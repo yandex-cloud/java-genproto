@@ -19,21 +19,43 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The maximum number of tokens allowed in the prompt.
+     * If the prompt exceeds this limit, the thread messages will be truncated.
+     * Default max_prompt_tokens: 7000
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_prompt_tokens = 1;</code>
      * @return Whether the maxPromptTokens field is set.
      */
     boolean hasMaxPromptTokens();
     /**
+     * <pre>
+     * The maximum number of tokens allowed in the prompt.
+     * If the prompt exceeds this limit, the thread messages will be truncated.
+     * Default max_prompt_tokens: 7000
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_prompt_tokens = 1;</code>
      * @return The maxPromptTokens.
      */
     com.google.protobuf.Int64Value getMaxPromptTokens();
     /**
+     * <pre>
+     * The maximum number of tokens allowed in the prompt.
+     * If the prompt exceeds this limit, the thread messages will be truncated.
+     * Default max_prompt_tokens: 7000
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_prompt_tokens = 1;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMaxPromptTokensOrBuilder();
   }
   /**
+   * <pre>
+   * Defines the options for truncating thread messages within a prompt.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.PromptTruncationOptions}
    */
   public static final class PromptTruncationOptions extends
@@ -126,6 +148,12 @@ public final class Common {
     public static final int MAX_PROMPT_TOKENS_FIELD_NUMBER = 1;
     private com.google.protobuf.Int64Value maxPromptTokens_;
     /**
+     * <pre>
+     * The maximum number of tokens allowed in the prompt.
+     * If the prompt exceeds this limit, the thread messages will be truncated.
+     * Default max_prompt_tokens: 7000
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_prompt_tokens = 1;</code>
      * @return Whether the maxPromptTokens field is set.
      */
@@ -134,6 +162,12 @@ public final class Common {
       return maxPromptTokens_ != null;
     }
     /**
+     * <pre>
+     * The maximum number of tokens allowed in the prompt.
+     * If the prompt exceeds this limit, the thread messages will be truncated.
+     * Default max_prompt_tokens: 7000
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_prompt_tokens = 1;</code>
      * @return The maxPromptTokens.
      */
@@ -142,6 +176,12 @@ public final class Common {
       return maxPromptTokens_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxPromptTokens_;
     }
     /**
+     * <pre>
+     * The maximum number of tokens allowed in the prompt.
+     * If the prompt exceeds this limit, the thread messages will be truncated.
+     * Default max_prompt_tokens: 7000
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_prompt_tokens = 1;</code>
      */
     @java.lang.Override
@@ -310,6 +350,10 @@ public final class Common {
       return builder;
     }
     /**
+     * <pre>
+     * Defines the options for truncating thread messages within a prompt.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.PromptTruncationOptions}
      */
     public static final class Builder extends
@@ -468,6 +512,12 @@ public final class Common {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxPromptTokensBuilder_;
       /**
+       * <pre>
+       * The maximum number of tokens allowed in the prompt.
+       * If the prompt exceeds this limit, the thread messages will be truncated.
+       * Default max_prompt_tokens: 7000
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_prompt_tokens = 1;</code>
        * @return Whether the maxPromptTokens field is set.
        */
@@ -475,6 +525,12 @@ public final class Common {
         return maxPromptTokensBuilder_ != null || maxPromptTokens_ != null;
       }
       /**
+       * <pre>
+       * The maximum number of tokens allowed in the prompt.
+       * If the prompt exceeds this limit, the thread messages will be truncated.
+       * Default max_prompt_tokens: 7000
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_prompt_tokens = 1;</code>
        * @return The maxPromptTokens.
        */
@@ -486,6 +542,12 @@ public final class Common {
         }
       }
       /**
+       * <pre>
+       * The maximum number of tokens allowed in the prompt.
+       * If the prompt exceeds this limit, the thread messages will be truncated.
+       * Default max_prompt_tokens: 7000
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_prompt_tokens = 1;</code>
        */
       public Builder setMaxPromptTokens(com.google.protobuf.Int64Value value) {
@@ -502,6 +564,12 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of tokens allowed in the prompt.
+       * If the prompt exceeds this limit, the thread messages will be truncated.
+       * Default max_prompt_tokens: 7000
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_prompt_tokens = 1;</code>
        */
       public Builder setMaxPromptTokens(
@@ -516,6 +584,12 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of tokens allowed in the prompt.
+       * If the prompt exceeds this limit, the thread messages will be truncated.
+       * Default max_prompt_tokens: 7000
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_prompt_tokens = 1;</code>
        */
       public Builder mergeMaxPromptTokens(com.google.protobuf.Int64Value value) {
@@ -534,6 +608,12 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of tokens allowed in the prompt.
+       * If the prompt exceeds this limit, the thread messages will be truncated.
+       * Default max_prompt_tokens: 7000
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_prompt_tokens = 1;</code>
        */
       public Builder clearMaxPromptTokens() {
@@ -548,6 +628,12 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of tokens allowed in the prompt.
+       * If the prompt exceeds this limit, the thread messages will be truncated.
+       * Default max_prompt_tokens: 7000
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_prompt_tokens = 1;</code>
        */
       public com.google.protobuf.Int64Value.Builder getMaxPromptTokensBuilder() {
@@ -556,6 +642,12 @@ public final class Common {
         return getMaxPromptTokensFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The maximum number of tokens allowed in the prompt.
+       * If the prompt exceeds this limit, the thread messages will be truncated.
+       * Default max_prompt_tokens: 7000
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_prompt_tokens = 1;</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getMaxPromptTokensOrBuilder() {
@@ -567,6 +659,12 @@ public final class Common {
         }
       }
       /**
+       * <pre>
+       * The maximum number of tokens allowed in the prompt.
+       * If the prompt exceeds this limit, the thread messages will be truncated.
+       * Default max_prompt_tokens: 7000
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_prompt_tokens = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -640,36 +738,73 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The limit on the number of tokens used for single completion generation.
+     * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_tokens = 2;</code>
      * @return Whether the maxTokens field is set.
      */
     boolean hasMaxTokens();
     /**
+     * <pre>
+     * The limit on the number of tokens used for single completion generation.
+     * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_tokens = 2;</code>
      * @return The maxTokens.
      */
     com.google.protobuf.Int64Value getMaxTokens();
     /**
+     * <pre>
+     * The limit on the number of tokens used for single completion generation.
+     * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_tokens = 2;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMaxTokensOrBuilder();
 
     /**
+     * <pre>
+     * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
+     * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+     * Default temperature: 0.3
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue temperature = 3;</code>
      * @return Whether the temperature field is set.
      */
     boolean hasTemperature();
     /**
+     * <pre>
+     * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
+     * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+     * Default temperature: 0.3
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue temperature = 3;</code>
      * @return The temperature.
      */
     com.google.protobuf.DoubleValue getTemperature();
     /**
+     * <pre>
+     * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
+     * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+     * Default temperature: 0.3
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue temperature = 3;</code>
      */
     com.google.protobuf.DoubleValueOrBuilder getTemperatureOrBuilder();
   }
   /**
+   * <pre>
+   * Defines the options for completion generation.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.CompletionOptions}
    */
   public static final class CompletionOptions extends
@@ -775,6 +910,11 @@ public final class Common {
     public static final int MAX_TOKENS_FIELD_NUMBER = 2;
     private com.google.protobuf.Int64Value maxTokens_;
     /**
+     * <pre>
+     * The limit on the number of tokens used for single completion generation.
+     * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_tokens = 2;</code>
      * @return Whether the maxTokens field is set.
      */
@@ -783,6 +923,11 @@ public final class Common {
       return maxTokens_ != null;
     }
     /**
+     * <pre>
+     * The limit on the number of tokens used for single completion generation.
+     * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_tokens = 2;</code>
      * @return The maxTokens.
      */
@@ -791,6 +936,11 @@ public final class Common {
       return maxTokens_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxTokens_;
     }
     /**
+     * <pre>
+     * The limit on the number of tokens used for single completion generation.
+     * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_tokens = 2;</code>
      */
     @java.lang.Override
@@ -801,6 +951,12 @@ public final class Common {
     public static final int TEMPERATURE_FIELD_NUMBER = 3;
     private com.google.protobuf.DoubleValue temperature_;
     /**
+     * <pre>
+     * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
+     * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+     * Default temperature: 0.3
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue temperature = 3;</code>
      * @return Whether the temperature field is set.
      */
@@ -809,6 +965,12 @@ public final class Common {
       return temperature_ != null;
     }
     /**
+     * <pre>
+     * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
+     * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+     * Default temperature: 0.3
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue temperature = 3;</code>
      * @return The temperature.
      */
@@ -817,6 +979,12 @@ public final class Common {
       return temperature_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : temperature_;
     }
     /**
+     * <pre>
+     * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
+     * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+     * Default temperature: 0.3
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue temperature = 3;</code>
      */
     @java.lang.Override
@@ -1001,6 +1169,10 @@ public final class Common {
       return builder;
     }
     /**
+     * <pre>
+     * Defines the options for completion generation.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.CompletionOptions}
      */
     public static final class Builder extends
@@ -1173,6 +1345,11 @@ public final class Common {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxTokensBuilder_;
       /**
+       * <pre>
+       * The limit on the number of tokens used for single completion generation.
+       * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_tokens = 2;</code>
        * @return Whether the maxTokens field is set.
        */
@@ -1180,6 +1357,11 @@ public final class Common {
         return maxTokensBuilder_ != null || maxTokens_ != null;
       }
       /**
+       * <pre>
+       * The limit on the number of tokens used for single completion generation.
+       * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_tokens = 2;</code>
        * @return The maxTokens.
        */
@@ -1191,6 +1373,11 @@ public final class Common {
         }
       }
       /**
+       * <pre>
+       * The limit on the number of tokens used for single completion generation.
+       * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_tokens = 2;</code>
        */
       public Builder setMaxTokens(com.google.protobuf.Int64Value value) {
@@ -1207,6 +1394,11 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * The limit on the number of tokens used for single completion generation.
+       * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_tokens = 2;</code>
        */
       public Builder setMaxTokens(
@@ -1221,6 +1413,11 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * The limit on the number of tokens used for single completion generation.
+       * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_tokens = 2;</code>
        */
       public Builder mergeMaxTokens(com.google.protobuf.Int64Value value) {
@@ -1239,6 +1436,11 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * The limit on the number of tokens used for single completion generation.
+       * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_tokens = 2;</code>
        */
       public Builder clearMaxTokens() {
@@ -1253,6 +1455,11 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * The limit on the number of tokens used for single completion generation.
+       * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_tokens = 2;</code>
        */
       public com.google.protobuf.Int64Value.Builder getMaxTokensBuilder() {
@@ -1261,6 +1468,11 @@ public final class Common {
         return getMaxTokensFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The limit on the number of tokens used for single completion generation.
+       * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_tokens = 2;</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getMaxTokensOrBuilder() {
@@ -1272,6 +1484,11 @@ public final class Common {
         }
       }
       /**
+       * <pre>
+       * The limit on the number of tokens used for single completion generation.
+       * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_tokens = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1292,6 +1509,12 @@ public final class Common {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> temperatureBuilder_;
       /**
+       * <pre>
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
+       * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+       * Default temperature: 0.3
+       * </pre>
+       *
        * <code>.google.protobuf.DoubleValue temperature = 3;</code>
        * @return Whether the temperature field is set.
        */
@@ -1299,6 +1522,12 @@ public final class Common {
         return temperatureBuilder_ != null || temperature_ != null;
       }
       /**
+       * <pre>
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
+       * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+       * Default temperature: 0.3
+       * </pre>
+       *
        * <code>.google.protobuf.DoubleValue temperature = 3;</code>
        * @return The temperature.
        */
@@ -1310,6 +1539,12 @@ public final class Common {
         }
       }
       /**
+       * <pre>
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
+       * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+       * Default temperature: 0.3
+       * </pre>
+       *
        * <code>.google.protobuf.DoubleValue temperature = 3;</code>
        */
       public Builder setTemperature(com.google.protobuf.DoubleValue value) {
@@ -1326,6 +1561,12 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
+       * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+       * Default temperature: 0.3
+       * </pre>
+       *
        * <code>.google.protobuf.DoubleValue temperature = 3;</code>
        */
       public Builder setTemperature(
@@ -1340,6 +1581,12 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
+       * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+       * Default temperature: 0.3
+       * </pre>
+       *
        * <code>.google.protobuf.DoubleValue temperature = 3;</code>
        */
       public Builder mergeTemperature(com.google.protobuf.DoubleValue value) {
@@ -1358,6 +1605,12 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
+       * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+       * Default temperature: 0.3
+       * </pre>
+       *
        * <code>.google.protobuf.DoubleValue temperature = 3;</code>
        */
       public Builder clearTemperature() {
@@ -1372,6 +1625,12 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
+       * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+       * Default temperature: 0.3
+       * </pre>
+       *
        * <code>.google.protobuf.DoubleValue temperature = 3;</code>
        */
       public com.google.protobuf.DoubleValue.Builder getTemperatureBuilder() {
@@ -1380,6 +1639,12 @@ public final class Common {
         return getTemperatureFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
+       * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+       * Default temperature: 0.3
+       * </pre>
+       *
        * <code>.google.protobuf.DoubleValue temperature = 3;</code>
        */
       public com.google.protobuf.DoubleValueOrBuilder getTemperatureOrBuilder() {
@@ -1391,6 +1656,12 @@ public final class Common {
         }
       }
       /**
+       * <pre>
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
+       * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+       * Default temperature: 0.3
+       * </pre>
+       *
        * <code>.google.protobuf.DoubleValue temperature = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1464,23 +1735,39 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * A list of search index IDs that this tool will query. Currently, only a single index ID is supported.
+     * </pre>
+     *
      * <code>repeated string search_index_ids = 1;</code>
      * @return A list containing the searchIndexIds.
      */
     java.util.List<java.lang.String>
         getSearchIndexIdsList();
     /**
+     * <pre>
+     * A list of search index IDs that this tool will query. Currently, only a single index ID is supported.
+     * </pre>
+     *
      * <code>repeated string search_index_ids = 1;</code>
      * @return The count of searchIndexIds.
      */
     int getSearchIndexIdsCount();
     /**
+     * <pre>
+     * A list of search index IDs that this tool will query. Currently, only a single index ID is supported.
+     * </pre>
+     *
      * <code>repeated string search_index_ids = 1;</code>
      * @param index The index of the element to return.
      * @return The searchIndexIds at the given index.
      */
     java.lang.String getSearchIndexIds(int index);
     /**
+     * <pre>
+     * A list of search index IDs that this tool will query. Currently, only a single index ID is supported.
+     * </pre>
+     *
      * <code>repeated string search_index_ids = 1;</code>
      * @param index The index of the value to return.
      * @return The bytes of the searchIndexIds at the given index.
@@ -1489,21 +1776,43 @@ public final class Common {
         getSearchIndexIdsBytes(int index);
 
     /**
+     * <pre>
+     * The maximum number of results to return from the search.
+     * Fewer results may be returned if necessary to fit within the prompt's token limit.
+     * This ensures that the combined prompt and search results do not exceed the token constraints.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_num_results = 2;</code>
      * @return Whether the maxNumResults field is set.
      */
     boolean hasMaxNumResults();
     /**
+     * <pre>
+     * The maximum number of results to return from the search.
+     * Fewer results may be returned if necessary to fit within the prompt's token limit.
+     * This ensures that the combined prompt and search results do not exceed the token constraints.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_num_results = 2;</code>
      * @return The maxNumResults.
      */
     com.google.protobuf.Int64Value getMaxNumResults();
     /**
+     * <pre>
+     * The maximum number of results to return from the search.
+     * Fewer results may be returned if necessary to fit within the prompt's token limit.
+     * This ensures that the combined prompt and search results do not exceed the token constraints.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_num_results = 2;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMaxNumResultsOrBuilder();
   }
   /**
+   * <pre>
+   * Configures a tool that enables Retrieval-Augmented Generation (RAG) by allowing the assistant to search across a specified search index.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.SearchIndexTool}
    */
   public static final class SearchIndexTool extends
@@ -1610,6 +1919,10 @@ public final class Common {
     public static final int SEARCH_INDEX_IDS_FIELD_NUMBER = 1;
     private com.google.protobuf.LazyStringList searchIndexIds_;
     /**
+     * <pre>
+     * A list of search index IDs that this tool will query. Currently, only a single index ID is supported.
+     * </pre>
+     *
      * <code>repeated string search_index_ids = 1;</code>
      * @return A list containing the searchIndexIds.
      */
@@ -1618,6 +1931,10 @@ public final class Common {
       return searchIndexIds_;
     }
     /**
+     * <pre>
+     * A list of search index IDs that this tool will query. Currently, only a single index ID is supported.
+     * </pre>
+     *
      * <code>repeated string search_index_ids = 1;</code>
      * @return The count of searchIndexIds.
      */
@@ -1625,6 +1942,10 @@ public final class Common {
       return searchIndexIds_.size();
     }
     /**
+     * <pre>
+     * A list of search index IDs that this tool will query. Currently, only a single index ID is supported.
+     * </pre>
+     *
      * <code>repeated string search_index_ids = 1;</code>
      * @param index The index of the element to return.
      * @return The searchIndexIds at the given index.
@@ -1633,6 +1954,10 @@ public final class Common {
       return searchIndexIds_.get(index);
     }
     /**
+     * <pre>
+     * A list of search index IDs that this tool will query. Currently, only a single index ID is supported.
+     * </pre>
+     *
      * <code>repeated string search_index_ids = 1;</code>
      * @param index The index of the value to return.
      * @return The bytes of the searchIndexIds at the given index.
@@ -1645,6 +1970,12 @@ public final class Common {
     public static final int MAX_NUM_RESULTS_FIELD_NUMBER = 2;
     private com.google.protobuf.Int64Value maxNumResults_;
     /**
+     * <pre>
+     * The maximum number of results to return from the search.
+     * Fewer results may be returned if necessary to fit within the prompt's token limit.
+     * This ensures that the combined prompt and search results do not exceed the token constraints.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_num_results = 2;</code>
      * @return Whether the maxNumResults field is set.
      */
@@ -1653,6 +1984,12 @@ public final class Common {
       return maxNumResults_ != null;
     }
     /**
+     * <pre>
+     * The maximum number of results to return from the search.
+     * Fewer results may be returned if necessary to fit within the prompt's token limit.
+     * This ensures that the combined prompt and search results do not exceed the token constraints.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_num_results = 2;</code>
      * @return The maxNumResults.
      */
@@ -1661,6 +1998,12 @@ public final class Common {
       return maxNumResults_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxNumResults_;
     }
     /**
+     * <pre>
+     * The maximum number of results to return from the search.
+     * Fewer results may be returned if necessary to fit within the prompt's token limit.
+     * This ensures that the combined prompt and search results do not exceed the token constraints.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_num_results = 2;</code>
      */
     @java.lang.Override
@@ -1846,6 +2189,10 @@ public final class Common {
       return builder;
     }
     /**
+     * <pre>
+     * Configures a tool that enables Retrieval-Augmented Generation (RAG) by allowing the assistant to search across a specified search index.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.SearchIndexTool}
      */
     public static final class Builder extends
@@ -2027,6 +2374,10 @@ public final class Common {
          }
       }
       /**
+       * <pre>
+       * A list of search index IDs that this tool will query. Currently, only a single index ID is supported.
+       * </pre>
+       *
        * <code>repeated string search_index_ids = 1;</code>
        * @return A list containing the searchIndexIds.
        */
@@ -2035,6 +2386,10 @@ public final class Common {
         return searchIndexIds_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * A list of search index IDs that this tool will query. Currently, only a single index ID is supported.
+       * </pre>
+       *
        * <code>repeated string search_index_ids = 1;</code>
        * @return The count of searchIndexIds.
        */
@@ -2042,6 +2397,10 @@ public final class Common {
         return searchIndexIds_.size();
       }
       /**
+       * <pre>
+       * A list of search index IDs that this tool will query. Currently, only a single index ID is supported.
+       * </pre>
+       *
        * <code>repeated string search_index_ids = 1;</code>
        * @param index The index of the element to return.
        * @return The searchIndexIds at the given index.
@@ -2050,6 +2409,10 @@ public final class Common {
         return searchIndexIds_.get(index);
       }
       /**
+       * <pre>
+       * A list of search index IDs that this tool will query. Currently, only a single index ID is supported.
+       * </pre>
+       *
        * <code>repeated string search_index_ids = 1;</code>
        * @param index The index of the value to return.
        * @return The bytes of the searchIndexIds at the given index.
@@ -2059,6 +2422,10 @@ public final class Common {
         return searchIndexIds_.getByteString(index);
       }
       /**
+       * <pre>
+       * A list of search index IDs that this tool will query. Currently, only a single index ID is supported.
+       * </pre>
+       *
        * <code>repeated string search_index_ids = 1;</code>
        * @param index The index to set the value at.
        * @param value The searchIndexIds to set.
@@ -2075,6 +2442,10 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * A list of search index IDs that this tool will query. Currently, only a single index ID is supported.
+       * </pre>
+       *
        * <code>repeated string search_index_ids = 1;</code>
        * @param value The searchIndexIds to add.
        * @return This builder for chaining.
@@ -2090,6 +2461,10 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * A list of search index IDs that this tool will query. Currently, only a single index ID is supported.
+       * </pre>
+       *
        * <code>repeated string search_index_ids = 1;</code>
        * @param values The searchIndexIds to add.
        * @return This builder for chaining.
@@ -2103,6 +2478,10 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * A list of search index IDs that this tool will query. Currently, only a single index ID is supported.
+       * </pre>
+       *
        * <code>repeated string search_index_ids = 1;</code>
        * @return This builder for chaining.
        */
@@ -2113,6 +2492,10 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * A list of search index IDs that this tool will query. Currently, only a single index ID is supported.
+       * </pre>
+       *
        * <code>repeated string search_index_ids = 1;</code>
        * @param value The bytes of the searchIndexIds to add.
        * @return This builder for chaining.
@@ -2133,6 +2516,12 @@ public final class Common {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxNumResultsBuilder_;
       /**
+       * <pre>
+       * The maximum number of results to return from the search.
+       * Fewer results may be returned if necessary to fit within the prompt's token limit.
+       * This ensures that the combined prompt and search results do not exceed the token constraints.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_num_results = 2;</code>
        * @return Whether the maxNumResults field is set.
        */
@@ -2140,6 +2529,12 @@ public final class Common {
         return maxNumResultsBuilder_ != null || maxNumResults_ != null;
       }
       /**
+       * <pre>
+       * The maximum number of results to return from the search.
+       * Fewer results may be returned if necessary to fit within the prompt's token limit.
+       * This ensures that the combined prompt and search results do not exceed the token constraints.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_num_results = 2;</code>
        * @return The maxNumResults.
        */
@@ -2151,6 +2546,12 @@ public final class Common {
         }
       }
       /**
+       * <pre>
+       * The maximum number of results to return from the search.
+       * Fewer results may be returned if necessary to fit within the prompt's token limit.
+       * This ensures that the combined prompt and search results do not exceed the token constraints.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_num_results = 2;</code>
        */
       public Builder setMaxNumResults(com.google.protobuf.Int64Value value) {
@@ -2167,6 +2568,12 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results to return from the search.
+       * Fewer results may be returned if necessary to fit within the prompt's token limit.
+       * This ensures that the combined prompt and search results do not exceed the token constraints.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_num_results = 2;</code>
        */
       public Builder setMaxNumResults(
@@ -2181,6 +2588,12 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results to return from the search.
+       * Fewer results may be returned if necessary to fit within the prompt's token limit.
+       * This ensures that the combined prompt and search results do not exceed the token constraints.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_num_results = 2;</code>
        */
       public Builder mergeMaxNumResults(com.google.protobuf.Int64Value value) {
@@ -2199,6 +2612,12 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results to return from the search.
+       * Fewer results may be returned if necessary to fit within the prompt's token limit.
+       * This ensures that the combined prompt and search results do not exceed the token constraints.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_num_results = 2;</code>
        */
       public Builder clearMaxNumResults() {
@@ -2213,6 +2632,12 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results to return from the search.
+       * Fewer results may be returned if necessary to fit within the prompt's token limit.
+       * This ensures that the combined prompt and search results do not exceed the token constraints.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_num_results = 2;</code>
        */
       public com.google.protobuf.Int64Value.Builder getMaxNumResultsBuilder() {
@@ -2221,6 +2646,12 @@ public final class Common {
         return getMaxNumResultsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The maximum number of results to return from the search.
+       * Fewer results may be returned if necessary to fit within the prompt's token limit.
+       * This ensures that the combined prompt and search results do not exceed the token constraints.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_num_results = 2;</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getMaxNumResultsOrBuilder() {
@@ -2232,6 +2663,12 @@ public final class Common {
         }
       }
       /**
+       * <pre>
+       * The maximum number of results to return from the search.
+       * Fewer results may be returned if necessary to fit within the prompt's token limit.
+       * This ensures that the combined prompt and search results do not exceed the token constraints.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_num_results = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2305,16 +2742,28 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * SearchIndexTool tool that performs search across specified indexes.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
      * @return Whether the searchIndex field is set.
      */
     boolean hasSearchIndex();
     /**
+     * <pre>
+     * SearchIndexTool tool that performs search across specified indexes.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
      * @return The searchIndex.
      */
     yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool getSearchIndex();
     /**
+     * <pre>
+     * SearchIndexTool tool that performs search across specified indexes.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
      */
     yandex.cloud.api.ai.assistants.v1.Common.SearchIndexToolOrBuilder getSearchIndexOrBuilder();
@@ -2322,6 +2771,10 @@ public final class Common {
     public yandex.cloud.api.ai.assistants.v1.Common.Tool.ToolTypeCase getToolTypeCase();
   }
   /**
+   * <pre>
+   * Represents a general tool that can be one of several types.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.Tool}
    */
   public static final class Tool extends
@@ -2453,6 +2906,10 @@ public final class Common {
 
     public static final int SEARCH_INDEX_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * SearchIndexTool tool that performs search across specified indexes.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
      * @return Whether the searchIndex field is set.
      */
@@ -2461,6 +2918,10 @@ public final class Common {
       return toolTypeCase_ == 1;
     }
     /**
+     * <pre>
+     * SearchIndexTool tool that performs search across specified indexes.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
      * @return The searchIndex.
      */
@@ -2472,6 +2933,10 @@ public final class Common {
       return yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.getDefaultInstance();
     }
     /**
+     * <pre>
+     * SearchIndexTool tool that performs search across specified indexes.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
      */
     @java.lang.Override
@@ -2651,6 +3116,10 @@ public final class Common {
       return builder;
     }
     /**
+     * <pre>
+     * Represents a general tool that can be one of several types.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.Tool}
      */
     public static final class Builder extends
@@ -2828,6 +3297,10 @@ public final class Common {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool, yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.Builder, yandex.cloud.api.ai.assistants.v1.Common.SearchIndexToolOrBuilder> searchIndexBuilder_;
       /**
+       * <pre>
+       * SearchIndexTool tool that performs search across specified indexes.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
        * @return Whether the searchIndex field is set.
        */
@@ -2836,6 +3309,10 @@ public final class Common {
         return toolTypeCase_ == 1;
       }
       /**
+       * <pre>
+       * SearchIndexTool tool that performs search across specified indexes.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
        * @return The searchIndex.
        */
@@ -2854,6 +3331,10 @@ public final class Common {
         }
       }
       /**
+       * <pre>
+       * SearchIndexTool tool that performs search across specified indexes.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
        */
       public Builder setSearchIndex(yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool value) {
@@ -2870,6 +3351,10 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * SearchIndexTool tool that performs search across specified indexes.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
        */
       public Builder setSearchIndex(
@@ -2884,6 +3369,10 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * SearchIndexTool tool that performs search across specified indexes.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
        */
       public Builder mergeSearchIndex(yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool value) {
@@ -2906,6 +3395,10 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * SearchIndexTool tool that performs search across specified indexes.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
        */
       public Builder clearSearchIndex() {
@@ -2925,12 +3418,20 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * SearchIndexTool tool that performs search across specified indexes.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.Builder getSearchIndexBuilder() {
         return getSearchIndexFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * SearchIndexTool tool that performs search across specified indexes.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
        */
       @java.lang.Override
@@ -2945,6 +3446,10 @@ public final class Common {
         }
       }
       /**
+       * <pre>
+       * SearchIndexTool tool that performs search across specified indexes.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

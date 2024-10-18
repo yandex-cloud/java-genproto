@@ -19,11 +19,19 @@ public final class SearchIndexFileOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Unique identifier of the file that was used for indexing.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * Unique identifier of the file that was used for indexing.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -31,11 +39,19 @@ public final class SearchIndexFileOuterClass {
         getIdBytes();
 
     /**
+     * <pre>
+     * ID of the search index that contains this file.
+     * </pre>
+     *
      * <code>string search_index_id = 2;</code>
      * @return The searchIndexId.
      */
     java.lang.String getSearchIndexId();
     /**
+     * <pre>
+     * ID of the search index that contains this file.
+     * </pre>
+     *
      * <code>string search_index_id = 2;</code>
      * @return The bytes for searchIndexId.
      */
@@ -43,11 +59,19 @@ public final class SearchIndexFileOuterClass {
         getSearchIndexIdBytes();
 
     /**
+     * <pre>
+     * Identifier of the subject who created the file in the search index.
+     * </pre>
+     *
      * <code>string created_by = 3;</code>
      * @return The createdBy.
      */
     java.lang.String getCreatedBy();
     /**
+     * <pre>
+     * Identifier of the subject who created the file in the search index.
+     * </pre>
+     *
      * <code>string created_by = 3;</code>
      * @return The bytes for createdBy.
      */
@@ -55,16 +79,28 @@ public final class SearchIndexFileOuterClass {
         getCreatedByBytes();
 
     /**
+     * <pre>
+     * Timestamp representing when the file was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Timestamp representing when the file was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Timestamp representing when the file was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
@@ -85,6 +121,10 @@ public final class SearchIndexFileOuterClass {
     yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategyOrBuilder getChunkingStrategyOrBuilder();
   }
   /**
+   * <pre>
+   * Represents a file that has been indexed within a search index.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile}
    */
   public static final class SearchIndexFile extends
@@ -211,6 +251,10 @@ public final class SearchIndexFileOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * Unique identifier of the file that was used for indexing.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -228,6 +272,10 @@ public final class SearchIndexFileOuterClass {
       }
     }
     /**
+     * <pre>
+     * Unique identifier of the file that was used for indexing.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -249,6 +297,10 @@ public final class SearchIndexFileOuterClass {
     public static final int SEARCH_INDEX_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object searchIndexId_;
     /**
+     * <pre>
+     * ID of the search index that contains this file.
+     * </pre>
+     *
      * <code>string search_index_id = 2;</code>
      * @return The searchIndexId.
      */
@@ -266,6 +318,10 @@ public final class SearchIndexFileOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the search index that contains this file.
+     * </pre>
+     *
      * <code>string search_index_id = 2;</code>
      * @return The bytes for searchIndexId.
      */
@@ -287,6 +343,10 @@ public final class SearchIndexFileOuterClass {
     public static final int CREATED_BY_FIELD_NUMBER = 3;
     private volatile java.lang.Object createdBy_;
     /**
+     * <pre>
+     * Identifier of the subject who created the file in the search index.
+     * </pre>
+     *
      * <code>string created_by = 3;</code>
      * @return The createdBy.
      */
@@ -304,6 +364,10 @@ public final class SearchIndexFileOuterClass {
       }
     }
     /**
+     * <pre>
+     * Identifier of the subject who created the file in the search index.
+     * </pre>
+     *
      * <code>string created_by = 3;</code>
      * @return The bytes for createdBy.
      */
@@ -325,6 +389,10 @@ public final class SearchIndexFileOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 4;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Timestamp representing when the file was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      * @return Whether the createdAt field is set.
      */
@@ -333,6 +401,10 @@ public final class SearchIndexFileOuterClass {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Timestamp representing when the file was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      * @return The createdAt.
      */
@@ -341,6 +413,10 @@ public final class SearchIndexFileOuterClass {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Timestamp representing when the file was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
     @java.lang.Override
@@ -581,6 +657,10 @@ public final class SearchIndexFileOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Represents a file that has been indexed within a search index.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile}
      */
     public static final class Builder extends
@@ -772,6 +852,10 @@ public final class SearchIndexFileOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * Unique identifier of the file that was used for indexing.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -788,6 +872,10 @@ public final class SearchIndexFileOuterClass {
         }
       }
       /**
+       * <pre>
+       * Unique identifier of the file that was used for indexing.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -805,6 +893,10 @@ public final class SearchIndexFileOuterClass {
         }
       }
       /**
+       * <pre>
+       * Unique identifier of the file that was used for indexing.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -820,6 +912,10 @@ public final class SearchIndexFileOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Unique identifier of the file that was used for indexing.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -830,6 +926,10 @@ public final class SearchIndexFileOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Unique identifier of the file that was used for indexing.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -848,6 +948,10 @@ public final class SearchIndexFileOuterClass {
 
       private java.lang.Object searchIndexId_ = "";
       /**
+       * <pre>
+       * ID of the search index that contains this file.
+       * </pre>
+       *
        * <code>string search_index_id = 2;</code>
        * @return The searchIndexId.
        */
@@ -864,6 +968,10 @@ public final class SearchIndexFileOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the search index that contains this file.
+       * </pre>
+       *
        * <code>string search_index_id = 2;</code>
        * @return The bytes for searchIndexId.
        */
@@ -881,6 +989,10 @@ public final class SearchIndexFileOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the search index that contains this file.
+       * </pre>
+       *
        * <code>string search_index_id = 2;</code>
        * @param value The searchIndexId to set.
        * @return This builder for chaining.
@@ -896,6 +1008,10 @@ public final class SearchIndexFileOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the search index that contains this file.
+       * </pre>
+       *
        * <code>string search_index_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -906,6 +1022,10 @@ public final class SearchIndexFileOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the search index that contains this file.
+       * </pre>
+       *
        * <code>string search_index_id = 2;</code>
        * @param value The bytes for searchIndexId to set.
        * @return This builder for chaining.
@@ -924,6 +1044,10 @@ public final class SearchIndexFileOuterClass {
 
       private java.lang.Object createdBy_ = "";
       /**
+       * <pre>
+       * Identifier of the subject who created the file in the search index.
+       * </pre>
+       *
        * <code>string created_by = 3;</code>
        * @return The createdBy.
        */
@@ -940,6 +1064,10 @@ public final class SearchIndexFileOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier of the subject who created the file in the search index.
+       * </pre>
+       *
        * <code>string created_by = 3;</code>
        * @return The bytes for createdBy.
        */
@@ -957,6 +1085,10 @@ public final class SearchIndexFileOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier of the subject who created the file in the search index.
+       * </pre>
+       *
        * <code>string created_by = 3;</code>
        * @param value The createdBy to set.
        * @return This builder for chaining.
@@ -972,6 +1104,10 @@ public final class SearchIndexFileOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the subject who created the file in the search index.
+       * </pre>
+       *
        * <code>string created_by = 3;</code>
        * @return This builder for chaining.
        */
@@ -982,6 +1118,10 @@ public final class SearchIndexFileOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the subject who created the file in the search index.
+       * </pre>
+       *
        * <code>string created_by = 3;</code>
        * @param value The bytes for createdBy to set.
        * @return This builder for chaining.
@@ -1002,6 +1142,10 @@ public final class SearchIndexFileOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Timestamp representing when the file was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        * @return Whether the createdAt field is set.
        */
@@ -1009,6 +1153,10 @@ public final class SearchIndexFileOuterClass {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Timestamp representing when the file was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        * @return The createdAt.
        */
@@ -1020,6 +1168,10 @@ public final class SearchIndexFileOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp representing when the file was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1036,6 +1188,10 @@ public final class SearchIndexFileOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the file was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public Builder setCreatedAt(
@@ -1050,6 +1206,10 @@ public final class SearchIndexFileOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the file was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1068,6 +1228,10 @@ public final class SearchIndexFileOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the file was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public Builder clearCreatedAt() {
@@ -1082,6 +1246,10 @@ public final class SearchIndexFileOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the file was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -1090,6 +1258,10 @@ public final class SearchIndexFileOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Timestamp representing when the file was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -1101,6 +1273,10 @@ public final class SearchIndexFileOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp representing when the file was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

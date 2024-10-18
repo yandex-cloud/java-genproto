@@ -3,6 +3,9 @@ package yandex.cloud.api.ai.assistants.v1.searchindex;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * ThreadService provides operations for managing search indexes.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -215,10 +218,16 @@ public final class SearchIndexServiceGrpc {
   }
 
   /**
+   * <pre>
+   * ThreadService provides operations for managing search indexes.
+   * </pre>
    */
   public static abstract class SearchIndexServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Create a new search index in [asynchronous mode](/docs/foundation-models/concepts/#working-mode).
+     * </pre>
      */
     public void create(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.CreateSearchIndexRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -226,6 +235,9 @@ public final class SearchIndexServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific search index by its ID.
+     * </pre>
      */
     public void get(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.GetSearchIndexRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex> responseObserver) {
@@ -233,6 +245,9 @@ public final class SearchIndexServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update an existing search index.
+     * </pre>
      */
     public void update(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.UpdateSearchIndexRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex> responseObserver) {
@@ -240,6 +255,9 @@ public final class SearchIndexServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete a search index by its ID.
+     * </pre>
      */
     public void delete(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.DeleteSearchIndexRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.DeleteSearchIndexResponse> responseObserver) {
@@ -247,6 +265,9 @@ public final class SearchIndexServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List search indexes in a specific folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.ListSearchIndicesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.ListSearchIndicesResponse> responseObserver) {
@@ -295,6 +316,9 @@ public final class SearchIndexServiceGrpc {
   }
 
   /**
+   * <pre>
+   * ThreadService provides operations for managing search indexes.
+   * </pre>
    */
   public static final class SearchIndexServiceStub extends io.grpc.stub.AbstractAsyncStub<SearchIndexServiceStub> {
     private SearchIndexServiceStub(
@@ -309,6 +333,9 @@ public final class SearchIndexServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create a new search index in [asynchronous mode](/docs/foundation-models/concepts/#working-mode).
+     * </pre>
      */
     public void create(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.CreateSearchIndexRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -317,6 +344,9 @@ public final class SearchIndexServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific search index by its ID.
+     * </pre>
      */
     public void get(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.GetSearchIndexRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex> responseObserver) {
@@ -325,6 +355,9 @@ public final class SearchIndexServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update an existing search index.
+     * </pre>
      */
     public void update(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.UpdateSearchIndexRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex> responseObserver) {
@@ -333,6 +366,9 @@ public final class SearchIndexServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete a search index by its ID.
+     * </pre>
      */
     public void delete(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.DeleteSearchIndexRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.DeleteSearchIndexResponse> responseObserver) {
@@ -341,6 +377,9 @@ public final class SearchIndexServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List search indexes in a specific folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.ListSearchIndicesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.ListSearchIndicesResponse> responseObserver) {
@@ -350,6 +389,9 @@ public final class SearchIndexServiceGrpc {
   }
 
   /**
+   * <pre>
+   * ThreadService provides operations for managing search indexes.
+   * </pre>
    */
   public static final class SearchIndexServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SearchIndexServiceBlockingStub> {
     private SearchIndexServiceBlockingStub(
@@ -364,6 +406,9 @@ public final class SearchIndexServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create a new search index in [asynchronous mode](/docs/foundation-models/concepts/#working-mode).
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.CreateSearchIndexRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -371,6 +416,9 @@ public final class SearchIndexServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific search index by its ID.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex get(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.GetSearchIndexRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -378,6 +426,9 @@ public final class SearchIndexServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update an existing search index.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex update(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.UpdateSearchIndexRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -385,6 +436,9 @@ public final class SearchIndexServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete a search index by its ID.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.DeleteSearchIndexResponse delete(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.DeleteSearchIndexRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -392,6 +446,9 @@ public final class SearchIndexServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List search indexes in a specific folder.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.ListSearchIndicesResponse list(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.ListSearchIndicesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -400,6 +457,9 @@ public final class SearchIndexServiceGrpc {
   }
 
   /**
+   * <pre>
+   * ThreadService provides operations for managing search indexes.
+   * </pre>
    */
   public static final class SearchIndexServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SearchIndexServiceFutureStub> {
     private SearchIndexServiceFutureStub(
@@ -414,6 +474,9 @@ public final class SearchIndexServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create a new search index in [asynchronous mode](/docs/foundation-models/concepts/#working-mode).
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.CreateSearchIndexRequest request) {
@@ -422,6 +485,9 @@ public final class SearchIndexServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific search index by its ID.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex> get(
         yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.GetSearchIndexRequest request) {
@@ -430,6 +496,9 @@ public final class SearchIndexServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update an existing search index.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex> update(
         yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.UpdateSearchIndexRequest request) {
@@ -438,6 +507,9 @@ public final class SearchIndexServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete a search index by its ID.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.DeleteSearchIndexResponse> delete(
         yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.DeleteSearchIndexRequest request) {
@@ -446,6 +518,9 @@ public final class SearchIndexServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List search indexes in a specific folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.ListSearchIndicesResponse> list(
         yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.ListSearchIndicesRequest request) {

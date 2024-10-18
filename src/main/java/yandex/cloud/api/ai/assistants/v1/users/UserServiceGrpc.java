@@ -3,6 +3,9 @@ package yandex.cloud.api.ai.assistants.v1.users;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * UserService provides operations for managing users.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -215,10 +218,16 @@ public final class UserServiceGrpc {
   }
 
   /**
+   * <pre>
+   * UserService provides operations for managing users.
+   * </pre>
    */
   public static abstract class UserServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Create a new user.
+     * </pre>
      */
     public void create(yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.CreateUserRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User> responseObserver) {
@@ -226,6 +235,9 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific user by its ID.
+     * </pre>
      */
     public void get(yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.GetUserRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User> responseObserver) {
@@ -233,6 +245,9 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update an existing user.
+     * </pre>
      */
     public void update(yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.UpdateUserRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User> responseObserver) {
@@ -240,6 +255,9 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete a user by its ID.
+     * </pre>
      */
     public void delete(yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.DeleteUserRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.DeleteUserResponse> responseObserver) {
@@ -247,6 +265,9 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List users in a specific folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.ListUsersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.ListUsersResponse> responseObserver) {
@@ -295,6 +316,9 @@ public final class UserServiceGrpc {
   }
 
   /**
+   * <pre>
+   * UserService provides operations for managing users.
+   * </pre>
    */
   public static final class UserServiceStub extends io.grpc.stub.AbstractAsyncStub<UserServiceStub> {
     private UserServiceStub(
@@ -309,6 +333,9 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create a new user.
+     * </pre>
      */
     public void create(yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.CreateUserRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User> responseObserver) {
@@ -317,6 +344,9 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific user by its ID.
+     * </pre>
      */
     public void get(yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.GetUserRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User> responseObserver) {
@@ -325,6 +355,9 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update an existing user.
+     * </pre>
      */
     public void update(yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.UpdateUserRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User> responseObserver) {
@@ -333,6 +366,9 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete a user by its ID.
+     * </pre>
      */
     public void delete(yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.DeleteUserRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.DeleteUserResponse> responseObserver) {
@@ -341,6 +377,9 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List users in a specific folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.ListUsersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.ListUsersResponse> responseObserver) {
@@ -350,6 +389,9 @@ public final class UserServiceGrpc {
   }
 
   /**
+   * <pre>
+   * UserService provides operations for managing users.
+   * </pre>
    */
   public static final class UserServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<UserServiceBlockingStub> {
     private UserServiceBlockingStub(
@@ -364,6 +406,9 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create a new user.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User create(yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.CreateUserRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -371,6 +416,9 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific user by its ID.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User get(yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.GetUserRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -378,6 +426,9 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update an existing user.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User update(yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.UpdateUserRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -385,6 +436,9 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete a user by its ID.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.DeleteUserResponse delete(yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.DeleteUserRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -392,6 +446,9 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List users in a specific folder.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.ListUsersResponse list(yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.ListUsersRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -400,6 +457,9 @@ public final class UserServiceGrpc {
   }
 
   /**
+   * <pre>
+   * UserService provides operations for managing users.
+   * </pre>
    */
   public static final class UserServiceFutureStub extends io.grpc.stub.AbstractFutureStub<UserServiceFutureStub> {
     private UserServiceFutureStub(
@@ -414,6 +474,9 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create a new user.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User> create(
         yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.CreateUserRequest request) {
@@ -422,6 +485,9 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific user by its ID.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User> get(
         yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.GetUserRequest request) {
@@ -430,6 +496,9 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update an existing user.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User> update(
         yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.UpdateUserRequest request) {
@@ -438,6 +507,9 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete a user by its ID.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.DeleteUserResponse> delete(
         yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.DeleteUserRequest request) {
@@ -446,6 +518,9 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List users in a specific folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.ListUsersResponse> list(
         yandex.cloud.api.ai.assistants.v1.users.UserServiceOuterClass.ListUsersRequest request) {

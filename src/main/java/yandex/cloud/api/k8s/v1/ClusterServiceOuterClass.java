@@ -9699,6 +9699,33 @@ public final class ClusterServiceOuterClass {
      */
     yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpecOrBuilder getLocationsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Specification of parameters for external IPv6 networking.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v6_address_spec = 6;</code>
+     * @return Whether the externalV6AddressSpec field is set.
+     */
+    boolean hasExternalV6AddressSpec();
+    /**
+     * <pre>
+     * Specification of parameters for external IPv6 networking.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v6_address_spec = 6;</code>
+     * @return The externalV6AddressSpec.
+     */
+    yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec getExternalV6AddressSpec();
+    /**
+     * <pre>
+     * Specification of parameters for external IPv6 networking.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v6_address_spec = 6;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpecOrBuilder getExternalV6AddressSpecOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.MasterUpdateSpec}
@@ -9803,6 +9830,19 @@ public final class ClusterServiceOuterClass {
               }
               locations_.add(
                   input.readMessage(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.parser(), extensionRegistry));
+              break;
+            }
+            case 50: {
+              yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec.Builder subBuilder = null;
+              if (externalV6AddressSpec_ != null) {
+                subBuilder = externalV6AddressSpec_.toBuilder();
+              }
+              externalV6AddressSpec_ = input.readMessage(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(externalV6AddressSpec_);
+                externalV6AddressSpec_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -10068,6 +10108,44 @@ public final class ClusterServiceOuterClass {
       return locations_.get(index);
     }
 
+    public static final int EXTERNAL_V6_ADDRESS_SPEC_FIELD_NUMBER = 6;
+    private yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec externalV6AddressSpec_;
+    /**
+     * <pre>
+     * Specification of parameters for external IPv6 networking.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v6_address_spec = 6;</code>
+     * @return Whether the externalV6AddressSpec field is set.
+     */
+    @java.lang.Override
+    public boolean hasExternalV6AddressSpec() {
+      return externalV6AddressSpec_ != null;
+    }
+    /**
+     * <pre>
+     * Specification of parameters for external IPv6 networking.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v6_address_spec = 6;</code>
+     * @return The externalV6AddressSpec.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec getExternalV6AddressSpec() {
+      return externalV6AddressSpec_ == null ? yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec.getDefaultInstance() : externalV6AddressSpec_;
+    }
+    /**
+     * <pre>
+     * Specification of parameters for external IPv6 networking.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v6_address_spec = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpecOrBuilder getExternalV6AddressSpecOrBuilder() {
+      return getExternalV6AddressSpec();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10096,6 +10174,9 @@ public final class ClusterServiceOuterClass {
       }
       for (int i = 0; i < locations_.size(); i++) {
         output.writeMessage(5, locations_.get(i));
+      }
+      if (externalV6AddressSpec_ != null) {
+        output.writeMessage(6, getExternalV6AddressSpec());
       }
       unknownFields.writeTo(output);
     }
@@ -10129,6 +10210,10 @@ public final class ClusterServiceOuterClass {
       for (int i = 0; i < locations_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, locations_.get(i));
+      }
+      if (externalV6AddressSpec_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getExternalV6AddressSpec());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10164,6 +10249,11 @@ public final class ClusterServiceOuterClass {
       }
       if (!getLocationsList()
           .equals(other.getLocationsList())) return false;
+      if (hasExternalV6AddressSpec() != other.hasExternalV6AddressSpec()) return false;
+      if (hasExternalV6AddressSpec()) {
+        if (!getExternalV6AddressSpec()
+            .equals(other.getExternalV6AddressSpec())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10194,6 +10284,10 @@ public final class ClusterServiceOuterClass {
       if (getLocationsCount() > 0) {
         hash = (37 * hash) + LOCATIONS_FIELD_NUMBER;
         hash = (53 * hash) + getLocationsList().hashCode();
+      }
+      if (hasExternalV6AddressSpec()) {
+        hash = (37 * hash) + EXTERNAL_V6_ADDRESS_SPEC_FIELD_NUMBER;
+        hash = (53 * hash) + getExternalV6AddressSpec().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -10355,6 +10449,12 @@ public final class ClusterServiceOuterClass {
         } else {
           locationsBuilder_.clear();
         }
+        if (externalV6AddressSpecBuilder_ == null) {
+          externalV6AddressSpec_ = null;
+        } else {
+          externalV6AddressSpec_ = null;
+          externalV6AddressSpecBuilder_ = null;
+        }
         return this;
       }
 
@@ -10410,6 +10510,11 @@ public final class ClusterServiceOuterClass {
           result.locations_ = locations_;
         } else {
           result.locations_ = locationsBuilder_.build();
+        }
+        if (externalV6AddressSpecBuilder_ == null) {
+          result.externalV6AddressSpec_ = externalV6AddressSpec_;
+        } else {
+          result.externalV6AddressSpec_ = externalV6AddressSpecBuilder_.build();
         }
         onBuilt();
         return result;
@@ -10503,6 +10608,9 @@ public final class ClusterServiceOuterClass {
               locationsBuilder_.addAllMessages(other.locations_);
             }
           }
+        }
+        if (other.hasExternalV6AddressSpec()) {
+          mergeExternalV6AddressSpec(other.getExternalV6AddressSpec());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11455,6 +11563,161 @@ public final class ClusterServiceOuterClass {
           locations_ = null;
         }
         return locationsBuilder_;
+      }
+
+      private yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec externalV6AddressSpec_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpecOrBuilder> externalV6AddressSpecBuilder_;
+      /**
+       * <pre>
+       * Specification of parameters for external IPv6 networking.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v6_address_spec = 6;</code>
+       * @return Whether the externalV6AddressSpec field is set.
+       */
+      public boolean hasExternalV6AddressSpec() {
+        return externalV6AddressSpecBuilder_ != null || externalV6AddressSpec_ != null;
+      }
+      /**
+       * <pre>
+       * Specification of parameters for external IPv6 networking.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v6_address_spec = 6;</code>
+       * @return The externalV6AddressSpec.
+       */
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec getExternalV6AddressSpec() {
+        if (externalV6AddressSpecBuilder_ == null) {
+          return externalV6AddressSpec_ == null ? yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec.getDefaultInstance() : externalV6AddressSpec_;
+        } else {
+          return externalV6AddressSpecBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specification of parameters for external IPv6 networking.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v6_address_spec = 6;</code>
+       */
+      public Builder setExternalV6AddressSpec(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec value) {
+        if (externalV6AddressSpecBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          externalV6AddressSpec_ = value;
+          onChanged();
+        } else {
+          externalV6AddressSpecBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specification of parameters for external IPv6 networking.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v6_address_spec = 6;</code>
+       */
+      public Builder setExternalV6AddressSpec(
+          yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec.Builder builderForValue) {
+        if (externalV6AddressSpecBuilder_ == null) {
+          externalV6AddressSpec_ = builderForValue.build();
+          onChanged();
+        } else {
+          externalV6AddressSpecBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specification of parameters for external IPv6 networking.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v6_address_spec = 6;</code>
+       */
+      public Builder mergeExternalV6AddressSpec(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec value) {
+        if (externalV6AddressSpecBuilder_ == null) {
+          if (externalV6AddressSpec_ != null) {
+            externalV6AddressSpec_ =
+              yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec.newBuilder(externalV6AddressSpec_).mergeFrom(value).buildPartial();
+          } else {
+            externalV6AddressSpec_ = value;
+          }
+          onChanged();
+        } else {
+          externalV6AddressSpecBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specification of parameters for external IPv6 networking.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v6_address_spec = 6;</code>
+       */
+      public Builder clearExternalV6AddressSpec() {
+        if (externalV6AddressSpecBuilder_ == null) {
+          externalV6AddressSpec_ = null;
+          onChanged();
+        } else {
+          externalV6AddressSpec_ = null;
+          externalV6AddressSpecBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specification of parameters for external IPv6 networking.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v6_address_spec = 6;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec.Builder getExternalV6AddressSpecBuilder() {
+        
+        onChanged();
+        return getExternalV6AddressSpecFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specification of parameters for external IPv6 networking.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v6_address_spec = 6;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpecOrBuilder getExternalV6AddressSpecOrBuilder() {
+        if (externalV6AddressSpecBuilder_ != null) {
+          return externalV6AddressSpecBuilder_.getMessageOrBuilder();
+        } else {
+          return externalV6AddressSpec_ == null ?
+              yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec.getDefaultInstance() : externalV6AddressSpec_;
+        }
+      }
+      /**
+       * <pre>
+       * Specification of parameters for external IPv6 networking.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v6_address_spec = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpecOrBuilder> 
+          getExternalV6AddressSpecFieldBuilder() {
+        if (externalV6AddressSpecBuilder_ == null) {
+          externalV6AddressSpecBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpecOrBuilder>(
+                  getExternalV6AddressSpec(),
+                  getParentForChildren(),
+                  isClean());
+          externalV6AddressSpec_ = null;
+        }
+        return externalV6AddressSpecBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -32705,136 +32968,138 @@ public final class ClusterServiceOuterClass {
       "kPolicy\022E\n\024ip_allocation_policy\030\013 \001(\0132\'." +
       "yandex.cloud.k8s.v1.IPAllocationPolicy\032-" +
       "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001B\022\n\020internet_gateway\"\243\002\n\020MasterUpda" +
+      "\t:\0028\001B\022\n\020internet_gateway\"\357\002\n\020MasterUpda" +
       "teSpec\0227\n\007version\030\001 \001(\0132&.yandex.cloud.k" +
       "8s.v1.UpdateVersionSpec\022H\n\022maintenance_p" +
       "olicy\030\002 \001(\0132,.yandex.cloud.k8s.v1.Master" +
       "MaintenancePolicy\022\032\n\022security_group_ids\030" +
       "\003 \003(\t\022:\n\016master_logging\030\004 \001(\0132\".yandex.c" +
       "loud.k8s.v1.MasterLogging\0224\n\tlocations\030\005" +
-      " \003(\0132!.yandex.cloud.k8s.v1.LocationSpec\"" +
-      "+\n\025UpdateClusterMetadata\022\022\n\ncluster_id\030\001" +
-      " \001(\t\"\330\006\n\024CreateClusterRequest\022\027\n\tfolder_" +
-      "id\030\001 \001(\tB\004\350\3071\001\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]" +
-      "([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descriptio" +
-      "n\030\003 \001(\tB\t\212\3101\005<=256\022\216\001\n\006labels\030\004 \003(\01325.ya" +
-      "ndex.cloud.k8s.v1.CreateClusterRequest.L" +
-      "abelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0" +
-      "-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-" +
-      "z]*\022\030\n\nnetwork_id\030\005 \001(\tB\004\350\3071\001\022:\n\013master_" +
-      "spec\030\006 \001(\0132\037.yandex.cloud.k8s.v1.MasterS" +
-      "pecB\004\350\3071\001\022E\n\024ip_allocation_policy\030\007 \001(\0132" +
-      "\'.yandex.cloud.k8s.v1.IPAllocationPolicy" +
-      "\022\036\n\024gateway_ipv4_address\030\010 \001(\tH\000\022 \n\022serv" +
-      "ice_account_id\030\t \001(\tB\004\350\3071\001\022%\n\027node_servi" +
-      "ce_account_id\030\n \001(\tB\004\350\3071\001\022<\n\017release_cha" +
-      "nnel\030\013 \001(\0162#.yandex.cloud.k8s.v1.Release" +
-      "Channel\022:\n\016network_policy\030\014 \001(\0132\".yandex" +
-      ".cloud.k8s.v1.NetworkPolicy\0226\n\014kms_provi" +
-      "der\030\r \001(\0132 .yandex.cloud.k8s.v1.KMSProvi" +
-      "der\022-\n\006cilium\030\016 \001(\0132\033.yandex.cloud.k8s.v" +
-      "1.CiliumH\001\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001B\022\n\020internet_gatewayB\030\n" +
-      "\026network_implementation\"+\n\025CreateCluster" +
-      "Metadata\022\022\n\ncluster_id\030\001 \001(\t\"/\n\031AutoUpgr" +
-      "adeMasterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\222\001" +
-      "\n\034ListClusterOperationsRequest\022\030\n\ncluste" +
-      "r_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
-      "\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032" +
-      "\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"o\n\035ListCluste" +
-      "rOperationsResponse\0225\n\noperations\030\001 \003(\0132" +
-      "!.yandex.cloud.operation.Operation\022\027\n\017ne" +
-      "xt_page_token\030\002 \001(\t\"\222\001\n\034ListClusterNodeG" +
-      "roupsRequest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022\035" +
-      "\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_to" +
-      "ken\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\310" +
-      "1\006<=1000\"m\n\035ListClusterNodeGroupsRespons" +
-      "e\0223\n\013node_groups\030\001 \003(\0132\036.yandex.cloud.k8" +
-      "s.v1.NodeGroup\022\027\n\017next_page_token\030\002 \001(\t\"" +
-      "q\n\027ListClusterNodesRequest\022\030\n\ncluster_id" +
+      " \003(\0132!.yandex.cloud.k8s.v1.LocationSpec\022" +
+      "J\n\030external_v6_address_spec\030\006 \001(\0132(.yand" +
+      "ex.cloud.k8s.v1.ExternalAddressSpec\"+\n\025U" +
+      "pdateClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t" +
+      "\"\330\006\n\024CreateClusterRequest\022\027\n\tfolder_id\030\001" +
+      " \001(\tB\004\350\3071\001\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a" +
+      "-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\003 " +
+      "\001(\tB\t\212\3101\005<=256\022\216\001\n\006labels\030\004 \003(\01325.yandex" +
+      ".cloud.k8s.v1.CreateClusterRequest.Label" +
+      "sEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-" +
+      "z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022" +
+      "\030\n\nnetwork_id\030\005 \001(\tB\004\350\3071\001\022:\n\013master_spec" +
+      "\030\006 \001(\0132\037.yandex.cloud.k8s.v1.MasterSpecB" +
+      "\004\350\3071\001\022E\n\024ip_allocation_policy\030\007 \001(\0132\'.ya" +
+      "ndex.cloud.k8s.v1.IPAllocationPolicy\022\036\n\024" +
+      "gateway_ipv4_address\030\010 \001(\tH\000\022 \n\022service_" +
+      "account_id\030\t \001(\tB\004\350\3071\001\022%\n\027node_service_a" +
+      "ccount_id\030\n \001(\tB\004\350\3071\001\022<\n\017release_channel" +
+      "\030\013 \001(\0162#.yandex.cloud.k8s.v1.ReleaseChan" +
+      "nel\022:\n\016network_policy\030\014 \001(\0132\".yandex.clo" +
+      "ud.k8s.v1.NetworkPolicy\0226\n\014kms_provider\030" +
+      "\r \001(\0132 .yandex.cloud.k8s.v1.KMSProvider\022" +
+      "-\n\006cilium\030\016 \001(\0132\033.yandex.cloud.k8s.v1.Ci" +
+      "liumH\001\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001B\022\n\020internet_gatewayB\030\n\026net" +
+      "work_implementation\"+\n\025CreateClusterMeta" +
+      "data\022\022\n\ncluster_id\030\001 \001(\t\"/\n\031AutoUpgradeM" +
+      "asterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\222\001\n\034Li" +
+      "stClusterOperationsRequest\022\030\n\ncluster_id" +
       "\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1" +
-      "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"]\n\030Li" +
-      "stClusterNodesResponse\022(\n\005nodes\030\001 \003(\0132\031." +
-      "yandex.cloud.k8s.v1.Node\022\027\n\017next_page_to" +
-      "ken\030\002 \001(\t\"\324\004\n\nMasterSpec\022A\n\021zonal_master" +
-      "_spec\030\001 \001(\0132$.yandex.cloud.k8s.v1.ZonalM" +
-      "asterSpecH\000\022G\n\024regional_master_spec\030\002 \001(" +
-      "\0132\'.yandex.cloud.k8s.v1.RegionalMasterSp" +
-      "ecH\000\0224\n\tlocations\030\010 \003(\0132!.yandex.cloud.k" +
-      "8s.v1.LocationSpec\022$\n\021etcd_cluster_size\030" +
-      "\t \001(\003B\t\372\3071\0050,1,3\022J\n\030external_v4_address_" +
-      "spec\030\n \001(\0132(.yandex.cloud.k8s.v1.Externa" +
-      "lAddressSpec\022J\n\030external_v6_address_spec" +
-      "\030\013 \001(\0132(.yandex.cloud.k8s.v1.ExternalAdd" +
-      "ressSpec\022\017\n\007version\030\003 \001(\t\022H\n\022maintenance" +
-      "_policy\030\004 \001(\0132,.yandex.cloud.k8s.v1.Mast" +
-      "erMaintenancePolicy\022\032\n\022security_group_id" +
-      "s\030\006 \003(\t\022:\n\016master_logging\030\007 \001(\0132\".yandex" +
-      ".cloud.k8s.v1.MasterLoggingB\r\n\013master_ty" +
-      "peJ\004\010\005\020\006\"\300\001\n\017ZonalMasterSpec\022\025\n\007zone_id\030" +
-      "\001 \001(\tB\004\350\3071\001\022J\n\030internal_v4_address_spec\030" +
-      "\002 \001(\0132(.yandex.cloud.k8s.v1.InternalAddr" +
-      "essSpec\022J\n\030external_v4_address_spec\030\003 \001(" +
-      "\0132(.yandex.cloud.k8s.v1.ExternalAddressS" +
-      "pec\"\375\001\n\022RegionalMasterSpec\022\027\n\tregion_id\030" +
-      "\001 \001(\tB\004\350\3071\001\0226\n\tlocations\030\002 \003(\0132#.yandex." +
-      "cloud.k8s.v1.MasterLocation\022J\n\030external_" +
-      "v4_address_spec\030\003 \001(\0132(.yandex.cloud.k8s" +
-      ".v1.ExternalAddressSpec\022J\n\030external_v6_a" +
-      "ddress_spec\030\004 \001(\0132(.yandex.cloud.k8s.v1." +
-      "ExternalAddressSpec\"(\n\023InternalAddressSp" +
-      "ec\022\021\n\tsubnet_id\030\002 \001(\t\"&\n\023ExternalAddress" +
-      "Spec\022\017\n\007address\030\001 \001(\t\"s\n\016MasterLocation\022" +
-      "\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022J\n\030internal_v4_ad" +
-      "dress_spec\030\002 \001(\0132(.yandex.cloud.k8s.v1.I" +
-      "nternalAddressSpec\"8\n\014LocationSpec\022\025\n\007zo" +
-      "ne_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tsubnet_id\030\002 \001(\t2\306\r\n" +
-      "\016ClusterService\022\201\001\n\003Get\022&.yandex.cloud.k" +
-      "8s.v1.GetClusterRequest\032\034.yandex.cloud.k" +
-      "8s.v1.Cluster\"4\202\323\344\223\002.\022,/managed-kubernet" +
-      "es/v1/clusters/{cluster_id}\022\204\001\n\004List\022(.y" +
-      "andex.cloud.k8s.v1.ListClustersRequest\032)" +
-      ".yandex.cloud.k8s.v1.ListClustersRespons" +
-      "e\"\'\202\323\344\223\002!\022\037/managed-kubernetes/v1/cluste" +
-      "rs\022\246\001\n\006Create\022).yandex.cloud.k8s.v1.Crea" +
-      "teClusterRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"N\202\323\344\223\002$\"\037/managed-kubernetes" +
-      "/v1/clusters:\001*\262\322* \n\025CreateClusterMetada" +
-      "ta\022\007Cluster\022\263\001\n\006Update\022).yandex.cloud.k8" +
-      "s.v1.UpdateClusterRequest\032!.yandex.cloud" +
-      ".operation.Operation\"[\202\323\344\223\00212,/managed-k" +
-      "ubernetes/v1/clusters/{cluster_id}:\001*\262\322*" +
-      " \n\025UpdateClusterMetadata\022\007Cluster\022\276\001\n\006De" +
-      "lete\022).yandex.cloud.k8s.v1.DeleteCluster" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"f\202\323\344\223\002.*,/managed-kubernetes/v1/clust" +
-      "ers/{cluster_id}\262\322*.\n\025DeleteClusterMetad" +
-      "ata\022\025google.protobuf.Empty\022\262\001\n\004Stop\022\'.ya" +
-      "ndex.cloud.k8s.v1.StopClusterRequest\032!.y" +
-      "andex.cloud.operation.Operation\"^\202\323\344\223\0026\"" +
-      "1/managed-kubernetes/v1/clusters/{cluste" +
-      "r_id}:stop:\001*\262\322*\036\n\023StopClusterMetadata\022\007" +
-      "Cluster\022\266\001\n\005Start\022(.yandex.cloud.k8s.v1." +
-      "StartClusterRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"`\202\323\344\223\0027\"2/managed-kuberne" +
-      "tes/v1/clusters/{cluster_id}:start:\001*\262\322*" +
-      "\037\n\024StartClusterMetadata\022\007Cluster\022\270\001\n\016Lis" +
-      "tNodeGroups\0221.yandex.cloud.k8s.v1.ListCl" +
-      "usterNodeGroupsRequest\0322.yandex.cloud.k8" +
-      "s.v1.ListClusterNodeGroupsResponse\"?\202\323\344\223" +
-      "\0029\0227/managed-kubernetes/v1/clusters/{clu" +
-      "ster_id}/nodeGroups\022\270\001\n\016ListOperations\0221" +
-      ".yandex.cloud.k8s.v1.ListClusterOperatio" +
-      "nsRequest\0322.yandex.cloud.k8s.v1.ListClus" +
-      "terOperationsResponse\"?\202\323\344\223\0029\0227/managed-" +
-      "kubernetes/v1/clusters/{cluster_id}/oper" +
-      "ations\022\244\001\n\tListNodes\022,.yandex.cloud.k8s." +
-      "v1.ListClusterNodesRequest\032-.yandex.clou" +
-      "d.k8s.v1.ListClusterNodesResponse\":\202\323\344\223\002" +
-      "4\0222/managed-kubernetes/v1/clusters/{clus" +
-      "ter_id}/nodesBV\n\027yandex.cloud.api.k8s.v1" +
-      "Z;github.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/k8s/v1;k8sb\006proto3"
+      "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006fi" +
+      "lter\030\004 \001(\tB\n\212\3101\006<=1000\"o\n\035ListClusterOpe" +
+      "rationsResponse\0225\n\noperations\030\001 \003(\0132!.ya" +
+      "ndex.cloud.operation.Operation\022\027\n\017next_p" +
+      "age_token\030\002 \001(\t\"\222\001\n\034ListClusterNodeGroup" +
+      "sRequest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpa" +
+      "ge_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030" +
+      "\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=" +
+      "1000\"m\n\035ListClusterNodeGroupsResponse\0223\n" +
+      "\013node_groups\030\001 \003(\0132\036.yandex.cloud.k8s.v1" +
+      ".NodeGroup\022\027\n\017next_page_token\030\002 \001(\t\"q\n\027L" +
+      "istClusterNodesRequest\022\030\n\ncluster_id\030\001 \001" +
+      "(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022" +
+      "\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"]\n\030ListCl" +
+      "usterNodesResponse\022(\n\005nodes\030\001 \003(\0132\031.yand" +
+      "ex.cloud.k8s.v1.Node\022\027\n\017next_page_token\030" +
+      "\002 \001(\t\"\324\004\n\nMasterSpec\022A\n\021zonal_master_spe" +
+      "c\030\001 \001(\0132$.yandex.cloud.k8s.v1.ZonalMaste" +
+      "rSpecH\000\022G\n\024regional_master_spec\030\002 \001(\0132\'." +
+      "yandex.cloud.k8s.v1.RegionalMasterSpecH\000" +
+      "\0224\n\tlocations\030\010 \003(\0132!.yandex.cloud.k8s.v" +
+      "1.LocationSpec\022$\n\021etcd_cluster_size\030\t \001(" +
+      "\003B\t\372\3071\0050,1,3\022J\n\030external_v4_address_spec" +
+      "\030\n \001(\0132(.yandex.cloud.k8s.v1.ExternalAdd" +
+      "ressSpec\022J\n\030external_v6_address_spec\030\013 \001" +
+      "(\0132(.yandex.cloud.k8s.v1.ExternalAddress" +
+      "Spec\022\017\n\007version\030\003 \001(\t\022H\n\022maintenance_pol" +
+      "icy\030\004 \001(\0132,.yandex.cloud.k8s.v1.MasterMa" +
+      "intenancePolicy\022\032\n\022security_group_ids\030\006 " +
+      "\003(\t\022:\n\016master_logging\030\007 \001(\0132\".yandex.clo" +
+      "ud.k8s.v1.MasterLoggingB\r\n\013master_typeJ\004" +
+      "\010\005\020\006\"\300\001\n\017ZonalMasterSpec\022\025\n\007zone_id\030\001 \001(" +
+      "\tB\004\350\3071\001\022J\n\030internal_v4_address_spec\030\002 \001(" +
+      "\0132(.yandex.cloud.k8s.v1.InternalAddressS" +
+      "pec\022J\n\030external_v4_address_spec\030\003 \001(\0132(." +
+      "yandex.cloud.k8s.v1.ExternalAddressSpec\"" +
+      "\375\001\n\022RegionalMasterSpec\022\027\n\tregion_id\030\001 \001(" +
+      "\tB\004\350\3071\001\0226\n\tlocations\030\002 \003(\0132#.yandex.clou" +
+      "d.k8s.v1.MasterLocation\022J\n\030external_v4_a" +
+      "ddress_spec\030\003 \001(\0132(.yandex.cloud.k8s.v1." +
+      "ExternalAddressSpec\022J\n\030external_v6_addre" +
+      "ss_spec\030\004 \001(\0132(.yandex.cloud.k8s.v1.Exte" +
+      "rnalAddressSpec\"(\n\023InternalAddressSpec\022\021" +
+      "\n\tsubnet_id\030\002 \001(\t\"&\n\023ExternalAddressSpec" +
+      "\022\017\n\007address\030\001 \001(\t\"s\n\016MasterLocation\022\025\n\007z" +
+      "one_id\030\001 \001(\tB\004\350\3071\001\022J\n\030internal_v4_addres" +
+      "s_spec\030\002 \001(\0132(.yandex.cloud.k8s.v1.Inter" +
+      "nalAddressSpec\"8\n\014LocationSpec\022\025\n\007zone_i" +
+      "d\030\001 \001(\tB\004\350\3071\001\022\021\n\tsubnet_id\030\002 \001(\t2\306\r\n\016Clu" +
+      "sterService\022\201\001\n\003Get\022&.yandex.cloud.k8s.v" +
+      "1.GetClusterRequest\032\034.yandex.cloud.k8s.v" +
+      "1.Cluster\"4\202\323\344\223\002.\022,/managed-kubernetes/v" +
+      "1/clusters/{cluster_id}\022\204\001\n\004List\022(.yande" +
+      "x.cloud.k8s.v1.ListClustersRequest\032).yan" +
+      "dex.cloud.k8s.v1.ListClustersResponse\"\'\202" +
+      "\323\344\223\002!\022\037/managed-kubernetes/v1/clusters\022\246" +
+      "\001\n\006Create\022).yandex.cloud.k8s.v1.CreateCl" +
+      "usterRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"N\202\323\344\223\002$\"\037/managed-kubernetes/v1/" +
+      "clusters:\001*\262\322* \n\025CreateClusterMetadata\022\007" +
+      "Cluster\022\263\001\n\006Update\022).yandex.cloud.k8s.v1" +
+      ".UpdateClusterRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"[\202\323\344\223\00212,/managed-kuber" +
+      "netes/v1/clusters/{cluster_id}:\001*\262\322* \n\025U" +
+      "pdateClusterMetadata\022\007Cluster\022\276\001\n\006Delete" +
+      "\022).yandex.cloud.k8s.v1.DeleteClusterRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"f" +
+      "\202\323\344\223\002.*,/managed-kubernetes/v1/clusters/" +
+      "{cluster_id}\262\322*.\n\025DeleteClusterMetadata\022" +
+      "\025google.protobuf.Empty\022\262\001\n\004Stop\022\'.yandex" +
+      ".cloud.k8s.v1.StopClusterRequest\032!.yande" +
+      "x.cloud.operation.Operation\"^\202\323\344\223\0026\"1/ma" +
+      "naged-kubernetes/v1/clusters/{cluster_id" +
+      "}:stop:\001*\262\322*\036\n\023StopClusterMetadata\022\007Clus" +
+      "ter\022\266\001\n\005Start\022(.yandex.cloud.k8s.v1.Star" +
+      "tClusterRequest\032!.yandex.cloud.operation" +
+      ".Operation\"`\202\323\344\223\0027\"2/managed-kubernetes/" +
+      "v1/clusters/{cluster_id}:start:\001*\262\322*\037\n\024S" +
+      "tartClusterMetadata\022\007Cluster\022\270\001\n\016ListNod" +
+      "eGroups\0221.yandex.cloud.k8s.v1.ListCluste" +
+      "rNodeGroupsRequest\0322.yandex.cloud.k8s.v1" +
+      ".ListClusterNodeGroupsResponse\"?\202\323\344\223\0029\0227" +
+      "/managed-kubernetes/v1/clusters/{cluster" +
+      "_id}/nodeGroups\022\270\001\n\016ListOperations\0221.yan" +
+      "dex.cloud.k8s.v1.ListClusterOperationsRe" +
+      "quest\0322.yandex.cloud.k8s.v1.ListClusterO" +
+      "perationsResponse\"?\202\323\344\223\0029\0227/managed-kube" +
+      "rnetes/v1/clusters/{cluster_id}/operatio" +
+      "ns\022\244\001\n\tListNodes\022,.yandex.cloud.k8s.v1.L" +
+      "istClusterNodesRequest\032-.yandex.cloud.k8" +
+      "s.v1.ListClusterNodesResponse\":\202\323\344\223\0024\0222/" +
+      "managed-kubernetes/v1/clusters/{cluster_" +
+      "id}/nodesBV\n\027yandex.cloud.api.k8s.v1Z;gi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/k8s/v1;k8sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -32920,7 +33185,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_k8s_v1_MasterUpdateSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_MasterUpdateSpec_descriptor,
-        new java.lang.String[] { "Version", "MaintenancePolicy", "SecurityGroupIds", "MasterLogging", "Locations", });
+        new java.lang.String[] { "Version", "MaintenancePolicy", "SecurityGroupIds", "MasterLogging", "Locations", "ExternalV6AddressSpec", });
     internal_static_yandex_cloud_k8s_v1_UpdateClusterMetadata_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_k8s_v1_UpdateClusterMetadata_fieldAccessorTable = new

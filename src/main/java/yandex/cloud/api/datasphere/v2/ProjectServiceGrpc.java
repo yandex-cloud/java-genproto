@@ -297,68 +297,6 @@ public final class ProjectServiceGrpc {
     return getExecuteMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsRequest,
-      yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsResponse> getGetCellOutputsMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetCellOutputs",
-      requestType = yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsRequest.class,
-      responseType = yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsRequest,
-      yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsResponse> getGetCellOutputsMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsRequest, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsResponse> getGetCellOutputsMethod;
-    if ((getGetCellOutputsMethod = ProjectServiceGrpc.getGetCellOutputsMethod) == null) {
-      synchronized (ProjectServiceGrpc.class) {
-        if ((getGetCellOutputsMethod = ProjectServiceGrpc.getGetCellOutputsMethod) == null) {
-          ProjectServiceGrpc.getGetCellOutputsMethod = getGetCellOutputsMethod =
-              io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsRequest, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCellOutputs"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("GetCellOutputs"))
-              .build();
-        }
-      }
-    }
-    return getGetCellOutputsMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesRequest,
-      yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesResponse> getGetStateVariablesMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetStateVariables",
-      requestType = yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesRequest.class,
-      responseType = yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesRequest,
-      yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesResponse> getGetStateVariablesMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesRequest, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesResponse> getGetStateVariablesMethod;
-    if ((getGetStateVariablesMethod = ProjectServiceGrpc.getGetStateVariablesMethod) == null) {
-      synchronized (ProjectServiceGrpc.class) {
-        if ((getGetStateVariablesMethod = ProjectServiceGrpc.getGetStateVariablesMethod) == null) {
-          ProjectServiceGrpc.getGetStateVariablesMethod = getGetStateVariablesMethod =
-              io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesRequest, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetStateVariables"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("GetStateVariables"))
-              .build();
-        }
-      }
-    }
-    return getGetStateVariablesMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest,
       yandex.cloud.api.access.Access.ListAccessBindingsResponse> getListAccessBindingsMethod;
 
@@ -781,28 +719,6 @@ public final class ProjectServiceGrpc {
 
     /**
      * <pre>
-     * Returns outputs of the specified cell.
-     * Deprecated
-     * </pre>
-     */
-    public void getCellOutputs(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCellOutputsMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Returns state variables of the specified notebook.
-     * Deprecated
-     * </pre>
-     */
-    public void getStateVariables(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetStateVariablesMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * Lists access bindings for the project.
      * </pre>
      */
@@ -956,20 +872,6 @@ public final class ProjectServiceGrpc {
                 yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ProjectExecutionRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_EXECUTE)))
-          .addMethod(
-            getGetCellOutputsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsRequest,
-                yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsResponse>(
-                  this, METHODID_GET_CELL_OUTPUTS)))
-          .addMethod(
-            getGetStateVariablesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesRequest,
-                yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesResponse>(
-                  this, METHODID_GET_STATE_VARIABLES)))
           .addMethod(
             getListAccessBindingsMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1151,30 +1053,6 @@ public final class ProjectServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getExecuteMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Returns outputs of the specified cell.
-     * Deprecated
-     * </pre>
-     */
-    public void getCellOutputs(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetCellOutputsMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Returns state variables of the specified notebook.
-     * Deprecated
-     * </pre>
-     */
-    public void getStateVariables(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetStateVariablesMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1386,28 +1264,6 @@ public final class ProjectServiceGrpc {
 
     /**
      * <pre>
-     * Returns outputs of the specified cell.
-     * Deprecated
-     * </pre>
-     */
-    public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsResponse getCellOutputs(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetCellOutputsMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * Returns state variables of the specified notebook.
-     * Deprecated
-     * </pre>
-     */
-    public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesResponse getStateVariables(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetStateVariablesMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
      * Lists access bindings for the project.
      * </pre>
      */
@@ -1615,30 +1471,6 @@ public final class ProjectServiceGrpc {
 
     /**
      * <pre>
-     * Returns outputs of the specified cell.
-     * Deprecated
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsResponse> getCellOutputs(
-        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetCellOutputsMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * Returns state variables of the specified notebook.
-     * Deprecated
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesResponse> getStateVariables(
-        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetStateVariablesMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * Lists access bindings for the project.
      * </pre>
      */
@@ -1746,17 +1578,15 @@ public final class ProjectServiceGrpc {
   private static final int METHODID_GET_UNIT_BALANCE = 6;
   private static final int METHODID_SET_UNIT_BALANCE = 7;
   private static final int METHODID_EXECUTE = 8;
-  private static final int METHODID_GET_CELL_OUTPUTS = 9;
-  private static final int METHODID_GET_STATE_VARIABLES = 10;
-  private static final int METHODID_LIST_ACCESS_BINDINGS = 11;
-  private static final int METHODID_SET_ACCESS_BINDINGS = 12;
-  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 13;
-  private static final int METHODID_ADD_RESOURCE = 14;
-  private static final int METHODID_REMOVE_RESOURCE = 15;
-  private static final int METHODID_RESIZE_DISK = 16;
-  private static final int METHODID_GET_RESTRICTIONS_META = 17;
-  private static final int METHODID_GET_RESTRICTIONS = 18;
-  private static final int METHODID_SET_RESTRICTIONS = 19;
+  private static final int METHODID_LIST_ACCESS_BINDINGS = 9;
+  private static final int METHODID_SET_ACCESS_BINDINGS = 10;
+  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 11;
+  private static final int METHODID_ADD_RESOURCE = 12;
+  private static final int METHODID_REMOVE_RESOURCE = 13;
+  private static final int METHODID_RESIZE_DISK = 14;
+  private static final int METHODID_GET_RESTRICTIONS_META = 15;
+  private static final int METHODID_GET_RESTRICTIONS = 16;
+  private static final int METHODID_SET_RESTRICTIONS = 17;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1810,14 +1640,6 @@ public final class ProjectServiceGrpc {
         case METHODID_EXECUTE:
           serviceImpl.execute((yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ProjectExecutionRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
-          break;
-        case METHODID_GET_CELL_OUTPUTS:
-          serviceImpl.getCellOutputs((yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsResponse>) responseObserver);
-          break;
-        case METHODID_GET_STATE_VARIABLES:
-          serviceImpl.getStateVariables((yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesResponse>) responseObserver);
           break;
         case METHODID_LIST_ACCESS_BINDINGS:
           serviceImpl.listAccessBindings((yandex.cloud.api.access.Access.ListAccessBindingsRequest) request,
@@ -1925,8 +1747,6 @@ public final class ProjectServiceGrpc {
               .addMethod(getGetUnitBalanceMethod())
               .addMethod(getSetUnitBalanceMethod())
               .addMethod(getExecuteMethod())
-              .addMethod(getGetCellOutputsMethod())
-              .addMethod(getGetStateVariablesMethod())
               .addMethod(getListAccessBindingsMethod())
               .addMethod(getSetAccessBindingsMethod())
               .addMethod(getUpdateAccessBindingsMethod())

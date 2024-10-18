@@ -3,6 +3,9 @@ package yandex.cloud.api.ai.assistants.v1.runs;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * RunService provides operations for managing runs.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -215,10 +218,16 @@ public final class RunServiceGrpc {
   }
 
   /**
+   * <pre>
+   * RunService provides operations for managing runs.
+   * </pre>
    */
   public static abstract class RunServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Create a new run for a given assistant and thread.
+     * </pre>
      */
     public void create(yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.CreateRunRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run> responseObserver) {
@@ -226,6 +235,11 @@ public final class RunServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Listen to events from a specific run.
+     * If the run was created with `stream = false`, Listen will only respond with the final status of the run
+     * and will not stream partial messages or intermediate events.
+     * </pre>
      */
     public void listen(yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.ListenRunRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamEvent> responseObserver) {
@@ -233,6 +247,9 @@ public final class RunServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific run by its ID.
+     * </pre>
      */
     public void get(yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.GetRunRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run> responseObserver) {
@@ -240,6 +257,9 @@ public final class RunServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the most recent run for a specific thread.
+     * </pre>
      */
     public void getLastByThread(yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.GetLastRunByThreadRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run> responseObserver) {
@@ -247,6 +267,9 @@ public final class RunServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List runs in a specific folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.ListRunsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.ListRunsResponse> responseObserver) {
@@ -295,6 +318,9 @@ public final class RunServiceGrpc {
   }
 
   /**
+   * <pre>
+   * RunService provides operations for managing runs.
+   * </pre>
    */
   public static final class RunServiceStub extends io.grpc.stub.AbstractAsyncStub<RunServiceStub> {
     private RunServiceStub(
@@ -309,6 +335,9 @@ public final class RunServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create a new run for a given assistant and thread.
+     * </pre>
      */
     public void create(yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.CreateRunRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run> responseObserver) {
@@ -317,6 +346,11 @@ public final class RunServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Listen to events from a specific run.
+     * If the run was created with `stream = false`, Listen will only respond with the final status of the run
+     * and will not stream partial messages or intermediate events.
+     * </pre>
      */
     public void listen(yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.ListenRunRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamEvent> responseObserver) {
@@ -325,6 +359,9 @@ public final class RunServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific run by its ID.
+     * </pre>
      */
     public void get(yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.GetRunRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run> responseObserver) {
@@ -333,6 +370,9 @@ public final class RunServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the most recent run for a specific thread.
+     * </pre>
      */
     public void getLastByThread(yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.GetLastRunByThreadRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run> responseObserver) {
@@ -341,6 +381,9 @@ public final class RunServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List runs in a specific folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.ListRunsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.ListRunsResponse> responseObserver) {
@@ -350,6 +393,9 @@ public final class RunServiceGrpc {
   }
 
   /**
+   * <pre>
+   * RunService provides operations for managing runs.
+   * </pre>
    */
   public static final class RunServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<RunServiceBlockingStub> {
     private RunServiceBlockingStub(
@@ -364,6 +410,9 @@ public final class RunServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create a new run for a given assistant and thread.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run create(yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.CreateRunRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -371,6 +420,11 @@ public final class RunServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Listen to events from a specific run.
+     * If the run was created with `stream = false`, Listen will only respond with the final status of the run
+     * and will not stream partial messages or intermediate events.
+     * </pre>
      */
     public java.util.Iterator<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamEvent> listen(
         yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.ListenRunRequest request) {
@@ -379,6 +433,9 @@ public final class RunServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific run by its ID.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run get(yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.GetRunRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -386,6 +443,9 @@ public final class RunServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the most recent run for a specific thread.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run getLastByThread(yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.GetLastRunByThreadRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -393,6 +453,9 @@ public final class RunServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List runs in a specific folder.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.ListRunsResponse list(yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.ListRunsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -401,6 +464,9 @@ public final class RunServiceGrpc {
   }
 
   /**
+   * <pre>
+   * RunService provides operations for managing runs.
+   * </pre>
    */
   public static final class RunServiceFutureStub extends io.grpc.stub.AbstractFutureStub<RunServiceFutureStub> {
     private RunServiceFutureStub(
@@ -415,6 +481,9 @@ public final class RunServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create a new run for a given assistant and thread.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run> create(
         yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.CreateRunRequest request) {
@@ -423,6 +492,9 @@ public final class RunServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific run by its ID.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run> get(
         yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.GetRunRequest request) {
@@ -431,6 +503,9 @@ public final class RunServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the most recent run for a specific thread.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run> getLastByThread(
         yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.GetLastRunByThreadRequest request) {
@@ -439,6 +514,9 @@ public final class RunServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List runs in a specific folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.ListRunsResponse> list(
         yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.ListRunsRequest request) {

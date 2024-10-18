@@ -19,11 +19,19 @@ public final class ThreadOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Unique identifier of the thread.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * Unique identifier of the thread.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -31,11 +39,19 @@ public final class ThreadOuterClass {
         getIdBytes();
 
     /**
+     * <pre>
+     * ID of the folder that the thread belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder that the thread belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The bytes for folderId.
      */
@@ -43,11 +59,19 @@ public final class ThreadOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Name of the thread.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the thread.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The bytes for name.
      */
@@ -55,11 +79,19 @@ public final class ThreadOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the thread.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the thread.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -67,11 +99,19 @@ public final class ThreadOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Default user ID that will be used as the author for thread messages if no other author is specified.
+     * </pre>
+     *
      * <code>string default_message_author_id = 5;</code>
      * @return The defaultMessageAuthorId.
      */
     java.lang.String getDefaultMessageAuthorId();
     /**
+     * <pre>
+     * Default user ID that will be used as the author for thread messages if no other author is specified.
+     * </pre>
+     *
      * <code>string default_message_author_id = 5;</code>
      * @return The bytes for defaultMessageAuthorId.
      */
@@ -79,11 +119,19 @@ public final class ThreadOuterClass {
         getDefaultMessageAuthorIdBytes();
 
     /**
+     * <pre>
+     * Identifier of the subject who created this thread.
+     * </pre>
+     *
      * <code>string created_by = 6;</code>
      * @return The createdBy.
      */
     java.lang.String getCreatedBy();
     /**
+     * <pre>
+     * Identifier of the subject who created this thread.
+     * </pre>
+     *
      * <code>string created_by = 6;</code>
      * @return The bytes for createdBy.
      */
@@ -91,26 +139,46 @@ public final class ThreadOuterClass {
         getCreatedByBytes();
 
     /**
+     * <pre>
+     * Timestamp representing when the thread was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 7;</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Timestamp representing when the thread was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 7;</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Timestamp representing when the thread was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 7;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
+     * <pre>
+     * Identifier of the subject who last updated this thread.
+     * </pre>
+     *
      * <code>string updated_by = 8;</code>
      * @return The updatedBy.
      */
     java.lang.String getUpdatedBy();
     /**
+     * <pre>
+     * Identifier of the subject who last updated this thread.
+     * </pre>
+     *
      * <code>string updated_by = 8;</code>
      * @return The bytes for updatedBy.
      */
@@ -118,55 +186,99 @@ public final class ThreadOuterClass {
         getUpdatedByBytes();
 
     /**
+     * <pre>
+     * Timestamp representing the last time this thread was updated.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 9;</code>
      * @return Whether the updatedAt field is set.
      */
     boolean hasUpdatedAt();
     /**
+     * <pre>
+     * Timestamp representing the last time this thread was updated.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 9;</code>
      * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
+     * <pre>
+     * Timestamp representing the last time this thread was updated.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 9;</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
 
     /**
+     * <pre>
+     * Configuration for the expiration of the thread, defining when and how the thread will expire.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 10;</code>
      * @return Whether the expirationConfig field is set.
      */
     boolean hasExpirationConfig();
     /**
+     * <pre>
+     * Configuration for the expiration of the thread, defining when and how the thread will expire.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 10;</code>
      * @return The expirationConfig.
      */
     yandex.cloud.api.ai.common.Common.ExpirationConfig getExpirationConfig();
     /**
+     * <pre>
+     * Configuration for the expiration of the thread, defining when and how the thread will expire.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 10;</code>
      */
     yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder getExpirationConfigOrBuilder();
 
     /**
+     * <pre>
+     * Timestamp representing when the thread will expire.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp expires_at = 11;</code>
      * @return Whether the expiresAt field is set.
      */
     boolean hasExpiresAt();
     /**
+     * <pre>
+     * Timestamp representing when the thread will expire.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp expires_at = 11;</code>
      * @return The expiresAt.
      */
     com.google.protobuf.Timestamp getExpiresAt();
     /**
+     * <pre>
+     * Timestamp representing when the thread will expire.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp expires_at = 11;</code>
      */
     com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder();
 
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 12;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 12;</code>
      */
     boolean containsLabels(
@@ -178,11 +290,19 @@ public final class ThreadOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 12;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 12;</code>
      */
 
@@ -190,6 +310,10 @@ public final class ThreadOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 12;</code>
      */
 
@@ -403,6 +527,10 @@ public final class ThreadOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * Unique identifier of the thread.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -420,6 +548,10 @@ public final class ThreadOuterClass {
       }
     }
     /**
+     * <pre>
+     * Unique identifier of the thread.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -441,6 +573,10 @@ public final class ThreadOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder that the thread belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The folderId.
      */
@@ -458,6 +594,10 @@ public final class ThreadOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder that the thread belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The bytes for folderId.
      */
@@ -479,6 +619,10 @@ public final class ThreadOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the thread.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The name.
      */
@@ -496,6 +640,10 @@ public final class ThreadOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the thread.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The bytes for name.
      */
@@ -517,6 +665,10 @@ public final class ThreadOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the thread.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
@@ -534,6 +686,10 @@ public final class ThreadOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the thread.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -555,6 +711,10 @@ public final class ThreadOuterClass {
     public static final int DEFAULT_MESSAGE_AUTHOR_ID_FIELD_NUMBER = 5;
     private volatile java.lang.Object defaultMessageAuthorId_;
     /**
+     * <pre>
+     * Default user ID that will be used as the author for thread messages if no other author is specified.
+     * </pre>
+     *
      * <code>string default_message_author_id = 5;</code>
      * @return The defaultMessageAuthorId.
      */
@@ -572,6 +732,10 @@ public final class ThreadOuterClass {
       }
     }
     /**
+     * <pre>
+     * Default user ID that will be used as the author for thread messages if no other author is specified.
+     * </pre>
+     *
      * <code>string default_message_author_id = 5;</code>
      * @return The bytes for defaultMessageAuthorId.
      */
@@ -593,6 +757,10 @@ public final class ThreadOuterClass {
     public static final int CREATED_BY_FIELD_NUMBER = 6;
     private volatile java.lang.Object createdBy_;
     /**
+     * <pre>
+     * Identifier of the subject who created this thread.
+     * </pre>
+     *
      * <code>string created_by = 6;</code>
      * @return The createdBy.
      */
@@ -610,6 +778,10 @@ public final class ThreadOuterClass {
       }
     }
     /**
+     * <pre>
+     * Identifier of the subject who created this thread.
+     * </pre>
+     *
      * <code>string created_by = 6;</code>
      * @return The bytes for createdBy.
      */
@@ -631,6 +803,10 @@ public final class ThreadOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 7;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Timestamp representing when the thread was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 7;</code>
      * @return Whether the createdAt field is set.
      */
@@ -639,6 +815,10 @@ public final class ThreadOuterClass {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Timestamp representing when the thread was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 7;</code>
      * @return The createdAt.
      */
@@ -647,6 +827,10 @@ public final class ThreadOuterClass {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Timestamp representing when the thread was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 7;</code>
      */
     @java.lang.Override
@@ -657,6 +841,10 @@ public final class ThreadOuterClass {
     public static final int UPDATED_BY_FIELD_NUMBER = 8;
     private volatile java.lang.Object updatedBy_;
     /**
+     * <pre>
+     * Identifier of the subject who last updated this thread.
+     * </pre>
+     *
      * <code>string updated_by = 8;</code>
      * @return The updatedBy.
      */
@@ -674,6 +862,10 @@ public final class ThreadOuterClass {
       }
     }
     /**
+     * <pre>
+     * Identifier of the subject who last updated this thread.
+     * </pre>
+     *
      * <code>string updated_by = 8;</code>
      * @return The bytes for updatedBy.
      */
@@ -695,6 +887,10 @@ public final class ThreadOuterClass {
     public static final int UPDATED_AT_FIELD_NUMBER = 9;
     private com.google.protobuf.Timestamp updatedAt_;
     /**
+     * <pre>
+     * Timestamp representing the last time this thread was updated.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 9;</code>
      * @return Whether the updatedAt field is set.
      */
@@ -703,6 +899,10 @@ public final class ThreadOuterClass {
       return updatedAt_ != null;
     }
     /**
+     * <pre>
+     * Timestamp representing the last time this thread was updated.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 9;</code>
      * @return The updatedAt.
      */
@@ -711,6 +911,10 @@ public final class ThreadOuterClass {
       return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
     /**
+     * <pre>
+     * Timestamp representing the last time this thread was updated.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 9;</code>
      */
     @java.lang.Override
@@ -721,6 +925,10 @@ public final class ThreadOuterClass {
     public static final int EXPIRATION_CONFIG_FIELD_NUMBER = 10;
     private yandex.cloud.api.ai.common.Common.ExpirationConfig expirationConfig_;
     /**
+     * <pre>
+     * Configuration for the expiration of the thread, defining when and how the thread will expire.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 10;</code>
      * @return Whether the expirationConfig field is set.
      */
@@ -729,6 +937,10 @@ public final class ThreadOuterClass {
       return expirationConfig_ != null;
     }
     /**
+     * <pre>
+     * Configuration for the expiration of the thread, defining when and how the thread will expire.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 10;</code>
      * @return The expirationConfig.
      */
@@ -737,6 +949,10 @@ public final class ThreadOuterClass {
       return expirationConfig_ == null ? yandex.cloud.api.ai.common.Common.ExpirationConfig.getDefaultInstance() : expirationConfig_;
     }
     /**
+     * <pre>
+     * Configuration for the expiration of the thread, defining when and how the thread will expire.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 10;</code>
      */
     @java.lang.Override
@@ -747,6 +963,10 @@ public final class ThreadOuterClass {
     public static final int EXPIRES_AT_FIELD_NUMBER = 11;
     private com.google.protobuf.Timestamp expiresAt_;
     /**
+     * <pre>
+     * Timestamp representing when the thread will expire.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp expires_at = 11;</code>
      * @return Whether the expiresAt field is set.
      */
@@ -755,6 +975,10 @@ public final class ThreadOuterClass {
       return expiresAt_ != null;
     }
     /**
+     * <pre>
+     * Timestamp representing when the thread will expire.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp expires_at = 11;</code>
      * @return The expiresAt.
      */
@@ -763,6 +987,10 @@ public final class ThreadOuterClass {
       return expiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
     }
     /**
+     * <pre>
+     * Timestamp representing when the thread will expire.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp expires_at = 11;</code>
      */
     @java.lang.Override
@@ -797,6 +1025,10 @@ public final class ThreadOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 12;</code>
      */
 
@@ -815,6 +1047,10 @@ public final class ThreadOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 12;</code>
      */
     @java.lang.Override
@@ -823,6 +1059,10 @@ public final class ThreadOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 12;</code>
      */
     @java.lang.Override
@@ -836,6 +1076,10 @@ public final class ThreadOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 12;</code>
      */
     @java.lang.Override
@@ -1428,6 +1672,10 @@ public final class ThreadOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * Unique identifier of the thread.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -1444,6 +1692,10 @@ public final class ThreadOuterClass {
         }
       }
       /**
+       * <pre>
+       * Unique identifier of the thread.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -1461,6 +1713,10 @@ public final class ThreadOuterClass {
         }
       }
       /**
+       * <pre>
+       * Unique identifier of the thread.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -1476,6 +1732,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Unique identifier of the thread.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -1486,6 +1746,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Unique identifier of the thread.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -1504,6 +1768,10 @@ public final class ThreadOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder that the thread belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @return The folderId.
        */
@@ -1520,6 +1788,10 @@ public final class ThreadOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder that the thread belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @return The bytes for folderId.
        */
@@ -1537,6 +1809,10 @@ public final class ThreadOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder that the thread belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -1552,6 +1828,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder that the thread belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -1562,6 +1842,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder that the thread belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -1580,6 +1864,10 @@ public final class ThreadOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the thread.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return The name.
        */
@@ -1596,6 +1884,10 @@ public final class ThreadOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the thread.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return The bytes for name.
        */
@@ -1613,6 +1905,10 @@ public final class ThreadOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the thread.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -1628,6 +1924,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the thread.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return This builder for chaining.
        */
@@ -1638,6 +1938,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the thread.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -1656,6 +1960,10 @@ public final class ThreadOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the thread.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The description.
        */
@@ -1672,6 +1980,10 @@ public final class ThreadOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the thread.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The bytes for description.
        */
@@ -1689,6 +2001,10 @@ public final class ThreadOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the thread.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -1704,6 +2020,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the thread.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return This builder for chaining.
        */
@@ -1714,6 +2034,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the thread.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -1732,6 +2056,10 @@ public final class ThreadOuterClass {
 
       private java.lang.Object defaultMessageAuthorId_ = "";
       /**
+       * <pre>
+       * Default user ID that will be used as the author for thread messages if no other author is specified.
+       * </pre>
+       *
        * <code>string default_message_author_id = 5;</code>
        * @return The defaultMessageAuthorId.
        */
@@ -1748,6 +2076,10 @@ public final class ThreadOuterClass {
         }
       }
       /**
+       * <pre>
+       * Default user ID that will be used as the author for thread messages if no other author is specified.
+       * </pre>
+       *
        * <code>string default_message_author_id = 5;</code>
        * @return The bytes for defaultMessageAuthorId.
        */
@@ -1765,6 +2097,10 @@ public final class ThreadOuterClass {
         }
       }
       /**
+       * <pre>
+       * Default user ID that will be used as the author for thread messages if no other author is specified.
+       * </pre>
+       *
        * <code>string default_message_author_id = 5;</code>
        * @param value The defaultMessageAuthorId to set.
        * @return This builder for chaining.
@@ -1780,6 +2116,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Default user ID that will be used as the author for thread messages if no other author is specified.
+       * </pre>
+       *
        * <code>string default_message_author_id = 5;</code>
        * @return This builder for chaining.
        */
@@ -1790,6 +2130,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Default user ID that will be used as the author for thread messages if no other author is specified.
+       * </pre>
+       *
        * <code>string default_message_author_id = 5;</code>
        * @param value The bytes for defaultMessageAuthorId to set.
        * @return This builder for chaining.
@@ -1808,6 +2152,10 @@ public final class ThreadOuterClass {
 
       private java.lang.Object createdBy_ = "";
       /**
+       * <pre>
+       * Identifier of the subject who created this thread.
+       * </pre>
+       *
        * <code>string created_by = 6;</code>
        * @return The createdBy.
        */
@@ -1824,6 +2172,10 @@ public final class ThreadOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier of the subject who created this thread.
+       * </pre>
+       *
        * <code>string created_by = 6;</code>
        * @return The bytes for createdBy.
        */
@@ -1841,6 +2193,10 @@ public final class ThreadOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier of the subject who created this thread.
+       * </pre>
+       *
        * <code>string created_by = 6;</code>
        * @param value The createdBy to set.
        * @return This builder for chaining.
@@ -1856,6 +2212,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the subject who created this thread.
+       * </pre>
+       *
        * <code>string created_by = 6;</code>
        * @return This builder for chaining.
        */
@@ -1866,6 +2226,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the subject who created this thread.
+       * </pre>
+       *
        * <code>string created_by = 6;</code>
        * @param value The bytes for createdBy to set.
        * @return This builder for chaining.
@@ -1886,6 +2250,10 @@ public final class ThreadOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Timestamp representing when the thread was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
        * @return Whether the createdAt field is set.
        */
@@ -1893,6 +2261,10 @@ public final class ThreadOuterClass {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Timestamp representing when the thread was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
        * @return The createdAt.
        */
@@ -1904,6 +2276,10 @@ public final class ThreadOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp representing when the thread was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1920,6 +2296,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the thread was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
        */
       public Builder setCreatedAt(
@@ -1934,6 +2314,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the thread was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1952,6 +2336,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the thread was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
        */
       public Builder clearCreatedAt() {
@@ -1966,6 +2354,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the thread was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -1974,6 +2366,10 @@ public final class ThreadOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Timestamp representing when the thread was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -1985,6 +2381,10 @@ public final class ThreadOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp representing when the thread was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2003,6 +2403,10 @@ public final class ThreadOuterClass {
 
       private java.lang.Object updatedBy_ = "";
       /**
+       * <pre>
+       * Identifier of the subject who last updated this thread.
+       * </pre>
+       *
        * <code>string updated_by = 8;</code>
        * @return The updatedBy.
        */
@@ -2019,6 +2423,10 @@ public final class ThreadOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier of the subject who last updated this thread.
+       * </pre>
+       *
        * <code>string updated_by = 8;</code>
        * @return The bytes for updatedBy.
        */
@@ -2036,6 +2444,10 @@ public final class ThreadOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier of the subject who last updated this thread.
+       * </pre>
+       *
        * <code>string updated_by = 8;</code>
        * @param value The updatedBy to set.
        * @return This builder for chaining.
@@ -2051,6 +2463,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the subject who last updated this thread.
+       * </pre>
+       *
        * <code>string updated_by = 8;</code>
        * @return This builder for chaining.
        */
@@ -2061,6 +2477,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the subject who last updated this thread.
+       * </pre>
+       *
        * <code>string updated_by = 8;</code>
        * @param value The bytes for updatedBy to set.
        * @return This builder for chaining.
@@ -2081,6 +2501,10 @@ public final class ThreadOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
+       * <pre>
+       * Timestamp representing the last time this thread was updated.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 9;</code>
        * @return Whether the updatedAt field is set.
        */
@@ -2088,6 +2512,10 @@ public final class ThreadOuterClass {
         return updatedAtBuilder_ != null || updatedAt_ != null;
       }
       /**
+       * <pre>
+       * Timestamp representing the last time this thread was updated.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 9;</code>
        * @return The updatedAt.
        */
@@ -2099,6 +2527,10 @@ public final class ThreadOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp representing the last time this thread was updated.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 9;</code>
        */
       public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
@@ -2115,6 +2547,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing the last time this thread was updated.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 9;</code>
        */
       public Builder setUpdatedAt(
@@ -2129,6 +2565,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing the last time this thread was updated.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 9;</code>
        */
       public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
@@ -2147,6 +2587,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing the last time this thread was updated.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 9;</code>
        */
       public Builder clearUpdatedAt() {
@@ -2161,6 +2605,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing the last time this thread was updated.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 9;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedAtBuilder() {
@@ -2169,6 +2617,10 @@ public final class ThreadOuterClass {
         return getUpdatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Timestamp representing the last time this thread was updated.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 9;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
@@ -2180,6 +2632,10 @@ public final class ThreadOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp representing the last time this thread was updated.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2200,6 +2656,10 @@ public final class ThreadOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.common.Common.ExpirationConfig, yandex.cloud.api.ai.common.Common.ExpirationConfig.Builder, yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder> expirationConfigBuilder_;
       /**
+       * <pre>
+       * Configuration for the expiration of the thread, defining when and how the thread will expire.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 10;</code>
        * @return Whether the expirationConfig field is set.
        */
@@ -2207,6 +2667,10 @@ public final class ThreadOuterClass {
         return expirationConfigBuilder_ != null || expirationConfig_ != null;
       }
       /**
+       * <pre>
+       * Configuration for the expiration of the thread, defining when and how the thread will expire.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 10;</code>
        * @return The expirationConfig.
        */
@@ -2218,6 +2682,10 @@ public final class ThreadOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration for the expiration of the thread, defining when and how the thread will expire.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 10;</code>
        */
       public Builder setExpirationConfig(yandex.cloud.api.ai.common.Common.ExpirationConfig value) {
@@ -2234,6 +2702,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for the expiration of the thread, defining when and how the thread will expire.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 10;</code>
        */
       public Builder setExpirationConfig(
@@ -2248,6 +2720,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for the expiration of the thread, defining when and how the thread will expire.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 10;</code>
        */
       public Builder mergeExpirationConfig(yandex.cloud.api.ai.common.Common.ExpirationConfig value) {
@@ -2266,6 +2742,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for the expiration of the thread, defining when and how the thread will expire.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 10;</code>
        */
       public Builder clearExpirationConfig() {
@@ -2280,6 +2760,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for the expiration of the thread, defining when and how the thread will expire.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 10;</code>
        */
       public yandex.cloud.api.ai.common.Common.ExpirationConfig.Builder getExpirationConfigBuilder() {
@@ -2288,6 +2772,10 @@ public final class ThreadOuterClass {
         return getExpirationConfigFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Configuration for the expiration of the thread, defining when and how the thread will expire.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 10;</code>
        */
       public yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder getExpirationConfigOrBuilder() {
@@ -2299,6 +2787,10 @@ public final class ThreadOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration for the expiration of the thread, defining when and how the thread will expire.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2319,6 +2811,10 @@ public final class ThreadOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> expiresAtBuilder_;
       /**
+       * <pre>
+       * Timestamp representing when the thread will expire.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp expires_at = 11;</code>
        * @return Whether the expiresAt field is set.
        */
@@ -2326,6 +2822,10 @@ public final class ThreadOuterClass {
         return expiresAtBuilder_ != null || expiresAt_ != null;
       }
       /**
+       * <pre>
+       * Timestamp representing when the thread will expire.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp expires_at = 11;</code>
        * @return The expiresAt.
        */
@@ -2337,6 +2837,10 @@ public final class ThreadOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp representing when the thread will expire.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp expires_at = 11;</code>
        */
       public Builder setExpiresAt(com.google.protobuf.Timestamp value) {
@@ -2353,6 +2857,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the thread will expire.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp expires_at = 11;</code>
        */
       public Builder setExpiresAt(
@@ -2367,6 +2875,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the thread will expire.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp expires_at = 11;</code>
        */
       public Builder mergeExpiresAt(com.google.protobuf.Timestamp value) {
@@ -2385,6 +2897,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the thread will expire.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp expires_at = 11;</code>
        */
       public Builder clearExpiresAt() {
@@ -2399,6 +2915,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the thread will expire.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp expires_at = 11;</code>
        */
       public com.google.protobuf.Timestamp.Builder getExpiresAtBuilder() {
@@ -2407,6 +2927,10 @@ public final class ThreadOuterClass {
         return getExpiresAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Timestamp representing when the thread will expire.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp expires_at = 11;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder() {
@@ -2418,6 +2942,10 @@ public final class ThreadOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp representing when the thread will expire.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp expires_at = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2461,6 +2989,10 @@ public final class ThreadOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the thread.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 12;</code>
        */
 
@@ -2479,6 +3011,10 @@ public final class ThreadOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the thread.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 12;</code>
        */
       @java.lang.Override
@@ -2487,6 +3023,10 @@ public final class ThreadOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the thread.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 12;</code>
        */
       @java.lang.Override
@@ -2500,6 +3040,10 @@ public final class ThreadOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the thread.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 12;</code>
        */
       @java.lang.Override
@@ -2521,6 +3065,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the thread.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 12;</code>
        */
 
@@ -2540,6 +3088,10 @@ public final class ThreadOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the thread.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 12;</code>
        */
       public Builder putLabels(
@@ -2555,6 +3107,10 @@ public final class ThreadOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the thread.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 12;</code>
        */
 

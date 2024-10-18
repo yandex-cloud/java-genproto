@@ -19,11 +19,19 @@ public final class MessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Unique identifier of the message.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * Unique identifier of the message.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -31,11 +39,19 @@ public final class MessageOuterClass {
         getIdBytes();
 
     /**
+     * <pre>
+     * ID of the thread that this message belongs to.
+     * </pre>
+     *
      * <code>string thread_id = 2;</code>
      * @return The threadId.
      */
     java.lang.String getThreadId();
     /**
+     * <pre>
+     * ID of the thread that this message belongs to.
+     * </pre>
+     *
      * <code>string thread_id = 2;</code>
      * @return The bytes for threadId.
      */
@@ -43,11 +59,19 @@ public final class MessageOuterClass {
         getThreadIdBytes();
 
     /**
+     * <pre>
+     * Identifier of the subject who created this message.
+     * </pre>
+     *
      * <code>string created_by = 3;</code>
      * @return The createdBy.
      */
     java.lang.String getCreatedBy();
     /**
+     * <pre>
+     * Identifier of the subject who created this message.
+     * </pre>
+     *
      * <code>string created_by = 3;</code>
      * @return The bytes for createdBy.
      */
@@ -55,40 +79,72 @@ public final class MessageOuterClass {
         getCreatedByBytes();
 
     /**
+     * <pre>
+     * Timestamp representing when the message was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Timestamp representing when the message was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Timestamp representing when the message was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
+     * <pre>
+     * Author of the message, containing details about the message's creator.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 5;</code>
      * @return Whether the author field is set.
      */
     boolean hasAuthor();
     /**
+     * <pre>
+     * Author of the message, containing details about the message's creator.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 5;</code>
      * @return The author.
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Author getAuthor();
     /**
+     * <pre>
+     * Author of the message, containing details about the message's creator.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 5;</code>
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.AuthorOrBuilder getAuthorOrBuilder();
 
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     boolean containsLabels(
@@ -100,11 +156,19 @@ public final class MessageOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -112,6 +176,10 @@ public final class MessageOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -119,19 +187,50 @@ public final class MessageOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * Content of the message.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 7;</code>
      * @return Whether the content field is set.
      */
     boolean hasContent();
     /**
+     * <pre>
+     * Content of the message.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 7;</code>
      * @return The content.
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent getContent();
     /**
+     * <pre>
+     * Content of the message.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 7;</code>
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContentOrBuilder getContentOrBuilder();
+
+    /**
+     * <pre>
+     * Status of the message.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.threads.Message.MessageStatus status = 8;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <pre>
+     * Status of the message.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.threads.Message.MessageStatus status = 8;</code>
+     * @return The status.
+     */
+    yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message.MessageStatus getStatus();
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.Message}
@@ -149,6 +248,7 @@ public final class MessageOuterClass {
       id_ = "";
       threadId_ = "";
       createdBy_ = "";
+      status_ = 0;
     }
 
     @java.lang.Override
@@ -252,6 +352,12 @@ public final class MessageOuterClass {
 
               break;
             }
+            case 64: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -296,9 +402,175 @@ public final class MessageOuterClass {
               yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message.class, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message.Builder.class);
     }
 
+    /**
+     * <pre>
+     * Enum representing the status of a message.
+     * </pre>
+     *
+     * Protobuf enum {@code yandex.cloud.ai.assistants.v1.threads.Message.MessageStatus}
+     */
+    public enum MessageStatus
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * Unspecified message status.
+       * </pre>
+       *
+       * <code>MESSAGE_STATUS_UNSPECIFIED = 0;</code>
+       */
+      MESSAGE_STATUS_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Message was successfully created by a user or generated by an assistant.
+       * </pre>
+       *
+       * <code>COMPLETED = 1;</code>
+       */
+      COMPLETED(1),
+      /**
+       * <pre>
+       * Message generation was truncated due to reaching the maximum allowed number of tokens.
+       * </pre>
+       *
+       * <code>TRUNCATED = 2;</code>
+       */
+      TRUNCATED(2),
+      /**
+       * <pre>
+       * Message generation was stopped because potentially sensitive content was detected either in the prompt or in the generated response.
+       * </pre>
+       *
+       * <code>FILTERED_CONTENT = 3;</code>
+       */
+      FILTERED_CONTENT(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * Unspecified message status.
+       * </pre>
+       *
+       * <code>MESSAGE_STATUS_UNSPECIFIED = 0;</code>
+       */
+      public static final int MESSAGE_STATUS_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Message was successfully created by a user or generated by an assistant.
+       * </pre>
+       *
+       * <code>COMPLETED = 1;</code>
+       */
+      public static final int COMPLETED_VALUE = 1;
+      /**
+       * <pre>
+       * Message generation was truncated due to reaching the maximum allowed number of tokens.
+       * </pre>
+       *
+       * <code>TRUNCATED = 2;</code>
+       */
+      public static final int TRUNCATED_VALUE = 2;
+      /**
+       * <pre>
+       * Message generation was stopped because potentially sensitive content was detected either in the prompt or in the generated response.
+       * </pre>
+       *
+       * <code>FILTERED_CONTENT = 3;</code>
+       */
+      public static final int FILTERED_CONTENT_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static MessageStatus valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static MessageStatus forNumber(int value) {
+        switch (value) {
+          case 0: return MESSAGE_STATUS_UNSPECIFIED;
+          case 1: return COMPLETED;
+          case 2: return TRUNCATED;
+          case 3: return FILTERED_CONTENT;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<MessageStatus>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          MessageStatus> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<MessageStatus>() {
+              public MessageStatus findValueByNumber(int number) {
+                return MessageStatus.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final MessageStatus[] VALUES = values();
+
+      public static MessageStatus valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private MessageStatus(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.ai.assistants.v1.threads.Message.MessageStatus)
+    }
+
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * Unique identifier of the message.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -316,6 +588,10 @@ public final class MessageOuterClass {
       }
     }
     /**
+     * <pre>
+     * Unique identifier of the message.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -337,6 +613,10 @@ public final class MessageOuterClass {
     public static final int THREAD_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object threadId_;
     /**
+     * <pre>
+     * ID of the thread that this message belongs to.
+     * </pre>
+     *
      * <code>string thread_id = 2;</code>
      * @return The threadId.
      */
@@ -354,6 +634,10 @@ public final class MessageOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the thread that this message belongs to.
+     * </pre>
+     *
      * <code>string thread_id = 2;</code>
      * @return The bytes for threadId.
      */
@@ -375,6 +659,10 @@ public final class MessageOuterClass {
     public static final int CREATED_BY_FIELD_NUMBER = 3;
     private volatile java.lang.Object createdBy_;
     /**
+     * <pre>
+     * Identifier of the subject who created this message.
+     * </pre>
+     *
      * <code>string created_by = 3;</code>
      * @return The createdBy.
      */
@@ -392,6 +680,10 @@ public final class MessageOuterClass {
       }
     }
     /**
+     * <pre>
+     * Identifier of the subject who created this message.
+     * </pre>
+     *
      * <code>string created_by = 3;</code>
      * @return The bytes for createdBy.
      */
@@ -413,6 +705,10 @@ public final class MessageOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 4;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Timestamp representing when the message was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      * @return Whether the createdAt field is set.
      */
@@ -421,6 +717,10 @@ public final class MessageOuterClass {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Timestamp representing when the message was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      * @return The createdAt.
      */
@@ -429,6 +729,10 @@ public final class MessageOuterClass {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Timestamp representing when the message was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
     @java.lang.Override
@@ -439,6 +743,10 @@ public final class MessageOuterClass {
     public static final int AUTHOR_FIELD_NUMBER = 5;
     private yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Author author_;
     /**
+     * <pre>
+     * Author of the message, containing details about the message's creator.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 5;</code>
      * @return Whether the author field is set.
      */
@@ -447,6 +755,10 @@ public final class MessageOuterClass {
       return author_ != null;
     }
     /**
+     * <pre>
+     * Author of the message, containing details about the message's creator.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 5;</code>
      * @return The author.
      */
@@ -455,6 +767,10 @@ public final class MessageOuterClass {
       return author_ == null ? yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Author.getDefaultInstance() : author_;
     }
     /**
+     * <pre>
+     * Author of the message, containing details about the message's creator.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 5;</code>
      */
     @java.lang.Override
@@ -489,6 +805,10 @@ public final class MessageOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -507,6 +827,10 @@ public final class MessageOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -515,6 +839,10 @@ public final class MessageOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -528,6 +856,10 @@ public final class MessageOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -546,6 +878,10 @@ public final class MessageOuterClass {
     public static final int CONTENT_FIELD_NUMBER = 7;
     private yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent content_;
     /**
+     * <pre>
+     * Content of the message.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 7;</code>
      * @return Whether the content field is set.
      */
@@ -554,6 +890,10 @@ public final class MessageOuterClass {
       return content_ != null;
     }
     /**
+     * <pre>
+     * Content of the message.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 7;</code>
      * @return The content.
      */
@@ -562,11 +902,42 @@ public final class MessageOuterClass {
       return content_ == null ? yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent.getDefaultInstance() : content_;
     }
     /**
+     * <pre>
+     * Content of the message.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 7;</code>
      */
     @java.lang.Override
     public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContentOrBuilder getContentOrBuilder() {
       return getContent();
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 8;
+    private int status_;
+    /**
+     * <pre>
+     * Status of the message.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.threads.Message.MessageStatus status = 8;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * Status of the message.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.threads.Message.MessageStatus status = 8;</code>
+     * @return The status.
+     */
+    @java.lang.Override public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message.MessageStatus getStatus() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message.MessageStatus result = yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message.MessageStatus.valueOf(status_);
+      return result == null ? yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message.MessageStatus.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -606,6 +977,9 @@ public final class MessageOuterClass {
           6);
       if (content_ != null) {
         output.writeMessage(7, getContent());
+      }
+      if (status_ != yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message.MessageStatus.MESSAGE_STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(8, status_);
       }
       unknownFields.writeTo(output);
     }
@@ -647,6 +1021,10 @@ public final class MessageOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getContent());
       }
+      if (status_ != yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message.MessageStatus.MESSAGE_STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(8, status_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -685,6 +1063,7 @@ public final class MessageOuterClass {
         if (!getContent()
             .equals(other.getContent())) return false;
       }
+      if (status_ != other.status_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -718,6 +1097,8 @@ public final class MessageOuterClass {
         hash = (37 * hash) + CONTENT_FIELD_NUMBER;
         hash = (53 * hash) + getContent().hashCode();
       }
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -898,6 +1279,8 @@ public final class MessageOuterClass {
           content_ = null;
           contentBuilder_ = null;
         }
+        status_ = 0;
+
         return this;
       }
 
@@ -945,6 +1328,7 @@ public final class MessageOuterClass {
         } else {
           result.content_ = contentBuilder_.build();
         }
+        result.status_ = status_;
         onBuilt();
         return result;
       }
@@ -1016,6 +1400,9 @@ public final class MessageOuterClass {
         if (other.hasContent()) {
           mergeContent(other.getContent());
         }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1048,6 +1435,10 @@ public final class MessageOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * Unique identifier of the message.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -1064,6 +1455,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Unique identifier of the message.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -1081,6 +1476,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Unique identifier of the message.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -1096,6 +1495,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Unique identifier of the message.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -1106,6 +1509,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Unique identifier of the message.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -1124,6 +1531,10 @@ public final class MessageOuterClass {
 
       private java.lang.Object threadId_ = "";
       /**
+       * <pre>
+       * ID of the thread that this message belongs to.
+       * </pre>
+       *
        * <code>string thread_id = 2;</code>
        * @return The threadId.
        */
@@ -1140,6 +1551,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thread that this message belongs to.
+       * </pre>
+       *
        * <code>string thread_id = 2;</code>
        * @return The bytes for threadId.
        */
@@ -1157,6 +1572,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thread that this message belongs to.
+       * </pre>
+       *
        * <code>string thread_id = 2;</code>
        * @param value The threadId to set.
        * @return This builder for chaining.
@@ -1172,6 +1591,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thread that this message belongs to.
+       * </pre>
+       *
        * <code>string thread_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -1182,6 +1605,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thread that this message belongs to.
+       * </pre>
+       *
        * <code>string thread_id = 2;</code>
        * @param value The bytes for threadId to set.
        * @return This builder for chaining.
@@ -1200,6 +1627,10 @@ public final class MessageOuterClass {
 
       private java.lang.Object createdBy_ = "";
       /**
+       * <pre>
+       * Identifier of the subject who created this message.
+       * </pre>
+       *
        * <code>string created_by = 3;</code>
        * @return The createdBy.
        */
@@ -1216,6 +1647,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier of the subject who created this message.
+       * </pre>
+       *
        * <code>string created_by = 3;</code>
        * @return The bytes for createdBy.
        */
@@ -1233,6 +1668,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier of the subject who created this message.
+       * </pre>
+       *
        * <code>string created_by = 3;</code>
        * @param value The createdBy to set.
        * @return This builder for chaining.
@@ -1248,6 +1687,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the subject who created this message.
+       * </pre>
+       *
        * <code>string created_by = 3;</code>
        * @return This builder for chaining.
        */
@@ -1258,6 +1701,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the subject who created this message.
+       * </pre>
+       *
        * <code>string created_by = 3;</code>
        * @param value The bytes for createdBy to set.
        * @return This builder for chaining.
@@ -1278,6 +1725,10 @@ public final class MessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Timestamp representing when the message was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        * @return Whether the createdAt field is set.
        */
@@ -1285,6 +1736,10 @@ public final class MessageOuterClass {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Timestamp representing when the message was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        * @return The createdAt.
        */
@@ -1296,6 +1751,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp representing when the message was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1312,6 +1771,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the message was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public Builder setCreatedAt(
@@ -1326,6 +1789,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the message was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1344,6 +1811,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the message was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public Builder clearCreatedAt() {
@@ -1358,6 +1829,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the message was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -1366,6 +1841,10 @@ public final class MessageOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Timestamp representing when the message was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -1377,6 +1856,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp representing when the message was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1397,6 +1880,10 @@ public final class MessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Author, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Author.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.AuthorOrBuilder> authorBuilder_;
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 5;</code>
        * @return Whether the author field is set.
        */
@@ -1404,6 +1891,10 @@ public final class MessageOuterClass {
         return authorBuilder_ != null || author_ != null;
       }
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 5;</code>
        * @return The author.
        */
@@ -1415,6 +1906,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 5;</code>
        */
       public Builder setAuthor(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Author value) {
@@ -1431,6 +1926,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 5;</code>
        */
       public Builder setAuthor(
@@ -1445,6 +1944,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 5;</code>
        */
       public Builder mergeAuthor(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Author value) {
@@ -1463,6 +1966,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 5;</code>
        */
       public Builder clearAuthor() {
@@ -1477,6 +1984,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 5;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Author.Builder getAuthorBuilder() {
@@ -1485,6 +1996,10 @@ public final class MessageOuterClass {
         return getAuthorFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 5;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.AuthorOrBuilder getAuthorOrBuilder() {
@@ -1496,6 +2011,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1539,6 +2058,10 @@ public final class MessageOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the message.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1557,6 +2080,10 @@ public final class MessageOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the message.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -1565,6 +2092,10 @@ public final class MessageOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the message.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -1578,6 +2109,10 @@ public final class MessageOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the message.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -1599,6 +2134,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the message.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1618,6 +2157,10 @@ public final class MessageOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the message.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       public Builder putLabels(
@@ -1633,6 +2176,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the message.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1647,6 +2194,10 @@ public final class MessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContentOrBuilder> contentBuilder_;
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 7;</code>
        * @return Whether the content field is set.
        */
@@ -1654,6 +2205,10 @@ public final class MessageOuterClass {
         return contentBuilder_ != null || content_ != null;
       }
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 7;</code>
        * @return The content.
        */
@@ -1665,6 +2220,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 7;</code>
        */
       public Builder setContent(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent value) {
@@ -1681,6 +2240,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 7;</code>
        */
       public Builder setContent(
@@ -1695,6 +2258,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 7;</code>
        */
       public Builder mergeContent(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent value) {
@@ -1713,6 +2280,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 7;</code>
        */
       public Builder clearContent() {
@@ -1727,6 +2298,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 7;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent.Builder getContentBuilder() {
@@ -1735,6 +2310,10 @@ public final class MessageOuterClass {
         return getContentFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 7;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContentOrBuilder getContentOrBuilder() {
@@ -1746,6 +2325,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1760,6 +2343,80 @@ public final class MessageOuterClass {
           content_ = null;
         }
         return contentBuilder_;
+      }
+
+      private int status_ = 0;
+      /**
+       * <pre>
+       * Status of the message.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.threads.Message.MessageStatus status = 8;</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <pre>
+       * Status of the message.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.threads.Message.MessageStatus status = 8;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status of the message.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.threads.Message.MessageStatus status = 8;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message.MessageStatus getStatus() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message.MessageStatus result = yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message.MessageStatus.valueOf(status_);
+        return result == null ? yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message.MessageStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Status of the message.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.threads.Message.MessageStatus status = 8;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message.MessageStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status of the message.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.threads.Message.MessageStatus status = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1819,30 +2476,54 @@ public final class MessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * A list of content parts that make up the message.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
      */
     java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart> 
         getContentList();
     /**
+     * <pre>
+     * A list of content parts that make up the message.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart getContent(int index);
     /**
+     * <pre>
+     * A list of content parts that make up the message.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
      */
     int getContentCount();
     /**
+     * <pre>
+     * A list of content parts that make up the message.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPartOrBuilder> 
         getContentOrBuilderList();
     /**
+     * <pre>
+     * A list of content parts that make up the message.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPartOrBuilder getContentOrBuilder(
         int index);
   }
   /**
+   * <pre>
+   * Represents the content of a message, which can consist of multiple parts.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.MessageContent}
    */
   public static final class MessageContent extends
@@ -1936,6 +2617,10 @@ public final class MessageOuterClass {
     public static final int CONTENT_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart> content_;
     /**
+     * <pre>
+     * A list of content parts that make up the message.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
      */
     @java.lang.Override
@@ -1943,6 +2628,10 @@ public final class MessageOuterClass {
       return content_;
     }
     /**
+     * <pre>
+     * A list of content parts that make up the message.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
      */
     @java.lang.Override
@@ -1951,6 +2640,10 @@ public final class MessageOuterClass {
       return content_;
     }
     /**
+     * <pre>
+     * A list of content parts that make up the message.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
      */
     @java.lang.Override
@@ -1958,6 +2651,10 @@ public final class MessageOuterClass {
       return content_.size();
     }
     /**
+     * <pre>
+     * A list of content parts that make up the message.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
      */
     @java.lang.Override
@@ -1965,6 +2662,10 @@ public final class MessageOuterClass {
       return content_.get(index);
     }
     /**
+     * <pre>
+     * A list of content parts that make up the message.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
      */
     @java.lang.Override
@@ -2131,6 +2832,10 @@ public final class MessageOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Represents the content of a message, which can consist of multiple parts.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.MessageContent}
      */
     public static final class Builder extends
@@ -2328,6 +3033,10 @@ public final class MessageOuterClass {
           yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPartOrBuilder> contentBuilder_;
 
       /**
+       * <pre>
+       * A list of content parts that make up the message.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
        */
       public java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart> getContentList() {
@@ -2338,6 +3047,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * A list of content parts that make up the message.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
        */
       public int getContentCount() {
@@ -2348,6 +3061,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * A list of content parts that make up the message.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart getContent(int index) {
@@ -2358,6 +3075,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * A list of content parts that make up the message.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
        */
       public Builder setContent(
@@ -2375,6 +3096,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A list of content parts that make up the message.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
        */
       public Builder setContent(
@@ -2389,6 +3114,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A list of content parts that make up the message.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
        */
       public Builder addContent(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart value) {
@@ -2405,6 +3134,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A list of content parts that make up the message.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
        */
       public Builder addContent(
@@ -2422,6 +3155,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A list of content parts that make up the message.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
        */
       public Builder addContent(
@@ -2436,6 +3173,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A list of content parts that make up the message.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
        */
       public Builder addContent(
@@ -2450,6 +3191,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A list of content parts that make up the message.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
        */
       public Builder addAllContent(
@@ -2465,6 +3210,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A list of content parts that make up the message.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
        */
       public Builder clearContent() {
@@ -2478,6 +3227,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A list of content parts that make up the message.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
        */
       public Builder removeContent(int index) {
@@ -2491,6 +3244,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A list of content parts that make up the message.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart.Builder getContentBuilder(
@@ -2498,6 +3255,10 @@ public final class MessageOuterClass {
         return getContentFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * A list of content parts that make up the message.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPartOrBuilder getContentOrBuilder(
@@ -2508,6 +3269,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * A list of content parts that make up the message.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPartOrBuilder> 
@@ -2519,6 +3284,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * A list of content parts that make up the message.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart.Builder addContentBuilder() {
@@ -2526,6 +3295,10 @@ public final class MessageOuterClass {
             yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart.getDefaultInstance());
       }
       /**
+       * <pre>
+       * A list of content parts that make up the message.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart.Builder addContentBuilder(
@@ -2534,6 +3307,10 @@ public final class MessageOuterClass {
             index, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart.getDefaultInstance());
       }
       /**
+       * <pre>
+       * A list of content parts that make up the message.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
        */
       public java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart.Builder> 
@@ -2612,25 +3389,45 @@ public final class MessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Author of the message, containing details about the message's creator.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 1;</code>
      * @return Whether the author field is set.
      */
     boolean hasAuthor();
     /**
+     * <pre>
+     * Author of the message, containing details about the message's creator.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 1;</code>
      * @return The author.
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Author getAuthor();
     /**
+     * <pre>
+     * Author of the message, containing details about the message's creator.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 1;</code>
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.AuthorOrBuilder getAuthorOrBuilder();
 
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 2;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 2;</code>
      */
     boolean containsLabels(
@@ -2642,11 +3439,19 @@ public final class MessageOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 2;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 2;</code>
      */
 
@@ -2654,6 +3459,10 @@ public final class MessageOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 2;</code>
      */
 
@@ -2661,21 +3470,38 @@ public final class MessageOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * Content of the message.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 3;</code>
      * @return Whether the content field is set.
      */
     boolean hasContent();
     /**
+     * <pre>
+     * Content of the message.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 3;</code>
      * @return The content.
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent getContent();
     /**
+     * <pre>
+     * Content of the message.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 3;</code>
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContentOrBuilder getContentOrBuilder();
   }
   /**
+   * <pre>
+   * Represents the data required to create or initialize a message in a thread.
+   * This message is used, for example, to initialize a thread with some messages upon its creation.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.MessageData}
    */
   public static final class MessageData extends
@@ -2807,6 +3633,10 @@ public final class MessageOuterClass {
     public static final int AUTHOR_FIELD_NUMBER = 1;
     private yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Author author_;
     /**
+     * <pre>
+     * Author of the message, containing details about the message's creator.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 1;</code>
      * @return Whether the author field is set.
      */
@@ -2815,6 +3645,10 @@ public final class MessageOuterClass {
       return author_ != null;
     }
     /**
+     * <pre>
+     * Author of the message, containing details about the message's creator.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 1;</code>
      * @return The author.
      */
@@ -2823,6 +3657,10 @@ public final class MessageOuterClass {
       return author_ == null ? yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Author.getDefaultInstance() : author_;
     }
     /**
+     * <pre>
+     * Author of the message, containing details about the message's creator.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 1;</code>
      */
     @java.lang.Override
@@ -2857,6 +3695,10 @@ public final class MessageOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 2;</code>
      */
 
@@ -2875,6 +3717,10 @@ public final class MessageOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 2;</code>
      */
     @java.lang.Override
@@ -2883,6 +3729,10 @@ public final class MessageOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 2;</code>
      */
     @java.lang.Override
@@ -2896,6 +3746,10 @@ public final class MessageOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 2;</code>
      */
     @java.lang.Override
@@ -2914,6 +3768,10 @@ public final class MessageOuterClass {
     public static final int CONTENT_FIELD_NUMBER = 3;
     private yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent content_;
     /**
+     * <pre>
+     * Content of the message.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 3;</code>
      * @return Whether the content field is set.
      */
@@ -2922,6 +3780,10 @@ public final class MessageOuterClass {
       return content_ != null;
     }
     /**
+     * <pre>
+     * Content of the message.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 3;</code>
      * @return The content.
      */
@@ -2930,6 +3792,10 @@ public final class MessageOuterClass {
       return content_ == null ? yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent.getDefaultInstance() : content_;
     }
     /**
+     * <pre>
+     * Content of the message.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 3;</code>
      */
     @java.lang.Override
@@ -3136,6 +4002,11 @@ public final class MessageOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Represents the data required to create or initialize a message in a thread.
+     * This message is used, for example, to initialize a thread with some messages upon its creation.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.MessageData}
      */
     public static final class Builder extends
@@ -3337,6 +4208,10 @@ public final class MessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Author, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Author.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.AuthorOrBuilder> authorBuilder_;
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 1;</code>
        * @return Whether the author field is set.
        */
@@ -3344,6 +4219,10 @@ public final class MessageOuterClass {
         return authorBuilder_ != null || author_ != null;
       }
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 1;</code>
        * @return The author.
        */
@@ -3355,6 +4234,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 1;</code>
        */
       public Builder setAuthor(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Author value) {
@@ -3371,6 +4254,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 1;</code>
        */
       public Builder setAuthor(
@@ -3385,6 +4272,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 1;</code>
        */
       public Builder mergeAuthor(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Author value) {
@@ -3403,6 +4294,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 1;</code>
        */
       public Builder clearAuthor() {
@@ -3417,6 +4312,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Author.Builder getAuthorBuilder() {
@@ -3425,6 +4324,10 @@ public final class MessageOuterClass {
         return getAuthorFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.AuthorOrBuilder getAuthorOrBuilder() {
@@ -3436,6 +4339,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3479,6 +4386,10 @@ public final class MessageOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the message.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 2;</code>
        */
 
@@ -3497,6 +4408,10 @@ public final class MessageOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the message.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 2;</code>
        */
       @java.lang.Override
@@ -3505,6 +4420,10 @@ public final class MessageOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the message.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 2;</code>
        */
       @java.lang.Override
@@ -3518,6 +4437,10 @@ public final class MessageOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the message.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 2;</code>
        */
       @java.lang.Override
@@ -3539,6 +4462,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the message.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 2;</code>
        */
 
@@ -3558,6 +4485,10 @@ public final class MessageOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the message.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 2;</code>
        */
       public Builder putLabels(
@@ -3573,6 +4504,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the message.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 2;</code>
        */
 
@@ -3587,6 +4522,10 @@ public final class MessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContentOrBuilder> contentBuilder_;
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 3;</code>
        * @return Whether the content field is set.
        */
@@ -3594,6 +4533,10 @@ public final class MessageOuterClass {
         return contentBuilder_ != null || content_ != null;
       }
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 3;</code>
        * @return The content.
        */
@@ -3605,6 +4548,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 3;</code>
        */
       public Builder setContent(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent value) {
@@ -3621,6 +4568,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 3;</code>
        */
       public Builder setContent(
@@ -3635,6 +4586,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 3;</code>
        */
       public Builder mergeContent(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent value) {
@@ -3653,6 +4608,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 3;</code>
        */
       public Builder clearContent() {
@@ -3667,6 +4626,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 3;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent.Builder getContentBuilder() {
@@ -3675,6 +4638,10 @@ public final class MessageOuterClass {
         return getContentFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 3;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContentOrBuilder getContentOrBuilder() {
@@ -3686,6 +4653,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3759,11 +4730,19 @@ public final class MessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Text content of the message.
+     * </pre>
+     *
      * <code>string content = 1;</code>
      * @return The content.
      */
     java.lang.String getContent();
     /**
+     * <pre>
+     * Text content of the message.
+     * </pre>
+     *
      * <code>string content = 1;</code>
      * @return The bytes for content.
      */
@@ -3771,6 +4750,10 @@ public final class MessageOuterClass {
         getContentBytes();
   }
   /**
+   * <pre>
+   * Text represents a textual content part of a message.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.Text}
    */
   public static final class Text extends
@@ -3857,6 +4840,10 @@ public final class MessageOuterClass {
     public static final int CONTENT_FIELD_NUMBER = 1;
     private volatile java.lang.Object content_;
     /**
+     * <pre>
+     * Text content of the message.
+     * </pre>
+     *
      * <code>string content = 1;</code>
      * @return The content.
      */
@@ -3874,6 +4861,10 @@ public final class MessageOuterClass {
       }
     }
     /**
+     * <pre>
+     * Text content of the message.
+     * </pre>
+     *
      * <code>string content = 1;</code>
      * @return The bytes for content.
      */
@@ -4047,6 +5038,10 @@ public final class MessageOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Text represents a textual content part of a message.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.Text}
      */
     public static final class Builder extends
@@ -4196,6 +5191,10 @@ public final class MessageOuterClass {
 
       private java.lang.Object content_ = "";
       /**
+       * <pre>
+       * Text content of the message.
+       * </pre>
+       *
        * <code>string content = 1;</code>
        * @return The content.
        */
@@ -4212,6 +5211,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Text content of the message.
+       * </pre>
+       *
        * <code>string content = 1;</code>
        * @return The bytes for content.
        */
@@ -4229,6 +5232,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Text content of the message.
+       * </pre>
+       *
        * <code>string content = 1;</code>
        * @param value The content to set.
        * @return This builder for chaining.
@@ -4244,6 +5251,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Text content of the message.
+       * </pre>
+       *
        * <code>string content = 1;</code>
        * @return This builder for chaining.
        */
@@ -4254,6 +5265,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Text content of the message.
+       * </pre>
+       *
        * <code>string content = 1;</code>
        * @param value The bytes for content to set.
        * @return This builder for chaining.
@@ -4327,16 +5342,28 @@ public final class MessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Text content of the message part.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Text text = 1;</code>
      * @return Whether the text field is set.
      */
     boolean hasText();
     /**
+     * <pre>
+     * Text content of the message part.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Text text = 1;</code>
      * @return The text.
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Text getText();
     /**
+     * <pre>
+     * Text content of the message part.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Text text = 1;</code>
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.TextOrBuilder getTextOrBuilder();
@@ -4344,6 +5371,10 @@ public final class MessageOuterClass {
     public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart.PartTypeCase getPartTypeCase();
   }
   /**
+   * <pre>
+   * ContentPart represents an individual part of the message content, which can be of various types.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.ContentPart}
    */
   public static final class ContentPart extends
@@ -4475,6 +5506,10 @@ public final class MessageOuterClass {
 
     public static final int TEXT_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * Text content of the message part.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Text text = 1;</code>
      * @return Whether the text field is set.
      */
@@ -4483,6 +5518,10 @@ public final class MessageOuterClass {
       return partTypeCase_ == 1;
     }
     /**
+     * <pre>
+     * Text content of the message part.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Text text = 1;</code>
      * @return The text.
      */
@@ -4494,6 +5533,10 @@ public final class MessageOuterClass {
       return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Text.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Text content of the message part.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Text text = 1;</code>
      */
     @java.lang.Override
@@ -4673,6 +5716,10 @@ public final class MessageOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * ContentPart represents an individual part of the message content, which can be of various types.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.ContentPart}
      */
     public static final class Builder extends
@@ -4850,6 +5897,10 @@ public final class MessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Text, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Text.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.TextOrBuilder> textBuilder_;
       /**
+       * <pre>
+       * Text content of the message part.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Text text = 1;</code>
        * @return Whether the text field is set.
        */
@@ -4858,6 +5909,10 @@ public final class MessageOuterClass {
         return partTypeCase_ == 1;
       }
       /**
+       * <pre>
+       * Text content of the message part.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Text text = 1;</code>
        * @return The text.
        */
@@ -4876,6 +5931,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Text content of the message part.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Text text = 1;</code>
        */
       public Builder setText(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Text value) {
@@ -4892,6 +5951,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Text content of the message part.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Text text = 1;</code>
        */
       public Builder setText(
@@ -4906,6 +5969,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Text content of the message part.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Text text = 1;</code>
        */
       public Builder mergeText(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Text value) {
@@ -4928,6 +5995,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Text content of the message part.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Text text = 1;</code>
        */
       public Builder clearText() {
@@ -4947,12 +6018,20 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Text content of the message part.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Text text = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Text.Builder getTextBuilder() {
         return getTextFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Text content of the message part.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Text text = 1;</code>
        */
       @java.lang.Override
@@ -4967,6 +6046,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Text content of the message part.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Text text = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5045,11 +6128,19 @@ public final class MessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Unique identifier of the author. This could be either the user's ID or the assistant's ID, depending on the role.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * Unique identifier of the author. This could be either the user's ID or the assistant's ID, depending on the role.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -5057,11 +6148,19 @@ public final class MessageOuterClass {
         getIdBytes();
 
     /**
+     * <pre>
+     * Role of the author, indicating whether the message was created by a "user" or an "assistant".
+     * </pre>
+     *
      * <code>string role = 2;</code>
      * @return The role.
      */
     java.lang.String getRole();
     /**
+     * <pre>
+     * Role of the author, indicating whether the message was created by a "user" or an "assistant".
+     * </pre>
+     *
      * <code>string role = 2;</code>
      * @return The bytes for role.
      */
@@ -5069,6 +6168,10 @@ public final class MessageOuterClass {
         getRoleBytes();
   }
   /**
+   * <pre>
+   * Author of the message, containing details about the message's creator.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.Author}
    */
   public static final class Author extends
@@ -5162,6 +6265,10 @@ public final class MessageOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * Unique identifier of the author. This could be either the user's ID or the assistant's ID, depending on the role.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -5179,6 +6286,10 @@ public final class MessageOuterClass {
       }
     }
     /**
+     * <pre>
+     * Unique identifier of the author. This could be either the user's ID or the assistant's ID, depending on the role.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -5200,6 +6311,10 @@ public final class MessageOuterClass {
     public static final int ROLE_FIELD_NUMBER = 2;
     private volatile java.lang.Object role_;
     /**
+     * <pre>
+     * Role of the author, indicating whether the message was created by a "user" or an "assistant".
+     * </pre>
+     *
      * <code>string role = 2;</code>
      * @return The role.
      */
@@ -5217,6 +6332,10 @@ public final class MessageOuterClass {
       }
     }
     /**
+     * <pre>
+     * Role of the author, indicating whether the message was created by a "user" or an "assistant".
+     * </pre>
+     *
      * <code>string role = 2;</code>
      * @return The bytes for role.
      */
@@ -5400,6 +6519,10 @@ public final class MessageOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Author of the message, containing details about the message's creator.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.Author}
      */
     public static final class Builder extends
@@ -5556,6 +6679,10 @@ public final class MessageOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * Unique identifier of the author. This could be either the user's ID or the assistant's ID, depending on the role.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -5572,6 +6699,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Unique identifier of the author. This could be either the user's ID or the assistant's ID, depending on the role.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -5589,6 +6720,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Unique identifier of the author. This could be either the user's ID or the assistant's ID, depending on the role.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -5604,6 +6739,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Unique identifier of the author. This could be either the user's ID or the assistant's ID, depending on the role.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -5614,6 +6753,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Unique identifier of the author. This could be either the user's ID or the assistant's ID, depending on the role.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -5632,6 +6775,10 @@ public final class MessageOuterClass {
 
       private java.lang.Object role_ = "";
       /**
+       * <pre>
+       * Role of the author, indicating whether the message was created by a "user" or an "assistant".
+       * </pre>
+       *
        * <code>string role = 2;</code>
        * @return The role.
        */
@@ -5648,6 +6795,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Role of the author, indicating whether the message was created by a "user" or an "assistant".
+       * </pre>
+       *
        * <code>string role = 2;</code>
        * @return The bytes for role.
        */
@@ -5665,6 +6816,10 @@ public final class MessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Role of the author, indicating whether the message was created by a "user" or an "assistant".
+       * </pre>
+       *
        * <code>string role = 2;</code>
        * @param value The role to set.
        * @return This builder for chaining.
@@ -5680,6 +6835,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Role of the author, indicating whether the message was created by a "user" or an "assistant".
+       * </pre>
+       *
        * <code>string role = 2;</code>
        * @return This builder for chaining.
        */
@@ -5690,6 +6849,10 @@ public final class MessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Role of the author, indicating whether the message was created by a "user" or an "assistant".
+       * </pre>
+       *
        * <code>string role = 2;</code>
        * @param value The bytes for role to set.
        * @return This builder for chaining.
@@ -5810,7 +6973,7 @@ public final class MessageOuterClass {
       "\n3yandex/cloud/ai/assistants/v1/threads/" +
       "message.proto\022%yandex.cloud.ai.assistant" +
       "s.v1.threads\032\037google/protobuf/timestamp." +
-      "proto\"\356\002\n\007Message\022\n\n\002id\030\001 \001(\t\022\021\n\tthread_" +
+      "proto\"\241\004\n\007Message\022\n\n\002id\030\001 \001(\t\022\021\n\tthread_" +
       "id\030\002 \001(\t\022\022\n\ncreated_by\030\003 \001(\t\022.\n\ncreated_" +
       "at\030\004 \001(\0132\032.google.protobuf.Timestamp\022=\n\006" +
       "author\030\005 \001(\0132-.yandex.cloud.ai.assistant" +
@@ -5818,24 +6981,29 @@ public final class MessageOuterClass {
       "ndex.cloud.ai.assistants.v1.threads.Mess" +
       "age.LabelsEntry\022F\n\007content\030\007 \001(\01325.yande" +
       "x.cloud.ai.assistants.v1.threads.Message" +
-      "Content\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\"U\n\016MessageContent\022C\n\007cont" +
-      "ent\030\001 \003(\01322.yandex.cloud.ai.assistants.v" +
-      "1.threads.ContentPart\"\223\002\n\013MessageData\022=\n" +
-      "\006author\030\001 \001(\0132-.yandex.cloud.ai.assistan" +
-      "ts.v1.threads.Author\022N\n\006labels\030\002 \003(\0132>.y" +
-      "andex.cloud.ai.assistants.v1.threads.Mes" +
-      "sageData.LabelsEntry\022F\n\007content\030\003 \001(\01325." +
-      "yandex.cloud.ai.assistants.v1.threads.Me" +
-      "ssageContent\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001\"\027\n\004Text\022\017\n\007content\030\001" +
-      " \001(\t\"V\n\013ContentPart\022;\n\004text\030\001 \001(\0132+.yand" +
-      "ex.cloud.ai.assistants.v1.threads.TextH\000" +
-      "B\n\n\010PartType\"\"\n\006Author\022\n\n\002id\030\001 \001(\t\022\014\n\004ro" +
-      "le\030\002 \001(\tB~\n)yandex.cloud.api.ai.assistan" +
-      "ts.v1.threadsZQgithub.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/ai/assistants/v1" +
-      "/threads;threadsb\006proto3"
+      "Content\022L\n\006status\030\010 \001(\0162<.yandex.cloud.a" +
+      "i.assistants.v1.threads.Message.MessageS" +
+      "tatus\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001\"c\n\rMessageStatus\022\036\n\032MESSAGE" +
+      "_STATUS_UNSPECIFIED\020\000\022\r\n\tCOMPLETED\020\001\022\r\n\t" +
+      "TRUNCATED\020\002\022\024\n\020FILTERED_CONTENT\020\003\"U\n\016Mes" +
+      "sageContent\022C\n\007content\030\001 \003(\01322.yandex.cl" +
+      "oud.ai.assistants.v1.threads.ContentPart" +
+      "\"\223\002\n\013MessageData\022=\n\006author\030\001 \001(\0132-.yande" +
+      "x.cloud.ai.assistants.v1.threads.Author\022" +
+      "N\n\006labels\030\002 \003(\0132>.yandex.cloud.ai.assist" +
+      "ants.v1.threads.MessageData.LabelsEntry\022" +
+      "F\n\007content\030\003 \001(\01325.yandex.cloud.ai.assis" +
+      "tants.v1.threads.MessageContent\032-\n\013Label" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\027" +
+      "\n\004Text\022\017\n\007content\030\001 \001(\t\"V\n\013ContentPart\022;" +
+      "\n\004text\030\001 \001(\0132+.yandex.cloud.ai.assistant" +
+      "s.v1.threads.TextH\000B\n\n\010PartType\"\"\n\006Autho" +
+      "r\022\n\n\002id\030\001 \001(\t\022\014\n\004role\030\002 \001(\tB~\n)yandex.cl" +
+      "oud.api.ai.assistants.v1.threadsZQgithub" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/ai/assistants/v1/threads;threadsb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5847,7 +7015,7 @@ public final class MessageOuterClass {
     internal_static_yandex_cloud_ai_assistants_v1_threads_Message_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_threads_Message_descriptor,
-        new java.lang.String[] { "Id", "ThreadId", "CreatedBy", "CreatedAt", "Author", "Labels", "Content", });
+        new java.lang.String[] { "Id", "ThreadId", "CreatedBy", "CreatedAt", "Author", "Labels", "Content", "Status", });
     internal_static_yandex_cloud_ai_assistants_v1_threads_Message_LabelsEntry_descriptor =
       internal_static_yandex_cloud_ai_assistants_v1_threads_Message_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_ai_assistants_v1_threads_Message_LabelsEntry_fieldAccessorTable = new

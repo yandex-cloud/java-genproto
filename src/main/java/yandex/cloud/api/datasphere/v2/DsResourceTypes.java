@@ -24,10 +24,6 @@ public final class DsResourceTypes {
      */
     RESOURCE_TYPE_UNSPECIFIED(0),
     /**
-     * <code>RESOURCE_TYPE_UNPINNED_CHECKPOINT = 1;</code>
-     */
-    RESOURCE_TYPE_UNPINNED_CHECKPOINT(1),
-    /**
      * <code>RESOURCE_TYPE_SECRET = 2;</code>
      */
     RESOURCE_TYPE_SECRET(2),
@@ -48,10 +44,6 @@ public final class DsResourceTypes {
      */
     RESOURCE_TYPE_NODE(6),
     /**
-     * <code>RESOURCE_TYPE_PINNED_CHECKPOINT = 7;</code>
-     */
-    RESOURCE_TYPE_PINNED_CHECKPOINT(7),
-    /**
      * <code>RESOURCE_TYPE_ALIAS = 8;</code>
      */
     RESOURCE_TYPE_ALIAS(8),
@@ -62,10 +54,6 @@ public final class DsResourceTypes {
      * <code>RESOURCE_TYPE_UNSPECIFIED = 0;</code>
      */
     public static final int RESOURCE_TYPE_UNSPECIFIED_VALUE = 0;
-    /**
-     * <code>RESOURCE_TYPE_UNPINNED_CHECKPOINT = 1;</code>
-     */
-    public static final int RESOURCE_TYPE_UNPINNED_CHECKPOINT_VALUE = 1;
     /**
      * <code>RESOURCE_TYPE_SECRET = 2;</code>
      */
@@ -86,10 +74,6 @@ public final class DsResourceTypes {
      * <code>RESOURCE_TYPE_NODE = 6;</code>
      */
     public static final int RESOURCE_TYPE_NODE_VALUE = 6;
-    /**
-     * <code>RESOURCE_TYPE_PINNED_CHECKPOINT = 7;</code>
-     */
-    public static final int RESOURCE_TYPE_PINNED_CHECKPOINT_VALUE = 7;
     /**
      * <code>RESOURCE_TYPE_ALIAS = 8;</code>
      */
@@ -121,13 +105,11 @@ public final class DsResourceTypes {
     public static ResourceType forNumber(int value) {
       switch (value) {
         case 0: return RESOURCE_TYPE_UNSPECIFIED;
-        case 1: return RESOURCE_TYPE_UNPINNED_CHECKPOINT;
         case 2: return RESOURCE_TYPE_SECRET;
         case 3: return RESOURCE_TYPE_DOCKER_IMAGE;
         case 4: return RESOURCE_TYPE_DATASET;
         case 5: return RESOURCE_TYPE_S3;
         case 6: return RESOURCE_TYPE_NODE;
-        case 7: return RESOURCE_TYPE_PINNED_CHECKPOINT;
         case 8: return RESOURCE_TYPE_ALIAS;
         default: return null;
       }
@@ -195,18 +177,16 @@ public final class DsResourceTypes {
   static {
     java.lang.String[] descriptorData = {
       "\n/yandex/cloud/datasphere/v2/resource_ty" +
-      "pes.proto\022\032yandex.cloud.datasphere.v2*\225\002" +
+      "pes.proto\022\032yandex.cloud.datasphere.v2*\325\001" +
       "\n\014ResourceType\022\035\n\031RESOURCE_TYPE_UNSPECIF" +
-      "IED\020\000\022%\n!RESOURCE_TYPE_UNPINNED_CHECKPOI" +
-      "NT\020\001\022\030\n\024RESOURCE_TYPE_SECRET\020\002\022\036\n\032RESOUR" +
-      "CE_TYPE_DOCKER_IMAGE\020\003\022\031\n\025RESOURCE_TYPE_" +
-      "DATASET\020\004\022\024\n\020RESOURCE_TYPE_S3\020\005\022\026\n\022RESOU" +
-      "RCE_TYPE_NODE\020\006\022#\n\037RESOURCE_TYPE_PINNED_" +
-      "CHECKPOINT\020\007\022\027\n\023RESOURCE_TYPE_ALIAS\020\010B|\n" +
-      "\036yandex.cloud.api.datasphere.v2B\017DsResou" +
-      "rceTypesZIgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/datasphere/v2;datasph" +
-      "ereb\006proto3"
+      "IED\020\000\022\030\n\024RESOURCE_TYPE_SECRET\020\002\022\036\n\032RESOU" +
+      "RCE_TYPE_DOCKER_IMAGE\020\003\022\031\n\025RESOURCE_TYPE" +
+      "_DATASET\020\004\022\024\n\020RESOURCE_TYPE_S3\020\005\022\026\n\022RESO" +
+      "URCE_TYPE_NODE\020\006\022\027\n\023RESOURCE_TYPE_ALIAS\020" +
+      "\010\"\004\010\001\020\001\"\004\010\007\020\007B|\n\036yandex.cloud.api.datasp" +
+      "here.v2B\017DsResourceTypesZIgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/datas" +
+      "phere/v2;datasphereb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

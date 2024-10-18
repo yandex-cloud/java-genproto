@@ -2957,6 +2957,14 @@ public final class TextCommon {
        * <code>ALTERNATIVE_STATUS_CONTENT_FILTER = 4;</code>
        */
       ALTERNATIVE_STATUS_CONTENT_FILTER(4),
+      /**
+       * <pre>
+       * Tools were invoked during the completion generation.
+       * </pre>
+       *
+       * <code>ALTERNATIVE_STATUS_TOOL_CALLS = 5;</code>
+       */
+      ALTERNATIVE_STATUS_TOOL_CALLS(5),
       UNRECOGNIZED(-1),
       ;
 
@@ -3001,6 +3009,14 @@ public final class TextCommon {
        * <code>ALTERNATIVE_STATUS_CONTENT_FILTER = 4;</code>
        */
       public static final int ALTERNATIVE_STATUS_CONTENT_FILTER_VALUE = 4;
+      /**
+       * <pre>
+       * Tools were invoked during the completion generation.
+       * </pre>
+       *
+       * <code>ALTERNATIVE_STATUS_TOOL_CALLS = 5;</code>
+       */
+      public static final int ALTERNATIVE_STATUS_TOOL_CALLS_VALUE = 5;
 
 
       public final int getNumber() {
@@ -3032,6 +3048,7 @@ public final class TextCommon {
           case 2: return ALTERNATIVE_STATUS_TRUNCATED_FINAL;
           case 3: return ALTERNATIVE_STATUS_FINAL;
           case 4: return ALTERNATIVE_STATUS_CONTENT_FILTER;
+          case 5: return ALTERNATIVE_STATUS_TOOL_CALLS;
           default: return null;
         }
       }
@@ -4563,6 +4580,7096 @@ public final class TextCommon {
 
   }
 
+  public interface ToolOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.foundation_models.v1.Tool)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Represents a function that can be called.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.Function function = 1;</code>
+     * @return Whether the function field is set.
+     */
+    boolean hasFunction();
+    /**
+     * <pre>
+     * Represents a function that can be called.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.Function function = 1;</code>
+     * @return The function.
+     */
+    yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function getFunction();
+    /**
+     * <pre>
+     * Represents a function that can be called.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.Function function = 1;</code>
+     */
+    yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionOrBuilder getFunctionOrBuilder();
+
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool.ToolTypeCase getToolTypeCase();
+  }
+  /**
+   * <pre>
+   * Represents a tool that can be invoked during completion generation.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.Tool}
+   */
+  public static final class Tool extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.foundation_models.v1.Tool)
+      ToolOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Tool.newBuilder() to construct.
+    private Tool(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Tool() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Tool();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Tool(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function.Builder subBuilder = null;
+              if (toolTypeCase_ == 1) {
+                subBuilder = ((yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function) toolType_).toBuilder();
+              }
+              toolType_ =
+                  input.readMessage(yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function) toolType_);
+                toolType_ = subBuilder.buildPartial();
+              }
+              toolTypeCase_ = 1;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_Tool_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_Tool_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool.class, yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool.Builder.class);
+    }
+
+    private int toolTypeCase_ = 0;
+    private java.lang.Object toolType_;
+    public enum ToolTypeCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      FUNCTION(1),
+      TOOLTYPE_NOT_SET(0);
+      private final int value;
+      private ToolTypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ToolTypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ToolTypeCase forNumber(int value) {
+        switch (value) {
+          case 1: return FUNCTION;
+          case 0: return TOOLTYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ToolTypeCase
+    getToolTypeCase() {
+      return ToolTypeCase.forNumber(
+          toolTypeCase_);
+    }
+
+    public static final int FUNCTION_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * Represents a function that can be called.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.Function function = 1;</code>
+     * @return Whether the function field is set.
+     */
+    @java.lang.Override
+    public boolean hasFunction() {
+      return toolTypeCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Represents a function that can be called.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.Function function = 1;</code>
+     * @return The function.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function getFunction() {
+      if (toolTypeCase_ == 1) {
+         return (yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function) toolType_;
+      }
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Represents a function that can be called.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.Function function = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionOrBuilder getFunctionOrBuilder() {
+      if (toolTypeCase_ == 1) {
+         return (yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function) toolType_;
+      }
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (toolTypeCase_ == 1) {
+        output.writeMessage(1, (yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function) toolType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (toolTypeCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function) toolType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool other = (yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool) obj;
+
+      if (!getToolTypeCase().equals(other.getToolTypeCase())) return false;
+      switch (toolTypeCase_) {
+        case 1:
+          if (!getFunction()
+              .equals(other.getFunction())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (toolTypeCase_) {
+        case 1:
+          hash = (37 * hash) + FUNCTION_FIELD_NUMBER;
+          hash = (53 * hash) + getFunction().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents a tool that can be invoked during completion generation.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.Tool}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.foundation_models.v1.Tool)
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_Tool_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_Tool_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool.class, yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        toolTypeCase_ = 0;
+        toolType_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_Tool_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool build() {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool buildPartial() {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool result = new yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool(this);
+        if (toolTypeCase_ == 1) {
+          if (functionBuilder_ == null) {
+            result.toolType_ = toolType_;
+          } else {
+            result.toolType_ = functionBuilder_.build();
+          }
+        }
+        result.toolTypeCase_ = toolTypeCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool) {
+          return mergeFrom((yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool other) {
+        if (other == yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool.getDefaultInstance()) return this;
+        switch (other.getToolTypeCase()) {
+          case FUNCTION: {
+            mergeFunction(other.getFunction());
+            break;
+          }
+          case TOOLTYPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int toolTypeCase_ = 0;
+      private java.lang.Object toolType_;
+      public ToolTypeCase
+          getToolTypeCase() {
+        return ToolTypeCase.forNumber(
+            toolTypeCase_);
+      }
+
+      public Builder clearToolType() {
+        toolTypeCase_ = 0;
+        toolType_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function, yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionOrBuilder> functionBuilder_;
+      /**
+       * <pre>
+       * Represents a function that can be called.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.Function function = 1;</code>
+       * @return Whether the function field is set.
+       */
+      @java.lang.Override
+      public boolean hasFunction() {
+        return toolTypeCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Represents a function that can be called.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.Function function = 1;</code>
+       * @return The function.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function getFunction() {
+        if (functionBuilder_ == null) {
+          if (toolTypeCase_ == 1) {
+            return (yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function) toolType_;
+          }
+          return yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function.getDefaultInstance();
+        } else {
+          if (toolTypeCase_ == 1) {
+            return functionBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Represents a function that can be called.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.Function function = 1;</code>
+       */
+      public Builder setFunction(yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function value) {
+        if (functionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          toolType_ = value;
+          onChanged();
+        } else {
+          functionBuilder_.setMessage(value);
+        }
+        toolTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents a function that can be called.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.Function function = 1;</code>
+       */
+      public Builder setFunction(
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function.Builder builderForValue) {
+        if (functionBuilder_ == null) {
+          toolType_ = builderForValue.build();
+          onChanged();
+        } else {
+          functionBuilder_.setMessage(builderForValue.build());
+        }
+        toolTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents a function that can be called.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.Function function = 1;</code>
+       */
+      public Builder mergeFunction(yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function value) {
+        if (functionBuilder_ == null) {
+          if (toolTypeCase_ == 1 &&
+              toolType_ != yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function.getDefaultInstance()) {
+            toolType_ = yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function.newBuilder((yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function) toolType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            toolType_ = value;
+          }
+          onChanged();
+        } else {
+          if (toolTypeCase_ == 1) {
+            functionBuilder_.mergeFrom(value);
+          }
+          functionBuilder_.setMessage(value);
+        }
+        toolTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents a function that can be called.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.Function function = 1;</code>
+       */
+      public Builder clearFunction() {
+        if (functionBuilder_ == null) {
+          if (toolTypeCase_ == 1) {
+            toolTypeCase_ = 0;
+            toolType_ = null;
+            onChanged();
+          }
+        } else {
+          if (toolTypeCase_ == 1) {
+            toolTypeCase_ = 0;
+            toolType_ = null;
+          }
+          functionBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents a function that can be called.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.Function function = 1;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function.Builder getFunctionBuilder() {
+        return getFunctionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Represents a function that can be called.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.Function function = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionOrBuilder getFunctionOrBuilder() {
+        if ((toolTypeCase_ == 1) && (functionBuilder_ != null)) {
+          return functionBuilder_.getMessageOrBuilder();
+        } else {
+          if (toolTypeCase_ == 1) {
+            return (yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function) toolType_;
+          }
+          return yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Represents a function that can be called.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.Function function = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function, yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionOrBuilder> 
+          getFunctionFieldBuilder() {
+        if (functionBuilder_ == null) {
+          if (!(toolTypeCase_ == 1)) {
+            toolType_ = yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function.getDefaultInstance();
+          }
+          functionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function, yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionOrBuilder>(
+                  (yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function) toolType_,
+                  getParentForChildren(),
+                  isClean());
+          toolType_ = null;
+        }
+        toolTypeCase_ = 1;
+        onChanged();;
+        return functionBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.foundation_models.v1.Tool)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.foundation_models.v1.Tool)
+    private static final yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool();
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Tool>
+        PARSER = new com.google.protobuf.AbstractParser<Tool>() {
+      @java.lang.Override
+      public Tool parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Tool(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Tool> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Tool> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FunctionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.foundation_models.v1.Function)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The name of the function.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * The name of the function.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * A description of the function's purpose or behavior.
+     * </pre>
+     *
+     * <code>string description = 2;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * A description of the function's purpose or behavior.
+     * </pre>
+     *
+     * <code>string description = 2;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * A JSON Schema that defines the expected parameters for the function.
+     * The schema should describe the required fields, their types, and any constraints or default values.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct parameters = 3;</code>
+     * @return Whether the parameters field is set.
+     */
+    boolean hasParameters();
+    /**
+     * <pre>
+     * A JSON Schema that defines the expected parameters for the function.
+     * The schema should describe the required fields, their types, and any constraints or default values.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct parameters = 3;</code>
+     * @return The parameters.
+     */
+    com.google.protobuf.Struct getParameters();
+    /**
+     * <pre>
+     * A JSON Schema that defines the expected parameters for the function.
+     * The schema should describe the required fields, their types, and any constraints or default values.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct parameters = 3;</code>
+     */
+    com.google.protobuf.StructOrBuilder getParametersOrBuilder();
+  }
+  /**
+   * <pre>
+   * Represents a function tool that can be invoked during completion generation.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.Function}
+   */
+  public static final class Function extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.foundation_models.v1.Function)
+      FunctionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Function.newBuilder() to construct.
+    private Function(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Function() {
+      name_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Function();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Function(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Struct.Builder subBuilder = null;
+              if (parameters_ != null) {
+                subBuilder = parameters_.toBuilder();
+              }
+              parameters_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(parameters_);
+                parameters_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_Function_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_Function_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function.class, yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * The name of the function.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The name of the function.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * A description of the function's purpose or behavior.
+     * </pre>
+     *
+     * <code>string description = 2;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A description of the function's purpose or behavior.
+     * </pre>
+     *
+     * <code>string description = 2;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PARAMETERS_FIELD_NUMBER = 3;
+    private com.google.protobuf.Struct parameters_;
+    /**
+     * <pre>
+     * A JSON Schema that defines the expected parameters for the function.
+     * The schema should describe the required fields, their types, and any constraints or default values.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct parameters = 3;</code>
+     * @return Whether the parameters field is set.
+     */
+    @java.lang.Override
+    public boolean hasParameters() {
+      return parameters_ != null;
+    }
+    /**
+     * <pre>
+     * A JSON Schema that defines the expected parameters for the function.
+     * The schema should describe the required fields, their types, and any constraints or default values.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct parameters = 3;</code>
+     * @return The parameters.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getParameters() {
+      return parameters_ == null ? com.google.protobuf.Struct.getDefaultInstance() : parameters_;
+    }
+    /**
+     * <pre>
+     * A JSON Schema that defines the expected parameters for the function.
+     * The schema should describe the required fields, their types, and any constraints or default values.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct parameters = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StructOrBuilder getParametersOrBuilder() {
+      return getParameters();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (parameters_ != null) {
+        output.writeMessage(3, getParameters());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (parameters_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getParameters());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function other = (yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasParameters() != other.hasParameters()) return false;
+      if (hasParameters()) {
+        if (!getParameters()
+            .equals(other.getParameters())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (hasParameters()) {
+        hash = (37 * hash) + PARAMETERS_FIELD_NUMBER;
+        hash = (53 * hash) + getParameters().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents a function tool that can be invoked during completion generation.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.Function}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.foundation_models.v1.Function)
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_Function_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_Function_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function.class, yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+
+        description_ = "";
+
+        if (parametersBuilder_ == null) {
+          parameters_ = null;
+        } else {
+          parameters_ = null;
+          parametersBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_Function_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function build() {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function buildPartial() {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function result = new yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function(this);
+        result.name_ = name_;
+        result.description_ = description_;
+        if (parametersBuilder_ == null) {
+          result.parameters_ = parameters_;
+        } else {
+          result.parameters_ = parametersBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function) {
+          return mergeFrom((yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function other) {
+        if (other == yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        if (other.hasParameters()) {
+          mergeParameters(other.getParameters());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * The name of the function.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the function.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the function.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the function.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the function.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * A description of the function's purpose or behavior.
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A description of the function's purpose or behavior.
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A description of the function's purpose or behavior.
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A description of the function's purpose or behavior.
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A description of the function's purpose or behavior.
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Struct parameters_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> parametersBuilder_;
+      /**
+       * <pre>
+       * A JSON Schema that defines the expected parameters for the function.
+       * The schema should describe the required fields, their types, and any constraints or default values.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct parameters = 3;</code>
+       * @return Whether the parameters field is set.
+       */
+      public boolean hasParameters() {
+        return parametersBuilder_ != null || parameters_ != null;
+      }
+      /**
+       * <pre>
+       * A JSON Schema that defines the expected parameters for the function.
+       * The schema should describe the required fields, their types, and any constraints or default values.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct parameters = 3;</code>
+       * @return The parameters.
+       */
+      public com.google.protobuf.Struct getParameters() {
+        if (parametersBuilder_ == null) {
+          return parameters_ == null ? com.google.protobuf.Struct.getDefaultInstance() : parameters_;
+        } else {
+          return parametersBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * A JSON Schema that defines the expected parameters for the function.
+       * The schema should describe the required fields, their types, and any constraints or default values.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct parameters = 3;</code>
+       */
+      public Builder setParameters(com.google.protobuf.Struct value) {
+        if (parametersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          parameters_ = value;
+          onChanged();
+        } else {
+          parametersBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A JSON Schema that defines the expected parameters for the function.
+       * The schema should describe the required fields, their types, and any constraints or default values.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct parameters = 3;</code>
+       */
+      public Builder setParameters(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        if (parametersBuilder_ == null) {
+          parameters_ = builderForValue.build();
+          onChanged();
+        } else {
+          parametersBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A JSON Schema that defines the expected parameters for the function.
+       * The schema should describe the required fields, their types, and any constraints or default values.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct parameters = 3;</code>
+       */
+      public Builder mergeParameters(com.google.protobuf.Struct value) {
+        if (parametersBuilder_ == null) {
+          if (parameters_ != null) {
+            parameters_ =
+              com.google.protobuf.Struct.newBuilder(parameters_).mergeFrom(value).buildPartial();
+          } else {
+            parameters_ = value;
+          }
+          onChanged();
+        } else {
+          parametersBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A JSON Schema that defines the expected parameters for the function.
+       * The schema should describe the required fields, their types, and any constraints or default values.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct parameters = 3;</code>
+       */
+      public Builder clearParameters() {
+        if (parametersBuilder_ == null) {
+          parameters_ = null;
+          onChanged();
+        } else {
+          parameters_ = null;
+          parametersBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A JSON Schema that defines the expected parameters for the function.
+       * The schema should describe the required fields, their types, and any constraints or default values.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct parameters = 3;</code>
+       */
+      public com.google.protobuf.Struct.Builder getParametersBuilder() {
+        
+        onChanged();
+        return getParametersFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * A JSON Schema that defines the expected parameters for the function.
+       * The schema should describe the required fields, their types, and any constraints or default values.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct parameters = 3;</code>
+       */
+      public com.google.protobuf.StructOrBuilder getParametersOrBuilder() {
+        if (parametersBuilder_ != null) {
+          return parametersBuilder_.getMessageOrBuilder();
+        } else {
+          return parameters_ == null ?
+              com.google.protobuf.Struct.getDefaultInstance() : parameters_;
+        }
+      }
+      /**
+       * <pre>
+       * A JSON Schema that defines the expected parameters for the function.
+       * The schema should describe the required fields, their types, and any constraints or default values.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct parameters = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+          getParametersFieldBuilder() {
+        if (parametersBuilder_ == null) {
+          parametersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
+                  getParameters(),
+                  getParentForChildren(),
+                  isClean());
+          parameters_ = null;
+        }
+        return parametersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.foundation_models.v1.Function)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.foundation_models.v1.Function)
+    private static final yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function();
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Function>
+        PARSER = new com.google.protobuf.AbstractParser<Function>() {
+      @java.lang.Override
+      public Function parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Function(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Function> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Function> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.Function getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ToolCallOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.foundation_models.v1.ToolCall)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Represents a call to a function.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.FunctionCall function_call = 1;</code>
+     * @return Whether the functionCall field is set.
+     */
+    boolean hasFunctionCall();
+    /**
+     * <pre>
+     * Represents a call to a function.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.FunctionCall function_call = 1;</code>
+     * @return The functionCall.
+     */
+    yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall getFunctionCall();
+    /**
+     * <pre>
+     * Represents a call to a function.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.FunctionCall function_call = 1;</code>
+     */
+    yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCallOrBuilder getFunctionCallOrBuilder();
+
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall.ToolCallTypeCase getToolCallTypeCase();
+  }
+  /**
+   * <pre>
+   * Represents a call to a tool.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.ToolCall}
+   */
+  public static final class ToolCall extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.foundation_models.v1.ToolCall)
+      ToolCallOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ToolCall.newBuilder() to construct.
+    private ToolCall(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ToolCall() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ToolCall();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ToolCall(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall.Builder subBuilder = null;
+              if (toolCallTypeCase_ == 1) {
+                subBuilder = ((yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall) toolCallType_).toBuilder();
+              }
+              toolCallType_ =
+                  input.readMessage(yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall) toolCallType_);
+                toolCallType_ = subBuilder.buildPartial();
+              }
+              toolCallTypeCase_ = 1;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ToolCall_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ToolCall_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall.class, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall.Builder.class);
+    }
+
+    private int toolCallTypeCase_ = 0;
+    private java.lang.Object toolCallType_;
+    public enum ToolCallTypeCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      FUNCTION_CALL(1),
+      TOOLCALLTYPE_NOT_SET(0);
+      private final int value;
+      private ToolCallTypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ToolCallTypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ToolCallTypeCase forNumber(int value) {
+        switch (value) {
+          case 1: return FUNCTION_CALL;
+          case 0: return TOOLCALLTYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ToolCallTypeCase
+    getToolCallTypeCase() {
+      return ToolCallTypeCase.forNumber(
+          toolCallTypeCase_);
+    }
+
+    public static final int FUNCTION_CALL_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * Represents a call to a function.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.FunctionCall function_call = 1;</code>
+     * @return Whether the functionCall field is set.
+     */
+    @java.lang.Override
+    public boolean hasFunctionCall() {
+      return toolCallTypeCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Represents a call to a function.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.FunctionCall function_call = 1;</code>
+     * @return The functionCall.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall getFunctionCall() {
+      if (toolCallTypeCase_ == 1) {
+         return (yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall) toolCallType_;
+      }
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Represents a call to a function.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.FunctionCall function_call = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCallOrBuilder getFunctionCallOrBuilder() {
+      if (toolCallTypeCase_ == 1) {
+         return (yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall) toolCallType_;
+      }
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (toolCallTypeCase_ == 1) {
+        output.writeMessage(1, (yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall) toolCallType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (toolCallTypeCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall) toolCallType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall other = (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall) obj;
+
+      if (!getToolCallTypeCase().equals(other.getToolCallTypeCase())) return false;
+      switch (toolCallTypeCase_) {
+        case 1:
+          if (!getFunctionCall()
+              .equals(other.getFunctionCall())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (toolCallTypeCase_) {
+        case 1:
+          hash = (37 * hash) + FUNCTION_CALL_FIELD_NUMBER;
+          hash = (53 * hash) + getFunctionCall().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents a call to a tool.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.ToolCall}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.foundation_models.v1.ToolCall)
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ToolCall_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ToolCall_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall.class, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        toolCallTypeCase_ = 0;
+        toolCallType_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ToolCall_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall build() {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall buildPartial() {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall result = new yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall(this);
+        if (toolCallTypeCase_ == 1) {
+          if (functionCallBuilder_ == null) {
+            result.toolCallType_ = toolCallType_;
+          } else {
+            result.toolCallType_ = functionCallBuilder_.build();
+          }
+        }
+        result.toolCallTypeCase_ = toolCallTypeCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall) {
+          return mergeFrom((yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall other) {
+        if (other == yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall.getDefaultInstance()) return this;
+        switch (other.getToolCallTypeCase()) {
+          case FUNCTION_CALL: {
+            mergeFunctionCall(other.getFunctionCall());
+            break;
+          }
+          case TOOLCALLTYPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int toolCallTypeCase_ = 0;
+      private java.lang.Object toolCallType_;
+      public ToolCallTypeCase
+          getToolCallTypeCase() {
+        return ToolCallTypeCase.forNumber(
+            toolCallTypeCase_);
+      }
+
+      public Builder clearToolCallType() {
+        toolCallTypeCase_ = 0;
+        toolCallType_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall, yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCallOrBuilder> functionCallBuilder_;
+      /**
+       * <pre>
+       * Represents a call to a function.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.FunctionCall function_call = 1;</code>
+       * @return Whether the functionCall field is set.
+       */
+      @java.lang.Override
+      public boolean hasFunctionCall() {
+        return toolCallTypeCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Represents a call to a function.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.FunctionCall function_call = 1;</code>
+       * @return The functionCall.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall getFunctionCall() {
+        if (functionCallBuilder_ == null) {
+          if (toolCallTypeCase_ == 1) {
+            return (yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall) toolCallType_;
+          }
+          return yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall.getDefaultInstance();
+        } else {
+          if (toolCallTypeCase_ == 1) {
+            return functionCallBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Represents a call to a function.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.FunctionCall function_call = 1;</code>
+       */
+      public Builder setFunctionCall(yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall value) {
+        if (functionCallBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          toolCallType_ = value;
+          onChanged();
+        } else {
+          functionCallBuilder_.setMessage(value);
+        }
+        toolCallTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents a call to a function.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.FunctionCall function_call = 1;</code>
+       */
+      public Builder setFunctionCall(
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall.Builder builderForValue) {
+        if (functionCallBuilder_ == null) {
+          toolCallType_ = builderForValue.build();
+          onChanged();
+        } else {
+          functionCallBuilder_.setMessage(builderForValue.build());
+        }
+        toolCallTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents a call to a function.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.FunctionCall function_call = 1;</code>
+       */
+      public Builder mergeFunctionCall(yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall value) {
+        if (functionCallBuilder_ == null) {
+          if (toolCallTypeCase_ == 1 &&
+              toolCallType_ != yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall.getDefaultInstance()) {
+            toolCallType_ = yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall.newBuilder((yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall) toolCallType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            toolCallType_ = value;
+          }
+          onChanged();
+        } else {
+          if (toolCallTypeCase_ == 1) {
+            functionCallBuilder_.mergeFrom(value);
+          }
+          functionCallBuilder_.setMessage(value);
+        }
+        toolCallTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents a call to a function.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.FunctionCall function_call = 1;</code>
+       */
+      public Builder clearFunctionCall() {
+        if (functionCallBuilder_ == null) {
+          if (toolCallTypeCase_ == 1) {
+            toolCallTypeCase_ = 0;
+            toolCallType_ = null;
+            onChanged();
+          }
+        } else {
+          if (toolCallTypeCase_ == 1) {
+            toolCallTypeCase_ = 0;
+            toolCallType_ = null;
+          }
+          functionCallBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents a call to a function.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.FunctionCall function_call = 1;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall.Builder getFunctionCallBuilder() {
+        return getFunctionCallFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Represents a call to a function.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.FunctionCall function_call = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCallOrBuilder getFunctionCallOrBuilder() {
+        if ((toolCallTypeCase_ == 1) && (functionCallBuilder_ != null)) {
+          return functionCallBuilder_.getMessageOrBuilder();
+        } else {
+          if (toolCallTypeCase_ == 1) {
+            return (yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall) toolCallType_;
+          }
+          return yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Represents a call to a function.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.FunctionCall function_call = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall, yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCallOrBuilder> 
+          getFunctionCallFieldBuilder() {
+        if (functionCallBuilder_ == null) {
+          if (!(toolCallTypeCase_ == 1)) {
+            toolCallType_ = yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall.getDefaultInstance();
+          }
+          functionCallBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall, yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCallOrBuilder>(
+                  (yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall) toolCallType_,
+                  getParentForChildren(),
+                  isClean());
+          toolCallType_ = null;
+        }
+        toolCallTypeCase_ = 1;
+        onChanged();;
+        return functionCallBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.foundation_models.v1.ToolCall)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.foundation_models.v1.ToolCall)
+    private static final yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall();
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ToolCall>
+        PARSER = new com.google.protobuf.AbstractParser<ToolCall>() {
+      @java.lang.Override
+      public ToolCall parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ToolCall(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ToolCall> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ToolCall> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FunctionCallOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.foundation_models.v1.FunctionCall)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The name of the function being called.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * The name of the function being called.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * The structured arguments passed to the function.
+     * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct arguments = 2;</code>
+     * @return Whether the arguments field is set.
+     */
+    boolean hasArguments();
+    /**
+     * <pre>
+     * The structured arguments passed to the function.
+     * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct arguments = 2;</code>
+     * @return The arguments.
+     */
+    com.google.protobuf.Struct getArguments();
+    /**
+     * <pre>
+     * The structured arguments passed to the function.
+     * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct arguments = 2;</code>
+     */
+    com.google.protobuf.StructOrBuilder getArgumentsOrBuilder();
+  }
+  /**
+   * <pre>
+   * Represents the invocation of a function with specific arguments.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.FunctionCall}
+   */
+  public static final class FunctionCall extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.foundation_models.v1.FunctionCall)
+      FunctionCallOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FunctionCall.newBuilder() to construct.
+    private FunctionCall(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FunctionCall() {
+      name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FunctionCall();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FunctionCall(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Struct.Builder subBuilder = null;
+              if (arguments_ != null) {
+                subBuilder = arguments_.toBuilder();
+              }
+              arguments_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(arguments_);
+                arguments_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_FunctionCall_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_FunctionCall_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall.class, yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * The name of the function being called.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The name of the function being called.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ARGUMENTS_FIELD_NUMBER = 2;
+    private com.google.protobuf.Struct arguments_;
+    /**
+     * <pre>
+     * The structured arguments passed to the function.
+     * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct arguments = 2;</code>
+     * @return Whether the arguments field is set.
+     */
+    @java.lang.Override
+    public boolean hasArguments() {
+      return arguments_ != null;
+    }
+    /**
+     * <pre>
+     * The structured arguments passed to the function.
+     * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct arguments = 2;</code>
+     * @return The arguments.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getArguments() {
+      return arguments_ == null ? com.google.protobuf.Struct.getDefaultInstance() : arguments_;
+    }
+    /**
+     * <pre>
+     * The structured arguments passed to the function.
+     * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct arguments = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StructOrBuilder getArgumentsOrBuilder() {
+      return getArguments();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (arguments_ != null) {
+        output.writeMessage(2, getArguments());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (arguments_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getArguments());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall other = (yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasArguments() != other.hasArguments()) return false;
+      if (hasArguments()) {
+        if (!getArguments()
+            .equals(other.getArguments())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      if (hasArguments()) {
+        hash = (37 * hash) + ARGUMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getArguments().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents the invocation of a function with specific arguments.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.FunctionCall}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.foundation_models.v1.FunctionCall)
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCallOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_FunctionCall_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_FunctionCall_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall.class, yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+
+        if (argumentsBuilder_ == null) {
+          arguments_ = null;
+        } else {
+          arguments_ = null;
+          argumentsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_FunctionCall_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall build() {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall buildPartial() {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall result = new yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall(this);
+        result.name_ = name_;
+        if (argumentsBuilder_ == null) {
+          result.arguments_ = arguments_;
+        } else {
+          result.arguments_ = argumentsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall) {
+          return mergeFrom((yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall other) {
+        if (other == yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasArguments()) {
+          mergeArguments(other.getArguments());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * The name of the function being called.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the function being called.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the function being called.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the function being called.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the function being called.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Struct arguments_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> argumentsBuilder_;
+      /**
+       * <pre>
+       * The structured arguments passed to the function.
+       * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct arguments = 2;</code>
+       * @return Whether the arguments field is set.
+       */
+      public boolean hasArguments() {
+        return argumentsBuilder_ != null || arguments_ != null;
+      }
+      /**
+       * <pre>
+       * The structured arguments passed to the function.
+       * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct arguments = 2;</code>
+       * @return The arguments.
+       */
+      public com.google.protobuf.Struct getArguments() {
+        if (argumentsBuilder_ == null) {
+          return arguments_ == null ? com.google.protobuf.Struct.getDefaultInstance() : arguments_;
+        } else {
+          return argumentsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The structured arguments passed to the function.
+       * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct arguments = 2;</code>
+       */
+      public Builder setArguments(com.google.protobuf.Struct value) {
+        if (argumentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          arguments_ = value;
+          onChanged();
+        } else {
+          argumentsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The structured arguments passed to the function.
+       * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct arguments = 2;</code>
+       */
+      public Builder setArguments(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        if (argumentsBuilder_ == null) {
+          arguments_ = builderForValue.build();
+          onChanged();
+        } else {
+          argumentsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The structured arguments passed to the function.
+       * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct arguments = 2;</code>
+       */
+      public Builder mergeArguments(com.google.protobuf.Struct value) {
+        if (argumentsBuilder_ == null) {
+          if (arguments_ != null) {
+            arguments_ =
+              com.google.protobuf.Struct.newBuilder(arguments_).mergeFrom(value).buildPartial();
+          } else {
+            arguments_ = value;
+          }
+          onChanged();
+        } else {
+          argumentsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The structured arguments passed to the function.
+       * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct arguments = 2;</code>
+       */
+      public Builder clearArguments() {
+        if (argumentsBuilder_ == null) {
+          arguments_ = null;
+          onChanged();
+        } else {
+          arguments_ = null;
+          argumentsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The structured arguments passed to the function.
+       * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct arguments = 2;</code>
+       */
+      public com.google.protobuf.Struct.Builder getArgumentsBuilder() {
+        
+        onChanged();
+        return getArgumentsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The structured arguments passed to the function.
+       * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct arguments = 2;</code>
+       */
+      public com.google.protobuf.StructOrBuilder getArgumentsOrBuilder() {
+        if (argumentsBuilder_ != null) {
+          return argumentsBuilder_.getMessageOrBuilder();
+        } else {
+          return arguments_ == null ?
+              com.google.protobuf.Struct.getDefaultInstance() : arguments_;
+        }
+      }
+      /**
+       * <pre>
+       * The structured arguments passed to the function.
+       * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct arguments = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+          getArgumentsFieldBuilder() {
+        if (argumentsBuilder_ == null) {
+          argumentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
+                  getArguments(),
+                  getParentForChildren(),
+                  isClean());
+          arguments_ = null;
+        }
+        return argumentsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.foundation_models.v1.FunctionCall)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.foundation_models.v1.FunctionCall)
+    private static final yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall();
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FunctionCall>
+        PARSER = new com.google.protobuf.AbstractParser<FunctionCall>() {
+      @java.lang.Override
+      public FunctionCall parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FunctionCall(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FunctionCall> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FunctionCall> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionCall getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ToolCallListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.foundation_models.v1.ToolCallList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * A list of tool calls to be executed.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall> 
+        getToolCallsList();
+    /**
+     * <pre>
+     * A list of tool calls to be executed.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+     */
+    yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall getToolCalls(int index);
+    /**
+     * <pre>
+     * A list of tool calls to be executed.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+     */
+    int getToolCallsCount();
+    /**
+     * <pre>
+     * A list of tool calls to be executed.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallOrBuilder> 
+        getToolCallsOrBuilderList();
+    /**
+     * <pre>
+     * A list of tool calls to be executed.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+     */
+    yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallOrBuilder getToolCallsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Represents a list of tool calls.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.ToolCallList}
+   */
+  public static final class ToolCallList extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.foundation_models.v1.ToolCallList)
+      ToolCallListOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ToolCallList.newBuilder() to construct.
+    private ToolCallList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ToolCallList() {
+      toolCalls_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ToolCallList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ToolCallList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                toolCalls_ = new java.util.ArrayList<yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              toolCalls_.add(
+                  input.readMessage(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          toolCalls_ = java.util.Collections.unmodifiableList(toolCalls_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ToolCallList_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ToolCallList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList.class, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList.Builder.class);
+    }
+
+    public static final int TOOL_CALLS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall> toolCalls_;
+    /**
+     * <pre>
+     * A list of tool calls to be executed.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall> getToolCallsList() {
+      return toolCalls_;
+    }
+    /**
+     * <pre>
+     * A list of tool calls to be executed.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallOrBuilder> 
+        getToolCallsOrBuilderList() {
+      return toolCalls_;
+    }
+    /**
+     * <pre>
+     * A list of tool calls to be executed.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+     */
+    @java.lang.Override
+    public int getToolCallsCount() {
+      return toolCalls_.size();
+    }
+    /**
+     * <pre>
+     * A list of tool calls to be executed.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall getToolCalls(int index) {
+      return toolCalls_.get(index);
+    }
+    /**
+     * <pre>
+     * A list of tool calls to be executed.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallOrBuilder getToolCallsOrBuilder(
+        int index) {
+      return toolCalls_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < toolCalls_.size(); i++) {
+        output.writeMessage(1, toolCalls_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < toolCalls_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, toolCalls_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList other = (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList) obj;
+
+      if (!getToolCallsList()
+          .equals(other.getToolCallsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getToolCallsCount() > 0) {
+        hash = (37 * hash) + TOOL_CALLS_FIELD_NUMBER;
+        hash = (53 * hash) + getToolCallsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents a list of tool calls.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.ToolCallList}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.foundation_models.v1.ToolCallList)
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ToolCallList_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ToolCallList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList.class, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getToolCallsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (toolCallsBuilder_ == null) {
+          toolCalls_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          toolCallsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ToolCallList_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList build() {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList buildPartial() {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList result = new yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList(this);
+        int from_bitField0_ = bitField0_;
+        if (toolCallsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            toolCalls_ = java.util.Collections.unmodifiableList(toolCalls_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.toolCalls_ = toolCalls_;
+        } else {
+          result.toolCalls_ = toolCallsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList) {
+          return mergeFrom((yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList other) {
+        if (other == yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList.getDefaultInstance()) return this;
+        if (toolCallsBuilder_ == null) {
+          if (!other.toolCalls_.isEmpty()) {
+            if (toolCalls_.isEmpty()) {
+              toolCalls_ = other.toolCalls_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureToolCallsIsMutable();
+              toolCalls_.addAll(other.toolCalls_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.toolCalls_.isEmpty()) {
+            if (toolCallsBuilder_.isEmpty()) {
+              toolCallsBuilder_.dispose();
+              toolCallsBuilder_ = null;
+              toolCalls_ = other.toolCalls_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              toolCallsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getToolCallsFieldBuilder() : null;
+            } else {
+              toolCallsBuilder_.addAllMessages(other.toolCalls_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall> toolCalls_ =
+        java.util.Collections.emptyList();
+      private void ensureToolCallsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          toolCalls_ = new java.util.ArrayList<yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall>(toolCalls_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallOrBuilder> toolCallsBuilder_;
+
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall> getToolCallsList() {
+        if (toolCallsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(toolCalls_);
+        } else {
+          return toolCallsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+       */
+      public int getToolCallsCount() {
+        if (toolCallsBuilder_ == null) {
+          return toolCalls_.size();
+        } else {
+          return toolCallsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall getToolCalls(int index) {
+        if (toolCallsBuilder_ == null) {
+          return toolCalls_.get(index);
+        } else {
+          return toolCallsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+       */
+      public Builder setToolCalls(
+          int index, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall value) {
+        if (toolCallsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureToolCallsIsMutable();
+          toolCalls_.set(index, value);
+          onChanged();
+        } else {
+          toolCallsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+       */
+      public Builder setToolCalls(
+          int index, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall.Builder builderForValue) {
+        if (toolCallsBuilder_ == null) {
+          ensureToolCallsIsMutable();
+          toolCalls_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          toolCallsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+       */
+      public Builder addToolCalls(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall value) {
+        if (toolCallsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureToolCallsIsMutable();
+          toolCalls_.add(value);
+          onChanged();
+        } else {
+          toolCallsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+       */
+      public Builder addToolCalls(
+          int index, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall value) {
+        if (toolCallsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureToolCallsIsMutable();
+          toolCalls_.add(index, value);
+          onChanged();
+        } else {
+          toolCallsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+       */
+      public Builder addToolCalls(
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall.Builder builderForValue) {
+        if (toolCallsBuilder_ == null) {
+          ensureToolCallsIsMutable();
+          toolCalls_.add(builderForValue.build());
+          onChanged();
+        } else {
+          toolCallsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+       */
+      public Builder addToolCalls(
+          int index, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall.Builder builderForValue) {
+        if (toolCallsBuilder_ == null) {
+          ensureToolCallsIsMutable();
+          toolCalls_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          toolCallsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+       */
+      public Builder addAllToolCalls(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall> values) {
+        if (toolCallsBuilder_ == null) {
+          ensureToolCallsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, toolCalls_);
+          onChanged();
+        } else {
+          toolCallsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+       */
+      public Builder clearToolCalls() {
+        if (toolCallsBuilder_ == null) {
+          toolCalls_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          toolCallsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+       */
+      public Builder removeToolCalls(int index) {
+        if (toolCallsBuilder_ == null) {
+          ensureToolCallsIsMutable();
+          toolCalls_.remove(index);
+          onChanged();
+        } else {
+          toolCallsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall.Builder getToolCallsBuilder(
+          int index) {
+        return getToolCallsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallOrBuilder getToolCallsOrBuilder(
+          int index) {
+        if (toolCallsBuilder_ == null) {
+          return toolCalls_.get(index);  } else {
+          return toolCallsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallOrBuilder> 
+           getToolCallsOrBuilderList() {
+        if (toolCallsBuilder_ != null) {
+          return toolCallsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(toolCalls_);
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall.Builder addToolCallsBuilder() {
+        return getToolCallsFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall.Builder addToolCallsBuilder(
+          int index) {
+        return getToolCallsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolCall tool_calls = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall.Builder> 
+           getToolCallsBuilderList() {
+        return getToolCallsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallOrBuilder> 
+          getToolCallsFieldBuilder() {
+        if (toolCallsBuilder_ == null) {
+          toolCallsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCall.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallOrBuilder>(
+                  toolCalls_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          toolCalls_ = null;
+        }
+        return toolCallsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.foundation_models.v1.ToolCallList)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.foundation_models.v1.ToolCallList)
+    private static final yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList();
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ToolCallList>
+        PARSER = new com.google.protobuf.AbstractParser<ToolCallList>() {
+      @java.lang.Override
+      public ToolCallList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ToolCallList(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ToolCallList> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ToolCallList> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ToolResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.foundation_models.v1.ToolResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Represents the result of a function call.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.FunctionResult function_result = 1;</code>
+     * @return Whether the functionResult field is set.
+     */
+    boolean hasFunctionResult();
+    /**
+     * <pre>
+     * Represents the result of a function call.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.FunctionResult function_result = 1;</code>
+     * @return The functionResult.
+     */
+    yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult getFunctionResult();
+    /**
+     * <pre>
+     * Represents the result of a function call.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.FunctionResult function_result = 1;</code>
+     */
+    yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResultOrBuilder getFunctionResultOrBuilder();
+
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult.ToolResultTypeCase getToolResultTypeCase();
+  }
+  /**
+   * <pre>
+   * Represents the result of a tool call.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.ToolResult}
+   */
+  public static final class ToolResult extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.foundation_models.v1.ToolResult)
+      ToolResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ToolResult.newBuilder() to construct.
+    private ToolResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ToolResult() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ToolResult();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ToolResult(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult.Builder subBuilder = null;
+              if (toolResultTypeCase_ == 1) {
+                subBuilder = ((yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult) toolResultType_).toBuilder();
+              }
+              toolResultType_ =
+                  input.readMessage(yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult) toolResultType_);
+                toolResultType_ = subBuilder.buildPartial();
+              }
+              toolResultTypeCase_ = 1;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ToolResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ToolResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult.class, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult.Builder.class);
+    }
+
+    private int toolResultTypeCase_ = 0;
+    private java.lang.Object toolResultType_;
+    public enum ToolResultTypeCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      FUNCTION_RESULT(1),
+      TOOLRESULTTYPE_NOT_SET(0);
+      private final int value;
+      private ToolResultTypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ToolResultTypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ToolResultTypeCase forNumber(int value) {
+        switch (value) {
+          case 1: return FUNCTION_RESULT;
+          case 0: return TOOLRESULTTYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ToolResultTypeCase
+    getToolResultTypeCase() {
+      return ToolResultTypeCase.forNumber(
+          toolResultTypeCase_);
+    }
+
+    public static final int FUNCTION_RESULT_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * Represents the result of a function call.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.FunctionResult function_result = 1;</code>
+     * @return Whether the functionResult field is set.
+     */
+    @java.lang.Override
+    public boolean hasFunctionResult() {
+      return toolResultTypeCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Represents the result of a function call.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.FunctionResult function_result = 1;</code>
+     * @return The functionResult.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult getFunctionResult() {
+      if (toolResultTypeCase_ == 1) {
+         return (yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult) toolResultType_;
+      }
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Represents the result of a function call.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.FunctionResult function_result = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResultOrBuilder getFunctionResultOrBuilder() {
+      if (toolResultTypeCase_ == 1) {
+         return (yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult) toolResultType_;
+      }
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (toolResultTypeCase_ == 1) {
+        output.writeMessage(1, (yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult) toolResultType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (toolResultTypeCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult) toolResultType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult other = (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult) obj;
+
+      if (!getToolResultTypeCase().equals(other.getToolResultTypeCase())) return false;
+      switch (toolResultTypeCase_) {
+        case 1:
+          if (!getFunctionResult()
+              .equals(other.getFunctionResult())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (toolResultTypeCase_) {
+        case 1:
+          hash = (37 * hash) + FUNCTION_RESULT_FIELD_NUMBER;
+          hash = (53 * hash) + getFunctionResult().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents the result of a tool call.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.ToolResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.foundation_models.v1.ToolResult)
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ToolResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ToolResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult.class, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        toolResultTypeCase_ = 0;
+        toolResultType_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ToolResult_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult build() {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult buildPartial() {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult result = new yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult(this);
+        if (toolResultTypeCase_ == 1) {
+          if (functionResultBuilder_ == null) {
+            result.toolResultType_ = toolResultType_;
+          } else {
+            result.toolResultType_ = functionResultBuilder_.build();
+          }
+        }
+        result.toolResultTypeCase_ = toolResultTypeCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult) {
+          return mergeFrom((yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult other) {
+        if (other == yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult.getDefaultInstance()) return this;
+        switch (other.getToolResultTypeCase()) {
+          case FUNCTION_RESULT: {
+            mergeFunctionResult(other.getFunctionResult());
+            break;
+          }
+          case TOOLRESULTTYPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int toolResultTypeCase_ = 0;
+      private java.lang.Object toolResultType_;
+      public ToolResultTypeCase
+          getToolResultTypeCase() {
+        return ToolResultTypeCase.forNumber(
+            toolResultTypeCase_);
+      }
+
+      public Builder clearToolResultType() {
+        toolResultTypeCase_ = 0;
+        toolResultType_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult, yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResultOrBuilder> functionResultBuilder_;
+      /**
+       * <pre>
+       * Represents the result of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.FunctionResult function_result = 1;</code>
+       * @return Whether the functionResult field is set.
+       */
+      @java.lang.Override
+      public boolean hasFunctionResult() {
+        return toolResultTypeCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Represents the result of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.FunctionResult function_result = 1;</code>
+       * @return The functionResult.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult getFunctionResult() {
+        if (functionResultBuilder_ == null) {
+          if (toolResultTypeCase_ == 1) {
+            return (yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult) toolResultType_;
+          }
+          return yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult.getDefaultInstance();
+        } else {
+          if (toolResultTypeCase_ == 1) {
+            return functionResultBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Represents the result of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.FunctionResult function_result = 1;</code>
+       */
+      public Builder setFunctionResult(yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult value) {
+        if (functionResultBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          toolResultType_ = value;
+          onChanged();
+        } else {
+          functionResultBuilder_.setMessage(value);
+        }
+        toolResultTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents the result of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.FunctionResult function_result = 1;</code>
+       */
+      public Builder setFunctionResult(
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult.Builder builderForValue) {
+        if (functionResultBuilder_ == null) {
+          toolResultType_ = builderForValue.build();
+          onChanged();
+        } else {
+          functionResultBuilder_.setMessage(builderForValue.build());
+        }
+        toolResultTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents the result of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.FunctionResult function_result = 1;</code>
+       */
+      public Builder mergeFunctionResult(yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult value) {
+        if (functionResultBuilder_ == null) {
+          if (toolResultTypeCase_ == 1 &&
+              toolResultType_ != yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult.getDefaultInstance()) {
+            toolResultType_ = yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult.newBuilder((yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult) toolResultType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            toolResultType_ = value;
+          }
+          onChanged();
+        } else {
+          if (toolResultTypeCase_ == 1) {
+            functionResultBuilder_.mergeFrom(value);
+          }
+          functionResultBuilder_.setMessage(value);
+        }
+        toolResultTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents the result of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.FunctionResult function_result = 1;</code>
+       */
+      public Builder clearFunctionResult() {
+        if (functionResultBuilder_ == null) {
+          if (toolResultTypeCase_ == 1) {
+            toolResultTypeCase_ = 0;
+            toolResultType_ = null;
+            onChanged();
+          }
+        } else {
+          if (toolResultTypeCase_ == 1) {
+            toolResultTypeCase_ = 0;
+            toolResultType_ = null;
+          }
+          functionResultBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents the result of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.FunctionResult function_result = 1;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult.Builder getFunctionResultBuilder() {
+        return getFunctionResultFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Represents the result of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.FunctionResult function_result = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResultOrBuilder getFunctionResultOrBuilder() {
+        if ((toolResultTypeCase_ == 1) && (functionResultBuilder_ != null)) {
+          return functionResultBuilder_.getMessageOrBuilder();
+        } else {
+          if (toolResultTypeCase_ == 1) {
+            return (yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult) toolResultType_;
+          }
+          return yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Represents the result of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.FunctionResult function_result = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult, yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResultOrBuilder> 
+          getFunctionResultFieldBuilder() {
+        if (functionResultBuilder_ == null) {
+          if (!(toolResultTypeCase_ == 1)) {
+            toolResultType_ = yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult.getDefaultInstance();
+          }
+          functionResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult, yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResultOrBuilder>(
+                  (yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult) toolResultType_,
+                  getParentForChildren(),
+                  isClean());
+          toolResultType_ = null;
+        }
+        toolResultTypeCase_ = 1;
+        onChanged();;
+        return functionResultBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.foundation_models.v1.ToolResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.foundation_models.v1.ToolResult)
+    private static final yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult();
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ToolResult>
+        PARSER = new com.google.protobuf.AbstractParser<ToolResult>() {
+      @java.lang.Override
+      public ToolResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ToolResult(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ToolResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ToolResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FunctionResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.foundation_models.v1.FunctionResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The name of the function that was executed.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * The name of the function that was executed.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * The result of the function call, represented as a string.
+     * This field can be used to store the output of the function.
+     * </pre>
+     *
+     * <code>string content = 2;</code>
+     * @return Whether the content field is set.
+     */
+    boolean hasContent();
+    /**
+     * <pre>
+     * The result of the function call, represented as a string.
+     * This field can be used to store the output of the function.
+     * </pre>
+     *
+     * <code>string content = 2;</code>
+     * @return The content.
+     */
+    java.lang.String getContent();
+    /**
+     * <pre>
+     * The result of the function call, represented as a string.
+     * This field can be used to store the output of the function.
+     * </pre>
+     *
+     * <code>string content = 2;</code>
+     * @return The bytes for content.
+     */
+    com.google.protobuf.ByteString
+        getContentBytes();
+
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult.ContentTypeCase getContentTypeCase();
+  }
+  /**
+   * <pre>
+   * Represents the result of a function call.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.FunctionResult}
+   */
+  public static final class FunctionResult extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.foundation_models.v1.FunctionResult)
+      FunctionResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FunctionResult.newBuilder() to construct.
+    private FunctionResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FunctionResult() {
+      name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FunctionResult();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FunctionResult(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              contentTypeCase_ = 2;
+              contentType_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_FunctionResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_FunctionResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult.class, yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult.Builder.class);
+    }
+
+    private int contentTypeCase_ = 0;
+    private java.lang.Object contentType_;
+    public enum ContentTypeCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      CONTENT(2),
+      CONTENTTYPE_NOT_SET(0);
+      private final int value;
+      private ContentTypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ContentTypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ContentTypeCase forNumber(int value) {
+        switch (value) {
+          case 2: return CONTENT;
+          case 0: return CONTENTTYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ContentTypeCase
+    getContentTypeCase() {
+      return ContentTypeCase.forNumber(
+          contentTypeCase_);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * The name of the function that was executed.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The name of the function that was executed.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTENT_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * The result of the function call, represented as a string.
+     * This field can be used to store the output of the function.
+     * </pre>
+     *
+     * <code>string content = 2;</code>
+     * @return Whether the content field is set.
+     */
+    public boolean hasContent() {
+      return contentTypeCase_ == 2;
+    }
+    /**
+     * <pre>
+     * The result of the function call, represented as a string.
+     * This field can be used to store the output of the function.
+     * </pre>
+     *
+     * <code>string content = 2;</code>
+     * @return The content.
+     */
+    public java.lang.String getContent() {
+      java.lang.Object ref = "";
+      if (contentTypeCase_ == 2) {
+        ref = contentType_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (contentTypeCase_ == 2) {
+          contentType_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The result of the function call, represented as a string.
+     * This field can be used to store the output of the function.
+     * </pre>
+     *
+     * <code>string content = 2;</code>
+     * @return The bytes for content.
+     */
+    public com.google.protobuf.ByteString
+        getContentBytes() {
+      java.lang.Object ref = "";
+      if (contentTypeCase_ == 2) {
+        ref = contentType_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (contentTypeCase_ == 2) {
+          contentType_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (contentTypeCase_ == 2) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, contentType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (contentTypeCase_ == 2) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, contentType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult other = (yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getContentTypeCase().equals(other.getContentTypeCase())) return false;
+      switch (contentTypeCase_) {
+        case 2:
+          if (!getContent()
+              .equals(other.getContent())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      switch (contentTypeCase_) {
+        case 2:
+          hash = (37 * hash) + CONTENT_FIELD_NUMBER;
+          hash = (53 * hash) + getContent().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents the result of a function call.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.FunctionResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.foundation_models.v1.FunctionResult)
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_FunctionResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_FunctionResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult.class, yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+
+        contentTypeCase_ = 0;
+        contentType_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_FunctionResult_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult build() {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult buildPartial() {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult result = new yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult(this);
+        result.name_ = name_;
+        if (contentTypeCase_ == 2) {
+          result.contentType_ = contentType_;
+        }
+        result.contentTypeCase_ = contentTypeCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult) {
+          return mergeFrom((yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult other) {
+        if (other == yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        switch (other.getContentTypeCase()) {
+          case CONTENT: {
+            contentTypeCase_ = 2;
+            contentType_ = other.contentType_;
+            onChanged();
+            break;
+          }
+          case CONTENTTYPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int contentTypeCase_ = 0;
+      private java.lang.Object contentType_;
+      public ContentTypeCase
+          getContentTypeCase() {
+        return ContentTypeCase.forNumber(
+            contentTypeCase_);
+      }
+
+      public Builder clearContentType() {
+        contentTypeCase_ = 0;
+        contentType_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * The name of the function that was executed.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the function that was executed.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the function that was executed.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the function that was executed.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the function that was executed.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * The result of the function call, represented as a string.
+       * This field can be used to store the output of the function.
+       * </pre>
+       *
+       * <code>string content = 2;</code>
+       * @return Whether the content field is set.
+       */
+      @java.lang.Override
+      public boolean hasContent() {
+        return contentTypeCase_ == 2;
+      }
+      /**
+       * <pre>
+       * The result of the function call, represented as a string.
+       * This field can be used to store the output of the function.
+       * </pre>
+       *
+       * <code>string content = 2;</code>
+       * @return The content.
+       */
+      @java.lang.Override
+      public java.lang.String getContent() {
+        java.lang.Object ref = "";
+        if (contentTypeCase_ == 2) {
+          ref = contentType_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (contentTypeCase_ == 2) {
+            contentType_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The result of the function call, represented as a string.
+       * This field can be used to store the output of the function.
+       * </pre>
+       *
+       * <code>string content = 2;</code>
+       * @return The bytes for content.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getContentBytes() {
+        java.lang.Object ref = "";
+        if (contentTypeCase_ == 2) {
+          ref = contentType_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (contentTypeCase_ == 2) {
+            contentType_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The result of the function call, represented as a string.
+       * This field can be used to store the output of the function.
+       * </pre>
+       *
+       * <code>string content = 2;</code>
+       * @param value The content to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContent(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  contentTypeCase_ = 2;
+        contentType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The result of the function call, represented as a string.
+       * This field can be used to store the output of the function.
+       * </pre>
+       *
+       * <code>string content = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContent() {
+        if (contentTypeCase_ == 2) {
+          contentTypeCase_ = 0;
+          contentType_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The result of the function call, represented as a string.
+       * This field can be used to store the output of the function.
+       * </pre>
+       *
+       * <code>string content = 2;</code>
+       * @param value The bytes for content to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        contentTypeCase_ = 2;
+        contentType_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.foundation_models.v1.FunctionResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.foundation_models.v1.FunctionResult)
+    private static final yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult();
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FunctionResult>
+        PARSER = new com.google.protobuf.AbstractParser<FunctionResult>() {
+      @java.lang.Override
+      public FunctionResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FunctionResult(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FunctionResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FunctionResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.FunctionResult getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ToolResultListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.foundation_models.v1.ToolResultList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * A list of tool results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult> 
+        getToolResultsList();
+    /**
+     * <pre>
+     * A list of tool results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+     */
+    yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult getToolResults(int index);
+    /**
+     * <pre>
+     * A list of tool results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+     */
+    int getToolResultsCount();
+    /**
+     * <pre>
+     * A list of tool results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultOrBuilder> 
+        getToolResultsOrBuilderList();
+    /**
+     * <pre>
+     * A list of tool results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+     */
+    yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultOrBuilder getToolResultsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Represents a list of tool results.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.ToolResultList}
+   */
+  public static final class ToolResultList extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.foundation_models.v1.ToolResultList)
+      ToolResultListOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ToolResultList.newBuilder() to construct.
+    private ToolResultList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ToolResultList() {
+      toolResults_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ToolResultList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ToolResultList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                toolResults_ = new java.util.ArrayList<yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              toolResults_.add(
+                  input.readMessage(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          toolResults_ = java.util.Collections.unmodifiableList(toolResults_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ToolResultList_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ToolResultList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList.class, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList.Builder.class);
+    }
+
+    public static final int TOOL_RESULTS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult> toolResults_;
+    /**
+     * <pre>
+     * A list of tool results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult> getToolResultsList() {
+      return toolResults_;
+    }
+    /**
+     * <pre>
+     * A list of tool results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultOrBuilder> 
+        getToolResultsOrBuilderList() {
+      return toolResults_;
+    }
+    /**
+     * <pre>
+     * A list of tool results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+     */
+    @java.lang.Override
+    public int getToolResultsCount() {
+      return toolResults_.size();
+    }
+    /**
+     * <pre>
+     * A list of tool results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult getToolResults(int index) {
+      return toolResults_.get(index);
+    }
+    /**
+     * <pre>
+     * A list of tool results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultOrBuilder getToolResultsOrBuilder(
+        int index) {
+      return toolResults_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < toolResults_.size(); i++) {
+        output.writeMessage(1, toolResults_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < toolResults_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, toolResults_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList other = (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList) obj;
+
+      if (!getToolResultsList()
+          .equals(other.getToolResultsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getToolResultsCount() > 0) {
+        hash = (37 * hash) + TOOL_RESULTS_FIELD_NUMBER;
+        hash = (53 * hash) + getToolResultsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents a list of tool results.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.ToolResultList}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.foundation_models.v1.ToolResultList)
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ToolResultList_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ToolResultList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList.class, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getToolResultsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (toolResultsBuilder_ == null) {
+          toolResults_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          toolResultsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ToolResultList_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList build() {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList buildPartial() {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList result = new yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList(this);
+        int from_bitField0_ = bitField0_;
+        if (toolResultsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            toolResults_ = java.util.Collections.unmodifiableList(toolResults_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.toolResults_ = toolResults_;
+        } else {
+          result.toolResults_ = toolResultsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList) {
+          return mergeFrom((yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList other) {
+        if (other == yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList.getDefaultInstance()) return this;
+        if (toolResultsBuilder_ == null) {
+          if (!other.toolResults_.isEmpty()) {
+            if (toolResults_.isEmpty()) {
+              toolResults_ = other.toolResults_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureToolResultsIsMutable();
+              toolResults_.addAll(other.toolResults_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.toolResults_.isEmpty()) {
+            if (toolResultsBuilder_.isEmpty()) {
+              toolResultsBuilder_.dispose();
+              toolResultsBuilder_ = null;
+              toolResults_ = other.toolResults_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              toolResultsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getToolResultsFieldBuilder() : null;
+            } else {
+              toolResultsBuilder_.addAllMessages(other.toolResults_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult> toolResults_ =
+        java.util.Collections.emptyList();
+      private void ensureToolResultsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          toolResults_ = new java.util.ArrayList<yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult>(toolResults_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultOrBuilder> toolResultsBuilder_;
+
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult> getToolResultsList() {
+        if (toolResultsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(toolResults_);
+        } else {
+          return toolResultsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+       */
+      public int getToolResultsCount() {
+        if (toolResultsBuilder_ == null) {
+          return toolResults_.size();
+        } else {
+          return toolResultsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult getToolResults(int index) {
+        if (toolResultsBuilder_ == null) {
+          return toolResults_.get(index);
+        } else {
+          return toolResultsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+       */
+      public Builder setToolResults(
+          int index, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult value) {
+        if (toolResultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureToolResultsIsMutable();
+          toolResults_.set(index, value);
+          onChanged();
+        } else {
+          toolResultsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+       */
+      public Builder setToolResults(
+          int index, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult.Builder builderForValue) {
+        if (toolResultsBuilder_ == null) {
+          ensureToolResultsIsMutable();
+          toolResults_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          toolResultsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+       */
+      public Builder addToolResults(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult value) {
+        if (toolResultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureToolResultsIsMutable();
+          toolResults_.add(value);
+          onChanged();
+        } else {
+          toolResultsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+       */
+      public Builder addToolResults(
+          int index, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult value) {
+        if (toolResultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureToolResultsIsMutable();
+          toolResults_.add(index, value);
+          onChanged();
+        } else {
+          toolResultsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+       */
+      public Builder addToolResults(
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult.Builder builderForValue) {
+        if (toolResultsBuilder_ == null) {
+          ensureToolResultsIsMutable();
+          toolResults_.add(builderForValue.build());
+          onChanged();
+        } else {
+          toolResultsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+       */
+      public Builder addToolResults(
+          int index, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult.Builder builderForValue) {
+        if (toolResultsBuilder_ == null) {
+          ensureToolResultsIsMutable();
+          toolResults_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          toolResultsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+       */
+      public Builder addAllToolResults(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult> values) {
+        if (toolResultsBuilder_ == null) {
+          ensureToolResultsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, toolResults_);
+          onChanged();
+        } else {
+          toolResultsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+       */
+      public Builder clearToolResults() {
+        if (toolResultsBuilder_ == null) {
+          toolResults_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          toolResultsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+       */
+      public Builder removeToolResults(int index) {
+        if (toolResultsBuilder_ == null) {
+          ensureToolResultsIsMutable();
+          toolResults_.remove(index);
+          onChanged();
+        } else {
+          toolResultsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult.Builder getToolResultsBuilder(
+          int index) {
+        return getToolResultsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultOrBuilder getToolResultsOrBuilder(
+          int index) {
+        if (toolResultsBuilder_ == null) {
+          return toolResults_.get(index);  } else {
+          return toolResultsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultOrBuilder> 
+           getToolResultsOrBuilderList() {
+        if (toolResultsBuilder_ != null) {
+          return toolResultsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(toolResults_);
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult.Builder addToolResultsBuilder() {
+        return getToolResultsFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult.Builder addToolResultsBuilder(
+          int index) {
+        return getToolResultsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.ToolResult tool_results = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult.Builder> 
+           getToolResultsBuilderList() {
+        return getToolResultsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultOrBuilder> 
+          getToolResultsFieldBuilder() {
+        if (toolResultsBuilder_ == null) {
+          toolResultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResult.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultOrBuilder>(
+                  toolResults_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          toolResults_ = null;
+        }
+        return toolResultsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.foundation_models.v1.ToolResultList)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.foundation_models.v1.ToolResultList)
+    private static final yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList();
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ToolResultList>
+        PARSER = new com.google.protobuf.AbstractParser<ToolResultList>() {
+      @java.lang.Override
+      public ToolResultList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ToolResultList(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ToolResultList> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ToolResultList> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_foundation_models_v1_CompletionOptions_descriptor;
   private static final 
@@ -4588,6 +11695,46 @@ public final class TextCommon {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_foundation_models_v1_Token_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_foundation_models_v1_Tool_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_foundation_models_v1_Tool_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_foundation_models_v1_Function_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_foundation_models_v1_Function_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_foundation_models_v1_ToolCall_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_foundation_models_v1_ToolCall_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_foundation_models_v1_FunctionCall_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_foundation_models_v1_FunctionCall_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_foundation_models_v1_ToolCallList_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_foundation_models_v1_ToolCallList_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_foundation_models_v1_ToolResult_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_foundation_models_v1_ToolResult_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_foundation_models_v1_FunctionResult_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_foundation_models_v1_FunctionResult_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_foundation_models_v1_ToolResultList_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_foundation_models_v1_ToolResultList_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4599,33 +11746,53 @@ public final class TextCommon {
     java.lang.String[] descriptorData = {
       "\n6yandex/cloud/ai/foundation_models/v1/t" +
       "ext_common.proto\022$yandex.cloud.ai.founda" +
-      "tion_models.v1\032\036google/protobuf/wrappers" +
-      ".proto\"\207\001\n\021CompletionOptions\022\016\n\006stream\030\001" +
-      " \001(\010\0221\n\013temperature\030\002 \001(\0132\034.google.proto" +
-      "buf.DoubleValue\022/\n\nmax_tokens\030\003 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\"2\n\007Message\022\014\n\004r" +
-      "ole\030\001 \001(\t\022\016\n\004text\030\002 \001(\tH\000B\t\n\007Content\"Z\n\014" +
-      "ContentUsage\022\031\n\021input_text_tokens\030\001 \001(\003\022" +
-      "\031\n\021completion_tokens\030\002 \001(\003\022\024\n\014total_toke" +
-      "ns\030\003 \001(\003\"\351\002\n\013Alternative\022>\n\007message\030\001 \001(" +
-      "\0132-.yandex.cloud.ai.foundation_models.v1" +
-      ".Message\022S\n\006status\030\002 \001(\0162C.yandex.cloud." +
-      "ai.foundation_models.v1.Alternative.Alte" +
-      "rnativeStatus\"\304\001\n\021AlternativeStatus\022\"\n\036A" +
-      "LTERNATIVE_STATUS_UNSPECIFIED\020\000\022\036\n\032ALTER" +
-      "NATIVE_STATUS_PARTIAL\020\001\022&\n\"ALTERNATIVE_S" +
-      "TATUS_TRUNCATED_FINAL\020\002\022\034\n\030ALTERNATIVE_S" +
-      "TATUS_FINAL\020\003\022%\n!ALTERNATIVE_STATUS_CONT" +
-      "ENT_FILTER\020\004\"2\n\005Token\022\n\n\002id\030\001 \001(\003\022\014\n\004tex" +
-      "t\030\002 \001(\t\022\017\n\007special\030\003 \001(\010B\206\001\n(yandex.clou" +
-      "d.api.ai.foundation_models.v1ZZgithub.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "ai/foundation_models/v1;foundation_model" +
-      "sb\006proto3"
+      "tion_models.v1\032\034google/protobuf/struct.p" +
+      "roto\032\036google/protobuf/wrappers.proto\"\207\001\n" +
+      "\021CompletionOptions\022\016\n\006stream\030\001 \001(\010\0221\n\013te" +
+      "mperature\030\002 \001(\0132\034.google.protobuf.Double" +
+      "Value\022/\n\nmax_tokens\030\003 \001(\0132\033.google.proto" +
+      "buf.Int64Value\"2\n\007Message\022\014\n\004role\030\001 \001(\t\022" +
+      "\016\n\004text\030\002 \001(\tH\000B\t\n\007Content\"Z\n\014ContentUsa" +
+      "ge\022\031\n\021input_text_tokens\030\001 \001(\003\022\031\n\021complet" +
+      "ion_tokens\030\002 \001(\003\022\024\n\014total_tokens\030\003 \001(\003\"\214" +
+      "\003\n\013Alternative\022>\n\007message\030\001 \001(\0132-.yandex" +
+      ".cloud.ai.foundation_models.v1.Message\022S" +
+      "\n\006status\030\002 \001(\0162C.yandex.cloud.ai.foundat" +
+      "ion_models.v1.Alternative.AlternativeSta" +
+      "tus\"\347\001\n\021AlternativeStatus\022\"\n\036ALTERNATIVE" +
+      "_STATUS_UNSPECIFIED\020\000\022\036\n\032ALTERNATIVE_STA" +
+      "TUS_PARTIAL\020\001\022&\n\"ALTERNATIVE_STATUS_TRUN" +
+      "CATED_FINAL\020\002\022\034\n\030ALTERNATIVE_STATUS_FINA" +
+      "L\020\003\022%\n!ALTERNATIVE_STATUS_CONTENT_FILTER" +
+      "\020\004\022!\n\035ALTERNATIVE_STATUS_TOOL_CALLS\020\005\"2\n" +
+      "\005Token\022\n\n\002id\030\001 \001(\003\022\014\n\004text\030\002 \001(\t\022\017\n\007spec" +
+      "ial\030\003 \001(\010\"V\n\004Tool\022B\n\010function\030\001 \001(\0132..ya" +
+      "ndex.cloud.ai.foundation_models.v1.Funct" +
+      "ionH\000B\n\n\010ToolType\"Z\n\010Function\022\014\n\004name\030\001 " +
+      "\001(\t\022\023\n\013description\030\002 \001(\t\022+\n\nparameters\030\003" +
+      " \001(\0132\027.google.protobuf.Struct\"g\n\010ToolCal" +
+      "l\022K\n\rfunction_call\030\001 \001(\01322.yandex.cloud." +
+      "ai.foundation_models.v1.FunctionCallH\000B\016" +
+      "\n\014ToolCallType\"H\n\014FunctionCall\022\014\n\004name\030\001" +
+      " \001(\t\022*\n\targuments\030\002 \001(\0132\027.google.protobu" +
+      "f.Struct\"R\n\014ToolCallList\022B\n\ntool_calls\030\001" +
+      " \003(\0132..yandex.cloud.ai.foundation_models" +
+      ".v1.ToolCall\"o\n\nToolResult\022O\n\017function_r" +
+      "esult\030\001 \001(\01324.yandex.cloud.ai.foundation" +
+      "_models.v1.FunctionResultH\000B\020\n\016ToolResul" +
+      "tType\"@\n\016FunctionResult\022\014\n\004name\030\001 \001(\t\022\021\n" +
+      "\007content\030\002 \001(\tH\000B\r\n\013ContentType\"X\n\016ToolR" +
+      "esultList\022F\n\014tool_results\030\001 \003(\01320.yandex" +
+      ".cloud.ai.foundation_models.v1.ToolResul" +
+      "tB\206\001\n(yandex.cloud.api.ai.foundation_mod" +
+      "els.v1ZZgithub.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/ai/foundation_models/v1" +
+      ";foundation_modelsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.StructProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
         });
     internal_static_yandex_cloud_ai_foundation_models_v1_CompletionOptions_descriptor =
@@ -4658,6 +11825,55 @@ public final class TextCommon {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_Token_descriptor,
         new java.lang.String[] { "Id", "Text", "Special", });
+    internal_static_yandex_cloud_ai_foundation_models_v1_Tool_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_ai_foundation_models_v1_Tool_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_foundation_models_v1_Tool_descriptor,
+        new java.lang.String[] { "Function", "ToolType", });
+    internal_static_yandex_cloud_ai_foundation_models_v1_Function_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_ai_foundation_models_v1_Function_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_foundation_models_v1_Function_descriptor,
+        new java.lang.String[] { "Name", "Description", "Parameters", });
+    internal_static_yandex_cloud_ai_foundation_models_v1_ToolCall_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_yandex_cloud_ai_foundation_models_v1_ToolCall_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_foundation_models_v1_ToolCall_descriptor,
+        new java.lang.String[] { "FunctionCall", "ToolCallType", });
+    internal_static_yandex_cloud_ai_foundation_models_v1_FunctionCall_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_yandex_cloud_ai_foundation_models_v1_FunctionCall_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_foundation_models_v1_FunctionCall_descriptor,
+        new java.lang.String[] { "Name", "Arguments", });
+    internal_static_yandex_cloud_ai_foundation_models_v1_ToolCallList_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_ai_foundation_models_v1_ToolCallList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_foundation_models_v1_ToolCallList_descriptor,
+        new java.lang.String[] { "ToolCalls", });
+    internal_static_yandex_cloud_ai_foundation_models_v1_ToolResult_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_ai_foundation_models_v1_ToolResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_foundation_models_v1_ToolResult_descriptor,
+        new java.lang.String[] { "FunctionResult", "ToolResultType", });
+    internal_static_yandex_cloud_ai_foundation_models_v1_FunctionResult_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_ai_foundation_models_v1_FunctionResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_foundation_models_v1_FunctionResult_descriptor,
+        new java.lang.String[] { "Name", "Content", "ContentType", });
+    internal_static_yandex_cloud_ai_foundation_models_v1_ToolResultList_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_ai_foundation_models_v1_ToolResultList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_foundation_models_v1_ToolResultList_descriptor,
+        new java.lang.String[] { "ToolResults", });
+    com.google.protobuf.StructProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
   }
 

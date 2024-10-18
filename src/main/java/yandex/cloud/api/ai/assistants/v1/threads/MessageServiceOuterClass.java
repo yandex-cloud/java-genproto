@@ -19,11 +19,19 @@ public final class MessageServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the thread to which the message will be added.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The threadId.
      */
     java.lang.String getThreadId();
     /**
+     * <pre>
+     * ID of the thread to which the message will be added.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for threadId.
      */
@@ -31,25 +39,48 @@ public final class MessageServiceOuterClass {
         getThreadIdBytes();
 
     /**
+     * <pre>
+     * Author of the message, containing details about the message's creator.
+     * If not provided, the default author ID specified in the corresponding thread will be used.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 2;</code>
      * @return Whether the author field is set.
      */
     boolean hasAuthor();
     /**
+     * <pre>
+     * Author of the message, containing details about the message's creator.
+     * If not provided, the default author ID specified in the corresponding thread will be used.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 2;</code>
      * @return The author.
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Author getAuthor();
     /**
+     * <pre>
+     * Author of the message, containing details about the message's creator.
+     * If not provided, the default author ID specified in the corresponding thread will be used.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 2;</code>
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.AuthorOrBuilder getAuthorOrBuilder();
 
     /**
+     * <pre>
+     * Set of key-value pairs to label the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 3;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Set of key-value pairs to label the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 3;</code>
      */
     boolean containsLabels(
@@ -61,11 +92,19 @@ public final class MessageServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Set of key-value pairs to label the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 3;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Set of key-value pairs to label the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 3;</code>
      */
 
@@ -73,6 +112,10 @@ public final class MessageServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Set of key-value pairs to label the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 3;</code>
      */
 
@@ -80,21 +123,37 @@ public final class MessageServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * Content of the message.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 4 [(.yandex.cloud.required) = true];</code>
      * @return Whether the content field is set.
      */
     boolean hasContent();
     /**
+     * <pre>
+     * Content of the message.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 4 [(.yandex.cloud.required) = true];</code>
      * @return The content.
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent getContent();
     /**
+     * <pre>
+     * Content of the message.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 4 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContentOrBuilder getContentOrBuilder();
   }
   /**
+   * <pre>
+   * Request to create a new message in a specific thread.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.CreateMessageRequest}
    */
   public static final class CreateMessageRequest extends
@@ -233,6 +292,10 @@ public final class MessageServiceOuterClass {
     public static final int THREAD_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object threadId_;
     /**
+     * <pre>
+     * ID of the thread to which the message will be added.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The threadId.
      */
@@ -250,6 +313,10 @@ public final class MessageServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the thread to which the message will be added.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for threadId.
      */
@@ -271,6 +338,11 @@ public final class MessageServiceOuterClass {
     public static final int AUTHOR_FIELD_NUMBER = 2;
     private yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Author author_;
     /**
+     * <pre>
+     * Author of the message, containing details about the message's creator.
+     * If not provided, the default author ID specified in the corresponding thread will be used.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 2;</code>
      * @return Whether the author field is set.
      */
@@ -279,6 +351,11 @@ public final class MessageServiceOuterClass {
       return author_ != null;
     }
     /**
+     * <pre>
+     * Author of the message, containing details about the message's creator.
+     * If not provided, the default author ID specified in the corresponding thread will be used.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 2;</code>
      * @return The author.
      */
@@ -287,6 +364,11 @@ public final class MessageServiceOuterClass {
       return author_ == null ? yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Author.getDefaultInstance() : author_;
     }
     /**
+     * <pre>
+     * Author of the message, containing details about the message's creator.
+     * If not provided, the default author ID specified in the corresponding thread will be used.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 2;</code>
      */
     @java.lang.Override
@@ -321,6 +403,10 @@ public final class MessageServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 3;</code>
      */
 
@@ -339,6 +425,10 @@ public final class MessageServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 3;</code>
      */
     @java.lang.Override
@@ -347,6 +437,10 @@ public final class MessageServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 3;</code>
      */
     @java.lang.Override
@@ -360,6 +454,10 @@ public final class MessageServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the message.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 3;</code>
      */
     @java.lang.Override
@@ -378,6 +476,10 @@ public final class MessageServiceOuterClass {
     public static final int CONTENT_FIELD_NUMBER = 4;
     private yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent content_;
     /**
+     * <pre>
+     * Content of the message.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 4 [(.yandex.cloud.required) = true];</code>
      * @return Whether the content field is set.
      */
@@ -386,6 +488,10 @@ public final class MessageServiceOuterClass {
       return content_ != null;
     }
     /**
+     * <pre>
+     * Content of the message.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 4 [(.yandex.cloud.required) = true];</code>
      * @return The content.
      */
@@ -394,6 +500,10 @@ public final class MessageServiceOuterClass {
       return content_ == null ? yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent.getDefaultInstance() : content_;
     }
     /**
+     * <pre>
+     * Content of the message.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 4 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
@@ -610,6 +720,10 @@ public final class MessageServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request to create a new message in a specific thread.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.CreateMessageRequest}
      */
     public static final class Builder extends
@@ -816,6 +930,10 @@ public final class MessageServiceOuterClass {
 
       private java.lang.Object threadId_ = "";
       /**
+       * <pre>
+       * ID of the thread to which the message will be added.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The threadId.
        */
@@ -832,6 +950,10 @@ public final class MessageServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thread to which the message will be added.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for threadId.
        */
@@ -849,6 +971,10 @@ public final class MessageServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thread to which the message will be added.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The threadId to set.
        * @return This builder for chaining.
@@ -864,6 +990,10 @@ public final class MessageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thread to which the message will be added.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -874,6 +1004,10 @@ public final class MessageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thread to which the message will be added.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for threadId to set.
        * @return This builder for chaining.
@@ -894,6 +1028,11 @@ public final class MessageServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Author, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Author.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.AuthorOrBuilder> authorBuilder_;
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * If not provided, the default author ID specified in the corresponding thread will be used.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 2;</code>
        * @return Whether the author field is set.
        */
@@ -901,6 +1040,11 @@ public final class MessageServiceOuterClass {
         return authorBuilder_ != null || author_ != null;
       }
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * If not provided, the default author ID specified in the corresponding thread will be used.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 2;</code>
        * @return The author.
        */
@@ -912,6 +1056,11 @@ public final class MessageServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * If not provided, the default author ID specified in the corresponding thread will be used.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 2;</code>
        */
       public Builder setAuthor(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Author value) {
@@ -928,6 +1077,11 @@ public final class MessageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * If not provided, the default author ID specified in the corresponding thread will be used.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 2;</code>
        */
       public Builder setAuthor(
@@ -942,6 +1096,11 @@ public final class MessageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * If not provided, the default author ID specified in the corresponding thread will be used.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 2;</code>
        */
       public Builder mergeAuthor(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Author value) {
@@ -960,6 +1119,11 @@ public final class MessageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * If not provided, the default author ID specified in the corresponding thread will be used.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 2;</code>
        */
       public Builder clearAuthor() {
@@ -974,6 +1138,11 @@ public final class MessageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * If not provided, the default author ID specified in the corresponding thread will be used.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 2;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Author.Builder getAuthorBuilder() {
@@ -982,6 +1151,11 @@ public final class MessageServiceOuterClass {
         return getAuthorFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * If not provided, the default author ID specified in the corresponding thread will be used.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 2;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.AuthorOrBuilder getAuthorOrBuilder() {
@@ -993,6 +1167,11 @@ public final class MessageServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Author of the message, containing details about the message's creator.
+       * If not provided, the default author ID specified in the corresponding thread will be used.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Author author = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1036,6 +1215,10 @@ public final class MessageServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the message.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 3;</code>
        */
 
@@ -1054,6 +1237,10 @@ public final class MessageServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the message.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 3;</code>
        */
       @java.lang.Override
@@ -1062,6 +1249,10 @@ public final class MessageServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the message.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 3;</code>
        */
       @java.lang.Override
@@ -1075,6 +1266,10 @@ public final class MessageServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the message.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 3;</code>
        */
       @java.lang.Override
@@ -1096,6 +1291,10 @@ public final class MessageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the message.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 3;</code>
        */
 
@@ -1115,6 +1314,10 @@ public final class MessageServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the message.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 3;</code>
        */
       public Builder putLabels(
@@ -1130,6 +1333,10 @@ public final class MessageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the message.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 3;</code>
        */
 
@@ -1144,6 +1351,10 @@ public final class MessageServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContentOrBuilder> contentBuilder_;
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 4 [(.yandex.cloud.required) = true];</code>
        * @return Whether the content field is set.
        */
@@ -1151,6 +1362,10 @@ public final class MessageServiceOuterClass {
         return contentBuilder_ != null || content_ != null;
       }
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 4 [(.yandex.cloud.required) = true];</code>
        * @return The content.
        */
@@ -1162,6 +1377,10 @@ public final class MessageServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 4 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setContent(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent value) {
@@ -1178,6 +1397,10 @@ public final class MessageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 4 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setContent(
@@ -1192,6 +1415,10 @@ public final class MessageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 4 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeContent(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent value) {
@@ -1210,6 +1437,10 @@ public final class MessageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 4 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearContent() {
@@ -1224,6 +1455,10 @@ public final class MessageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 4 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent.Builder getContentBuilder() {
@@ -1232,6 +1467,10 @@ public final class MessageServiceOuterClass {
         return getContentFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 4 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContentOrBuilder getContentOrBuilder() {
@@ -1243,6 +1482,10 @@ public final class MessageServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Content of the message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent content = 4 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1316,11 +1559,19 @@ public final class MessageServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the thread that contains the message.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The threadId.
      */
     java.lang.String getThreadId();
     /**
+     * <pre>
+     * ID of the thread that contains the message.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for threadId.
      */
@@ -1328,11 +1579,19 @@ public final class MessageServiceOuterClass {
         getThreadIdBytes();
 
     /**
+     * <pre>
+     * ID of the message to retrieve.
+     * </pre>
+     *
      * <code>string message_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The messageId.
      */
     java.lang.String getMessageId();
     /**
+     * <pre>
+     * ID of the message to retrieve.
+     * </pre>
+     *
      * <code>string message_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for messageId.
      */
@@ -1340,6 +1599,10 @@ public final class MessageServiceOuterClass {
         getMessageIdBytes();
   }
   /**
+   * <pre>
+   * Request message for retrieving a message from a thread.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.GetMessageRequest}
    */
   public static final class GetMessageRequest extends
@@ -1433,6 +1696,10 @@ public final class MessageServiceOuterClass {
     public static final int THREAD_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object threadId_;
     /**
+     * <pre>
+     * ID of the thread that contains the message.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The threadId.
      */
@@ -1450,6 +1717,10 @@ public final class MessageServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the thread that contains the message.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for threadId.
      */
@@ -1471,6 +1742,10 @@ public final class MessageServiceOuterClass {
     public static final int MESSAGE_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object messageId_;
     /**
+     * <pre>
+     * ID of the message to retrieve.
+     * </pre>
+     *
      * <code>string message_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The messageId.
      */
@@ -1488,6 +1763,10 @@ public final class MessageServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the message to retrieve.
+     * </pre>
+     *
      * <code>string message_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for messageId.
      */
@@ -1671,6 +1950,10 @@ public final class MessageServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for retrieving a message from a thread.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.GetMessageRequest}
      */
     public static final class Builder extends
@@ -1827,6 +2110,10 @@ public final class MessageServiceOuterClass {
 
       private java.lang.Object threadId_ = "";
       /**
+       * <pre>
+       * ID of the thread that contains the message.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The threadId.
        */
@@ -1843,6 +2130,10 @@ public final class MessageServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thread that contains the message.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for threadId.
        */
@@ -1860,6 +2151,10 @@ public final class MessageServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thread that contains the message.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The threadId to set.
        * @return This builder for chaining.
@@ -1875,6 +2170,10 @@ public final class MessageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thread that contains the message.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -1885,6 +2184,10 @@ public final class MessageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thread that contains the message.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for threadId to set.
        * @return This builder for chaining.
@@ -1903,6 +2206,10 @@ public final class MessageServiceOuterClass {
 
       private java.lang.Object messageId_ = "";
       /**
+       * <pre>
+       * ID of the message to retrieve.
+       * </pre>
+       *
        * <code>string message_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The messageId.
        */
@@ -1919,6 +2226,10 @@ public final class MessageServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the message to retrieve.
+       * </pre>
+       *
        * <code>string message_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for messageId.
        */
@@ -1936,6 +2247,10 @@ public final class MessageServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the message to retrieve.
+       * </pre>
+       *
        * <code>string message_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The messageId to set.
        * @return This builder for chaining.
@@ -1951,6 +2266,10 @@ public final class MessageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the message to retrieve.
+       * </pre>
+       *
        * <code>string message_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -1961,6 +2280,10 @@ public final class MessageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the message to retrieve.
+       * </pre>
+       *
        * <code>string message_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for messageId to set.
        * @return This builder for chaining.
@@ -2034,11 +2357,19 @@ public final class MessageServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the thread whose messages will be listed.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The threadId.
      */
     java.lang.String getThreadId();
     /**
+     * <pre>
+     * ID of the thread whose messages will be listed.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for threadId.
      */
@@ -2046,6 +2377,10 @@ public final class MessageServiceOuterClass {
         getThreadIdBytes();
   }
   /**
+   * <pre>
+   * Request message for listing messages in a specific thread.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.ListMessagesRequest}
    */
   public static final class ListMessagesRequest extends
@@ -2132,6 +2467,10 @@ public final class MessageServiceOuterClass {
     public static final int THREAD_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object threadId_;
     /**
+     * <pre>
+     * ID of the thread whose messages will be listed.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The threadId.
      */
@@ -2149,6 +2488,10 @@ public final class MessageServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the thread whose messages will be listed.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for threadId.
      */
@@ -2322,6 +2665,10 @@ public final class MessageServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for listing messages in a specific thread.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.ListMessagesRequest}
      */
     public static final class Builder extends
@@ -2471,6 +2818,10 @@ public final class MessageServiceOuterClass {
 
       private java.lang.Object threadId_ = "";
       /**
+       * <pre>
+       * ID of the thread whose messages will be listed.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The threadId.
        */
@@ -2487,6 +2838,10 @@ public final class MessageServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thread whose messages will be listed.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for threadId.
        */
@@ -2504,6 +2859,10 @@ public final class MessageServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thread whose messages will be listed.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The threadId to set.
        * @return This builder for chaining.
@@ -2519,6 +2878,10 @@ public final class MessageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thread whose messages will be listed.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -2529,6 +2892,10 @@ public final class MessageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thread whose messages will be listed.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for threadId to set.
        * @return This builder for chaining.

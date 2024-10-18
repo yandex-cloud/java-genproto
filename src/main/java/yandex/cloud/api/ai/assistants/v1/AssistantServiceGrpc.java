@@ -3,6 +3,9 @@ package yandex.cloud.api.ai.assistants.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * AssistantService provides operations for managing assistants.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -246,10 +249,16 @@ public final class AssistantServiceGrpc {
   }
 
   /**
+   * <pre>
+   * AssistantService provides operations for managing assistants.
+   * </pre>
    */
   public static abstract class AssistantServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Create a new assistant.
+     * </pre>
      */
     public void create(yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.CreateAssistantRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant> responseObserver) {
@@ -257,6 +266,9 @@ public final class AssistantServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific assistant by its ID.
+     * </pre>
      */
     public void get(yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.GetAssistantRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant> responseObserver) {
@@ -264,6 +276,9 @@ public final class AssistantServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update an existing assistant.
+     * </pre>
      */
     public void update(yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.UpdateAssistantRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant> responseObserver) {
@@ -271,6 +286,9 @@ public final class AssistantServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete an assistant by its ID.
+     * </pre>
      */
     public void delete(yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.DeleteAssistantRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.DeleteAssistantResponse> responseObserver) {
@@ -278,6 +296,9 @@ public final class AssistantServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List assistants in a specific folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.ListAssistantsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.ListAssistantsResponse> responseObserver) {
@@ -285,6 +306,9 @@ public final class AssistantServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all versions of a specific assistant.
+     * </pre>
      */
     public void listVersions(yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.ListAssistantVersionsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.ListAssistantVersionsResponse> responseObserver) {
@@ -340,6 +364,9 @@ public final class AssistantServiceGrpc {
   }
 
   /**
+   * <pre>
+   * AssistantService provides operations for managing assistants.
+   * </pre>
    */
   public static final class AssistantServiceStub extends io.grpc.stub.AbstractAsyncStub<AssistantServiceStub> {
     private AssistantServiceStub(
@@ -354,6 +381,9 @@ public final class AssistantServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create a new assistant.
+     * </pre>
      */
     public void create(yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.CreateAssistantRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant> responseObserver) {
@@ -362,6 +392,9 @@ public final class AssistantServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific assistant by its ID.
+     * </pre>
      */
     public void get(yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.GetAssistantRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant> responseObserver) {
@@ -370,6 +403,9 @@ public final class AssistantServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update an existing assistant.
+     * </pre>
      */
     public void update(yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.UpdateAssistantRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant> responseObserver) {
@@ -378,6 +414,9 @@ public final class AssistantServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete an assistant by its ID.
+     * </pre>
      */
     public void delete(yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.DeleteAssistantRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.DeleteAssistantResponse> responseObserver) {
@@ -386,6 +425,9 @@ public final class AssistantServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List assistants in a specific folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.ListAssistantsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.ListAssistantsResponse> responseObserver) {
@@ -394,6 +436,9 @@ public final class AssistantServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all versions of a specific assistant.
+     * </pre>
      */
     public void listVersions(yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.ListAssistantVersionsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.ListAssistantVersionsResponse> responseObserver) {
@@ -403,6 +448,9 @@ public final class AssistantServiceGrpc {
   }
 
   /**
+   * <pre>
+   * AssistantService provides operations for managing assistants.
+   * </pre>
    */
   public static final class AssistantServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AssistantServiceBlockingStub> {
     private AssistantServiceBlockingStub(
@@ -417,6 +465,9 @@ public final class AssistantServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create a new assistant.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant create(yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.CreateAssistantRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -424,6 +475,9 @@ public final class AssistantServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific assistant by its ID.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant get(yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.GetAssistantRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -431,6 +485,9 @@ public final class AssistantServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update an existing assistant.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant update(yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.UpdateAssistantRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -438,6 +495,9 @@ public final class AssistantServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete an assistant by its ID.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.DeleteAssistantResponse delete(yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.DeleteAssistantRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -445,6 +505,9 @@ public final class AssistantServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List assistants in a specific folder.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.ListAssistantsResponse list(yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.ListAssistantsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -452,6 +515,9 @@ public final class AssistantServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all versions of a specific assistant.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.ListAssistantVersionsResponse listVersions(yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.ListAssistantVersionsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -460,6 +526,9 @@ public final class AssistantServiceGrpc {
   }
 
   /**
+   * <pre>
+   * AssistantService provides operations for managing assistants.
+   * </pre>
    */
   public static final class AssistantServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AssistantServiceFutureStub> {
     private AssistantServiceFutureStub(
@@ -474,6 +543,9 @@ public final class AssistantServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create a new assistant.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant> create(
         yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.CreateAssistantRequest request) {
@@ -482,6 +554,9 @@ public final class AssistantServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific assistant by its ID.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant> get(
         yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.GetAssistantRequest request) {
@@ -490,6 +565,9 @@ public final class AssistantServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update an existing assistant.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant> update(
         yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.UpdateAssistantRequest request) {
@@ -498,6 +576,9 @@ public final class AssistantServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete an assistant by its ID.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.DeleteAssistantResponse> delete(
         yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.DeleteAssistantRequest request) {
@@ -506,6 +587,9 @@ public final class AssistantServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List assistants in a specific folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.ListAssistantsResponse> list(
         yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.ListAssistantsRequest request) {
@@ -514,6 +598,9 @@ public final class AssistantServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all versions of a specific assistant.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.ListAssistantVersionsResponse> listVersions(
         yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.ListAssistantVersionsRequest request) {

@@ -31,11 +31,19 @@ public final class UserServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Name of the user.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the user.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
@@ -43,11 +51,19 @@ public final class UserServiceOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the user.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the user.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The bytes for description.
      */
@@ -67,25 +83,45 @@ public final class UserServiceOuterClass {
         getSourceBytes();
 
     /**
+     * <pre>
+     * Expiration configuration for the user.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return Whether the expirationConfig field is set.
      */
     boolean hasExpirationConfig();
     /**
+     * <pre>
+     * Expiration configuration for the user.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return The expirationConfig.
      */
     yandex.cloud.api.ai.common.Common.ExpirationConfig getExpirationConfig();
     /**
+     * <pre>
+     * Expiration configuration for the user.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      */
     yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder getExpirationConfigOrBuilder();
 
     /**
+     * <pre>
+     * Set of key-value pairs to label the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Set of key-value pairs to label the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     boolean containsLabels(
@@ -97,11 +133,19 @@ public final class UserServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Set of key-value pairs to label the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Set of key-value pairs to label the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -109,6 +153,10 @@ public final class UserServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Set of key-value pairs to label the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -116,6 +164,10 @@ public final class UserServiceOuterClass {
         java.lang.String key);
   }
   /**
+   * <pre>
+   * Request message for creating a new user.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.users.CreateUserRequest}
    */
   public static final class CreateUserRequest extends
@@ -300,6 +352,10 @@ public final class UserServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the user.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The name.
      */
@@ -317,6 +373,10 @@ public final class UserServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the user.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
@@ -338,6 +398,10 @@ public final class UserServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the user.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The description.
      */
@@ -355,6 +419,10 @@ public final class UserServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the user.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The bytes for description.
      */
@@ -414,6 +482,10 @@ public final class UserServiceOuterClass {
     public static final int EXPIRATION_CONFIG_FIELD_NUMBER = 5;
     private yandex.cloud.api.ai.common.Common.ExpirationConfig expirationConfig_;
     /**
+     * <pre>
+     * Expiration configuration for the user.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return Whether the expirationConfig field is set.
      */
@@ -422,6 +494,10 @@ public final class UserServiceOuterClass {
       return expirationConfig_ != null;
     }
     /**
+     * <pre>
+     * Expiration configuration for the user.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return The expirationConfig.
      */
@@ -430,6 +506,10 @@ public final class UserServiceOuterClass {
       return expirationConfig_ == null ? yandex.cloud.api.ai.common.Common.ExpirationConfig.getDefaultInstance() : expirationConfig_;
     }
     /**
+     * <pre>
+     * Expiration configuration for the user.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      */
     @java.lang.Override
@@ -464,6 +544,10 @@ public final class UserServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -482,6 +566,10 @@ public final class UserServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -490,6 +578,10 @@ public final class UserServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -503,6 +595,10 @@ public final class UserServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -741,6 +837,10 @@ public final class UserServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for creating a new user.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.users.CreateUserRequest}
      */
     public static final class Builder extends
@@ -1030,6 +1130,10 @@ public final class UserServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the user.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return The name.
        */
@@ -1046,6 +1150,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the user.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return The bytes for name.
        */
@@ -1063,6 +1171,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the user.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -1078,6 +1190,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the user.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return This builder for chaining.
        */
@@ -1088,6 +1204,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the user.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -1106,6 +1226,10 @@ public final class UserServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the user.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return The description.
        */
@@ -1122,6 +1246,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the user.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return The bytes for description.
        */
@@ -1139,6 +1267,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the user.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -1154,6 +1286,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the user.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return This builder for chaining.
        */
@@ -1164,6 +1300,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the user.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -1260,6 +1400,10 @@ public final class UserServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.common.Common.ExpirationConfig, yandex.cloud.api.ai.common.Common.ExpirationConfig.Builder, yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder> expirationConfigBuilder_;
       /**
+       * <pre>
+       * Expiration configuration for the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        * @return Whether the expirationConfig field is set.
        */
@@ -1267,6 +1411,10 @@ public final class UserServiceOuterClass {
         return expirationConfigBuilder_ != null || expirationConfig_ != null;
       }
       /**
+       * <pre>
+       * Expiration configuration for the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        * @return The expirationConfig.
        */
@@ -1278,6 +1426,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Expiration configuration for the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder setExpirationConfig(yandex.cloud.api.ai.common.Common.ExpirationConfig value) {
@@ -1294,6 +1446,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Expiration configuration for the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder setExpirationConfig(
@@ -1308,6 +1464,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Expiration configuration for the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder mergeExpirationConfig(yandex.cloud.api.ai.common.Common.ExpirationConfig value) {
@@ -1326,6 +1486,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Expiration configuration for the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder clearExpirationConfig() {
@@ -1340,6 +1504,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Expiration configuration for the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public yandex.cloud.api.ai.common.Common.ExpirationConfig.Builder getExpirationConfigBuilder() {
@@ -1348,6 +1516,10 @@ public final class UserServiceOuterClass {
         return getExpirationConfigFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Expiration configuration for the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder getExpirationConfigOrBuilder() {
@@ -1359,6 +1531,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Expiration configuration for the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1402,6 +1578,10 @@ public final class UserServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the user.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1420,6 +1600,10 @@ public final class UserServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the user.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -1428,6 +1612,10 @@ public final class UserServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the user.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -1441,6 +1629,10 @@ public final class UserServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the user.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -1462,6 +1654,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the user.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1481,6 +1677,10 @@ public final class UserServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the user.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       public Builder putLabels(
@@ -1496,6 +1696,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the user.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1563,11 +1767,19 @@ public final class UserServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the user to retrieve.
+     * </pre>
+     *
      * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The userId.
      */
     java.lang.String getUserId();
     /**
+     * <pre>
+     * ID of the user to retrieve.
+     * </pre>
+     *
      * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for userId.
      */
@@ -1575,6 +1787,10 @@ public final class UserServiceOuterClass {
         getUserIdBytes();
   }
   /**
+   * <pre>
+   * Request message for retrieving a user by ID.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.users.GetUserRequest}
    */
   public static final class GetUserRequest extends
@@ -1661,6 +1877,10 @@ public final class UserServiceOuterClass {
     public static final int USER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object userId_;
     /**
+     * <pre>
+     * ID of the user to retrieve.
+     * </pre>
+     *
      * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The userId.
      */
@@ -1678,6 +1898,10 @@ public final class UserServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the user to retrieve.
+     * </pre>
+     *
      * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for userId.
      */
@@ -1851,6 +2075,10 @@ public final class UserServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for retrieving a user by ID.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.users.GetUserRequest}
      */
     public static final class Builder extends
@@ -2000,6 +2228,10 @@ public final class UserServiceOuterClass {
 
       private java.lang.Object userId_ = "";
       /**
+       * <pre>
+       * ID of the user to retrieve.
+       * </pre>
+       *
        * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The userId.
        */
@@ -2016,6 +2248,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the user to retrieve.
+       * </pre>
+       *
        * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for userId.
        */
@@ -2033,6 +2269,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the user to retrieve.
+       * </pre>
+       *
        * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The userId to set.
        * @return This builder for chaining.
@@ -2048,6 +2288,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the user to retrieve.
+       * </pre>
+       *
        * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -2058,6 +2302,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the user to retrieve.
+       * </pre>
+       *
        * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for userId to set.
        * @return This builder for chaining.
@@ -2131,11 +2379,19 @@ public final class UserServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the user to update.
+     * </pre>
+     *
      * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The userId.
      */
     java.lang.String getUserId();
     /**
+     * <pre>
+     * ID of the user to update.
+     * </pre>
+     *
      * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for userId.
      */
@@ -2143,26 +2399,46 @@ public final class UserServiceOuterClass {
         getUserIdBytes();
 
     /**
+     * <pre>
+     * A field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * A field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * A field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
+     * <pre>
+     * New name for the user.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * New name for the user.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The bytes for name.
      */
@@ -2170,11 +2446,19 @@ public final class UserServiceOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * New description for the user.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * New description for the user.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -2182,25 +2466,45 @@ public final class UserServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * New expiration configuration for the user.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return Whether the expirationConfig field is set.
      */
     boolean hasExpirationConfig();
     /**
+     * <pre>
+     * New expiration configuration for the user.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return The expirationConfig.
      */
     yandex.cloud.api.ai.common.Common.ExpirationConfig getExpirationConfig();
     /**
+     * <pre>
+     * New expiration configuration for the user.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      */
     yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder getExpirationConfigOrBuilder();
 
     /**
+     * <pre>
+     * New set of labels for the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * New set of labels for the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     boolean containsLabels(
@@ -2212,11 +2516,19 @@ public final class UserServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * New set of labels for the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * New set of labels for the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -2224,6 +2536,10 @@ public final class UserServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * New set of labels for the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -2231,6 +2547,10 @@ public final class UserServiceOuterClass {
         java.lang.String key);
   }
   /**
+   * <pre>
+   * Request message for updating an existing user.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.users.UpdateUserRequest}
    */
   public static final class UpdateUserRequest extends
@@ -2383,6 +2703,10 @@ public final class UserServiceOuterClass {
     public static final int USER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object userId_;
     /**
+     * <pre>
+     * ID of the user to update.
+     * </pre>
+     *
      * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The userId.
      */
@@ -2400,6 +2724,10 @@ public final class UserServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the user to update.
+     * </pre>
+     *
      * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for userId.
      */
@@ -2421,6 +2749,10 @@ public final class UserServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * A field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return Whether the updateMask field is set.
      */
@@ -2429,6 +2761,10 @@ public final class UserServiceOuterClass {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * A field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return The updateMask.
      */
@@ -2437,6 +2773,10 @@ public final class UserServiceOuterClass {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * A field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
@@ -2447,6 +2787,10 @@ public final class UserServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * New name for the user.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The name.
      */
@@ -2464,6 +2808,10 @@ public final class UserServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New name for the user.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The bytes for name.
      */
@@ -2485,6 +2833,10 @@ public final class UserServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * New description for the user.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
@@ -2502,6 +2854,10 @@ public final class UserServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New description for the user.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -2523,6 +2879,10 @@ public final class UserServiceOuterClass {
     public static final int EXPIRATION_CONFIG_FIELD_NUMBER = 5;
     private yandex.cloud.api.ai.common.Common.ExpirationConfig expirationConfig_;
     /**
+     * <pre>
+     * New expiration configuration for the user.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return Whether the expirationConfig field is set.
      */
@@ -2531,6 +2891,10 @@ public final class UserServiceOuterClass {
       return expirationConfig_ != null;
     }
     /**
+     * <pre>
+     * New expiration configuration for the user.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return The expirationConfig.
      */
@@ -2539,6 +2903,10 @@ public final class UserServiceOuterClass {
       return expirationConfig_ == null ? yandex.cloud.api.ai.common.Common.ExpirationConfig.getDefaultInstance() : expirationConfig_;
     }
     /**
+     * <pre>
+     * New expiration configuration for the user.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      */
     @java.lang.Override
@@ -2573,6 +2941,10 @@ public final class UserServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * New set of labels for the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -2591,6 +2963,10 @@ public final class UserServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * New set of labels for the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -2599,6 +2975,10 @@ public final class UserServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * New set of labels for the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -2612,6 +2992,10 @@ public final class UserServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * New set of labels for the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -2856,6 +3240,10 @@ public final class UserServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for updating an existing user.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.users.UpdateUserRequest}
      */
     public static final class Builder extends
@@ -3076,6 +3464,10 @@ public final class UserServiceOuterClass {
 
       private java.lang.Object userId_ = "";
       /**
+       * <pre>
+       * ID of the user to update.
+       * </pre>
+       *
        * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The userId.
        */
@@ -3092,6 +3484,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the user to update.
+       * </pre>
+       *
        * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for userId.
        */
@@ -3109,6 +3505,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the user to update.
+       * </pre>
+       *
        * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The userId to set.
        * @return This builder for chaining.
@@ -3124,6 +3524,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the user to update.
+       * </pre>
+       *
        * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -3134,6 +3538,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the user to update.
+       * </pre>
+       *
        * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for userId to set.
        * @return This builder for chaining.
@@ -3154,6 +3562,10 @@ public final class UserServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * A field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        * @return Whether the updateMask field is set.
        */
@@ -3161,6 +3573,10 @@ public final class UserServiceOuterClass {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * A field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        * @return The updateMask.
        */
@@ -3172,6 +3588,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -3188,6 +3608,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setUpdateMask(
@@ -3202,6 +3626,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -3220,6 +3648,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearUpdateMask() {
@@ -3234,6 +3666,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -3242,6 +3678,10 @@ public final class UserServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * A field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -3253,6 +3693,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3271,6 +3715,10 @@ public final class UserServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * New name for the user.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return The name.
        */
@@ -3287,6 +3735,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New name for the user.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return The bytes for name.
        */
@@ -3304,6 +3756,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New name for the user.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -3319,6 +3775,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New name for the user.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return This builder for chaining.
        */
@@ -3329,6 +3789,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New name for the user.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -3347,6 +3811,10 @@ public final class UserServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * New description for the user.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The description.
        */
@@ -3363,6 +3831,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description for the user.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The bytes for description.
        */
@@ -3380,6 +3852,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description for the user.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -3395,6 +3871,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description for the user.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return This builder for chaining.
        */
@@ -3405,6 +3885,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description for the user.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -3425,6 +3909,10 @@ public final class UserServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.common.Common.ExpirationConfig, yandex.cloud.api.ai.common.Common.ExpirationConfig.Builder, yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder> expirationConfigBuilder_;
       /**
+       * <pre>
+       * New expiration configuration for the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        * @return Whether the expirationConfig field is set.
        */
@@ -3432,6 +3920,10 @@ public final class UserServiceOuterClass {
         return expirationConfigBuilder_ != null || expirationConfig_ != null;
       }
       /**
+       * <pre>
+       * New expiration configuration for the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        * @return The expirationConfig.
        */
@@ -3443,6 +3935,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New expiration configuration for the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder setExpirationConfig(yandex.cloud.api.ai.common.Common.ExpirationConfig value) {
@@ -3459,6 +3955,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New expiration configuration for the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder setExpirationConfig(
@@ -3473,6 +3973,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New expiration configuration for the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder mergeExpirationConfig(yandex.cloud.api.ai.common.Common.ExpirationConfig value) {
@@ -3491,6 +3995,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New expiration configuration for the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder clearExpirationConfig() {
@@ -3505,6 +4013,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New expiration configuration for the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public yandex.cloud.api.ai.common.Common.ExpirationConfig.Builder getExpirationConfigBuilder() {
@@ -3513,6 +4025,10 @@ public final class UserServiceOuterClass {
         return getExpirationConfigFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * New expiration configuration for the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder getExpirationConfigOrBuilder() {
@@ -3524,6 +4040,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New expiration configuration for the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3567,6 +4087,10 @@ public final class UserServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * New set of labels for the user.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -3585,6 +4109,10 @@ public final class UserServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * New set of labels for the user.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -3593,6 +4121,10 @@ public final class UserServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * New set of labels for the user.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -3606,6 +4138,10 @@ public final class UserServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * New set of labels for the user.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -3627,6 +4163,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New set of labels for the user.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -3646,6 +4186,10 @@ public final class UserServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * New set of labels for the user.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       public Builder putLabels(
@@ -3661,6 +4205,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New set of labels for the user.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -3728,11 +4276,19 @@ public final class UserServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the user to delete.
+     * </pre>
+     *
      * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The userId.
      */
     java.lang.String getUserId();
     /**
+     * <pre>
+     * ID of the user to delete.
+     * </pre>
+     *
      * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for userId.
      */
@@ -3740,6 +4296,10 @@ public final class UserServiceOuterClass {
         getUserIdBytes();
   }
   /**
+   * <pre>
+   * Request message for deleting a user by ID.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.users.DeleteUserRequest}
    */
   public static final class DeleteUserRequest extends
@@ -3826,6 +4386,10 @@ public final class UserServiceOuterClass {
     public static final int USER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object userId_;
     /**
+     * <pre>
+     * ID of the user to delete.
+     * </pre>
+     *
      * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The userId.
      */
@@ -3843,6 +4407,10 @@ public final class UserServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the user to delete.
+     * </pre>
+     *
      * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for userId.
      */
@@ -4016,6 +4584,10 @@ public final class UserServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for deleting a user by ID.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.users.DeleteUserRequest}
      */
     public static final class Builder extends
@@ -4165,6 +4737,10 @@ public final class UserServiceOuterClass {
 
       private java.lang.Object userId_ = "";
       /**
+       * <pre>
+       * ID of the user to delete.
+       * </pre>
+       *
        * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The userId.
        */
@@ -4181,6 +4757,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the user to delete.
+       * </pre>
+       *
        * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for userId.
        */
@@ -4198,6 +4778,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the user to delete.
+       * </pre>
+       *
        * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The userId to set.
        * @return This builder for chaining.
@@ -4213,6 +4797,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the user to delete.
+       * </pre>
+       *
        * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -4223,6 +4811,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the user to delete.
+       * </pre>
+       *
        * <code>string user_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for userId to set.
        * @return This builder for chaining.
@@ -4296,6 +4888,10 @@ public final class UserServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
+   * <pre>
+   * Response message for the delete operation.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.users.DeleteUserResponse}
    */
   public static final class DeleteUserResponse extends
@@ -4517,6 +5113,10 @@ public final class UserServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Response message for the delete operation.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.users.DeleteUserResponse}
      */
     public static final class Builder extends
@@ -4714,11 +5314,19 @@ public final class UserServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Folder ID from which to list users.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * Folder ID from which to list users.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for folderId.
      */
@@ -4726,17 +5334,29 @@ public final class UserServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Maximum number of users to return per page.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The bytes for pageToken.
      */
@@ -4744,6 +5364,10 @@ public final class UserServiceOuterClass {
         getPageTokenBytes();
   }
   /**
+   * <pre>
+   * Request message for listing users in a specific folder.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.users.ListUsersRequest}
    */
   public static final class ListUsersRequest extends
@@ -4842,6 +5466,10 @@ public final class UserServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * Folder ID from which to list users.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The folderId.
      */
@@ -4859,6 +5487,10 @@ public final class UserServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Folder ID from which to list users.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for folderId.
      */
@@ -4880,6 +5512,10 @@ public final class UserServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * Maximum number of users to return per page.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      * @return The pageSize.
      */
@@ -4891,6 +5527,10 @@ public final class UserServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The pageToken.
      */
@@ -4908,6 +5548,10 @@ public final class UserServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The bytes for pageToken.
      */
@@ -5103,6 +5747,10 @@ public final class UserServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for listing users in a specific folder.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.users.ListUsersRequest}
      */
     public static final class Builder extends
@@ -5265,6 +5913,10 @@ public final class UserServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * Folder ID from which to list users.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The folderId.
        */
@@ -5281,6 +5933,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID from which to list users.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for folderId.
        */
@@ -5298,6 +5954,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID from which to list users.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -5313,6 +5973,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID from which to list users.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -5323,6 +5987,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID from which to list users.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -5341,6 +6009,10 @@ public final class UserServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * Maximum number of users to return per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @return The pageSize.
        */
@@ -5349,6 +6021,10 @@ public final class UserServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * Maximum number of users to return per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -5360,6 +6036,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maximum number of users to return per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @return This builder for chaining.
        */
@@ -5372,6 +6052,10 @@ public final class UserServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return The pageToken.
        */
@@ -5388,6 +6072,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return The bytes for pageToken.
        */
@@ -5405,6 +6093,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -5420,6 +6112,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return This builder for chaining.
        */
@@ -5430,6 +6126,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -5503,35 +6203,63 @@ public final class UserServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of users in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
      */
     java.util.List<yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User> 
         getUsersList();
     /**
+     * <pre>
+     * List of users in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
      */
     yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User getUsers(int index);
     /**
+     * <pre>
+     * List of users in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
      */
     int getUsersCount();
     /**
+     * <pre>
+     * List of users in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.UserOrBuilder> 
         getUsersOrBuilderList();
     /**
+     * <pre>
+     * List of users in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
      */
     yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.UserOrBuilder getUsersOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -5539,6 +6267,10 @@ public final class UserServiceOuterClass {
         getNextPageTokenBytes();
   }
   /**
+   * <pre>
+   * Response message for the list operation.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.users.ListUsersResponse}
    */
   public static final class ListUsersResponse extends
@@ -5639,6 +6371,10 @@ public final class UserServiceOuterClass {
     public static final int USERS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User> users_;
     /**
+     * <pre>
+     * List of users in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
      */
     @java.lang.Override
@@ -5646,6 +6382,10 @@ public final class UserServiceOuterClass {
       return users_;
     }
     /**
+     * <pre>
+     * List of users in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
      */
     @java.lang.Override
@@ -5654,6 +6394,10 @@ public final class UserServiceOuterClass {
       return users_;
     }
     /**
+     * <pre>
+     * List of users in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
      */
     @java.lang.Override
@@ -5661,6 +6405,10 @@ public final class UserServiceOuterClass {
       return users_.size();
     }
     /**
+     * <pre>
+     * List of users in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
      */
     @java.lang.Override
@@ -5668,6 +6416,10 @@ public final class UserServiceOuterClass {
       return users_.get(index);
     }
     /**
+     * <pre>
+     * List of users in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
      */
     @java.lang.Override
@@ -5679,6 +6431,10 @@ public final class UserServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
@@ -5696,6 +6452,10 @@ public final class UserServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -5882,6 +6642,10 @@ public final class UserServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Response message for the list operation.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.users.ListUsersResponse}
      */
     public static final class Builder extends
@@ -6086,6 +6850,10 @@ public final class UserServiceOuterClass {
           yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User, yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User.Builder, yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.UserOrBuilder> usersBuilder_;
 
       /**
+       * <pre>
+       * List of users in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
        */
       public java.util.List<yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User> getUsersList() {
@@ -6096,6 +6864,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of users in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
        */
       public int getUsersCount() {
@@ -6106,6 +6878,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of users in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User getUsers(int index) {
@@ -6116,6 +6892,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of users in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
        */
       public Builder setUsers(
@@ -6133,6 +6913,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of users in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
        */
       public Builder setUsers(
@@ -6147,6 +6931,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of users in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
        */
       public Builder addUsers(yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User value) {
@@ -6163,6 +6951,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of users in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
        */
       public Builder addUsers(
@@ -6180,6 +6972,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of users in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
        */
       public Builder addUsers(
@@ -6194,6 +6990,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of users in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
        */
       public Builder addUsers(
@@ -6208,6 +7008,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of users in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
        */
       public Builder addAllUsers(
@@ -6223,6 +7027,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of users in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
        */
       public Builder clearUsers() {
@@ -6236,6 +7044,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of users in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
        */
       public Builder removeUsers(int index) {
@@ -6249,6 +7061,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of users in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User.Builder getUsersBuilder(
@@ -6256,6 +7072,10 @@ public final class UserServiceOuterClass {
         return getUsersFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of users in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.UserOrBuilder getUsersOrBuilder(
@@ -6266,6 +7086,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of users in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.UserOrBuilder> 
@@ -6277,6 +7101,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of users in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User.Builder addUsersBuilder() {
@@ -6284,6 +7112,10 @@ public final class UserServiceOuterClass {
             yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of users in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User.Builder addUsersBuilder(
@@ -6292,6 +7124,10 @@ public final class UserServiceOuterClass {
             index, yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of users in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.users.User users = 1;</code>
        */
       public java.util.List<yandex.cloud.api.ai.assistants.v1.users.UserOuterClass.User.Builder> 
@@ -6315,6 +7151,10 @@ public final class UserServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The nextPageToken.
        */
@@ -6331,6 +7171,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The bytes for nextPageToken.
        */
@@ -6348,6 +7192,10 @@ public final class UserServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -6363,6 +7211,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return This builder for chaining.
        */
@@ -6373,6 +7225,10 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.

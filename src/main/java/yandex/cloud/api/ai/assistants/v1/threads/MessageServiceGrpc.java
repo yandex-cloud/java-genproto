@@ -3,6 +3,9 @@ package yandex.cloud.api.ai.assistants.v1.threads;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * MessageService provides operations for managing messages.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -153,10 +156,16 @@ public final class MessageServiceGrpc {
   }
 
   /**
+   * <pre>
+   * MessageService provides operations for managing messages.
+   * </pre>
    */
   public static abstract class MessageServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Create a new message.
+     * </pre>
      */
     public void create(yandex.cloud.api.ai.assistants.v1.threads.MessageServiceOuterClass.CreateMessageRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message> responseObserver) {
@@ -164,6 +173,9 @@ public final class MessageServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific message by its ID.
+     * </pre>
      */
     public void get(yandex.cloud.api.ai.assistants.v1.threads.MessageServiceOuterClass.GetMessageRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message> responseObserver) {
@@ -171,6 +183,10 @@ public final class MessageServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List messages in a specific thread.
+     * By default, messages are listed in reverse chronological order, i.e., from the newest to the oldest.
+     * </pre>
      */
     public void list(yandex.cloud.api.ai.assistants.v1.threads.MessageServiceOuterClass.ListMessagesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message> responseObserver) {
@@ -205,6 +221,9 @@ public final class MessageServiceGrpc {
   }
 
   /**
+   * <pre>
+   * MessageService provides operations for managing messages.
+   * </pre>
    */
   public static final class MessageServiceStub extends io.grpc.stub.AbstractAsyncStub<MessageServiceStub> {
     private MessageServiceStub(
@@ -219,6 +238,9 @@ public final class MessageServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create a new message.
+     * </pre>
      */
     public void create(yandex.cloud.api.ai.assistants.v1.threads.MessageServiceOuterClass.CreateMessageRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message> responseObserver) {
@@ -227,6 +249,9 @@ public final class MessageServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific message by its ID.
+     * </pre>
      */
     public void get(yandex.cloud.api.ai.assistants.v1.threads.MessageServiceOuterClass.GetMessageRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message> responseObserver) {
@@ -235,6 +260,10 @@ public final class MessageServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List messages in a specific thread.
+     * By default, messages are listed in reverse chronological order, i.e., from the newest to the oldest.
+     * </pre>
      */
     public void list(yandex.cloud.api.ai.assistants.v1.threads.MessageServiceOuterClass.ListMessagesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message> responseObserver) {
@@ -244,6 +273,9 @@ public final class MessageServiceGrpc {
   }
 
   /**
+   * <pre>
+   * MessageService provides operations for managing messages.
+   * </pre>
    */
   public static final class MessageServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<MessageServiceBlockingStub> {
     private MessageServiceBlockingStub(
@@ -258,6 +290,9 @@ public final class MessageServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create a new message.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message create(yandex.cloud.api.ai.assistants.v1.threads.MessageServiceOuterClass.CreateMessageRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -265,6 +300,9 @@ public final class MessageServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific message by its ID.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message get(yandex.cloud.api.ai.assistants.v1.threads.MessageServiceOuterClass.GetMessageRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -272,6 +310,10 @@ public final class MessageServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List messages in a specific thread.
+     * By default, messages are listed in reverse chronological order, i.e., from the newest to the oldest.
+     * </pre>
      */
     public java.util.Iterator<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message> list(
         yandex.cloud.api.ai.assistants.v1.threads.MessageServiceOuterClass.ListMessagesRequest request) {
@@ -281,6 +323,9 @@ public final class MessageServiceGrpc {
   }
 
   /**
+   * <pre>
+   * MessageService provides operations for managing messages.
+   * </pre>
    */
   public static final class MessageServiceFutureStub extends io.grpc.stub.AbstractFutureStub<MessageServiceFutureStub> {
     private MessageServiceFutureStub(
@@ -295,6 +340,9 @@ public final class MessageServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create a new message.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message> create(
         yandex.cloud.api.ai.assistants.v1.threads.MessageServiceOuterClass.CreateMessageRequest request) {
@@ -303,6 +351,9 @@ public final class MessageServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific message by its ID.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message> get(
         yandex.cloud.api.ai.assistants.v1.threads.MessageServiceOuterClass.GetMessageRequest request) {

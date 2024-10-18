@@ -359,6 +359,33 @@ public final class ImageOuterClass {
      * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 14;</code>
      */
     yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder getHardwareGenerationOrBuilder();
+
+    /**
+     * <pre>
+     * Key encryption key info.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.KMSKey kms_key = 15;</code>
+     * @return Whether the kmsKey field is set.
+     */
+    boolean hasKmsKey();
+    /**
+     * <pre>
+     * Key encryption key info.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.KMSKey kms_key = 15;</code>
+     * @return The kmsKey.
+     */
+    yandex.cloud.api.compute.v1.Kek.KMSKey getKmsKey();
+    /**
+     * <pre>
+     * Key encryption key info.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.KMSKey kms_key = 15;</code>
+     */
+    yandex.cloud.api.compute.v1.Kek.KMSKeyOrBuilder getKmsKeyOrBuilder();
   }
   /**
    * <pre>
@@ -525,6 +552,19 @@ public final class ImageOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(hardwareGeneration_);
                 hardwareGeneration_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 122: {
+              yandex.cloud.api.compute.v1.Kek.KMSKey.Builder subBuilder = null;
+              if (kmsKey_ != null) {
+                subBuilder = kmsKey_.toBuilder();
+              }
+              kmsKey_ = input.readMessage(yandex.cloud.api.compute.v1.Kek.KMSKey.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(kmsKey_);
+                kmsKey_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1324,6 +1364,44 @@ public final class ImageOuterClass {
       return getHardwareGeneration();
     }
 
+    public static final int KMS_KEY_FIELD_NUMBER = 15;
+    private yandex.cloud.api.compute.v1.Kek.KMSKey kmsKey_;
+    /**
+     * <pre>
+     * Key encryption key info.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.KMSKey kms_key = 15;</code>
+     * @return Whether the kmsKey field is set.
+     */
+    @java.lang.Override
+    public boolean hasKmsKey() {
+      return kmsKey_ != null;
+    }
+    /**
+     * <pre>
+     * Key encryption key info.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.KMSKey kms_key = 15;</code>
+     * @return The kmsKey.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.Kek.KMSKey getKmsKey() {
+      return kmsKey_ == null ? yandex.cloud.api.compute.v1.Kek.KMSKey.getDefaultInstance() : kmsKey_;
+    }
+    /**
+     * <pre>
+     * Key encryption key info.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.KMSKey kms_key = 15;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.Kek.KMSKeyOrBuilder getKmsKeyOrBuilder() {
+      return getKmsKey();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1382,6 +1460,9 @@ public final class ImageOuterClass {
       }
       if (hardwareGeneration_ != null) {
         output.writeMessage(14, getHardwareGeneration());
+      }
+      if (kmsKey_ != null) {
+        output.writeMessage(15, getKmsKey());
       }
       unknownFields.writeTo(output);
     }
@@ -1453,6 +1534,10 @@ public final class ImageOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, getHardwareGeneration());
       }
+      if (kmsKey_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getKmsKey());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1503,6 +1588,11 @@ public final class ImageOuterClass {
       if (hasHardwareGeneration()) {
         if (!getHardwareGeneration()
             .equals(other.getHardwareGeneration())) return false;
+      }
+      if (hasKmsKey() != other.hasKmsKey()) return false;
+      if (hasKmsKey()) {
+        if (!getKmsKey()
+            .equals(other.getKmsKey())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -1555,6 +1645,10 @@ public final class ImageOuterClass {
       if (hasHardwareGeneration()) {
         hash = (37 * hash) + HARDWARE_GENERATION_FIELD_NUMBER;
         hash = (53 * hash) + getHardwareGeneration().hashCode();
+      }
+      if (hasKmsKey()) {
+        hash = (37 * hash) + KMS_KEY_FIELD_NUMBER;
+        hash = (53 * hash) + getKmsKey().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1754,6 +1848,12 @@ public final class ImageOuterClass {
           hardwareGeneration_ = null;
           hardwareGenerationBuilder_ = null;
         }
+        if (kmsKeyBuilder_ == null) {
+          kmsKey_ = null;
+        } else {
+          kmsKey_ = null;
+          kmsKeyBuilder_ = null;
+        }
         return this;
       }
 
@@ -1811,6 +1911,11 @@ public final class ImageOuterClass {
           result.hardwareGeneration_ = hardwareGeneration_;
         } else {
           result.hardwareGeneration_ = hardwareGenerationBuilder_.build();
+        }
+        if (kmsKeyBuilder_ == null) {
+          result.kmsKey_ = kmsKey_;
+        } else {
+          result.kmsKey_ = kmsKeyBuilder_.build();
         }
         onBuilt();
         return result;
@@ -1912,6 +2017,9 @@ public final class ImageOuterClass {
         }
         if (other.hasHardwareGeneration()) {
           mergeHardwareGeneration(other.getHardwareGeneration());
+        }
+        if (other.hasKmsKey()) {
+          mergeKmsKey(other.getKmsKey());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3428,6 +3536,161 @@ public final class ImageOuterClass {
         }
         return hardwareGenerationBuilder_;
       }
+
+      private yandex.cloud.api.compute.v1.Kek.KMSKey kmsKey_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.Kek.KMSKey, yandex.cloud.api.compute.v1.Kek.KMSKey.Builder, yandex.cloud.api.compute.v1.Kek.KMSKeyOrBuilder> kmsKeyBuilder_;
+      /**
+       * <pre>
+       * Key encryption key info.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.KMSKey kms_key = 15;</code>
+       * @return Whether the kmsKey field is set.
+       */
+      public boolean hasKmsKey() {
+        return kmsKeyBuilder_ != null || kmsKey_ != null;
+      }
+      /**
+       * <pre>
+       * Key encryption key info.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.KMSKey kms_key = 15;</code>
+       * @return The kmsKey.
+       */
+      public yandex.cloud.api.compute.v1.Kek.KMSKey getKmsKey() {
+        if (kmsKeyBuilder_ == null) {
+          return kmsKey_ == null ? yandex.cloud.api.compute.v1.Kek.KMSKey.getDefaultInstance() : kmsKey_;
+        } else {
+          return kmsKeyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Key encryption key info.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.KMSKey kms_key = 15;</code>
+       */
+      public Builder setKmsKey(yandex.cloud.api.compute.v1.Kek.KMSKey value) {
+        if (kmsKeyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          kmsKey_ = value;
+          onChanged();
+        } else {
+          kmsKeyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Key encryption key info.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.KMSKey kms_key = 15;</code>
+       */
+      public Builder setKmsKey(
+          yandex.cloud.api.compute.v1.Kek.KMSKey.Builder builderForValue) {
+        if (kmsKeyBuilder_ == null) {
+          kmsKey_ = builderForValue.build();
+          onChanged();
+        } else {
+          kmsKeyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Key encryption key info.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.KMSKey kms_key = 15;</code>
+       */
+      public Builder mergeKmsKey(yandex.cloud.api.compute.v1.Kek.KMSKey value) {
+        if (kmsKeyBuilder_ == null) {
+          if (kmsKey_ != null) {
+            kmsKey_ =
+              yandex.cloud.api.compute.v1.Kek.KMSKey.newBuilder(kmsKey_).mergeFrom(value).buildPartial();
+          } else {
+            kmsKey_ = value;
+          }
+          onChanged();
+        } else {
+          kmsKeyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Key encryption key info.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.KMSKey kms_key = 15;</code>
+       */
+      public Builder clearKmsKey() {
+        if (kmsKeyBuilder_ == null) {
+          kmsKey_ = null;
+          onChanged();
+        } else {
+          kmsKey_ = null;
+          kmsKeyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Key encryption key info.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.KMSKey kms_key = 15;</code>
+       */
+      public yandex.cloud.api.compute.v1.Kek.KMSKey.Builder getKmsKeyBuilder() {
+        
+        onChanged();
+        return getKmsKeyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Key encryption key info.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.KMSKey kms_key = 15;</code>
+       */
+      public yandex.cloud.api.compute.v1.Kek.KMSKeyOrBuilder getKmsKeyOrBuilder() {
+        if (kmsKeyBuilder_ != null) {
+          return kmsKeyBuilder_.getMessageOrBuilder();
+        } else {
+          return kmsKey_ == null ?
+              yandex.cloud.api.compute.v1.Kek.KMSKey.getDefaultInstance() : kmsKey_;
+        }
+      }
+      /**
+       * <pre>
+       * Key encryption key info.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.KMSKey kms_key = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.Kek.KMSKey, yandex.cloud.api.compute.v1.Kek.KMSKey.Builder, yandex.cloud.api.compute.v1.Kek.KMSKeyOrBuilder> 
+          getKmsKeyFieldBuilder() {
+        if (kmsKeyBuilder_ == null) {
+          kmsKeyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.compute.v1.Kek.KMSKey, yandex.cloud.api.compute.v1.Kek.KMSKey.Builder, yandex.cloud.api.compute.v1.Kek.KMSKeyOrBuilder>(
+                  getKmsKey(),
+                  getParentForChildren(),
+                  isClean());
+          kmsKey_ = null;
+        }
+        return kmsKeyBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4210,33 +4473,36 @@ public final class ImageOuterClass {
     java.lang.String[] descriptorData = {
       "\n#yandex/cloud/compute/v1/image.proto\022\027y" +
       "andex.cloud.compute.v1\032\037google/protobuf/" +
-      "timestamp.proto\0321yandex/cloud/compute/v1" +
-      "/hardware_generation.proto\"\304\004\n\005Image\022\n\n\002" +
-      "id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_a" +
-      "t\030\003 \001(\0132\032.google.protobuf.Timestamp\022\014\n\004n" +
-      "ame\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022:\n\006labels" +
-      "\030\006 \003(\0132*.yandex.cloud.compute.v1.Image.L" +
-      "abelsEntry\022\016\n\006family\030\007 \001(\t\022\024\n\014storage_si" +
-      "ze\030\010 \001(\003\022\025\n\rmin_disk_size\030\t \001(\003\022\023\n\013produ" +
-      "ct_ids\030\n \003(\t\0225\n\006status\030\013 \001(\0162%.yandex.cl" +
-      "oud.compute.v1.Image.Status\022\'\n\002os\030\014 \001(\0132" +
-      "\033.yandex.cloud.compute.v1.Os\022\016\n\006pooled\030\r" +
-      " \001(\010\022H\n\023hardware_generation\030\016 \001(\0132+.yand" +
-      "ex.cloud.compute.v1.HardwareGeneration\032-" +
-      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\"R\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022" +
-      "\014\n\010CREATING\020\001\022\t\n\005READY\020\002\022\t\n\005ERROR\020\003\022\014\n\010D" +
-      "ELETING\020\004\"j\n\002Os\022.\n\004type\030\001 \001(\0162 .yandex.c" +
-      "loud.compute.v1.Os.Type\"4\n\004Type\022\024\n\020TYPE_" +
-      "UNSPECIFIED\020\000\022\t\n\005LINUX\020\001\022\013\n\007WINDOWS\020\002Bb\n" +
-      "\033yandex.cloud.api.compute.v1ZCgithub.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/c" +
-      "ompute/v1;computeb\006proto3"
+      "timestamp.proto\032!yandex/cloud/compute/v1" +
+      "/kek.proto\0321yandex/cloud/compute/v1/hard" +
+      "ware_generation.proto\"\366\004\n\005Image\022\n\n\002id\030\001 " +
+      "\001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001" +
+      "(\0132\032.google.protobuf.Timestamp\022\014\n\004name\030\004" +
+      " \001(\t\022\023\n\013description\030\005 \001(\t\022:\n\006labels\030\006 \003(" +
+      "\0132*.yandex.cloud.compute.v1.Image.Labels" +
+      "Entry\022\016\n\006family\030\007 \001(\t\022\024\n\014storage_size\030\010 " +
+      "\001(\003\022\025\n\rmin_disk_size\030\t \001(\003\022\023\n\013product_id" +
+      "s\030\n \003(\t\0225\n\006status\030\013 \001(\0162%.yandex.cloud.c" +
+      "ompute.v1.Image.Status\022\'\n\002os\030\014 \001(\0132\033.yan" +
+      "dex.cloud.compute.v1.Os\022\016\n\006pooled\030\r \001(\010\022" +
+      "H\n\023hardware_generation\030\016 \001(\0132+.yandex.cl" +
+      "oud.compute.v1.HardwareGeneration\0220\n\007kms" +
+      "_key\030\017 \001(\0132\037.yandex.cloud.compute.v1.KMS" +
+      "Key\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\"R\n\006Status\022\026\n\022STATUS_UNSPECIFI" +
+      "ED\020\000\022\014\n\010CREATING\020\001\022\t\n\005READY\020\002\022\t\n\005ERROR\020\003" +
+      "\022\014\n\010DELETING\020\004\"j\n\002Os\022.\n\004type\030\001 \001(\0162 .yan" +
+      "dex.cloud.compute.v1.Os.Type\"4\n\004Type\022\024\n\020" +
+      "TYPE_UNSPECIFIED\020\000\022\t\n\005LINUX\020\001\022\013\n\007WINDOWS" +
+      "\020\002Bb\n\033yandex.cloud.api.compute.v1ZCgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/compute/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          yandex.cloud.api.compute.v1.Kek.getDescriptor(),
           yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_compute_v1_Image_descriptor =
@@ -4244,7 +4510,7 @@ public final class ImageOuterClass {
     internal_static_yandex_cloud_compute_v1_Image_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_Image_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Family", "StorageSize", "MinDiskSize", "ProductIds", "Status", "Os", "Pooled", "HardwareGeneration", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Family", "StorageSize", "MinDiskSize", "ProductIds", "Status", "Os", "Pooled", "HardwareGeneration", "KmsKey", });
     internal_static_yandex_cloud_compute_v1_Image_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_Image_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_Image_LabelsEntry_fieldAccessorTable = new
@@ -4258,6 +4524,7 @@ public final class ImageOuterClass {
         internal_static_yandex_cloud_compute_v1_Os_descriptor,
         new java.lang.String[] { "Type", });
     com.google.protobuf.TimestampProto.getDescriptor();
+    yandex.cloud.api.compute.v1.Kek.getDescriptor();
     yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.getDescriptor();
   }
 

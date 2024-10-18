@@ -3,6 +3,9 @@ package yandex.cloud.api.ai.assistants.v1.threads;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * ThreadService provides operations for managing threads.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -215,10 +218,16 @@ public final class ThreadServiceGrpc {
   }
 
   /**
+   * <pre>
+   * ThreadService provides operations for managing threads.
+   * </pre>
    */
   public static abstract class ThreadServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Create a new thread.
+     * </pre>
      */
     public void create(yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.CreateThreadRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread> responseObserver) {
@@ -226,6 +235,9 @@ public final class ThreadServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific thread by its ID.
+     * </pre>
      */
     public void get(yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.GetThreadRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread> responseObserver) {
@@ -233,6 +245,9 @@ public final class ThreadServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update an existing thread.
+     * </pre>
      */
     public void update(yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.UpdateThreadRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread> responseObserver) {
@@ -240,6 +255,9 @@ public final class ThreadServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete a thread by its ID.
+     * </pre>
      */
     public void delete(yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.DeleteThreadRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.DeleteThreadResponse> responseObserver) {
@@ -247,6 +265,9 @@ public final class ThreadServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List threads in a specific folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.ListThreadsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.ListThreadsResponse> responseObserver) {
@@ -295,6 +316,9 @@ public final class ThreadServiceGrpc {
   }
 
   /**
+   * <pre>
+   * ThreadService provides operations for managing threads.
+   * </pre>
    */
   public static final class ThreadServiceStub extends io.grpc.stub.AbstractAsyncStub<ThreadServiceStub> {
     private ThreadServiceStub(
@@ -309,6 +333,9 @@ public final class ThreadServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create a new thread.
+     * </pre>
      */
     public void create(yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.CreateThreadRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread> responseObserver) {
@@ -317,6 +344,9 @@ public final class ThreadServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific thread by its ID.
+     * </pre>
      */
     public void get(yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.GetThreadRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread> responseObserver) {
@@ -325,6 +355,9 @@ public final class ThreadServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update an existing thread.
+     * </pre>
      */
     public void update(yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.UpdateThreadRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread> responseObserver) {
@@ -333,6 +366,9 @@ public final class ThreadServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete a thread by its ID.
+     * </pre>
      */
     public void delete(yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.DeleteThreadRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.DeleteThreadResponse> responseObserver) {
@@ -341,6 +377,9 @@ public final class ThreadServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List threads in a specific folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.ListThreadsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.ListThreadsResponse> responseObserver) {
@@ -350,6 +389,9 @@ public final class ThreadServiceGrpc {
   }
 
   /**
+   * <pre>
+   * ThreadService provides operations for managing threads.
+   * </pre>
    */
   public static final class ThreadServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ThreadServiceBlockingStub> {
     private ThreadServiceBlockingStub(
@@ -364,6 +406,9 @@ public final class ThreadServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create a new thread.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread create(yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.CreateThreadRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -371,6 +416,9 @@ public final class ThreadServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific thread by its ID.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread get(yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.GetThreadRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -378,6 +426,9 @@ public final class ThreadServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update an existing thread.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread update(yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.UpdateThreadRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -385,6 +436,9 @@ public final class ThreadServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete a thread by its ID.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.DeleteThreadResponse delete(yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.DeleteThreadRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -392,6 +446,9 @@ public final class ThreadServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List threads in a specific folder.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.ListThreadsResponse list(yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.ListThreadsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -400,6 +457,9 @@ public final class ThreadServiceGrpc {
   }
 
   /**
+   * <pre>
+   * ThreadService provides operations for managing threads.
+   * </pre>
    */
   public static final class ThreadServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ThreadServiceFutureStub> {
     private ThreadServiceFutureStub(
@@ -414,6 +474,9 @@ public final class ThreadServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create a new thread.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread> create(
         yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.CreateThreadRequest request) {
@@ -422,6 +485,9 @@ public final class ThreadServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific thread by its ID.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread> get(
         yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.GetThreadRequest request) {
@@ -430,6 +496,9 @@ public final class ThreadServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update an existing thread.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread> update(
         yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.UpdateThreadRequest request) {
@@ -438,6 +507,9 @@ public final class ThreadServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete a thread by its ID.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.DeleteThreadResponse> delete(
         yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.DeleteThreadRequest request) {
@@ -446,6 +518,9 @@ public final class ThreadServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List threads in a specific folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.ListThreadsResponse> list(
         yandex.cloud.api.ai.assistants.v1.threads.ThreadServiceOuterClass.ListThreadsRequest request) {

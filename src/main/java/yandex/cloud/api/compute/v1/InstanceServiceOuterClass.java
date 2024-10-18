@@ -46212,43 +46212,6 @@ public final class InstanceServiceOuterClass {
 
       /**
        * <pre>
-       * Block size of the disk, specified in bytes. The default is 4096.
-       * </pre>
-       *
-       * <code>int64 block_size = 8;</code>
-       * @return The blockSize.
-       */
-      long getBlockSize();
-
-      /**
-       * <pre>
-       * Placement policy configuration.
-       * </pre>
-       *
-       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
-       * @return Whether the diskPlacementPolicy field is set.
-       */
-      boolean hasDiskPlacementPolicy();
-      /**
-       * <pre>
-       * Placement policy configuration.
-       * </pre>
-       *
-       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
-       * @return The diskPlacementPolicy.
-       */
-      yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy getDiskPlacementPolicy();
-      /**
-       * <pre>
-       * Placement policy configuration.
-       * </pre>
-       *
-       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
-       */
-      yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder getDiskPlacementPolicyOrBuilder();
-
-      /**
-       * <pre>
        * ID of the image to create the disk from.
        * </pre>
        *
@@ -46305,6 +46268,63 @@ public final class InstanceServiceOuterClass {
       com.google.protobuf.ByteString
           getSnapshotIdBytes();
 
+      /**
+       * <pre>
+       * Placement policy configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
+       * @return Whether the diskPlacementPolicy field is set.
+       */
+      boolean hasDiskPlacementPolicy();
+      /**
+       * <pre>
+       * Placement policy configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
+       * @return The diskPlacementPolicy.
+       */
+      yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy getDiskPlacementPolicy();
+      /**
+       * <pre>
+       * Placement policy configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
+       */
+      yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder getDiskPlacementPolicyOrBuilder();
+
+      /**
+       * <pre>
+       * Block size of the disk, specified in bytes. The default is 4096.
+       * </pre>
+       *
+       * <code>int64 block_size = 8;</code>
+       * @return The blockSize.
+       */
+      long getBlockSize();
+
+      /**
+       * <pre>
+       * ID of KMS key for disk encryption
+       * </pre>
+       *
+       * <code>string kms_key_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The kmsKeyId.
+       */
+      java.lang.String getKmsKeyId();
+      /**
+       * <pre>
+       * ID of KMS key for disk encryption
+       * </pre>
+       *
+       * <code>string kms_key_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for kmsKeyId.
+       */
+      com.google.protobuf.ByteString
+          getKmsKeyIdBytes();
+
       public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedDiskSpec.DiskSpec.SourceCase getSourceCase();
     }
     /**
@@ -46323,6 +46343,7 @@ public final class InstanceServiceOuterClass {
         name_ = "";
         description_ = "";
         typeId_ = "";
+        kmsKeyId_ = "";
       }
 
       @java.lang.Override
@@ -46406,6 +46427,12 @@ public final class InstanceServiceOuterClass {
               case 64: {
 
                 blockSize_ = input.readInt64();
+                break;
+              }
+              case 74: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                kmsKeyId_ = s;
                 break;
               }
               default: {
@@ -46636,59 +46663,6 @@ public final class InstanceServiceOuterClass {
         return size_;
       }
 
-      public static final int BLOCK_SIZE_FIELD_NUMBER = 8;
-      private long blockSize_;
-      /**
-       * <pre>
-       * Block size of the disk, specified in bytes. The default is 4096.
-       * </pre>
-       *
-       * <code>int64 block_size = 8;</code>
-       * @return The blockSize.
-       */
-      @java.lang.Override
-      public long getBlockSize() {
-        return blockSize_;
-      }
-
-      public static final int DISK_PLACEMENT_POLICY_FIELD_NUMBER = 7;
-      private yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy diskPlacementPolicy_;
-      /**
-       * <pre>
-       * Placement policy configuration.
-       * </pre>
-       *
-       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
-       * @return Whether the diskPlacementPolicy field is set.
-       */
-      @java.lang.Override
-      public boolean hasDiskPlacementPolicy() {
-        return diskPlacementPolicy_ != null;
-      }
-      /**
-       * <pre>
-       * Placement policy configuration.
-       * </pre>
-       *
-       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
-       * @return The diskPlacementPolicy.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy getDiskPlacementPolicy() {
-        return diskPlacementPolicy_ == null ? yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.getDefaultInstance() : diskPlacementPolicy_;
-      }
-      /**
-       * <pre>
-       * Placement policy configuration.
-       * </pre>
-       *
-       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
-       */
-      @java.lang.Override
-      public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder getDiskPlacementPolicyOrBuilder() {
-        return getDiskPlacementPolicy();
-      }
-
       public static final int IMAGE_ID_FIELD_NUMBER = 5;
       /**
        * <pre>
@@ -46817,6 +46791,105 @@ public final class InstanceServiceOuterClass {
         }
       }
 
+      public static final int DISK_PLACEMENT_POLICY_FIELD_NUMBER = 7;
+      private yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy diskPlacementPolicy_;
+      /**
+       * <pre>
+       * Placement policy configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
+       * @return Whether the diskPlacementPolicy field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskPlacementPolicy() {
+        return diskPlacementPolicy_ != null;
+      }
+      /**
+       * <pre>
+       * Placement policy configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
+       * @return The diskPlacementPolicy.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy getDiskPlacementPolicy() {
+        return diskPlacementPolicy_ == null ? yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.getDefaultInstance() : diskPlacementPolicy_;
+      }
+      /**
+       * <pre>
+       * Placement policy configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder getDiskPlacementPolicyOrBuilder() {
+        return getDiskPlacementPolicy();
+      }
+
+      public static final int BLOCK_SIZE_FIELD_NUMBER = 8;
+      private long blockSize_;
+      /**
+       * <pre>
+       * Block size of the disk, specified in bytes. The default is 4096.
+       * </pre>
+       *
+       * <code>int64 block_size = 8;</code>
+       * @return The blockSize.
+       */
+      @java.lang.Override
+      public long getBlockSize() {
+        return blockSize_;
+      }
+
+      public static final int KMS_KEY_ID_FIELD_NUMBER = 9;
+      private volatile java.lang.Object kmsKeyId_;
+      /**
+       * <pre>
+       * ID of KMS key for disk encryption
+       * </pre>
+       *
+       * <code>string kms_key_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The kmsKeyId.
+       */
+      @java.lang.Override
+      public java.lang.String getKmsKeyId() {
+        java.lang.Object ref = kmsKeyId_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          kmsKeyId_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * ID of KMS key for disk encryption
+       * </pre>
+       *
+       * <code>string kms_key_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for kmsKeyId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getKmsKeyIdBytes() {
+        java.lang.Object ref = kmsKeyId_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          kmsKeyId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -46855,6 +46928,9 @@ public final class InstanceServiceOuterClass {
         if (blockSize_ != 0L) {
           output.writeInt64(8, blockSize_);
         }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(kmsKeyId_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 9, kmsKeyId_);
+        }
         unknownFields.writeTo(output);
       }
 
@@ -46891,6 +46967,9 @@ public final class InstanceServiceOuterClass {
           size += com.google.protobuf.CodedOutputStream
             .computeInt64Size(8, blockSize_);
         }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(kmsKeyId_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, kmsKeyId_);
+        }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
         return size;
@@ -46914,13 +46993,15 @@ public final class InstanceServiceOuterClass {
             .equals(other.getTypeId())) return false;
         if (getSize()
             != other.getSize()) return false;
-        if (getBlockSize()
-            != other.getBlockSize()) return false;
         if (hasDiskPlacementPolicy() != other.hasDiskPlacementPolicy()) return false;
         if (hasDiskPlacementPolicy()) {
           if (!getDiskPlacementPolicy()
               .equals(other.getDiskPlacementPolicy())) return false;
         }
+        if (getBlockSize()
+            != other.getBlockSize()) return false;
+        if (!getKmsKeyId()
+            .equals(other.getKmsKeyId())) return false;
         if (!getSourceCase().equals(other.getSourceCase())) return false;
         switch (sourceCase_) {
           case 5:
@@ -46954,13 +47035,15 @@ public final class InstanceServiceOuterClass {
         hash = (37 * hash) + SIZE_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getSize());
-        hash = (37 * hash) + BLOCK_SIZE_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-            getBlockSize());
         if (hasDiskPlacementPolicy()) {
           hash = (37 * hash) + DISK_PLACEMENT_POLICY_FIELD_NUMBER;
           hash = (53 * hash) + getDiskPlacementPolicy().hashCode();
         }
+        hash = (37 * hash) + BLOCK_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getBlockSize());
+        hash = (37 * hash) + KMS_KEY_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getKmsKeyId().hashCode();
         switch (sourceCase_) {
           case 5:
             hash = (37 * hash) + IMAGE_ID_FIELD_NUMBER;
@@ -47114,14 +47197,16 @@ public final class InstanceServiceOuterClass {
 
           size_ = 0L;
 
-          blockSize_ = 0L;
-
           if (diskPlacementPolicyBuilder_ == null) {
             diskPlacementPolicy_ = null;
           } else {
             diskPlacementPolicy_ = null;
             diskPlacementPolicyBuilder_ = null;
           }
+          blockSize_ = 0L;
+
+          kmsKeyId_ = "";
+
           sourceCase_ = 0;
           source_ = null;
           return this;
@@ -47154,18 +47239,19 @@ public final class InstanceServiceOuterClass {
           result.description_ = description_;
           result.typeId_ = typeId_;
           result.size_ = size_;
-          result.blockSize_ = blockSize_;
-          if (diskPlacementPolicyBuilder_ == null) {
-            result.diskPlacementPolicy_ = diskPlacementPolicy_;
-          } else {
-            result.diskPlacementPolicy_ = diskPlacementPolicyBuilder_.build();
-          }
           if (sourceCase_ == 5) {
             result.source_ = source_;
           }
           if (sourceCase_ == 6) {
             result.source_ = source_;
           }
+          if (diskPlacementPolicyBuilder_ == null) {
+            result.diskPlacementPolicy_ = diskPlacementPolicy_;
+          } else {
+            result.diskPlacementPolicy_ = diskPlacementPolicyBuilder_.build();
+          }
+          result.blockSize_ = blockSize_;
+          result.kmsKeyId_ = kmsKeyId_;
           result.sourceCase_ = sourceCase_;
           onBuilt();
           return result;
@@ -47230,11 +47316,15 @@ public final class InstanceServiceOuterClass {
           if (other.getSize() != 0L) {
             setSize(other.getSize());
           }
+          if (other.hasDiskPlacementPolicy()) {
+            mergeDiskPlacementPolicy(other.getDiskPlacementPolicy());
+          }
           if (other.getBlockSize() != 0L) {
             setBlockSize(other.getBlockSize());
           }
-          if (other.hasDiskPlacementPolicy()) {
-            mergeDiskPlacementPolicy(other.getDiskPlacementPolicy());
+          if (!other.getKmsKeyId().isEmpty()) {
+            kmsKeyId_ = other.kmsKeyId_;
+            onChanged();
           }
           switch (other.getSourceCase()) {
             case IMAGE_ID: {
@@ -47633,204 +47723,6 @@ public final class InstanceServiceOuterClass {
           return this;
         }
 
-        private long blockSize_ ;
-        /**
-         * <pre>
-         * Block size of the disk, specified in bytes. The default is 4096.
-         * </pre>
-         *
-         * <code>int64 block_size = 8;</code>
-         * @return The blockSize.
-         */
-        @java.lang.Override
-        public long getBlockSize() {
-          return blockSize_;
-        }
-        /**
-         * <pre>
-         * Block size of the disk, specified in bytes. The default is 4096.
-         * </pre>
-         *
-         * <code>int64 block_size = 8;</code>
-         * @param value The blockSize to set.
-         * @return This builder for chaining.
-         */
-        public Builder setBlockSize(long value) {
-          
-          blockSize_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * Block size of the disk, specified in bytes. The default is 4096.
-         * </pre>
-         *
-         * <code>int64 block_size = 8;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearBlockSize() {
-          
-          blockSize_ = 0L;
-          onChanged();
-          return this;
-        }
-
-        private yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy diskPlacementPolicy_;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.Builder, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder> diskPlacementPolicyBuilder_;
-        /**
-         * <pre>
-         * Placement policy configuration.
-         * </pre>
-         *
-         * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
-         * @return Whether the diskPlacementPolicy field is set.
-         */
-        public boolean hasDiskPlacementPolicy() {
-          return diskPlacementPolicyBuilder_ != null || diskPlacementPolicy_ != null;
-        }
-        /**
-         * <pre>
-         * Placement policy configuration.
-         * </pre>
-         *
-         * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
-         * @return The diskPlacementPolicy.
-         */
-        public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy getDiskPlacementPolicy() {
-          if (diskPlacementPolicyBuilder_ == null) {
-            return diskPlacementPolicy_ == null ? yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.getDefaultInstance() : diskPlacementPolicy_;
-          } else {
-            return diskPlacementPolicyBuilder_.getMessage();
-          }
-        }
-        /**
-         * <pre>
-         * Placement policy configuration.
-         * </pre>
-         *
-         * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
-         */
-        public Builder setDiskPlacementPolicy(yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy value) {
-          if (diskPlacementPolicyBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            diskPlacementPolicy_ = value;
-            onChanged();
-          } else {
-            diskPlacementPolicyBuilder_.setMessage(value);
-          }
-
-          return this;
-        }
-        /**
-         * <pre>
-         * Placement policy configuration.
-         * </pre>
-         *
-         * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
-         */
-        public Builder setDiskPlacementPolicy(
-            yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.Builder builderForValue) {
-          if (diskPlacementPolicyBuilder_ == null) {
-            diskPlacementPolicy_ = builderForValue.build();
-            onChanged();
-          } else {
-            diskPlacementPolicyBuilder_.setMessage(builderForValue.build());
-          }
-
-          return this;
-        }
-        /**
-         * <pre>
-         * Placement policy configuration.
-         * </pre>
-         *
-         * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
-         */
-        public Builder mergeDiskPlacementPolicy(yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy value) {
-          if (diskPlacementPolicyBuilder_ == null) {
-            if (diskPlacementPolicy_ != null) {
-              diskPlacementPolicy_ =
-                yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.newBuilder(diskPlacementPolicy_).mergeFrom(value).buildPartial();
-            } else {
-              diskPlacementPolicy_ = value;
-            }
-            onChanged();
-          } else {
-            diskPlacementPolicyBuilder_.mergeFrom(value);
-          }
-
-          return this;
-        }
-        /**
-         * <pre>
-         * Placement policy configuration.
-         * </pre>
-         *
-         * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
-         */
-        public Builder clearDiskPlacementPolicy() {
-          if (diskPlacementPolicyBuilder_ == null) {
-            diskPlacementPolicy_ = null;
-            onChanged();
-          } else {
-            diskPlacementPolicy_ = null;
-            diskPlacementPolicyBuilder_ = null;
-          }
-
-          return this;
-        }
-        /**
-         * <pre>
-         * Placement policy configuration.
-         * </pre>
-         *
-         * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
-         */
-        public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.Builder getDiskPlacementPolicyBuilder() {
-          
-          onChanged();
-          return getDiskPlacementPolicyFieldBuilder().getBuilder();
-        }
-        /**
-         * <pre>
-         * Placement policy configuration.
-         * </pre>
-         *
-         * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
-         */
-        public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder getDiskPlacementPolicyOrBuilder() {
-          if (diskPlacementPolicyBuilder_ != null) {
-            return diskPlacementPolicyBuilder_.getMessageOrBuilder();
-          } else {
-            return diskPlacementPolicy_ == null ?
-                yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.getDefaultInstance() : diskPlacementPolicy_;
-          }
-        }
-        /**
-         * <pre>
-         * Placement policy configuration.
-         * </pre>
-         *
-         * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.Builder, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder> 
-            getDiskPlacementPolicyFieldBuilder() {
-          if (diskPlacementPolicyBuilder_ == null) {
-            diskPlacementPolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.Builder, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder>(
-                    getDiskPlacementPolicy(),
-                    getParentForChildren(),
-                    isClean());
-            diskPlacementPolicy_ = null;
-          }
-          return diskPlacementPolicyBuilder_;
-        }
-
         /**
          * <pre>
          * ID of the image to create the disk from.
@@ -48069,6 +47961,300 @@ public final class InstanceServiceOuterClass {
   checkByteStringIsUtf8(value);
           sourceCase_ = 6;
           source_ = value;
+          onChanged();
+          return this;
+        }
+
+        private yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy diskPlacementPolicy_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.Builder, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder> diskPlacementPolicyBuilder_;
+        /**
+         * <pre>
+         * Placement policy configuration.
+         * </pre>
+         *
+         * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
+         * @return Whether the diskPlacementPolicy field is set.
+         */
+        public boolean hasDiskPlacementPolicy() {
+          return diskPlacementPolicyBuilder_ != null || diskPlacementPolicy_ != null;
+        }
+        /**
+         * <pre>
+         * Placement policy configuration.
+         * </pre>
+         *
+         * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
+         * @return The diskPlacementPolicy.
+         */
+        public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy getDiskPlacementPolicy() {
+          if (diskPlacementPolicyBuilder_ == null) {
+            return diskPlacementPolicy_ == null ? yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.getDefaultInstance() : diskPlacementPolicy_;
+          } else {
+            return diskPlacementPolicyBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Placement policy configuration.
+         * </pre>
+         *
+         * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
+         */
+        public Builder setDiskPlacementPolicy(yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy value) {
+          if (diskPlacementPolicyBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskPlacementPolicy_ = value;
+            onChanged();
+          } else {
+            diskPlacementPolicyBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Placement policy configuration.
+         * </pre>
+         *
+         * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
+         */
+        public Builder setDiskPlacementPolicy(
+            yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.Builder builderForValue) {
+          if (diskPlacementPolicyBuilder_ == null) {
+            diskPlacementPolicy_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskPlacementPolicyBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Placement policy configuration.
+         * </pre>
+         *
+         * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
+         */
+        public Builder mergeDiskPlacementPolicy(yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy value) {
+          if (diskPlacementPolicyBuilder_ == null) {
+            if (diskPlacementPolicy_ != null) {
+              diskPlacementPolicy_ =
+                yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.newBuilder(diskPlacementPolicy_).mergeFrom(value).buildPartial();
+            } else {
+              diskPlacementPolicy_ = value;
+            }
+            onChanged();
+          } else {
+            diskPlacementPolicyBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Placement policy configuration.
+         * </pre>
+         *
+         * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
+         */
+        public Builder clearDiskPlacementPolicy() {
+          if (diskPlacementPolicyBuilder_ == null) {
+            diskPlacementPolicy_ = null;
+            onChanged();
+          } else {
+            diskPlacementPolicy_ = null;
+            diskPlacementPolicyBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Placement policy configuration.
+         * </pre>
+         *
+         * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
+         */
+        public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.Builder getDiskPlacementPolicyBuilder() {
+          
+          onChanged();
+          return getDiskPlacementPolicyFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Placement policy configuration.
+         * </pre>
+         *
+         * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
+         */
+        public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder getDiskPlacementPolicyOrBuilder() {
+          if (diskPlacementPolicyBuilder_ != null) {
+            return diskPlacementPolicyBuilder_.getMessageOrBuilder();
+          } else {
+            return diskPlacementPolicy_ == null ?
+                yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.getDefaultInstance() : diskPlacementPolicy_;
+          }
+        }
+        /**
+         * <pre>
+         * Placement policy configuration.
+         * </pre>
+         *
+         * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 7;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.Builder, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder> 
+            getDiskPlacementPolicyFieldBuilder() {
+          if (diskPlacementPolicyBuilder_ == null) {
+            diskPlacementPolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.Builder, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder>(
+                    getDiskPlacementPolicy(),
+                    getParentForChildren(),
+                    isClean());
+            diskPlacementPolicy_ = null;
+          }
+          return diskPlacementPolicyBuilder_;
+        }
+
+        private long blockSize_ ;
+        /**
+         * <pre>
+         * Block size of the disk, specified in bytes. The default is 4096.
+         * </pre>
+         *
+         * <code>int64 block_size = 8;</code>
+         * @return The blockSize.
+         */
+        @java.lang.Override
+        public long getBlockSize() {
+          return blockSize_;
+        }
+        /**
+         * <pre>
+         * Block size of the disk, specified in bytes. The default is 4096.
+         * </pre>
+         *
+         * <code>int64 block_size = 8;</code>
+         * @param value The blockSize to set.
+         * @return This builder for chaining.
+         */
+        public Builder setBlockSize(long value) {
+          
+          blockSize_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Block size of the disk, specified in bytes. The default is 4096.
+         * </pre>
+         *
+         * <code>int64 block_size = 8;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearBlockSize() {
+          
+          blockSize_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object kmsKeyId_ = "";
+        /**
+         * <pre>
+         * ID of KMS key for disk encryption
+         * </pre>
+         *
+         * <code>string kms_key_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+         * @return The kmsKeyId.
+         */
+        public java.lang.String getKmsKeyId() {
+          java.lang.Object ref = kmsKeyId_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            kmsKeyId_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * ID of KMS key for disk encryption
+         * </pre>
+         *
+         * <code>string kms_key_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+         * @return The bytes for kmsKeyId.
+         */
+        public com.google.protobuf.ByteString
+            getKmsKeyIdBytes() {
+          java.lang.Object ref = kmsKeyId_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            kmsKeyId_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * ID of KMS key for disk encryption
+         * </pre>
+         *
+         * <code>string kms_key_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+         * @param value The kmsKeyId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setKmsKeyId(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          kmsKeyId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * ID of KMS key for disk encryption
+         * </pre>
+         *
+         * <code>string kms_key_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearKmsKeyId() {
+          
+          kmsKeyId_ = getDefaultInstance().getKmsKeyId();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * ID of KMS key for disk encryption
+         * </pre>
+         *
+         * <code>string kms_key_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+         * @param value The bytes for kmsKeyId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setKmsKeyIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          kmsKeyId_ = value;
           onChanged();
           return this;
         }
@@ -63328,207 +63514,208 @@ public final class InstanceServiceOuterClass {
       "2,24,26,28,30,32,34,36,40,44,48,52,56,60" +
       ",64,68,72,76,80\022(\n\rcore_fraction\030\003 \001(\003B\021" +
       "\372\3071\r0,5,20,50,100\022\031\n\004gpus\030\004 \001(\003B\013\372\3071\0070,1" +
-      ",2,4\"\230\005\n\020AttachedDiskSpec\022<\n\004mode\030\001 \001(\0162" +
+      ",2,4\"\266\005\n\020AttachedDiskSpec\022<\n\004mode\030\001 \001(\0162" +
       "..yandex.cloud.compute.v1.AttachedDiskSp" +
       "ec.Mode\022-\n\013device_name\030\002 \001(\tB\030\362\3071\024[a-z][" +
       "a-z0-9-_]{,19}\022\023\n\013auto_delete\030\003 \001(\010\022G\n\td" +
       "isk_spec\030\004 \001(\01322.yandex.cloud.compute.v1" +
       ".AttachedDiskSpec.DiskSpecH\000\022\033\n\007disk_id\030" +
-      "\005 \001(\tB\010\212\3101\004<=50H\000\032\320\002\n\010DiskSpec\0222\n\004name\030\001" +
+      "\005 \001(\tB\010\212\3101\004<=50H\000\032\356\002\n\010DiskSpec\0222\n\004name\030\001" +
       " \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9]" +
       ")?\022\036\n\013description\030\002 \001(\tB\t\212\3101\005<=256\022\031\n\007ty" +
       "pe_id\030\003 \001(\tB\010\212\3101\004<=50\022+\n\004size\030\004 \001(\003B\035\350\3071" +
-      "\001\372\3071\0254194304-4398046511104\022\022\n\nblock_size" +
-      "\030\010 \001(\003\022K\n\025disk_placement_policy\030\007 \001(\0132,." +
-      "yandex.cloud.compute.v1.DiskPlacementPol" +
-      "icy\022\034\n\010image_id\030\005 \001(\tB\010\212\3101\004<=50H\000\022\037\n\013sna" +
-      "pshot_id\030\006 \001(\tB\010\212\3101\004<=50H\000B\010\n\006source\";\n\004" +
-      "Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020" +
-      "\001\022\016\n\nREAD_WRITE\020\002B\014\n\004disk\022\004\300\3011\001\"+\n\025Attac" +
-      "hedLocalDiskSpec\022\022\n\004size\030\001 \001(\003B\004\350\3071\001\"\351\001\n" +
-      "\026AttachedFilesystemSpec\022B\n\004mode\030\001 \001(\01624." +
-      "yandex.cloud.compute.v1.AttachedFilesyst" +
-      "emSpec.Mode\022-\n\013device_name\030\002 \001(\tB\030\362\3071\024[a" +
-      "-z][a-z0-9-_]{,19}\022\037\n\rfilesystem_id\030\003 \001(" +
-      "\tB\010\212\3101\004<=50\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020" +
-      "\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002\"\204\002\n\024Net" +
-      "workInterfaceSpec\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\022L\n\027primary_v4_address_spec\030\002 " +
-      "\001(\0132+.yandex.cloud.compute.v1.PrimaryAdd" +
-      "ressSpec\022L\n\027primary_v6_address_spec\030\003 \001(" +
-      "\0132+.yandex.cloud.compute.v1.PrimaryAddre" +
-      "ssSpec\022\032\n\022security_group_ids\030\006 \003(\t\022\r\n\005in" +
-      "dex\030\007 \001(\tJ\004\010\004\020\006\"\256\001\n\022PrimaryAddressSpec\022\017" +
-      "\n\007address\030\001 \001(\t\022E\n\023one_to_one_nat_spec\030\002" +
-      " \001(\0132(.yandex.cloud.compute.v1.OneToOneN" +
-      "atSpec\022@\n\020dns_record_specs\030\003 \003(\0132&.yande" +
-      "x.cloud.compute.v1.DnsRecordSpec\"\234\001\n\017One" +
-      "ToOneNatSpec\0226\n\nip_version\030\001 \001(\0162\".yande" +
-      "x.cloud.compute.v1.IpVersion\022\017\n\007address\030" +
-      "\002 \001(\t\022@\n\020dns_record_specs\030\003 \003(\0132&.yandex" +
-      ".cloud.compute.v1.DnsRecordSpec\"_\n\rDnsRe" +
-      "cordSpec\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone" +
-      "_id\030\002 \001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003p" +
-      "tr\030\004 \001(\010\"e\n\023MoveInstanceRequest\022!\n\013insta" +
-      "nce_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destinatio" +
-      "n_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"d\n\024MoveI" +
-      "nstanceMetadata\022\023\n\013instance_id\030\001 \001(\t\022\030\n\020" +
-      "source_folder_id\030\002 \001(\t\022\035\n\025destination_fo" +
-      "lder_id\030\003 \001(\t\"\344\002\n\027RelocateInstanceReques" +
-      "t\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022)\n\023" +
-      "destination_zone_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "Y\n\027network_interface_specs\030\003 \003(\0132-.yande" +
-      "x.cloud.compute.v1.NetworkInterfaceSpecB" +
-      "\t\202\3101\0011\350\3071\001\022I\n\023boot_disk_placement\030\004 \001(\0132" +
-      ",.yandex.cloud.compute.v1.DiskPlacementP" +
-      "olicy\022U\n\031secondary_disk_placements\030\005 \003(\013" +
-      "22.yandex.cloud.compute.v1.DiskPlacement" +
-      "PolicyChange\"d\n\030RelocateInstanceMetadata" +
-      "\022\023\n\013instance_id\030\001 \001(\t\022\026\n\016source_zone_id\030" +
-      "\002 \001(\t\022\033\n\023destination_zone_id\030\003 \001(\t\"0\n\031Gu" +
-      "estStopInstanceMetadata\022\023\n\013instance_id\030\001" +
-      " \001(\t\".\n\027PreemptInstanceMetadata\022\023\n\013insta" +
-      "nce_id\030\001 \001(\t\",\n\025CrashInstanceMetadata\022\023\n" +
-      "\013instance_id\030\001 \001(\t*#\n\014InstanceView\022\t\n\005BA" +
-      "SIC\020\000\022\010\n\004FULL\020\0012\237*\n\017InstanceService\022\202\001\n\003" +
-      "Get\022+.yandex.cloud.compute.v1.GetInstanc" +
-      "eRequest\032!.yandex.cloud.compute.v1.Insta" +
-      "nce\"+\202\323\344\223\002%\022#/compute/v1/instances/{inst" +
-      "ance_id}\022\204\001\n\004List\022-.yandex.cloud.compute" +
-      ".v1.ListInstancesRequest\032..yandex.cloud." +
-      "compute.v1.ListInstancesResponse\"\035\202\323\344\223\002\027" +
-      "\022\025/compute/v1/instances\022\243\001\n\006Create\022..yan" +
-      "dex.cloud.compute.v1.CreateInstanceReque" +
-      "st\032!.yandex.cloud.operation.Operation\"F\202" +
-      "\323\344\223\002\032\"\025/compute/v1/instances:\001*\262\322*\"\n\026Cre" +
-      "ateInstanceMetadata\022\010Instance\022\261\001\n\006Update" +
-      "\022..yandex.cloud.compute.v1.UpdateInstanc" +
-      "eRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"T\202\323\344\223\002(2#/compute/v1/instances/{inst" +
-      "ance_id}:\001*\262\322*\"\n\026UpdateInstanceMetadata\022" +
-      "\010Instance\022\273\001\n\006Delete\022..yandex.cloud.comp" +
-      "ute.v1.DeleteInstanceRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"^\202\323\344\223\002%*#/comput" +
-      "e/v1/instances/{instance_id}\262\322*/\n\026Delete" +
-      "InstanceMetadata\022\025google.protobuf.Empty\022" +
-      "\330\001\n\016UpdateMetadata\0226.yandex.cloud.comput" +
-      "e.v1.UpdateInstanceMetadataRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"k\202\323\344\223\0027\"2/" +
-      "compute/v1/instances/{instance_id}/updat" +
-      "eMetadata:\001*\262\322**\n\036UpdateInstanceMetadata" +
-      "Metadata\022\010Instance\022\316\001\n\023GetSerialPortOutp" +
-      "ut\022;.yandex.cloud.compute.v1.GetInstance" +
-      "SerialPortOutputRequest\032<.yandex.cloud.c" +
-      "ompute.v1.GetInstanceSerialPortOutputRes" +
-      "ponse\"<\202\323\344\223\0026\0224/compute/v1/instances/{in" +
-      "stance_id}:serialPortOutput\022\272\001\n\004Stop\022,.y" +
-      "andex.cloud.compute.v1.StopInstanceReque" +
-      "st\032!.yandex.cloud.operation.Operation\"a\202" +
-      "\323\344\223\002*\"(/compute/v1/instances/{instance_i" +
-      "d}:stop\262\322*-\n\024StopInstanceMetadata\022\025googl" +
-      "e.protobuf.Empty\022\261\001\n\005Start\022-.yandex.clou" +
-      "d.compute.v1.StartInstanceRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"V\202\323\344\223\002+\")/c" +
-      "ompute/v1/instances/{instance_id}:start\262" +
-      "\322*!\n\025StartInstanceMetadata\022\010Instance\022\306\001\n" +
-      "\007Restart\022/.yandex.cloud.compute.v1.Resta" +
-      "rtInstanceRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"g\202\323\344\223\002-\"+/compute/v1/instan" +
-      "ces/{instance_id}:restart\262\322*0\n\027RestartIn" +
-      "stanceMetadata\022\025google.protobuf.Empty\022\310\001" +
-      "\n\nAttachDisk\0222.yandex.cloud.compute.v1.A" +
-      "ttachInstanceDiskRequest\032!.yandex.cloud." +
-      "operation.Operation\"c\202\323\344\223\0023\"./compute/v1" +
-      "/instances/{instance_id}:attachDisk:\001*\262\322" +
-      "*&\n\032AttachInstanceDiskMetadata\022\010Instance" +
-      "\022\310\001\n\nDetachDisk\0222.yandex.cloud.compute.v" +
-      "1.DetachInstanceDiskRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"c\202\323\344\223\0023\"./compute" +
-      "/v1/instances/{instance_id}:detachDisk:\001" +
-      "*\262\322*&\n\032DetachInstanceDiskMetadata\022\010Insta" +
-      "nce\022\340\001\n\020AttachFilesystem\0228.yandex.cloud." +
-      "compute.v1.AttachInstanceFilesystemReque" +
-      "st\032!.yandex.cloud.operation.Operation\"o\202" +
-      "\323\344\223\0029\"4/compute/v1/instances/{instance_i" +
-      "d}:attachFilesystem:\001*\262\322*,\n AttachInstan" +
-      "ceFilesystemMetadata\022\010Instance\022\340\001\n\020Detac" +
-      "hFilesystem\0228.yandex.cloud.compute.v1.De" +
-      "tachInstanceFilesystemRequest\032!.yandex.c" +
-      "loud.operation.Operation\"o\202\323\344\223\0029\"4/compu" +
-      "te/v1/instances/{instance_id}:detachFile" +
-      "system:\001*\262\322*,\n DetachInstanceFilesystemM" +
-      "etadata\022\010Instance\022\370\001\n\026AttachNetworkInter" +
-      "face\022>.yandex.cloud.compute.v1.AttachIns" +
-      "tanceNetworkInterfaceRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"{\202\323\344\223\002?\":/comput" +
-      "e/v1/instances/{instance_id}:attachNetwo" +
-      "rkInterface:\001*\262\322*2\n&AttachInstanceNetwor" +
-      "kInterfaceMetadata\022\010Instance\022\370\001\n\026DetachN" +
-      "etworkInterface\022>.yandex.cloud.compute.v" +
-      "1.DetachInstanceNetworkInterfaceRequest\032" +
-      "!.yandex.cloud.operation.Operation\"{\202\323\344\223" +
-      "\002?\":/compute/v1/instances/{instance_id}:" +
-      "detachNetworkInterface:\001*\262\322*2\n&DetachIns" +
-      "tanceNetworkInterfaceMetadata\022\010Instance\022" +
-      "\330\001\n\016AddOneToOneNat\0226.yandex.cloud.comput" +
-      "e.v1.AddInstanceOneToOneNatRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"k\202\323\344\223\0027\"2/" +
-      "compute/v1/instances/{instance_id}/addOn" +
-      "eToOneNat:\001*\262\322**\n\036AddInstanceOneToOneNat" +
-      "Metadata\022\010Instance\022\344\001\n\021RemoveOneToOneNat" +
-      "\0229.yandex.cloud.compute.v1.RemoveInstanc" +
-      "eOneToOneNatRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"q\202\323\344\223\002:\"5/compute/v1/inst" +
-      "ances/{instance_id}/removeOneToOneNat:\001*" +
-      "\262\322*-\n!RemoveInstanceOneToOneNatMetadata\022" +
-      "\010Instance\022\370\001\n\026UpdateNetworkInterface\022>.y" +
-      "andex.cloud.compute.v1.UpdateInstanceNet" +
-      "workInterfaceRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"{\202\323\344\223\002?2:/compute/v1/ins" +
-      "tances/{instance_id}/updateNetworkInterf" +
-      "ace:\001*\262\322*2\n&UpdateInstanceNetworkInterfa" +
-      "ceMetadata\022\010Instance\022\271\001\n\016ListOperations\022" +
-      "6.yandex.cloud.compute.v1.ListInstanceOp" +
-      "erationsRequest\0327.yandex.cloud.compute.v" +
-      "1.ListInstanceOperationsResponse\"6\202\323\344\223\0020" +
-      "\022./compute/v1/instances/{instance_id}/op" +
-      "erations\022\260\001\n\004Move\022,.yandex.cloud.compute" +
-      ".v1.MoveInstanceRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"W\202\323\344\223\002-\"(/compute/v1/" +
-      "instances/{instance_id}:move:\001*\262\322* \n\024Mov" +
-      "eInstanceMetadata\022\010Instance\022\300\001\n\010Relocate" +
-      "\0220.yandex.cloud.compute.v1.RelocateInsta" +
-      "nceRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"_\202\323\344\223\0021\",/compute/v1/instances/{in" +
-      "stance_id}:relocate:\001*\262\322*$\n\030RelocateInst" +
-      "anceMetadata\022\010Instance\022\216\002\n\030SimulateMaint" +
-      "enanceEvent\022@.yandex.cloud.compute.v1.Si" +
-      "mulateInstanceMaintenanceEventRequest\032!." +
-      "yandex.cloud.operation.Operation\"\214\001\202\323\344\223\002" +
-      "A\"</compute/v1/instances/{instance_id}:s" +
-      "imulateMaintenanceEvent:\001*\262\322*A\n(Simulate" +
-      "InstanceMaintenanceEventMetadata\022\025google" +
-      ".protobuf.Empty\022\265\001\n\022ListAccessBindings\022." +
-      ".yandex.cloud.access.ListAccessBindingsR" +
-      "equest\032/.yandex.cloud.access.ListAccessB" +
-      "indingsResponse\">\202\323\344\223\0028\0226/compute/v1/ins" +
-      "tances/{resource_id}:listAccessBindings\022" +
-      "\364\001\n\021SetAccessBindings\022-.yandex.cloud.acc" +
-      "ess.SetAccessBindingsRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"\214\001\202\323\344\223\002:\"5/compu" +
-      "te/v1/instances/{resource_id}:setAccessB" +
-      "indings:\001*\262\322*H\n access.SetAccessBindings" +
-      "Metadata\022$access.AccessBindingsOperation" +
-      "Result\022\200\002\n\024UpdateAccessBindings\0220.yandex" +
-      ".cloud.access.UpdateAccessBindingsReques" +
-      "t\032!.yandex.cloud.operation.Operation\"\222\001\202" +
-      "\323\344\223\002=\"8/compute/v1/instances/{resource_i" +
-      "d}:updateAccessBindings:\001*\262\322*K\n#access.U" +
-      "pdateAccessBindingsMetadata\022$access.Acce" +
-      "ssBindingsOperationResultBb\n\033yandex.clou" +
-      "d.api.compute.v1ZCgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/compute/v1;co" +
-      "mputeb\006proto3"
+      "\001\372\3071\0254194304-4398046511104\022\034\n\010image_id\030\005" +
+      " \001(\tB\010\212\3101\004<=50H\000\022\037\n\013snapshot_id\030\006 \001(\tB\010\212" +
+      "\3101\004<=50H\000\022K\n\025disk_placement_policy\030\007 \001(\013" +
+      "2,.yandex.cloud.compute.v1.DiskPlacement" +
+      "Policy\022\022\n\nblock_size\030\010 \001(\003\022\034\n\nkms_key_id" +
+      "\030\t \001(\tB\010\212\3101\004<=50B\010\n\006source\";\n\004Mode\022\024\n\020MO" +
+      "DE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_" +
+      "WRITE\020\002B\014\n\004disk\022\004\300\3011\001\"+\n\025AttachedLocalDi" +
+      "skSpec\022\022\n\004size\030\001 \001(\003B\004\350\3071\001\"\351\001\n\026AttachedF" +
+      "ilesystemSpec\022B\n\004mode\030\001 \001(\01624.yandex.clo" +
+      "ud.compute.v1.AttachedFilesystemSpec.Mod" +
+      "e\022-\n\013device_name\030\002 \001(\tB\030\362\3071\024[a-z][a-z0-9" +
+      "-_]{,19}\022\037\n\rfilesystem_id\030\003 \001(\tB\010\212\3101\004<=5" +
+      "0\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_" +
+      "ONLY\020\001\022\016\n\nREAD_WRITE\020\002\"\204\002\n\024NetworkInterf" +
+      "aceSpec\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022L\n\027primary_v4_address_spec\030\002 \001(\0132+.yand" +
+      "ex.cloud.compute.v1.PrimaryAddressSpec\022L" +
+      "\n\027primary_v6_address_spec\030\003 \001(\0132+.yandex" +
+      ".cloud.compute.v1.PrimaryAddressSpec\022\032\n\022" +
+      "security_group_ids\030\006 \003(\t\022\r\n\005index\030\007 \001(\tJ" +
+      "\004\010\004\020\006\"\256\001\n\022PrimaryAddressSpec\022\017\n\007address\030" +
+      "\001 \001(\t\022E\n\023one_to_one_nat_spec\030\002 \001(\0132(.yan" +
+      "dex.cloud.compute.v1.OneToOneNatSpec\022@\n\020" +
+      "dns_record_specs\030\003 \003(\0132&.yandex.cloud.co" +
+      "mpute.v1.DnsRecordSpec\"\234\001\n\017OneToOneNatSp" +
+      "ec\0226\n\nip_version\030\001 \001(\0162\".yandex.cloud.co" +
+      "mpute.v1.IpVersion\022\017\n\007address\030\002 \001(\t\022@\n\020d" +
+      "ns_record_specs\030\003 \003(\0132&.yandex.cloud.com" +
+      "pute.v1.DnsRecordSpec\"_\n\rDnsRecordSpec\022\022" +
+      "\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030\002 \001(\t\022" +
+      "\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(\010\"e" +
+      "\n\023MoveInstanceRequest\022!\n\013instance_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_folder_i" +
+      "d\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"d\n\024MoveInstanceMet" +
+      "adata\022\023\n\013instance_id\030\001 \001(\t\022\030\n\020source_fol" +
+      "der_id\030\002 \001(\t\022\035\n\025destination_folder_id\030\003 " +
+      "\001(\t\"\344\002\n\027RelocateInstanceRequest\022!\n\013insta" +
+      "nce_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022)\n\023destinatio" +
+      "n_zone_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022Y\n\027network" +
+      "_interface_specs\030\003 \003(\0132-.yandex.cloud.co" +
+      "mpute.v1.NetworkInterfaceSpecB\t\202\3101\0011\350\3071\001" +
+      "\022I\n\023boot_disk_placement\030\004 \001(\0132,.yandex.c" +
+      "loud.compute.v1.DiskPlacementPolicy\022U\n\031s" +
+      "econdary_disk_placements\030\005 \003(\01322.yandex." +
+      "cloud.compute.v1.DiskPlacementPolicyChan" +
+      "ge\"d\n\030RelocateInstanceMetadata\022\023\n\013instan" +
+      "ce_id\030\001 \001(\t\022\026\n\016source_zone_id\030\002 \001(\t\022\033\n\023d" +
+      "estination_zone_id\030\003 \001(\t\"0\n\031GuestStopIns" +
+      "tanceMetadata\022\023\n\013instance_id\030\001 \001(\t\".\n\027Pr" +
+      "eemptInstanceMetadata\022\023\n\013instance_id\030\001 \001" +
+      "(\t\",\n\025CrashInstanceMetadata\022\023\n\013instance_" +
+      "id\030\001 \001(\t*#\n\014InstanceView\022\t\n\005BASIC\020\000\022\010\n\004F" +
+      "ULL\020\0012\237*\n\017InstanceService\022\202\001\n\003Get\022+.yand" +
+      "ex.cloud.compute.v1.GetInstanceRequest\032!" +
+      ".yandex.cloud.compute.v1.Instance\"+\202\323\344\223\002" +
+      "%\022#/compute/v1/instances/{instance_id}\022\204" +
+      "\001\n\004List\022-.yandex.cloud.compute.v1.ListIn" +
+      "stancesRequest\032..yandex.cloud.compute.v1" +
+      ".ListInstancesResponse\"\035\202\323\344\223\002\027\022\025/compute" +
+      "/v1/instances\022\243\001\n\006Create\022..yandex.cloud." +
+      "compute.v1.CreateInstanceRequest\032!.yande" +
+      "x.cloud.operation.Operation\"F\202\323\344\223\002\032\"\025/co" +
+      "mpute/v1/instances:\001*\262\322*\"\n\026CreateInstanc" +
+      "eMetadata\022\010Instance\022\261\001\n\006Update\022..yandex." +
+      "cloud.compute.v1.UpdateInstanceRequest\032!" +
+      ".yandex.cloud.operation.Operation\"T\202\323\344\223\002" +
+      "(2#/compute/v1/instances/{instance_id}:\001" +
+      "*\262\322*\"\n\026UpdateInstanceMetadata\022\010Instance\022" +
+      "\273\001\n\006Delete\022..yandex.cloud.compute.v1.Del" +
+      "eteInstanceRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"^\202\323\344\223\002%*#/compute/v1/insta" +
+      "nces/{instance_id}\262\322*/\n\026DeleteInstanceMe" +
+      "tadata\022\025google.protobuf.Empty\022\330\001\n\016Update" +
+      "Metadata\0226.yandex.cloud.compute.v1.Updat" +
+      "eInstanceMetadataRequest\032!.yandex.cloud." +
+      "operation.Operation\"k\202\323\344\223\0027\"2/compute/v1" +
+      "/instances/{instance_id}/updateMetadata:" +
+      "\001*\262\322**\n\036UpdateInstanceMetadataMetadata\022\010" +
+      "Instance\022\316\001\n\023GetSerialPortOutput\022;.yande" +
+      "x.cloud.compute.v1.GetInstanceSerialPort" +
+      "OutputRequest\032<.yandex.cloud.compute.v1." +
+      "GetInstanceSerialPortOutputResponse\"<\202\323\344" +
+      "\223\0026\0224/compute/v1/instances/{instance_id}" +
+      ":serialPortOutput\022\272\001\n\004Stop\022,.yandex.clou" +
+      "d.compute.v1.StopInstanceRequest\032!.yande" +
+      "x.cloud.operation.Operation\"a\202\323\344\223\002*\"(/co" +
+      "mpute/v1/instances/{instance_id}:stop\262\322*" +
+      "-\n\024StopInstanceMetadata\022\025google.protobuf" +
+      ".Empty\022\261\001\n\005Start\022-.yandex.cloud.compute." +
+      "v1.StartInstanceRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"V\202\323\344\223\002+\")/compute/v1/" +
+      "instances/{instance_id}:start\262\322*!\n\025Start" +
+      "InstanceMetadata\022\010Instance\022\306\001\n\007Restart\022/" +
+      ".yandex.cloud.compute.v1.RestartInstance" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"g\202\323\344\223\002-\"+/compute/v1/instances/{insta" +
+      "nce_id}:restart\262\322*0\n\027RestartInstanceMeta" +
+      "data\022\025google.protobuf.Empty\022\310\001\n\nAttachDi" +
+      "sk\0222.yandex.cloud.compute.v1.AttachInsta" +
+      "nceDiskRequest\032!.yandex.cloud.operation." +
+      "Operation\"c\202\323\344\223\0023\"./compute/v1/instances" +
+      "/{instance_id}:attachDisk:\001*\262\322*&\n\032Attach" +
+      "InstanceDiskMetadata\022\010Instance\022\310\001\n\nDetac" +
+      "hDisk\0222.yandex.cloud.compute.v1.DetachIn" +
+      "stanceDiskRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"c\202\323\344\223\0023\"./compute/v1/instan" +
+      "ces/{instance_id}:detachDisk:\001*\262\322*&\n\032Det" +
+      "achInstanceDiskMetadata\022\010Instance\022\340\001\n\020At" +
+      "tachFilesystem\0228.yandex.cloud.compute.v1" +
+      ".AttachInstanceFilesystemRequest\032!.yande" +
+      "x.cloud.operation.Operation\"o\202\323\344\223\0029\"4/co" +
+      "mpute/v1/instances/{instance_id}:attachF" +
+      "ilesystem:\001*\262\322*,\n AttachInstanceFilesyst" +
+      "emMetadata\022\010Instance\022\340\001\n\020DetachFilesyste" +
+      "m\0228.yandex.cloud.compute.v1.DetachInstan" +
+      "ceFilesystemRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"o\202\323\344\223\0029\"4/compute/v1/inst" +
+      "ances/{instance_id}:detachFilesystem:\001*\262" +
+      "\322*,\n DetachInstanceFilesystemMetadata\022\010I" +
+      "nstance\022\370\001\n\026AttachNetworkInterface\022>.yan" +
+      "dex.cloud.compute.v1.AttachInstanceNetwo" +
+      "rkInterfaceRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"{\202\323\344\223\002?\":/compute/v1/insta" +
+      "nces/{instance_id}:attachNetworkInterfac" +
+      "e:\001*\262\322*2\n&AttachInstanceNetworkInterface" +
+      "Metadata\022\010Instance\022\370\001\n\026DetachNetworkInte" +
+      "rface\022>.yandex.cloud.compute.v1.DetachIn" +
+      "stanceNetworkInterfaceRequest\032!.yandex.c" +
+      "loud.operation.Operation\"{\202\323\344\223\002?\":/compu" +
+      "te/v1/instances/{instance_id}:detachNetw" +
+      "orkInterface:\001*\262\322*2\n&DetachInstanceNetwo" +
+      "rkInterfaceMetadata\022\010Instance\022\330\001\n\016AddOne" +
+      "ToOneNat\0226.yandex.cloud.compute.v1.AddIn" +
+      "stanceOneToOneNatRequest\032!.yandex.cloud." +
+      "operation.Operation\"k\202\323\344\223\0027\"2/compute/v1" +
+      "/instances/{instance_id}/addOneToOneNat:" +
+      "\001*\262\322**\n\036AddInstanceOneToOneNatMetadata\022\010" +
+      "Instance\022\344\001\n\021RemoveOneToOneNat\0229.yandex." +
+      "cloud.compute.v1.RemoveInstanceOneToOneN" +
+      "atRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"q\202\323\344\223\002:\"5/compute/v1/instances/{ins" +
+      "tance_id}/removeOneToOneNat:\001*\262\322*-\n!Remo" +
+      "veInstanceOneToOneNatMetadata\022\010Instance\022" +
+      "\370\001\n\026UpdateNetworkInterface\022>.yandex.clou" +
+      "d.compute.v1.UpdateInstanceNetworkInterf" +
+      "aceRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"{\202\323\344\223\002?2:/compute/v1/instances/{in" +
+      "stance_id}/updateNetworkInterface:\001*\262\322*2" +
+      "\n&UpdateInstanceNetworkInterfaceMetadata" +
+      "\022\010Instance\022\271\001\n\016ListOperations\0226.yandex.c" +
+      "loud.compute.v1.ListInstanceOperationsRe" +
+      "quest\0327.yandex.cloud.compute.v1.ListInst" +
+      "anceOperationsResponse\"6\202\323\344\223\0020\022./compute" +
+      "/v1/instances/{instance_id}/operations\022\260" +
+      "\001\n\004Move\022,.yandex.cloud.compute.v1.MoveIn" +
+      "stanceRequest\032!.yandex.cloud.operation.O" +
+      "peration\"W\202\323\344\223\002-\"(/compute/v1/instances/" +
+      "{instance_id}:move:\001*\262\322* \n\024MoveInstanceM" +
+      "etadata\022\010Instance\022\300\001\n\010Relocate\0220.yandex." +
+      "cloud.compute.v1.RelocateInstanceRequest" +
+      "\032!.yandex.cloud.operation.Operation\"_\202\323\344" +
+      "\223\0021\",/compute/v1/instances/{instance_id}" +
+      ":relocate:\001*\262\322*$\n\030RelocateInstanceMetada" +
+      "ta\022\010Instance\022\216\002\n\030SimulateMaintenanceEven" +
+      "t\022@.yandex.cloud.compute.v1.SimulateInst" +
+      "anceMaintenanceEventRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"\214\001\202\323\344\223\002A\"</comput" +
+      "e/v1/instances/{instance_id}:simulateMai" +
+      "ntenanceEvent:\001*\262\322*A\n(SimulateInstanceMa" +
+      "intenanceEventMetadata\022\025google.protobuf." +
+      "Empty\022\265\001\n\022ListAccessBindings\022..yandex.cl" +
+      "oud.access.ListAccessBindingsRequest\032/.y" +
+      "andex.cloud.access.ListAccessBindingsRes" +
+      "ponse\">\202\323\344\223\0028\0226/compute/v1/instances/{re" +
+      "source_id}:listAccessBindings\022\364\001\n\021SetAcc" +
+      "essBindings\022-.yandex.cloud.access.SetAcc" +
+      "essBindingsRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"\214\001\202\323\344\223\002:\"5/compute/v1/inst" +
+      "ances/{resource_id}:setAccessBindings:\001*" +
+      "\262\322*H\n access.SetAccessBindingsMetadata\022$" +
+      "access.AccessBindingsOperationResult\022\200\002\n" +
+      "\024UpdateAccessBindings\0220.yandex.cloud.acc" +
+      "ess.UpdateAccessBindingsRequest\032!.yandex" +
+      ".cloud.operation.Operation\"\222\001\202\323\344\223\002=\"8/co" +
+      "mpute/v1/instances/{resource_id}:updateA" +
+      "ccessBindings:\001*\262\322*K\n#access.UpdateAcces" +
+      "sBindingsMetadata\022$access.AccessBindings" +
+      "OperationResultBb\n\033yandex.cloud.api.comp" +
+      "ute.v1ZCgithub.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/compute/v1;computeb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -63837,7 +64024,7 @@ public final class InstanceServiceOuterClass {
     internal_static_yandex_cloud_compute_v1_AttachedDiskSpec_DiskSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_AttachedDiskSpec_DiskSpec_descriptor,
-        new java.lang.String[] { "Name", "Description", "TypeId", "Size", "BlockSize", "DiskPlacementPolicy", "ImageId", "SnapshotId", "Source", });
+        new java.lang.String[] { "Name", "Description", "TypeId", "Size", "ImageId", "SnapshotId", "DiskPlacementPolicy", "BlockSize", "KmsKeyId", "Source", });
     internal_static_yandex_cloud_compute_v1_AttachedLocalDiskSpec_descriptor =
       getDescriptor().getMessageTypes().get(43);
     internal_static_yandex_cloud_compute_v1_AttachedLocalDiskSpec_fieldAccessorTable = new

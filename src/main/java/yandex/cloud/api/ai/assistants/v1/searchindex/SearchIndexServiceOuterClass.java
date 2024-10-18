@@ -31,23 +31,39 @@ public final class SearchIndexServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * List of file IDs to be indexed.
+     * </pre>
+     *
      * <code>repeated string file_ids = 2;</code>
      * @return A list containing the fileIds.
      */
     java.util.List<java.lang.String>
         getFileIdsList();
     /**
+     * <pre>
+     * List of file IDs to be indexed.
+     * </pre>
+     *
      * <code>repeated string file_ids = 2;</code>
      * @return The count of fileIds.
      */
     int getFileIdsCount();
     /**
+     * <pre>
+     * List of file IDs to be indexed.
+     * </pre>
+     *
      * <code>repeated string file_ids = 2;</code>
      * @param index The index of the element to return.
      * @return The fileIds at the given index.
      */
     java.lang.String getFileIds(int index);
     /**
+     * <pre>
+     * List of file IDs to be indexed.
+     * </pre>
+     *
      * <code>repeated string file_ids = 2;</code>
      * @param index The index of the value to return.
      * @return The bytes of the fileIds at the given index.
@@ -56,11 +72,19 @@ public final class SearchIndexServiceOuterClass {
         getFileIdsBytes(int index);
 
     /**
+     * <pre>
+     * Name of the search index.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the search index.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The bytes for name.
      */
@@ -68,11 +92,19 @@ public final class SearchIndexServiceOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the search index.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the search index.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -80,25 +112,45 @@ public final class SearchIndexServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Expiration configuration for the search index.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return Whether the expirationConfig field is set.
      */
     boolean hasExpirationConfig();
     /**
+     * <pre>
+     * Expiration configuration for the search index.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return The expirationConfig.
      */
     yandex.cloud.api.ai.common.Common.ExpirationConfig getExpirationConfig();
     /**
+     * <pre>
+     * Expiration configuration for the search index.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      */
     yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder getExpirationConfigOrBuilder();
 
     /**
+     * <pre>
+     * Set of key-value pairs to label the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Set of key-value pairs to label the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     boolean containsLabels(
@@ -110,11 +162,19 @@ public final class SearchIndexServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Set of key-value pairs to label the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Set of key-value pairs to label the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -122,6 +182,10 @@ public final class SearchIndexServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Set of key-value pairs to label the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -129,31 +193,55 @@ public final class SearchIndexServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * Configuration for a traditional keyword-based text search index.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 7;</code>
      * @return Whether the textSearchIndex field is set.
      */
     boolean hasTextSearchIndex();
     /**
+     * <pre>
+     * Configuration for a traditional keyword-based text search index.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 7;</code>
      * @return The textSearchIndex.
      */
     yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex getTextSearchIndex();
     /**
+     * <pre>
+     * Configuration for a traditional keyword-based text search index.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 7;</code>
      */
     yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndexOrBuilder getTextSearchIndexOrBuilder();
 
     /**
+     * <pre>
+     * Configuration for a vector-based search index using embeddings.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 8;</code>
      * @return Whether the vectorSearchIndex field is set.
      */
     boolean hasVectorSearchIndex();
     /**
+     * <pre>
+     * Configuration for a vector-based search index using embeddings.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 8;</code>
      * @return The vectorSearchIndex.
      */
     yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex getVectorSearchIndex();
     /**
+     * <pre>
+     * Configuration for a vector-based search index using embeddings.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 8;</code>
      */
     yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndexOrBuilder getVectorSearchIndexOrBuilder();
@@ -161,6 +249,10 @@ public final class SearchIndexServiceOuterClass {
     public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.CreateSearchIndexRequest.IndexTypeCase getIndexTypeCase();
   }
   /**
+   * <pre>
+   * Request to create a new search index.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.CreateSearchIndexRequest}
    */
   public static final class CreateSearchIndexRequest extends
@@ -420,6 +512,10 @@ public final class SearchIndexServiceOuterClass {
     public static final int FILE_IDS_FIELD_NUMBER = 2;
     private com.google.protobuf.LazyStringList fileIds_;
     /**
+     * <pre>
+     * List of file IDs to be indexed.
+     * </pre>
+     *
      * <code>repeated string file_ids = 2;</code>
      * @return A list containing the fileIds.
      */
@@ -428,6 +524,10 @@ public final class SearchIndexServiceOuterClass {
       return fileIds_;
     }
     /**
+     * <pre>
+     * List of file IDs to be indexed.
+     * </pre>
+     *
      * <code>repeated string file_ids = 2;</code>
      * @return The count of fileIds.
      */
@@ -435,6 +535,10 @@ public final class SearchIndexServiceOuterClass {
       return fileIds_.size();
     }
     /**
+     * <pre>
+     * List of file IDs to be indexed.
+     * </pre>
+     *
      * <code>repeated string file_ids = 2;</code>
      * @param index The index of the element to return.
      * @return The fileIds at the given index.
@@ -443,6 +547,10 @@ public final class SearchIndexServiceOuterClass {
       return fileIds_.get(index);
     }
     /**
+     * <pre>
+     * List of file IDs to be indexed.
+     * </pre>
+     *
      * <code>repeated string file_ids = 2;</code>
      * @param index The index of the value to return.
      * @return The bytes of the fileIds at the given index.
@@ -455,6 +563,10 @@ public final class SearchIndexServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the search index.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The name.
      */
@@ -472,6 +584,10 @@ public final class SearchIndexServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the search index.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The bytes for name.
      */
@@ -493,6 +609,10 @@ public final class SearchIndexServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the search index.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
@@ -510,6 +630,10 @@ public final class SearchIndexServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the search index.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -531,6 +655,10 @@ public final class SearchIndexServiceOuterClass {
     public static final int EXPIRATION_CONFIG_FIELD_NUMBER = 5;
     private yandex.cloud.api.ai.common.Common.ExpirationConfig expirationConfig_;
     /**
+     * <pre>
+     * Expiration configuration for the search index.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return Whether the expirationConfig field is set.
      */
@@ -539,6 +667,10 @@ public final class SearchIndexServiceOuterClass {
       return expirationConfig_ != null;
     }
     /**
+     * <pre>
+     * Expiration configuration for the search index.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return The expirationConfig.
      */
@@ -547,6 +679,10 @@ public final class SearchIndexServiceOuterClass {
       return expirationConfig_ == null ? yandex.cloud.api.ai.common.Common.ExpirationConfig.getDefaultInstance() : expirationConfig_;
     }
     /**
+     * <pre>
+     * Expiration configuration for the search index.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      */
     @java.lang.Override
@@ -581,6 +717,10 @@ public final class SearchIndexServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -599,6 +739,10 @@ public final class SearchIndexServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -607,6 +751,10 @@ public final class SearchIndexServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -620,6 +768,10 @@ public final class SearchIndexServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -637,6 +789,10 @@ public final class SearchIndexServiceOuterClass {
 
     public static final int TEXT_SEARCH_INDEX_FIELD_NUMBER = 7;
     /**
+     * <pre>
+     * Configuration for a traditional keyword-based text search index.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 7;</code>
      * @return Whether the textSearchIndex field is set.
      */
@@ -645,6 +801,10 @@ public final class SearchIndexServiceOuterClass {
       return indexTypeCase_ == 7;
     }
     /**
+     * <pre>
+     * Configuration for a traditional keyword-based text search index.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 7;</code>
      * @return The textSearchIndex.
      */
@@ -656,6 +816,10 @@ public final class SearchIndexServiceOuterClass {
       return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Configuration for a traditional keyword-based text search index.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 7;</code>
      */
     @java.lang.Override
@@ -668,6 +832,10 @@ public final class SearchIndexServiceOuterClass {
 
     public static final int VECTOR_SEARCH_INDEX_FIELD_NUMBER = 8;
     /**
+     * <pre>
+     * Configuration for a vector-based search index using embeddings.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 8;</code>
      * @return Whether the vectorSearchIndex field is set.
      */
@@ -676,6 +844,10 @@ public final class SearchIndexServiceOuterClass {
       return indexTypeCase_ == 8;
     }
     /**
+     * <pre>
+     * Configuration for a vector-based search index using embeddings.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 8;</code>
      * @return The vectorSearchIndex.
      */
@@ -687,6 +859,10 @@ public final class SearchIndexServiceOuterClass {
       return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Configuration for a vector-based search index using embeddings.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 8;</code>
      */
     @java.lang.Override
@@ -966,6 +1142,10 @@ public final class SearchIndexServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request to create a new search index.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.CreateSearchIndexRequest}
      */
     public static final class Builder extends
@@ -1316,6 +1496,10 @@ public final class SearchIndexServiceOuterClass {
          }
       }
       /**
+       * <pre>
+       * List of file IDs to be indexed.
+       * </pre>
+       *
        * <code>repeated string file_ids = 2;</code>
        * @return A list containing the fileIds.
        */
@@ -1324,6 +1508,10 @@ public final class SearchIndexServiceOuterClass {
         return fileIds_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * List of file IDs to be indexed.
+       * </pre>
+       *
        * <code>repeated string file_ids = 2;</code>
        * @return The count of fileIds.
        */
@@ -1331,6 +1519,10 @@ public final class SearchIndexServiceOuterClass {
         return fileIds_.size();
       }
       /**
+       * <pre>
+       * List of file IDs to be indexed.
+       * </pre>
+       *
        * <code>repeated string file_ids = 2;</code>
        * @param index The index of the element to return.
        * @return The fileIds at the given index.
@@ -1339,6 +1531,10 @@ public final class SearchIndexServiceOuterClass {
         return fileIds_.get(index);
       }
       /**
+       * <pre>
+       * List of file IDs to be indexed.
+       * </pre>
+       *
        * <code>repeated string file_ids = 2;</code>
        * @param index The index of the value to return.
        * @return The bytes of the fileIds at the given index.
@@ -1348,6 +1544,10 @@ public final class SearchIndexServiceOuterClass {
         return fileIds_.getByteString(index);
       }
       /**
+       * <pre>
+       * List of file IDs to be indexed.
+       * </pre>
+       *
        * <code>repeated string file_ids = 2;</code>
        * @param index The index to set the value at.
        * @param value The fileIds to set.
@@ -1364,6 +1564,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of file IDs to be indexed.
+       * </pre>
+       *
        * <code>repeated string file_ids = 2;</code>
        * @param value The fileIds to add.
        * @return This builder for chaining.
@@ -1379,6 +1583,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of file IDs to be indexed.
+       * </pre>
+       *
        * <code>repeated string file_ids = 2;</code>
        * @param values The fileIds to add.
        * @return This builder for chaining.
@@ -1392,6 +1600,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of file IDs to be indexed.
+       * </pre>
+       *
        * <code>repeated string file_ids = 2;</code>
        * @return This builder for chaining.
        */
@@ -1402,6 +1614,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of file IDs to be indexed.
+       * </pre>
+       *
        * <code>repeated string file_ids = 2;</code>
        * @param value The bytes of the fileIds to add.
        * @return This builder for chaining.
@@ -1420,6 +1636,10 @@ public final class SearchIndexServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the search index.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return The name.
        */
@@ -1436,6 +1656,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the search index.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return The bytes for name.
        */
@@ -1453,6 +1677,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the search index.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -1468,6 +1696,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the search index.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return This builder for chaining.
        */
@@ -1478,6 +1710,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the search index.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -1496,6 +1732,10 @@ public final class SearchIndexServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the search index.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The description.
        */
@@ -1512,6 +1752,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the search index.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The bytes for description.
        */
@@ -1529,6 +1773,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the search index.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -1544,6 +1792,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the search index.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return This builder for chaining.
        */
@@ -1554,6 +1806,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the search index.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -1574,6 +1830,10 @@ public final class SearchIndexServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.common.Common.ExpirationConfig, yandex.cloud.api.ai.common.Common.ExpirationConfig.Builder, yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder> expirationConfigBuilder_;
       /**
+       * <pre>
+       * Expiration configuration for the search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        * @return Whether the expirationConfig field is set.
        */
@@ -1581,6 +1841,10 @@ public final class SearchIndexServiceOuterClass {
         return expirationConfigBuilder_ != null || expirationConfig_ != null;
       }
       /**
+       * <pre>
+       * Expiration configuration for the search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        * @return The expirationConfig.
        */
@@ -1592,6 +1856,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Expiration configuration for the search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder setExpirationConfig(yandex.cloud.api.ai.common.Common.ExpirationConfig value) {
@@ -1608,6 +1876,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Expiration configuration for the search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder setExpirationConfig(
@@ -1622,6 +1894,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Expiration configuration for the search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder mergeExpirationConfig(yandex.cloud.api.ai.common.Common.ExpirationConfig value) {
@@ -1640,6 +1916,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Expiration configuration for the search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder clearExpirationConfig() {
@@ -1654,6 +1934,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Expiration configuration for the search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public yandex.cloud.api.ai.common.Common.ExpirationConfig.Builder getExpirationConfigBuilder() {
@@ -1662,6 +1946,10 @@ public final class SearchIndexServiceOuterClass {
         return getExpirationConfigFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Expiration configuration for the search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder getExpirationConfigOrBuilder() {
@@ -1673,6 +1961,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Expiration configuration for the search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1716,6 +2008,10 @@ public final class SearchIndexServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the search index.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1734,6 +2030,10 @@ public final class SearchIndexServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the search index.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -1742,6 +2042,10 @@ public final class SearchIndexServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the search index.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -1755,6 +2059,10 @@ public final class SearchIndexServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the search index.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -1776,6 +2084,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the search index.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1795,6 +2107,10 @@ public final class SearchIndexServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the search index.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       public Builder putLabels(
@@ -1810,6 +2126,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the search index.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1823,6 +2143,10 @@ public final class SearchIndexServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndexOrBuilder> textSearchIndexBuilder_;
       /**
+       * <pre>
+       * Configuration for a traditional keyword-based text search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 7;</code>
        * @return Whether the textSearchIndex field is set.
        */
@@ -1831,6 +2155,10 @@ public final class SearchIndexServiceOuterClass {
         return indexTypeCase_ == 7;
       }
       /**
+       * <pre>
+       * Configuration for a traditional keyword-based text search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 7;</code>
        * @return The textSearchIndex.
        */
@@ -1849,6 +2177,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration for a traditional keyword-based text search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 7;</code>
        */
       public Builder setTextSearchIndex(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex value) {
@@ -1865,6 +2197,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for a traditional keyword-based text search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 7;</code>
        */
       public Builder setTextSearchIndex(
@@ -1879,6 +2215,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for a traditional keyword-based text search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 7;</code>
        */
       public Builder mergeTextSearchIndex(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex value) {
@@ -1901,6 +2241,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for a traditional keyword-based text search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 7;</code>
        */
       public Builder clearTextSearchIndex() {
@@ -1920,12 +2264,20 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for a traditional keyword-based text search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 7;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex.Builder getTextSearchIndexBuilder() {
         return getTextSearchIndexFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Configuration for a traditional keyword-based text search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 7;</code>
        */
       @java.lang.Override
@@ -1940,6 +2292,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration for a traditional keyword-based text search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1964,6 +2320,10 @@ public final class SearchIndexServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndexOrBuilder> vectorSearchIndexBuilder_;
       /**
+       * <pre>
+       * Configuration for a vector-based search index using embeddings.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 8;</code>
        * @return Whether the vectorSearchIndex field is set.
        */
@@ -1972,6 +2332,10 @@ public final class SearchIndexServiceOuterClass {
         return indexTypeCase_ == 8;
       }
       /**
+       * <pre>
+       * Configuration for a vector-based search index using embeddings.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 8;</code>
        * @return The vectorSearchIndex.
        */
@@ -1990,6 +2354,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration for a vector-based search index using embeddings.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 8;</code>
        */
       public Builder setVectorSearchIndex(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex value) {
@@ -2006,6 +2374,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for a vector-based search index using embeddings.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 8;</code>
        */
       public Builder setVectorSearchIndex(
@@ -2020,6 +2392,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for a vector-based search index using embeddings.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 8;</code>
        */
       public Builder mergeVectorSearchIndex(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex value) {
@@ -2042,6 +2418,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for a vector-based search index using embeddings.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 8;</code>
        */
       public Builder clearVectorSearchIndex() {
@@ -2061,12 +2441,20 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for a vector-based search index using embeddings.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 8;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex.Builder getVectorSearchIndexBuilder() {
         return getVectorSearchIndexFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Configuration for a vector-based search index using embeddings.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 8;</code>
        */
       @java.lang.Override
@@ -2081,6 +2469,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration for a vector-based search index using embeddings.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2159,11 +2551,19 @@ public final class SearchIndexServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the search index to retrieve.
+     * </pre>
+     *
      * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The searchIndexId.
      */
     java.lang.String getSearchIndexId();
     /**
+     * <pre>
+     * ID of the search index to retrieve.
+     * </pre>
+     *
      * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for searchIndexId.
      */
@@ -2171,6 +2571,10 @@ public final class SearchIndexServiceOuterClass {
         getSearchIndexIdBytes();
   }
   /**
+   * <pre>
+   * Request message for retrieving a search index by ID.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.GetSearchIndexRequest}
    */
   public static final class GetSearchIndexRequest extends
@@ -2257,6 +2661,10 @@ public final class SearchIndexServiceOuterClass {
     public static final int SEARCH_INDEX_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object searchIndexId_;
     /**
+     * <pre>
+     * ID of the search index to retrieve.
+     * </pre>
+     *
      * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The searchIndexId.
      */
@@ -2274,6 +2682,10 @@ public final class SearchIndexServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the search index to retrieve.
+     * </pre>
+     *
      * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for searchIndexId.
      */
@@ -2447,6 +2859,10 @@ public final class SearchIndexServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for retrieving a search index by ID.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.GetSearchIndexRequest}
      */
     public static final class Builder extends
@@ -2596,6 +3012,10 @@ public final class SearchIndexServiceOuterClass {
 
       private java.lang.Object searchIndexId_ = "";
       /**
+       * <pre>
+       * ID of the search index to retrieve.
+       * </pre>
+       *
        * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The searchIndexId.
        */
@@ -2612,6 +3032,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the search index to retrieve.
+       * </pre>
+       *
        * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for searchIndexId.
        */
@@ -2629,6 +3053,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the search index to retrieve.
+       * </pre>
+       *
        * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The searchIndexId to set.
        * @return This builder for chaining.
@@ -2644,6 +3072,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the search index to retrieve.
+       * </pre>
+       *
        * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -2654,6 +3086,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the search index to retrieve.
+       * </pre>
+       *
        * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for searchIndexId to set.
        * @return This builder for chaining.
@@ -2727,11 +3163,19 @@ public final class SearchIndexServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the search index to update.
+     * </pre>
+     *
      * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The searchIndexId.
      */
     java.lang.String getSearchIndexId();
     /**
+     * <pre>
+     * ID of the search index to update.
+     * </pre>
+     *
      * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for searchIndexId.
      */
@@ -2739,26 +3183,46 @@ public final class SearchIndexServiceOuterClass {
         getSearchIndexIdBytes();
 
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
+     * <pre>
+     * New name for the search index.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * New name for the search index.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The bytes for name.
      */
@@ -2766,11 +3230,19 @@ public final class SearchIndexServiceOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * New description for the search index.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * New description for the search index.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -2778,25 +3250,45 @@ public final class SearchIndexServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * New expiration configuration for the search index.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return Whether the expirationConfig field is set.
      */
     boolean hasExpirationConfig();
     /**
+     * <pre>
+     * New expiration configuration for the search index.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return The expirationConfig.
      */
     yandex.cloud.api.ai.common.Common.ExpirationConfig getExpirationConfig();
     /**
+     * <pre>
+     * New expiration configuration for the search index.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      */
     yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder getExpirationConfigOrBuilder();
 
     /**
+     * <pre>
+     * New set of labels for the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * New set of labels for the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     boolean containsLabels(
@@ -2808,11 +3300,19 @@ public final class SearchIndexServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * New set of labels for the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * New set of labels for the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -2820,6 +3320,10 @@ public final class SearchIndexServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * New set of labels for the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -2827,6 +3331,10 @@ public final class SearchIndexServiceOuterClass {
         java.lang.String key);
   }
   /**
+   * <pre>
+   * Request message for updating an existing search index.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.UpdateSearchIndexRequest}
    */
   public static final class UpdateSearchIndexRequest extends
@@ -2979,6 +3487,10 @@ public final class SearchIndexServiceOuterClass {
     public static final int SEARCH_INDEX_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object searchIndexId_;
     /**
+     * <pre>
+     * ID of the search index to update.
+     * </pre>
+     *
      * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The searchIndexId.
      */
@@ -2996,6 +3508,10 @@ public final class SearchIndexServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the search index to update.
+     * </pre>
+     *
      * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for searchIndexId.
      */
@@ -3017,6 +3533,10 @@ public final class SearchIndexServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return Whether the updateMask field is set.
      */
@@ -3025,6 +3545,10 @@ public final class SearchIndexServiceOuterClass {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return The updateMask.
      */
@@ -3033,6 +3557,10 @@ public final class SearchIndexServiceOuterClass {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
@@ -3043,6 +3571,10 @@ public final class SearchIndexServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * New name for the search index.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The name.
      */
@@ -3060,6 +3592,10 @@ public final class SearchIndexServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New name for the search index.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The bytes for name.
      */
@@ -3081,6 +3617,10 @@ public final class SearchIndexServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * New description for the search index.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
@@ -3098,6 +3638,10 @@ public final class SearchIndexServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New description for the search index.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -3119,6 +3663,10 @@ public final class SearchIndexServiceOuterClass {
     public static final int EXPIRATION_CONFIG_FIELD_NUMBER = 5;
     private yandex.cloud.api.ai.common.Common.ExpirationConfig expirationConfig_;
     /**
+     * <pre>
+     * New expiration configuration for the search index.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return Whether the expirationConfig field is set.
      */
@@ -3127,6 +3675,10 @@ public final class SearchIndexServiceOuterClass {
       return expirationConfig_ != null;
     }
     /**
+     * <pre>
+     * New expiration configuration for the search index.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return The expirationConfig.
      */
@@ -3135,6 +3687,10 @@ public final class SearchIndexServiceOuterClass {
       return expirationConfig_ == null ? yandex.cloud.api.ai.common.Common.ExpirationConfig.getDefaultInstance() : expirationConfig_;
     }
     /**
+     * <pre>
+     * New expiration configuration for the search index.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      */
     @java.lang.Override
@@ -3169,6 +3725,10 @@ public final class SearchIndexServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * New set of labels for the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -3187,6 +3747,10 @@ public final class SearchIndexServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * New set of labels for the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -3195,6 +3759,10 @@ public final class SearchIndexServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * New set of labels for the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -3208,6 +3776,10 @@ public final class SearchIndexServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * New set of labels for the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -3452,6 +4024,10 @@ public final class SearchIndexServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for updating an existing search index.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.UpdateSearchIndexRequest}
      */
     public static final class Builder extends
@@ -3672,6 +4248,10 @@ public final class SearchIndexServiceOuterClass {
 
       private java.lang.Object searchIndexId_ = "";
       /**
+       * <pre>
+       * ID of the search index to update.
+       * </pre>
+       *
        * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The searchIndexId.
        */
@@ -3688,6 +4268,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the search index to update.
+       * </pre>
+       *
        * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for searchIndexId.
        */
@@ -3705,6 +4289,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the search index to update.
+       * </pre>
+       *
        * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The searchIndexId to set.
        * @return This builder for chaining.
@@ -3720,6 +4308,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the search index to update.
+       * </pre>
+       *
        * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -3730,6 +4322,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the search index to update.
+       * </pre>
+       *
        * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for searchIndexId to set.
        * @return This builder for chaining.
@@ -3750,6 +4346,10 @@ public final class SearchIndexServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        * @return Whether the updateMask field is set.
        */
@@ -3757,6 +4357,10 @@ public final class SearchIndexServiceOuterClass {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        * @return The updateMask.
        */
@@ -3768,6 +4372,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -3784,6 +4392,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setUpdateMask(
@@ -3798,6 +4410,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -3816,6 +4432,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearUpdateMask() {
@@ -3830,6 +4450,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -3838,6 +4462,10 @@ public final class SearchIndexServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -3849,6 +4477,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3867,6 +4499,10 @@ public final class SearchIndexServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * New name for the search index.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return The name.
        */
@@ -3883,6 +4519,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New name for the search index.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return The bytes for name.
        */
@@ -3900,6 +4540,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New name for the search index.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -3915,6 +4559,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New name for the search index.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return This builder for chaining.
        */
@@ -3925,6 +4573,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New name for the search index.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -3943,6 +4595,10 @@ public final class SearchIndexServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * New description for the search index.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The description.
        */
@@ -3959,6 +4615,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description for the search index.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The bytes for description.
        */
@@ -3976,6 +4636,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description for the search index.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -3991,6 +4655,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description for the search index.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return This builder for chaining.
        */
@@ -4001,6 +4669,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description for the search index.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -4021,6 +4693,10 @@ public final class SearchIndexServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.common.Common.ExpirationConfig, yandex.cloud.api.ai.common.Common.ExpirationConfig.Builder, yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder> expirationConfigBuilder_;
       /**
+       * <pre>
+       * New expiration configuration for the search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        * @return Whether the expirationConfig field is set.
        */
@@ -4028,6 +4704,10 @@ public final class SearchIndexServiceOuterClass {
         return expirationConfigBuilder_ != null || expirationConfig_ != null;
       }
       /**
+       * <pre>
+       * New expiration configuration for the search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        * @return The expirationConfig.
        */
@@ -4039,6 +4719,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New expiration configuration for the search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder setExpirationConfig(yandex.cloud.api.ai.common.Common.ExpirationConfig value) {
@@ -4055,6 +4739,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New expiration configuration for the search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder setExpirationConfig(
@@ -4069,6 +4757,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New expiration configuration for the search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder mergeExpirationConfig(yandex.cloud.api.ai.common.Common.ExpirationConfig value) {
@@ -4087,6 +4779,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New expiration configuration for the search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder clearExpirationConfig() {
@@ -4101,6 +4797,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New expiration configuration for the search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public yandex.cloud.api.ai.common.Common.ExpirationConfig.Builder getExpirationConfigBuilder() {
@@ -4109,6 +4809,10 @@ public final class SearchIndexServiceOuterClass {
         return getExpirationConfigFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * New expiration configuration for the search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder getExpirationConfigOrBuilder() {
@@ -4120,6 +4824,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New expiration configuration for the search index.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4163,6 +4871,10 @@ public final class SearchIndexServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * New set of labels for the search index.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -4181,6 +4893,10 @@ public final class SearchIndexServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * New set of labels for the search index.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -4189,6 +4905,10 @@ public final class SearchIndexServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * New set of labels for the search index.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -4202,6 +4922,10 @@ public final class SearchIndexServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * New set of labels for the search index.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -4223,6 +4947,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New set of labels for the search index.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -4242,6 +4970,10 @@ public final class SearchIndexServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * New set of labels for the search index.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       public Builder putLabels(
@@ -4257,6 +4989,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New set of labels for the search index.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -4324,11 +5060,19 @@ public final class SearchIndexServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the search index to delete.
+     * </pre>
+     *
      * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The searchIndexId.
      */
     java.lang.String getSearchIndexId();
     /**
+     * <pre>
+     * ID of the search index to delete.
+     * </pre>
+     *
      * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for searchIndexId.
      */
@@ -4336,6 +5080,10 @@ public final class SearchIndexServiceOuterClass {
         getSearchIndexIdBytes();
   }
   /**
+   * <pre>
+   * Request message for deleting a search index by ID.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.DeleteSearchIndexRequest}
    */
   public static final class DeleteSearchIndexRequest extends
@@ -4422,6 +5170,10 @@ public final class SearchIndexServiceOuterClass {
     public static final int SEARCH_INDEX_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object searchIndexId_;
     /**
+     * <pre>
+     * ID of the search index to delete.
+     * </pre>
+     *
      * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The searchIndexId.
      */
@@ -4439,6 +5191,10 @@ public final class SearchIndexServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the search index to delete.
+     * </pre>
+     *
      * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for searchIndexId.
      */
@@ -4612,6 +5368,10 @@ public final class SearchIndexServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for deleting a search index by ID.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.DeleteSearchIndexRequest}
      */
     public static final class Builder extends
@@ -4761,6 +5521,10 @@ public final class SearchIndexServiceOuterClass {
 
       private java.lang.Object searchIndexId_ = "";
       /**
+       * <pre>
+       * ID of the search index to delete.
+       * </pre>
+       *
        * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The searchIndexId.
        */
@@ -4777,6 +5541,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the search index to delete.
+       * </pre>
+       *
        * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for searchIndexId.
        */
@@ -4794,6 +5562,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the search index to delete.
+       * </pre>
+       *
        * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The searchIndexId to set.
        * @return This builder for chaining.
@@ -4809,6 +5581,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the search index to delete.
+       * </pre>
+       *
        * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -4819,6 +5595,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the search index to delete.
+       * </pre>
+       *
        * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for searchIndexId to set.
        * @return This builder for chaining.
@@ -4892,6 +5672,10 @@ public final class SearchIndexServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
+   * <pre>
+   * Response message for the delete operation.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.DeleteSearchIndexResponse}
    */
   public static final class DeleteSearchIndexResponse extends
@@ -5113,6 +5897,10 @@ public final class SearchIndexServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Response message for the delete operation.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.DeleteSearchIndexResponse}
      */
     public static final class Builder extends
@@ -5310,11 +6098,19 @@ public final class SearchIndexServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Folder ID from which to list search indexes.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * Folder ID from which to list search indexes.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for folderId.
      */
@@ -5322,17 +6118,29 @@ public final class SearchIndexServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Maximum number of threads to return per page.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The bytes for pageToken.
      */
@@ -5340,6 +6148,10 @@ public final class SearchIndexServiceOuterClass {
         getPageTokenBytes();
   }
   /**
+   * <pre>
+   * Request message for listing search indexes in a specific folder.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.ListSearchIndicesRequest}
    */
   public static final class ListSearchIndicesRequest extends
@@ -5438,6 +6250,10 @@ public final class SearchIndexServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * Folder ID from which to list search indexes.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The folderId.
      */
@@ -5455,6 +6271,10 @@ public final class SearchIndexServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Folder ID from which to list search indexes.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for folderId.
      */
@@ -5476,6 +6296,10 @@ public final class SearchIndexServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * Maximum number of threads to return per page.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      * @return The pageSize.
      */
@@ -5487,6 +6311,10 @@ public final class SearchIndexServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The pageToken.
      */
@@ -5504,6 +6332,10 @@ public final class SearchIndexServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The bytes for pageToken.
      */
@@ -5699,6 +6531,10 @@ public final class SearchIndexServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for listing search indexes in a specific folder.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.ListSearchIndicesRequest}
      */
     public static final class Builder extends
@@ -5861,6 +6697,10 @@ public final class SearchIndexServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * Folder ID from which to list search indexes.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The folderId.
        */
@@ -5877,6 +6717,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID from which to list search indexes.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for folderId.
        */
@@ -5894,6 +6738,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID from which to list search indexes.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -5909,6 +6757,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID from which to list search indexes.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -5919,6 +6771,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID from which to list search indexes.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -5937,6 +6793,10 @@ public final class SearchIndexServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * Maximum number of threads to return per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @return The pageSize.
        */
@@ -5945,6 +6805,10 @@ public final class SearchIndexServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * Maximum number of threads to return per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -5956,6 +6820,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maximum number of threads to return per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @return This builder for chaining.
        */
@@ -5968,6 +6836,10 @@ public final class SearchIndexServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return The pageToken.
        */
@@ -5984,6 +6856,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return The bytes for pageToken.
        */
@@ -6001,6 +6877,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -6016,6 +6896,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return This builder for chaining.
        */
@@ -6026,6 +6910,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -6099,35 +6987,63 @@ public final class SearchIndexServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of search indexes in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
      */
     java.util.List<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex> 
         getIndicesList();
     /**
+     * <pre>
+     * List of search indexes in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
      */
     yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex getIndices(int index);
     /**
+     * <pre>
+     * List of search indexes in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
      */
     int getIndicesCount();
     /**
+     * <pre>
+     * List of search indexes in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndexOrBuilder> 
         getIndicesOrBuilderList();
     /**
+     * <pre>
+     * List of search indexes in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
      */
     yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndexOrBuilder getIndicesOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -6135,6 +7051,10 @@ public final class SearchIndexServiceOuterClass {
         getNextPageTokenBytes();
   }
   /**
+   * <pre>
+   * Response message for the list operation.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.ListSearchIndicesResponse}
    */
   public static final class ListSearchIndicesResponse extends
@@ -6235,6 +7155,10 @@ public final class SearchIndexServiceOuterClass {
     public static final int INDICES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex> indices_;
     /**
+     * <pre>
+     * List of search indexes in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
      */
     @java.lang.Override
@@ -6242,6 +7166,10 @@ public final class SearchIndexServiceOuterClass {
       return indices_;
     }
     /**
+     * <pre>
+     * List of search indexes in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
      */
     @java.lang.Override
@@ -6250,6 +7178,10 @@ public final class SearchIndexServiceOuterClass {
       return indices_;
     }
     /**
+     * <pre>
+     * List of search indexes in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
      */
     @java.lang.Override
@@ -6257,6 +7189,10 @@ public final class SearchIndexServiceOuterClass {
       return indices_.size();
     }
     /**
+     * <pre>
+     * List of search indexes in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
      */
     @java.lang.Override
@@ -6264,6 +7200,10 @@ public final class SearchIndexServiceOuterClass {
       return indices_.get(index);
     }
     /**
+     * <pre>
+     * List of search indexes in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
      */
     @java.lang.Override
@@ -6275,6 +7215,10 @@ public final class SearchIndexServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
@@ -6292,6 +7236,10 @@ public final class SearchIndexServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -6478,6 +7426,10 @@ public final class SearchIndexServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Response message for the list operation.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.ListSearchIndicesResponse}
      */
     public static final class Builder extends
@@ -6682,6 +7634,10 @@ public final class SearchIndexServiceOuterClass {
           yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndexOrBuilder> indicesBuilder_;
 
       /**
+       * <pre>
+       * List of search indexes in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
        */
       public java.util.List<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex> getIndicesList() {
@@ -6692,6 +7648,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of search indexes in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
        */
       public int getIndicesCount() {
@@ -6702,6 +7662,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of search indexes in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex getIndices(int index) {
@@ -6712,6 +7676,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of search indexes in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
        */
       public Builder setIndices(
@@ -6729,6 +7697,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of search indexes in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
        */
       public Builder setIndices(
@@ -6743,6 +7715,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of search indexes in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
        */
       public Builder addIndices(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex value) {
@@ -6759,6 +7735,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of search indexes in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
        */
       public Builder addIndices(
@@ -6776,6 +7756,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of search indexes in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
        */
       public Builder addIndices(
@@ -6790,6 +7774,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of search indexes in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
        */
       public Builder addIndices(
@@ -6804,6 +7792,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of search indexes in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
        */
       public Builder addAllIndices(
@@ -6819,6 +7811,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of search indexes in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
        */
       public Builder clearIndices() {
@@ -6832,6 +7828,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of search indexes in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
        */
       public Builder removeIndices(int index) {
@@ -6845,6 +7845,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of search indexes in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex.Builder getIndicesBuilder(
@@ -6852,6 +7856,10 @@ public final class SearchIndexServiceOuterClass {
         return getIndicesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of search indexes in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndexOrBuilder getIndicesOrBuilder(
@@ -6862,6 +7870,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of search indexes in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndexOrBuilder> 
@@ -6873,6 +7885,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of search indexes in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex.Builder addIndicesBuilder() {
@@ -6880,6 +7896,10 @@ public final class SearchIndexServiceOuterClass {
             yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of search indexes in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex.Builder addIndicesBuilder(
@@ -6888,6 +7908,10 @@ public final class SearchIndexServiceOuterClass {
             index, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of search indexes in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndex indices = 1;</code>
        */
       public java.util.List<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex.Builder> 
@@ -6911,6 +7935,10 @@ public final class SearchIndexServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The nextPageToken.
        */
@@ -6927,6 +7955,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The bytes for nextPageToken.
        */
@@ -6944,6 +7976,10 @@ public final class SearchIndexServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -6959,6 +7995,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return This builder for chaining.
        */
@@ -6969,6 +8009,10 @@ public final class SearchIndexServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.

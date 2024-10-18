@@ -19,11 +19,19 @@ public final class SearchIndexOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Unique identifier of the search index.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * Unique identifier of the search index.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -31,11 +39,19 @@ public final class SearchIndexOuterClass {
         getIdBytes();
 
     /**
+     * <pre>
+     * ID of the folder that the search index belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder that the search index belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The bytes for folderId.
      */
@@ -43,11 +59,19 @@ public final class SearchIndexOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Name of the search index.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the search index.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The bytes for name.
      */
@@ -55,11 +79,19 @@ public final class SearchIndexOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the search index.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the search index.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -67,11 +99,19 @@ public final class SearchIndexOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Identifier of the subject who created this search index.
+     * </pre>
+     *
      * <code>string created_by = 5;</code>
      * @return The createdBy.
      */
     java.lang.String getCreatedBy();
     /**
+     * <pre>
+     * Identifier of the subject who created this search index.
+     * </pre>
+     *
      * <code>string created_by = 5;</code>
      * @return The bytes for createdBy.
      */
@@ -79,26 +119,46 @@ public final class SearchIndexOuterClass {
         getCreatedByBytes();
 
     /**
+     * <pre>
+     * Timestamp representing when the search index was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Timestamp representing when the search index was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Timestamp representing when the search index was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
+     * <pre>
+     * Identifier of the subject who last updated this search index.
+     * </pre>
+     *
      * <code>string updated_by = 7;</code>
      * @return The updatedBy.
      */
     java.lang.String getUpdatedBy();
     /**
+     * <pre>
+     * Identifier of the subject who last updated this search index.
+     * </pre>
+     *
      * <code>string updated_by = 7;</code>
      * @return The bytes for updatedBy.
      */
@@ -106,55 +166,99 @@ public final class SearchIndexOuterClass {
         getUpdatedByBytes();
 
     /**
+     * <pre>
+     * Timestamp representing the last time this search index was updated.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 8;</code>
      * @return Whether the updatedAt field is set.
      */
     boolean hasUpdatedAt();
     /**
+     * <pre>
+     * Timestamp representing the last time this search index was updated.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 8;</code>
      * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
+     * <pre>
+     * Timestamp representing the last time this search index was updated.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 8;</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
 
     /**
+     * <pre>
+     * Configuration for the expiration of the search index, defining when and how the search index will expire.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 9;</code>
      * @return Whether the expirationConfig field is set.
      */
     boolean hasExpirationConfig();
     /**
+     * <pre>
+     * Configuration for the expiration of the search index, defining when and how the search index will expire.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 9;</code>
      * @return The expirationConfig.
      */
     yandex.cloud.api.ai.common.Common.ExpirationConfig getExpirationConfig();
     /**
+     * <pre>
+     * Configuration for the expiration of the search index, defining when and how the search index will expire.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 9;</code>
      */
     yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder getExpirationConfigOrBuilder();
 
     /**
+     * <pre>
+     * Timestamp representing when the search index will expire.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp expires_at = 10;</code>
      * @return Whether the expiresAt field is set.
      */
     boolean hasExpiresAt();
     /**
+     * <pre>
+     * Timestamp representing when the search index will expire.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp expires_at = 10;</code>
      * @return The expiresAt.
      */
     com.google.protobuf.Timestamp getExpiresAt();
     /**
+     * <pre>
+     * Timestamp representing when the search index will expire.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp expires_at = 10;</code>
      */
     com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder();
 
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 11;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 11;</code>
      */
     boolean containsLabels(
@@ -166,11 +270,19 @@ public final class SearchIndexOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 11;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 11;</code>
      */
 
@@ -178,6 +290,10 @@ public final class SearchIndexOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 11;</code>
      */
 
@@ -185,31 +301,61 @@ public final class SearchIndexOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * Keyword-based text search index configuration.
+     * This type of index is used for traditional text search, where documents are indexed based on their keywords.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 12;</code>
      * @return Whether the textSearchIndex field is set.
      */
     boolean hasTextSearchIndex();
     /**
+     * <pre>
+     * Keyword-based text search index configuration.
+     * This type of index is used for traditional text search, where documents are indexed based on their keywords.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 12;</code>
      * @return The textSearchIndex.
      */
     yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex getTextSearchIndex();
     /**
+     * <pre>
+     * Keyword-based text search index configuration.
+     * This type of index is used for traditional text search, where documents are indexed based on their keywords.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 12;</code>
      */
     yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndexOrBuilder getTextSearchIndexOrBuilder();
 
     /**
+     * <pre>
+     * Vector-based search index configuration.
+     * This type is used for vector search, where documents are indexed using vector embeddings.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 13;</code>
      * @return Whether the vectorSearchIndex field is set.
      */
     boolean hasVectorSearchIndex();
     /**
+     * <pre>
+     * Vector-based search index configuration.
+     * This type is used for vector search, where documents are indexed using vector embeddings.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 13;</code>
      * @return The vectorSearchIndex.
      */
     yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex getVectorSearchIndex();
     /**
+     * <pre>
+     * Vector-based search index configuration.
+     * This type is used for vector search, where documents are indexed using vector embeddings.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 13;</code>
      */
     yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndexOrBuilder getVectorSearchIndexOrBuilder();
@@ -217,6 +363,10 @@ public final class SearchIndexOuterClass {
     public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex.IndexTypeCase getIndexTypeCase();
   }
   /**
+   * <pre>
+   * Represents a search index used to store and query data, either using traditional keyword-based text search or vector-based search mechanisms.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.SearchIndex}
    */
   public static final class SearchIndex extends
@@ -485,6 +635,10 @@ public final class SearchIndexOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * Unique identifier of the search index.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -502,6 +656,10 @@ public final class SearchIndexOuterClass {
       }
     }
     /**
+     * <pre>
+     * Unique identifier of the search index.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -523,6 +681,10 @@ public final class SearchIndexOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder that the search index belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The folderId.
      */
@@ -540,6 +702,10 @@ public final class SearchIndexOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder that the search index belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The bytes for folderId.
      */
@@ -561,6 +727,10 @@ public final class SearchIndexOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the search index.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The name.
      */
@@ -578,6 +748,10 @@ public final class SearchIndexOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the search index.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The bytes for name.
      */
@@ -599,6 +773,10 @@ public final class SearchIndexOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the search index.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
@@ -616,6 +794,10 @@ public final class SearchIndexOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the search index.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -637,6 +819,10 @@ public final class SearchIndexOuterClass {
     public static final int CREATED_BY_FIELD_NUMBER = 5;
     private volatile java.lang.Object createdBy_;
     /**
+     * <pre>
+     * Identifier of the subject who created this search index.
+     * </pre>
+     *
      * <code>string created_by = 5;</code>
      * @return The createdBy.
      */
@@ -654,6 +840,10 @@ public final class SearchIndexOuterClass {
       }
     }
     /**
+     * <pre>
+     * Identifier of the subject who created this search index.
+     * </pre>
+     *
      * <code>string created_by = 5;</code>
      * @return The bytes for createdBy.
      */
@@ -675,6 +865,10 @@ public final class SearchIndexOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 6;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Timestamp representing when the search index was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      * @return Whether the createdAt field is set.
      */
@@ -683,6 +877,10 @@ public final class SearchIndexOuterClass {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Timestamp representing when the search index was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      * @return The createdAt.
      */
@@ -691,6 +889,10 @@ public final class SearchIndexOuterClass {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Timestamp representing when the search index was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      */
     @java.lang.Override
@@ -701,6 +903,10 @@ public final class SearchIndexOuterClass {
     public static final int UPDATED_BY_FIELD_NUMBER = 7;
     private volatile java.lang.Object updatedBy_;
     /**
+     * <pre>
+     * Identifier of the subject who last updated this search index.
+     * </pre>
+     *
      * <code>string updated_by = 7;</code>
      * @return The updatedBy.
      */
@@ -718,6 +924,10 @@ public final class SearchIndexOuterClass {
       }
     }
     /**
+     * <pre>
+     * Identifier of the subject who last updated this search index.
+     * </pre>
+     *
      * <code>string updated_by = 7;</code>
      * @return The bytes for updatedBy.
      */
@@ -739,6 +949,10 @@ public final class SearchIndexOuterClass {
     public static final int UPDATED_AT_FIELD_NUMBER = 8;
     private com.google.protobuf.Timestamp updatedAt_;
     /**
+     * <pre>
+     * Timestamp representing the last time this search index was updated.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 8;</code>
      * @return Whether the updatedAt field is set.
      */
@@ -747,6 +961,10 @@ public final class SearchIndexOuterClass {
       return updatedAt_ != null;
     }
     /**
+     * <pre>
+     * Timestamp representing the last time this search index was updated.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 8;</code>
      * @return The updatedAt.
      */
@@ -755,6 +973,10 @@ public final class SearchIndexOuterClass {
       return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
     /**
+     * <pre>
+     * Timestamp representing the last time this search index was updated.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 8;</code>
      */
     @java.lang.Override
@@ -765,6 +987,10 @@ public final class SearchIndexOuterClass {
     public static final int EXPIRATION_CONFIG_FIELD_NUMBER = 9;
     private yandex.cloud.api.ai.common.Common.ExpirationConfig expirationConfig_;
     /**
+     * <pre>
+     * Configuration for the expiration of the search index, defining when and how the search index will expire.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 9;</code>
      * @return Whether the expirationConfig field is set.
      */
@@ -773,6 +999,10 @@ public final class SearchIndexOuterClass {
       return expirationConfig_ != null;
     }
     /**
+     * <pre>
+     * Configuration for the expiration of the search index, defining when and how the search index will expire.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 9;</code>
      * @return The expirationConfig.
      */
@@ -781,6 +1011,10 @@ public final class SearchIndexOuterClass {
       return expirationConfig_ == null ? yandex.cloud.api.ai.common.Common.ExpirationConfig.getDefaultInstance() : expirationConfig_;
     }
     /**
+     * <pre>
+     * Configuration for the expiration of the search index, defining when and how the search index will expire.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 9;</code>
      */
     @java.lang.Override
@@ -791,6 +1025,10 @@ public final class SearchIndexOuterClass {
     public static final int EXPIRES_AT_FIELD_NUMBER = 10;
     private com.google.protobuf.Timestamp expiresAt_;
     /**
+     * <pre>
+     * Timestamp representing when the search index will expire.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp expires_at = 10;</code>
      * @return Whether the expiresAt field is set.
      */
@@ -799,6 +1037,10 @@ public final class SearchIndexOuterClass {
       return expiresAt_ != null;
     }
     /**
+     * <pre>
+     * Timestamp representing when the search index will expire.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp expires_at = 10;</code>
      * @return The expiresAt.
      */
@@ -807,6 +1049,10 @@ public final class SearchIndexOuterClass {
       return expiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
     }
     /**
+     * <pre>
+     * Timestamp representing when the search index will expire.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp expires_at = 10;</code>
      */
     @java.lang.Override
@@ -841,6 +1087,10 @@ public final class SearchIndexOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 11;</code>
      */
 
@@ -859,6 +1109,10 @@ public final class SearchIndexOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 11;</code>
      */
     @java.lang.Override
@@ -867,6 +1121,10 @@ public final class SearchIndexOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 11;</code>
      */
     @java.lang.Override
@@ -880,6 +1138,10 @@ public final class SearchIndexOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the search index.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 11;</code>
      */
     @java.lang.Override
@@ -897,6 +1159,11 @@ public final class SearchIndexOuterClass {
 
     public static final int TEXT_SEARCH_INDEX_FIELD_NUMBER = 12;
     /**
+     * <pre>
+     * Keyword-based text search index configuration.
+     * This type of index is used for traditional text search, where documents are indexed based on their keywords.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 12;</code>
      * @return Whether the textSearchIndex field is set.
      */
@@ -905,6 +1172,11 @@ public final class SearchIndexOuterClass {
       return indexTypeCase_ == 12;
     }
     /**
+     * <pre>
+     * Keyword-based text search index configuration.
+     * This type of index is used for traditional text search, where documents are indexed based on their keywords.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 12;</code>
      * @return The textSearchIndex.
      */
@@ -916,6 +1188,11 @@ public final class SearchIndexOuterClass {
       return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Keyword-based text search index configuration.
+     * This type of index is used for traditional text search, where documents are indexed based on their keywords.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 12;</code>
      */
     @java.lang.Override
@@ -928,6 +1205,11 @@ public final class SearchIndexOuterClass {
 
     public static final int VECTOR_SEARCH_INDEX_FIELD_NUMBER = 13;
     /**
+     * <pre>
+     * Vector-based search index configuration.
+     * This type is used for vector search, where documents are indexed using vector embeddings.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 13;</code>
      * @return Whether the vectorSearchIndex field is set.
      */
@@ -936,6 +1218,11 @@ public final class SearchIndexOuterClass {
       return indexTypeCase_ == 13;
     }
     /**
+     * <pre>
+     * Vector-based search index configuration.
+     * This type is used for vector search, where documents are indexed using vector embeddings.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 13;</code>
      * @return The vectorSearchIndex.
      */
@@ -947,6 +1234,11 @@ public final class SearchIndexOuterClass {
       return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Vector-based search index configuration.
+     * This type is used for vector search, where documents are indexed using vector embeddings.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 13;</code>
      */
     @java.lang.Override
@@ -1287,6 +1579,10 @@ public final class SearchIndexOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Represents a search index used to store and query data, either using traditional keyword-based text search or vector-based search mechanisms.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.SearchIndex}
      */
     public static final class Builder extends
@@ -1601,6 +1897,10 @@ public final class SearchIndexOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * Unique identifier of the search index.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -1617,6 +1917,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Unique identifier of the search index.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -1634,6 +1938,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Unique identifier of the search index.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -1649,6 +1957,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Unique identifier of the search index.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -1659,6 +1971,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Unique identifier of the search index.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -1677,6 +1993,10 @@ public final class SearchIndexOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder that the search index belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @return The folderId.
        */
@@ -1693,6 +2013,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder that the search index belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @return The bytes for folderId.
        */
@@ -1710,6 +2034,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder that the search index belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -1725,6 +2053,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder that the search index belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -1735,6 +2067,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder that the search index belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -1753,6 +2089,10 @@ public final class SearchIndexOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the search index.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return The name.
        */
@@ -1769,6 +2109,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the search index.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return The bytes for name.
        */
@@ -1786,6 +2130,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the search index.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -1801,6 +2149,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the search index.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return This builder for chaining.
        */
@@ -1811,6 +2163,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the search index.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -1829,6 +2185,10 @@ public final class SearchIndexOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the search index.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The description.
        */
@@ -1845,6 +2205,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the search index.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The bytes for description.
        */
@@ -1862,6 +2226,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the search index.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -1877,6 +2245,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the search index.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return This builder for chaining.
        */
@@ -1887,6 +2259,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the search index.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -1905,6 +2281,10 @@ public final class SearchIndexOuterClass {
 
       private java.lang.Object createdBy_ = "";
       /**
+       * <pre>
+       * Identifier of the subject who created this search index.
+       * </pre>
+       *
        * <code>string created_by = 5;</code>
        * @return The createdBy.
        */
@@ -1921,6 +2301,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier of the subject who created this search index.
+       * </pre>
+       *
        * <code>string created_by = 5;</code>
        * @return The bytes for createdBy.
        */
@@ -1938,6 +2322,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier of the subject who created this search index.
+       * </pre>
+       *
        * <code>string created_by = 5;</code>
        * @param value The createdBy to set.
        * @return This builder for chaining.
@@ -1953,6 +2341,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the subject who created this search index.
+       * </pre>
+       *
        * <code>string created_by = 5;</code>
        * @return This builder for chaining.
        */
@@ -1963,6 +2355,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the subject who created this search index.
+       * </pre>
+       *
        * <code>string created_by = 5;</code>
        * @param value The bytes for createdBy to set.
        * @return This builder for chaining.
@@ -1983,6 +2379,10 @@ public final class SearchIndexOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Timestamp representing when the search index was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        * @return Whether the createdAt field is set.
        */
@@ -1990,6 +2390,10 @@ public final class SearchIndexOuterClass {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Timestamp representing when the search index was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        * @return The createdAt.
        */
@@ -2001,6 +2405,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp representing when the search index was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -2017,6 +2425,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the search index was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public Builder setCreatedAt(
@@ -2031,6 +2443,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the search index was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -2049,6 +2465,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the search index was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public Builder clearCreatedAt() {
@@ -2063,6 +2483,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the search index was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -2071,6 +2495,10 @@ public final class SearchIndexOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Timestamp representing when the search index was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -2082,6 +2510,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp representing when the search index was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2100,6 +2532,10 @@ public final class SearchIndexOuterClass {
 
       private java.lang.Object updatedBy_ = "";
       /**
+       * <pre>
+       * Identifier of the subject who last updated this search index.
+       * </pre>
+       *
        * <code>string updated_by = 7;</code>
        * @return The updatedBy.
        */
@@ -2116,6 +2552,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier of the subject who last updated this search index.
+       * </pre>
+       *
        * <code>string updated_by = 7;</code>
        * @return The bytes for updatedBy.
        */
@@ -2133,6 +2573,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier of the subject who last updated this search index.
+       * </pre>
+       *
        * <code>string updated_by = 7;</code>
        * @param value The updatedBy to set.
        * @return This builder for chaining.
@@ -2148,6 +2592,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the subject who last updated this search index.
+       * </pre>
+       *
        * <code>string updated_by = 7;</code>
        * @return This builder for chaining.
        */
@@ -2158,6 +2606,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the subject who last updated this search index.
+       * </pre>
+       *
        * <code>string updated_by = 7;</code>
        * @param value The bytes for updatedBy to set.
        * @return This builder for chaining.
@@ -2178,6 +2630,10 @@ public final class SearchIndexOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
+       * <pre>
+       * Timestamp representing the last time this search index was updated.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 8;</code>
        * @return Whether the updatedAt field is set.
        */
@@ -2185,6 +2641,10 @@ public final class SearchIndexOuterClass {
         return updatedAtBuilder_ != null || updatedAt_ != null;
       }
       /**
+       * <pre>
+       * Timestamp representing the last time this search index was updated.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 8;</code>
        * @return The updatedAt.
        */
@@ -2196,6 +2656,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp representing the last time this search index was updated.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 8;</code>
        */
       public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
@@ -2212,6 +2676,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing the last time this search index was updated.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 8;</code>
        */
       public Builder setUpdatedAt(
@@ -2226,6 +2694,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing the last time this search index was updated.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 8;</code>
        */
       public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
@@ -2244,6 +2716,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing the last time this search index was updated.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 8;</code>
        */
       public Builder clearUpdatedAt() {
@@ -2258,6 +2734,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing the last time this search index was updated.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 8;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedAtBuilder() {
@@ -2266,6 +2746,10 @@ public final class SearchIndexOuterClass {
         return getUpdatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Timestamp representing the last time this search index was updated.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 8;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
@@ -2277,6 +2761,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp representing the last time this search index was updated.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2297,6 +2785,10 @@ public final class SearchIndexOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.common.Common.ExpirationConfig, yandex.cloud.api.ai.common.Common.ExpirationConfig.Builder, yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder> expirationConfigBuilder_;
       /**
+       * <pre>
+       * Configuration for the expiration of the search index, defining when and how the search index will expire.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 9;</code>
        * @return Whether the expirationConfig field is set.
        */
@@ -2304,6 +2796,10 @@ public final class SearchIndexOuterClass {
         return expirationConfigBuilder_ != null || expirationConfig_ != null;
       }
       /**
+       * <pre>
+       * Configuration for the expiration of the search index, defining when and how the search index will expire.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 9;</code>
        * @return The expirationConfig.
        */
@@ -2315,6 +2811,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration for the expiration of the search index, defining when and how the search index will expire.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 9;</code>
        */
       public Builder setExpirationConfig(yandex.cloud.api.ai.common.Common.ExpirationConfig value) {
@@ -2331,6 +2831,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for the expiration of the search index, defining when and how the search index will expire.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 9;</code>
        */
       public Builder setExpirationConfig(
@@ -2345,6 +2849,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for the expiration of the search index, defining when and how the search index will expire.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 9;</code>
        */
       public Builder mergeExpirationConfig(yandex.cloud.api.ai.common.Common.ExpirationConfig value) {
@@ -2363,6 +2871,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for the expiration of the search index, defining when and how the search index will expire.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 9;</code>
        */
       public Builder clearExpirationConfig() {
@@ -2377,6 +2889,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for the expiration of the search index, defining when and how the search index will expire.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 9;</code>
        */
       public yandex.cloud.api.ai.common.Common.ExpirationConfig.Builder getExpirationConfigBuilder() {
@@ -2385,6 +2901,10 @@ public final class SearchIndexOuterClass {
         return getExpirationConfigFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Configuration for the expiration of the search index, defining when and how the search index will expire.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 9;</code>
        */
       public yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder getExpirationConfigOrBuilder() {
@@ -2396,6 +2916,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration for the expiration of the search index, defining when and how the search index will expire.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2416,6 +2940,10 @@ public final class SearchIndexOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> expiresAtBuilder_;
       /**
+       * <pre>
+       * Timestamp representing when the search index will expire.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp expires_at = 10;</code>
        * @return Whether the expiresAt field is set.
        */
@@ -2423,6 +2951,10 @@ public final class SearchIndexOuterClass {
         return expiresAtBuilder_ != null || expiresAt_ != null;
       }
       /**
+       * <pre>
+       * Timestamp representing when the search index will expire.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp expires_at = 10;</code>
        * @return The expiresAt.
        */
@@ -2434,6 +2966,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp representing when the search index will expire.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp expires_at = 10;</code>
        */
       public Builder setExpiresAt(com.google.protobuf.Timestamp value) {
@@ -2450,6 +2986,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the search index will expire.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp expires_at = 10;</code>
        */
       public Builder setExpiresAt(
@@ -2464,6 +3004,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the search index will expire.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp expires_at = 10;</code>
        */
       public Builder mergeExpiresAt(com.google.protobuf.Timestamp value) {
@@ -2482,6 +3026,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the search index will expire.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp expires_at = 10;</code>
        */
       public Builder clearExpiresAt() {
@@ -2496,6 +3044,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the search index will expire.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp expires_at = 10;</code>
        */
       public com.google.protobuf.Timestamp.Builder getExpiresAtBuilder() {
@@ -2504,6 +3056,10 @@ public final class SearchIndexOuterClass {
         return getExpiresAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Timestamp representing when the search index will expire.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp expires_at = 10;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder() {
@@ -2515,6 +3071,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp representing when the search index will expire.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp expires_at = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2558,6 +3118,10 @@ public final class SearchIndexOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the search index.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 11;</code>
        */
 
@@ -2576,6 +3140,10 @@ public final class SearchIndexOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the search index.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 11;</code>
        */
       @java.lang.Override
@@ -2584,6 +3152,10 @@ public final class SearchIndexOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the search index.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 11;</code>
        */
       @java.lang.Override
@@ -2597,6 +3169,10 @@ public final class SearchIndexOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the search index.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 11;</code>
        */
       @java.lang.Override
@@ -2618,6 +3194,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the search index.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 11;</code>
        */
 
@@ -2637,6 +3217,10 @@ public final class SearchIndexOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the search index.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 11;</code>
        */
       public Builder putLabels(
@@ -2652,6 +3236,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the search index.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 11;</code>
        */
 
@@ -2665,6 +3253,11 @@ public final class SearchIndexOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndexOrBuilder> textSearchIndexBuilder_;
       /**
+       * <pre>
+       * Keyword-based text search index configuration.
+       * This type of index is used for traditional text search, where documents are indexed based on their keywords.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 12;</code>
        * @return Whether the textSearchIndex field is set.
        */
@@ -2673,6 +3266,11 @@ public final class SearchIndexOuterClass {
         return indexTypeCase_ == 12;
       }
       /**
+       * <pre>
+       * Keyword-based text search index configuration.
+       * This type of index is used for traditional text search, where documents are indexed based on their keywords.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 12;</code>
        * @return The textSearchIndex.
        */
@@ -2691,6 +3289,11 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Keyword-based text search index configuration.
+       * This type of index is used for traditional text search, where documents are indexed based on their keywords.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 12;</code>
        */
       public Builder setTextSearchIndex(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex value) {
@@ -2707,6 +3310,11 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Keyword-based text search index configuration.
+       * This type of index is used for traditional text search, where documents are indexed based on their keywords.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 12;</code>
        */
       public Builder setTextSearchIndex(
@@ -2721,6 +3329,11 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Keyword-based text search index configuration.
+       * This type of index is used for traditional text search, where documents are indexed based on their keywords.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 12;</code>
        */
       public Builder mergeTextSearchIndex(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex value) {
@@ -2743,6 +3356,11 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Keyword-based text search index configuration.
+       * This type of index is used for traditional text search, where documents are indexed based on their keywords.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 12;</code>
        */
       public Builder clearTextSearchIndex() {
@@ -2762,12 +3380,22 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Keyword-based text search index configuration.
+       * This type of index is used for traditional text search, where documents are indexed based on their keywords.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 12;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex.Builder getTextSearchIndexBuilder() {
         return getTextSearchIndexFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Keyword-based text search index configuration.
+       * This type of index is used for traditional text search, where documents are indexed based on their keywords.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 12;</code>
        */
       @java.lang.Override
@@ -2782,6 +3410,11 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Keyword-based text search index configuration.
+       * This type of index is used for traditional text search, where documents are indexed based on their keywords.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 12;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2806,6 +3439,11 @@ public final class SearchIndexOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndexOrBuilder> vectorSearchIndexBuilder_;
       /**
+       * <pre>
+       * Vector-based search index configuration.
+       * This type is used for vector search, where documents are indexed using vector embeddings.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 13;</code>
        * @return Whether the vectorSearchIndex field is set.
        */
@@ -2814,6 +3452,11 @@ public final class SearchIndexOuterClass {
         return indexTypeCase_ == 13;
       }
       /**
+       * <pre>
+       * Vector-based search index configuration.
+       * This type is used for vector search, where documents are indexed using vector embeddings.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 13;</code>
        * @return The vectorSearchIndex.
        */
@@ -2832,6 +3475,11 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Vector-based search index configuration.
+       * This type is used for vector search, where documents are indexed using vector embeddings.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 13;</code>
        */
       public Builder setVectorSearchIndex(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex value) {
@@ -2848,6 +3496,11 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Vector-based search index configuration.
+       * This type is used for vector search, where documents are indexed using vector embeddings.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 13;</code>
        */
       public Builder setVectorSearchIndex(
@@ -2862,6 +3515,11 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Vector-based search index configuration.
+       * This type is used for vector search, where documents are indexed using vector embeddings.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 13;</code>
        */
       public Builder mergeVectorSearchIndex(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex value) {
@@ -2884,6 +3542,11 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Vector-based search index configuration.
+       * This type is used for vector search, where documents are indexed using vector embeddings.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 13;</code>
        */
       public Builder clearVectorSearchIndex() {
@@ -2903,12 +3566,22 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Vector-based search index configuration.
+       * This type is used for vector search, where documents are indexed using vector embeddings.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 13;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex.Builder getVectorSearchIndexBuilder() {
         return getVectorSearchIndexFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Vector-based search index configuration.
+       * This type is used for vector search, where documents are indexed using vector embeddings.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 13;</code>
        */
       @java.lang.Override
@@ -2923,6 +3596,11 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Vector-based search index configuration.
+       * This type is used for vector search, where documents are indexed using vector embeddings.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3001,21 +3679,37 @@ public final class SearchIndexOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Chunking strategy used to split text into smaller chunks before indexing.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
      * @return Whether the chunkingStrategy field is set.
      */
     boolean hasChunkingStrategy();
     /**
+     * <pre>
+     * Chunking strategy used to split text into smaller chunks before indexing.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
      * @return The chunkingStrategy.
      */
     yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy getChunkingStrategy();
     /**
+     * <pre>
+     * Chunking strategy used to split text into smaller chunks before indexing.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
      */
     yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategyOrBuilder getChunkingStrategyOrBuilder();
   }
   /**
+   * <pre>
+   * Defines the configuration for a traditional keyword-based text search index.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex}
    */
   public static final class TextSearchIndex extends
@@ -3108,6 +3802,10 @@ public final class SearchIndexOuterClass {
     public static final int CHUNKING_STRATEGY_FIELD_NUMBER = 1;
     private yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy chunkingStrategy_;
     /**
+     * <pre>
+     * Chunking strategy used to split text into smaller chunks before indexing.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
      * @return Whether the chunkingStrategy field is set.
      */
@@ -3116,6 +3814,10 @@ public final class SearchIndexOuterClass {
       return chunkingStrategy_ != null;
     }
     /**
+     * <pre>
+     * Chunking strategy used to split text into smaller chunks before indexing.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
      * @return The chunkingStrategy.
      */
@@ -3124,6 +3826,10 @@ public final class SearchIndexOuterClass {
       return chunkingStrategy_ == null ? yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.getDefaultInstance() : chunkingStrategy_;
     }
     /**
+     * <pre>
+     * Chunking strategy used to split text into smaller chunks before indexing.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
      */
     @java.lang.Override
@@ -3292,6 +3998,10 @@ public final class SearchIndexOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Defines the configuration for a traditional keyword-based text search index.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex}
      */
     public static final class Builder extends
@@ -3450,6 +4160,10 @@ public final class SearchIndexOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy, yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategyOrBuilder> chunkingStrategyBuilder_;
       /**
+       * <pre>
+       * Chunking strategy used to split text into smaller chunks before indexing.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
        * @return Whether the chunkingStrategy field is set.
        */
@@ -3457,6 +4171,10 @@ public final class SearchIndexOuterClass {
         return chunkingStrategyBuilder_ != null || chunkingStrategy_ != null;
       }
       /**
+       * <pre>
+       * Chunking strategy used to split text into smaller chunks before indexing.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
        * @return The chunkingStrategy.
        */
@@ -3468,6 +4186,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Chunking strategy used to split text into smaller chunks before indexing.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
        */
       public Builder setChunkingStrategy(yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy value) {
@@ -3484,6 +4206,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Chunking strategy used to split text into smaller chunks before indexing.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
        */
       public Builder setChunkingStrategy(
@@ -3498,6 +4224,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Chunking strategy used to split text into smaller chunks before indexing.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
        */
       public Builder mergeChunkingStrategy(yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy value) {
@@ -3516,6 +4246,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Chunking strategy used to split text into smaller chunks before indexing.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
        */
       public Builder clearChunkingStrategy() {
@@ -3530,6 +4264,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Chunking strategy used to split text into smaller chunks before indexing.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.Builder getChunkingStrategyBuilder() {
@@ -3538,6 +4276,10 @@ public final class SearchIndexOuterClass {
         return getChunkingStrategyFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Chunking strategy used to split text into smaller chunks before indexing.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategyOrBuilder getChunkingStrategyOrBuilder() {
@@ -3549,6 +4291,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Chunking strategy used to split text into smaller chunks before indexing.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3622,11 +4368,19 @@ public final class SearchIndexOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining document text embeddings.
+     * </pre>
+     *
      * <code>string doc_embedder_uri = 1;</code>
      * @return The docEmbedderUri.
      */
     java.lang.String getDocEmbedderUri();
     /**
+     * <pre>
+     * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining document text embeddings.
+     * </pre>
+     *
      * <code>string doc_embedder_uri = 1;</code>
      * @return The bytes for docEmbedderUri.
      */
@@ -3634,11 +4388,19 @@ public final class SearchIndexOuterClass {
         getDocEmbedderUriBytes();
 
     /**
+     * <pre>
+     * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining query text embeddings.
+     * </pre>
+     *
      * <code>string query_embedder_uri = 2;</code>
      * @return The queryEmbedderUri.
      */
     java.lang.String getQueryEmbedderUri();
     /**
+     * <pre>
+     * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining query text embeddings.
+     * </pre>
+     *
      * <code>string query_embedder_uri = 2;</code>
      * @return The bytes for queryEmbedderUri.
      */
@@ -3646,21 +4408,37 @@ public final class SearchIndexOuterClass {
         getQueryEmbedderUriBytes();
 
     /**
+     * <pre>
+     * Chunking strategy used to split text into smaller chunks before indexing.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
      * @return Whether the chunkingStrategy field is set.
      */
     boolean hasChunkingStrategy();
     /**
+     * <pre>
+     * Chunking strategy used to split text into smaller chunks before indexing.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
      * @return The chunkingStrategy.
      */
     yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy getChunkingStrategy();
     /**
+     * <pre>
+     * Chunking strategy used to split text into smaller chunks before indexing.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
      */
     yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategyOrBuilder getChunkingStrategyOrBuilder();
   }
   /**
+   * <pre>
+   * Defines the configuration for a vector-based search index. This type uses embeddings to represent documents and queries.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex}
    */
   public static final class VectorSearchIndex extends
@@ -3767,6 +4545,10 @@ public final class SearchIndexOuterClass {
     public static final int DOC_EMBEDDER_URI_FIELD_NUMBER = 1;
     private volatile java.lang.Object docEmbedderUri_;
     /**
+     * <pre>
+     * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining document text embeddings.
+     * </pre>
+     *
      * <code>string doc_embedder_uri = 1;</code>
      * @return The docEmbedderUri.
      */
@@ -3784,6 +4566,10 @@ public final class SearchIndexOuterClass {
       }
     }
     /**
+     * <pre>
+     * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining document text embeddings.
+     * </pre>
+     *
      * <code>string doc_embedder_uri = 1;</code>
      * @return The bytes for docEmbedderUri.
      */
@@ -3805,6 +4591,10 @@ public final class SearchIndexOuterClass {
     public static final int QUERY_EMBEDDER_URI_FIELD_NUMBER = 2;
     private volatile java.lang.Object queryEmbedderUri_;
     /**
+     * <pre>
+     * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining query text embeddings.
+     * </pre>
+     *
      * <code>string query_embedder_uri = 2;</code>
      * @return The queryEmbedderUri.
      */
@@ -3822,6 +4612,10 @@ public final class SearchIndexOuterClass {
       }
     }
     /**
+     * <pre>
+     * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining query text embeddings.
+     * </pre>
+     *
      * <code>string query_embedder_uri = 2;</code>
      * @return The bytes for queryEmbedderUri.
      */
@@ -3843,6 +4637,10 @@ public final class SearchIndexOuterClass {
     public static final int CHUNKING_STRATEGY_FIELD_NUMBER = 3;
     private yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy chunkingStrategy_;
     /**
+     * <pre>
+     * Chunking strategy used to split text into smaller chunks before indexing.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
      * @return Whether the chunkingStrategy field is set.
      */
@@ -3851,6 +4649,10 @@ public final class SearchIndexOuterClass {
       return chunkingStrategy_ != null;
     }
     /**
+     * <pre>
+     * Chunking strategy used to split text into smaller chunks before indexing.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
      * @return The chunkingStrategy.
      */
@@ -3859,6 +4661,10 @@ public final class SearchIndexOuterClass {
       return chunkingStrategy_ == null ? yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.getDefaultInstance() : chunkingStrategy_;
     }
     /**
+     * <pre>
+     * Chunking strategy used to split text into smaller chunks before indexing.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
      */
     @java.lang.Override
@@ -4047,6 +4853,10 @@ public final class SearchIndexOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Defines the configuration for a vector-based search index. This type uses embeddings to represent documents and queries.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex}
      */
     public static final class Builder extends
@@ -4217,6 +5027,10 @@ public final class SearchIndexOuterClass {
 
       private java.lang.Object docEmbedderUri_ = "";
       /**
+       * <pre>
+       * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining document text embeddings.
+       * </pre>
+       *
        * <code>string doc_embedder_uri = 1;</code>
        * @return The docEmbedderUri.
        */
@@ -4233,6 +5047,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining document text embeddings.
+       * </pre>
+       *
        * <code>string doc_embedder_uri = 1;</code>
        * @return The bytes for docEmbedderUri.
        */
@@ -4250,6 +5068,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining document text embeddings.
+       * </pre>
+       *
        * <code>string doc_embedder_uri = 1;</code>
        * @param value The docEmbedderUri to set.
        * @return This builder for chaining.
@@ -4265,6 +5087,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining document text embeddings.
+       * </pre>
+       *
        * <code>string doc_embedder_uri = 1;</code>
        * @return This builder for chaining.
        */
@@ -4275,6 +5101,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining document text embeddings.
+       * </pre>
+       *
        * <code>string doc_embedder_uri = 1;</code>
        * @param value The bytes for docEmbedderUri to set.
        * @return This builder for chaining.
@@ -4293,6 +5123,10 @@ public final class SearchIndexOuterClass {
 
       private java.lang.Object queryEmbedderUri_ = "";
       /**
+       * <pre>
+       * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining query text embeddings.
+       * </pre>
+       *
        * <code>string query_embedder_uri = 2;</code>
        * @return The queryEmbedderUri.
        */
@@ -4309,6 +5143,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining query text embeddings.
+       * </pre>
+       *
        * <code>string query_embedder_uri = 2;</code>
        * @return The bytes for queryEmbedderUri.
        */
@@ -4326,6 +5164,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining query text embeddings.
+       * </pre>
+       *
        * <code>string query_embedder_uri = 2;</code>
        * @param value The queryEmbedderUri to set.
        * @return This builder for chaining.
@@ -4341,6 +5183,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining query text embeddings.
+       * </pre>
+       *
        * <code>string query_embedder_uri = 2;</code>
        * @return This builder for chaining.
        */
@@ -4351,6 +5197,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining query text embeddings.
+       * </pre>
+       *
        * <code>string query_embedder_uri = 2;</code>
        * @param value The bytes for queryEmbedderUri to set.
        * @return This builder for chaining.
@@ -4371,6 +5221,10 @@ public final class SearchIndexOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy, yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategyOrBuilder> chunkingStrategyBuilder_;
       /**
+       * <pre>
+       * Chunking strategy used to split text into smaller chunks before indexing.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
        * @return Whether the chunkingStrategy field is set.
        */
@@ -4378,6 +5232,10 @@ public final class SearchIndexOuterClass {
         return chunkingStrategyBuilder_ != null || chunkingStrategy_ != null;
       }
       /**
+       * <pre>
+       * Chunking strategy used to split text into smaller chunks before indexing.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
        * @return The chunkingStrategy.
        */
@@ -4389,6 +5247,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Chunking strategy used to split text into smaller chunks before indexing.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
        */
       public Builder setChunkingStrategy(yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy value) {
@@ -4405,6 +5267,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Chunking strategy used to split text into smaller chunks before indexing.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
        */
       public Builder setChunkingStrategy(
@@ -4419,6 +5285,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Chunking strategy used to split text into smaller chunks before indexing.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
        */
       public Builder mergeChunkingStrategy(yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy value) {
@@ -4437,6 +5307,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Chunking strategy used to split text into smaller chunks before indexing.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
        */
       public Builder clearChunkingStrategy() {
@@ -4451,6 +5325,10 @@ public final class SearchIndexOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Chunking strategy used to split text into smaller chunks before indexing.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.Builder getChunkingStrategyBuilder() {
@@ -4459,6 +5337,10 @@ public final class SearchIndexOuterClass {
         return getChunkingStrategyFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Chunking strategy used to split text into smaller chunks before indexing.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategyOrBuilder getChunkingStrategyOrBuilder() {
@@ -4470,6 +5352,10 @@ public final class SearchIndexOuterClass {
         }
       }
       /**
+       * <pre>
+       * Chunking strategy used to split text into smaller chunks before indexing.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

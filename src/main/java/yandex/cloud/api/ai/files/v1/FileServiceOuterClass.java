@@ -31,11 +31,19 @@ public final class FileServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Name of the file.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the file.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
@@ -43,11 +51,19 @@ public final class FileServiceOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the file.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the file.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The bytes for description.
      */
@@ -55,11 +71,21 @@ public final class FileServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * MIME type of the file, indicating the file's format (e.g., "application/pdf").
+     * If not specified, will be deduced automatically based on the file content.
+     * </pre>
+     *
      * <code>string mime_type = 4;</code>
      * @return The mimeType.
      */
     java.lang.String getMimeType();
     /**
+     * <pre>
+     * MIME type of the file, indicating the file's format (e.g., "application/pdf").
+     * If not specified, will be deduced automatically based on the file content.
+     * </pre>
+     *
      * <code>string mime_type = 4;</code>
      * @return The bytes for mimeType.
      */
@@ -67,16 +93,28 @@ public final class FileServiceOuterClass {
         getMimeTypeBytes();
 
     /**
+     * <pre>
+     * Binary content of the file.
+     * </pre>
+     *
      * <code>bytes content = 5 [(.yandex.cloud.required) = true];</code>
      * @return The content.
      */
     com.google.protobuf.ByteString getContent();
 
     /**
+     * <pre>
+     * Set of key-value pairs to label the file.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Set of key-value pairs to label the file.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     boolean containsLabels(
@@ -88,11 +126,19 @@ public final class FileServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Set of key-value pairs to label the file.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Set of key-value pairs to label the file.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -100,6 +146,10 @@ public final class FileServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Set of key-value pairs to label the file.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -107,21 +157,37 @@ public final class FileServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * Expiration configuration for the file.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 7;</code>
      * @return Whether the expirationConfig field is set.
      */
     boolean hasExpirationConfig();
     /**
+     * <pre>
+     * Expiration configuration for the file.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 7;</code>
      * @return The expirationConfig.
      */
     yandex.cloud.api.ai.common.Common.ExpirationConfig getExpirationConfig();
     /**
+     * <pre>
+     * Expiration configuration for the file.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 7;</code>
      */
     yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder getExpirationConfigOrBuilder();
   }
   /**
+   * <pre>
+   * Request message for creating a new file.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.files.v1.CreateFileRequest}
    */
   public static final class CreateFileRequest extends
@@ -312,6 +378,10 @@ public final class FileServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the file.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The name.
      */
@@ -329,6 +399,10 @@ public final class FileServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the file.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
@@ -350,6 +424,10 @@ public final class FileServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the file.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The description.
      */
@@ -367,6 +445,10 @@ public final class FileServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the file.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The bytes for description.
      */
@@ -388,6 +470,11 @@ public final class FileServiceOuterClass {
     public static final int MIME_TYPE_FIELD_NUMBER = 4;
     private volatile java.lang.Object mimeType_;
     /**
+     * <pre>
+     * MIME type of the file, indicating the file's format (e.g., "application/pdf").
+     * If not specified, will be deduced automatically based on the file content.
+     * </pre>
+     *
      * <code>string mime_type = 4;</code>
      * @return The mimeType.
      */
@@ -405,6 +492,11 @@ public final class FileServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * MIME type of the file, indicating the file's format (e.g., "application/pdf").
+     * If not specified, will be deduced automatically based on the file content.
+     * </pre>
+     *
      * <code>string mime_type = 4;</code>
      * @return The bytes for mimeType.
      */
@@ -426,6 +518,10 @@ public final class FileServiceOuterClass {
     public static final int CONTENT_FIELD_NUMBER = 5;
     private com.google.protobuf.ByteString content_;
     /**
+     * <pre>
+     * Binary content of the file.
+     * </pre>
+     *
      * <code>bytes content = 5 [(.yandex.cloud.required) = true];</code>
      * @return The content.
      */
@@ -461,6 +557,10 @@ public final class FileServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the file.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -479,6 +579,10 @@ public final class FileServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the file.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -487,6 +591,10 @@ public final class FileServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the file.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -500,6 +608,10 @@ public final class FileServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the file.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -518,6 +630,10 @@ public final class FileServiceOuterClass {
     public static final int EXPIRATION_CONFIG_FIELD_NUMBER = 7;
     private yandex.cloud.api.ai.common.Common.ExpirationConfig expirationConfig_;
     /**
+     * <pre>
+     * Expiration configuration for the file.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 7;</code>
      * @return Whether the expirationConfig field is set.
      */
@@ -526,6 +642,10 @@ public final class FileServiceOuterClass {
       return expirationConfig_ != null;
     }
     /**
+     * <pre>
+     * Expiration configuration for the file.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 7;</code>
      * @return The expirationConfig.
      */
@@ -534,6 +654,10 @@ public final class FileServiceOuterClass {
       return expirationConfig_ == null ? yandex.cloud.api.ai.common.Common.ExpirationConfig.getDefaultInstance() : expirationConfig_;
     }
     /**
+     * <pre>
+     * Expiration configuration for the file.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 7;</code>
      */
     @java.lang.Override
@@ -775,6 +899,10 @@ public final class FileServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for creating a new file.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.files.v1.CreateFileRequest}
      */
     public static final class Builder extends
@@ -1070,6 +1198,10 @@ public final class FileServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the file.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return The name.
        */
@@ -1086,6 +1218,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the file.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return The bytes for name.
        */
@@ -1103,6 +1239,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the file.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -1118,6 +1258,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the file.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return This builder for chaining.
        */
@@ -1128,6 +1272,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the file.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -1146,6 +1294,10 @@ public final class FileServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the file.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return The description.
        */
@@ -1162,6 +1314,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the file.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return The bytes for description.
        */
@@ -1179,6 +1335,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the file.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -1194,6 +1354,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the file.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return This builder for chaining.
        */
@@ -1204,6 +1368,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the file.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -1222,6 +1390,11 @@ public final class FileServiceOuterClass {
 
       private java.lang.Object mimeType_ = "";
       /**
+       * <pre>
+       * MIME type of the file, indicating the file's format (e.g., "application/pdf").
+       * If not specified, will be deduced automatically based on the file content.
+       * </pre>
+       *
        * <code>string mime_type = 4;</code>
        * @return The mimeType.
        */
@@ -1238,6 +1411,11 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * MIME type of the file, indicating the file's format (e.g., "application/pdf").
+       * If not specified, will be deduced automatically based on the file content.
+       * </pre>
+       *
        * <code>string mime_type = 4;</code>
        * @return The bytes for mimeType.
        */
@@ -1255,6 +1433,11 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * MIME type of the file, indicating the file's format (e.g., "application/pdf").
+       * If not specified, will be deduced automatically based on the file content.
+       * </pre>
+       *
        * <code>string mime_type = 4;</code>
        * @param value The mimeType to set.
        * @return This builder for chaining.
@@ -1270,6 +1453,11 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * MIME type of the file, indicating the file's format (e.g., "application/pdf").
+       * If not specified, will be deduced automatically based on the file content.
+       * </pre>
+       *
        * <code>string mime_type = 4;</code>
        * @return This builder for chaining.
        */
@@ -1280,6 +1468,11 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * MIME type of the file, indicating the file's format (e.g., "application/pdf").
+       * If not specified, will be deduced automatically based on the file content.
+       * </pre>
+       *
        * <code>string mime_type = 4;</code>
        * @param value The bytes for mimeType to set.
        * @return This builder for chaining.
@@ -1298,6 +1491,10 @@ public final class FileServiceOuterClass {
 
       private com.google.protobuf.ByteString content_ = com.google.protobuf.ByteString.EMPTY;
       /**
+       * <pre>
+       * Binary content of the file.
+       * </pre>
+       *
        * <code>bytes content = 5 [(.yandex.cloud.required) = true];</code>
        * @return The content.
        */
@@ -1306,6 +1503,10 @@ public final class FileServiceOuterClass {
         return content_;
       }
       /**
+       * <pre>
+       * Binary content of the file.
+       * </pre>
+       *
        * <code>bytes content = 5 [(.yandex.cloud.required) = true];</code>
        * @param value The content to set.
        * @return This builder for chaining.
@@ -1320,6 +1521,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Binary content of the file.
+       * </pre>
+       *
        * <code>bytes content = 5 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -1357,6 +1562,10 @@ public final class FileServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the file.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1375,6 +1584,10 @@ public final class FileServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the file.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -1383,6 +1596,10 @@ public final class FileServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the file.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -1396,6 +1613,10 @@ public final class FileServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the file.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -1417,6 +1638,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the file.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1436,6 +1661,10 @@ public final class FileServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the file.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       public Builder putLabels(
@@ -1451,6 +1680,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the file.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1465,6 +1698,10 @@ public final class FileServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.common.Common.ExpirationConfig, yandex.cloud.api.ai.common.Common.ExpirationConfig.Builder, yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder> expirationConfigBuilder_;
       /**
+       * <pre>
+       * Expiration configuration for the file.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 7;</code>
        * @return Whether the expirationConfig field is set.
        */
@@ -1472,6 +1709,10 @@ public final class FileServiceOuterClass {
         return expirationConfigBuilder_ != null || expirationConfig_ != null;
       }
       /**
+       * <pre>
+       * Expiration configuration for the file.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 7;</code>
        * @return The expirationConfig.
        */
@@ -1483,6 +1724,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Expiration configuration for the file.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 7;</code>
        */
       public Builder setExpirationConfig(yandex.cloud.api.ai.common.Common.ExpirationConfig value) {
@@ -1499,6 +1744,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Expiration configuration for the file.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 7;</code>
        */
       public Builder setExpirationConfig(
@@ -1513,6 +1762,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Expiration configuration for the file.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 7;</code>
        */
       public Builder mergeExpirationConfig(yandex.cloud.api.ai.common.Common.ExpirationConfig value) {
@@ -1531,6 +1784,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Expiration configuration for the file.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 7;</code>
        */
       public Builder clearExpirationConfig() {
@@ -1545,6 +1802,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Expiration configuration for the file.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 7;</code>
        */
       public yandex.cloud.api.ai.common.Common.ExpirationConfig.Builder getExpirationConfigBuilder() {
@@ -1553,6 +1814,10 @@ public final class FileServiceOuterClass {
         return getExpirationConfigFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Expiration configuration for the file.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 7;</code>
        */
       public yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder getExpirationConfigOrBuilder() {
@@ -1564,6 +1829,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Expiration configuration for the file.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1637,11 +1906,19 @@ public final class FileServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the file to retrieve.
+     * </pre>
+     *
      * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The fileId.
      */
     java.lang.String getFileId();
     /**
+     * <pre>
+     * ID of the file to retrieve.
+     * </pre>
+     *
      * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for fileId.
      */
@@ -1649,6 +1926,10 @@ public final class FileServiceOuterClass {
         getFileIdBytes();
   }
   /**
+   * <pre>
+   * Request message for retrieving a file by ID.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.files.v1.GetFileRequest}
    */
   public static final class GetFileRequest extends
@@ -1735,6 +2016,10 @@ public final class FileServiceOuterClass {
     public static final int FILE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object fileId_;
     /**
+     * <pre>
+     * ID of the file to retrieve.
+     * </pre>
+     *
      * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The fileId.
      */
@@ -1752,6 +2037,10 @@ public final class FileServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the file to retrieve.
+     * </pre>
+     *
      * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for fileId.
      */
@@ -1925,6 +2214,10 @@ public final class FileServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for retrieving a file by ID.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.files.v1.GetFileRequest}
      */
     public static final class Builder extends
@@ -2074,6 +2367,10 @@ public final class FileServiceOuterClass {
 
       private java.lang.Object fileId_ = "";
       /**
+       * <pre>
+       * ID of the file to retrieve.
+       * </pre>
+       *
        * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The fileId.
        */
@@ -2090,6 +2387,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the file to retrieve.
+       * </pre>
+       *
        * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for fileId.
        */
@@ -2107,6 +2408,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the file to retrieve.
+       * </pre>
+       *
        * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The fileId to set.
        * @return This builder for chaining.
@@ -2122,6 +2427,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the file to retrieve.
+       * </pre>
+       *
        * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -2132,6 +2441,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the file to retrieve.
+       * </pre>
+       *
        * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for fileId to set.
        * @return This builder for chaining.
@@ -2205,11 +2518,19 @@ public final class FileServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the file which the URL is requested.
+     * </pre>
+     *
      * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The fileId.
      */
     java.lang.String getFileId();
     /**
+     * <pre>
+     * ID of the file which the URL is requested.
+     * </pre>
+     *
      * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for fileId.
      */
@@ -2217,6 +2538,10 @@ public final class FileServiceOuterClass {
         getFileIdBytes();
   }
   /**
+   * <pre>
+   * Request message for retrieving the URL of a specific file.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.files.v1.GetFileUrlRequest}
    */
   public static final class GetFileUrlRequest extends
@@ -2303,6 +2628,10 @@ public final class FileServiceOuterClass {
     public static final int FILE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object fileId_;
     /**
+     * <pre>
+     * ID of the file which the URL is requested.
+     * </pre>
+     *
      * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The fileId.
      */
@@ -2320,6 +2649,10 @@ public final class FileServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the file which the URL is requested.
+     * </pre>
+     *
      * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for fileId.
      */
@@ -2493,6 +2826,10 @@ public final class FileServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for retrieving the URL of a specific file.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.files.v1.GetFileUrlRequest}
      */
     public static final class Builder extends
@@ -2642,6 +2979,10 @@ public final class FileServiceOuterClass {
 
       private java.lang.Object fileId_ = "";
       /**
+       * <pre>
+       * ID of the file which the URL is requested.
+       * </pre>
+       *
        * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The fileId.
        */
@@ -2658,6 +2999,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the file which the URL is requested.
+       * </pre>
+       *
        * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for fileId.
        */
@@ -2675,6 +3020,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the file which the URL is requested.
+       * </pre>
+       *
        * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The fileId to set.
        * @return This builder for chaining.
@@ -2690,6 +3039,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the file which the URL is requested.
+       * </pre>
+       *
        * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -2700,6 +3053,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the file which the URL is requested.
+       * </pre>
+       *
        * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for fileId to set.
        * @return This builder for chaining.
@@ -2773,11 +3130,19 @@ public final class FileServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * URL that can be used to access or download the file.
+     * </pre>
+     *
      * <code>string url = 1;</code>
      * @return The url.
      */
     java.lang.String getUrl();
     /**
+     * <pre>
+     * URL that can be used to access or download the file.
+     * </pre>
+     *
      * <code>string url = 1;</code>
      * @return The bytes for url.
      */
@@ -2785,6 +3150,10 @@ public final class FileServiceOuterClass {
         getUrlBytes();
   }
   /**
+   * <pre>
+   * Response message containing the URL to access the requested file.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.files.v1.GetFileUrlResponse}
    */
   public static final class GetFileUrlResponse extends
@@ -2871,6 +3240,10 @@ public final class FileServiceOuterClass {
     public static final int URL_FIELD_NUMBER = 1;
     private volatile java.lang.Object url_;
     /**
+     * <pre>
+     * URL that can be used to access or download the file.
+     * </pre>
+     *
      * <code>string url = 1;</code>
      * @return The url.
      */
@@ -2888,6 +3261,10 @@ public final class FileServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * URL that can be used to access or download the file.
+     * </pre>
+     *
      * <code>string url = 1;</code>
      * @return The bytes for url.
      */
@@ -3061,6 +3438,10 @@ public final class FileServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Response message containing the URL to access the requested file.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.files.v1.GetFileUrlResponse}
      */
     public static final class Builder extends
@@ -3210,6 +3591,10 @@ public final class FileServiceOuterClass {
 
       private java.lang.Object url_ = "";
       /**
+       * <pre>
+       * URL that can be used to access or download the file.
+       * </pre>
+       *
        * <code>string url = 1;</code>
        * @return The url.
        */
@@ -3226,6 +3611,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * URL that can be used to access or download the file.
+       * </pre>
+       *
        * <code>string url = 1;</code>
        * @return The bytes for url.
        */
@@ -3243,6 +3632,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * URL that can be used to access or download the file.
+       * </pre>
+       *
        * <code>string url = 1;</code>
        * @param value The url to set.
        * @return This builder for chaining.
@@ -3258,6 +3651,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * URL that can be used to access or download the file.
+       * </pre>
+       *
        * <code>string url = 1;</code>
        * @return This builder for chaining.
        */
@@ -3268,6 +3665,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * URL that can be used to access or download the file.
+       * </pre>
+       *
        * <code>string url = 1;</code>
        * @param value The bytes for url to set.
        * @return This builder for chaining.
@@ -3341,11 +3742,19 @@ public final class FileServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the file to update.
+     * </pre>
+     *
      * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The fileId.
      */
     java.lang.String getFileId();
     /**
+     * <pre>
+     * ID of the file to update.
+     * </pre>
+     *
      * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for fileId.
      */
@@ -3353,26 +3762,46 @@ public final class FileServiceOuterClass {
         getFileIdBytes();
 
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
+     * <pre>
+     * New name for the file.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * New name for the file.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The bytes for name.
      */
@@ -3380,11 +3809,19 @@ public final class FileServiceOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * New description for the file.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * New description for the file.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -3392,25 +3829,45 @@ public final class FileServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * New expiration configuration for the file.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return Whether the expirationConfig field is set.
      */
     boolean hasExpirationConfig();
     /**
+     * <pre>
+     * New expiration configuration for the file.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return The expirationConfig.
      */
     yandex.cloud.api.ai.common.Common.ExpirationConfig getExpirationConfig();
     /**
+     * <pre>
+     * New expiration configuration for the file.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      */
     yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder getExpirationConfigOrBuilder();
 
     /**
+     * <pre>
+     * New set of labels for the file.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * New set of labels for the file.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     boolean containsLabels(
@@ -3422,11 +3879,19 @@ public final class FileServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * New set of labels for the file.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * New set of labels for the file.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -3434,6 +3899,10 @@ public final class FileServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * New set of labels for the file.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -3441,6 +3910,10 @@ public final class FileServiceOuterClass {
         java.lang.String key);
   }
   /**
+   * <pre>
+   * Request message for updating an existing file.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.files.v1.UpdateFileRequest}
    */
   public static final class UpdateFileRequest extends
@@ -3593,6 +4066,10 @@ public final class FileServiceOuterClass {
     public static final int FILE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object fileId_;
     /**
+     * <pre>
+     * ID of the file to update.
+     * </pre>
+     *
      * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The fileId.
      */
@@ -3610,6 +4087,10 @@ public final class FileServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the file to update.
+     * </pre>
+     *
      * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for fileId.
      */
@@ -3631,6 +4112,10 @@ public final class FileServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return Whether the updateMask field is set.
      */
@@ -3639,6 +4124,10 @@ public final class FileServiceOuterClass {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return The updateMask.
      */
@@ -3647,6 +4136,10 @@ public final class FileServiceOuterClass {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
@@ -3657,6 +4150,10 @@ public final class FileServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * New name for the file.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The name.
      */
@@ -3674,6 +4171,10 @@ public final class FileServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New name for the file.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The bytes for name.
      */
@@ -3695,6 +4196,10 @@ public final class FileServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * New description for the file.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
@@ -3712,6 +4217,10 @@ public final class FileServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New description for the file.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -3733,6 +4242,10 @@ public final class FileServiceOuterClass {
     public static final int EXPIRATION_CONFIG_FIELD_NUMBER = 5;
     private yandex.cloud.api.ai.common.Common.ExpirationConfig expirationConfig_;
     /**
+     * <pre>
+     * New expiration configuration for the file.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return Whether the expirationConfig field is set.
      */
@@ -3741,6 +4254,10 @@ public final class FileServiceOuterClass {
       return expirationConfig_ != null;
     }
     /**
+     * <pre>
+     * New expiration configuration for the file.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return The expirationConfig.
      */
@@ -3749,6 +4266,10 @@ public final class FileServiceOuterClass {
       return expirationConfig_ == null ? yandex.cloud.api.ai.common.Common.ExpirationConfig.getDefaultInstance() : expirationConfig_;
     }
     /**
+     * <pre>
+     * New expiration configuration for the file.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      */
     @java.lang.Override
@@ -3783,6 +4304,10 @@ public final class FileServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * New set of labels for the file.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -3801,6 +4326,10 @@ public final class FileServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * New set of labels for the file.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -3809,6 +4338,10 @@ public final class FileServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * New set of labels for the file.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -3822,6 +4355,10 @@ public final class FileServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * New set of labels for the file.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -4066,6 +4603,10 @@ public final class FileServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for updating an existing file.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.files.v1.UpdateFileRequest}
      */
     public static final class Builder extends
@@ -4286,6 +4827,10 @@ public final class FileServiceOuterClass {
 
       private java.lang.Object fileId_ = "";
       /**
+       * <pre>
+       * ID of the file to update.
+       * </pre>
+       *
        * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The fileId.
        */
@@ -4302,6 +4847,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the file to update.
+       * </pre>
+       *
        * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for fileId.
        */
@@ -4319,6 +4868,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the file to update.
+       * </pre>
+       *
        * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The fileId to set.
        * @return This builder for chaining.
@@ -4334,6 +4887,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the file to update.
+       * </pre>
+       *
        * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -4344,6 +4901,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the file to update.
+       * </pre>
+       *
        * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for fileId to set.
        * @return This builder for chaining.
@@ -4364,6 +4925,10 @@ public final class FileServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        * @return Whether the updateMask field is set.
        */
@@ -4371,6 +4936,10 @@ public final class FileServiceOuterClass {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        * @return The updateMask.
        */
@@ -4382,6 +4951,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -4398,6 +4971,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setUpdateMask(
@@ -4412,6 +4989,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -4430,6 +5011,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearUpdateMask() {
@@ -4444,6 +5029,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -4452,6 +5041,10 @@ public final class FileServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -4463,6 +5056,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4481,6 +5078,10 @@ public final class FileServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * New name for the file.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return The name.
        */
@@ -4497,6 +5098,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New name for the file.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return The bytes for name.
        */
@@ -4514,6 +5119,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New name for the file.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -4529,6 +5138,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New name for the file.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return This builder for chaining.
        */
@@ -4539,6 +5152,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New name for the file.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -4557,6 +5174,10 @@ public final class FileServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * New description for the file.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The description.
        */
@@ -4573,6 +5194,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description for the file.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The bytes for description.
        */
@@ -4590,6 +5215,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description for the file.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -4605,6 +5234,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description for the file.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return This builder for chaining.
        */
@@ -4615,6 +5248,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description for the file.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -4635,6 +5272,10 @@ public final class FileServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.common.Common.ExpirationConfig, yandex.cloud.api.ai.common.Common.ExpirationConfig.Builder, yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder> expirationConfigBuilder_;
       /**
+       * <pre>
+       * New expiration configuration for the file.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        * @return Whether the expirationConfig field is set.
        */
@@ -4642,6 +5283,10 @@ public final class FileServiceOuterClass {
         return expirationConfigBuilder_ != null || expirationConfig_ != null;
       }
       /**
+       * <pre>
+       * New expiration configuration for the file.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        * @return The expirationConfig.
        */
@@ -4653,6 +5298,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New expiration configuration for the file.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder setExpirationConfig(yandex.cloud.api.ai.common.Common.ExpirationConfig value) {
@@ -4669,6 +5318,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New expiration configuration for the file.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder setExpirationConfig(
@@ -4683,6 +5336,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New expiration configuration for the file.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder mergeExpirationConfig(yandex.cloud.api.ai.common.Common.ExpirationConfig value) {
@@ -4701,6 +5358,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New expiration configuration for the file.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder clearExpirationConfig() {
@@ -4715,6 +5376,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New expiration configuration for the file.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public yandex.cloud.api.ai.common.Common.ExpirationConfig.Builder getExpirationConfigBuilder() {
@@ -4723,6 +5388,10 @@ public final class FileServiceOuterClass {
         return getExpirationConfigFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * New expiration configuration for the file.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder getExpirationConfigOrBuilder() {
@@ -4734,6 +5403,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New expiration configuration for the file.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4777,6 +5450,10 @@ public final class FileServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * New set of labels for the file.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -4795,6 +5472,10 @@ public final class FileServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * New set of labels for the file.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -4803,6 +5484,10 @@ public final class FileServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * New set of labels for the file.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -4816,6 +5501,10 @@ public final class FileServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * New set of labels for the file.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -4837,6 +5526,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New set of labels for the file.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -4856,6 +5549,10 @@ public final class FileServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * New set of labels for the file.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       public Builder putLabels(
@@ -4871,6 +5568,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New set of labels for the file.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -4938,11 +5639,19 @@ public final class FileServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the file to delete.
+     * </pre>
+     *
      * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The fileId.
      */
     java.lang.String getFileId();
     /**
+     * <pre>
+     * ID of the file to delete.
+     * </pre>
+     *
      * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for fileId.
      */
@@ -4950,6 +5659,10 @@ public final class FileServiceOuterClass {
         getFileIdBytes();
   }
   /**
+   * <pre>
+   * Request message for deleting a file by ID.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.files.v1.DeleteFileRequest}
    */
   public static final class DeleteFileRequest extends
@@ -5036,6 +5749,10 @@ public final class FileServiceOuterClass {
     public static final int FILE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object fileId_;
     /**
+     * <pre>
+     * ID of the file to delete.
+     * </pre>
+     *
      * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The fileId.
      */
@@ -5053,6 +5770,10 @@ public final class FileServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the file to delete.
+     * </pre>
+     *
      * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for fileId.
      */
@@ -5226,6 +5947,10 @@ public final class FileServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for deleting a file by ID.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.files.v1.DeleteFileRequest}
      */
     public static final class Builder extends
@@ -5375,6 +6100,10 @@ public final class FileServiceOuterClass {
 
       private java.lang.Object fileId_ = "";
       /**
+       * <pre>
+       * ID of the file to delete.
+       * </pre>
+       *
        * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The fileId.
        */
@@ -5391,6 +6120,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the file to delete.
+       * </pre>
+       *
        * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for fileId.
        */
@@ -5408,6 +6141,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the file to delete.
+       * </pre>
+       *
        * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The fileId to set.
        * @return This builder for chaining.
@@ -5423,6 +6160,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the file to delete.
+       * </pre>
+       *
        * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -5433,6 +6174,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the file to delete.
+       * </pre>
+       *
        * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for fileId to set.
        * @return This builder for chaining.
@@ -5506,6 +6251,10 @@ public final class FileServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
+   * <pre>
+   * Response message for the delete operation.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.files.v1.DeleteFileResponse}
    */
   public static final class DeleteFileResponse extends
@@ -5727,6 +6476,10 @@ public final class FileServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Response message for the delete operation.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.files.v1.DeleteFileResponse}
      */
     public static final class Builder extends
@@ -5924,11 +6677,19 @@ public final class FileServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Folder ID from which to list files.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * Folder ID from which to list files.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for folderId.
      */
@@ -5936,17 +6697,29 @@ public final class FileServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Maximum number of files to return per page.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The bytes for pageToken.
      */
@@ -5954,6 +6727,10 @@ public final class FileServiceOuterClass {
         getPageTokenBytes();
   }
   /**
+   * <pre>
+   * Request message for listing files in a specific folder.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.files.v1.ListFilesRequest}
    */
   public static final class ListFilesRequest extends
@@ -6052,6 +6829,10 @@ public final class FileServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * Folder ID from which to list files.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The folderId.
      */
@@ -6069,6 +6850,10 @@ public final class FileServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Folder ID from which to list files.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for folderId.
      */
@@ -6090,6 +6875,10 @@ public final class FileServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * Maximum number of files to return per page.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      * @return The pageSize.
      */
@@ -6101,6 +6890,10 @@ public final class FileServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The pageToken.
      */
@@ -6118,6 +6911,10 @@ public final class FileServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The bytes for pageToken.
      */
@@ -6313,6 +7110,10 @@ public final class FileServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for listing files in a specific folder.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.files.v1.ListFilesRequest}
      */
     public static final class Builder extends
@@ -6475,6 +7276,10 @@ public final class FileServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * Folder ID from which to list files.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The folderId.
        */
@@ -6491,6 +7296,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID from which to list files.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for folderId.
        */
@@ -6508,6 +7317,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID from which to list files.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -6523,6 +7336,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID from which to list files.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -6533,6 +7350,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID from which to list files.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -6551,6 +7372,10 @@ public final class FileServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * Maximum number of files to return per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @return The pageSize.
        */
@@ -6559,6 +7384,10 @@ public final class FileServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * Maximum number of files to return per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -6570,6 +7399,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maximum number of files to return per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @return This builder for chaining.
        */
@@ -6582,6 +7415,10 @@ public final class FileServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return The pageToken.
        */
@@ -6598,6 +7435,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return The bytes for pageToken.
        */
@@ -6615,6 +7456,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -6630,6 +7475,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return This builder for chaining.
        */
@@ -6640,6 +7489,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -6713,35 +7566,63 @@ public final class FileServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of files in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
      */
     java.util.List<yandex.cloud.api.ai.files.v1.FileOuterClass.File> 
         getFilesList();
     /**
+     * <pre>
+     * List of files in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
      */
     yandex.cloud.api.ai.files.v1.FileOuterClass.File getFiles(int index);
     /**
+     * <pre>
+     * List of files in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
      */
     int getFilesCount();
     /**
+     * <pre>
+     * List of files in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.ai.files.v1.FileOuterClass.FileOrBuilder> 
         getFilesOrBuilderList();
     /**
+     * <pre>
+     * List of files in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
      */
     yandex.cloud.api.ai.files.v1.FileOuterClass.FileOrBuilder getFilesOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -6749,6 +7630,10 @@ public final class FileServiceOuterClass {
         getNextPageTokenBytes();
   }
   /**
+   * <pre>
+   * Response message for the list operation.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.files.v1.ListFilesResponse}
    */
   public static final class ListFilesResponse extends
@@ -6849,6 +7734,10 @@ public final class FileServiceOuterClass {
     public static final int FILES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.ai.files.v1.FileOuterClass.File> files_;
     /**
+     * <pre>
+     * List of files in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
      */
     @java.lang.Override
@@ -6856,6 +7745,10 @@ public final class FileServiceOuterClass {
       return files_;
     }
     /**
+     * <pre>
+     * List of files in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
      */
     @java.lang.Override
@@ -6864,6 +7757,10 @@ public final class FileServiceOuterClass {
       return files_;
     }
     /**
+     * <pre>
+     * List of files in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
      */
     @java.lang.Override
@@ -6871,6 +7768,10 @@ public final class FileServiceOuterClass {
       return files_.size();
     }
     /**
+     * <pre>
+     * List of files in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
      */
     @java.lang.Override
@@ -6878,6 +7779,10 @@ public final class FileServiceOuterClass {
       return files_.get(index);
     }
     /**
+     * <pre>
+     * List of files in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
      */
     @java.lang.Override
@@ -6889,6 +7794,10 @@ public final class FileServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
@@ -6906,6 +7815,10 @@ public final class FileServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -7092,6 +8005,10 @@ public final class FileServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Response message for the list operation.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.files.v1.ListFilesResponse}
      */
     public static final class Builder extends
@@ -7296,6 +8213,10 @@ public final class FileServiceOuterClass {
           yandex.cloud.api.ai.files.v1.FileOuterClass.File, yandex.cloud.api.ai.files.v1.FileOuterClass.File.Builder, yandex.cloud.api.ai.files.v1.FileOuterClass.FileOrBuilder> filesBuilder_;
 
       /**
+       * <pre>
+       * List of files in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
        */
       public java.util.List<yandex.cloud.api.ai.files.v1.FileOuterClass.File> getFilesList() {
@@ -7306,6 +8227,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of files in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
        */
       public int getFilesCount() {
@@ -7316,6 +8241,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of files in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
        */
       public yandex.cloud.api.ai.files.v1.FileOuterClass.File getFiles(int index) {
@@ -7326,6 +8255,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of files in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
        */
       public Builder setFiles(
@@ -7343,6 +8276,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of files in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
        */
       public Builder setFiles(
@@ -7357,6 +8294,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of files in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
        */
       public Builder addFiles(yandex.cloud.api.ai.files.v1.FileOuterClass.File value) {
@@ -7373,6 +8314,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of files in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
        */
       public Builder addFiles(
@@ -7390,6 +8335,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of files in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
        */
       public Builder addFiles(
@@ -7404,6 +8353,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of files in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
        */
       public Builder addFiles(
@@ -7418,6 +8371,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of files in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
        */
       public Builder addAllFiles(
@@ -7433,6 +8390,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of files in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
        */
       public Builder clearFiles() {
@@ -7446,6 +8407,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of files in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
        */
       public Builder removeFiles(int index) {
@@ -7459,6 +8424,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of files in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
        */
       public yandex.cloud.api.ai.files.v1.FileOuterClass.File.Builder getFilesBuilder(
@@ -7466,6 +8435,10 @@ public final class FileServiceOuterClass {
         return getFilesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of files in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
        */
       public yandex.cloud.api.ai.files.v1.FileOuterClass.FileOrBuilder getFilesOrBuilder(
@@ -7476,6 +8449,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of files in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.ai.files.v1.FileOuterClass.FileOrBuilder> 
@@ -7487,6 +8464,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of files in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
        */
       public yandex.cloud.api.ai.files.v1.FileOuterClass.File.Builder addFilesBuilder() {
@@ -7494,6 +8475,10 @@ public final class FileServiceOuterClass {
             yandex.cloud.api.ai.files.v1.FileOuterClass.File.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of files in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
        */
       public yandex.cloud.api.ai.files.v1.FileOuterClass.File.Builder addFilesBuilder(
@@ -7502,6 +8487,10 @@ public final class FileServiceOuterClass {
             index, yandex.cloud.api.ai.files.v1.FileOuterClass.File.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of files in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.files.v1.File files = 1;</code>
        */
       public java.util.List<yandex.cloud.api.ai.files.v1.FileOuterClass.File.Builder> 
@@ -7525,6 +8514,10 @@ public final class FileServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The nextPageToken.
        */
@@ -7541,6 +8534,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The bytes for nextPageToken.
        */
@@ -7558,6 +8555,10 @@ public final class FileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -7573,6 +8574,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return This builder for chaining.
        */
@@ -7583,6 +8588,10 @@ public final class FileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.

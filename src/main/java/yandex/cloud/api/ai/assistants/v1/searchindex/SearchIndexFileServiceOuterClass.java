@@ -19,11 +19,19 @@ public final class SearchIndexFileServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the file to retrieve.
+     * </pre>
+     *
      * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The fileId.
      */
     java.lang.String getFileId();
     /**
+     * <pre>
+     * ID of the file to retrieve.
+     * </pre>
+     *
      * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for fileId.
      */
@@ -31,11 +39,19 @@ public final class SearchIndexFileServiceOuterClass {
         getFileIdBytes();
 
     /**
+     * <pre>
+     * ID of the search index that contains the file.
+     * </pre>
+     *
      * <code>string search_index_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The searchIndexId.
      */
     java.lang.String getSearchIndexId();
     /**
+     * <pre>
+     * ID of the search index that contains the file.
+     * </pre>
+     *
      * <code>string search_index_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for searchIndexId.
      */
@@ -43,6 +59,10 @@ public final class SearchIndexFileServiceOuterClass {
         getSearchIndexIdBytes();
   }
   /**
+   * <pre>
+   * Request message for retrieving a file from a search index.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.GetSearchIndexFileRequest}
    */
   public static final class GetSearchIndexFileRequest extends
@@ -136,6 +156,10 @@ public final class SearchIndexFileServiceOuterClass {
     public static final int FILE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object fileId_;
     /**
+     * <pre>
+     * ID of the file to retrieve.
+     * </pre>
+     *
      * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The fileId.
      */
@@ -153,6 +177,10 @@ public final class SearchIndexFileServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the file to retrieve.
+     * </pre>
+     *
      * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for fileId.
      */
@@ -174,6 +202,10 @@ public final class SearchIndexFileServiceOuterClass {
     public static final int SEARCH_INDEX_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object searchIndexId_;
     /**
+     * <pre>
+     * ID of the search index that contains the file.
+     * </pre>
+     *
      * <code>string search_index_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The searchIndexId.
      */
@@ -191,6 +223,10 @@ public final class SearchIndexFileServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the search index that contains the file.
+     * </pre>
+     *
      * <code>string search_index_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for searchIndexId.
      */
@@ -374,6 +410,10 @@ public final class SearchIndexFileServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for retrieving a file from a search index.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.GetSearchIndexFileRequest}
      */
     public static final class Builder extends
@@ -530,6 +570,10 @@ public final class SearchIndexFileServiceOuterClass {
 
       private java.lang.Object fileId_ = "";
       /**
+       * <pre>
+       * ID of the file to retrieve.
+       * </pre>
+       *
        * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The fileId.
        */
@@ -546,6 +590,10 @@ public final class SearchIndexFileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the file to retrieve.
+       * </pre>
+       *
        * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for fileId.
        */
@@ -563,6 +611,10 @@ public final class SearchIndexFileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the file to retrieve.
+       * </pre>
+       *
        * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The fileId to set.
        * @return This builder for chaining.
@@ -578,6 +630,10 @@ public final class SearchIndexFileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the file to retrieve.
+       * </pre>
+       *
        * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -588,6 +644,10 @@ public final class SearchIndexFileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the file to retrieve.
+       * </pre>
+       *
        * <code>string file_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for fileId to set.
        * @return This builder for chaining.
@@ -606,6 +666,10 @@ public final class SearchIndexFileServiceOuterClass {
 
       private java.lang.Object searchIndexId_ = "";
       /**
+       * <pre>
+       * ID of the search index that contains the file.
+       * </pre>
+       *
        * <code>string search_index_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The searchIndexId.
        */
@@ -622,6 +686,10 @@ public final class SearchIndexFileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the search index that contains the file.
+       * </pre>
+       *
        * <code>string search_index_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for searchIndexId.
        */
@@ -639,6 +707,10 @@ public final class SearchIndexFileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the search index that contains the file.
+       * </pre>
+       *
        * <code>string search_index_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The searchIndexId to set.
        * @return This builder for chaining.
@@ -654,6 +726,10 @@ public final class SearchIndexFileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the search index that contains the file.
+       * </pre>
+       *
        * <code>string search_index_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -664,6 +740,10 @@ public final class SearchIndexFileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the search index that contains the file.
+       * </pre>
+       *
        * <code>string search_index_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for searchIndexId to set.
        * @return This builder for chaining.
@@ -737,11 +817,19 @@ public final class SearchIndexFileServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the search index whose files will be listed.
+     * </pre>
+     *
      * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The searchIndexId.
      */
     java.lang.String getSearchIndexId();
     /**
+     * <pre>
+     * ID of the search index whose files will be listed.
+     * </pre>
+     *
      * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for searchIndexId.
      */
@@ -749,17 +837,29 @@ public final class SearchIndexFileServiceOuterClass {
         getSearchIndexIdBytes();
 
     /**
+     * <pre>
+     * Maximum number of files to return per page.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The bytes for pageToken.
      */
@@ -767,6 +867,10 @@ public final class SearchIndexFileServiceOuterClass {
         getPageTokenBytes();
   }
   /**
+   * <pre>
+   * Request message for listing files in a specific search index.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.ListSearchIndexFilesRequest}
    */
   public static final class ListSearchIndexFilesRequest extends
@@ -865,6 +969,10 @@ public final class SearchIndexFileServiceOuterClass {
     public static final int SEARCH_INDEX_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object searchIndexId_;
     /**
+     * <pre>
+     * ID of the search index whose files will be listed.
+     * </pre>
+     *
      * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The searchIndexId.
      */
@@ -882,6 +990,10 @@ public final class SearchIndexFileServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the search index whose files will be listed.
+     * </pre>
+     *
      * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for searchIndexId.
      */
@@ -903,6 +1015,10 @@ public final class SearchIndexFileServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * Maximum number of files to return per page.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      * @return The pageSize.
      */
@@ -914,6 +1030,10 @@ public final class SearchIndexFileServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The pageToken.
      */
@@ -931,6 +1051,10 @@ public final class SearchIndexFileServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The bytes for pageToken.
      */
@@ -1126,6 +1250,10 @@ public final class SearchIndexFileServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for listing files in a specific search index.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.ListSearchIndexFilesRequest}
      */
     public static final class Builder extends
@@ -1288,6 +1416,10 @@ public final class SearchIndexFileServiceOuterClass {
 
       private java.lang.Object searchIndexId_ = "";
       /**
+       * <pre>
+       * ID of the search index whose files will be listed.
+       * </pre>
+       *
        * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The searchIndexId.
        */
@@ -1304,6 +1436,10 @@ public final class SearchIndexFileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the search index whose files will be listed.
+       * </pre>
+       *
        * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for searchIndexId.
        */
@@ -1321,6 +1457,10 @@ public final class SearchIndexFileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the search index whose files will be listed.
+       * </pre>
+       *
        * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The searchIndexId to set.
        * @return This builder for chaining.
@@ -1336,6 +1476,10 @@ public final class SearchIndexFileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the search index whose files will be listed.
+       * </pre>
+       *
        * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -1346,6 +1490,10 @@ public final class SearchIndexFileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the search index whose files will be listed.
+       * </pre>
+       *
        * <code>string search_index_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for searchIndexId to set.
        * @return This builder for chaining.
@@ -1364,6 +1512,10 @@ public final class SearchIndexFileServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * Maximum number of files to return per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @return The pageSize.
        */
@@ -1372,6 +1524,10 @@ public final class SearchIndexFileServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * Maximum number of files to return per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -1383,6 +1539,10 @@ public final class SearchIndexFileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maximum number of files to return per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @return This builder for chaining.
        */
@@ -1395,6 +1555,10 @@ public final class SearchIndexFileServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return The pageToken.
        */
@@ -1411,6 +1575,10 @@ public final class SearchIndexFileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return The bytes for pageToken.
        */
@@ -1428,6 +1596,10 @@ public final class SearchIndexFileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -1443,6 +1615,10 @@ public final class SearchIndexFileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return This builder for chaining.
        */
@@ -1453,6 +1629,10 @@ public final class SearchIndexFileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -1526,35 +1706,63 @@ public final class SearchIndexFileServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of files in the specified search index.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
      */
     java.util.List<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile> 
         getFilesList();
     /**
+     * <pre>
+     * List of files in the specified search index.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
      */
     yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile getFiles(int index);
     /**
+     * <pre>
+     * List of files in the specified search index.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
      */
     int getFilesCount();
     /**
+     * <pre>
+     * List of files in the specified search index.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFileOrBuilder> 
         getFilesOrBuilderList();
     /**
+     * <pre>
+     * List of files in the specified search index.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
      */
     yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFileOrBuilder getFilesOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -1562,6 +1770,10 @@ public final class SearchIndexFileServiceOuterClass {
         getNextPageTokenBytes();
   }
   /**
+   * <pre>
+   * Response message for the list operation.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.ListSearchIndexFilesResponse}
    */
   public static final class ListSearchIndexFilesResponse extends
@@ -1662,6 +1874,10 @@ public final class SearchIndexFileServiceOuterClass {
     public static final int FILES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile> files_;
     /**
+     * <pre>
+     * List of files in the specified search index.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
      */
     @java.lang.Override
@@ -1669,6 +1885,10 @@ public final class SearchIndexFileServiceOuterClass {
       return files_;
     }
     /**
+     * <pre>
+     * List of files in the specified search index.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
      */
     @java.lang.Override
@@ -1677,6 +1897,10 @@ public final class SearchIndexFileServiceOuterClass {
       return files_;
     }
     /**
+     * <pre>
+     * List of files in the specified search index.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
      */
     @java.lang.Override
@@ -1684,6 +1908,10 @@ public final class SearchIndexFileServiceOuterClass {
       return files_.size();
     }
     /**
+     * <pre>
+     * List of files in the specified search index.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
      */
     @java.lang.Override
@@ -1691,6 +1919,10 @@ public final class SearchIndexFileServiceOuterClass {
       return files_.get(index);
     }
     /**
+     * <pre>
+     * List of files in the specified search index.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
      */
     @java.lang.Override
@@ -1702,6 +1934,10 @@ public final class SearchIndexFileServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
@@ -1719,6 +1955,10 @@ public final class SearchIndexFileServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -1905,6 +2145,10 @@ public final class SearchIndexFileServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Response message for the list operation.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.ListSearchIndexFilesResponse}
      */
     public static final class Builder extends
@@ -2109,6 +2353,10 @@ public final class SearchIndexFileServiceOuterClass {
           yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFileOrBuilder> filesBuilder_;
 
       /**
+       * <pre>
+       * List of files in the specified search index.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
        */
       public java.util.List<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile> getFilesList() {
@@ -2119,6 +2367,10 @@ public final class SearchIndexFileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of files in the specified search index.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
        */
       public int getFilesCount() {
@@ -2129,6 +2381,10 @@ public final class SearchIndexFileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of files in the specified search index.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile getFiles(int index) {
@@ -2139,6 +2395,10 @@ public final class SearchIndexFileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of files in the specified search index.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
        */
       public Builder setFiles(
@@ -2156,6 +2416,10 @@ public final class SearchIndexFileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of files in the specified search index.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
        */
       public Builder setFiles(
@@ -2170,6 +2434,10 @@ public final class SearchIndexFileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of files in the specified search index.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
        */
       public Builder addFiles(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile value) {
@@ -2186,6 +2454,10 @@ public final class SearchIndexFileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of files in the specified search index.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
        */
       public Builder addFiles(
@@ -2203,6 +2475,10 @@ public final class SearchIndexFileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of files in the specified search index.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
        */
       public Builder addFiles(
@@ -2217,6 +2493,10 @@ public final class SearchIndexFileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of files in the specified search index.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
        */
       public Builder addFiles(
@@ -2231,6 +2511,10 @@ public final class SearchIndexFileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of files in the specified search index.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
        */
       public Builder addAllFiles(
@@ -2246,6 +2530,10 @@ public final class SearchIndexFileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of files in the specified search index.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
        */
       public Builder clearFiles() {
@@ -2259,6 +2547,10 @@ public final class SearchIndexFileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of files in the specified search index.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
        */
       public Builder removeFiles(int index) {
@@ -2272,6 +2564,10 @@ public final class SearchIndexFileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of files in the specified search index.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile.Builder getFilesBuilder(
@@ -2279,6 +2575,10 @@ public final class SearchIndexFileServiceOuterClass {
         return getFilesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of files in the specified search index.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFileOrBuilder getFilesOrBuilder(
@@ -2289,6 +2589,10 @@ public final class SearchIndexFileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of files in the specified search index.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFileOrBuilder> 
@@ -2300,6 +2604,10 @@ public final class SearchIndexFileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of files in the specified search index.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile.Builder addFilesBuilder() {
@@ -2307,6 +2615,10 @@ public final class SearchIndexFileServiceOuterClass {
             yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of files in the specified search index.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile.Builder addFilesBuilder(
@@ -2315,6 +2627,10 @@ public final class SearchIndexFileServiceOuterClass {
             index, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of files in the specified search index.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
        */
       public java.util.List<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile.Builder> 
@@ -2338,6 +2654,10 @@ public final class SearchIndexFileServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The nextPageToken.
        */
@@ -2354,6 +2674,10 @@ public final class SearchIndexFileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The bytes for nextPageToken.
        */
@@ -2371,6 +2695,10 @@ public final class SearchIndexFileServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -2386,6 +2714,10 @@ public final class SearchIndexFileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return This builder for chaining.
        */
@@ -2396,6 +2728,10 @@ public final class SearchIndexFileServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.

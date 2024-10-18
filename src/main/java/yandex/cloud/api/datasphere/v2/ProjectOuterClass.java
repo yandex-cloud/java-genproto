@@ -462,25 +462,6 @@ public final class ProjectOuterClass {
 
       /**
        * <pre>
-       * Commit mode that is assigned to the project.
-       * </pre>
-       *
-       * <code>.yandex.cloud.datasphere.v2.Project.Settings.CommitMode commit_mode = 4;</code>
-       * @return The enum numeric value on the wire for commitMode.
-       */
-      int getCommitModeValue();
-      /**
-       * <pre>
-       * Commit mode that is assigned to the project.
-       * </pre>
-       *
-       * <code>.yandex.cloud.datasphere.v2.Project.Settings.CommitMode commit_mode = 4;</code>
-       * @return The commitMode.
-       */
-      yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.CommitMode getCommitMode();
-
-      /**
-       * <pre>
        * Network interfaces security groups.
        * </pre>
        *
@@ -590,25 +571,6 @@ public final class ProjectOuterClass {
 
       /**
        * <pre>
-       * VM allocation mode.
-       * </pre>
-       *
-       * <code>.yandex.cloud.datasphere.v2.Project.Settings.IdeExecutionMode ide_execution_mode = 10;</code>
-       * @return The enum numeric value on the wire for ideExecutionMode.
-       */
-      int getIdeExecutionModeValue();
-      /**
-       * <pre>
-       * VM allocation mode.
-       * </pre>
-       *
-       * <code>.yandex.cloud.datasphere.v2.Project.Settings.IdeExecutionMode ide_execution_mode = 10;</code>
-       * @return The ideExecutionMode.
-       */
-      yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.IdeExecutionMode getIdeExecutionMode();
-
-      /**
-       * <pre>
        * Timeout for VM deallocation.
        * </pre>
        *
@@ -670,12 +632,10 @@ public final class ProjectOuterClass {
         serviceAccountId_ = "";
         subnetId_ = "";
         dataProcClusterId_ = "";
-        commitMode_ = 0;
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         ide_ = 0;
         defaultFolderId_ = "";
         staleExecTimeoutMode_ = 0;
-        ideExecutionMode_ = 0;
         defaultDedicatedSpec_ = "";
       }
 
@@ -728,12 +688,6 @@ public final class ProjectOuterClass {
                 dataProcClusterId_ = s;
                 break;
               }
-              case 32: {
-                int rawValue = input.readEnum();
-
-                commitMode_ = rawValue;
-                break;
-              }
               case 42: {
                 java.lang.String s = input.readStringRequireUtf8();
                 if (!((mutable_bitField0_ & 0x00000001) != 0)) {
@@ -764,12 +718,6 @@ public final class ProjectOuterClass {
                 int rawValue = input.readEnum();
 
                 staleExecTimeoutMode_ = rawValue;
-                break;
-              }
-              case 80: {
-                int rawValue = input.readEnum();
-
-                ideExecutionMode_ = rawValue;
                 break;
               }
               case 90: {
@@ -824,141 +772,6 @@ public final class ProjectOuterClass {
         return yandex.cloud.api.datasphere.v2.ProjectOuterClass.internal_static_yandex_cloud_datasphere_v2_Project_Settings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.class, yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.Builder.class);
-      }
-
-      /**
-       * Protobuf enum {@code yandex.cloud.datasphere.v2.Project.Settings.CommitMode}
-       */
-      public enum CommitMode
-          implements com.google.protobuf.ProtocolMessageEnum {
-        /**
-         * <code>COMMIT_MODE_UNSPECIFIED = 0;</code>
-         */
-        COMMIT_MODE_UNSPECIFIED(0),
-        /**
-         * <pre>
-         * Commit happens after the execution of a cell or group of cells or after completion with an error.
-         * </pre>
-         *
-         * <code>STANDARD = 1;</code>
-         */
-        STANDARD(1),
-        /**
-         * <pre>
-         * Commit happens periodically.
-         * Also, automatic saving of state occurs when switching to another type of computing resource.
-         * </pre>
-         *
-         * <code>AUTO = 2;</code>
-         */
-        AUTO(2),
-        UNRECOGNIZED(-1),
-        ;
-
-        /**
-         * <code>COMMIT_MODE_UNSPECIFIED = 0;</code>
-         */
-        public static final int COMMIT_MODE_UNSPECIFIED_VALUE = 0;
-        /**
-         * <pre>
-         * Commit happens after the execution of a cell or group of cells or after completion with an error.
-         * </pre>
-         *
-         * <code>STANDARD = 1;</code>
-         */
-        public static final int STANDARD_VALUE = 1;
-        /**
-         * <pre>
-         * Commit happens periodically.
-         * Also, automatic saving of state occurs when switching to another type of computing resource.
-         * </pre>
-         *
-         * <code>AUTO = 2;</code>
-         */
-        public static final int AUTO_VALUE = 2;
-
-
-        public final int getNumber() {
-          if (this == UNRECOGNIZED) {
-            throw new java.lang.IllegalArgumentException(
-                "Can't get the number of an unknown enum value.");
-          }
-          return value;
-        }
-
-        /**
-         * @param value The numeric wire value of the corresponding enum entry.
-         * @return The enum associated with the given numeric wire value.
-         * @deprecated Use {@link #forNumber(int)} instead.
-         */
-        @java.lang.Deprecated
-        public static CommitMode valueOf(int value) {
-          return forNumber(value);
-        }
-
-        /**
-         * @param value The numeric wire value of the corresponding enum entry.
-         * @return The enum associated with the given numeric wire value.
-         */
-        public static CommitMode forNumber(int value) {
-          switch (value) {
-            case 0: return COMMIT_MODE_UNSPECIFIED;
-            case 1: return STANDARD;
-            case 2: return AUTO;
-            default: return null;
-          }
-        }
-
-        public static com.google.protobuf.Internal.EnumLiteMap<CommitMode>
-            internalGetValueMap() {
-          return internalValueMap;
-        }
-        private static final com.google.protobuf.Internal.EnumLiteMap<
-            CommitMode> internalValueMap =
-              new com.google.protobuf.Internal.EnumLiteMap<CommitMode>() {
-                public CommitMode findValueByNumber(int number) {
-                  return CommitMode.forNumber(number);
-                }
-              };
-
-        public final com.google.protobuf.Descriptors.EnumValueDescriptor
-            getValueDescriptor() {
-          if (this == UNRECOGNIZED) {
-            throw new java.lang.IllegalStateException(
-                "Can't get the descriptor of an unrecognized enum value.");
-          }
-          return getDescriptor().getValues().get(ordinal());
-        }
-        public final com.google.protobuf.Descriptors.EnumDescriptor
-            getDescriptorForType() {
-          return getDescriptor();
-        }
-        public static final com.google.protobuf.Descriptors.EnumDescriptor
-            getDescriptor() {
-          return yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.getDescriptor().getEnumTypes().get(0);
-        }
-
-        private static final CommitMode[] VALUES = values();
-
-        public static CommitMode valueOf(
-            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-          if (desc.getType() != getDescriptor()) {
-            throw new java.lang.IllegalArgumentException(
-              "EnumValueDescriptor is not for this type.");
-          }
-          if (desc.getIndex() == -1) {
-            return UNRECOGNIZED;
-          }
-          return VALUES[desc.getIndex()];
-        }
-
-        private final int value;
-
-        private CommitMode(int value) {
-          this.value = value;
-        }
-
-        // @@protoc_insertion_point(enum_scope:yandex.cloud.datasphere.v2.Project.Settings.CommitMode)
       }
 
       /**
@@ -1051,7 +864,7 @@ public final class ProjectOuterClass {
         }
         public static final com.google.protobuf.Descriptors.EnumDescriptor
             getDescriptor() {
-          return yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.getDescriptor().getEnumTypes().get(1);
+          return yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.getDescriptor().getEnumTypes().get(0);
         }
 
         private static final Ide[] VALUES = values();
@@ -1201,7 +1014,7 @@ public final class ProjectOuterClass {
         }
         public static final com.google.protobuf.Descriptors.EnumDescriptor
             getDescriptor() {
-          return yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.getDescriptor().getEnumTypes().get(2);
+          return yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.getDescriptor().getEnumTypes().get(1);
         }
 
         private static final StaleExecutionTimeoutMode[] VALUES = values();
@@ -1225,141 +1038,6 @@ public final class ProjectOuterClass {
         }
 
         // @@protoc_insertion_point(enum_scope:yandex.cloud.datasphere.v2.Project.Settings.StaleExecutionTimeoutMode)
-      }
-
-      /**
-       * Protobuf enum {@code yandex.cloud.datasphere.v2.Project.Settings.IdeExecutionMode}
-       */
-      public enum IdeExecutionMode
-          implements com.google.protobuf.ProtocolMessageEnum {
-        /**
-         * <code>IDE_EXECUTION_MODE_UNSPECIFIED = 0;</code>
-         */
-        IDE_EXECUTION_MODE_UNSPECIFIED(0),
-        /**
-         * <pre>
-         * VM is allocated for specific execution and deallocated after the execution ends.
-         * </pre>
-         *
-         * <code>SERVERLESS = 1;</code>
-         */
-        SERVERLESS(1),
-        /**
-         * <pre>
-         * VM is allocated at the first execution and stays allocated until manually deallocated.
-         * Or until timeout exceeded.
-         * </pre>
-         *
-         * <code>DEDICATED = 2;</code>
-         */
-        DEDICATED(2),
-        UNRECOGNIZED(-1),
-        ;
-
-        /**
-         * <code>IDE_EXECUTION_MODE_UNSPECIFIED = 0;</code>
-         */
-        public static final int IDE_EXECUTION_MODE_UNSPECIFIED_VALUE = 0;
-        /**
-         * <pre>
-         * VM is allocated for specific execution and deallocated after the execution ends.
-         * </pre>
-         *
-         * <code>SERVERLESS = 1;</code>
-         */
-        public static final int SERVERLESS_VALUE = 1;
-        /**
-         * <pre>
-         * VM is allocated at the first execution and stays allocated until manually deallocated.
-         * Or until timeout exceeded.
-         * </pre>
-         *
-         * <code>DEDICATED = 2;</code>
-         */
-        public static final int DEDICATED_VALUE = 2;
-
-
-        public final int getNumber() {
-          if (this == UNRECOGNIZED) {
-            throw new java.lang.IllegalArgumentException(
-                "Can't get the number of an unknown enum value.");
-          }
-          return value;
-        }
-
-        /**
-         * @param value The numeric wire value of the corresponding enum entry.
-         * @return The enum associated with the given numeric wire value.
-         * @deprecated Use {@link #forNumber(int)} instead.
-         */
-        @java.lang.Deprecated
-        public static IdeExecutionMode valueOf(int value) {
-          return forNumber(value);
-        }
-
-        /**
-         * @param value The numeric wire value of the corresponding enum entry.
-         * @return The enum associated with the given numeric wire value.
-         */
-        public static IdeExecutionMode forNumber(int value) {
-          switch (value) {
-            case 0: return IDE_EXECUTION_MODE_UNSPECIFIED;
-            case 1: return SERVERLESS;
-            case 2: return DEDICATED;
-            default: return null;
-          }
-        }
-
-        public static com.google.protobuf.Internal.EnumLiteMap<IdeExecutionMode>
-            internalGetValueMap() {
-          return internalValueMap;
-        }
-        private static final com.google.protobuf.Internal.EnumLiteMap<
-            IdeExecutionMode> internalValueMap =
-              new com.google.protobuf.Internal.EnumLiteMap<IdeExecutionMode>() {
-                public IdeExecutionMode findValueByNumber(int number) {
-                  return IdeExecutionMode.forNumber(number);
-                }
-              };
-
-        public final com.google.protobuf.Descriptors.EnumValueDescriptor
-            getValueDescriptor() {
-          if (this == UNRECOGNIZED) {
-            throw new java.lang.IllegalStateException(
-                "Can't get the descriptor of an unrecognized enum value.");
-          }
-          return getDescriptor().getValues().get(ordinal());
-        }
-        public final com.google.protobuf.Descriptors.EnumDescriptor
-            getDescriptorForType() {
-          return getDescriptor();
-        }
-        public static final com.google.protobuf.Descriptors.EnumDescriptor
-            getDescriptor() {
-          return yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.getDescriptor().getEnumTypes().get(3);
-        }
-
-        private static final IdeExecutionMode[] VALUES = values();
-
-        public static IdeExecutionMode valueOf(
-            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-          if (desc.getType() != getDescriptor()) {
-            throw new java.lang.IllegalArgumentException(
-              "EnumValueDescriptor is not for this type.");
-          }
-          if (desc.getIndex() == -1) {
-            return UNRECOGNIZED;
-          }
-          return VALUES[desc.getIndex()];
-        }
-
-        private final int value;
-
-        private IdeExecutionMode(int value) {
-          this.value = value;
-        }
-
-        // @@protoc_insertion_point(enum_scope:yandex.cloud.datasphere.v2.Project.Settings.IdeExecutionMode)
       }
 
       public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 1;
@@ -1500,33 +1178,6 @@ public final class ProjectOuterClass {
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
-      }
-
-      public static final int COMMIT_MODE_FIELD_NUMBER = 4;
-      private int commitMode_;
-      /**
-       * <pre>
-       * Commit mode that is assigned to the project.
-       * </pre>
-       *
-       * <code>.yandex.cloud.datasphere.v2.Project.Settings.CommitMode commit_mode = 4;</code>
-       * @return The enum numeric value on the wire for commitMode.
-       */
-      @java.lang.Override public int getCommitModeValue() {
-        return commitMode_;
-      }
-      /**
-       * <pre>
-       * Commit mode that is assigned to the project.
-       * </pre>
-       *
-       * <code>.yandex.cloud.datasphere.v2.Project.Settings.CommitMode commit_mode = 4;</code>
-       * @return The commitMode.
-       */
-      @java.lang.Override public yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.CommitMode getCommitMode() {
-        @SuppressWarnings("deprecation")
-        yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.CommitMode result = yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.CommitMode.valueOf(commitMode_);
-        return result == null ? yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.CommitMode.UNRECOGNIZED : result;
       }
 
       public static final int SECURITY_GROUP_IDS_FIELD_NUMBER = 5;
@@ -1695,33 +1346,6 @@ public final class ProjectOuterClass {
         return result == null ? yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.StaleExecutionTimeoutMode.UNRECOGNIZED : result;
       }
 
-      public static final int IDE_EXECUTION_MODE_FIELD_NUMBER = 10;
-      private int ideExecutionMode_;
-      /**
-       * <pre>
-       * VM allocation mode.
-       * </pre>
-       *
-       * <code>.yandex.cloud.datasphere.v2.Project.Settings.IdeExecutionMode ide_execution_mode = 10;</code>
-       * @return The enum numeric value on the wire for ideExecutionMode.
-       */
-      @java.lang.Override public int getIdeExecutionModeValue() {
-        return ideExecutionMode_;
-      }
-      /**
-       * <pre>
-       * VM allocation mode.
-       * </pre>
-       *
-       * <code>.yandex.cloud.datasphere.v2.Project.Settings.IdeExecutionMode ide_execution_mode = 10;</code>
-       * @return The ideExecutionMode.
-       */
-      @java.lang.Override public yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.IdeExecutionMode getIdeExecutionMode() {
-        @SuppressWarnings("deprecation")
-        yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.IdeExecutionMode result = yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.IdeExecutionMode.valueOf(ideExecutionMode_);
-        return result == null ? yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.IdeExecutionMode.UNRECOGNIZED : result;
-      }
-
       public static final int VM_INACTIVITY_TIMEOUT_FIELD_NUMBER = 11;
       private com.google.protobuf.Duration vmInactivityTimeout_;
       /**
@@ -1829,9 +1453,6 @@ public final class ProjectOuterClass {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataProcClusterId_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 3, dataProcClusterId_);
         }
-        if (commitMode_ != yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.CommitMode.COMMIT_MODE_UNSPECIFIED.getNumber()) {
-          output.writeEnum(4, commitMode_);
-        }
         for (int i = 0; i < securityGroupIds_.size(); i++) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 5, securityGroupIds_.getRaw(i));
         }
@@ -1846,9 +1467,6 @@ public final class ProjectOuterClass {
         }
         if (staleExecTimeoutMode_ != yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.StaleExecutionTimeoutMode.STALE_EXECUTION_TIMEOUT_MODE_UNSPECIFIED.getNumber()) {
           output.writeEnum(9, staleExecTimeoutMode_);
-        }
-        if (ideExecutionMode_ != yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.IdeExecutionMode.IDE_EXECUTION_MODE_UNSPECIFIED.getNumber()) {
-          output.writeEnum(10, ideExecutionMode_);
         }
         if (vmInactivityTimeout_ != null) {
           output.writeMessage(11, getVmInactivityTimeout());
@@ -1874,10 +1492,6 @@ public final class ProjectOuterClass {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataProcClusterId_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, dataProcClusterId_);
         }
-        if (commitMode_ != yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.CommitMode.COMMIT_MODE_UNSPECIFIED.getNumber()) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeEnumSize(4, commitMode_);
-        }
         {
           int dataSize = 0;
           for (int i = 0; i < securityGroupIds_.size(); i++) {
@@ -1900,10 +1514,6 @@ public final class ProjectOuterClass {
         if (staleExecTimeoutMode_ != yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.StaleExecutionTimeoutMode.STALE_EXECUTION_TIMEOUT_MODE_UNSPECIFIED.getNumber()) {
           size += com.google.protobuf.CodedOutputStream
             .computeEnumSize(9, staleExecTimeoutMode_);
-        }
-        if (ideExecutionMode_ != yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.IdeExecutionMode.IDE_EXECUTION_MODE_UNSPECIFIED.getNumber()) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeEnumSize(10, ideExecutionMode_);
         }
         if (vmInactivityTimeout_ != null) {
           size += com.google.protobuf.CodedOutputStream
@@ -1933,7 +1543,6 @@ public final class ProjectOuterClass {
             .equals(other.getSubnetId())) return false;
         if (!getDataProcClusterId()
             .equals(other.getDataProcClusterId())) return false;
-        if (commitMode_ != other.commitMode_) return false;
         if (!getSecurityGroupIdsList()
             .equals(other.getSecurityGroupIdsList())) return false;
         if (getEarlyAccess()
@@ -1942,7 +1551,6 @@ public final class ProjectOuterClass {
         if (!getDefaultFolderId()
             .equals(other.getDefaultFolderId())) return false;
         if (staleExecTimeoutMode_ != other.staleExecTimeoutMode_) return false;
-        if (ideExecutionMode_ != other.ideExecutionMode_) return false;
         if (hasVmInactivityTimeout() != other.hasVmInactivityTimeout()) return false;
         if (hasVmInactivityTimeout()) {
           if (!getVmInactivityTimeout()
@@ -1967,8 +1575,6 @@ public final class ProjectOuterClass {
         hash = (53 * hash) + getSubnetId().hashCode();
         hash = (37 * hash) + DATA_PROC_CLUSTER_ID_FIELD_NUMBER;
         hash = (53 * hash) + getDataProcClusterId().hashCode();
-        hash = (37 * hash) + COMMIT_MODE_FIELD_NUMBER;
-        hash = (53 * hash) + commitMode_;
         if (getSecurityGroupIdsCount() > 0) {
           hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
           hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
@@ -1982,8 +1588,6 @@ public final class ProjectOuterClass {
         hash = (53 * hash) + getDefaultFolderId().hashCode();
         hash = (37 * hash) + STALE_EXEC_TIMEOUT_MODE_FIELD_NUMBER;
         hash = (53 * hash) + staleExecTimeoutMode_;
-        hash = (37 * hash) + IDE_EXECUTION_MODE_FIELD_NUMBER;
-        hash = (53 * hash) + ideExecutionMode_;
         if (hasVmInactivityTimeout()) {
           hash = (37 * hash) + VM_INACTIVITY_TIMEOUT_FIELD_NUMBER;
           hash = (53 * hash) + getVmInactivityTimeout().hashCode();
@@ -2129,8 +1733,6 @@ public final class ProjectOuterClass {
 
           dataProcClusterId_ = "";
 
-          commitMode_ = 0;
-
           securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
           bitField0_ = (bitField0_ & ~0x00000001);
           earlyAccess_ = false;
@@ -2140,8 +1742,6 @@ public final class ProjectOuterClass {
           defaultFolderId_ = "";
 
           staleExecTimeoutMode_ = 0;
-
-          ideExecutionMode_ = 0;
 
           if (vmInactivityTimeoutBuilder_ == null) {
             vmInactivityTimeout_ = null;
@@ -2181,7 +1781,6 @@ public final class ProjectOuterClass {
           result.serviceAccountId_ = serviceAccountId_;
           result.subnetId_ = subnetId_;
           result.dataProcClusterId_ = dataProcClusterId_;
-          result.commitMode_ = commitMode_;
           if (((bitField0_ & 0x00000001) != 0)) {
             securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
             bitField0_ = (bitField0_ & ~0x00000001);
@@ -2191,7 +1790,6 @@ public final class ProjectOuterClass {
           result.ide_ = ide_;
           result.defaultFolderId_ = defaultFolderId_;
           result.staleExecTimeoutMode_ = staleExecTimeoutMode_;
-          result.ideExecutionMode_ = ideExecutionMode_;
           if (vmInactivityTimeoutBuilder_ == null) {
             result.vmInactivityTimeout_ = vmInactivityTimeout_;
           } else {
@@ -2258,9 +1856,6 @@ public final class ProjectOuterClass {
             dataProcClusterId_ = other.dataProcClusterId_;
             onChanged();
           }
-          if (other.commitMode_ != 0) {
-            setCommitModeValue(other.getCommitModeValue());
-          }
           if (!other.securityGroupIds_.isEmpty()) {
             if (securityGroupIds_.isEmpty()) {
               securityGroupIds_ = other.securityGroupIds_;
@@ -2283,9 +1878,6 @@ public final class ProjectOuterClass {
           }
           if (other.staleExecTimeoutMode_ != 0) {
             setStaleExecTimeoutModeValue(other.getStaleExecTimeoutModeValue());
-          }
-          if (other.ideExecutionMode_ != 0) {
-            setIdeExecutionModeValue(other.getIdeExecutionModeValue());
           }
           if (other.hasVmInactivityTimeout()) {
             mergeVmInactivityTimeout(other.getVmInactivityTimeout());
@@ -2613,80 +2205,6 @@ public final class ProjectOuterClass {
   checkByteStringIsUtf8(value);
           
           dataProcClusterId_ = value;
-          onChanged();
-          return this;
-        }
-
-        private int commitMode_ = 0;
-        /**
-         * <pre>
-         * Commit mode that is assigned to the project.
-         * </pre>
-         *
-         * <code>.yandex.cloud.datasphere.v2.Project.Settings.CommitMode commit_mode = 4;</code>
-         * @return The enum numeric value on the wire for commitMode.
-         */
-        @java.lang.Override public int getCommitModeValue() {
-          return commitMode_;
-        }
-        /**
-         * <pre>
-         * Commit mode that is assigned to the project.
-         * </pre>
-         *
-         * <code>.yandex.cloud.datasphere.v2.Project.Settings.CommitMode commit_mode = 4;</code>
-         * @param value The enum numeric value on the wire for commitMode to set.
-         * @return This builder for chaining.
-         */
-        public Builder setCommitModeValue(int value) {
-          
-          commitMode_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * Commit mode that is assigned to the project.
-         * </pre>
-         *
-         * <code>.yandex.cloud.datasphere.v2.Project.Settings.CommitMode commit_mode = 4;</code>
-         * @return The commitMode.
-         */
-        @java.lang.Override
-        public yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.CommitMode getCommitMode() {
-          @SuppressWarnings("deprecation")
-          yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.CommitMode result = yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.CommitMode.valueOf(commitMode_);
-          return result == null ? yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.CommitMode.UNRECOGNIZED : result;
-        }
-        /**
-         * <pre>
-         * Commit mode that is assigned to the project.
-         * </pre>
-         *
-         * <code>.yandex.cloud.datasphere.v2.Project.Settings.CommitMode commit_mode = 4;</code>
-         * @param value The commitMode to set.
-         * @return This builder for chaining.
-         */
-        public Builder setCommitMode(yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.CommitMode value) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          
-          commitMode_ = value.getNumber();
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * Commit mode that is assigned to the project.
-         * </pre>
-         *
-         * <code>.yandex.cloud.datasphere.v2.Project.Settings.CommitMode commit_mode = 4;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearCommitMode() {
-          
-          commitMode_ = 0;
           onChanged();
           return this;
         }
@@ -3120,80 +2638,6 @@ public final class ProjectOuterClass {
         public Builder clearStaleExecTimeoutMode() {
           
           staleExecTimeoutMode_ = 0;
-          onChanged();
-          return this;
-        }
-
-        private int ideExecutionMode_ = 0;
-        /**
-         * <pre>
-         * VM allocation mode.
-         * </pre>
-         *
-         * <code>.yandex.cloud.datasphere.v2.Project.Settings.IdeExecutionMode ide_execution_mode = 10;</code>
-         * @return The enum numeric value on the wire for ideExecutionMode.
-         */
-        @java.lang.Override public int getIdeExecutionModeValue() {
-          return ideExecutionMode_;
-        }
-        /**
-         * <pre>
-         * VM allocation mode.
-         * </pre>
-         *
-         * <code>.yandex.cloud.datasphere.v2.Project.Settings.IdeExecutionMode ide_execution_mode = 10;</code>
-         * @param value The enum numeric value on the wire for ideExecutionMode to set.
-         * @return This builder for chaining.
-         */
-        public Builder setIdeExecutionModeValue(int value) {
-          
-          ideExecutionMode_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * VM allocation mode.
-         * </pre>
-         *
-         * <code>.yandex.cloud.datasphere.v2.Project.Settings.IdeExecutionMode ide_execution_mode = 10;</code>
-         * @return The ideExecutionMode.
-         */
-        @java.lang.Override
-        public yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.IdeExecutionMode getIdeExecutionMode() {
-          @SuppressWarnings("deprecation")
-          yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.IdeExecutionMode result = yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.IdeExecutionMode.valueOf(ideExecutionMode_);
-          return result == null ? yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.IdeExecutionMode.UNRECOGNIZED : result;
-        }
-        /**
-         * <pre>
-         * VM allocation mode.
-         * </pre>
-         *
-         * <code>.yandex.cloud.datasphere.v2.Project.Settings.IdeExecutionMode ide_execution_mode = 10;</code>
-         * @param value The ideExecutionMode to set.
-         * @return This builder for chaining.
-         */
-        public Builder setIdeExecutionMode(yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.IdeExecutionMode value) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          
-          ideExecutionMode_ = value.getNumber();
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * VM allocation mode.
-         * </pre>
-         *
-         * <code>.yandex.cloud.datasphere.v2.Project.Settings.IdeExecutionMode ide_execution_mode = 10;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearIdeExecutionMode() {
-          
-          ideExecutionMode_ = 0;
           onChanged();
           return this;
         }
@@ -6470,7 +5914,7 @@ public final class ProjectOuterClass {
       "to\022\032yandex.cloud.datasphere.v2\032\036google/p" +
       "rotobuf/duration.proto\032\037google/protobuf/" +
       "timestamp.proto\032\036google/protobuf/wrapper" +
-      "s.proto\"\241\013\n\007Project\022\n\n\002id\030\001 \001(\t\022.\n\ncreat" +
+      "s.proto\"\352\010\n\007Project\022\n\n\002id\030\001 \001(\t\022.\n\ncreat" +
       "ed_at\030\002 \001(\0132\032.google.protobuf.Timestamp\022" +
       "\014\n\004name\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022?\n\006la" +
       "bels\030\005 \003(\0132/.yandex.cloud.datasphere.v2." +
@@ -6478,38 +5922,30 @@ public final class ProjectOuterClass {
       "(\t\022>\n\010settings\030\007 \001(\0132,.yandex.cloud.data" +
       "sphere.v2.Project.Settings\022:\n\006limits\030\010 \001" +
       "(\0132*.yandex.cloud.datasphere.v2.Project." +
-      "Limits\022\024\n\014community_id\030\013 \001(\t\032\220\007\n\010Setting" +
+      "Limits\022\024\n\014community_id\030\013 \001(\t\032\331\004\n\010Setting" +
       "s\022\032\n\022service_account_id\030\001 \001(\t\022\021\n\tsubnet_" +
-      "id\030\002 \001(\t\022\034\n\024data_proc_cluster_id\030\003 \001(\t\022L" +
-      "\n\013commit_mode\030\004 \001(\01627.yandex.cloud.datas" +
-      "phere.v2.Project.Settings.CommitMode\022\032\n\022" +
-      "security_group_ids\030\005 \003(\t\022\024\n\014early_access" +
-      "\030\006 \001(\010\022=\n\003ide\030\007 \001(\01620.yandex.cloud.datas" +
-      "phere.v2.Project.Settings.Ide\022\031\n\021default" +
-      "_folder_id\030\010 \001(\t\022g\n\027stale_exec_timeout_m" +
-      "ode\030\t \001(\0162F.yandex.cloud.datasphere.v2.P" +
-      "roject.Settings.StaleExecutionTimeoutMod" +
-      "e\022Y\n\022ide_execution_mode\030\n \001(\0162=.yandex.c" +
-      "loud.datasphere.v2.Project.Settings.IdeE" +
-      "xecutionMode\0228\n\025vm_inactivity_timeout\030\013 " +
-      "\001(\0132\031.google.protobuf.Duration\022\036\n\026defaul" +
-      "t_dedicated_spec\030\014 \001(\t\"A\n\nCommitMode\022\033\n\027" +
-      "COMMIT_MODE_UNSPECIFIED\020\000\022\014\n\010STANDARD\020\001\022" +
-      "\010\n\004AUTO\020\002\"+\n\003Ide\022\023\n\017IDE_UNSPECIFIED\020\000\022\017\n" +
-      "\013JUPYTER_LAB\020\001\"x\n\031StaleExecutionTimeoutM" +
-      "ode\022,\n(STALE_EXECUTION_TIMEOUT_MODE_UNSP" +
-      "ECIFIED\020\000\022\014\n\010ONE_HOUR\020\001\022\017\n\013THREE_HOURS\020\002" +
-      "\022\016\n\nNO_TIMEOUT\020\003\"U\n\020IdeExecutionMode\022\"\n\036" +
-      "IDE_EXECUTION_MODE_UNSPECIFIED\020\000\022\016\n\nSERV" +
-      "ERLESS\020\001\022\r\n\tDEDICATED\020\002\032\177\n\006Limits\0227\n\022max" +
-      "_units_per_hour\030\001 \001(\0132\033.google.protobuf." +
-      "Int64Value\022<\n\027max_units_per_execution\030\002 " +
-      "\001(\0132\033.google.protobuf.Int64Value\032-\n\013Labe" +
-      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J" +
-      "\004\010\n\020\013J\004\010\t\020\nBk\n\036yandex.cloud.api.datasphe" +
-      "re.v2ZIgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/datasphere/v2;datasphere" +
-      "b\006proto3"
+      "id\030\002 \001(\t\022\034\n\024data_proc_cluster_id\030\003 \001(\t\022\032" +
+      "\n\022security_group_ids\030\005 \003(\t\022\024\n\014early_acce" +
+      "ss\030\006 \001(\010\022=\n\003ide\030\007 \001(\01620.yandex.cloud.dat" +
+      "asphere.v2.Project.Settings.Ide\022\031\n\021defau" +
+      "lt_folder_id\030\010 \001(\t\022g\n\027stale_exec_timeout" +
+      "_mode\030\t \001(\0162F.yandex.cloud.datasphere.v2" +
+      ".Project.Settings.StaleExecutionTimeoutM" +
+      "ode\0228\n\025vm_inactivity_timeout\030\013 \001(\0132\031.goo" +
+      "gle.protobuf.Duration\022\036\n\026default_dedicat" +
+      "ed_spec\030\014 \001(\t\"+\n\003Ide\022\023\n\017IDE_UNSPECIFIED\020" +
+      "\000\022\017\n\013JUPYTER_LAB\020\001\"x\n\031StaleExecutionTime" +
+      "outMode\022,\n(STALE_EXECUTION_TIMEOUT_MODE_" +
+      "UNSPECIFIED\020\000\022\014\n\010ONE_HOUR\020\001\022\017\n\013THREE_HOU" +
+      "RS\020\002\022\016\n\nNO_TIMEOUT\020\003J\004\010\004\020\005J\004\010\n\020\013\032\177\n\006Limi" +
+      "ts\0227\n\022max_units_per_hour\030\001 \001(\0132\033.google." +
+      "protobuf.Int64Value\022<\n\027max_units_per_exe" +
+      "cution\030\002 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001J\004\010\n\020\013J\004\010\t\020\nBk\n\036yandex.cloud.api" +
+      ".datasphere.v2ZIgithub.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/datasphere/v2;d" +
+      "atasphereb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6529,7 +5965,7 @@ public final class ProjectOuterClass {
     internal_static_yandex_cloud_datasphere_v2_Project_Settings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_Project_Settings_descriptor,
-        new java.lang.String[] { "ServiceAccountId", "SubnetId", "DataProcClusterId", "CommitMode", "SecurityGroupIds", "EarlyAccess", "Ide", "DefaultFolderId", "StaleExecTimeoutMode", "IdeExecutionMode", "VmInactivityTimeout", "DefaultDedicatedSpec", });
+        new java.lang.String[] { "ServiceAccountId", "SubnetId", "DataProcClusterId", "SecurityGroupIds", "EarlyAccess", "Ide", "DefaultFolderId", "StaleExecTimeoutMode", "VmInactivityTimeout", "DefaultDedicatedSpec", });
     internal_static_yandex_cloud_datasphere_v2_Project_Limits_descriptor =
       internal_static_yandex_cloud_datasphere_v2_Project_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_datasphere_v2_Project_Limits_fieldAccessorTable = new

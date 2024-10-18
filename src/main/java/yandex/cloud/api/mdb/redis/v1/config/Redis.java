@@ -274,6 +274,249 @@ public final class Redis {
      * <code>.google.protobuf.Int64Value maxmemory_percent = 10 [(.yandex.cloud.value) = "1-75"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMaxmemoryPercentOrBuilder();
+
+    /**
+     * <pre>
+     * Maximum time in milliseconds for Lua scripts, 0 - disabled mechanism
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lua_time_limit = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the luaTimeLimit field is set.
+     */
+    boolean hasLuaTimeLimit();
+    /**
+     * <pre>
+     * Maximum time in milliseconds for Lua scripts, 0 - disabled mechanism
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lua_time_limit = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The luaTimeLimit.
+     */
+    com.google.protobuf.Int64Value getLuaTimeLimit();
+    /**
+     * <pre>
+     * Maximum time in milliseconds for Lua scripts, 0 - disabled mechanism
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lua_time_limit = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getLuaTimeLimitOrBuilder();
+
+    /**
+     * <pre>
+     * Replication backlog size as a percentage of flavor maxmemory
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value repl_backlog_size_percent = 12 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the replBacklogSizePercent field is set.
+     */
+    boolean hasReplBacklogSizePercent();
+    /**
+     * <pre>
+     * Replication backlog size as a percentage of flavor maxmemory
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value repl_backlog_size_percent = 12 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The replBacklogSizePercent.
+     */
+    com.google.protobuf.Int64Value getReplBacklogSizePercent();
+    /**
+     * <pre>
+     * Replication backlog size as a percentage of flavor maxmemory
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value repl_backlog_size_percent = 12 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getReplBacklogSizePercentOrBuilder();
+
+    /**
+     * <pre>
+     * Controls whether all hash slots must be covered by nodes
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue cluster_require_full_coverage = 13;</code>
+     * @return Whether the clusterRequireFullCoverage field is set.
+     */
+    boolean hasClusterRequireFullCoverage();
+    /**
+     * <pre>
+     * Controls whether all hash slots must be covered by nodes
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue cluster_require_full_coverage = 13;</code>
+     * @return The clusterRequireFullCoverage.
+     */
+    com.google.protobuf.BoolValue getClusterRequireFullCoverage();
+    /**
+     * <pre>
+     * Controls whether all hash slots must be covered by nodes
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue cluster_require_full_coverage = 13;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getClusterRequireFullCoverageOrBuilder();
+
+    /**
+     * <pre>
+     * Allows read operations when cluster is down
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue cluster_allow_reads_when_down = 14;</code>
+     * @return Whether the clusterAllowReadsWhenDown field is set.
+     */
+    boolean hasClusterAllowReadsWhenDown();
+    /**
+     * <pre>
+     * Allows read operations when cluster is down
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue cluster_allow_reads_when_down = 14;</code>
+     * @return The clusterAllowReadsWhenDown.
+     */
+    com.google.protobuf.BoolValue getClusterAllowReadsWhenDown();
+    /**
+     * <pre>
+     * Allows read operations when cluster is down
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue cluster_allow_reads_when_down = 14;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getClusterAllowReadsWhenDownOrBuilder();
+
+    /**
+     * <pre>
+     * Permits Pub/Sub shard operations when cluster is down
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue cluster_allow_pubsubshard_when_down = 15;</code>
+     * @return Whether the clusterAllowPubsubshardWhenDown field is set.
+     */
+    boolean hasClusterAllowPubsubshardWhenDown();
+    /**
+     * <pre>
+     * Permits Pub/Sub shard operations when cluster is down
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue cluster_allow_pubsubshard_when_down = 15;</code>
+     * @return The clusterAllowPubsubshardWhenDown.
+     */
+    com.google.protobuf.BoolValue getClusterAllowPubsubshardWhenDown();
+    /**
+     * <pre>
+     * Permits Pub/Sub shard operations when cluster is down
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue cluster_allow_pubsubshard_when_down = 15;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getClusterAllowPubsubshardWhenDownOrBuilder();
+
+    /**
+     * <pre>
+     * The time, in minutes, that must elapse in order for the key counter to be divided by two (or decremented if it has a value less &lt;= 10)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lfu_decay_time = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the lfuDecayTime field is set.
+     */
+    boolean hasLfuDecayTime();
+    /**
+     * <pre>
+     * The time, in minutes, that must elapse in order for the key counter to be divided by two (or decremented if it has a value less &lt;= 10)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lfu_decay_time = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The lfuDecayTime.
+     */
+    com.google.protobuf.Int64Value getLfuDecayTime();
+    /**
+     * <pre>
+     * The time, in minutes, that must elapse in order for the key counter to be divided by two (or decremented if it has a value less &lt;= 10)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lfu_decay_time = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getLfuDecayTimeOrBuilder();
+
+    /**
+     * <pre>
+     * Determines how the frequency counter represents key hits.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lfu_log_factor = 17 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the lfuLogFactor field is set.
+     */
+    boolean hasLfuLogFactor();
+    /**
+     * <pre>
+     * Determines how the frequency counter represents key hits.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lfu_log_factor = 17 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The lfuLogFactor.
+     */
+    com.google.protobuf.Int64Value getLfuLogFactor();
+    /**
+     * <pre>
+     * Determines how the frequency counter represents key hits.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lfu_log_factor = 17 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getLfuLogFactorOrBuilder();
+
+    /**
+     * <pre>
+     * Allows to turn before switchover in RDSync
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue turn_before_switchover = 18;</code>
+     * @return Whether the turnBeforeSwitchover field is set.
+     */
+    boolean hasTurnBeforeSwitchover();
+    /**
+     * <pre>
+     * Allows to turn before switchover in RDSync
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue turn_before_switchover = 18;</code>
+     * @return The turnBeforeSwitchover.
+     */
+    com.google.protobuf.BoolValue getTurnBeforeSwitchover();
+    /**
+     * <pre>
+     * Allows to turn before switchover in RDSync
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue turn_before_switchover = 18;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getTurnBeforeSwitchoverOrBuilder();
+
+    /**
+     * <pre>
+     * Allows some data to be lost in favor of faster switchover/restart
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue allow_data_loss = 19;</code>
+     * @return Whether the allowDataLoss field is set.
+     */
+    boolean hasAllowDataLoss();
+    /**
+     * <pre>
+     * Allows some data to be lost in favor of faster switchover/restart
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue allow_data_loss = 19;</code>
+     * @return The allowDataLoss.
+     */
+    com.google.protobuf.BoolValue getAllowDataLoss();
+    /**
+     * <pre>
+     * Allows some data to be lost in favor of faster switchover/restart
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue allow_data_loss = 19;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getAllowDataLossOrBuilder();
   }
   /**
    * <pre>
@@ -433,6 +676,123 @@ public final class Redis {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(maxmemoryPercent_);
                 maxmemoryPercent_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (luaTimeLimit_ != null) {
+                subBuilder = luaTimeLimit_.toBuilder();
+              }
+              luaTimeLimit_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(luaTimeLimit_);
+                luaTimeLimit_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (replBacklogSizePercent_ != null) {
+                subBuilder = replBacklogSizePercent_.toBuilder();
+              }
+              replBacklogSizePercent_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(replBacklogSizePercent_);
+                replBacklogSizePercent_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 106: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (clusterRequireFullCoverage_ != null) {
+                subBuilder = clusterRequireFullCoverage_.toBuilder();
+              }
+              clusterRequireFullCoverage_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(clusterRequireFullCoverage_);
+                clusterRequireFullCoverage_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 114: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (clusterAllowReadsWhenDown_ != null) {
+                subBuilder = clusterAllowReadsWhenDown_.toBuilder();
+              }
+              clusterAllowReadsWhenDown_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(clusterAllowReadsWhenDown_);
+                clusterAllowReadsWhenDown_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 122: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (clusterAllowPubsubshardWhenDown_ != null) {
+                subBuilder = clusterAllowPubsubshardWhenDown_.toBuilder();
+              }
+              clusterAllowPubsubshardWhenDown_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(clusterAllowPubsubshardWhenDown_);
+                clusterAllowPubsubshardWhenDown_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 130: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (lfuDecayTime_ != null) {
+                subBuilder = lfuDecayTime_.toBuilder();
+              }
+              lfuDecayTime_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lfuDecayTime_);
+                lfuDecayTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 138: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (lfuLogFactor_ != null) {
+                subBuilder = lfuLogFactor_.toBuilder();
+              }
+              lfuLogFactor_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lfuLogFactor_);
+                lfuLogFactor_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 146: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (turnBeforeSwitchover_ != null) {
+                subBuilder = turnBeforeSwitchover_.toBuilder();
+              }
+              turnBeforeSwitchover_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(turnBeforeSwitchover_);
+                turnBeforeSwitchover_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 154: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (allowDataLoss_ != null) {
+                subBuilder = allowDataLoss_.toBuilder();
+              }
+              allowDataLoss_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(allowDataLoss_);
+                allowDataLoss_ = subBuilder.buildPartial();
               }
 
               break;
@@ -2309,6 +2669,348 @@ public final class Redis {
       return getMaxmemoryPercent();
     }
 
+    public static final int LUA_TIME_LIMIT_FIELD_NUMBER = 11;
+    private com.google.protobuf.Int64Value luaTimeLimit_;
+    /**
+     * <pre>
+     * Maximum time in milliseconds for Lua scripts, 0 - disabled mechanism
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lua_time_limit = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the luaTimeLimit field is set.
+     */
+    @java.lang.Override
+    public boolean hasLuaTimeLimit() {
+      return luaTimeLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Maximum time in milliseconds for Lua scripts, 0 - disabled mechanism
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lua_time_limit = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The luaTimeLimit.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getLuaTimeLimit() {
+      return luaTimeLimit_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : luaTimeLimit_;
+    }
+    /**
+     * <pre>
+     * Maximum time in milliseconds for Lua scripts, 0 - disabled mechanism
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lua_time_limit = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getLuaTimeLimitOrBuilder() {
+      return getLuaTimeLimit();
+    }
+
+    public static final int REPL_BACKLOG_SIZE_PERCENT_FIELD_NUMBER = 12;
+    private com.google.protobuf.Int64Value replBacklogSizePercent_;
+    /**
+     * <pre>
+     * Replication backlog size as a percentage of flavor maxmemory
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value repl_backlog_size_percent = 12 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the replBacklogSizePercent field is set.
+     */
+    @java.lang.Override
+    public boolean hasReplBacklogSizePercent() {
+      return replBacklogSizePercent_ != null;
+    }
+    /**
+     * <pre>
+     * Replication backlog size as a percentage of flavor maxmemory
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value repl_backlog_size_percent = 12 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The replBacklogSizePercent.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getReplBacklogSizePercent() {
+      return replBacklogSizePercent_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replBacklogSizePercent_;
+    }
+    /**
+     * <pre>
+     * Replication backlog size as a percentage of flavor maxmemory
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value repl_backlog_size_percent = 12 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getReplBacklogSizePercentOrBuilder() {
+      return getReplBacklogSizePercent();
+    }
+
+    public static final int CLUSTER_REQUIRE_FULL_COVERAGE_FIELD_NUMBER = 13;
+    private com.google.protobuf.BoolValue clusterRequireFullCoverage_;
+    /**
+     * <pre>
+     * Controls whether all hash slots must be covered by nodes
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue cluster_require_full_coverage = 13;</code>
+     * @return Whether the clusterRequireFullCoverage field is set.
+     */
+    @java.lang.Override
+    public boolean hasClusterRequireFullCoverage() {
+      return clusterRequireFullCoverage_ != null;
+    }
+    /**
+     * <pre>
+     * Controls whether all hash slots must be covered by nodes
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue cluster_require_full_coverage = 13;</code>
+     * @return The clusterRequireFullCoverage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getClusterRequireFullCoverage() {
+      return clusterRequireFullCoverage_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : clusterRequireFullCoverage_;
+    }
+    /**
+     * <pre>
+     * Controls whether all hash slots must be covered by nodes
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue cluster_require_full_coverage = 13;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getClusterRequireFullCoverageOrBuilder() {
+      return getClusterRequireFullCoverage();
+    }
+
+    public static final int CLUSTER_ALLOW_READS_WHEN_DOWN_FIELD_NUMBER = 14;
+    private com.google.protobuf.BoolValue clusterAllowReadsWhenDown_;
+    /**
+     * <pre>
+     * Allows read operations when cluster is down
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue cluster_allow_reads_when_down = 14;</code>
+     * @return Whether the clusterAllowReadsWhenDown field is set.
+     */
+    @java.lang.Override
+    public boolean hasClusterAllowReadsWhenDown() {
+      return clusterAllowReadsWhenDown_ != null;
+    }
+    /**
+     * <pre>
+     * Allows read operations when cluster is down
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue cluster_allow_reads_when_down = 14;</code>
+     * @return The clusterAllowReadsWhenDown.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getClusterAllowReadsWhenDown() {
+      return clusterAllowReadsWhenDown_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : clusterAllowReadsWhenDown_;
+    }
+    /**
+     * <pre>
+     * Allows read operations when cluster is down
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue cluster_allow_reads_when_down = 14;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getClusterAllowReadsWhenDownOrBuilder() {
+      return getClusterAllowReadsWhenDown();
+    }
+
+    public static final int CLUSTER_ALLOW_PUBSUBSHARD_WHEN_DOWN_FIELD_NUMBER = 15;
+    private com.google.protobuf.BoolValue clusterAllowPubsubshardWhenDown_;
+    /**
+     * <pre>
+     * Permits Pub/Sub shard operations when cluster is down
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue cluster_allow_pubsubshard_when_down = 15;</code>
+     * @return Whether the clusterAllowPubsubshardWhenDown field is set.
+     */
+    @java.lang.Override
+    public boolean hasClusterAllowPubsubshardWhenDown() {
+      return clusterAllowPubsubshardWhenDown_ != null;
+    }
+    /**
+     * <pre>
+     * Permits Pub/Sub shard operations when cluster is down
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue cluster_allow_pubsubshard_when_down = 15;</code>
+     * @return The clusterAllowPubsubshardWhenDown.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getClusterAllowPubsubshardWhenDown() {
+      return clusterAllowPubsubshardWhenDown_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : clusterAllowPubsubshardWhenDown_;
+    }
+    /**
+     * <pre>
+     * Permits Pub/Sub shard operations when cluster is down
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue cluster_allow_pubsubshard_when_down = 15;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getClusterAllowPubsubshardWhenDownOrBuilder() {
+      return getClusterAllowPubsubshardWhenDown();
+    }
+
+    public static final int LFU_DECAY_TIME_FIELD_NUMBER = 16;
+    private com.google.protobuf.Int64Value lfuDecayTime_;
+    /**
+     * <pre>
+     * The time, in minutes, that must elapse in order for the key counter to be divided by two (or decremented if it has a value less &lt;= 10)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lfu_decay_time = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the lfuDecayTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasLfuDecayTime() {
+      return lfuDecayTime_ != null;
+    }
+    /**
+     * <pre>
+     * The time, in minutes, that must elapse in order for the key counter to be divided by two (or decremented if it has a value less &lt;= 10)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lfu_decay_time = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The lfuDecayTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getLfuDecayTime() {
+      return lfuDecayTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : lfuDecayTime_;
+    }
+    /**
+     * <pre>
+     * The time, in minutes, that must elapse in order for the key counter to be divided by two (or decremented if it has a value less &lt;= 10)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lfu_decay_time = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getLfuDecayTimeOrBuilder() {
+      return getLfuDecayTime();
+    }
+
+    public static final int LFU_LOG_FACTOR_FIELD_NUMBER = 17;
+    private com.google.protobuf.Int64Value lfuLogFactor_;
+    /**
+     * <pre>
+     * Determines how the frequency counter represents key hits.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lfu_log_factor = 17 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the lfuLogFactor field is set.
+     */
+    @java.lang.Override
+    public boolean hasLfuLogFactor() {
+      return lfuLogFactor_ != null;
+    }
+    /**
+     * <pre>
+     * Determines how the frequency counter represents key hits.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lfu_log_factor = 17 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The lfuLogFactor.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getLfuLogFactor() {
+      return lfuLogFactor_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : lfuLogFactor_;
+    }
+    /**
+     * <pre>
+     * Determines how the frequency counter represents key hits.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lfu_log_factor = 17 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getLfuLogFactorOrBuilder() {
+      return getLfuLogFactor();
+    }
+
+    public static final int TURN_BEFORE_SWITCHOVER_FIELD_NUMBER = 18;
+    private com.google.protobuf.BoolValue turnBeforeSwitchover_;
+    /**
+     * <pre>
+     * Allows to turn before switchover in RDSync
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue turn_before_switchover = 18;</code>
+     * @return Whether the turnBeforeSwitchover field is set.
+     */
+    @java.lang.Override
+    public boolean hasTurnBeforeSwitchover() {
+      return turnBeforeSwitchover_ != null;
+    }
+    /**
+     * <pre>
+     * Allows to turn before switchover in RDSync
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue turn_before_switchover = 18;</code>
+     * @return The turnBeforeSwitchover.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getTurnBeforeSwitchover() {
+      return turnBeforeSwitchover_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : turnBeforeSwitchover_;
+    }
+    /**
+     * <pre>
+     * Allows to turn before switchover in RDSync
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue turn_before_switchover = 18;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getTurnBeforeSwitchoverOrBuilder() {
+      return getTurnBeforeSwitchover();
+    }
+
+    public static final int ALLOW_DATA_LOSS_FIELD_NUMBER = 19;
+    private com.google.protobuf.BoolValue allowDataLoss_;
+    /**
+     * <pre>
+     * Allows some data to be lost in favor of faster switchover/restart
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue allow_data_loss = 19;</code>
+     * @return Whether the allowDataLoss field is set.
+     */
+    @java.lang.Override
+    public boolean hasAllowDataLoss() {
+      return allowDataLoss_ != null;
+    }
+    /**
+     * <pre>
+     * Allows some data to be lost in favor of faster switchover/restart
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue allow_data_loss = 19;</code>
+     * @return The allowDataLoss.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getAllowDataLoss() {
+      return allowDataLoss_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : allowDataLoss_;
+    }
+    /**
+     * <pre>
+     * Allows some data to be lost in favor of faster switchover/restart
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue allow_data_loss = 19;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getAllowDataLossOrBuilder() {
+      return getAllowDataLoss();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2352,6 +3054,33 @@ public final class Redis {
       }
       if (maxmemoryPercent_ != null) {
         output.writeMessage(10, getMaxmemoryPercent());
+      }
+      if (luaTimeLimit_ != null) {
+        output.writeMessage(11, getLuaTimeLimit());
+      }
+      if (replBacklogSizePercent_ != null) {
+        output.writeMessage(12, getReplBacklogSizePercent());
+      }
+      if (clusterRequireFullCoverage_ != null) {
+        output.writeMessage(13, getClusterRequireFullCoverage());
+      }
+      if (clusterAllowReadsWhenDown_ != null) {
+        output.writeMessage(14, getClusterAllowReadsWhenDown());
+      }
+      if (clusterAllowPubsubshardWhenDown_ != null) {
+        output.writeMessage(15, getClusterAllowPubsubshardWhenDown());
+      }
+      if (lfuDecayTime_ != null) {
+        output.writeMessage(16, getLfuDecayTime());
+      }
+      if (lfuLogFactor_ != null) {
+        output.writeMessage(17, getLfuLogFactor());
+      }
+      if (turnBeforeSwitchover_ != null) {
+        output.writeMessage(18, getTurnBeforeSwitchover());
+      }
+      if (allowDataLoss_ != null) {
+        output.writeMessage(19, getAllowDataLoss());
       }
       unknownFields.writeTo(output);
     }
@@ -2399,6 +3128,42 @@ public final class Redis {
       if (maxmemoryPercent_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getMaxmemoryPercent());
+      }
+      if (luaTimeLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getLuaTimeLimit());
+      }
+      if (replBacklogSizePercent_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getReplBacklogSizePercent());
+      }
+      if (clusterRequireFullCoverage_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getClusterRequireFullCoverage());
+      }
+      if (clusterAllowReadsWhenDown_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getClusterAllowReadsWhenDown());
+      }
+      if (clusterAllowPubsubshardWhenDown_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getClusterAllowPubsubshardWhenDown());
+      }
+      if (lfuDecayTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, getLfuDecayTime());
+      }
+      if (lfuLogFactor_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(17, getLfuLogFactor());
+      }
+      if (turnBeforeSwitchover_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(18, getTurnBeforeSwitchover());
+      }
+      if (allowDataLoss_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, getAllowDataLoss());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2455,6 +3220,51 @@ public final class Redis {
         if (!getMaxmemoryPercent()
             .equals(other.getMaxmemoryPercent())) return false;
       }
+      if (hasLuaTimeLimit() != other.hasLuaTimeLimit()) return false;
+      if (hasLuaTimeLimit()) {
+        if (!getLuaTimeLimit()
+            .equals(other.getLuaTimeLimit())) return false;
+      }
+      if (hasReplBacklogSizePercent() != other.hasReplBacklogSizePercent()) return false;
+      if (hasReplBacklogSizePercent()) {
+        if (!getReplBacklogSizePercent()
+            .equals(other.getReplBacklogSizePercent())) return false;
+      }
+      if (hasClusterRequireFullCoverage() != other.hasClusterRequireFullCoverage()) return false;
+      if (hasClusterRequireFullCoverage()) {
+        if (!getClusterRequireFullCoverage()
+            .equals(other.getClusterRequireFullCoverage())) return false;
+      }
+      if (hasClusterAllowReadsWhenDown() != other.hasClusterAllowReadsWhenDown()) return false;
+      if (hasClusterAllowReadsWhenDown()) {
+        if (!getClusterAllowReadsWhenDown()
+            .equals(other.getClusterAllowReadsWhenDown())) return false;
+      }
+      if (hasClusterAllowPubsubshardWhenDown() != other.hasClusterAllowPubsubshardWhenDown()) return false;
+      if (hasClusterAllowPubsubshardWhenDown()) {
+        if (!getClusterAllowPubsubshardWhenDown()
+            .equals(other.getClusterAllowPubsubshardWhenDown())) return false;
+      }
+      if (hasLfuDecayTime() != other.hasLfuDecayTime()) return false;
+      if (hasLfuDecayTime()) {
+        if (!getLfuDecayTime()
+            .equals(other.getLfuDecayTime())) return false;
+      }
+      if (hasLfuLogFactor() != other.hasLfuLogFactor()) return false;
+      if (hasLfuLogFactor()) {
+        if (!getLfuLogFactor()
+            .equals(other.getLfuLogFactor())) return false;
+      }
+      if (hasTurnBeforeSwitchover() != other.hasTurnBeforeSwitchover()) return false;
+      if (hasTurnBeforeSwitchover()) {
+        if (!getTurnBeforeSwitchover()
+            .equals(other.getTurnBeforeSwitchover())) return false;
+      }
+      if (hasAllowDataLoss() != other.hasAllowDataLoss()) return false;
+      if (hasAllowDataLoss()) {
+        if (!getAllowDataLoss()
+            .equals(other.getAllowDataLoss())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2499,6 +3309,42 @@ public final class Redis {
       if (hasMaxmemoryPercent()) {
         hash = (37 * hash) + MAXMEMORY_PERCENT_FIELD_NUMBER;
         hash = (53 * hash) + getMaxmemoryPercent().hashCode();
+      }
+      if (hasLuaTimeLimit()) {
+        hash = (37 * hash) + LUA_TIME_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getLuaTimeLimit().hashCode();
+      }
+      if (hasReplBacklogSizePercent()) {
+        hash = (37 * hash) + REPL_BACKLOG_SIZE_PERCENT_FIELD_NUMBER;
+        hash = (53 * hash) + getReplBacklogSizePercent().hashCode();
+      }
+      if (hasClusterRequireFullCoverage()) {
+        hash = (37 * hash) + CLUSTER_REQUIRE_FULL_COVERAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getClusterRequireFullCoverage().hashCode();
+      }
+      if (hasClusterAllowReadsWhenDown()) {
+        hash = (37 * hash) + CLUSTER_ALLOW_READS_WHEN_DOWN_FIELD_NUMBER;
+        hash = (53 * hash) + getClusterAllowReadsWhenDown().hashCode();
+      }
+      if (hasClusterAllowPubsubshardWhenDown()) {
+        hash = (37 * hash) + CLUSTER_ALLOW_PUBSUBSHARD_WHEN_DOWN_FIELD_NUMBER;
+        hash = (53 * hash) + getClusterAllowPubsubshardWhenDown().hashCode();
+      }
+      if (hasLfuDecayTime()) {
+        hash = (37 * hash) + LFU_DECAY_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getLfuDecayTime().hashCode();
+      }
+      if (hasLfuLogFactor()) {
+        hash = (37 * hash) + LFU_LOG_FACTOR_FIELD_NUMBER;
+        hash = (53 * hash) + getLfuLogFactor().hashCode();
+      }
+      if (hasTurnBeforeSwitchover()) {
+        hash = (37 * hash) + TURN_BEFORE_SWITCHOVER_FIELD_NUMBER;
+        hash = (53 * hash) + getTurnBeforeSwitchover().hashCode();
+      }
+      if (hasAllowDataLoss()) {
+        hash = (37 * hash) + ALLOW_DATA_LOSS_FIELD_NUMBER;
+        hash = (53 * hash) + getAllowDataLoss().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2686,6 +3532,60 @@ public final class Redis {
           maxmemoryPercent_ = null;
           maxmemoryPercentBuilder_ = null;
         }
+        if (luaTimeLimitBuilder_ == null) {
+          luaTimeLimit_ = null;
+        } else {
+          luaTimeLimit_ = null;
+          luaTimeLimitBuilder_ = null;
+        }
+        if (replBacklogSizePercentBuilder_ == null) {
+          replBacklogSizePercent_ = null;
+        } else {
+          replBacklogSizePercent_ = null;
+          replBacklogSizePercentBuilder_ = null;
+        }
+        if (clusterRequireFullCoverageBuilder_ == null) {
+          clusterRequireFullCoverage_ = null;
+        } else {
+          clusterRequireFullCoverage_ = null;
+          clusterRequireFullCoverageBuilder_ = null;
+        }
+        if (clusterAllowReadsWhenDownBuilder_ == null) {
+          clusterAllowReadsWhenDown_ = null;
+        } else {
+          clusterAllowReadsWhenDown_ = null;
+          clusterAllowReadsWhenDownBuilder_ = null;
+        }
+        if (clusterAllowPubsubshardWhenDownBuilder_ == null) {
+          clusterAllowPubsubshardWhenDown_ = null;
+        } else {
+          clusterAllowPubsubshardWhenDown_ = null;
+          clusterAllowPubsubshardWhenDownBuilder_ = null;
+        }
+        if (lfuDecayTimeBuilder_ == null) {
+          lfuDecayTime_ = null;
+        } else {
+          lfuDecayTime_ = null;
+          lfuDecayTimeBuilder_ = null;
+        }
+        if (lfuLogFactorBuilder_ == null) {
+          lfuLogFactor_ = null;
+        } else {
+          lfuLogFactor_ = null;
+          lfuLogFactorBuilder_ = null;
+        }
+        if (turnBeforeSwitchoverBuilder_ == null) {
+          turnBeforeSwitchover_ = null;
+        } else {
+          turnBeforeSwitchover_ = null;
+          turnBeforeSwitchoverBuilder_ = null;
+        }
+        if (allowDataLossBuilder_ == null) {
+          allowDataLoss_ = null;
+        } else {
+          allowDataLoss_ = null;
+          allowDataLossBuilder_ = null;
+        }
         return this;
       }
 
@@ -2749,6 +3649,51 @@ public final class Redis {
           result.maxmemoryPercent_ = maxmemoryPercent_;
         } else {
           result.maxmemoryPercent_ = maxmemoryPercentBuilder_.build();
+        }
+        if (luaTimeLimitBuilder_ == null) {
+          result.luaTimeLimit_ = luaTimeLimit_;
+        } else {
+          result.luaTimeLimit_ = luaTimeLimitBuilder_.build();
+        }
+        if (replBacklogSizePercentBuilder_ == null) {
+          result.replBacklogSizePercent_ = replBacklogSizePercent_;
+        } else {
+          result.replBacklogSizePercent_ = replBacklogSizePercentBuilder_.build();
+        }
+        if (clusterRequireFullCoverageBuilder_ == null) {
+          result.clusterRequireFullCoverage_ = clusterRequireFullCoverage_;
+        } else {
+          result.clusterRequireFullCoverage_ = clusterRequireFullCoverageBuilder_.build();
+        }
+        if (clusterAllowReadsWhenDownBuilder_ == null) {
+          result.clusterAllowReadsWhenDown_ = clusterAllowReadsWhenDown_;
+        } else {
+          result.clusterAllowReadsWhenDown_ = clusterAllowReadsWhenDownBuilder_.build();
+        }
+        if (clusterAllowPubsubshardWhenDownBuilder_ == null) {
+          result.clusterAllowPubsubshardWhenDown_ = clusterAllowPubsubshardWhenDown_;
+        } else {
+          result.clusterAllowPubsubshardWhenDown_ = clusterAllowPubsubshardWhenDownBuilder_.build();
+        }
+        if (lfuDecayTimeBuilder_ == null) {
+          result.lfuDecayTime_ = lfuDecayTime_;
+        } else {
+          result.lfuDecayTime_ = lfuDecayTimeBuilder_.build();
+        }
+        if (lfuLogFactorBuilder_ == null) {
+          result.lfuLogFactor_ = lfuLogFactor_;
+        } else {
+          result.lfuLogFactor_ = lfuLogFactorBuilder_.build();
+        }
+        if (turnBeforeSwitchoverBuilder_ == null) {
+          result.turnBeforeSwitchover_ = turnBeforeSwitchover_;
+        } else {
+          result.turnBeforeSwitchover_ = turnBeforeSwitchoverBuilder_.build();
+        }
+        if (allowDataLossBuilder_ == null) {
+          result.allowDataLoss_ = allowDataLoss_;
+        } else {
+          result.allowDataLoss_ = allowDataLossBuilder_.build();
         }
         onBuilt();
         return result;
@@ -2829,6 +3774,33 @@ public final class Redis {
         }
         if (other.hasMaxmemoryPercent()) {
           mergeMaxmemoryPercent(other.getMaxmemoryPercent());
+        }
+        if (other.hasLuaTimeLimit()) {
+          mergeLuaTimeLimit(other.getLuaTimeLimit());
+        }
+        if (other.hasReplBacklogSizePercent()) {
+          mergeReplBacklogSizePercent(other.getReplBacklogSizePercent());
+        }
+        if (other.hasClusterRequireFullCoverage()) {
+          mergeClusterRequireFullCoverage(other.getClusterRequireFullCoverage());
+        }
+        if (other.hasClusterAllowReadsWhenDown()) {
+          mergeClusterAllowReadsWhenDown(other.getClusterAllowReadsWhenDown());
+        }
+        if (other.hasClusterAllowPubsubshardWhenDown()) {
+          mergeClusterAllowPubsubshardWhenDown(other.getClusterAllowPubsubshardWhenDown());
+        }
+        if (other.hasLfuDecayTime()) {
+          mergeLfuDecayTime(other.getLfuDecayTime());
+        }
+        if (other.hasLfuLogFactor()) {
+          mergeLfuLogFactor(other.getLfuLogFactor());
+        }
+        if (other.hasTurnBeforeSwitchover()) {
+          mergeTurnBeforeSwitchover(other.getTurnBeforeSwitchover());
+        }
+        if (other.hasAllowDataLoss()) {
+          mergeAllowDataLoss(other.getAllowDataLoss());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4233,6 +5205,1401 @@ public final class Redis {
         }
         return maxmemoryPercentBuilder_;
       }
+
+      private com.google.protobuf.Int64Value luaTimeLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> luaTimeLimitBuilder_;
+      /**
+       * <pre>
+       * Maximum time in milliseconds for Lua scripts, 0 - disabled mechanism
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lua_time_limit = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the luaTimeLimit field is set.
+       */
+      public boolean hasLuaTimeLimit() {
+        return luaTimeLimitBuilder_ != null || luaTimeLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Maximum time in milliseconds for Lua scripts, 0 - disabled mechanism
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lua_time_limit = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The luaTimeLimit.
+       */
+      public com.google.protobuf.Int64Value getLuaTimeLimit() {
+        if (luaTimeLimitBuilder_ == null) {
+          return luaTimeLimit_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : luaTimeLimit_;
+        } else {
+          return luaTimeLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Maximum time in milliseconds for Lua scripts, 0 - disabled mechanism
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lua_time_limit = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setLuaTimeLimit(com.google.protobuf.Int64Value value) {
+        if (luaTimeLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          luaTimeLimit_ = value;
+          onChanged();
+        } else {
+          luaTimeLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum time in milliseconds for Lua scripts, 0 - disabled mechanism
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lua_time_limit = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setLuaTimeLimit(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (luaTimeLimitBuilder_ == null) {
+          luaTimeLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          luaTimeLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum time in milliseconds for Lua scripts, 0 - disabled mechanism
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lua_time_limit = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeLuaTimeLimit(com.google.protobuf.Int64Value value) {
+        if (luaTimeLimitBuilder_ == null) {
+          if (luaTimeLimit_ != null) {
+            luaTimeLimit_ =
+              com.google.protobuf.Int64Value.newBuilder(luaTimeLimit_).mergeFrom(value).buildPartial();
+          } else {
+            luaTimeLimit_ = value;
+          }
+          onChanged();
+        } else {
+          luaTimeLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum time in milliseconds for Lua scripts, 0 - disabled mechanism
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lua_time_limit = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearLuaTimeLimit() {
+        if (luaTimeLimitBuilder_ == null) {
+          luaTimeLimit_ = null;
+          onChanged();
+        } else {
+          luaTimeLimit_ = null;
+          luaTimeLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum time in milliseconds for Lua scripts, 0 - disabled mechanism
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lua_time_limit = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getLuaTimeLimitBuilder() {
+        
+        onChanged();
+        return getLuaTimeLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Maximum time in milliseconds for Lua scripts, 0 - disabled mechanism
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lua_time_limit = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getLuaTimeLimitOrBuilder() {
+        if (luaTimeLimitBuilder_ != null) {
+          return luaTimeLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return luaTimeLimit_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : luaTimeLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Maximum time in milliseconds for Lua scripts, 0 - disabled mechanism
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lua_time_limit = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getLuaTimeLimitFieldBuilder() {
+        if (luaTimeLimitBuilder_ == null) {
+          luaTimeLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getLuaTimeLimit(),
+                  getParentForChildren(),
+                  isClean());
+          luaTimeLimit_ = null;
+        }
+        return luaTimeLimitBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value replBacklogSizePercent_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> replBacklogSizePercentBuilder_;
+      /**
+       * <pre>
+       * Replication backlog size as a percentage of flavor maxmemory
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value repl_backlog_size_percent = 12 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the replBacklogSizePercent field is set.
+       */
+      public boolean hasReplBacklogSizePercent() {
+        return replBacklogSizePercentBuilder_ != null || replBacklogSizePercent_ != null;
+      }
+      /**
+       * <pre>
+       * Replication backlog size as a percentage of flavor maxmemory
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value repl_backlog_size_percent = 12 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The replBacklogSizePercent.
+       */
+      public com.google.protobuf.Int64Value getReplBacklogSizePercent() {
+        if (replBacklogSizePercentBuilder_ == null) {
+          return replBacklogSizePercent_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replBacklogSizePercent_;
+        } else {
+          return replBacklogSizePercentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Replication backlog size as a percentage of flavor maxmemory
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value repl_backlog_size_percent = 12 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder setReplBacklogSizePercent(com.google.protobuf.Int64Value value) {
+        if (replBacklogSizePercentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          replBacklogSizePercent_ = value;
+          onChanged();
+        } else {
+          replBacklogSizePercentBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replication backlog size as a percentage of flavor maxmemory
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value repl_backlog_size_percent = 12 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder setReplBacklogSizePercent(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (replBacklogSizePercentBuilder_ == null) {
+          replBacklogSizePercent_ = builderForValue.build();
+          onChanged();
+        } else {
+          replBacklogSizePercentBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replication backlog size as a percentage of flavor maxmemory
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value repl_backlog_size_percent = 12 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder mergeReplBacklogSizePercent(com.google.protobuf.Int64Value value) {
+        if (replBacklogSizePercentBuilder_ == null) {
+          if (replBacklogSizePercent_ != null) {
+            replBacklogSizePercent_ =
+              com.google.protobuf.Int64Value.newBuilder(replBacklogSizePercent_).mergeFrom(value).buildPartial();
+          } else {
+            replBacklogSizePercent_ = value;
+          }
+          onChanged();
+        } else {
+          replBacklogSizePercentBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replication backlog size as a percentage of flavor maxmemory
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value repl_backlog_size_percent = 12 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder clearReplBacklogSizePercent() {
+        if (replBacklogSizePercentBuilder_ == null) {
+          replBacklogSizePercent_ = null;
+          onChanged();
+        } else {
+          replBacklogSizePercent_ = null;
+          replBacklogSizePercentBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replication backlog size as a percentage of flavor maxmemory
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value repl_backlog_size_percent = 12 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getReplBacklogSizePercentBuilder() {
+        
+        onChanged();
+        return getReplBacklogSizePercentFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Replication backlog size as a percentage of flavor maxmemory
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value repl_backlog_size_percent = 12 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getReplBacklogSizePercentOrBuilder() {
+        if (replBacklogSizePercentBuilder_ != null) {
+          return replBacklogSizePercentBuilder_.getMessageOrBuilder();
+        } else {
+          return replBacklogSizePercent_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : replBacklogSizePercent_;
+        }
+      }
+      /**
+       * <pre>
+       * Replication backlog size as a percentage of flavor maxmemory
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value repl_backlog_size_percent = 12 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getReplBacklogSizePercentFieldBuilder() {
+        if (replBacklogSizePercentBuilder_ == null) {
+          replBacklogSizePercentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getReplBacklogSizePercent(),
+                  getParentForChildren(),
+                  isClean());
+          replBacklogSizePercent_ = null;
+        }
+        return replBacklogSizePercentBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue clusterRequireFullCoverage_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> clusterRequireFullCoverageBuilder_;
+      /**
+       * <pre>
+       * Controls whether all hash slots must be covered by nodes
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_require_full_coverage = 13;</code>
+       * @return Whether the clusterRequireFullCoverage field is set.
+       */
+      public boolean hasClusterRequireFullCoverage() {
+        return clusterRequireFullCoverageBuilder_ != null || clusterRequireFullCoverage_ != null;
+      }
+      /**
+       * <pre>
+       * Controls whether all hash slots must be covered by nodes
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_require_full_coverage = 13;</code>
+       * @return The clusterRequireFullCoverage.
+       */
+      public com.google.protobuf.BoolValue getClusterRequireFullCoverage() {
+        if (clusterRequireFullCoverageBuilder_ == null) {
+          return clusterRequireFullCoverage_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : clusterRequireFullCoverage_;
+        } else {
+          return clusterRequireFullCoverageBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Controls whether all hash slots must be covered by nodes
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_require_full_coverage = 13;</code>
+       */
+      public Builder setClusterRequireFullCoverage(com.google.protobuf.BoolValue value) {
+        if (clusterRequireFullCoverageBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          clusterRequireFullCoverage_ = value;
+          onChanged();
+        } else {
+          clusterRequireFullCoverageBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls whether all hash slots must be covered by nodes
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_require_full_coverage = 13;</code>
+       */
+      public Builder setClusterRequireFullCoverage(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (clusterRequireFullCoverageBuilder_ == null) {
+          clusterRequireFullCoverage_ = builderForValue.build();
+          onChanged();
+        } else {
+          clusterRequireFullCoverageBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls whether all hash slots must be covered by nodes
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_require_full_coverage = 13;</code>
+       */
+      public Builder mergeClusterRequireFullCoverage(com.google.protobuf.BoolValue value) {
+        if (clusterRequireFullCoverageBuilder_ == null) {
+          if (clusterRequireFullCoverage_ != null) {
+            clusterRequireFullCoverage_ =
+              com.google.protobuf.BoolValue.newBuilder(clusterRequireFullCoverage_).mergeFrom(value).buildPartial();
+          } else {
+            clusterRequireFullCoverage_ = value;
+          }
+          onChanged();
+        } else {
+          clusterRequireFullCoverageBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls whether all hash slots must be covered by nodes
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_require_full_coverage = 13;</code>
+       */
+      public Builder clearClusterRequireFullCoverage() {
+        if (clusterRequireFullCoverageBuilder_ == null) {
+          clusterRequireFullCoverage_ = null;
+          onChanged();
+        } else {
+          clusterRequireFullCoverage_ = null;
+          clusterRequireFullCoverageBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls whether all hash slots must be covered by nodes
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_require_full_coverage = 13;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getClusterRequireFullCoverageBuilder() {
+        
+        onChanged();
+        return getClusterRequireFullCoverageFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Controls whether all hash slots must be covered by nodes
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_require_full_coverage = 13;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getClusterRequireFullCoverageOrBuilder() {
+        if (clusterRequireFullCoverageBuilder_ != null) {
+          return clusterRequireFullCoverageBuilder_.getMessageOrBuilder();
+        } else {
+          return clusterRequireFullCoverage_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : clusterRequireFullCoverage_;
+        }
+      }
+      /**
+       * <pre>
+       * Controls whether all hash slots must be covered by nodes
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_require_full_coverage = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getClusterRequireFullCoverageFieldBuilder() {
+        if (clusterRequireFullCoverageBuilder_ == null) {
+          clusterRequireFullCoverageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getClusterRequireFullCoverage(),
+                  getParentForChildren(),
+                  isClean());
+          clusterRequireFullCoverage_ = null;
+        }
+        return clusterRequireFullCoverageBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue clusterAllowReadsWhenDown_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> clusterAllowReadsWhenDownBuilder_;
+      /**
+       * <pre>
+       * Allows read operations when cluster is down
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_allow_reads_when_down = 14;</code>
+       * @return Whether the clusterAllowReadsWhenDown field is set.
+       */
+      public boolean hasClusterAllowReadsWhenDown() {
+        return clusterAllowReadsWhenDownBuilder_ != null || clusterAllowReadsWhenDown_ != null;
+      }
+      /**
+       * <pre>
+       * Allows read operations when cluster is down
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_allow_reads_when_down = 14;</code>
+       * @return The clusterAllowReadsWhenDown.
+       */
+      public com.google.protobuf.BoolValue getClusterAllowReadsWhenDown() {
+        if (clusterAllowReadsWhenDownBuilder_ == null) {
+          return clusterAllowReadsWhenDown_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : clusterAllowReadsWhenDown_;
+        } else {
+          return clusterAllowReadsWhenDownBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Allows read operations when cluster is down
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_allow_reads_when_down = 14;</code>
+       */
+      public Builder setClusterAllowReadsWhenDown(com.google.protobuf.BoolValue value) {
+        if (clusterAllowReadsWhenDownBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          clusterAllowReadsWhenDown_ = value;
+          onChanged();
+        } else {
+          clusterAllowReadsWhenDownBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Allows read operations when cluster is down
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_allow_reads_when_down = 14;</code>
+       */
+      public Builder setClusterAllowReadsWhenDown(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (clusterAllowReadsWhenDownBuilder_ == null) {
+          clusterAllowReadsWhenDown_ = builderForValue.build();
+          onChanged();
+        } else {
+          clusterAllowReadsWhenDownBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Allows read operations when cluster is down
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_allow_reads_when_down = 14;</code>
+       */
+      public Builder mergeClusterAllowReadsWhenDown(com.google.protobuf.BoolValue value) {
+        if (clusterAllowReadsWhenDownBuilder_ == null) {
+          if (clusterAllowReadsWhenDown_ != null) {
+            clusterAllowReadsWhenDown_ =
+              com.google.protobuf.BoolValue.newBuilder(clusterAllowReadsWhenDown_).mergeFrom(value).buildPartial();
+          } else {
+            clusterAllowReadsWhenDown_ = value;
+          }
+          onChanged();
+        } else {
+          clusterAllowReadsWhenDownBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Allows read operations when cluster is down
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_allow_reads_when_down = 14;</code>
+       */
+      public Builder clearClusterAllowReadsWhenDown() {
+        if (clusterAllowReadsWhenDownBuilder_ == null) {
+          clusterAllowReadsWhenDown_ = null;
+          onChanged();
+        } else {
+          clusterAllowReadsWhenDown_ = null;
+          clusterAllowReadsWhenDownBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Allows read operations when cluster is down
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_allow_reads_when_down = 14;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getClusterAllowReadsWhenDownBuilder() {
+        
+        onChanged();
+        return getClusterAllowReadsWhenDownFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Allows read operations when cluster is down
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_allow_reads_when_down = 14;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getClusterAllowReadsWhenDownOrBuilder() {
+        if (clusterAllowReadsWhenDownBuilder_ != null) {
+          return clusterAllowReadsWhenDownBuilder_.getMessageOrBuilder();
+        } else {
+          return clusterAllowReadsWhenDown_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : clusterAllowReadsWhenDown_;
+        }
+      }
+      /**
+       * <pre>
+       * Allows read operations when cluster is down
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_allow_reads_when_down = 14;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getClusterAllowReadsWhenDownFieldBuilder() {
+        if (clusterAllowReadsWhenDownBuilder_ == null) {
+          clusterAllowReadsWhenDownBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getClusterAllowReadsWhenDown(),
+                  getParentForChildren(),
+                  isClean());
+          clusterAllowReadsWhenDown_ = null;
+        }
+        return clusterAllowReadsWhenDownBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue clusterAllowPubsubshardWhenDown_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> clusterAllowPubsubshardWhenDownBuilder_;
+      /**
+       * <pre>
+       * Permits Pub/Sub shard operations when cluster is down
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_allow_pubsubshard_when_down = 15;</code>
+       * @return Whether the clusterAllowPubsubshardWhenDown field is set.
+       */
+      public boolean hasClusterAllowPubsubshardWhenDown() {
+        return clusterAllowPubsubshardWhenDownBuilder_ != null || clusterAllowPubsubshardWhenDown_ != null;
+      }
+      /**
+       * <pre>
+       * Permits Pub/Sub shard operations when cluster is down
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_allow_pubsubshard_when_down = 15;</code>
+       * @return The clusterAllowPubsubshardWhenDown.
+       */
+      public com.google.protobuf.BoolValue getClusterAllowPubsubshardWhenDown() {
+        if (clusterAllowPubsubshardWhenDownBuilder_ == null) {
+          return clusterAllowPubsubshardWhenDown_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : clusterAllowPubsubshardWhenDown_;
+        } else {
+          return clusterAllowPubsubshardWhenDownBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Permits Pub/Sub shard operations when cluster is down
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_allow_pubsubshard_when_down = 15;</code>
+       */
+      public Builder setClusterAllowPubsubshardWhenDown(com.google.protobuf.BoolValue value) {
+        if (clusterAllowPubsubshardWhenDownBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          clusterAllowPubsubshardWhenDown_ = value;
+          onChanged();
+        } else {
+          clusterAllowPubsubshardWhenDownBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Permits Pub/Sub shard operations when cluster is down
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_allow_pubsubshard_when_down = 15;</code>
+       */
+      public Builder setClusterAllowPubsubshardWhenDown(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (clusterAllowPubsubshardWhenDownBuilder_ == null) {
+          clusterAllowPubsubshardWhenDown_ = builderForValue.build();
+          onChanged();
+        } else {
+          clusterAllowPubsubshardWhenDownBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Permits Pub/Sub shard operations when cluster is down
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_allow_pubsubshard_when_down = 15;</code>
+       */
+      public Builder mergeClusterAllowPubsubshardWhenDown(com.google.protobuf.BoolValue value) {
+        if (clusterAllowPubsubshardWhenDownBuilder_ == null) {
+          if (clusterAllowPubsubshardWhenDown_ != null) {
+            clusterAllowPubsubshardWhenDown_ =
+              com.google.protobuf.BoolValue.newBuilder(clusterAllowPubsubshardWhenDown_).mergeFrom(value).buildPartial();
+          } else {
+            clusterAllowPubsubshardWhenDown_ = value;
+          }
+          onChanged();
+        } else {
+          clusterAllowPubsubshardWhenDownBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Permits Pub/Sub shard operations when cluster is down
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_allow_pubsubshard_when_down = 15;</code>
+       */
+      public Builder clearClusterAllowPubsubshardWhenDown() {
+        if (clusterAllowPubsubshardWhenDownBuilder_ == null) {
+          clusterAllowPubsubshardWhenDown_ = null;
+          onChanged();
+        } else {
+          clusterAllowPubsubshardWhenDown_ = null;
+          clusterAllowPubsubshardWhenDownBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Permits Pub/Sub shard operations when cluster is down
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_allow_pubsubshard_when_down = 15;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getClusterAllowPubsubshardWhenDownBuilder() {
+        
+        onChanged();
+        return getClusterAllowPubsubshardWhenDownFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Permits Pub/Sub shard operations when cluster is down
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_allow_pubsubshard_when_down = 15;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getClusterAllowPubsubshardWhenDownOrBuilder() {
+        if (clusterAllowPubsubshardWhenDownBuilder_ != null) {
+          return clusterAllowPubsubshardWhenDownBuilder_.getMessageOrBuilder();
+        } else {
+          return clusterAllowPubsubshardWhenDown_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : clusterAllowPubsubshardWhenDown_;
+        }
+      }
+      /**
+       * <pre>
+       * Permits Pub/Sub shard operations when cluster is down
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cluster_allow_pubsubshard_when_down = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getClusterAllowPubsubshardWhenDownFieldBuilder() {
+        if (clusterAllowPubsubshardWhenDownBuilder_ == null) {
+          clusterAllowPubsubshardWhenDownBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getClusterAllowPubsubshardWhenDown(),
+                  getParentForChildren(),
+                  isClean());
+          clusterAllowPubsubshardWhenDown_ = null;
+        }
+        return clusterAllowPubsubshardWhenDownBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value lfuDecayTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> lfuDecayTimeBuilder_;
+      /**
+       * <pre>
+       * The time, in minutes, that must elapse in order for the key counter to be divided by two (or decremented if it has a value less &lt;= 10)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lfu_decay_time = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the lfuDecayTime field is set.
+       */
+      public boolean hasLfuDecayTime() {
+        return lfuDecayTimeBuilder_ != null || lfuDecayTime_ != null;
+      }
+      /**
+       * <pre>
+       * The time, in minutes, that must elapse in order for the key counter to be divided by two (or decremented if it has a value less &lt;= 10)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lfu_decay_time = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The lfuDecayTime.
+       */
+      public com.google.protobuf.Int64Value getLfuDecayTime() {
+        if (lfuDecayTimeBuilder_ == null) {
+          return lfuDecayTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : lfuDecayTime_;
+        } else {
+          return lfuDecayTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The time, in minutes, that must elapse in order for the key counter to be divided by two (or decremented if it has a value less &lt;= 10)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lfu_decay_time = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setLfuDecayTime(com.google.protobuf.Int64Value value) {
+        if (lfuDecayTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lfuDecayTime_ = value;
+          onChanged();
+        } else {
+          lfuDecayTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time, in minutes, that must elapse in order for the key counter to be divided by two (or decremented if it has a value less &lt;= 10)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lfu_decay_time = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setLfuDecayTime(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (lfuDecayTimeBuilder_ == null) {
+          lfuDecayTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          lfuDecayTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time, in minutes, that must elapse in order for the key counter to be divided by two (or decremented if it has a value less &lt;= 10)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lfu_decay_time = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeLfuDecayTime(com.google.protobuf.Int64Value value) {
+        if (lfuDecayTimeBuilder_ == null) {
+          if (lfuDecayTime_ != null) {
+            lfuDecayTime_ =
+              com.google.protobuf.Int64Value.newBuilder(lfuDecayTime_).mergeFrom(value).buildPartial();
+          } else {
+            lfuDecayTime_ = value;
+          }
+          onChanged();
+        } else {
+          lfuDecayTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time, in minutes, that must elapse in order for the key counter to be divided by two (or decremented if it has a value less &lt;= 10)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lfu_decay_time = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearLfuDecayTime() {
+        if (lfuDecayTimeBuilder_ == null) {
+          lfuDecayTime_ = null;
+          onChanged();
+        } else {
+          lfuDecayTime_ = null;
+          lfuDecayTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time, in minutes, that must elapse in order for the key counter to be divided by two (or decremented if it has a value less &lt;= 10)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lfu_decay_time = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getLfuDecayTimeBuilder() {
+        
+        onChanged();
+        return getLfuDecayTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The time, in minutes, that must elapse in order for the key counter to be divided by two (or decremented if it has a value less &lt;= 10)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lfu_decay_time = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getLfuDecayTimeOrBuilder() {
+        if (lfuDecayTimeBuilder_ != null) {
+          return lfuDecayTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return lfuDecayTime_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : lfuDecayTime_;
+        }
+      }
+      /**
+       * <pre>
+       * The time, in minutes, that must elapse in order for the key counter to be divided by two (or decremented if it has a value less &lt;= 10)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lfu_decay_time = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getLfuDecayTimeFieldBuilder() {
+        if (lfuDecayTimeBuilder_ == null) {
+          lfuDecayTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getLfuDecayTime(),
+                  getParentForChildren(),
+                  isClean());
+          lfuDecayTime_ = null;
+        }
+        return lfuDecayTimeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value lfuLogFactor_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> lfuLogFactorBuilder_;
+      /**
+       * <pre>
+       * Determines how the frequency counter represents key hits.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lfu_log_factor = 17 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the lfuLogFactor field is set.
+       */
+      public boolean hasLfuLogFactor() {
+        return lfuLogFactorBuilder_ != null || lfuLogFactor_ != null;
+      }
+      /**
+       * <pre>
+       * Determines how the frequency counter represents key hits.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lfu_log_factor = 17 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The lfuLogFactor.
+       */
+      public com.google.protobuf.Int64Value getLfuLogFactor() {
+        if (lfuLogFactorBuilder_ == null) {
+          return lfuLogFactor_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : lfuLogFactor_;
+        } else {
+          return lfuLogFactorBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Determines how the frequency counter represents key hits.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lfu_log_factor = 17 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setLfuLogFactor(com.google.protobuf.Int64Value value) {
+        if (lfuLogFactorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lfuLogFactor_ = value;
+          onChanged();
+        } else {
+          lfuLogFactorBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Determines how the frequency counter represents key hits.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lfu_log_factor = 17 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setLfuLogFactor(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (lfuLogFactorBuilder_ == null) {
+          lfuLogFactor_ = builderForValue.build();
+          onChanged();
+        } else {
+          lfuLogFactorBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Determines how the frequency counter represents key hits.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lfu_log_factor = 17 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeLfuLogFactor(com.google.protobuf.Int64Value value) {
+        if (lfuLogFactorBuilder_ == null) {
+          if (lfuLogFactor_ != null) {
+            lfuLogFactor_ =
+              com.google.protobuf.Int64Value.newBuilder(lfuLogFactor_).mergeFrom(value).buildPartial();
+          } else {
+            lfuLogFactor_ = value;
+          }
+          onChanged();
+        } else {
+          lfuLogFactorBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Determines how the frequency counter represents key hits.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lfu_log_factor = 17 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearLfuLogFactor() {
+        if (lfuLogFactorBuilder_ == null) {
+          lfuLogFactor_ = null;
+          onChanged();
+        } else {
+          lfuLogFactor_ = null;
+          lfuLogFactorBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Determines how the frequency counter represents key hits.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lfu_log_factor = 17 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getLfuLogFactorBuilder() {
+        
+        onChanged();
+        return getLfuLogFactorFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Determines how the frequency counter represents key hits.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lfu_log_factor = 17 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getLfuLogFactorOrBuilder() {
+        if (lfuLogFactorBuilder_ != null) {
+          return lfuLogFactorBuilder_.getMessageOrBuilder();
+        } else {
+          return lfuLogFactor_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : lfuLogFactor_;
+        }
+      }
+      /**
+       * <pre>
+       * Determines how the frequency counter represents key hits.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lfu_log_factor = 17 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getLfuLogFactorFieldBuilder() {
+        if (lfuLogFactorBuilder_ == null) {
+          lfuLogFactorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getLfuLogFactor(),
+                  getParentForChildren(),
+                  isClean());
+          lfuLogFactor_ = null;
+        }
+        return lfuLogFactorBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue turnBeforeSwitchover_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> turnBeforeSwitchoverBuilder_;
+      /**
+       * <pre>
+       * Allows to turn before switchover in RDSync
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue turn_before_switchover = 18;</code>
+       * @return Whether the turnBeforeSwitchover field is set.
+       */
+      public boolean hasTurnBeforeSwitchover() {
+        return turnBeforeSwitchoverBuilder_ != null || turnBeforeSwitchover_ != null;
+      }
+      /**
+       * <pre>
+       * Allows to turn before switchover in RDSync
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue turn_before_switchover = 18;</code>
+       * @return The turnBeforeSwitchover.
+       */
+      public com.google.protobuf.BoolValue getTurnBeforeSwitchover() {
+        if (turnBeforeSwitchoverBuilder_ == null) {
+          return turnBeforeSwitchover_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : turnBeforeSwitchover_;
+        } else {
+          return turnBeforeSwitchoverBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Allows to turn before switchover in RDSync
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue turn_before_switchover = 18;</code>
+       */
+      public Builder setTurnBeforeSwitchover(com.google.protobuf.BoolValue value) {
+        if (turnBeforeSwitchoverBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          turnBeforeSwitchover_ = value;
+          onChanged();
+        } else {
+          turnBeforeSwitchoverBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Allows to turn before switchover in RDSync
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue turn_before_switchover = 18;</code>
+       */
+      public Builder setTurnBeforeSwitchover(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (turnBeforeSwitchoverBuilder_ == null) {
+          turnBeforeSwitchover_ = builderForValue.build();
+          onChanged();
+        } else {
+          turnBeforeSwitchoverBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Allows to turn before switchover in RDSync
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue turn_before_switchover = 18;</code>
+       */
+      public Builder mergeTurnBeforeSwitchover(com.google.protobuf.BoolValue value) {
+        if (turnBeforeSwitchoverBuilder_ == null) {
+          if (turnBeforeSwitchover_ != null) {
+            turnBeforeSwitchover_ =
+              com.google.protobuf.BoolValue.newBuilder(turnBeforeSwitchover_).mergeFrom(value).buildPartial();
+          } else {
+            turnBeforeSwitchover_ = value;
+          }
+          onChanged();
+        } else {
+          turnBeforeSwitchoverBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Allows to turn before switchover in RDSync
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue turn_before_switchover = 18;</code>
+       */
+      public Builder clearTurnBeforeSwitchover() {
+        if (turnBeforeSwitchoverBuilder_ == null) {
+          turnBeforeSwitchover_ = null;
+          onChanged();
+        } else {
+          turnBeforeSwitchover_ = null;
+          turnBeforeSwitchoverBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Allows to turn before switchover in RDSync
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue turn_before_switchover = 18;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getTurnBeforeSwitchoverBuilder() {
+        
+        onChanged();
+        return getTurnBeforeSwitchoverFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Allows to turn before switchover in RDSync
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue turn_before_switchover = 18;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getTurnBeforeSwitchoverOrBuilder() {
+        if (turnBeforeSwitchoverBuilder_ != null) {
+          return turnBeforeSwitchoverBuilder_.getMessageOrBuilder();
+        } else {
+          return turnBeforeSwitchover_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : turnBeforeSwitchover_;
+        }
+      }
+      /**
+       * <pre>
+       * Allows to turn before switchover in RDSync
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue turn_before_switchover = 18;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getTurnBeforeSwitchoverFieldBuilder() {
+        if (turnBeforeSwitchoverBuilder_ == null) {
+          turnBeforeSwitchoverBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getTurnBeforeSwitchover(),
+                  getParentForChildren(),
+                  isClean());
+          turnBeforeSwitchover_ = null;
+        }
+        return turnBeforeSwitchoverBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue allowDataLoss_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> allowDataLossBuilder_;
+      /**
+       * <pre>
+       * Allows some data to be lost in favor of faster switchover/restart
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue allow_data_loss = 19;</code>
+       * @return Whether the allowDataLoss field is set.
+       */
+      public boolean hasAllowDataLoss() {
+        return allowDataLossBuilder_ != null || allowDataLoss_ != null;
+      }
+      /**
+       * <pre>
+       * Allows some data to be lost in favor of faster switchover/restart
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue allow_data_loss = 19;</code>
+       * @return The allowDataLoss.
+       */
+      public com.google.protobuf.BoolValue getAllowDataLoss() {
+        if (allowDataLossBuilder_ == null) {
+          return allowDataLoss_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : allowDataLoss_;
+        } else {
+          return allowDataLossBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Allows some data to be lost in favor of faster switchover/restart
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue allow_data_loss = 19;</code>
+       */
+      public Builder setAllowDataLoss(com.google.protobuf.BoolValue value) {
+        if (allowDataLossBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          allowDataLoss_ = value;
+          onChanged();
+        } else {
+          allowDataLossBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Allows some data to be lost in favor of faster switchover/restart
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue allow_data_loss = 19;</code>
+       */
+      public Builder setAllowDataLoss(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (allowDataLossBuilder_ == null) {
+          allowDataLoss_ = builderForValue.build();
+          onChanged();
+        } else {
+          allowDataLossBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Allows some data to be lost in favor of faster switchover/restart
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue allow_data_loss = 19;</code>
+       */
+      public Builder mergeAllowDataLoss(com.google.protobuf.BoolValue value) {
+        if (allowDataLossBuilder_ == null) {
+          if (allowDataLoss_ != null) {
+            allowDataLoss_ =
+              com.google.protobuf.BoolValue.newBuilder(allowDataLoss_).mergeFrom(value).buildPartial();
+          } else {
+            allowDataLoss_ = value;
+          }
+          onChanged();
+        } else {
+          allowDataLossBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Allows some data to be lost in favor of faster switchover/restart
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue allow_data_loss = 19;</code>
+       */
+      public Builder clearAllowDataLoss() {
+        if (allowDataLossBuilder_ == null) {
+          allowDataLoss_ = null;
+          onChanged();
+        } else {
+          allowDataLoss_ = null;
+          allowDataLossBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Allows some data to be lost in favor of faster switchover/restart
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue allow_data_loss = 19;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getAllowDataLossBuilder() {
+        
+        onChanged();
+        return getAllowDataLossFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Allows some data to be lost in favor of faster switchover/restart
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue allow_data_loss = 19;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getAllowDataLossOrBuilder() {
+        if (allowDataLossBuilder_ != null) {
+          return allowDataLossBuilder_.getMessageOrBuilder();
+        } else {
+          return allowDataLoss_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : allowDataLoss_;
+        }
+      }
+      /**
+       * <pre>
+       * Allows some data to be lost in favor of faster switchover/restart
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue allow_data_loss = 19;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getAllowDataLossFieldBuilder() {
+        if (allowDataLossBuilder_ == null) {
+          allowDataLossBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getAllowDataLoss(),
+                  getParentForChildren(),
+                  isClean());
+          allowDataLoss_ = null;
+        }
+        return allowDataLossBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5535,7 +7902,7 @@ public final class Redis {
       "\n,yandex/cloud/mdb/redis/v1/config/redis" +
       ".proto\022 yandex.cloud.mdb.redis.v1.config" +
       "\032\036google/protobuf/wrappers.proto\032\035yandex" +
-      "/cloud/validation.proto\"\214\t\n\013RedisConfig\022" +
+      "/cloud/validation.proto\"\316\r\n\013RedisConfig\022" +
       "W\n\020maxmemory_policy\030\001 \001(\0162=.yandex.cloud" +
       ".mdb.redis.v1.config.RedisConfig.Maxmemo" +
       "ryPolicy\022,\n\007timeout\030\002 \001(\0132\033.google.proto" +
@@ -5554,26 +7921,41 @@ public final class Redis {
       ".yandex.cloud.mdb.redis.v1.config.RedisC" +
       "onfig.ClientOutputBufferLimit\022@\n\021maxmemo" +
       "ry_percent\030\n \001(\0132\033.google.protobuf.Int64" +
-      "ValueB\010\372\3071\0041-75\032\325\001\n\027ClientOutputBufferLi" +
-      "mit\0228\n\nhard_limit\030\001 \001(\0132\033.google.protobu" +
-      "f.Int64ValueB\007\372\3071\003>=0\0228\n\nsoft_limit\030\003 \001(" +
+      "ValueB\010\372\3071\0041-75\022<\n\016lua_time_limit\030\013 \001(\0132" +
+      "\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022F\n" +
+      "\031repl_backlog_size_percent\030\014 \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\006\372\3071\002>0\022A\n\035cluster" +
+      "_require_full_coverage\030\r \001(\0132\032.google.pr" +
+      "otobuf.BoolValue\022A\n\035cluster_allow_reads_" +
+      "when_down\030\016 \001(\0132\032.google.protobuf.BoolVa" +
+      "lue\022G\n#cluster_allow_pubsubshard_when_do" +
+      "wn\030\017 \001(\0132\032.google.protobuf.BoolValue\022<\n\016" +
+      "lfu_decay_time\030\020 \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\007\372\3071\003>=0\022<\n\016lfu_log_factor\030\021 \001" +
+      "(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0" +
+      "\022:\n\026turn_before_switchover\030\022 \001(\0132\032.googl" +
+      "e.protobuf.BoolValue\0223\n\017allow_data_loss\030" +
+      "\023 \001(\0132\032.google.protobuf.BoolValue\032\325\001\n\027Cl" +
+      "ientOutputBufferLimit\0228\n\nhard_limit\030\001 \001(" +
       "\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022" +
-      ":\n\014soft_seconds\030\005 \001(\0132\033.google.protobuf." +
-      "Int64ValueB\007\372\3071\003>=0J\004\010\004\020\005J\004\010\002\020\003\"\304\001\n\017Maxm" +
-      "emoryPolicy\022 \n\034MAXMEMORY_POLICY_UNSPECIF" +
-      "IED\020\000\022\020\n\014VOLATILE_LRU\020\001\022\017\n\013ALLKEYS_LRU\020\002" +
-      "\022\020\n\014VOLATILE_LFU\020\003\022\017\n\013ALLKEYS_LFU\020\004\022\023\n\017V" +
-      "OLATILE_RANDOM\020\005\022\022\n\016ALLKEYS_RANDOM\020\006\022\020\n\014" +
-      "VOLATILE_TTL\020\007\022\016\n\nNOEVICTION\020\010\"\344\001\n\016Redis" +
-      "ConfigSet\022G\n\020effective_config\030\001 \001(\0132-.ya" +
-      "ndex.cloud.mdb.redis.v1.config.RedisConf" +
-      "ig\022B\n\013user_config\030\002 \001(\0132-.yandex.cloud.m" +
-      "db.redis.v1.config.RedisConfig\022E\n\016defaul" +
-      "t_config\030\003 \001(\0132-.yandex.cloud.mdb.redis." +
-      "v1.config.RedisConfigBr\n$yandex.cloud.ap" +
-      "i.mdb.redis.v1.configZJgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/mdb/redi" +
-      "s/v1/config;redisb\006proto3"
+      "8\n\nsoft_limit\030\003 \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\007\372\3071\003>=0\022:\n\014soft_seconds\030\005 \001(\0132" +
+      "\033.google.protobuf.Int64ValueB\007\372\3071\003>=0J\004\010" +
+      "\004\020\005J\004\010\002\020\003\"\304\001\n\017MaxmemoryPolicy\022 \n\034MAXMEMO" +
+      "RY_POLICY_UNSPECIFIED\020\000\022\020\n\014VOLATILE_LRU\020" +
+      "\001\022\017\n\013ALLKEYS_LRU\020\002\022\020\n\014VOLATILE_LFU\020\003\022\017\n\013" +
+      "ALLKEYS_LFU\020\004\022\023\n\017VOLATILE_RANDOM\020\005\022\022\n\016AL" +
+      "LKEYS_RANDOM\020\006\022\020\n\014VOLATILE_TTL\020\007\022\016\n\nNOEV" +
+      "ICTION\020\010\"\344\001\n\016RedisConfigSet\022G\n\020effective" +
+      "_config\030\001 \001(\0132-.yandex.cloud.mdb.redis.v" +
+      "1.config.RedisConfig\022B\n\013user_config\030\002 \001(" +
+      "\0132-.yandex.cloud.mdb.redis.v1.config.Red" +
+      "isConfig\022E\n\016default_config\030\003 \001(\0132-.yande" +
+      "x.cloud.mdb.redis.v1.config.RedisConfigB" +
+      "r\n$yandex.cloud.api.mdb.redis.v1.configZ" +
+      "Jgithub.com/yandex-cloud/go-genproto/yan" +
+      "dex/cloud/mdb/redis/v1/config;redisb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5586,7 +7968,7 @@ public final class Redis {
     internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig_descriptor,
-        new java.lang.String[] { "MaxmemoryPolicy", "Timeout", "Password", "Databases", "SlowlogLogSlowerThan", "SlowlogMaxLen", "NotifyKeyspaceEvents", "ClientOutputBufferLimitPubsub", "ClientOutputBufferLimitNormal", "MaxmemoryPercent", });
+        new java.lang.String[] { "MaxmemoryPolicy", "Timeout", "Password", "Databases", "SlowlogLogSlowerThan", "SlowlogMaxLen", "NotifyKeyspaceEvents", "ClientOutputBufferLimitPubsub", "ClientOutputBufferLimitNormal", "MaxmemoryPercent", "LuaTimeLimit", "ReplBacklogSizePercent", "ClusterRequireFullCoverage", "ClusterAllowReadsWhenDown", "ClusterAllowPubsubshardWhenDown", "LfuDecayTime", "LfuLogFactor", "TurnBeforeSwitchover", "AllowDataLoss", });
     internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig_ClientOutputBufferLimit_descriptor =
       internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig_ClientOutputBufferLimit_fieldAccessorTable = new

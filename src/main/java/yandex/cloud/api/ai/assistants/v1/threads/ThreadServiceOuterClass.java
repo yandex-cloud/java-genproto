@@ -31,35 +31,63 @@ public final class ThreadServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * List of messages to initialize the thread.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
      */
     java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData> 
         getMessagesList();
     /**
+     * <pre>
+     * List of messages to initialize the thread.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData getMessages(int index);
     /**
+     * <pre>
+     * List of messages to initialize the thread.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
      */
     int getMessagesCount();
     /**
+     * <pre>
+     * List of messages to initialize the thread.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
      */
     java.util.List<? extends yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageDataOrBuilder> 
         getMessagesOrBuilderList();
     /**
+     * <pre>
+     * List of messages to initialize the thread.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageDataOrBuilder getMessagesOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Name of the thread.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the thread.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The bytes for name.
      */
@@ -67,11 +95,19 @@ public final class ThreadServiceOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the thread.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the thread.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -79,11 +115,19 @@ public final class ThreadServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Default user ID that will be used as the author for thread messages if no other author is specified.
+     * </pre>
+     *
      * <code>string default_message_author_id = 5;</code>
      * @return The defaultMessageAuthorId.
      */
     java.lang.String getDefaultMessageAuthorId();
     /**
+     * <pre>
+     * Default user ID that will be used as the author for thread messages if no other author is specified.
+     * </pre>
+     *
      * <code>string default_message_author_id = 5;</code>
      * @return The bytes for defaultMessageAuthorId.
      */
@@ -91,25 +135,45 @@ public final class ThreadServiceOuterClass {
         getDefaultMessageAuthorIdBytes();
 
     /**
+     * <pre>
+     * Expiration configuration for the thread.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 6;</code>
      * @return Whether the expirationConfig field is set.
      */
     boolean hasExpirationConfig();
     /**
+     * <pre>
+     * Expiration configuration for the thread.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 6;</code>
      * @return The expirationConfig.
      */
     yandex.cloud.api.ai.common.Common.ExpirationConfig getExpirationConfig();
     /**
+     * <pre>
+     * Expiration configuration for the thread.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 6;</code>
      */
     yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder getExpirationConfigOrBuilder();
 
     /**
+     * <pre>
+     * Set of key-value pairs to label the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Set of key-value pairs to label the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
     boolean containsLabels(
@@ -121,11 +185,19 @@ public final class ThreadServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Set of key-value pairs to label the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Set of key-value pairs to label the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
 
@@ -133,6 +205,10 @@ public final class ThreadServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Set of key-value pairs to label the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
 
@@ -140,6 +216,10 @@ public final class ThreadServiceOuterClass {
         java.lang.String key);
   }
   /**
+   * <pre>
+   * Request message for creating a new thread.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.CreateThreadRequest}
    */
   public static final class CreateThreadRequest extends
@@ -337,6 +417,10 @@ public final class ThreadServiceOuterClass {
     public static final int MESSAGES_FIELD_NUMBER = 2;
     private java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData> messages_;
     /**
+     * <pre>
+     * List of messages to initialize the thread.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
      */
     @java.lang.Override
@@ -344,6 +428,10 @@ public final class ThreadServiceOuterClass {
       return messages_;
     }
     /**
+     * <pre>
+     * List of messages to initialize the thread.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
      */
     @java.lang.Override
@@ -352,6 +440,10 @@ public final class ThreadServiceOuterClass {
       return messages_;
     }
     /**
+     * <pre>
+     * List of messages to initialize the thread.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
      */
     @java.lang.Override
@@ -359,6 +451,10 @@ public final class ThreadServiceOuterClass {
       return messages_.size();
     }
     /**
+     * <pre>
+     * List of messages to initialize the thread.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
      */
     @java.lang.Override
@@ -366,6 +462,10 @@ public final class ThreadServiceOuterClass {
       return messages_.get(index);
     }
     /**
+     * <pre>
+     * List of messages to initialize the thread.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
      */
     @java.lang.Override
@@ -377,6 +477,10 @@ public final class ThreadServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the thread.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The name.
      */
@@ -394,6 +498,10 @@ public final class ThreadServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the thread.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The bytes for name.
      */
@@ -415,6 +523,10 @@ public final class ThreadServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the thread.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
@@ -432,6 +544,10 @@ public final class ThreadServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the thread.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -453,6 +569,10 @@ public final class ThreadServiceOuterClass {
     public static final int DEFAULT_MESSAGE_AUTHOR_ID_FIELD_NUMBER = 5;
     private volatile java.lang.Object defaultMessageAuthorId_;
     /**
+     * <pre>
+     * Default user ID that will be used as the author for thread messages if no other author is specified.
+     * </pre>
+     *
      * <code>string default_message_author_id = 5;</code>
      * @return The defaultMessageAuthorId.
      */
@@ -470,6 +590,10 @@ public final class ThreadServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Default user ID that will be used as the author for thread messages if no other author is specified.
+     * </pre>
+     *
      * <code>string default_message_author_id = 5;</code>
      * @return The bytes for defaultMessageAuthorId.
      */
@@ -491,6 +615,10 @@ public final class ThreadServiceOuterClass {
     public static final int EXPIRATION_CONFIG_FIELD_NUMBER = 6;
     private yandex.cloud.api.ai.common.Common.ExpirationConfig expirationConfig_;
     /**
+     * <pre>
+     * Expiration configuration for the thread.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 6;</code>
      * @return Whether the expirationConfig field is set.
      */
@@ -499,6 +627,10 @@ public final class ThreadServiceOuterClass {
       return expirationConfig_ != null;
     }
     /**
+     * <pre>
+     * Expiration configuration for the thread.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 6;</code>
      * @return The expirationConfig.
      */
@@ -507,6 +639,10 @@ public final class ThreadServiceOuterClass {
       return expirationConfig_ == null ? yandex.cloud.api.ai.common.Common.ExpirationConfig.getDefaultInstance() : expirationConfig_;
     }
     /**
+     * <pre>
+     * Expiration configuration for the thread.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 6;</code>
      */
     @java.lang.Override
@@ -541,6 +677,10 @@ public final class ThreadServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
 
@@ -559,6 +699,10 @@ public final class ThreadServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
     @java.lang.Override
@@ -567,6 +711,10 @@ public final class ThreadServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
     @java.lang.Override
@@ -580,6 +728,10 @@ public final class ThreadServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
     @java.lang.Override
@@ -831,6 +983,10 @@ public final class ThreadServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for creating a new thread.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.CreateThreadRequest}
      */
     public static final class Builder extends
@@ -1173,6 +1329,10 @@ public final class ThreadServiceOuterClass {
           yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageDataOrBuilder> messagesBuilder_;
 
       /**
+       * <pre>
+       * List of messages to initialize the thread.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
        */
       public java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData> getMessagesList() {
@@ -1183,6 +1343,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of messages to initialize the thread.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
        */
       public int getMessagesCount() {
@@ -1193,6 +1357,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of messages to initialize the thread.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData getMessages(int index) {
@@ -1203,6 +1371,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of messages to initialize the thread.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
        */
       public Builder setMessages(
@@ -1220,6 +1392,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of messages to initialize the thread.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
        */
       public Builder setMessages(
@@ -1234,6 +1410,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of messages to initialize the thread.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
        */
       public Builder addMessages(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData value) {
@@ -1250,6 +1430,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of messages to initialize the thread.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
        */
       public Builder addMessages(
@@ -1267,6 +1451,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of messages to initialize the thread.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
        */
       public Builder addMessages(
@@ -1281,6 +1469,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of messages to initialize the thread.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
        */
       public Builder addMessages(
@@ -1295,6 +1487,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of messages to initialize the thread.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
        */
       public Builder addAllMessages(
@@ -1310,6 +1506,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of messages to initialize the thread.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
        */
       public Builder clearMessages() {
@@ -1323,6 +1523,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of messages to initialize the thread.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
        */
       public Builder removeMessages(int index) {
@@ -1336,6 +1540,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of messages to initialize the thread.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData.Builder getMessagesBuilder(
@@ -1343,6 +1551,10 @@ public final class ThreadServiceOuterClass {
         return getMessagesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of messages to initialize the thread.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageDataOrBuilder getMessagesOrBuilder(
@@ -1353,6 +1565,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of messages to initialize the thread.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
        */
       public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageDataOrBuilder> 
@@ -1364,6 +1580,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of messages to initialize the thread.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData.Builder addMessagesBuilder() {
@@ -1371,6 +1591,10 @@ public final class ThreadServiceOuterClass {
             yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of messages to initialize the thread.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData.Builder addMessagesBuilder(
@@ -1379,6 +1603,10 @@ public final class ThreadServiceOuterClass {
             index, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of messages to initialize the thread.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData messages = 2;</code>
        */
       public java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData.Builder> 
@@ -1402,6 +1630,10 @@ public final class ThreadServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the thread.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return The name.
        */
@@ -1418,6 +1650,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the thread.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return The bytes for name.
        */
@@ -1435,6 +1671,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the thread.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -1450,6 +1690,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the thread.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return This builder for chaining.
        */
@@ -1460,6 +1704,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the thread.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -1478,6 +1726,10 @@ public final class ThreadServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the thread.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The description.
        */
@@ -1494,6 +1746,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the thread.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The bytes for description.
        */
@@ -1511,6 +1767,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the thread.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -1526,6 +1786,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the thread.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return This builder for chaining.
        */
@@ -1536,6 +1800,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the thread.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -1554,6 +1822,10 @@ public final class ThreadServiceOuterClass {
 
       private java.lang.Object defaultMessageAuthorId_ = "";
       /**
+       * <pre>
+       * Default user ID that will be used as the author for thread messages if no other author is specified.
+       * </pre>
+       *
        * <code>string default_message_author_id = 5;</code>
        * @return The defaultMessageAuthorId.
        */
@@ -1570,6 +1842,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Default user ID that will be used as the author for thread messages if no other author is specified.
+       * </pre>
+       *
        * <code>string default_message_author_id = 5;</code>
        * @return The bytes for defaultMessageAuthorId.
        */
@@ -1587,6 +1863,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Default user ID that will be used as the author for thread messages if no other author is specified.
+       * </pre>
+       *
        * <code>string default_message_author_id = 5;</code>
        * @param value The defaultMessageAuthorId to set.
        * @return This builder for chaining.
@@ -1602,6 +1882,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Default user ID that will be used as the author for thread messages if no other author is specified.
+       * </pre>
+       *
        * <code>string default_message_author_id = 5;</code>
        * @return This builder for chaining.
        */
@@ -1612,6 +1896,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Default user ID that will be used as the author for thread messages if no other author is specified.
+       * </pre>
+       *
        * <code>string default_message_author_id = 5;</code>
        * @param value The bytes for defaultMessageAuthorId to set.
        * @return This builder for chaining.
@@ -1632,6 +1920,10 @@ public final class ThreadServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.common.Common.ExpirationConfig, yandex.cloud.api.ai.common.Common.ExpirationConfig.Builder, yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder> expirationConfigBuilder_;
       /**
+       * <pre>
+       * Expiration configuration for the thread.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 6;</code>
        * @return Whether the expirationConfig field is set.
        */
@@ -1639,6 +1931,10 @@ public final class ThreadServiceOuterClass {
         return expirationConfigBuilder_ != null || expirationConfig_ != null;
       }
       /**
+       * <pre>
+       * Expiration configuration for the thread.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 6;</code>
        * @return The expirationConfig.
        */
@@ -1650,6 +1946,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Expiration configuration for the thread.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 6;</code>
        */
       public Builder setExpirationConfig(yandex.cloud.api.ai.common.Common.ExpirationConfig value) {
@@ -1666,6 +1966,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Expiration configuration for the thread.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 6;</code>
        */
       public Builder setExpirationConfig(
@@ -1680,6 +1984,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Expiration configuration for the thread.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 6;</code>
        */
       public Builder mergeExpirationConfig(yandex.cloud.api.ai.common.Common.ExpirationConfig value) {
@@ -1698,6 +2006,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Expiration configuration for the thread.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 6;</code>
        */
       public Builder clearExpirationConfig() {
@@ -1712,6 +2024,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Expiration configuration for the thread.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 6;</code>
        */
       public yandex.cloud.api.ai.common.Common.ExpirationConfig.Builder getExpirationConfigBuilder() {
@@ -1720,6 +2036,10 @@ public final class ThreadServiceOuterClass {
         return getExpirationConfigFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Expiration configuration for the thread.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 6;</code>
        */
       public yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder getExpirationConfigOrBuilder() {
@@ -1731,6 +2051,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Expiration configuration for the thread.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1774,6 +2098,10 @@ public final class ThreadServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the thread.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
 
@@ -1792,6 +2120,10 @@ public final class ThreadServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the thread.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
       @java.lang.Override
@@ -1800,6 +2132,10 @@ public final class ThreadServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the thread.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
       @java.lang.Override
@@ -1813,6 +2149,10 @@ public final class ThreadServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the thread.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
       @java.lang.Override
@@ -1834,6 +2174,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the thread.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
 
@@ -1853,6 +2197,10 @@ public final class ThreadServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the thread.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
       public Builder putLabels(
@@ -1868,6 +2216,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the thread.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
 
@@ -1935,11 +2287,19 @@ public final class ThreadServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the thread to retrieve.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The threadId.
      */
     java.lang.String getThreadId();
     /**
+     * <pre>
+     * ID of the thread to retrieve.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for threadId.
      */
@@ -1947,6 +2307,10 @@ public final class ThreadServiceOuterClass {
         getThreadIdBytes();
   }
   /**
+   * <pre>
+   * Request message for retrieving a thread by ID.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.GetThreadRequest}
    */
   public static final class GetThreadRequest extends
@@ -2033,6 +2397,10 @@ public final class ThreadServiceOuterClass {
     public static final int THREAD_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object threadId_;
     /**
+     * <pre>
+     * ID of the thread to retrieve.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The threadId.
      */
@@ -2050,6 +2418,10 @@ public final class ThreadServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the thread to retrieve.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for threadId.
      */
@@ -2223,6 +2595,10 @@ public final class ThreadServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for retrieving a thread by ID.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.GetThreadRequest}
      */
     public static final class Builder extends
@@ -2372,6 +2748,10 @@ public final class ThreadServiceOuterClass {
 
       private java.lang.Object threadId_ = "";
       /**
+       * <pre>
+       * ID of the thread to retrieve.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The threadId.
        */
@@ -2388,6 +2768,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thread to retrieve.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for threadId.
        */
@@ -2405,6 +2789,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thread to retrieve.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The threadId to set.
        * @return This builder for chaining.
@@ -2420,6 +2808,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thread to retrieve.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -2430,6 +2822,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thread to retrieve.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for threadId to set.
        * @return This builder for chaining.
@@ -2503,11 +2899,19 @@ public final class ThreadServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the thread to update.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The threadId.
      */
     java.lang.String getThreadId();
     /**
+     * <pre>
+     * ID of the thread to update.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for threadId.
      */
@@ -2515,26 +2919,46 @@ public final class ThreadServiceOuterClass {
         getThreadIdBytes();
 
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
+     * <pre>
+     * New name for the thread.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * New name for the thread.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The bytes for name.
      */
@@ -2542,11 +2966,19 @@ public final class ThreadServiceOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * New description for the thread.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * New description for the thread.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -2554,25 +2986,45 @@ public final class ThreadServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * New expiration configuration for the thread.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return Whether the expirationConfig field is set.
      */
     boolean hasExpirationConfig();
     /**
+     * <pre>
+     * New expiration configuration for the thread.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return The expirationConfig.
      */
     yandex.cloud.api.ai.common.Common.ExpirationConfig getExpirationConfig();
     /**
+     * <pre>
+     * New expiration configuration for the thread.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      */
     yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder getExpirationConfigOrBuilder();
 
     /**
+     * <pre>
+     * New set of labels for the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * New set of labels for the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     boolean containsLabels(
@@ -2584,11 +3036,19 @@ public final class ThreadServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * New set of labels for the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * New set of labels for the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -2596,6 +3056,10 @@ public final class ThreadServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * New set of labels for the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -2603,6 +3067,10 @@ public final class ThreadServiceOuterClass {
         java.lang.String key);
   }
   /**
+   * <pre>
+   * Request message for updating an existing thread.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.UpdateThreadRequest}
    */
   public static final class UpdateThreadRequest extends
@@ -2755,6 +3223,10 @@ public final class ThreadServiceOuterClass {
     public static final int THREAD_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object threadId_;
     /**
+     * <pre>
+     * ID of the thread to update.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The threadId.
      */
@@ -2772,6 +3244,10 @@ public final class ThreadServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the thread to update.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for threadId.
      */
@@ -2793,6 +3269,10 @@ public final class ThreadServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return Whether the updateMask field is set.
      */
@@ -2801,6 +3281,10 @@ public final class ThreadServiceOuterClass {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return The updateMask.
      */
@@ -2809,6 +3293,10 @@ public final class ThreadServiceOuterClass {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
@@ -2819,6 +3307,10 @@ public final class ThreadServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * New name for the thread.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The name.
      */
@@ -2836,6 +3328,10 @@ public final class ThreadServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New name for the thread.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The bytes for name.
      */
@@ -2857,6 +3353,10 @@ public final class ThreadServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * New description for the thread.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
@@ -2874,6 +3374,10 @@ public final class ThreadServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New description for the thread.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -2895,6 +3399,10 @@ public final class ThreadServiceOuterClass {
     public static final int EXPIRATION_CONFIG_FIELD_NUMBER = 5;
     private yandex.cloud.api.ai.common.Common.ExpirationConfig expirationConfig_;
     /**
+     * <pre>
+     * New expiration configuration for the thread.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return Whether the expirationConfig field is set.
      */
@@ -2903,6 +3411,10 @@ public final class ThreadServiceOuterClass {
       return expirationConfig_ != null;
     }
     /**
+     * <pre>
+     * New expiration configuration for the thread.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return The expirationConfig.
      */
@@ -2911,6 +3423,10 @@ public final class ThreadServiceOuterClass {
       return expirationConfig_ == null ? yandex.cloud.api.ai.common.Common.ExpirationConfig.getDefaultInstance() : expirationConfig_;
     }
     /**
+     * <pre>
+     * New expiration configuration for the thread.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      */
     @java.lang.Override
@@ -2945,6 +3461,10 @@ public final class ThreadServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * New set of labels for the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -2963,6 +3483,10 @@ public final class ThreadServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * New set of labels for the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -2971,6 +3495,10 @@ public final class ThreadServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * New set of labels for the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -2984,6 +3512,10 @@ public final class ThreadServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * New set of labels for the thread.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -3228,6 +3760,10 @@ public final class ThreadServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for updating an existing thread.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.UpdateThreadRequest}
      */
     public static final class Builder extends
@@ -3448,6 +3984,10 @@ public final class ThreadServiceOuterClass {
 
       private java.lang.Object threadId_ = "";
       /**
+       * <pre>
+       * ID of the thread to update.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The threadId.
        */
@@ -3464,6 +4004,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thread to update.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for threadId.
        */
@@ -3481,6 +4025,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thread to update.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The threadId to set.
        * @return This builder for chaining.
@@ -3496,6 +4044,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thread to update.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -3506,6 +4058,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thread to update.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for threadId to set.
        * @return This builder for chaining.
@@ -3526,6 +4082,10 @@ public final class ThreadServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        * @return Whether the updateMask field is set.
        */
@@ -3533,6 +4093,10 @@ public final class ThreadServiceOuterClass {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        * @return The updateMask.
        */
@@ -3544,6 +4108,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -3560,6 +4128,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setUpdateMask(
@@ -3574,6 +4146,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -3592,6 +4168,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearUpdateMask() {
@@ -3606,6 +4186,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -3614,6 +4198,10 @@ public final class ThreadServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -3625,6 +4213,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3643,6 +4235,10 @@ public final class ThreadServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * New name for the thread.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return The name.
        */
@@ -3659,6 +4255,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New name for the thread.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return The bytes for name.
        */
@@ -3676,6 +4276,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New name for the thread.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -3691,6 +4295,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New name for the thread.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return This builder for chaining.
        */
@@ -3701,6 +4309,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New name for the thread.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -3719,6 +4331,10 @@ public final class ThreadServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * New description for the thread.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The description.
        */
@@ -3735,6 +4351,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description for the thread.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The bytes for description.
        */
@@ -3752,6 +4372,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description for the thread.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -3767,6 +4391,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description for the thread.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return This builder for chaining.
        */
@@ -3777,6 +4405,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description for the thread.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -3797,6 +4429,10 @@ public final class ThreadServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.common.Common.ExpirationConfig, yandex.cloud.api.ai.common.Common.ExpirationConfig.Builder, yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder> expirationConfigBuilder_;
       /**
+       * <pre>
+       * New expiration configuration for the thread.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        * @return Whether the expirationConfig field is set.
        */
@@ -3804,6 +4440,10 @@ public final class ThreadServiceOuterClass {
         return expirationConfigBuilder_ != null || expirationConfig_ != null;
       }
       /**
+       * <pre>
+       * New expiration configuration for the thread.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        * @return The expirationConfig.
        */
@@ -3815,6 +4455,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New expiration configuration for the thread.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder setExpirationConfig(yandex.cloud.api.ai.common.Common.ExpirationConfig value) {
@@ -3831,6 +4475,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New expiration configuration for the thread.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder setExpirationConfig(
@@ -3845,6 +4493,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New expiration configuration for the thread.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder mergeExpirationConfig(yandex.cloud.api.ai.common.Common.ExpirationConfig value) {
@@ -3863,6 +4515,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New expiration configuration for the thread.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder clearExpirationConfig() {
@@ -3877,6 +4533,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New expiration configuration for the thread.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public yandex.cloud.api.ai.common.Common.ExpirationConfig.Builder getExpirationConfigBuilder() {
@@ -3885,6 +4545,10 @@ public final class ThreadServiceOuterClass {
         return getExpirationConfigFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * New expiration configuration for the thread.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder getExpirationConfigOrBuilder() {
@@ -3896,6 +4560,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New expiration configuration for the thread.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3939,6 +4607,10 @@ public final class ThreadServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * New set of labels for the thread.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -3957,6 +4629,10 @@ public final class ThreadServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * New set of labels for the thread.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -3965,6 +4641,10 @@ public final class ThreadServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * New set of labels for the thread.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -3978,6 +4658,10 @@ public final class ThreadServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * New set of labels for the thread.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -3999,6 +4683,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New set of labels for the thread.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -4018,6 +4706,10 @@ public final class ThreadServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * New set of labels for the thread.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       public Builder putLabels(
@@ -4033,6 +4725,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New set of labels for the thread.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -4100,11 +4796,19 @@ public final class ThreadServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the thread to delete.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The threadId.
      */
     java.lang.String getThreadId();
     /**
+     * <pre>
+     * ID of the thread to delete.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for threadId.
      */
@@ -4112,6 +4816,10 @@ public final class ThreadServiceOuterClass {
         getThreadIdBytes();
   }
   /**
+   * <pre>
+   * Request message for deleting a thread by ID.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.DeleteThreadRequest}
    */
   public static final class DeleteThreadRequest extends
@@ -4198,6 +4906,10 @@ public final class ThreadServiceOuterClass {
     public static final int THREAD_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object threadId_;
     /**
+     * <pre>
+     * ID of the thread to delete.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The threadId.
      */
@@ -4215,6 +4927,10 @@ public final class ThreadServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the thread to delete.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for threadId.
      */
@@ -4388,6 +5104,10 @@ public final class ThreadServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for deleting a thread by ID.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.DeleteThreadRequest}
      */
     public static final class Builder extends
@@ -4537,6 +5257,10 @@ public final class ThreadServiceOuterClass {
 
       private java.lang.Object threadId_ = "";
       /**
+       * <pre>
+       * ID of the thread to delete.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The threadId.
        */
@@ -4553,6 +5277,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thread to delete.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for threadId.
        */
@@ -4570,6 +5298,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thread to delete.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The threadId to set.
        * @return This builder for chaining.
@@ -4585,6 +5317,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thread to delete.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -4595,6 +5331,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thread to delete.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for threadId to set.
        * @return This builder for chaining.
@@ -4668,6 +5408,10 @@ public final class ThreadServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
+   * <pre>
+   * Response message for the delete operation.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.DeleteThreadResponse}
    */
   public static final class DeleteThreadResponse extends
@@ -4889,6 +5633,10 @@ public final class ThreadServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Response message for the delete operation.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.DeleteThreadResponse}
      */
     public static final class Builder extends
@@ -5086,11 +5834,19 @@ public final class ThreadServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Folder ID from which to list threads.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * Folder ID from which to list threads.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for folderId.
      */
@@ -5098,17 +5854,29 @@ public final class ThreadServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Maximum number of threads to return per page.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The bytes for pageToken.
      */
@@ -5116,6 +5884,10 @@ public final class ThreadServiceOuterClass {
         getPageTokenBytes();
   }
   /**
+   * <pre>
+   * Request message for listing threads in a specific folder.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.ListThreadsRequest}
    */
   public static final class ListThreadsRequest extends
@@ -5214,6 +5986,10 @@ public final class ThreadServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * Folder ID from which to list threads.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The folderId.
      */
@@ -5231,6 +6007,10 @@ public final class ThreadServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Folder ID from which to list threads.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for folderId.
      */
@@ -5252,6 +6032,10 @@ public final class ThreadServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * Maximum number of threads to return per page.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      * @return The pageSize.
      */
@@ -5263,6 +6047,10 @@ public final class ThreadServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The pageToken.
      */
@@ -5280,6 +6068,10 @@ public final class ThreadServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The bytes for pageToken.
      */
@@ -5475,6 +6267,10 @@ public final class ThreadServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for listing threads in a specific folder.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.ListThreadsRequest}
      */
     public static final class Builder extends
@@ -5637,6 +6433,10 @@ public final class ThreadServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * Folder ID from which to list threads.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The folderId.
        */
@@ -5653,6 +6453,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID from which to list threads.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for folderId.
        */
@@ -5670,6 +6474,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID from which to list threads.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -5685,6 +6493,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID from which to list threads.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -5695,6 +6507,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID from which to list threads.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -5713,6 +6529,10 @@ public final class ThreadServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * Maximum number of threads to return per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @return The pageSize.
        */
@@ -5721,6 +6541,10 @@ public final class ThreadServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * Maximum number of threads to return per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -5732,6 +6556,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maximum number of threads to return per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @return This builder for chaining.
        */
@@ -5744,6 +6572,10 @@ public final class ThreadServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return The pageToken.
        */
@@ -5760,6 +6592,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return The bytes for pageToken.
        */
@@ -5777,6 +6613,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -5792,6 +6632,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return This builder for chaining.
        */
@@ -5802,6 +6646,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -5875,35 +6723,63 @@ public final class ThreadServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of threads in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
      */
     java.util.List<yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread> 
         getThreadsList();
     /**
+     * <pre>
+     * List of threads in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
      */
     yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread getThreads(int index);
     /**
+     * <pre>
+     * List of threads in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
      */
     int getThreadsCount();
     /**
+     * <pre>
+     * List of threads in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.ThreadOrBuilder> 
         getThreadsOrBuilderList();
     /**
+     * <pre>
+     * List of threads in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
      */
     yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.ThreadOrBuilder getThreadsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -5911,6 +6787,10 @@ public final class ThreadServiceOuterClass {
         getNextPageTokenBytes();
   }
   /**
+   * <pre>
+   * Response message for the list operation.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.ListThreadsResponse}
    */
   public static final class ListThreadsResponse extends
@@ -6011,6 +6891,10 @@ public final class ThreadServiceOuterClass {
     public static final int THREADS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread> threads_;
     /**
+     * <pre>
+     * List of threads in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
      */
     @java.lang.Override
@@ -6018,6 +6902,10 @@ public final class ThreadServiceOuterClass {
       return threads_;
     }
     /**
+     * <pre>
+     * List of threads in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
      */
     @java.lang.Override
@@ -6026,6 +6914,10 @@ public final class ThreadServiceOuterClass {
       return threads_;
     }
     /**
+     * <pre>
+     * List of threads in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
      */
     @java.lang.Override
@@ -6033,6 +6925,10 @@ public final class ThreadServiceOuterClass {
       return threads_.size();
     }
     /**
+     * <pre>
+     * List of threads in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
      */
     @java.lang.Override
@@ -6040,6 +6936,10 @@ public final class ThreadServiceOuterClass {
       return threads_.get(index);
     }
     /**
+     * <pre>
+     * List of threads in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
      */
     @java.lang.Override
@@ -6051,6 +6951,10 @@ public final class ThreadServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
@@ -6068,6 +6972,10 @@ public final class ThreadServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -6254,6 +7162,10 @@ public final class ThreadServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Response message for the list operation.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.ListThreadsResponse}
      */
     public static final class Builder extends
@@ -6458,6 +7370,10 @@ public final class ThreadServiceOuterClass {
           yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread, yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread.Builder, yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.ThreadOrBuilder> threadsBuilder_;
 
       /**
+       * <pre>
+       * List of threads in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
        */
       public java.util.List<yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread> getThreadsList() {
@@ -6468,6 +7384,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of threads in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
        */
       public int getThreadsCount() {
@@ -6478,6 +7398,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of threads in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread getThreads(int index) {
@@ -6488,6 +7412,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of threads in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
        */
       public Builder setThreads(
@@ -6505,6 +7433,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of threads in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
        */
       public Builder setThreads(
@@ -6519,6 +7451,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of threads in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
        */
       public Builder addThreads(yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread value) {
@@ -6535,6 +7471,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of threads in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
        */
       public Builder addThreads(
@@ -6552,6 +7492,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of threads in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
        */
       public Builder addThreads(
@@ -6566,6 +7510,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of threads in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
        */
       public Builder addThreads(
@@ -6580,6 +7528,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of threads in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
        */
       public Builder addAllThreads(
@@ -6595,6 +7547,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of threads in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
        */
       public Builder clearThreads() {
@@ -6608,6 +7564,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of threads in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
        */
       public Builder removeThreads(int index) {
@@ -6621,6 +7581,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of threads in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread.Builder getThreadsBuilder(
@@ -6628,6 +7592,10 @@ public final class ThreadServiceOuterClass {
         return getThreadsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of threads in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.ThreadOrBuilder getThreadsOrBuilder(
@@ -6638,6 +7606,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of threads in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.ThreadOrBuilder> 
@@ -6649,6 +7621,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of threads in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread.Builder addThreadsBuilder() {
@@ -6656,6 +7632,10 @@ public final class ThreadServiceOuterClass {
             yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of threads in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread.Builder addThreadsBuilder(
@@ -6664,6 +7644,10 @@ public final class ThreadServiceOuterClass {
             index, yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of threads in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Thread threads = 1;</code>
        */
       public java.util.List<yandex.cloud.api.ai.assistants.v1.threads.ThreadOuterClass.Thread.Builder> 
@@ -6687,6 +7671,10 @@ public final class ThreadServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The nextPageToken.
        */
@@ -6703,6 +7691,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The bytes for nextPageToken.
        */
@@ -6720,6 +7712,10 @@ public final class ThreadServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -6735,6 +7731,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return This builder for chaining.
        */
@@ -6745,6 +7745,10 @@ public final class ThreadServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.

@@ -383,25 +383,6 @@ public final class ProjectOuterClass {
 
       /**
        * <pre>
-       * Commit mode that is assigned to the project.
-       * </pre>
-       *
-       * <code>.yandex.cloud.datasphere.v1.Project.Settings.CommitMode commit_mode = 4;</code>
-       * @return The enum numeric value on the wire for commitMode.
-       */
-      int getCommitModeValue();
-      /**
-       * <pre>
-       * Commit mode that is assigned to the project.
-       * </pre>
-       *
-       * <code>.yandex.cloud.datasphere.v1.Project.Settings.CommitMode commit_mode = 4;</code>
-       * @return The commitMode.
-       */
-      yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Settings.CommitMode getCommitMode();
-
-      /**
-       * <pre>
        * Network interfaces security groups.
        * </pre>
        *
@@ -457,7 +438,6 @@ public final class ProjectOuterClass {
         serviceAccountId_ = "";
         subnetId_ = "";
         dataProcClusterId_ = "";
-        commitMode_ = 0;
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       }
 
@@ -510,12 +490,6 @@ public final class ProjectOuterClass {
                 dataProcClusterId_ = s;
                 break;
               }
-              case 32: {
-                int rawValue = input.readEnum();
-
-                commitMode_ = rawValue;
-                break;
-              }
               case 42: {
                 java.lang.String s = input.readStringRequireUtf8();
                 if (!((mutable_bitField0_ & 0x00000001) != 0)) {
@@ -558,141 +532,6 @@ public final class ProjectOuterClass {
         return yandex.cloud.api.datasphere.v1.ProjectOuterClass.internal_static_yandex_cloud_datasphere_v1_Project_Settings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Settings.class, yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Settings.Builder.class);
-      }
-
-      /**
-       * Protobuf enum {@code yandex.cloud.datasphere.v1.Project.Settings.CommitMode}
-       */
-      public enum CommitMode
-          implements com.google.protobuf.ProtocolMessageEnum {
-        /**
-         * <code>COMMIT_MODE_UNSPECIFIED = 0;</code>
-         */
-        COMMIT_MODE_UNSPECIFIED(0),
-        /**
-         * <pre>
-         * Commit happens after the execution of a cell or group of cells or after completion with an error.
-         * </pre>
-         *
-         * <code>STANDARD = 1;</code>
-         */
-        STANDARD(1),
-        /**
-         * <pre>
-         * Commit happens periodically.
-         * Also, automatic saving of state occurs when switching to another type of computing resource.
-         * </pre>
-         *
-         * <code>AUTO = 2;</code>
-         */
-        AUTO(2),
-        UNRECOGNIZED(-1),
-        ;
-
-        /**
-         * <code>COMMIT_MODE_UNSPECIFIED = 0;</code>
-         */
-        public static final int COMMIT_MODE_UNSPECIFIED_VALUE = 0;
-        /**
-         * <pre>
-         * Commit happens after the execution of a cell or group of cells or after completion with an error.
-         * </pre>
-         *
-         * <code>STANDARD = 1;</code>
-         */
-        public static final int STANDARD_VALUE = 1;
-        /**
-         * <pre>
-         * Commit happens periodically.
-         * Also, automatic saving of state occurs when switching to another type of computing resource.
-         * </pre>
-         *
-         * <code>AUTO = 2;</code>
-         */
-        public static final int AUTO_VALUE = 2;
-
-
-        public final int getNumber() {
-          if (this == UNRECOGNIZED) {
-            throw new java.lang.IllegalArgumentException(
-                "Can't get the number of an unknown enum value.");
-          }
-          return value;
-        }
-
-        /**
-         * @param value The numeric wire value of the corresponding enum entry.
-         * @return The enum associated with the given numeric wire value.
-         * @deprecated Use {@link #forNumber(int)} instead.
-         */
-        @java.lang.Deprecated
-        public static CommitMode valueOf(int value) {
-          return forNumber(value);
-        }
-
-        /**
-         * @param value The numeric wire value of the corresponding enum entry.
-         * @return The enum associated with the given numeric wire value.
-         */
-        public static CommitMode forNumber(int value) {
-          switch (value) {
-            case 0: return COMMIT_MODE_UNSPECIFIED;
-            case 1: return STANDARD;
-            case 2: return AUTO;
-            default: return null;
-          }
-        }
-
-        public static com.google.protobuf.Internal.EnumLiteMap<CommitMode>
-            internalGetValueMap() {
-          return internalValueMap;
-        }
-        private static final com.google.protobuf.Internal.EnumLiteMap<
-            CommitMode> internalValueMap =
-              new com.google.protobuf.Internal.EnumLiteMap<CommitMode>() {
-                public CommitMode findValueByNumber(int number) {
-                  return CommitMode.forNumber(number);
-                }
-              };
-
-        public final com.google.protobuf.Descriptors.EnumValueDescriptor
-            getValueDescriptor() {
-          if (this == UNRECOGNIZED) {
-            throw new java.lang.IllegalStateException(
-                "Can't get the descriptor of an unrecognized enum value.");
-          }
-          return getDescriptor().getValues().get(ordinal());
-        }
-        public final com.google.protobuf.Descriptors.EnumDescriptor
-            getDescriptorForType() {
-          return getDescriptor();
-        }
-        public static final com.google.protobuf.Descriptors.EnumDescriptor
-            getDescriptor() {
-          return yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Settings.getDescriptor().getEnumTypes().get(0);
-        }
-
-        private static final CommitMode[] VALUES = values();
-
-        public static CommitMode valueOf(
-            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-          if (desc.getType() != getDescriptor()) {
-            throw new java.lang.IllegalArgumentException(
-              "EnumValueDescriptor is not for this type.");
-          }
-          if (desc.getIndex() == -1) {
-            return UNRECOGNIZED;
-          }
-          return VALUES[desc.getIndex()];
-        }
-
-        private final int value;
-
-        private CommitMode(int value) {
-          this.value = value;
-        }
-
-        // @@protoc_insertion_point(enum_scope:yandex.cloud.datasphere.v1.Project.Settings.CommitMode)
       }
 
       public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 1;
@@ -835,33 +674,6 @@ public final class ProjectOuterClass {
         }
       }
 
-      public static final int COMMIT_MODE_FIELD_NUMBER = 4;
-      private int commitMode_;
-      /**
-       * <pre>
-       * Commit mode that is assigned to the project.
-       * </pre>
-       *
-       * <code>.yandex.cloud.datasphere.v1.Project.Settings.CommitMode commit_mode = 4;</code>
-       * @return The enum numeric value on the wire for commitMode.
-       */
-      @java.lang.Override public int getCommitModeValue() {
-        return commitMode_;
-      }
-      /**
-       * <pre>
-       * Commit mode that is assigned to the project.
-       * </pre>
-       *
-       * <code>.yandex.cloud.datasphere.v1.Project.Settings.CommitMode commit_mode = 4;</code>
-       * @return The commitMode.
-       */
-      @java.lang.Override public yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Settings.CommitMode getCommitMode() {
-        @SuppressWarnings("deprecation")
-        yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Settings.CommitMode result = yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Settings.CommitMode.valueOf(commitMode_);
-        return result == null ? yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Settings.CommitMode.UNRECOGNIZED : result;
-      }
-
       public static final int SECURITY_GROUP_IDS_FIELD_NUMBER = 5;
       private com.google.protobuf.LazyStringList securityGroupIds_;
       /**
@@ -936,9 +748,6 @@ public final class ProjectOuterClass {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataProcClusterId_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 3, dataProcClusterId_);
         }
-        if (commitMode_ != yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Settings.CommitMode.COMMIT_MODE_UNSPECIFIED.getNumber()) {
-          output.writeEnum(4, commitMode_);
-        }
         for (int i = 0; i < securityGroupIds_.size(); i++) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 5, securityGroupIds_.getRaw(i));
         }
@@ -959,10 +768,6 @@ public final class ProjectOuterClass {
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataProcClusterId_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, dataProcClusterId_);
-        }
-        if (commitMode_ != yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Settings.CommitMode.COMMIT_MODE_UNSPECIFIED.getNumber()) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeEnumSize(4, commitMode_);
         }
         {
           int dataSize = 0;
@@ -993,7 +798,6 @@ public final class ProjectOuterClass {
             .equals(other.getSubnetId())) return false;
         if (!getDataProcClusterId()
             .equals(other.getDataProcClusterId())) return false;
-        if (commitMode_ != other.commitMode_) return false;
         if (!getSecurityGroupIdsList()
             .equals(other.getSecurityGroupIdsList())) return false;
         if (!unknownFields.equals(other.unknownFields)) return false;
@@ -1013,8 +817,6 @@ public final class ProjectOuterClass {
         hash = (53 * hash) + getSubnetId().hashCode();
         hash = (37 * hash) + DATA_PROC_CLUSTER_ID_FIELD_NUMBER;
         hash = (53 * hash) + getDataProcClusterId().hashCode();
-        hash = (37 * hash) + COMMIT_MODE_FIELD_NUMBER;
-        hash = (53 * hash) + commitMode_;
         if (getSecurityGroupIdsCount() > 0) {
           hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
           hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
@@ -1158,8 +960,6 @@ public final class ProjectOuterClass {
 
           dataProcClusterId_ = "";
 
-          commitMode_ = 0;
-
           securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
           bitField0_ = (bitField0_ & ~0x00000001);
           return this;
@@ -1192,7 +992,6 @@ public final class ProjectOuterClass {
           result.serviceAccountId_ = serviceAccountId_;
           result.subnetId_ = subnetId_;
           result.dataProcClusterId_ = dataProcClusterId_;
-          result.commitMode_ = commitMode_;
           if (((bitField0_ & 0x00000001) != 0)) {
             securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
             bitField0_ = (bitField0_ & ~0x00000001);
@@ -1257,9 +1056,6 @@ public final class ProjectOuterClass {
           if (!other.getDataProcClusterId().isEmpty()) {
             dataProcClusterId_ = other.dataProcClusterId_;
             onChanged();
-          }
-          if (other.commitMode_ != 0) {
-            setCommitModeValue(other.getCommitModeValue());
           }
           if (!other.securityGroupIds_.isEmpty()) {
             if (securityGroupIds_.isEmpty()) {
@@ -1590,80 +1386,6 @@ public final class ProjectOuterClass {
   checkByteStringIsUtf8(value);
           
           dataProcClusterId_ = value;
-          onChanged();
-          return this;
-        }
-
-        private int commitMode_ = 0;
-        /**
-         * <pre>
-         * Commit mode that is assigned to the project.
-         * </pre>
-         *
-         * <code>.yandex.cloud.datasphere.v1.Project.Settings.CommitMode commit_mode = 4;</code>
-         * @return The enum numeric value on the wire for commitMode.
-         */
-        @java.lang.Override public int getCommitModeValue() {
-          return commitMode_;
-        }
-        /**
-         * <pre>
-         * Commit mode that is assigned to the project.
-         * </pre>
-         *
-         * <code>.yandex.cloud.datasphere.v1.Project.Settings.CommitMode commit_mode = 4;</code>
-         * @param value The enum numeric value on the wire for commitMode to set.
-         * @return This builder for chaining.
-         */
-        public Builder setCommitModeValue(int value) {
-          
-          commitMode_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * Commit mode that is assigned to the project.
-         * </pre>
-         *
-         * <code>.yandex.cloud.datasphere.v1.Project.Settings.CommitMode commit_mode = 4;</code>
-         * @return The commitMode.
-         */
-        @java.lang.Override
-        public yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Settings.CommitMode getCommitMode() {
-          @SuppressWarnings("deprecation")
-          yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Settings.CommitMode result = yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Settings.CommitMode.valueOf(commitMode_);
-          return result == null ? yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Settings.CommitMode.UNRECOGNIZED : result;
-        }
-        /**
-         * <pre>
-         * Commit mode that is assigned to the project.
-         * </pre>
-         *
-         * <code>.yandex.cloud.datasphere.v1.Project.Settings.CommitMode commit_mode = 4;</code>
-         * @param value The commitMode to set.
-         * @return This builder for chaining.
-         */
-        public Builder setCommitMode(yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Settings.CommitMode value) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          
-          commitMode_ = value.getNumber();
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * Commit mode that is assigned to the project.
-         * </pre>
-         *
-         * <code>.yandex.cloud.datasphere.v1.Project.Settings.CommitMode commit_mode = 4;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearCommitMode() {
-          
-          commitMode_ = 0;
           onChanged();
           return this;
         }
@@ -4435,26 +4157,22 @@ public final class ProjectOuterClass {
       "\n(yandex/cloud/datasphere/v1/project.pro" +
       "to\022\032yandex.cloud.datasphere.v1\032\037google/p" +
       "rotobuf/timestamp.proto\032\036google/protobuf" +
-      "/wrappers.proto\"\377\004\n\007Project\022\n\n\002id\030\001 \001(\t\022" +
+      "/wrappers.proto\"\363\003\n\007Project\022\n\n\002id\030\001 \001(\t\022" +
       "\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032" +
       ".google.protobuf.Timestamp\022\014\n\004name\030\004 \001(\t" +
       "\022\023\n\013description\030\005 \001(\t\022>\n\010settings\030\006 \001(\0132" +
       ",.yandex.cloud.datasphere.v1.Project.Set" +
       "tings\022:\n\006limits\030\007 \001(\0132*.yandex.cloud.dat" +
-      "asphere.v1.Project.Limits\032\204\002\n\010Settings\022\032" +
-      "\n\022service_account_id\030\001 \001(\t\022\021\n\tsubnet_id\030" +
-      "\002 \001(\t\022\034\n\024data_proc_cluster_id\030\003 \001(\t\022L\n\013c" +
-      "ommit_mode\030\004 \001(\01627.yandex.cloud.datasphe" +
-      "re.v1.Project.Settings.CommitMode\022\032\n\022sec" +
-      "urity_group_ids\030\005 \003(\t\"A\n\nCommitMode\022\033\n\027C" +
-      "OMMIT_MODE_UNSPECIFIED\020\000\022\014\n\010STANDARD\020\001\022\010" +
-      "\n\004AUTO\020\002\032\177\n\006Limits\0227\n\022max_units_per_hour" +
-      "\030\002 \001(\0132\033.google.protobuf.Int64Value\022<\n\027m" +
-      "ax_units_per_execution\030\003 \001(\0132\033.google.pr" +
-      "otobuf.Int64ValueBk\n\036yandex.cloud.api.da" +
-      "tasphere.v1ZIgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/datasphere/v1;data" +
-      "sphereb\006proto3"
+      "asphere.v1.Project.Limits\032y\n\010Settings\022\032\n" +
+      "\022service_account_id\030\001 \001(\t\022\021\n\tsubnet_id\030\002" +
+      " \001(\t\022\034\n\024data_proc_cluster_id\030\003 \001(\t\022\032\n\022se" +
+      "curity_group_ids\030\005 \003(\tJ\004\010\004\020\005\032\177\n\006Limits\0227" +
+      "\n\022max_units_per_hour\030\002 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022<\n\027max_units_per_executi" +
+      "on\030\003 \001(\0132\033.google.protobuf.Int64ValueBk\n" +
+      "\036yandex.cloud.api.datasphere.v1ZIgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/datasphere/v1;datasphereb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4473,7 +4191,7 @@ public final class ProjectOuterClass {
     internal_static_yandex_cloud_datasphere_v1_Project_Settings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v1_Project_Settings_descriptor,
-        new java.lang.String[] { "ServiceAccountId", "SubnetId", "DataProcClusterId", "CommitMode", "SecurityGroupIds", });
+        new java.lang.String[] { "ServiceAccountId", "SubnetId", "DataProcClusterId", "SecurityGroupIds", });
     internal_static_yandex_cloud_datasphere_v1_Project_Limits_descriptor =
       internal_static_yandex_cloud_datasphere_v1_Project_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_datasphere_v1_Project_Limits_fieldAccessorTable = new

@@ -19,18 +19,35 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The maximum number of tokens allowed in a single chunk.
+     * Constraints: must be within the range [100, 2048].
+     * Default value: 800
+     * </pre>
+     *
      * <code>int64 max_chunk_size_tokens = 1;</code>
      * @return The maxChunkSizeTokens.
      */
     long getMaxChunkSizeTokens();
 
     /**
+     * <pre>
+     * The number of tokens that should overlap between consecutive chunks.
+     * This allows for some context from the previous chunk to be included in the next chunk.
+     * Constraints: must be less than or equal to half of `max_chunk_size_tokens`.
+     * Default value: 400
+     * </pre>
+     *
      * <code>int64 chunk_overlap_tokens = 2;</code>
      * @return The chunkOverlapTokens.
      */
     long getChunkOverlapTokens();
   }
   /**
+   * <pre>
+   * Defines a chunking strategy where chunks are created with a fixed maximum chunk size and an overlap between consecutive chunks.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.StaticChunkingStrategy}
    */
   public static final class StaticChunkingStrategy extends
@@ -120,6 +137,12 @@ public final class Common {
     public static final int MAX_CHUNK_SIZE_TOKENS_FIELD_NUMBER = 1;
     private long maxChunkSizeTokens_;
     /**
+     * <pre>
+     * The maximum number of tokens allowed in a single chunk.
+     * Constraints: must be within the range [100, 2048].
+     * Default value: 800
+     * </pre>
+     *
      * <code>int64 max_chunk_size_tokens = 1;</code>
      * @return The maxChunkSizeTokens.
      */
@@ -131,6 +154,13 @@ public final class Common {
     public static final int CHUNK_OVERLAP_TOKENS_FIELD_NUMBER = 2;
     private long chunkOverlapTokens_;
     /**
+     * <pre>
+     * The number of tokens that should overlap between consecutive chunks.
+     * This allows for some context from the previous chunk to be included in the next chunk.
+     * Constraints: must be less than or equal to half of `max_chunk_size_tokens`.
+     * Default value: 400
+     * </pre>
+     *
      * <code>int64 chunk_overlap_tokens = 2;</code>
      * @return The chunkOverlapTokens.
      */
@@ -308,6 +338,10 @@ public final class Common {
       return builder;
     }
     /**
+     * <pre>
+     * Defines a chunking strategy where chunks are created with a fixed maximum chunk size and an overlap between consecutive chunks.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.StaticChunkingStrategy}
      */
     public static final class Builder extends
@@ -462,6 +496,12 @@ public final class Common {
 
       private long maxChunkSizeTokens_ ;
       /**
+       * <pre>
+       * The maximum number of tokens allowed in a single chunk.
+       * Constraints: must be within the range [100, 2048].
+       * Default value: 800
+       * </pre>
+       *
        * <code>int64 max_chunk_size_tokens = 1;</code>
        * @return The maxChunkSizeTokens.
        */
@@ -470,6 +510,12 @@ public final class Common {
         return maxChunkSizeTokens_;
       }
       /**
+       * <pre>
+       * The maximum number of tokens allowed in a single chunk.
+       * Constraints: must be within the range [100, 2048].
+       * Default value: 800
+       * </pre>
+       *
        * <code>int64 max_chunk_size_tokens = 1;</code>
        * @param value The maxChunkSizeTokens to set.
        * @return This builder for chaining.
@@ -481,6 +527,12 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of tokens allowed in a single chunk.
+       * Constraints: must be within the range [100, 2048].
+       * Default value: 800
+       * </pre>
+       *
        * <code>int64 max_chunk_size_tokens = 1;</code>
        * @return This builder for chaining.
        */
@@ -493,6 +545,13 @@ public final class Common {
 
       private long chunkOverlapTokens_ ;
       /**
+       * <pre>
+       * The number of tokens that should overlap between consecutive chunks.
+       * This allows for some context from the previous chunk to be included in the next chunk.
+       * Constraints: must be less than or equal to half of `max_chunk_size_tokens`.
+       * Default value: 400
+       * </pre>
+       *
        * <code>int64 chunk_overlap_tokens = 2;</code>
        * @return The chunkOverlapTokens.
        */
@@ -501,6 +560,13 @@ public final class Common {
         return chunkOverlapTokens_;
       }
       /**
+       * <pre>
+       * The number of tokens that should overlap between consecutive chunks.
+       * This allows for some context from the previous chunk to be included in the next chunk.
+       * Constraints: must be less than or equal to half of `max_chunk_size_tokens`.
+       * Default value: 400
+       * </pre>
+       *
        * <code>int64 chunk_overlap_tokens = 2;</code>
        * @param value The chunkOverlapTokens to set.
        * @return This builder for chaining.
@@ -512,6 +578,13 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * The number of tokens that should overlap between consecutive chunks.
+       * This allows for some context from the previous chunk to be included in the next chunk.
+       * Constraints: must be less than or equal to half of `max_chunk_size_tokens`.
+       * Default value: 400
+       * </pre>
+       *
        * <code>int64 chunk_overlap_tokens = 2;</code>
        * @return This builder for chaining.
        */
@@ -596,6 +669,11 @@ public final class Common {
     public yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.StrategyCase getStrategyCase();
   }
   /**
+   * <pre>
+   * Defines a general strategy for chunking text into smaller segments.
+   * Currently, only StaticChunkingStrategy is supported.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy}
    */
   public static final class ChunkingStrategy extends
@@ -925,6 +1003,11 @@ public final class Common {
       return builder;
     }
     /**
+     * <pre>
+     * Defines a general strategy for chunking text into smaller segments.
+     * Currently, only StaticChunkingStrategy is supported.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy}
      */
     public static final class Builder extends

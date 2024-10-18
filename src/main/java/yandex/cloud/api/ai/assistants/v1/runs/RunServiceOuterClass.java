@@ -19,11 +19,19 @@ public final class RunServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the assistant for which the run is being created
+     * </pre>
+     *
      * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The assistantId.
      */
     java.lang.String getAssistantId();
     /**
+     * <pre>
+     * ID of the assistant for which the run is being created
+     * </pre>
+     *
      * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for assistantId.
      */
@@ -31,11 +39,19 @@ public final class RunServiceOuterClass {
         getAssistantIdBytes();
 
     /**
+     * <pre>
+     * ID of the thread associated with the run.
+     * </pre>
+     *
      * <code>string thread_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The threadId.
      */
     java.lang.String getThreadId();
     /**
+     * <pre>
+     * ID of the thread associated with the run.
+     * </pre>
+     *
      * <code>string thread_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for threadId.
      */
@@ -43,10 +59,18 @@ public final class RunServiceOuterClass {
         getThreadIdBytes();
 
     /**
+     * <pre>
+     * Set of key-value pairs to label the run.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 3;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Set of key-value pairs to label the run.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 3;</code>
      */
     boolean containsLabels(
@@ -58,11 +82,19 @@ public final class RunServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Set of key-value pairs to label the run.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 3;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Set of key-value pairs to label the run.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 3;</code>
      */
 
@@ -70,6 +102,10 @@ public final class RunServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Set of key-value pairs to label the run.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 3;</code>
      */
 
@@ -77,66 +113,124 @@ public final class RunServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * Additional messages that will be written to the thread before the run starts.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
      */
     java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData> 
         getAdditionalMessagesList();
     /**
+     * <pre>
+     * Additional messages that will be written to the thread before the run starts.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData getAdditionalMessages(int index);
     /**
+     * <pre>
+     * Additional messages that will be written to the thread before the run starts.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
      */
     int getAdditionalMessagesCount();
     /**
+     * <pre>
+     * Additional messages that will be written to the thread before the run starts.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
      */
     java.util.List<? extends yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageDataOrBuilder> 
         getAdditionalMessagesOrBuilderList();
     /**
+     * <pre>
+     * Additional messages that will be written to the thread before the run starts.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageDataOrBuilder getAdditionalMessagesOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+     * If specified, these options will override the assistant's prompt truncation settings for this run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 5;</code>
      * @return Whether the customPromptTruncationOptions field is set.
      */
     boolean hasCustomPromptTruncationOptions();
     /**
+     * <pre>
+     * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+     * If specified, these options will override the assistant's prompt truncation settings for this run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 5;</code>
      * @return The customPromptTruncationOptions.
      */
     yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions getCustomPromptTruncationOptions();
     /**
+     * <pre>
+     * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+     * If specified, these options will override the assistant's prompt truncation settings for this run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 5;</code>
      */
     yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptionsOrBuilder getCustomPromptTruncationOptionsOrBuilder();
 
     /**
+     * <pre>
+     * Configuration options for completion generation.
+     * If specified, these options will override the assistant's completion settings for this run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 6;</code>
      * @return Whether the customCompletionOptions field is set.
      */
     boolean hasCustomCompletionOptions();
     /**
+     * <pre>
+     * Configuration options for completion generation.
+     * If specified, these options will override the assistant's completion settings for this run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 6;</code>
      * @return The customCompletionOptions.
      */
     yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions getCustomCompletionOptions();
     /**
+     * <pre>
+     * Configuration options for completion generation.
+     * If specified, these options will override the assistant's completion settings for this run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 6;</code>
      */
     yandex.cloud.api.ai.assistants.v1.Common.CompletionOptionsOrBuilder getCustomCompletionOptionsOrBuilder();
 
     /**
+     * <pre>
+     * Enables streaming of intermediate events, such as partial messages.
+     * </pre>
+     *
      * <code>bool stream = 7;</code>
      * @return The stream.
      */
     boolean getStream();
   }
   /**
+   * <pre>
+   * Request message for creating a new run.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.CreateRunRequest}
    */
   public static final class CreateRunRequest extends
@@ -300,6 +394,10 @@ public final class RunServiceOuterClass {
     public static final int ASSISTANT_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object assistantId_;
     /**
+     * <pre>
+     * ID of the assistant for which the run is being created
+     * </pre>
+     *
      * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The assistantId.
      */
@@ -317,6 +415,10 @@ public final class RunServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the assistant for which the run is being created
+     * </pre>
+     *
      * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for assistantId.
      */
@@ -338,6 +440,10 @@ public final class RunServiceOuterClass {
     public static final int THREAD_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object threadId_;
     /**
+     * <pre>
+     * ID of the thread associated with the run.
+     * </pre>
+     *
      * <code>string thread_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The threadId.
      */
@@ -355,6 +461,10 @@ public final class RunServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the thread associated with the run.
+     * </pre>
+     *
      * <code>string thread_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for threadId.
      */
@@ -400,6 +510,10 @@ public final class RunServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the run.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 3;</code>
      */
 
@@ -418,6 +532,10 @@ public final class RunServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the run.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 3;</code>
      */
     @java.lang.Override
@@ -426,6 +544,10 @@ public final class RunServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the run.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 3;</code>
      */
     @java.lang.Override
@@ -439,6 +561,10 @@ public final class RunServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the run.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 3;</code>
      */
     @java.lang.Override
@@ -457,6 +583,10 @@ public final class RunServiceOuterClass {
     public static final int ADDITIONAL_MESSAGES_FIELD_NUMBER = 4;
     private java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData> additionalMessages_;
     /**
+     * <pre>
+     * Additional messages that will be written to the thread before the run starts.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
      */
     @java.lang.Override
@@ -464,6 +594,10 @@ public final class RunServiceOuterClass {
       return additionalMessages_;
     }
     /**
+     * <pre>
+     * Additional messages that will be written to the thread before the run starts.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
      */
     @java.lang.Override
@@ -472,6 +606,10 @@ public final class RunServiceOuterClass {
       return additionalMessages_;
     }
     /**
+     * <pre>
+     * Additional messages that will be written to the thread before the run starts.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
      */
     @java.lang.Override
@@ -479,6 +617,10 @@ public final class RunServiceOuterClass {
       return additionalMessages_.size();
     }
     /**
+     * <pre>
+     * Additional messages that will be written to the thread before the run starts.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
      */
     @java.lang.Override
@@ -486,6 +628,10 @@ public final class RunServiceOuterClass {
       return additionalMessages_.get(index);
     }
     /**
+     * <pre>
+     * Additional messages that will be written to the thread before the run starts.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
      */
     @java.lang.Override
@@ -497,6 +643,11 @@ public final class RunServiceOuterClass {
     public static final int CUSTOM_PROMPT_TRUNCATION_OPTIONS_FIELD_NUMBER = 5;
     private yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions customPromptTruncationOptions_;
     /**
+     * <pre>
+     * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+     * If specified, these options will override the assistant's prompt truncation settings for this run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 5;</code>
      * @return Whether the customPromptTruncationOptions field is set.
      */
@@ -505,6 +656,11 @@ public final class RunServiceOuterClass {
       return customPromptTruncationOptions_ != null;
     }
     /**
+     * <pre>
+     * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+     * If specified, these options will override the assistant's prompt truncation settings for this run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 5;</code>
      * @return The customPromptTruncationOptions.
      */
@@ -513,6 +669,11 @@ public final class RunServiceOuterClass {
       return customPromptTruncationOptions_ == null ? yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.getDefaultInstance() : customPromptTruncationOptions_;
     }
     /**
+     * <pre>
+     * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+     * If specified, these options will override the assistant's prompt truncation settings for this run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 5;</code>
      */
     @java.lang.Override
@@ -523,6 +684,11 @@ public final class RunServiceOuterClass {
     public static final int CUSTOM_COMPLETION_OPTIONS_FIELD_NUMBER = 6;
     private yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions customCompletionOptions_;
     /**
+     * <pre>
+     * Configuration options for completion generation.
+     * If specified, these options will override the assistant's completion settings for this run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 6;</code>
      * @return Whether the customCompletionOptions field is set.
      */
@@ -531,6 +697,11 @@ public final class RunServiceOuterClass {
       return customCompletionOptions_ != null;
     }
     /**
+     * <pre>
+     * Configuration options for completion generation.
+     * If specified, these options will override the assistant's completion settings for this run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 6;</code>
      * @return The customCompletionOptions.
      */
@@ -539,6 +710,11 @@ public final class RunServiceOuterClass {
       return customCompletionOptions_ == null ? yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions.getDefaultInstance() : customCompletionOptions_;
     }
     /**
+     * <pre>
+     * Configuration options for completion generation.
+     * If specified, these options will override the assistant's completion settings for this run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 6;</code>
      */
     @java.lang.Override
@@ -549,6 +725,10 @@ public final class RunServiceOuterClass {
     public static final int STREAM_FIELD_NUMBER = 7;
     private boolean stream_;
     /**
+     * <pre>
+     * Enables streaming of intermediate events, such as partial messages.
+     * </pre>
+     *
      * <code>bool stream = 7;</code>
      * @return The stream.
      */
@@ -801,6 +981,10 @@ public final class RunServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for creating a new run.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.CreateRunRequest}
      */
     public static final class Builder extends
@@ -1062,6 +1246,10 @@ public final class RunServiceOuterClass {
 
       private java.lang.Object assistantId_ = "";
       /**
+       * <pre>
+       * ID of the assistant for which the run is being created
+       * </pre>
+       *
        * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The assistantId.
        */
@@ -1078,6 +1266,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the assistant for which the run is being created
+       * </pre>
+       *
        * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for assistantId.
        */
@@ -1095,6 +1287,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the assistant for which the run is being created
+       * </pre>
+       *
        * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The assistantId to set.
        * @return This builder for chaining.
@@ -1110,6 +1306,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the assistant for which the run is being created
+       * </pre>
+       *
        * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -1120,6 +1320,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the assistant for which the run is being created
+       * </pre>
+       *
        * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for assistantId to set.
        * @return This builder for chaining.
@@ -1138,6 +1342,10 @@ public final class RunServiceOuterClass {
 
       private java.lang.Object threadId_ = "";
       /**
+       * <pre>
+       * ID of the thread associated with the run.
+       * </pre>
+       *
        * <code>string thread_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The threadId.
        */
@@ -1154,6 +1362,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thread associated with the run.
+       * </pre>
+       *
        * <code>string thread_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for threadId.
        */
@@ -1171,6 +1383,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thread associated with the run.
+       * </pre>
+       *
        * <code>string thread_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The threadId to set.
        * @return This builder for chaining.
@@ -1186,6 +1402,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thread associated with the run.
+       * </pre>
+       *
        * <code>string thread_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -1196,6 +1416,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thread associated with the run.
+       * </pre>
+       *
        * <code>string thread_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for threadId to set.
        * @return This builder for chaining.
@@ -1239,6 +1463,10 @@ public final class RunServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the run.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 3;</code>
        */
 
@@ -1257,6 +1485,10 @@ public final class RunServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the run.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 3;</code>
        */
       @java.lang.Override
@@ -1265,6 +1497,10 @@ public final class RunServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the run.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 3;</code>
        */
       @java.lang.Override
@@ -1278,6 +1514,10 @@ public final class RunServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the run.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 3;</code>
        */
       @java.lang.Override
@@ -1299,6 +1539,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the run.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 3;</code>
        */
 
@@ -1318,6 +1562,10 @@ public final class RunServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the run.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 3;</code>
        */
       public Builder putLabels(
@@ -1333,6 +1581,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the run.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 3;</code>
        */
 
@@ -1356,6 +1608,10 @@ public final class RunServiceOuterClass {
           yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageDataOrBuilder> additionalMessagesBuilder_;
 
       /**
+       * <pre>
+       * Additional messages that will be written to the thread before the run starts.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
        */
       public java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData> getAdditionalMessagesList() {
@@ -1366,6 +1622,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Additional messages that will be written to the thread before the run starts.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
        */
       public int getAdditionalMessagesCount() {
@@ -1376,6 +1636,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Additional messages that will be written to the thread before the run starts.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData getAdditionalMessages(int index) {
@@ -1386,6 +1650,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Additional messages that will be written to the thread before the run starts.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
        */
       public Builder setAdditionalMessages(
@@ -1403,6 +1671,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Additional messages that will be written to the thread before the run starts.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
        */
       public Builder setAdditionalMessages(
@@ -1417,6 +1689,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Additional messages that will be written to the thread before the run starts.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
        */
       public Builder addAdditionalMessages(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData value) {
@@ -1433,6 +1709,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Additional messages that will be written to the thread before the run starts.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
        */
       public Builder addAdditionalMessages(
@@ -1450,6 +1730,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Additional messages that will be written to the thread before the run starts.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
        */
       public Builder addAdditionalMessages(
@@ -1464,6 +1748,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Additional messages that will be written to the thread before the run starts.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
        */
       public Builder addAdditionalMessages(
@@ -1478,6 +1766,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Additional messages that will be written to the thread before the run starts.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
        */
       public Builder addAllAdditionalMessages(
@@ -1493,6 +1785,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Additional messages that will be written to the thread before the run starts.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
        */
       public Builder clearAdditionalMessages() {
@@ -1506,6 +1802,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Additional messages that will be written to the thread before the run starts.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
        */
       public Builder removeAdditionalMessages(int index) {
@@ -1519,6 +1819,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Additional messages that will be written to the thread before the run starts.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData.Builder getAdditionalMessagesBuilder(
@@ -1526,6 +1830,10 @@ public final class RunServiceOuterClass {
         return getAdditionalMessagesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Additional messages that will be written to the thread before the run starts.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageDataOrBuilder getAdditionalMessagesOrBuilder(
@@ -1536,6 +1844,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Additional messages that will be written to the thread before the run starts.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
        */
       public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageDataOrBuilder> 
@@ -1547,6 +1859,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Additional messages that will be written to the thread before the run starts.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData.Builder addAdditionalMessagesBuilder() {
@@ -1554,6 +1870,10 @@ public final class RunServiceOuterClass {
             yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Additional messages that will be written to the thread before the run starts.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData.Builder addAdditionalMessagesBuilder(
@@ -1562,6 +1882,10 @@ public final class RunServiceOuterClass {
             index, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Additional messages that will be written to the thread before the run starts.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.threads.MessageData additional_messages = 4;</code>
        */
       public java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageData.Builder> 
@@ -1587,6 +1911,11 @@ public final class RunServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions, yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.Builder, yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptionsOrBuilder> customPromptTruncationOptionsBuilder_;
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * If specified, these options will override the assistant's prompt truncation settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 5;</code>
        * @return Whether the customPromptTruncationOptions field is set.
        */
@@ -1594,6 +1923,11 @@ public final class RunServiceOuterClass {
         return customPromptTruncationOptionsBuilder_ != null || customPromptTruncationOptions_ != null;
       }
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * If specified, these options will override the assistant's prompt truncation settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 5;</code>
        * @return The customPromptTruncationOptions.
        */
@@ -1605,6 +1939,11 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * If specified, these options will override the assistant's prompt truncation settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 5;</code>
        */
       public Builder setCustomPromptTruncationOptions(yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions value) {
@@ -1621,6 +1960,11 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * If specified, these options will override the assistant's prompt truncation settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 5;</code>
        */
       public Builder setCustomPromptTruncationOptions(
@@ -1635,6 +1979,11 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * If specified, these options will override the assistant's prompt truncation settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 5;</code>
        */
       public Builder mergeCustomPromptTruncationOptions(yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions value) {
@@ -1653,6 +2002,11 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * If specified, these options will override the assistant's prompt truncation settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 5;</code>
        */
       public Builder clearCustomPromptTruncationOptions() {
@@ -1667,6 +2021,11 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * If specified, these options will override the assistant's prompt truncation settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 5;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.Builder getCustomPromptTruncationOptionsBuilder() {
@@ -1675,6 +2034,11 @@ public final class RunServiceOuterClass {
         return getCustomPromptTruncationOptionsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * If specified, these options will override the assistant's prompt truncation settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 5;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptionsOrBuilder getCustomPromptTruncationOptionsOrBuilder() {
@@ -1686,6 +2050,11 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * If specified, these options will override the assistant's prompt truncation settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1706,6 +2075,11 @@ public final class RunServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions, yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions.Builder, yandex.cloud.api.ai.assistants.v1.Common.CompletionOptionsOrBuilder> customCompletionOptionsBuilder_;
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * If specified, these options will override the assistant's completion settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 6;</code>
        * @return Whether the customCompletionOptions field is set.
        */
@@ -1713,6 +2087,11 @@ public final class RunServiceOuterClass {
         return customCompletionOptionsBuilder_ != null || customCompletionOptions_ != null;
       }
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * If specified, these options will override the assistant's completion settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 6;</code>
        * @return The customCompletionOptions.
        */
@@ -1724,6 +2103,11 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * If specified, these options will override the assistant's completion settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 6;</code>
        */
       public Builder setCustomCompletionOptions(yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions value) {
@@ -1740,6 +2124,11 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * If specified, these options will override the assistant's completion settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 6;</code>
        */
       public Builder setCustomCompletionOptions(
@@ -1754,6 +2143,11 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * If specified, these options will override the assistant's completion settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 6;</code>
        */
       public Builder mergeCustomCompletionOptions(yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions value) {
@@ -1772,6 +2166,11 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * If specified, these options will override the assistant's completion settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 6;</code>
        */
       public Builder clearCustomCompletionOptions() {
@@ -1786,6 +2185,11 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * If specified, these options will override the assistant's completion settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 6;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions.Builder getCustomCompletionOptionsBuilder() {
@@ -1794,6 +2198,11 @@ public final class RunServiceOuterClass {
         return getCustomCompletionOptionsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * If specified, these options will override the assistant's completion settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 6;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.CompletionOptionsOrBuilder getCustomCompletionOptionsOrBuilder() {
@@ -1805,6 +2214,11 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * If specified, these options will override the assistant's completion settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1823,6 +2237,10 @@ public final class RunServiceOuterClass {
 
       private boolean stream_ ;
       /**
+       * <pre>
+       * Enables streaming of intermediate events, such as partial messages.
+       * </pre>
+       *
        * <code>bool stream = 7;</code>
        * @return The stream.
        */
@@ -1831,6 +2249,10 @@ public final class RunServiceOuterClass {
         return stream_;
       }
       /**
+       * <pre>
+       * Enables streaming of intermediate events, such as partial messages.
+       * </pre>
+       *
        * <code>bool stream = 7;</code>
        * @param value The stream to set.
        * @return This builder for chaining.
@@ -1842,6 +2264,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Enables streaming of intermediate events, such as partial messages.
+       * </pre>
+       *
        * <code>bool stream = 7;</code>
        * @return This builder for chaining.
        */
@@ -1909,11 +2335,19 @@ public final class RunServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the run to listen to.
+     * </pre>
+     *
      * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The runId.
      */
     java.lang.String getRunId();
     /**
+     * <pre>
+     * ID of the run to listen to.
+     * </pre>
+     *
      * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for runId.
      */
@@ -1921,21 +2355,37 @@ public final class RunServiceOuterClass {
         getRunIdBytes();
 
     /**
+     * <pre>
+     * Starting index for events. If provided, listening will start from this event.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
      * @return Whether the eventsStartIdx field is set.
      */
     boolean hasEventsStartIdx();
     /**
+     * <pre>
+     * Starting index for events. If provided, listening will start from this event.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
      * @return The eventsStartIdx.
      */
     com.google.protobuf.Int64Value getEventsStartIdx();
     /**
+     * <pre>
+     * Starting index for events. If provided, listening will start from this event.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getEventsStartIdxOrBuilder();
   }
   /**
+   * <pre>
+   * Request message for listing to a run events.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.ListenRunRequest}
    */
   public static final class ListenRunRequest extends
@@ -2035,6 +2485,10 @@ public final class RunServiceOuterClass {
     public static final int RUN_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object runId_;
     /**
+     * <pre>
+     * ID of the run to listen to.
+     * </pre>
+     *
      * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The runId.
      */
@@ -2052,6 +2506,10 @@ public final class RunServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the run to listen to.
+     * </pre>
+     *
      * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for runId.
      */
@@ -2073,6 +2531,10 @@ public final class RunServiceOuterClass {
     public static final int EVENTS_START_IDX_FIELD_NUMBER = 2;
     private com.google.protobuf.Int64Value eventsStartIdx_;
     /**
+     * <pre>
+     * Starting index for events. If provided, listening will start from this event.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
      * @return Whether the eventsStartIdx field is set.
      */
@@ -2081,6 +2543,10 @@ public final class RunServiceOuterClass {
       return eventsStartIdx_ != null;
     }
     /**
+     * <pre>
+     * Starting index for events. If provided, listening will start from this event.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
      * @return The eventsStartIdx.
      */
@@ -2089,6 +2555,10 @@ public final class RunServiceOuterClass {
       return eventsStartIdx_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : eventsStartIdx_;
     }
     /**
+     * <pre>
+     * Starting index for events. If provided, listening will start from this event.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
      */
     @java.lang.Override
@@ -2267,6 +2737,10 @@ public final class RunServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for listing to a run events.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.ListenRunRequest}
      */
     public static final class Builder extends
@@ -2430,6 +2904,10 @@ public final class RunServiceOuterClass {
 
       private java.lang.Object runId_ = "";
       /**
+       * <pre>
+       * ID of the run to listen to.
+       * </pre>
+       *
        * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The runId.
        */
@@ -2446,6 +2924,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the run to listen to.
+       * </pre>
+       *
        * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for runId.
        */
@@ -2463,6 +2945,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the run to listen to.
+       * </pre>
+       *
        * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The runId to set.
        * @return This builder for chaining.
@@ -2478,6 +2964,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the run to listen to.
+       * </pre>
+       *
        * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -2488,6 +2978,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the run to listen to.
+       * </pre>
+       *
        * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for runId to set.
        * @return This builder for chaining.
@@ -2508,6 +3002,10 @@ public final class RunServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> eventsStartIdxBuilder_;
       /**
+       * <pre>
+       * Starting index for events. If provided, listening will start from this event.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
        * @return Whether the eventsStartIdx field is set.
        */
@@ -2515,6 +3013,10 @@ public final class RunServiceOuterClass {
         return eventsStartIdxBuilder_ != null || eventsStartIdx_ != null;
       }
       /**
+       * <pre>
+       * Starting index for events. If provided, listening will start from this event.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
        * @return The eventsStartIdx.
        */
@@ -2526,6 +3028,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Starting index for events. If provided, listening will start from this event.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
        */
       public Builder setEventsStartIdx(com.google.protobuf.Int64Value value) {
@@ -2542,6 +3048,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Starting index for events. If provided, listening will start from this event.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
        */
       public Builder setEventsStartIdx(
@@ -2556,6 +3066,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Starting index for events. If provided, listening will start from this event.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
        */
       public Builder mergeEventsStartIdx(com.google.protobuf.Int64Value value) {
@@ -2574,6 +3088,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Starting index for events. If provided, listening will start from this event.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
        */
       public Builder clearEventsStartIdx() {
@@ -2588,6 +3106,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Starting index for events. If provided, listening will start from this event.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
        */
       public com.google.protobuf.Int64Value.Builder getEventsStartIdxBuilder() {
@@ -2596,6 +3118,10 @@ public final class RunServiceOuterClass {
         return getEventsStartIdxFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Starting index for events. If provided, listening will start from this event.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getEventsStartIdxOrBuilder() {
@@ -2607,6 +3133,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Starting index for events. If provided, listening will start from this event.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2680,11 +3210,19 @@ public final class RunServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the run to retrieve.
+     * </pre>
+     *
      * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The runId.
      */
     java.lang.String getRunId();
     /**
+     * <pre>
+     * ID of the run to retrieve.
+     * </pre>
+     *
      * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for runId.
      */
@@ -2692,6 +3230,10 @@ public final class RunServiceOuterClass {
         getRunIdBytes();
   }
   /**
+   * <pre>
+   * Request message for retrieving a specific run by its ID.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.GetRunRequest}
    */
   public static final class GetRunRequest extends
@@ -2778,6 +3320,10 @@ public final class RunServiceOuterClass {
     public static final int RUN_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object runId_;
     /**
+     * <pre>
+     * ID of the run to retrieve.
+     * </pre>
+     *
      * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The runId.
      */
@@ -2795,6 +3341,10 @@ public final class RunServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the run to retrieve.
+     * </pre>
+     *
      * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for runId.
      */
@@ -2968,6 +3518,10 @@ public final class RunServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for retrieving a specific run by its ID.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.GetRunRequest}
      */
     public static final class Builder extends
@@ -3117,6 +3671,10 @@ public final class RunServiceOuterClass {
 
       private java.lang.Object runId_ = "";
       /**
+       * <pre>
+       * ID of the run to retrieve.
+       * </pre>
+       *
        * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The runId.
        */
@@ -3133,6 +3691,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the run to retrieve.
+       * </pre>
+       *
        * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for runId.
        */
@@ -3150,6 +3712,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the run to retrieve.
+       * </pre>
+       *
        * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The runId to set.
        * @return This builder for chaining.
@@ -3165,6 +3731,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the run to retrieve.
+       * </pre>
+       *
        * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -3175,6 +3745,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the run to retrieve.
+       * </pre>
+       *
        * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for runId to set.
        * @return This builder for chaining.
@@ -3248,11 +3822,19 @@ public final class RunServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the thread for which the last run is being fetched.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The threadId.
      */
     java.lang.String getThreadId();
     /**
+     * <pre>
+     * ID of the thread for which the last run is being fetched.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for threadId.
      */
@@ -3260,6 +3842,10 @@ public final class RunServiceOuterClass {
         getThreadIdBytes();
   }
   /**
+   * <pre>
+   * Request message for retrieving the last run associated with a specific thread.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.GetLastRunByThreadRequest}
    */
   public static final class GetLastRunByThreadRequest extends
@@ -3346,6 +3932,10 @@ public final class RunServiceOuterClass {
     public static final int THREAD_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object threadId_;
     /**
+     * <pre>
+     * ID of the thread for which the last run is being fetched.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The threadId.
      */
@@ -3363,6 +3953,10 @@ public final class RunServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the thread for which the last run is being fetched.
+     * </pre>
+     *
      * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for threadId.
      */
@@ -3536,6 +4130,10 @@ public final class RunServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for retrieving the last run associated with a specific thread.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.GetLastRunByThreadRequest}
      */
     public static final class Builder extends
@@ -3685,6 +4283,10 @@ public final class RunServiceOuterClass {
 
       private java.lang.Object threadId_ = "";
       /**
+       * <pre>
+       * ID of the thread for which the last run is being fetched.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The threadId.
        */
@@ -3701,6 +4303,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thread for which the last run is being fetched.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for threadId.
        */
@@ -3718,6 +4324,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thread for which the last run is being fetched.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The threadId to set.
        * @return This builder for chaining.
@@ -3733,6 +4343,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thread for which the last run is being fetched.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -3743,6 +4357,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thread for which the last run is being fetched.
+       * </pre>
+       *
        * <code>string thread_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for threadId to set.
        * @return This builder for chaining.
@@ -3816,11 +4434,19 @@ public final class RunServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Folder ID from which to list runs.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * Folder ID from which to list runs.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for folderId.
      */
@@ -3828,17 +4454,29 @@ public final class RunServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Maximum number of threads to return per page.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The bytes for pageToken.
      */
@@ -3846,6 +4484,10 @@ public final class RunServiceOuterClass {
         getPageTokenBytes();
   }
   /**
+   * <pre>
+   * Request message for listing runs.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.ListRunsRequest}
    */
   public static final class ListRunsRequest extends
@@ -3944,6 +4586,10 @@ public final class RunServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * Folder ID from which to list runs.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The folderId.
      */
@@ -3961,6 +4607,10 @@ public final class RunServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Folder ID from which to list runs.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for folderId.
      */
@@ -3982,6 +4632,10 @@ public final class RunServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * Maximum number of threads to return per page.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      * @return The pageSize.
      */
@@ -3993,6 +4647,10 @@ public final class RunServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The pageToken.
      */
@@ -4010,6 +4668,10 @@ public final class RunServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The bytes for pageToken.
      */
@@ -4205,6 +4867,10 @@ public final class RunServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for listing runs.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.ListRunsRequest}
      */
     public static final class Builder extends
@@ -4367,6 +5033,10 @@ public final class RunServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * Folder ID from which to list runs.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The folderId.
        */
@@ -4383,6 +5053,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID from which to list runs.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for folderId.
        */
@@ -4400,6 +5074,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID from which to list runs.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -4415,6 +5093,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID from which to list runs.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -4425,6 +5107,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID from which to list runs.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -4443,6 +5129,10 @@ public final class RunServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * Maximum number of threads to return per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @return The pageSize.
        */
@@ -4451,6 +5141,10 @@ public final class RunServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * Maximum number of threads to return per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -4462,6 +5156,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maximum number of threads to return per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @return This builder for chaining.
        */
@@ -4474,6 +5172,10 @@ public final class RunServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return The pageToken.
        */
@@ -4490,6 +5192,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return The bytes for pageToken.
        */
@@ -4507,6 +5213,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -4522,6 +5232,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return This builder for chaining.
        */
@@ -4532,6 +5246,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -4605,35 +5323,63 @@ public final class RunServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of runs in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
      */
     java.util.List<yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run> 
         getRunsList();
     /**
+     * <pre>
+     * List of runs in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
      */
     yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run getRuns(int index);
     /**
+     * <pre>
+     * List of runs in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
      */
     int getRunsCount();
     /**
+     * <pre>
+     * List of runs in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.RunOrBuilder> 
         getRunsOrBuilderList();
     /**
+     * <pre>
+     * List of runs in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
      */
     yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.RunOrBuilder getRunsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -4641,6 +5387,10 @@ public final class RunServiceOuterClass {
         getNextPageTokenBytes();
   }
   /**
+   * <pre>
+   * Response message for the list operation.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.ListRunsResponse}
    */
   public static final class ListRunsResponse extends
@@ -4741,6 +5491,10 @@ public final class RunServiceOuterClass {
     public static final int RUNS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run> runs_;
     /**
+     * <pre>
+     * List of runs in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
      */
     @java.lang.Override
@@ -4748,6 +5502,10 @@ public final class RunServiceOuterClass {
       return runs_;
     }
     /**
+     * <pre>
+     * List of runs in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
      */
     @java.lang.Override
@@ -4756,6 +5514,10 @@ public final class RunServiceOuterClass {
       return runs_;
     }
     /**
+     * <pre>
+     * List of runs in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
      */
     @java.lang.Override
@@ -4763,6 +5525,10 @@ public final class RunServiceOuterClass {
       return runs_.size();
     }
     /**
+     * <pre>
+     * List of runs in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
      */
     @java.lang.Override
@@ -4770,6 +5536,10 @@ public final class RunServiceOuterClass {
       return runs_.get(index);
     }
     /**
+     * <pre>
+     * List of runs in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
      */
     @java.lang.Override
@@ -4781,6 +5551,10 @@ public final class RunServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
@@ -4798,6 +5572,10 @@ public final class RunServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -4984,6 +5762,10 @@ public final class RunServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Response message for the list operation.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.ListRunsResponse}
      */
     public static final class Builder extends
@@ -5188,6 +5970,10 @@ public final class RunServiceOuterClass {
           yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run, yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run.Builder, yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.RunOrBuilder> runsBuilder_;
 
       /**
+       * <pre>
+       * List of runs in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
        */
       public java.util.List<yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run> getRunsList() {
@@ -5198,6 +5984,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of runs in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
        */
       public int getRunsCount() {
@@ -5208,6 +5998,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of runs in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run getRuns(int index) {
@@ -5218,6 +6012,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of runs in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
        */
       public Builder setRuns(
@@ -5235,6 +6033,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of runs in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
        */
       public Builder setRuns(
@@ -5249,6 +6051,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of runs in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
        */
       public Builder addRuns(yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run value) {
@@ -5265,6 +6071,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of runs in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
        */
       public Builder addRuns(
@@ -5282,6 +6092,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of runs in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
        */
       public Builder addRuns(
@@ -5296,6 +6110,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of runs in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
        */
       public Builder addRuns(
@@ -5310,6 +6128,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of runs in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
        */
       public Builder addAllRuns(
@@ -5325,6 +6147,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of runs in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
        */
       public Builder clearRuns() {
@@ -5338,6 +6164,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of runs in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
        */
       public Builder removeRuns(int index) {
@@ -5351,6 +6181,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of runs in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run.Builder getRunsBuilder(
@@ -5358,6 +6192,10 @@ public final class RunServiceOuterClass {
         return getRunsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of runs in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.RunOrBuilder getRunsOrBuilder(
@@ -5368,6 +6206,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of runs in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.RunOrBuilder> 
@@ -5379,6 +6221,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of runs in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run.Builder addRunsBuilder() {
@@ -5386,6 +6232,10 @@ public final class RunServiceOuterClass {
             yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of runs in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run.Builder addRunsBuilder(
@@ -5394,6 +6244,10 @@ public final class RunServiceOuterClass {
             index, yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of runs in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.runs.Run runs = 1;</code>
        */
       public java.util.List<yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run.Builder> 
@@ -5417,6 +6271,10 @@ public final class RunServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The nextPageToken.
        */
@@ -5433,6 +6291,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The bytes for nextPageToken.
        */
@@ -5450,6 +6312,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -5465,6 +6331,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return This builder for chaining.
        */
@@ -5475,6 +6345,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.
@@ -5548,18 +6422,30 @@ public final class RunServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Index of the current event in the stream.
+     * </pre>
+     *
      * <code>int64 current_event_idx = 1;</code>
      * @return The currentEventIdx.
      */
     long getCurrentEventIdx();
 
     /**
+     * <pre>
+     * The number of user events received so far.
+     * </pre>
+     *
      * <code>int64 num_user_events_received = 2;</code>
      * @return The numUserEventsReceived.
      */
     long getNumUserEventsReceived();
   }
   /**
+   * <pre>
+   * Represents the cursor position in a stream of events.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.StreamCursor}
    */
   public static final class StreamCursor extends
@@ -5649,6 +6535,10 @@ public final class RunServiceOuterClass {
     public static final int CURRENT_EVENT_IDX_FIELD_NUMBER = 1;
     private long currentEventIdx_;
     /**
+     * <pre>
+     * Index of the current event in the stream.
+     * </pre>
+     *
      * <code>int64 current_event_idx = 1;</code>
      * @return The currentEventIdx.
      */
@@ -5660,6 +6550,10 @@ public final class RunServiceOuterClass {
     public static final int NUM_USER_EVENTS_RECEIVED_FIELD_NUMBER = 2;
     private long numUserEventsReceived_;
     /**
+     * <pre>
+     * The number of user events received so far.
+     * </pre>
+     *
      * <code>int64 num_user_events_received = 2;</code>
      * @return The numUserEventsReceived.
      */
@@ -5837,6 +6731,10 @@ public final class RunServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Represents the cursor position in a stream of events.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.StreamCursor}
      */
     public static final class Builder extends
@@ -5991,6 +6889,10 @@ public final class RunServiceOuterClass {
 
       private long currentEventIdx_ ;
       /**
+       * <pre>
+       * Index of the current event in the stream.
+       * </pre>
+       *
        * <code>int64 current_event_idx = 1;</code>
        * @return The currentEventIdx.
        */
@@ -5999,6 +6901,10 @@ public final class RunServiceOuterClass {
         return currentEventIdx_;
       }
       /**
+       * <pre>
+       * Index of the current event in the stream.
+       * </pre>
+       *
        * <code>int64 current_event_idx = 1;</code>
        * @param value The currentEventIdx to set.
        * @return This builder for chaining.
@@ -6010,6 +6916,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Index of the current event in the stream.
+       * </pre>
+       *
        * <code>int64 current_event_idx = 1;</code>
        * @return This builder for chaining.
        */
@@ -6022,6 +6932,10 @@ public final class RunServiceOuterClass {
 
       private long numUserEventsReceived_ ;
       /**
+       * <pre>
+       * The number of user events received so far.
+       * </pre>
+       *
        * <code>int64 num_user_events_received = 2;</code>
        * @return The numUserEventsReceived.
        */
@@ -6030,6 +6944,10 @@ public final class RunServiceOuterClass {
         return numUserEventsReceived_;
       }
       /**
+       * <pre>
+       * The number of user events received so far.
+       * </pre>
+       *
        * <code>int64 num_user_events_received = 2;</code>
        * @param value The numUserEventsReceived to set.
        * @return This builder for chaining.
@@ -6041,6 +6959,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The number of user events received so far.
+       * </pre>
+       *
        * <code>int64 num_user_events_received = 2;</code>
        * @return This builder for chaining.
        */
@@ -6108,72 +7030,128 @@ public final class RunServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The type of event.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.StreamEvent.EventType event_type = 1;</code>
      * @return The enum numeric value on the wire for eventType.
      */
     int getEventTypeValue();
     /**
+     * <pre>
+     * The type of event.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.StreamEvent.EventType event_type = 1;</code>
      * @return The eventType.
      */
     yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamEvent.EventType getEventType();
 
     /**
+     * <pre>
+     * The current position in the stream.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.StreamCursor stream_cursor = 2;</code>
      * @return Whether the streamCursor field is set.
      */
     boolean hasStreamCursor();
     /**
+     * <pre>
+     * The current position in the stream.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.StreamCursor stream_cursor = 2;</code>
      * @return The streamCursor.
      */
     yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamCursor getStreamCursor();
     /**
+     * <pre>
+     * The current position in the stream.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.StreamCursor stream_cursor = 2;</code>
      */
     yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamCursorOrBuilder getStreamCursorOrBuilder();
 
     /**
+     * <pre>
+     * Error information if the run has failed.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.Error error = 3;</code>
      * @return Whether the error field is set.
      */
     boolean hasError();
     /**
+     * <pre>
+     * Error information if the run has failed.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.Error error = 3;</code>
      * @return The error.
      */
     yandex.cloud.api.ai.common.Common.Error getError();
     /**
+     * <pre>
+     * Error information if the run has failed.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.Error error = 3;</code>
      */
     yandex.cloud.api.ai.common.Common.ErrorOrBuilder getErrorOrBuilder();
 
     /**
+     * <pre>
+     * Partially generated message.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent partial_message = 4;</code>
      * @return Whether the partialMessage field is set.
      */
     boolean hasPartialMessage();
     /**
+     * <pre>
+     * Partially generated message.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent partial_message = 4;</code>
      * @return The partialMessage.
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent getPartialMessage();
     /**
+     * <pre>
+     * Partially generated message.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent partial_message = 4;</code>
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContentOrBuilder getPartialMessageOrBuilder();
 
     /**
+     * <pre>
+     * Final message generated by an assistant if a run has completed successfully.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 5;</code>
      * @return Whether the completedMessage field is set.
      */
     boolean hasCompletedMessage();
     /**
+     * <pre>
+     * Final message generated by an assistant if a run has completed successfully.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 5;</code>
      * @return The completedMessage.
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message getCompletedMessage();
     /**
+     * <pre>
+     * Final message generated by an assistant if a run has completed successfully.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 5;</code>
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageOrBuilder getCompletedMessageOrBuilder();
@@ -6181,6 +7159,10 @@ public final class RunServiceOuterClass {
     public yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamEvent.EventDataCase getEventDataCase();
   }
   /**
+   * <pre>
+   * Represents an event in the stream of a run.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.StreamEvent}
    */
   public static final class StreamEvent extends
@@ -6320,23 +7302,43 @@ public final class RunServiceOuterClass {
     }
 
     /**
+     * <pre>
+     * Enum representing events that can occur in the stream.
+     * </pre>
+     *
      * Protobuf enum {@code yandex.cloud.ai.assistants.v1.runs.StreamEvent.EventType}
      */
     public enum EventType
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Unspecified event type.
+       * </pre>
+       *
        * <code>EVENT_TYPE_UNSPECIFIED = 0;</code>
        */
       EVENT_TYPE_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Partial message is available.
+       * </pre>
+       *
        * <code>PARTIAL_MESSAGE = 1;</code>
        */
       PARTIAL_MESSAGE(1),
       /**
+       * <pre>
+       * Run has failed due to an error.
+       * </pre>
+       *
        * <code>ERROR = 2;</code>
        */
       ERROR(2),
       /**
+       * <pre>
+       * The run has completed.
+       * </pre>
+       *
        * <code>DONE = 3;</code>
        */
       DONE(3),
@@ -6344,18 +7346,34 @@ public final class RunServiceOuterClass {
       ;
 
       /**
+       * <pre>
+       * Unspecified event type.
+       * </pre>
+       *
        * <code>EVENT_TYPE_UNSPECIFIED = 0;</code>
        */
       public static final int EVENT_TYPE_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Partial message is available.
+       * </pre>
+       *
        * <code>PARTIAL_MESSAGE = 1;</code>
        */
       public static final int PARTIAL_MESSAGE_VALUE = 1;
       /**
+       * <pre>
+       * Run has failed due to an error.
+       * </pre>
+       *
        * <code>ERROR = 2;</code>
        */
       public static final int ERROR_VALUE = 2;
       /**
+       * <pre>
+       * The run has completed.
+       * </pre>
+       *
        * <code>DONE = 3;</code>
        */
       public static final int DONE_VALUE = 3;
@@ -6491,6 +7509,10 @@ public final class RunServiceOuterClass {
     public static final int EVENT_TYPE_FIELD_NUMBER = 1;
     private int eventType_;
     /**
+     * <pre>
+     * The type of event.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.StreamEvent.EventType event_type = 1;</code>
      * @return The enum numeric value on the wire for eventType.
      */
@@ -6498,6 +7520,10 @@ public final class RunServiceOuterClass {
       return eventType_;
     }
     /**
+     * <pre>
+     * The type of event.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.StreamEvent.EventType event_type = 1;</code>
      * @return The eventType.
      */
@@ -6510,6 +7536,10 @@ public final class RunServiceOuterClass {
     public static final int STREAM_CURSOR_FIELD_NUMBER = 2;
     private yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamCursor streamCursor_;
     /**
+     * <pre>
+     * The current position in the stream.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.StreamCursor stream_cursor = 2;</code>
      * @return Whether the streamCursor field is set.
      */
@@ -6518,6 +7548,10 @@ public final class RunServiceOuterClass {
       return streamCursor_ != null;
     }
     /**
+     * <pre>
+     * The current position in the stream.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.StreamCursor stream_cursor = 2;</code>
      * @return The streamCursor.
      */
@@ -6526,6 +7560,10 @@ public final class RunServiceOuterClass {
       return streamCursor_ == null ? yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamCursor.getDefaultInstance() : streamCursor_;
     }
     /**
+     * <pre>
+     * The current position in the stream.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.StreamCursor stream_cursor = 2;</code>
      */
     @java.lang.Override
@@ -6535,6 +7573,10 @@ public final class RunServiceOuterClass {
 
     public static final int ERROR_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     * Error information if the run has failed.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.Error error = 3;</code>
      * @return Whether the error field is set.
      */
@@ -6543,6 +7585,10 @@ public final class RunServiceOuterClass {
       return eventDataCase_ == 3;
     }
     /**
+     * <pre>
+     * Error information if the run has failed.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.Error error = 3;</code>
      * @return The error.
      */
@@ -6554,6 +7600,10 @@ public final class RunServiceOuterClass {
       return yandex.cloud.api.ai.common.Common.Error.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Error information if the run has failed.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.Error error = 3;</code>
      */
     @java.lang.Override
@@ -6566,6 +7616,10 @@ public final class RunServiceOuterClass {
 
     public static final int PARTIAL_MESSAGE_FIELD_NUMBER = 4;
     /**
+     * <pre>
+     * Partially generated message.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent partial_message = 4;</code>
      * @return Whether the partialMessage field is set.
      */
@@ -6574,6 +7628,10 @@ public final class RunServiceOuterClass {
       return eventDataCase_ == 4;
     }
     /**
+     * <pre>
+     * Partially generated message.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent partial_message = 4;</code>
      * @return The partialMessage.
      */
@@ -6585,6 +7643,10 @@ public final class RunServiceOuterClass {
       return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Partially generated message.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent partial_message = 4;</code>
      */
     @java.lang.Override
@@ -6597,6 +7659,10 @@ public final class RunServiceOuterClass {
 
     public static final int COMPLETED_MESSAGE_FIELD_NUMBER = 5;
     /**
+     * <pre>
+     * Final message generated by an assistant if a run has completed successfully.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 5;</code>
      * @return Whether the completedMessage field is set.
      */
@@ -6605,6 +7671,10 @@ public final class RunServiceOuterClass {
       return eventDataCase_ == 5;
     }
     /**
+     * <pre>
+     * Final message generated by an assistant if a run has completed successfully.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 5;</code>
      * @return The completedMessage.
      */
@@ -6616,6 +7686,10 @@ public final class RunServiceOuterClass {
       return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Final message generated by an assistant if a run has completed successfully.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 5;</code>
      */
     @java.lang.Override
@@ -6851,6 +7925,10 @@ public final class RunServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Represents an event in the stream of a run.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.StreamEvent}
      */
     public static final class Builder extends
@@ -7069,6 +8147,10 @@ public final class RunServiceOuterClass {
 
       private int eventType_ = 0;
       /**
+       * <pre>
+       * The type of event.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.StreamEvent.EventType event_type = 1;</code>
        * @return The enum numeric value on the wire for eventType.
        */
@@ -7076,6 +8158,10 @@ public final class RunServiceOuterClass {
         return eventType_;
       }
       /**
+       * <pre>
+       * The type of event.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.StreamEvent.EventType event_type = 1;</code>
        * @param value The enum numeric value on the wire for eventType to set.
        * @return This builder for chaining.
@@ -7087,6 +8173,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The type of event.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.StreamEvent.EventType event_type = 1;</code>
        * @return The eventType.
        */
@@ -7097,6 +8187,10 @@ public final class RunServiceOuterClass {
         return result == null ? yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamEvent.EventType.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * The type of event.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.StreamEvent.EventType event_type = 1;</code>
        * @param value The eventType to set.
        * @return This builder for chaining.
@@ -7111,6 +8205,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The type of event.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.StreamEvent.EventType event_type = 1;</code>
        * @return This builder for chaining.
        */
@@ -7125,6 +8223,10 @@ public final class RunServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamCursor, yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamCursor.Builder, yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamCursorOrBuilder> streamCursorBuilder_;
       /**
+       * <pre>
+       * The current position in the stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.StreamCursor stream_cursor = 2;</code>
        * @return Whether the streamCursor field is set.
        */
@@ -7132,6 +8234,10 @@ public final class RunServiceOuterClass {
         return streamCursorBuilder_ != null || streamCursor_ != null;
       }
       /**
+       * <pre>
+       * The current position in the stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.StreamCursor stream_cursor = 2;</code>
        * @return The streamCursor.
        */
@@ -7143,6 +8249,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The current position in the stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.StreamCursor stream_cursor = 2;</code>
        */
       public Builder setStreamCursor(yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamCursor value) {
@@ -7159,6 +8269,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The current position in the stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.StreamCursor stream_cursor = 2;</code>
        */
       public Builder setStreamCursor(
@@ -7173,6 +8287,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The current position in the stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.StreamCursor stream_cursor = 2;</code>
        */
       public Builder mergeStreamCursor(yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamCursor value) {
@@ -7191,6 +8309,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The current position in the stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.StreamCursor stream_cursor = 2;</code>
        */
       public Builder clearStreamCursor() {
@@ -7205,6 +8327,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The current position in the stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.StreamCursor stream_cursor = 2;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamCursor.Builder getStreamCursorBuilder() {
@@ -7213,6 +8339,10 @@ public final class RunServiceOuterClass {
         return getStreamCursorFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The current position in the stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.StreamCursor stream_cursor = 2;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamCursorOrBuilder getStreamCursorOrBuilder() {
@@ -7224,6 +8354,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The current position in the stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.StreamCursor stream_cursor = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7243,6 +8377,10 @@ public final class RunServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.common.Common.Error, yandex.cloud.api.ai.common.Common.Error.Builder, yandex.cloud.api.ai.common.Common.ErrorOrBuilder> errorBuilder_;
       /**
+       * <pre>
+       * Error information if the run has failed.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.Error error = 3;</code>
        * @return Whether the error field is set.
        */
@@ -7251,6 +8389,10 @@ public final class RunServiceOuterClass {
         return eventDataCase_ == 3;
       }
       /**
+       * <pre>
+       * Error information if the run has failed.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.Error error = 3;</code>
        * @return The error.
        */
@@ -7269,6 +8411,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Error information if the run has failed.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.Error error = 3;</code>
        */
       public Builder setError(yandex.cloud.api.ai.common.Common.Error value) {
@@ -7285,6 +8431,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Error information if the run has failed.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.Error error = 3;</code>
        */
       public Builder setError(
@@ -7299,6 +8449,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Error information if the run has failed.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.Error error = 3;</code>
        */
       public Builder mergeError(yandex.cloud.api.ai.common.Common.Error value) {
@@ -7321,6 +8475,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Error information if the run has failed.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.Error error = 3;</code>
        */
       public Builder clearError() {
@@ -7340,12 +8498,20 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Error information if the run has failed.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.Error error = 3;</code>
        */
       public yandex.cloud.api.ai.common.Common.Error.Builder getErrorBuilder() {
         return getErrorFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Error information if the run has failed.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.Error error = 3;</code>
        */
       @java.lang.Override
@@ -7360,6 +8526,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Error information if the run has failed.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.Error error = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7384,6 +8554,10 @@ public final class RunServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContentOrBuilder> partialMessageBuilder_;
       /**
+       * <pre>
+       * Partially generated message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent partial_message = 4;</code>
        * @return Whether the partialMessage field is set.
        */
@@ -7392,6 +8566,10 @@ public final class RunServiceOuterClass {
         return eventDataCase_ == 4;
       }
       /**
+       * <pre>
+       * Partially generated message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent partial_message = 4;</code>
        * @return The partialMessage.
        */
@@ -7410,6 +8588,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Partially generated message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent partial_message = 4;</code>
        */
       public Builder setPartialMessage(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent value) {
@@ -7426,6 +8608,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Partially generated message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent partial_message = 4;</code>
        */
       public Builder setPartialMessage(
@@ -7440,6 +8626,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Partially generated message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent partial_message = 4;</code>
        */
       public Builder mergePartialMessage(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent value) {
@@ -7462,6 +8652,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Partially generated message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent partial_message = 4;</code>
        */
       public Builder clearPartialMessage() {
@@ -7481,12 +8675,20 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Partially generated message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent partial_message = 4;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageContent.Builder getPartialMessageBuilder() {
         return getPartialMessageFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Partially generated message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent partial_message = 4;</code>
        */
       @java.lang.Override
@@ -7501,6 +8703,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Partially generated message.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.MessageContent partial_message = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7525,6 +8731,10 @@ public final class RunServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageOrBuilder> completedMessageBuilder_;
       /**
+       * <pre>
+       * Final message generated by an assistant if a run has completed successfully.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 5;</code>
        * @return Whether the completedMessage field is set.
        */
@@ -7533,6 +8743,10 @@ public final class RunServiceOuterClass {
         return eventDataCase_ == 5;
       }
       /**
+       * <pre>
+       * Final message generated by an assistant if a run has completed successfully.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 5;</code>
        * @return The completedMessage.
        */
@@ -7551,6 +8765,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Final message generated by an assistant if a run has completed successfully.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 5;</code>
        */
       public Builder setCompletedMessage(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message value) {
@@ -7567,6 +8785,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Final message generated by an assistant if a run has completed successfully.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 5;</code>
        */
       public Builder setCompletedMessage(
@@ -7581,6 +8803,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Final message generated by an assistant if a run has completed successfully.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 5;</code>
        */
       public Builder mergeCompletedMessage(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message value) {
@@ -7603,6 +8829,10 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Final message generated by an assistant if a run has completed successfully.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 5;</code>
        */
       public Builder clearCompletedMessage() {
@@ -7622,12 +8852,20 @@ public final class RunServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Final message generated by an assistant if a run has completed successfully.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 5;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message.Builder getCompletedMessageBuilder() {
         return getCompletedMessageFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Final message generated by an assistant if a run has completed successfully.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 5;</code>
        */
       @java.lang.Override
@@ -7642,6 +8880,10 @@ public final class RunServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Final message generated by an assistant if a run has completed successfully.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

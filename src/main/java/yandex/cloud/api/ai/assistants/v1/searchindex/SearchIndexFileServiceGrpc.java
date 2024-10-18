@@ -3,6 +3,9 @@ package yandex.cloud.api.ai.assistants.v1.searchindex;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * ThreadService provides operations for managing files within search indexes.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -122,10 +125,16 @@ public final class SearchIndexFileServiceGrpc {
   }
 
   /**
+   * <pre>
+   * ThreadService provides operations for managing files within search indexes.
+   * </pre>
    */
   public static abstract class SearchIndexFileServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Retrieves details of a specific file that has been indexed within a search index.
+     * </pre>
      */
     public void get(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.GetSearchIndexFileRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile> responseObserver) {
@@ -133,6 +142,9 @@ public final class SearchIndexFileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List files that are indexed within a specific search index.
+     * </pre>
      */
     public void list(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.ListSearchIndexFilesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.ListSearchIndexFilesResponse> responseObserver) {
@@ -160,6 +172,9 @@ public final class SearchIndexFileServiceGrpc {
   }
 
   /**
+   * <pre>
+   * ThreadService provides operations for managing files within search indexes.
+   * </pre>
    */
   public static final class SearchIndexFileServiceStub extends io.grpc.stub.AbstractAsyncStub<SearchIndexFileServiceStub> {
     private SearchIndexFileServiceStub(
@@ -174,6 +189,9 @@ public final class SearchIndexFileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves details of a specific file that has been indexed within a search index.
+     * </pre>
      */
     public void get(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.GetSearchIndexFileRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile> responseObserver) {
@@ -182,6 +200,9 @@ public final class SearchIndexFileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List files that are indexed within a specific search index.
+     * </pre>
      */
     public void list(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.ListSearchIndexFilesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.ListSearchIndexFilesResponse> responseObserver) {
@@ -191,6 +212,9 @@ public final class SearchIndexFileServiceGrpc {
   }
 
   /**
+   * <pre>
+   * ThreadService provides operations for managing files within search indexes.
+   * </pre>
    */
   public static final class SearchIndexFileServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SearchIndexFileServiceBlockingStub> {
     private SearchIndexFileServiceBlockingStub(
@@ -205,6 +229,9 @@ public final class SearchIndexFileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves details of a specific file that has been indexed within a search index.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile get(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.GetSearchIndexFileRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -212,6 +239,9 @@ public final class SearchIndexFileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List files that are indexed within a specific search index.
+     * </pre>
      */
     public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.ListSearchIndexFilesResponse list(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.ListSearchIndexFilesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -220,6 +250,9 @@ public final class SearchIndexFileServiceGrpc {
   }
 
   /**
+   * <pre>
+   * ThreadService provides operations for managing files within search indexes.
+   * </pre>
    */
   public static final class SearchIndexFileServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SearchIndexFileServiceFutureStub> {
     private SearchIndexFileServiceFutureStub(
@@ -234,6 +267,9 @@ public final class SearchIndexFileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves details of a specific file that has been indexed within a search index.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile> get(
         yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.GetSearchIndexFileRequest request) {
@@ -242,6 +278,9 @@ public final class SearchIndexFileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List files that are indexed within a specific search index.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.ListSearchIndexFilesResponse> list(
         yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.ListSearchIndexFilesRequest request) {

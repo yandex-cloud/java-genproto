@@ -19,11 +19,19 @@ public final class RunOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Unique identifier of the run.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * Unique identifier of the run.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -31,11 +39,19 @@ public final class RunOuterClass {
         getIdBytes();
 
     /**
+     * <pre>
+     * Identifier for the assistant that is being run.
+     * </pre>
+     *
      * <code>string assistant_id = 2;</code>
      * @return The assistantId.
      */
     java.lang.String getAssistantId();
     /**
+     * <pre>
+     * Identifier for the assistant that is being run.
+     * </pre>
+     *
      * <code>string assistant_id = 2;</code>
      * @return The bytes for assistantId.
      */
@@ -43,11 +59,19 @@ public final class RunOuterClass {
         getAssistantIdBytes();
 
     /**
+     * <pre>
+     * Identifier for the thread of messages that this run is associated with.
+     * </pre>
+     *
      * <code>string thread_id = 3;</code>
      * @return The threadId.
      */
     java.lang.String getThreadId();
     /**
+     * <pre>
+     * Identifier for the thread of messages that this run is associated with.
+     * </pre>
+     *
      * <code>string thread_id = 3;</code>
      * @return The bytes for threadId.
      */
@@ -55,11 +79,19 @@ public final class RunOuterClass {
         getThreadIdBytes();
 
     /**
+     * <pre>
+     * Identifier of the subject who created this run.
+     * </pre>
+     *
      * <code>string created_by = 4;</code>
      * @return The createdBy.
      */
     java.lang.String getCreatedBy();
     /**
+     * <pre>
+     * Identifier of the subject who created this run.
+     * </pre>
+     *
      * <code>string created_by = 4;</code>
      * @return The bytes for createdBy.
      */
@@ -67,25 +99,45 @@ public final class RunOuterClass {
         getCreatedByBytes();
 
     /**
+     * <pre>
+     * Timestamp representing when the run was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 5;</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Timestamp representing when the run was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 5;</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Timestamp representing when the run was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 5;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the run.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the run.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     boolean containsLabels(
@@ -97,11 +149,19 @@ public final class RunOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the run.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the run.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -109,6 +169,10 @@ public final class RunOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the run.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -116,66 +180,124 @@ public final class RunOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * Current state of the run, including its status and any associated data.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.RunState state = 7;</code>
      * @return Whether the state field is set.
      */
     boolean hasState();
     /**
+     * <pre>
+     * Current state of the run, including its status and any associated data.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.RunState state = 7;</code>
      * @return The state.
      */
     yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.RunState getState();
     /**
+     * <pre>
+     * Current state of the run, including its status and any associated data.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.RunState state = 7;</code>
      */
     yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.RunStateOrBuilder getStateOrBuilder();
 
     /**
+     * <pre>
+     * Information about the content usage during the run, such as the number of [tokens](/docs/foundation-models/concepts/yandexgpt/tokens) used by the completion model.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.ContentUsage usage = 8;</code>
      * @return Whether the usage field is set.
      */
     boolean hasUsage();
     /**
+     * <pre>
+     * Information about the content usage during the run, such as the number of [tokens](/docs/foundation-models/concepts/yandexgpt/tokens) used by the completion model.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.ContentUsage usage = 8;</code>
      * @return The usage.
      */
     yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.ContentUsage getUsage();
     /**
+     * <pre>
+     * Information about the content usage during the run, such as the number of [tokens](/docs/foundation-models/concepts/yandexgpt/tokens) used by the completion model.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.ContentUsage usage = 8;</code>
      */
     yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.ContentUsageOrBuilder getUsageOrBuilder();
 
     /**
+     * <pre>
+     * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+     * If specified, these options will override the assistant's prompt truncation settings for this run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 9;</code>
      * @return Whether the customPromptTruncationOptions field is set.
      */
     boolean hasCustomPromptTruncationOptions();
     /**
+     * <pre>
+     * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+     * If specified, these options will override the assistant's prompt truncation settings for this run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 9;</code>
      * @return The customPromptTruncationOptions.
      */
     yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions getCustomPromptTruncationOptions();
     /**
+     * <pre>
+     * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+     * If specified, these options will override the assistant's prompt truncation settings for this run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 9;</code>
      */
     yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptionsOrBuilder getCustomPromptTruncationOptionsOrBuilder();
 
     /**
+     * <pre>
+     * Configuration options for completion generation.
+     * If specified, these options will override the assistant's completion settings for this run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 10;</code>
      * @return Whether the customCompletionOptions field is set.
      */
     boolean hasCustomCompletionOptions();
     /**
+     * <pre>
+     * Configuration options for completion generation.
+     * If specified, these options will override the assistant's completion settings for this run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 10;</code>
      * @return The customCompletionOptions.
      */
     yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions getCustomCompletionOptions();
     /**
+     * <pre>
+     * Configuration options for completion generation.
+     * If specified, these options will override the assistant's completion settings for this run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 10;</code>
      */
     yandex.cloud.api.ai.assistants.v1.Common.CompletionOptionsOrBuilder getCustomCompletionOptionsOrBuilder();
   }
   /**
+   * <pre>
+   * Represents a run of an assistant over a specific thread of messages.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.Run}
    */
   public static final class Run extends
@@ -374,6 +496,10 @@ public final class RunOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * Unique identifier of the run.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -391,6 +517,10 @@ public final class RunOuterClass {
       }
     }
     /**
+     * <pre>
+     * Unique identifier of the run.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -412,6 +542,10 @@ public final class RunOuterClass {
     public static final int ASSISTANT_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object assistantId_;
     /**
+     * <pre>
+     * Identifier for the assistant that is being run.
+     * </pre>
+     *
      * <code>string assistant_id = 2;</code>
      * @return The assistantId.
      */
@@ -429,6 +563,10 @@ public final class RunOuterClass {
       }
     }
     /**
+     * <pre>
+     * Identifier for the assistant that is being run.
+     * </pre>
+     *
      * <code>string assistant_id = 2;</code>
      * @return The bytes for assistantId.
      */
@@ -450,6 +588,10 @@ public final class RunOuterClass {
     public static final int THREAD_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object threadId_;
     /**
+     * <pre>
+     * Identifier for the thread of messages that this run is associated with.
+     * </pre>
+     *
      * <code>string thread_id = 3;</code>
      * @return The threadId.
      */
@@ -467,6 +609,10 @@ public final class RunOuterClass {
       }
     }
     /**
+     * <pre>
+     * Identifier for the thread of messages that this run is associated with.
+     * </pre>
+     *
      * <code>string thread_id = 3;</code>
      * @return The bytes for threadId.
      */
@@ -488,6 +634,10 @@ public final class RunOuterClass {
     public static final int CREATED_BY_FIELD_NUMBER = 4;
     private volatile java.lang.Object createdBy_;
     /**
+     * <pre>
+     * Identifier of the subject who created this run.
+     * </pre>
+     *
      * <code>string created_by = 4;</code>
      * @return The createdBy.
      */
@@ -505,6 +655,10 @@ public final class RunOuterClass {
       }
     }
     /**
+     * <pre>
+     * Identifier of the subject who created this run.
+     * </pre>
+     *
      * <code>string created_by = 4;</code>
      * @return The bytes for createdBy.
      */
@@ -526,6 +680,10 @@ public final class RunOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 5;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Timestamp representing when the run was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 5;</code>
      * @return Whether the createdAt field is set.
      */
@@ -534,6 +692,10 @@ public final class RunOuterClass {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Timestamp representing when the run was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 5;</code>
      * @return The createdAt.
      */
@@ -542,6 +704,10 @@ public final class RunOuterClass {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Timestamp representing when the run was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 5;</code>
      */
     @java.lang.Override
@@ -576,6 +742,10 @@ public final class RunOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the run.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -594,6 +764,10 @@ public final class RunOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the run.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -602,6 +776,10 @@ public final class RunOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the run.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -615,6 +793,10 @@ public final class RunOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Set of key-value pairs that can be used to organize and categorize the run.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -633,6 +815,10 @@ public final class RunOuterClass {
     public static final int STATE_FIELD_NUMBER = 7;
     private yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.RunState state_;
     /**
+     * <pre>
+     * Current state of the run, including its status and any associated data.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.RunState state = 7;</code>
      * @return Whether the state field is set.
      */
@@ -641,6 +827,10 @@ public final class RunOuterClass {
       return state_ != null;
     }
     /**
+     * <pre>
+     * Current state of the run, including its status and any associated data.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.RunState state = 7;</code>
      * @return The state.
      */
@@ -649,6 +839,10 @@ public final class RunOuterClass {
       return state_ == null ? yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.RunState.getDefaultInstance() : state_;
     }
     /**
+     * <pre>
+     * Current state of the run, including its status and any associated data.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.RunState state = 7;</code>
      */
     @java.lang.Override
@@ -659,6 +853,10 @@ public final class RunOuterClass {
     public static final int USAGE_FIELD_NUMBER = 8;
     private yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.ContentUsage usage_;
     /**
+     * <pre>
+     * Information about the content usage during the run, such as the number of [tokens](/docs/foundation-models/concepts/yandexgpt/tokens) used by the completion model.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.ContentUsage usage = 8;</code>
      * @return Whether the usage field is set.
      */
@@ -667,6 +865,10 @@ public final class RunOuterClass {
       return usage_ != null;
     }
     /**
+     * <pre>
+     * Information about the content usage during the run, such as the number of [tokens](/docs/foundation-models/concepts/yandexgpt/tokens) used by the completion model.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.ContentUsage usage = 8;</code>
      * @return The usage.
      */
@@ -675,6 +877,10 @@ public final class RunOuterClass {
       return usage_ == null ? yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.ContentUsage.getDefaultInstance() : usage_;
     }
     /**
+     * <pre>
+     * Information about the content usage during the run, such as the number of [tokens](/docs/foundation-models/concepts/yandexgpt/tokens) used by the completion model.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.ContentUsage usage = 8;</code>
      */
     @java.lang.Override
@@ -685,6 +891,11 @@ public final class RunOuterClass {
     public static final int CUSTOM_PROMPT_TRUNCATION_OPTIONS_FIELD_NUMBER = 9;
     private yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions customPromptTruncationOptions_;
     /**
+     * <pre>
+     * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+     * If specified, these options will override the assistant's prompt truncation settings for this run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 9;</code>
      * @return Whether the customPromptTruncationOptions field is set.
      */
@@ -693,6 +904,11 @@ public final class RunOuterClass {
       return customPromptTruncationOptions_ != null;
     }
     /**
+     * <pre>
+     * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+     * If specified, these options will override the assistant's prompt truncation settings for this run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 9;</code>
      * @return The customPromptTruncationOptions.
      */
@@ -701,6 +917,11 @@ public final class RunOuterClass {
       return customPromptTruncationOptions_ == null ? yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.getDefaultInstance() : customPromptTruncationOptions_;
     }
     /**
+     * <pre>
+     * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+     * If specified, these options will override the assistant's prompt truncation settings for this run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 9;</code>
      */
     @java.lang.Override
@@ -711,6 +932,11 @@ public final class RunOuterClass {
     public static final int CUSTOM_COMPLETION_OPTIONS_FIELD_NUMBER = 10;
     private yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions customCompletionOptions_;
     /**
+     * <pre>
+     * Configuration options for completion generation.
+     * If specified, these options will override the assistant's completion settings for this run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 10;</code>
      * @return Whether the customCompletionOptions field is set.
      */
@@ -719,6 +945,11 @@ public final class RunOuterClass {
       return customCompletionOptions_ != null;
     }
     /**
+     * <pre>
+     * Configuration options for completion generation.
+     * If specified, these options will override the assistant's completion settings for this run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 10;</code>
      * @return The customCompletionOptions.
      */
@@ -727,6 +958,11 @@ public final class RunOuterClass {
       return customCompletionOptions_ == null ? yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions.getDefaultInstance() : customCompletionOptions_;
     }
     /**
+     * <pre>
+     * Configuration options for completion generation.
+     * If specified, these options will override the assistant's completion settings for this run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 10;</code>
      */
     @java.lang.Override
@@ -1021,6 +1257,10 @@ public final class RunOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Represents a run of an assistant over a specific thread of messages.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.Run}
      */
     public static final class Builder extends
@@ -1290,6 +1530,10 @@ public final class RunOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * Unique identifier of the run.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -1306,6 +1550,10 @@ public final class RunOuterClass {
         }
       }
       /**
+       * <pre>
+       * Unique identifier of the run.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -1323,6 +1571,10 @@ public final class RunOuterClass {
         }
       }
       /**
+       * <pre>
+       * Unique identifier of the run.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -1338,6 +1590,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Unique identifier of the run.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -1348,6 +1604,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Unique identifier of the run.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -1366,6 +1626,10 @@ public final class RunOuterClass {
 
       private java.lang.Object assistantId_ = "";
       /**
+       * <pre>
+       * Identifier for the assistant that is being run.
+       * </pre>
+       *
        * <code>string assistant_id = 2;</code>
        * @return The assistantId.
        */
@@ -1382,6 +1646,10 @@ public final class RunOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier for the assistant that is being run.
+       * </pre>
+       *
        * <code>string assistant_id = 2;</code>
        * @return The bytes for assistantId.
        */
@@ -1399,6 +1667,10 @@ public final class RunOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier for the assistant that is being run.
+       * </pre>
+       *
        * <code>string assistant_id = 2;</code>
        * @param value The assistantId to set.
        * @return This builder for chaining.
@@ -1414,6 +1686,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier for the assistant that is being run.
+       * </pre>
+       *
        * <code>string assistant_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -1424,6 +1700,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier for the assistant that is being run.
+       * </pre>
+       *
        * <code>string assistant_id = 2;</code>
        * @param value The bytes for assistantId to set.
        * @return This builder for chaining.
@@ -1442,6 +1722,10 @@ public final class RunOuterClass {
 
       private java.lang.Object threadId_ = "";
       /**
+       * <pre>
+       * Identifier for the thread of messages that this run is associated with.
+       * </pre>
+       *
        * <code>string thread_id = 3;</code>
        * @return The threadId.
        */
@@ -1458,6 +1742,10 @@ public final class RunOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier for the thread of messages that this run is associated with.
+       * </pre>
+       *
        * <code>string thread_id = 3;</code>
        * @return The bytes for threadId.
        */
@@ -1475,6 +1763,10 @@ public final class RunOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier for the thread of messages that this run is associated with.
+       * </pre>
+       *
        * <code>string thread_id = 3;</code>
        * @param value The threadId to set.
        * @return This builder for chaining.
@@ -1490,6 +1782,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier for the thread of messages that this run is associated with.
+       * </pre>
+       *
        * <code>string thread_id = 3;</code>
        * @return This builder for chaining.
        */
@@ -1500,6 +1796,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier for the thread of messages that this run is associated with.
+       * </pre>
+       *
        * <code>string thread_id = 3;</code>
        * @param value The bytes for threadId to set.
        * @return This builder for chaining.
@@ -1518,6 +1818,10 @@ public final class RunOuterClass {
 
       private java.lang.Object createdBy_ = "";
       /**
+       * <pre>
+       * Identifier of the subject who created this run.
+       * </pre>
+       *
        * <code>string created_by = 4;</code>
        * @return The createdBy.
        */
@@ -1534,6 +1838,10 @@ public final class RunOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier of the subject who created this run.
+       * </pre>
+       *
        * <code>string created_by = 4;</code>
        * @return The bytes for createdBy.
        */
@@ -1551,6 +1859,10 @@ public final class RunOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier of the subject who created this run.
+       * </pre>
+       *
        * <code>string created_by = 4;</code>
        * @param value The createdBy to set.
        * @return This builder for chaining.
@@ -1566,6 +1878,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the subject who created this run.
+       * </pre>
+       *
        * <code>string created_by = 4;</code>
        * @return This builder for chaining.
        */
@@ -1576,6 +1892,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the subject who created this run.
+       * </pre>
+       *
        * <code>string created_by = 4;</code>
        * @param value The bytes for createdBy to set.
        * @return This builder for chaining.
@@ -1596,6 +1916,10 @@ public final class RunOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Timestamp representing when the run was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 5;</code>
        * @return Whether the createdAt field is set.
        */
@@ -1603,6 +1927,10 @@ public final class RunOuterClass {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Timestamp representing when the run was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 5;</code>
        * @return The createdAt.
        */
@@ -1614,6 +1942,10 @@ public final class RunOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp representing when the run was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 5;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1630,6 +1962,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the run was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 5;</code>
        */
       public Builder setCreatedAt(
@@ -1644,6 +1980,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the run was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 5;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1662,6 +2002,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the run was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 5;</code>
        */
       public Builder clearCreatedAt() {
@@ -1676,6 +2020,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp representing when the run was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 5;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -1684,6 +2032,10 @@ public final class RunOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Timestamp representing when the run was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 5;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -1695,6 +2047,10 @@ public final class RunOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp representing when the run was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1738,6 +2094,10 @@ public final class RunOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the run.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1756,6 +2116,10 @@ public final class RunOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the run.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -1764,6 +2128,10 @@ public final class RunOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the run.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -1777,6 +2145,10 @@ public final class RunOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the run.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -1798,6 +2170,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the run.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1817,6 +2193,10 @@ public final class RunOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the run.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       public Builder putLabels(
@@ -1832,6 +2212,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of key-value pairs that can be used to organize and categorize the run.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1846,6 +2230,10 @@ public final class RunOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.RunState, yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.RunState.Builder, yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.RunStateOrBuilder> stateBuilder_;
       /**
+       * <pre>
+       * Current state of the run, including its status and any associated data.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.RunState state = 7;</code>
        * @return Whether the state field is set.
        */
@@ -1853,6 +2241,10 @@ public final class RunOuterClass {
         return stateBuilder_ != null || state_ != null;
       }
       /**
+       * <pre>
+       * Current state of the run, including its status and any associated data.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.RunState state = 7;</code>
        * @return The state.
        */
@@ -1864,6 +2256,10 @@ public final class RunOuterClass {
         }
       }
       /**
+       * <pre>
+       * Current state of the run, including its status and any associated data.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.RunState state = 7;</code>
        */
       public Builder setState(yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.RunState value) {
@@ -1880,6 +2276,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Current state of the run, including its status and any associated data.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.RunState state = 7;</code>
        */
       public Builder setState(
@@ -1894,6 +2294,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Current state of the run, including its status and any associated data.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.RunState state = 7;</code>
        */
       public Builder mergeState(yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.RunState value) {
@@ -1912,6 +2316,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Current state of the run, including its status and any associated data.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.RunState state = 7;</code>
        */
       public Builder clearState() {
@@ -1926,6 +2334,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Current state of the run, including its status and any associated data.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.RunState state = 7;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.RunState.Builder getStateBuilder() {
@@ -1934,6 +2346,10 @@ public final class RunOuterClass {
         return getStateFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Current state of the run, including its status and any associated data.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.RunState state = 7;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.RunStateOrBuilder getStateOrBuilder() {
@@ -1945,6 +2361,10 @@ public final class RunOuterClass {
         }
       }
       /**
+       * <pre>
+       * Current state of the run, including its status and any associated data.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.RunState state = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1965,6 +2385,10 @@ public final class RunOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.ContentUsage, yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.ContentUsage.Builder, yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.ContentUsageOrBuilder> usageBuilder_;
       /**
+       * <pre>
+       * Information about the content usage during the run, such as the number of [tokens](/docs/foundation-models/concepts/yandexgpt/tokens) used by the completion model.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.ContentUsage usage = 8;</code>
        * @return Whether the usage field is set.
        */
@@ -1972,6 +2396,10 @@ public final class RunOuterClass {
         return usageBuilder_ != null || usage_ != null;
       }
       /**
+       * <pre>
+       * Information about the content usage during the run, such as the number of [tokens](/docs/foundation-models/concepts/yandexgpt/tokens) used by the completion model.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.ContentUsage usage = 8;</code>
        * @return The usage.
        */
@@ -1983,6 +2411,10 @@ public final class RunOuterClass {
         }
       }
       /**
+       * <pre>
+       * Information about the content usage during the run, such as the number of [tokens](/docs/foundation-models/concepts/yandexgpt/tokens) used by the completion model.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.ContentUsage usage = 8;</code>
        */
       public Builder setUsage(yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.ContentUsage value) {
@@ -1999,6 +2431,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Information about the content usage during the run, such as the number of [tokens](/docs/foundation-models/concepts/yandexgpt/tokens) used by the completion model.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.ContentUsage usage = 8;</code>
        */
       public Builder setUsage(
@@ -2013,6 +2449,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Information about the content usage during the run, such as the number of [tokens](/docs/foundation-models/concepts/yandexgpt/tokens) used by the completion model.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.ContentUsage usage = 8;</code>
        */
       public Builder mergeUsage(yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.ContentUsage value) {
@@ -2031,6 +2471,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Information about the content usage during the run, such as the number of [tokens](/docs/foundation-models/concepts/yandexgpt/tokens) used by the completion model.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.ContentUsage usage = 8;</code>
        */
       public Builder clearUsage() {
@@ -2045,6 +2489,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Information about the content usage during the run, such as the number of [tokens](/docs/foundation-models/concepts/yandexgpt/tokens) used by the completion model.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.ContentUsage usage = 8;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.ContentUsage.Builder getUsageBuilder() {
@@ -2053,6 +2501,10 @@ public final class RunOuterClass {
         return getUsageFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Information about the content usage during the run, such as the number of [tokens](/docs/foundation-models/concepts/yandexgpt/tokens) used by the completion model.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.ContentUsage usage = 8;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.ContentUsageOrBuilder getUsageOrBuilder() {
@@ -2064,6 +2516,10 @@ public final class RunOuterClass {
         }
       }
       /**
+       * <pre>
+       * Information about the content usage during the run, such as the number of [tokens](/docs/foundation-models/concepts/yandexgpt/tokens) used by the completion model.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.ContentUsage usage = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2084,6 +2540,11 @@ public final class RunOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions, yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.Builder, yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptionsOrBuilder> customPromptTruncationOptionsBuilder_;
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * If specified, these options will override the assistant's prompt truncation settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 9;</code>
        * @return Whether the customPromptTruncationOptions field is set.
        */
@@ -2091,6 +2552,11 @@ public final class RunOuterClass {
         return customPromptTruncationOptionsBuilder_ != null || customPromptTruncationOptions_ != null;
       }
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * If specified, these options will override the assistant's prompt truncation settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 9;</code>
        * @return The customPromptTruncationOptions.
        */
@@ -2102,6 +2568,11 @@ public final class RunOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * If specified, these options will override the assistant's prompt truncation settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 9;</code>
        */
       public Builder setCustomPromptTruncationOptions(yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions value) {
@@ -2118,6 +2589,11 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * If specified, these options will override the assistant's prompt truncation settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 9;</code>
        */
       public Builder setCustomPromptTruncationOptions(
@@ -2132,6 +2608,11 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * If specified, these options will override the assistant's prompt truncation settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 9;</code>
        */
       public Builder mergeCustomPromptTruncationOptions(yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions value) {
@@ -2150,6 +2631,11 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * If specified, these options will override the assistant's prompt truncation settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 9;</code>
        */
       public Builder clearCustomPromptTruncationOptions() {
@@ -2164,6 +2650,11 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * If specified, these options will override the assistant's prompt truncation settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 9;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.Builder getCustomPromptTruncationOptionsBuilder() {
@@ -2172,6 +2663,11 @@ public final class RunOuterClass {
         return getCustomPromptTruncationOptionsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * If specified, these options will override the assistant's prompt truncation settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 9;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptionsOrBuilder getCustomPromptTruncationOptionsOrBuilder() {
@@ -2183,6 +2679,11 @@ public final class RunOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * If specified, these options will override the assistant's prompt truncation settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions custom_prompt_truncation_options = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2203,6 +2704,11 @@ public final class RunOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions, yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions.Builder, yandex.cloud.api.ai.assistants.v1.Common.CompletionOptionsOrBuilder> customCompletionOptionsBuilder_;
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * If specified, these options will override the assistant's completion settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 10;</code>
        * @return Whether the customCompletionOptions field is set.
        */
@@ -2210,6 +2716,11 @@ public final class RunOuterClass {
         return customCompletionOptionsBuilder_ != null || customCompletionOptions_ != null;
       }
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * If specified, these options will override the assistant's completion settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 10;</code>
        * @return The customCompletionOptions.
        */
@@ -2221,6 +2732,11 @@ public final class RunOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * If specified, these options will override the assistant's completion settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 10;</code>
        */
       public Builder setCustomCompletionOptions(yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions value) {
@@ -2237,6 +2753,11 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * If specified, these options will override the assistant's completion settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 10;</code>
        */
       public Builder setCustomCompletionOptions(
@@ -2251,6 +2772,11 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * If specified, these options will override the assistant's completion settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 10;</code>
        */
       public Builder mergeCustomCompletionOptions(yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions value) {
@@ -2269,6 +2795,11 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * If specified, these options will override the assistant's completion settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 10;</code>
        */
       public Builder clearCustomCompletionOptions() {
@@ -2283,6 +2814,11 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * If specified, these options will override the assistant's completion settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 10;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions.Builder getCustomCompletionOptionsBuilder() {
@@ -2291,6 +2827,11 @@ public final class RunOuterClass {
         return getCustomCompletionOptionsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * If specified, these options will override the assistant's completion settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 10;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.CompletionOptionsOrBuilder getCustomCompletionOptionsOrBuilder() {
@@ -2302,6 +2843,11 @@ public final class RunOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * If specified, these options will override the assistant's completion settings for this run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions custom_completion_options = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2375,42 +2921,74 @@ public final class RunOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Current status of a run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.RunState.RunStatus status = 1;</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
+     * <pre>
+     * Current status of a run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.RunState.RunStatus status = 1;</code>
      * @return The status.
      */
     yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.RunState.RunStatus getStatus();
 
     /**
+     * <pre>
+     * Error information if a run has failed.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.Error error = 2;</code>
      * @return Whether the error field is set.
      */
     boolean hasError();
     /**
+     * <pre>
+     * Error information if a run has failed.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.Error error = 2;</code>
      * @return The error.
      */
     yandex.cloud.api.ai.common.Common.Error getError();
     /**
+     * <pre>
+     * Error information if a run has failed.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.Error error = 2;</code>
      */
     yandex.cloud.api.ai.common.Common.ErrorOrBuilder getErrorOrBuilder();
 
     /**
+     * <pre>
+     * Final message generated by an assistant if a run has completed successfully.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 3;</code>
      * @return Whether the completedMessage field is set.
      */
     boolean hasCompletedMessage();
     /**
+     * <pre>
+     * Final message generated by an assistant if a run has completed successfully.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 3;</code>
      * @return The completedMessage.
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message getCompletedMessage();
     /**
+     * <pre>
+     * Final message generated by an assistant if a run has completed successfully.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 3;</code>
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageOrBuilder getCompletedMessageOrBuilder();
@@ -2418,6 +2996,10 @@ public final class RunOuterClass {
     public yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.RunState.StateDataCase getStateDataCase();
   }
   /**
+   * <pre>
+   * Represents the current state of a run.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.RunState}
    */
   public static final class RunState extends
@@ -2530,27 +3112,51 @@ public final class RunOuterClass {
     }
 
     /**
+     * <pre>
+     * Enum representing the status of a run.
+     * </pre>
+     *
      * Protobuf enum {@code yandex.cloud.ai.assistants.v1.runs.RunState.RunStatus}
      */
     public enum RunStatus
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Default unspecified status.
+       * </pre>
+       *
        * <code>RUN_STATUS_UNSPECIFIED = 0;</code>
        */
       RUN_STATUS_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Run has been created but has not started yet.
+       * </pre>
+       *
        * <code>PENDING = 1;</code>
        */
       PENDING(1),
       /**
+       * <pre>
+       * Run is currently in progress.
+       * </pre>
+       *
        * <code>IN_PROGRESS = 2;</code>
        */
       IN_PROGRESS(2),
       /**
+       * <pre>
+       * Run has failed due to an error.
+       * </pre>
+       *
        * <code>FAILED = 3;</code>
        */
       FAILED(3),
       /**
+       * <pre>
+       * Run has completed successfully.
+       * </pre>
+       *
        * <code>COMPLETED = 4;</code>
        */
       COMPLETED(4),
@@ -2558,22 +3164,42 @@ public final class RunOuterClass {
       ;
 
       /**
+       * <pre>
+       * Default unspecified status.
+       * </pre>
+       *
        * <code>RUN_STATUS_UNSPECIFIED = 0;</code>
        */
       public static final int RUN_STATUS_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Run has been created but has not started yet.
+       * </pre>
+       *
        * <code>PENDING = 1;</code>
        */
       public static final int PENDING_VALUE = 1;
       /**
+       * <pre>
+       * Run is currently in progress.
+       * </pre>
+       *
        * <code>IN_PROGRESS = 2;</code>
        */
       public static final int IN_PROGRESS_VALUE = 2;
       /**
+       * <pre>
+       * Run has failed due to an error.
+       * </pre>
+       *
        * <code>FAILED = 3;</code>
        */
       public static final int FAILED_VALUE = 3;
       /**
+       * <pre>
+       * Run has completed successfully.
+       * </pre>
+       *
        * <code>COMPLETED = 4;</code>
        */
       public static final int COMPLETED_VALUE = 4;
@@ -2708,6 +3334,10 @@ public final class RunOuterClass {
     public static final int STATUS_FIELD_NUMBER = 1;
     private int status_;
     /**
+     * <pre>
+     * Current status of a run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.RunState.RunStatus status = 1;</code>
      * @return The enum numeric value on the wire for status.
      */
@@ -2715,6 +3345,10 @@ public final class RunOuterClass {
       return status_;
     }
     /**
+     * <pre>
+     * Current status of a run.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.runs.RunState.RunStatus status = 1;</code>
      * @return The status.
      */
@@ -2726,6 +3360,10 @@ public final class RunOuterClass {
 
     public static final int ERROR_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Error information if a run has failed.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.Error error = 2;</code>
      * @return Whether the error field is set.
      */
@@ -2734,6 +3372,10 @@ public final class RunOuterClass {
       return stateDataCase_ == 2;
     }
     /**
+     * <pre>
+     * Error information if a run has failed.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.Error error = 2;</code>
      * @return The error.
      */
@@ -2745,6 +3387,10 @@ public final class RunOuterClass {
       return yandex.cloud.api.ai.common.Common.Error.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Error information if a run has failed.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.Error error = 2;</code>
      */
     @java.lang.Override
@@ -2757,6 +3403,10 @@ public final class RunOuterClass {
 
     public static final int COMPLETED_MESSAGE_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     * Final message generated by an assistant if a run has completed successfully.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 3;</code>
      * @return Whether the completedMessage field is set.
      */
@@ -2765,6 +3415,10 @@ public final class RunOuterClass {
       return stateDataCase_ == 3;
     }
     /**
+     * <pre>
+     * Final message generated by an assistant if a run has completed successfully.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 3;</code>
      * @return The completedMessage.
      */
@@ -2776,6 +3430,10 @@ public final class RunOuterClass {
       return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Final message generated by an assistant if a run has completed successfully.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 3;</code>
      */
     @java.lang.Override
@@ -2980,6 +3638,10 @@ public final class RunOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Represents the current state of a run.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.RunState}
      */
     public static final class Builder extends
@@ -3173,6 +3835,10 @@ public final class RunOuterClass {
 
       private int status_ = 0;
       /**
+       * <pre>
+       * Current status of a run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.RunState.RunStatus status = 1;</code>
        * @return The enum numeric value on the wire for status.
        */
@@ -3180,6 +3846,10 @@ public final class RunOuterClass {
         return status_;
       }
       /**
+       * <pre>
+       * Current status of a run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.RunState.RunStatus status = 1;</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
@@ -3191,6 +3861,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Current status of a run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.RunState.RunStatus status = 1;</code>
        * @return The status.
        */
@@ -3201,6 +3875,10 @@ public final class RunOuterClass {
         return result == null ? yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.RunState.RunStatus.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Current status of a run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.RunState.RunStatus status = 1;</code>
        * @param value The status to set.
        * @return This builder for chaining.
@@ -3215,6 +3893,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Current status of a run.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.runs.RunState.RunStatus status = 1;</code>
        * @return This builder for chaining.
        */
@@ -3228,6 +3910,10 @@ public final class RunOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.common.Common.Error, yandex.cloud.api.ai.common.Common.Error.Builder, yandex.cloud.api.ai.common.Common.ErrorOrBuilder> errorBuilder_;
       /**
+       * <pre>
+       * Error information if a run has failed.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.Error error = 2;</code>
        * @return Whether the error field is set.
        */
@@ -3236,6 +3922,10 @@ public final class RunOuterClass {
         return stateDataCase_ == 2;
       }
       /**
+       * <pre>
+       * Error information if a run has failed.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.Error error = 2;</code>
        * @return The error.
        */
@@ -3254,6 +3944,10 @@ public final class RunOuterClass {
         }
       }
       /**
+       * <pre>
+       * Error information if a run has failed.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.Error error = 2;</code>
        */
       public Builder setError(yandex.cloud.api.ai.common.Common.Error value) {
@@ -3270,6 +3964,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Error information if a run has failed.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.Error error = 2;</code>
        */
       public Builder setError(
@@ -3284,6 +3982,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Error information if a run has failed.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.Error error = 2;</code>
        */
       public Builder mergeError(yandex.cloud.api.ai.common.Common.Error value) {
@@ -3306,6 +4008,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Error information if a run has failed.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.Error error = 2;</code>
        */
       public Builder clearError() {
@@ -3325,12 +4031,20 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Error information if a run has failed.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.Error error = 2;</code>
        */
       public yandex.cloud.api.ai.common.Common.Error.Builder getErrorBuilder() {
         return getErrorFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Error information if a run has failed.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.Error error = 2;</code>
        */
       @java.lang.Override
@@ -3345,6 +4059,10 @@ public final class RunOuterClass {
         }
       }
       /**
+       * <pre>
+       * Error information if a run has failed.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.Error error = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3369,6 +4087,10 @@ public final class RunOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageOrBuilder> completedMessageBuilder_;
       /**
+       * <pre>
+       * Final message generated by an assistant if a run has completed successfully.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 3;</code>
        * @return Whether the completedMessage field is set.
        */
@@ -3377,6 +4099,10 @@ public final class RunOuterClass {
         return stateDataCase_ == 3;
       }
       /**
+       * <pre>
+       * Final message generated by an assistant if a run has completed successfully.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 3;</code>
        * @return The completedMessage.
        */
@@ -3395,6 +4121,10 @@ public final class RunOuterClass {
         }
       }
       /**
+       * <pre>
+       * Final message generated by an assistant if a run has completed successfully.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 3;</code>
        */
       public Builder setCompletedMessage(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message value) {
@@ -3411,6 +4141,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Final message generated by an assistant if a run has completed successfully.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 3;</code>
        */
       public Builder setCompletedMessage(
@@ -3425,6 +4159,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Final message generated by an assistant if a run has completed successfully.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 3;</code>
        */
       public Builder mergeCompletedMessage(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message value) {
@@ -3447,6 +4185,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Final message generated by an assistant if a run has completed successfully.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 3;</code>
        */
       public Builder clearCompletedMessage() {
@@ -3466,12 +4208,20 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Final message generated by an assistant if a run has completed successfully.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 3;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message.Builder getCompletedMessageBuilder() {
         return getCompletedMessageFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Final message generated by an assistant if a run has completed successfully.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 3;</code>
        */
       @java.lang.Override
@@ -3486,6 +4236,10 @@ public final class RunOuterClass {
         }
       }
       /**
+       * <pre>
+       * Final message generated by an assistant if a run has completed successfully.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.threads.Message completed_message = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3564,24 +4318,40 @@ public final class RunOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The number of tokens used in the prompt.
+     * </pre>
+     *
      * <code>int64 prompt_tokens = 1;</code>
      * @return The promptTokens.
      */
     long getPromptTokens();
 
     /**
+     * <pre>
+     * The number of tokens used in the completion response.
+     * </pre>
+     *
      * <code>int64 completion_tokens = 2;</code>
      * @return The completionTokens.
      */
     long getCompletionTokens();
 
     /**
+     * <pre>
+     * The total number of tokens used (prompt + completion).
+     * </pre>
+     *
      * <code>int64 total_tokens = 3;</code>
      * @return The totalTokens.
      */
     long getTotalTokens();
   }
   /**
+   * <pre>
+   * Represents the content usage during a run, such as the number of [tokens](/docs/foundation-models/concepts/yandexgpt/tokens) used by the completion model.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.ContentUsage}
    */
   public static final class ContentUsage extends
@@ -3676,6 +4446,10 @@ public final class RunOuterClass {
     public static final int PROMPT_TOKENS_FIELD_NUMBER = 1;
     private long promptTokens_;
     /**
+     * <pre>
+     * The number of tokens used in the prompt.
+     * </pre>
+     *
      * <code>int64 prompt_tokens = 1;</code>
      * @return The promptTokens.
      */
@@ -3687,6 +4461,10 @@ public final class RunOuterClass {
     public static final int COMPLETION_TOKENS_FIELD_NUMBER = 2;
     private long completionTokens_;
     /**
+     * <pre>
+     * The number of tokens used in the completion response.
+     * </pre>
+     *
      * <code>int64 completion_tokens = 2;</code>
      * @return The completionTokens.
      */
@@ -3698,6 +4476,10 @@ public final class RunOuterClass {
     public static final int TOTAL_TOKENS_FIELD_NUMBER = 3;
     private long totalTokens_;
     /**
+     * <pre>
+     * The total number of tokens used (prompt + completion).
+     * </pre>
+     *
      * <code>int64 total_tokens = 3;</code>
      * @return The totalTokens.
      */
@@ -3887,6 +4669,10 @@ public final class RunOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Represents the content usage during a run, such as the number of [tokens](/docs/foundation-models/concepts/yandexgpt/tokens) used by the completion model.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.ContentUsage}
      */
     public static final class Builder extends
@@ -4047,6 +4833,10 @@ public final class RunOuterClass {
 
       private long promptTokens_ ;
       /**
+       * <pre>
+       * The number of tokens used in the prompt.
+       * </pre>
+       *
        * <code>int64 prompt_tokens = 1;</code>
        * @return The promptTokens.
        */
@@ -4055,6 +4845,10 @@ public final class RunOuterClass {
         return promptTokens_;
       }
       /**
+       * <pre>
+       * The number of tokens used in the prompt.
+       * </pre>
+       *
        * <code>int64 prompt_tokens = 1;</code>
        * @param value The promptTokens to set.
        * @return This builder for chaining.
@@ -4066,6 +4860,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The number of tokens used in the prompt.
+       * </pre>
+       *
        * <code>int64 prompt_tokens = 1;</code>
        * @return This builder for chaining.
        */
@@ -4078,6 +4876,10 @@ public final class RunOuterClass {
 
       private long completionTokens_ ;
       /**
+       * <pre>
+       * The number of tokens used in the completion response.
+       * </pre>
+       *
        * <code>int64 completion_tokens = 2;</code>
        * @return The completionTokens.
        */
@@ -4086,6 +4888,10 @@ public final class RunOuterClass {
         return completionTokens_;
       }
       /**
+       * <pre>
+       * The number of tokens used in the completion response.
+       * </pre>
+       *
        * <code>int64 completion_tokens = 2;</code>
        * @param value The completionTokens to set.
        * @return This builder for chaining.
@@ -4097,6 +4903,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The number of tokens used in the completion response.
+       * </pre>
+       *
        * <code>int64 completion_tokens = 2;</code>
        * @return This builder for chaining.
        */
@@ -4109,6 +4919,10 @@ public final class RunOuterClass {
 
       private long totalTokens_ ;
       /**
+       * <pre>
+       * The total number of tokens used (prompt + completion).
+       * </pre>
+       *
        * <code>int64 total_tokens = 3;</code>
        * @return The totalTokens.
        */
@@ -4117,6 +4931,10 @@ public final class RunOuterClass {
         return totalTokens_;
       }
       /**
+       * <pre>
+       * The total number of tokens used (prompt + completion).
+       * </pre>
+       *
        * <code>int64 total_tokens = 3;</code>
        * @param value The totalTokens to set.
        * @return This builder for chaining.
@@ -4128,6 +4946,10 @@ public final class RunOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The total number of tokens used (prompt + completion).
+       * </pre>
+       *
        * <code>int64 total_tokens = 3;</code>
        * @return This builder for chaining.
        */

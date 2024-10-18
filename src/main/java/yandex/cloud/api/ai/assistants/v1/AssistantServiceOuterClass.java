@@ -31,11 +31,19 @@ public final class AssistantServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Name of the assistant.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the assistant.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
@@ -43,11 +51,19 @@ public final class AssistantServiceOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the assistant.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the assistant.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The bytes for description.
      */
@@ -55,25 +71,45 @@ public final class AssistantServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Expiration configuration for the assistant.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 4;</code>
      * @return Whether the expirationConfig field is set.
      */
     boolean hasExpirationConfig();
     /**
+     * <pre>
+     * Expiration configuration for the assistant.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 4;</code>
      * @return The expirationConfig.
      */
     yandex.cloud.api.ai.common.Common.ExpirationConfig getExpirationConfig();
     /**
+     * <pre>
+     * Expiration configuration for the assistant.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 4;</code>
      */
     yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder getExpirationConfigOrBuilder();
 
     /**
+     * <pre>
+     * Set of key-value pairs to label the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Set of key-value pairs to label the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
     boolean containsLabels(
@@ -85,11 +121,19 @@ public final class AssistantServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Set of key-value pairs to label the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Set of key-value pairs to label the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
 
@@ -97,6 +141,10 @@ public final class AssistantServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Set of key-value pairs to label the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
 
@@ -104,11 +152,19 @@ public final class AssistantServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+     * </pre>
+     *
      * <code>string model_uri = 6 [(.yandex.cloud.required) = true];</code>
      * @return The modelUri.
      */
     java.lang.String getModelUri();
     /**
+     * <pre>
+     * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+     * </pre>
+     *
      * <code>string model_uri = 6 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for modelUri.
      */
@@ -116,11 +172,21 @@ public final class AssistantServiceOuterClass {
         getModelUriBytes();
 
     /**
+     * <pre>
+     * Instructions or guidelines that the assistant should follow when generating responses or performing tasks.
+     * These instructions can help guide the assistant's behavior and responses.
+     * </pre>
+     *
      * <code>string instruction = 7;</code>
      * @return The instruction.
      */
     java.lang.String getInstruction();
     /**
+     * <pre>
+     * Instructions or guidelines that the assistant should follow when generating responses or performing tasks.
+     * These instructions can help guide the assistant's behavior and responses.
+     * </pre>
+     *
      * <code>string instruction = 7;</code>
      * @return The bytes for instruction.
      */
@@ -128,60 +194,113 @@ public final class AssistantServiceOuterClass {
         getInstructionBytes();
 
     /**
+     * <pre>
+     * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 8;</code>
      * @return Whether the promptTruncationOptions field is set.
      */
     boolean hasPromptTruncationOptions();
     /**
+     * <pre>
+     * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 8;</code>
      * @return The promptTruncationOptions.
      */
     yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions getPromptTruncationOptions();
     /**
+     * <pre>
+     * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 8;</code>
      */
     yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptionsOrBuilder getPromptTruncationOptionsOrBuilder();
 
     /**
+     * <pre>
+     * Configuration options for completion generation.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 9;</code>
      * @return Whether the completionOptions field is set.
      */
     boolean hasCompletionOptions();
     /**
+     * <pre>
+     * Configuration options for completion generation.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 9;</code>
      * @return The completionOptions.
      */
     yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions getCompletionOptions();
     /**
+     * <pre>
+     * Configuration options for completion generation.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 9;</code>
      */
     yandex.cloud.api.ai.assistants.v1.Common.CompletionOptionsOrBuilder getCompletionOptionsOrBuilder();
 
     /**
+     * <pre>
+     * List of tools that the assistant can use to perform additional tasks.
+     * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
      */
     java.util.List<yandex.cloud.api.ai.assistants.v1.Common.Tool> 
         getToolsList();
     /**
+     * <pre>
+     * List of tools that the assistant can use to perform additional tasks.
+     * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
      */
     yandex.cloud.api.ai.assistants.v1.Common.Tool getTools(int index);
     /**
+     * <pre>
+     * List of tools that the assistant can use to perform additional tasks.
+     * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
      */
     int getToolsCount();
     /**
+     * <pre>
+     * List of tools that the assistant can use to perform additional tasks.
+     * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
      */
     java.util.List<? extends yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder> 
         getToolsOrBuilderList();
     /**
+     * <pre>
+     * List of tools that the assistant can use to perform additional tasks.
+     * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
      */
     yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder getToolsOrBuilder(
         int index);
   }
   /**
+   * <pre>
+   * Request to create a new assistant.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.CreateAssistantRequest}
    */
   public static final class CreateAssistantRequest extends
@@ -412,6 +531,10 @@ public final class AssistantServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the assistant.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The name.
      */
@@ -429,6 +552,10 @@ public final class AssistantServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the assistant.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
@@ -450,6 +577,10 @@ public final class AssistantServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the assistant.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The description.
      */
@@ -467,6 +598,10 @@ public final class AssistantServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the assistant.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The bytes for description.
      */
@@ -488,6 +623,10 @@ public final class AssistantServiceOuterClass {
     public static final int EXPIRATION_CONFIG_FIELD_NUMBER = 4;
     private yandex.cloud.api.ai.common.Common.ExpirationConfig expirationConfig_;
     /**
+     * <pre>
+     * Expiration configuration for the assistant.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 4;</code>
      * @return Whether the expirationConfig field is set.
      */
@@ -496,6 +635,10 @@ public final class AssistantServiceOuterClass {
       return expirationConfig_ != null;
     }
     /**
+     * <pre>
+     * Expiration configuration for the assistant.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 4;</code>
      * @return The expirationConfig.
      */
@@ -504,6 +647,10 @@ public final class AssistantServiceOuterClass {
       return expirationConfig_ == null ? yandex.cloud.api.ai.common.Common.ExpirationConfig.getDefaultInstance() : expirationConfig_;
     }
     /**
+     * <pre>
+     * Expiration configuration for the assistant.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 4;</code>
      */
     @java.lang.Override
@@ -538,6 +685,10 @@ public final class AssistantServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
 
@@ -556,6 +707,10 @@ public final class AssistantServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
     @java.lang.Override
@@ -564,6 +719,10 @@ public final class AssistantServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
     @java.lang.Override
@@ -577,6 +736,10 @@ public final class AssistantServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Set of key-value pairs to label the user.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
     @java.lang.Override
@@ -595,6 +758,10 @@ public final class AssistantServiceOuterClass {
     public static final int MODEL_URI_FIELD_NUMBER = 6;
     private volatile java.lang.Object modelUri_;
     /**
+     * <pre>
+     * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+     * </pre>
+     *
      * <code>string model_uri = 6 [(.yandex.cloud.required) = true];</code>
      * @return The modelUri.
      */
@@ -612,6 +779,10 @@ public final class AssistantServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+     * </pre>
+     *
      * <code>string model_uri = 6 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for modelUri.
      */
@@ -633,6 +804,11 @@ public final class AssistantServiceOuterClass {
     public static final int INSTRUCTION_FIELD_NUMBER = 7;
     private volatile java.lang.Object instruction_;
     /**
+     * <pre>
+     * Instructions or guidelines that the assistant should follow when generating responses or performing tasks.
+     * These instructions can help guide the assistant's behavior and responses.
+     * </pre>
+     *
      * <code>string instruction = 7;</code>
      * @return The instruction.
      */
@@ -650,6 +826,11 @@ public final class AssistantServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Instructions or guidelines that the assistant should follow when generating responses or performing tasks.
+     * These instructions can help guide the assistant's behavior and responses.
+     * </pre>
+     *
      * <code>string instruction = 7;</code>
      * @return The bytes for instruction.
      */
@@ -671,6 +852,10 @@ public final class AssistantServiceOuterClass {
     public static final int PROMPT_TRUNCATION_OPTIONS_FIELD_NUMBER = 8;
     private yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions promptTruncationOptions_;
     /**
+     * <pre>
+     * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 8;</code>
      * @return Whether the promptTruncationOptions field is set.
      */
@@ -679,6 +864,10 @@ public final class AssistantServiceOuterClass {
       return promptTruncationOptions_ != null;
     }
     /**
+     * <pre>
+     * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 8;</code>
      * @return The promptTruncationOptions.
      */
@@ -687,6 +876,10 @@ public final class AssistantServiceOuterClass {
       return promptTruncationOptions_ == null ? yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.getDefaultInstance() : promptTruncationOptions_;
     }
     /**
+     * <pre>
+     * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 8;</code>
      */
     @java.lang.Override
@@ -697,6 +890,10 @@ public final class AssistantServiceOuterClass {
     public static final int COMPLETION_OPTIONS_FIELD_NUMBER = 9;
     private yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions completionOptions_;
     /**
+     * <pre>
+     * Configuration options for completion generation.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 9;</code>
      * @return Whether the completionOptions field is set.
      */
@@ -705,6 +902,10 @@ public final class AssistantServiceOuterClass {
       return completionOptions_ != null;
     }
     /**
+     * <pre>
+     * Configuration options for completion generation.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 9;</code>
      * @return The completionOptions.
      */
@@ -713,6 +914,10 @@ public final class AssistantServiceOuterClass {
       return completionOptions_ == null ? yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions.getDefaultInstance() : completionOptions_;
     }
     /**
+     * <pre>
+     * Configuration options for completion generation.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 9;</code>
      */
     @java.lang.Override
@@ -723,6 +928,11 @@ public final class AssistantServiceOuterClass {
     public static final int TOOLS_FIELD_NUMBER = 10;
     private java.util.List<yandex.cloud.api.ai.assistants.v1.Common.Tool> tools_;
     /**
+     * <pre>
+     * List of tools that the assistant can use to perform additional tasks.
+     * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
      */
     @java.lang.Override
@@ -730,6 +940,11 @@ public final class AssistantServiceOuterClass {
       return tools_;
     }
     /**
+     * <pre>
+     * List of tools that the assistant can use to perform additional tasks.
+     * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
      */
     @java.lang.Override
@@ -738,6 +953,11 @@ public final class AssistantServiceOuterClass {
       return tools_;
     }
     /**
+     * <pre>
+     * List of tools that the assistant can use to perform additional tasks.
+     * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
      */
     @java.lang.Override
@@ -745,6 +965,11 @@ public final class AssistantServiceOuterClass {
       return tools_.size();
     }
     /**
+     * <pre>
+     * List of tools that the assistant can use to perform additional tasks.
+     * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
      */
     @java.lang.Override
@@ -752,6 +977,11 @@ public final class AssistantServiceOuterClass {
       return tools_.get(index);
     }
     /**
+     * <pre>
+     * List of tools that the assistant can use to perform additional tasks.
+     * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
      */
     @java.lang.Override
@@ -1038,6 +1268,10 @@ public final class AssistantServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request to create a new assistant.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.CreateAssistantRequest}
      */
     public static final class Builder extends
@@ -1404,6 +1638,10 @@ public final class AssistantServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the assistant.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return The name.
        */
@@ -1420,6 +1658,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the assistant.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return The bytes for name.
        */
@@ -1437,6 +1679,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the assistant.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -1452,6 +1698,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the assistant.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return This builder for chaining.
        */
@@ -1462,6 +1712,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the assistant.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -1480,6 +1734,10 @@ public final class AssistantServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the assistant.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return The description.
        */
@@ -1496,6 +1754,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the assistant.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return The bytes for description.
        */
@@ -1513,6 +1775,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the assistant.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -1528,6 +1794,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the assistant.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return This builder for chaining.
        */
@@ -1538,6 +1808,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the assistant.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -1558,6 +1832,10 @@ public final class AssistantServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.common.Common.ExpirationConfig, yandex.cloud.api.ai.common.Common.ExpirationConfig.Builder, yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder> expirationConfigBuilder_;
       /**
+       * <pre>
+       * Expiration configuration for the assistant.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 4;</code>
        * @return Whether the expirationConfig field is set.
        */
@@ -1565,6 +1843,10 @@ public final class AssistantServiceOuterClass {
         return expirationConfigBuilder_ != null || expirationConfig_ != null;
       }
       /**
+       * <pre>
+       * Expiration configuration for the assistant.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 4;</code>
        * @return The expirationConfig.
        */
@@ -1576,6 +1858,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Expiration configuration for the assistant.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 4;</code>
        */
       public Builder setExpirationConfig(yandex.cloud.api.ai.common.Common.ExpirationConfig value) {
@@ -1592,6 +1878,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Expiration configuration for the assistant.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 4;</code>
        */
       public Builder setExpirationConfig(
@@ -1606,6 +1896,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Expiration configuration for the assistant.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 4;</code>
        */
       public Builder mergeExpirationConfig(yandex.cloud.api.ai.common.Common.ExpirationConfig value) {
@@ -1624,6 +1918,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Expiration configuration for the assistant.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 4;</code>
        */
       public Builder clearExpirationConfig() {
@@ -1638,6 +1936,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Expiration configuration for the assistant.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 4;</code>
        */
       public yandex.cloud.api.ai.common.Common.ExpirationConfig.Builder getExpirationConfigBuilder() {
@@ -1646,6 +1948,10 @@ public final class AssistantServiceOuterClass {
         return getExpirationConfigFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Expiration configuration for the assistant.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 4;</code>
        */
       public yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder getExpirationConfigOrBuilder() {
@@ -1657,6 +1963,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Expiration configuration for the assistant.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1700,6 +2010,10 @@ public final class AssistantServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the user.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
 
@@ -1718,6 +2032,10 @@ public final class AssistantServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the user.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
       @java.lang.Override
@@ -1726,6 +2044,10 @@ public final class AssistantServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the user.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
       @java.lang.Override
@@ -1739,6 +2061,10 @@ public final class AssistantServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the user.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
       @java.lang.Override
@@ -1760,6 +2086,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the user.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
 
@@ -1779,6 +2109,10 @@ public final class AssistantServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the user.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
       public Builder putLabels(
@@ -1794,6 +2128,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of key-value pairs to label the user.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
 
@@ -1806,6 +2144,10 @@ public final class AssistantServiceOuterClass {
 
       private java.lang.Object modelUri_ = "";
       /**
+       * <pre>
+       * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+       * </pre>
+       *
        * <code>string model_uri = 6 [(.yandex.cloud.required) = true];</code>
        * @return The modelUri.
        */
@@ -1822,6 +2164,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+       * </pre>
+       *
        * <code>string model_uri = 6 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for modelUri.
        */
@@ -1839,6 +2185,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+       * </pre>
+       *
        * <code>string model_uri = 6 [(.yandex.cloud.required) = true];</code>
        * @param value The modelUri to set.
        * @return This builder for chaining.
@@ -1854,6 +2204,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+       * </pre>
+       *
        * <code>string model_uri = 6 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -1864,6 +2218,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+       * </pre>
+       *
        * <code>string model_uri = 6 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for modelUri to set.
        * @return This builder for chaining.
@@ -1882,6 +2240,11 @@ public final class AssistantServiceOuterClass {
 
       private java.lang.Object instruction_ = "";
       /**
+       * <pre>
+       * Instructions or guidelines that the assistant should follow when generating responses or performing tasks.
+       * These instructions can help guide the assistant's behavior and responses.
+       * </pre>
+       *
        * <code>string instruction = 7;</code>
        * @return The instruction.
        */
@@ -1898,6 +2261,11 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Instructions or guidelines that the assistant should follow when generating responses or performing tasks.
+       * These instructions can help guide the assistant's behavior and responses.
+       * </pre>
+       *
        * <code>string instruction = 7;</code>
        * @return The bytes for instruction.
        */
@@ -1915,6 +2283,11 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Instructions or guidelines that the assistant should follow when generating responses or performing tasks.
+       * These instructions can help guide the assistant's behavior and responses.
+       * </pre>
+       *
        * <code>string instruction = 7;</code>
        * @param value The instruction to set.
        * @return This builder for chaining.
@@ -1930,6 +2303,11 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions or guidelines that the assistant should follow when generating responses or performing tasks.
+       * These instructions can help guide the assistant's behavior and responses.
+       * </pre>
+       *
        * <code>string instruction = 7;</code>
        * @return This builder for chaining.
        */
@@ -1940,6 +2318,11 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions or guidelines that the assistant should follow when generating responses or performing tasks.
+       * These instructions can help guide the assistant's behavior and responses.
+       * </pre>
+       *
        * <code>string instruction = 7;</code>
        * @param value The bytes for instruction to set.
        * @return This builder for chaining.
@@ -1960,6 +2343,10 @@ public final class AssistantServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions, yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.Builder, yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptionsOrBuilder> promptTruncationOptionsBuilder_;
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 8;</code>
        * @return Whether the promptTruncationOptions field is set.
        */
@@ -1967,6 +2354,10 @@ public final class AssistantServiceOuterClass {
         return promptTruncationOptionsBuilder_ != null || promptTruncationOptions_ != null;
       }
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 8;</code>
        * @return The promptTruncationOptions.
        */
@@ -1978,6 +2369,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 8;</code>
        */
       public Builder setPromptTruncationOptions(yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions value) {
@@ -1994,6 +2389,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 8;</code>
        */
       public Builder setPromptTruncationOptions(
@@ -2008,6 +2407,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 8;</code>
        */
       public Builder mergePromptTruncationOptions(yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions value) {
@@ -2026,6 +2429,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 8;</code>
        */
       public Builder clearPromptTruncationOptions() {
@@ -2040,6 +2447,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 8;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.Builder getPromptTruncationOptionsBuilder() {
@@ -2048,6 +2459,10 @@ public final class AssistantServiceOuterClass {
         return getPromptTruncationOptionsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 8;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptionsOrBuilder getPromptTruncationOptionsOrBuilder() {
@@ -2059,6 +2474,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration options for truncating the prompt when the token count exceeds a specified limit.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2079,6 +2498,10 @@ public final class AssistantServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions, yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions.Builder, yandex.cloud.api.ai.assistants.v1.Common.CompletionOptionsOrBuilder> completionOptionsBuilder_;
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 9;</code>
        * @return Whether the completionOptions field is set.
        */
@@ -2086,6 +2509,10 @@ public final class AssistantServiceOuterClass {
         return completionOptionsBuilder_ != null || completionOptions_ != null;
       }
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 9;</code>
        * @return The completionOptions.
        */
@@ -2097,6 +2524,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 9;</code>
        */
       public Builder setCompletionOptions(yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions value) {
@@ -2113,6 +2544,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 9;</code>
        */
       public Builder setCompletionOptions(
@@ -2127,6 +2562,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 9;</code>
        */
       public Builder mergeCompletionOptions(yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions value) {
@@ -2145,6 +2584,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 9;</code>
        */
       public Builder clearCompletionOptions() {
@@ -2159,6 +2602,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 9;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions.Builder getCompletionOptionsBuilder() {
@@ -2167,6 +2614,10 @@ public final class AssistantServiceOuterClass {
         return getCompletionOptionsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 9;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.CompletionOptionsOrBuilder getCompletionOptionsOrBuilder() {
@@ -2178,6 +2629,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration options for completion generation.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2207,6 +2662,11 @@ public final class AssistantServiceOuterClass {
           yandex.cloud.api.ai.assistants.v1.Common.Tool, yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder, yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder> toolsBuilder_;
 
       /**
+       * <pre>
+       * List of tools that the assistant can use to perform additional tasks.
+       * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
        */
       public java.util.List<yandex.cloud.api.ai.assistants.v1.Common.Tool> getToolsList() {
@@ -2217,6 +2677,11 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of tools that the assistant can use to perform additional tasks.
+       * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
        */
       public int getToolsCount() {
@@ -2227,6 +2692,11 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of tools that the assistant can use to perform additional tasks.
+       * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.Tool getTools(int index) {
@@ -2237,6 +2707,11 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of tools that the assistant can use to perform additional tasks.
+       * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
        */
       public Builder setTools(
@@ -2254,6 +2729,11 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of tools that the assistant can use to perform additional tasks.
+       * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
        */
       public Builder setTools(
@@ -2268,6 +2748,11 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of tools that the assistant can use to perform additional tasks.
+       * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
        */
       public Builder addTools(yandex.cloud.api.ai.assistants.v1.Common.Tool value) {
@@ -2284,6 +2769,11 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of tools that the assistant can use to perform additional tasks.
+       * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
        */
       public Builder addTools(
@@ -2301,6 +2791,11 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of tools that the assistant can use to perform additional tasks.
+       * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
        */
       public Builder addTools(
@@ -2315,6 +2810,11 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of tools that the assistant can use to perform additional tasks.
+       * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
        */
       public Builder addTools(
@@ -2329,6 +2829,11 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of tools that the assistant can use to perform additional tasks.
+       * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
        */
       public Builder addAllTools(
@@ -2344,6 +2849,11 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of tools that the assistant can use to perform additional tasks.
+       * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
        */
       public Builder clearTools() {
@@ -2357,6 +2867,11 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of tools that the assistant can use to perform additional tasks.
+       * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
        */
       public Builder removeTools(int index) {
@@ -2370,6 +2885,11 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of tools that the assistant can use to perform additional tasks.
+       * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder getToolsBuilder(
@@ -2377,6 +2897,11 @@ public final class AssistantServiceOuterClass {
         return getToolsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of tools that the assistant can use to perform additional tasks.
+       * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder getToolsOrBuilder(
@@ -2387,6 +2912,11 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of tools that the assistant can use to perform additional tasks.
+       * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
        */
       public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder> 
@@ -2398,6 +2928,11 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of tools that the assistant can use to perform additional tasks.
+       * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder addToolsBuilder() {
@@ -2405,6 +2940,11 @@ public final class AssistantServiceOuterClass {
             yandex.cloud.api.ai.assistants.v1.Common.Tool.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of tools that the assistant can use to perform additional tasks.
+       * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder addToolsBuilder(
@@ -2413,6 +2953,11 @@ public final class AssistantServiceOuterClass {
             index, yandex.cloud.api.ai.assistants.v1.Common.Tool.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of tools that the assistant can use to perform additional tasks.
+       * One example is the SearchIndexTool, which is used for Retrieval-Augmented Generation (RAG).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 10;</code>
        */
       public java.util.List<yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder> 
@@ -2491,11 +3036,19 @@ public final class AssistantServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the assistant to retrieve.
+     * </pre>
+     *
      * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The assistantId.
      */
     java.lang.String getAssistantId();
     /**
+     * <pre>
+     * ID of the assistant to retrieve.
+     * </pre>
+     *
      * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for assistantId.
      */
@@ -2503,6 +3056,10 @@ public final class AssistantServiceOuterClass {
         getAssistantIdBytes();
   }
   /**
+   * <pre>
+   * Request message for retrieving an assistant by ID.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.GetAssistantRequest}
    */
   public static final class GetAssistantRequest extends
@@ -2589,6 +3146,10 @@ public final class AssistantServiceOuterClass {
     public static final int ASSISTANT_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object assistantId_;
     /**
+     * <pre>
+     * ID of the assistant to retrieve.
+     * </pre>
+     *
      * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The assistantId.
      */
@@ -2606,6 +3167,10 @@ public final class AssistantServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the assistant to retrieve.
+     * </pre>
+     *
      * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for assistantId.
      */
@@ -2779,6 +3344,10 @@ public final class AssistantServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for retrieving an assistant by ID.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.GetAssistantRequest}
      */
     public static final class Builder extends
@@ -2928,6 +3497,10 @@ public final class AssistantServiceOuterClass {
 
       private java.lang.Object assistantId_ = "";
       /**
+       * <pre>
+       * ID of the assistant to retrieve.
+       * </pre>
+       *
        * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The assistantId.
        */
@@ -2944,6 +3517,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the assistant to retrieve.
+       * </pre>
+       *
        * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for assistantId.
        */
@@ -2961,6 +3538,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the assistant to retrieve.
+       * </pre>
+       *
        * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The assistantId to set.
        * @return This builder for chaining.
@@ -2976,6 +3557,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the assistant to retrieve.
+       * </pre>
+       *
        * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -2986,6 +3571,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the assistant to retrieve.
+       * </pre>
+       *
        * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for assistantId to set.
        * @return This builder for chaining.
@@ -3059,11 +3648,19 @@ public final class AssistantServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the assistant to update.
+     * </pre>
+     *
      * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The assistantId.
      */
     java.lang.String getAssistantId();
     /**
+     * <pre>
+     * ID of the assistant to update.
+     * </pre>
+     *
      * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for assistantId.
      */
@@ -3071,26 +3668,46 @@ public final class AssistantServiceOuterClass {
         getAssistantIdBytes();
 
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
+     * <pre>
+     * New name for the assistant.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * New name for the assistant.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The bytes for name.
      */
@@ -3098,11 +3715,19 @@ public final class AssistantServiceOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * New description for the assistant.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * New description for the assistant.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -3110,25 +3735,45 @@ public final class AssistantServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * New expiration configuration for the assistant.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return Whether the expirationConfig field is set.
      */
     boolean hasExpirationConfig();
     /**
+     * <pre>
+     * New expiration configuration for the assistant.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return The expirationConfig.
      */
     yandex.cloud.api.ai.common.Common.ExpirationConfig getExpirationConfig();
     /**
+     * <pre>
+     * New expiration configuration for the assistant.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      */
     yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder getExpirationConfigOrBuilder();
 
     /**
+     * <pre>
+     * New set of labels for the assistant.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * New set of labels for the assistant.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     boolean containsLabels(
@@ -3140,11 +3785,19 @@ public final class AssistantServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * New set of labels for the assistant.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * New set of labels for the assistant.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -3152,6 +3805,10 @@ public final class AssistantServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * New set of labels for the assistant.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -3159,11 +3816,19 @@ public final class AssistantServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * The new [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+     * </pre>
+     *
      * <code>string model_uri = 7;</code>
      * @return The modelUri.
      */
     java.lang.String getModelUri();
     /**
+     * <pre>
+     * The new [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+     * </pre>
+     *
      * <code>string model_uri = 7;</code>
      * @return The bytes for modelUri.
      */
@@ -3171,11 +3836,19 @@ public final class AssistantServiceOuterClass {
         getModelUriBytes();
 
     /**
+     * <pre>
+     * New instructions or guidelines for the assistant to follow.
+     * </pre>
+     *
      * <code>string instruction = 8;</code>
      * @return The instruction.
      */
     java.lang.String getInstruction();
     /**
+     * <pre>
+     * New instructions or guidelines for the assistant to follow.
+     * </pre>
+     *
      * <code>string instruction = 8;</code>
      * @return The bytes for instruction.
      */
@@ -3183,60 +3856,108 @@ public final class AssistantServiceOuterClass {
         getInstructionBytes();
 
     /**
+     * <pre>
+     * New configuration for truncating the prompt.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 9;</code>
      * @return Whether the promptTruncationOptions field is set.
      */
     boolean hasPromptTruncationOptions();
     /**
+     * <pre>
+     * New configuration for truncating the prompt.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 9;</code>
      * @return The promptTruncationOptions.
      */
     yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions getPromptTruncationOptions();
     /**
+     * <pre>
+     * New configuration for truncating the prompt.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 9;</code>
      */
     yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptionsOrBuilder getPromptTruncationOptionsOrBuilder();
 
     /**
+     * <pre>
+     * New configuration for completion generation.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 10;</code>
      * @return Whether the completionOptions field is set.
      */
     boolean hasCompletionOptions();
     /**
+     * <pre>
+     * New configuration for completion generation.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 10;</code>
      * @return The completionOptions.
      */
     yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions getCompletionOptions();
     /**
+     * <pre>
+     * New configuration for completion generation.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 10;</code>
      */
     yandex.cloud.api.ai.assistants.v1.Common.CompletionOptionsOrBuilder getCompletionOptionsOrBuilder();
 
     /**
+     * <pre>
+     * New list of tools the assistant can use.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
      */
     java.util.List<yandex.cloud.api.ai.assistants.v1.Common.Tool> 
         getToolsList();
     /**
+     * <pre>
+     * New list of tools the assistant can use.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
      */
     yandex.cloud.api.ai.assistants.v1.Common.Tool getTools(int index);
     /**
+     * <pre>
+     * New list of tools the assistant can use.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
      */
     int getToolsCount();
     /**
+     * <pre>
+     * New list of tools the assistant can use.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
      */
     java.util.List<? extends yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder> 
         getToolsOrBuilderList();
     /**
+     * <pre>
+     * New list of tools the assistant can use.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
      */
     yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder getToolsOrBuilder(
         int index);
   }
   /**
+   * <pre>
+   * Request message for updating an existing assistant.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.UpdateAssistantRequest}
    */
   public static final class UpdateAssistantRequest extends
@@ -3442,6 +4163,10 @@ public final class AssistantServiceOuterClass {
     public static final int ASSISTANT_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object assistantId_;
     /**
+     * <pre>
+     * ID of the assistant to update.
+     * </pre>
+     *
      * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The assistantId.
      */
@@ -3459,6 +4184,10 @@ public final class AssistantServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the assistant to update.
+     * </pre>
+     *
      * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for assistantId.
      */
@@ -3480,6 +4209,10 @@ public final class AssistantServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return Whether the updateMask field is set.
      */
@@ -3488,6 +4221,10 @@ public final class AssistantServiceOuterClass {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return The updateMask.
      */
@@ -3496,6 +4233,10 @@ public final class AssistantServiceOuterClass {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
@@ -3506,6 +4247,10 @@ public final class AssistantServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * New name for the assistant.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The name.
      */
@@ -3523,6 +4268,10 @@ public final class AssistantServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New name for the assistant.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The bytes for name.
      */
@@ -3544,6 +4293,10 @@ public final class AssistantServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * New description for the assistant.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
@@ -3561,6 +4314,10 @@ public final class AssistantServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New description for the assistant.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -3582,6 +4339,10 @@ public final class AssistantServiceOuterClass {
     public static final int EXPIRATION_CONFIG_FIELD_NUMBER = 5;
     private yandex.cloud.api.ai.common.Common.ExpirationConfig expirationConfig_;
     /**
+     * <pre>
+     * New expiration configuration for the assistant.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return Whether the expirationConfig field is set.
      */
@@ -3590,6 +4351,10 @@ public final class AssistantServiceOuterClass {
       return expirationConfig_ != null;
     }
     /**
+     * <pre>
+     * New expiration configuration for the assistant.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      * @return The expirationConfig.
      */
@@ -3598,6 +4363,10 @@ public final class AssistantServiceOuterClass {
       return expirationConfig_ == null ? yandex.cloud.api.ai.common.Common.ExpirationConfig.getDefaultInstance() : expirationConfig_;
     }
     /**
+     * <pre>
+     * New expiration configuration for the assistant.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
      */
     @java.lang.Override
@@ -3632,6 +4401,10 @@ public final class AssistantServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * New set of labels for the assistant.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -3650,6 +4423,10 @@ public final class AssistantServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * New set of labels for the assistant.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -3658,6 +4435,10 @@ public final class AssistantServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * New set of labels for the assistant.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -3671,6 +4452,10 @@ public final class AssistantServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * New set of labels for the assistant.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -3689,6 +4474,10 @@ public final class AssistantServiceOuterClass {
     public static final int MODEL_URI_FIELD_NUMBER = 7;
     private volatile java.lang.Object modelUri_;
     /**
+     * <pre>
+     * The new [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+     * </pre>
+     *
      * <code>string model_uri = 7;</code>
      * @return The modelUri.
      */
@@ -3706,6 +4495,10 @@ public final class AssistantServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * The new [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+     * </pre>
+     *
      * <code>string model_uri = 7;</code>
      * @return The bytes for modelUri.
      */
@@ -3727,6 +4520,10 @@ public final class AssistantServiceOuterClass {
     public static final int INSTRUCTION_FIELD_NUMBER = 8;
     private volatile java.lang.Object instruction_;
     /**
+     * <pre>
+     * New instructions or guidelines for the assistant to follow.
+     * </pre>
+     *
      * <code>string instruction = 8;</code>
      * @return The instruction.
      */
@@ -3744,6 +4541,10 @@ public final class AssistantServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New instructions or guidelines for the assistant to follow.
+     * </pre>
+     *
      * <code>string instruction = 8;</code>
      * @return The bytes for instruction.
      */
@@ -3765,6 +4566,10 @@ public final class AssistantServiceOuterClass {
     public static final int PROMPT_TRUNCATION_OPTIONS_FIELD_NUMBER = 9;
     private yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions promptTruncationOptions_;
     /**
+     * <pre>
+     * New configuration for truncating the prompt.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 9;</code>
      * @return Whether the promptTruncationOptions field is set.
      */
@@ -3773,6 +4578,10 @@ public final class AssistantServiceOuterClass {
       return promptTruncationOptions_ != null;
     }
     /**
+     * <pre>
+     * New configuration for truncating the prompt.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 9;</code>
      * @return The promptTruncationOptions.
      */
@@ -3781,6 +4590,10 @@ public final class AssistantServiceOuterClass {
       return promptTruncationOptions_ == null ? yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.getDefaultInstance() : promptTruncationOptions_;
     }
     /**
+     * <pre>
+     * New configuration for truncating the prompt.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 9;</code>
      */
     @java.lang.Override
@@ -3791,6 +4604,10 @@ public final class AssistantServiceOuterClass {
     public static final int COMPLETION_OPTIONS_FIELD_NUMBER = 10;
     private yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions completionOptions_;
     /**
+     * <pre>
+     * New configuration for completion generation.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 10;</code>
      * @return Whether the completionOptions field is set.
      */
@@ -3799,6 +4616,10 @@ public final class AssistantServiceOuterClass {
       return completionOptions_ != null;
     }
     /**
+     * <pre>
+     * New configuration for completion generation.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 10;</code>
      * @return The completionOptions.
      */
@@ -3807,6 +4628,10 @@ public final class AssistantServiceOuterClass {
       return completionOptions_ == null ? yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions.getDefaultInstance() : completionOptions_;
     }
     /**
+     * <pre>
+     * New configuration for completion generation.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 10;</code>
      */
     @java.lang.Override
@@ -3817,6 +4642,10 @@ public final class AssistantServiceOuterClass {
     public static final int TOOLS_FIELD_NUMBER = 11;
     private java.util.List<yandex.cloud.api.ai.assistants.v1.Common.Tool> tools_;
     /**
+     * <pre>
+     * New list of tools the assistant can use.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
      */
     @java.lang.Override
@@ -3824,6 +4653,10 @@ public final class AssistantServiceOuterClass {
       return tools_;
     }
     /**
+     * <pre>
+     * New list of tools the assistant can use.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
      */
     @java.lang.Override
@@ -3832,6 +4665,10 @@ public final class AssistantServiceOuterClass {
       return tools_;
     }
     /**
+     * <pre>
+     * New list of tools the assistant can use.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
      */
     @java.lang.Override
@@ -3839,6 +4676,10 @@ public final class AssistantServiceOuterClass {
       return tools_.size();
     }
     /**
+     * <pre>
+     * New list of tools the assistant can use.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
      */
     @java.lang.Override
@@ -3846,6 +4687,10 @@ public final class AssistantServiceOuterClass {
       return tools_.get(index);
     }
     /**
+     * <pre>
+     * New list of tools the assistant can use.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
      */
     @java.lang.Override
@@ -4148,6 +4993,10 @@ public final class AssistantServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for updating an existing assistant.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.UpdateAssistantRequest}
      */
     public static final class Builder extends
@@ -4452,6 +5301,10 @@ public final class AssistantServiceOuterClass {
 
       private java.lang.Object assistantId_ = "";
       /**
+       * <pre>
+       * ID of the assistant to update.
+       * </pre>
+       *
        * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The assistantId.
        */
@@ -4468,6 +5321,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the assistant to update.
+       * </pre>
+       *
        * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for assistantId.
        */
@@ -4485,6 +5342,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the assistant to update.
+       * </pre>
+       *
        * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The assistantId to set.
        * @return This builder for chaining.
@@ -4500,6 +5361,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the assistant to update.
+       * </pre>
+       *
        * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -4510,6 +5375,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the assistant to update.
+       * </pre>
+       *
        * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for assistantId to set.
        * @return This builder for chaining.
@@ -4530,6 +5399,10 @@ public final class AssistantServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        * @return Whether the updateMask field is set.
        */
@@ -4537,6 +5410,10 @@ public final class AssistantServiceOuterClass {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        * @return The updateMask.
        */
@@ -4548,6 +5425,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -4564,6 +5445,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setUpdateMask(
@@ -4578,6 +5463,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -4596,6 +5485,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearUpdateMask() {
@@ -4610,6 +5503,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -4618,6 +5515,10 @@ public final class AssistantServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -4629,6 +5530,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4647,6 +5552,10 @@ public final class AssistantServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * New name for the assistant.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return The name.
        */
@@ -4663,6 +5572,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New name for the assistant.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return The bytes for name.
        */
@@ -4680,6 +5593,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New name for the assistant.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -4695,6 +5612,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New name for the assistant.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return This builder for chaining.
        */
@@ -4705,6 +5626,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New name for the assistant.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -4723,6 +5648,10 @@ public final class AssistantServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * New description for the assistant.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The description.
        */
@@ -4739,6 +5668,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description for the assistant.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The bytes for description.
        */
@@ -4756,6 +5689,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description for the assistant.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -4771,6 +5708,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description for the assistant.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return This builder for chaining.
        */
@@ -4781,6 +5722,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description for the assistant.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -4801,6 +5746,10 @@ public final class AssistantServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.common.Common.ExpirationConfig, yandex.cloud.api.ai.common.Common.ExpirationConfig.Builder, yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder> expirationConfigBuilder_;
       /**
+       * <pre>
+       * New expiration configuration for the assistant.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        * @return Whether the expirationConfig field is set.
        */
@@ -4808,6 +5757,10 @@ public final class AssistantServiceOuterClass {
         return expirationConfigBuilder_ != null || expirationConfig_ != null;
       }
       /**
+       * <pre>
+       * New expiration configuration for the assistant.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        * @return The expirationConfig.
        */
@@ -4819,6 +5772,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New expiration configuration for the assistant.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder setExpirationConfig(yandex.cloud.api.ai.common.Common.ExpirationConfig value) {
@@ -4835,6 +5792,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New expiration configuration for the assistant.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder setExpirationConfig(
@@ -4849,6 +5810,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New expiration configuration for the assistant.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder mergeExpirationConfig(yandex.cloud.api.ai.common.Common.ExpirationConfig value) {
@@ -4867,6 +5832,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New expiration configuration for the assistant.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public Builder clearExpirationConfig() {
@@ -4881,6 +5850,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New expiration configuration for the assistant.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public yandex.cloud.api.ai.common.Common.ExpirationConfig.Builder getExpirationConfigBuilder() {
@@ -4889,6 +5862,10 @@ public final class AssistantServiceOuterClass {
         return getExpirationConfigFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * New expiration configuration for the assistant.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       public yandex.cloud.api.ai.common.Common.ExpirationConfigOrBuilder getExpirationConfigOrBuilder() {
@@ -4900,6 +5877,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New expiration configuration for the assistant.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.common.ExpirationConfig expiration_config = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4943,6 +5924,10 @@ public final class AssistantServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * New set of labels for the assistant.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -4961,6 +5946,10 @@ public final class AssistantServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * New set of labels for the assistant.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -4969,6 +5958,10 @@ public final class AssistantServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * New set of labels for the assistant.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -4982,6 +5975,10 @@ public final class AssistantServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * New set of labels for the assistant.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -5003,6 +6000,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New set of labels for the assistant.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -5022,6 +6023,10 @@ public final class AssistantServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * New set of labels for the assistant.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       public Builder putLabels(
@@ -5037,6 +6042,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New set of labels for the assistant.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -5049,6 +6058,10 @@ public final class AssistantServiceOuterClass {
 
       private java.lang.Object modelUri_ = "";
       /**
+       * <pre>
+       * The new [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+       * </pre>
+       *
        * <code>string model_uri = 7;</code>
        * @return The modelUri.
        */
@@ -5065,6 +6078,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The new [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+       * </pre>
+       *
        * <code>string model_uri = 7;</code>
        * @return The bytes for modelUri.
        */
@@ -5082,6 +6099,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The new [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+       * </pre>
+       *
        * <code>string model_uri = 7;</code>
        * @param value The modelUri to set.
        * @return This builder for chaining.
@@ -5097,6 +6118,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The new [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+       * </pre>
+       *
        * <code>string model_uri = 7;</code>
        * @return This builder for chaining.
        */
@@ -5107,6 +6132,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The new [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+       * </pre>
+       *
        * <code>string model_uri = 7;</code>
        * @param value The bytes for modelUri to set.
        * @return This builder for chaining.
@@ -5125,6 +6154,10 @@ public final class AssistantServiceOuterClass {
 
       private java.lang.Object instruction_ = "";
       /**
+       * <pre>
+       * New instructions or guidelines for the assistant to follow.
+       * </pre>
+       *
        * <code>string instruction = 8;</code>
        * @return The instruction.
        */
@@ -5141,6 +6174,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New instructions or guidelines for the assistant to follow.
+       * </pre>
+       *
        * <code>string instruction = 8;</code>
        * @return The bytes for instruction.
        */
@@ -5158,6 +6195,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New instructions or guidelines for the assistant to follow.
+       * </pre>
+       *
        * <code>string instruction = 8;</code>
        * @param value The instruction to set.
        * @return This builder for chaining.
@@ -5173,6 +6214,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New instructions or guidelines for the assistant to follow.
+       * </pre>
+       *
        * <code>string instruction = 8;</code>
        * @return This builder for chaining.
        */
@@ -5183,6 +6228,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New instructions or guidelines for the assistant to follow.
+       * </pre>
+       *
        * <code>string instruction = 8;</code>
        * @param value The bytes for instruction to set.
        * @return This builder for chaining.
@@ -5203,6 +6252,10 @@ public final class AssistantServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions, yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.Builder, yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptionsOrBuilder> promptTruncationOptionsBuilder_;
       /**
+       * <pre>
+       * New configuration for truncating the prompt.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 9;</code>
        * @return Whether the promptTruncationOptions field is set.
        */
@@ -5210,6 +6263,10 @@ public final class AssistantServiceOuterClass {
         return promptTruncationOptionsBuilder_ != null || promptTruncationOptions_ != null;
       }
       /**
+       * <pre>
+       * New configuration for truncating the prompt.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 9;</code>
        * @return The promptTruncationOptions.
        */
@@ -5221,6 +6278,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New configuration for truncating the prompt.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 9;</code>
        */
       public Builder setPromptTruncationOptions(yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions value) {
@@ -5237,6 +6298,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New configuration for truncating the prompt.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 9;</code>
        */
       public Builder setPromptTruncationOptions(
@@ -5251,6 +6316,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New configuration for truncating the prompt.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 9;</code>
        */
       public Builder mergePromptTruncationOptions(yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions value) {
@@ -5269,6 +6338,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New configuration for truncating the prompt.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 9;</code>
        */
       public Builder clearPromptTruncationOptions() {
@@ -5283,6 +6356,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New configuration for truncating the prompt.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 9;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.Builder getPromptTruncationOptionsBuilder() {
@@ -5291,6 +6368,10 @@ public final class AssistantServiceOuterClass {
         return getPromptTruncationOptionsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * New configuration for truncating the prompt.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 9;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptionsOrBuilder getPromptTruncationOptionsOrBuilder() {
@@ -5302,6 +6383,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New configuration for truncating the prompt.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions prompt_truncation_options = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5322,6 +6407,10 @@ public final class AssistantServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions, yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions.Builder, yandex.cloud.api.ai.assistants.v1.Common.CompletionOptionsOrBuilder> completionOptionsBuilder_;
       /**
+       * <pre>
+       * New configuration for completion generation.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 10;</code>
        * @return Whether the completionOptions field is set.
        */
@@ -5329,6 +6418,10 @@ public final class AssistantServiceOuterClass {
         return completionOptionsBuilder_ != null || completionOptions_ != null;
       }
       /**
+       * <pre>
+       * New configuration for completion generation.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 10;</code>
        * @return The completionOptions.
        */
@@ -5340,6 +6433,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New configuration for completion generation.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 10;</code>
        */
       public Builder setCompletionOptions(yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions value) {
@@ -5356,6 +6453,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New configuration for completion generation.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 10;</code>
        */
       public Builder setCompletionOptions(
@@ -5370,6 +6471,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New configuration for completion generation.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 10;</code>
        */
       public Builder mergeCompletionOptions(yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions value) {
@@ -5388,6 +6493,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New configuration for completion generation.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 10;</code>
        */
       public Builder clearCompletionOptions() {
@@ -5402,6 +6511,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New configuration for completion generation.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 10;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.CompletionOptions.Builder getCompletionOptionsBuilder() {
@@ -5410,6 +6523,10 @@ public final class AssistantServiceOuterClass {
         return getCompletionOptionsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * New configuration for completion generation.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 10;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.CompletionOptionsOrBuilder getCompletionOptionsOrBuilder() {
@@ -5421,6 +6538,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New configuration for completion generation.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.CompletionOptions completion_options = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5450,6 +6571,10 @@ public final class AssistantServiceOuterClass {
           yandex.cloud.api.ai.assistants.v1.Common.Tool, yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder, yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder> toolsBuilder_;
 
       /**
+       * <pre>
+       * New list of tools the assistant can use.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
        */
       public java.util.List<yandex.cloud.api.ai.assistants.v1.Common.Tool> getToolsList() {
@@ -5460,6 +6585,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of tools the assistant can use.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
        */
       public int getToolsCount() {
@@ -5470,6 +6599,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of tools the assistant can use.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.Tool getTools(int index) {
@@ -5480,6 +6613,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of tools the assistant can use.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
        */
       public Builder setTools(
@@ -5497,6 +6634,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of tools the assistant can use.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
        */
       public Builder setTools(
@@ -5511,6 +6652,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of tools the assistant can use.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
        */
       public Builder addTools(yandex.cloud.api.ai.assistants.v1.Common.Tool value) {
@@ -5527,6 +6672,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of tools the assistant can use.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
        */
       public Builder addTools(
@@ -5544,6 +6693,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of tools the assistant can use.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
        */
       public Builder addTools(
@@ -5558,6 +6711,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of tools the assistant can use.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
        */
       public Builder addTools(
@@ -5572,6 +6729,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of tools the assistant can use.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
        */
       public Builder addAllTools(
@@ -5587,6 +6748,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of tools the assistant can use.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
        */
       public Builder clearTools() {
@@ -5600,6 +6765,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of tools the assistant can use.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
        */
       public Builder removeTools(int index) {
@@ -5613,6 +6782,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of tools the assistant can use.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder getToolsBuilder(
@@ -5620,6 +6793,10 @@ public final class AssistantServiceOuterClass {
         return getToolsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * New list of tools the assistant can use.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder getToolsOrBuilder(
@@ -5630,6 +6807,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of tools the assistant can use.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
        */
       public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder> 
@@ -5641,6 +6822,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of tools the assistant can use.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder addToolsBuilder() {
@@ -5648,6 +6833,10 @@ public final class AssistantServiceOuterClass {
             yandex.cloud.api.ai.assistants.v1.Common.Tool.getDefaultInstance());
       }
       /**
+       * <pre>
+       * New list of tools the assistant can use.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder addToolsBuilder(
@@ -5656,6 +6845,10 @@ public final class AssistantServiceOuterClass {
             index, yandex.cloud.api.ai.assistants.v1.Common.Tool.getDefaultInstance());
       }
       /**
+       * <pre>
+       * New list of tools the assistant can use.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 11;</code>
        */
       public java.util.List<yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder> 
@@ -5734,11 +6927,19 @@ public final class AssistantServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the assistant to delete.
+     * </pre>
+     *
      * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The assistantId.
      */
     java.lang.String getAssistantId();
     /**
+     * <pre>
+     * ID of the assistant to delete.
+     * </pre>
+     *
      * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for assistantId.
      */
@@ -5746,6 +6947,10 @@ public final class AssistantServiceOuterClass {
         getAssistantIdBytes();
   }
   /**
+   * <pre>
+   * Request message for deleting an assistant by ID.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.DeleteAssistantRequest}
    */
   public static final class DeleteAssistantRequest extends
@@ -5832,6 +7037,10 @@ public final class AssistantServiceOuterClass {
     public static final int ASSISTANT_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object assistantId_;
     /**
+     * <pre>
+     * ID of the assistant to delete.
+     * </pre>
+     *
      * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The assistantId.
      */
@@ -5849,6 +7058,10 @@ public final class AssistantServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the assistant to delete.
+     * </pre>
+     *
      * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for assistantId.
      */
@@ -6022,6 +7235,10 @@ public final class AssistantServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for deleting an assistant by ID.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.DeleteAssistantRequest}
      */
     public static final class Builder extends
@@ -6171,6 +7388,10 @@ public final class AssistantServiceOuterClass {
 
       private java.lang.Object assistantId_ = "";
       /**
+       * <pre>
+       * ID of the assistant to delete.
+       * </pre>
+       *
        * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The assistantId.
        */
@@ -6187,6 +7408,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the assistant to delete.
+       * </pre>
+       *
        * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for assistantId.
        */
@@ -6204,6 +7429,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the assistant to delete.
+       * </pre>
+       *
        * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The assistantId to set.
        * @return This builder for chaining.
@@ -6219,6 +7448,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the assistant to delete.
+       * </pre>
+       *
        * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -6229,6 +7462,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the assistant to delete.
+       * </pre>
+       *
        * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for assistantId to set.
        * @return This builder for chaining.
@@ -6302,6 +7539,10 @@ public final class AssistantServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
+   * <pre>
+   * Response message for the delete operation.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.DeleteAssistantResponse}
    */
   public static final class DeleteAssistantResponse extends
@@ -6523,6 +7764,10 @@ public final class AssistantServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Response message for the delete operation.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.DeleteAssistantResponse}
      */
     public static final class Builder extends
@@ -6720,11 +7965,19 @@ public final class AssistantServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Folder ID from which to list assistants.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * Folder ID from which to list assistants.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for folderId.
      */
@@ -6732,17 +7985,29 @@ public final class AssistantServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Maximum number of assistants to return per page.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The bytes for pageToken.
      */
@@ -6750,6 +8015,10 @@ public final class AssistantServiceOuterClass {
         getPageTokenBytes();
   }
   /**
+   * <pre>
+   * Request message for listing assistants in a specific folder.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.ListAssistantsRequest}
    */
   public static final class ListAssistantsRequest extends
@@ -6848,6 +8117,10 @@ public final class AssistantServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * Folder ID from which to list assistants.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The folderId.
      */
@@ -6865,6 +8138,10 @@ public final class AssistantServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Folder ID from which to list assistants.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for folderId.
      */
@@ -6886,6 +8163,10 @@ public final class AssistantServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * Maximum number of assistants to return per page.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      * @return The pageSize.
      */
@@ -6897,6 +8178,10 @@ public final class AssistantServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The pageToken.
      */
@@ -6914,6 +8199,10 @@ public final class AssistantServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The bytes for pageToken.
      */
@@ -7109,6 +8398,10 @@ public final class AssistantServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for listing assistants in a specific folder.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.ListAssistantsRequest}
      */
     public static final class Builder extends
@@ -7271,6 +8564,10 @@ public final class AssistantServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * Folder ID from which to list assistants.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The folderId.
        */
@@ -7287,6 +8584,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID from which to list assistants.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for folderId.
        */
@@ -7304,6 +8605,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID from which to list assistants.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -7319,6 +8624,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID from which to list assistants.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -7329,6 +8638,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID from which to list assistants.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -7347,6 +8660,10 @@ public final class AssistantServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * Maximum number of assistants to return per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @return The pageSize.
        */
@@ -7355,6 +8672,10 @@ public final class AssistantServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * Maximum number of assistants to return per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -7366,6 +8687,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maximum number of assistants to return per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @return This builder for chaining.
        */
@@ -7378,6 +8703,10 @@ public final class AssistantServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return The pageToken.
        */
@@ -7394,6 +8723,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return The bytes for pageToken.
        */
@@ -7411,6 +8744,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -7426,6 +8763,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return This builder for chaining.
        */
@@ -7436,6 +8777,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -7509,35 +8854,63 @@ public final class AssistantServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of assistants in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
      */
     java.util.List<yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant> 
         getAssistantsList();
     /**
+     * <pre>
+     * List of assistants in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
      */
     yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant getAssistants(int index);
     /**
+     * <pre>
+     * List of assistants in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
      */
     int getAssistantsCount();
     /**
+     * <pre>
+     * List of assistants in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.AssistantOrBuilder> 
         getAssistantsOrBuilderList();
     /**
+     * <pre>
+     * List of assistants in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
      */
     yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.AssistantOrBuilder getAssistantsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -7545,6 +8918,10 @@ public final class AssistantServiceOuterClass {
         getNextPageTokenBytes();
   }
   /**
+   * <pre>
+   * Response message for the list operation.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.ListAssistantsResponse}
    */
   public static final class ListAssistantsResponse extends
@@ -7645,6 +9022,10 @@ public final class AssistantServiceOuterClass {
     public static final int ASSISTANTS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant> assistants_;
     /**
+     * <pre>
+     * List of assistants in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
      */
     @java.lang.Override
@@ -7652,6 +9033,10 @@ public final class AssistantServiceOuterClass {
       return assistants_;
     }
     /**
+     * <pre>
+     * List of assistants in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
      */
     @java.lang.Override
@@ -7660,6 +9045,10 @@ public final class AssistantServiceOuterClass {
       return assistants_;
     }
     /**
+     * <pre>
+     * List of assistants in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
      */
     @java.lang.Override
@@ -7667,6 +9056,10 @@ public final class AssistantServiceOuterClass {
       return assistants_.size();
     }
     /**
+     * <pre>
+     * List of assistants in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
      */
     @java.lang.Override
@@ -7674,6 +9067,10 @@ public final class AssistantServiceOuterClass {
       return assistants_.get(index);
     }
     /**
+     * <pre>
+     * List of assistants in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
      */
     @java.lang.Override
@@ -7685,6 +9082,10 @@ public final class AssistantServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
@@ -7702,6 +9103,10 @@ public final class AssistantServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -7888,6 +9293,10 @@ public final class AssistantServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Response message for the list operation.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.ListAssistantsResponse}
      */
     public static final class Builder extends
@@ -8092,6 +9501,10 @@ public final class AssistantServiceOuterClass {
           yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant, yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant.Builder, yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.AssistantOrBuilder> assistantsBuilder_;
 
       /**
+       * <pre>
+       * List of assistants in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
        */
       public java.util.List<yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant> getAssistantsList() {
@@ -8102,6 +9515,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of assistants in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
        */
       public int getAssistantsCount() {
@@ -8112,6 +9529,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of assistants in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant getAssistants(int index) {
@@ -8122,6 +9543,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of assistants in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
        */
       public Builder setAssistants(
@@ -8139,6 +9564,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of assistants in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
        */
       public Builder setAssistants(
@@ -8153,6 +9582,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of assistants in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
        */
       public Builder addAssistants(yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant value) {
@@ -8169,6 +9602,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of assistants in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
        */
       public Builder addAssistants(
@@ -8186,6 +9623,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of assistants in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
        */
       public Builder addAssistants(
@@ -8200,6 +9641,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of assistants in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
        */
       public Builder addAssistants(
@@ -8214,6 +9659,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of assistants in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
        */
       public Builder addAllAssistants(
@@ -8229,6 +9678,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of assistants in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
        */
       public Builder clearAssistants() {
@@ -8242,6 +9695,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of assistants in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
        */
       public Builder removeAssistants(int index) {
@@ -8255,6 +9712,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of assistants in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant.Builder getAssistantsBuilder(
@@ -8262,6 +9723,10 @@ public final class AssistantServiceOuterClass {
         return getAssistantsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of assistants in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.AssistantOrBuilder getAssistantsOrBuilder(
@@ -8272,6 +9737,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of assistants in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.AssistantOrBuilder> 
@@ -8283,6 +9752,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of assistants in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant.Builder addAssistantsBuilder() {
@@ -8290,6 +9763,10 @@ public final class AssistantServiceOuterClass {
             yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of assistants in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant.Builder addAssistantsBuilder(
@@ -8298,6 +9775,10 @@ public final class AssistantServiceOuterClass {
             index, yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of assistants in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.Assistant assistants = 1;</code>
        */
       public java.util.List<yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant.Builder> 
@@ -8321,6 +9802,10 @@ public final class AssistantServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The nextPageToken.
        */
@@ -8337,6 +9822,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The bytes for nextPageToken.
        */
@@ -8354,6 +9843,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -8369,6 +9862,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return This builder for chaining.
        */
@@ -8379,6 +9876,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.
@@ -8452,11 +9953,19 @@ public final class AssistantServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the assistant whose versions are to be listed.
+     * </pre>
+     *
      * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The assistantId.
      */
     java.lang.String getAssistantId();
     /**
+     * <pre>
+     * ID of the assistant whose versions are to be listed.
+     * </pre>
+     *
      * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for assistantId.
      */
@@ -8464,17 +9973,29 @@ public final class AssistantServiceOuterClass {
         getAssistantIdBytes();
 
     /**
+     * <pre>
+     * Maximum number of versions to return per page.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The bytes for pageToken.
      */
@@ -8482,6 +10003,10 @@ public final class AssistantServiceOuterClass {
         getPageTokenBytes();
   }
   /**
+   * <pre>
+   * Request to list all versions of a specific assistant.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.ListAssistantVersionsRequest}
    */
   public static final class ListAssistantVersionsRequest extends
@@ -8580,6 +10105,10 @@ public final class AssistantServiceOuterClass {
     public static final int ASSISTANT_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object assistantId_;
     /**
+     * <pre>
+     * ID of the assistant whose versions are to be listed.
+     * </pre>
+     *
      * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The assistantId.
      */
@@ -8597,6 +10126,10 @@ public final class AssistantServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the assistant whose versions are to be listed.
+     * </pre>
+     *
      * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for assistantId.
      */
@@ -8618,6 +10151,10 @@ public final class AssistantServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * Maximum number of versions to return per page.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      * @return The pageSize.
      */
@@ -8629,6 +10166,10 @@ public final class AssistantServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The pageToken.
      */
@@ -8646,6 +10187,10 @@ public final class AssistantServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The bytes for pageToken.
      */
@@ -8841,6 +10386,10 @@ public final class AssistantServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request to list all versions of a specific assistant.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.ListAssistantVersionsRequest}
      */
     public static final class Builder extends
@@ -9003,6 +10552,10 @@ public final class AssistantServiceOuterClass {
 
       private java.lang.Object assistantId_ = "";
       /**
+       * <pre>
+       * ID of the assistant whose versions are to be listed.
+       * </pre>
+       *
        * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The assistantId.
        */
@@ -9019,6 +10572,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the assistant whose versions are to be listed.
+       * </pre>
+       *
        * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for assistantId.
        */
@@ -9036,6 +10593,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the assistant whose versions are to be listed.
+       * </pre>
+       *
        * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The assistantId to set.
        * @return This builder for chaining.
@@ -9051,6 +10612,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the assistant whose versions are to be listed.
+       * </pre>
+       *
        * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -9061,6 +10626,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the assistant whose versions are to be listed.
+       * </pre>
+       *
        * <code>string assistant_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for assistantId to set.
        * @return This builder for chaining.
@@ -9079,6 +10648,10 @@ public final class AssistantServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * Maximum number of versions to return per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @return The pageSize.
        */
@@ -9087,6 +10660,10 @@ public final class AssistantServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * Maximum number of versions to return per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -9098,6 +10675,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maximum number of versions to return per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @return This builder for chaining.
        */
@@ -9110,6 +10691,10 @@ public final class AssistantServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return The pageToken.
        */
@@ -9126,6 +10711,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return The bytes for pageToken.
        */
@@ -9143,6 +10732,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -9158,6 +10751,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return This builder for chaining.
        */
@@ -9168,6 +10765,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -9241,11 +10842,19 @@ public final class AssistantServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the assistant version.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of the assistant version.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -9253,36 +10862,64 @@ public final class AssistantServiceOuterClass {
         getIdBytes();
 
     /**
+     * <pre>
+     * Mask specifying which fields were updated in this version.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Mask specifying which fields were updated in this version.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Mask specifying which fields were updated in this version.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
+     * <pre>
+     * Assistant configuration for this version.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.Assistant assistant = 3;</code>
      * @return Whether the assistant field is set.
      */
     boolean hasAssistant();
     /**
+     * <pre>
+     * Assistant configuration for this version.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.Assistant assistant = 3;</code>
      * @return The assistant.
      */
     yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant getAssistant();
     /**
+     * <pre>
+     * Assistant configuration for this version.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.Assistant assistant = 3;</code>
      */
     yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.AssistantOrBuilder getAssistantOrBuilder();
   }
   /**
+   * <pre>
+   * Represents a specific version of an assistant.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.AssistantVersion}
    */
   public static final class AssistantVersion extends
@@ -9395,6 +11032,10 @@ public final class AssistantServiceOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of the assistant version.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -9412,6 +11053,10 @@ public final class AssistantServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the assistant version.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -9433,6 +11078,10 @@ public final class AssistantServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Mask specifying which fields were updated in this version.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      * @return Whether the updateMask field is set.
      */
@@ -9441,6 +11090,10 @@ public final class AssistantServiceOuterClass {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Mask specifying which fields were updated in this version.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      * @return The updateMask.
      */
@@ -9449,6 +11102,10 @@ public final class AssistantServiceOuterClass {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Mask specifying which fields were updated in this version.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     @java.lang.Override
@@ -9459,6 +11116,10 @@ public final class AssistantServiceOuterClass {
     public static final int ASSISTANT_FIELD_NUMBER = 3;
     private yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant assistant_;
     /**
+     * <pre>
+     * Assistant configuration for this version.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.Assistant assistant = 3;</code>
      * @return Whether the assistant field is set.
      */
@@ -9467,6 +11128,10 @@ public final class AssistantServiceOuterClass {
       return assistant_ != null;
     }
     /**
+     * <pre>
+     * Assistant configuration for this version.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.Assistant assistant = 3;</code>
      * @return The assistant.
      */
@@ -9475,6 +11140,10 @@ public final class AssistantServiceOuterClass {
       return assistant_ == null ? yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant.getDefaultInstance() : assistant_;
     }
     /**
+     * <pre>
+     * Assistant configuration for this version.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.assistants.v1.Assistant assistant = 3;</code>
      */
     @java.lang.Override
@@ -9669,6 +11338,10 @@ public final class AssistantServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Represents a specific version of an assistant.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.AssistantVersion}
      */
     public static final class Builder extends
@@ -9846,6 +11519,10 @@ public final class AssistantServiceOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of the assistant version.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -9862,6 +11539,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the assistant version.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -9879,6 +11560,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the assistant version.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -9894,6 +11579,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the assistant version.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -9904,6 +11593,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the assistant version.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -9924,6 +11617,10 @@ public final class AssistantServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Mask specifying which fields were updated in this version.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        * @return Whether the updateMask field is set.
        */
@@ -9931,6 +11628,10 @@ public final class AssistantServiceOuterClass {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Mask specifying which fields were updated in this version.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        * @return The updateMask.
        */
@@ -9942,6 +11643,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Mask specifying which fields were updated in this version.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -9958,6 +11663,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Mask specifying which fields were updated in this version.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(
@@ -9972,6 +11681,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Mask specifying which fields were updated in this version.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -9990,6 +11703,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Mask specifying which fields were updated in this version.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder clearUpdateMask() {
@@ -10004,6 +11721,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Mask specifying which fields were updated in this version.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -10012,6 +11733,10 @@ public final class AssistantServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Mask specifying which fields were updated in this version.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -10023,6 +11748,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Mask specifying which fields were updated in this version.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -10043,6 +11772,10 @@ public final class AssistantServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant, yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant.Builder, yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.AssistantOrBuilder> assistantBuilder_;
       /**
+       * <pre>
+       * Assistant configuration for this version.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.Assistant assistant = 3;</code>
        * @return Whether the assistant field is set.
        */
@@ -10050,6 +11783,10 @@ public final class AssistantServiceOuterClass {
         return assistantBuilder_ != null || assistant_ != null;
       }
       /**
+       * <pre>
+       * Assistant configuration for this version.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.Assistant assistant = 3;</code>
        * @return The assistant.
        */
@@ -10061,6 +11798,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Assistant configuration for this version.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.Assistant assistant = 3;</code>
        */
       public Builder setAssistant(yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant value) {
@@ -10077,6 +11818,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Assistant configuration for this version.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.Assistant assistant = 3;</code>
        */
       public Builder setAssistant(
@@ -10091,6 +11836,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Assistant configuration for this version.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.Assistant assistant = 3;</code>
        */
       public Builder mergeAssistant(yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant value) {
@@ -10109,6 +11858,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Assistant configuration for this version.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.Assistant assistant = 3;</code>
        */
       public Builder clearAssistant() {
@@ -10123,6 +11876,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Assistant configuration for this version.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.Assistant assistant = 3;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.Assistant.Builder getAssistantBuilder() {
@@ -10131,6 +11888,10 @@ public final class AssistantServiceOuterClass {
         return getAssistantFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Assistant configuration for this version.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.Assistant assistant = 3;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.AssistantOuterClass.AssistantOrBuilder getAssistantOrBuilder() {
@@ -10142,6 +11903,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Assistant configuration for this version.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.assistants.v1.Assistant assistant = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -10215,35 +11980,63 @@ public final class AssistantServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of assistant versions.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
      */
     java.util.List<yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.AssistantVersion> 
         getVersionsList();
     /**
+     * <pre>
+     * List of assistant versions.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
      */
     yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.AssistantVersion getVersions(int index);
     /**
+     * <pre>
+     * List of assistant versions.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
      */
     int getVersionsCount();
     /**
+     * <pre>
+     * List of assistant versions.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.AssistantVersionOrBuilder> 
         getVersionsOrBuilderList();
     /**
+     * <pre>
+     * List of assistant versions.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
      */
     yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.AssistantVersionOrBuilder getVersionsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -10251,6 +12044,10 @@ public final class AssistantServiceOuterClass {
         getNextPageTokenBytes();
   }
   /**
+   * <pre>
+   * Response message containing the list versions operation.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.ListAssistantVersionsResponse}
    */
   public static final class ListAssistantVersionsResponse extends
@@ -10351,6 +12148,10 @@ public final class AssistantServiceOuterClass {
     public static final int VERSIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.AssistantVersion> versions_;
     /**
+     * <pre>
+     * List of assistant versions.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
      */
     @java.lang.Override
@@ -10358,6 +12159,10 @@ public final class AssistantServiceOuterClass {
       return versions_;
     }
     /**
+     * <pre>
+     * List of assistant versions.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
      */
     @java.lang.Override
@@ -10366,6 +12171,10 @@ public final class AssistantServiceOuterClass {
       return versions_;
     }
     /**
+     * <pre>
+     * List of assistant versions.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
      */
     @java.lang.Override
@@ -10373,6 +12182,10 @@ public final class AssistantServiceOuterClass {
       return versions_.size();
     }
     /**
+     * <pre>
+     * List of assistant versions.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
      */
     @java.lang.Override
@@ -10380,6 +12193,10 @@ public final class AssistantServiceOuterClass {
       return versions_.get(index);
     }
     /**
+     * <pre>
+     * List of assistant versions.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
      */
     @java.lang.Override
@@ -10391,6 +12208,10 @@ public final class AssistantServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
@@ -10408,6 +12229,10 @@ public final class AssistantServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token to retrieve the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -10594,6 +12419,10 @@ public final class AssistantServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Response message containing the list versions operation.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.assistants.v1.ListAssistantVersionsResponse}
      */
     public static final class Builder extends
@@ -10798,6 +12627,10 @@ public final class AssistantServiceOuterClass {
           yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.AssistantVersion, yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.AssistantVersion.Builder, yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.AssistantVersionOrBuilder> versionsBuilder_;
 
       /**
+       * <pre>
+       * List of assistant versions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
        */
       public java.util.List<yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.AssistantVersion> getVersionsList() {
@@ -10808,6 +12641,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of assistant versions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
        */
       public int getVersionsCount() {
@@ -10818,6 +12655,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of assistant versions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.AssistantVersion getVersions(int index) {
@@ -10828,6 +12669,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of assistant versions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
        */
       public Builder setVersions(
@@ -10845,6 +12690,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of assistant versions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
        */
       public Builder setVersions(
@@ -10859,6 +12708,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of assistant versions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
        */
       public Builder addVersions(yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.AssistantVersion value) {
@@ -10875,6 +12728,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of assistant versions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
        */
       public Builder addVersions(
@@ -10892,6 +12749,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of assistant versions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
        */
       public Builder addVersions(
@@ -10906,6 +12767,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of assistant versions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
        */
       public Builder addVersions(
@@ -10920,6 +12785,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of assistant versions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
        */
       public Builder addAllVersions(
@@ -10935,6 +12804,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of assistant versions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
        */
       public Builder clearVersions() {
@@ -10948,6 +12821,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of assistant versions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
        */
       public Builder removeVersions(int index) {
@@ -10961,6 +12838,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of assistant versions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.AssistantVersion.Builder getVersionsBuilder(
@@ -10968,6 +12849,10 @@ public final class AssistantServiceOuterClass {
         return getVersionsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of assistant versions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.AssistantVersionOrBuilder getVersionsOrBuilder(
@@ -10978,6 +12863,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of assistant versions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.AssistantVersionOrBuilder> 
@@ -10989,6 +12878,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of assistant versions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.AssistantVersion.Builder addVersionsBuilder() {
@@ -10996,6 +12889,10 @@ public final class AssistantServiceOuterClass {
             yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.AssistantVersion.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of assistant versions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
        */
       public yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.AssistantVersion.Builder addVersionsBuilder(
@@ -11004,6 +12901,10 @@ public final class AssistantServiceOuterClass {
             index, yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.AssistantVersion.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of assistant versions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.ai.assistants.v1.AssistantVersion versions = 1;</code>
        */
       public java.util.List<yandex.cloud.api.ai.assistants.v1.AssistantServiceOuterClass.AssistantVersion.Builder> 
@@ -11027,6 +12928,10 @@ public final class AssistantServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The nextPageToken.
        */
@@ -11043,6 +12948,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The bytes for nextPageToken.
        */
@@ -11060,6 +12969,10 @@ public final class AssistantServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -11075,6 +12988,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return This builder for chaining.
        */
@@ -11085,6 +13002,10 @@ public final class AssistantServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token to retrieve the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.

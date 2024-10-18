@@ -3,6 +3,9 @@ package yandex.cloud.api.ai.files.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * FileService provides operations for managing files.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -246,10 +249,16 @@ public final class FileServiceGrpc {
   }
 
   /**
+   * <pre>
+   * FileService provides operations for managing files.
+   * </pre>
    */
   public static abstract class FileServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Create a new file.
+     * </pre>
      */
     public void create(yandex.cloud.api.ai.files.v1.FileServiceOuterClass.CreateFileRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.files.v1.FileOuterClass.File> responseObserver) {
@@ -257,6 +266,9 @@ public final class FileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific file by its ID.
+     * </pre>
      */
     public void get(yandex.cloud.api.ai.files.v1.FileServiceOuterClass.GetFileRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.files.v1.FileOuterClass.File> responseObserver) {
@@ -264,6 +276,9 @@ public final class FileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve a URL for accessing or downloading a specific file.
+     * </pre>
      */
     public void getUrl(yandex.cloud.api.ai.files.v1.FileServiceOuterClass.GetFileUrlRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.files.v1.FileServiceOuterClass.GetFileUrlResponse> responseObserver) {
@@ -271,6 +286,9 @@ public final class FileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update an existing file.
+     * </pre>
      */
     public void update(yandex.cloud.api.ai.files.v1.FileServiceOuterClass.UpdateFileRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.files.v1.FileOuterClass.File> responseObserver) {
@@ -278,6 +296,9 @@ public final class FileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete a file by its ID.
+     * </pre>
      */
     public void delete(yandex.cloud.api.ai.files.v1.FileServiceOuterClass.DeleteFileRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.files.v1.FileServiceOuterClass.DeleteFileResponse> responseObserver) {
@@ -285,6 +306,9 @@ public final class FileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List files in a specific folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.ai.files.v1.FileServiceOuterClass.ListFilesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.files.v1.FileServiceOuterClass.ListFilesResponse> responseObserver) {
@@ -340,6 +364,9 @@ public final class FileServiceGrpc {
   }
 
   /**
+   * <pre>
+   * FileService provides operations for managing files.
+   * </pre>
    */
   public static final class FileServiceStub extends io.grpc.stub.AbstractAsyncStub<FileServiceStub> {
     private FileServiceStub(
@@ -354,6 +381,9 @@ public final class FileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create a new file.
+     * </pre>
      */
     public void create(yandex.cloud.api.ai.files.v1.FileServiceOuterClass.CreateFileRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.files.v1.FileOuterClass.File> responseObserver) {
@@ -362,6 +392,9 @@ public final class FileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific file by its ID.
+     * </pre>
      */
     public void get(yandex.cloud.api.ai.files.v1.FileServiceOuterClass.GetFileRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.files.v1.FileOuterClass.File> responseObserver) {
@@ -370,6 +403,9 @@ public final class FileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve a URL for accessing or downloading a specific file.
+     * </pre>
      */
     public void getUrl(yandex.cloud.api.ai.files.v1.FileServiceOuterClass.GetFileUrlRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.files.v1.FileServiceOuterClass.GetFileUrlResponse> responseObserver) {
@@ -378,6 +414,9 @@ public final class FileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update an existing file.
+     * </pre>
      */
     public void update(yandex.cloud.api.ai.files.v1.FileServiceOuterClass.UpdateFileRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.files.v1.FileOuterClass.File> responseObserver) {
@@ -386,6 +425,9 @@ public final class FileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete a file by its ID.
+     * </pre>
      */
     public void delete(yandex.cloud.api.ai.files.v1.FileServiceOuterClass.DeleteFileRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.files.v1.FileServiceOuterClass.DeleteFileResponse> responseObserver) {
@@ -394,6 +436,9 @@ public final class FileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List files in a specific folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.ai.files.v1.FileServiceOuterClass.ListFilesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.files.v1.FileServiceOuterClass.ListFilesResponse> responseObserver) {
@@ -403,6 +448,9 @@ public final class FileServiceGrpc {
   }
 
   /**
+   * <pre>
+   * FileService provides operations for managing files.
+   * </pre>
    */
   public static final class FileServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<FileServiceBlockingStub> {
     private FileServiceBlockingStub(
@@ -417,6 +465,9 @@ public final class FileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create a new file.
+     * </pre>
      */
     public yandex.cloud.api.ai.files.v1.FileOuterClass.File create(yandex.cloud.api.ai.files.v1.FileServiceOuterClass.CreateFileRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -424,6 +475,9 @@ public final class FileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific file by its ID.
+     * </pre>
      */
     public yandex.cloud.api.ai.files.v1.FileOuterClass.File get(yandex.cloud.api.ai.files.v1.FileServiceOuterClass.GetFileRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -431,6 +485,9 @@ public final class FileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve a URL for accessing or downloading a specific file.
+     * </pre>
      */
     public yandex.cloud.api.ai.files.v1.FileServiceOuterClass.GetFileUrlResponse getUrl(yandex.cloud.api.ai.files.v1.FileServiceOuterClass.GetFileUrlRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -438,6 +495,9 @@ public final class FileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update an existing file.
+     * </pre>
      */
     public yandex.cloud.api.ai.files.v1.FileOuterClass.File update(yandex.cloud.api.ai.files.v1.FileServiceOuterClass.UpdateFileRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -445,6 +505,9 @@ public final class FileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete a file by its ID.
+     * </pre>
      */
     public yandex.cloud.api.ai.files.v1.FileServiceOuterClass.DeleteFileResponse delete(yandex.cloud.api.ai.files.v1.FileServiceOuterClass.DeleteFileRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -452,6 +515,9 @@ public final class FileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List files in a specific folder.
+     * </pre>
      */
     public yandex.cloud.api.ai.files.v1.FileServiceOuterClass.ListFilesResponse list(yandex.cloud.api.ai.files.v1.FileServiceOuterClass.ListFilesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -460,6 +526,9 @@ public final class FileServiceGrpc {
   }
 
   /**
+   * <pre>
+   * FileService provides operations for managing files.
+   * </pre>
    */
   public static final class FileServiceFutureStub extends io.grpc.stub.AbstractFutureStub<FileServiceFutureStub> {
     private FileServiceFutureStub(
@@ -474,6 +543,9 @@ public final class FileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create a new file.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.files.v1.FileOuterClass.File> create(
         yandex.cloud.api.ai.files.v1.FileServiceOuterClass.CreateFileRequest request) {
@@ -482,6 +554,9 @@ public final class FileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve details of a specific file by its ID.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.files.v1.FileOuterClass.File> get(
         yandex.cloud.api.ai.files.v1.FileServiceOuterClass.GetFileRequest request) {
@@ -490,6 +565,9 @@ public final class FileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieve a URL for accessing or downloading a specific file.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.files.v1.FileServiceOuterClass.GetFileUrlResponse> getUrl(
         yandex.cloud.api.ai.files.v1.FileServiceOuterClass.GetFileUrlRequest request) {
@@ -498,6 +576,9 @@ public final class FileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update an existing file.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.files.v1.FileOuterClass.File> update(
         yandex.cloud.api.ai.files.v1.FileServiceOuterClass.UpdateFileRequest request) {
@@ -506,6 +587,9 @@ public final class FileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete a file by its ID.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.files.v1.FileServiceOuterClass.DeleteFileResponse> delete(
         yandex.cloud.api.ai.files.v1.FileServiceOuterClass.DeleteFileRequest request) {
@@ -514,6 +598,9 @@ public final class FileServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List files in a specific folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.files.v1.FileServiceOuterClass.ListFilesResponse> list(
         yandex.cloud.api.ai.files.v1.FileServiceOuterClass.ListFilesRequest request) {
