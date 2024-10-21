@@ -11717,7 +11717,7 @@ public final class ContainerServiceOuterClass {
      * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
      * </pre>
      *
-     * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+     * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "0s-3600s"];</code>
      * @return Whether the executionTimeout field is set.
      */
     boolean hasExecutionTimeout();
@@ -11727,7 +11727,7 @@ public final class ContainerServiceOuterClass {
      * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
      * </pre>
      *
-     * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+     * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "0s-3600s"];</code>
      * @return The executionTimeout.
      */
     com.google.protobuf.Duration getExecutionTimeout();
@@ -11737,7 +11737,7 @@ public final class ContainerServiceOuterClass {
      * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
      * </pre>
      *
-     * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+     * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "0s-3600s"];</code>
      */
     com.google.protobuf.DurationOrBuilder getExecutionTimeoutOrBuilder();
 
@@ -12416,7 +12416,7 @@ public final class ContainerServiceOuterClass {
      * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
      * </pre>
      *
-     * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+     * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "0s-3600s"];</code>
      * @return Whether the executionTimeout field is set.
      */
     @java.lang.Override
@@ -12429,7 +12429,7 @@ public final class ContainerServiceOuterClass {
      * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
      * </pre>
      *
-     * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+     * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "0s-3600s"];</code>
      * @return The executionTimeout.
      */
     @java.lang.Override
@@ -12442,7 +12442,7 @@ public final class ContainerServiceOuterClass {
      * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
      * </pre>
      *
-     * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+     * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "0s-3600s"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getExecutionTimeoutOrBuilder() {
@@ -13976,7 +13976,7 @@ public final class ContainerServiceOuterClass {
        * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "0s-3600s"];</code>
        * @return Whether the executionTimeout field is set.
        */
       public boolean hasExecutionTimeout() {
@@ -13988,7 +13988,7 @@ public final class ContainerServiceOuterClass {
        * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "0s-3600s"];</code>
        * @return The executionTimeout.
        */
       public com.google.protobuf.Duration getExecutionTimeout() {
@@ -14004,7 +14004,7 @@ public final class ContainerServiceOuterClass {
        * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "0s-3600s"];</code>
        */
       public Builder setExecutionTimeout(com.google.protobuf.Duration value) {
         if (executionTimeoutBuilder_ == null) {
@@ -14025,7 +14025,7 @@ public final class ContainerServiceOuterClass {
        * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "0s-3600s"];</code>
        */
       public Builder setExecutionTimeout(
           com.google.protobuf.Duration.Builder builderForValue) {
@@ -14044,7 +14044,7 @@ public final class ContainerServiceOuterClass {
        * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "0s-3600s"];</code>
        */
       public Builder mergeExecutionTimeout(com.google.protobuf.Duration value) {
         if (executionTimeoutBuilder_ == null) {
@@ -14067,7 +14067,7 @@ public final class ContainerServiceOuterClass {
        * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "0s-3600s"];</code>
        */
       public Builder clearExecutionTimeout() {
         if (executionTimeoutBuilder_ == null) {
@@ -14086,7 +14086,7 @@ public final class ContainerServiceOuterClass {
        * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "0s-3600s"];</code>
        */
       public com.google.protobuf.Duration.Builder getExecutionTimeoutBuilder() {
         
@@ -14099,7 +14099,7 @@ public final class ContainerServiceOuterClass {
        * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "0s-3600s"];</code>
        */
       public com.google.protobuf.DurationOrBuilder getExecutionTimeoutOrBuilder() {
         if (executionTimeoutBuilder_ != null) {
@@ -14115,7 +14115,7 @@ public final class ContainerServiceOuterClass {
        * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "0s-3600s"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
@@ -22380,121 +22380,121 @@ public final class ContainerServiceOuterClass {
       "\212\3101\006<=1000B\n\n\002id\022\004\300\3011\001\"~\n\037ListContainers" +
       "RevisionsResponse\022B\n\trevisions\030\001 \003(\0132/.y" +
       "andex.cloud.serverless.containers.v1.Rev" +
-      "ision\022\027\n\017next_page_token\030\002 \001(\t\"\345\006\n\036Deplo" +
+      "ision\022\027\n\017next_page_token\030\002 \001(\t\"\347\006\n\036Deplo" +
       "yContainerRevisionRequest\022\032\n\014container_i" +
       "d\030\001 \001(\tB\004\350\3071\001\022\023\n\013description\030\003 \001(\t\022I\n\tre" +
       "sources\030\005 \001(\01320.yandex.cloud.serverless." +
-      "containers.v1.ResourcesB\004\350\3071\001\022@\n\021executi" +
+      "containers.v1.ResourcesB\004\350\3071\001\022B\n\021executi" +
       "on_timeout\030\006 \001(\0132\031.google.protobuf.Durat" +
-      "ionB\n\372\3071\006<=600s\022\032\n\022service_account_id\030\007 " +
-      "\001(\t\022J\n\nimage_spec\030\010 \001(\01320.yandex.cloud.s" +
-      "erverless.containers.v1.ImageSpecB\004\350\3071\001\022" +
-      "\023\n\013concurrency\030\t \001(\003\022>\n\007secrets\030\n \003(\0132-." +
-      "yandex.cloud.serverless.containers.v1.Se" +
-      "cret\022I\n\014connectivity\030\013 \001(\01323.yandex.clou" +
-      "d.serverless.containers.v1.Connectivity\022" +
-      "P\n\020provision_policy\030\014 \001(\01326.yandex.cloud" +
-      ".serverless.containers.v1.ProvisionPolic" +
-      "y\022L\n\016scaling_policy\030\r \001(\01324.yandex.cloud" +
-      ".serverless.containers.v1.ScalingPolicy\022" +
-      "F\n\013log_options\030\016 \001(\01321.yandex.cloud.serv" +
-      "erless.containers.v1.LogOptions\022K\n\016stora" +
-      "ge_mounts\030\017 \003(\01323.yandex.cloud.serverles" +
-      "s.containers.v1.StorageMount\022<\n\006mounts\030\020" +
-      " \003(\0132,.yandex.cloud.serverless.container" +
-      "s.v1.MountJ\004\010\004\020\005J\004\010\002\020\003\"\350\002\n\tImageSpec\022\027\n\t" +
-      "image_url\030\001 \001(\tB\004\350\3071\001\022?\n\007command\030\002 \001(\0132." +
-      ".yandex.cloud.serverless.containers.v1.C" +
-      "ommand\0229\n\004args\030\003 \001(\0132+.yandex.cloud.serv" +
-      "erless.containers.v1.Args\022}\n\013environment" +
-      "\030\004 \003(\0132A.yandex.cloud.serverless.contain" +
-      "ers.v1.ImageSpec.EnvironmentEntryB%\212\3101\006<" +
-      "=4096\262\3101\027\022\025[a-zA-Z][a-zA-Z0-9_]*\022\023\n\013work" +
-      "ing_dir\030\005 \001(\t\0322\n\020EnvironmentEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"@\n\037DeployConta" +
-      "inerRevisionMetadata\022\035\n\025container_revisi" +
-      "on_id\030\001 \001(\t\"Q\n\030RollbackContainerRequest\022" +
-      "\032\n\014container_id\030\001 \001(\tB\004\350\3071\001\022\031\n\013revision_" +
-      "id\030\002 \001(\tB\004\350\3071\001\"F\n\031RollbackContainerMetad" +
-      "ata\022\024\n\014container_id\030\001 \001(\t\022\023\n\013revision_id" +
-      "\030\002 \001(\t\"\226\001\n\036ListContainerOperationsReques" +
-      "t\022\032\n\014container_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_si" +
-      "ze\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\t" +
-      "B\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"" +
-      "q\n\037ListContainerOperationsResponse\0225\n\nop" +
-      "erations\030\001 \003(\0132!.yandex.cloud.operation." +
-      "Operation\022\027\n\017next_page_token\030\002 \001(\t2\355\024\n\020C" +
-      "ontainerService\022\245\001\n\003Get\022:.yandex.cloud.s" +
-      "erverless.containers.v1.GetContainerRequ" +
-      "est\0320.yandex.cloud.serverless.containers" +
-      ".v1.Container\"0\202\323\344\223\002*\022(/containers/v1/co" +
-      "ntainers/{container_id}\022\246\001\n\004List\022<.yande" +
-      "x.cloud.serverless.containers.v1.ListCon" +
-      "tainersRequest\032=.yandex.cloud.serverless" +
-      ".containers.v1.ListContainersResponse\"!\202" +
-      "\323\344\223\002\033\022\031/containers/v1/containers\022\270\001\n\006Cre" +
-      "ate\022=.yandex.cloud.serverless.containers" +
-      ".v1.CreateContainerRequest\032!.yandex.clou" +
-      "d.operation.Operation\"L\202\323\344\223\002\036\"\031/containe" +
-      "rs/v1/containers:\001*\262\322*$\n\027CreateContainer" +
-      "Metadata\022\tContainer\022\307\001\n\006Update\022=.yandex." +
-      "cloud.serverless.containers.v1.UpdateCon" +
-      "tainerRequest\032!.yandex.cloud.operation.O" +
-      "peration\"[\202\323\344\223\002-2(/containers/v1/contain" +
-      "ers/{container_id}:\001*\262\322*$\n\027UpdateContain" +
-      "erMetadata\022\tContainer\022\320\001\n\006Delete\022=.yande" +
-      "x.cloud.serverless.containers.v1.DeleteC" +
-      "ontainerRequest\032!.yandex.cloud.operation" +
-      ".Operation\"d\202\323\344\223\002**(/containers/v1/conta" +
-      "iners/{container_id}\262\322*0\n\027DeleteContaine" +
-      "rMetadata\022\025google.protobuf.Empty\022\325\001\n\016Dep" +
-      "loyRevision\022E.yandex.cloud.serverless.co" +
-      "ntainers.v1.DeployContainerRevisionReque" +
-      "st\032!.yandex.cloud.operation.Operation\"Y\202" +
-      "\323\344\223\002$\"\037/containers/v1/revisions:deploy:\001" +
-      "*\262\322*+\n\037DeployContainerRevisionMetadata\022\010" +
-      "Revision\022\326\001\n\010Rollback\022?.yandex.cloud.ser" +
-      "verless.containers.v1.RollbackContainerR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"f\202\323\344\223\0026\"1/containers/v1/containers/{co" +
-      "ntainer_id}:rollback:\001*\262\322*&\n\031RollbackCon" +
-      "tainerMetadata\022\tContainer\022\274\001\n\013GetRevisio" +
-      "n\022B.yandex.cloud.serverless.containers.v" +
-      "1.GetContainerRevisionRequest\032/.yandex.c" +
-      "loud.serverless.containers.v1.Revision\"8" +
-      "\202\323\344\223\0022\0220/containers/v1/revisions/{contai" +
-      "ner_revision_id}\022\300\001\n\rListRevisions\022E.yan" +
+      "ionB\014\372\3071\0100s-3600s\022\032\n\022service_account_id\030" +
+      "\007 \001(\t\022J\n\nimage_spec\030\010 \001(\01320.yandex.cloud" +
+      ".serverless.containers.v1.ImageSpecB\004\350\3071" +
+      "\001\022\023\n\013concurrency\030\t \001(\003\022>\n\007secrets\030\n \003(\0132" +
+      "-.yandex.cloud.serverless.containers.v1." +
+      "Secret\022I\n\014connectivity\030\013 \001(\01323.yandex.cl" +
+      "oud.serverless.containers.v1.Connectivit" +
+      "y\022P\n\020provision_policy\030\014 \001(\01326.yandex.clo" +
+      "ud.serverless.containers.v1.ProvisionPol" +
+      "icy\022L\n\016scaling_policy\030\r \001(\01324.yandex.clo" +
+      "ud.serverless.containers.v1.ScalingPolic" +
+      "y\022F\n\013log_options\030\016 \001(\01321.yandex.cloud.se" +
+      "rverless.containers.v1.LogOptions\022K\n\016sto" +
+      "rage_mounts\030\017 \003(\01323.yandex.cloud.serverl" +
+      "ess.containers.v1.StorageMount\022<\n\006mounts" +
+      "\030\020 \003(\0132,.yandex.cloud.serverless.contain" +
+      "ers.v1.MountJ\004\010\004\020\005J\004\010\002\020\003\"\350\002\n\tImageSpec\022\027" +
+      "\n\timage_url\030\001 \001(\tB\004\350\3071\001\022?\n\007command\030\002 \001(\013" +
+      "2..yandex.cloud.serverless.containers.v1" +
+      ".Command\0229\n\004args\030\003 \001(\0132+.yandex.cloud.se" +
+      "rverless.containers.v1.Args\022}\n\013environme" +
+      "nt\030\004 \003(\0132A.yandex.cloud.serverless.conta" +
+      "iners.v1.ImageSpec.EnvironmentEntryB%\212\3101" +
+      "\006<=4096\262\3101\027\022\025[a-zA-Z][a-zA-Z0-9_]*\022\023\n\013wo" +
+      "rking_dir\030\005 \001(\t\0322\n\020EnvironmentEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"@\n\037DeployCon" +
+      "tainerRevisionMetadata\022\035\n\025container_revi" +
+      "sion_id\030\001 \001(\t\"Q\n\030RollbackContainerReques" +
+      "t\022\032\n\014container_id\030\001 \001(\tB\004\350\3071\001\022\031\n\013revisio" +
+      "n_id\030\002 \001(\tB\004\350\3071\001\"F\n\031RollbackContainerMet" +
+      "adata\022\024\n\014container_id\030\001 \001(\t\022\023\n\013revision_" +
+      "id\030\002 \001(\t\"\226\001\n\036ListContainerOperationsRequ" +
+      "est\022\032\n\014container_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_" +
+      "size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001" +
+      "(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=100" +
+      "0\"q\n\037ListContainerOperationsResponse\0225\n\n" +
+      "operations\030\001 \003(\0132!.yandex.cloud.operatio" +
+      "n.Operation\022\027\n\017next_page_token\030\002 \001(\t2\355\024\n" +
+      "\020ContainerService\022\245\001\n\003Get\022:.yandex.cloud" +
+      ".serverless.containers.v1.GetContainerRe" +
+      "quest\0320.yandex.cloud.serverless.containe" +
+      "rs.v1.Container\"0\202\323\344\223\002*\022(/containers/v1/" +
+      "containers/{container_id}\022\246\001\n\004List\022<.yan" +
       "dex.cloud.serverless.containers.v1.ListC" +
-      "ontainersRevisionsRequest\032F.yandex.cloud" +
-      ".serverless.containers.v1.ListContainers" +
-      "RevisionsResponse\" \202\323\344\223\002\032\022\030/containers/v" +
-      "1/revisions\022\334\001\n\016ListOperations\022E.yandex." +
-      "cloud.serverless.containers.v1.ListConta" +
-      "inerOperationsRequest\032F.yandex.cloud.ser" +
-      "verless.containers.v1.ListContainerOpera" +
-      "tionsResponse\";\202\323\344\223\0025\0223/containers/v1/co" +
-      "ntainers/{container_id}/operations\022\271\001\n\022L" +
-      "istAccessBindings\022..yandex.cloud.access." +
-      "ListAccessBindingsRequest\032/.yandex.cloud" +
-      ".access.ListAccessBindingsResponse\"B\202\323\344\223" +
-      "\002<\022:/containers/v1/containers/{resource_" +
-      "id}:listAccessBindings\022\351\001\n\021SetAccessBind" +
-      "ings\022-.yandex.cloud.access.SetAccessBind" +
-      "ingsRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"\201\001\202\323\344\223\002>\"9/containers/v1/containe" +
-      "rs/{resource_id}:setAccessBindings:\001*\262\322*" +
-      "9\n access.SetAccessBindingsMetadata\022\025goo" +
-      "gle.protobuf.Empty\022\365\001\n\024UpdateAccessBindi" +
-      "ngs\0220.yandex.cloud.access.UpdateAccessBi" +
+      "ontainersRequest\032=.yandex.cloud.serverle" +
+      "ss.containers.v1.ListContainersResponse\"" +
+      "!\202\323\344\223\002\033\022\031/containers/v1/containers\022\270\001\n\006C" +
+      "reate\022=.yandex.cloud.serverless.containe" +
+      "rs.v1.CreateContainerRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"L\202\323\344\223\002\036\"\031/contai" +
+      "ners/v1/containers:\001*\262\322*$\n\027CreateContain" +
+      "erMetadata\022\tContainer\022\307\001\n\006Update\022=.yande" +
+      "x.cloud.serverless.containers.v1.UpdateC" +
+      "ontainerRequest\032!.yandex.cloud.operation" +
+      ".Operation\"[\202\323\344\223\002-2(/containers/v1/conta" +
+      "iners/{container_id}:\001*\262\322*$\n\027UpdateConta" +
+      "inerMetadata\022\tContainer\022\320\001\n\006Delete\022=.yan" +
+      "dex.cloud.serverless.containers.v1.Delet" +
+      "eContainerRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"d\202\323\344\223\002**(/containers/v1/con" +
+      "tainers/{container_id}\262\322*0\n\027DeleteContai" +
+      "nerMetadata\022\025google.protobuf.Empty\022\325\001\n\016D" +
+      "eployRevision\022E.yandex.cloud.serverless." +
+      "containers.v1.DeployContainerRevisionReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "Y\202\323\344\223\002$\"\037/containers/v1/revisions:deploy" +
+      ":\001*\262\322*+\n\037DeployContainerRevisionMetadata" +
+      "\022\010Revision\022\326\001\n\010Rollback\022?.yandex.cloud.s" +
+      "erverless.containers.v1.RollbackContaine" +
+      "rRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"f\202\323\344\223\0026\"1/containers/v1/containers/{" +
+      "container_id}:rollback:\001*\262\322*&\n\031RollbackC" +
+      "ontainerMetadata\022\tContainer\022\274\001\n\013GetRevis" +
+      "ion\022B.yandex.cloud.serverless.containers" +
+      ".v1.GetContainerRevisionRequest\032/.yandex" +
+      ".cloud.serverless.containers.v1.Revision" +
+      "\"8\202\323\344\223\0022\0220/containers/v1/revisions/{cont" +
+      "ainer_revision_id}\022\300\001\n\rListRevisions\022E.y" +
+      "andex.cloud.serverless.containers.v1.Lis" +
+      "tContainersRevisionsRequest\032F.yandex.clo" +
+      "ud.serverless.containers.v1.ListContaine" +
+      "rsRevisionsResponse\" \202\323\344\223\002\032\022\030/containers" +
+      "/v1/revisions\022\334\001\n\016ListOperations\022E.yande" +
+      "x.cloud.serverless.containers.v1.ListCon" +
+      "tainerOperationsRequest\032F.yandex.cloud.s" +
+      "erverless.containers.v1.ListContainerOpe" +
+      "rationsResponse\";\202\323\344\223\0025\0223/containers/v1/" +
+      "containers/{container_id}/operations\022\271\001\n" +
+      "\022ListAccessBindings\022..yandex.cloud.acces" +
+      "s.ListAccessBindingsRequest\032/.yandex.clo" +
+      "ud.access.ListAccessBindingsResponse\"B\202\323" +
+      "\344\223\002<\022:/containers/v1/containers/{resourc" +
+      "e_id}:listAccessBindings\022\351\001\n\021SetAccessBi" +
+      "ndings\022-.yandex.cloud.access.SetAccessBi" +
       "ndingsRequest\032!.yandex.cloud.operation.O" +
-      "peration\"\207\001\202\323\344\223\002A\"</containers/v1/contai" +
-      "ners/{resource_id}:updateAccessBindings:" +
-      "\001*\262\322*<\n#access.UpdateAccessBindingsMetad" +
-      "ata\022\025google.protobuf.EmptyB\201\001\n)yandex.cl" +
-      "oud.api.serverless.containers.v1ZTgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/serverless/containers/v1;containersb\006" +
-      "proto3"
+      "peration\"\201\001\202\323\344\223\002>\"9/containers/v1/contai" +
+      "ners/{resource_id}:setAccessBindings:\001*\262" +
+      "\322*9\n access.SetAccessBindingsMetadata\022\025g" +
+      "oogle.protobuf.Empty\022\365\001\n\024UpdateAccessBin" +
+      "dings\0220.yandex.cloud.access.UpdateAccess" +
+      "BindingsRequest\032!.yandex.cloud.operation" +
+      ".Operation\"\207\001\202\323\344\223\002A\"</containers/v1/cont" +
+      "ainers/{resource_id}:updateAccessBinding" +
+      "s:\001*\262\322*<\n#access.UpdateAccessBindingsMet" +
+      "adata\022\025google.protobuf.EmptyB\201\001\n)yandex." +
+      "cloud.api.serverless.containers.v1ZTgith" +
+      "ub.com/yandex-cloud/go-genproto/yandex/c" +
+      "loud/serverless/containers/v1;containers" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
