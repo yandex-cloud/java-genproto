@@ -3950,6 +3950,42 @@ public final class SecretServiceOuterClass {
      */
     yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder getPasswordPayloadSpecificationOrBuilder();
 
+    /**
+     * <pre>
+     * If true: a version will be created with either version_payload_entries or password_payload_specification (one is required).
+     * If false: a version is NOT created, no matter version_payload_entries or password_payload_specification.
+     * Default: a version is created IF either version_payload_entries or password_payload_specification are specified.
+     * It's never allowed to set both version_payload_entries and password_payload_specification.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue create_version = 10;</code>
+     * @return Whether the createVersion field is set.
+     */
+    boolean hasCreateVersion();
+    /**
+     * <pre>
+     * If true: a version will be created with either version_payload_entries or password_payload_specification (one is required).
+     * If false: a version is NOT created, no matter version_payload_entries or password_payload_specification.
+     * Default: a version is created IF either version_payload_entries or password_payload_specification are specified.
+     * It's never allowed to set both version_payload_entries and password_payload_specification.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue create_version = 10;</code>
+     * @return The createVersion.
+     */
+    com.google.protobuf.BoolValue getCreateVersion();
+    /**
+     * <pre>
+     * If true: a version will be created with either version_payload_entries or password_payload_specification (one is required).
+     * If false: a version is NOT created, no matter version_payload_entries or password_payload_specification.
+     * Default: a version is created IF either version_payload_entries or password_payload_specification are specified.
+     * It's never allowed to set both version_payload_entries and password_payload_specification.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue create_version = 10;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getCreateVersionOrBuilder();
+
     public yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.CreateSecretRequest.PayloadSpecificationCase getPayloadSpecificationCase();
   }
   /**
@@ -4073,6 +4109,19 @@ public final class SecretServiceOuterClass {
                 payloadSpecification_ = subBuilder.buildPartial();
               }
               payloadSpecificationCase_ = 9;
+              break;
+            }
+            case 82: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (createVersion_ != null) {
+                subBuilder = createVersion_.toBuilder();
+              }
+              createVersion_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(createVersion_);
+                createVersion_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -4598,6 +4647,53 @@ public final class SecretServiceOuterClass {
       return yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
     }
 
+    public static final int CREATE_VERSION_FIELD_NUMBER = 10;
+    private com.google.protobuf.BoolValue createVersion_;
+    /**
+     * <pre>
+     * If true: a version will be created with either version_payload_entries or password_payload_specification (one is required).
+     * If false: a version is NOT created, no matter version_payload_entries or password_payload_specification.
+     * Default: a version is created IF either version_payload_entries or password_payload_specification are specified.
+     * It's never allowed to set both version_payload_entries and password_payload_specification.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue create_version = 10;</code>
+     * @return Whether the createVersion field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreateVersion() {
+      return createVersion_ != null;
+    }
+    /**
+     * <pre>
+     * If true: a version will be created with either version_payload_entries or password_payload_specification (one is required).
+     * If false: a version is NOT created, no matter version_payload_entries or password_payload_specification.
+     * Default: a version is created IF either version_payload_entries or password_payload_specification are specified.
+     * It's never allowed to set both version_payload_entries and password_payload_specification.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue create_version = 10;</code>
+     * @return The createVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getCreateVersion() {
+      return createVersion_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : createVersion_;
+    }
+    /**
+     * <pre>
+     * If true: a version will be created with either version_payload_entries or password_payload_specification (one is required).
+     * If false: a version is NOT created, no matter version_payload_entries or password_payload_specification.
+     * Default: a version is created IF either version_payload_entries or password_payload_specification are specified.
+     * It's never allowed to set both version_payload_entries and password_payload_specification.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue create_version = 10;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getCreateVersionOrBuilder() {
+      return getCreateVersion();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4641,6 +4737,9 @@ public final class SecretServiceOuterClass {
       }
       if (payloadSpecificationCase_ == 9) {
         output.writeMessage(9, (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_);
+      }
+      if (createVersion_ != null) {
+        output.writeMessage(10, getCreateVersion());
       }
       unknownFields.writeTo(output);
     }
@@ -4688,6 +4787,10 @@ public final class SecretServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_);
       }
+      if (createVersion_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getCreateVersion());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4719,6 +4822,11 @@ public final class SecretServiceOuterClass {
           .equals(other.getVersionPayloadEntriesList())) return false;
       if (getDeletionProtection()
           != other.getDeletionProtection()) return false;
+      if (hasCreateVersion() != other.hasCreateVersion()) return false;
+      if (hasCreateVersion()) {
+        if (!getCreateVersion()
+            .equals(other.getCreateVersion())) return false;
+      }
       if (!getPayloadSpecificationCase().equals(other.getPayloadSpecificationCase())) return false;
       switch (payloadSpecificationCase_) {
         case 9:
@@ -4760,6 +4868,10 @@ public final class SecretServiceOuterClass {
       hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDeletionProtection());
+      if (hasCreateVersion()) {
+        hash = (37 * hash) + CREATE_VERSION_FIELD_NUMBER;
+        hash = (53 * hash) + getCreateVersion().hashCode();
+      }
       switch (payloadSpecificationCase_) {
         case 9:
           hash = (37 * hash) + PASSWORD_PAYLOAD_SPECIFICATION_FIELD_NUMBER;
@@ -4943,6 +5055,12 @@ public final class SecretServiceOuterClass {
         }
         deletionProtection_ = false;
 
+        if (createVersionBuilder_ == null) {
+          createVersion_ = null;
+        } else {
+          createVersion_ = null;
+          createVersionBuilder_ = null;
+        }
         payloadSpecificationCase_ = 0;
         payloadSpecification_ = null;
         return this;
@@ -4995,6 +5113,11 @@ public final class SecretServiceOuterClass {
           } else {
             result.payloadSpecification_ = passwordPayloadSpecificationBuilder_.build();
           }
+        }
+        if (createVersionBuilder_ == null) {
+          result.createVersion_ = createVersion_;
+        } else {
+          result.createVersion_ = createVersionBuilder_.build();
         }
         result.payloadSpecificationCase_ = payloadSpecificationCase_;
         onBuilt();
@@ -5095,6 +5218,9 @@ public final class SecretServiceOuterClass {
         }
         if (other.getDeletionProtection() != false) {
           setDeletionProtection(other.getDeletionProtection());
+        }
+        if (other.hasCreateVersion()) {
+          mergeCreateVersion(other.getCreateVersion());
         }
         switch (other.getPayloadSpecificationCase()) {
           case PASSWORD_PAYLOAD_SPECIFICATION: {
@@ -6290,6 +6416,188 @@ public final class SecretServiceOuterClass {
         payloadSpecificationCase_ = 9;
         onChanged();;
         return passwordPayloadSpecificationBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue createVersion_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> createVersionBuilder_;
+      /**
+       * <pre>
+       * If true: a version will be created with either version_payload_entries or password_payload_specification (one is required).
+       * If false: a version is NOT created, no matter version_payload_entries or password_payload_specification.
+       * Default: a version is created IF either version_payload_entries or password_payload_specification are specified.
+       * It's never allowed to set both version_payload_entries and password_payload_specification.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue create_version = 10;</code>
+       * @return Whether the createVersion field is set.
+       */
+      public boolean hasCreateVersion() {
+        return createVersionBuilder_ != null || createVersion_ != null;
+      }
+      /**
+       * <pre>
+       * If true: a version will be created with either version_payload_entries or password_payload_specification (one is required).
+       * If false: a version is NOT created, no matter version_payload_entries or password_payload_specification.
+       * Default: a version is created IF either version_payload_entries or password_payload_specification are specified.
+       * It's never allowed to set both version_payload_entries and password_payload_specification.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue create_version = 10;</code>
+       * @return The createVersion.
+       */
+      public com.google.protobuf.BoolValue getCreateVersion() {
+        if (createVersionBuilder_ == null) {
+          return createVersion_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : createVersion_;
+        } else {
+          return createVersionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * If true: a version will be created with either version_payload_entries or password_payload_specification (one is required).
+       * If false: a version is NOT created, no matter version_payload_entries or password_payload_specification.
+       * Default: a version is created IF either version_payload_entries or password_payload_specification are specified.
+       * It's never allowed to set both version_payload_entries and password_payload_specification.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue create_version = 10;</code>
+       */
+      public Builder setCreateVersion(com.google.protobuf.BoolValue value) {
+        if (createVersionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createVersion_ = value;
+          onChanged();
+        } else {
+          createVersionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If true: a version will be created with either version_payload_entries or password_payload_specification (one is required).
+       * If false: a version is NOT created, no matter version_payload_entries or password_payload_specification.
+       * Default: a version is created IF either version_payload_entries or password_payload_specification are specified.
+       * It's never allowed to set both version_payload_entries and password_payload_specification.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue create_version = 10;</code>
+       */
+      public Builder setCreateVersion(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (createVersionBuilder_ == null) {
+          createVersion_ = builderForValue.build();
+          onChanged();
+        } else {
+          createVersionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If true: a version will be created with either version_payload_entries or password_payload_specification (one is required).
+       * If false: a version is NOT created, no matter version_payload_entries or password_payload_specification.
+       * Default: a version is created IF either version_payload_entries or password_payload_specification are specified.
+       * It's never allowed to set both version_payload_entries and password_payload_specification.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue create_version = 10;</code>
+       */
+      public Builder mergeCreateVersion(com.google.protobuf.BoolValue value) {
+        if (createVersionBuilder_ == null) {
+          if (createVersion_ != null) {
+            createVersion_ =
+              com.google.protobuf.BoolValue.newBuilder(createVersion_).mergeFrom(value).buildPartial();
+          } else {
+            createVersion_ = value;
+          }
+          onChanged();
+        } else {
+          createVersionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If true: a version will be created with either version_payload_entries or password_payload_specification (one is required).
+       * If false: a version is NOT created, no matter version_payload_entries or password_payload_specification.
+       * Default: a version is created IF either version_payload_entries or password_payload_specification are specified.
+       * It's never allowed to set both version_payload_entries and password_payload_specification.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue create_version = 10;</code>
+       */
+      public Builder clearCreateVersion() {
+        if (createVersionBuilder_ == null) {
+          createVersion_ = null;
+          onChanged();
+        } else {
+          createVersion_ = null;
+          createVersionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If true: a version will be created with either version_payload_entries or password_payload_specification (one is required).
+       * If false: a version is NOT created, no matter version_payload_entries or password_payload_specification.
+       * Default: a version is created IF either version_payload_entries or password_payload_specification are specified.
+       * It's never allowed to set both version_payload_entries and password_payload_specification.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue create_version = 10;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getCreateVersionBuilder() {
+        
+        onChanged();
+        return getCreateVersionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * If true: a version will be created with either version_payload_entries or password_payload_specification (one is required).
+       * If false: a version is NOT created, no matter version_payload_entries or password_payload_specification.
+       * Default: a version is created IF either version_payload_entries or password_payload_specification are specified.
+       * It's never allowed to set both version_payload_entries and password_payload_specification.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue create_version = 10;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getCreateVersionOrBuilder() {
+        if (createVersionBuilder_ != null) {
+          return createVersionBuilder_.getMessageOrBuilder();
+        } else {
+          return createVersion_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : createVersion_;
+        }
+      }
+      /**
+       * <pre>
+       * If true: a version will be created with either version_payload_entries or password_payload_specification (one is required).
+       * If false: a version is NOT created, no matter version_payload_entries or password_payload_specification.
+       * Default: a version is created IF either version_payload_entries or password_payload_specification are specified.
+       * It's never allowed to set both version_payload_entries and password_payload_specification.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue create_version = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getCreateVersionFieldBuilder() {
+        if (createVersionBuilder_ == null) {
+          createVersionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getCreateVersion(),
+                  getParentForChildren(),
+                  isClean());
+          createVersion_ = null;
+        }
+        return createVersionBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -23532,162 +23840,164 @@ public final class SecretServiceOuterClass {
       "api/annotations.proto\032\036google/protobuf/d" +
       "uration.proto\032 google/protobuf/field_mas" +
       "k.proto\032\037google/protobuf/timestamp.proto" +
-      "\032 yandex/cloud/access/access.proto\032 yand" +
-      "ex/cloud/api/operation.proto\032$yandex/clo" +
-      "ud/lockbox/v1/secret.proto\032&yandex/cloud" +
-      "/operation/operation.proto\032\035yandex/cloud" +
-      "/validation.proto\"\230\001\n\022PayloadEntryChange" +
-      "\0221\n\003key\030\001 \001(\tB$\350\3071\001\212\3101\005<=256\362\3071\023[-_./\\\\@" +
-      "0-9a-zA-Z]+\022!\n\ntext_value\030\002 \001(\tB\013\212\3101\007<=6" +
-      "5536H\000\022#\n\014binary_value\030\003 \001(\014B\013\212\3101\007<=6553" +
-      "6H\000B\007\n\005value\"3\n\020GetSecretRequest\022\037\n\tsecr" +
-      "et_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"s\n\022ListSecrets" +
-      "Request\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_" +
-      "token\030\003 \001(\tB\t\212\3101\005<=100\"`\n\023ListSecretsRes" +
-      "ponse\0220\n\007secrets\030\001 \003(\0132\037.yandex.cloud.lo" +
-      "ckbox.v1.Secret\022\027\n\017next_page_token\030\002 \001(\t" +
-      "\"\340\004\n\023CreateSecretRequest\022\037\n\tfolder_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\027\n\004name\030\002 \001(\tB\t\212\3101\005<=1" +
-      "00\022\037\n\013description\030\003 \001(\tB\n\212\3101\006<=1024\022\211\001\n\006" +
-      "labels\030\004 \003(\01328.yandex.cloud.lockbox.v1.C" +
-      "reateSecretRequest.LabelsEntryB?\202\3101\004<=64" +
-      "\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[" +
-      "a-z][-_0-9a-z]*\022\034\n\nkms_key_id\030\005 \001(\tB\010\212\3101" +
-      "\004<=50\022&\n\023version_description\030\006 \001(\tB\t\212\3101\005" +
-      "<=256\022V\n\027version_payload_entries\030\007 \003(\0132+" +
-      ".yandex.cloud.lockbox.v1.PayloadEntryCha" +
-      "ngeB\010\202\3101\004<=32\022\033\n\023deletion_protection\030\010 \001" +
-      "(\010\022_\n\036password_payload_specification\030\t \001" +
-      "(\01325.yandex.cloud.lockbox.v1.PasswordPay" +
-      "loadSpecificationH\000\032-\n\013LabelsEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\027\n\025payload_sp" +
-      "ecification\"=\n\024CreateSecretMetadata\022\021\n\ts" +
-      "ecret_id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\"\371\003\n\023U" +
-      "pdateSecretRequest\022\037\n\tsecret_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\0225\n\013update_mask\030\002 \001(\0132\032.googl" +
-      "e.protobuf.FieldMaskB\004\350\3071\001\022\027\n\004name\030\003 \001(\t" +
-      "B\t\212\3101\005<=100\022\037\n\013description\030\004 \001(\tB\n\212\3101\006<=" +
-      "1024\022\211\001\n\006labels\030\005 \003(\01328.yandex.cloud.loc" +
-      "kbox.v1.UpdateSecretRequest.LabelsEntryB" +
-      "?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=" +
-      "63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\033\n\023deletion_pro" +
-      "tection\030\006 \001(\010\022_\n\036password_payload_specif" +
-      "ication\030\007 \001(\01325.yandex.cloud.lockbox.v1." +
-      "PasswordPayloadSpecificationH\000\032-\n\013Labels" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\027\n" +
-      "\025payload_specification\"7\n\024UpdateSecretMe" +
-      "tadata\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"" +
-      "6\n\023DeleteSecretRequest\022\037\n\tsecret_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\")\n\024DeleteSecretMetadata\022" +
-      "\021\n\tsecret_id\030\001 \001(\t\"8\n\025ActivateSecretRequ" +
-      "est\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\026" +
-      "ActivateSecretMetadata\022\021\n\tsecret_id\030\001 \001(" +
-      "\t\":\n\027DeactivateSecretRequest\022\037\n\tsecret_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\030DeactivateSecre" +
-      "tMetadata\022\021\n\tsecret_id\030\001 \001(\t\"\310\001\n\021AddVers" +
-      "ionRequest\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022\037\n\013description\030\002 \001(\tB\n\212\3101\006<=1024\022N\n\017" +
-      "payload_entries\030\003 \003(\0132+.yandex.cloud.loc" +
-      "kbox.v1.PayloadEntryChangeB\010\202\3101\004<=32\022!\n\017" +
-      "base_version_id\030\004 \001(\tB\010\212\3101\004<=50\";\n\022AddVe" +
-      "rsionMetadata\022\021\n\tsecret_id\030\001 \001(\t\022\022\n\nvers" +
-      "ion_id\030\002 \001(\t\"t\n\023ListVersionsRequest\022\037\n\ts" +
-      "ecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_siz" +
-      "e\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB" +
-      "\t\212\3101\005<=100\"c\n\024ListVersionsResponse\0222\n\010ve" +
-      "rsions\030\001 \003(\0132 .yandex.cloud.lockbox.v1.V" +
-      "ersion\022\027\n\017next_page_token\030\002 \001(\t\"\231\001\n!Sche" +
-      "duleVersionDestructionRequest\022\037\n\tsecret_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\nversion_id\030\002 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\0221\n\016pending_period\030\003 \001(\013" +
-      "2\031.google.protobuf.Duration\"{\n\"ScheduleV" +
-      "ersionDestructionMetadata\022\021\n\tsecret_id\030\001" +
-      " \001(\t\022\022\n\nversion_id\030\002 \001(\t\022.\n\ndestroy_at\030\003" +
-      " \001(\0132\032.google.protobuf.Timestamp\"d\n\037Canc" +
-      "elVersionDestructionRequest\022\037\n\tsecret_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\nversion_id\030\002 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\"I\n CancelVersionDestructi" +
-      "onMetadata\022\021\n\tsecret_id\030\001 \001(\t\022\022\n\nversion" +
-      "_id\030\002 \001(\t\"|\n\033ListSecretOperationsRequest" +
-      "\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpag" +
-      "e_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003" +
-      " \001(\tB\t\212\3101\005<=100\"n\n\034ListSecretOperationsR" +
-      "esponse\0225\n\noperations\030\001 \003(\0132!.yandex.clo" +
-      "ud.operation.Operation\022\027\n\017next_page_toke" +
-      "n\030\002 \001(\t2\351\025\n\rSecretService\022z\n\003Get\022).yande" +
-      "x.cloud.lockbox.v1.GetSecretRequest\032\037.ya" +
-      "ndex.cloud.lockbox.v1.Secret\"\'\202\323\344\223\002!\022\037/l" +
-      "ockbox/v1/secrets/{secret_id}\022~\n\004List\022+." +
-      "yandex.cloud.lockbox.v1.ListSecretsReque" +
-      "st\032,.yandex.cloud.lockbox.v1.ListSecrets" +
-      "Response\"\033\202\323\344\223\002\025\022\023/lockbox/v1/secrets\022\233\001" +
-      "\n\006Create\022,.yandex.cloud.lockbox.v1.Creat" +
-      "eSecretRequest\032!.yandex.cloud.operation." +
-      "Operation\"@\202\323\344\223\002\030\"\023/lockbox/v1/secrets:\001" +
-      "*\262\322*\036\n\024CreateSecretMetadata\022\006Secret\022\247\001\n\006" +
-      "Update\022,.yandex.cloud.lockbox.v1.UpdateS" +
-      "ecretRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"L\202\323\344\223\002$2\037/lockbox/v1/secrets/{se" +
-      "cret_id}:\001*\262\322*\036\n\024UpdateSecretMetadata\022\006S" +
-      "ecret\022\244\001\n\006Delete\022,.yandex.cloud.lockbox." +
-      "v1.DeleteSecretRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"I\202\323\344\223\002!*\037/lockbox/v1/s" +
-      "ecrets/{secret_id}\262\322*\036\n\024DeleteSecretMeta" +
-      "data\022\006Secret\022\263\001\n\010Activate\022..yandex.cloud" +
-      ".lockbox.v1.ActivateSecretRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"T\202\323\344\223\002*\"(/l" +
-      "ockbox/v1/secrets/{secret_id}:activate\262\322" +
-      "* \n\026ActivateSecretMetadata\022\006Secret\022\273\001\n\nD" +
-      "eactivate\0220.yandex.cloud.lockbox.v1.Deac" +
-      "tivateSecretRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"X\202\323\344\223\002,\"*/lockbox/v1/secr" +
-      "ets/{secret_id}:deactivate\262\322*\"\n\030Deactiva" +
-      "teSecretMetadata\022\006Secret\022\235\001\n\014ListVersion" +
-      "s\022,.yandex.cloud.lockbox.v1.ListVersions" +
-      "Request\032-.yandex.cloud.lockbox.v1.ListVe" +
-      "rsionsResponse\"0\202\323\344\223\002*\022(/lockbox/v1/secr" +
-      "ets/{secret_id}/versions\022\263\001\n\nAddVersion\022" +
-      "*.yandex.cloud.lockbox.v1.AddVersionRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"V" +
-      "\202\323\344\223\002/\"*/lockbox/v1/secrets/{secret_id}:" +
-      "addVersion:\001*\262\322*\035\n\022AddVersionMetadata\022\007V" +
-      "ersion\022\363\001\n\032ScheduleVersionDestruction\022:." +
-      "yandex.cloud.lockbox.v1.ScheduleVersionD" +
-      "estructionRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"v\202\323\344\223\002?\":/lockbox/v1/secret" +
-      "s/{secret_id}:scheduleVersionDestruction" +
-      ":\001*\262\322*-\n\"ScheduleVersionDestructionMetad" +
-      "ata\022\007Version\022\353\001\n\030CancelVersionDestructio" +
-      "n\0228.yandex.cloud.lockbox.v1.CancelVersio" +
-      "nDestructionRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"r\202\323\344\223\002=\"8/lockbox/v1/secr" +
-      "ets/{secret_id}:cancelVersionDestruction" +
-      ":\001*\262\322*+\n CancelVersionDestructionMetadat" +
-      "a\022\007Version\022\261\001\n\016ListOperations\0224.yandex.c" +
-      "loud.lockbox.v1.ListSecretOperationsRequ" +
-      "est\0325.yandex.cloud.lockbox.v1.ListSecret" +
-      "OperationsResponse\"2\202\323\344\223\002,\022*/lockbox/v1/" +
-      "secrets/{secret_id}/operations\022\263\001\n\022ListA" +
-      "ccessBindings\022..yandex.cloud.access.List" +
-      "AccessBindingsRequest\032/.yandex.cloud.acc" +
-      "ess.ListAccessBindingsResponse\"<\202\323\344\223\0026\0224" +
-      "/lockbox/v1/secrets/{resource_id}:listAc" +
-      "cessBindings\022\342\001\n\021SetAccessBindings\022-.yan" +
-      "dex.cloud.access.SetAccessBindingsReques" +
-      "t\032!.yandex.cloud.operation.Operation\"{\202\323" +
-      "\344\223\0028\"3/lockbox/v1/secrets/{resource_id}:" +
-      "setAccessBindings:\001*\262\322*9\n access.SetAcce" +
-      "ssBindingsMetadata\022\025google.protobuf.Empt" +
-      "y\022\357\001\n\024UpdateAccessBindings\0220.yandex.clou" +
-      "d.access.UpdateAccessBindingsRequest\032!.y" +
-      "andex.cloud.operation.Operation\"\201\001\202\323\344\223\002;" +
-      "\"6/lockbox/v1/secrets/{resource_id}:upda" +
-      "teAccessBindings:\001*\262\322*<\n#access.UpdateAc" +
-      "cessBindingsMetadata\022\025google.protobuf.Em" +
-      "ptyBb\n\033yandex.cloud.api.lockbox.v1ZCgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/lockbox/v1;lockboxb\006proto3"
+      "\032\036google/protobuf/wrappers.proto\032 yandex" +
+      "/cloud/access/access.proto\032 yandex/cloud" +
+      "/api/operation.proto\032$yandex/cloud/lockb" +
+      "ox/v1/secret.proto\032&yandex/cloud/operati" +
+      "on/operation.proto\032\035yandex/cloud/validat" +
+      "ion.proto\"\230\001\n\022PayloadEntryChange\0221\n\003key\030" +
+      "\001 \001(\tB$\350\3071\001\212\3101\005<=256\362\3071\023[-_./\\\\@0-9a-zA-" +
+      "Z]+\022!\n\ntext_value\030\002 \001(\tB\013\212\3101\007<=65536H\000\022#" +
+      "\n\014binary_value\030\003 \001(\014B\013\212\3101\007<=65536H\000B\007\n\005v" +
+      "alue\"3\n\020GetSecretRequest\022\037\n\tsecret_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\"s\n\022ListSecretsRequest\022" +
+      "\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage" +
+      "_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 " +
+      "\001(\tB\t\212\3101\005<=100\"`\n\023ListSecretsResponse\0220\n" +
+      "\007secrets\030\001 \003(\0132\037.yandex.cloud.lockbox.v1" +
+      ".Secret\022\027\n\017next_page_token\030\002 \001(\t\"\224\005\n\023Cre" +
+      "ateSecretRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\022\027\n\004name\030\002 \001(\tB\t\212\3101\005<=100\022\037\n\013de" +
+      "scription\030\003 \001(\tB\n\212\3101\006<=1024\022\211\001\n\006labels\030\004" +
+      " \003(\01328.yandex.cloud.lockbox.v1.CreateSec" +
+      "retRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63" +
+      "\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0" +
+      "-9a-z]*\022\034\n\nkms_key_id\030\005 \001(\tB\010\212\3101\004<=50\022&\n" +
+      "\023version_description\030\006 \001(\tB\t\212\3101\005<=256\022V\n" +
+      "\027version_payload_entries\030\007 \003(\0132+.yandex." +
+      "cloud.lockbox.v1.PayloadEntryChangeB\010\202\3101" +
+      "\004<=32\022\033\n\023deletion_protection\030\010 \001(\010\022_\n\036pa" +
+      "ssword_payload_specification\030\t \001(\01325.yan" +
+      "dex.cloud.lockbox.v1.PasswordPayloadSpec" +
+      "ificationH\000\0222\n\016create_version\030\n \001(\0132\032.go" +
+      "ogle.protobuf.BoolValue\032-\n\013LabelsEntry\022\013" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\027\n\025payloa" +
+      "d_specification\"=\n\024CreateSecretMetadata\022" +
+      "\021\n\tsecret_id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\"\371" +
+      "\003\n\023UpdateSecretRequest\022\037\n\tsecret_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\0225\n\013update_mask\030\002 \001(\0132\032.g" +
+      "oogle.protobuf.FieldMaskB\004\350\3071\001\022\027\n\004name\030\003" +
+      " \001(\tB\t\212\3101\005<=100\022\037\n\013description\030\004 \001(\tB\n\212\310" +
+      "1\006<=1024\022\211\001\n\006labels\030\005 \003(\01328.yandex.cloud" +
+      ".lockbox.v1.UpdateSecretRequest.LabelsEn" +
+      "tryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006" +
+      "\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\033\n\023deletion" +
+      "_protection\030\006 \001(\010\022_\n\036password_payload_sp" +
+      "ecification\030\007 \001(\01325.yandex.cloud.lockbox" +
+      ".v1.PasswordPayloadSpecificationH\000\032-\n\013La" +
+      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001B\027\n\025payload_specification\"7\n\024UpdateSecr" +
+      "etMetadata\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\"6\n\023DeleteSecretRequest\022\037\n\tsecret_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\024DeleteSecretMetad" +
+      "ata\022\021\n\tsecret_id\030\001 \001(\t\"8\n\025ActivateSecret" +
+      "Request\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\"+\n\026ActivateSecretMetadata\022\021\n\tsecret_id\030" +
+      "\001 \001(\t\":\n\027DeactivateSecretRequest\022\037\n\tsecr" +
+      "et_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\030DeactivateS" +
+      "ecretMetadata\022\021\n\tsecret_id\030\001 \001(\t\"\310\001\n\021Add" +
+      "VersionRequest\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022\037\n\013description\030\002 \001(\tB\n\212\3101\006<=1024" +
+      "\022N\n\017payload_entries\030\003 \003(\0132+.yandex.cloud" +
+      ".lockbox.v1.PayloadEntryChangeB\010\202\3101\004<=32" +
+      "\022!\n\017base_version_id\030\004 \001(\tB\010\212\3101\004<=50\";\n\022A" +
+      "ddVersionMetadata\022\021\n\tsecret_id\030\001 \001(\t\022\022\n\n" +
+      "version_id\030\002 \001(\t\"t\n\023ListVersionsRequest\022" +
+      "\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage" +
+      "_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 " +
+      "\001(\tB\t\212\3101\005<=100\"c\n\024ListVersionsResponse\0222" +
+      "\n\010versions\030\001 \003(\0132 .yandex.cloud.lockbox." +
+      "v1.Version\022\027\n\017next_page_token\030\002 \001(\t\"\231\001\n!" +
+      "ScheduleVersionDestructionRequest\022\037\n\tsec" +
+      "ret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\nversion_id" +
+      "\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\0221\n\016pending_period\030\003" +
+      " \001(\0132\031.google.protobuf.Duration\"{\n\"Sched" +
+      "uleVersionDestructionMetadata\022\021\n\tsecret_" +
+      "id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\022.\n\ndestroy_" +
+      "at\030\003 \001(\0132\032.google.protobuf.Timestamp\"d\n\037" +
+      "CancelVersionDestructionRequest\022\037\n\tsecre" +
+      "t_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\nversion_id\030\002" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\"I\n CancelVersionDestr" +
+      "uctionMetadata\022\021\n\tsecret_id\030\001 \001(\t\022\022\n\nver" +
+      "sion_id\030\002 \001(\t\"|\n\033ListSecretOperationsReq" +
+      "uest\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n" +
+      "\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_tok" +
+      "en\030\003 \001(\tB\t\212\3101\005<=100\"n\n\034ListSecretOperati" +
+      "onsResponse\0225\n\noperations\030\001 \003(\0132!.yandex" +
+      ".cloud.operation.Operation\022\027\n\017next_page_" +
+      "token\030\002 \001(\t2\351\025\n\rSecretService\022z\n\003Get\022).y" +
+      "andex.cloud.lockbox.v1.GetSecretRequest\032" +
+      "\037.yandex.cloud.lockbox.v1.Secret\"\'\202\323\344\223\002!" +
+      "\022\037/lockbox/v1/secrets/{secret_id}\022~\n\004Lis" +
+      "t\022+.yandex.cloud.lockbox.v1.ListSecretsR" +
+      "equest\032,.yandex.cloud.lockbox.v1.ListSec" +
+      "retsResponse\"\033\202\323\344\223\002\025\022\023/lockbox/v1/secret" +
+      "s\022\233\001\n\006Create\022,.yandex.cloud.lockbox.v1.C" +
+      "reateSecretRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"@\202\323\344\223\002\030\"\023/lockbox/v1/secre" +
+      "ts:\001*\262\322*\036\n\024CreateSecretMetadata\022\006Secret\022" +
+      "\247\001\n\006Update\022,.yandex.cloud.lockbox.v1.Upd" +
+      "ateSecretRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"L\202\323\344\223\002$2\037/lockbox/v1/secrets" +
+      "/{secret_id}:\001*\262\322*\036\n\024UpdateSecretMetadat" +
+      "a\022\006Secret\022\244\001\n\006Delete\022,.yandex.cloud.lock" +
+      "box.v1.DeleteSecretRequest\032!.yandex.clou" +
+      "d.operation.Operation\"I\202\323\344\223\002!*\037/lockbox/" +
+      "v1/secrets/{secret_id}\262\322*\036\n\024DeleteSecret" +
+      "Metadata\022\006Secret\022\263\001\n\010Activate\022..yandex.c" +
+      "loud.lockbox.v1.ActivateSecretRequest\032!." +
+      "yandex.cloud.operation.Operation\"T\202\323\344\223\002*" +
+      "\"(/lockbox/v1/secrets/{secret_id}:activa" +
+      "te\262\322* \n\026ActivateSecretMetadata\022\006Secret\022\273" +
+      "\001\n\nDeactivate\0220.yandex.cloud.lockbox.v1." +
+      "DeactivateSecretRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"X\202\323\344\223\002,\"*/lockbox/v1/" +
+      "secrets/{secret_id}:deactivate\262\322*\"\n\030Deac" +
+      "tivateSecretMetadata\022\006Secret\022\235\001\n\014ListVer" +
+      "sions\022,.yandex.cloud.lockbox.v1.ListVers" +
+      "ionsRequest\032-.yandex.cloud.lockbox.v1.Li" +
+      "stVersionsResponse\"0\202\323\344\223\002*\022(/lockbox/v1/" +
+      "secrets/{secret_id}/versions\022\263\001\n\nAddVers" +
+      "ion\022*.yandex.cloud.lockbox.v1.AddVersion" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"V\202\323\344\223\002/\"*/lockbox/v1/secrets/{secret_" +
+      "id}:addVersion:\001*\262\322*\035\n\022AddVersionMetadat" +
+      "a\022\007Version\022\363\001\n\032ScheduleVersionDestructio" +
+      "n\022:.yandex.cloud.lockbox.v1.ScheduleVers" +
+      "ionDestructionRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"v\202\323\344\223\002?\":/lockbox/v1/se" +
+      "crets/{secret_id}:scheduleVersionDestruc" +
+      "tion:\001*\262\322*-\n\"ScheduleVersionDestructionM" +
+      "etadata\022\007Version\022\353\001\n\030CancelVersionDestru" +
+      "ction\0228.yandex.cloud.lockbox.v1.CancelVe" +
+      "rsionDestructionRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"r\202\323\344\223\002=\"8/lockbox/v1/" +
+      "secrets/{secret_id}:cancelVersionDestruc" +
+      "tion:\001*\262\322*+\n CancelVersionDestructionMet" +
+      "adata\022\007Version\022\261\001\n\016ListOperations\0224.yand" +
+      "ex.cloud.lockbox.v1.ListSecretOperations" +
+      "Request\0325.yandex.cloud.lockbox.v1.ListSe" +
+      "cretOperationsResponse\"2\202\323\344\223\002,\022*/lockbox" +
+      "/v1/secrets/{secret_id}/operations\022\263\001\n\022L" +
+      "istAccessBindings\022..yandex.cloud.access." +
+      "ListAccessBindingsRequest\032/.yandex.cloud" +
+      ".access.ListAccessBindingsResponse\"<\202\323\344\223" +
+      "\0026\0224/lockbox/v1/secrets/{resource_id}:li" +
+      "stAccessBindings\022\342\001\n\021SetAccessBindings\022-" +
+      ".yandex.cloud.access.SetAccessBindingsRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"{\202\323\344\223\0028\"3/lockbox/v1/secrets/{resource_" +
+      "id}:setAccessBindings:\001*\262\322*9\n access.Set" +
+      "AccessBindingsMetadata\022\025google.protobuf." +
+      "Empty\022\357\001\n\024UpdateAccessBindings\0220.yandex." +
+      "cloud.access.UpdateAccessBindingsRequest" +
+      "\032!.yandex.cloud.operation.Operation\"\201\001\202\323" +
+      "\344\223\002;\"6/lockbox/v1/secrets/{resource_id}:" +
+      "updateAccessBindings:\001*\262\322*<\n#access.Upda" +
+      "teAccessBindingsMetadata\022\025google.protobu" +
+      "f.EmptyBb\n\033yandex.cloud.api.lockbox.v1ZC" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/lockbox/v1;lockboxb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -23696,6 +24006,7 @@ public final class SecretServiceOuterClass {
           com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.access.Access.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.lockbox.v1.SecretOuterClass.getDescriptor(),
@@ -23731,7 +24042,7 @@ public final class SecretServiceOuterClass {
     internal_static_yandex_cloud_lockbox_v1_CreateSecretRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_lockbox_v1_CreateSecretRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "KmsKeyId", "VersionDescription", "VersionPayloadEntries", "DeletionProtection", "PasswordPayloadSpecification", "PayloadSpecification", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "KmsKeyId", "VersionDescription", "VersionPayloadEntries", "DeletionProtection", "PasswordPayloadSpecification", "CreateVersion", "PayloadSpecification", });
     internal_static_yandex_cloud_lockbox_v1_CreateSecretRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_lockbox_v1_CreateSecretRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_lockbox_v1_CreateSecretRequest_LabelsEntry_fieldAccessorTable = new
@@ -23874,6 +24185,7 @@ public final class SecretServiceOuterClass {
     com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
     yandex.cloud.api.access.Access.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.lockbox.v1.SecretOuterClass.getDescriptor();

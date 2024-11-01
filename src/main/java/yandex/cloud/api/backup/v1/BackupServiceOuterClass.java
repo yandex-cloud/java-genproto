@@ -2010,6 +2010,25 @@ public final class BackupServiceOuterClass {
     com.google.protobuf.ByteString
         getFilterBytes();
 
+    /**
+     * <pre>
+     * Type of resource. Could be compute VM or baremetal server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.ResourceType type = 9;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <pre>
+     * Type of resource. Could be compute VM or baremetal server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.ResourceType type = 9;</code>
+     * @return The type.
+     */
+    yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType getType();
+
     public yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.IdCase getIdCase();
   }
   /**
@@ -2027,6 +2046,7 @@ public final class BackupServiceOuterClass {
     private ListBackupsRequest() {
       orderBy_ = "";
       filter_ = "";
+      type_ = 0;
     }
 
     @java.lang.Override
@@ -2121,6 +2141,12 @@ public final class BackupServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               filter_ = s;
+              break;
+            }
+            case 72: {
+              int rawValue = input.readEnum();
+
+              type_ = rawValue;
               break;
             }
             default: {
@@ -4228,6 +4254,33 @@ public final class BackupServiceOuterClass {
       }
     }
 
+    public static final int TYPE_FIELD_NUMBER = 9;
+    private int type_;
+    /**
+     * <pre>
+     * Type of resource. Could be compute VM or baremetal server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.ResourceType type = 9;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * Type of resource. Could be compute VM or baremetal server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.ResourceType type = 9;</code>
+     * @return The type.
+     */
+    @java.lang.Override public yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType getType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType result = yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.valueOf(type_);
+      return result == null ? yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4266,6 +4319,9 @@ public final class BackupServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, filter_);
       }
+      if (type_ != yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.RESOURCE_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(9, type_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4301,6 +4357,10 @@ public final class BackupServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, filter_);
       }
+      if (type_ != yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.RESOURCE_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(9, type_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4320,6 +4380,7 @@ public final class BackupServiceOuterClass {
           .equals(other.getOrderBy())) return false;
       if (!getFilter()
           .equals(other.getFilter())) return false;
+      if (type_ != other.type_) return false;
       if (!getIdCase().equals(other.getIdCase())) return false;
       switch (idCase_) {
         case 1:
@@ -4364,6 +4425,8 @@ public final class BackupServiceOuterClass {
       hash = (53 * hash) + getOrderBy().hashCode();
       hash = (37 * hash) + FILTER_FIELD_NUMBER;
       hash = (53 * hash) + getFilter().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
       switch (idCase_) {
         case 1:
           hash = (37 * hash) + COMPUTE_INSTANCE_ID_FIELD_NUMBER;
@@ -4529,6 +4592,8 @@ public final class BackupServiceOuterClass {
 
         filter_ = "";
 
+        type_ = 0;
+
         idCase_ = 0;
         id_ = null;
         return this;
@@ -4585,6 +4650,7 @@ public final class BackupServiceOuterClass {
         }
         result.orderBy_ = orderBy_;
         result.filter_ = filter_;
+        result.type_ = type_;
         result.idCase_ = idCase_;
         onBuilt();
         return result;
@@ -4641,6 +4707,9 @@ public final class BackupServiceOuterClass {
         if (!other.getFilter().isEmpty()) {
           filter_ = other.filter_;
           onChanged();
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
         }
         switch (other.getIdCase()) {
           case COMPUTE_INSTANCE_ID: {
@@ -5774,6 +5843,80 @@ public final class BackupServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         filter_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int type_ = 0;
+      /**
+       * <pre>
+       * Type of resource. Could be compute VM or baremetal server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ResourceType type = 9;</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <pre>
+       * Type of resource. Could be compute VM or baremetal server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ResourceType type = 9;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of resource. Could be compute VM or baremetal server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ResourceType type = 9;</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType getType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType result = yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.valueOf(type_);
+        return result == null ? yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Type of resource. Could be compute VM or baremetal server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ResourceType type = 9;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of resource. Could be compute VM or baremetal server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ResourceType type = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
         onChanged();
         return this;
       }
@@ -17314,91 +17457,93 @@ public final class BackupServiceOuterClass {
       "i/annotations.proto\032 yandex/cloud/api/op" +
       "eration.proto\032#yandex/cloud/backup/v1/ba" +
       "ckup.proto\032&yandex/cloud/operation/opera" +
-      "tion.proto\032\035yandex/cloud/validation.prot" +
-      "o\"U\n\023ListArchivesRequest\022\023\n\tfolder_id\030\001 " +
-      "\001(\tH\000\022\035\n\023compute_instance_id\030\002 \001(\tH\000B\n\n\002" +
-      "id\022\004\300\3011\001\"I\n\024ListArchivesResponse\0221\n\010arch" +
-      "ives\030\001 \003(\0132\037.yandex.cloud.backup.v1.Arch" +
-      "ive\"\323\003\n\022ListBackupsRequest\022\035\n\023compute_in" +
-      "stance_id\030\001 \001(\tH\000\022O\n\007archive\030\002 \001(\0132<.yan" +
-      "dex.cloud.backup.v1.ListBackupsRequest.A" +
-      "rchiveParametersH\000\022\023\n\tfolder_id\030\003 \001(\tH\000\022" +
-      "T\n\017instance_policy\030\004 \001(\01329.yandex.cloud." +
-      "backup.v1.ListBackupsRequest.InstancePol" +
-      "icyH\000\022\025\n\013resource_id\030\006 \001(\tH\000\022\023\n\tpolicy_i" +
-      "d\030\007 \001(\tH\000\022\020\n\010order_by\030\005 \001(\t\022\016\n\006filter\030\010 " +
-      "\001(\t\032F\n\021ArchiveParameters\022\030\n\narchive_id\030\001" +
-      " \001(\tB\004\350\3071\001\022\027\n\tfolder_id\030\002 \001(\tB\004\350\3071\001\032@\n\016I" +
-      "nstancePolicy\022\033\n\023compute_instance_id\030\001 \001" +
-      "(\t\022\021\n\tpolicy_id\030\002 \001(\tB\n\n\002id\022\004\300\3011\001\"F\n\023Lis" +
-      "tBackupsResponse\022/\n\007backups\030\001 \003(\0132\036.yand" +
-      "ex.cloud.backup.v1.Backup\"]\n\020ListFilesRe" +
-      "quest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\022\027\n\tbackup" +
-      "_id\030\002 \001(\tB\004\350\3071\001\022\027\n\tsource_id\030\003 \001(\tB\004\350\3071\000" +
-      "\"F\n\021ListFilesResponse\0221\n\005files\030\001 \003(\0132\".y" +
-      "andex.cloud.backup.v1.BackupFile\"D\n\020GetB" +
-      "ackupRequest\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001\022\027\n" +
-      "\tfolder_id\030\002 \001(\tB\004\350\3071\001\"Z\n\024StartRecoveryR" +
-      "equest\022)\n\023compute_instance_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\022\027\n\tbackup_id\030\002 \001(\tB\004\350\3071\001\"l\n\025St" +
-      "artRecoveryMetadata\022\033\n\023progress_percenta" +
-      "ge\030\001 \001(\001\022\025\n\rsrc_backup_id\030\002 \001(\t\022\037\n\027dst_c" +
-      "ompute_instance_id\030\003 \001(\t\"\024\n\022TargetPathOr" +
-      "iginal\" \n\020TargetPathCustom\022\014\n\004path\030\001 \001(\t" +
-      "\"\373\002\n\024FilesRecoveryOptions\022O\n\toverwrite\030\001" +
-      " \001(\01626.yandex.cloud.backup.v1.FilesRecov" +
-      "eryOptions.OverwriteB\004\350\3071\000\022\036\n\020reboot_if_" +
-      "needed\030\002 \001(\010B\004\350\3071\000\022>\n\010original\030d \001(\0132*.y" +
-      "andex.cloud.backup.v1.TargetPathOriginal" +
-      "H\000\022:\n\006custom\030e \001(\0132(.yandex.cloud.backup" +
-      ".v1.TargetPathCustomH\000\"b\n\tOverwrite\022\031\n\025O" +
-      "VERWRITE_UNSPECIFIED\020\000\022\021\n\rOVERWRITE_ALL\020" +
-      "\001\022\023\n\017OVERWRITE_OLDER\020\002\022\022\n\016OVERWRITE_NONE" +
-      "\020\003B\014\n\004type\022\004\300\3011\001J\004\010\003\020d\"\265\001\n\031StartFilesRec" +
-      "overyRequest\022!\n\023compute_instance_id\030\001 \001(" +
-      "\tB\004\350\3071\001\022\027\n\tbackup_id\030\002 \001(\tB\004\350\3071\001\022@\n\004opts" +
-      "\030\003 \001(\0132,.yandex.cloud.backup.v1.FilesRec" +
-      "overyOptionsB\004\350\3071\001\022\032\n\nsource_ids\030\004 \003(\tB\006" +
-      "\202\3101\002>0\"\221\001\n\032StartFilesRecoveryMetadata\022\033\n" +
-      "\023progress_percentage\030\001 \001(\001\022!\n\023compute_in" +
-      "stance_id\030\002 \001(\tB\004\350\3071\001\022\027\n\tbackup_id\030\003 \001(\t" +
-      "B\004\350\3071\001\022\032\n\nsource_ids\030\004 \003(\tB\006\202\3101\002>0\"Y\n\023De" +
-      "leteBackupRequest\022)\n\023compute_instance_id" +
+      "tion.proto\032%yandex/cloud/backup/v1/resou" +
+      "rce.proto\032\035yandex/cloud/validation.proto" +
+      "\"U\n\023ListArchivesRequest\022\023\n\tfolder_id\030\001 \001" +
+      "(\tH\000\022\035\n\023compute_instance_id\030\002 \001(\tH\000B\n\n\002i" +
+      "d\022\004\300\3011\001\"I\n\024ListArchivesResponse\0221\n\010archi" +
+      "ves\030\001 \003(\0132\037.yandex.cloud.backup.v1.Archi" +
+      "ve\"\207\004\n\022ListBackupsRequest\022\035\n\023compute_ins" +
+      "tance_id\030\001 \001(\tH\000\022O\n\007archive\030\002 \001(\0132<.yand" +
+      "ex.cloud.backup.v1.ListBackupsRequest.Ar" +
+      "chiveParametersH\000\022\023\n\tfolder_id\030\003 \001(\tH\000\022T" +
+      "\n\017instance_policy\030\004 \001(\01329.yandex.cloud.b" +
+      "ackup.v1.ListBackupsRequest.InstancePoli" +
+      "cyH\000\022\025\n\013resource_id\030\006 \001(\tH\000\022\023\n\tpolicy_id" +
+      "\030\007 \001(\tH\000\022\020\n\010order_by\030\005 \001(\t\022\016\n\006filter\030\010 \001" +
+      "(\t\0222\n\004type\030\t \001(\0162$.yandex.cloud.backup.v" +
+      "1.ResourceType\032F\n\021ArchiveParameters\022\030\n\na" +
+      "rchive_id\030\001 \001(\tB\004\350\3071\001\022\027\n\tfolder_id\030\002 \001(\t" +
+      "B\004\350\3071\001\032@\n\016InstancePolicy\022\033\n\023compute_inst" +
+      "ance_id\030\001 \001(\t\022\021\n\tpolicy_id\030\002 \001(\tB\n\n\002id\022\004" +
+      "\300\3011\001\"F\n\023ListBackupsResponse\022/\n\007backups\030\001" +
+      " \003(\0132\036.yandex.cloud.backup.v1.Backup\"]\n\020" +
+      "ListFilesRequest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071" +
+      "\001\022\027\n\tbackup_id\030\002 \001(\tB\004\350\3071\001\022\027\n\tsource_id\030" +
+      "\003 \001(\tB\004\350\3071\000\"F\n\021ListFilesResponse\0221\n\005file" +
+      "s\030\001 \003(\0132\".yandex.cloud.backup.v1.BackupF" +
+      "ile\"D\n\020GetBackupRequest\022\027\n\tbackup_id\030\001 \001" +
+      "(\tB\004\350\3071\001\022\027\n\tfolder_id\030\002 \001(\tB\004\350\3071\001\"Z\n\024Sta" +
+      "rtRecoveryRequest\022)\n\023compute_instance_id" +
       "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\027\n\tbackup_id\030\002 \001(\tB" +
-      "\004\350\3071\001\"F\n\024DeleteBackupMetadata\022\033\n\023compute" +
-      "_instance_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t2\373\010" +
-      "\n\rBackupService\022{\n\004List\022*.yandex.cloud.b" +
-      "ackup.v1.ListBackupsRequest\032+.yandex.clo" +
-      "ud.backup.v1.ListBackupsResponse\"\032\202\323\344\223\002\024" +
-      "\022\022/backup/v1/backups\022\244\001\n\014ListArchives\022+." +
-      "yandex.cloud.backup.v1.ListArchivesReque" +
-      "st\032,.yandex.cloud.backup.v1.ListArchives" +
-      "Response\"9\202\323\344\223\0023\0221/backup/v1/backups/{co" +
-      "mpute_instance_id}/archives\022\216\001\n\tListFile" +
-      "s\022(.yandex.cloud.backup.v1.ListFilesRequ" +
-      "est\032).yandex.cloud.backup.v1.ListFilesRe" +
-      "sponse\",\202\323\344\223\002&\022$/backup/v1/backups/{back" +
-      "up_id}/files\022w\n\003Get\022(.yandex.cloud.backu" +
-      "p.v1.GetBackupRequest\032\036.yandex.cloud.bac" +
-      "kup.v1.Backup\"&\202\323\344\223\002 \022\036/backup/v1/backup" +
-      "s/{backup_id}\022\313\001\n\rStartRecovery\022,.yandex" +
-      ".cloud.backup.v1.StartRecoveryRequest\032!." +
-      "yandex.cloud.operation.Operation\"i\202\323\344\223\0021" +
-      "\",/backup/v1/backups/{backup_id}:startRe" +
-      "covery:\001*\262\322*.\n\025StartRecoveryMetadata\022\025go" +
-      "ogle.protobuf.Empty\022\243\001\n\022StartFilesRecove" +
-      "ry\0221.yandex.cloud.backup.v1.StartFilesRe" +
-      "coveryRequest\032!.yandex.cloud.operation.O" +
-      "peration\"7\262\322*3\n\032StartFilesRecoveryMetada" +
-      "ta\022\025google.protobuf.Empty\022\307\001\n\006Delete\022+.y" +
-      "andex.cloud.backup.v1.DeleteBackupReques" +
-      "t\032!.yandex.cloud.operation.Operation\"m\202\323" +
-      "\344\223\0026*4/backup/v1/backups/{compute_instan" +
-      "ce_id}/{backup_id}\262\322*-\n\024DeleteBackupMeta" +
-      "data\022\025google.protobuf.EmptyB_\n\032yandex.cl" +
-      "oud.api.backup.v1ZAgithub.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/backup/v1;ba" +
-      "ckupb\006proto3"
+      "\004\350\3071\001\"l\n\025StartRecoveryMetadata\022\033\n\023progre" +
+      "ss_percentage\030\001 \001(\001\022\025\n\rsrc_backup_id\030\002 \001" +
+      "(\t\022\037\n\027dst_compute_instance_id\030\003 \001(\t\"\024\n\022T" +
+      "argetPathOriginal\" \n\020TargetPathCustom\022\014\n" +
+      "\004path\030\001 \001(\t\"\373\002\n\024FilesRecoveryOptions\022O\n\t" +
+      "overwrite\030\001 \001(\01626.yandex.cloud.backup.v1" +
+      ".FilesRecoveryOptions.OverwriteB\004\350\3071\000\022\036\n" +
+      "\020reboot_if_needed\030\002 \001(\010B\004\350\3071\000\022>\n\010origina" +
+      "l\030d \001(\0132*.yandex.cloud.backup.v1.TargetP" +
+      "athOriginalH\000\022:\n\006custom\030e \001(\0132(.yandex.c" +
+      "loud.backup.v1.TargetPathCustomH\000\"b\n\tOve" +
+      "rwrite\022\031\n\025OVERWRITE_UNSPECIFIED\020\000\022\021\n\rOVE" +
+      "RWRITE_ALL\020\001\022\023\n\017OVERWRITE_OLDER\020\002\022\022\n\016OVE" +
+      "RWRITE_NONE\020\003B\014\n\004type\022\004\300\3011\001J\004\010\003\020d\"\265\001\n\031St" +
+      "artFilesRecoveryRequest\022!\n\023compute_insta" +
+      "nce_id\030\001 \001(\tB\004\350\3071\001\022\027\n\tbackup_id\030\002 \001(\tB\004\350" +
+      "\3071\001\022@\n\004opts\030\003 \001(\0132,.yandex.cloud.backup." +
+      "v1.FilesRecoveryOptionsB\004\350\3071\001\022\032\n\nsource_" +
+      "ids\030\004 \003(\tB\006\202\3101\002>0\"\221\001\n\032StartFilesRecovery" +
+      "Metadata\022\033\n\023progress_percentage\030\001 \001(\001\022!\n" +
+      "\023compute_instance_id\030\002 \001(\tB\004\350\3071\001\022\027\n\tback" +
+      "up_id\030\003 \001(\tB\004\350\3071\001\022\032\n\nsource_ids\030\004 \003(\tB\006\202" +
+      "\3101\002>0\"Y\n\023DeleteBackupRequest\022)\n\023compute_" +
+      "instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\027\n\tbacku" +
+      "p_id\030\002 \001(\tB\004\350\3071\001\"F\n\024DeleteBackupMetadata" +
+      "\022\033\n\023compute_instance_id\030\001 \001(\t\022\021\n\tbackup_" +
+      "id\030\002 \001(\t2\373\010\n\rBackupService\022{\n\004List\022*.yan" +
+      "dex.cloud.backup.v1.ListBackupsRequest\032+" +
+      ".yandex.cloud.backup.v1.ListBackupsRespo" +
+      "nse\"\032\202\323\344\223\002\024\022\022/backup/v1/backups\022\244\001\n\014List" +
+      "Archives\022+.yandex.cloud.backup.v1.ListAr" +
+      "chivesRequest\032,.yandex.cloud.backup.v1.L" +
+      "istArchivesResponse\"9\202\323\344\223\0023\0221/backup/v1/" +
+      "backups/{compute_instance_id}/archives\022\216" +
+      "\001\n\tListFiles\022(.yandex.cloud.backup.v1.Li" +
+      "stFilesRequest\032).yandex.cloud.backup.v1." +
+      "ListFilesResponse\",\202\323\344\223\002&\022$/backup/v1/ba" +
+      "ckups/{backup_id}/files\022w\n\003Get\022(.yandex." +
+      "cloud.backup.v1.GetBackupRequest\032\036.yande" +
+      "x.cloud.backup.v1.Backup\"&\202\323\344\223\002 \022\036/backu" +
+      "p/v1/backups/{backup_id}\022\313\001\n\rStartRecove" +
+      "ry\022,.yandex.cloud.backup.v1.StartRecover" +
+      "yRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"i\202\323\344\223\0021\",/backup/v1/backups/{backup_" +
+      "id}:startRecovery:\001*\262\322*.\n\025StartRecoveryM" +
+      "etadata\022\025google.protobuf.Empty\022\243\001\n\022Start" +
+      "FilesRecovery\0221.yandex.cloud.backup.v1.S" +
+      "tartFilesRecoveryRequest\032!.yandex.cloud." +
+      "operation.Operation\"7\262\322*3\n\032StartFilesRec" +
+      "overyMetadata\022\025google.protobuf.Empty\022\307\001\n" +
+      "\006Delete\022+.yandex.cloud.backup.v1.DeleteB" +
+      "ackupRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"m\202\323\344\223\0026*4/backup/v1/backups/{com" +
+      "pute_instance_id}/{backup_id}\262\322*-\n\024Delet" +
+      "eBackupMetadata\022\025google.protobuf.EmptyB_" +
+      "\n\032yandex.cloud.api.backup.v1ZAgithub.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/b" +
+      "ackup/v1;backupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17407,6 +17552,7 @@ public final class BackupServiceOuterClass {
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.backup.v1.BackupOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.backup.v1.ResourceOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_backup_v1_ListArchivesRequest_descriptor =
@@ -17426,7 +17572,7 @@ public final class BackupServiceOuterClass {
     internal_static_yandex_cloud_backup_v1_ListBackupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_ListBackupsRequest_descriptor,
-        new java.lang.String[] { "ComputeInstanceId", "Archive", "FolderId", "InstancePolicy", "ResourceId", "PolicyId", "OrderBy", "Filter", "Id", });
+        new java.lang.String[] { "ComputeInstanceId", "Archive", "FolderId", "InstancePolicy", "ResourceId", "PolicyId", "OrderBy", "Filter", "Type", "Id", });
     internal_static_yandex_cloud_backup_v1_ListBackupsRequest_ArchiveParameters_descriptor =
       internal_static_yandex_cloud_backup_v1_ListBackupsRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_backup_v1_ListBackupsRequest_ArchiveParameters_fieldAccessorTable = new
@@ -17531,6 +17677,7 @@ public final class BackupServiceOuterClass {
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.backup.v1.BackupOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.backup.v1.ResourceOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

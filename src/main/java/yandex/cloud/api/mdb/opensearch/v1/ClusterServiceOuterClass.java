@@ -41349,6 +41349,1586 @@ public final class ClusterServiceOuterClass {
 
   }
 
+  public interface DeleteBackupRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.opensearch.v1.DeleteBackupRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Required. ID of the OpenSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * Required. ID of the OpenSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Required. ID of the backup to delete.
+     * </pre>
+     *
+     * <code>string backup_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The backupId.
+     */
+    java.lang.String getBackupId();
+    /**
+     * <pre>
+     * Required. ID of the backup to delete.
+     * </pre>
+     *
+     * <code>string backup_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for backupId.
+     */
+    com.google.protobuf.ByteString
+        getBackupIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.DeleteBackupRequest}
+   */
+  public static final class DeleteBackupRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.opensearch.v1.DeleteBackupRequest)
+      DeleteBackupRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteBackupRequest.newBuilder() to construct.
+    private DeleteBackupRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteBackupRequest() {
+      clusterId_ = "";
+      backupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteBackupRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteBackupRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              backupId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_DeleteBackupRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_DeleteBackupRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest.class, yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * Required. ID of the OpenSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
+     */
+    @java.lang.Override
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. ID of the OpenSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BACKUP_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object backupId_;
+    /**
+     * <pre>
+     * Required. ID of the backup to delete.
+     * </pre>
+     *
+     * <code>string backup_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The backupId.
+     */
+    @java.lang.Override
+    public java.lang.String getBackupId() {
+      java.lang.Object ref = backupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        backupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. ID of the backup to delete.
+     * </pre>
+     *
+     * <code>string backup_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for backupId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBackupIdBytes() {
+      java.lang.Object ref = backupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        backupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, backupId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, backupId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest other = (yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest) obj;
+
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getBackupId()
+          .equals(other.getBackupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + BACKUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getBackupId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.DeleteBackupRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.opensearch.v1.DeleteBackupRequest)
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_DeleteBackupRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_DeleteBackupRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest.class, yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        backupId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_DeleteBackupRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest build() {
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest buildPartial() {
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest result = new yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest(this);
+        result.clusterId_ = clusterId_;
+        result.backupId_ = backupId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest) {
+          return mergeFrom((yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest other) {
+        if (other == yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.getBackupId().isEmpty()) {
+          backupId_ = other.backupId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * Required. ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object backupId_ = "";
+      /**
+       * <pre>
+       * Required. ID of the backup to delete.
+       * </pre>
+       *
+       * <code>string backup_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The backupId.
+       */
+      public java.lang.String getBackupId() {
+        java.lang.Object ref = backupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          backupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the backup to delete.
+       * </pre>
+       *
+       * <code>string backup_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for backupId.
+       */
+      public com.google.protobuf.ByteString
+          getBackupIdBytes() {
+        java.lang.Object ref = backupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          backupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the backup to delete.
+       * </pre>
+       *
+       * <code>string backup_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The backupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBackupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        backupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the backup to delete.
+       * </pre>
+       *
+       * <code>string backup_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBackupId() {
+        
+        backupId_ = getDefaultInstance().getBackupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the backup to delete.
+       * </pre>
+       *
+       * <code>string backup_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for backupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBackupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        backupId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.opensearch.v1.DeleteBackupRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.opensearch.v1.DeleteBackupRequest)
+    private static final yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest();
+    }
+
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteBackupRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteBackupRequest>() {
+      @java.lang.Override
+      public DeleteBackupRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteBackupRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteBackupRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteBackupRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteBackupMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.opensearch.v1.DeleteBackupMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the OpenSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of the OpenSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * ID of the backup to delete.
+     * </pre>
+     *
+     * <code>string backup_id = 2;</code>
+     * @return The backupId.
+     */
+    java.lang.String getBackupId();
+    /**
+     * <pre>
+     * ID of the backup to delete.
+     * </pre>
+     *
+     * <code>string backup_id = 2;</code>
+     * @return The bytes for backupId.
+     */
+    com.google.protobuf.ByteString
+        getBackupIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.DeleteBackupMetadata}
+   */
+  public static final class DeleteBackupMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.opensearch.v1.DeleteBackupMetadata)
+      DeleteBackupMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteBackupMetadata.newBuilder() to construct.
+    private DeleteBackupMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteBackupMetadata() {
+      clusterId_ = "";
+      backupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteBackupMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteBackupMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              backupId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_DeleteBackupMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_DeleteBackupMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata.class, yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of the OpenSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
+     */
+    @java.lang.Override
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the OpenSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BACKUP_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object backupId_;
+    /**
+     * <pre>
+     * ID of the backup to delete.
+     * </pre>
+     *
+     * <code>string backup_id = 2;</code>
+     * @return The backupId.
+     */
+    @java.lang.Override
+    public java.lang.String getBackupId() {
+      java.lang.Object ref = backupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        backupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the backup to delete.
+     * </pre>
+     *
+     * <code>string backup_id = 2;</code>
+     * @return The bytes for backupId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBackupIdBytes() {
+      java.lang.Object ref = backupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        backupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, backupId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, backupId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata other = (yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata) obj;
+
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getBackupId()
+          .equals(other.getBackupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + BACKUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getBackupId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.DeleteBackupMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.opensearch.v1.DeleteBackupMetadata)
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_DeleteBackupMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_DeleteBackupMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata.class, yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        backupId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_DeleteBackupMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata build() {
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata buildPartial() {
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata result = new yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata(this);
+        result.clusterId_ = clusterId_;
+        result.backupId_ = backupId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata) {
+          return mergeFrom((yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata other) {
+        if (other == yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.getBackupId().isEmpty()) {
+          backupId_ = other.backupId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object backupId_ = "";
+      /**
+       * <pre>
+       * ID of the backup to delete.
+       * </pre>
+       *
+       * <code>string backup_id = 2;</code>
+       * @return The backupId.
+       */
+      public java.lang.String getBackupId() {
+        java.lang.Object ref = backupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          backupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the backup to delete.
+       * </pre>
+       *
+       * <code>string backup_id = 2;</code>
+       * @return The bytes for backupId.
+       */
+      public com.google.protobuf.ByteString
+          getBackupIdBytes() {
+        java.lang.Object ref = backupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          backupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the backup to delete.
+       * </pre>
+       *
+       * <code>string backup_id = 2;</code>
+       * @param value The backupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBackupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        backupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the backup to delete.
+       * </pre>
+       *
+       * <code>string backup_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBackupId() {
+        
+        backupId_ = getDefaultInstance().getBackupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the backup to delete.
+       * </pre>
+       *
+       * <code>string backup_id = 2;</code>
+       * @param value The bytes for backupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBackupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        backupId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.opensearch.v1.DeleteBackupMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.opensearch.v1.DeleteBackupMetadata)
+    private static final yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata();
+    }
+
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteBackupMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteBackupMetadata>() {
+      @java.lang.Override
+      public DeleteBackupMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteBackupMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteBackupMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteBackupMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface RestoreClusterRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.opensearch.v1.RestoreClusterRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -63649,6 +65229,16 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_opensearch_v1_BackupClusterMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_opensearch_v1_DeleteBackupRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_opensearch_v1_DeleteBackupRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_opensearch_v1_DeleteBackupMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_opensearch_v1_DeleteBackupMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_opensearch_v1_RestoreClusterRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -63929,224 +65519,234 @@ public final class ClusterServiceOuterClass {
       "DashboardsClusterUpdateSpec\"8\n\024BackupClu" +
       "sterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
       "\004<=50\"+\n\025BackupClusterMetadata\022\022\n\ncluste" +
-      "r_id\030\001 \001(\t\"\300\005\n\025RestoreClusterRequest\022\027\n\t" +
-      "backup_id\030\001 \001(\tB\004\350\3071\001\022,\n\004name\030\002 \001(\tB\036\350\3071" +
-      "\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013descripti" +
-      "on\030\003 \001(\tB\t\212\3101\005<=256\022\222\001\n\006labels\030\004 \003(\0132A.y" +
-      "andex.cloud.mdb.opensearch.v1.RestoreClu" +
-      "sterRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=6" +
-      "3\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_" +
-      "0-9a-z]*\022H\n\013environment\030\005 \001(\01623.yandex.c" +
-      "loud.mdb.opensearch.v1.Cluster.Environme" +
-      "nt\022K\n\013config_spec\030\006 \001(\01320.yandex.cloud.m" +
-      "db.opensearch.v1.ConfigCreateSpecB\004\350\3071\001\022" +
-      " \n\nnetwork_id\030\007 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022sec" +
-      "urity_group_ids\030\010 \003(\t\022\032\n\022service_account" +
-      "_id\030\t \001(\t\022\033\n\023deletion_protection\030\n \001(\010\022\037" +
-      "\n\tfolder_id\030\013 \001(\tB\014\350\3071\001\212\3101\004<=50\022M\n\022maint" +
-      "enance_window\030\014 \001(\01321.yandex.cloud.mdb.o" +
-      "pensearch.v1.MaintenanceWindow\032-\n\013Labels" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"?\n" +
-      "\026RestoreClusterMetadata\022\022\n\ncluster_id\030\001 " +
-      "\001(\t\022\021\n\tbackup_id\030\002 \001(\t\"\317\002\n\034RescheduleMai" +
-      "ntenanceRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\022j\n\017reschedule_type\030\002 \001(\0162K.yan" +
-      "dex.cloud.mdb.opensearch.v1.RescheduleMa" +
-      "intenanceRequest.RescheduleTypeB\004\350\3071\001\0221\n" +
-      "\rdelayed_until\030\003 \001(\0132\032.google.protobuf.T" +
-      "imestamp\"n\n\016RescheduleType\022\037\n\033RESCHEDULE" +
-      "_TYPE_UNSPECIFIED\020\000\022\r\n\tIMMEDIATE\020\001\022\031\n\025NE" +
-      "XT_AVAILABLE_WINDOW\020\002\022\021\n\rSPECIFIC_TIME\020\003" +
-      "\"l\n\035RescheduleMaintenanceMetadata\022\022\n\nclu" +
-      "ster_id\030\001 \001(\t\0221\n\rdelayed_until\030\004 \001(\0132\032.g" +
-      "oogle.protobuf.TimestampJ\004\010\002\020\004\"{\n\031ListCl" +
-      "usterBackupsRequest\022 \n\ncluster_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-" +
-      "1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"n\n\032L" +
-      "istClusterBackupsResponse\0227\n\007backups\030\001 \003" +
-      "(\0132&.yandex.cloud.mdb.opensearch.v1.Back" +
-      "up\022\027\n\017next_page_token\030\002 \001(\t\"R\n DeleteOpe" +
-      "nSearchNodeGroupRequest\022 \n\ncluster_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\014\n\004name\030\002 \001(\t\"\373\001\n Upda" +
-      "teOpenSearchNodeGroupRequest\022 \n\ncluster_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004name\030\002 \001(\tB\036\350\307" +
-      "1\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022/\n\013update_m" +
-      "ask\030\003 \001(\0132\032.google.protobuf.FieldMask\022V\n" +
-      "\017node_group_spec\030\004 \001(\0132=.yandex.cloud.md" +
-      "b.opensearch.v1.OpenSearchNodeGroupUpdat" +
-      "eSpec\"\313\002\n\035OpenSearchNodeGroupUpdateSpec\022" +
-      "<\n\tresources\030\001 \001(\0132).yandex.cloud.mdb.op" +
-      "ensearch.v1.Resources\022\023\n\013hosts_count\030\002 \001" +
-      "(\003\022C\n\005roles\030\003 \003(\01624.yandex.cloud.mdb.ope" +
-      "nsearch.v1.OpenSearch.GroupRole\022\020\n\010zone_" +
-      "ids\030\004 \003(\t\022\022\n\nsubnet_ids\030\005 \003(\t\022\030\n\020assign_" +
-      "public_ip\030\006 \001(\010\022R\n\025disk_size_autoscaling" +
-      "\030\007 \001(\01323.yandex.cloud.mdb.opensearch.v1." +
-      "DiskSizeAutoscaling\"\232\001\n\035AddOpenSearchNod" +
-      "eGroupRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\022W\n\017node_group_spec\030\002 \001(\0132>.yande" +
-      "x.cloud.mdb.opensearch.v1.OpenSearchCrea" +
-      "teSpec.NodeGroup\"r\n DeleteDashboardsNode" +
-      "GroupRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a" +
-      "-zA-Z0-9_-]*\"\373\001\n UpdateDashboardsNodeGro" +
-      "upRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA" +
-      "-Z0-9_-]*\022/\n\013update_mask\030\003 \001(\0132\032.google." +
-      "protobuf.FieldMask\022V\n\017node_group_spec\030\004 " +
-      "\001(\0132=.yandex.cloud.mdb.opensearch.v1.Das" +
-      "hboardsNodeGroupUpdateSpec\"\206\002\n\035Dashboard" +
-      "sNodeGroupUpdateSpec\022<\n\tresources\030\001 \001(\0132" +
-      ").yandex.cloud.mdb.opensearch.v1.Resourc" +
-      "es\022\023\n\013hosts_count\030\002 \001(\003\022\020\n\010zone_ids\030\003 \003(" +
-      "\t\022\022\n\nsubnet_ids\030\004 \003(\t\022\030\n\020assign_public_i" +
-      "p\030\005 \001(\010\022R\n\025disk_size_autoscaling\030\006 \001(\01323" +
-      ".yandex.cloud.mdb.opensearch.v1.DiskSize" +
-      "Autoscaling\"\232\001\n\035AddDashboardsNodeGroupRe" +
+      "r_id\030\001 \001(\t\"X\n\023DeleteBackupRequest\022 \n\nclu" +
+      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\037\n\tbackup_id" +
+      "\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"=\n\024DeleteBackupMeta" +
+      "data\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 " +
+      "\001(\t\"\300\005\n\025RestoreClusterRequest\022\027\n\tbackup_" +
+      "id\030\001 \001(\tB\004\350\3071\001\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=" +
+      "63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013description\030\003 \001(" +
+      "\tB\t\212\3101\005<=256\022\222\001\n\006labels\030\004 \003(\0132A.yandex.c" +
+      "loud.mdb.opensearch.v1.RestoreClusterReq" +
+      "uest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-" +
+      "_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]" +
+      "*\022H\n\013environment\030\005 \001(\01623.yandex.cloud.md" +
+      "b.opensearch.v1.Cluster.Environment\022K\n\013c" +
+      "onfig_spec\030\006 \001(\01320.yandex.cloud.mdb.open" +
+      "search.v1.ConfigCreateSpecB\004\350\3071\001\022 \n\nnetw" +
+      "ork_id\030\007 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022security_g" +
+      "roup_ids\030\010 \003(\t\022\032\n\022service_account_id\030\t \001" +
+      "(\t\022\033\n\023deletion_protection\030\n \001(\010\022\037\n\tfolde" +
+      "r_id\030\013 \001(\tB\014\350\3071\001\212\3101\004<=50\022M\n\022maintenance_" +
+      "window\030\014 \001(\01321.yandex.cloud.mdb.opensear" +
+      "ch.v1.MaintenanceWindow\032-\n\013LabelsEntry\022\013" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"?\n\026Restor" +
+      "eClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\t" +
+      "backup_id\030\002 \001(\t\"\317\002\n\034RescheduleMaintenanc" +
+      "eRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022j\n\017reschedule_type\030\002 \001(\0162K.yandex.clo" +
+      "ud.mdb.opensearch.v1.RescheduleMaintenan" +
+      "ceRequest.RescheduleTypeB\004\350\3071\001\0221\n\rdelaye" +
+      "d_until\030\003 \001(\0132\032.google.protobuf.Timestam" +
+      "p\"n\n\016RescheduleType\022\037\n\033RESCHEDULE_TYPE_U" +
+      "NSPECIFIED\020\000\022\r\n\tIMMEDIATE\020\001\022\031\n\025NEXT_AVAI" +
+      "LABLE_WINDOW\020\002\022\021\n\rSPECIFIC_TIME\020\003\"l\n\035Res" +
+      "cheduleMaintenanceMetadata\022\022\n\ncluster_id" +
+      "\030\001 \001(\t\0221\n\rdelayed_until\030\004 \001(\0132\032.google.p" +
+      "rotobuf.TimestampJ\004\010\002\020\004\"{\n\031ListClusterBa" +
+      "ckupsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n" +
+      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"n\n\032ListClus" +
+      "terBackupsResponse\0227\n\007backups\030\001 \003(\0132&.ya" +
+      "ndex.cloud.mdb.opensearch.v1.Backup\022\027\n\017n" +
+      "ext_page_token\030\002 \001(\t\"R\n DeleteOpenSearch" +
+      "NodeGroupRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\022\014\n\004name\030\002 \001(\t\"\373\001\n UpdateOpenS" +
+      "earchNodeGroupRequest\022 \n\ncluster_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<" +
+      "=63\362\3071\016[a-zA-Z0-9_-]*\022/\n\013update_mask\030\003 \001" +
+      "(\0132\032.google.protobuf.FieldMask\022V\n\017node_g" +
+      "roup_spec\030\004 \001(\0132=.yandex.cloud.mdb.opens" +
+      "earch.v1.OpenSearchNodeGroupUpdateSpec\"\313" +
+      "\002\n\035OpenSearchNodeGroupUpdateSpec\022<\n\treso" +
+      "urces\030\001 \001(\0132).yandex.cloud.mdb.opensearc" +
+      "h.v1.Resources\022\023\n\013hosts_count\030\002 \001(\003\022C\n\005r" +
+      "oles\030\003 \003(\01624.yandex.cloud.mdb.opensearch" +
+      ".v1.OpenSearch.GroupRole\022\020\n\010zone_ids\030\004 \003" +
+      "(\t\022\022\n\nsubnet_ids\030\005 \003(\t\022\030\n\020assign_public_" +
+      "ip\030\006 \001(\010\022R\n\025disk_size_autoscaling\030\007 \001(\0132" +
+      "3.yandex.cloud.mdb.opensearch.v1.DiskSiz" +
+      "eAutoscaling\"\232\001\n\035AddOpenSearchNodeGroupR" +
+      "equest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022W\n\017node_group_spec\030\002 \001(\0132>.yandex.cloud" +
+      ".mdb.opensearch.v1.OpenSearchCreateSpec." +
+      "NodeGroup\"r\n DeleteDashboardsNodeGroupRe" +
       "quest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "W\n\017node_group_spec\030\002 \001(\0132>.yandex.cloud." +
-      "mdb.opensearch.v1.DashboardsCreateSpec.N" +
-      "odeGroup\"8\n\024AddNodeGroupMetadata\022\022\n\nclus" +
-      "ter_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\";\n\027UpdateNode" +
-      "GroupMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\014\n\004nam" +
-      "e\030\002 \001(\t\";\n\027DeleteNodeGroupMetadata\022\022\n\ncl" +
-      "uster_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\":\n\026GetAuthS" +
-      "ettingsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\"}\n\031UpdateAuthSettingsRequest\022 \n" +
-      "\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022>\n\010setti" +
-      "ngs\030\002 \001(\0132,.yandex.cloud.mdb.opensearch." +
-      "v1.AuthSettings\"0\n\032UpdateAuthSettingsMet" +
-      "adata\022\022\n\ncluster_id\030\001 \001(\t2\322\'\n\016ClusterSer" +
-      "vice\022\227\001\n\003Get\0221.yandex.cloud.mdb.opensear" +
-      "ch.v1.GetClusterRequest\032\'.yandex.cloud.m" +
-      "db.opensearch.v1.Cluster\"4\202\323\344\223\002.\022,/manag" +
-      "ed-opensearch/v1/clusters/{cluster_id}\022\232" +
-      "\001\n\004List\0223.yandex.cloud.mdb.opensearch.v1" +
-      ".ListClustersRequest\0324.yandex.cloud.mdb." +
-      "opensearch.v1.ListClustersResponse\"\'\202\323\344\223" +
-      "\002!\022\037/managed-opensearch/v1/clusters\022\261\001\n\006" +
-      "Create\0224.yandex.cloud.mdb.opensearch.v1." +
-      "CreateClusterRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"N\202\323\344\223\002$\"\037/managed-opense" +
-      "arch/v1/clusters:\001*\262\322* \n\025CreateClusterMe" +
-      "tadata\022\007Cluster\022\276\001\n\006Update\0224.yandex.clou" +
-      "d.mdb.opensearch.v1.UpdateClusterRequest" +
-      "\032!.yandex.cloud.operation.Operation\"[\202\323\344" +
-      "\223\00212,/managed-opensearch/v1/clusters/{cl" +
-      "uster_id}:\001*\262\322* \n\025UpdateClusterMetadata\022" +
-      "\007Cluster\022\311\001\n\006Delete\0224.yandex.cloud.mdb.o" +
-      "pensearch.v1.DeleteClusterRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"f\202\323\344\223\002.*,/m" +
+      ",\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-" +
+      "9_-]*\"\373\001\n UpdateDashboardsNodeGroupReque" +
+      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004" +
+      "name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-" +
+      "]*\022/\n\013update_mask\030\003 \001(\0132\032.google.protobu" +
+      "f.FieldMask\022V\n\017node_group_spec\030\004 \001(\0132=.y" +
+      "andex.cloud.mdb.opensearch.v1.Dashboards" +
+      "NodeGroupUpdateSpec\"\206\002\n\035DashboardsNodeGr" +
+      "oupUpdateSpec\022<\n\tresources\030\001 \001(\0132).yande" +
+      "x.cloud.mdb.opensearch.v1.Resources\022\023\n\013h" +
+      "osts_count\030\002 \001(\003\022\020\n\010zone_ids\030\003 \003(\t\022\022\n\nsu" +
+      "bnet_ids\030\004 \003(\t\022\030\n\020assign_public_ip\030\005 \001(\010" +
+      "\022R\n\025disk_size_autoscaling\030\006 \001(\01323.yandex" +
+      ".cloud.mdb.opensearch.v1.DiskSizeAutosca" +
+      "ling\"\232\001\n\035AddDashboardsNodeGroupRequest\022 " +
+      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022W\n\017node" +
+      "_group_spec\030\002 \001(\0132>.yandex.cloud.mdb.ope" +
+      "nsearch.v1.DashboardsCreateSpec.NodeGrou" +
+      "p\"8\n\024AddNodeGroupMetadata\022\022\n\ncluster_id\030" +
+      "\001 \001(\t\022\014\n\004name\030\002 \001(\t\";\n\027UpdateNodeGroupMe" +
+      "tadata\022\022\n\ncluster_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t" +
+      "\";\n\027DeleteNodeGroupMetadata\022\022\n\ncluster_i" +
+      "d\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\":\n\026GetAuthSettings" +
+      "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\"}\n\031UpdateAuthSettingsRequest\022 \n\ncluste" +
+      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022>\n\010settings\030\002 \001" +
+      "(\0132,.yandex.cloud.mdb.opensearch.v1.Auth" +
+      "Settings\"0\n\032UpdateAuthSettingsMetadata\022\022" +
+      "\n\ncluster_id\030\001 \001(\t2\266)\n\016ClusterService\022\227\001" +
+      "\n\003Get\0221.yandex.cloud.mdb.opensearch.v1.G" +
+      "etClusterRequest\032\'.yandex.cloud.mdb.open" +
+      "search.v1.Cluster\"4\202\323\344\223\002.\022,/managed-open" +
+      "search/v1/clusters/{cluster_id}\022\232\001\n\004List" +
+      "\0223.yandex.cloud.mdb.opensearch.v1.ListCl" +
+      "ustersRequest\0324.yandex.cloud.mdb.opensea" +
+      "rch.v1.ListClustersResponse\"\'\202\323\344\223\002!\022\037/ma" +
+      "naged-opensearch/v1/clusters\022\261\001\n\006Create\022" +
+      "4.yandex.cloud.mdb.opensearch.v1.CreateC" +
+      "lusterRequest\032!.yandex.cloud.operation.O" +
+      "peration\"N\202\323\344\223\002$\"\037/managed-opensearch/v1" +
+      "/clusters:\001*\262\322* \n\025CreateClusterMetadata\022" +
+      "\007Cluster\022\276\001\n\006Update\0224.yandex.cloud.mdb.o" +
+      "pensearch.v1.UpdateClusterRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"[\202\323\344\223\00212,/m" +
       "anaged-opensearch/v1/clusters/{cluster_i" +
-      "d}\262\322*.\n\025DeleteClusterMetadata\022\025google.pr" +
-      "otobuf.Empty\022\302\001\n\006Backup\0224.yandex.cloud.m" +
-      "db.opensearch.v1.BackupClusterRequest\032!." +
-      "yandex.cloud.operation.Operation\"_\202\323\344\223\0025" +
-      "\"3/managed-opensearch/v1/clusters/{clust" +
-      "er_id}:backup\262\322* \n\025BackupClusterMetadata" +
-      "\022\007Cluster\022\274\001\n\007Restore\0225.yandex.cloud.mdb" +
-      ".opensearch.v1.RestoreClusterRequest\032!.y" +
-      "andex.cloud.operation.Operation\"W\202\323\344\223\002,\"" +
-      "\'/managed-opensearch/v1/clusters:restore" +
-      ":\001*\262\322*!\n\026RestoreClusterMetadata\022\007Cluster" +
-      "\022\363\001\n\025RescheduleMaintenance\022<.yandex.clou" +
-      "d.mdb.opensearch.v1.RescheduleMaintenanc" +
-      "eRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"y\202\323\344\223\002G\"B/managed-opensearch/v1/clus" +
-      "ters/{cluster_id}:rescheduleMaintenance:" +
-      "\001*\262\322*(\n\035RescheduleMaintenanceMetadata\022\007C" +
-      "luster\022\302\001\n\013ListBackups\0229.yandex.cloud.md" +
-      "b.opensearch.v1.ListClusterBackupsReques" +
-      "t\032:.yandex.cloud.mdb.opensearch.v1.ListC" +
-      "lusterBackupsResponse\"<\202\323\344\223\0026\0224/managed-" +
-      "opensearch/v1/clusters/{cluster_id}/back" +
-      "ups\022\275\001\n\004Move\0222.yandex.cloud.mdb.opensear" +
-      "ch.v1.MoveClusterRequest\032!.yandex.cloud." +
-      "operation.Operation\"^\202\323\344\223\0026\"1/managed-op" +
-      "ensearch/v1/clusters/{cluster_id}:move:\001" +
-      "*\262\322*\036\n\023MoveClusterMetadata\022\007Cluster\022\276\001\n\005" +
-      "Start\0223.yandex.cloud.mdb.opensearch.v1.S" +
-      "tartClusterRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"]\202\323\344\223\0024\"2/managed-opensear" +
-      "ch/v1/clusters/{cluster_id}:start\262\322*\037\n\024S" +
-      "tartClusterMetadata\022\007Cluster\022\272\001\n\004Stop\0222." +
-      "yandex.cloud.mdb.opensearch.v1.StopClust" +
-      "erRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"[\202\323\344\223\0023\"1/managed-opensearch/v1/clu" +
-      "sters/{cluster_id}:stop\262\322*\036\n\023StopCluster" +
-      "Metadata\022\007Cluster\022\266\001\n\010ListLogs\0226.yandex." +
-      "cloud.mdb.opensearch.v1.ListClusterLogsR" +
-      "equest\0327.yandex.cloud.mdb.opensearch.v1." +
-      "ListClusterLogsResponse\"9\202\323\344\223\0023\0221/manage" +
-      "d-opensearch/v1/clusters/{cluster_id}:lo" +
-      "gs\022\273\001\n\nStreamLogs\0228.yandex.cloud.mdb.ope" +
-      "nsearch.v1.StreamClusterLogsRequest\032/.ya" +
-      "ndex.cloud.mdb.opensearch.v1.StreamLogRe" +
-      "cord\"@\202\323\344\223\002:\0228/managed-opensearch/v1/clu" +
-      "sters/{cluster_id}:stream_logs0\001\022\316\001\n\016Lis" +
-      "tOperations\022<.yandex.cloud.mdb.opensearc" +
-      "h.v1.ListClusterOperationsRequest\032=.yand" +
-      "ex.cloud.mdb.opensearch.v1.ListClusterOp" +
-      "erationsResponse\"?\202\323\344\223\0029\0227/managed-opens" +
-      "earch/v1/clusters/{cluster_id}/operation" +
-      "s\022\272\001\n\tListHosts\0227.yandex.cloud.mdb.opens" +
-      "earch.v1.ListClusterHostsRequest\0328.yande" +
-      "x.cloud.mdb.opensearch.v1.ListClusterHos" +
-      "tsResponse\":\202\323\344\223\0024\0222/managed-opensearch/" +
-      "v1/clusters/{cluster_id}/hosts\022\373\001\n\026AddOp" +
-      "enSearchNodeGroup\022=.yandex.cloud.mdb.ope" +
-      "nsearch.v1.AddOpenSearchNodeGroupRequest" +
-      "\032!.yandex.cloud.operation.Operation\"\177\202\323\344" +
-      "\223\002H\"C/managed-opensearch/v1/clusters/{cl" +
-      "uster_id}/opensearch/node_groups:\001*\262\322*-\n" +
-      "\024AddNodeGroupMetadata\022\025google.protobuf.E" +
-      "mpty\022\211\002\n\031DeleteOpenSearchNodeGroup\022@.yan" +
-      "dex.cloud.mdb.opensearch.v1.DeleteOpenSe" +
-      "archNodeGroupRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"\206\001\202\323\344\223\002L*J/managed-opens" +
+      "d}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Cluste" +
+      "r\022\311\001\n\006Delete\0224.yandex.cloud.mdb.opensear" +
+      "ch.v1.DeleteClusterRequest\032!.yandex.clou" +
+      "d.operation.Operation\"f\202\323\344\223\002.*,/managed-" +
+      "opensearch/v1/clusters/{cluster_id}\262\322*.\n" +
+      "\025DeleteClusterMetadata\022\025google.protobuf." +
+      "Empty\022\302\001\n\006Backup\0224.yandex.cloud.mdb.open" +
+      "search.v1.BackupClusterRequest\032!.yandex." +
+      "cloud.operation.Operation\"_\202\323\344\223\0025\"3/mana" +
+      "ged-opensearch/v1/clusters/{cluster_id}:" +
+      "backup\262\322* \n\025BackupClusterMetadata\022\007Clust" +
+      "er\022\341\001\n\014DeleteBackup\0223.yandex.cloud.mdb.o" +
+      "pensearch.v1.DeleteBackupRequest\032!.yande" +
+      "x.cloud.operation.Operation\"y\202\323\344\223\002B*@/ma" +
+      "naged-opensearch/v1/clusters/{cluster_id" +
+      "}/backups/{backup_id}\262\322*-\n\024DeleteBackupM" +
+      "etadata\022\025google.protobuf.Empty\022\274\001\n\007Resto" +
+      "re\0225.yandex.cloud.mdb.opensearch.v1.Rest" +
+      "oreClusterRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"W\202\323\344\223\002,\"\'/managed-opensearc" +
+      "h/v1/clusters:restore:\001*\262\322*!\n\026RestoreClu" +
+      "sterMetadata\022\007Cluster\022\363\001\n\025RescheduleMain" +
+      "tenance\022<.yandex.cloud.mdb.opensearch.v1" +
+      ".RescheduleMaintenanceRequest\032!.yandex.c" +
+      "loud.operation.Operation\"y\202\323\344\223\002G\"B/manag" +
+      "ed-opensearch/v1/clusters/{cluster_id}:r" +
+      "escheduleMaintenance:\001*\262\322*(\n\035RescheduleM" +
+      "aintenanceMetadata\022\007Cluster\022\302\001\n\013ListBack" +
+      "ups\0229.yandex.cloud.mdb.opensearch.v1.Lis" +
+      "tClusterBackupsRequest\032:.yandex.cloud.md" +
+      "b.opensearch.v1.ListClusterBackupsRespon" +
+      "se\"<\202\323\344\223\0026\0224/managed-opensearch/v1/clust" +
+      "ers/{cluster_id}/backups\022\275\001\n\004Move\0222.yand" +
+      "ex.cloud.mdb.opensearch.v1.MoveClusterRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"^\202\323\344\223\0026\"1/managed-opensearch/v1/cluster" +
+      "s/{cluster_id}:move:\001*\262\322*\036\n\023MoveClusterM" +
+      "etadata\022\007Cluster\022\276\001\n\005Start\0223.yandex.clou" +
+      "d.mdb.opensearch.v1.StartClusterRequest\032" +
+      "!.yandex.cloud.operation.Operation\"]\202\323\344\223" +
+      "\0024\"2/managed-opensearch/v1/clusters/{clu" +
+      "ster_id}:start\262\322*\037\n\024StartClusterMetadata" +
+      "\022\007Cluster\022\272\001\n\004Stop\0222.yandex.cloud.mdb.op" +
+      "ensearch.v1.StopClusterRequest\032!.yandex." +
+      "cloud.operation.Operation\"[\202\323\344\223\0023\"1/mana" +
+      "ged-opensearch/v1/clusters/{cluster_id}:" +
+      "stop\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022\266" +
+      "\001\n\010ListLogs\0226.yandex.cloud.mdb.opensearc" +
+      "h.v1.ListClusterLogsRequest\0327.yandex.clo" +
+      "ud.mdb.opensearch.v1.ListClusterLogsResp" +
+      "onse\"9\202\323\344\223\0023\0221/managed-opensearch/v1/clu" +
+      "sters/{cluster_id}:logs\022\273\001\n\nStreamLogs\0228" +
+      ".yandex.cloud.mdb.opensearch.v1.StreamCl" +
+      "usterLogsRequest\032/.yandex.cloud.mdb.open" +
+      "search.v1.StreamLogRecord\"@\202\323\344\223\002:\0228/mana" +
+      "ged-opensearch/v1/clusters/{cluster_id}:" +
+      "stream_logs0\001\022\316\001\n\016ListOperations\022<.yande" +
+      "x.cloud.mdb.opensearch.v1.ListClusterOpe" +
+      "rationsRequest\032=.yandex.cloud.mdb.opense" +
+      "arch.v1.ListClusterOperationsResponse\"?\202" +
+      "\323\344\223\0029\0227/managed-opensearch/v1/clusters/{" +
+      "cluster_id}/operations\022\272\001\n\tListHosts\0227.y" +
+      "andex.cloud.mdb.opensearch.v1.ListCluste" +
+      "rHostsRequest\0328.yandex.cloud.mdb.opensea" +
+      "rch.v1.ListClusterHostsResponse\":\202\323\344\223\0024\022" +
+      "2/managed-opensearch/v1/clusters/{cluste" +
+      "r_id}/hosts\022\373\001\n\026AddOpenSearchNodeGroup\022=" +
+      ".yandex.cloud.mdb.opensearch.v1.AddOpenS" +
+      "earchNodeGroupRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"\177\202\323\344\223\002H\"C/managed-opens" +
       "earch/v1/clusters/{cluster_id}/opensearc" +
-      "h/node_groups/{name}\262\322*0\n\027DeleteNodeGrou" +
-      "pMetadata\022\025google.protobuf.Empty\022\214\002\n\031Upd" +
-      "ateOpenSearchNodeGroup\022@.yandex.cloud.md" +
-      "b.opensearch.v1.UpdateOpenSearchNodeGrou" +
-      "pRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"\211\001\202\323\344\223\002O2J/managed-opensearch/v1/clu" +
-      "sters/{cluster_id}/opensearch/node_group" +
-      "s/{name}:\001*\262\322*0\n\027UpdateNodeGroupMetadata" +
-      "\022\025google.protobuf.Empty\022\373\001\n\026AddDashboard" +
-      "sNodeGroup\022=.yandex.cloud.mdb.opensearch" +
-      ".v1.AddDashboardsNodeGroupRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"\177\202\323\344\223\002H\"C/m" +
-      "anaged-opensearch/v1/clusters/{cluster_i" +
-      "d}/dashboards/node_groups:\001*\262\322*-\n\024AddNod" +
-      "eGroupMetadata\022\025google.protobuf.Empty\022\211\002" +
-      "\n\031DeleteDashboardsNodeGroup\022@.yandex.clo" +
-      "ud.mdb.opensearch.v1.DeleteDashboardsNod" +
-      "eGroupRequest\032!.yandex.cloud.operation.O" +
-      "peration\"\206\001\202\323\344\223\002L*J/managed-opensearch/v" +
+      "h/node_groups:\001*\262\322*-\n\024AddNodeGroupMetada" +
+      "ta\022\025google.protobuf.Empty\022\211\002\n\031DeleteOpen" +
+      "SearchNodeGroup\022@.yandex.cloud.mdb.opens" +
+      "earch.v1.DeleteOpenSearchNodeGroupReques" +
+      "t\032!.yandex.cloud.operation.Operation\"\206\001\202" +
+      "\323\344\223\002L*J/managed-opensearch/v1/clusters/{" +
+      "cluster_id}/opensearch/node_groups/{name" +
+      "}\262\322*0\n\027DeleteNodeGroupMetadata\022\025google.p" +
+      "rotobuf.Empty\022\214\002\n\031UpdateOpenSearchNodeGr" +
+      "oup\022@.yandex.cloud.mdb.opensearch.v1.Upd" +
+      "ateOpenSearchNodeGroupRequest\032!.yandex.c" +
+      "loud.operation.Operation\"\211\001\202\323\344\223\002O2J/mana" +
+      "ged-opensearch/v1/clusters/{cluster_id}/" +
+      "opensearch/node_groups/{name}:\001*\262\322*0\n\027Up" +
+      "dateNodeGroupMetadata\022\025google.protobuf.E" +
+      "mpty\022\373\001\n\026AddDashboardsNodeGroup\022=.yandex" +
+      ".cloud.mdb.opensearch.v1.AddDashboardsNo" +
+      "deGroupRequest\032!.yandex.cloud.operation." +
+      "Operation\"\177\202\323\344\223\002H\"C/managed-opensearch/v" +
       "1/clusters/{cluster_id}/dashboards/node_" +
-      "groups/{name}\262\322*0\n\027DeleteNodeGroupMetada" +
-      "ta\022\025google.protobuf.Empty\022\214\002\n\031UpdateDash" +
-      "boardsNodeGroup\022@.yandex.cloud.mdb.opens" +
-      "earch.v1.UpdateDashboardsNodeGroupReques" +
-      "t\032!.yandex.cloud.operation.Operation\"\211\001\202" +
-      "\323\344\223\002O2J/managed-opensearch/v1/clusters/{" +
-      "cluster_id}/dashboards/node_groups/{name" +
-      "}:\001*\262\322*0\n\027UpdateNodeGroupMetadata\022\025googl" +
-      "e.protobuf.Empty\022\262\001\n\017GetAuthSettings\0226.y" +
-      "andex.cloud.mdb.opensearch.v1.GetAuthSet" +
-      "tingsRequest\032,.yandex.cloud.mdb.opensear" +
-      "ch.v1.AuthSettings\"9\202\323\344\223\0023\0221/managed-ope" +
-      "nsearch/v1/clusters/{cluster_id}/auth\022\336\001" +
-      "\n\022UpdateAuthSettings\0229.yandex.cloud.mdb." +
-      "opensearch.v1.UpdateAuthSettingsRequest\032" +
-      "!.yandex.cloud.operation.Operation\"j\202\323\344\223" +
-      "\0026\0321/managed-opensearch/v1/clusters/{clu" +
-      "ster_id}/auth:\001*\262\322**\n\032UpdateAuthSettings" +
-      "Metadata\022\014AuthSettingsBs\n\"yandex.cloud.a" +
-      "pi.mdb.opensearch.v1ZMgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/mdb/opens" +
-      "earch/v1;opensearchb\006proto3"
+      "groups:\001*\262\322*-\n\024AddNodeGroupMetadata\022\025goo" +
+      "gle.protobuf.Empty\022\211\002\n\031DeleteDashboardsN" +
+      "odeGroup\022@.yandex.cloud.mdb.opensearch.v" +
+      "1.DeleteDashboardsNodeGroupRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"\206\001\202\323\344\223\002L*J" +
+      "/managed-opensearch/v1/clusters/{cluster" +
+      "_id}/dashboards/node_groups/{name}\262\322*0\n\027" +
+      "DeleteNodeGroupMetadata\022\025google.protobuf" +
+      ".Empty\022\214\002\n\031UpdateDashboardsNodeGroup\022@.y" +
+      "andex.cloud.mdb.opensearch.v1.UpdateDash" +
+      "boardsNodeGroupRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"\211\001\202\323\344\223\002O2J/managed-ope" +
+      "nsearch/v1/clusters/{cluster_id}/dashboa" +
+      "rds/node_groups/{name}:\001*\262\322*0\n\027UpdateNod" +
+      "eGroupMetadata\022\025google.protobuf.Empty\022\262\001" +
+      "\n\017GetAuthSettings\0226.yandex.cloud.mdb.ope" +
+      "nsearch.v1.GetAuthSettingsRequest\032,.yand" +
+      "ex.cloud.mdb.opensearch.v1.AuthSettings\"" +
+      "9\202\323\344\223\0023\0221/managed-opensearch/v1/clusters" +
+      "/{cluster_id}/auth\022\336\001\n\022UpdateAuthSetting" +
+      "s\0229.yandex.cloud.mdb.opensearch.v1.Updat" +
+      "eAuthSettingsRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"j\202\323\344\223\0026\0321/managed-opense" +
+      "arch/v1/clusters/{cluster_id}/auth:\001*\262\322*" +
+      "*\n\032UpdateAuthSettingsMetadata\022\014AuthSetti" +
+      "ngsBs\n\"yandex.cloud.api.mdb.opensearch.v" +
+      "1ZMgithub.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/mdb/opensearch/v1;opensearch" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -64391,8 +65991,20 @@ public final class ClusterServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_BackupClusterMetadata_descriptor,
         new java.lang.String[] { "ClusterId", });
-    internal_static_yandex_cloud_mdb_opensearch_v1_RestoreClusterRequest_descriptor =
+    internal_static_yandex_cloud_mdb_opensearch_v1_DeleteBackupRequest_descriptor =
       getDescriptor().getMessageTypes().get(33);
+    internal_static_yandex_cloud_mdb_opensearch_v1_DeleteBackupRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_opensearch_v1_DeleteBackupRequest_descriptor,
+        new java.lang.String[] { "ClusterId", "BackupId", });
+    internal_static_yandex_cloud_mdb_opensearch_v1_DeleteBackupMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(34);
+    internal_static_yandex_cloud_mdb_opensearch_v1_DeleteBackupMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_opensearch_v1_DeleteBackupMetadata_descriptor,
+        new java.lang.String[] { "ClusterId", "BackupId", });
+    internal_static_yandex_cloud_mdb_opensearch_v1_RestoreClusterRequest_descriptor =
+      getDescriptor().getMessageTypes().get(35);
     internal_static_yandex_cloud_mdb_opensearch_v1_RestoreClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_RestoreClusterRequest_descriptor,
@@ -64404,115 +66016,115 @@ public final class ClusterServiceOuterClass {
         internal_static_yandex_cloud_mdb_opensearch_v1_RestoreClusterRequest_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_mdb_opensearch_v1_RestoreClusterMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_yandex_cloud_mdb_opensearch_v1_RestoreClusterMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_RestoreClusterMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "BackupId", });
     internal_static_yandex_cloud_mdb_opensearch_v1_RescheduleMaintenanceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_yandex_cloud_mdb_opensearch_v1_RescheduleMaintenanceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_RescheduleMaintenanceRequest_descriptor,
         new java.lang.String[] { "ClusterId", "RescheduleType", "DelayedUntil", });
     internal_static_yandex_cloud_mdb_opensearch_v1_RescheduleMaintenanceMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_yandex_cloud_mdb_opensearch_v1_RescheduleMaintenanceMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_RescheduleMaintenanceMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "DelayedUntil", });
     internal_static_yandex_cloud_mdb_opensearch_v1_ListClusterBackupsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_yandex_cloud_mdb_opensearch_v1_ListClusterBackupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_ListClusterBackupsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_opensearch_v1_ListClusterBackupsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_yandex_cloud_mdb_opensearch_v1_ListClusterBackupsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_ListClusterBackupsResponse_descriptor,
         new java.lang.String[] { "Backups", "NextPageToken", });
     internal_static_yandex_cloud_mdb_opensearch_v1_DeleteOpenSearchNodeGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_yandex_cloud_mdb_opensearch_v1_DeleteOpenSearchNodeGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_DeleteOpenSearchNodeGroupRequest_descriptor,
         new java.lang.String[] { "ClusterId", "Name", });
     internal_static_yandex_cloud_mdb_opensearch_v1_UpdateOpenSearchNodeGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_yandex_cloud_mdb_opensearch_v1_UpdateOpenSearchNodeGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_UpdateOpenSearchNodeGroupRequest_descriptor,
         new java.lang.String[] { "ClusterId", "Name", "UpdateMask", "NodeGroupSpec", });
     internal_static_yandex_cloud_mdb_opensearch_v1_OpenSearchNodeGroupUpdateSpec_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(43);
     internal_static_yandex_cloud_mdb_opensearch_v1_OpenSearchNodeGroupUpdateSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_OpenSearchNodeGroupUpdateSpec_descriptor,
         new java.lang.String[] { "Resources", "HostsCount", "Roles", "ZoneIds", "SubnetIds", "AssignPublicIp", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_opensearch_v1_AddOpenSearchNodeGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(44);
     internal_static_yandex_cloud_mdb_opensearch_v1_AddOpenSearchNodeGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_AddOpenSearchNodeGroupRequest_descriptor,
         new java.lang.String[] { "ClusterId", "NodeGroupSpec", });
     internal_static_yandex_cloud_mdb_opensearch_v1_DeleteDashboardsNodeGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(45);
     internal_static_yandex_cloud_mdb_opensearch_v1_DeleteDashboardsNodeGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_DeleteDashboardsNodeGroupRequest_descriptor,
         new java.lang.String[] { "ClusterId", "Name", });
     internal_static_yandex_cloud_mdb_opensearch_v1_UpdateDashboardsNodeGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(46);
     internal_static_yandex_cloud_mdb_opensearch_v1_UpdateDashboardsNodeGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_UpdateDashboardsNodeGroupRequest_descriptor,
         new java.lang.String[] { "ClusterId", "Name", "UpdateMask", "NodeGroupSpec", });
     internal_static_yandex_cloud_mdb_opensearch_v1_DashboardsNodeGroupUpdateSpec_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(47);
     internal_static_yandex_cloud_mdb_opensearch_v1_DashboardsNodeGroupUpdateSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_DashboardsNodeGroupUpdateSpec_descriptor,
         new java.lang.String[] { "Resources", "HostsCount", "ZoneIds", "SubnetIds", "AssignPublicIp", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_opensearch_v1_AddDashboardsNodeGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(48);
     internal_static_yandex_cloud_mdb_opensearch_v1_AddDashboardsNodeGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_AddDashboardsNodeGroupRequest_descriptor,
         new java.lang.String[] { "ClusterId", "NodeGroupSpec", });
     internal_static_yandex_cloud_mdb_opensearch_v1_AddNodeGroupMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(47);
+      getDescriptor().getMessageTypes().get(49);
     internal_static_yandex_cloud_mdb_opensearch_v1_AddNodeGroupMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_AddNodeGroupMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "Name", });
     internal_static_yandex_cloud_mdb_opensearch_v1_UpdateNodeGroupMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(48);
+      getDescriptor().getMessageTypes().get(50);
     internal_static_yandex_cloud_mdb_opensearch_v1_UpdateNodeGroupMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_UpdateNodeGroupMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "Name", });
     internal_static_yandex_cloud_mdb_opensearch_v1_DeleteNodeGroupMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(49);
+      getDescriptor().getMessageTypes().get(51);
     internal_static_yandex_cloud_mdb_opensearch_v1_DeleteNodeGroupMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_DeleteNodeGroupMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "Name", });
     internal_static_yandex_cloud_mdb_opensearch_v1_GetAuthSettingsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(50);
+      getDescriptor().getMessageTypes().get(52);
     internal_static_yandex_cloud_mdb_opensearch_v1_GetAuthSettingsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_GetAuthSettingsRequest_descriptor,
         new java.lang.String[] { "ClusterId", });
     internal_static_yandex_cloud_mdb_opensearch_v1_UpdateAuthSettingsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(51);
+      getDescriptor().getMessageTypes().get(53);
     internal_static_yandex_cloud_mdb_opensearch_v1_UpdateAuthSettingsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_UpdateAuthSettingsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "Settings", });
     internal_static_yandex_cloud_mdb_opensearch_v1_UpdateAuthSettingsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(52);
+      getDescriptor().getMessageTypes().get(54);
     internal_static_yandex_cloud_mdb_opensearch_v1_UpdateAuthSettingsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_UpdateAuthSettingsMetadata_descriptor,

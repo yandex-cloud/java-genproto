@@ -3309,10 +3309,11 @@ public final class CustomerServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the reseller that customer will be associated with.
-     * Value must match either one of the two regular expressions: 
-     * `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|[0-9a-f]{32})$` 
-     * or `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`.
+     * ID of the reseller that customer will be associated with.&lt;/br&gt;
+     * Value must match either one of the three regular expressions:
+     * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$`
+     * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32})$`
+     * &lt;/br&gt;- `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`
      * </pre>
      *
      * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3321,10 +3322,11 @@ public final class CustomerServiceOuterClass {
     java.lang.String getResellerId();
     /**
      * <pre>
-     * ID of the reseller that customer will be associated with.
-     * Value must match either one of the two regular expressions: 
-     * `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|[0-9a-f]{32})$` 
-     * or `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`.
+     * ID of the reseller that customer will be associated with.&lt;/br&gt;
+     * Value must match either one of the three regular expressions:
+     * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$`
+     * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32})$`
+     * &lt;/br&gt;- `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`
      * </pre>
      *
      * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3490,10 +3492,11 @@ public final class CustomerServiceOuterClass {
     private volatile java.lang.Object resellerId_;
     /**
      * <pre>
-     * ID of the reseller that customer will be associated with.
-     * Value must match either one of the two regular expressions: 
-     * `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|[0-9a-f]{32})$` 
-     * or `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`.
+     * ID of the reseller that customer will be associated with.&lt;/br&gt;
+     * Value must match either one of the three regular expressions:
+     * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$`
+     * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32})$`
+     * &lt;/br&gt;- `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`
      * </pre>
      *
      * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3514,10 +3517,11 @@ public final class CustomerServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the reseller that customer will be associated with.
-     * Value must match either one of the two regular expressions: 
-     * `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|[0-9a-f]{32})$` 
-     * or `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`.
+     * ID of the reseller that customer will be associated with.&lt;/br&gt;
+     * Value must match either one of the three regular expressions:
+     * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$`
+     * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32})$`
+     * &lt;/br&gt;- `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`
      * </pre>
      *
      * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3976,10 +3980,11 @@ public final class CustomerServiceOuterClass {
       private java.lang.Object resellerId_ = "";
       /**
        * <pre>
-       * ID of the reseller that customer will be associated with.
-       * Value must match either one of the two regular expressions: 
-       * `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|[0-9a-f]{32})$` 
-       * or `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`.
+       * ID of the reseller that customer will be associated with.&lt;/br&gt;
+       * Value must match either one of the three regular expressions:
+       * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$`
+       * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32})$`
+       * &lt;/br&gt;- `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`
        * </pre>
        *
        * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3999,10 +4004,11 @@ public final class CustomerServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the reseller that customer will be associated with.
-       * Value must match either one of the two regular expressions: 
-       * `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|[0-9a-f]{32})$` 
-       * or `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`.
+       * ID of the reseller that customer will be associated with.&lt;/br&gt;
+       * Value must match either one of the three regular expressions:
+       * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$`
+       * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32})$`
+       * &lt;/br&gt;- `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`
        * </pre>
        *
        * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4023,10 +4029,11 @@ public final class CustomerServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the reseller that customer will be associated with.
-       * Value must match either one of the two regular expressions: 
-       * `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|[0-9a-f]{32})$` 
-       * or `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`.
+       * ID of the reseller that customer will be associated with.&lt;/br&gt;
+       * Value must match either one of the three regular expressions:
+       * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$`
+       * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32})$`
+       * &lt;/br&gt;- `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`
        * </pre>
        *
        * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4045,10 +4052,11 @@ public final class CustomerServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the reseller that customer will be associated with.
-       * Value must match either one of the two regular expressions: 
-       * `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|[0-9a-f]{32})$` 
-       * or `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`.
+       * ID of the reseller that customer will be associated with.&lt;/br&gt;
+       * Value must match either one of the three regular expressions:
+       * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$`
+       * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32})$`
+       * &lt;/br&gt;- `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`
        * </pre>
        *
        * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4062,10 +4070,11 @@ public final class CustomerServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the reseller that customer will be associated with.
-       * Value must match either one of the two regular expressions: 
-       * `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|[0-9a-f]{32})$` 
-       * or `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`.
+       * ID of the reseller that customer will be associated with.&lt;/br&gt;
+       * Value must match either one of the three regular expressions:
+       * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$`
+       * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32})$`
+       * &lt;/br&gt;- `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`
        * </pre>
        *
        * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>

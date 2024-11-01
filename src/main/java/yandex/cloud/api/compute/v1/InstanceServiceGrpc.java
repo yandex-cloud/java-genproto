@@ -929,7 +929,7 @@ public final class InstanceServiceGrpc {
 
     /**
      * <pre>
-     * Updates the metadata of the specified instance.
+     * Updates the metadata of the specified instance. For more information on metadata, see [VM metadata](/docs/compute/concepts/vm-metadata).
      * </pre>
      */
     public void updateMetadata(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateInstanceMetadataRequest request,
@@ -1412,7 +1412,7 @@ public final class InstanceServiceGrpc {
 
     /**
      * <pre>
-     * Updates the metadata of the specified instance.
+     * Updates the metadata of the specified instance. For more information on metadata, see [VM metadata](/docs/compute/concepts/vm-metadata).
      * </pre>
      */
     public void updateMetadata(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateInstanceMetadataRequest request,
@@ -1724,7 +1724,7 @@ public final class InstanceServiceGrpc {
 
     /**
      * <pre>
-     * Updates the metadata of the specified instance.
+     * Updates the metadata of the specified instance. For more information on metadata, see [VM metadata](/docs/compute/concepts/vm-metadata).
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateMetadata(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateInstanceMetadataRequest request) {
@@ -2020,7 +2020,7 @@ public final class InstanceServiceGrpc {
 
     /**
      * <pre>
-     * Updates the metadata of the specified instance.
+     * Updates the metadata of the specified instance. For more information on metadata, see [VM metadata](/docs/compute/concepts/vm-metadata).
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateMetadata(

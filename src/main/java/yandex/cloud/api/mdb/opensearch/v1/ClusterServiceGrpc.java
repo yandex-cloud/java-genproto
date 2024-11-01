@@ -204,6 +204,37 @@ public final class ClusterServiceGrpc {
     return getBackupMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteBackupMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteBackup",
+      requestType = yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteBackupMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteBackupMethod;
+    if ((getDeleteBackupMethod = ClusterServiceGrpc.getDeleteBackupMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getDeleteBackupMethod = ClusterServiceGrpc.getDeleteBackupMethod) == null) {
+          ClusterServiceGrpc.getDeleteBackupMethod = getDeleteBackupMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteBackup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("DeleteBackup"))
+              .build();
+        }
+      }
+    }
+    return getDeleteBackupMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestoreClusterRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getRestoreMethod;
 
@@ -876,6 +907,16 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Delete backup for the specified OpenSearch cluster.
+     * </pre>
+     */
+    public void deleteBackup(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteBackupMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates a new OpenSearch cluster using the specified backup.
      * </pre>
      */
@@ -1100,6 +1141,13 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_BACKUP)))
           .addMethod(
+            getDeleteBackupMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_DELETE_BACKUP)))
+          .addMethod(
             getRestoreMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
@@ -1311,6 +1359,17 @@ public final class ClusterServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getBackupMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Delete backup for the specified OpenSearch cluster.
+     * </pre>
+     */
+    public void deleteBackup(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteBackupMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1593,6 +1652,16 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Delete backup for the specified OpenSearch cluster.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation deleteBackup(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteBackupMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Creates a new OpenSearch cluster using the specified backup.
      * </pre>
      */
@@ -1860,6 +1929,17 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Delete backup for the specified OpenSearch cluster.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deleteBackup(
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteBackupMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Creates a new OpenSearch cluster using the specified backup.
      * </pre>
      */
@@ -2053,24 +2133,25 @@ public final class ClusterServiceGrpc {
   private static final int METHODID_UPDATE = 3;
   private static final int METHODID_DELETE = 4;
   private static final int METHODID_BACKUP = 5;
-  private static final int METHODID_RESTORE = 6;
-  private static final int METHODID_RESCHEDULE_MAINTENANCE = 7;
-  private static final int METHODID_LIST_BACKUPS = 8;
-  private static final int METHODID_MOVE = 9;
-  private static final int METHODID_START = 10;
-  private static final int METHODID_STOP = 11;
-  private static final int METHODID_LIST_LOGS = 12;
-  private static final int METHODID_STREAM_LOGS = 13;
-  private static final int METHODID_LIST_OPERATIONS = 14;
-  private static final int METHODID_LIST_HOSTS = 15;
-  private static final int METHODID_ADD_OPEN_SEARCH_NODE_GROUP = 16;
-  private static final int METHODID_DELETE_OPEN_SEARCH_NODE_GROUP = 17;
-  private static final int METHODID_UPDATE_OPEN_SEARCH_NODE_GROUP = 18;
-  private static final int METHODID_ADD_DASHBOARDS_NODE_GROUP = 19;
-  private static final int METHODID_DELETE_DASHBOARDS_NODE_GROUP = 20;
-  private static final int METHODID_UPDATE_DASHBOARDS_NODE_GROUP = 21;
-  private static final int METHODID_GET_AUTH_SETTINGS = 22;
-  private static final int METHODID_UPDATE_AUTH_SETTINGS = 23;
+  private static final int METHODID_DELETE_BACKUP = 6;
+  private static final int METHODID_RESTORE = 7;
+  private static final int METHODID_RESCHEDULE_MAINTENANCE = 8;
+  private static final int METHODID_LIST_BACKUPS = 9;
+  private static final int METHODID_MOVE = 10;
+  private static final int METHODID_START = 11;
+  private static final int METHODID_STOP = 12;
+  private static final int METHODID_LIST_LOGS = 13;
+  private static final int METHODID_STREAM_LOGS = 14;
+  private static final int METHODID_LIST_OPERATIONS = 15;
+  private static final int METHODID_LIST_HOSTS = 16;
+  private static final int METHODID_ADD_OPEN_SEARCH_NODE_GROUP = 17;
+  private static final int METHODID_DELETE_OPEN_SEARCH_NODE_GROUP = 18;
+  private static final int METHODID_UPDATE_OPEN_SEARCH_NODE_GROUP = 19;
+  private static final int METHODID_ADD_DASHBOARDS_NODE_GROUP = 20;
+  private static final int METHODID_DELETE_DASHBOARDS_NODE_GROUP = 21;
+  private static final int METHODID_UPDATE_DASHBOARDS_NODE_GROUP = 22;
+  private static final int METHODID_GET_AUTH_SETTINGS = 23;
+  private static final int METHODID_UPDATE_AUTH_SETTINGS = 24;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2111,6 +2192,10 @@ public final class ClusterServiceGrpc {
           break;
         case METHODID_BACKUP:
           serviceImpl.backup((yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.BackupClusterRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_DELETE_BACKUP:
+          serviceImpl.deleteBackup((yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DeleteBackupRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_RESTORE:
@@ -2252,6 +2337,7 @@ public final class ClusterServiceGrpc {
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
               .addMethod(getBackupMethod())
+              .addMethod(getDeleteBackupMethod())
               .addMethod(getRestoreMethod())
               .addMethod(getRescheduleMaintenanceMethod())
               .addMethod(getListBackupsMethod())

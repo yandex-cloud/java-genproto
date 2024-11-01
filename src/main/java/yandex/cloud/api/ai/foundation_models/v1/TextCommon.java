@@ -1161,6 +1161,60 @@ public final class TextCommon {
     com.google.protobuf.ByteString
         getTextBytes();
 
+    /**
+     * <pre>
+     * List of tool calls made by the model as part of the response generation.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ToolCallList tool_call_list = 3;</code>
+     * @return Whether the toolCallList field is set.
+     */
+    boolean hasToolCallList();
+    /**
+     * <pre>
+     * List of tool calls made by the model as part of the response generation.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ToolCallList tool_call_list = 3;</code>
+     * @return The toolCallList.
+     */
+    yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList getToolCallList();
+    /**
+     * <pre>
+     * List of tool calls made by the model as part of the response generation.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ToolCallList tool_call_list = 3;</code>
+     */
+    yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallListOrBuilder getToolCallListOrBuilder();
+
+    /**
+     * <pre>
+     * List of tool results returned from external tools that were invoked by the model.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ToolResultList tool_result_list = 4;</code>
+     * @return Whether the toolResultList field is set.
+     */
+    boolean hasToolResultList();
+    /**
+     * <pre>
+     * List of tool results returned from external tools that were invoked by the model.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ToolResultList tool_result_list = 4;</code>
+     * @return The toolResultList.
+     */
+    yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList getToolResultList();
+    /**
+     * <pre>
+     * List of tool results returned from external tools that were invoked by the model.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ToolResultList tool_result_list = 4;</code>
+     */
+    yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultListOrBuilder getToolResultListOrBuilder();
+
     public yandex.cloud.api.ai.foundation_models.v1.TextCommon.Message.ContentCase getContentCase();
   }
   /**
@@ -1225,6 +1279,34 @@ public final class TextCommon {
               content_ = s;
               break;
             }
+            case 26: {
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList.Builder subBuilder = null;
+              if (contentCase_ == 3) {
+                subBuilder = ((yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList) content_).toBuilder();
+              }
+              content_ =
+                  input.readMessage(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList) content_);
+                content_ = subBuilder.buildPartial();
+              }
+              contentCase_ = 3;
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList.Builder subBuilder = null;
+              if (contentCase_ == 4) {
+                subBuilder = ((yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList) content_).toBuilder();
+              }
+              content_ =
+                  input.readMessage(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList) content_);
+                content_ = subBuilder.buildPartial();
+              }
+              contentCase_ = 4;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -1263,6 +1345,8 @@ public final class TextCommon {
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       TEXT(2),
+      TOOL_CALL_LIST(3),
+      TOOL_RESULT_LIST(4),
       CONTENT_NOT_SET(0);
       private final int value;
       private ContentCase(int value) {
@@ -1281,6 +1365,8 @@ public final class TextCommon {
       public static ContentCase forNumber(int value) {
         switch (value) {
           case 2: return TEXT;
+          case 3: return TOOL_CALL_LIST;
+          case 4: return TOOL_RESULT_LIST;
           case 0: return CONTENT_NOT_SET;
           default: return null;
         }
@@ -1412,6 +1498,92 @@ public final class TextCommon {
       }
     }
 
+    public static final int TOOL_CALL_LIST_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * List of tool calls made by the model as part of the response generation.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ToolCallList tool_call_list = 3;</code>
+     * @return Whether the toolCallList field is set.
+     */
+    @java.lang.Override
+    public boolean hasToolCallList() {
+      return contentCase_ == 3;
+    }
+    /**
+     * <pre>
+     * List of tool calls made by the model as part of the response generation.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ToolCallList tool_call_list = 3;</code>
+     * @return The toolCallList.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList getToolCallList() {
+      if (contentCase_ == 3) {
+         return (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList) content_;
+      }
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * List of tool calls made by the model as part of the response generation.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ToolCallList tool_call_list = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallListOrBuilder getToolCallListOrBuilder() {
+      if (contentCase_ == 3) {
+         return (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList) content_;
+      }
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList.getDefaultInstance();
+    }
+
+    public static final int TOOL_RESULT_LIST_FIELD_NUMBER = 4;
+    /**
+     * <pre>
+     * List of tool results returned from external tools that were invoked by the model.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ToolResultList tool_result_list = 4;</code>
+     * @return Whether the toolResultList field is set.
+     */
+    @java.lang.Override
+    public boolean hasToolResultList() {
+      return contentCase_ == 4;
+    }
+    /**
+     * <pre>
+     * List of tool results returned from external tools that were invoked by the model.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ToolResultList tool_result_list = 4;</code>
+     * @return The toolResultList.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList getToolResultList() {
+      if (contentCase_ == 4) {
+         return (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList) content_;
+      }
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * List of tool results returned from external tools that were invoked by the model.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ToolResultList tool_result_list = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultListOrBuilder getToolResultListOrBuilder() {
+      if (contentCase_ == 4) {
+         return (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList) content_;
+      }
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1432,6 +1604,12 @@ public final class TextCommon {
       if (contentCase_ == 2) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, content_);
       }
+      if (contentCase_ == 3) {
+        output.writeMessage(3, (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList) content_);
+      }
+      if (contentCase_ == 4) {
+        output.writeMessage(4, (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList) content_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1446,6 +1624,14 @@ public final class TextCommon {
       }
       if (contentCase_ == 2) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, content_);
+      }
+      if (contentCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList) content_);
+      }
+      if (contentCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList) content_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1470,6 +1656,14 @@ public final class TextCommon {
           if (!getText()
               .equals(other.getText())) return false;
           break;
+        case 3:
+          if (!getToolCallList()
+              .equals(other.getToolCallList())) return false;
+          break;
+        case 4:
+          if (!getToolResultList()
+              .equals(other.getToolResultList())) return false;
+          break;
         case 0:
         default:
       }
@@ -1490,6 +1684,14 @@ public final class TextCommon {
         case 2:
           hash = (37 * hash) + TEXT_FIELD_NUMBER;
           hash = (53 * hash) + getText().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + TOOL_CALL_LIST_FIELD_NUMBER;
+          hash = (53 * hash) + getToolCallList().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + TOOL_RESULT_LIST_FIELD_NUMBER;
+          hash = (53 * hash) + getToolResultList().hashCode();
           break;
         case 0:
         default:
@@ -1665,6 +1867,20 @@ public final class TextCommon {
         if (contentCase_ == 2) {
           result.content_ = content_;
         }
+        if (contentCase_ == 3) {
+          if (toolCallListBuilder_ == null) {
+            result.content_ = content_;
+          } else {
+            result.content_ = toolCallListBuilder_.build();
+          }
+        }
+        if (contentCase_ == 4) {
+          if (toolResultListBuilder_ == null) {
+            result.content_ = content_;
+          } else {
+            result.content_ = toolResultListBuilder_.build();
+          }
+        }
         result.contentCase_ = contentCase_;
         onBuilt();
         return result;
@@ -1723,6 +1939,14 @@ public final class TextCommon {
             contentCase_ = 2;
             content_ = other.content_;
             onChanged();
+            break;
+          }
+          case TOOL_CALL_LIST: {
+            mergeToolCallList(other.getToolCallList());
+            break;
+          }
+          case TOOL_RESULT_LIST: {
+            mergeToolResultList(other.getToolResultList());
             break;
           }
           case CONTENT_NOT_SET: {
@@ -2003,6 +2227,360 @@ public final class TextCommon {
         content_ = value;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallListOrBuilder> toolCallListBuilder_;
+      /**
+       * <pre>
+       * List of tool calls made by the model as part of the response generation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ToolCallList tool_call_list = 3;</code>
+       * @return Whether the toolCallList field is set.
+       */
+      @java.lang.Override
+      public boolean hasToolCallList() {
+        return contentCase_ == 3;
+      }
+      /**
+       * <pre>
+       * List of tool calls made by the model as part of the response generation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ToolCallList tool_call_list = 3;</code>
+       * @return The toolCallList.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList getToolCallList() {
+        if (toolCallListBuilder_ == null) {
+          if (contentCase_ == 3) {
+            return (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList) content_;
+          }
+          return yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList.getDefaultInstance();
+        } else {
+          if (contentCase_ == 3) {
+            return toolCallListBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * List of tool calls made by the model as part of the response generation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ToolCallList tool_call_list = 3;</code>
+       */
+      public Builder setToolCallList(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList value) {
+        if (toolCallListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          content_ = value;
+          onChanged();
+        } else {
+          toolCallListBuilder_.setMessage(value);
+        }
+        contentCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tool calls made by the model as part of the response generation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ToolCallList tool_call_list = 3;</code>
+       */
+      public Builder setToolCallList(
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList.Builder builderForValue) {
+        if (toolCallListBuilder_ == null) {
+          content_ = builderForValue.build();
+          onChanged();
+        } else {
+          toolCallListBuilder_.setMessage(builderForValue.build());
+        }
+        contentCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tool calls made by the model as part of the response generation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ToolCallList tool_call_list = 3;</code>
+       */
+      public Builder mergeToolCallList(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList value) {
+        if (toolCallListBuilder_ == null) {
+          if (contentCase_ == 3 &&
+              content_ != yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList.getDefaultInstance()) {
+            content_ = yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList.newBuilder((yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList) content_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            content_ = value;
+          }
+          onChanged();
+        } else {
+          if (contentCase_ == 3) {
+            toolCallListBuilder_.mergeFrom(value);
+          }
+          toolCallListBuilder_.setMessage(value);
+        }
+        contentCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tool calls made by the model as part of the response generation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ToolCallList tool_call_list = 3;</code>
+       */
+      public Builder clearToolCallList() {
+        if (toolCallListBuilder_ == null) {
+          if (contentCase_ == 3) {
+            contentCase_ = 0;
+            content_ = null;
+            onChanged();
+          }
+        } else {
+          if (contentCase_ == 3) {
+            contentCase_ = 0;
+            content_ = null;
+          }
+          toolCallListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tool calls made by the model as part of the response generation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ToolCallList tool_call_list = 3;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList.Builder getToolCallListBuilder() {
+        return getToolCallListFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * List of tool calls made by the model as part of the response generation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ToolCallList tool_call_list = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallListOrBuilder getToolCallListOrBuilder() {
+        if ((contentCase_ == 3) && (toolCallListBuilder_ != null)) {
+          return toolCallListBuilder_.getMessageOrBuilder();
+        } else {
+          if (contentCase_ == 3) {
+            return (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList) content_;
+          }
+          return yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * List of tool calls made by the model as part of the response generation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ToolCallList tool_call_list = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallListOrBuilder> 
+          getToolCallListFieldBuilder() {
+        if (toolCallListBuilder_ == null) {
+          if (!(contentCase_ == 3)) {
+            content_ = yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList.getDefaultInstance();
+          }
+          toolCallListBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallListOrBuilder>(
+                  (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolCallList) content_,
+                  getParentForChildren(),
+                  isClean());
+          content_ = null;
+        }
+        contentCase_ = 3;
+        onChanged();;
+        return toolCallListBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultListOrBuilder> toolResultListBuilder_;
+      /**
+       * <pre>
+       * List of tool results returned from external tools that were invoked by the model.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ToolResultList tool_result_list = 4;</code>
+       * @return Whether the toolResultList field is set.
+       */
+      @java.lang.Override
+      public boolean hasToolResultList() {
+        return contentCase_ == 4;
+      }
+      /**
+       * <pre>
+       * List of tool results returned from external tools that were invoked by the model.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ToolResultList tool_result_list = 4;</code>
+       * @return The toolResultList.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList getToolResultList() {
+        if (toolResultListBuilder_ == null) {
+          if (contentCase_ == 4) {
+            return (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList) content_;
+          }
+          return yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList.getDefaultInstance();
+        } else {
+          if (contentCase_ == 4) {
+            return toolResultListBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * List of tool results returned from external tools that were invoked by the model.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ToolResultList tool_result_list = 4;</code>
+       */
+      public Builder setToolResultList(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList value) {
+        if (toolResultListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          content_ = value;
+          onChanged();
+        } else {
+          toolResultListBuilder_.setMessage(value);
+        }
+        contentCase_ = 4;
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tool results returned from external tools that were invoked by the model.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ToolResultList tool_result_list = 4;</code>
+       */
+      public Builder setToolResultList(
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList.Builder builderForValue) {
+        if (toolResultListBuilder_ == null) {
+          content_ = builderForValue.build();
+          onChanged();
+        } else {
+          toolResultListBuilder_.setMessage(builderForValue.build());
+        }
+        contentCase_ = 4;
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tool results returned from external tools that were invoked by the model.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ToolResultList tool_result_list = 4;</code>
+       */
+      public Builder mergeToolResultList(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList value) {
+        if (toolResultListBuilder_ == null) {
+          if (contentCase_ == 4 &&
+              content_ != yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList.getDefaultInstance()) {
+            content_ = yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList.newBuilder((yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList) content_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            content_ = value;
+          }
+          onChanged();
+        } else {
+          if (contentCase_ == 4) {
+            toolResultListBuilder_.mergeFrom(value);
+          }
+          toolResultListBuilder_.setMessage(value);
+        }
+        contentCase_ = 4;
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tool results returned from external tools that were invoked by the model.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ToolResultList tool_result_list = 4;</code>
+       */
+      public Builder clearToolResultList() {
+        if (toolResultListBuilder_ == null) {
+          if (contentCase_ == 4) {
+            contentCase_ = 0;
+            content_ = null;
+            onChanged();
+          }
+        } else {
+          if (contentCase_ == 4) {
+            contentCase_ = 0;
+            content_ = null;
+          }
+          toolResultListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tool results returned from external tools that were invoked by the model.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ToolResultList tool_result_list = 4;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList.Builder getToolResultListBuilder() {
+        return getToolResultListFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * List of tool results returned from external tools that were invoked by the model.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ToolResultList tool_result_list = 4;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultListOrBuilder getToolResultListOrBuilder() {
+        if ((contentCase_ == 4) && (toolResultListBuilder_ != null)) {
+          return toolResultListBuilder_.getMessageOrBuilder();
+        } else {
+          if (contentCase_ == 4) {
+            return (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList) content_;
+          }
+          return yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * List of tool results returned from external tools that were invoked by the model.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ToolResultList tool_result_list = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultListOrBuilder> 
+          getToolResultListFieldBuilder() {
+        if (toolResultListBuilder_ == null) {
+          if (!(contentCase_ == 4)) {
+            content_ = yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList.getDefaultInstance();
+          }
+          toolResultListBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultListOrBuilder>(
+                  (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolResultList) content_,
+                  getParentForChildren(),
+                  isClean());
+          content_ = null;
+        }
+        contentCase_ = 4;
+        onChanged();;
+        return toolResultListBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11751,43 +12329,47 @@ public final class TextCommon {
       "\021CompletionOptions\022\016\n\006stream\030\001 \001(\010\0221\n\013te" +
       "mperature\030\002 \001(\0132\034.google.protobuf.Double" +
       "Value\022/\n\nmax_tokens\030\003 \001(\0132\033.google.proto" +
-      "buf.Int64Value\"2\n\007Message\022\014\n\004role\030\001 \001(\t\022" +
-      "\016\n\004text\030\002 \001(\tH\000B\t\n\007Content\"Z\n\014ContentUsa" +
-      "ge\022\031\n\021input_text_tokens\030\001 \001(\003\022\031\n\021complet" +
-      "ion_tokens\030\002 \001(\003\022\024\n\014total_tokens\030\003 \001(\003\"\214" +
-      "\003\n\013Alternative\022>\n\007message\030\001 \001(\0132-.yandex" +
-      ".cloud.ai.foundation_models.v1.Message\022S" +
-      "\n\006status\030\002 \001(\0162C.yandex.cloud.ai.foundat" +
-      "ion_models.v1.Alternative.AlternativeSta" +
-      "tus\"\347\001\n\021AlternativeStatus\022\"\n\036ALTERNATIVE" +
-      "_STATUS_UNSPECIFIED\020\000\022\036\n\032ALTERNATIVE_STA" +
-      "TUS_PARTIAL\020\001\022&\n\"ALTERNATIVE_STATUS_TRUN" +
-      "CATED_FINAL\020\002\022\034\n\030ALTERNATIVE_STATUS_FINA" +
-      "L\020\003\022%\n!ALTERNATIVE_STATUS_CONTENT_FILTER" +
-      "\020\004\022!\n\035ALTERNATIVE_STATUS_TOOL_CALLS\020\005\"2\n" +
-      "\005Token\022\n\n\002id\030\001 \001(\003\022\014\n\004text\030\002 \001(\t\022\017\n\007spec" +
-      "ial\030\003 \001(\010\"Z\n\004Tool\022F\n\010function\030\001 \001(\01322.ya" +
-      "ndex.cloud.ai.foundation_models.v1.Funct" +
-      "ionToolH\000B\n\n\010ToolType\"^\n\014FunctionTool\022\014\n" +
-      "\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022+\n\npara" +
-      "meters\030\003 \001(\0132\027.google.protobuf.Struct\"g\n" +
-      "\010ToolCall\022K\n\rfunction_call\030\001 \001(\01322.yande" +
-      "x.cloud.ai.foundation_models.v1.Function" +
-      "CallH\000B\016\n\014ToolCallType\"H\n\014FunctionCall\022\014" +
-      "\n\004name\030\001 \001(\t\022*\n\targuments\030\002 \001(\0132\027.google" +
-      ".protobuf.Struct\"R\n\014ToolCallList\022B\n\ntool" +
-      "_calls\030\001 \003(\0132..yandex.cloud.ai.foundatio" +
-      "n_models.v1.ToolCall\"o\n\nToolResult\022O\n\017fu" +
-      "nction_result\030\001 \001(\01324.yandex.cloud.ai.fo" +
-      "undation_models.v1.FunctionResultH\000B\020\n\016T" +
-      "oolResultType\"@\n\016FunctionResult\022\014\n\004name\030" +
-      "\001 \001(\t\022\021\n\007content\030\002 \001(\tH\000B\r\n\013ContentType\"" +
-      "X\n\016ToolResultList\022F\n\014tool_results\030\001 \003(\0132" +
-      "0.yandex.cloud.ai.foundation_models.v1.T" +
-      "oolResultB\206\001\n(yandex.cloud.api.ai.founda" +
-      "tion_models.v1ZZgithub.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/ai/foundation_m" +
-      "odels/v1;foundation_modelsb\006proto3"
+      "buf.Int64Value\"\322\001\n\007Message\022\014\n\004role\030\001 \001(\t" +
+      "\022\016\n\004text\030\002 \001(\tH\000\022L\n\016tool_call_list\030\003 \001(\013" +
+      "22.yandex.cloud.ai.foundation_models.v1." +
+      "ToolCallListH\000\022P\n\020tool_result_list\030\004 \001(\013" +
+      "24.yandex.cloud.ai.foundation_models.v1." +
+      "ToolResultListH\000B\t\n\007Content\"Z\n\014ContentUs" +
+      "age\022\031\n\021input_text_tokens\030\001 \001(\003\022\031\n\021comple" +
+      "tion_tokens\030\002 \001(\003\022\024\n\014total_tokens\030\003 \001(\003\"" +
+      "\214\003\n\013Alternative\022>\n\007message\030\001 \001(\0132-.yande" +
+      "x.cloud.ai.foundation_models.v1.Message\022" +
+      "S\n\006status\030\002 \001(\0162C.yandex.cloud.ai.founda" +
+      "tion_models.v1.Alternative.AlternativeSt" +
+      "atus\"\347\001\n\021AlternativeStatus\022\"\n\036ALTERNATIV" +
+      "E_STATUS_UNSPECIFIED\020\000\022\036\n\032ALTERNATIVE_ST" +
+      "ATUS_PARTIAL\020\001\022&\n\"ALTERNATIVE_STATUS_TRU" +
+      "NCATED_FINAL\020\002\022\034\n\030ALTERNATIVE_STATUS_FIN" +
+      "AL\020\003\022%\n!ALTERNATIVE_STATUS_CONTENT_FILTE" +
+      "R\020\004\022!\n\035ALTERNATIVE_STATUS_TOOL_CALLS\020\005\"2" +
+      "\n\005Token\022\n\n\002id\030\001 \001(\003\022\014\n\004text\030\002 \001(\t\022\017\n\007spe" +
+      "cial\030\003 \001(\010\"Z\n\004Tool\022F\n\010function\030\001 \001(\01322.y" +
+      "andex.cloud.ai.foundation_models.v1.Func" +
+      "tionToolH\000B\n\n\010ToolType\"^\n\014FunctionTool\022\014" +
+      "\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022+\n\npar" +
+      "ameters\030\003 \001(\0132\027.google.protobuf.Struct\"g" +
+      "\n\010ToolCall\022K\n\rfunction_call\030\001 \001(\01322.yand" +
+      "ex.cloud.ai.foundation_models.v1.Functio" +
+      "nCallH\000B\016\n\014ToolCallType\"H\n\014FunctionCall\022" +
+      "\014\n\004name\030\001 \001(\t\022*\n\targuments\030\002 \001(\0132\027.googl" +
+      "e.protobuf.Struct\"R\n\014ToolCallList\022B\n\ntoo" +
+      "l_calls\030\001 \003(\0132..yandex.cloud.ai.foundati" +
+      "on_models.v1.ToolCall\"o\n\nToolResult\022O\n\017f" +
+      "unction_result\030\001 \001(\01324.yandex.cloud.ai.f" +
+      "oundation_models.v1.FunctionResultH\000B\020\n\016" +
+      "ToolResultType\"@\n\016FunctionResult\022\014\n\004name" +
+      "\030\001 \001(\t\022\021\n\007content\030\002 \001(\tH\000B\r\n\013ContentType" +
+      "\"X\n\016ToolResultList\022F\n\014tool_results\030\001 \003(\013" +
+      "20.yandex.cloud.ai.foundation_models.v1." +
+      "ToolResultB\206\001\n(yandex.cloud.api.ai.found" +
+      "ation_models.v1ZZgithub.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/ai/foundation_" +
+      "models/v1;foundation_modelsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11806,7 +12388,7 @@ public final class TextCommon {
     internal_static_yandex_cloud_ai_foundation_models_v1_Message_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_Message_descriptor,
-        new java.lang.String[] { "Role", "Text", "Content", });
+        new java.lang.String[] { "Role", "Text", "ToolCallList", "ToolResultList", "Content", });
     internal_static_yandex_cloud_ai_foundation_models_v1_ContentUsage_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_ai_foundation_models_v1_ContentUsage_fieldAccessorTable = new
