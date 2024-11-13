@@ -20,7 +20,7 @@ public final class EmbeddingService {
 
     /**
      * <pre>
-     * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
+     * The [model URI](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -29,7 +29,7 @@ public final class EmbeddingService {
     java.lang.String getModelUri();
     /**
      * <pre>
-     * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
+     * The [model URI](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -157,7 +157,7 @@ public final class EmbeddingService {
     private volatile java.lang.Object modelUri_;
     /**
      * <pre>
-     * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
+     * The [model URI](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -178,7 +178,7 @@ public final class EmbeddingService {
     }
     /**
      * <pre>
-     * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
+     * The [model URI](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -571,7 +571,7 @@ public final class EmbeddingService {
       private java.lang.Object modelUri_ = "";
       /**
        * <pre>
-       * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
+       * The [model URI](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -591,7 +591,7 @@ public final class EmbeddingService {
       }
       /**
        * <pre>
-       * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
+       * The [model URI](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -612,7 +612,7 @@ public final class EmbeddingService {
       }
       /**
        * <pre>
-       * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
+       * The [model URI](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -631,7 +631,7 @@ public final class EmbeddingService {
       }
       /**
        * <pre>
-       * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
+       * The [model URI](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -645,7 +645,7 @@ public final class EmbeddingService {
       }
       /**
        * <pre>
-       * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
+       * The [model URI](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
        * </pre>
        *
        * <code>string model_uri = 1;</code>

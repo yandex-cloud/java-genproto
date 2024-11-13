@@ -80,6 +80,37 @@ public final class StreamLineServiceGrpc {
     return getListMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest,
+      yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse> getBatchGetMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "BatchGet",
+      requestType = yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest.class,
+      responseType = yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest,
+      yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse> getBatchGetMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse> getBatchGetMethod;
+    if ((getBatchGetMethod = StreamLineServiceGrpc.getBatchGetMethod) == null) {
+      synchronized (StreamLineServiceGrpc.class) {
+        if ((getBatchGetMethod = StreamLineServiceGrpc.getBatchGetMethod) == null) {
+          StreamLineServiceGrpc.getBatchGetMethod = getBatchGetMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BatchGet"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new StreamLineServiceMethodDescriptorSupplier("BatchGet"))
+              .build();
+        }
+      }
+    }
+    return getBatchGetMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.StreamLineServiceOuterClass.CreateStreamLineRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod;
 
@@ -171,6 +202,37 @@ public final class StreamLineServiceGrpc {
       }
     }
     return getDeleteMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getBatchDeleteMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "BatchDelete",
+      requestType = yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getBatchDeleteMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getBatchDeleteMethod;
+    if ((getBatchDeleteMethod = StreamLineServiceGrpc.getBatchDeleteMethod) == null) {
+      synchronized (StreamLineServiceGrpc.class) {
+        if ((getBatchDeleteMethod = StreamLineServiceGrpc.getBatchDeleteMethod) == null) {
+          StreamLineServiceGrpc.getBatchDeleteMethod = getBatchDeleteMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BatchDelete"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new StreamLineServiceMethodDescriptorSupplier("BatchDelete"))
+              .build();
+        }
+      }
+    }
+    return getBatchDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.StreamLineServiceOuterClass.PerformLineActionRequest,
@@ -339,6 +401,16 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
+     * Batch get lines for channel.
+     * </pre>
+     */
+    public void batchGet(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBatchGetMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Create stream line.
      * </pre>
      */
@@ -365,6 +437,16 @@ public final class StreamLineServiceGrpc {
     public void delete(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.DeleteStreamLineRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Batch delete stream lines.
+     * </pre>
+     */
+    public void batchDelete(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBatchDeleteMethod(), responseObserver);
     }
 
     /**
@@ -414,6 +496,13 @@ public final class StreamLineServiceGrpc {
                 yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ListStreamLinesResponse>(
                   this, METHODID_LIST)))
           .addMethod(
+            getBatchGetMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest,
+                yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse>(
+                  this, METHODID_BATCH_GET)))
+          .addMethod(
             getCreateMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
@@ -434,6 +523,13 @@ public final class StreamLineServiceGrpc {
                 yandex.cloud.api.video.v1.StreamLineServiceOuterClass.DeleteStreamLineRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
+          .addMethod(
+            getBatchDeleteMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_BATCH_DELETE)))
           .addMethod(
             getPerformActionMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -500,6 +596,17 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
+     * Batch get lines for channel.
+     * </pre>
+     */
+    public void batchGet(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getBatchGetMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Create stream line.
      * </pre>
      */
@@ -529,6 +636,17 @@ public final class StreamLineServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Batch delete stream lines.
+     * </pre>
+     */
+    public void batchDelete(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getBatchDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -604,6 +722,16 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
+     * Batch get lines for channel.
+     * </pre>
+     */
+    public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse batchGet(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBatchGetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Create stream line.
      * </pre>
      */
@@ -630,6 +758,16 @@ public final class StreamLineServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.DeleteStreamLineRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Batch delete stream lines.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation batchDelete(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBatchDeleteMethod(), getCallOptions(), request);
     }
 
     /**
@@ -704,6 +842,17 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
+     * Batch get lines for channel.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse> batchGet(
+        yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getBatchGetMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Create stream line.
      * </pre>
      */
@@ -733,6 +882,17 @@ public final class StreamLineServiceGrpc {
         yandex.cloud.api.video.v1.StreamLineServiceOuterClass.DeleteStreamLineRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Batch delete stream lines.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> batchDelete(
+        yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getBatchDeleteMethod(), getCallOptions()), request);
     }
 
     /**
@@ -771,12 +931,14 @@ public final class StreamLineServiceGrpc {
 
   private static final int METHODID_GET = 0;
   private static final int METHODID_LIST = 1;
-  private static final int METHODID_CREATE = 2;
-  private static final int METHODID_UPDATE = 3;
-  private static final int METHODID_DELETE = 4;
-  private static final int METHODID_PERFORM_ACTION = 5;
-  private static final int METHODID_GET_STREAM_KEY = 6;
-  private static final int METHODID_UPDATE_STREAM_KEY = 7;
+  private static final int METHODID_BATCH_GET = 2;
+  private static final int METHODID_CREATE = 3;
+  private static final int METHODID_UPDATE = 4;
+  private static final int METHODID_DELETE = 5;
+  private static final int METHODID_BATCH_DELETE = 6;
+  private static final int METHODID_PERFORM_ACTION = 7;
+  private static final int METHODID_GET_STREAM_KEY = 8;
+  private static final int METHODID_UPDATE_STREAM_KEY = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -803,6 +965,10 @@ public final class StreamLineServiceGrpc {
           serviceImpl.list((yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ListStreamLinesRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ListStreamLinesResponse>) responseObserver);
           break;
+        case METHODID_BATCH_GET:
+          serviceImpl.batchGet((yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse>) responseObserver);
+          break;
         case METHODID_CREATE:
           serviceImpl.create((yandex.cloud.api.video.v1.StreamLineServiceOuterClass.CreateStreamLineRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
@@ -813,6 +979,10 @@ public final class StreamLineServiceGrpc {
           break;
         case METHODID_DELETE:
           serviceImpl.delete((yandex.cloud.api.video.v1.StreamLineServiceOuterClass.DeleteStreamLineRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_BATCH_DELETE:
+          serviceImpl.batchDelete((yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_PERFORM_ACTION:
@@ -890,9 +1060,11 @@ public final class StreamLineServiceGrpc {
               .setSchemaDescriptor(new StreamLineServiceFileDescriptorSupplier())
               .addMethod(getGetMethod())
               .addMethod(getListMethod())
+              .addMethod(getBatchGetMethod())
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
+              .addMethod(getBatchDeleteMethod())
               .addMethod(getPerformActionMethod())
               .addMethod(getGetStreamKeyMethod())
               .addMethod(getUpdateStreamKeyMethod())

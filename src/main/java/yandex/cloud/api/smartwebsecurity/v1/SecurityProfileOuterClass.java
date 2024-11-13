@@ -301,6 +301,33 @@ public final class SecurityProfileOuterClass {
      */
     com.google.protobuf.ByteString
         getAdvancedRateLimiterProfileIdBytes();
+
+    /**
+     * <pre>
+     * Parameters for request body analyzer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 13;</code>
+     * @return Whether the analyzeRequestBody field is set.
+     */
+    boolean hasAnalyzeRequestBody();
+    /**
+     * <pre>
+     * Parameters for request body analyzer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 13;</code>
+     * @return The analyzeRequestBody.
+     */
+    yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody getAnalyzeRequestBody();
+    /**
+     * <pre>
+     * Parameters for request body analyzer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 13;</code>
+     */
+    yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBodyOrBuilder getAnalyzeRequestBodyOrBuilder();
   }
   /**
    * <pre>
@@ -442,6 +469,19 @@ public final class SecurityProfileOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               advancedRateLimiterProfileId_ = s;
+              break;
+            }
+            case 106: {
+              yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Builder subBuilder = null;
+              if (analyzeRequestBody_ != null) {
+                subBuilder = analyzeRequestBody_.toBuilder();
+              }
+              analyzeRequestBody_ = input.readMessage(yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(analyzeRequestBody_);
+                analyzeRequestBody_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -626,6 +666,795 @@ public final class SecurityProfileOuterClass {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.smartwebsecurity.v1.SecurityProfile.DefaultAction)
+    }
+
+    public interface AnalyzeRequestBodyOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Maximum size of body to pass to analyzer. In kilobytes.
+       * </pre>
+       *
+       * <code>int64 size_limit = 1 [(.yandex.cloud.value) = "0,8,16,32,64,128,256,512"];</code>
+       * @return The sizeLimit.
+       */
+      long getSizeLimit();
+
+      /**
+       * <pre>
+       * Action to perform if maximum size of body exceeded.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody.Action size_limit_action = 2;</code>
+       * @return The enum numeric value on the wire for sizeLimitAction.
+       */
+      int getSizeLimitActionValue();
+      /**
+       * <pre>
+       * Action to perform if maximum size of body exceeded.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody.Action size_limit_action = 2;</code>
+       * @return The sizeLimitAction.
+       */
+      yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Action getSizeLimitAction();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody}
+     */
+    public static final class AnalyzeRequestBody extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody)
+        AnalyzeRequestBodyOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use AnalyzeRequestBody.newBuilder() to construct.
+      private AnalyzeRequestBody(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private AnalyzeRequestBody() {
+        sizeLimitAction_ = 0;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new AnalyzeRequestBody();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private AnalyzeRequestBody(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                sizeLimit_ = input.readInt64();
+                break;
+              }
+              case 16: {
+                int rawValue = input.readEnum();
+
+                sizeLimitAction_ = rawValue;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.internal_static_yandex_cloud_smartwebsecurity_v1_SecurityProfile_AnalyzeRequestBody_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.internal_static_yandex_cloud_smartwebsecurity_v1_SecurityProfile_AnalyzeRequestBody_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.class, yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Builder.class);
+      }
+
+      /**
+       * <pre>
+       * Action to perform if maximum size of body exceeded.
+       * </pre>
+       *
+       * Protobuf enum {@code yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody.Action}
+       */
+      public enum Action
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <code>ACTION_UNSPECIFIED = 0;</code>
+         */
+        ACTION_UNSPECIFIED(0),
+        /**
+         * <pre>
+         * Ignore body.
+         * </pre>
+         *
+         * <code>IGNORE = 1;</code>
+         */
+        IGNORE(1),
+        /**
+         * <pre>
+         * Deny request.
+         * </pre>
+         *
+         * <code>DENY = 2;</code>
+         */
+        DENY(2),
+        UNRECOGNIZED(-1),
+        ;
+
+        /**
+         * <code>ACTION_UNSPECIFIED = 0;</code>
+         */
+        public static final int ACTION_UNSPECIFIED_VALUE = 0;
+        /**
+         * <pre>
+         * Ignore body.
+         * </pre>
+         *
+         * <code>IGNORE = 1;</code>
+         */
+        public static final int IGNORE_VALUE = 1;
+        /**
+         * <pre>
+         * Deny request.
+         * </pre>
+         *
+         * <code>DENY = 2;</code>
+         */
+        public static final int DENY_VALUE = 2;
+
+
+        public final int getNumber() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalArgumentException(
+                "Can't get the number of an unknown enum value.");
+          }
+          return value;
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static Action valueOf(int value) {
+          return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static Action forNumber(int value) {
+          switch (value) {
+            case 0: return ACTION_UNSPECIFIED;
+            case 1: return IGNORE;
+            case 2: return DENY;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<Action>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            Action> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<Action>() {
+                public Action findValueByNumber(int number) {
+                  return Action.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalStateException(
+                "Can't get the descriptor of an unrecognized enum value.");
+          }
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.getDescriptor().getEnumTypes().get(0);
+        }
+
+        private static final Action[] VALUES = values();
+
+        public static Action valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          if (desc.getIndex() == -1) {
+            return UNRECOGNIZED;
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private Action(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody.Action)
+      }
+
+      public static final int SIZE_LIMIT_FIELD_NUMBER = 1;
+      private long sizeLimit_;
+      /**
+       * <pre>
+       * Maximum size of body to pass to analyzer. In kilobytes.
+       * </pre>
+       *
+       * <code>int64 size_limit = 1 [(.yandex.cloud.value) = "0,8,16,32,64,128,256,512"];</code>
+       * @return The sizeLimit.
+       */
+      @java.lang.Override
+      public long getSizeLimit() {
+        return sizeLimit_;
+      }
+
+      public static final int SIZE_LIMIT_ACTION_FIELD_NUMBER = 2;
+      private int sizeLimitAction_;
+      /**
+       * <pre>
+       * Action to perform if maximum size of body exceeded.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody.Action size_limit_action = 2;</code>
+       * @return The enum numeric value on the wire for sizeLimitAction.
+       */
+      @java.lang.Override public int getSizeLimitActionValue() {
+        return sizeLimitAction_;
+      }
+      /**
+       * <pre>
+       * Action to perform if maximum size of body exceeded.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody.Action size_limit_action = 2;</code>
+       * @return The sizeLimitAction.
+       */
+      @java.lang.Override public yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Action getSizeLimitAction() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Action result = yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Action.valueOf(sizeLimitAction_);
+        return result == null ? yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Action.UNRECOGNIZED : result;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (sizeLimit_ != 0L) {
+          output.writeInt64(1, sizeLimit_);
+        }
+        if (sizeLimitAction_ != yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Action.ACTION_UNSPECIFIED.getNumber()) {
+          output.writeEnum(2, sizeLimitAction_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (sizeLimit_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(1, sizeLimit_);
+        }
+        if (sizeLimitAction_ != yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Action.ACTION_UNSPECIFIED.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(2, sizeLimitAction_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody other = (yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody) obj;
+
+        if (getSizeLimit()
+            != other.getSizeLimit()) return false;
+        if (sizeLimitAction_ != other.sizeLimitAction_) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + SIZE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getSizeLimit());
+        hash = (37 * hash) + SIZE_LIMIT_ACTION_FIELD_NUMBER;
+        hash = (53 * hash) + sizeLimitAction_;
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody)
+          yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBodyOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.internal_static_yandex_cloud_smartwebsecurity_v1_SecurityProfile_AnalyzeRequestBody_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.internal_static_yandex_cloud_smartwebsecurity_v1_SecurityProfile_AnalyzeRequestBody_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.class, yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          sizeLimit_ = 0L;
+
+          sizeLimitAction_ = 0;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.internal_static_yandex_cloud_smartwebsecurity_v1_SecurityProfile_AnalyzeRequestBody_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody getDefaultInstanceForType() {
+          return yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody build() {
+          yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody buildPartial() {
+          yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody result = new yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody(this);
+          result.sizeLimit_ = sizeLimit_;
+          result.sizeLimitAction_ = sizeLimitAction_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody) {
+            return mergeFrom((yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody other) {
+          if (other == yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.getDefaultInstance()) return this;
+          if (other.getSizeLimit() != 0L) {
+            setSizeLimit(other.getSizeLimit());
+          }
+          if (other.sizeLimitAction_ != 0) {
+            setSizeLimitActionValue(other.getSizeLimitActionValue());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private long sizeLimit_ ;
+        /**
+         * <pre>
+         * Maximum size of body to pass to analyzer. In kilobytes.
+         * </pre>
+         *
+         * <code>int64 size_limit = 1 [(.yandex.cloud.value) = "0,8,16,32,64,128,256,512"];</code>
+         * @return The sizeLimit.
+         */
+        @java.lang.Override
+        public long getSizeLimit() {
+          return sizeLimit_;
+        }
+        /**
+         * <pre>
+         * Maximum size of body to pass to analyzer. In kilobytes.
+         * </pre>
+         *
+         * <code>int64 size_limit = 1 [(.yandex.cloud.value) = "0,8,16,32,64,128,256,512"];</code>
+         * @param value The sizeLimit to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSizeLimit(long value) {
+          
+          sizeLimit_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum size of body to pass to analyzer. In kilobytes.
+         * </pre>
+         *
+         * <code>int64 size_limit = 1 [(.yandex.cloud.value) = "0,8,16,32,64,128,256,512"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSizeLimit() {
+          
+          sizeLimit_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private int sizeLimitAction_ = 0;
+        /**
+         * <pre>
+         * Action to perform if maximum size of body exceeded.
+         * </pre>
+         *
+         * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody.Action size_limit_action = 2;</code>
+         * @return The enum numeric value on the wire for sizeLimitAction.
+         */
+        @java.lang.Override public int getSizeLimitActionValue() {
+          return sizeLimitAction_;
+        }
+        /**
+         * <pre>
+         * Action to perform if maximum size of body exceeded.
+         * </pre>
+         *
+         * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody.Action size_limit_action = 2;</code>
+         * @param value The enum numeric value on the wire for sizeLimitAction to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSizeLimitActionValue(int value) {
+          
+          sizeLimitAction_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Action to perform if maximum size of body exceeded.
+         * </pre>
+         *
+         * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody.Action size_limit_action = 2;</code>
+         * @return The sizeLimitAction.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Action getSizeLimitAction() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Action result = yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Action.valueOf(sizeLimitAction_);
+          return result == null ? yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Action.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * Action to perform if maximum size of body exceeded.
+         * </pre>
+         *
+         * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody.Action size_limit_action = 2;</code>
+         * @param value The sizeLimitAction to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSizeLimitAction(yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Action value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          
+          sizeLimitAction_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Action to perform if maximum size of body exceeded.
+         * </pre>
+         *
+         * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody.Action size_limit_action = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSizeLimitAction() {
+          
+          sizeLimitAction_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody)
+      private static final yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody();
+      }
+
+      public static yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<AnalyzeRequestBody>
+          PARSER = new com.google.protobuf.AbstractParser<AnalyzeRequestBody>() {
+        @java.lang.Override
+        public AnalyzeRequestBody parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new AnalyzeRequestBody(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<AnalyzeRequestBody> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<AnalyzeRequestBody> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -1172,6 +2001,44 @@ public final class SecurityProfileOuterClass {
       }
     }
 
+    public static final int ANALYZE_REQUEST_BODY_FIELD_NUMBER = 13;
+    private yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody analyzeRequestBody_;
+    /**
+     * <pre>
+     * Parameters for request body analyzer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 13;</code>
+     * @return Whether the analyzeRequestBody field is set.
+     */
+    @java.lang.Override
+    public boolean hasAnalyzeRequestBody() {
+      return analyzeRequestBody_ != null;
+    }
+    /**
+     * <pre>
+     * Parameters for request body analyzer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 13;</code>
+     * @return The analyzeRequestBody.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody getAnalyzeRequestBody() {
+      return analyzeRequestBody_ == null ? yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.getDefaultInstance() : analyzeRequestBody_;
+    }
+    /**
+     * <pre>
+     * Parameters for request body analyzer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 13;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBodyOrBuilder getAnalyzeRequestBodyOrBuilder() {
+      return getAnalyzeRequestBody();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1221,6 +2088,9 @@ public final class SecurityProfileOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(advancedRateLimiterProfileId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, advancedRateLimiterProfileId_);
+      }
+      if (analyzeRequestBody_ != null) {
+        output.writeMessage(13, getAnalyzeRequestBody());
       }
       unknownFields.writeTo(output);
     }
@@ -1274,6 +2144,10 @@ public final class SecurityProfileOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(advancedRateLimiterProfileId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, advancedRateLimiterProfileId_);
       }
+      if (analyzeRequestBody_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getAnalyzeRequestBody());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1313,6 +2187,11 @@ public final class SecurityProfileOuterClass {
           .equals(other.getCaptchaId())) return false;
       if (!getAdvancedRateLimiterProfileId()
           .equals(other.getAdvancedRateLimiterProfileId())) return false;
+      if (hasAnalyzeRequestBody() != other.hasAnalyzeRequestBody()) return false;
+      if (hasAnalyzeRequestBody()) {
+        if (!getAnalyzeRequestBody()
+            .equals(other.getAnalyzeRequestBody())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1352,6 +2231,10 @@ public final class SecurityProfileOuterClass {
       hash = (53 * hash) + getCaptchaId().hashCode();
       hash = (37 * hash) + ADVANCED_RATE_LIMITER_PROFILE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getAdvancedRateLimiterProfileId().hashCode();
+      if (hasAnalyzeRequestBody()) {
+        hash = (37 * hash) + ANALYZE_REQUEST_BODY_FIELD_NUMBER;
+        hash = (53 * hash) + getAnalyzeRequestBody().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1541,6 +2424,12 @@ public final class SecurityProfileOuterClass {
 
         advancedRateLimiterProfileId_ = "";
 
+        if (analyzeRequestBodyBuilder_ == null) {
+          analyzeRequestBody_ = null;
+        } else {
+          analyzeRequestBody_ = null;
+          analyzeRequestBodyBuilder_ = null;
+        }
         return this;
       }
 
@@ -1592,6 +2481,11 @@ public final class SecurityProfileOuterClass {
         result.cloudId_ = cloudId_;
         result.captchaId_ = captchaId_;
         result.advancedRateLimiterProfileId_ = advancedRateLimiterProfileId_;
+        if (analyzeRequestBodyBuilder_ == null) {
+          result.analyzeRequestBody_ = analyzeRequestBody_;
+        } else {
+          result.analyzeRequestBody_ = analyzeRequestBodyBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1701,6 +2595,9 @@ public final class SecurityProfileOuterClass {
         if (!other.getAdvancedRateLimiterProfileId().isEmpty()) {
           advancedRateLimiterProfileId_ = other.advancedRateLimiterProfileId_;
           onChanged();
+        }
+        if (other.hasAnalyzeRequestBody()) {
+          mergeAnalyzeRequestBody(other.getAnalyzeRequestBody());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3102,6 +3999,161 @@ public final class SecurityProfileOuterClass {
         advancedRateLimiterProfileId_ = value;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody analyzeRequestBody_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody, yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Builder, yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBodyOrBuilder> analyzeRequestBodyBuilder_;
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 13;</code>
+       * @return Whether the analyzeRequestBody field is set.
+       */
+      public boolean hasAnalyzeRequestBody() {
+        return analyzeRequestBodyBuilder_ != null || analyzeRequestBody_ != null;
+      }
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 13;</code>
+       * @return The analyzeRequestBody.
+       */
+      public yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody getAnalyzeRequestBody() {
+        if (analyzeRequestBodyBuilder_ == null) {
+          return analyzeRequestBody_ == null ? yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.getDefaultInstance() : analyzeRequestBody_;
+        } else {
+          return analyzeRequestBodyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 13;</code>
+       */
+      public Builder setAnalyzeRequestBody(yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody value) {
+        if (analyzeRequestBodyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          analyzeRequestBody_ = value;
+          onChanged();
+        } else {
+          analyzeRequestBodyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 13;</code>
+       */
+      public Builder setAnalyzeRequestBody(
+          yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Builder builderForValue) {
+        if (analyzeRequestBodyBuilder_ == null) {
+          analyzeRequestBody_ = builderForValue.build();
+          onChanged();
+        } else {
+          analyzeRequestBodyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 13;</code>
+       */
+      public Builder mergeAnalyzeRequestBody(yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody value) {
+        if (analyzeRequestBodyBuilder_ == null) {
+          if (analyzeRequestBody_ != null) {
+            analyzeRequestBody_ =
+              yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.newBuilder(analyzeRequestBody_).mergeFrom(value).buildPartial();
+          } else {
+            analyzeRequestBody_ = value;
+          }
+          onChanged();
+        } else {
+          analyzeRequestBodyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 13;</code>
+       */
+      public Builder clearAnalyzeRequestBody() {
+        if (analyzeRequestBodyBuilder_ == null) {
+          analyzeRequestBody_ = null;
+          onChanged();
+        } else {
+          analyzeRequestBody_ = null;
+          analyzeRequestBodyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 13;</code>
+       */
+      public yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Builder getAnalyzeRequestBodyBuilder() {
+        
+        onChanged();
+        return getAnalyzeRequestBodyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 13;</code>
+       */
+      public yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBodyOrBuilder getAnalyzeRequestBodyOrBuilder() {
+        if (analyzeRequestBodyBuilder_ != null) {
+          return analyzeRequestBodyBuilder_.getMessageOrBuilder();
+        } else {
+          return analyzeRequestBody_ == null ?
+              yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.getDefaultInstance() : analyzeRequestBody_;
+        }
+      }
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody, yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Builder, yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBodyOrBuilder> 
+          getAnalyzeRequestBodyFieldBuilder() {
+        if (analyzeRequestBodyBuilder_ == null) {
+          analyzeRequestBodyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody, yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Builder, yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBodyOrBuilder>(
+                  getAnalyzeRequestBody(),
+                  getParentForChildren(),
+                  isClean());
+          analyzeRequestBody_ = null;
+        }
+        return analyzeRequestBodyBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -19275,6 +20327,11 @@ public final class SecurityProfileOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_smartwebsecurity_v1_SecurityProfile_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_smartwebsecurity_v1_SecurityProfile_AnalyzeRequestBody_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_smartwebsecurity_v1_SecurityProfile_AnalyzeRequestBody_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_smartwebsecurity_v1_SecurityProfile_LabelsEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -19361,7 +20418,7 @@ public final class SecurityProfileOuterClass {
       "\n7yandex/cloud/smartwebsecurity/v1/secur" +
       "ity_profile.proto\022 yandex.cloud.smartweb" +
       "security.v1\032\037google/protobuf/timestamp.p" +
-      "roto\032\035yandex/cloud/validation.proto\"\275\005\n\017" +
+      "roto\032\035yandex/cloud/validation.proto\"\212\010\n\017" +
       "SecurityProfile\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id" +
       "\030\002 \001(\t\022\216\001\n\006labels\030\003 \003(\0132=.yandex.cloud.s" +
       "martwebsecurity.v1.SecurityProfile.Label" +
@@ -19376,85 +20433,93 @@ public final class SecurityProfileOuterClass {
       "rityRule\022.\n\ncreated_at\030\010 \001(\0132\032.google.pr" +
       "otobuf.Timestamp\022\020\n\010cloud_id\030\n \001(\t\022\022\n\nca" +
       "ptcha_id\030\013 \001(\t\022(\n advanced_rate_limiter_" +
-      "profile_id\030\014 \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"D\n\rDefaultAction" +
-      "\022\036\n\032DEFAULT_ACTION_UNSPECIFIED\020\000\022\t\n\005ALLO" +
-      "W\020\001\022\010\n\004DENY\020\002J\004\010\t\020\n\"\266\010\n\014SecurityRule\0228\n\004" +
-      "name\030\001 \001(\tB*\350\3071\001\212\3101\0041-50\362\3071\032[a-zA-Z0-9][" +
-      "a-zA-Z0-9-_.]*\022\036\n\010priority\030\002 \001(\003B\014\372\3071\0101-" +
-      "999999\022\017\n\007dry_run\030\003 \001(\010\022V\n\016rule_conditio" +
-      "n\030\004 \001(\0132<.yandex.cloud.smartwebsecurity." +
-      "v1.SecurityRule.RuleConditionH\000\022Z\n\020smart" +
-      "_protection\030\005 \001(\0132>.yandex.cloud.smartwe" +
-      "bsecurity.v1.SecurityRule.SmartProtectio" +
-      "nH\000\022A\n\003waf\030\006 \001(\01322.yandex.cloud.smartweb" +
-      "security.v1.SecurityRule.WafH\000\022\036\n\013descri" +
-      "ption\030\007 \001(\tB\t\212\3101\005<=512\032\333\001\n\rRuleCondition" +
-      "\022S\n\006action\030\001 \001(\0162C.yandex.cloud.smartweb" +
-      "security.v1.SecurityRule.RuleCondition.A" +
-      "ction\022>\n\tcondition\030\002 \001(\0132+.yandex.cloud." +
-      "smartwebsecurity.v1.Condition\"5\n\006Action\022" +
-      "\026\n\022ACTION_UNSPECIFIED\020\000\022\t\n\005ALLOW\020\001\022\010\n\004DE" +
-      "NY\020\002\032\325\001\n\017SmartProtection\022Q\n\004mode\030\001 \001(\0162C" +
-      ".yandex.cloud.smartwebsecurity.v1.Securi" +
-      "tyRule.SmartProtection.Mode\022>\n\tcondition" +
-      "\030\002 \001(\0132+.yandex.cloud.smartwebsecurity.v" +
-      "1.Condition\"/\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020" +
-      "\000\022\010\n\004FULL\020\001\022\007\n\003API\020\002\032\333\001\n\003Waf\022E\n\004mode\030\001 \001" +
-      "(\01627.yandex.cloud.smartwebsecurity.v1.Se" +
-      "curityRule.Waf.Mode\022>\n\tcondition\030\002 \001(\0132+" +
-      ".yandex.cloud.smartwebsecurity.v1.Condit" +
-      "ion\022\034\n\016waf_profile_id\030\003 \001(\tB\004\350\3071\001\"/\n\004Mod" +
-      "e\022\024\n\020MODE_UNSPECIFIED\020\000\022\010\n\004FULL\020\001\022\007\n\003API" +
-      "\020\002B\020\n\016rule_specifier\"\371\r\n\tCondition\022O\n\tau" +
-      "thority\030\001 \001(\0132<.yandex.cloud.smartwebsec" +
-      "urity.v1.Condition.AuthorityMatcher\022R\n\013h" +
-      "ttp_method\030\002 \001(\0132=.yandex.cloud.smartweb" +
-      "security.v1.Condition.HttpMethodMatcher\022" +
-      "R\n\013request_uri\030\003 \001(\0132=.yandex.cloud.smar" +
-      "twebsecurity.v1.Condition.RequestUriMatc" +
-      "her\022T\n\007headers\030\004 \003(\01329.yandex.cloud.smar" +
-      "twebsecurity.v1.Condition.HeaderMatcherB" +
-      "\010\202\3101\004<=20\022H\n\tsource_ip\030\005 \001(\01325.yandex.cl" +
-      "oud.smartwebsecurity.v1.Condition.IpMatc" +
-      "her\032\374\001\n\rStringMatcher\022 \n\013exact_match\030\001 \001" +
-      "(\tB\t\212\3101\0050-255H\000\022$\n\017exact_not_match\030\002 \001(\t" +
-      "B\t\212\3101\0050-255H\000\022!\n\014prefix_match\030\003 \001(\tB\t\212\3101" +
-      "\0050-255H\000\022%\n\020prefix_not_match\030\004 \001(\tB\t\212\3101\005" +
-      "0-255H\000\022%\n\020pire_regex_match\030\005 \001(\tB\t\212\3101\0050" +
-      "-255H\000\022)\n\024pire_regex_not_match\030\006 \001(\tB\t\212\310" +
-      "1\0050-255H\000B\007\n\005match\032n\n\021HttpMethodMatcher\022" +
-      "Y\n\014http_methods\030\001 \003(\01329.yandex.cloud.sma" +
-      "rtwebsecurity.v1.Condition.StringMatcher" +
-      "B\010\202\3101\004<=20\032l\n\020AuthorityMatcher\022X\n\013author" +
-      "ities\030\001 \003(\01329.yandex.cloud.smartwebsecur" +
-      "ity.v1.Condition.StringMatcherB\010\202\3101\004<=20" +
-      "\032\261\001\n\021RequestUriMatcher\022G\n\004path\030\001 \001(\01329.y" +
-      "andex.cloud.smartwebsecurity.v1.Conditio" +
-      "n.StringMatcher\022S\n\007queries\030\002 \003(\01328.yande" +
-      "x.cloud.smartwebsecurity.v1.Condition.Qu" +
-      "eryMatcherB\010\202\3101\004<=20\032z\n\014QueryMatcher\022\032\n\003" +
-      "key\030\001 \001(\tB\r\350\3071\001\212\3101\0051-255\022N\n\005value\030\002 \001(\0132" +
-      "9.yandex.cloud.smartwebsecurity.v1.Condi" +
-      "tion.StringMatcherB\004\350\3071\001\032|\n\rHeaderMatche" +
-      "r\022\033\n\004name\030\001 \001(\tB\r\350\3071\001\212\3101\0051-255\022N\n\005value\030" +
-      "\002 \001(\01329.yandex.cloud.smartwebsecurity.v1" +
-      ".Condition.StringMatcherB\004\350\3071\001\032\337\002\n\tIpMat" +
-      "cher\022T\n\017ip_ranges_match\030\001 \001(\0132;.yandex.c" +
-      "loud.smartwebsecurity.v1.Condition.IpRan" +
-      "gesMatcher\022X\n\023ip_ranges_not_match\030\002 \001(\0132" +
-      ";.yandex.cloud.smartwebsecurity.v1.Condi" +
-      "tion.IpRangesMatcher\022N\n\014geo_ip_match\030\003 \001" +
-      "(\01328.yandex.cloud.smartwebsecurity.v1.Co" +
-      "ndition.GeoIpMatcher\022R\n\020geo_ip_not_match" +
-      "\030\004 \001(\01328.yandex.cloud.smartwebsecurity.v" +
-      "1.Condition.GeoIpMatcher\0321\n\017IpRangesMatc" +
-      "her\022\036\n\tip_ranges\030\001 \003(\tB\013\202\3101\007<=10000\0323\n\014G" +
-      "eoIpMatcher\022#\n\tlocations\030\001 \003(\tB\020\202\3101\003>=1\220" +
-      "\3101\001\212\3101\0012B}\n$yandex.cloud.api.smartwebsec" +
-      "urity.v1ZUgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/smartwebsecurity/v1;s" +
-      "martwebsecurityb\006proto3"
+      "profile_id\030\014 \001(\t\022b\n\024analyze_request_body" +
+      "\030\r \001(\0132D.yandex.cloud.smartwebsecurity.v" +
+      "1.SecurityProfile.AnalyzeRequestBody\032\346\001\n" +
+      "\022AnalyzeRequestBody\0220\n\nsize_limit\030\001 \001(\003B" +
+      "\034\372\3071\0300,8,16,32,64,128,256,512\022f\n\021size_li" +
+      "mit_action\030\002 \001(\0162K.yandex.cloud.smartweb" +
+      "security.v1.SecurityProfile.AnalyzeReque" +
+      "stBody.Action\"6\n\006Action\022\026\n\022ACTION_UNSPEC" +
+      "IFIED\020\000\022\n\n\006IGNORE\020\001\022\010\n\004DENY\020\002\032-\n\013LabelsE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"D\n\r" +
+      "DefaultAction\022\036\n\032DEFAULT_ACTION_UNSPECIF" +
+      "IED\020\000\022\t\n\005ALLOW\020\001\022\010\n\004DENY\020\002J\004\010\t\020\n\"\266\010\n\014Sec" +
+      "urityRule\0228\n\004name\030\001 \001(\tB*\350\3071\001\212\3101\0041-50\362\3071" +
+      "\032[a-zA-Z0-9][a-zA-Z0-9-_.]*\022\036\n\010priority\030" +
+      "\002 \001(\003B\014\372\3071\0101-999999\022\017\n\007dry_run\030\003 \001(\010\022V\n\016" +
+      "rule_condition\030\004 \001(\0132<.yandex.cloud.smar" +
+      "twebsecurity.v1.SecurityRule.RuleConditi" +
+      "onH\000\022Z\n\020smart_protection\030\005 \001(\0132>.yandex." +
+      "cloud.smartwebsecurity.v1.SecurityRule.S" +
+      "martProtectionH\000\022A\n\003waf\030\006 \001(\01322.yandex.c" +
+      "loud.smartwebsecurity.v1.SecurityRule.Wa" +
+      "fH\000\022\036\n\013description\030\007 \001(\tB\t\212\3101\005<=512\032\333\001\n\r" +
+      "RuleCondition\022S\n\006action\030\001 \001(\0162C.yandex.c" +
+      "loud.smartwebsecurity.v1.SecurityRule.Ru" +
+      "leCondition.Action\022>\n\tcondition\030\002 \001(\0132+." +
+      "yandex.cloud.smartwebsecurity.v1.Conditi" +
+      "on\"5\n\006Action\022\026\n\022ACTION_UNSPECIFIED\020\000\022\t\n\005" +
+      "ALLOW\020\001\022\010\n\004DENY\020\002\032\325\001\n\017SmartProtection\022Q\n" +
+      "\004mode\030\001 \001(\0162C.yandex.cloud.smartwebsecur" +
+      "ity.v1.SecurityRule.SmartProtection.Mode" +
+      "\022>\n\tcondition\030\002 \001(\0132+.yandex.cloud.smart" +
+      "websecurity.v1.Condition\"/\n\004Mode\022\024\n\020MODE" +
+      "_UNSPECIFIED\020\000\022\010\n\004FULL\020\001\022\007\n\003API\020\002\032\333\001\n\003Wa" +
+      "f\022E\n\004mode\030\001 \001(\01627.yandex.cloud.smartwebs" +
+      "ecurity.v1.SecurityRule.Waf.Mode\022>\n\tcond" +
+      "ition\030\002 \001(\0132+.yandex.cloud.smartwebsecur" +
+      "ity.v1.Condition\022\034\n\016waf_profile_id\030\003 \001(\t" +
+      "B\004\350\3071\001\"/\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\010\n\004" +
+      "FULL\020\001\022\007\n\003API\020\002B\020\n\016rule_specifier\"\371\r\n\tCo" +
+      "ndition\022O\n\tauthority\030\001 \001(\0132<.yandex.clou" +
+      "d.smartwebsecurity.v1.Condition.Authorit" +
+      "yMatcher\022R\n\013http_method\030\002 \001(\0132=.yandex.c" +
+      "loud.smartwebsecurity.v1.Condition.HttpM" +
+      "ethodMatcher\022R\n\013request_uri\030\003 \001(\0132=.yand" +
+      "ex.cloud.smartwebsecurity.v1.Condition.R" +
+      "equestUriMatcher\022T\n\007headers\030\004 \003(\01329.yand" +
+      "ex.cloud.smartwebsecurity.v1.Condition.H" +
+      "eaderMatcherB\010\202\3101\004<=20\022H\n\tsource_ip\030\005 \001(" +
+      "\01325.yandex.cloud.smartwebsecurity.v1.Con" +
+      "dition.IpMatcher\032\374\001\n\rStringMatcher\022 \n\013ex" +
+      "act_match\030\001 \001(\tB\t\212\3101\0050-255H\000\022$\n\017exact_no" +
+      "t_match\030\002 \001(\tB\t\212\3101\0050-255H\000\022!\n\014prefix_mat" +
+      "ch\030\003 \001(\tB\t\212\3101\0050-255H\000\022%\n\020prefix_not_matc" +
+      "h\030\004 \001(\tB\t\212\3101\0050-255H\000\022%\n\020pire_regex_match" +
+      "\030\005 \001(\tB\t\212\3101\0050-255H\000\022)\n\024pire_regex_not_ma" +
+      "tch\030\006 \001(\tB\t\212\3101\0050-255H\000B\007\n\005match\032n\n\021HttpM" +
+      "ethodMatcher\022Y\n\014http_methods\030\001 \003(\01329.yan" +
+      "dex.cloud.smartwebsecurity.v1.Condition." +
+      "StringMatcherB\010\202\3101\004<=20\032l\n\020AuthorityMatc" +
+      "her\022X\n\013authorities\030\001 \003(\01329.yandex.cloud." +
+      "smartwebsecurity.v1.Condition.StringMatc" +
+      "herB\010\202\3101\004<=20\032\261\001\n\021RequestUriMatcher\022G\n\004p" +
+      "ath\030\001 \001(\01329.yandex.cloud.smartwebsecurit" +
+      "y.v1.Condition.StringMatcher\022S\n\007queries\030" +
+      "\002 \003(\01328.yandex.cloud.smartwebsecurity.v1" +
+      ".Condition.QueryMatcherB\010\202\3101\004<=20\032z\n\014Que" +
+      "ryMatcher\022\032\n\003key\030\001 \001(\tB\r\350\3071\001\212\3101\0051-255\022N\n" +
+      "\005value\030\002 \001(\01329.yandex.cloud.smartwebsecu" +
+      "rity.v1.Condition.StringMatcherB\004\350\3071\001\032|\n" +
+      "\rHeaderMatcher\022\033\n\004name\030\001 \001(\tB\r\350\3071\001\212\3101\0051-" +
+      "255\022N\n\005value\030\002 \001(\01329.yandex.cloud.smartw" +
+      "ebsecurity.v1.Condition.StringMatcherB\004\350" +
+      "\3071\001\032\337\002\n\tIpMatcher\022T\n\017ip_ranges_match\030\001 \001" +
+      "(\0132;.yandex.cloud.smartwebsecurity.v1.Co" +
+      "ndition.IpRangesMatcher\022X\n\023ip_ranges_not" +
+      "_match\030\002 \001(\0132;.yandex.cloud.smartwebsecu" +
+      "rity.v1.Condition.IpRangesMatcher\022N\n\014geo" +
+      "_ip_match\030\003 \001(\01328.yandex.cloud.smartwebs" +
+      "ecurity.v1.Condition.GeoIpMatcher\022R\n\020geo" +
+      "_ip_not_match\030\004 \001(\01328.yandex.cloud.smart" +
+      "websecurity.v1.Condition.GeoIpMatcher\0321\n" +
+      "\017IpRangesMatcher\022\036\n\tip_ranges\030\001 \003(\tB\013\202\3101" +
+      "\007<=10000\0323\n\014GeoIpMatcher\022#\n\tlocations\030\001 " +
+      "\003(\tB\020\202\3101\003>=1\220\3101\001\212\3101\0012B}\n$yandex.cloud.ap" +
+      "i.smartwebsecurity.v1ZUgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/smartweb" +
+      "security/v1;smartwebsecurityb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -19467,9 +20532,15 @@ public final class SecurityProfileOuterClass {
     internal_static_yandex_cloud_smartwebsecurity_v1_SecurityProfile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_smartwebsecurity_v1_SecurityProfile_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "Labels", "Name", "Description", "DefaultAction", "SecurityRules", "CreatedAt", "CloudId", "CaptchaId", "AdvancedRateLimiterProfileId", });
-    internal_static_yandex_cloud_smartwebsecurity_v1_SecurityProfile_LabelsEntry_descriptor =
+        new java.lang.String[] { "Id", "FolderId", "Labels", "Name", "Description", "DefaultAction", "SecurityRules", "CreatedAt", "CloudId", "CaptchaId", "AdvancedRateLimiterProfileId", "AnalyzeRequestBody", });
+    internal_static_yandex_cloud_smartwebsecurity_v1_SecurityProfile_AnalyzeRequestBody_descriptor =
       internal_static_yandex_cloud_smartwebsecurity_v1_SecurityProfile_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_smartwebsecurity_v1_SecurityProfile_AnalyzeRequestBody_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_smartwebsecurity_v1_SecurityProfile_AnalyzeRequestBody_descriptor,
+        new java.lang.String[] { "SizeLimit", "SizeLimitAction", });
+    internal_static_yandex_cloud_smartwebsecurity_v1_SecurityProfile_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_smartwebsecurity_v1_SecurityProfile_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_smartwebsecurity_v1_SecurityProfile_LabelsEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_smartwebsecurity_v1_SecurityProfile_LabelsEntry_descriptor,

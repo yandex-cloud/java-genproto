@@ -20,7 +20,7 @@ public final class TextClassificationServiceOuterClass {
 
     /**
      * <pre>
-     * The identifier of the classification model.
+     * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model. 
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -29,7 +29,7 @@ public final class TextClassificationServiceOuterClass {
     java.lang.String getModelUri();
     /**
      * <pre>
-     * The identifier of the classification model.
+     * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model. 
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -60,7 +60,10 @@ public final class TextClassificationServiceOuterClass {
   }
   /**
    * <pre>
-   * Request for the service to classify text.
+   * Request for the service to classify text with tuned model.
+   * The names of the classes between which the model will be distributing requests must be specified during model tuning; 
+   * therefore, they are not provided in the request.
+   * For examples of usage, see [step-by-step guides](/docs/operations/classifier/additionally-trained).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.text_classification.TextClassificationRequest}
@@ -157,7 +160,7 @@ public final class TextClassificationServiceOuterClass {
     private volatile java.lang.Object modelUri_;
     /**
      * <pre>
-     * The identifier of the classification model.
+     * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model. 
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -178,7 +181,7 @@ public final class TextClassificationServiceOuterClass {
     }
     /**
      * <pre>
-     * The identifier of the classification model.
+     * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model. 
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -411,7 +414,10 @@ public final class TextClassificationServiceOuterClass {
     }
     /**
      * <pre>
-     * Request for the service to classify text.
+     * Request for the service to classify text with tuned model.
+     * The names of the classes between which the model will be distributing requests must be specified during model tuning; 
+     * therefore, they are not provided in the request.
+     * For examples of usage, see [step-by-step guides](/docs/operations/classifier/additionally-trained).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.text_classification.TextClassificationRequest}
@@ -571,7 +577,7 @@ public final class TextClassificationServiceOuterClass {
       private java.lang.Object modelUri_ = "";
       /**
        * <pre>
-       * The identifier of the classification model.
+       * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model. 
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -591,7 +597,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The identifier of the classification model.
+       * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model. 
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -612,7 +618,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The identifier of the classification model.
+       * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model. 
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -631,7 +637,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The identifier of the classification model.
+       * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model. 
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -645,7 +651,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The identifier of the classification model.
+       * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model. 
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -818,7 +824,8 @@ public final class TextClassificationServiceOuterClass {
 
     /**
      * <pre>
-     * Result of classification - a list of label-confidence pairs.
+     * The classification results with the `confidence`` values 
+     * for the probability of classifying the request text into each class.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -827,7 +834,8 @@ public final class TextClassificationServiceOuterClass {
         getPredictionsList();
     /**
      * <pre>
-     * Result of classification - a list of label-confidence pairs.
+     * The classification results with the `confidence`` values 
+     * for the probability of classifying the request text into each class.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -835,7 +843,8 @@ public final class TextClassificationServiceOuterClass {
     yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel getPredictions(int index);
     /**
      * <pre>
-     * Result of classification - a list of label-confidence pairs.
+     * The classification results with the `confidence`` values 
+     * for the probability of classifying the request text into each class.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -843,7 +852,8 @@ public final class TextClassificationServiceOuterClass {
     int getPredictionsCount();
     /**
      * <pre>
-     * Result of classification - a list of label-confidence pairs.
+     * The classification results with the `confidence`` values 
+     * for the probability of classifying the request text into each class.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -852,7 +862,8 @@ public final class TextClassificationServiceOuterClass {
         getPredictionsOrBuilderList();
     /**
      * <pre>
-     * Result of classification - a list of label-confidence pairs.
+     * The classification results with the `confidence`` values 
+     * for the probability of classifying the request text into each class.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -862,7 +873,7 @@ public final class TextClassificationServiceOuterClass {
 
     /**
      * <pre>
-     * Model version (changes with model releases).
+     * The model version changes with each new releases.
      * </pre>
      *
      * <code>string model_version = 2;</code>
@@ -871,7 +882,7 @@ public final class TextClassificationServiceOuterClass {
     java.lang.String getModelVersion();
     /**
      * <pre>
-     * Model version (changes with model releases).
+     * The model version changes with each new releases.
      * </pre>
      *
      * <code>string model_version = 2;</code>
@@ -882,7 +893,7 @@ public final class TextClassificationServiceOuterClass {
   }
   /**
    * <pre>
-   * Response containing classifier predictions.
+   * Response with classifier predictions.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.text_classification.TextClassificationResponse}
@@ -986,7 +997,8 @@ public final class TextClassificationServiceOuterClass {
     private java.util.List<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel> predictions_;
     /**
      * <pre>
-     * Result of classification - a list of label-confidence pairs.
+     * The classification results with the `confidence`` values 
+     * for the probability of classifying the request text into each class.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -997,7 +1009,8 @@ public final class TextClassificationServiceOuterClass {
     }
     /**
      * <pre>
-     * Result of classification - a list of label-confidence pairs.
+     * The classification results with the `confidence`` values 
+     * for the probability of classifying the request text into each class.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -1009,7 +1022,8 @@ public final class TextClassificationServiceOuterClass {
     }
     /**
      * <pre>
-     * Result of classification - a list of label-confidence pairs.
+     * The classification results with the `confidence`` values 
+     * for the probability of classifying the request text into each class.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -1020,7 +1034,8 @@ public final class TextClassificationServiceOuterClass {
     }
     /**
      * <pre>
-     * Result of classification - a list of label-confidence pairs.
+     * The classification results with the `confidence`` values 
+     * for the probability of classifying the request text into each class.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -1031,7 +1046,8 @@ public final class TextClassificationServiceOuterClass {
     }
     /**
      * <pre>
-     * Result of classification - a list of label-confidence pairs.
+     * The classification results with the `confidence`` values 
+     * for the probability of classifying the request text into each class.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -1046,7 +1062,7 @@ public final class TextClassificationServiceOuterClass {
     private volatile java.lang.Object modelVersion_;
     /**
      * <pre>
-     * Model version (changes with model releases).
+     * The model version changes with each new releases.
      * </pre>
      *
      * <code>string model_version = 2;</code>
@@ -1067,7 +1083,7 @@ public final class TextClassificationServiceOuterClass {
     }
     /**
      * <pre>
-     * Model version (changes with model releases).
+     * The model version changes with each new releases.
      * </pre>
      *
      * <code>string model_version = 2;</code>
@@ -1257,7 +1273,7 @@ public final class TextClassificationServiceOuterClass {
     }
     /**
      * <pre>
-     * Response containing classifier predictions.
+     * Response with classifier predictions.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.text_classification.TextClassificationResponse}
@@ -1465,7 +1481,8 @@ public final class TextClassificationServiceOuterClass {
 
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -1479,7 +1496,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -1493,7 +1511,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -1507,7 +1526,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -1528,7 +1548,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -1546,7 +1567,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -1566,7 +1588,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -1587,7 +1610,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -1605,7 +1629,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -1623,7 +1648,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -1642,7 +1668,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -1659,7 +1686,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -1676,7 +1704,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -1687,7 +1716,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -1701,7 +1731,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -1716,7 +1747,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -1727,7 +1759,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -1739,7 +1772,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -1766,7 +1800,7 @@ public final class TextClassificationServiceOuterClass {
       private java.lang.Object modelVersion_ = "";
       /**
        * <pre>
-       * Model version (changes with model releases).
+       * The model version changes with each new releases.
        * </pre>
        *
        * <code>string model_version = 2;</code>
@@ -1786,7 +1820,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Model version (changes with model releases).
+       * The model version changes with each new releases.
        * </pre>
        *
        * <code>string model_version = 2;</code>
@@ -1807,7 +1841,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Model version (changes with model releases).
+       * The model version changes with each new releases.
        * </pre>
        *
        * <code>string model_version = 2;</code>
@@ -1826,7 +1860,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Model version (changes with model releases).
+       * The model version changes with each new releases.
        * </pre>
        *
        * <code>string model_version = 2;</code>
@@ -1840,7 +1874,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Model version (changes with model releases).
+       * The model version changes with each new releases.
        * </pre>
        *
        * <code>string model_version = 2;</code>
@@ -1917,7 +1951,7 @@ public final class TextClassificationServiceOuterClass {
 
     /**
      * <pre>
-     * The identifier of the classification model.
+     * The [URI](/docs/foundation-models/concepts/classifier/models) of the classifier model.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -1926,7 +1960,7 @@ public final class TextClassificationServiceOuterClass {
     java.lang.String getModelUri();
     /**
      * <pre>
-     * The identifier of the classification model.
+     * The [URI](/docs/foundation-models/concepts/classifier/models) of the classifier model.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -1958,6 +1992,8 @@ public final class TextClassificationServiceOuterClass {
     /**
      * <pre>
      * List of available labels for the classification result.
+     * Give meaningful names to label classes: this is essential for correct classification results. 
+     * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
      * </pre>
      *
      * <code>repeated string labels = 3;</code>
@@ -1968,6 +2004,8 @@ public final class TextClassificationServiceOuterClass {
     /**
      * <pre>
      * List of available labels for the classification result.
+     * Give meaningful names to label classes: this is essential for correct classification results. 
+     * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
      * </pre>
      *
      * <code>repeated string labels = 3;</code>
@@ -1977,6 +2015,8 @@ public final class TextClassificationServiceOuterClass {
     /**
      * <pre>
      * List of available labels for the classification result.
+     * Give meaningful names to label classes: this is essential for correct classification results. 
+     * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
      * </pre>
      *
      * <code>repeated string labels = 3;</code>
@@ -1987,6 +2027,8 @@ public final class TextClassificationServiceOuterClass {
     /**
      * <pre>
      * List of available labels for the classification result.
+     * Give meaningful names to label classes: this is essential for correct classification results. 
+     * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
      * </pre>
      *
      * <code>repeated string labels = 3;</code>
@@ -2063,6 +2105,7 @@ public final class TextClassificationServiceOuterClass {
   /**
    * <pre>
    * Request for the service to classify text.
+   * For examples of usage, see [step-by-step guides](/docs/operations/classifier/readymade).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.text_classification.FewShotTextClassificationRequest}
@@ -2193,7 +2236,7 @@ public final class TextClassificationServiceOuterClass {
     private volatile java.lang.Object modelUri_;
     /**
      * <pre>
-     * The identifier of the classification model.
+     * The [URI](/docs/foundation-models/concepts/classifier/models) of the classifier model.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -2214,7 +2257,7 @@ public final class TextClassificationServiceOuterClass {
     }
     /**
      * <pre>
-     * The identifier of the classification model.
+     * The [URI](/docs/foundation-models/concepts/classifier/models) of the classifier model.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -2286,6 +2329,8 @@ public final class TextClassificationServiceOuterClass {
     /**
      * <pre>
      * List of available labels for the classification result.
+     * Give meaningful names to label classes: this is essential for correct classification results. 
+     * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
      * </pre>
      *
      * <code>repeated string labels = 3;</code>
@@ -2298,6 +2343,8 @@ public final class TextClassificationServiceOuterClass {
     /**
      * <pre>
      * List of available labels for the classification result.
+     * Give meaningful names to label classes: this is essential for correct classification results. 
+     * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
      * </pre>
      *
      * <code>repeated string labels = 3;</code>
@@ -2309,6 +2356,8 @@ public final class TextClassificationServiceOuterClass {
     /**
      * <pre>
      * List of available labels for the classification result.
+     * Give meaningful names to label classes: this is essential for correct classification results. 
+     * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
      * </pre>
      *
      * <code>repeated string labels = 3;</code>
@@ -2321,6 +2370,8 @@ public final class TextClassificationServiceOuterClass {
     /**
      * <pre>
      * List of available labels for the classification result.
+     * Give meaningful names to label classes: this is essential for correct classification results. 
+     * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
      * </pre>
      *
      * <code>repeated string labels = 3;</code>
@@ -2645,6 +2696,7 @@ public final class TextClassificationServiceOuterClass {
     /**
      * <pre>
      * Request for the service to classify text.
+     * For examples of usage, see [step-by-step guides](/docs/operations/classifier/readymade).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.text_classification.FewShotTextClassificationRequest}
@@ -2872,7 +2924,7 @@ public final class TextClassificationServiceOuterClass {
       private java.lang.Object modelUri_ = "";
       /**
        * <pre>
-       * The identifier of the classification model.
+       * The [URI](/docs/foundation-models/concepts/classifier/models) of the classifier model.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -2892,7 +2944,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The identifier of the classification model.
+       * The [URI](/docs/foundation-models/concepts/classifier/models) of the classifier model.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -2913,7 +2965,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The identifier of the classification model.
+       * The [URI](/docs/foundation-models/concepts/classifier/models) of the classifier model.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -2932,7 +2984,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The identifier of the classification model.
+       * The [URI](/docs/foundation-models/concepts/classifier/models) of the classifier model.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -2946,7 +2998,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The identifier of the classification model.
+       * The [URI](/docs/foundation-models/concepts/classifier/models) of the classifier model.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -3071,6 +3123,8 @@ public final class TextClassificationServiceOuterClass {
       /**
        * <pre>
        * List of available labels for the classification result.
+       * Give meaningful names to label classes: this is essential for correct classification results. 
+       * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
        * </pre>
        *
        * <code>repeated string labels = 3;</code>
@@ -3083,6 +3137,8 @@ public final class TextClassificationServiceOuterClass {
       /**
        * <pre>
        * List of available labels for the classification result.
+       * Give meaningful names to label classes: this is essential for correct classification results. 
+       * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
        * </pre>
        *
        * <code>repeated string labels = 3;</code>
@@ -3094,6 +3150,8 @@ public final class TextClassificationServiceOuterClass {
       /**
        * <pre>
        * List of available labels for the classification result.
+       * Give meaningful names to label classes: this is essential for correct classification results. 
+       * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
        * </pre>
        *
        * <code>repeated string labels = 3;</code>
@@ -3106,6 +3164,8 @@ public final class TextClassificationServiceOuterClass {
       /**
        * <pre>
        * List of available labels for the classification result.
+       * Give meaningful names to label classes: this is essential for correct classification results. 
+       * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
        * </pre>
        *
        * <code>repeated string labels = 3;</code>
@@ -3119,6 +3179,8 @@ public final class TextClassificationServiceOuterClass {
       /**
        * <pre>
        * List of available labels for the classification result.
+       * Give meaningful names to label classes: this is essential for correct classification results. 
+       * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
        * </pre>
        *
        * <code>repeated string labels = 3;</code>
@@ -3139,6 +3201,8 @@ public final class TextClassificationServiceOuterClass {
       /**
        * <pre>
        * List of available labels for the classification result.
+       * Give meaningful names to label classes: this is essential for correct classification results. 
+       * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
        * </pre>
        *
        * <code>repeated string labels = 3;</code>
@@ -3158,6 +3222,8 @@ public final class TextClassificationServiceOuterClass {
       /**
        * <pre>
        * List of available labels for the classification result.
+       * Give meaningful names to label classes: this is essential for correct classification results. 
+       * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
        * </pre>
        *
        * <code>repeated string labels = 3;</code>
@@ -3175,6 +3241,8 @@ public final class TextClassificationServiceOuterClass {
       /**
        * <pre>
        * List of available labels for the classification result.
+       * Give meaningful names to label classes: this is essential for correct classification results. 
+       * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
        * </pre>
        *
        * <code>repeated string labels = 3;</code>
@@ -3189,6 +3257,8 @@ public final class TextClassificationServiceOuterClass {
       /**
        * <pre>
        * List of available labels for the classification result.
+       * Give meaningful names to label classes: this is essential for correct classification results. 
+       * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
        * </pre>
        *
        * <code>repeated string labels = 3;</code>
@@ -3673,7 +3743,8 @@ public final class TextClassificationServiceOuterClass {
 
     /**
      * <pre>
-     * Result of classification - a list of label-confidence pairs.
+     * The classification results with the `confidence`` values 
+     * for the probability of classifying the request text into each class.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -3682,7 +3753,8 @@ public final class TextClassificationServiceOuterClass {
         getPredictionsList();
     /**
      * <pre>
-     * Result of classification - a list of label-confidence pairs.
+     * The classification results with the `confidence`` values 
+     * for the probability of classifying the request text into each class.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -3690,7 +3762,8 @@ public final class TextClassificationServiceOuterClass {
     yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel getPredictions(int index);
     /**
      * <pre>
-     * Result of classification - a list of label-confidence pairs.
+     * The classification results with the `confidence`` values 
+     * for the probability of classifying the request text into each class.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -3698,7 +3771,8 @@ public final class TextClassificationServiceOuterClass {
     int getPredictionsCount();
     /**
      * <pre>
-     * Result of classification - a list of label-confidence pairs.
+     * The classification results with the `confidence`` values 
+     * for the probability of classifying the request text into each class.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -3707,7 +3781,8 @@ public final class TextClassificationServiceOuterClass {
         getPredictionsOrBuilderList();
     /**
      * <pre>
-     * Result of classification - a list of label-confidence pairs.
+     * The classification results with the `confidence`` values 
+     * for the probability of classifying the request text into each class.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -3717,7 +3792,7 @@ public final class TextClassificationServiceOuterClass {
 
     /**
      * <pre>
-     * Model version (changes with model releases).
+     * The model version changes with each new releases.
      * </pre>
      *
      * <code>string model_version = 2;</code>
@@ -3726,7 +3801,7 @@ public final class TextClassificationServiceOuterClass {
     java.lang.String getModelVersion();
     /**
      * <pre>
-     * Model version (changes with model releases).
+     * The model version changes with each new releases.
      * </pre>
      *
      * <code>string model_version = 2;</code>
@@ -3841,7 +3916,8 @@ public final class TextClassificationServiceOuterClass {
     private java.util.List<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel> predictions_;
     /**
      * <pre>
-     * Result of classification - a list of label-confidence pairs.
+     * The classification results with the `confidence`` values 
+     * for the probability of classifying the request text into each class.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -3852,7 +3928,8 @@ public final class TextClassificationServiceOuterClass {
     }
     /**
      * <pre>
-     * Result of classification - a list of label-confidence pairs.
+     * The classification results with the `confidence`` values 
+     * for the probability of classifying the request text into each class.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -3864,7 +3941,8 @@ public final class TextClassificationServiceOuterClass {
     }
     /**
      * <pre>
-     * Result of classification - a list of label-confidence pairs.
+     * The classification results with the `confidence`` values 
+     * for the probability of classifying the request text into each class.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -3875,7 +3953,8 @@ public final class TextClassificationServiceOuterClass {
     }
     /**
      * <pre>
-     * Result of classification - a list of label-confidence pairs.
+     * The classification results with the `confidence`` values 
+     * for the probability of classifying the request text into each class.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -3886,7 +3965,8 @@ public final class TextClassificationServiceOuterClass {
     }
     /**
      * <pre>
-     * Result of classification - a list of label-confidence pairs.
+     * The classification results with the `confidence`` values 
+     * for the probability of classifying the request text into each class.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -3901,7 +3981,7 @@ public final class TextClassificationServiceOuterClass {
     private volatile java.lang.Object modelVersion_;
     /**
      * <pre>
-     * Model version (changes with model releases).
+     * The model version changes with each new releases.
      * </pre>
      *
      * <code>string model_version = 2;</code>
@@ -3922,7 +4002,7 @@ public final class TextClassificationServiceOuterClass {
     }
     /**
      * <pre>
-     * Model version (changes with model releases).
+     * The model version changes with each new releases.
      * </pre>
      *
      * <code>string model_version = 2;</code>
@@ -4320,7 +4400,8 @@ public final class TextClassificationServiceOuterClass {
 
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -4334,7 +4415,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -4348,7 +4430,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -4362,7 +4445,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -4383,7 +4467,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -4401,7 +4486,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -4421,7 +4507,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -4442,7 +4529,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -4460,7 +4548,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -4478,7 +4567,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -4497,7 +4587,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -4514,7 +4605,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -4531,7 +4623,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -4542,7 +4635,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -4556,7 +4650,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -4571,7 +4666,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -4582,7 +4678,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -4594,7 +4691,8 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of classification - a list of label-confidence pairs.
+       * The classification results with the `confidence`` values 
+       * for the probability of classifying the request text into each class.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
@@ -4621,7 +4719,7 @@ public final class TextClassificationServiceOuterClass {
       private java.lang.Object modelVersion_ = "";
       /**
        * <pre>
-       * Model version (changes with model releases).
+       * The model version changes with each new releases.
        * </pre>
        *
        * <code>string model_version = 2;</code>
@@ -4641,7 +4739,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Model version (changes with model releases).
+       * The model version changes with each new releases.
        * </pre>
        *
        * <code>string model_version = 2;</code>
@@ -4662,7 +4760,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Model version (changes with model releases).
+       * The model version changes with each new releases.
        * </pre>
        *
        * <code>string model_version = 2;</code>
@@ -4681,7 +4779,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Model version (changes with model releases).
+       * The model version changes with each new releases.
        * </pre>
        *
        * <code>string model_version = 2;</code>
@@ -4695,7 +4793,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * Model version (changes with model releases).
+       * The model version changes with each new releases.
        * </pre>
        *
        * <code>string model_version = 2;</code>

@@ -2788,6 +2788,33 @@ public final class ContainerOuterClass {
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.MountOrBuilder getMountsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * The container's execution mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 18;</code>
+     * @return Whether the runtime field is set.
+     */
+    boolean hasRuntime();
+    /**
+     * <pre>
+     * The container's execution mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 18;</code>
+     * @return The runtime.
+     */
+    yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime getRuntime();
+    /**
+     * <pre>
+     * The container's execution mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 18;</code>
+     */
+    yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.RuntimeOrBuilder getRuntimeOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.containers.v1.Revision}
@@ -3007,6 +3034,19 @@ public final class ContainerOuterClass {
               }
               mounts_.add(
                   input.readMessage(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Mount.parser(), extensionRegistry));
+              break;
+            }
+            case 146: {
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Builder subBuilder = null;
+              if (runtime_ != null) {
+                subBuilder = runtime_.toBuilder();
+              }
+              runtime_ = input.readMessage(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(runtime_);
+                runtime_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -3916,6 +3956,44 @@ public final class ContainerOuterClass {
       return mounts_.get(index);
     }
 
+    public static final int RUNTIME_FIELD_NUMBER = 18;
+    private yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime runtime_;
+    /**
+     * <pre>
+     * The container's execution mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 18;</code>
+     * @return Whether the runtime field is set.
+     */
+    @java.lang.Override
+    public boolean hasRuntime() {
+      return runtime_ != null;
+    }
+    /**
+     * <pre>
+     * The container's execution mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 18;</code>
+     * @return The runtime.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime getRuntime() {
+      return runtime_ == null ? yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.getDefaultInstance() : runtime_;
+    }
+    /**
+     * <pre>
+     * The container's execution mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 18;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.RuntimeOrBuilder getRuntimeOrBuilder() {
+      return getRuntime();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3980,6 +4058,9 @@ public final class ContainerOuterClass {
       }
       for (int i = 0; i < mounts_.size(); i++) {
         output.writeMessage(17, mounts_.get(i));
+      }
+      if (runtime_ != null) {
+        output.writeMessage(18, getRuntime());
       }
       unknownFields.writeTo(output);
     }
@@ -4054,6 +4135,10 @@ public final class ContainerOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(17, mounts_.get(i));
       }
+      if (runtime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(18, getRuntime());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4126,6 +4211,11 @@ public final class ContainerOuterClass {
           .equals(other.getStorageMountsList())) return false;
       if (!getMountsList()
           .equals(other.getMountsList())) return false;
+      if (hasRuntime() != other.hasRuntime()) return false;
+      if (hasRuntime()) {
+        if (!getRuntime()
+            .equals(other.getRuntime())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4193,6 +4283,10 @@ public final class ContainerOuterClass {
       if (getMountsCount() > 0) {
         hash = (37 * hash) + MOUNTS_FIELD_NUMBER;
         hash = (53 * hash) + getMountsList().hashCode();
+      }
+      if (hasRuntime()) {
+        hash = (37 * hash) + RUNTIME_FIELD_NUMBER;
+        hash = (53 * hash) + getRuntime().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4408,6 +4502,12 @@ public final class ContainerOuterClass {
         } else {
           mountsBuilder_.clear();
         }
+        if (runtimeBuilder_ == null) {
+          runtime_ = null;
+        } else {
+          runtime_ = null;
+          runtimeBuilder_ = null;
+        }
         return this;
       }
 
@@ -4507,6 +4607,11 @@ public final class ContainerOuterClass {
           result.mounts_ = mounts_;
         } else {
           result.mounts_ = mountsBuilder_.build();
+        }
+        if (runtimeBuilder_ == null) {
+          result.runtime_ = runtime_;
+        } else {
+          result.runtime_ = runtimeBuilder_.build();
         }
         onBuilt();
         return result;
@@ -4679,6 +4784,9 @@ public final class ContainerOuterClass {
               mountsBuilder_.addAllMessages(other.mounts_);
             }
           }
+        }
+        if (other.hasRuntime()) {
+          mergeRuntime(other.getRuntime());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7403,6 +7511,161 @@ public final class ContainerOuterClass {
           mounts_ = null;
         }
         return mountsBuilder_;
+      }
+
+      private yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime runtime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.RuntimeOrBuilder> runtimeBuilder_;
+      /**
+       * <pre>
+       * The container's execution mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 18;</code>
+       * @return Whether the runtime field is set.
+       */
+      public boolean hasRuntime() {
+        return runtimeBuilder_ != null || runtime_ != null;
+      }
+      /**
+       * <pre>
+       * The container's execution mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 18;</code>
+       * @return The runtime.
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime getRuntime() {
+        if (runtimeBuilder_ == null) {
+          return runtime_ == null ? yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.getDefaultInstance() : runtime_;
+        } else {
+          return runtimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The container's execution mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 18;</code>
+       */
+      public Builder setRuntime(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime value) {
+        if (runtimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          runtime_ = value;
+          onChanged();
+        } else {
+          runtimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The container's execution mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 18;</code>
+       */
+      public Builder setRuntime(
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Builder builderForValue) {
+        if (runtimeBuilder_ == null) {
+          runtime_ = builderForValue.build();
+          onChanged();
+        } else {
+          runtimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The container's execution mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 18;</code>
+       */
+      public Builder mergeRuntime(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime value) {
+        if (runtimeBuilder_ == null) {
+          if (runtime_ != null) {
+            runtime_ =
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.newBuilder(runtime_).mergeFrom(value).buildPartial();
+          } else {
+            runtime_ = value;
+          }
+          onChanged();
+        } else {
+          runtimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The container's execution mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 18;</code>
+       */
+      public Builder clearRuntime() {
+        if (runtimeBuilder_ == null) {
+          runtime_ = null;
+          onChanged();
+        } else {
+          runtime_ = null;
+          runtimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The container's execution mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 18;</code>
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Builder getRuntimeBuilder() {
+        
+        onChanged();
+        return getRuntimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The container's execution mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 18;</code>
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.RuntimeOrBuilder getRuntimeOrBuilder() {
+        if (runtimeBuilder_ != null) {
+          return runtimeBuilder_.getMessageOrBuilder();
+        } else {
+          return runtime_ == null ?
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.getDefaultInstance() : runtime_;
+        }
+      }
+      /**
+       * <pre>
+       * The container's execution mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 18;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.RuntimeOrBuilder> 
+          getRuntimeFieldBuilder() {
+        if (runtimeBuilder_ == null) {
+          runtimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.RuntimeOrBuilder>(
+                  getRuntime(),
+                  getParentForChildren(),
+                  isClean());
+          runtime_ = null;
+        }
+        return runtimeBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -20129,6 +20392,1917 @@ public final class ContainerOuterClass {
 
   }
 
+  public interface RuntimeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.containers.v1.Runtime)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The classic one. You need to run an HTTP server inside the container.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.Runtime.Http http = 1;</code>
+     * @return Whether the http field is set.
+     */
+    boolean hasHttp();
+    /**
+     * <pre>
+     * The classic one. You need to run an HTTP server inside the container.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.Runtime.Http http = 1;</code>
+     * @return The http.
+     */
+    yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http getHttp();
+    /**
+     * <pre>
+     * The classic one. You need to run an HTTP server inside the container.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.Runtime.Http http = 1;</code>
+     */
+    yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.HttpOrBuilder getHttpOrBuilder();
+
+    /**
+     * <pre>
+     * We run a process from ENTRYPOINT inside the container for each user request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.Runtime.Task task = 2;</code>
+     * @return Whether the task field is set.
+     */
+    boolean hasTask();
+    /**
+     * <pre>
+     * We run a process from ENTRYPOINT inside the container for each user request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.Runtime.Task task = 2;</code>
+     * @return The task.
+     */
+    yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task getTask();
+    /**
+     * <pre>
+     * We run a process from ENTRYPOINT inside the container for each user request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.Runtime.Task task = 2;</code>
+     */
+    yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.TaskOrBuilder getTaskOrBuilder();
+
+    public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.TypeCase getTypeCase();
+  }
+  /**
+   * <pre>
+   * The container's execution mode
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.serverless.containers.v1.Runtime}
+   */
+  public static final class Runtime extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.containers.v1.Runtime)
+      RuntimeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Runtime.newBuilder() to construct.
+    private Runtime(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Runtime() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Runtime();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Runtime(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http.Builder subBuilder = null;
+              if (typeCase_ == 1) {
+                subBuilder = ((yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 1;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task.Builder subBuilder = null;
+              if (typeCase_ == 2) {
+                subBuilder = ((yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 2;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_Runtime_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_Runtime_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.class, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Builder.class);
+    }
+
+    public interface HttpOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.containers.v1.Runtime.Http)
+        com.google.protobuf.MessageOrBuilder {
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.containers.v1.Runtime.Http}
+     */
+    public static final class Http extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.containers.v1.Runtime.Http)
+        HttpOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Http.newBuilder() to construct.
+      private Http(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Http() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Http();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Http(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_Runtime_Http_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_Runtime_Http_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http.class, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http.Builder.class);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http other = (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http) obj;
+
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.serverless.containers.v1.Runtime.Http}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.containers.v1.Runtime.Http)
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.HttpOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_Runtime_Http_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_Runtime_Http_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http.class, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_Runtime_Http_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http getDefaultInstanceForType() {
+          return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http build() {
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http buildPartial() {
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http result = new yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http(this);
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http) {
+            return mergeFrom((yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http other) {
+          if (other == yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http.getDefaultInstance()) return this;
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.containers.v1.Runtime.Http)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.containers.v1.Runtime.Http)
+      private static final yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http();
+      }
+
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Http>
+          PARSER = new com.google.protobuf.AbstractParser<Http>() {
+        @java.lang.Override
+        public Http parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Http(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Http> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Http> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface TaskOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.containers.v1.Runtime.Task)
+        com.google.protobuf.MessageOrBuilder {
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.containers.v1.Runtime.Task}
+     */
+    public static final class Task extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.containers.v1.Runtime.Task)
+        TaskOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Task.newBuilder() to construct.
+      private Task(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Task() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Task();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Task(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_Runtime_Task_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_Runtime_Task_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task.class, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task.Builder.class);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task other = (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task) obj;
+
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.serverless.containers.v1.Runtime.Task}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.containers.v1.Runtime.Task)
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.TaskOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_Runtime_Task_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_Runtime_Task_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task.class, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_Runtime_Task_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task getDefaultInstanceForType() {
+          return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task build() {
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task buildPartial() {
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task result = new yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task(this);
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task) {
+            return mergeFrom((yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task other) {
+          if (other == yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task.getDefaultInstance()) return this;
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.containers.v1.Runtime.Task)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.containers.v1.Runtime.Task)
+      private static final yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task();
+      }
+
+      public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Task>
+          PARSER = new com.google.protobuf.AbstractParser<Task>() {
+        @java.lang.Override
+        public Task parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Task(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Task> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Task> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int typeCase_ = 0;
+    private java.lang.Object type_;
+    public enum TypeCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      HTTP(1),
+      TASK(2),
+      TYPE_NOT_SET(0);
+      private final int value;
+      private TypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TypeCase forNumber(int value) {
+        switch (value) {
+          case 1: return HTTP;
+          case 2: return TASK;
+          case 0: return TYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TypeCase
+    getTypeCase() {
+      return TypeCase.forNumber(
+          typeCase_);
+    }
+
+    public static final int HTTP_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * The classic one. You need to run an HTTP server inside the container.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.Runtime.Http http = 1;</code>
+     * @return Whether the http field is set.
+     */
+    @java.lang.Override
+    public boolean hasHttp() {
+      return typeCase_ == 1;
+    }
+    /**
+     * <pre>
+     * The classic one. You need to run an HTTP server inside the container.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.Runtime.Http http = 1;</code>
+     * @return The http.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http getHttp() {
+      if (typeCase_ == 1) {
+         return (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http) type_;
+      }
+      return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * The classic one. You need to run an HTTP server inside the container.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.Runtime.Http http = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.HttpOrBuilder getHttpOrBuilder() {
+      if (typeCase_ == 1) {
+         return (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http) type_;
+      }
+      return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http.getDefaultInstance();
+    }
+
+    public static final int TASK_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * We run a process from ENTRYPOINT inside the container for each user request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.Runtime.Task task = 2;</code>
+     * @return Whether the task field is set.
+     */
+    @java.lang.Override
+    public boolean hasTask() {
+      return typeCase_ == 2;
+    }
+    /**
+     * <pre>
+     * We run a process from ENTRYPOINT inside the container for each user request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.Runtime.Task task = 2;</code>
+     * @return The task.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task getTask() {
+      if (typeCase_ == 2) {
+         return (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task) type_;
+      }
+      return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * We run a process from ENTRYPOINT inside the container for each user request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.Runtime.Task task = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.TaskOrBuilder getTaskOrBuilder() {
+      if (typeCase_ == 2) {
+         return (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task) type_;
+      }
+      return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (typeCase_ == 1) {
+        output.writeMessage(1, (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http) type_);
+      }
+      if (typeCase_ == 2) {
+        output.writeMessage(2, (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task) type_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (typeCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http) type_);
+      }
+      if (typeCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task) type_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime other = (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime) obj;
+
+      if (!getTypeCase().equals(other.getTypeCase())) return false;
+      switch (typeCase_) {
+        case 1:
+          if (!getHttp()
+              .equals(other.getHttp())) return false;
+          break;
+        case 2:
+          if (!getTask()
+              .equals(other.getTask())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (typeCase_) {
+        case 1:
+          hash = (37 * hash) + HTTP_FIELD_NUMBER;
+          hash = (53 * hash) + getHttp().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + TASK_FIELD_NUMBER;
+          hash = (53 * hash) + getTask().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The container's execution mode
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.serverless.containers.v1.Runtime}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.containers.v1.Runtime)
+        yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.RuntimeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_Runtime_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_Runtime_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.class, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        typeCase_ = 0;
+        type_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_Runtime_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime build() {
+        yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime buildPartial() {
+        yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime result = new yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime(this);
+        if (typeCase_ == 1) {
+          if (httpBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = httpBuilder_.build();
+          }
+        }
+        if (typeCase_ == 2) {
+          if (taskBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = taskBuilder_.build();
+          }
+        }
+        result.typeCase_ = typeCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime) {
+          return mergeFrom((yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime other) {
+        if (other == yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.getDefaultInstance()) return this;
+        switch (other.getTypeCase()) {
+          case HTTP: {
+            mergeHttp(other.getHttp());
+            break;
+          }
+          case TASK: {
+            mergeTask(other.getTask());
+            break;
+          }
+          case TYPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int typeCase_ = 0;
+      private java.lang.Object type_;
+      public TypeCase
+          getTypeCase() {
+        return TypeCase.forNumber(
+            typeCase_);
+      }
+
+      public Builder clearType() {
+        typeCase_ = 0;
+        type_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.HttpOrBuilder> httpBuilder_;
+      /**
+       * <pre>
+       * The classic one. You need to run an HTTP server inside the container.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime.Http http = 1;</code>
+       * @return Whether the http field is set.
+       */
+      @java.lang.Override
+      public boolean hasHttp() {
+        return typeCase_ == 1;
+      }
+      /**
+       * <pre>
+       * The classic one. You need to run an HTTP server inside the container.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime.Http http = 1;</code>
+       * @return The http.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http getHttp() {
+        if (httpBuilder_ == null) {
+          if (typeCase_ == 1) {
+            return (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http) type_;
+          }
+          return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http.getDefaultInstance();
+        } else {
+          if (typeCase_ == 1) {
+            return httpBuilder_.getMessage();
+          }
+          return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * The classic one. You need to run an HTTP server inside the container.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime.Http http = 1;</code>
+       */
+      public Builder setHttp(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http value) {
+        if (httpBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          httpBuilder_.setMessage(value);
+        }
+        typeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * The classic one. You need to run an HTTP server inside the container.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime.Http http = 1;</code>
+       */
+      public Builder setHttp(
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http.Builder builderForValue) {
+        if (httpBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          httpBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * The classic one. You need to run an HTTP server inside the container.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime.Http http = 1;</code>
+       */
+      public Builder mergeHttp(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http value) {
+        if (httpBuilder_ == null) {
+          if (typeCase_ == 1 &&
+              type_ != yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http.getDefaultInstance()) {
+            type_ = yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http.newBuilder((yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 1) {
+            httpBuilder_.mergeFrom(value);
+          }
+          httpBuilder_.setMessage(value);
+        }
+        typeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * The classic one. You need to run an HTTP server inside the container.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime.Http http = 1;</code>
+       */
+      public Builder clearHttp() {
+        if (httpBuilder_ == null) {
+          if (typeCase_ == 1) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 1) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          httpBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The classic one. You need to run an HTTP server inside the container.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime.Http http = 1;</code>
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http.Builder getHttpBuilder() {
+        return getHttpFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The classic one. You need to run an HTTP server inside the container.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime.Http http = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.HttpOrBuilder getHttpOrBuilder() {
+        if ((typeCase_ == 1) && (httpBuilder_ != null)) {
+          return httpBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 1) {
+            return (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http) type_;
+          }
+          return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * The classic one. You need to run an HTTP server inside the container.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime.Http http = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.HttpOrBuilder> 
+          getHttpFieldBuilder() {
+        if (httpBuilder_ == null) {
+          if (!(typeCase_ == 1)) {
+            type_ = yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http.getDefaultInstance();
+          }
+          httpBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.HttpOrBuilder>(
+                  (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Http) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 1;
+        onChanged();;
+        return httpBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.TaskOrBuilder> taskBuilder_;
+      /**
+       * <pre>
+       * We run a process from ENTRYPOINT inside the container for each user request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime.Task task = 2;</code>
+       * @return Whether the task field is set.
+       */
+      @java.lang.Override
+      public boolean hasTask() {
+        return typeCase_ == 2;
+      }
+      /**
+       * <pre>
+       * We run a process from ENTRYPOINT inside the container for each user request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime.Task task = 2;</code>
+       * @return The task.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task getTask() {
+        if (taskBuilder_ == null) {
+          if (typeCase_ == 2) {
+            return (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task) type_;
+          }
+          return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task.getDefaultInstance();
+        } else {
+          if (typeCase_ == 2) {
+            return taskBuilder_.getMessage();
+          }
+          return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * We run a process from ENTRYPOINT inside the container for each user request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime.Task task = 2;</code>
+       */
+      public Builder setTask(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task value) {
+        if (taskBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          taskBuilder_.setMessage(value);
+        }
+        typeCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * We run a process from ENTRYPOINT inside the container for each user request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime.Task task = 2;</code>
+       */
+      public Builder setTask(
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task.Builder builderForValue) {
+        if (taskBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          taskBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * We run a process from ENTRYPOINT inside the container for each user request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime.Task task = 2;</code>
+       */
+      public Builder mergeTask(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task value) {
+        if (taskBuilder_ == null) {
+          if (typeCase_ == 2 &&
+              type_ != yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task.getDefaultInstance()) {
+            type_ = yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task.newBuilder((yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 2) {
+            taskBuilder_.mergeFrom(value);
+          }
+          taskBuilder_.setMessage(value);
+        }
+        typeCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * We run a process from ENTRYPOINT inside the container for each user request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime.Task task = 2;</code>
+       */
+      public Builder clearTask() {
+        if (taskBuilder_ == null) {
+          if (typeCase_ == 2) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 2) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          taskBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * We run a process from ENTRYPOINT inside the container for each user request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime.Task task = 2;</code>
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task.Builder getTaskBuilder() {
+        return getTaskFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * We run a process from ENTRYPOINT inside the container for each user request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime.Task task = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.TaskOrBuilder getTaskOrBuilder() {
+        if ((typeCase_ == 2) && (taskBuilder_ != null)) {
+          return taskBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 2) {
+            return (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task) type_;
+          }
+          return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * We run a process from ENTRYPOINT inside the container for each user request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.Runtime.Task task = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.TaskOrBuilder> 
+          getTaskFieldBuilder() {
+        if (taskBuilder_ == null) {
+          if (!(typeCase_ == 2)) {
+            type_ = yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task.getDefaultInstance();
+          }
+          taskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.TaskOrBuilder>(
+                  (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Task) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 2;
+        onChanged();;
+        return taskBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.containers.v1.Runtime)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.containers.v1.Runtime)
+    private static final yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime();
+    }
+
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Runtime>
+        PARSER = new com.google.protobuf.AbstractParser<Runtime>() {
+      @java.lang.Override
+      public Runtime parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Runtime(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Runtime> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Runtime> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_containers_v1_Container_descriptor;
   private static final 
@@ -20214,6 +22388,21 @@ public final class ContainerOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_containers_v1_Mount_DiskSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_containers_v1_Runtime_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_containers_v1_Runtime_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_containers_v1_Runtime_Http_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_containers_v1_Runtime_Http_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_containers_v1_Runtime_Task_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_containers_v1_Runtime_Task_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -20239,7 +22428,7 @@ public final class ContainerOuterClass {
       "tus\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
       "\030\002 \001(\t:\0028\001\"S\n\006Status\022\026\n\022STATUS_UNSPECIFI" +
       "ED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETI" +
-      "NG\020\003\022\t\n\005ERROR\020\004J\004\010\007\020\010\"\352\007\n\010Revision\022\n\n\002id" +
+      "NG\020\003\022\t\n\005ERROR\020\004J\004\010\007\020\010\"\253\010\n\010Revision\022\n\n\002id" +
       "\030\001 \001(\t\022\024\n\014container_id\030\002 \001(\t\022\023\n\013descript" +
       "ion\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google.p" +
       "rotobuf.Timestamp\022;\n\005image\030\005 \001(\0132,.yande" +
@@ -20262,56 +22451,63 @@ public final class ContainerOuterClass {
       "v1.LogOptions\022K\n\016storage_mounts\030\020 \003(\01323." +
       "yandex.cloud.serverless.containers.v1.St" +
       "orageMount\022<\n\006mounts\030\021 \003(\0132,.yandex.clou" +
-      "d.serverless.containers.v1.Mount\"H\n\006Stat" +
-      "us\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001" +
-      "\022\n\n\006ACTIVE\020\002\022\014\n\010OBSOLETE\020\003\"\360\002\n\005Image\022\021\n\t" +
-      "image_url\030\001 \001(\t\022\024\n\014image_digest\030\002 \001(\t\022?\n" +
-      "\007command\030\003 \001(\0132..yandex.cloud.serverless" +
-      ".containers.v1.Command\0229\n\004args\030\004 \001(\0132+.y" +
-      "andex.cloud.serverless.containers.v1.Arg" +
-      "s\022y\n\013environment\030\005 \003(\0132=.yandex.cloud.se" +
-      "rverless.containers.v1.Image.Environment" +
-      "EntryB%\212\3101\006<=4096\262\3101\027\022\025[a-zA-Z][a-zA-Z0-" +
-      "9_]*\022\023\n\013working_dir\030\006 \001(\t\0322\n\020Environment" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\032\n" +
-      "\007Command\022\017\n\007command\030\001 \003(\t\"\024\n\004Args\022\014\n\004arg" +
-      "s\030\001 \003(\t\"o\n\tResources\022(\n\006memory\030\001 \001(\003B\030\372\307" +
-      "1\024134217728-8589934592\022\026\n\005cores\030\002 \001(\003B\007\372" +
-      "\3071\0030-4\022 \n\rcore_fraction\030\003 \001(\003B\t\372\3071\0050-100" +
-      "\"(\n\017ProvisionPolicy\022\025\n\rmin_instances\030\001 \001" +
-      "(\003\"b\n\006Secret\022\n\n\002id\030\001 \001(\t\022\022\n\nversion_id\030\002" +
-      " \001(\t\022\013\n\003key\030\003 \001(\t\022\036\n\024environment_variabl" +
-      "e\030\004 \001(\tH\000B\013\n\treference\"B\n\014Connectivity\022\022" +
-      "\n\nnetwork_id\030\001 \001(\t\022\036\n\nsubnet_ids\030\002 \003(\tB\n" +
-      "\212\3101\002>0\220\3101\001\"\340\001\n\nLogOptions\022\020\n\010disabled\030\001 " +
-      "\001(\010\022;\n\014log_group_id\030\002 \001(\tB#\362\3071\037([a-zA-Z]" +
-      "[-a-zA-Z0-9_.]{0,63})?H\000\0228\n\tfolder_id\030\003 " +
-      "\001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?" +
-      "H\000\022:\n\tmin_level\030\004 \001(\0162\'.yandex.cloud.log" +
-      "ging.v1.LogLevel.LevelB\r\n\013destination\"J\n" +
-      "\rScalingPolicy\022\034\n\024zone_instances_limit\030\001" +
-      " \001(\003\022\033\n\023zone_requests_limit\030\002 \001(\003\"\252\001\n\014St" +
-      "orageMount\0221\n\tbucket_id\030\001 \001(\tB\036\350\3071\001\212\3101\0043" +
-      "-63\362\3071\016[-.0-9a-zA-Z]*\022\016\n\006prefix\030\002 \001(\t\022\021\n" +
-      "\tread_only\030\004 \001(\010\022:\n\020mount_point_path\030\005 \001" +
-      "(\tB \350\3071\001\212\3101\0051-300\362\3071\017[-_0-9a-zA-Z/]*:\002\030\001" +
-      "J\004\010\003\020\004\"\223\004\n\005Mount\022:\n\020mount_point_path\030\002 \001" +
-      "(\tB \350\3071\001\212\3101\0051-300\362\3071\017[-_0-9a-zA-Z/]*\022?\n\004" +
-      "mode\030\003 \001(\01621.yandex.cloud.serverless.con" +
-      "tainers.v1.Mount.Mode\022T\n\016object_storage\030" +
-      "\n \001(\0132:.yandex.cloud.serverless.containe" +
-      "rs.v1.Mount.ObjectStorageH\000\022T\n\023ephemeral" +
-      "_disk_spec\030\013 \001(\01325.yandex.cloud.serverle" +
-      "ss.containers.v1.Mount.DiskSpecH\000\032R\n\rObj" +
-      "ectStorage\0221\n\tbucket_id\030\001 \001(\tB\036\350\3071\001\212\3101\0043" +
-      "-63\362\3071\016[-.0-9a-zA-Z]*\022\016\n\006prefix\030\002 \001(\t\0324\n" +
-      "\010DiskSpec\022\024\n\004size\030\001 \001(\003B\006\372\3071\002>0\022\022\n\nblock" +
-      "_size\030\002 \001(\003\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020" +
-      "\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002B\016\n\006targ" +
-      "et\022\004\300\3011\001J\004\010\004\020\nJ\004\010\001\020\002B\201\001\n)yandex.cloud.ap" +
-      "i.serverless.containers.v1ZTgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/ser" +
-      "verless/containers/v1;containersb\006proto3"
+      "d.serverless.containers.v1.Mount\022?\n\007runt" +
+      "ime\030\022 \001(\0132..yandex.cloud.serverless.cont" +
+      "ainers.v1.Runtime\"H\n\006Status\022\026\n\022STATUS_UN" +
+      "SPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n" +
+      "\010OBSOLETE\020\003\"\360\002\n\005Image\022\021\n\timage_url\030\001 \001(\t" +
+      "\022\024\n\014image_digest\030\002 \001(\t\022?\n\007command\030\003 \001(\0132" +
+      "..yandex.cloud.serverless.containers.v1." +
+      "Command\0229\n\004args\030\004 \001(\0132+.yandex.cloud.ser" +
+      "verless.containers.v1.Args\022y\n\013environmen" +
+      "t\030\005 \003(\0132=.yandex.cloud.serverless.contai" +
+      "ners.v1.Image.EnvironmentEntryB%\212\3101\006<=40" +
+      "96\262\3101\027\022\025[a-zA-Z][a-zA-Z0-9_]*\022\023\n\013working" +
+      "_dir\030\006 \001(\t\0322\n\020EnvironmentEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\032\n\007Command\022\017\n\007com" +
+      "mand\030\001 \003(\t\"\024\n\004Args\022\014\n\004args\030\001 \003(\t\"o\n\tReso" +
+      "urces\022(\n\006memory\030\001 \001(\003B\030\372\3071\024134217728-858" +
+      "9934592\022\026\n\005cores\030\002 \001(\003B\007\372\3071\0030-4\022 \n\rcore_" +
+      "fraction\030\003 \001(\003B\t\372\3071\0050-100\"(\n\017ProvisionPo" +
+      "licy\022\025\n\rmin_instances\030\001 \001(\003\"b\n\006Secret\022\n\n" +
+      "\002id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\022\013\n\003key\030\003 \001" +
+      "(\t\022\036\n\024environment_variable\030\004 \001(\tH\000B\013\n\tre" +
+      "ference\"B\n\014Connectivity\022\022\n\nnetwork_id\030\001 " +
+      "\001(\t\022\036\n\nsubnet_ids\030\002 \003(\tB\n\212\3101\002>0\220\3101\001\"\340\001\n\n" +
+      "LogOptions\022\020\n\010disabled\030\001 \001(\010\022;\n\014log_grou" +
+      "p_id\030\002 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{" +
+      "0,63})?H\000\0228\n\tfolder_id\030\003 \001(\tB#\362\3071\037([a-zA" +
+      "-Z][-a-zA-Z0-9_.]{0,63})?H\000\022:\n\tmin_level" +
+      "\030\004 \001(\0162\'.yandex.cloud.logging.v1.LogLeve" +
+      "l.LevelB\r\n\013destination\"J\n\rScalingPolicy\022" +
+      "\034\n\024zone_instances_limit\030\001 \001(\003\022\033\n\023zone_re" +
+      "quests_limit\030\002 \001(\003\"\252\001\n\014StorageMount\0221\n\tb" +
+      "ucket_id\030\001 \001(\tB\036\350\3071\001\212\3101\0043-63\362\3071\016[-.0-9a-" +
+      "zA-Z]*\022\016\n\006prefix\030\002 \001(\t\022\021\n\tread_only\030\004 \001(" +
+      "\010\022:\n\020mount_point_path\030\005 \001(\tB \350\3071\001\212\3101\0051-3" +
+      "00\362\3071\017[-_0-9a-zA-Z/]*:\002\030\001J\004\010\003\020\004\"\223\004\n\005Moun" +
+      "t\022:\n\020mount_point_path\030\002 \001(\tB \350\3071\001\212\3101\0051-3" +
+      "00\362\3071\017[-_0-9a-zA-Z/]*\022?\n\004mode\030\003 \001(\01621.ya" +
+      "ndex.cloud.serverless.containers.v1.Moun" +
+      "t.Mode\022T\n\016object_storage\030\n \001(\0132:.yandex." +
+      "cloud.serverless.containers.v1.Mount.Obj" +
+      "ectStorageH\000\022T\n\023ephemeral_disk_spec\030\013 \001(" +
+      "\01325.yandex.cloud.serverless.containers.v" +
+      "1.Mount.DiskSpecH\000\032R\n\rObjectStorage\0221\n\tb" +
+      "ucket_id\030\001 \001(\tB\036\350\3071\001\212\3101\0043-63\362\3071\016[-.0-9a-" +
+      "zA-Z]*\022\016\n\006prefix\030\002 \001(\t\0324\n\010DiskSpec\022\024\n\004si" +
+      "ze\030\001 \001(\003B\006\372\3071\002>0\022\022\n\nblock_size\030\002 \001(\003\";\n\004" +
+      "Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020" +
+      "\001\022\016\n\nREAD_WRITE\020\002B\016\n\006target\022\004\300\3011\001J\004\010\004\020\nJ" +
+      "\004\010\001\020\002\"\261\001\n\007Runtime\022C\n\004http\030\001 \001(\01323.yandex" +
+      ".cloud.serverless.containers.v1.Runtime." +
+      "HttpH\000\022C\n\004task\030\002 \001(\01323.yandex.cloud.serv" +
+      "erless.containers.v1.Runtime.TaskH\000\032\006\n\004H" +
+      "ttp\032\006\n\004TaskB\014\n\004type\022\004\300\3011\001B\201\001\n)yandex.clo" +
+      "ud.api.serverless.containers.v1ZTgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/serverless/containers/v1;containersb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -20338,7 +22534,7 @@ public final class ContainerOuterClass {
     internal_static_yandex_cloud_serverless_containers_v1_Revision_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_containers_v1_Revision_descriptor,
-        new java.lang.String[] { "Id", "ContainerId", "Description", "CreatedAt", "Image", "Resources", "ExecutionTimeout", "Concurrency", "ServiceAccountId", "Status", "Secrets", "Connectivity", "ProvisionPolicy", "ScalingPolicy", "LogOptions", "StorageMounts", "Mounts", });
+        new java.lang.String[] { "Id", "ContainerId", "Description", "CreatedAt", "Image", "Resources", "ExecutionTimeout", "Concurrency", "ServiceAccountId", "Status", "Secrets", "Connectivity", "ProvisionPolicy", "ScalingPolicy", "LogOptions", "StorageMounts", "Mounts", "Runtime", });
     internal_static_yandex_cloud_serverless_containers_v1_Image_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_serverless_containers_v1_Image_fieldAccessorTable = new
@@ -20423,6 +22619,24 @@ public final class ContainerOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_containers_v1_Mount_DiskSpec_descriptor,
         new java.lang.String[] { "Size", "BlockSize", });
+    internal_static_yandex_cloud_serverless_containers_v1_Runtime_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_serverless_containers_v1_Runtime_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_containers_v1_Runtime_descriptor,
+        new java.lang.String[] { "Http", "Task", "Type", });
+    internal_static_yandex_cloud_serverless_containers_v1_Runtime_Http_descriptor =
+      internal_static_yandex_cloud_serverless_containers_v1_Runtime_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_serverless_containers_v1_Runtime_Http_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_containers_v1_Runtime_Http_descriptor,
+        new java.lang.String[] { });
+    internal_static_yandex_cloud_serverless_containers_v1_Runtime_Task_descriptor =
+      internal_static_yandex_cloud_serverless_containers_v1_Runtime_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_serverless_containers_v1_Runtime_Task_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_containers_v1_Runtime_Task_descriptor,
+        new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);

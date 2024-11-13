@@ -14,6 +14,610 @@ public final class ThumbnailServiceOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface GetThumbnailRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.GetThumbnailRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
+     * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The thumbnailId.
+     */
+    java.lang.String getThumbnailId();
+    /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
+     * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for thumbnailId.
+     */
+    com.google.protobuf.ByteString
+        getThumbnailIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.video.v1.GetThumbnailRequest}
+   */
+  public static final class GetThumbnailRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.GetThumbnailRequest)
+      GetThumbnailRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetThumbnailRequest.newBuilder() to construct.
+    private GetThumbnailRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetThumbnailRequest() {
+      thumbnailId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetThumbnailRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetThumbnailRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              thumbnailId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.internal_static_yandex_cloud_video_v1_GetThumbnailRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.internal_static_yandex_cloud_video_v1_GetThumbnailRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest.class, yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest.Builder.class);
+    }
+
+    public static final int THUMBNAIL_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object thumbnailId_;
+    /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
+     * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The thumbnailId.
+     */
+    @java.lang.Override
+    public java.lang.String getThumbnailId() {
+      java.lang.Object ref = thumbnailId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        thumbnailId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
+     * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for thumbnailId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getThumbnailIdBytes() {
+      java.lang.Object ref = thumbnailId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        thumbnailId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(thumbnailId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, thumbnailId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(thumbnailId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, thumbnailId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest other = (yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest) obj;
+
+      if (!getThumbnailId()
+          .equals(other.getThumbnailId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + THUMBNAIL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getThumbnailId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.video.v1.GetThumbnailRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.GetThumbnailRequest)
+        yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.internal_static_yandex_cloud_video_v1_GetThumbnailRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.internal_static_yandex_cloud_video_v1_GetThumbnailRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest.class, yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        thumbnailId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.internal_static_yandex_cloud_video_v1_GetThumbnailRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest build() {
+        yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest buildPartial() {
+        yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest result = new yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest(this);
+        result.thumbnailId_ = thumbnailId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest) {
+          return mergeFrom((yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest other) {
+        if (other == yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest.getDefaultInstance()) return this;
+        if (!other.getThumbnailId().isEmpty()) {
+          thumbnailId_ = other.thumbnailId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object thumbnailId_ = "";
+      /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
+       * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The thumbnailId.
+       */
+      public java.lang.String getThumbnailId() {
+        java.lang.Object ref = thumbnailId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          thumbnailId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
+       * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for thumbnailId.
+       */
+      public com.google.protobuf.ByteString
+          getThumbnailIdBytes() {
+        java.lang.Object ref = thumbnailId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          thumbnailId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
+       * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The thumbnailId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setThumbnailId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        thumbnailId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
+       * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearThumbnailId() {
+        
+        thumbnailId_ = getDefaultInstance().getThumbnailId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
+       * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for thumbnailId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setThumbnailIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        thumbnailId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.GetThumbnailRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.GetThumbnailRequest)
+    private static final yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest();
+    }
+
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetThumbnailRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetThumbnailRequest>() {
+      @java.lang.Override
+      public GetThumbnailRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetThumbnailRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetThumbnailRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetThumbnailRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ListThumbnailRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.ListThumbnailRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -23,7 +627,7 @@ public final class ThumbnailServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The channelId.
      */
     java.lang.String getChannelId();
@@ -32,7 +636,7 @@ public final class ThumbnailServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for channelId.
      */
     com.google.protobuf.ByteString
@@ -43,7 +647,7 @@ public final class ThumbnailServiceOuterClass {
      * The maximum number of the results per page to return. Default value: 100.
      * </pre>
      *
-     * <code>int64 page_size = 100;</code>
+     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
     long getPageSize();
@@ -53,7 +657,7 @@ public final class ThumbnailServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101;</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
@@ -62,7 +666,7 @@ public final class ThumbnailServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101;</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
@@ -171,7 +775,7 @@ public final class ThumbnailServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The channelId.
      */
     @java.lang.Override
@@ -192,7 +796,7 @@ public final class ThumbnailServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for channelId.
      */
     @java.lang.Override
@@ -217,7 +821,7 @@ public final class ThumbnailServiceOuterClass {
      * The maximum number of the results per page to return. Default value: 100.
      * </pre>
      *
-     * <code>int64 page_size = 100;</code>
+     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
     @java.lang.Override
@@ -232,7 +836,7 @@ public final class ThumbnailServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101;</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The pageToken.
      */
     @java.lang.Override
@@ -253,7 +857,7 @@ public final class ThumbnailServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101;</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The bytes for pageToken.
      */
     @java.lang.Override
@@ -614,7 +1218,7 @@ public final class ThumbnailServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The channelId.
        */
       public java.lang.String getChannelId() {
@@ -634,7 +1238,7 @@ public final class ThumbnailServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for channelId.
        */
       public com.google.protobuf.ByteString
@@ -655,7 +1259,7 @@ public final class ThumbnailServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The channelId to set.
        * @return This builder for chaining.
        */
@@ -674,7 +1278,7 @@ public final class ThumbnailServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearChannelId() {
@@ -688,7 +1292,7 @@ public final class ThumbnailServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for channelId to set.
        * @return This builder for chaining.
        */
@@ -710,7 +1314,7 @@ public final class ThumbnailServiceOuterClass {
        * The maximum number of the results per page to return. Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 100;</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return The pageSize.
        */
       @java.lang.Override
@@ -722,7 +1326,7 @@ public final class ThumbnailServiceOuterClass {
        * The maximum number of the results per page to return. Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 100;</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
        */
@@ -737,7 +1341,7 @@ public final class ThumbnailServiceOuterClass {
        * The maximum number of the results per page to return. Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 100;</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageSize() {
@@ -753,7 +1357,7 @@ public final class ThumbnailServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101;</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return The pageToken.
        */
       public java.lang.String getPageToken() {
@@ -773,7 +1377,7 @@ public final class ThumbnailServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101;</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
@@ -794,7 +1398,7 @@ public final class ThumbnailServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101;</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
        */
@@ -813,7 +1417,7 @@ public final class ThumbnailServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101;</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageToken() {
@@ -827,7 +1431,7 @@ public final class ThumbnailServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101;</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
        */
@@ -1995,7 +2599,7 @@ public final class ThumbnailServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The channelId.
      */
     java.lang.String getChannelId();
@@ -2004,7 +2608,7 @@ public final class ThumbnailServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The bytes for channelId.
      */
     com.google.protobuf.ByteString
@@ -2101,7 +2705,7 @@ public final class ThumbnailServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The channelId.
      */
     @java.lang.Override
@@ -2122,7 +2726,7 @@ public final class ThumbnailServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The bytes for channelId.
      */
     @java.lang.Override
@@ -2448,7 +3052,7 @@ public final class ThumbnailServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return The channelId.
        */
       public java.lang.String getChannelId() {
@@ -2468,7 +3072,7 @@ public final class ThumbnailServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return The bytes for channelId.
        */
       public com.google.protobuf.ByteString
@@ -2489,7 +3093,7 @@ public final class ThumbnailServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @param value The channelId to set.
        * @return This builder for chaining.
        */
@@ -2508,7 +3112,7 @@ public final class ThumbnailServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return This builder for chaining.
        */
       public Builder clearChannelId() {
@@ -2522,7 +3126,7 @@ public final class ThumbnailServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @param value The bytes for channelId to set.
        * @return This builder for chaining.
        */
@@ -3203,7 +3807,7 @@ public final class ThumbnailServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The channelId.
      */
     java.lang.String getChannelId();
@@ -3212,7 +3816,7 @@ public final class ThumbnailServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The bytes for channelId.
      */
     com.google.protobuf.ByteString
@@ -3223,7 +3827,7 @@ public final class ThumbnailServiceOuterClass {
      * List of thumbnails IDs.
      * </pre>
      *
-     * <code>repeated string thumbnail_ids = 2;</code>
+     * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return A list containing the thumbnailIds.
      */
     java.util.List<java.lang.String>
@@ -3233,7 +3837,7 @@ public final class ThumbnailServiceOuterClass {
      * List of thumbnails IDs.
      * </pre>
      *
-     * <code>repeated string thumbnail_ids = 2;</code>
+     * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The count of thumbnailIds.
      */
     int getThumbnailIdsCount();
@@ -3242,7 +3846,7 @@ public final class ThumbnailServiceOuterClass {
      * List of thumbnails IDs.
      * </pre>
      *
-     * <code>repeated string thumbnail_ids = 2;</code>
+     * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the element to return.
      * @return The thumbnailIds at the given index.
      */
@@ -3252,7 +3856,7 @@ public final class ThumbnailServiceOuterClass {
      * List of thumbnails IDs.
      * </pre>
      *
-     * <code>repeated string thumbnail_ids = 2;</code>
+     * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the thumbnailIds at the given index.
      */
@@ -3364,7 +3968,7 @@ public final class ThumbnailServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The channelId.
      */
     @java.lang.Override
@@ -3385,7 +3989,7 @@ public final class ThumbnailServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The bytes for channelId.
      */
     @java.lang.Override
@@ -3410,7 +4014,7 @@ public final class ThumbnailServiceOuterClass {
      * List of thumbnails IDs.
      * </pre>
      *
-     * <code>repeated string thumbnail_ids = 2;</code>
+     * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return A list containing the thumbnailIds.
      */
     public com.google.protobuf.ProtocolStringList
@@ -3422,7 +4026,7 @@ public final class ThumbnailServiceOuterClass {
      * List of thumbnails IDs.
      * </pre>
      *
-     * <code>repeated string thumbnail_ids = 2;</code>
+     * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The count of thumbnailIds.
      */
     public int getThumbnailIdsCount() {
@@ -3433,7 +4037,7 @@ public final class ThumbnailServiceOuterClass {
      * List of thumbnails IDs.
      * </pre>
      *
-     * <code>repeated string thumbnail_ids = 2;</code>
+     * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the element to return.
      * @return The thumbnailIds at the given index.
      */
@@ -3445,7 +4049,7 @@ public final class ThumbnailServiceOuterClass {
      * List of thumbnails IDs.
      * </pre>
      *
-     * <code>repeated string thumbnail_ids = 2;</code>
+     * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the thumbnailIds at the given index.
      */
@@ -3798,7 +4402,7 @@ public final class ThumbnailServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
        * @return The channelId.
        */
       public java.lang.String getChannelId() {
@@ -3818,7 +4422,7 @@ public final class ThumbnailServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
        * @return The bytes for channelId.
        */
       public com.google.protobuf.ByteString
@@ -3839,7 +4443,7 @@ public final class ThumbnailServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
        * @param value The channelId to set.
        * @return This builder for chaining.
        */
@@ -3858,7 +4462,7 @@ public final class ThumbnailServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
        * @return This builder for chaining.
        */
       public Builder clearChannelId() {
@@ -3872,7 +4476,7 @@ public final class ThumbnailServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
        * @param value The bytes for channelId to set.
        * @return This builder for chaining.
        */
@@ -3900,7 +4504,7 @@ public final class ThumbnailServiceOuterClass {
        * List of thumbnails IDs.
        * </pre>
        *
-       * <code>repeated string thumbnail_ids = 2;</code>
+       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return A list containing the thumbnailIds.
        */
       public com.google.protobuf.ProtocolStringList
@@ -3912,7 +4516,7 @@ public final class ThumbnailServiceOuterClass {
        * List of thumbnails IDs.
        * </pre>
        *
-       * <code>repeated string thumbnail_ids = 2;</code>
+       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The count of thumbnailIds.
        */
       public int getThumbnailIdsCount() {
@@ -3923,7 +4527,7 @@ public final class ThumbnailServiceOuterClass {
        * List of thumbnails IDs.
        * </pre>
        *
-       * <code>repeated string thumbnail_ids = 2;</code>
+       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param index The index of the element to return.
        * @return The thumbnailIds at the given index.
        */
@@ -3935,7 +4539,7 @@ public final class ThumbnailServiceOuterClass {
        * List of thumbnails IDs.
        * </pre>
        *
-       * <code>repeated string thumbnail_ids = 2;</code>
+       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the thumbnailIds at the given index.
        */
@@ -3948,7 +4552,7 @@ public final class ThumbnailServiceOuterClass {
        * List of thumbnails IDs.
        * </pre>
        *
-       * <code>repeated string thumbnail_ids = 2;</code>
+       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param index The index to set the value at.
        * @param value The thumbnailIds to set.
        * @return This builder for chaining.
@@ -3968,7 +4572,7 @@ public final class ThumbnailServiceOuterClass {
        * List of thumbnails IDs.
        * </pre>
        *
-       * <code>repeated string thumbnail_ids = 2;</code>
+       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The thumbnailIds to add.
        * @return This builder for chaining.
        */
@@ -3987,7 +4591,7 @@ public final class ThumbnailServiceOuterClass {
        * List of thumbnails IDs.
        * </pre>
        *
-       * <code>repeated string thumbnail_ids = 2;</code>
+       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param values The thumbnailIds to add.
        * @return This builder for chaining.
        */
@@ -4004,7 +4608,7 @@ public final class ThumbnailServiceOuterClass {
        * List of thumbnails IDs.
        * </pre>
        *
-       * <code>repeated string thumbnail_ids = 2;</code>
+       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearThumbnailIds() {
@@ -4018,7 +4622,7 @@ public final class ThumbnailServiceOuterClass {
        * List of thumbnails IDs.
        * </pre>
        *
-       * <code>repeated string thumbnail_ids = 2;</code>
+       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes of the thumbnailIds to add.
        * @return This builder for chaining.
        */
@@ -5790,7 +6394,7 @@ public final class ThumbnailServiceOuterClass {
      * ID of the thumbnail.
      * </pre>
      *
-     * <code>string thumbnail_id = 1;</code>
+     * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The thumbnailId.
      */
     java.lang.String getThumbnailId();
@@ -5799,7 +6403,7 @@ public final class ThumbnailServiceOuterClass {
      * ID of the thumbnail.
      * </pre>
      *
-     * <code>string thumbnail_id = 1;</code>
+     * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for thumbnailId.
      */
     com.google.protobuf.ByteString
@@ -5896,7 +6500,7 @@ public final class ThumbnailServiceOuterClass {
      * ID of the thumbnail.
      * </pre>
      *
-     * <code>string thumbnail_id = 1;</code>
+     * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The thumbnailId.
      */
     @java.lang.Override
@@ -5917,7 +6521,7 @@ public final class ThumbnailServiceOuterClass {
      * ID of the thumbnail.
      * </pre>
      *
-     * <code>string thumbnail_id = 1;</code>
+     * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for thumbnailId.
      */
     @java.lang.Override
@@ -6243,7 +6847,7 @@ public final class ThumbnailServiceOuterClass {
        * ID of the thumbnail.
        * </pre>
        *
-       * <code>string thumbnail_id = 1;</code>
+       * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The thumbnailId.
        */
       public java.lang.String getThumbnailId() {
@@ -6263,7 +6867,7 @@ public final class ThumbnailServiceOuterClass {
        * ID of the thumbnail.
        * </pre>
        *
-       * <code>string thumbnail_id = 1;</code>
+       * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for thumbnailId.
        */
       public com.google.protobuf.ByteString
@@ -6284,7 +6888,7 @@ public final class ThumbnailServiceOuterClass {
        * ID of the thumbnail.
        * </pre>
        *
-       * <code>string thumbnail_id = 1;</code>
+       * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The thumbnailId to set.
        * @return This builder for chaining.
        */
@@ -6303,7 +6907,7 @@ public final class ThumbnailServiceOuterClass {
        * ID of the thumbnail.
        * </pre>
        *
-       * <code>string thumbnail_id = 1;</code>
+       * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearThumbnailId() {
@@ -6317,7 +6921,7 @@ public final class ThumbnailServiceOuterClass {
        * ID of the thumbnail.
        * </pre>
        *
-       * <code>string thumbnail_id = 1;</code>
+       * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for thumbnailId to set.
        * @return This builder for chaining.
        */
@@ -6989,6 +7593,1219 @@ public final class ThumbnailServiceOuterClass {
 
   }
 
+  public interface DeleteThumbnailRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.DeleteThumbnailRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
+     * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The thumbnailId.
+     */
+    java.lang.String getThumbnailId();
+    /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
+     * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for thumbnailId.
+     */
+    com.google.protobuf.ByteString
+        getThumbnailIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.video.v1.DeleteThumbnailRequest}
+   */
+  public static final class DeleteThumbnailRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.DeleteThumbnailRequest)
+      DeleteThumbnailRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteThumbnailRequest.newBuilder() to construct.
+    private DeleteThumbnailRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteThumbnailRequest() {
+      thumbnailId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteThumbnailRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteThumbnailRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              thumbnailId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.internal_static_yandex_cloud_video_v1_DeleteThumbnailRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.internal_static_yandex_cloud_video_v1_DeleteThumbnailRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest.class, yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest.Builder.class);
+    }
+
+    public static final int THUMBNAIL_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object thumbnailId_;
+    /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
+     * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The thumbnailId.
+     */
+    @java.lang.Override
+    public java.lang.String getThumbnailId() {
+      java.lang.Object ref = thumbnailId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        thumbnailId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
+     * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for thumbnailId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getThumbnailIdBytes() {
+      java.lang.Object ref = thumbnailId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        thumbnailId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(thumbnailId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, thumbnailId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(thumbnailId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, thumbnailId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest other = (yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest) obj;
+
+      if (!getThumbnailId()
+          .equals(other.getThumbnailId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + THUMBNAIL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getThumbnailId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.video.v1.DeleteThumbnailRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.DeleteThumbnailRequest)
+        yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.internal_static_yandex_cloud_video_v1_DeleteThumbnailRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.internal_static_yandex_cloud_video_v1_DeleteThumbnailRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest.class, yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        thumbnailId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.internal_static_yandex_cloud_video_v1_DeleteThumbnailRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest build() {
+        yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest buildPartial() {
+        yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest result = new yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest(this);
+        result.thumbnailId_ = thumbnailId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest) {
+          return mergeFrom((yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest other) {
+        if (other == yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest.getDefaultInstance()) return this;
+        if (!other.getThumbnailId().isEmpty()) {
+          thumbnailId_ = other.thumbnailId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object thumbnailId_ = "";
+      /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
+       * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The thumbnailId.
+       */
+      public java.lang.String getThumbnailId() {
+        java.lang.Object ref = thumbnailId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          thumbnailId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
+       * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for thumbnailId.
+       */
+      public com.google.protobuf.ByteString
+          getThumbnailIdBytes() {
+        java.lang.Object ref = thumbnailId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          thumbnailId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
+       * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The thumbnailId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setThumbnailId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        thumbnailId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
+       * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearThumbnailId() {
+        
+        thumbnailId_ = getDefaultInstance().getThumbnailId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
+       * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for thumbnailId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setThumbnailIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        thumbnailId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.DeleteThumbnailRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.DeleteThumbnailRequest)
+    private static final yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest();
+    }
+
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteThumbnailRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteThumbnailRequest>() {
+      @java.lang.Override
+      public DeleteThumbnailRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteThumbnailRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteThumbnailRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteThumbnailRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteThumbnailMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.DeleteThumbnailMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
+     * <code>string thumbnail_id = 1;</code>
+     * @return The thumbnailId.
+     */
+    java.lang.String getThumbnailId();
+    /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
+     * <code>string thumbnail_id = 1;</code>
+     * @return The bytes for thumbnailId.
+     */
+    com.google.protobuf.ByteString
+        getThumbnailIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.video.v1.DeleteThumbnailMetadata}
+   */
+  public static final class DeleteThumbnailMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.DeleteThumbnailMetadata)
+      DeleteThumbnailMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteThumbnailMetadata.newBuilder() to construct.
+    private DeleteThumbnailMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteThumbnailMetadata() {
+      thumbnailId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteThumbnailMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteThumbnailMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              thumbnailId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.internal_static_yandex_cloud_video_v1_DeleteThumbnailMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.internal_static_yandex_cloud_video_v1_DeleteThumbnailMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata.class, yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata.Builder.class);
+    }
+
+    public static final int THUMBNAIL_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object thumbnailId_;
+    /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
+     * <code>string thumbnail_id = 1;</code>
+     * @return The thumbnailId.
+     */
+    @java.lang.Override
+    public java.lang.String getThumbnailId() {
+      java.lang.Object ref = thumbnailId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        thumbnailId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
+     * <code>string thumbnail_id = 1;</code>
+     * @return The bytes for thumbnailId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getThumbnailIdBytes() {
+      java.lang.Object ref = thumbnailId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        thumbnailId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(thumbnailId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, thumbnailId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(thumbnailId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, thumbnailId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata other = (yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata) obj;
+
+      if (!getThumbnailId()
+          .equals(other.getThumbnailId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + THUMBNAIL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getThumbnailId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.video.v1.DeleteThumbnailMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.DeleteThumbnailMetadata)
+        yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.internal_static_yandex_cloud_video_v1_DeleteThumbnailMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.internal_static_yandex_cloud_video_v1_DeleteThumbnailMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata.class, yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        thumbnailId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.internal_static_yandex_cloud_video_v1_DeleteThumbnailMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata build() {
+        yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata buildPartial() {
+        yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata result = new yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata(this);
+        result.thumbnailId_ = thumbnailId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata) {
+          return mergeFrom((yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata other) {
+        if (other == yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata.getDefaultInstance()) return this;
+        if (!other.getThumbnailId().isEmpty()) {
+          thumbnailId_ = other.thumbnailId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object thumbnailId_ = "";
+      /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
+       * <code>string thumbnail_id = 1;</code>
+       * @return The thumbnailId.
+       */
+      public java.lang.String getThumbnailId() {
+        java.lang.Object ref = thumbnailId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          thumbnailId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
+       * <code>string thumbnail_id = 1;</code>
+       * @return The bytes for thumbnailId.
+       */
+      public com.google.protobuf.ByteString
+          getThumbnailIdBytes() {
+        java.lang.Object ref = thumbnailId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          thumbnailId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
+       * <code>string thumbnail_id = 1;</code>
+       * @param value The thumbnailId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setThumbnailId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        thumbnailId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
+       * <code>string thumbnail_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearThumbnailId() {
+        
+        thumbnailId_ = getDefaultInstance().getThumbnailId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
+       * <code>string thumbnail_id = 1;</code>
+       * @param value The bytes for thumbnailId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setThumbnailIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        thumbnailId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.DeleteThumbnailMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.DeleteThumbnailMetadata)
+    private static final yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata();
+    }
+
+    public static yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteThumbnailMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteThumbnailMetadata>() {
+      @java.lang.Override
+      public DeleteThumbnailMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteThumbnailMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteThumbnailMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteThumbnailMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_GetThumbnailRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_GetThumbnailRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_video_v1_ListThumbnailRequest_descriptor;
   private static final 
@@ -7034,6 +8851,16 @@ public final class ThumbnailServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_video_v1_GenerateThumbnailUploadURLResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_DeleteThumbnailRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_DeleteThumbnailRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_DeleteThumbnailMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_DeleteThumbnailMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -7047,45 +8874,60 @@ public final class ThumbnailServiceOuterClass {
       "e.proto\022\025yandex.cloud.video.v1\032\034google/a" +
       "pi/annotations.proto\032 yandex/cloud/api/o" +
       "peration.proto\032&yandex/cloud/operation/o" +
-      "peration.proto\032%yandex/cloud/video/v1/th" +
-      "umbnail.proto\"W\n\024ListThumbnailRequest\022\022\n" +
-      "\nchannel_id\030\001 \001(\t\022\021\n\tpage_size\030d \001(\003\022\022\n\n" +
-      "page_token\030e \001(\tJ\004\010\002\020d\"l\n\025ListThumbnailR" +
-      "esponse\0224\n\nthumbnails\030\001 \003(\0132 .yandex.clo" +
-      "ud.video.v1.Thumbnail\022\027\n\017next_page_token" +
-      "\030d \001(\tJ\004\010\002\020d\",\n\026CreateThumbnailRequest\022\022" +
-      "\n\nchannel_id\030\001 \001(\t\"/\n\027CreateThumbnailMet" +
-      "adata\022\024\n\014thumbnail_id\030\001 \001(\t\"M\n BatchGene" +
-      "rateDownloadURLsRequest\022\022\n\nchannel_id\030\001 " +
-      "\001(\t\022\025\n\rthumbnail_ids\030\002 \003(\t\"g\n!BatchGener" +
-      "ateDownloadURLsResponse\022B\n\rdownload_urls" +
-      "\030\001 \003(\0132+.yandex.cloud.video.v1.Thumbnail" +
-      "DownloadURL\"B\n\024ThumbnailDownloadURL\022\024\n\014t" +
-      "humbnail_id\030\001 \001(\t\022\024\n\014download_url\030\002 \001(\t\"" +
-      "9\n!GenerateThumbnailUploadURLRequest\022\024\n\014" +
-      "thumbnail_id\030\001 \001(\t\"8\n\"GenerateThumbnailU" +
-      "ploadURLResponse\022\022\n\nupload_url\030\001 \001(\t2\322\005\n" +
-      "\020ThumbnailService\022\177\n\004List\022+.yandex.cloud" +
-      ".video.v1.ListThumbnailRequest\032,.yandex." +
-      "cloud.video.v1.ListThumbnailResponse\"\034\202\323" +
-      "\344\223\002\026\022\024/video/v1/thumbnails\022\243\001\n\006Create\022-." +
-      "yandex.cloud.video.v1.CreateThumbnailReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "G\202\323\344\223\002\031\"\024/video/v1/thumbnails:\001*\262\322*$\n\027Cr" +
-      "eateThumbnailMetadata\022\tThumbnail\022\311\001\n\031Bat" +
-      "chGenerateDownloadURLs\0227.yandex.cloud.vi" +
-      "deo.v1.BatchGenerateDownloadURLsRequest\032" +
-      "8.yandex.cloud.video.v1.BatchGenerateDow" +
-      "nloadURLsResponse\"9\202\323\344\223\0023\"./video/v1/thu" +
-      "mbnails:batchGenerateDownloadURLs:\001*\022\312\001\n" +
-      "\021GenerateUploadURL\0228.yandex.cloud.video." +
-      "v1.GenerateThumbnailUploadURLRequest\0329.y" +
-      "andex.cloud.video.v1.GenerateThumbnailUp" +
-      "loadURLResponse\"@\202\323\344\223\002:\"5/video/v1/thumb" +
-      "nails/{thumbnail_id}:generateUploadURL:\001" +
-      "*B\\\n\031yandex.cloud.api.video.v1Z?github.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/video/v1;videob\006proto3"
+      "peration.proto\032\035yandex/cloud/validation." +
+      "proto\032%yandex/cloud/video/v1/thumbnail.p" +
+      "roto\"9\n\023GetThumbnailRequest\022\"\n\014thumbnail" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"x\n\024ListThumbnail" +
+      "Request\022\034\n\nchannel_id\030\001 \001(\tB\010\212\3101\004<=50\022\035\n" +
+      "\tpage_size\030d \001(\003B\n\372\3071\006<=1000\022\035\n\npage_tok" +
+      "en\030e \001(\tB\t\212\3101\005<=200J\004\010\002\020d\"l\n\025ListThumbna" +
+      "ilResponse\0224\n\nthumbnails\030\001 \003(\0132 .yandex." +
+      "cloud.video.v1.Thumbnail\022\027\n\017next_page_to" +
+      "ken\030d \001(\tJ\004\010\002\020d\"7\n\026CreateThumbnailReques" +
+      "t\022\035\n\nchannel_id\030\001 \001(\tB\t\212\3101\005<=200\"/\n\027Crea" +
+      "teThumbnailMetadata\022\024\n\014thumbnail_id\030\001 \001(" +
+      "\t\"n\n BatchGenerateDownloadURLsRequest\022!\n" +
+      "\nchannel_id\030\001 \001(\tB\r\350\3071\001\212\3101\005<=200\022\'\n\rthum" +
+      "bnail_ids\030\002 \003(\tB\020\202\3101\0041-50\212\3101\004<=50\"g\n!Bat" +
+      "chGenerateDownloadURLsResponse\022B\n\rdownlo" +
+      "ad_urls\030\001 \003(\0132+.yandex.cloud.video.v1.Th" +
+      "umbnailDownloadURL\"B\n\024ThumbnailDownloadU" +
+      "RL\022\024\n\014thumbnail_id\030\001 \001(\t\022\024\n\014download_url" +
+      "\030\002 \001(\t\"G\n!GenerateThumbnailUploadURLRequ" +
+      "est\022\"\n\014thumbnail_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"" +
+      "8\n\"GenerateThumbnailUploadURLResponse\022\022\n" +
+      "\nupload_url\030\001 \001(\t\"<\n\026DeleteThumbnailRequ" +
+      "est\022\"\n\014thumbnail_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"" +
+      "/\n\027DeleteThumbnailMetadata\022\024\n\014thumbnail_" +
+      "id\030\001 \001(\t2\223\010\n\020ThumbnailService\022\200\001\n\003Get\022*." +
+      "yandex.cloud.video.v1.GetThumbnailReques" +
+      "t\032 .yandex.cloud.video.v1.Thumbnail\"+\202\323\344" +
+      "\223\002%\022#/video/v1/thumbnails/{thumbnail_id}" +
+      "\022\177\n\004List\022+.yandex.cloud.video.v1.ListThu" +
+      "mbnailRequest\032,.yandex.cloud.video.v1.Li" +
+      "stThumbnailResponse\"\034\202\323\344\223\002\026\022\024/video/v1/t" +
+      "humbnails\022\243\001\n\006Create\022-.yandex.cloud.vide" +
+      "o.v1.CreateThumbnailRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"G\202\323\344\223\002\031\"\024/video/v" +
+      "1/thumbnails:\001*\262\322*$\n\027CreateThumbnailMeta" +
+      "data\022\tThumbnail\022\311\001\n\031BatchGenerateDownloa" +
+      "dURLs\0227.yandex.cloud.video.v1.BatchGener" +
+      "ateDownloadURLsRequest\0328.yandex.cloud.vi" +
+      "deo.v1.BatchGenerateDownloadURLsResponse" +
+      "\"9\202\323\344\223\0023\"./video/v1/thumbnails:batchGene" +
+      "rateDownloadURLs:\001*\022\312\001\n\021GenerateUploadUR" +
+      "L\0228.yandex.cloud.video.v1.GenerateThumbn" +
+      "ailUploadURLRequest\0329.yandex.cloud.video" +
+      ".v1.GenerateThumbnailUploadURLResponse\"@" +
+      "\202\323\344\223\002:\"5/video/v1/thumbnails/{thumbnail_" +
+      "id}:generateUploadURL:\001*\022\273\001\n\006Delete\022-.ya" +
+      "ndex.cloud.video.v1.DeleteThumbnailReque" +
+      "st\032!.yandex.cloud.operation.Operation\"_\202" +
+      "\323\344\223\002%*#/video/v1/thumbnails/{thumbnail_i" +
+      "d}\262\322*0\n\027DeleteThumbnailMetadata\022\025google." +
+      "protobuf.EmptyB\\\n\031yandex.cloud.api.video" +
+      ".v1Z?github.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/video/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7093,71 +8935,95 @@ public final class ThumbnailServiceOuterClass {
           com.google.api.AnnotationsProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.video.v1.ThumbnailOuterClass.getDescriptor(),
         });
-    internal_static_yandex_cloud_video_v1_ListThumbnailRequest_descriptor =
+    internal_static_yandex_cloud_video_v1_GetThumbnailRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_yandex_cloud_video_v1_GetThumbnailRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_GetThumbnailRequest_descriptor,
+        new java.lang.String[] { "ThumbnailId", });
+    internal_static_yandex_cloud_video_v1_ListThumbnailRequest_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_video_v1_ListThumbnailRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_ListThumbnailRequest_descriptor,
         new java.lang.String[] { "ChannelId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_video_v1_ListThumbnailResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_video_v1_ListThumbnailResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_ListThumbnailResponse_descriptor,
         new java.lang.String[] { "Thumbnails", "NextPageToken", });
     internal_static_yandex_cloud_video_v1_CreateThumbnailRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_video_v1_CreateThumbnailRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_CreateThumbnailRequest_descriptor,
         new java.lang.String[] { "ChannelId", });
     internal_static_yandex_cloud_video_v1_CreateThumbnailMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_video_v1_CreateThumbnailMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_CreateThumbnailMetadata_descriptor,
         new java.lang.String[] { "ThumbnailId", });
     internal_static_yandex_cloud_video_v1_BatchGenerateDownloadURLsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_video_v1_BatchGenerateDownloadURLsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_BatchGenerateDownloadURLsRequest_descriptor,
         new java.lang.String[] { "ChannelId", "ThumbnailIds", });
     internal_static_yandex_cloud_video_v1_BatchGenerateDownloadURLsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_video_v1_BatchGenerateDownloadURLsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_BatchGenerateDownloadURLsResponse_descriptor,
         new java.lang.String[] { "DownloadUrls", });
     internal_static_yandex_cloud_video_v1_ThumbnailDownloadURL_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_video_v1_ThumbnailDownloadURL_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_ThumbnailDownloadURL_descriptor,
         new java.lang.String[] { "ThumbnailId", "DownloadUrl", });
     internal_static_yandex_cloud_video_v1_GenerateThumbnailUploadURLRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_video_v1_GenerateThumbnailUploadURLRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_GenerateThumbnailUploadURLRequest_descriptor,
         new java.lang.String[] { "ThumbnailId", });
     internal_static_yandex_cloud_video_v1_GenerateThumbnailUploadURLResponse_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_video_v1_GenerateThumbnailUploadURLResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_GenerateThumbnailUploadURLResponse_descriptor,
         new java.lang.String[] { "UploadUrl", });
+    internal_static_yandex_cloud_video_v1_DeleteThumbnailRequest_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_video_v1_DeleteThumbnailRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_DeleteThumbnailRequest_descriptor,
+        new java.lang.String[] { "ThumbnailId", });
+    internal_static_yandex_cloud_video_v1_DeleteThumbnailMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_video_v1_DeleteThumbnailMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_DeleteThumbnailMetadata_descriptor,
+        new java.lang.String[] { "ThumbnailId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
+    registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
+    registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.video.v1.ThumbnailOuterClass.getDescriptor();
   }
 

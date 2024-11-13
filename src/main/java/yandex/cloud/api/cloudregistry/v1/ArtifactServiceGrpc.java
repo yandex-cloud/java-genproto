@@ -3,6 +3,9 @@ package yandex.cloud.api.cloudregistry.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * A set of methods for managing Artifacts.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -122,13 +125,16 @@ public final class ArtifactServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Artifacts.
+   * </pre>
    */
   public static abstract class ArtifactServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Returns the specified Registry artifact resource.
-     * To get the list of available Registry artifact resources, make RegistryService.ListArtifacts method call.
+     * Returns the specified artifact resource.
+     * To get the list of available artifact resources, make [RegistryService.ListArtifacts] method call.
      * </pre>
      */
     public void get(yandex.cloud.api.cloudregistry.v1.ArtifactServiceOuterClass.GetArtifactRequest request,
@@ -138,7 +144,7 @@ public final class ArtifactServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified registry artifact.
+     * Deletes the specified artifact.
      * </pre>
      */
     public void delete(yandex.cloud.api.cloudregistry.v1.ArtifactServiceOuterClass.DeleteArtifactRequest request,
@@ -167,6 +173,9 @@ public final class ArtifactServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Artifacts.
+   * </pre>
    */
   public static final class ArtifactServiceStub extends io.grpc.stub.AbstractAsyncStub<ArtifactServiceStub> {
     private ArtifactServiceStub(
@@ -182,8 +191,8 @@ public final class ArtifactServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified Registry artifact resource.
-     * To get the list of available Registry artifact resources, make RegistryService.ListArtifacts method call.
+     * Returns the specified artifact resource.
+     * To get the list of available artifact resources, make [RegistryService.ListArtifacts] method call.
      * </pre>
      */
     public void get(yandex.cloud.api.cloudregistry.v1.ArtifactServiceOuterClass.GetArtifactRequest request,
@@ -194,7 +203,7 @@ public final class ArtifactServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified registry artifact.
+     * Deletes the specified artifact.
      * </pre>
      */
     public void delete(yandex.cloud.api.cloudregistry.v1.ArtifactServiceOuterClass.DeleteArtifactRequest request,
@@ -205,6 +214,9 @@ public final class ArtifactServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Artifacts.
+   * </pre>
    */
   public static final class ArtifactServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ArtifactServiceBlockingStub> {
     private ArtifactServiceBlockingStub(
@@ -220,8 +232,8 @@ public final class ArtifactServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified Registry artifact resource.
-     * To get the list of available Registry artifact resources, make RegistryService.ListArtifacts method call.
+     * Returns the specified artifact resource.
+     * To get the list of available artifact resources, make [RegistryService.ListArtifacts] method call.
      * </pre>
      */
     public yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact get(yandex.cloud.api.cloudregistry.v1.ArtifactServiceOuterClass.GetArtifactRequest request) {
@@ -231,7 +243,7 @@ public final class ArtifactServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified registry artifact.
+     * Deletes the specified artifact.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.cloudregistry.v1.ArtifactServiceOuterClass.DeleteArtifactRequest request) {
@@ -241,6 +253,9 @@ public final class ArtifactServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Artifacts.
+   * </pre>
    */
   public static final class ArtifactServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ArtifactServiceFutureStub> {
     private ArtifactServiceFutureStub(
@@ -256,8 +271,8 @@ public final class ArtifactServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified Registry artifact resource.
-     * To get the list of available Registry artifact resources, make RegistryService.ListArtifacts method call.
+     * Returns the specified artifact resource.
+     * To get the list of available artifact resources, make [RegistryService.ListArtifacts] method call.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact> get(
@@ -268,7 +283,7 @@ public final class ArtifactServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified registry artifact.
+     * Deletes the specified artifact.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(

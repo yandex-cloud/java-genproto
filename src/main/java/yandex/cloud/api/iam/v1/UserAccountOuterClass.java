@@ -96,7 +96,7 @@ public final class UserAccountOuterClass {
   }
   /**
    * <pre>
-   * Currently represents only [Yandex account](/docs/iam/concepts/#passport).
+   * Currently represents only [Yandex account](/docs/iam/concepts/users/accounts#passport).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.iam.v1.UserAccount}
@@ -578,7 +578,7 @@ public final class UserAccountOuterClass {
     }
     /**
      * <pre>
-     * Currently represents only [Yandex account](/docs/iam/concepts/#passport).
+     * Currently represents only [Yandex account](/docs/iam/concepts/users/accounts#passport).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.iam.v1.UserAccount}
@@ -1322,7 +1322,7 @@ public final class UserAccountOuterClass {
   /**
    * <pre>
    * A YandexPassportUserAccount resource.
-   * For more information, see [Yandex account](/docs/iam/concepts/#passport).
+   * For more information, see [Yandex account](/docs/iam/concepts/users/accounts#passport).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.iam.v1.YandexPassportUserAccount}
@@ -1674,7 +1674,7 @@ public final class UserAccountOuterClass {
     /**
      * <pre>
      * A YandexPassportUserAccount resource.
-     * For more information, see [Yandex account](/docs/iam/concepts/#passport).
+     * For more information, see [Yandex account](/docs/iam/concepts/users/accounts#passport).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.iam.v1.YandexPassportUserAccount}

@@ -11240,6 +11240,17 @@ public final class BackendGroupOuterClass {
      */
     boolean getEnableProxyProtocol();
 
+    /**
+     * <pre>
+     * If a backend host becomes unhealthy (as determined by the configured health checks),
+     * keep connections to the failed host.
+     * </pre>
+     *
+     * <code>bool keep_connections_on_host_health_failure = 9;</code>
+     * @return The keepConnectionsOnHostHealthFailure.
+     */
+    boolean getKeepConnectionsOnHostHealthFailure();
+
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend.BackendTypeCase getBackendTypeCase();
   }
   /**
@@ -11370,6 +11381,11 @@ public final class BackendGroupOuterClass {
             case 64: {
 
               enableProxyProtocol_ = input.readBool();
+              break;
+            }
+            case 72: {
+
+              keepConnectionsOnHostHealthFailure_ = input.readBool();
               break;
             }
             default: {
@@ -11770,6 +11786,22 @@ public final class BackendGroupOuterClass {
       return enableProxyProtocol_;
     }
 
+    public static final int KEEP_CONNECTIONS_ON_HOST_HEALTH_FAILURE_FIELD_NUMBER = 9;
+    private boolean keepConnectionsOnHostHealthFailure_;
+    /**
+     * <pre>
+     * If a backend host becomes unhealthy (as determined by the configured health checks),
+     * keep connections to the failed host.
+     * </pre>
+     *
+     * <code>bool keep_connections_on_host_health_failure = 9;</code>
+     * @return The keepConnectionsOnHostHealthFailure.
+     */
+    @java.lang.Override
+    public boolean getKeepConnectionsOnHostHealthFailure() {
+      return keepConnectionsOnHostHealthFailure_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11807,6 +11839,9 @@ public final class BackendGroupOuterClass {
       }
       if (enableProxyProtocol_ != false) {
         output.writeBool(8, enableProxyProtocol_);
+      }
+      if (keepConnectionsOnHostHealthFailure_ != false) {
+        output.writeBool(9, keepConnectionsOnHostHealthFailure_);
       }
       unknownFields.writeTo(output);
     }
@@ -11848,6 +11883,10 @@ public final class BackendGroupOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(8, enableProxyProtocol_);
       }
+      if (keepConnectionsOnHostHealthFailure_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(9, keepConnectionsOnHostHealthFailure_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -11886,6 +11925,8 @@ public final class BackendGroupOuterClass {
       }
       if (getEnableProxyProtocol()
           != other.getEnableProxyProtocol()) return false;
+      if (getKeepConnectionsOnHostHealthFailure()
+          != other.getKeepConnectionsOnHostHealthFailure()) return false;
       if (!getBackendTypeCase().equals(other.getBackendTypeCase())) return false;
       switch (backendTypeCase_) {
         case 5:
@@ -11930,6 +11971,9 @@ public final class BackendGroupOuterClass {
       hash = (37 * hash) + ENABLE_PROXY_PROTOCOL_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getEnableProxyProtocol());
+      hash = (37 * hash) + KEEP_CONNECTIONS_ON_HOST_HEALTH_FAILURE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getKeepConnectionsOnHostHealthFailure());
       switch (backendTypeCase_) {
         case 5:
           hash = (37 * hash) + TARGET_GROUPS_FIELD_NUMBER;
@@ -12106,6 +12150,8 @@ public final class BackendGroupOuterClass {
         }
         enableProxyProtocol_ = false;
 
+        keepConnectionsOnHostHealthFailure_ = false;
+
         backendTypeCase_ = 0;
         backendType_ = null;
         return this;
@@ -12169,6 +12215,7 @@ public final class BackendGroupOuterClass {
           result.tls_ = tlsBuilder_.build();
         }
         result.enableProxyProtocol_ = enableProxyProtocol_;
+        result.keepConnectionsOnHostHealthFailure_ = keepConnectionsOnHostHealthFailure_;
         result.backendTypeCase_ = backendTypeCase_;
         onBuilt();
         return result;
@@ -12262,6 +12309,9 @@ public final class BackendGroupOuterClass {
         }
         if (other.getEnableProxyProtocol() != false) {
           setEnableProxyProtocol(other.getEnableProxyProtocol());
+        }
+        if (other.getKeepConnectionsOnHostHealthFailure() != false) {
+          setKeepConnectionsOnHostHealthFailure(other.getKeepConnectionsOnHostHealthFailure());
         }
         switch (other.getBackendTypeCase()) {
           case TARGET_GROUPS: {
@@ -13548,6 +13598,52 @@ public final class BackendGroupOuterClass {
       public Builder clearEnableProxyProtocol() {
         
         enableProxyProtocol_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean keepConnectionsOnHostHealthFailure_ ;
+      /**
+       * <pre>
+       * If a backend host becomes unhealthy (as determined by the configured health checks),
+       * keep connections to the failed host.
+       * </pre>
+       *
+       * <code>bool keep_connections_on_host_health_failure = 9;</code>
+       * @return The keepConnectionsOnHostHealthFailure.
+       */
+      @java.lang.Override
+      public boolean getKeepConnectionsOnHostHealthFailure() {
+        return keepConnectionsOnHostHealthFailure_;
+      }
+      /**
+       * <pre>
+       * If a backend host becomes unhealthy (as determined by the configured health checks),
+       * keep connections to the failed host.
+       * </pre>
+       *
+       * <code>bool keep_connections_on_host_health_failure = 9;</code>
+       * @param value The keepConnectionsOnHostHealthFailure to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeepConnectionsOnHostHealthFailure(boolean value) {
+        
+        keepConnectionsOnHostHealthFailure_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If a backend host becomes unhealthy (as determined by the configured health checks),
+       * keep connections to the failed host.
+       * </pre>
+       *
+       * <code>bool keep_connections_on_host_health_failure = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKeepConnectionsOnHostHealthFailure() {
+        
+        keepConnectionsOnHostHealthFailure_ = false;
         onChanged();
         return this;
       }
@@ -28055,7 +28151,7 @@ public final class BackendGroupOuterClass {
       " \001(\003B\t\372\3071\0050-100\0221\n\036locality_aware_routin" +
       "g_percent\030\002 \001(\003B\t\372\3071\0050-100\022\027\n\017strict_loc" +
       "ality\030\003 \001(\010\022@\n\004mode\030\004 \001(\01622.yandex.cloud" +
-      ".apploadbalancer.v1.LoadBalancingMode\"\346\003" +
+      ".apploadbalancer.v1.LoadBalancingMode\"\227\004" +
       "\n\rStreamBackend\022.\n\004name\030\001 \001(\tB \362\3071\034[a-z]" +
       "[-a-z0-9]{1,61}[a-z0-9]\0223\n\016backend_weigh" +
       "t\030\002 \001(\0132\033.google.protobuf.Int64Value\022S\n\025" +
@@ -28067,71 +28163,73 @@ public final class BackendGroupOuterClass {
       "cks\030\006 \003(\0132,.yandex.cloud.apploadbalancer" +
       ".v1.HealthCheck\0228\n\003tls\030\007 \001(\0132+.yandex.cl" +
       "oud.apploadbalancer.v1.BackendTls\022\035\n\025ena" +
-      "ble_proxy_protocol\030\010 \001(\010B\024\n\014backend_type" +
-      "\022\004\300\3011\001\"\255\004\n\013HttpBackend\0222\n\004name\030\001 \001(\tB$\350\307" +
-      "1\001\362\3071\034[a-z][-a-z0-9]{1,61}[a-z0-9]\0223\n\016ba" +
-      "ckend_weight\030\002 \001(\0132\033.google.protobuf.Int" +
-      "64Value\022S\n\025load_balancing_config\030\003 \001(\01324" +
-      ".yandex.cloud.apploadbalancer.v1.LoadBal" +
-      "ancingConfig\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022" +
-      "M\n\rtarget_groups\030\005 \001(\01324.yandex.cloud.ap" +
-      "ploadbalancer.v1.TargetGroupsBackendH\000\022O" +
-      "\n\016storage_bucket\030\t \001(\01325.yandex.cloud.ap" +
-      "ploadbalancer.v1.StorageBucketBackendH\000\022" +
-      "B\n\014healthchecks\030\006 \003(\0132,.yandex.cloud.app" +
-      "loadbalancer.v1.HealthCheck\0228\n\003tls\030\007 \001(\013" +
-      "2+.yandex.cloud.apploadbalancer.v1.Backe" +
-      "ndTls\022\021\n\tuse_http2\030\010 \001(\010B\024\n\014backend_type" +
-      "\022\004\300\3011\001\"\317\003\n\013GrpcBackend\0222\n\004name\030\001 \001(\tB$\350\307" +
-      "1\001\362\3071\034[a-z][-a-z0-9]{1,61}[a-z0-9]\0223\n\016ba" +
-      "ckend_weight\030\002 \001(\0132\033.google.protobuf.Int" +
-      "64Value\022S\n\025load_balancing_config\030\003 \001(\01324" +
-      ".yandex.cloud.apploadbalancer.v1.LoadBal" +
-      "ancingConfig\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022" +
-      "M\n\rtarget_groups\030\005 \001(\01324.yandex.cloud.ap" +
-      "ploadbalancer.v1.TargetGroupsBackendH\000\022B" +
-      "\n\014healthchecks\030\007 \003(\0132,.yandex.cloud.appl" +
-      "oadbalancer.v1.HealthCheck\0228\n\003tls\030\010 \001(\0132" +
-      "+.yandex.cloud.apploadbalancer.v1.Backen" +
-      "dTlsB\024\n\014backend_type\022\004\300\3011\001J\004\010\006\020\007\"7\n\023Targ" +
-      "etGroupsBackend\022 \n\020target_group_ids\030\001 \003(" +
-      "\tB\006\202\3101\002>0\"\034\n\032PlaintextTransportSettings\"" +
-      "|\n\027SecureTransportSettings\022\013\n\003sni\030\001 \001(\t\022" +
-      "N\n\022validation_context\030\003 \001(\01322.yandex.clo" +
-      "ud.apploadbalancer.v1.ValidationContextJ" +
-      "\004\010\002\020\003\"o\n\nBackendTls\022\013\n\003sni\030\001 \001(\t\022N\n\022vali" +
-      "dation_context\030\003 \001(\01322.yandex.cloud.appl" +
-      "oadbalancer.v1.ValidationContextJ\004\010\002\020\003\"," +
-      "\n\024StorageBucketBackend\022\024\n\006bucket\030\001 \001(\tB\004" +
-      "\350\3071\001\"\240\007\n\013HealthCheck\0220\n\007timeout\030\001 \001(\0132\031." +
-      "google.protobuf.DurationB\004\350\3071\001\0221\n\010interv" +
-      "al\030\002 \001(\0132\031.google.protobuf.DurationB\004\350\3071" +
-      "\001\022\037\n\027interval_jitter_percent\030\003 \001(\001\022\031\n\021he" +
-      "althy_threshold\030\004 \001(\003\022\033\n\023unhealthy_thres" +
-      "hold\030\005 \001(\003\022%\n\020healthcheck_port\030\006 \001(\003B\013\372\307" +
-      "1\0070-65535\022P\n\006stream\030\007 \001(\0132>.yandex.cloud" +
-      ".apploadbalancer.v1.HealthCheck.StreamHe" +
-      "althCheckH\000\022L\n\004http\030\010 \001(\0132<.yandex.cloud" +
-      ".apploadbalancer.v1.HealthCheck.HttpHeal" +
-      "thCheckH\000\022L\n\004grpc\030\t \001(\0132<.yandex.cloud.a" +
-      "pploadbalancer.v1.HealthCheck.GrpcHealth" +
-      "CheckH\000\022P\n\tplaintext\030\n \001(\0132;.yandex.clou" +
-      "d.apploadbalancer.v1.PlaintextTransportS" +
-      "ettingsH\001\022G\n\003tls\030\013 \001(\01328.yandex.cloud.ap" +
-      "ploadbalancer.v1.SecureTransportSettings" +
-      "H\001\032\206\001\n\021StreamHealthCheck\0226\n\004send\030\001 \001(\0132(" +
-      ".yandex.cloud.apploadbalancer.v1.Payload" +
-      "\0229\n\007receive\030\002 \001(\0132(.yandex.cloud.appload" +
-      "balancer.v1.Payload\032F\n\017HttpHealthCheck\022\014" +
-      "\n\004host\030\001 \001(\t\022\022\n\004path\030\002 \001(\tB\004\350\3071\001\022\021\n\tuse_" +
-      "http2\030\003 \001(\010\032\'\n\017GrpcHealthCheck\022\024\n\014servic" +
-      "e_name\030\001 \001(\tB\023\n\013healthcheck\022\004\300\3011\001B\024\n\022tra" +
-      "nsport_settings*T\n\021LoadBalancingMode\022\017\n\013" +
-      "ROUND_ROBIN\020\000\022\n\n\006RANDOM\020\001\022\021\n\rLEAST_REQUE" +
-      "ST\020\002\022\017\n\013MAGLEV_HASH\020\003Bz\n#yandex.cloud.ap" +
-      "i.apploadbalancer.v1ZSgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/apploadba" +
-      "lancer/v1;apploadbalancerb\006proto3"
+      "ble_proxy_protocol\030\010 \001(\010\022/\n\'keep_connect" +
+      "ions_on_host_health_failure\030\t \001(\010B\024\n\014bac" +
+      "kend_type\022\004\300\3011\001\"\255\004\n\013HttpBackend\0222\n\004name\030" +
+      "\001 \001(\tB$\350\3071\001\362\3071\034[a-z][-a-z0-9]{1,61}[a-z0" +
+      "-9]\0223\n\016backend_weight\030\002 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022S\n\025load_balancing_confi" +
+      "g\030\003 \001(\01324.yandex.cloud.apploadbalancer.v" +
+      "1.LoadBalancingConfig\022\031\n\004port\030\004 \001(\003B\013\372\3071" +
+      "\0070-65535\022M\n\rtarget_groups\030\005 \001(\01324.yandex" +
+      ".cloud.apploadbalancer.v1.TargetGroupsBa" +
+      "ckendH\000\022O\n\016storage_bucket\030\t \001(\01325.yandex" +
+      ".cloud.apploadbalancer.v1.StorageBucketB" +
+      "ackendH\000\022B\n\014healthchecks\030\006 \003(\0132,.yandex." +
+      "cloud.apploadbalancer.v1.HealthCheck\0228\n\003" +
+      "tls\030\007 \001(\0132+.yandex.cloud.apploadbalancer" +
+      ".v1.BackendTls\022\021\n\tuse_http2\030\010 \001(\010B\024\n\014bac" +
+      "kend_type\022\004\300\3011\001\"\317\003\n\013GrpcBackend\0222\n\004name\030" +
+      "\001 \001(\tB$\350\3071\001\362\3071\034[a-z][-a-z0-9]{1,61}[a-z0" +
+      "-9]\0223\n\016backend_weight\030\002 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022S\n\025load_balancing_confi" +
+      "g\030\003 \001(\01324.yandex.cloud.apploadbalancer.v" +
+      "1.LoadBalancingConfig\022\031\n\004port\030\004 \001(\003B\013\372\3071" +
+      "\0070-65535\022M\n\rtarget_groups\030\005 \001(\01324.yandex" +
+      ".cloud.apploadbalancer.v1.TargetGroupsBa" +
+      "ckendH\000\022B\n\014healthchecks\030\007 \003(\0132,.yandex.c" +
+      "loud.apploadbalancer.v1.HealthCheck\0228\n\003t" +
+      "ls\030\010 \001(\0132+.yandex.cloud.apploadbalancer." +
+      "v1.BackendTlsB\024\n\014backend_type\022\004\300\3011\001J\004\010\006\020" +
+      "\007\"7\n\023TargetGroupsBackend\022 \n\020target_group" +
+      "_ids\030\001 \003(\tB\006\202\3101\002>0\"\034\n\032PlaintextTransport" +
+      "Settings\"|\n\027SecureTransportSettings\022\013\n\003s" +
+      "ni\030\001 \001(\t\022N\n\022validation_context\030\003 \001(\01322.y" +
+      "andex.cloud.apploadbalancer.v1.Validatio" +
+      "nContextJ\004\010\002\020\003\"o\n\nBackendTls\022\013\n\003sni\030\001 \001(" +
+      "\t\022N\n\022validation_context\030\003 \001(\01322.yandex.c" +
+      "loud.apploadbalancer.v1.ValidationContex" +
+      "tJ\004\010\002\020\003\",\n\024StorageBucketBackend\022\024\n\006bucke" +
+      "t\030\001 \001(\tB\004\350\3071\001\"\240\007\n\013HealthCheck\0220\n\007timeout" +
+      "\030\001 \001(\0132\031.google.protobuf.DurationB\004\350\3071\001\022" +
+      "1\n\010interval\030\002 \001(\0132\031.google.protobuf.Dura" +
+      "tionB\004\350\3071\001\022\037\n\027interval_jitter_percent\030\003 " +
+      "\001(\001\022\031\n\021healthy_threshold\030\004 \001(\003\022\033\n\023unheal" +
+      "thy_threshold\030\005 \001(\003\022%\n\020healthcheck_port\030" +
+      "\006 \001(\003B\013\372\3071\0070-65535\022P\n\006stream\030\007 \001(\0132>.yan" +
+      "dex.cloud.apploadbalancer.v1.HealthCheck" +
+      ".StreamHealthCheckH\000\022L\n\004http\030\010 \001(\0132<.yan" +
+      "dex.cloud.apploadbalancer.v1.HealthCheck" +
+      ".HttpHealthCheckH\000\022L\n\004grpc\030\t \001(\0132<.yande" +
+      "x.cloud.apploadbalancer.v1.HealthCheck.G" +
+      "rpcHealthCheckH\000\022P\n\tplaintext\030\n \001(\0132;.ya" +
+      "ndex.cloud.apploadbalancer.v1.PlaintextT" +
+      "ransportSettingsH\001\022G\n\003tls\030\013 \001(\01328.yandex" +
+      ".cloud.apploadbalancer.v1.SecureTranspor" +
+      "tSettingsH\001\032\206\001\n\021StreamHealthCheck\0226\n\004sen" +
+      "d\030\001 \001(\0132(.yandex.cloud.apploadbalancer.v" +
+      "1.Payload\0229\n\007receive\030\002 \001(\0132(.yandex.clou" +
+      "d.apploadbalancer.v1.Payload\032F\n\017HttpHeal" +
+      "thCheck\022\014\n\004host\030\001 \001(\t\022\022\n\004path\030\002 \001(\tB\004\350\3071" +
+      "\001\022\021\n\tuse_http2\030\003 \001(\010\032\'\n\017GrpcHealthCheck\022" +
+      "\024\n\014service_name\030\001 \001(\tB\023\n\013healthcheck\022\004\300\301" +
+      "1\001B\024\n\022transport_settings*T\n\021LoadBalancin" +
+      "gMode\022\017\n\013ROUND_ROBIN\020\000\022\n\n\006RANDOM\020\001\022\021\n\rLE" +
+      "AST_REQUEST\020\002\022\017\n\013MAGLEV_HASH\020\003Bz\n#yandex" +
+      ".cloud.api.apploadbalancer.v1ZSgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "apploadbalancer/v1;apploadbalancerb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -28202,7 +28300,7 @@ public final class BackendGroupOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_StreamBackend_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_StreamBackend_descriptor,
-        new java.lang.String[] { "Name", "BackendWeight", "LoadBalancingConfig", "Port", "TargetGroups", "Healthchecks", "Tls", "EnableProxyProtocol", "BackendType", });
+        new java.lang.String[] { "Name", "BackendWeight", "LoadBalancingConfig", "Port", "TargetGroups", "Healthchecks", "Tls", "EnableProxyProtocol", "KeepConnectionsOnHostHealthFailure", "BackendType", });
     internal_static_yandex_cloud_apploadbalancer_v1_HttpBackend_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_apploadbalancer_v1_HttpBackend_fieldAccessorTable = new

@@ -556,6 +556,14 @@ public final class PERR {
        * <code>DISABLED = 4;</code>
        */
       DISABLED(4),
+      /**
+       * <pre>
+       * Rule deletion in progress
+       * </pre>
+       *
+       * <code>DELETING = 5;</code>
+       */
+      DELETING(5),
       UNRECOGNIZED(-1),
       ;
 
@@ -595,6 +603,14 @@ public final class PERR {
        * <code>DISABLED = 4;</code>
        */
       public static final int DISABLED_VALUE = 4;
+      /**
+       * <pre>
+       * Rule deletion in progress
+       * </pre>
+       *
+       * <code>DELETING = 5;</code>
+       */
+      public static final int DELETING_VALUE = 5;
 
 
       public final int getNumber() {
@@ -626,6 +642,7 @@ public final class PERR {
           case 2: return ENABLED;
           case 3: return UPDATING;
           case 4: return DISABLED;
+          case 5: return DELETING;
           default: return null;
         }
       }
@@ -18436,7 +18453,7 @@ public final class PERR {
       "/rule.proto\022&yandex.cloud.serverless.eve" +
       "ntrouter.v1\032\036google/protobuf/duration.pr" +
       "oto\032\037google/protobuf/timestamp.proto\032\035ya" +
-      "ndex/cloud/validation.proto\"\344\004\n\004Rule\022\n\n\002" +
+      "ndex/cloud/validation.proto\"\362\004\n\004Rule\022\n\n\002" +
       "id\030\001 \001(\t\022\016\n\006bus_id\030\002 \001(\t\022\021\n\tfolder_id\030\003 " +
       "\001(\t\022\020\n\010cloud_id\030\004 \001(\t\022.\n\ncreated_at\030\005 \001(" +
       "\0132\032.google.protobuf.Timestamp\022\014\n\004name\030\006 " +
@@ -18449,79 +18466,80 @@ public final class PERR {
       "deletion_protection\030\r \001(\010\022C\n\006status\030\016 \001(" +
       "\01623.yandex.cloud.serverless.eventrouter." +
       "v1.Rule.Status\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"W\n\006Status\022\026\n\022STATU" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"e\n\006Status\022\026\n\022STATU" +
       "S_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\013\n\007ENABLED" +
-      "\020\002\022\014\n\010UPDATING\020\003\022\014\n\010DISABLED\020\004J\004\010\t\020\nJ\004\010\n" +
-      "\020\013\"<\n\006Filter\022\037\n\tjq_filter\030\001 \001(\tB\n\212\3101\006<=1" +
-      "024H\000B\021\n\tcondition\022\004\300\3011\001\"I\n\013Transformer\022" +
-      "%\n\016jq_transformer\030\001 \001(\tB\013\212\3101\007<=65536H\000B\023" +
-      "\n\013transformer\022\004\300\3011\001\"\212\010\n\006Target\022@\n\003yds\030\001 " +
+      "\020\002\022\014\n\010UPDATING\020\003\022\014\n\010DISABLED\020\004\022\014\n\010DELETI" +
+      "NG\020\005J\004\010\t\020\nJ\004\010\n\020\013\"<\n\006Filter\022\037\n\tjq_filter\030" +
+      "\001 \001(\tB\n\212\3101\006<=1024H\000B\021\n\tcondition\022\004\300\3011\001\"I" +
+      "\n\013Transformer\022%\n\016jq_transformer\030\001 \001(\tB\013\212" +
+      "\3101\007<=65536H\000B\023\n\013transformer\022\004\300\3011\001\"\212\010\n\006Ta" +
+      "rget\022@\n\003yds\030\001 \001(\01321.yandex.cloud.serverl" +
+      "ess.eventrouter.v1.YdsTargetH\000\022@\n\003ymq\030\002 " +
       "\001(\01321.yandex.cloud.serverless.eventroute" +
-      "r.v1.YdsTargetH\000\022@\n\003ymq\030\002 \001(\01321.yandex.c" +
-      "loud.serverless.eventrouter.v1.YmqTarget" +
-      "H\000\022J\n\010function\030\003 \001(\01326.yandex.cloud.serv" +
-      "erless.eventrouter.v1.FunctionTargetH\000\022L" +
-      "\n\tcontainer\030\004 \001(\01327.yandex.cloud.serverl" +
-      "ess.eventrouter.v1.ContainerTargetH\000\022g\n\024" +
-      "gateway_ws_broadcast\030\005 \001(\0132G.yandex.clou" +
-      "d.serverless.eventrouter.v1.GatewayWebso" +
-      "cketBroadcastTargetH\000\022H\n\007logging\030\006 \001(\01325" +
-      ".yandex.cloud.serverless.eventrouter.v1." +
-      "LoggingTargetH\000\022J\n\010workflow\030\007 \001(\01326.yand" +
-      "ex.cloud.serverless.eventrouter.v1.Workf" +
-      "lowTargetH\000\022H\n\013transformer\0302 \001(\01323.yande" +
-      "x.cloud.serverless.eventrouter.v1.Transf" +
-      "ormer\022M\n\016retry_settings\0303 \001(\01325.yandex.c" +
-      "loud.serverless.eventrouter.v1.RetrySett" +
-      "ings\022T\n\021dead_letter_queue\0304 \001(\01327.yandex" +
-      ".cloud.serverless.eventrouter.v1.PutQueu" +
-      "eMessageH\001\022E\n\006status\0306 \001(\01625.yandex.clou" +
-      "d.serverless.eventrouter.v1.Target.Statu" +
-      "s\"\201\001\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\013\n\007" +
-      "ENABLED\020\001\022\014\n\010DISABLED\020\002\022\026\n\022RESOURCE_NOT_" +
-      "FOUND\020\003\022\025\n\021PERMISSION_DENIED\020\004\022\025\n\021SUBJEC" +
-      "T_NOT_FOUND\020\005B\016\n\006target\022\004\300\3011\001B\r\n\013dead_le" +
-      "tterJ\004\010\010\0202J\004\0105\0206\"h\n\tYdsTarget\022\026\n\010databas" +
-      "e\030\001 \001(\tB\004\350\3071\001\022\031\n\013stream_name\030\002 \001(\tB\004\350\3071\001" +
-      "\022(\n\022service_account_id\030\003 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\"N\n\tYmqTarget\022\027\n\tqueue_arn\030\001 \001(\tB\004\350\3071\001" +
-      "\022(\n\022service_account_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\"\276\001\n\016FunctionTarget\022!\n\013function_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014function_tag\030\002 \001(\t\022$" +
-      "\n\022service_account_id\030\003 \001(\tB\010\212\3101\004<=50\022M\n\016" +
-      "batch_settings\030\004 \001(\01325.yandex.cloud.serv" +
-      "erless.eventrouter.v1.BatchSettings\"\327\001\n\017" +
-      "ContainerTarget\022\"\n\014container_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022\035\n\025container_revision_id\030\002 \001" +
-      "(\t\022\014\n\004path\030\003 \001(\t\022$\n\022service_account_id\030\004" +
-      " \001(\tB\010\212\3101\004<=50\022M\n\016batch_settings\030\005 \001(\01325" +
-      ".yandex.cloud.serverless.eventrouter.v1." +
-      "BatchSettings\"\320\001\n\037GatewayWebsocketBroadc" +
-      "astTarget\022 \n\ngateway_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022\022\n\004path\030\002 \001(\tB\004\350\3071\001\022(\n\022service_accou" +
-      "nt_id\030\003 \001(\tB\014\350\3071\001\212\3101\004<=50\022M\n\016batch_setti" +
-      "ngs\030\004 \001(\01325.yandex.cloud.serverless.even" +
-      "trouter.v1.BatchSettings\"\217\001\n\rLoggingTarg" +
-      "et\022 \n\014log_group_id\030\001 \001(\tB\010\212\3101\004<=63H\000\022\035\n\t" +
-      "folder_id\030\002 \001(\tB\010\212\3101\004<=63H\000\022(\n\022service_a" +
-      "ccount_id\030\003 \001(\tB\014\350\3071\001\212\3101\004<=50B\023\n\013destina" +
-      "tion\022\004\300\3011\001\"\270\001\n\016WorkflowTarget\022!\n\013workflo" +
-      "w_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022(\n\022service_acco" +
-      "unt_id\030\004 \001(\tB\014\350\3071\001\212\3101\004<=50\022M\n\016batch_sett" +
-      "ings\030\005 \001(\01325.yandex.cloud.serverless.eve" +
-      "ntrouter.v1.BatchSettingsJ\004\010\002\020\003J\004\010\003\020\004\"l\n" +
-      "\rRetrySettings\022 \n\016retry_attempts\030\001 \001(\003B\010" +
-      "\372\3071\0040-10\0229\n\013maximum_age\030\002 \001(\0132\031.google.p" +
-      "rotobuf.DurationB\t\372\3071\005<=24h\"N\n\017PutQueueM" +
-      "essage\022\021\n\tqueue_arn\030\001 \001(\t\022(\n\022service_acc" +
-      "ount_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\210\001\n\rBatchSet" +
-      "tings\022\035\n\tmax_count\030\001 \001(\003B\n\372\3071\0060-1000\022\037\n\t" +
-      "max_bytes\030\002 \001(\003B\014\372\3071\0100-262144\0227\n\006cutoff\030" +
-      "\003 \001(\0132\031.google.protobuf.DurationB\014\350\3071\001\372\307" +
-      "1\004<=1mB\212\001\n*yandex.cloud.api.serverless.e" +
-      "ventrouter.v1B\004PERRZVgithub.com/yandex-c" +
-      "loud/go-genproto/yandex/cloud/serverless" +
-      "/eventrouter/v1;eventrouterb\006proto3"
+      "r.v1.YmqTargetH\000\022J\n\010function\030\003 \001(\01326.yan" +
+      "dex.cloud.serverless.eventrouter.v1.Func" +
+      "tionTargetH\000\022L\n\tcontainer\030\004 \001(\01327.yandex" +
+      ".cloud.serverless.eventrouter.v1.Contain" +
+      "erTargetH\000\022g\n\024gateway_ws_broadcast\030\005 \001(\013" +
+      "2G.yandex.cloud.serverless.eventrouter.v" +
+      "1.GatewayWebsocketBroadcastTargetH\000\022H\n\007l" +
+      "ogging\030\006 \001(\01325.yandex.cloud.serverless.e" +
+      "ventrouter.v1.LoggingTargetH\000\022J\n\010workflo" +
+      "w\030\007 \001(\01326.yandex.cloud.serverless.eventr" +
+      "outer.v1.WorkflowTargetH\000\022H\n\013transformer" +
+      "\0302 \001(\01323.yandex.cloud.serverless.eventro" +
+      "uter.v1.Transformer\022M\n\016retry_settings\0303 " +
+      "\001(\01325.yandex.cloud.serverless.eventroute" +
+      "r.v1.RetrySettings\022T\n\021dead_letter_queue\030" +
+      "4 \001(\01327.yandex.cloud.serverless.eventrou" +
+      "ter.v1.PutQueueMessageH\001\022E\n\006status\0306 \001(\016" +
+      "25.yandex.cloud.serverless.eventrouter.v" +
+      "1.Target.Status\"\201\001\n\006Status\022\026\n\022STATUS_UNS" +
+      "PECIFIED\020\000\022\013\n\007ENABLED\020\001\022\014\n\010DISABLED\020\002\022\026\n" +
+      "\022RESOURCE_NOT_FOUND\020\003\022\025\n\021PERMISSION_DENI" +
+      "ED\020\004\022\025\n\021SUBJECT_NOT_FOUND\020\005B\016\n\006target\022\004\300" +
+      "\3011\001B\r\n\013dead_letterJ\004\010\010\0202J\004\0105\0206\"h\n\tYdsTar" +
+      "get\022\026\n\010database\030\001 \001(\tB\004\350\3071\001\022\031\n\013stream_na" +
+      "me\030\002 \001(\tB\004\350\3071\001\022(\n\022service_account_id\030\003 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\"N\n\tYmqTarget\022\027\n\tqueue_a" +
+      "rn\030\001 \001(\tB\004\350\3071\001\022(\n\022service_account_id\030\002 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\"\276\001\n\016FunctionTarget\022!\n\013f" +
+      "unction_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014functi" +
+      "on_tag\030\002 \001(\t\022$\n\022service_account_id\030\003 \001(\t" +
+      "B\010\212\3101\004<=50\022M\n\016batch_settings\030\004 \001(\01325.yan" +
+      "dex.cloud.serverless.eventrouter.v1.Batc" +
+      "hSettings\"\327\001\n\017ContainerTarget\022\"\n\014contain" +
+      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\025container_r" +
+      "evision_id\030\002 \001(\t\022\014\n\004path\030\003 \001(\t\022$\n\022servic" +
+      "e_account_id\030\004 \001(\tB\010\212\3101\004<=50\022M\n\016batch_se" +
+      "ttings\030\005 \001(\01325.yandex.cloud.serverless.e" +
+      "ventrouter.v1.BatchSettings\"\320\001\n\037GatewayW" +
+      "ebsocketBroadcastTarget\022 \n\ngateway_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\022\n\004path\030\002 \001(\tB\004\350\3071\001\022(\n" +
+      "\022service_account_id\030\003 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
+      "M\n\016batch_settings\030\004 \001(\01325.yandex.cloud.s" +
+      "erverless.eventrouter.v1.BatchSettings\"\217" +
+      "\001\n\rLoggingTarget\022 \n\014log_group_id\030\001 \001(\tB\010" +
+      "\212\3101\004<=63H\000\022\035\n\tfolder_id\030\002 \001(\tB\010\212\3101\004<=63H" +
+      "\000\022(\n\022service_account_id\030\003 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50B\023\n\013destination\022\004\300\3011\001\"\270\001\n\016WorkflowTar" +
+      "get\022!\n\013workflow_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022(" +
+      "\n\022service_account_id\030\004 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022M\n\016batch_settings\030\005 \001(\01325.yandex.cloud." +
+      "serverless.eventrouter.v1.BatchSettingsJ" +
+      "\004\010\002\020\003J\004\010\003\020\004\"l\n\rRetrySettings\022 \n\016retry_at" +
+      "tempts\030\001 \001(\003B\010\372\3071\0040-10\0229\n\013maximum_age\030\002 " +
+      "\001(\0132\031.google.protobuf.DurationB\t\372\3071\005<=24" +
+      "h\"N\n\017PutQueueMessage\022\021\n\tqueue_arn\030\001 \001(\t\022" +
+      "(\n\022service_account_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\"\210\001\n\rBatchSettings\022\035\n\tmax_count\030\001 \001(\003B\n" +
+      "\372\3071\0060-1000\022\037\n\tmax_bytes\030\002 \001(\003B\014\372\3071\0100-262" +
+      "144\0227\n\006cutoff\030\003 \001(\0132\031.google.protobuf.Du" +
+      "rationB\014\350\3071\001\372\3071\004<=1mB\212\001\n*yandex.cloud.ap" +
+      "i.serverless.eventrouter.v1B\004PERRZVgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/serverless/eventrouter/v1;eventroute" +
+      "rb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

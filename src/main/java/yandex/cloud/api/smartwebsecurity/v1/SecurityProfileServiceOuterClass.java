@@ -2384,6 +2384,33 @@ public final class SecurityProfileServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getAdvancedRateLimiterProfileIdBytes();
+
+    /**
+     * <pre>
+     * Parameters for request body analyzer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 9;</code>
+     * @return Whether the analyzeRequestBody field is set.
+     */
+    boolean hasAnalyzeRequestBody();
+    /**
+     * <pre>
+     * Parameters for request body analyzer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 9;</code>
+     * @return The analyzeRequestBody.
+     */
+    yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody getAnalyzeRequestBody();
+    /**
+     * <pre>
+     * Parameters for request body analyzer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 9;</code>
+     */
+    yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBodyOrBuilder getAnalyzeRequestBodyOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.smartwebsecurity.v1.CreateSecurityProfileRequest}
@@ -2494,6 +2521,19 @@ public final class SecurityProfileServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               advancedRateLimiterProfileId_ = s;
+              break;
+            }
+            case 74: {
+              yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Builder subBuilder = null;
+              if (analyzeRequestBody_ != null) {
+                subBuilder = analyzeRequestBody_.toBuilder();
+              }
+              analyzeRequestBody_ = input.readMessage(yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(analyzeRequestBody_);
+                analyzeRequestBody_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -2957,6 +2997,44 @@ public final class SecurityProfileServiceOuterClass {
       }
     }
 
+    public static final int ANALYZE_REQUEST_BODY_FIELD_NUMBER = 9;
+    private yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody analyzeRequestBody_;
+    /**
+     * <pre>
+     * Parameters for request body analyzer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 9;</code>
+     * @return Whether the analyzeRequestBody field is set.
+     */
+    @java.lang.Override
+    public boolean hasAnalyzeRequestBody() {
+      return analyzeRequestBody_ != null;
+    }
+    /**
+     * <pre>
+     * Parameters for request body analyzer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 9;</code>
+     * @return The analyzeRequestBody.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody getAnalyzeRequestBody() {
+      return analyzeRequestBody_ == null ? yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.getDefaultInstance() : analyzeRequestBody_;
+    }
+    /**
+     * <pre>
+     * Parameters for request body analyzer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 9;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBodyOrBuilder getAnalyzeRequestBodyOrBuilder() {
+      return getAnalyzeRequestBody();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2997,6 +3075,9 @@ public final class SecurityProfileServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(advancedRateLimiterProfileId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, advancedRateLimiterProfileId_);
+      }
+      if (analyzeRequestBody_ != null) {
+        output.writeMessage(9, getAnalyzeRequestBody());
       }
       unknownFields.writeTo(output);
     }
@@ -3040,6 +3121,10 @@ public final class SecurityProfileServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(advancedRateLimiterProfileId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, advancedRateLimiterProfileId_);
       }
+      if (analyzeRequestBody_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getAnalyzeRequestBody());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3070,6 +3155,11 @@ public final class SecurityProfileServiceOuterClass {
           .equals(other.getCaptchaId())) return false;
       if (!getAdvancedRateLimiterProfileId()
           .equals(other.getAdvancedRateLimiterProfileId())) return false;
+      if (hasAnalyzeRequestBody() != other.hasAnalyzeRequestBody()) return false;
+      if (hasAnalyzeRequestBody()) {
+        if (!getAnalyzeRequestBody()
+            .equals(other.getAnalyzeRequestBody())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3101,6 +3191,10 @@ public final class SecurityProfileServiceOuterClass {
       hash = (53 * hash) + getCaptchaId().hashCode();
       hash = (37 * hash) + ADVANCED_RATE_LIMITER_PROFILE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getAdvancedRateLimiterProfileId().hashCode();
+      if (hasAnalyzeRequestBody()) {
+        hash = (37 * hash) + ANALYZE_REQUEST_BODY_FIELD_NUMBER;
+        hash = (53 * hash) + getAnalyzeRequestBody().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3276,6 +3370,12 @@ public final class SecurityProfileServiceOuterClass {
 
         advancedRateLimiterProfileId_ = "";
 
+        if (analyzeRequestBodyBuilder_ == null) {
+          analyzeRequestBody_ = null;
+        } else {
+          analyzeRequestBody_ = null;
+          analyzeRequestBodyBuilder_ = null;
+        }
         return this;
       }
 
@@ -3320,6 +3420,11 @@ public final class SecurityProfileServiceOuterClass {
         }
         result.captchaId_ = captchaId_;
         result.advancedRateLimiterProfileId_ = advancedRateLimiterProfileId_;
+        if (analyzeRequestBodyBuilder_ == null) {
+          result.analyzeRequestBody_ = analyzeRequestBody_;
+        } else {
+          result.analyzeRequestBody_ = analyzeRequestBodyBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -3418,6 +3523,9 @@ public final class SecurityProfileServiceOuterClass {
         if (!other.getAdvancedRateLimiterProfileId().isEmpty()) {
           advancedRateLimiterProfileId_ = other.advancedRateLimiterProfileId_;
           onChanged();
+        }
+        if (other.hasAnalyzeRequestBody()) {
+          mergeAnalyzeRequestBody(other.getAnalyzeRequestBody());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4473,6 +4581,161 @@ public final class SecurityProfileServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody analyzeRequestBody_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody, yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Builder, yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBodyOrBuilder> analyzeRequestBodyBuilder_;
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 9;</code>
+       * @return Whether the analyzeRequestBody field is set.
+       */
+      public boolean hasAnalyzeRequestBody() {
+        return analyzeRequestBodyBuilder_ != null || analyzeRequestBody_ != null;
+      }
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 9;</code>
+       * @return The analyzeRequestBody.
+       */
+      public yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody getAnalyzeRequestBody() {
+        if (analyzeRequestBodyBuilder_ == null) {
+          return analyzeRequestBody_ == null ? yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.getDefaultInstance() : analyzeRequestBody_;
+        } else {
+          return analyzeRequestBodyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 9;</code>
+       */
+      public Builder setAnalyzeRequestBody(yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody value) {
+        if (analyzeRequestBodyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          analyzeRequestBody_ = value;
+          onChanged();
+        } else {
+          analyzeRequestBodyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 9;</code>
+       */
+      public Builder setAnalyzeRequestBody(
+          yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Builder builderForValue) {
+        if (analyzeRequestBodyBuilder_ == null) {
+          analyzeRequestBody_ = builderForValue.build();
+          onChanged();
+        } else {
+          analyzeRequestBodyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 9;</code>
+       */
+      public Builder mergeAnalyzeRequestBody(yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody value) {
+        if (analyzeRequestBodyBuilder_ == null) {
+          if (analyzeRequestBody_ != null) {
+            analyzeRequestBody_ =
+              yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.newBuilder(analyzeRequestBody_).mergeFrom(value).buildPartial();
+          } else {
+            analyzeRequestBody_ = value;
+          }
+          onChanged();
+        } else {
+          analyzeRequestBodyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 9;</code>
+       */
+      public Builder clearAnalyzeRequestBody() {
+        if (analyzeRequestBodyBuilder_ == null) {
+          analyzeRequestBody_ = null;
+          onChanged();
+        } else {
+          analyzeRequestBody_ = null;
+          analyzeRequestBodyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 9;</code>
+       */
+      public yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Builder getAnalyzeRequestBodyBuilder() {
+        
+        onChanged();
+        return getAnalyzeRequestBodyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 9;</code>
+       */
+      public yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBodyOrBuilder getAnalyzeRequestBodyOrBuilder() {
+        if (analyzeRequestBodyBuilder_ != null) {
+          return analyzeRequestBodyBuilder_.getMessageOrBuilder();
+        } else {
+          return analyzeRequestBody_ == null ?
+              yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.getDefaultInstance() : analyzeRequestBody_;
+        }
+      }
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody, yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Builder, yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBodyOrBuilder> 
+          getAnalyzeRequestBodyFieldBuilder() {
+        if (analyzeRequestBodyBuilder_ == null) {
+          analyzeRequestBodyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody, yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Builder, yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBodyOrBuilder>(
+                  getAnalyzeRequestBody(),
+                  getParentForChildren(),
+                  isClean());
+          analyzeRequestBody_ = null;
+        }
+        return analyzeRequestBodyBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5377,6 +5640,33 @@ public final class SecurityProfileServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getAdvancedRateLimiterProfileIdBytes();
+
+    /**
+     * <pre>
+     * Parameters for request body analyzer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 10;</code>
+     * @return Whether the analyzeRequestBody field is set.
+     */
+    boolean hasAnalyzeRequestBody();
+    /**
+     * <pre>
+     * Parameters for request body analyzer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 10;</code>
+     * @return The analyzeRequestBody.
+     */
+    yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody getAnalyzeRequestBody();
+    /**
+     * <pre>
+     * Parameters for request body analyzer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 10;</code>
+     */
+    yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBodyOrBuilder getAnalyzeRequestBodyOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.smartwebsecurity.v1.UpdateSecurityProfileRequest}
@@ -5500,6 +5790,19 @@ public final class SecurityProfileServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               advancedRateLimiterProfileId_ = s;
+              break;
+            }
+            case 82: {
+              yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Builder subBuilder = null;
+              if (analyzeRequestBody_ != null) {
+                subBuilder = analyzeRequestBody_.toBuilder();
+              }
+              analyzeRequestBody_ = input.readMessage(yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(analyzeRequestBody_);
+                analyzeRequestBody_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -6001,6 +6304,44 @@ public final class SecurityProfileServiceOuterClass {
       }
     }
 
+    public static final int ANALYZE_REQUEST_BODY_FIELD_NUMBER = 10;
+    private yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody analyzeRequestBody_;
+    /**
+     * <pre>
+     * Parameters for request body analyzer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 10;</code>
+     * @return Whether the analyzeRequestBody field is set.
+     */
+    @java.lang.Override
+    public boolean hasAnalyzeRequestBody() {
+      return analyzeRequestBody_ != null;
+    }
+    /**
+     * <pre>
+     * Parameters for request body analyzer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 10;</code>
+     * @return The analyzeRequestBody.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody getAnalyzeRequestBody() {
+      return analyzeRequestBody_ == null ? yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.getDefaultInstance() : analyzeRequestBody_;
+    }
+    /**
+     * <pre>
+     * Parameters for request body analyzer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBodyOrBuilder getAnalyzeRequestBodyOrBuilder() {
+      return getAnalyzeRequestBody();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6044,6 +6385,9 @@ public final class SecurityProfileServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(advancedRateLimiterProfileId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, advancedRateLimiterProfileId_);
+      }
+      if (analyzeRequestBody_ != null) {
+        output.writeMessage(10, getAnalyzeRequestBody());
       }
       unknownFields.writeTo(output);
     }
@@ -6091,6 +6435,10 @@ public final class SecurityProfileServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(advancedRateLimiterProfileId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, advancedRateLimiterProfileId_);
       }
+      if (analyzeRequestBody_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getAnalyzeRequestBody());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6126,6 +6474,11 @@ public final class SecurityProfileServiceOuterClass {
           .equals(other.getCaptchaId())) return false;
       if (!getAdvancedRateLimiterProfileId()
           .equals(other.getAdvancedRateLimiterProfileId())) return false;
+      if (hasAnalyzeRequestBody() != other.hasAnalyzeRequestBody()) return false;
+      if (hasAnalyzeRequestBody()) {
+        if (!getAnalyzeRequestBody()
+            .equals(other.getAnalyzeRequestBody())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6161,6 +6514,10 @@ public final class SecurityProfileServiceOuterClass {
       hash = (53 * hash) + getCaptchaId().hashCode();
       hash = (37 * hash) + ADVANCED_RATE_LIMITER_PROFILE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getAdvancedRateLimiterProfileId().hashCode();
+      if (hasAnalyzeRequestBody()) {
+        hash = (37 * hash) + ANALYZE_REQUEST_BODY_FIELD_NUMBER;
+        hash = (53 * hash) + getAnalyzeRequestBody().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6342,6 +6699,12 @@ public final class SecurityProfileServiceOuterClass {
 
         advancedRateLimiterProfileId_ = "";
 
+        if (analyzeRequestBodyBuilder_ == null) {
+          analyzeRequestBody_ = null;
+        } else {
+          analyzeRequestBody_ = null;
+          analyzeRequestBodyBuilder_ = null;
+        }
         return this;
       }
 
@@ -6391,6 +6754,11 @@ public final class SecurityProfileServiceOuterClass {
         }
         result.captchaId_ = captchaId_;
         result.advancedRateLimiterProfileId_ = advancedRateLimiterProfileId_;
+        if (analyzeRequestBodyBuilder_ == null) {
+          result.analyzeRequestBody_ = analyzeRequestBody_;
+        } else {
+          result.analyzeRequestBody_ = analyzeRequestBodyBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -6492,6 +6860,9 @@ public final class SecurityProfileServiceOuterClass {
         if (!other.getAdvancedRateLimiterProfileId().isEmpty()) {
           advancedRateLimiterProfileId_ = other.advancedRateLimiterProfileId_;
           onChanged();
+        }
+        if (other.hasAnalyzeRequestBody()) {
+          mergeAnalyzeRequestBody(other.getAnalyzeRequestBody());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7701,6 +8072,161 @@ public final class SecurityProfileServiceOuterClass {
         advancedRateLimiterProfileId_ = value;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody analyzeRequestBody_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody, yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Builder, yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBodyOrBuilder> analyzeRequestBodyBuilder_;
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 10;</code>
+       * @return Whether the analyzeRequestBody field is set.
+       */
+      public boolean hasAnalyzeRequestBody() {
+        return analyzeRequestBodyBuilder_ != null || analyzeRequestBody_ != null;
+      }
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 10;</code>
+       * @return The analyzeRequestBody.
+       */
+      public yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody getAnalyzeRequestBody() {
+        if (analyzeRequestBodyBuilder_ == null) {
+          return analyzeRequestBody_ == null ? yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.getDefaultInstance() : analyzeRequestBody_;
+        } else {
+          return analyzeRequestBodyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 10;</code>
+       */
+      public Builder setAnalyzeRequestBody(yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody value) {
+        if (analyzeRequestBodyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          analyzeRequestBody_ = value;
+          onChanged();
+        } else {
+          analyzeRequestBodyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 10;</code>
+       */
+      public Builder setAnalyzeRequestBody(
+          yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Builder builderForValue) {
+        if (analyzeRequestBodyBuilder_ == null) {
+          analyzeRequestBody_ = builderForValue.build();
+          onChanged();
+        } else {
+          analyzeRequestBodyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 10;</code>
+       */
+      public Builder mergeAnalyzeRequestBody(yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody value) {
+        if (analyzeRequestBodyBuilder_ == null) {
+          if (analyzeRequestBody_ != null) {
+            analyzeRequestBody_ =
+              yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.newBuilder(analyzeRequestBody_).mergeFrom(value).buildPartial();
+          } else {
+            analyzeRequestBody_ = value;
+          }
+          onChanged();
+        } else {
+          analyzeRequestBodyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 10;</code>
+       */
+      public Builder clearAnalyzeRequestBody() {
+        if (analyzeRequestBodyBuilder_ == null) {
+          analyzeRequestBody_ = null;
+          onChanged();
+        } else {
+          analyzeRequestBody_ = null;
+          analyzeRequestBodyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 10;</code>
+       */
+      public yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Builder getAnalyzeRequestBodyBuilder() {
+        
+        onChanged();
+        return getAnalyzeRequestBodyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 10;</code>
+       */
+      public yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBodyOrBuilder getAnalyzeRequestBodyOrBuilder() {
+        if (analyzeRequestBodyBuilder_ != null) {
+          return analyzeRequestBodyBuilder_.getMessageOrBuilder();
+        } else {
+          return analyzeRequestBody_ == null ?
+              yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.getDefaultInstance() : analyzeRequestBody_;
+        }
+      }
+      /**
+       * <pre>
+       * Parameters for request body analyzer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartwebsecurity.v1.SecurityProfile.AnalyzeRequestBody analyze_request_body = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody, yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Builder, yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBodyOrBuilder> 
+          getAnalyzeRequestBodyFieldBuilder() {
+        if (analyzeRequestBodyBuilder_ == null) {
+          analyzeRequestBodyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody, yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBody.Builder, yandex.cloud.api.smartwebsecurity.v1.SecurityProfileOuterClass.SecurityProfile.AnalyzeRequestBodyOrBuilder>(
+                  getAnalyzeRequestBody(),
+                  getParentForChildren(),
+                  isClean());
+          analyzeRequestBody_ = null;
+        }
+        return analyzeRequestBodyBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -9644,7 +10170,7 @@ public final class SecurityProfileServiceOuterClass {
       "urityProfilesRequest\022\027\n\tfolder_id\030\001 \001(\tB" +
       "\004\350\3071\001\"l\n\034ListSecurityProfilesResponse\022L\n" +
       "\021security_profiles\030\001 \003(\01321.yandex.cloud." +
-      "smartwebsecurity.v1.SecurityProfile\"\304\003\n\034" +
+      "smartwebsecurity.v1.SecurityProfile\"\250\004\n\034" +
       "CreateSecurityProfileRequest\022\027\n\tfolder_i" +
       "d\030\001 \001(\tB\004\350\3071\001\022Z\n\006labels\030\002 \003(\0132J.yandex.c" +
       "loud.smartwebsecurity.v1.CreateSecurityP" +
@@ -9655,21 +10181,26 @@ public final class SecurityProfileServiceOuterClass {
       "y_rules\030\006 \003(\0132..yandex.cloud.smartwebsec" +
       "urity.v1.SecurityRule\022\022\n\ncaptcha_id\030\007 \001(" +
       "\t\022(\n advanced_rate_limiter_profile_id\030\010 " +
-      "\001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001\"<\n\035CreateSecurityProfileMetad" +
-      "ata\022\033\n\023security_profile_id\030\001 \001(\t\"\377\003\n\034Upd" +
-      "ateSecurityProfileRequest\022!\n\023security_pr" +
-      "ofile_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(" +
-      "\0132\032.google.protobuf.FieldMask\022Z\n\006labels\030" +
-      "\003 \003(\0132J.yandex.cloud.smartwebsecurity.v1" +
-      ".UpdateSecurityProfileRequest.LabelsEntr" +
-      "y\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022W\n\016" +
-      "default_action\030\006 \001(\0162?.yandex.cloud.smar" +
-      "twebsecurity.v1.SecurityProfile.DefaultA" +
-      "ction\022F\n\016security_rules\030\007 \003(\0132..yandex.c" +
-      "loud.smartwebsecurity.v1.SecurityRule\022\022\n" +
-      "\ncaptcha_id\030\010 \001(\t\022(\n advanced_rate_limit" +
-      "er_profile_id\030\t \001(\t\032-\n\013LabelsEntry\022\013\n\003ke" +
+      "\001(\t\022b\n\024analyze_request_body\030\t \001(\0132D.yand" +
+      "ex.cloud.smartwebsecurity.v1.SecurityPro" +
+      "file.AnalyzeRequestBody\032-\n\013LabelsEntry\022\013" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"<\n\035Create" +
+      "SecurityProfileMetadata\022\033\n\023security_prof" +
+      "ile_id\030\001 \001(\t\"\343\004\n\034UpdateSecurityProfileRe" +
+      "quest\022!\n\023security_profile_id\030\001 \001(\tB\004\350\3071\001" +
+      "\022/\n\013update_mask\030\002 \001(\0132\032.google.protobuf." +
+      "FieldMask\022Z\n\006labels\030\003 \003(\0132J.yandex.cloud" +
+      ".smartwebsecurity.v1.UpdateSecurityProfi" +
+      "leRequest.LabelsEntry\022\014\n\004name\030\004 \001(\t\022\023\n\013d" +
+      "escription\030\005 \001(\t\022W\n\016default_action\030\006 \001(\016" +
+      "2?.yandex.cloud.smartwebsecurity.v1.Secu" +
+      "rityProfile.DefaultAction\022F\n\016security_ru" +
+      "les\030\007 \003(\0132..yandex.cloud.smartwebsecurit" +
+      "y.v1.SecurityRule\022\022\n\ncaptcha_id\030\010 \001(\t\022(\n" +
+      " advanced_rate_limiter_profile_id\030\t \001(\t\022" +
+      "b\n\024analyze_request_body\030\n \001(\0132D.yandex.c" +
+      "loud.smartwebsecurity.v1.SecurityProfile" +
+      ".AnalyzeRequestBody\032-\n\013LabelsEntry\022\013\n\003ke" +
       "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"<\n\035UpdateSecu" +
       "rityProfileMetadata\022\033\n\023security_profile_" +
       "id\030\001 \001(\t\"A\n\034DeleteSecurityProfileRequest" +
@@ -9740,7 +10271,7 @@ public final class SecurityProfileServiceOuterClass {
     internal_static_yandex_cloud_smartwebsecurity_v1_CreateSecurityProfileRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_smartwebsecurity_v1_CreateSecurityProfileRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Labels", "Name", "Description", "DefaultAction", "SecurityRules", "CaptchaId", "AdvancedRateLimiterProfileId", });
+        new java.lang.String[] { "FolderId", "Labels", "Name", "Description", "DefaultAction", "SecurityRules", "CaptchaId", "AdvancedRateLimiterProfileId", "AnalyzeRequestBody", });
     internal_static_yandex_cloud_smartwebsecurity_v1_CreateSecurityProfileRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_smartwebsecurity_v1_CreateSecurityProfileRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_smartwebsecurity_v1_CreateSecurityProfileRequest_LabelsEntry_fieldAccessorTable = new
@@ -9758,7 +10289,7 @@ public final class SecurityProfileServiceOuterClass {
     internal_static_yandex_cloud_smartwebsecurity_v1_UpdateSecurityProfileRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_smartwebsecurity_v1_UpdateSecurityProfileRequest_descriptor,
-        new java.lang.String[] { "SecurityProfileId", "UpdateMask", "Labels", "Name", "Description", "DefaultAction", "SecurityRules", "CaptchaId", "AdvancedRateLimiterProfileId", });
+        new java.lang.String[] { "SecurityProfileId", "UpdateMask", "Labels", "Name", "Description", "DefaultAction", "SecurityRules", "CaptchaId", "AdvancedRateLimiterProfileId", "AnalyzeRequestBody", });
     internal_static_yandex_cloud_smartwebsecurity_v1_UpdateSecurityProfileRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_smartwebsecurity_v1_UpdateSecurityProfileRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_smartwebsecurity_v1_UpdateSecurityProfileRequest_LabelsEntry_fieldAccessorTable = new

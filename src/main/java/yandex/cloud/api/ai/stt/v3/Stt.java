@@ -44574,6 +44574,574 @@ public final class Stt {
 
   }
 
+  public interface DeleteRecognitionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.DeleteRecognitionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string operation_id = 1;</code>
+     * @return The operationId.
+     */
+    java.lang.String getOperationId();
+    /**
+     * <code>string operation_id = 1;</code>
+     * @return The bytes for operationId.
+     */
+    com.google.protobuf.ByteString
+        getOperationIdBytes();
+  }
+  /**
+   * Protobuf type {@code speechkit.stt.v3.DeleteRecognitionRequest}
+   */
+  public static final class DeleteRecognitionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:speechkit.stt.v3.DeleteRecognitionRequest)
+      DeleteRecognitionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteRecognitionRequest.newBuilder() to construct.
+    private DeleteRecognitionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteRecognitionRequest() {
+      operationId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteRecognitionRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteRecognitionRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              operationId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_DeleteRecognitionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_DeleteRecognitionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest.class, yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest.Builder.class);
+    }
+
+    public static final int OPERATION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object operationId_;
+    /**
+     * <code>string operation_id = 1;</code>
+     * @return The operationId.
+     */
+    @java.lang.Override
+    public java.lang.String getOperationId() {
+      java.lang.Object ref = operationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        operationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string operation_id = 1;</code>
+     * @return The bytes for operationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOperationIdBytes() {
+      java.lang.Object ref = operationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        operationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, operationId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, operationId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest other = (yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest) obj;
+
+      if (!getOperationId()
+          .equals(other.getOperationId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OPERATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOperationId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code speechkit.stt.v3.DeleteRecognitionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:speechkit.stt.v3.DeleteRecognitionRequest)
+        yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_DeleteRecognitionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_DeleteRecognitionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest.class, yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        operationId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_DeleteRecognitionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest build() {
+        yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest buildPartial() {
+        yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest result = new yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest(this);
+        result.operationId_ = operationId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest) {
+          return mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest other) {
+        if (other == yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest.getDefaultInstance()) return this;
+        if (!other.getOperationId().isEmpty()) {
+          operationId_ = other.operationId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object operationId_ = "";
+      /**
+       * <code>string operation_id = 1;</code>
+       * @return The operationId.
+       */
+      public java.lang.String getOperationId() {
+        java.lang.Object ref = operationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          operationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string operation_id = 1;</code>
+       * @return The bytes for operationId.
+       */
+      public com.google.protobuf.ByteString
+          getOperationIdBytes() {
+        java.lang.Object ref = operationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          operationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string operation_id = 1;</code>
+       * @param value The operationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperationId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        operationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string operation_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOperationId() {
+        
+        operationId_ = getDefaultInstance().getOperationId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string operation_id = 1;</code>
+       * @param value The bytes for operationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        operationId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:speechkit.stt.v3.DeleteRecognitionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:speechkit.stt.v3.DeleteRecognitionRequest)
+    private static final yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest();
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteRecognitionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteRecognitionRequest>() {
+      @java.lang.Override
+      public DeleteRecognitionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteRecognitionRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteRecognitionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteRecognitionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_speechkit_stt_v3_TextNormalizationOptions_descriptor;
   private static final 
@@ -44769,6 +45337,11 @@ public final class Stt {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_speechkit_stt_v3_StreamingResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_stt_v3_DeleteRecognitionRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_stt_v3_DeleteRecognitionRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -44974,12 +45547,13 @@ public final class Stt {
       "_analysis\030\013 \001(\0132!.speechkit.stt.v3.Speak" +
       "erAnalysisH\000\022G\n\025conversation_analysis\030\014 " +
       "\001(\0132&.speechkit.stt.v3.ConversationAnaly" +
-      "sisH\000\022\023\n\013channel_tag\030\t \001(\tB\007\n\005Event*O\n\010C" +
-      "odeType\022\035\n\025CODE_TYPE_UNSPECIFIED\020\000\032\002\010\001\022\013" +
-      "\n\007WORKING\020\001\022\013\n\007WARNING\020\002\022\n\n\006CLOSED\020\003B\\\n\032" +
-      "yandex.cloud.api.ai.stt.v3Z>github.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/ai/" +
-      "stt/v3;sttb\006proto3"
+      "sisH\000\022\023\n\013channel_tag\030\t \001(\tB\007\n\005Event\"0\n\030D" +
+      "eleteRecognitionRequest\022\024\n\014operation_id\030" +
+      "\001 \001(\t*O\n\010CodeType\022\035\n\025CODE_TYPE_UNSPECIFI" +
+      "ED\020\000\032\002\010\001\022\013\n\007WORKING\020\001\022\013\n\007WARNING\020\002\022\n\n\006CL" +
+      "OSED\020\003B\\\n\032yandex.cloud.api.ai.stt.v3Z>gi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/ai/stt/v3;sttb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -45219,6 +45793,12 @@ public final class Stt {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_StreamingResponse_descriptor,
         new java.lang.String[] { "SessionUuid", "AudioCursors", "ResponseWallTimeMs", "Partial", "Final", "EouUpdate", "FinalRefinement", "StatusCode", "ClassifierUpdate", "SpeakerAnalysis", "ConversationAnalysis", "ChannelTag", "Event", });
+    internal_static_speechkit_stt_v3_DeleteRecognitionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(37);
+    internal_static_speechkit_stt_v3_DeleteRecognitionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_stt_v3_DeleteRecognitionRequest_descriptor,
+        new java.lang.String[] { "OperationId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

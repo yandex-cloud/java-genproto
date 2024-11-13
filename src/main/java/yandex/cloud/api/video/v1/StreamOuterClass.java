@@ -5546,8 +5546,8 @@ public final class StreamOuterClass {
       "\002 \001(\t:\0028\001\"m\n\014StreamStatus\022\035\n\031STREAM_STAT" +
       "US_UNSPECIFIED\020\000\022\013\n\007OFFLINE\020\001\022\r\n\tPREPARI" +
       "NG\020\002\022\t\n\005READY\020\003\022\t\n\005ONAIR\020\004\022\014\n\010FINISHED\020\005" +
-      "B\r\n\013stream_typeJ\005\010f\020\310\001J\006\010\311\001\020\350\007J\004\010\014\020dJ\004\010\007" +
-      "\020\010\"\n\n\010OnDemand\"k\n\010Schedule\022.\n\nstart_time" +
+      "B\r\n\013stream_typeJ\004\010\007\020\010J\004\010\014\020dJ\005\010f\020\310\001J\006\010\311\001\020" +
+      "\350\007\"\n\n\010OnDemand\"k\n\010Schedule\022.\n\nstart_time" +
       "\030\001 \001(\0132\032.google.protobuf.Timestamp\022/\n\013fi" +
       "nish_time\030\002 \001(\0132\032.google.protobuf.Timest" +
       "ampB\\\n\031yandex.cloud.api.video.v1Z?github" +

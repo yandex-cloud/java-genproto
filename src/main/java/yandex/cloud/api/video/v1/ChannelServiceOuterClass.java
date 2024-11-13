@@ -23,7 +23,7 @@ public final class ChannelServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The channelId.
      */
     java.lang.String getChannelId();
@@ -32,7 +32,7 @@ public final class ChannelServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for channelId.
      */
     com.google.protobuf.ByteString
@@ -129,7 +129,7 @@ public final class ChannelServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The channelId.
      */
     @java.lang.Override
@@ -150,7 +150,7 @@ public final class ChannelServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for channelId.
      */
     @java.lang.Override
@@ -476,7 +476,7 @@ public final class ChannelServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The channelId.
        */
       public java.lang.String getChannelId() {
@@ -496,7 +496,7 @@ public final class ChannelServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for channelId.
        */
       public com.google.protobuf.ByteString
@@ -517,7 +517,7 @@ public final class ChannelServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The channelId to set.
        * @return This builder for chaining.
        */
@@ -536,7 +536,7 @@ public final class ChannelServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearChannelId() {
@@ -550,7 +550,7 @@ public final class ChannelServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for channelId to set.
        * @return This builder for chaining.
        */
@@ -627,7 +627,7 @@ public final class ChannelServiceOuterClass {
      * ID of the organization.
      * </pre>
      *
-     * <code>string organization_id = 1;</code>
+     * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The organizationId.
      */
     java.lang.String getOrganizationId();
@@ -636,7 +636,7 @@ public final class ChannelServiceOuterClass {
      * ID of the organization.
      * </pre>
      *
-     * <code>string organization_id = 1;</code>
+     * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for organizationId.
      */
     com.google.protobuf.ByteString
@@ -647,7 +647,7 @@ public final class ChannelServiceOuterClass {
      * The maximum number of the results per page to return. Default value: 100.
      * </pre>
      *
-     * <code>int64 page_size = 100;</code>
+     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
     long getPageSize();
@@ -657,7 +657,7 @@ public final class ChannelServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101;</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
@@ -666,7 +666,7 @@ public final class ChannelServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101;</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
@@ -709,7 +709,7 @@ public final class ChannelServiceOuterClass {
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
-     * <code>string filter = 103;</code>
+     * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The filter.
      */
     java.lang.String getFilter();
@@ -724,7 +724,7 @@ public final class ChannelServiceOuterClass {
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
-     * <code>string filter = 103;</code>
+     * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
@@ -847,7 +847,7 @@ public final class ChannelServiceOuterClass {
      * ID of the organization.
      * </pre>
      *
-     * <code>string organization_id = 1;</code>
+     * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The organizationId.
      */
     @java.lang.Override
@@ -868,7 +868,7 @@ public final class ChannelServiceOuterClass {
      * ID of the organization.
      * </pre>
      *
-     * <code>string organization_id = 1;</code>
+     * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for organizationId.
      */
     @java.lang.Override
@@ -893,7 +893,7 @@ public final class ChannelServiceOuterClass {
      * The maximum number of the results per page to return. Default value: 100.
      * </pre>
      *
-     * <code>int64 page_size = 100;</code>
+     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
     @java.lang.Override
@@ -908,7 +908,7 @@ public final class ChannelServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101;</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The pageToken.
      */
     @java.lang.Override
@@ -929,7 +929,7 @@ public final class ChannelServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101;</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The bytes for pageToken.
      */
     @java.lang.Override
@@ -1012,7 +1012,7 @@ public final class ChannelServiceOuterClass {
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
-     * <code>string filter = 103;</code>
+     * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The filter.
      */
     @java.lang.Override
@@ -1039,7 +1039,7 @@ public final class ChannelServiceOuterClass {
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
-     * <code>string filter = 103;</code>
+     * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for filter.
      */
     @java.lang.Override
@@ -1434,7 +1434,7 @@ public final class ChannelServiceOuterClass {
        * ID of the organization.
        * </pre>
        *
-       * <code>string organization_id = 1;</code>
+       * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The organizationId.
        */
       public java.lang.String getOrganizationId() {
@@ -1454,7 +1454,7 @@ public final class ChannelServiceOuterClass {
        * ID of the organization.
        * </pre>
        *
-       * <code>string organization_id = 1;</code>
+       * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for organizationId.
        */
       public com.google.protobuf.ByteString
@@ -1475,7 +1475,7 @@ public final class ChannelServiceOuterClass {
        * ID of the organization.
        * </pre>
        *
-       * <code>string organization_id = 1;</code>
+       * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The organizationId to set.
        * @return This builder for chaining.
        */
@@ -1494,7 +1494,7 @@ public final class ChannelServiceOuterClass {
        * ID of the organization.
        * </pre>
        *
-       * <code>string organization_id = 1;</code>
+       * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearOrganizationId() {
@@ -1508,7 +1508,7 @@ public final class ChannelServiceOuterClass {
        * ID of the organization.
        * </pre>
        *
-       * <code>string organization_id = 1;</code>
+       * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for organizationId to set.
        * @return This builder for chaining.
        */
@@ -1530,7 +1530,7 @@ public final class ChannelServiceOuterClass {
        * The maximum number of the results per page to return. Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 100;</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return The pageSize.
        */
       @java.lang.Override
@@ -1542,7 +1542,7 @@ public final class ChannelServiceOuterClass {
        * The maximum number of the results per page to return. Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 100;</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
        */
@@ -1557,7 +1557,7 @@ public final class ChannelServiceOuterClass {
        * The maximum number of the results per page to return. Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 100;</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageSize() {
@@ -1573,7 +1573,7 @@ public final class ChannelServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101;</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return The pageToken.
        */
       public java.lang.String getPageToken() {
@@ -1593,7 +1593,7 @@ public final class ChannelServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101;</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
@@ -1614,7 +1614,7 @@ public final class ChannelServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101;</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
        */
@@ -1633,7 +1633,7 @@ public final class ChannelServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101;</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageToken() {
@@ -1647,7 +1647,7 @@ public final class ChannelServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101;</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
        */
@@ -1786,7 +1786,7 @@ public final class ChannelServiceOuterClass {
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
-       * <code>string filter = 103;</code>
+       * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The filter.
        */
       public java.lang.String getFilter() {
@@ -1812,7 +1812,7 @@ public final class ChannelServiceOuterClass {
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
-       * <code>string filter = 103;</code>
+       * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
@@ -1839,7 +1839,7 @@ public final class ChannelServiceOuterClass {
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
-       * <code>string filter = 103;</code>
+       * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The filter to set.
        * @return This builder for chaining.
        */
@@ -1864,7 +1864,7 @@ public final class ChannelServiceOuterClass {
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
-       * <code>string filter = 103;</code>
+       * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFilter() {
@@ -1884,7 +1884,7 @@ public final class ChannelServiceOuterClass {
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
-       * <code>string filter = 103;</code>
+       * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The bytes for filter to set.
        * @return This builder for chaining.
        */
@@ -3052,7 +3052,7 @@ public final class ChannelServiceOuterClass {
      * ID of the organization.
      * </pre>
      *
-     * <code>string organization_id = 1;</code>
+     * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The organizationId.
      */
     java.lang.String getOrganizationId();
@@ -3061,7 +3061,7 @@ public final class ChannelServiceOuterClass {
      * ID of the organization.
      * </pre>
      *
-     * <code>string organization_id = 1;</code>
+     * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for organizationId.
      */
     com.google.protobuf.ByteString
@@ -3072,7 +3072,7 @@ public final class ChannelServiceOuterClass {
      * Channel title.
      * </pre>
      *
-     * <code>string title = 2;</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
      * @return The title.
      */
     java.lang.String getTitle();
@@ -3081,7 +3081,7 @@ public final class ChannelServiceOuterClass {
      * Channel title.
      * </pre>
      *
-     * <code>string title = 2;</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for title.
      */
     com.google.protobuf.ByteString
@@ -3112,7 +3112,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
@@ -3120,7 +3120,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -3135,7 +3135,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
@@ -3144,7 +3144,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -3155,7 +3155,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -3292,7 +3292,7 @@ public final class ChannelServiceOuterClass {
      * ID of the organization.
      * </pre>
      *
-     * <code>string organization_id = 1;</code>
+     * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The organizationId.
      */
     @java.lang.Override
@@ -3313,7 +3313,7 @@ public final class ChannelServiceOuterClass {
      * ID of the organization.
      * </pre>
      *
-     * <code>string organization_id = 1;</code>
+     * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for organizationId.
      */
     @java.lang.Override
@@ -3338,7 +3338,7 @@ public final class ChannelServiceOuterClass {
      * Channel title.
      * </pre>
      *
-     * <code>string title = 2;</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
      * @return The title.
      */
     @java.lang.Override
@@ -3359,7 +3359,7 @@ public final class ChannelServiceOuterClass {
      * Channel title.
      * </pre>
      *
-     * <code>string title = 2;</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for title.
      */
     @java.lang.Override
@@ -3454,7 +3454,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -3476,7 +3476,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -3488,7 +3488,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -3505,7 +3505,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -3913,7 +3913,7 @@ public final class ChannelServiceOuterClass {
        * ID of the organization.
        * </pre>
        *
-       * <code>string organization_id = 1;</code>
+       * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The organizationId.
        */
       public java.lang.String getOrganizationId() {
@@ -3933,7 +3933,7 @@ public final class ChannelServiceOuterClass {
        * ID of the organization.
        * </pre>
        *
-       * <code>string organization_id = 1;</code>
+       * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for organizationId.
        */
       public com.google.protobuf.ByteString
@@ -3954,7 +3954,7 @@ public final class ChannelServiceOuterClass {
        * ID of the organization.
        * </pre>
        *
-       * <code>string organization_id = 1;</code>
+       * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The organizationId to set.
        * @return This builder for chaining.
        */
@@ -3973,7 +3973,7 @@ public final class ChannelServiceOuterClass {
        * ID of the organization.
        * </pre>
        *
-       * <code>string organization_id = 1;</code>
+       * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearOrganizationId() {
@@ -3987,7 +3987,7 @@ public final class ChannelServiceOuterClass {
        * ID of the organization.
        * </pre>
        *
-       * <code>string organization_id = 1;</code>
+       * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for organizationId to set.
        * @return This builder for chaining.
        */
@@ -4009,7 +4009,7 @@ public final class ChannelServiceOuterClass {
        * Channel title.
        * </pre>
        *
-       * <code>string title = 2;</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
        * @return The title.
        */
       public java.lang.String getTitle() {
@@ -4029,7 +4029,7 @@ public final class ChannelServiceOuterClass {
        * Channel title.
        * </pre>
        *
-       * <code>string title = 2;</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
@@ -4050,7 +4050,7 @@ public final class ChannelServiceOuterClass {
        * Channel title.
        * </pre>
        *
-       * <code>string title = 2;</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The title to set.
        * @return This builder for chaining.
        */
@@ -4069,7 +4069,7 @@ public final class ChannelServiceOuterClass {
        * Channel title.
        * </pre>
        *
-       * <code>string title = 2;</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearTitle() {
@@ -4083,7 +4083,7 @@ public final class ChannelServiceOuterClass {
        * Channel title.
        * </pre>
        *
-       * <code>string title = 2;</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
        */
@@ -4226,7 +4226,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -4248,7 +4248,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -4260,7 +4260,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -4277,7 +4277,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -4302,7 +4302,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -4325,7 +4325,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -4344,7 +4344,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -5019,7 +5019,7 @@ public final class ChannelServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The channelId.
      */
     java.lang.String getChannelId();
@@ -5028,7 +5028,7 @@ public final class ChannelServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for channelId.
      */
     com.google.protobuf.ByteString
@@ -5106,7 +5106,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
@@ -5114,7 +5114,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -5129,7 +5129,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
@@ -5138,7 +5138,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -5149,7 +5149,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -5299,7 +5299,7 @@ public final class ChannelServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The channelId.
      */
     @java.lang.Override
@@ -5320,7 +5320,7 @@ public final class ChannelServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for channelId.
      */
     @java.lang.Override
@@ -5499,7 +5499,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -5521,7 +5521,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -5533,7 +5533,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -5550,7 +5550,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -5988,7 +5988,7 @@ public final class ChannelServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The channelId.
        */
       public java.lang.String getChannelId() {
@@ -6008,7 +6008,7 @@ public final class ChannelServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for channelId.
        */
       public com.google.protobuf.ByteString
@@ -6029,7 +6029,7 @@ public final class ChannelServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The channelId to set.
        * @return This builder for chaining.
        */
@@ -6048,7 +6048,7 @@ public final class ChannelServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearChannelId() {
@@ -6062,7 +6062,7 @@ public final class ChannelServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for channelId to set.
        * @return This builder for chaining.
        */
@@ -6456,7 +6456,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -6478,7 +6478,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -6490,7 +6490,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -6507,7 +6507,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -6532,7 +6532,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -6555,7 +6555,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -6574,7 +6574,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -7249,7 +7249,7 @@ public final class ChannelServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The channelId.
      */
     java.lang.String getChannelId();
@@ -7258,7 +7258,7 @@ public final class ChannelServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for channelId.
      */
     com.google.protobuf.ByteString
@@ -7355,7 +7355,7 @@ public final class ChannelServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The channelId.
      */
     @java.lang.Override
@@ -7376,7 +7376,7 @@ public final class ChannelServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for channelId.
      */
     @java.lang.Override
@@ -7702,7 +7702,7 @@ public final class ChannelServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The channelId.
        */
       public java.lang.String getChannelId() {
@@ -7722,7 +7722,7 @@ public final class ChannelServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for channelId.
        */
       public com.google.protobuf.ByteString
@@ -7743,7 +7743,7 @@ public final class ChannelServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The channelId to set.
        * @return This builder for chaining.
        */
@@ -7762,7 +7762,7 @@ public final class ChannelServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearChannelId() {
@@ -7776,7 +7776,7 @@ public final class ChannelServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for channelId to set.
        * @return This builder for chaining.
        */
@@ -8448,6 +8448,1604 @@ public final class ChannelServiceOuterClass {
 
   }
 
+  public interface BatchDeleteChannelsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.BatchDeleteChannelsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the organization.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The organizationId.
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <pre>
+     * ID of the organization.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for organizationId.
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
+
+    /**
+     * <pre>
+     * List of channel IDs.
+     * </pre>
+     *
+     * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return A list containing the channelIds.
+     */
+    java.util.List<java.lang.String>
+        getChannelIdsList();
+    /**
+     * <pre>
+     * List of channel IDs.
+     * </pre>
+     *
+     * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The count of channelIds.
+     */
+    int getChannelIdsCount();
+    /**
+     * <pre>
+     * List of channel IDs.
+     * </pre>
+     *
+     * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the element to return.
+     * @return The channelIds at the given index.
+     */
+    java.lang.String getChannelIds(int index);
+    /**
+     * <pre>
+     * List of channel IDs.
+     * </pre>
+     *
+     * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the channelIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getChannelIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.video.v1.BatchDeleteChannelsRequest}
+   */
+  public static final class BatchDeleteChannelsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.BatchDeleteChannelsRequest)
+      BatchDeleteChannelsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BatchDeleteChannelsRequest.newBuilder() to construct.
+    private BatchDeleteChannelsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BatchDeleteChannelsRequest() {
+      organizationId_ = "";
+      channelIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BatchDeleteChannelsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BatchDeleteChannelsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              organizationId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                channelIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              channelIds_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          channelIds_ = channelIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.video.v1.ChannelServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchDeleteChannelsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.video.v1.ChannelServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchDeleteChannelsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest.class, yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest.Builder.class);
+    }
+
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object organizationId_;
+    /**
+     * <pre>
+     * ID of the organization.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The organizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrganizationId() {
+      java.lang.Object ref = organizationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        organizationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the organization.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for organizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      java.lang.Object ref = organizationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        organizationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CHANNEL_IDS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList channelIds_;
+    /**
+     * <pre>
+     * List of channel IDs.
+     * </pre>
+     *
+     * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return A list containing the channelIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getChannelIdsList() {
+      return channelIds_;
+    }
+    /**
+     * <pre>
+     * List of channel IDs.
+     * </pre>
+     *
+     * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The count of channelIds.
+     */
+    public int getChannelIdsCount() {
+      return channelIds_.size();
+    }
+    /**
+     * <pre>
+     * List of channel IDs.
+     * </pre>
+     *
+     * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the element to return.
+     * @return The channelIds at the given index.
+     */
+    public java.lang.String getChannelIds(int index) {
+      return channelIds_.get(index);
+    }
+    /**
+     * <pre>
+     * List of channel IDs.
+     * </pre>
+     *
+     * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the channelIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getChannelIdsBytes(int index) {
+      return channelIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, organizationId_);
+      }
+      for (int i = 0; i < channelIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, channelIds_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, organizationId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < channelIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(channelIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getChannelIdsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest other = (yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest) obj;
+
+      if (!getOrganizationId()
+          .equals(other.getOrganizationId())) return false;
+      if (!getChannelIdsList()
+          .equals(other.getChannelIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOrganizationId().hashCode();
+      if (getChannelIdsCount() > 0) {
+        hash = (37 * hash) + CHANNEL_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getChannelIdsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.video.v1.BatchDeleteChannelsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.BatchDeleteChannelsRequest)
+        yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.ChannelServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchDeleteChannelsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.ChannelServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchDeleteChannelsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest.class, yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        organizationId_ = "";
+
+        channelIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.video.v1.ChannelServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchDeleteChannelsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest build() {
+        yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest buildPartial() {
+        yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest result = new yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.organizationId_ = organizationId_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          channelIds_ = channelIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.channelIds_ = channelIds_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest) {
+          return mergeFrom((yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest other) {
+        if (other == yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest.getDefaultInstance()) return this;
+        if (!other.getOrganizationId().isEmpty()) {
+          organizationId_ = other.organizationId_;
+          onChanged();
+        }
+        if (!other.channelIds_.isEmpty()) {
+          if (channelIds_.isEmpty()) {
+            channelIds_ = other.channelIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureChannelIdsIsMutable();
+            channelIds_.addAll(other.channelIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object organizationId_ = "";
+      /**
+       * <pre>
+       * ID of the organization.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The organizationId.
+       */
+      public java.lang.String getOrganizationId() {
+        java.lang.Object ref = organizationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          organizationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the organization.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for organizationId.
+       */
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        java.lang.Object ref = organizationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          organizationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the organization.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        organizationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the organization.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        
+        organizationId_ = getDefaultInstance().getOrganizationId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the organization.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        organizationId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList channelIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureChannelIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          channelIds_ = new com.google.protobuf.LazyStringArrayList(channelIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * List of channel IDs.
+       * </pre>
+       *
+       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return A list containing the channelIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getChannelIdsList() {
+        return channelIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of channel IDs.
+       * </pre>
+       *
+       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The count of channelIds.
+       */
+      public int getChannelIdsCount() {
+        return channelIds_.size();
+      }
+      /**
+       * <pre>
+       * List of channel IDs.
+       * </pre>
+       *
+       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param index The index of the element to return.
+       * @return The channelIds at the given index.
+       */
+      public java.lang.String getChannelIds(int index) {
+        return channelIds_.get(index);
+      }
+      /**
+       * <pre>
+       * List of channel IDs.
+       * </pre>
+       *
+       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the channelIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getChannelIdsBytes(int index) {
+        return channelIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of channel IDs.
+       * </pre>
+       *
+       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param index The index to set the value at.
+       * @param value The channelIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChannelIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureChannelIdsIsMutable();
+        channelIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of channel IDs.
+       * </pre>
+       *
+       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The channelIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addChannelIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureChannelIdsIsMutable();
+        channelIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of channel IDs.
+       * </pre>
+       *
+       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param values The channelIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllChannelIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureChannelIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, channelIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of channel IDs.
+       * </pre>
+       *
+       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChannelIds() {
+        channelIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of channel IDs.
+       * </pre>
+       *
+       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes of the channelIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addChannelIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureChannelIdsIsMutable();
+        channelIds_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.BatchDeleteChannelsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.BatchDeleteChannelsRequest)
+    private static final yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest();
+    }
+
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BatchDeleteChannelsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<BatchDeleteChannelsRequest>() {
+      @java.lang.Override
+      public BatchDeleteChannelsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BatchDeleteChannelsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BatchDeleteChannelsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BatchDeleteChannelsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BatchDeleteChannelsMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.BatchDeleteChannelsMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of channel IDs.
+     * </pre>
+     *
+     * <code>repeated string channel_ids = 1;</code>
+     * @return A list containing the channelIds.
+     */
+    java.util.List<java.lang.String>
+        getChannelIdsList();
+    /**
+     * <pre>
+     * List of channel IDs.
+     * </pre>
+     *
+     * <code>repeated string channel_ids = 1;</code>
+     * @return The count of channelIds.
+     */
+    int getChannelIdsCount();
+    /**
+     * <pre>
+     * List of channel IDs.
+     * </pre>
+     *
+     * <code>repeated string channel_ids = 1;</code>
+     * @param index The index of the element to return.
+     * @return The channelIds at the given index.
+     */
+    java.lang.String getChannelIds(int index);
+    /**
+     * <pre>
+     * List of channel IDs.
+     * </pre>
+     *
+     * <code>repeated string channel_ids = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the channelIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getChannelIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.video.v1.BatchDeleteChannelsMetadata}
+   */
+  public static final class BatchDeleteChannelsMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.BatchDeleteChannelsMetadata)
+      BatchDeleteChannelsMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BatchDeleteChannelsMetadata.newBuilder() to construct.
+    private BatchDeleteChannelsMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BatchDeleteChannelsMetadata() {
+      channelIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BatchDeleteChannelsMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BatchDeleteChannelsMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                channelIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              channelIds_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          channelIds_ = channelIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.video.v1.ChannelServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchDeleteChannelsMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.video.v1.ChannelServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchDeleteChannelsMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata.class, yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata.Builder.class);
+    }
+
+    public static final int CHANNEL_IDS_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList channelIds_;
+    /**
+     * <pre>
+     * List of channel IDs.
+     * </pre>
+     *
+     * <code>repeated string channel_ids = 1;</code>
+     * @return A list containing the channelIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getChannelIdsList() {
+      return channelIds_;
+    }
+    /**
+     * <pre>
+     * List of channel IDs.
+     * </pre>
+     *
+     * <code>repeated string channel_ids = 1;</code>
+     * @return The count of channelIds.
+     */
+    public int getChannelIdsCount() {
+      return channelIds_.size();
+    }
+    /**
+     * <pre>
+     * List of channel IDs.
+     * </pre>
+     *
+     * <code>repeated string channel_ids = 1;</code>
+     * @param index The index of the element to return.
+     * @return The channelIds at the given index.
+     */
+    public java.lang.String getChannelIds(int index) {
+      return channelIds_.get(index);
+    }
+    /**
+     * <pre>
+     * List of channel IDs.
+     * </pre>
+     *
+     * <code>repeated string channel_ids = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the channelIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getChannelIdsBytes(int index) {
+      return channelIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < channelIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, channelIds_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < channelIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(channelIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getChannelIdsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata other = (yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata) obj;
+
+      if (!getChannelIdsList()
+          .equals(other.getChannelIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getChannelIdsCount() > 0) {
+        hash = (37 * hash) + CHANNEL_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getChannelIdsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.video.v1.BatchDeleteChannelsMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.BatchDeleteChannelsMetadata)
+        yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.ChannelServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchDeleteChannelsMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.ChannelServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchDeleteChannelsMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata.class, yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        channelIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.video.v1.ChannelServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchDeleteChannelsMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata build() {
+        yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata buildPartial() {
+        yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata result = new yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          channelIds_ = channelIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.channelIds_ = channelIds_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata) {
+          return mergeFrom((yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata other) {
+        if (other == yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata.getDefaultInstance()) return this;
+        if (!other.channelIds_.isEmpty()) {
+          if (channelIds_.isEmpty()) {
+            channelIds_ = other.channelIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureChannelIdsIsMutable();
+            channelIds_.addAll(other.channelIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList channelIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureChannelIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          channelIds_ = new com.google.protobuf.LazyStringArrayList(channelIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * List of channel IDs.
+       * </pre>
+       *
+       * <code>repeated string channel_ids = 1;</code>
+       * @return A list containing the channelIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getChannelIdsList() {
+        return channelIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of channel IDs.
+       * </pre>
+       *
+       * <code>repeated string channel_ids = 1;</code>
+       * @return The count of channelIds.
+       */
+      public int getChannelIdsCount() {
+        return channelIds_.size();
+      }
+      /**
+       * <pre>
+       * List of channel IDs.
+       * </pre>
+       *
+       * <code>repeated string channel_ids = 1;</code>
+       * @param index The index of the element to return.
+       * @return The channelIds at the given index.
+       */
+      public java.lang.String getChannelIds(int index) {
+        return channelIds_.get(index);
+      }
+      /**
+       * <pre>
+       * List of channel IDs.
+       * </pre>
+       *
+       * <code>repeated string channel_ids = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the channelIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getChannelIdsBytes(int index) {
+        return channelIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of channel IDs.
+       * </pre>
+       *
+       * <code>repeated string channel_ids = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The channelIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChannelIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureChannelIdsIsMutable();
+        channelIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of channel IDs.
+       * </pre>
+       *
+       * <code>repeated string channel_ids = 1;</code>
+       * @param value The channelIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addChannelIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureChannelIdsIsMutable();
+        channelIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of channel IDs.
+       * </pre>
+       *
+       * <code>repeated string channel_ids = 1;</code>
+       * @param values The channelIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllChannelIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureChannelIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, channelIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of channel IDs.
+       * </pre>
+       *
+       * <code>repeated string channel_ids = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChannelIds() {
+        channelIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of channel IDs.
+       * </pre>
+       *
+       * <code>repeated string channel_ids = 1;</code>
+       * @param value The bytes of the channelIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addChannelIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureChannelIdsIsMutable();
+        channelIds_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.BatchDeleteChannelsMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.BatchDeleteChannelsMetadata)
+    private static final yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata();
+    }
+
+    public static yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BatchDeleteChannelsMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<BatchDeleteChannelsMetadata>() {
+      @java.lang.Override
+      public BatchDeleteChannelsMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BatchDeleteChannelsMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BatchDeleteChannelsMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BatchDeleteChannelsMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_video_v1_GetChannelRequest_descriptor;
   private static final 
@@ -8503,6 +10101,16 @@ public final class ChannelServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_video_v1_DeleteChannelMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_BatchDeleteChannelsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_BatchDeleteChannelsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_BatchDeleteChannelsMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_BatchDeleteChannelsMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -8517,53 +10125,69 @@ public final class ChannelServiceOuterClass {
       "/annotations.proto\032 google/protobuf/fiel" +
       "d_mask.proto\032 yandex/cloud/api/operation" +
       ".proto\032&yandex/cloud/operation/operation" +
-      ".proto\032#yandex/cloud/video/v1/channel.pr" +
-      "oto\"\'\n\021GetChannelRequest\022\022\n\nchannel_id\030\001" +
-      " \001(\t\"}\n\023ListChannelsRequest\022\027\n\017organizat" +
-      "ion_id\030\001 \001(\t\022\021\n\tpage_size\030d \001(\003\022\022\n\npage_" +
-      "token\030e \001(\t\022\020\n\010order_by\030f \001(\t\022\016\n\006filter\030" +
-      "g \001(\tJ\004\010\002\020d\"g\n\024ListChannelsResponse\0220\n\010c" +
-      "hannels\030\001 \003(\0132\036.yandex.cloud.video.v1.Ch" +
-      "annel\022\027\n\017next_page_token\030d \001(\tJ\004\010\002\020d\"\323\001\n" +
-      "\024CreateChannelRequest\022\027\n\017organization_id" +
-      "\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022\023\n\013description\030\003 \001" +
-      "(\t\022H\n\006labels\030\310\001 \003(\01327.yandex.cloud.video" +
-      ".v1.CreateChannelRequest.LabelsEntry\032-\n\013" +
-      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001J\005\010\004\020\310\001\"+\n\025CreateChannelMetadata\022\022\n\nc" +
-      "hannel_id\030\001 \001(\t\"\376\001\n\024UpdateChannelRequest" +
-      "\022\022\n\nchannel_id\030\001 \001(\t\022.\n\nfield_mask\030\002 \001(\013" +
-      "2\032.google.protobuf.FieldMask\022\r\n\005title\030\003 " +
-      "\001(\t\022\023\n\013description\030\004 \001(\t\022H\n\006labels\030\310\001 \003(" +
+      ".proto\032\035yandex/cloud/validation.proto\032#y" +
+      "andex/cloud/video/v1/channel.proto\"5\n\021Ge" +
+      "tChannelRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\"\256\001\n\023ListChannelsRequest\022%\n\017org" +
+      "anization_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage" +
+      "_size\030d \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030e " +
+      "\001(\tB\t\212\3101\005<=200\022\020\n\010order_by\030f \001(\t\022\032\n\006filt" +
+      "er\030g \001(\tB\n\212\3101\006<=1000J\004\010\002\020d\"g\n\024ListChanne" +
+      "lsResponse\0220\n\010channels\030\001 \003(\0132\036.yandex.cl" +
+      "oud.video.v1.Channel\022\027\n\017next_page_token\030" +
+      "d \001(\tJ\004\010\002\020d\"\255\002\n\024CreateChannelRequest\022%\n\017" +
+      "organization_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\023\n\005t" +
+      "itle\030\002 \001(\tB\004\350\3071\001\022\023\n\013description\030\003 \001(\t\022\215\001" +
+      "\n\006labels\030\310\001 \003(\01327.yandex.cloud.video.v1." +
+      "CreateChannelRequest.LabelsEntryBC\202\3101\004<=" +
+      "64\212\3101\004<=63\362\3071\017[-_.@:/0-9a-z]*\262\3101\006\032\004<=63\262" +
+      "\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\005\010\004\020\310\001\"+\n\025C" +
+      "reateChannelMetadata\022\022\n\nchannel_id\030\001 \001(\t" +
+      "\"\322\002\n\024UpdateChannelRequest\022 \n\nchannel_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022.\n\nfield_mask\030\002 \001(\0132" +
+      "\032.google.protobuf.FieldMask\022\r\n\005title\030\003 \001" +
+      "(\t\022\023\n\013description\030\004 \001(\t\022\215\001\n\006labels\030\310\001 \003(" +
       "\01327.yandex.cloud.video.v1.UpdateChannelR" +
-      "equest.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\005\010\005\020\310\001\"+\n\025Upda" +
-      "teChannelMetadata\022\022\n\nchannel_id\030\001 \001(\t\"*\n" +
-      "\024DeleteChannelRequest\022\022\n\nchannel_id\030\001 \001(" +
-      "\t\"+\n\025DeleteChannelMetadata\022\022\n\nchannel_id" +
-      "\030\001 \001(\t2\206\006\n\016ChannelService\022x\n\003Get\022(.yande" +
-      "x.cloud.video.v1.GetChannelRequest\032\036.yan" +
-      "dex.cloud.video.v1.Channel\"\'\202\323\344\223\002!\022\037/vid" +
-      "eo/v1/channels/{channel_id}\022{\n\004List\022*.ya" +
-      "ndex.cloud.video.v1.ListChannelsRequest\032" +
-      "+.yandex.cloud.video.v1.ListChannelsResp" +
-      "onse\"\032\202\323\344\223\002\024\022\022/video/v1/channels\022\233\001\n\006Cre" +
-      "ate\022+.yandex.cloud.video.v1.CreateChanne" +
-      "lRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"A\202\323\344\223\002\027\"\022/video/v1/channels:\001*\262\322* \n\025" +
-      "CreateChannelMetadata\022\007Channel\022\250\001\n\006Updat" +
-      "e\022+.yandex.cloud.video.v1.UpdateChannelR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"N\202\323\344\223\002$2\037/video/v1/channels/{channel_i" +
-      "d}:\001*\262\322* \n\025UpdateChannelMetadata\022\007Channe" +
-      "l\022\263\001\n\006Delete\022+.yandex.cloud.video.v1.Del" +
-      "eteChannelRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"Y\202\323\344\223\002!*\037/video/v1/channels" +
-      "/{channel_id}\262\322*.\n\025DeleteChannelMetadata" +
-      "\022\025google.protobuf.EmptyB\\\n\031yandex.cloud." +
-      "api.video.v1Z?github.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/video/v1;videob\006p" +
-      "roto3"
+      "equest.LabelsEntryBC\202\3101\004<=64\212\3101\004<=63\362\3071\017" +
+      "[-_.@:/0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0" +
+      "-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001J\005\010\005\020\310\001\"+\n\025UpdateChannelMe" +
+      "tadata\022\022\n\nchannel_id\030\001 \001(\t\"8\n\024DeleteChan" +
+      "nelRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\"+\n\025DeleteChannelMetadata\022\022\n\nchannel" +
+      "_id\030\001 \001(\t\"j\n\032BatchDeleteChannelsRequest\022" +
+      "%\n\017organization_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022%" +
+      "\n\013channel_ids\030\002 \003(\tB\020\202\3101\0041-50\212\3101\004<=50\"2\n" +
+      "\033BatchDeleteChannelsMetadata\022\023\n\013channel_" +
+      "ids\030\001 \003(\t2\317\007\n\016ChannelService\022x\n\003Get\022(.ya" +
+      "ndex.cloud.video.v1.GetChannelRequest\032\036." +
+      "yandex.cloud.video.v1.Channel\"\'\202\323\344\223\002!\022\037/" +
+      "video/v1/channels/{channel_id}\022{\n\004List\022*" +
+      ".yandex.cloud.video.v1.ListChannelsReque" +
+      "st\032+.yandex.cloud.video.v1.ListChannelsR" +
+      "esponse\"\032\202\323\344\223\002\024\022\022/video/v1/channels\022\233\001\n\006" +
+      "Create\022+.yandex.cloud.video.v1.CreateCha" +
+      "nnelRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"A\202\323\344\223\002\027\"\022/video/v1/channels:\001*\262\322*" +
+      " \n\025CreateChannelMetadata\022\007Channel\022\250\001\n\006Up" +
+      "date\022+.yandex.cloud.video.v1.UpdateChann" +
+      "elRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"N\202\323\344\223\002$2\037/video/v1/channels/{channe" +
+      "l_id}:\001*\262\322* \n\025UpdateChannelMetadata\022\007Cha" +
+      "nnel\022\263\001\n\006Delete\022+.yandex.cloud.video.v1." +
+      "DeleteChannelRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"Y\202\323\344\223\002!*\037/video/v1/chann" +
+      "els/{channel_id}\262\322*.\n\025DeleteChannelMetad" +
+      "ata\022\025google.protobuf.Empty\022\306\001\n\013BatchDele" +
+      "te\0221.yandex.cloud.video.v1.BatchDeleteCh" +
+      "annelsRequest\032!.yandex.cloud.operation.O" +
+      "peration\"a\202\323\344\223\002#\"\036/video/v1/channels:bat" +
+      "chDelete:\001*\262\322*4\n\033BatchDeleteChannelsMeta" +
+      "data\022\025google.protobuf.EmptyB\\\n\031yandex.cl" +
+      "oud.api.video.v1Z?github.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/video/v1;vide" +
+      "ob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8572,6 +10196,7 @@ public final class ChannelServiceOuterClass {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.video.v1.ChannelOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_video_v1_GetChannelRequest_descriptor =
@@ -8640,16 +10265,35 @@ public final class ChannelServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_DeleteChannelMetadata_descriptor,
         new java.lang.String[] { "ChannelId", });
+    internal_static_yandex_cloud_video_v1_BatchDeleteChannelsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_video_v1_BatchDeleteChannelsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_BatchDeleteChannelsRequest_descriptor,
+        new java.lang.String[] { "OrganizationId", "ChannelIds", });
+    internal_static_yandex_cloud_video_v1_BatchDeleteChannelsMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_video_v1_BatchDeleteChannelsMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_BatchDeleteChannelsMetadata_descriptor,
+        new java.lang.String[] { "ChannelIds", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
+    registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.mapKey);
+    registry.add(yandex.cloud.api.Validation.pattern);
+    registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
+    registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.video.v1.ChannelOuterClass.getDescriptor();
   }
 

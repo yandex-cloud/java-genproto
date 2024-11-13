@@ -444,7 +444,7 @@ public final class RegistryServiceGrpc {
     /**
      * <pre>
      * Returns the specified Registry resource.
-     * To get the list of available Registry resources, make a [List] request.
+     * To get the list of available Registry resources, make a [RegistryService.List] request.
      * </pre>
      */
     public void get(yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.GetRegistryRequest request,
@@ -554,7 +554,7 @@ public final class RegistryServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of Registry artifact resources in the specified registry.
+     * Retrieves the list of registry artifact resources in the specified registry.
      * </pre>
      */
     public void listArtifacts(yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.ListArtifactsRequest request,
@@ -672,7 +672,7 @@ public final class RegistryServiceGrpc {
     /**
      * <pre>
      * Returns the specified Registry resource.
-     * To get the list of available Registry resources, make a [List] request.
+     * To get the list of available Registry resources, make a [RegistryService.List] request.
      * </pre>
      */
     public void get(yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.GetRegistryRequest request,
@@ -793,7 +793,7 @@ public final class RegistryServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of Registry artifact resources in the specified registry.
+     * Retrieves the list of registry artifact resources in the specified registry.
      * </pre>
      */
     public void listArtifacts(yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.ListArtifactsRequest request,
@@ -823,7 +823,7 @@ public final class RegistryServiceGrpc {
     /**
      * <pre>
      * Returns the specified Registry resource.
-     * To get the list of available Registry resources, make a [List] request.
+     * To get the list of available Registry resources, make a [RegistryService.List] request.
      * </pre>
      */
     public yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry get(yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.GetRegistryRequest request) {
@@ -933,7 +933,7 @@ public final class RegistryServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of Registry artifact resources in the specified registry.
+     * Retrieves the list of registry artifact resources in the specified registry.
      * </pre>
      */
     public yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.ListArtifactsResponse listArtifacts(yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.ListArtifactsRequest request) {
@@ -962,7 +962,7 @@ public final class RegistryServiceGrpc {
     /**
      * <pre>
      * Returns the specified Registry resource.
-     * To get the list of available Registry resources, make a [List] request.
+     * To get the list of available Registry resources, make a [RegistryService.List] request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry> get(
@@ -1083,7 +1083,7 @@ public final class RegistryServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of Registry artifact resources in the specified registry.
+     * Retrieves the list of registry artifact resources in the specified registry.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.ListArtifactsResponse> listArtifacts(

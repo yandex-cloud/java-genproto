@@ -178,6 +178,25 @@ public final class BackupOuterClass {
      */
     com.google.protobuf.ByteString
         getSourceShardNamesBytes(int index);
+
+    /**
+     * <pre>
+     * How this backup was created (manual/automatic/etc...)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.Backup.BackupType type = 7;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <pre>
+     * How this backup was created (manual/automatic/etc...)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.Backup.BackupType type = 7;</code>
+     * @return The type.
+     */
+    yandex.cloud.api.mdb.redis.v1.BackupOuterClass.Backup.BackupType getType();
   }
   /**
    * <pre>
@@ -201,6 +220,7 @@ public final class BackupOuterClass {
       folderId_ = "";
       sourceClusterId_ = "";
       sourceShardNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      type_ = 0;
     }
 
     @java.lang.Override
@@ -287,6 +307,12 @@ public final class BackupOuterClass {
               sourceShardNames_.add(s);
               break;
             }
+            case 56: {
+              int rawValue = input.readEnum();
+
+              type_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -320,6 +346,139 @@ public final class BackupOuterClass {
       return yandex.cloud.api.mdb.redis.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_redis_v1_Backup_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               yandex.cloud.api.mdb.redis.v1.BackupOuterClass.Backup.class, yandex.cloud.api.mdb.redis.v1.BackupOuterClass.Backup.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.redis.v1.Backup.BackupType}
+     */
+    public enum BackupType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>BACKUP_TYPE_UNSPECIFIED = 0;</code>
+       */
+      BACKUP_TYPE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Backup created by automated daily schedule
+       * </pre>
+       *
+       * <code>AUTOMATED = 1;</code>
+       */
+      AUTOMATED(1),
+      /**
+       * <pre>
+       * Backup created by user request
+       * </pre>
+       *
+       * <code>MANUAL = 2;</code>
+       */
+      MANUAL(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>BACKUP_TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int BACKUP_TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Backup created by automated daily schedule
+       * </pre>
+       *
+       * <code>AUTOMATED = 1;</code>
+       */
+      public static final int AUTOMATED_VALUE = 1;
+      /**
+       * <pre>
+       * Backup created by user request
+       * </pre>
+       *
+       * <code>MANUAL = 2;</code>
+       */
+      public static final int MANUAL_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static BackupType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static BackupType forNumber(int value) {
+        switch (value) {
+          case 0: return BACKUP_TYPE_UNSPECIFIED;
+          case 1: return AUTOMATED;
+          case 2: return MANUAL;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<BackupType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          BackupType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<BackupType>() {
+              public BackupType findValueByNumber(int number) {
+                return BackupType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.redis.v1.BackupOuterClass.Backup.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final BackupType[] VALUES = values();
+
+      public static BackupType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private BackupType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.redis.v1.Backup.BackupType)
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -593,6 +752,33 @@ public final class BackupOuterClass {
       return sourceShardNames_.getByteString(index);
     }
 
+    public static final int TYPE_FIELD_NUMBER = 7;
+    private int type_;
+    /**
+     * <pre>
+     * How this backup was created (manual/automatic/etc...)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.Backup.BackupType type = 7;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * How this backup was created (manual/automatic/etc...)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.Backup.BackupType type = 7;</code>
+     * @return The type.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.redis.v1.BackupOuterClass.Backup.BackupType getType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.redis.v1.BackupOuterClass.Backup.BackupType result = yandex.cloud.api.mdb.redis.v1.BackupOuterClass.Backup.BackupType.valueOf(type_);
+      return result == null ? yandex.cloud.api.mdb.redis.v1.BackupOuterClass.Backup.BackupType.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -624,6 +810,9 @@ public final class BackupOuterClass {
       }
       for (int i = 0; i < sourceShardNames_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, sourceShardNames_.getRaw(i));
+      }
+      if (type_ != yandex.cloud.api.mdb.redis.v1.BackupOuterClass.Backup.BackupType.BACKUP_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(7, type_);
       }
       unknownFields.writeTo(output);
     }
@@ -659,6 +848,10 @@ public final class BackupOuterClass {
         size += dataSize;
         size += 1 * getSourceShardNamesList().size();
       }
+      if (type_ != yandex.cloud.api.mdb.redis.v1.BackupOuterClass.Backup.BackupType.BACKUP_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(7, type_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -692,6 +885,7 @@ public final class BackupOuterClass {
       }
       if (!getSourceShardNamesList()
           .equals(other.getSourceShardNamesList())) return false;
+      if (type_ != other.type_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -721,6 +915,8 @@ public final class BackupOuterClass {
         hash = (37 * hash) + SOURCE_SHARD_NAMES_FIELD_NUMBER;
         hash = (53 * hash) + getSourceShardNamesList().hashCode();
       }
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -879,6 +1075,8 @@ public final class BackupOuterClass {
         }
         sourceShardNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
+        type_ = 0;
+
         return this;
       }
 
@@ -924,6 +1122,7 @@ public final class BackupOuterClass {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.sourceShardNames_ = sourceShardNames_;
+        result.type_ = type_;
         onBuilt();
         return result;
       }
@@ -999,6 +1198,9 @@ public final class BackupOuterClass {
             sourceShardNames_.addAll(other.sourceShardNames_);
           }
           onChanged();
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1791,6 +1993,80 @@ public final class BackupOuterClass {
         onChanged();
         return this;
       }
+
+      private int type_ = 0;
+      /**
+       * <pre>
+       * How this backup was created (manual/automatic/etc...)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.Backup.BackupType type = 7;</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <pre>
+       * How this backup was created (manual/automatic/etc...)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.Backup.BackupType type = 7;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * How this backup was created (manual/automatic/etc...)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.Backup.BackupType type = 7;</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.BackupOuterClass.Backup.BackupType getType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.redis.v1.BackupOuterClass.Backup.BackupType result = yandex.cloud.api.mdb.redis.v1.BackupOuterClass.Backup.BackupType.valueOf(type_);
+        return result == null ? yandex.cloud.api.mdb.redis.v1.BackupOuterClass.Backup.BackupType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * How this backup was created (manual/automatic/etc...)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.Backup.BackupType type = 7;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(yandex.cloud.api.mdb.redis.v1.BackupOuterClass.Backup.BackupType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * How this backup was created (manual/automatic/etc...)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.Backup.BackupType type = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1860,15 +2136,18 @@ public final class BackupOuterClass {
     java.lang.String[] descriptorData = {
       "\n&yandex/cloud/mdb/redis/v1/backup.proto" +
       "\022\031yandex.cloud.mdb.redis.v1\032\037google/prot" +
-      "obuf/timestamp.proto\"\276\001\n\006Backup\022\n\n\002id\030\001 " +
+      "obuf/timestamp.proto\"\300\002\n\006Backup\022\n\n\002id\030\001 " +
       "\001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001" +
       "(\0132\032.google.protobuf.Timestamp\022\031\n\021source" +
       "_cluster_id\030\004 \001(\t\022.\n\nstarted_at\030\005 \001(\0132\032." +
       "google.protobuf.Timestamp\022\032\n\022source_shar" +
-      "d_names\030\006 \003(\tBd\n\035yandex.cloud.api.mdb.re" +
-      "dis.v1ZCgithub.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/mdb/redis/v1;redisb\006pro" +
-      "to3"
+      "d_names\030\006 \003(\t\022:\n\004type\030\007 \001(\0162,.yandex.clo" +
+      "ud.mdb.redis.v1.Backup.BackupType\"D\n\nBac" +
+      "kupType\022\033\n\027BACKUP_TYPE_UNSPECIFIED\020\000\022\r\n\t" +
+      "AUTOMATED\020\001\022\n\n\006MANUAL\020\002Bd\n\035yandex.cloud." +
+      "api.mdb.redis.v1ZCgithub.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/mdb/redis/v1;" +
+      "redisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1880,7 +2159,7 @@ public final class BackupOuterClass {
     internal_static_yandex_cloud_mdb_redis_v1_Backup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_Backup_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "SourceClusterId", "StartedAt", "SourceShardNames", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "SourceClusterId", "StartedAt", "SourceShardNames", "Type", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

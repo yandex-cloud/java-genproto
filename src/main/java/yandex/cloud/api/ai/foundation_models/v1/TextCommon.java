@@ -2651,7 +2651,7 @@ public final class TextCommon {
 
     /**
      * <pre>
-     * The total number of tokens in the generated completions.
+     * The number of tokens in the generated completion.
      * </pre>
      *
      * <code>int64 completion_tokens = 2;</code>
@@ -2784,7 +2784,7 @@ public final class TextCommon {
     private long completionTokens_;
     /**
      * <pre>
-     * The total number of tokens in the generated completions.
+     * The number of tokens in the generated completion.
      * </pre>
      *
      * <code>int64 completion_tokens = 2;</code>
@@ -3199,7 +3199,7 @@ public final class TextCommon {
       private long completionTokens_ ;
       /**
        * <pre>
-       * The total number of tokens in the generated completions.
+       * The number of tokens in the generated completion.
        * </pre>
        *
        * <code>int64 completion_tokens = 2;</code>
@@ -3211,7 +3211,7 @@ public final class TextCommon {
       }
       /**
        * <pre>
-       * The total number of tokens in the generated completions.
+       * The number of tokens in the generated completion.
        * </pre>
        *
        * <code>int64 completion_tokens = 2;</code>
@@ -3226,7 +3226,7 @@ public final class TextCommon {
       }
       /**
        * <pre>
-       * The total number of tokens in the generated completions.
+       * The number of tokens in the generated completion.
        * </pre>
        *
        * <code>int64 completion_tokens = 2;</code>
@@ -3340,7 +3340,7 @@ public final class TextCommon {
 
     /**
      * <pre>
-     * A message containing the content of the alternative.
+     * A message with the content of the alternative.
      * </pre>
      *
      * <code>.yandex.cloud.ai.foundation_models.v1.Message message = 1;</code>
@@ -3349,7 +3349,7 @@ public final class TextCommon {
     boolean hasMessage();
     /**
      * <pre>
-     * A message containing the content of the alternative.
+     * A message with the content of the alternative.
      * </pre>
      *
      * <code>.yandex.cloud.ai.foundation_models.v1.Message message = 1;</code>
@@ -3358,7 +3358,7 @@ public final class TextCommon {
     yandex.cloud.api.ai.foundation_models.v1.TextCommon.Message getMessage();
     /**
      * <pre>
-     * A message containing the content of the alternative.
+     * A message with the content of the alternative.
      * </pre>
      *
      * <code>.yandex.cloud.ai.foundation_models.v1.Message message = 1;</code>
@@ -3367,7 +3367,7 @@ public final class TextCommon {
 
     /**
      * <pre>
-     * The generation status of the alternative
+     * The generation status of the alternative.
      * </pre>
      *
      * <code>.yandex.cloud.ai.foundation_models.v1.Alternative.AlternativeStatus status = 2;</code>
@@ -3376,7 +3376,7 @@ public final class TextCommon {
     int getStatusValue();
     /**
      * <pre>
-     * The generation status of the alternative
+     * The generation status of the alternative.
      * </pre>
      *
      * <code>.yandex.cloud.ai.foundation_models.v1.Alternative.AlternativeStatus status = 2;</code>
@@ -3687,7 +3687,7 @@ public final class TextCommon {
     private yandex.cloud.api.ai.foundation_models.v1.TextCommon.Message message_;
     /**
      * <pre>
-     * A message containing the content of the alternative.
+     * A message with the content of the alternative.
      * </pre>
      *
      * <code>.yandex.cloud.ai.foundation_models.v1.Message message = 1;</code>
@@ -3699,7 +3699,7 @@ public final class TextCommon {
     }
     /**
      * <pre>
-     * A message containing the content of the alternative.
+     * A message with the content of the alternative.
      * </pre>
      *
      * <code>.yandex.cloud.ai.foundation_models.v1.Message message = 1;</code>
@@ -3711,7 +3711,7 @@ public final class TextCommon {
     }
     /**
      * <pre>
-     * A message containing the content of the alternative.
+     * A message with the content of the alternative.
      * </pre>
      *
      * <code>.yandex.cloud.ai.foundation_models.v1.Message message = 1;</code>
@@ -3725,7 +3725,7 @@ public final class TextCommon {
     private int status_;
     /**
      * <pre>
-     * The generation status of the alternative
+     * The generation status of the alternative.
      * </pre>
      *
      * <code>.yandex.cloud.ai.foundation_models.v1.Alternative.AlternativeStatus status = 2;</code>
@@ -3736,7 +3736,7 @@ public final class TextCommon {
     }
     /**
      * <pre>
-     * The generation status of the alternative
+     * The generation status of the alternative.
      * </pre>
      *
      * <code>.yandex.cloud.ai.foundation_models.v1.Alternative.AlternativeStatus status = 2;</code>
@@ -4088,7 +4088,7 @@ public final class TextCommon {
           yandex.cloud.api.ai.foundation_models.v1.TextCommon.Message, yandex.cloud.api.ai.foundation_models.v1.TextCommon.Message.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.MessageOrBuilder> messageBuilder_;
       /**
        * <pre>
-       * A message containing the content of the alternative.
+       * A message with the content of the alternative.
        * </pre>
        *
        * <code>.yandex.cloud.ai.foundation_models.v1.Message message = 1;</code>
@@ -4099,7 +4099,7 @@ public final class TextCommon {
       }
       /**
        * <pre>
-       * A message containing the content of the alternative.
+       * A message with the content of the alternative.
        * </pre>
        *
        * <code>.yandex.cloud.ai.foundation_models.v1.Message message = 1;</code>
@@ -4114,7 +4114,7 @@ public final class TextCommon {
       }
       /**
        * <pre>
-       * A message containing the content of the alternative.
+       * A message with the content of the alternative.
        * </pre>
        *
        * <code>.yandex.cloud.ai.foundation_models.v1.Message message = 1;</code>
@@ -4134,7 +4134,7 @@ public final class TextCommon {
       }
       /**
        * <pre>
-       * A message containing the content of the alternative.
+       * A message with the content of the alternative.
        * </pre>
        *
        * <code>.yandex.cloud.ai.foundation_models.v1.Message message = 1;</code>
@@ -4152,7 +4152,7 @@ public final class TextCommon {
       }
       /**
        * <pre>
-       * A message containing the content of the alternative.
+       * A message with the content of the alternative.
        * </pre>
        *
        * <code>.yandex.cloud.ai.foundation_models.v1.Message message = 1;</code>
@@ -4174,7 +4174,7 @@ public final class TextCommon {
       }
       /**
        * <pre>
-       * A message containing the content of the alternative.
+       * A message with the content of the alternative.
        * </pre>
        *
        * <code>.yandex.cloud.ai.foundation_models.v1.Message message = 1;</code>
@@ -4192,7 +4192,7 @@ public final class TextCommon {
       }
       /**
        * <pre>
-       * A message containing the content of the alternative.
+       * A message with the content of the alternative.
        * </pre>
        *
        * <code>.yandex.cloud.ai.foundation_models.v1.Message message = 1;</code>
@@ -4204,7 +4204,7 @@ public final class TextCommon {
       }
       /**
        * <pre>
-       * A message containing the content of the alternative.
+       * A message with the content of the alternative.
        * </pre>
        *
        * <code>.yandex.cloud.ai.foundation_models.v1.Message message = 1;</code>
@@ -4219,7 +4219,7 @@ public final class TextCommon {
       }
       /**
        * <pre>
-       * A message containing the content of the alternative.
+       * A message with the content of the alternative.
        * </pre>
        *
        * <code>.yandex.cloud.ai.foundation_models.v1.Message message = 1;</code>
@@ -4241,7 +4241,7 @@ public final class TextCommon {
       private int status_ = 0;
       /**
        * <pre>
-       * The generation status of the alternative
+       * The generation status of the alternative.
        * </pre>
        *
        * <code>.yandex.cloud.ai.foundation_models.v1.Alternative.AlternativeStatus status = 2;</code>
@@ -4252,7 +4252,7 @@ public final class TextCommon {
       }
       /**
        * <pre>
-       * The generation status of the alternative
+       * The generation status of the alternative.
        * </pre>
        *
        * <code>.yandex.cloud.ai.foundation_models.v1.Alternative.AlternativeStatus status = 2;</code>
@@ -4267,7 +4267,7 @@ public final class TextCommon {
       }
       /**
        * <pre>
-       * The generation status of the alternative
+       * The generation status of the alternative.
        * </pre>
        *
        * <code>.yandex.cloud.ai.foundation_models.v1.Alternative.AlternativeStatus status = 2;</code>
@@ -4281,7 +4281,7 @@ public final class TextCommon {
       }
       /**
        * <pre>
-       * The generation status of the alternative
+       * The generation status of the alternative.
        * </pre>
        *
        * <code>.yandex.cloud.ai.foundation_models.v1.Alternative.AlternativeStatus status = 2;</code>
@@ -4299,7 +4299,7 @@ public final class TextCommon {
       }
       /**
        * <pre>
-       * The generation status of the alternative
+       * The generation status of the alternative.
        * </pre>
        *
        * <code>.yandex.cloud.ai.foundation_models.v1.Alternative.AlternativeStatus status = 2;</code>

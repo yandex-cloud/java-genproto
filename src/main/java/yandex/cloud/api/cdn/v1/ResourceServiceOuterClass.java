@@ -8220,6 +8220,16 @@ public final class ResourceServiceOuterClass {
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * If flag is set to true resource labels will be deleted.
+     * </pre>
+     *
+     * <code>bool remove_labels = 9;</code>
+     * @return The removeLabels.
+     */
+    boolean getRemoveLabels();
   }
   /**
    * Protobuf type {@code yandex.cloud.cdn.v1.UpdateResourceRequest}
@@ -8357,6 +8367,11 @@ public final class ResourceServiceOuterClass {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 72: {
+
+              removeLabels_ = input.readBool();
               break;
             }
             default: {
@@ -8769,6 +8784,21 @@ public final class ResourceServiceOuterClass {
       return map.get(key);
     }
 
+    public static final int REMOVE_LABELS_FIELD_NUMBER = 9;
+    private boolean removeLabels_;
+    /**
+     * <pre>
+     * If flag is set to true resource labels will be deleted.
+     * </pre>
+     *
+     * <code>bool remove_labels = 9;</code>
+     * @return The removeLabels.
+     */
+    @java.lang.Override
+    public boolean getRemoveLabels() {
+      return removeLabels_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8810,6 +8840,9 @@ public final class ResourceServiceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           8);
+      if (removeLabels_ != false) {
+        output.writeBool(9, removeLabels_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -8856,6 +8889,10 @@ public final class ResourceServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(8, labels__);
       }
+      if (removeLabels_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(9, removeLabels_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -8901,6 +8938,8 @@ public final class ResourceServiceOuterClass {
       }
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (getRemoveLabels()
+          != other.getRemoveLabels()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8940,6 +8979,9 @@ public final class ResourceServiceOuterClass {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
       }
+      hash = (37 * hash) + REMOVE_LABELS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getRemoveLabels());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9130,6 +9172,8 @@ public final class ResourceServiceOuterClass {
           sslCertificateBuilder_ = null;
         }
         internalGetMutableLabels().clear();
+        removeLabels_ = false;
+
         return this;
       }
 
@@ -9186,6 +9230,7 @@ public final class ResourceServiceOuterClass {
         }
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        result.removeLabels_ = removeLabels_;
         onBuilt();
         return result;
       }
@@ -9258,6 +9303,9 @@ public final class ResourceServiceOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (other.getRemoveLabels() != false) {
+          setRemoveLabels(other.getRemoveLabels());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -10407,6 +10455,49 @@ public final class ResourceServiceOuterClass {
           java.util.Map<java.lang.String, java.lang.String> values) {
         internalGetMutableLabels().getMutableMap()
             .putAll(values);
+        return this;
+      }
+
+      private boolean removeLabels_ ;
+      /**
+       * <pre>
+       * If flag is set to true resource labels will be deleted.
+       * </pre>
+       *
+       * <code>bool remove_labels = 9;</code>
+       * @return The removeLabels.
+       */
+      @java.lang.Override
+      public boolean getRemoveLabels() {
+        return removeLabels_;
+      }
+      /**
+       * <pre>
+       * If flag is set to true resource labels will be deleted.
+       * </pre>
+       *
+       * <code>bool remove_labels = 9;</code>
+       * @param value The removeLabels to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemoveLabels(boolean value) {
+        
+        removeLabels_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If flag is set to true resource labels will be deleted.
+       * </pre>
+       *
+       * <code>bool remove_labels = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRemoveLabels() {
+        
+        removeLabels_ = false;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -13788,7 +13879,7 @@ public final class ResourceServiceOuterClass {
       "ginParams\022\016\n\006source\030\001 \001(\t\022-\n\004meta\030\002 \001(\0132" +
       "\037.yandex.cloud.cdn.v1.OriginMeta\";\n\026Crea" +
       "teResourceMetadata\022!\n\013resource_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\"\222\004\n\025UpdateResourceRequest\022" +
+      "\014\350\3071\001\212\3101\004<=50\"\251\004\n\025UpdateResourceRequest\022" +
       "!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0224\n\017or" +
       "igin_group_id\030\002 \001(\0132\033.google.protobuf.In" +
       "t64Value\022D\n\023secondary_hostnames\030\003 \001(\0132\'." +
@@ -13800,41 +13891,41 @@ public final class ResourceServiceOuterClass {
       "B\n\017ssl_certificate\030\007 \001(\0132).yandex.cloud." +
       "cdn.v1.SSLTargetCertificate\022F\n\006labels\030\010 " +
       "\003(\01326.yandex.cloud.cdn.v1.UpdateResource" +
-      "Request.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\";\n\026UpdateReso" +
-      "urceMetadata\022!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\":\n\025DeleteResourceRequest\022!\n\013reso" +
-      "urce_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\026DeleteRes" +
-      "ourceMetadata\022\023\n\013resource_id\030\001 \001(\t\":\n\027Ge" +
-      "tProviderCNameRequest\022\037\n\tfolder_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\"<\n\030GetProviderCNameRespon" +
-      "se\022\r\n\005cname\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t2\230\007\n" +
-      "\017ResourceService\022v\n\003Get\022\'.yandex.cloud.c" +
-      "dn.v1.GetResourceRequest\032\035.yandex.cloud." +
-      "cdn.v1.Resource\"\'\202\323\344\223\002!\022\037/cdn/v1/resourc" +
-      "es/{resource_id}\022x\n\004List\022).yandex.cloud." +
-      "cdn.v1.ListResourcesRequest\032*.yandex.clo" +
-      "ud.cdn.v1.ListResourcesResponse\"\031\202\323\344\223\002\023\022" +
-      "\021/cdn/v1/resources\022\233\001\n\006Create\022*.yandex.c" +
-      "loud.cdn.v1.CreateResourceRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"B\202\323\344\223\002\026\"\021/c" +
-      "dn/v1/resources:\001*\262\322*\"\n\026CreateResourceMe" +
-      "tadata\022\010Resource\022\251\001\n\006Update\022*.yandex.clo" +
-      "ud.cdn.v1.UpdateResourceRequest\032!.yandex" +
-      ".cloud.operation.Operation\"P\202\323\344\223\002$2\037/cdn" +
-      "/v1/resources/{resource_id}:\001*\262\322*\"\n\026Upda" +
-      "teResourceMetadata\022\010Resource\022\263\001\n\006Delete\022" +
-      "*.yandex.cloud.cdn.v1.DeleteResourceRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"Z" +
-      "\202\323\344\223\002!*\037/cdn/v1/resources/{resource_id}\262" +
-      "\322*/\n\026DeleteResourceMetadata\022\025google.prot" +
-      "obuf.Empty\022\222\001\n\020GetProviderCName\022,.yandex" +
-      ".cloud.cdn.v1.GetProviderCNameRequest\032-." +
-      "yandex.cloud.cdn.v1.GetProviderCNameResp" +
-      "onse\"!\202\323\344\223\002\033\022\031/cdn/v1/cname/{folder_id}B" +
-      "V\n\027yandex.cloud.api.cdn.v1Z;github.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/cdn" +
-      "/v1;cdnb\006proto3"
+      "Request.LabelsEntry\022\025\n\rremove_labels\030\t \001" +
+      "(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001\";\n\026UpdateResourceMetadata\022!\n\013r" +
+      "esource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\":\n\025Delete" +
+      "ResourceRequest\022!\n\013resource_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\"-\n\026DeleteResourceMetadata\022\023\n\013" +
+      "resource_id\030\001 \001(\t\":\n\027GetProviderCNameReq" +
+      "uest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"<\n" +
+      "\030GetProviderCNameResponse\022\r\n\005cname\030\001 \001(\t" +
+      "\022\021\n\tfolder_id\030\002 \001(\t2\230\007\n\017ResourceService\022" +
+      "v\n\003Get\022\'.yandex.cloud.cdn.v1.GetResource" +
+      "Request\032\035.yandex.cloud.cdn.v1.Resource\"\'" +
+      "\202\323\344\223\002!\022\037/cdn/v1/resources/{resource_id}\022" +
+      "x\n\004List\022).yandex.cloud.cdn.v1.ListResour" +
+      "cesRequest\032*.yandex.cloud.cdn.v1.ListRes" +
+      "ourcesResponse\"\031\202\323\344\223\002\023\022\021/cdn/v1/resource" +
+      "s\022\233\001\n\006Create\022*.yandex.cloud.cdn.v1.Creat" +
+      "eResourceRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"B\202\323\344\223\002\026\"\021/cdn/v1/resources:\001" +
+      "*\262\322*\"\n\026CreateResourceMetadata\022\010Resource\022" +
+      "\251\001\n\006Update\022*.yandex.cloud.cdn.v1.UpdateR" +
+      "esourceRequest\032!.yandex.cloud.operation." +
+      "Operation\"P\202\323\344\223\002$2\037/cdn/v1/resources/{re" +
+      "source_id}:\001*\262\322*\"\n\026UpdateResourceMetadat" +
+      "a\022\010Resource\022\263\001\n\006Delete\022*.yandex.cloud.cd" +
+      "n.v1.DeleteResourceRequest\032!.yandex.clou" +
+      "d.operation.Operation\"Z\202\323\344\223\002!*\037/cdn/v1/r" +
+      "esources/{resource_id}\262\322*/\n\026DeleteResour" +
+      "ceMetadata\022\025google.protobuf.Empty\022\222\001\n\020Ge" +
+      "tProviderCName\022,.yandex.cloud.cdn.v1.Get" +
+      "ProviderCNameRequest\032-.yandex.cloud.cdn." +
+      "v1.GetProviderCNameResponse\"!\202\323\344\223\002\033\022\031/cd" +
+      "n/v1/cname/{folder_id}BV\n\027yandex.cloud.a" +
+      "pi.cdn.v1Z;github.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/cdn/v1;cdnb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13900,7 +13991,7 @@ public final class ResourceServiceOuterClass {
     internal_static_yandex_cloud_cdn_v1_UpdateResourceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cdn_v1_UpdateResourceRequest_descriptor,
-        new java.lang.String[] { "ResourceId", "OriginGroupId", "SecondaryHostnames", "Options", "OriginProtocol", "Active", "SslCertificate", "Labels", });
+        new java.lang.String[] { "ResourceId", "OriginGroupId", "SecondaryHostnames", "Options", "OriginProtocol", "Active", "SslCertificate", "Labels", "RemoveLabels", });
     internal_static_yandex_cloud_cdn_v1_UpdateResourceRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_cdn_v1_UpdateResourceRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_cdn_v1_UpdateResourceRequest_LabelsEntry_fieldAccessorTable = new

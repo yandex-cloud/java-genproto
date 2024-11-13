@@ -319,7 +319,7 @@ public final class RegistryOuterClass {
   }
   /**
    * <pre>
-   * A Registry resource. For more information, see the [Registry](/docs/cloud-registry/concepts/registry) section of the documentation.
+   * A Registry resource.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.cloudregistry.v1.Registry}
@@ -1757,7 +1757,7 @@ public final class RegistryOuterClass {
     }
     /**
      * <pre>
-     * A Registry resource. For more information, see the [Registry](/docs/cloud-registry/concepts/registry) section of the documentation.
+     * A Registry resource.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.cloudregistry.v1.Registry}

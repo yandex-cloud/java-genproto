@@ -9376,27 +9376,83 @@ public final class DSPJS {
      * Instance of the job.
      * </pre>
      *
-     * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1;</code>
+     * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the job field is set.
      */
-    boolean hasJob();
+    @java.lang.Deprecated boolean hasJob();
     /**
      * <pre>
      * Instance of the job.
      * </pre>
      *
-     * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1;</code>
+     * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1 [deprecated = true];</code>
+     * @deprecated
      * @return The job.
      */
-    yandex.cloud.api.datasphere.v2.jobs.Jobs.Job getJob();
+    @java.lang.Deprecated yandex.cloud.api.datasphere.v2.jobs.Jobs.Job getJob();
     /**
      * <pre>
      * Instance of the job.
      * </pre>
      *
-     * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1;</code>
+     * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1 [deprecated = true];</code>
      */
-    yandex.cloud.api.datasphere.v2.jobs.Jobs.JobOrBuilder getJobOrBuilder();
+    @java.lang.Deprecated yandex.cloud.api.datasphere.v2.jobs.Jobs.JobOrBuilder getJobOrBuilder();
+
+    /**
+     * <pre>
+     * Job progress info
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.JobProgress progress = 2;</code>
+     * @return Whether the progress field is set.
+     */
+    boolean hasProgress();
+    /**
+     * <pre>
+     * Job progress info
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.JobProgress progress = 2;</code>
+     * @return The progress.
+     */
+    yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress getProgress();
+    /**
+     * <pre>
+     * Job progress info
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.JobProgress progress = 2;</code>
+     */
+    yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgressOrBuilder getProgressOrBuilder();
+
+    /**
+     * <pre>
+     * Job metadata with main job info
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.JobMetadata metadata = 3;</code>
+     * @return Whether the metadata field is set.
+     */
+    boolean hasMetadata();
+    /**
+     * <pre>
+     * Job metadata with main job info
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.JobMetadata metadata = 3;</code>
+     * @return The metadata.
+     */
+    yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata getMetadata();
+    /**
+     * <pre>
+     * Job metadata with main job info
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.JobMetadata metadata = 3;</code>
+     */
+    yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadataOrBuilder getMetadataOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.datasphere.v2.jobs.ExecuteProjectJobMetadata}
@@ -9456,6 +9512,32 @@ public final class DSPJS {
 
               break;
             }
+            case 18: {
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress.Builder subBuilder = null;
+              if (progress_ != null) {
+                subBuilder = progress_.toBuilder();
+              }
+              progress_ = input.readMessage(yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(progress_);
+                progress_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata.Builder subBuilder = null;
+              if (metadata_ != null) {
+                subBuilder = metadata_.toBuilder();
+              }
+              metadata_ = input.readMessage(yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(metadata_);
+                metadata_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -9495,11 +9577,12 @@ public final class DSPJS {
      * Instance of the job.
      * </pre>
      *
-     * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1;</code>
+     * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the job field is set.
      */
     @java.lang.Override
-    public boolean hasJob() {
+    @java.lang.Deprecated public boolean hasJob() {
       return job_ != null;
     }
     /**
@@ -9507,11 +9590,12 @@ public final class DSPJS {
      * Instance of the job.
      * </pre>
      *
-     * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1;</code>
+     * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1 [deprecated = true];</code>
+     * @deprecated
      * @return The job.
      */
     @java.lang.Override
-    public yandex.cloud.api.datasphere.v2.jobs.Jobs.Job getJob() {
+    @java.lang.Deprecated public yandex.cloud.api.datasphere.v2.jobs.Jobs.Job getJob() {
       return job_ == null ? yandex.cloud.api.datasphere.v2.jobs.Jobs.Job.getDefaultInstance() : job_;
     }
     /**
@@ -9519,11 +9603,87 @@ public final class DSPJS {
      * Instance of the job.
      * </pre>
      *
-     * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1;</code>
+     * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1 [deprecated = true];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.datasphere.v2.jobs.Jobs.JobOrBuilder getJobOrBuilder() {
+    @java.lang.Deprecated public yandex.cloud.api.datasphere.v2.jobs.Jobs.JobOrBuilder getJobOrBuilder() {
       return getJob();
+    }
+
+    public static final int PROGRESS_FIELD_NUMBER = 2;
+    private yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress progress_;
+    /**
+     * <pre>
+     * Job progress info
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.JobProgress progress = 2;</code>
+     * @return Whether the progress field is set.
+     */
+    @java.lang.Override
+    public boolean hasProgress() {
+      return progress_ != null;
+    }
+    /**
+     * <pre>
+     * Job progress info
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.JobProgress progress = 2;</code>
+     * @return The progress.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress getProgress() {
+      return progress_ == null ? yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress.getDefaultInstance() : progress_;
+    }
+    /**
+     * <pre>
+     * Job progress info
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.JobProgress progress = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgressOrBuilder getProgressOrBuilder() {
+      return getProgress();
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 3;
+    private yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata metadata_;
+    /**
+     * <pre>
+     * Job metadata with main job info
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.JobMetadata metadata = 3;</code>
+     * @return Whether the metadata field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetadata() {
+      return metadata_ != null;
+    }
+    /**
+     * <pre>
+     * Job metadata with main job info
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.JobMetadata metadata = 3;</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata getMetadata() {
+      return metadata_ == null ? yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata.getDefaultInstance() : metadata_;
+    }
+    /**
+     * <pre>
+     * Job metadata with main job info
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.JobMetadata metadata = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadataOrBuilder getMetadataOrBuilder() {
+      return getMetadata();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -9543,6 +9703,12 @@ public final class DSPJS {
       if (job_ != null) {
         output.writeMessage(1, getJob());
       }
+      if (progress_ != null) {
+        output.writeMessage(2, getProgress());
+      }
+      if (metadata_ != null) {
+        output.writeMessage(3, getMetadata());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -9555,6 +9721,14 @@ public final class DSPJS {
       if (job_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getJob());
+      }
+      if (progress_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getProgress());
+      }
+      if (metadata_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getMetadata());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9576,6 +9750,16 @@ public final class DSPJS {
         if (!getJob()
             .equals(other.getJob())) return false;
       }
+      if (hasProgress() != other.hasProgress()) return false;
+      if (hasProgress()) {
+        if (!getProgress()
+            .equals(other.getProgress())) return false;
+      }
+      if (hasMetadata() != other.hasMetadata()) return false;
+      if (hasMetadata()) {
+        if (!getMetadata()
+            .equals(other.getMetadata())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9590,6 +9774,14 @@ public final class DSPJS {
       if (hasJob()) {
         hash = (37 * hash) + JOB_FIELD_NUMBER;
         hash = (53 * hash) + getJob().hashCode();
+      }
+      if (hasProgress()) {
+        hash = (37 * hash) + PROGRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getProgress().hashCode();
+      }
+      if (hasMetadata()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadata().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -9730,6 +9922,18 @@ public final class DSPJS {
           job_ = null;
           jobBuilder_ = null;
         }
+        if (progressBuilder_ == null) {
+          progress_ = null;
+        } else {
+          progress_ = null;
+          progressBuilder_ = null;
+        }
+        if (metadataBuilder_ == null) {
+          metadata_ = null;
+        } else {
+          metadata_ = null;
+          metadataBuilder_ = null;
+        }
         return this;
       }
 
@@ -9760,6 +9964,16 @@ public final class DSPJS {
           result.job_ = job_;
         } else {
           result.job_ = jobBuilder_.build();
+        }
+        if (progressBuilder_ == null) {
+          result.progress_ = progress_;
+        } else {
+          result.progress_ = progressBuilder_.build();
+        }
+        if (metadataBuilder_ == null) {
+          result.metadata_ = metadata_;
+        } else {
+          result.metadata_ = metadataBuilder_.build();
         }
         onBuilt();
         return result;
@@ -9812,6 +10026,12 @@ public final class DSPJS {
         if (other.hasJob()) {
           mergeJob(other.getJob());
         }
+        if (other.hasProgress()) {
+          mergeProgress(other.getProgress());
+        }
+        if (other.hasMetadata()) {
+          mergeMetadata(other.getMetadata());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -9849,10 +10069,11 @@ public final class DSPJS {
        * Instance of the job.
        * </pre>
        *
-       * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1;</code>
+       * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the job field is set.
        */
-      public boolean hasJob() {
+      @java.lang.Deprecated public boolean hasJob() {
         return jobBuilder_ != null || job_ != null;
       }
       /**
@@ -9860,10 +10081,11 @@ public final class DSPJS {
        * Instance of the job.
        * </pre>
        *
-       * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1;</code>
+       * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1 [deprecated = true];</code>
+       * @deprecated
        * @return The job.
        */
-      public yandex.cloud.api.datasphere.v2.jobs.Jobs.Job getJob() {
+      @java.lang.Deprecated public yandex.cloud.api.datasphere.v2.jobs.Jobs.Job getJob() {
         if (jobBuilder_ == null) {
           return job_ == null ? yandex.cloud.api.datasphere.v2.jobs.Jobs.Job.getDefaultInstance() : job_;
         } else {
@@ -9875,9 +10097,9 @@ public final class DSPJS {
        * Instance of the job.
        * </pre>
        *
-       * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1;</code>
+       * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1 [deprecated = true];</code>
        */
-      public Builder setJob(yandex.cloud.api.datasphere.v2.jobs.Jobs.Job value) {
+      @java.lang.Deprecated public Builder setJob(yandex.cloud.api.datasphere.v2.jobs.Jobs.Job value) {
         if (jobBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -9895,9 +10117,9 @@ public final class DSPJS {
        * Instance of the job.
        * </pre>
        *
-       * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1;</code>
+       * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1 [deprecated = true];</code>
        */
-      public Builder setJob(
+      @java.lang.Deprecated public Builder setJob(
           yandex.cloud.api.datasphere.v2.jobs.Jobs.Job.Builder builderForValue) {
         if (jobBuilder_ == null) {
           job_ = builderForValue.build();
@@ -9913,9 +10135,9 @@ public final class DSPJS {
        * Instance of the job.
        * </pre>
        *
-       * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1;</code>
+       * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1 [deprecated = true];</code>
        */
-      public Builder mergeJob(yandex.cloud.api.datasphere.v2.jobs.Jobs.Job value) {
+      @java.lang.Deprecated public Builder mergeJob(yandex.cloud.api.datasphere.v2.jobs.Jobs.Job value) {
         if (jobBuilder_ == null) {
           if (job_ != null) {
             job_ =
@@ -9935,9 +10157,9 @@ public final class DSPJS {
        * Instance of the job.
        * </pre>
        *
-       * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1;</code>
+       * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1 [deprecated = true];</code>
        */
-      public Builder clearJob() {
+      @java.lang.Deprecated public Builder clearJob() {
         if (jobBuilder_ == null) {
           job_ = null;
           onChanged();
@@ -9953,9 +10175,9 @@ public final class DSPJS {
        * Instance of the job.
        * </pre>
        *
-       * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1;</code>
+       * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1 [deprecated = true];</code>
        */
-      public yandex.cloud.api.datasphere.v2.jobs.Jobs.Job.Builder getJobBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.datasphere.v2.jobs.Jobs.Job.Builder getJobBuilder() {
         
         onChanged();
         return getJobFieldBuilder().getBuilder();
@@ -9965,9 +10187,9 @@ public final class DSPJS {
        * Instance of the job.
        * </pre>
        *
-       * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1;</code>
+       * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1 [deprecated = true];</code>
        */
-      public yandex.cloud.api.datasphere.v2.jobs.Jobs.JobOrBuilder getJobOrBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.datasphere.v2.jobs.Jobs.JobOrBuilder getJobOrBuilder() {
         if (jobBuilder_ != null) {
           return jobBuilder_.getMessageOrBuilder();
         } else {
@@ -9980,7 +10202,7 @@ public final class DSPJS {
        * Instance of the job.
        * </pre>
        *
-       * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1;</code>
+       * <code>.yandex.cloud.datasphere.v2.jobs.Job job = 1 [deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datasphere.v2.jobs.Jobs.Job, yandex.cloud.api.datasphere.v2.jobs.Jobs.Job.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.JobOrBuilder> 
@@ -9994,6 +10216,316 @@ public final class DSPJS {
           job_ = null;
         }
         return jobBuilder_;
+      }
+
+      private yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress progress_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress, yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgressOrBuilder> progressBuilder_;
+      /**
+       * <pre>
+       * Job progress info
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.JobProgress progress = 2;</code>
+       * @return Whether the progress field is set.
+       */
+      public boolean hasProgress() {
+        return progressBuilder_ != null || progress_ != null;
+      }
+      /**
+       * <pre>
+       * Job progress info
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.JobProgress progress = 2;</code>
+       * @return The progress.
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress getProgress() {
+        if (progressBuilder_ == null) {
+          return progress_ == null ? yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress.getDefaultInstance() : progress_;
+        } else {
+          return progressBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Job progress info
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.JobProgress progress = 2;</code>
+       */
+      public Builder setProgress(yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress value) {
+        if (progressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          progress_ = value;
+          onChanged();
+        } else {
+          progressBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Job progress info
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.JobProgress progress = 2;</code>
+       */
+      public Builder setProgress(
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress.Builder builderForValue) {
+        if (progressBuilder_ == null) {
+          progress_ = builderForValue.build();
+          onChanged();
+        } else {
+          progressBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Job progress info
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.JobProgress progress = 2;</code>
+       */
+      public Builder mergeProgress(yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress value) {
+        if (progressBuilder_ == null) {
+          if (progress_ != null) {
+            progress_ =
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress.newBuilder(progress_).mergeFrom(value).buildPartial();
+          } else {
+            progress_ = value;
+          }
+          onChanged();
+        } else {
+          progressBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Job progress info
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.JobProgress progress = 2;</code>
+       */
+      public Builder clearProgress() {
+        if (progressBuilder_ == null) {
+          progress_ = null;
+          onChanged();
+        } else {
+          progress_ = null;
+          progressBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Job progress info
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.JobProgress progress = 2;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress.Builder getProgressBuilder() {
+        
+        onChanged();
+        return getProgressFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Job progress info
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.JobProgress progress = 2;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgressOrBuilder getProgressOrBuilder() {
+        if (progressBuilder_ != null) {
+          return progressBuilder_.getMessageOrBuilder();
+        } else {
+          return progress_ == null ?
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress.getDefaultInstance() : progress_;
+        }
+      }
+      /**
+       * <pre>
+       * Job progress info
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.JobProgress progress = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress, yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgressOrBuilder> 
+          getProgressFieldBuilder() {
+        if (progressBuilder_ == null) {
+          progressBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress, yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgressOrBuilder>(
+                  getProgress(),
+                  getParentForChildren(),
+                  isClean());
+          progress_ = null;
+        }
+        return progressBuilder_;
+      }
+
+      private yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata metadata_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata, yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadataOrBuilder> metadataBuilder_;
+      /**
+       * <pre>
+       * Job metadata with main job info
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.JobMetadata metadata = 3;</code>
+       * @return Whether the metadata field is set.
+       */
+      public boolean hasMetadata() {
+        return metadataBuilder_ != null || metadata_ != null;
+      }
+      /**
+       * <pre>
+       * Job metadata with main job info
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.JobMetadata metadata = 3;</code>
+       * @return The metadata.
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata getMetadata() {
+        if (metadataBuilder_ == null) {
+          return metadata_ == null ? yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata.getDefaultInstance() : metadata_;
+        } else {
+          return metadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Job metadata with main job info
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.JobMetadata metadata = 3;</code>
+       */
+      public Builder setMetadata(yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metadata_ = value;
+          onChanged();
+        } else {
+          metadataBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Job metadata with main job info
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.JobMetadata metadata = 3;</code>
+       */
+      public Builder setMetadata(
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata.Builder builderForValue) {
+        if (metadataBuilder_ == null) {
+          metadata_ = builderForValue.build();
+          onChanged();
+        } else {
+          metadataBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Job metadata with main job info
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.JobMetadata metadata = 3;</code>
+       */
+      public Builder mergeMetadata(yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (metadata_ != null) {
+            metadata_ =
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata.newBuilder(metadata_).mergeFrom(value).buildPartial();
+          } else {
+            metadata_ = value;
+          }
+          onChanged();
+        } else {
+          metadataBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Job metadata with main job info
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.JobMetadata metadata = 3;</code>
+       */
+      public Builder clearMetadata() {
+        if (metadataBuilder_ == null) {
+          metadata_ = null;
+          onChanged();
+        } else {
+          metadata_ = null;
+          metadataBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Job metadata with main job info
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.JobMetadata metadata = 3;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata.Builder getMetadataBuilder() {
+        
+        onChanged();
+        return getMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Job metadata with main job info
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.JobMetadata metadata = 3;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadataOrBuilder getMetadataOrBuilder() {
+        if (metadataBuilder_ != null) {
+          return metadataBuilder_.getMessageOrBuilder();
+        } else {
+          return metadata_ == null ?
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata.getDefaultInstance() : metadata_;
+        }
+      }
+      /**
+       * <pre>
+       * Job metadata with main job info
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.JobMetadata metadata = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata, yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadataOrBuilder> 
+          getMetadataFieldBuilder() {
+        if (metadataBuilder_ == null) {
+          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata, yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadataOrBuilder>(
+                  getMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          metadata_ = null;
+        }
+        return metadataBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -26541,104 +27073,108 @@ public final class DSPJS {
       "e\022G\n\017output_datasets\030\003 \003(\0132..yandex.clou" +
       "d.datasphere.v2.jobs.OutputDataset\022:\n\006re" +
       "sult\030\002 \001(\0132*.yandex.cloud.datasphere.v2." +
-      "jobs.JobResult\"N\n\031ExecuteProjectJobMetad" +
-      "ata\0221\n\003job\030\001 \001(\0132$.yandex.cloud.datasphe" +
-      "re.v2.jobs.Job\"K\n\027CancelProjectJobReques" +
-      "t\022\016\n\006job_id\030\001 \001(\t\022\016\n\006reason\030\002 \001(\t\022\020\n\010gra" +
-      "ceful\030\003 \001(\010\">\n\034ReadProjectJobStdLogsRequ" +
-      "est\022\016\n\006job_id\030\001 \001(\t\022\016\n\006offset\030\002 \001(\003\"f\n\035R" +
-      "eadProjectJobStdLogsResponse\0225\n\004logs\030\001 \003" +
-      "(\0132\'.yandex.cloud.datasphere.v2.jobs.Std" +
-      "Log\022\016\n\006offset\030\002 \001(\003\";\n\031ReadProjectJobLog" +
-      "sRequest\022\016\n\006job_id\030\001 \001(\t\022\016\n\006offset\030\002 \001(\003" +
-      "\"g\n\032ReadProjectJobLogsResponse\0229\n\004logs\030\001" +
-      " \003(\0132+.yandex.cloud.datasphere.v2.jobs.L" +
-      "ogMessage\022\016\n\006offset\030\002 \001(\003\"u\n\036DownloadPro" +
-      "jectJobFilesRequest\022\024\n\006job_id\030\001 \001(\tB\004\350\3071" +
-      "\001\022=\n\005files\030\002 \003(\0132%.yandex.cloud.datasphe" +
-      "re.v2.jobs.FileB\007\202\3101\003>=1\"g\n\037DownloadProj" +
-      "ectJobFilesResponse\022D\n\016download_files\030\001 " +
-      "\003(\0132,.yandex.cloud.datasphere.v2.jobs.St" +
-      "orageFile\"n\n\025ListProjectJobRequest\022\022\n\npr" +
-      "oject_id\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npag" +
-      "e_token\030\003 \001(\t\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=100" +
-      "0\"e\n\026ListProjectJobResponse\0222\n\004jobs\030\001 \003(" +
-      "\0132$.yandex.cloud.datasphere.v2.jobs.Job\022" +
-      "\027\n\017next_page_token\030\002 \001(\t\"&\n\024GetProjectJo" +
-      "bRequest\022\016\n\006job_id\030\001 \001(\t\")\n\027DeleteProjec" +
-      "tJobRequest\022\016\n\006job_id\030\001 \001(\t\"*\n\030DeletePro" +
-      "jectJobMetadata\022\016\n\006job_id\030\001 \001(\t\"-\n\033Delet" +
-      "eProjectJobDataRequest\022\016\n\006job_id\030\001 \001(\t\"." +
-      "\n\034DeleteProjectJobDataMetadata\022\016\n\006job_id" +
-      "\030\001 \001(\t\"\036\n\034DeleteProjectJobDataResponse\"4" +
-      "\n\036DeleteAllProjectJobDataRequest\022\022\n\nproj" +
-      "ect_id\030\001 \001(\t\"5\n\037DeleteAllProjectJobDataM" +
-      "etadata\022\022\n\nproject_id\030\001 \001(\t\"!\n\037DeleteAll" +
-      "ProjectJobDataResponse\"U\n\033SetProjectJobD" +
-      "ataTtlRequest\022\016\n\006job_id\030\001 \001(\t\022&\n\003ttl\030\002 \001" +
-      "(\0132\031.google.protobuf.Duration\"\036\n\034SetProj" +
-      "ectJobDataTtlResponse\"\205\001\n\006StdLog\022\017\n\007cont" +
-      "ent\030\001 \001(\014\022:\n\004type\030\002 \001(\0162,.yandex.cloud.d" +
-      "atasphere.v2.jobs.StdLog.Type\".\n\004Type\022\024\n" +
-      "\020TYPE_UNSPECIFIED\020\000\022\007\n\003OUT\020\001\022\007\n\003ERR\020\002\"\270\001" +
-      "\n\nLogMessage\022\017\n\007content\030\001 \001(\014\022.\n\ncreated" +
-      "_at\030\002 \001(\0132\032.google.protobuf.Timestamp\022J\n" +
-      "\017standard_stream\030\003 \001(\0162/.yandex.cloud.da" +
-      "tasphere.v2.jobs.StandardStreamH\000\022\023\n\tfil" +
-      "e_path\030\004 \001(\tH\000B\010\n\006source*C\n\016StandardStre" +
-      "am\022\037\n\033STANDARD_STREAM_UNSPECIFIED\020\000\022\007\n\003O" +
-      "UT\020\001\022\007\n\003ERR\020\0022\203\017\n\021ProjectJobService\022\237\001\n\006" +
-      "Create\0228.yandex.cloud.datasphere.v2.jobs" +
-      ".CreateProjectJobRequest\032!.yandex.cloud." +
-      "operation.Operation\"8\262\322*4\n\030CreateProject" +
-      "JobMetadata\022\030CreateProjectJobResponse\022\233\001" +
-      "\n\005Clone\0227.yandex.cloud.datasphere.v2.job" +
-      "s.CloneProjectJobRequest\032!.yandex.cloud." +
-      "operation.Operation\"6\262\322*2\n\027CloneProjectJ" +
-      "obMetadata\022\027CloneProjectJobResponse\022\243\001\n\007" +
-      "Execute\0229.yandex.cloud.datasphere.v2.job" +
-      "s.ExecuteProjectJobRequest\032!.yandex.clou" +
-      "d.operation.Operation\":\262\322*6\n\031ExecuteProj" +
-      "ectJobMetadata\022\031ExecuteProjectJobRespons" +
-      "e\022Z\n\006Cancel\0228.yandex.cloud.datasphere.v2" +
-      ".jobs.CancelProjectJobRequest\032\026.google.p" +
-      "rotobuf.Empty\022\223\001\n\013ReadStdLogs\022=.yandex.c" +
-      "loud.datasphere.v2.jobs.ReadProjectJobSt" +
-      "dLogsRequest\032>.yandex.cloud.datasphere.v" +
-      "2.jobs.ReadProjectJobStdLogsResponse\"\003\210\002" +
-      "\0010\001\022\205\001\n\010ReadLogs\022:.yandex.cloud.datasphe" +
-      "re.v2.jobs.ReadProjectJobLogsRequest\032;.y" +
-      "andex.cloud.datasphere.v2.jobs.ReadProje" +
-      "ctJobLogsResponse0\001\022\225\001\n\020DownloadJobFiles" +
-      "\022?.yandex.cloud.datasphere.v2.jobs.Downl" +
-      "oadProjectJobFilesRequest\032@.yandex.cloud" +
-      ".datasphere.v2.jobs.DownloadProjectJobFi" +
-      "lesResponse\022w\n\004List\0226.yandex.cloud.datas" +
-      "phere.v2.jobs.ListProjectJobRequest\0327.ya" +
-      "ndex.cloud.datasphere.v2.jobs.ListProjec" +
-      "tJobResponse\022b\n\003Get\0225.yandex.cloud.datas" +
-      "phere.v2.jobs.GetProjectJobRequest\032$.yan" +
-      "dex.cloud.datasphere.v2.jobs.Job\022\234\001\n\006Del" +
-      "ete\0228.yandex.cloud.datasphere.v2.jobs.De" +
-      "leteProjectJobRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"5\262\322*1\n\030DeleteProjectJob" +
-      "Metadata\022\025google.protobuf.Empty\022\257\001\n\nDele" +
-      "teData\022<.yandex.cloud.datasphere.v2.jobs" +
-      ".DeleteProjectJobDataRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"@\262\322*<\n\034DeletePro" +
-      "jectJobDataMetadata\022\034DeleteProjectJobDat" +
-      "aResponse\022\273\001\n\rDeleteAllData\022?.yandex.clo" +
-      "ud.datasphere.v2.jobs.DeleteAllProjectJo" +
-      "bDataRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"F\262\322*B\n\037DeleteAllProjectJobDataMe" +
-      "tadata\022\037DeleteAllProjectJobDataResponse\022" +
-      "\211\001\n\nSetDataTtl\022<.yandex.cloud.datasphere" +
-      ".v2.jobs.SetProjectJobDataTtlRequest\032=.y" +
-      "andex.cloud.datasphere.v2.jobs.SetProjec" +
-      "tJobDataTtlResponseB|\n#yandex.cloud.api." +
-      "datasphere.v2.jobsB\005DSPJSZNgithub.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/data" +
-      "sphere/v2/jobs;datasphereb\006proto3"
+      "jobs.JobResult\"\322\001\n\031ExecuteProjectJobMeta" +
+      "data\0225\n\003job\030\001 \001(\0132$.yandex.cloud.datasph" +
+      "ere.v2.jobs.JobB\002\030\001\022>\n\010progress\030\002 \001(\0132,." +
+      "yandex.cloud.datasphere.v2.jobs.JobProgr" +
+      "ess\022>\n\010metadata\030\003 \001(\0132,.yandex.cloud.dat" +
+      "asphere.v2.jobs.JobMetadata\"K\n\027CancelPro" +
+      "jectJobRequest\022\016\n\006job_id\030\001 \001(\t\022\016\n\006reason" +
+      "\030\002 \001(\t\022\020\n\010graceful\030\003 \001(\010\">\n\034ReadProjectJ" +
+      "obStdLogsRequest\022\016\n\006job_id\030\001 \001(\t\022\016\n\006offs" +
+      "et\030\002 \001(\003\"f\n\035ReadProjectJobStdLogsRespons" +
+      "e\0225\n\004logs\030\001 \003(\0132\'.yandex.cloud.dataspher" +
+      "e.v2.jobs.StdLog\022\016\n\006offset\030\002 \001(\003\";\n\031Read" +
+      "ProjectJobLogsRequest\022\016\n\006job_id\030\001 \001(\t\022\016\n" +
+      "\006offset\030\002 \001(\003\"g\n\032ReadProjectJobLogsRespo" +
+      "nse\0229\n\004logs\030\001 \003(\0132+.yandex.cloud.datasph" +
+      "ere.v2.jobs.LogMessage\022\016\n\006offset\030\002 \001(\003\"u" +
+      "\n\036DownloadProjectJobFilesRequest\022\024\n\006job_" +
+      "id\030\001 \001(\tB\004\350\3071\001\022=\n\005files\030\002 \003(\0132%.yandex.c" +
+      "loud.datasphere.v2.jobs.FileB\007\202\3101\003>=1\"g\n" +
+      "\037DownloadProjectJobFilesResponse\022D\n\016down" +
+      "load_files\030\001 \003(\0132,.yandex.cloud.datasphe" +
+      "re.v2.jobs.StorageFile\"n\n\025ListProjectJob" +
+      "Request\022\022\n\nproject_id\030\001 \001(\t\022\021\n\tpage_size" +
+      "\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\022\032\n\006filter\030\004 \001" +
+      "(\tB\n\212\3101\006<=1000\"e\n\026ListProjectJobResponse" +
+      "\0222\n\004jobs\030\001 \003(\0132$.yandex.cloud.datasphere" +
+      ".v2.jobs.Job\022\027\n\017next_page_token\030\002 \001(\t\"&\n" +
+      "\024GetProjectJobRequest\022\016\n\006job_id\030\001 \001(\t\")\n" +
+      "\027DeleteProjectJobRequest\022\016\n\006job_id\030\001 \001(\t" +
+      "\"*\n\030DeleteProjectJobMetadata\022\016\n\006job_id\030\001" +
+      " \001(\t\"-\n\033DeleteProjectJobDataRequest\022\016\n\006j" +
+      "ob_id\030\001 \001(\t\".\n\034DeleteProjectJobDataMetad" +
+      "ata\022\016\n\006job_id\030\001 \001(\t\"\036\n\034DeleteProjectJobD" +
+      "ataResponse\"4\n\036DeleteAllProjectJobDataRe" +
+      "quest\022\022\n\nproject_id\030\001 \001(\t\"5\n\037DeleteAllPr" +
+      "ojectJobDataMetadata\022\022\n\nproject_id\030\001 \001(\t" +
+      "\"!\n\037DeleteAllProjectJobDataResponse\"U\n\033S" +
+      "etProjectJobDataTtlRequest\022\016\n\006job_id\030\001 \001" +
+      "(\t\022&\n\003ttl\030\002 \001(\0132\031.google.protobuf.Durati" +
+      "on\"\036\n\034SetProjectJobDataTtlResponse\"\205\001\n\006S" +
+      "tdLog\022\017\n\007content\030\001 \001(\014\022:\n\004type\030\002 \001(\0162,.y" +
+      "andex.cloud.datasphere.v2.jobs.StdLog.Ty" +
+      "pe\".\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\007\n\003OUT\020" +
+      "\001\022\007\n\003ERR\020\002\"\270\001\n\nLogMessage\022\017\n\007content\030\001 \001" +
+      "(\014\022.\n\ncreated_at\030\002 \001(\0132\032.google.protobuf" +
+      ".Timestamp\022J\n\017standard_stream\030\003 \001(\0162/.ya" +
+      "ndex.cloud.datasphere.v2.jobs.StandardSt" +
+      "reamH\000\022\023\n\tfile_path\030\004 \001(\tH\000B\010\n\006source*C\n" +
+      "\016StandardStream\022\037\n\033STANDARD_STREAM_UNSPE" +
+      "CIFIED\020\000\022\007\n\003OUT\020\001\022\007\n\003ERR\020\0022\203\017\n\021ProjectJo" +
+      "bService\022\237\001\n\006Create\0228.yandex.cloud.datas" +
+      "phere.v2.jobs.CreateProjectJobRequest\032!." +
+      "yandex.cloud.operation.Operation\"8\262\322*4\n\030" +
+      "CreateProjectJobMetadata\022\030CreateProjectJ" +
+      "obResponse\022\233\001\n\005Clone\0227.yandex.cloud.data" +
+      "sphere.v2.jobs.CloneProjectJobRequest\032!." +
+      "yandex.cloud.operation.Operation\"6\262\322*2\n\027" +
+      "CloneProjectJobMetadata\022\027CloneProjectJob" +
+      "Response\022\243\001\n\007Execute\0229.yandex.cloud.data" +
+      "sphere.v2.jobs.ExecuteProjectJobRequest\032" +
+      "!.yandex.cloud.operation.Operation\":\262\322*6" +
+      "\n\031ExecuteProjectJobMetadata\022\031ExecuteProj" +
+      "ectJobResponse\022Z\n\006Cancel\0228.yandex.cloud." +
+      "datasphere.v2.jobs.CancelProjectJobReque" +
+      "st\032\026.google.protobuf.Empty\022\223\001\n\013ReadStdLo" +
+      "gs\022=.yandex.cloud.datasphere.v2.jobs.Rea" +
+      "dProjectJobStdLogsRequest\032>.yandex.cloud" +
+      ".datasphere.v2.jobs.ReadProjectJobStdLog" +
+      "sResponse\"\003\210\002\0010\001\022\205\001\n\010ReadLogs\022:.yandex.c" +
+      "loud.datasphere.v2.jobs.ReadProjectJobLo" +
+      "gsRequest\032;.yandex.cloud.datasphere.v2.j" +
+      "obs.ReadProjectJobLogsResponse0\001\022\225\001\n\020Dow" +
+      "nloadJobFiles\022?.yandex.cloud.datasphere." +
+      "v2.jobs.DownloadProjectJobFilesRequest\032@" +
+      ".yandex.cloud.datasphere.v2.jobs.Downloa" +
+      "dProjectJobFilesResponse\022w\n\004List\0226.yande" +
+      "x.cloud.datasphere.v2.jobs.ListProjectJo" +
+      "bRequest\0327.yandex.cloud.datasphere.v2.jo" +
+      "bs.ListProjectJobResponse\022b\n\003Get\0225.yande" +
+      "x.cloud.datasphere.v2.jobs.GetProjectJob" +
+      "Request\032$.yandex.cloud.datasphere.v2.job" +
+      "s.Job\022\234\001\n\006Delete\0228.yandex.cloud.datasphe" +
+      "re.v2.jobs.DeleteProjectJobRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"5\262\322*1\n\030Del" +
+      "eteProjectJobMetadata\022\025google.protobuf.E" +
+      "mpty\022\257\001\n\nDeleteData\022<.yandex.cloud.datas" +
+      "phere.v2.jobs.DeleteProjectJobDataReques" +
+      "t\032!.yandex.cloud.operation.Operation\"@\262\322" +
+      "*<\n\034DeleteProjectJobDataMetadata\022\034Delete" +
+      "ProjectJobDataResponse\022\273\001\n\rDeleteAllData" +
+      "\022?.yandex.cloud.datasphere.v2.jobs.Delet" +
+      "eAllProjectJobDataRequest\032!.yandex.cloud" +
+      ".operation.Operation\"F\262\322*B\n\037DeleteAllPro" +
+      "jectJobDataMetadata\022\037DeleteAllProjectJob" +
+      "DataResponse\022\211\001\n\nSetDataTtl\022<.yandex.clo" +
+      "ud.datasphere.v2.jobs.SetProjectJobDataT" +
+      "tlRequest\032=.yandex.cloud.datasphere.v2.j" +
+      "obs.SetProjectJobDataTtlResponseB|\n#yand" +
+      "ex.cloud.api.datasphere.v2.jobsB\005DSPJSZN" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/datasphere/v2/jobs;datasphereb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -26704,7 +27240,7 @@ public final class DSPJS {
     internal_static_yandex_cloud_datasphere_v2_jobs_ExecuteProjectJobMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_ExecuteProjectJobMetadata_descriptor,
-        new java.lang.String[] { "Job", });
+        new java.lang.String[] { "Job", "Progress", "Metadata", });
     internal_static_yandex_cloud_datasphere_v2_jobs_CancelProjectJobRequest_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_datasphere_v2_jobs_CancelProjectJobRequest_fieldAccessorTable = new

@@ -80,6 +80,37 @@ public final class VideoServiceGrpc {
     return getListMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosRequest,
+      yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosResponse> getBatchGetMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "BatchGet",
+      requestType = yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosRequest.class,
+      responseType = yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosRequest,
+      yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosResponse> getBatchGetMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosRequest, yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosResponse> getBatchGetMethod;
+    if ((getBatchGetMethod = VideoServiceGrpc.getBatchGetMethod) == null) {
+      synchronized (VideoServiceGrpc.class) {
+        if ((getBatchGetMethod = VideoServiceGrpc.getBatchGetMethod) == null) {
+          VideoServiceGrpc.getBatchGetMethod = getBatchGetMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosRequest, yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BatchGet"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new VideoServiceMethodDescriptorSupplier("BatchGet"))
+              .build();
+        }
+      }
+    }
+    return getBatchGetMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.VideoServiceOuterClass.CreateVideoRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod;
 
@@ -142,6 +173,37 @@ public final class VideoServiceGrpc {
     return getUpdateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.VideoServiceOuterClass.TranscodeVideoRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getTranscodeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Transcode",
+      requestType = yandex.cloud.api.video.v1.VideoServiceOuterClass.TranscodeVideoRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.VideoServiceOuterClass.TranscodeVideoRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getTranscodeMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.VideoServiceOuterClass.TranscodeVideoRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getTranscodeMethod;
+    if ((getTranscodeMethod = VideoServiceGrpc.getTranscodeMethod) == null) {
+      synchronized (VideoServiceGrpc.class) {
+        if ((getTranscodeMethod = VideoServiceGrpc.getTranscodeMethod) == null) {
+          VideoServiceGrpc.getTranscodeMethod = getTranscodeMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.video.v1.VideoServiceOuterClass.TranscodeVideoRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Transcode"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.video.v1.VideoServiceOuterClass.TranscodeVideoRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new VideoServiceMethodDescriptorSupplier("Transcode"))
+              .build();
+        }
+      }
+    }
+    return getTranscodeMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.VideoServiceOuterClass.DeleteVideoRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
 
@@ -171,6 +233,37 @@ public final class VideoServiceGrpc {
       }
     }
     return getDeleteMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchDeleteVideosRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getBatchDeleteMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "BatchDelete",
+      requestType = yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchDeleteVideosRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchDeleteVideosRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getBatchDeleteMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchDeleteVideosRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getBatchDeleteMethod;
+    if ((getBatchDeleteMethod = VideoServiceGrpc.getBatchDeleteMethod) == null) {
+      synchronized (VideoServiceGrpc.class) {
+        if ((getBatchDeleteMethod = VideoServiceGrpc.getBatchDeleteMethod) == null) {
+          VideoServiceGrpc.getBatchDeleteMethod = getBatchDeleteMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchDeleteVideosRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BatchDelete"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchDeleteVideosRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new VideoServiceMethodDescriptorSupplier("BatchDelete"))
+              .build();
+        }
+      }
+    }
+    return getBatchDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.VideoServiceOuterClass.PerformVideoActionRequest,
@@ -339,6 +432,16 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
+     * Batch get video in specific channel.
+     * </pre>
+     */
+    public void batchGet(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBatchGetMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Create video.
      * </pre>
      */
@@ -359,12 +462,32 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
+     * Transcode video.
+     * </pre>
+     */
+    public void transcode(yandex.cloud.api.video.v1.VideoServiceOuterClass.TranscodeVideoRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTranscodeMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Delete video.
      * </pre>
      */
     public void delete(yandex.cloud.api.video.v1.VideoServiceOuterClass.DeleteVideoRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Batch delete video.
+     * </pre>
+     */
+    public void batchDelete(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchDeleteVideosRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBatchDeleteMethod(), responseObserver);
     }
 
     /**
@@ -414,6 +537,13 @@ public final class VideoServiceGrpc {
                 yandex.cloud.api.video.v1.VideoServiceOuterClass.ListVideoResponse>(
                   this, METHODID_LIST)))
           .addMethod(
+            getBatchGetMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosRequest,
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosResponse>(
+                  this, METHODID_BATCH_GET)))
+          .addMethod(
             getCreateMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
@@ -428,12 +558,26 @@ public final class VideoServiceGrpc {
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
+            getTranscodeMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.TranscodeVideoRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_TRANSCODE)))
+          .addMethod(
             getDeleteMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.video.v1.VideoServiceOuterClass.DeleteVideoRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
+          .addMethod(
+            getBatchDeleteMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchDeleteVideosRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_BATCH_DELETE)))
           .addMethod(
             getPerformActionMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -500,6 +644,17 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
+     * Batch get video in specific channel.
+     * </pre>
+     */
+    public void batchGet(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getBatchGetMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Create video.
      * </pre>
      */
@@ -522,6 +677,17 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
+     * Transcode video.
+     * </pre>
+     */
+    public void transcode(yandex.cloud.api.video.v1.VideoServiceOuterClass.TranscodeVideoRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTranscodeMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Delete video.
      * </pre>
      */
@@ -529,6 +695,17 @@ public final class VideoServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Batch delete video.
+     * </pre>
+     */
+    public void batchDelete(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchDeleteVideosRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getBatchDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -604,6 +781,16 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
+     * Batch get video in specific channel.
+     * </pre>
+     */
+    public yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosResponse batchGet(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBatchGetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Create video.
      * </pre>
      */
@@ -624,12 +811,32 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
+     * Transcode video.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation transcode(yandex.cloud.api.video.v1.VideoServiceOuterClass.TranscodeVideoRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTranscodeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Delete video.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.video.v1.VideoServiceOuterClass.DeleteVideoRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Batch delete video.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation batchDelete(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchDeleteVideosRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBatchDeleteMethod(), getCallOptions(), request);
     }
 
     /**
@@ -704,6 +911,17 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
+     * Batch get video in specific channel.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosResponse> batchGet(
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getBatchGetMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Create video.
      * </pre>
      */
@@ -726,6 +944,17 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
+     * Transcode video.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> transcode(
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.TranscodeVideoRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTranscodeMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Delete video.
      * </pre>
      */
@@ -733,6 +962,17 @@ public final class VideoServiceGrpc {
         yandex.cloud.api.video.v1.VideoServiceOuterClass.DeleteVideoRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Batch delete video.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> batchDelete(
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchDeleteVideosRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getBatchDeleteMethod(), getCallOptions()), request);
     }
 
     /**
@@ -771,12 +1011,15 @@ public final class VideoServiceGrpc {
 
   private static final int METHODID_GET = 0;
   private static final int METHODID_LIST = 1;
-  private static final int METHODID_CREATE = 2;
-  private static final int METHODID_UPDATE = 3;
-  private static final int METHODID_DELETE = 4;
-  private static final int METHODID_PERFORM_ACTION = 5;
-  private static final int METHODID_GET_PLAYER_URL = 6;
-  private static final int METHODID_GET_MANIFESTS = 7;
+  private static final int METHODID_BATCH_GET = 2;
+  private static final int METHODID_CREATE = 3;
+  private static final int METHODID_UPDATE = 4;
+  private static final int METHODID_TRANSCODE = 5;
+  private static final int METHODID_DELETE = 6;
+  private static final int METHODID_BATCH_DELETE = 7;
+  private static final int METHODID_PERFORM_ACTION = 8;
+  private static final int METHODID_GET_PLAYER_URL = 9;
+  private static final int METHODID_GET_MANIFESTS = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -803,6 +1046,10 @@ public final class VideoServiceGrpc {
           serviceImpl.list((yandex.cloud.api.video.v1.VideoServiceOuterClass.ListVideoRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.VideoServiceOuterClass.ListVideoResponse>) responseObserver);
           break;
+        case METHODID_BATCH_GET:
+          serviceImpl.batchGet((yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosResponse>) responseObserver);
+          break;
         case METHODID_CREATE:
           serviceImpl.create((yandex.cloud.api.video.v1.VideoServiceOuterClass.CreateVideoRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
@@ -811,8 +1058,16 @@ public final class VideoServiceGrpc {
           serviceImpl.update((yandex.cloud.api.video.v1.VideoServiceOuterClass.UpdateVideoRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
+        case METHODID_TRANSCODE:
+          serviceImpl.transcode((yandex.cloud.api.video.v1.VideoServiceOuterClass.TranscodeVideoRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
         case METHODID_DELETE:
           serviceImpl.delete((yandex.cloud.api.video.v1.VideoServiceOuterClass.DeleteVideoRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_BATCH_DELETE:
+          serviceImpl.batchDelete((yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchDeleteVideosRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_PERFORM_ACTION:
@@ -890,9 +1145,12 @@ public final class VideoServiceGrpc {
               .setSchemaDescriptor(new VideoServiceFileDescriptorSupplier())
               .addMethod(getGetMethod())
               .addMethod(getListMethod())
+              .addMethod(getBatchGetMethod())
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())
+              .addMethod(getTranscodeMethod())
               .addMethod(getDeleteMethod())
+              .addMethod(getBatchDeleteMethod())
               .addMethod(getPerformActionMethod())
               .addMethod(getGetPlayerURLMethod())
               .addMethod(getGetManifestsMethod())

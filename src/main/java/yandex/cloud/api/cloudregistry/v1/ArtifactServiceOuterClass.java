@@ -20,7 +20,7 @@ public final class ArtifactServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Registry artifact resource to return.
+     * ID of the artifact resource to return.
      * </pre>
      *
      * <code>string artifact_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29,7 +29,7 @@ public final class ArtifactServiceOuterClass {
     java.lang.String getArtifactId();
     /**
      * <pre>
-     * ID of the Registry artifact resource to return.
+     * ID of the artifact resource to return.
      * </pre>
      *
      * <code>string artifact_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -126,7 +126,7 @@ public final class ArtifactServiceOuterClass {
     private volatile java.lang.Object artifactId_;
     /**
      * <pre>
-     * ID of the Registry artifact resource to return.
+     * ID of the artifact resource to return.
      * </pre>
      *
      * <code>string artifact_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -147,7 +147,7 @@ public final class ArtifactServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Registry artifact resource to return.
+     * ID of the artifact resource to return.
      * </pre>
      *
      * <code>string artifact_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -473,7 +473,7 @@ public final class ArtifactServiceOuterClass {
       private java.lang.Object artifactId_ = "";
       /**
        * <pre>
-       * ID of the Registry artifact resource to return.
+       * ID of the artifact resource to return.
        * </pre>
        *
        * <code>string artifact_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -493,7 +493,7 @@ public final class ArtifactServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Registry artifact resource to return.
+       * ID of the artifact resource to return.
        * </pre>
        *
        * <code>string artifact_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -514,7 +514,7 @@ public final class ArtifactServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Registry artifact resource to return.
+       * ID of the artifact resource to return.
        * </pre>
        *
        * <code>string artifact_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -533,7 +533,7 @@ public final class ArtifactServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Registry artifact resource to return.
+       * ID of the artifact resource to return.
        * </pre>
        *
        * <code>string artifact_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -547,7 +547,7 @@ public final class ArtifactServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Registry artifact resource to return.
+       * ID of the artifact resource to return.
        * </pre>
        *
        * <code>string artifact_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -624,7 +624,7 @@ public final class ArtifactServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Registry artifact to delete.
+     * ID of the artifact to delete.
      * </pre>
      *
      * <code>string artifact_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -633,7 +633,7 @@ public final class ArtifactServiceOuterClass {
     java.lang.String getArtifactId();
     /**
      * <pre>
-     * ID of the Registry artifact to delete.
+     * ID of the artifact to delete.
      * </pre>
      *
      * <code>string artifact_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -730,7 +730,7 @@ public final class ArtifactServiceOuterClass {
     private volatile java.lang.Object artifactId_;
     /**
      * <pre>
-     * ID of the Registry artifact to delete.
+     * ID of the artifact to delete.
      * </pre>
      *
      * <code>string artifact_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -751,7 +751,7 @@ public final class ArtifactServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Registry artifact to delete.
+     * ID of the artifact to delete.
      * </pre>
      *
      * <code>string artifact_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1077,7 +1077,7 @@ public final class ArtifactServiceOuterClass {
       private java.lang.Object artifactId_ = "";
       /**
        * <pre>
-       * ID of the Registry artifact to delete.
+       * ID of the artifact to delete.
        * </pre>
        *
        * <code>string artifact_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1097,7 +1097,7 @@ public final class ArtifactServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Registry artifact to delete.
+       * ID of the artifact to delete.
        * </pre>
        *
        * <code>string artifact_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1118,7 +1118,7 @@ public final class ArtifactServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Registry artifact to delete.
+       * ID of the artifact to delete.
        * </pre>
        *
        * <code>string artifact_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1137,7 +1137,7 @@ public final class ArtifactServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Registry artifact to delete.
+       * ID of the artifact to delete.
        * </pre>
        *
        * <code>string artifact_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1151,7 +1151,7 @@ public final class ArtifactServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Registry artifact to delete.
+       * ID of the artifact to delete.
        * </pre>
        *
        * <code>string artifact_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1228,7 +1228,7 @@ public final class ArtifactServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the registry artifact to delete.
+     * ID of the artifact to delete.
      * </pre>
      *
      * <code>string artifact_id = 1;</code>
@@ -1237,7 +1237,7 @@ public final class ArtifactServiceOuterClass {
     java.lang.String getArtifactId();
     /**
      * <pre>
-     * ID of the registry artifact to delete.
+     * ID of the artifact to delete.
      * </pre>
      *
      * <code>string artifact_id = 1;</code>
@@ -1334,7 +1334,7 @@ public final class ArtifactServiceOuterClass {
     private volatile java.lang.Object artifactId_;
     /**
      * <pre>
-     * ID of the registry artifact to delete.
+     * ID of the artifact to delete.
      * </pre>
      *
      * <code>string artifact_id = 1;</code>
@@ -1355,7 +1355,7 @@ public final class ArtifactServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the registry artifact to delete.
+     * ID of the artifact to delete.
      * </pre>
      *
      * <code>string artifact_id = 1;</code>
@@ -1681,7 +1681,7 @@ public final class ArtifactServiceOuterClass {
       private java.lang.Object artifactId_ = "";
       /**
        * <pre>
-       * ID of the registry artifact to delete.
+       * ID of the artifact to delete.
        * </pre>
        *
        * <code>string artifact_id = 1;</code>
@@ -1701,7 +1701,7 @@ public final class ArtifactServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the registry artifact to delete.
+       * ID of the artifact to delete.
        * </pre>
        *
        * <code>string artifact_id = 1;</code>
@@ -1722,7 +1722,7 @@ public final class ArtifactServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the registry artifact to delete.
+       * ID of the artifact to delete.
        * </pre>
        *
        * <code>string artifact_id = 1;</code>
@@ -1741,7 +1741,7 @@ public final class ArtifactServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the registry artifact to delete.
+       * ID of the artifact to delete.
        * </pre>
        *
        * <code>string artifact_id = 1;</code>
@@ -1755,7 +1755,7 @@ public final class ArtifactServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the registry artifact to delete.
+       * ID of the artifact to delete.
        * </pre>
        *
        * <code>string artifact_id = 1;</code>

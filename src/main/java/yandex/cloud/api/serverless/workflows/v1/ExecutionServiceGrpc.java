@@ -80,6 +80,37 @@ public final class ExecutionServiceGrpc {
     return getStopMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest,
+      yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse> getTerminateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Terminate",
+      requestType = yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest.class,
+      responseType = yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest,
+      yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse> getTerminateMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest, yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse> getTerminateMethod;
+    if ((getTerminateMethod = ExecutionServiceGrpc.getTerminateMethod) == null) {
+      synchronized (ExecutionServiceGrpc.class) {
+        if ((getTerminateMethod = ExecutionServiceGrpc.getTerminateMethod) == null) {
+          ExecutionServiceGrpc.getTerminateMethod = getTerminateMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest, yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Terminate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ExecutionServiceMethodDescriptorSupplier("Terminate"))
+              .build();
+        }
+      }
+    }
+    return getTerminateMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.GetExecutionRequest,
       yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.GetExecutionResponse> getGetMethod;
 
@@ -246,6 +277,16 @@ public final class ExecutionServiceGrpc {
 
     /**
      * <pre>
+     * Terminates specified Workflow execution.
+     * </pre>
+     */
+    public void terminate(yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTerminateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Retrieves specified Workflow execution.
      * </pre>
      */
@@ -290,6 +331,13 @@ public final class ExecutionServiceGrpc {
                 yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.StopExecutionRequest,
                 yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.StopExecutionResponse>(
                   this, METHODID_STOP)))
+          .addMethod(
+            getTerminateMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest,
+                yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse>(
+                  this, METHODID_TERMINATE)))
           .addMethod(
             getGetMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -352,6 +400,17 @@ public final class ExecutionServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.StopExecutionResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getStopMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Terminates specified Workflow execution.
+     * </pre>
+     */
+    public void terminate(yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTerminateMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -427,6 +486,16 @@ public final class ExecutionServiceGrpc {
 
     /**
      * <pre>
+     * Terminates specified Workflow execution.
+     * </pre>
+     */
+    public yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse terminate(yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTerminateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Retrieves specified Workflow execution.
      * </pre>
      */
@@ -497,6 +566,17 @@ public final class ExecutionServiceGrpc {
 
     /**
      * <pre>
+     * Terminates specified Workflow execution.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse> terminate(
+        yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTerminateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Retrieves specified Workflow execution.
      * </pre>
      */
@@ -531,9 +611,10 @@ public final class ExecutionServiceGrpc {
 
   private static final int METHODID_START = 0;
   private static final int METHODID_STOP = 1;
-  private static final int METHODID_GET = 2;
-  private static final int METHODID_GET_HISTORY = 3;
-  private static final int METHODID_LIST = 4;
+  private static final int METHODID_TERMINATE = 2;
+  private static final int METHODID_GET = 3;
+  private static final int METHODID_GET_HISTORY = 4;
+  private static final int METHODID_LIST = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -559,6 +640,10 @@ public final class ExecutionServiceGrpc {
         case METHODID_STOP:
           serviceImpl.stop((yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.StopExecutionRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.StopExecutionResponse>) responseObserver);
+          break;
+        case METHODID_TERMINATE:
+          serviceImpl.terminate((yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse>) responseObserver);
           break;
         case METHODID_GET:
           serviceImpl.get((yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.GetExecutionRequest) request,
@@ -635,6 +720,7 @@ public final class ExecutionServiceGrpc {
               .setSchemaDescriptor(new ExecutionServiceFileDescriptorSupplier())
               .addMethod(getStartMethod())
               .addMethod(getStopMethod())
+              .addMethod(getTerminateMethod())
               .addMethod(getGetMethod())
               .addMethod(getGetHistoryMethod())
               .addMethod(getListMethod())

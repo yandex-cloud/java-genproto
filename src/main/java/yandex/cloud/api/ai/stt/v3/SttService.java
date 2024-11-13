@@ -599,30 +599,35 @@ public final class SttService {
       "\n(yandex/cloud/ai/stt/v3/stt_service.pro" +
       "to\022\020speechkit.stt.v3\032 yandex/cloud/ai/st" +
       "t/v3/stt.proto\032\034google/api/annotations.p" +
-      "roto\032\035yandex/cloud/validation.proto\032 yan" +
-      "dex/cloud/api/operation.proto\032&yandex/cl" +
-      "oud/operation/operation.proto\";\n\025GetReco" +
-      "gnitionRequest\022\"\n\014operation_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=502q\n\nRecognizer\022c\n\022RecognizeStr" +
-      "eaming\022\".speechkit.stt.v3.StreamingReque" +
-      "st\032#.speechkit.stt.v3.StreamingResponse\"" +
-      "\000(\0010\0012\263\002\n\017AsyncRecognizer\022\234\001\n\rRecognizeF" +
-      "ile\022&.speechkit.stt.v3.RecognizeFileRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"@" +
-      "\262\322*\027\022\025google.protobuf.Empty\202\323\344\223\002\037\"\032/stt/" +
-      "v3/recognizeFileAsync:\001*\022\200\001\n\016GetRecognit" +
-      "ion\022\'.speechkit.stt.v3.GetRecognitionReq" +
-      "uest\032#.speechkit.stt.v3.StreamingRespons" +
-      "e\"\036\202\323\344\223\002\030\022\026/stt/v3/getRecognition0\001B\\\n\032y" +
-      "andex.cloud.api.ai.stt.v3Z>github.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/ai/s" +
-      "tt/v3;sttb\006proto3"
+      "roto\032\033google/protobuf/empty.proto\032\035yande" +
+      "x/cloud/validation.proto\032 yandex/cloud/a" +
+      "pi/operation.proto\032&yandex/cloud/operati" +
+      "on/operation.proto\";\n\025GetRecognitionRequ" +
+      "est\022\"\n\014operation_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=502" +
+      "q\n\nRecognizer\022c\n\022RecognizeStreaming\022\".sp" +
+      "eechkit.stt.v3.StreamingRequest\032#.speech" +
+      "kit.stt.v3.StreamingResponse\"\000(\0010\0012\257\003\n\017A" +
+      "syncRecognizer\022\234\001\n\rRecognizeFile\022&.speec" +
+      "hkit.stt.v3.RecognizeFileRequest\032!.yande" +
+      "x.cloud.operation.Operation\"@\262\322*\027\022\025googl" +
+      "e.protobuf.Empty\202\323\344\223\002\037\"\032/stt/v3/recogniz" +
+      "eFileAsync:\001*\022\200\001\n\016GetRecognition\022\'.speec" +
+      "hkit.stt.v3.GetRecognitionRequest\032#.spee" +
+      "chkit.stt.v3.StreamingResponse\"\036\202\323\344\223\002\030\022\026" +
+      "/stt/v3/getRecognition0\001\022z\n\021DeleteRecogn" +
+      "ition\022*.speechkit.stt.v3.DeleteRecogniti" +
+      "onRequest\032\026.google.protobuf.Empty\"!\202\323\344\223\002" +
+      "\033*\031/stt/v3/deleteRecognitionB\\\n\032yandex.c" +
+      "loud.api.ai.stt.v3Z>github.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/ai/stt/v3;s" +
+      "ttb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.ai.stt.v3.Stt.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.EmptyProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
@@ -643,6 +648,7 @@ public final class SttService {
         .internalUpdateFileDescriptor(descriptor, registry);
     yandex.cloud.api.ai.stt.v3.Stt.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.EmptyProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();

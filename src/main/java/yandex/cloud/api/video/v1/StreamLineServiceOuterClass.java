@@ -23,7 +23,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string stream_line_id = 1;</code>
+     * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The streamLineId.
      */
     java.lang.String getStreamLineId();
@@ -32,7 +32,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string stream_line_id = 1;</code>
+     * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for streamLineId.
      */
     com.google.protobuf.ByteString
@@ -129,7 +129,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string stream_line_id = 1;</code>
+     * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The streamLineId.
      */
     @java.lang.Override
@@ -150,7 +150,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string stream_line_id = 1;</code>
+     * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for streamLineId.
      */
     @java.lang.Override
@@ -476,7 +476,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The streamLineId.
        */
       public java.lang.String getStreamLineId() {
@@ -496,7 +496,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for streamLineId.
        */
       public com.google.protobuf.ByteString
@@ -517,7 +517,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The streamLineId to set.
        * @return This builder for chaining.
        */
@@ -536,7 +536,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStreamLineId() {
@@ -550,7 +550,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for streamLineId to set.
        * @return This builder for chaining.
        */
@@ -627,7 +627,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The channelId.
      */
     java.lang.String getChannelId();
@@ -636,7 +636,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for channelId.
      */
     com.google.protobuf.ByteString
@@ -647,7 +647,7 @@ public final class StreamLineServiceOuterClass {
      * The maximum number of the results per page to return. Default value: 100.
      * </pre>
      *
-     * <code>int64 page_size = 100;</code>
+     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
     long getPageSize();
@@ -657,7 +657,7 @@ public final class StreamLineServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101;</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
@@ -666,7 +666,7 @@ public final class StreamLineServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101;</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
@@ -709,7 +709,7 @@ public final class StreamLineServiceOuterClass {
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
-     * <code>string filter = 103;</code>
+     * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The filter.
      */
     java.lang.String getFilter();
@@ -724,7 +724,7 @@ public final class StreamLineServiceOuterClass {
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
-     * <code>string filter = 103;</code>
+     * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
@@ -847,7 +847,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The channelId.
      */
     @java.lang.Override
@@ -868,7 +868,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for channelId.
      */
     @java.lang.Override
@@ -893,7 +893,7 @@ public final class StreamLineServiceOuterClass {
      * The maximum number of the results per page to return. Default value: 100.
      * </pre>
      *
-     * <code>int64 page_size = 100;</code>
+     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
     @java.lang.Override
@@ -908,7 +908,7 @@ public final class StreamLineServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101;</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The pageToken.
      */
     @java.lang.Override
@@ -929,7 +929,7 @@ public final class StreamLineServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101;</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The bytes for pageToken.
      */
     @java.lang.Override
@@ -1012,7 +1012,7 @@ public final class StreamLineServiceOuterClass {
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
-     * <code>string filter = 103;</code>
+     * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The filter.
      */
     @java.lang.Override
@@ -1039,7 +1039,7 @@ public final class StreamLineServiceOuterClass {
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
-     * <code>string filter = 103;</code>
+     * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for filter.
      */
     @java.lang.Override
@@ -1434,7 +1434,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The channelId.
        */
       public java.lang.String getChannelId() {
@@ -1454,7 +1454,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for channelId.
        */
       public com.google.protobuf.ByteString
@@ -1475,7 +1475,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The channelId to set.
        * @return This builder for chaining.
        */
@@ -1494,7 +1494,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearChannelId() {
@@ -1508,7 +1508,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for channelId to set.
        * @return This builder for chaining.
        */
@@ -1530,7 +1530,7 @@ public final class StreamLineServiceOuterClass {
        * The maximum number of the results per page to return. Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 100;</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return The pageSize.
        */
       @java.lang.Override
@@ -1542,7 +1542,7 @@ public final class StreamLineServiceOuterClass {
        * The maximum number of the results per page to return. Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 100;</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
        */
@@ -1557,7 +1557,7 @@ public final class StreamLineServiceOuterClass {
        * The maximum number of the results per page to return. Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 100;</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageSize() {
@@ -1573,7 +1573,7 @@ public final class StreamLineServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101;</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return The pageToken.
        */
       public java.lang.String getPageToken() {
@@ -1593,7 +1593,7 @@ public final class StreamLineServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101;</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
@@ -1614,7 +1614,7 @@ public final class StreamLineServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101;</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
        */
@@ -1633,7 +1633,7 @@ public final class StreamLineServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101;</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageToken() {
@@ -1647,7 +1647,7 @@ public final class StreamLineServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101;</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
        */
@@ -1786,7 +1786,7 @@ public final class StreamLineServiceOuterClass {
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
-       * <code>string filter = 103;</code>
+       * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The filter.
        */
       public java.lang.String getFilter() {
@@ -1812,7 +1812,7 @@ public final class StreamLineServiceOuterClass {
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
-       * <code>string filter = 103;</code>
+       * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
@@ -1839,7 +1839,7 @@ public final class StreamLineServiceOuterClass {
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
-       * <code>string filter = 103;</code>
+       * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The filter to set.
        * @return This builder for chaining.
        */
@@ -1864,7 +1864,7 @@ public final class StreamLineServiceOuterClass {
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
-       * <code>string filter = 103;</code>
+       * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFilter() {
@@ -1884,7 +1884,7 @@ public final class StreamLineServiceOuterClass {
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
-       * <code>string filter = 103;</code>
+       * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The bytes for filter to set.
        * @return This builder for chaining.
        */
@@ -3043,6 +3043,1803 @@ public final class StreamLineServiceOuterClass {
 
   }
 
+  public interface BatchGetStreamLinesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.BatchGetStreamLinesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The channelId.
+     */
+    java.lang.String getChannelId();
+    /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for channelId.
+     */
+    com.google.protobuf.ByteString
+        getChannelIdBytes();
+
+    /**
+     * <pre>
+     * List of requested stream line IDs.
+     * </pre>
+     *
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return A list containing the streamLineIds.
+     */
+    java.util.List<java.lang.String>
+        getStreamLineIdsList();
+    /**
+     * <pre>
+     * List of requested stream line IDs.
+     * </pre>
+     *
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The count of streamLineIds.
+     */
+    int getStreamLineIdsCount();
+    /**
+     * <pre>
+     * List of requested stream line IDs.
+     * </pre>
+     *
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the element to return.
+     * @return The streamLineIds at the given index.
+     */
+    java.lang.String getStreamLineIds(int index);
+    /**
+     * <pre>
+     * List of requested stream line IDs.
+     * </pre>
+     *
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the streamLineIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getStreamLineIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.video.v1.BatchGetStreamLinesRequest}
+   */
+  public static final class BatchGetStreamLinesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.BatchGetStreamLinesRequest)
+      BatchGetStreamLinesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BatchGetStreamLinesRequest.newBuilder() to construct.
+    private BatchGetStreamLinesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BatchGetStreamLinesRequest() {
+      channelId_ = "";
+      streamLineIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BatchGetStreamLinesRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BatchGetStreamLinesRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              channelId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                streamLineIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              streamLineIds_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          streamLineIds_ = streamLineIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetStreamLinesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetStreamLinesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest.class, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest.Builder.class);
+    }
+
+    public static final int CHANNEL_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object channelId_;
+    /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The channelId.
+     */
+    @java.lang.Override
+    public java.lang.String getChannelId() {
+      java.lang.Object ref = channelId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        channelId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for channelId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChannelIdBytes() {
+      java.lang.Object ref = channelId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        channelId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STREAM_LINE_IDS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList streamLineIds_;
+    /**
+     * <pre>
+     * List of requested stream line IDs.
+     * </pre>
+     *
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return A list containing the streamLineIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getStreamLineIdsList() {
+      return streamLineIds_;
+    }
+    /**
+     * <pre>
+     * List of requested stream line IDs.
+     * </pre>
+     *
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The count of streamLineIds.
+     */
+    public int getStreamLineIdsCount() {
+      return streamLineIds_.size();
+    }
+    /**
+     * <pre>
+     * List of requested stream line IDs.
+     * </pre>
+     *
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the element to return.
+     * @return The streamLineIds at the given index.
+     */
+    public java.lang.String getStreamLineIds(int index) {
+      return streamLineIds_.get(index);
+    }
+    /**
+     * <pre>
+     * List of requested stream line IDs.
+     * </pre>
+     *
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the streamLineIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getStreamLineIdsBytes(int index) {
+      return streamLineIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(channelId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, channelId_);
+      }
+      for (int i = 0; i < streamLineIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, streamLineIds_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(channelId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, channelId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < streamLineIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(streamLineIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getStreamLineIdsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest other = (yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest) obj;
+
+      if (!getChannelId()
+          .equals(other.getChannelId())) return false;
+      if (!getStreamLineIdsList()
+          .equals(other.getStreamLineIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CHANNEL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChannelId().hashCode();
+      if (getStreamLineIdsCount() > 0) {
+        hash = (37 * hash) + STREAM_LINE_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getStreamLineIdsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.video.v1.BatchGetStreamLinesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.BatchGetStreamLinesRequest)
+        yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetStreamLinesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetStreamLinesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest.class, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        channelId_ = "";
+
+        streamLineIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetStreamLinesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest build() {
+        yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest buildPartial() {
+        yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest result = new yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.channelId_ = channelId_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          streamLineIds_ = streamLineIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.streamLineIds_ = streamLineIds_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest) {
+          return mergeFrom((yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest other) {
+        if (other == yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest.getDefaultInstance()) return this;
+        if (!other.getChannelId().isEmpty()) {
+          channelId_ = other.channelId_;
+          onChanged();
+        }
+        if (!other.streamLineIds_.isEmpty()) {
+          if (streamLineIds_.isEmpty()) {
+            streamLineIds_ = other.streamLineIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureStreamLineIdsIsMutable();
+            streamLineIds_.addAll(other.streamLineIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object channelId_ = "";
+      /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The channelId.
+       */
+      public java.lang.String getChannelId() {
+        java.lang.Object ref = channelId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          channelId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for channelId.
+       */
+      public com.google.protobuf.ByteString
+          getChannelIdBytes() {
+        java.lang.Object ref = channelId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          channelId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The channelId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChannelId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        channelId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChannelId() {
+        
+        channelId_ = getDefaultInstance().getChannelId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for channelId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChannelIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        channelId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList streamLineIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureStreamLineIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          streamLineIds_ = new com.google.protobuf.LazyStringArrayList(streamLineIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * List of requested stream line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return A list containing the streamLineIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getStreamLineIdsList() {
+        return streamLineIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of requested stream line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The count of streamLineIds.
+       */
+      public int getStreamLineIdsCount() {
+        return streamLineIds_.size();
+      }
+      /**
+       * <pre>
+       * List of requested stream line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param index The index of the element to return.
+       * @return The streamLineIds at the given index.
+       */
+      public java.lang.String getStreamLineIds(int index) {
+        return streamLineIds_.get(index);
+      }
+      /**
+       * <pre>
+       * List of requested stream line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the streamLineIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getStreamLineIdsBytes(int index) {
+        return streamLineIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of requested stream line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param index The index to set the value at.
+       * @param value The streamLineIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStreamLineIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureStreamLineIdsIsMutable();
+        streamLineIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of requested stream line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The streamLineIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addStreamLineIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureStreamLineIdsIsMutable();
+        streamLineIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of requested stream line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param values The streamLineIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllStreamLineIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureStreamLineIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, streamLineIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of requested stream line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStreamLineIds() {
+        streamLineIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of requested stream line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes of the streamLineIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addStreamLineIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureStreamLineIdsIsMutable();
+        streamLineIds_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.BatchGetStreamLinesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.BatchGetStreamLinesRequest)
+    private static final yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest();
+    }
+
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BatchGetStreamLinesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<BatchGetStreamLinesRequest>() {
+      @java.lang.Override
+      public BatchGetStreamLinesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BatchGetStreamLinesRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BatchGetStreamLinesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BatchGetStreamLinesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BatchGetStreamLinesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.BatchGetStreamLinesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of lines for specific channel.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine> 
+        getStreamLinesList();
+    /**
+     * <pre>
+     * List of lines for specific channel.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+     */
+    yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine getStreamLines(int index);
+    /**
+     * <pre>
+     * List of lines for specific channel.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+     */
+    int getStreamLinesCount();
+    /**
+     * <pre>
+     * List of lines for specific channel.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLineOrBuilder> 
+        getStreamLinesOrBuilderList();
+    /**
+     * <pre>
+     * List of lines for specific channel.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+     */
+    yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLineOrBuilder getStreamLinesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.video.v1.BatchGetStreamLinesResponse}
+   */
+  public static final class BatchGetStreamLinesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.BatchGetStreamLinesResponse)
+      BatchGetStreamLinesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BatchGetStreamLinesResponse.newBuilder() to construct.
+    private BatchGetStreamLinesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BatchGetStreamLinesResponse() {
+      streamLines_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BatchGetStreamLinesResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BatchGetStreamLinesResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                streamLines_ = new java.util.ArrayList<yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              streamLines_.add(
+                  input.readMessage(yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          streamLines_ = java.util.Collections.unmodifiableList(streamLines_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetStreamLinesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetStreamLinesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse.class, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse.Builder.class);
+    }
+
+    public static final int STREAM_LINES_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine> streamLines_;
+    /**
+     * <pre>
+     * List of lines for specific channel.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine> getStreamLinesList() {
+      return streamLines_;
+    }
+    /**
+     * <pre>
+     * List of lines for specific channel.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLineOrBuilder> 
+        getStreamLinesOrBuilderList() {
+      return streamLines_;
+    }
+    /**
+     * <pre>
+     * List of lines for specific channel.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+     */
+    @java.lang.Override
+    public int getStreamLinesCount() {
+      return streamLines_.size();
+    }
+    /**
+     * <pre>
+     * List of lines for specific channel.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine getStreamLines(int index) {
+      return streamLines_.get(index);
+    }
+    /**
+     * <pre>
+     * List of lines for specific channel.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLineOrBuilder getStreamLinesOrBuilder(
+        int index) {
+      return streamLines_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < streamLines_.size(); i++) {
+        output.writeMessage(1, streamLines_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < streamLines_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, streamLines_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse other = (yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse) obj;
+
+      if (!getStreamLinesList()
+          .equals(other.getStreamLinesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getStreamLinesCount() > 0) {
+        hash = (37 * hash) + STREAM_LINES_FIELD_NUMBER;
+        hash = (53 * hash) + getStreamLinesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.video.v1.BatchGetStreamLinesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.BatchGetStreamLinesResponse)
+        yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetStreamLinesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetStreamLinesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse.class, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStreamLinesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (streamLinesBuilder_ == null) {
+          streamLines_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          streamLinesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetStreamLinesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse build() {
+        yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse buildPartial() {
+        yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse result = new yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (streamLinesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            streamLines_ = java.util.Collections.unmodifiableList(streamLines_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.streamLines_ = streamLines_;
+        } else {
+          result.streamLines_ = streamLinesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse) {
+          return mergeFrom((yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse other) {
+        if (other == yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse.getDefaultInstance()) return this;
+        if (streamLinesBuilder_ == null) {
+          if (!other.streamLines_.isEmpty()) {
+            if (streamLines_.isEmpty()) {
+              streamLines_ = other.streamLines_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureStreamLinesIsMutable();
+              streamLines_.addAll(other.streamLines_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.streamLines_.isEmpty()) {
+            if (streamLinesBuilder_.isEmpty()) {
+              streamLinesBuilder_.dispose();
+              streamLinesBuilder_ = null;
+              streamLines_ = other.streamLines_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              streamLinesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getStreamLinesFieldBuilder() : null;
+            } else {
+              streamLinesBuilder_.addAllMessages(other.streamLines_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine> streamLines_ =
+        java.util.Collections.emptyList();
+      private void ensureStreamLinesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          streamLines_ = new java.util.ArrayList<yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine>(streamLines_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine, yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine.Builder, yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLineOrBuilder> streamLinesBuilder_;
+
+      /**
+       * <pre>
+       * List of lines for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine> getStreamLinesList() {
+        if (streamLinesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(streamLines_);
+        } else {
+          return streamLinesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of lines for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+       */
+      public int getStreamLinesCount() {
+        if (streamLinesBuilder_ == null) {
+          return streamLines_.size();
+        } else {
+          return streamLinesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of lines for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+       */
+      public yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine getStreamLines(int index) {
+        if (streamLinesBuilder_ == null) {
+          return streamLines_.get(index);
+        } else {
+          return streamLinesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of lines for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+       */
+      public Builder setStreamLines(
+          int index, yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine value) {
+        if (streamLinesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStreamLinesIsMutable();
+          streamLines_.set(index, value);
+          onChanged();
+        } else {
+          streamLinesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of lines for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+       */
+      public Builder setStreamLines(
+          int index, yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine.Builder builderForValue) {
+        if (streamLinesBuilder_ == null) {
+          ensureStreamLinesIsMutable();
+          streamLines_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          streamLinesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of lines for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+       */
+      public Builder addStreamLines(yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine value) {
+        if (streamLinesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStreamLinesIsMutable();
+          streamLines_.add(value);
+          onChanged();
+        } else {
+          streamLinesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of lines for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+       */
+      public Builder addStreamLines(
+          int index, yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine value) {
+        if (streamLinesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStreamLinesIsMutable();
+          streamLines_.add(index, value);
+          onChanged();
+        } else {
+          streamLinesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of lines for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+       */
+      public Builder addStreamLines(
+          yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine.Builder builderForValue) {
+        if (streamLinesBuilder_ == null) {
+          ensureStreamLinesIsMutable();
+          streamLines_.add(builderForValue.build());
+          onChanged();
+        } else {
+          streamLinesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of lines for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+       */
+      public Builder addStreamLines(
+          int index, yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine.Builder builderForValue) {
+        if (streamLinesBuilder_ == null) {
+          ensureStreamLinesIsMutable();
+          streamLines_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          streamLinesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of lines for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+       */
+      public Builder addAllStreamLines(
+          java.lang.Iterable<? extends yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine> values) {
+        if (streamLinesBuilder_ == null) {
+          ensureStreamLinesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, streamLines_);
+          onChanged();
+        } else {
+          streamLinesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of lines for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+       */
+      public Builder clearStreamLines() {
+        if (streamLinesBuilder_ == null) {
+          streamLines_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          streamLinesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of lines for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+       */
+      public Builder removeStreamLines(int index) {
+        if (streamLinesBuilder_ == null) {
+          ensureStreamLinesIsMutable();
+          streamLines_.remove(index);
+          onChanged();
+        } else {
+          streamLinesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of lines for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+       */
+      public yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine.Builder getStreamLinesBuilder(
+          int index) {
+        return getStreamLinesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of lines for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+       */
+      public yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLineOrBuilder getStreamLinesOrBuilder(
+          int index) {
+        if (streamLinesBuilder_ == null) {
+          return streamLines_.get(index);  } else {
+          return streamLinesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of lines for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLineOrBuilder> 
+           getStreamLinesOrBuilderList() {
+        if (streamLinesBuilder_ != null) {
+          return streamLinesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(streamLines_);
+        }
+      }
+      /**
+       * <pre>
+       * List of lines for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+       */
+      public yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine.Builder addStreamLinesBuilder() {
+        return getStreamLinesFieldBuilder().addBuilder(
+            yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of lines for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+       */
+      public yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine.Builder addStreamLinesBuilder(
+          int index) {
+        return getStreamLinesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of lines for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine.Builder> 
+           getStreamLinesBuilderList() {
+        return getStreamLinesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine, yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine.Builder, yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLineOrBuilder> 
+          getStreamLinesFieldBuilder() {
+        if (streamLinesBuilder_ == null) {
+          streamLinesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine, yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine.Builder, yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLineOrBuilder>(
+                  streamLines_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          streamLines_ = null;
+        }
+        return streamLinesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.BatchGetStreamLinesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.BatchGetStreamLinesResponse)
+    private static final yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse();
+    }
+
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BatchGetStreamLinesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<BatchGetStreamLinesResponse>() {
+      @java.lang.Override
+      public BatchGetStreamLinesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BatchGetStreamLinesResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BatchGetStreamLinesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BatchGetStreamLinesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CreateStreamLineRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.CreateStreamLineRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -3052,7 +4849,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The channelId.
      */
     java.lang.String getChannelId();
@@ -3061,7 +4858,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for channelId.
      */
     com.google.protobuf.ByteString
@@ -3072,7 +4869,7 @@ public final class StreamLineServiceOuterClass {
      * Line title.
      * </pre>
      *
-     * <code>string title = 2;</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
      * @return The title.
      */
     java.lang.String getTitle();
@@ -3081,7 +4878,7 @@ public final class StreamLineServiceOuterClass {
      * Line title.
      * </pre>
      *
-     * <code>string title = 2;</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for title.
      */
     com.google.protobuf.ByteString
@@ -3092,7 +4889,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the thumbnail.
      * </pre>
      *
-     * <code>string thumbnail_id = 3;</code>
+     * <code>string thumbnail_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The thumbnailId.
      */
     java.lang.String getThumbnailId();
@@ -3101,7 +4898,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the thumbnail.
      * </pre>
      *
-     * <code>string thumbnail_id = 3;</code>
+     * <code>string thumbnail_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for thumbnailId.
      */
     com.google.protobuf.ByteString
@@ -3112,7 +4909,7 @@ public final class StreamLineServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
@@ -3120,7 +4917,7 @@ public final class StreamLineServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -3135,7 +4932,7 @@ public final class StreamLineServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
@@ -3144,7 +4941,7 @@ public final class StreamLineServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -3155,7 +4952,7 @@ public final class StreamLineServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -3714,7 +5511,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The channelId.
      */
     @java.lang.Override
@@ -3735,7 +5532,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1;</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for channelId.
      */
     @java.lang.Override
@@ -3760,7 +5557,7 @@ public final class StreamLineServiceOuterClass {
      * Line title.
      * </pre>
      *
-     * <code>string title = 2;</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
      * @return The title.
      */
     @java.lang.Override
@@ -3781,7 +5578,7 @@ public final class StreamLineServiceOuterClass {
      * Line title.
      * </pre>
      *
-     * <code>string title = 2;</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for title.
      */
     @java.lang.Override
@@ -3806,7 +5603,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the thumbnail.
      * </pre>
      *
-     * <code>string thumbnail_id = 3;</code>
+     * <code>string thumbnail_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The thumbnailId.
      */
     @java.lang.Override
@@ -3827,7 +5624,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the thumbnail.
      * </pre>
      *
-     * <code>string thumbnail_id = 3;</code>
+     * <code>string thumbnail_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for thumbnailId.
      */
     @java.lang.Override
@@ -3876,7 +5673,7 @@ public final class StreamLineServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -3898,7 +5695,7 @@ public final class StreamLineServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -3910,7 +5707,7 @@ public final class StreamLineServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -3927,7 +5724,7 @@ public final class StreamLineServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -4951,7 +6748,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The channelId.
        */
       public java.lang.String getChannelId() {
@@ -4971,7 +6768,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for channelId.
        */
       public com.google.protobuf.ByteString
@@ -4992,7 +6789,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The channelId to set.
        * @return This builder for chaining.
        */
@@ -5011,7 +6808,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearChannelId() {
@@ -5025,7 +6822,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1;</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for channelId to set.
        * @return This builder for chaining.
        */
@@ -5047,7 +6844,7 @@ public final class StreamLineServiceOuterClass {
        * Line title.
        * </pre>
        *
-       * <code>string title = 2;</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
        * @return The title.
        */
       public java.lang.String getTitle() {
@@ -5067,7 +6864,7 @@ public final class StreamLineServiceOuterClass {
        * Line title.
        * </pre>
        *
-       * <code>string title = 2;</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
@@ -5088,7 +6885,7 @@ public final class StreamLineServiceOuterClass {
        * Line title.
        * </pre>
        *
-       * <code>string title = 2;</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The title to set.
        * @return This builder for chaining.
        */
@@ -5107,7 +6904,7 @@ public final class StreamLineServiceOuterClass {
        * Line title.
        * </pre>
        *
-       * <code>string title = 2;</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearTitle() {
@@ -5121,7 +6918,7 @@ public final class StreamLineServiceOuterClass {
        * Line title.
        * </pre>
        *
-       * <code>string title = 2;</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
        */
@@ -5143,7 +6940,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the thumbnail.
        * </pre>
        *
-       * <code>string thumbnail_id = 3;</code>
+       * <code>string thumbnail_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The thumbnailId.
        */
       public java.lang.String getThumbnailId() {
@@ -5163,7 +6960,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the thumbnail.
        * </pre>
        *
-       * <code>string thumbnail_id = 3;</code>
+       * <code>string thumbnail_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for thumbnailId.
        */
       public com.google.protobuf.ByteString
@@ -5184,7 +6981,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the thumbnail.
        * </pre>
        *
-       * <code>string thumbnail_id = 3;</code>
+       * <code>string thumbnail_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The thumbnailId to set.
        * @return This builder for chaining.
        */
@@ -5203,7 +7000,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the thumbnail.
        * </pre>
        *
-       * <code>string thumbnail_id = 3;</code>
+       * <code>string thumbnail_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearThumbnailId() {
@@ -5217,7 +7014,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the thumbnail.
        * </pre>
        *
-       * <code>string thumbnail_id = 3;</code>
+       * <code>string thumbnail_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for thumbnailId to set.
        * @return This builder for chaining.
        */
@@ -5264,7 +7061,7 @@ public final class StreamLineServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -5286,7 +7083,7 @@ public final class StreamLineServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -5298,7 +7095,7 @@ public final class StreamLineServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -5315,7 +7112,7 @@ public final class StreamLineServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -5340,7 +7137,7 @@ public final class StreamLineServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -5363,7 +7160,7 @@ public final class StreamLineServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -5382,7 +7179,7 @@ public final class StreamLineServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -7473,7 +9270,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string stream_line_id = 1;</code>
+     * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The streamLineId.
      */
     java.lang.String getStreamLineId();
@@ -7482,7 +9279,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string stream_line_id = 1;</code>
+     * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for streamLineId.
      */
     com.google.protobuf.ByteString
@@ -7540,7 +9337,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the thumbnail.
      * </pre>
      *
-     * <code>string thumbnail_id = 4;</code>
+     * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The thumbnailId.
      */
     java.lang.String getThumbnailId();
@@ -7549,7 +9346,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the thumbnail.
      * </pre>
      *
-     * <code>string thumbnail_id = 4;</code>
+     * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for thumbnailId.
      */
     com.google.protobuf.ByteString
@@ -7560,7 +9357,7 @@ public final class StreamLineServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
@@ -7568,7 +9365,7 @@ public final class StreamLineServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -7583,7 +9380,7 @@ public final class StreamLineServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
@@ -7592,7 +9389,7 @@ public final class StreamLineServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -7603,7 +9400,7 @@ public final class StreamLineServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -8050,7 +9847,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string stream_line_id = 1;</code>
+     * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The streamLineId.
      */
     @java.lang.Override
@@ -8071,7 +9868,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string stream_line_id = 1;</code>
+     * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for streamLineId.
      */
     @java.lang.Override
@@ -8180,7 +9977,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the thumbnail.
      * </pre>
      *
-     * <code>string thumbnail_id = 4;</code>
+     * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The thumbnailId.
      */
     @java.lang.Override
@@ -8201,7 +9998,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the thumbnail.
      * </pre>
      *
-     * <code>string thumbnail_id = 4;</code>
+     * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for thumbnailId.
      */
     @java.lang.Override
@@ -8250,7 +10047,7 @@ public final class StreamLineServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -8272,7 +10069,7 @@ public final class StreamLineServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -8284,7 +10081,7 @@ public final class StreamLineServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -8301,7 +10098,7 @@ public final class StreamLineServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200;</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -9185,7 +10982,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The streamLineId.
        */
       public java.lang.String getStreamLineId() {
@@ -9205,7 +11002,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for streamLineId.
        */
       public com.google.protobuf.ByteString
@@ -9226,7 +11023,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The streamLineId to set.
        * @return This builder for chaining.
        */
@@ -9245,7 +11042,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStreamLineId() {
@@ -9259,7 +11056,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for streamLineId to set.
        * @return This builder for chaining.
        */
@@ -9532,7 +11329,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the thumbnail.
        * </pre>
        *
-       * <code>string thumbnail_id = 4;</code>
+       * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The thumbnailId.
        */
       public java.lang.String getThumbnailId() {
@@ -9552,7 +11349,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the thumbnail.
        * </pre>
        *
-       * <code>string thumbnail_id = 4;</code>
+       * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for thumbnailId.
        */
       public com.google.protobuf.ByteString
@@ -9573,7 +11370,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the thumbnail.
        * </pre>
        *
-       * <code>string thumbnail_id = 4;</code>
+       * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The thumbnailId to set.
        * @return This builder for chaining.
        */
@@ -9592,7 +11389,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the thumbnail.
        * </pre>
        *
-       * <code>string thumbnail_id = 4;</code>
+       * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearThumbnailId() {
@@ -9606,7 +11403,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the thumbnail.
        * </pre>
        *
-       * <code>string thumbnail_id = 4;</code>
+       * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for thumbnailId to set.
        * @return This builder for chaining.
        */
@@ -9653,7 +11450,7 @@ public final class StreamLineServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -9675,7 +11472,7 @@ public final class StreamLineServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -9687,7 +11484,7 @@ public final class StreamLineServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -9704,7 +11501,7 @@ public final class StreamLineServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -9729,7 +11526,7 @@ public final class StreamLineServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -9752,7 +11549,7 @@ public final class StreamLineServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -9771,7 +11568,7 @@ public final class StreamLineServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200;</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -11508,7 +13305,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string stream_line_id = 1;</code>
+     * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The streamLineId.
      */
     java.lang.String getStreamLineId();
@@ -11517,7 +13314,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string stream_line_id = 1;</code>
+     * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for streamLineId.
      */
     com.google.protobuf.ByteString
@@ -11614,7 +13411,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string stream_line_id = 1;</code>
+     * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The streamLineId.
      */
     @java.lang.Override
@@ -11635,7 +13432,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string stream_line_id = 1;</code>
+     * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for streamLineId.
      */
     @java.lang.Override
@@ -11961,7 +13758,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The streamLineId.
        */
       public java.lang.String getStreamLineId() {
@@ -11981,7 +13778,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for streamLineId.
        */
       public com.google.protobuf.ByteString
@@ -12002,7 +13799,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The streamLineId to set.
        * @return This builder for chaining.
        */
@@ -12021,7 +13818,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStreamLineId() {
@@ -12035,7 +13832,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for streamLineId to set.
        * @return This builder for chaining.
        */
@@ -12707,6 +14504,1604 @@ public final class StreamLineServiceOuterClass {
 
   }
 
+  public interface BatchDeleteStreamLinesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.BatchDeleteStreamLinesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The channelId.
+     */
+    java.lang.String getChannelId();
+    /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for channelId.
+     */
+    com.google.protobuf.ByteString
+        getChannelIdBytes();
+
+    /**
+     * <pre>
+     * List of line IDs.
+     * </pre>
+     *
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return A list containing the streamLineIds.
+     */
+    java.util.List<java.lang.String>
+        getStreamLineIdsList();
+    /**
+     * <pre>
+     * List of line IDs.
+     * </pre>
+     *
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The count of streamLineIds.
+     */
+    int getStreamLineIdsCount();
+    /**
+     * <pre>
+     * List of line IDs.
+     * </pre>
+     *
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the element to return.
+     * @return The streamLineIds at the given index.
+     */
+    java.lang.String getStreamLineIds(int index);
+    /**
+     * <pre>
+     * List of line IDs.
+     * </pre>
+     *
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the streamLineIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getStreamLineIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.video.v1.BatchDeleteStreamLinesRequest}
+   */
+  public static final class BatchDeleteStreamLinesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.BatchDeleteStreamLinesRequest)
+      BatchDeleteStreamLinesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BatchDeleteStreamLinesRequest.newBuilder() to construct.
+    private BatchDeleteStreamLinesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BatchDeleteStreamLinesRequest() {
+      channelId_ = "";
+      streamLineIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BatchDeleteStreamLinesRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BatchDeleteStreamLinesRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              channelId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                streamLineIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              streamLineIds_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          streamLineIds_ = streamLineIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchDeleteStreamLinesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchDeleteStreamLinesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest.class, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest.Builder.class);
+    }
+
+    public static final int CHANNEL_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object channelId_;
+    /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The channelId.
+     */
+    @java.lang.Override
+    public java.lang.String getChannelId() {
+      java.lang.Object ref = channelId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        channelId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for channelId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChannelIdBytes() {
+      java.lang.Object ref = channelId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        channelId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STREAM_LINE_IDS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList streamLineIds_;
+    /**
+     * <pre>
+     * List of line IDs.
+     * </pre>
+     *
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return A list containing the streamLineIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getStreamLineIdsList() {
+      return streamLineIds_;
+    }
+    /**
+     * <pre>
+     * List of line IDs.
+     * </pre>
+     *
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The count of streamLineIds.
+     */
+    public int getStreamLineIdsCount() {
+      return streamLineIds_.size();
+    }
+    /**
+     * <pre>
+     * List of line IDs.
+     * </pre>
+     *
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the element to return.
+     * @return The streamLineIds at the given index.
+     */
+    public java.lang.String getStreamLineIds(int index) {
+      return streamLineIds_.get(index);
+    }
+    /**
+     * <pre>
+     * List of line IDs.
+     * </pre>
+     *
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the streamLineIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getStreamLineIdsBytes(int index) {
+      return streamLineIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(channelId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, channelId_);
+      }
+      for (int i = 0; i < streamLineIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, streamLineIds_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(channelId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, channelId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < streamLineIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(streamLineIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getStreamLineIdsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest other = (yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest) obj;
+
+      if (!getChannelId()
+          .equals(other.getChannelId())) return false;
+      if (!getStreamLineIdsList()
+          .equals(other.getStreamLineIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CHANNEL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChannelId().hashCode();
+      if (getStreamLineIdsCount() > 0) {
+        hash = (37 * hash) + STREAM_LINE_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getStreamLineIdsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.video.v1.BatchDeleteStreamLinesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.BatchDeleteStreamLinesRequest)
+        yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchDeleteStreamLinesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchDeleteStreamLinesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest.class, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        channelId_ = "";
+
+        streamLineIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchDeleteStreamLinesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest build() {
+        yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest buildPartial() {
+        yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest result = new yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.channelId_ = channelId_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          streamLineIds_ = streamLineIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.streamLineIds_ = streamLineIds_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest) {
+          return mergeFrom((yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest other) {
+        if (other == yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest.getDefaultInstance()) return this;
+        if (!other.getChannelId().isEmpty()) {
+          channelId_ = other.channelId_;
+          onChanged();
+        }
+        if (!other.streamLineIds_.isEmpty()) {
+          if (streamLineIds_.isEmpty()) {
+            streamLineIds_ = other.streamLineIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureStreamLineIdsIsMutable();
+            streamLineIds_.addAll(other.streamLineIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object channelId_ = "";
+      /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The channelId.
+       */
+      public java.lang.String getChannelId() {
+        java.lang.Object ref = channelId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          channelId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for channelId.
+       */
+      public com.google.protobuf.ByteString
+          getChannelIdBytes() {
+        java.lang.Object ref = channelId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          channelId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The channelId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChannelId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        channelId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChannelId() {
+        
+        channelId_ = getDefaultInstance().getChannelId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for channelId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChannelIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        channelId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList streamLineIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureStreamLineIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          streamLineIds_ = new com.google.protobuf.LazyStringArrayList(streamLineIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * List of line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return A list containing the streamLineIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getStreamLineIdsList() {
+        return streamLineIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The count of streamLineIds.
+       */
+      public int getStreamLineIdsCount() {
+        return streamLineIds_.size();
+      }
+      /**
+       * <pre>
+       * List of line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param index The index of the element to return.
+       * @return The streamLineIds at the given index.
+       */
+      public java.lang.String getStreamLineIds(int index) {
+        return streamLineIds_.get(index);
+      }
+      /**
+       * <pre>
+       * List of line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the streamLineIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getStreamLineIdsBytes(int index) {
+        return streamLineIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param index The index to set the value at.
+       * @param value The streamLineIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStreamLineIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureStreamLineIdsIsMutable();
+        streamLineIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The streamLineIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addStreamLineIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureStreamLineIdsIsMutable();
+        streamLineIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param values The streamLineIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllStreamLineIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureStreamLineIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, streamLineIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStreamLineIds() {
+        streamLineIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes of the streamLineIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addStreamLineIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureStreamLineIdsIsMutable();
+        streamLineIds_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.BatchDeleteStreamLinesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.BatchDeleteStreamLinesRequest)
+    private static final yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest();
+    }
+
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BatchDeleteStreamLinesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<BatchDeleteStreamLinesRequest>() {
+      @java.lang.Override
+      public BatchDeleteStreamLinesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BatchDeleteStreamLinesRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BatchDeleteStreamLinesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BatchDeleteStreamLinesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BatchDeleteStreamLinesMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.BatchDeleteStreamLinesMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of line IDs.
+     * </pre>
+     *
+     * <code>repeated string stream_line_ids = 1;</code>
+     * @return A list containing the streamLineIds.
+     */
+    java.util.List<java.lang.String>
+        getStreamLineIdsList();
+    /**
+     * <pre>
+     * List of line IDs.
+     * </pre>
+     *
+     * <code>repeated string stream_line_ids = 1;</code>
+     * @return The count of streamLineIds.
+     */
+    int getStreamLineIdsCount();
+    /**
+     * <pre>
+     * List of line IDs.
+     * </pre>
+     *
+     * <code>repeated string stream_line_ids = 1;</code>
+     * @param index The index of the element to return.
+     * @return The streamLineIds at the given index.
+     */
+    java.lang.String getStreamLineIds(int index);
+    /**
+     * <pre>
+     * List of line IDs.
+     * </pre>
+     *
+     * <code>repeated string stream_line_ids = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the streamLineIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getStreamLineIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.video.v1.BatchDeleteStreamLinesMetadata}
+   */
+  public static final class BatchDeleteStreamLinesMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.BatchDeleteStreamLinesMetadata)
+      BatchDeleteStreamLinesMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BatchDeleteStreamLinesMetadata.newBuilder() to construct.
+    private BatchDeleteStreamLinesMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BatchDeleteStreamLinesMetadata() {
+      streamLineIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BatchDeleteStreamLinesMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BatchDeleteStreamLinesMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                streamLineIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              streamLineIds_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          streamLineIds_ = streamLineIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchDeleteStreamLinesMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchDeleteStreamLinesMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata.class, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata.Builder.class);
+    }
+
+    public static final int STREAM_LINE_IDS_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList streamLineIds_;
+    /**
+     * <pre>
+     * List of line IDs.
+     * </pre>
+     *
+     * <code>repeated string stream_line_ids = 1;</code>
+     * @return A list containing the streamLineIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getStreamLineIdsList() {
+      return streamLineIds_;
+    }
+    /**
+     * <pre>
+     * List of line IDs.
+     * </pre>
+     *
+     * <code>repeated string stream_line_ids = 1;</code>
+     * @return The count of streamLineIds.
+     */
+    public int getStreamLineIdsCount() {
+      return streamLineIds_.size();
+    }
+    /**
+     * <pre>
+     * List of line IDs.
+     * </pre>
+     *
+     * <code>repeated string stream_line_ids = 1;</code>
+     * @param index The index of the element to return.
+     * @return The streamLineIds at the given index.
+     */
+    public java.lang.String getStreamLineIds(int index) {
+      return streamLineIds_.get(index);
+    }
+    /**
+     * <pre>
+     * List of line IDs.
+     * </pre>
+     *
+     * <code>repeated string stream_line_ids = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the streamLineIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getStreamLineIdsBytes(int index) {
+      return streamLineIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < streamLineIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, streamLineIds_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < streamLineIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(streamLineIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getStreamLineIdsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata other = (yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata) obj;
+
+      if (!getStreamLineIdsList()
+          .equals(other.getStreamLineIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getStreamLineIdsCount() > 0) {
+        hash = (37 * hash) + STREAM_LINE_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getStreamLineIdsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.video.v1.BatchDeleteStreamLinesMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.BatchDeleteStreamLinesMetadata)
+        yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchDeleteStreamLinesMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchDeleteStreamLinesMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata.class, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        streamLineIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchDeleteStreamLinesMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata build() {
+        yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata buildPartial() {
+        yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata result = new yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          streamLineIds_ = streamLineIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.streamLineIds_ = streamLineIds_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata) {
+          return mergeFrom((yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata other) {
+        if (other == yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata.getDefaultInstance()) return this;
+        if (!other.streamLineIds_.isEmpty()) {
+          if (streamLineIds_.isEmpty()) {
+            streamLineIds_ = other.streamLineIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureStreamLineIdsIsMutable();
+            streamLineIds_.addAll(other.streamLineIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList streamLineIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureStreamLineIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          streamLineIds_ = new com.google.protobuf.LazyStringArrayList(streamLineIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * List of line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 1;</code>
+       * @return A list containing the streamLineIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getStreamLineIdsList() {
+        return streamLineIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 1;</code>
+       * @return The count of streamLineIds.
+       */
+      public int getStreamLineIdsCount() {
+        return streamLineIds_.size();
+      }
+      /**
+       * <pre>
+       * List of line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 1;</code>
+       * @param index The index of the element to return.
+       * @return The streamLineIds at the given index.
+       */
+      public java.lang.String getStreamLineIds(int index) {
+        return streamLineIds_.get(index);
+      }
+      /**
+       * <pre>
+       * List of line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the streamLineIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getStreamLineIdsBytes(int index) {
+        return streamLineIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The streamLineIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStreamLineIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureStreamLineIdsIsMutable();
+        streamLineIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 1;</code>
+       * @param value The streamLineIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addStreamLineIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureStreamLineIdsIsMutable();
+        streamLineIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 1;</code>
+       * @param values The streamLineIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllStreamLineIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureStreamLineIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, streamLineIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStreamLineIds() {
+        streamLineIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of line IDs.
+       * </pre>
+       *
+       * <code>repeated string stream_line_ids = 1;</code>
+       * @param value The bytes of the streamLineIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addStreamLineIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureStreamLineIdsIsMutable();
+        streamLineIds_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.BatchDeleteStreamLinesMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.BatchDeleteStreamLinesMetadata)
+    private static final yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata();
+    }
+
+    public static yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BatchDeleteStreamLinesMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<BatchDeleteStreamLinesMetadata>() {
+      @java.lang.Override
+      public BatchDeleteStreamLinesMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BatchDeleteStreamLinesMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BatchDeleteStreamLinesMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BatchDeleteStreamLinesMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface PerformLineActionRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.PerformLineActionRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -12716,7 +16111,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string stream_line_id = 1;</code>
+     * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The streamLineId.
      */
     java.lang.String getStreamLineId();
@@ -12725,7 +16120,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string stream_line_id = 1;</code>
+     * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for streamLineId.
      */
     com.google.protobuf.ByteString
@@ -12923,7 +16318,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string stream_line_id = 1;</code>
+     * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The streamLineId.
      */
     @java.lang.Override
@@ -12944,7 +16339,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string stream_line_id = 1;</code>
+     * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for streamLineId.
      */
     @java.lang.Override
@@ -13416,7 +16811,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The streamLineId.
        */
       public java.lang.String getStreamLineId() {
@@ -13436,7 +16831,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for streamLineId.
        */
       public com.google.protobuf.ByteString
@@ -13457,7 +16852,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The streamLineId to set.
        * @return This builder for chaining.
        */
@@ -13476,7 +16871,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStreamLineId() {
@@ -13490,7 +16885,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for streamLineId to set.
        * @return This builder for chaining.
        */
@@ -15289,7 +18684,7 @@ public final class StreamLineServiceOuterClass {
      * URL of a RTMP streaming server.
      * </pre>
      *
-     * <code>string url = 1;</code>
+     * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "rtmp://.*"];</code>
      * @return The url.
      */
     java.lang.String getUrl();
@@ -15298,7 +18693,7 @@ public final class StreamLineServiceOuterClass {
      * URL of a RTMP streaming server.
      * </pre>
      *
-     * <code>string url = 1;</code>
+     * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "rtmp://.*"];</code>
      * @return The bytes for url.
      */
     com.google.protobuf.ByteString
@@ -15395,7 +18790,7 @@ public final class StreamLineServiceOuterClass {
      * URL of a RTMP streaming server.
      * </pre>
      *
-     * <code>string url = 1;</code>
+     * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "rtmp://.*"];</code>
      * @return The url.
      */
     @java.lang.Override
@@ -15416,7 +18811,7 @@ public final class StreamLineServiceOuterClass {
      * URL of a RTMP streaming server.
      * </pre>
      *
-     * <code>string url = 1;</code>
+     * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "rtmp://.*"];</code>
      * @return The bytes for url.
      */
     @java.lang.Override
@@ -15742,7 +19137,7 @@ public final class StreamLineServiceOuterClass {
        * URL of a RTMP streaming server.
        * </pre>
        *
-       * <code>string url = 1;</code>
+       * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "rtmp://.*"];</code>
        * @return The url.
        */
       public java.lang.String getUrl() {
@@ -15762,7 +19157,7 @@ public final class StreamLineServiceOuterClass {
        * URL of a RTMP streaming server.
        * </pre>
        *
-       * <code>string url = 1;</code>
+       * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "rtmp://.*"];</code>
        * @return The bytes for url.
        */
       public com.google.protobuf.ByteString
@@ -15783,7 +19178,7 @@ public final class StreamLineServiceOuterClass {
        * URL of a RTMP streaming server.
        * </pre>
        *
-       * <code>string url = 1;</code>
+       * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "rtmp://.*"];</code>
        * @param value The url to set.
        * @return This builder for chaining.
        */
@@ -15802,7 +19197,7 @@ public final class StreamLineServiceOuterClass {
        * URL of a RTMP streaming server.
        * </pre>
        *
-       * <code>string url = 1;</code>
+       * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "rtmp://.*"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUrl() {
@@ -15816,7 +19211,7 @@ public final class StreamLineServiceOuterClass {
        * URL of a RTMP streaming server.
        * </pre>
        *
-       * <code>string url = 1;</code>
+       * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "rtmp://.*"];</code>
        * @param value The bytes for url to set.
        * @return This builder for chaining.
        */
@@ -15893,7 +19288,7 @@ public final class StreamLineServiceOuterClass {
      * URL of a SRT streaming server.
      * </pre>
      *
-     * <code>string url = 1;</code>
+     * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "srt://.*"];</code>
      * @return The url.
      */
     java.lang.String getUrl();
@@ -15902,7 +19297,7 @@ public final class StreamLineServiceOuterClass {
      * URL of a SRT streaming server.
      * </pre>
      *
-     * <code>string url = 1;</code>
+     * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "srt://.*"];</code>
      * @return The bytes for url.
      */
     com.google.protobuf.ByteString
@@ -15999,7 +19394,7 @@ public final class StreamLineServiceOuterClass {
      * URL of a SRT streaming server.
      * </pre>
      *
-     * <code>string url = 1;</code>
+     * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "srt://.*"];</code>
      * @return The url.
      */
     @java.lang.Override
@@ -16020,7 +19415,7 @@ public final class StreamLineServiceOuterClass {
      * URL of a SRT streaming server.
      * </pre>
      *
-     * <code>string url = 1;</code>
+     * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "srt://.*"];</code>
      * @return The bytes for url.
      */
     @java.lang.Override
@@ -16346,7 +19741,7 @@ public final class StreamLineServiceOuterClass {
        * URL of a SRT streaming server.
        * </pre>
        *
-       * <code>string url = 1;</code>
+       * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "srt://.*"];</code>
        * @return The url.
        */
       public java.lang.String getUrl() {
@@ -16366,7 +19761,7 @@ public final class StreamLineServiceOuterClass {
        * URL of a SRT streaming server.
        * </pre>
        *
-       * <code>string url = 1;</code>
+       * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "srt://.*"];</code>
        * @return The bytes for url.
        */
       public com.google.protobuf.ByteString
@@ -16387,7 +19782,7 @@ public final class StreamLineServiceOuterClass {
        * URL of a SRT streaming server.
        * </pre>
        *
-       * <code>string url = 1;</code>
+       * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "srt://.*"];</code>
        * @param value The url to set.
        * @return This builder for chaining.
        */
@@ -16406,7 +19801,7 @@ public final class StreamLineServiceOuterClass {
        * URL of a SRT streaming server.
        * </pre>
        *
-       * <code>string url = 1;</code>
+       * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "srt://.*"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUrl() {
@@ -16420,7 +19815,7 @@ public final class StreamLineServiceOuterClass {
        * URL of a SRT streaming server.
        * </pre>
        *
-       * <code>string url = 1;</code>
+       * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "srt://.*"];</code>
        * @param value The bytes for url to set.
        * @return This builder for chaining.
        */
@@ -16497,7 +19892,7 @@ public final class StreamLineServiceOuterClass {
      * URL of a TCP streaming server.
      * </pre>
      *
-     * <code>string url = 2;</code>
+     * <code>string url = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "tcp://.*"];</code>
      * @return The url.
      */
     java.lang.String getUrl();
@@ -16506,7 +19901,7 @@ public final class StreamLineServiceOuterClass {
      * URL of a TCP streaming server.
      * </pre>
      *
-     * <code>string url = 2;</code>
+     * <code>string url = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "tcp://.*"];</code>
      * @return The bytes for url.
      */
     com.google.protobuf.ByteString
@@ -16603,7 +19998,7 @@ public final class StreamLineServiceOuterClass {
      * URL of a TCP streaming server.
      * </pre>
      *
-     * <code>string url = 2;</code>
+     * <code>string url = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "tcp://.*"];</code>
      * @return The url.
      */
     @java.lang.Override
@@ -16624,7 +20019,7 @@ public final class StreamLineServiceOuterClass {
      * URL of a TCP streaming server.
      * </pre>
      *
-     * <code>string url = 2;</code>
+     * <code>string url = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "tcp://.*"];</code>
      * @return The bytes for url.
      */
     @java.lang.Override
@@ -16950,7 +20345,7 @@ public final class StreamLineServiceOuterClass {
        * URL of a TCP streaming server.
        * </pre>
        *
-       * <code>string url = 2;</code>
+       * <code>string url = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "tcp://.*"];</code>
        * @return The url.
        */
       public java.lang.String getUrl() {
@@ -16970,7 +20365,7 @@ public final class StreamLineServiceOuterClass {
        * URL of a TCP streaming server.
        * </pre>
        *
-       * <code>string url = 2;</code>
+       * <code>string url = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "tcp://.*"];</code>
        * @return The bytes for url.
        */
       public com.google.protobuf.ByteString
@@ -16991,7 +20386,7 @@ public final class StreamLineServiceOuterClass {
        * URL of a TCP streaming server.
        * </pre>
        *
-       * <code>string url = 2;</code>
+       * <code>string url = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "tcp://.*"];</code>
        * @param value The url to set.
        * @return This builder for chaining.
        */
@@ -17010,7 +20405,7 @@ public final class StreamLineServiceOuterClass {
        * URL of a TCP streaming server.
        * </pre>
        *
-       * <code>string url = 2;</code>
+       * <code>string url = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "tcp://.*"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUrl() {
@@ -17024,7 +20419,7 @@ public final class StreamLineServiceOuterClass {
        * URL of a TCP streaming server.
        * </pre>
        *
-       * <code>string url = 2;</code>
+       * <code>string url = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "tcp://.*"];</code>
        * @param value The bytes for url to set.
        * @return This builder for chaining.
        */
@@ -17101,7 +20496,7 @@ public final class StreamLineServiceOuterClass {
      * URL of a RTSP streaming server.
      * </pre>
      *
-     * <code>string url = 1;</code>
+     * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "rtsp://.*"];</code>
      * @return The url.
      */
     java.lang.String getUrl();
@@ -17110,7 +20505,7 @@ public final class StreamLineServiceOuterClass {
      * URL of a RTSP streaming server.
      * </pre>
      *
-     * <code>string url = 1;</code>
+     * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "rtsp://.*"];</code>
      * @return The bytes for url.
      */
     com.google.protobuf.ByteString
@@ -17207,7 +20602,7 @@ public final class StreamLineServiceOuterClass {
      * URL of a RTSP streaming server.
      * </pre>
      *
-     * <code>string url = 1;</code>
+     * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "rtsp://.*"];</code>
      * @return The url.
      */
     @java.lang.Override
@@ -17228,7 +20623,7 @@ public final class StreamLineServiceOuterClass {
      * URL of a RTSP streaming server.
      * </pre>
      *
-     * <code>string url = 1;</code>
+     * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "rtsp://.*"];</code>
      * @return The bytes for url.
      */
     @java.lang.Override
@@ -17554,7 +20949,7 @@ public final class StreamLineServiceOuterClass {
        * URL of a RTSP streaming server.
        * </pre>
        *
-       * <code>string url = 1;</code>
+       * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "rtsp://.*"];</code>
        * @return The url.
        */
       public java.lang.String getUrl() {
@@ -17574,7 +20969,7 @@ public final class StreamLineServiceOuterClass {
        * URL of a RTSP streaming server.
        * </pre>
        *
-       * <code>string url = 1;</code>
+       * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "rtsp://.*"];</code>
        * @return The bytes for url.
        */
       public com.google.protobuf.ByteString
@@ -17595,7 +20990,7 @@ public final class StreamLineServiceOuterClass {
        * URL of a RTSP streaming server.
        * </pre>
        *
-       * <code>string url = 1;</code>
+       * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "rtsp://.*"];</code>
        * @param value The url to set.
        * @return This builder for chaining.
        */
@@ -17614,7 +21009,7 @@ public final class StreamLineServiceOuterClass {
        * URL of a RTSP streaming server.
        * </pre>
        *
-       * <code>string url = 1;</code>
+       * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "rtsp://.*"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUrl() {
@@ -17628,7 +21023,7 @@ public final class StreamLineServiceOuterClass {
        * URL of a RTSP streaming server.
        * </pre>
        *
-       * <code>string url = 1;</code>
+       * <code>string url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "rtsp://.*"];</code>
        * @param value The bytes for url to set.
        * @return This builder for chaining.
        */
@@ -19377,7 +22772,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string stream_line_id = 1;</code>
+     * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The streamLineId.
      */
     java.lang.String getStreamLineId();
@@ -19386,7 +22781,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string stream_line_id = 1;</code>
+     * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for streamLineId.
      */
     com.google.protobuf.ByteString
@@ -19483,7 +22878,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string stream_line_id = 1;</code>
+     * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The streamLineId.
      */
     @java.lang.Override
@@ -19504,7 +22899,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string stream_line_id = 1;</code>
+     * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for streamLineId.
      */
     @java.lang.Override
@@ -19830,7 +23225,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The streamLineId.
        */
       public java.lang.String getStreamLineId() {
@@ -19850,7 +23245,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for streamLineId.
        */
       public com.google.protobuf.ByteString
@@ -19871,7 +23266,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The streamLineId to set.
        * @return This builder for chaining.
        */
@@ -19890,7 +23285,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStreamLineId() {
@@ -19904,7 +23299,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for streamLineId to set.
        * @return This builder for chaining.
        */
@@ -19981,7 +23376,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string stream_line_id = 1;</code>
+     * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The streamLineId.
      */
     java.lang.String getStreamLineId();
@@ -19990,7 +23385,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string stream_line_id = 1;</code>
+     * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for streamLineId.
      */
     com.google.protobuf.ByteString
@@ -20087,7 +23482,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string stream_line_id = 1;</code>
+     * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The streamLineId.
      */
     @java.lang.Override
@@ -20108,7 +23503,7 @@ public final class StreamLineServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string stream_line_id = 1;</code>
+     * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for streamLineId.
      */
     @java.lang.Override
@@ -20434,7 +23829,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The streamLineId.
        */
       public java.lang.String getStreamLineId() {
@@ -20454,7 +23849,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for streamLineId.
        */
       public com.google.protobuf.ByteString
@@ -20475,7 +23870,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The streamLineId to set.
        * @return This builder for chaining.
        */
@@ -20494,7 +23889,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStreamLineId() {
@@ -20508,7 +23903,7 @@ public final class StreamLineServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string stream_line_id = 1;</code>
+       * <code>string stream_line_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for streamLineId to set.
        * @return This builder for chaining.
        */
@@ -21196,6 +24591,16 @@ public final class StreamLineServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_video_v1_ListStreamLinesResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_BatchGetStreamLinesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_BatchGetStreamLinesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_BatchGetStreamLinesResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_BatchGetStreamLinesResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_video_v1_CreateStreamLineRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -21235,6 +24640,16 @@ public final class StreamLineServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_video_v1_DeleteStreamLineMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_BatchDeleteStreamLinesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_BatchDeleteStreamLinesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_BatchDeleteStreamLinesMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_BatchDeleteStreamLinesMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_video_v1_PerformLineActionRequest_descriptor;
   private static final 
@@ -21324,110 +24739,139 @@ public final class StreamLineServiceOuterClass {
       "/api/annotations.proto\032 google/protobuf/" +
       "field_mask.proto\032 yandex/cloud/api/opera" +
       "tion.proto\032&yandex/cloud/operation/opera" +
-      "tion.proto\032\'yandex/cloud/video/v1/stream" +
-      "_line.proto\".\n\024GetStreamLineRequest\022\026\n\016s" +
-      "tream_line_id\030\001 \001(\t\"{\n\026ListStreamLinesRe" +
-      "quest\022\022\n\nchannel_id\030\001 \001(\t\022\021\n\tpage_size\030d" +
-      " \001(\003\022\022\n\npage_token\030e \001(\t\022\020\n\010order_by\030f \001" +
-      "(\t\022\016\n\006filter\030g \001(\tJ\004\010\002\020d\"q\n\027ListStreamLi" +
-      "nesResponse\0227\n\014stream_lines\030\001 \003(\0132!.yand" +
-      "ex.cloud.video.v1.StreamLine\022\027\n\017next_pag" +
-      "e_token\030d \001(\tJ\004\010\002\020d\"\367\005\n\027CreateStreamLine" +
-      "Request\022\022\n\nchannel_id\030\001 \001(\t\022\r\n\005title\030\002 \001" +
-      "(\t\022\024\n\014thumbnail_id\030\003 \001(\t\022K\n\006labels\030\310\001 \003(" +
-      "\0132:.yandex.cloud.video.v1.CreateStreamLi" +
-      "neRequest.LabelsEntry\022;\n\trtmp_push\030\350\007 \001(" +
-      "\0132%.yandex.cloud.video.v1.RTMPPushParams" +
-      "H\000\0229\n\010srt_push\030\351\007 \001(\0132$.yandex.cloud.vid" +
-      "eo.v1.SRTPushParamsH\000\022;\n\trtmp_pull\030\352\007 \001(" +
-      "\0132%.yandex.cloud.video.v1.RTMPPullParams" +
-      "H\000\0229\n\010srt_pull\030\353\007 \001(\0132$.yandex.cloud.vid" +
-      "eo.v1.SRTPullParamsH\000\0229\n\010tcp_pull\030\354\007 \001(\013" +
-      "2$.yandex.cloud.video.v1.TCPPullParamsH\000" +
-      "\022;\n\trtsp_pull\030\356\007 \001(\0132%.yandex.cloud.vide" +
-      "o.v1.RTSPPullParamsH\000\022?\n\013manual_line\030\320\017 " +
-      "\001(\0132\'.yandex.cloud.video.v1.ManualLinePa" +
-      "ramsH\001\022;\n\tauto_line\030\321\017 \001(\0132%.yandex.clou" +
-      "d.video.v1.AutoLineParamsH\001\032-\n\013LabelsEnt" +
-      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n\014in" +
-      "put_paramsB\022\n\020line_type_paramsJ\006\010\311\001\020\350\007J\006" +
-      "\010\355\007\020\356\007J\006\010\357\007\020\320\017J\005\010\004\020\310\001\"2\n\030CreateStreamLin" +
-      "eMetadata\022\026\n\016stream_line_id\030\001 \001(\t\"\221\005\n\027Up" +
-      "dateStreamLineRequest\022\026\n\016stream_line_id\030" +
-      "\001 \001(\t\022.\n\nfield_mask\030\002 \001(\0132\032.google.proto" +
-      "buf.FieldMask\022\r\n\005title\030\003 \001(\t\022\024\n\014thumbnai" +
-      "l_id\030\004 \001(\t\022K\n\006labels\030\310\001 \003(\0132:.yandex.clo" +
-      "ud.video.v1.UpdateStreamLineRequest.Labe" +
-      "lsEntry\022;\n\trtmp_push\030\350\007 \001(\0132%.yandex.clo" +
-      "ud.video.v1.RTMPPushParamsH\000\0229\n\010srt_push" +
-      "\030\351\007 \001(\0132$.yandex.cloud.video.v1.SRTPushP" +
-      "aramsH\000\022;\n\trtmp_pull\030\352\007 \001(\0132%.yandex.clo" +
-      "ud.video.v1.RTMPPullParamsH\000\0229\n\010srt_pull" +
-      "\030\353\007 \001(\0132$.yandex.cloud.video.v1.SRTPullP" +
-      "aramsH\000\0229\n\010tcp_pull\030\354\007 \001(\0132$.yandex.clou" +
-      "d.video.v1.TCPPullParamsH\000\022;\n\trtsp_pull\030" +
-      "\356\007 \001(\0132%.yandex.cloud.video.v1.RTSPPullP" +
-      "aramsH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001B\016\n\014input_paramsJ\006\010\311\001\020\350\007J\006" +
-      "\010\355\007\020\356\007J\005\010\005\020\310\001\"2\n\030UpdateStreamLineMetadat" +
-      "a\022\026\n\016stream_line_id\030\001 \001(\t\"1\n\027DeleteStrea" +
-      "mLineRequest\022\026\n\016stream_line_id\030\001 \001(\t\"2\n\030" +
-      "DeleteStreamLineMetadata\022\026\n\016stream_line_" +
-      "id\030\001 \001(\t\"\277\001\n\030PerformLineActionRequest\022\026\n" +
-      "\016stream_line_id\030\001 \001(\t\022:\n\010activate\030\350\007 \001(\013" +
-      "2%.yandex.cloud.video.v1.ActivateActionH" +
-      "\000\022>\n\ndeactivate\030\351\007 \001(\0132\'.yandex.cloud.vi" +
-      "deo.v1.DeactivateActionH\000B\010\n\006actionJ\005\010\002\020" +
-      "\350\007\"3\n\031PerformLineActionMetadata\022\026\n\016strea" +
-      "m_line_id\030\001 \001(\t\"\020\n\016RTMPPushParams\"\017\n\rSRT" +
-      "PushParams\"\035\n\016RTMPPullParams\022\013\n\003url\030\001 \001(" +
-      "\t\"\034\n\rSRTPullParams\022\013\n\003url\030\001 \001(\t\"\034\n\rTCPPu" +
-      "llParams\022\013\n\003url\030\002 \001(\t\"\035\n\016RTSPPullParams\022" +
-      "\013\n\003url\030\001 \001(\t\"\022\n\020ManualLineParams\"\020\n\016Auto" +
-      "LineParams\"\020\n\016ActivateAction\"\022\n\020Deactiva" +
-      "teAction\"-\n\023GetStreamKeyRequest\022\026\n\016strea" +
-      "m_line_id\030\001 \001(\t\"0\n\026UpdateStreamKeyReques" +
-      "t\022\026\n\016stream_line_id\030\001 \001(\t\"1\n\027UpdateStrea" +
-      "mKeyMetadata\022\026\n\016stream_line_id\030\001 \001(\t2\221\013\n" +
-      "\021StreamLineService\022\205\001\n\003Get\022+.yandex.clou" +
-      "d.video.v1.GetStreamLineRequest\032!.yandex" +
-      ".cloud.video.v1.StreamLine\".\202\323\344\223\002(\022&/vid" +
-      "eo/v1/streamLines/{stream_line_id}\022\204\001\n\004L" +
-      "ist\022-.yandex.cloud.video.v1.ListStreamLi" +
-      "nesRequest\032..yandex.cloud.video.v1.ListS" +
-      "treamLinesResponse\"\035\202\323\344\223\002\027\022\025/video/v1/st" +
-      "reamLines\022\247\001\n\006Create\022..yandex.cloud.vide" +
-      "o.v1.CreateStreamLineRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"J\202\323\344\223\002\032\"\025/video/" +
-      "v1/streamLines:\001*\262\322*&\n\030CreateStreamLineM" +
-      "etadata\022\nStreamLine\022\270\001\n\006Update\022..yandex." +
-      "cloud.video.v1.UpdateStreamLineRequest\032!" +
-      ".yandex.cloud.operation.Operation\"[\202\323\344\223\002" +
-      "+2&/video/v1/streamLines/{stream_line_id" +
-      "}:\001*\262\322*&\n\030UpdateStreamLineMetadata\022\nStre" +
-      "amLine\022\300\001\n\006Delete\022..yandex.cloud.video.v" +
-      "1.DeleteStreamLineRequest\032!.yandex.cloud" +
-      ".operation.Operation\"c\202\323\344\223\002(*&/video/v1/" +
-      "streamLines/{stream_line_id}\262\322*1\n\030Delete" +
-      "StreamLineMetadata\022\025google.protobuf.Empt" +
-      "y\022\317\001\n\rPerformAction\022/.yandex.cloud.video" +
-      ".v1.PerformLineActionRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"j\202\323\344\223\0029\"4/video/" +
-      "v1/streamLines/{stream_line_id}:performA" +
-      "ction:\001*\262\322*\'\n\031PerformLineActionMetadata\022" +
-      "\nStreamLine\022\235\001\n\014GetStreamKey\022*.yandex.cl" +
-      "oud.video.v1.GetStreamKeyRequest\032$.yande" +
-      "x.cloud.video.v1.PushStreamKey\";\202\323\344\223\0025\0223" +
-      "/video/v1/streamLines/{stream_line_id}:g" +
-      "etStreamKey\022\322\001\n\017UpdateStreamKey\022-.yandex" +
-      ".cloud.video.v1.UpdateStreamKeyRequest\032!" +
-      ".yandex.cloud.operation.Operation\"m\202\323\344\223\002" +
-      ";26/video/v1/streamLines/{stream_line_id" +
-      "}:updateStreamKey:\001*\262\322*(\n\027UpdateStreamKe" +
-      "yMetadata\022\rPushStreamKeyB\\\n\031yandex.cloud" +
-      ".api.video.v1Z?github.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/video/v1;videob\006" +
-      "proto3"
+      "tion.proto\032\035yandex/cloud/validation.prot" +
+      "o\032\'yandex/cloud/video/v1/stream_line.pro" +
+      "to\"<\n\024GetStreamLineRequest\022$\n\016stream_lin" +
+      "e_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\254\001\n\026ListStreamL" +
+      "inesRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022\035\n\tpage_size\030d \001(\003B\n\372\3071\006<=1000\022\035\n\n" +
+      "page_token\030e \001(\tB\t\212\3101\005<=200\022\020\n\010order_by\030" +
+      "f \001(\t\022\032\n\006filter\030g \001(\tB\n\212\3101\006<=1000J\004\010\002\020d\"" +
+      "q\n\027ListStreamLinesResponse\0227\n\014stream_lin" +
+      "es\030\001 \003(\0132!.yandex.cloud.video.v1.StreamL" +
+      "ine\022\027\n\017next_page_token\030d \001(\tJ\004\010\002\020d\"i\n\032Ba" +
+      "tchGetStreamLinesRequest\022 \n\nchannel_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022)\n\017stream_line_ids\030\002 " +
+      "\003(\tB\020\202\3101\0041-50\212\3101\004<=50\"V\n\033BatchGetStreamL" +
+      "inesResponse\0227\n\014stream_lines\030\001 \003(\0132!.yan" +
+      "dex.cloud.video.v1.StreamLine\"\347\006\n\027Create" +
+      "StreamLineRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\022\023\n\005title\030\002 \001(\tB\004\350\3071\001\022\036\n\014thum" +
+      "bnail_id\030\003 \001(\tB\010\212\3101\004<=50\022\220\001\n\006labels\030\310\001 \003" +
+      "(\0132:.yandex.cloud.video.v1.CreateStreamL" +
+      "ineRequest.LabelsEntryBC\202\3101\004<=64\212\3101\004<=63" +
+      "\362\3071\017[-_.@:/0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z]" +
+      "[-_0-9a-z]*\022;\n\trtmp_push\030\350\007 \001(\0132%.yandex" +
+      ".cloud.video.v1.RTMPPushParamsH\000\0229\n\010srt_" +
+      "push\030\351\007 \001(\0132$.yandex.cloud.video.v1.SRTP" +
+      "ushParamsH\000\022;\n\trtmp_pull\030\352\007 \001(\0132%.yandex" +
+      ".cloud.video.v1.RTMPPullParamsH\000\0229\n\010srt_" +
+      "pull\030\353\007 \001(\0132$.yandex.cloud.video.v1.SRTP" +
+      "ullParamsH\000\0229\n\010tcp_pull\030\354\007 \001(\0132$.yandex." +
+      "cloud.video.v1.TCPPullParamsH\000\022;\n\trtsp_p" +
+      "ull\030\356\007 \001(\0132%.yandex.cloud.video.v1.RTSPP" +
+      "ullParamsH\000\022?\n\013manual_line\030\320\017 \001(\0132\'.yand" +
+      "ex.cloud.video.v1.ManualLineParamsH\001\022;\n\t" +
+      "auto_line\030\321\017 \001(\0132%.yandex.cloud.video.v1" +
+      ".AutoLineParamsH\001\032-\n\013LabelsEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\024\n\014input_params" +
+      "\022\004\300\3011\001B\030\n\020line_type_params\022\004\300\3011\001J\005\010\004\020\310\001J" +
+      "\006\010\311\001\020\350\007J\006\010\355\007\020\356\007J\006\010\357\007\020\320\017\"2\n\030CreateStreamL" +
+      "ineMetadata\022\026\n\016stream_line_id\030\001 \001(\t\"\357\005\n\027" +
+      "UpdateStreamLineRequest\022$\n\016stream_line_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022.\n\nfield_mask\030\002 \001(" +
+      "\0132\032.google.protobuf.FieldMask\022\r\n\005title\030\003" +
+      " \001(\t\022\036\n\014thumbnail_id\030\004 \001(\tB\010\212\3101\004<=50\022\220\001\n" +
+      "\006labels\030\310\001 \003(\0132:.yandex.cloud.video.v1.U" +
+      "pdateStreamLineRequest.LabelsEntryBC\202\3101\004" +
+      "<=64\212\3101\004<=63\362\3071\017[-_.@:/0-9a-z]*\262\3101\006\032\004<=6" +
+      "3\262\3101\022\022\020[a-z][-_0-9a-z]*\022;\n\trtmp_push\030\350\007 " +
+      "\001(\0132%.yandex.cloud.video.v1.RTMPPushPara" +
+      "msH\000\0229\n\010srt_push\030\351\007 \001(\0132$.yandex.cloud.v" +
+      "ideo.v1.SRTPushParamsH\000\022;\n\trtmp_pull\030\352\007 " +
+      "\001(\0132%.yandex.cloud.video.v1.RTMPPullPara" +
+      "msH\000\0229\n\010srt_pull\030\353\007 \001(\0132$.yandex.cloud.v" +
+      "ideo.v1.SRTPullParamsH\000\0229\n\010tcp_pull\030\354\007 \001" +
+      "(\0132$.yandex.cloud.video.v1.TCPPullParams" +
+      "H\000\022;\n\trtsp_pull\030\356\007 \001(\0132%.yandex.cloud.vi" +
+      "deo.v1.RTSPPullParamsH\000\032-\n\013LabelsEntry\022\013" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n\014input_" +
+      "paramsJ\005\010\005\020\310\001J\006\010\311\001\020\350\007J\006\010\355\007\020\356\007\"2\n\030UpdateS" +
+      "treamLineMetadata\022\026\n\016stream_line_id\030\001 \001(" +
+      "\t\"?\n\027DeleteStreamLineRequest\022$\n\016stream_l" +
+      "ine_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"2\n\030DeleteStre" +
+      "amLineMetadata\022\026\n\016stream_line_id\030\001 \001(\t\"l" +
+      "\n\035BatchDeleteStreamLinesRequest\022 \n\nchann" +
+      "el_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022)\n\017stream_line" +
+      "_ids\030\002 \003(\tB\020\202\3101\0041-50\212\3101\004<=50\"9\n\036BatchDel" +
+      "eteStreamLinesMetadata\022\027\n\017stream_line_id" +
+      "s\030\001 \003(\t\"\323\001\n\030PerformLineActionRequest\022$\n\016" +
+      "stream_line_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022:\n\010ac" +
+      "tivate\030\350\007 \001(\0132%.yandex.cloud.video.v1.Ac" +
+      "tivateActionH\000\022>\n\ndeactivate\030\351\007 \001(\0132\'.ya" +
+      "ndex.cloud.video.v1.DeactivateActionH\000B\016" +
+      "\n\006action\022\004\300\3011\001J\005\010\002\020\350\007\"3\n\031PerformLineActi" +
+      "onMetadata\022\026\n\016stream_line_id\030\001 \001(\t\"\020\n\016RT" +
+      "MPPushParams\"\017\n\rSRTPushParams\"0\n\016RTMPPul" +
+      "lParams\022\036\n\003url\030\001 \001(\tB\021\350\3071\001\362\3071\trtmp://.*\"" +
+      ".\n\rSRTPullParams\022\035\n\003url\030\001 \001(\tB\020\350\3071\001\362\3071\010s" +
+      "rt://.*\"4\n\rTCPPullParams\022\035\n\003url\030\002 \001(\tB\020\350" +
+      "\3071\001\362\3071\010tcp://.*J\004\010\001\020\002\"0\n\016RTSPPullParams\022" +
+      "\036\n\003url\030\001 \001(\tB\021\350\3071\001\362\3071\trtsp://.*\"\022\n\020Manua" +
+      "lLineParams\"\020\n\016AutoLineParams\"\020\n\016Activat" +
+      "eAction\"\022\n\020DeactivateAction\";\n\023GetStream" +
+      "KeyRequest\022$\n\016stream_line_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\">\n\026UpdateStreamKeyRequest\022$\n\016st" +
+      "ream_line_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"1\n\027Upda" +
+      "teStreamKeyMetadata\022\026\n\016stream_line_id\030\001 " +
+      "\001(\t2\202\016\n\021StreamLineService\022\205\001\n\003Get\022+.yand" +
+      "ex.cloud.video.v1.GetStreamLineRequest\032!" +
+      ".yandex.cloud.video.v1.StreamLine\".\202\323\344\223\002" +
+      "(\022&/video/v1/streamLines/{stream_line_id" +
+      "}\022\204\001\n\004List\022-.yandex.cloud.video.v1.ListS" +
+      "treamLinesRequest\032..yandex.cloud.video.v" +
+      "1.ListStreamLinesResponse\"\035\202\323\344\223\002\027\022\025/vide" +
+      "o/v1/streamLines\022\234\001\n\010BatchGet\0221.yandex.c" +
+      "loud.video.v1.BatchGetStreamLinesRequest" +
+      "\0322.yandex.cloud.video.v1.BatchGetStreamL" +
+      "inesResponse\")\202\323\344\223\002#\"\036/video/v1/streamLi" +
+      "nes:batchGet:\001*\022\247\001\n\006Create\022..yandex.clou" +
+      "d.video.v1.CreateStreamLineRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"J\202\323\344\223\002\032\"\025/" +
+      "video/v1/streamLines:\001*\262\322*&\n\030CreateStrea" +
+      "mLineMetadata\022\nStreamLine\022\270\001\n\006Update\022..y" +
+      "andex.cloud.video.v1.UpdateStreamLineReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "[\202\323\344\223\002+2&/video/v1/streamLines/{stream_l" +
+      "ine_id}:\001*\262\322*&\n\030UpdateStreamLineMetadata" +
+      "\022\nStreamLine\022\300\001\n\006Delete\022..yandex.cloud.v" +
+      "ideo.v1.DeleteStreamLineRequest\032!.yandex" +
+      ".cloud.operation.Operation\"c\202\323\344\223\002(*&/vid" +
+      "eo/v1/streamLines/{stream_line_id}\262\322*1\n\030" +
+      "DeleteStreamLineMetadata\022\025google.protobu" +
+      "f.Empty\022\317\001\n\013BatchDelete\0224.yandex.cloud.v" +
+      "ideo.v1.BatchDeleteStreamLinesRequest\032!." +
+      "yandex.cloud.operation.Operation\"g\202\323\344\223\002&" +
+      "\"!/video/v1/streamLines:batchDelete:\001*\262\322" +
+      "*7\n\036BatchDeleteStreamLinesMetadata\022\025goog" +
+      "le.protobuf.Empty\022\317\001\n\rPerformAction\022/.ya" +
+      "ndex.cloud.video.v1.PerformLineActionReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "j\202\323\344\223\0029\"4/video/v1/streamLines/{stream_l" +
+      "ine_id}:performAction:\001*\262\322*\'\n\031PerformLin" +
+      "eActionMetadata\022\nStreamLine\022\235\001\n\014GetStrea" +
+      "mKey\022*.yandex.cloud.video.v1.GetStreamKe" +
+      "yRequest\032$.yandex.cloud.video.v1.PushStr" +
+      "eamKey\";\202\323\344\223\0025\0223/video/v1/streamLines/{s" +
+      "tream_line_id}:getStreamKey\022\322\001\n\017UpdateSt" +
+      "reamKey\022-.yandex.cloud.video.v1.UpdateSt" +
+      "reamKeyRequest\032!.yandex.cloud.operation." +
+      "Operation\"m\202\323\344\223\002;26/video/v1/streamLines" +
+      "/{stream_line_id}:updateStreamKey:\001*\262\322*(" +
+      "\n\027UpdateStreamKeyMetadata\022\rPushStreamKey" +
+      "B\\\n\031yandex.cloud.api.video.v1Z?github.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "video/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21436,6 +24880,7 @@ public final class StreamLineServiceOuterClass {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.video.v1.StreamLineOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_video_v1_GetStreamLineRequest_descriptor =
@@ -21456,8 +24901,20 @@ public final class StreamLineServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_ListStreamLinesResponse_descriptor,
         new java.lang.String[] { "StreamLines", "NextPageToken", });
-    internal_static_yandex_cloud_video_v1_CreateStreamLineRequest_descriptor =
+    internal_static_yandex_cloud_video_v1_BatchGetStreamLinesRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_video_v1_BatchGetStreamLinesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_BatchGetStreamLinesRequest_descriptor,
+        new java.lang.String[] { "ChannelId", "StreamLineIds", });
+    internal_static_yandex_cloud_video_v1_BatchGetStreamLinesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_video_v1_BatchGetStreamLinesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_BatchGetStreamLinesResponse_descriptor,
+        new java.lang.String[] { "StreamLines", });
+    internal_static_yandex_cloud_video_v1_CreateStreamLineRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_video_v1_CreateStreamLineRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_CreateStreamLineRequest_descriptor,
@@ -21469,13 +24926,13 @@ public final class StreamLineServiceOuterClass {
         internal_static_yandex_cloud_video_v1_CreateStreamLineRequest_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_video_v1_CreateStreamLineMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_video_v1_CreateStreamLineMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_CreateStreamLineMetadata_descriptor,
         new java.lang.String[] { "StreamLineId", });
     internal_static_yandex_cloud_video_v1_UpdateStreamLineRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_video_v1_UpdateStreamLineRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_UpdateStreamLineRequest_descriptor,
@@ -21487,109 +24944,121 @@ public final class StreamLineServiceOuterClass {
         internal_static_yandex_cloud_video_v1_UpdateStreamLineRequest_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_video_v1_UpdateStreamLineMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_video_v1_UpdateStreamLineMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_UpdateStreamLineMetadata_descriptor,
         new java.lang.String[] { "StreamLineId", });
     internal_static_yandex_cloud_video_v1_DeleteStreamLineRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_video_v1_DeleteStreamLineRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_DeleteStreamLineRequest_descriptor,
         new java.lang.String[] { "StreamLineId", });
     internal_static_yandex_cloud_video_v1_DeleteStreamLineMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_video_v1_DeleteStreamLineMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_DeleteStreamLineMetadata_descriptor,
         new java.lang.String[] { "StreamLineId", });
+    internal_static_yandex_cloud_video_v1_BatchDeleteStreamLinesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_video_v1_BatchDeleteStreamLinesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_BatchDeleteStreamLinesRequest_descriptor,
+        new java.lang.String[] { "ChannelId", "StreamLineIds", });
+    internal_static_yandex_cloud_video_v1_BatchDeleteStreamLinesMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_video_v1_BatchDeleteStreamLinesMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_BatchDeleteStreamLinesMetadata_descriptor,
+        new java.lang.String[] { "StreamLineIds", });
     internal_static_yandex_cloud_video_v1_PerformLineActionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_video_v1_PerformLineActionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_PerformLineActionRequest_descriptor,
         new java.lang.String[] { "StreamLineId", "Activate", "Deactivate", "Action", });
     internal_static_yandex_cloud_video_v1_PerformLineActionMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_video_v1_PerformLineActionMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_PerformLineActionMetadata_descriptor,
         new java.lang.String[] { "StreamLineId", });
     internal_static_yandex_cloud_video_v1_RTMPPushParams_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_video_v1_RTMPPushParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_RTMPPushParams_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_video_v1_SRTPushParams_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_video_v1_SRTPushParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_SRTPushParams_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_video_v1_RTMPPullParams_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_video_v1_RTMPPullParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_RTMPPullParams_descriptor,
         new java.lang.String[] { "Url", });
     internal_static_yandex_cloud_video_v1_SRTPullParams_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_video_v1_SRTPullParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_SRTPullParams_descriptor,
         new java.lang.String[] { "Url", });
     internal_static_yandex_cloud_video_v1_TCPPullParams_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_yandex_cloud_video_v1_TCPPullParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_TCPPullParams_descriptor,
         new java.lang.String[] { "Url", });
     internal_static_yandex_cloud_video_v1_RTSPPullParams_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_yandex_cloud_video_v1_RTSPPullParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_RTSPPullParams_descriptor,
         new java.lang.String[] { "Url", });
     internal_static_yandex_cloud_video_v1_ManualLineParams_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_yandex_cloud_video_v1_ManualLineParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_ManualLineParams_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_video_v1_AutoLineParams_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_yandex_cloud_video_v1_AutoLineParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_AutoLineParams_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_video_v1_ActivateAction_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_yandex_cloud_video_v1_ActivateAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_ActivateAction_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_video_v1_DeactivateAction_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_yandex_cloud_video_v1_DeactivateAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_DeactivateAction_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_video_v1_GetStreamKeyRequest_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_yandex_cloud_video_v1_GetStreamKeyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_GetStreamKeyRequest_descriptor,
         new java.lang.String[] { "StreamLineId", });
     internal_static_yandex_cloud_video_v1_UpdateStreamKeyRequest_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_yandex_cloud_video_v1_UpdateStreamKeyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_UpdateStreamKeyRequest_descriptor,
         new java.lang.String[] { "StreamLineId", });
     internal_static_yandex_cloud_video_v1_UpdateStreamKeyMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_yandex_cloud_video_v1_UpdateStreamKeyMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_UpdateStreamKeyMetadata_descriptor,
@@ -21598,12 +25067,20 @@ public final class StreamLineServiceOuterClass {
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
+    registry.add(yandex.cloud.api.Validation.exactlyOne);
+    registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.mapKey);
+    registry.add(yandex.cloud.api.Validation.pattern);
+    registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
+    registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.video.v1.StreamLineOuterClass.getDescriptor();
   }
 

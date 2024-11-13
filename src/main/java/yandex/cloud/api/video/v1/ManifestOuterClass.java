@@ -133,11 +133,6 @@ public final class ManifestOuterClass {
     }
 
     /**
-     * <pre>
-     * TODO: CLOUDAPI-336
-     * TODO: reserved 3;
-     * </pre>
-     *
      * Protobuf enum {@code yandex.cloud.video.v1.Manifest.ManifestType}
      */
     public enum ManifestType
@@ -826,13 +821,14 @@ public final class ManifestOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n$yandex/cloud/video/v1/manifest.proto\022\025" +
-      "yandex.cloud.video.v1\"\225\001\n\010Manifest\022\013\n\003ur" +
+      "yandex.cloud.video.v1\"\233\001\n\010Manifest\022\013\n\003ur" +
       "l\030\001 \001(\t\022:\n\004type\030\002 \001(\0162,.yandex.cloud.vid" +
-      "eo.v1.Manifest.ManifestType\"@\n\014ManifestT" +
+      "eo.v1.Manifest.ManifestType\"F\n\014ManifestT" +
       "ype\022\035\n\031MANIFEST_TYPE_UNSPECIFIED\020\000\022\010\n\004DA" +
-      "SH\020\001\022\007\n\003HLS\020\002B\\\n\031yandex.cloud.api.video." +
-      "v1Z?github.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/video/v1;videob\006proto3"
+      "SH\020\001\022\007\n\003HLS\020\002\"\004\010\003\020\003B\\\n\031yandex.cloud.api." +
+      "video.v1Z?github.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/video/v1;videob\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

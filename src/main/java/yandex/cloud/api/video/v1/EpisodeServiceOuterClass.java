@@ -23,7 +23,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the episode.
      * </pre>
      *
-     * <code>string episode_id = 1;</code>
+     * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The episodeId.
      */
     java.lang.String getEpisodeId();
@@ -32,7 +32,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the episode.
      * </pre>
      *
-     * <code>string episode_id = 1;</code>
+     * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for episodeId.
      */
     com.google.protobuf.ByteString
@@ -129,7 +129,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the episode.
      * </pre>
      *
-     * <code>string episode_id = 1;</code>
+     * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The episodeId.
      */
     @java.lang.Override
@@ -150,7 +150,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the episode.
      * </pre>
      *
-     * <code>string episode_id = 1;</code>
+     * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for episodeId.
      */
     @java.lang.Override
@@ -476,7 +476,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The episodeId.
        */
       public java.lang.String getEpisodeId() {
@@ -496,7 +496,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for episodeId.
        */
       public com.google.protobuf.ByteString
@@ -517,7 +517,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The episodeId to set.
        * @return This builder for chaining.
        */
@@ -536,7 +536,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearEpisodeId() {
@@ -550,7 +550,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for episodeId to set.
        * @return This builder for chaining.
        */
@@ -627,7 +627,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the stream.
      * </pre>
      *
-     * <code>string stream_id = 1;</code>
+     * <code>string stream_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return Whether the streamId field is set.
      */
     boolean hasStreamId();
@@ -636,7 +636,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the stream.
      * </pre>
      *
-     * <code>string stream_id = 1;</code>
+     * <code>string stream_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The streamId.
      */
     java.lang.String getStreamId();
@@ -645,7 +645,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the stream.
      * </pre>
      *
-     * <code>string stream_id = 1;</code>
+     * <code>string stream_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for streamId.
      */
     com.google.protobuf.ByteString
@@ -656,7 +656,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string line_id = 2;</code>
+     * <code>string line_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return Whether the lineId field is set.
      */
     boolean hasLineId();
@@ -665,7 +665,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string line_id = 2;</code>
+     * <code>string line_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The lineId.
      */
     java.lang.String getLineId();
@@ -674,7 +674,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string line_id = 2;</code>
+     * <code>string line_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for lineId.
      */
     com.google.protobuf.ByteString
@@ -685,7 +685,7 @@ public final class EpisodeServiceOuterClass {
      * The maximum number of the results per page to return. Default value: 100.
      * </pre>
      *
-     * <code>int64 page_size = 100;</code>
+     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
     long getPageSize();
@@ -695,7 +695,7 @@ public final class EpisodeServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101;</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
@@ -704,7 +704,7 @@ public final class EpisodeServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101;</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
@@ -747,7 +747,7 @@ public final class EpisodeServiceOuterClass {
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
-     * <code>string filter = 103;</code>
+     * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The filter.
      */
     java.lang.String getFilter();
@@ -762,7 +762,7 @@ public final class EpisodeServiceOuterClass {
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
-     * <code>string filter = 103;</code>
+     * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
@@ -932,7 +932,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the stream.
      * </pre>
      *
-     * <code>string stream_id = 1;</code>
+     * <code>string stream_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return Whether the streamId field is set.
      */
     public boolean hasStreamId() {
@@ -943,7 +943,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the stream.
      * </pre>
      *
-     * <code>string stream_id = 1;</code>
+     * <code>string stream_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The streamId.
      */
     public java.lang.String getStreamId() {
@@ -968,7 +968,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the stream.
      * </pre>
      *
-     * <code>string stream_id = 1;</code>
+     * <code>string stream_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for streamId.
      */
     public com.google.protobuf.ByteString
@@ -996,7 +996,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string line_id = 2;</code>
+     * <code>string line_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return Whether the lineId field is set.
      */
     public boolean hasLineId() {
@@ -1007,7 +1007,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string line_id = 2;</code>
+     * <code>string line_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The lineId.
      */
     public java.lang.String getLineId() {
@@ -1032,7 +1032,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string line_id = 2;</code>
+     * <code>string line_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for lineId.
      */
     public com.google.protobuf.ByteString
@@ -1061,7 +1061,7 @@ public final class EpisodeServiceOuterClass {
      * The maximum number of the results per page to return. Default value: 100.
      * </pre>
      *
-     * <code>int64 page_size = 100;</code>
+     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
     @java.lang.Override
@@ -1076,7 +1076,7 @@ public final class EpisodeServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101;</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The pageToken.
      */
     @java.lang.Override
@@ -1097,7 +1097,7 @@ public final class EpisodeServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101;</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The bytes for pageToken.
      */
     @java.lang.Override
@@ -1180,7 +1180,7 @@ public final class EpisodeServiceOuterClass {
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
-     * <code>string filter = 103;</code>
+     * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The filter.
      */
     @java.lang.Override
@@ -1207,7 +1207,7 @@ public final class EpisodeServiceOuterClass {
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
-     * <code>string filter = 103;</code>
+     * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for filter.
      */
     @java.lang.Override
@@ -1662,7 +1662,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the stream.
        * </pre>
        *
-       * <code>string stream_id = 1;</code>
+       * <code>string stream_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return Whether the streamId field is set.
        */
       @java.lang.Override
@@ -1674,7 +1674,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the stream.
        * </pre>
        *
-       * <code>string stream_id = 1;</code>
+       * <code>string stream_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The streamId.
        */
       @java.lang.Override
@@ -1700,7 +1700,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the stream.
        * </pre>
        *
-       * <code>string stream_id = 1;</code>
+       * <code>string stream_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for streamId.
        */
       @java.lang.Override
@@ -1727,7 +1727,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the stream.
        * </pre>
        *
-       * <code>string stream_id = 1;</code>
+       * <code>string stream_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The streamId to set.
        * @return This builder for chaining.
        */
@@ -1746,7 +1746,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the stream.
        * </pre>
        *
-       * <code>string stream_id = 1;</code>
+       * <code>string stream_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStreamId() {
@@ -1762,7 +1762,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the stream.
        * </pre>
        *
-       * <code>string stream_id = 1;</code>
+       * <code>string stream_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for streamId to set.
        * @return This builder for chaining.
        */
@@ -1783,7 +1783,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string line_id = 2;</code>
+       * <code>string line_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return Whether the lineId field is set.
        */
       @java.lang.Override
@@ -1795,7 +1795,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string line_id = 2;</code>
+       * <code>string line_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The lineId.
        */
       @java.lang.Override
@@ -1821,7 +1821,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string line_id = 2;</code>
+       * <code>string line_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for lineId.
        */
       @java.lang.Override
@@ -1848,7 +1848,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string line_id = 2;</code>
+       * <code>string line_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The lineId to set.
        * @return This builder for chaining.
        */
@@ -1867,7 +1867,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string line_id = 2;</code>
+       * <code>string line_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearLineId() {
@@ -1883,7 +1883,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string line_id = 2;</code>
+       * <code>string line_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for lineId to set.
        * @return This builder for chaining.
        */
@@ -1905,7 +1905,7 @@ public final class EpisodeServiceOuterClass {
        * The maximum number of the results per page to return. Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 100;</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return The pageSize.
        */
       @java.lang.Override
@@ -1917,7 +1917,7 @@ public final class EpisodeServiceOuterClass {
        * The maximum number of the results per page to return. Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 100;</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
        */
@@ -1932,7 +1932,7 @@ public final class EpisodeServiceOuterClass {
        * The maximum number of the results per page to return. Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 100;</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageSize() {
@@ -1948,7 +1948,7 @@ public final class EpisodeServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101;</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return The pageToken.
        */
       public java.lang.String getPageToken() {
@@ -1968,7 +1968,7 @@ public final class EpisodeServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101;</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
@@ -1989,7 +1989,7 @@ public final class EpisodeServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101;</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
        */
@@ -2008,7 +2008,7 @@ public final class EpisodeServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101;</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageToken() {
@@ -2022,7 +2022,7 @@ public final class EpisodeServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101;</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
        */
@@ -2161,7 +2161,7 @@ public final class EpisodeServiceOuterClass {
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
-       * <code>string filter = 103;</code>
+       * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The filter.
        */
       public java.lang.String getFilter() {
@@ -2187,7 +2187,7 @@ public final class EpisodeServiceOuterClass {
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
-       * <code>string filter = 103;</code>
+       * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
@@ -2214,7 +2214,7 @@ public final class EpisodeServiceOuterClass {
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
-       * <code>string filter = 103;</code>
+       * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The filter to set.
        * @return This builder for chaining.
        */
@@ -2239,7 +2239,7 @@ public final class EpisodeServiceOuterClass {
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
-       * <code>string filter = 103;</code>
+       * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFilter() {
@@ -2259,7 +2259,7 @@ public final class EpisodeServiceOuterClass {
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
-       * <code>string filter = 103;</code>
+       * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The bytes for filter to set.
        * @return This builder for chaining.
        */
@@ -3418,6 +3418,1803 @@ public final class EpisodeServiceOuterClass {
 
   }
 
+  public interface BatchGetEpisodesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.BatchGetEpisodesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The channelId.
+     */
+    java.lang.String getChannelId();
+    /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for channelId.
+     */
+    com.google.protobuf.ByteString
+        getChannelIdBytes();
+
+    /**
+     * <pre>
+     * List of requested episode IDs.
+     * </pre>
+     *
+     * <code>repeated string episode_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return A list containing the episodeIds.
+     */
+    java.util.List<java.lang.String>
+        getEpisodeIdsList();
+    /**
+     * <pre>
+     * List of requested episode IDs.
+     * </pre>
+     *
+     * <code>repeated string episode_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The count of episodeIds.
+     */
+    int getEpisodeIdsCount();
+    /**
+     * <pre>
+     * List of requested episode IDs.
+     * </pre>
+     *
+     * <code>repeated string episode_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the element to return.
+     * @return The episodeIds at the given index.
+     */
+    java.lang.String getEpisodeIds(int index);
+    /**
+     * <pre>
+     * List of requested episode IDs.
+     * </pre>
+     *
+     * <code>repeated string episode_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the episodeIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getEpisodeIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.video.v1.BatchGetEpisodesRequest}
+   */
+  public static final class BatchGetEpisodesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.BatchGetEpisodesRequest)
+      BatchGetEpisodesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BatchGetEpisodesRequest.newBuilder() to construct.
+    private BatchGetEpisodesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BatchGetEpisodesRequest() {
+      channelId_ = "";
+      episodeIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BatchGetEpisodesRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BatchGetEpisodesRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              channelId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                episodeIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              episodeIds_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          episodeIds_ = episodeIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetEpisodesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetEpisodesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest.class, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest.Builder.class);
+    }
+
+    public static final int CHANNEL_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object channelId_;
+    /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The channelId.
+     */
+    @java.lang.Override
+    public java.lang.String getChannelId() {
+      java.lang.Object ref = channelId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        channelId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for channelId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChannelIdBytes() {
+      java.lang.Object ref = channelId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        channelId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EPISODE_IDS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList episodeIds_;
+    /**
+     * <pre>
+     * List of requested episode IDs.
+     * </pre>
+     *
+     * <code>repeated string episode_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return A list containing the episodeIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getEpisodeIdsList() {
+      return episodeIds_;
+    }
+    /**
+     * <pre>
+     * List of requested episode IDs.
+     * </pre>
+     *
+     * <code>repeated string episode_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The count of episodeIds.
+     */
+    public int getEpisodeIdsCount() {
+      return episodeIds_.size();
+    }
+    /**
+     * <pre>
+     * List of requested episode IDs.
+     * </pre>
+     *
+     * <code>repeated string episode_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the element to return.
+     * @return The episodeIds at the given index.
+     */
+    public java.lang.String getEpisodeIds(int index) {
+      return episodeIds_.get(index);
+    }
+    /**
+     * <pre>
+     * List of requested episode IDs.
+     * </pre>
+     *
+     * <code>repeated string episode_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the episodeIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getEpisodeIdsBytes(int index) {
+      return episodeIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(channelId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, channelId_);
+      }
+      for (int i = 0; i < episodeIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, episodeIds_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(channelId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, channelId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < episodeIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(episodeIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getEpisodeIdsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest other = (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest) obj;
+
+      if (!getChannelId()
+          .equals(other.getChannelId())) return false;
+      if (!getEpisodeIdsList()
+          .equals(other.getEpisodeIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CHANNEL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChannelId().hashCode();
+      if (getEpisodeIdsCount() > 0) {
+        hash = (37 * hash) + EPISODE_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getEpisodeIdsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.video.v1.BatchGetEpisodesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.BatchGetEpisodesRequest)
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetEpisodesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetEpisodesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest.class, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        channelId_ = "";
+
+        episodeIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetEpisodesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest build() {
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest buildPartial() {
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest result = new yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.channelId_ = channelId_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          episodeIds_ = episodeIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.episodeIds_ = episodeIds_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest) {
+          return mergeFrom((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest other) {
+        if (other == yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest.getDefaultInstance()) return this;
+        if (!other.getChannelId().isEmpty()) {
+          channelId_ = other.channelId_;
+          onChanged();
+        }
+        if (!other.episodeIds_.isEmpty()) {
+          if (episodeIds_.isEmpty()) {
+            episodeIds_ = other.episodeIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureEpisodeIdsIsMutable();
+            episodeIds_.addAll(other.episodeIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object channelId_ = "";
+      /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The channelId.
+       */
+      public java.lang.String getChannelId() {
+        java.lang.Object ref = channelId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          channelId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for channelId.
+       */
+      public com.google.protobuf.ByteString
+          getChannelIdBytes() {
+        java.lang.Object ref = channelId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          channelId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The channelId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChannelId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        channelId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChannelId() {
+        
+        channelId_ = getDefaultInstance().getChannelId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for channelId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChannelIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        channelId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList episodeIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureEpisodeIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          episodeIds_ = new com.google.protobuf.LazyStringArrayList(episodeIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * List of requested episode IDs.
+       * </pre>
+       *
+       * <code>repeated string episode_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return A list containing the episodeIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getEpisodeIdsList() {
+        return episodeIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of requested episode IDs.
+       * </pre>
+       *
+       * <code>repeated string episode_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The count of episodeIds.
+       */
+      public int getEpisodeIdsCount() {
+        return episodeIds_.size();
+      }
+      /**
+       * <pre>
+       * List of requested episode IDs.
+       * </pre>
+       *
+       * <code>repeated string episode_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param index The index of the element to return.
+       * @return The episodeIds at the given index.
+       */
+      public java.lang.String getEpisodeIds(int index) {
+        return episodeIds_.get(index);
+      }
+      /**
+       * <pre>
+       * List of requested episode IDs.
+       * </pre>
+       *
+       * <code>repeated string episode_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the episodeIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getEpisodeIdsBytes(int index) {
+        return episodeIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of requested episode IDs.
+       * </pre>
+       *
+       * <code>repeated string episode_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param index The index to set the value at.
+       * @param value The episodeIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpisodeIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureEpisodeIdsIsMutable();
+        episodeIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of requested episode IDs.
+       * </pre>
+       *
+       * <code>repeated string episode_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The episodeIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addEpisodeIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureEpisodeIdsIsMutable();
+        episodeIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of requested episode IDs.
+       * </pre>
+       *
+       * <code>repeated string episode_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param values The episodeIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllEpisodeIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureEpisodeIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, episodeIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of requested episode IDs.
+       * </pre>
+       *
+       * <code>repeated string episode_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEpisodeIds() {
+        episodeIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of requested episode IDs.
+       * </pre>
+       *
+       * <code>repeated string episode_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes of the episodeIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addEpisodeIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureEpisodeIdsIsMutable();
+        episodeIds_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.BatchGetEpisodesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.BatchGetEpisodesRequest)
+    private static final yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest();
+    }
+
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BatchGetEpisodesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<BatchGetEpisodesRequest>() {
+      @java.lang.Override
+      public BatchGetEpisodesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BatchGetEpisodesRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BatchGetEpisodesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BatchGetEpisodesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BatchGetEpisodesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.BatchGetEpisodesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of episodes for specific channel.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.video.v1.EpisodeOuterClass.Episode> 
+        getEpisodesList();
+    /**
+     * <pre>
+     * List of episodes for specific channel.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+     */
+    yandex.cloud.api.video.v1.EpisodeOuterClass.Episode getEpisodes(int index);
+    /**
+     * <pre>
+     * List of episodes for specific channel.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+     */
+    int getEpisodesCount();
+    /**
+     * <pre>
+     * List of episodes for specific channel.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodeOrBuilder> 
+        getEpisodesOrBuilderList();
+    /**
+     * <pre>
+     * List of episodes for specific channel.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+     */
+    yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodeOrBuilder getEpisodesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.video.v1.BatchGetEpisodesResponse}
+   */
+  public static final class BatchGetEpisodesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.BatchGetEpisodesResponse)
+      BatchGetEpisodesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BatchGetEpisodesResponse.newBuilder() to construct.
+    private BatchGetEpisodesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BatchGetEpisodesResponse() {
+      episodes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BatchGetEpisodesResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BatchGetEpisodesResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                episodes_ = new java.util.ArrayList<yandex.cloud.api.video.v1.EpisodeOuterClass.Episode>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              episodes_.add(
+                  input.readMessage(yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          episodes_ = java.util.Collections.unmodifiableList(episodes_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetEpisodesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetEpisodesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse.class, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse.Builder.class);
+    }
+
+    public static final int EPISODES_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.video.v1.EpisodeOuterClass.Episode> episodes_;
+    /**
+     * <pre>
+     * List of episodes for specific channel.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.video.v1.EpisodeOuterClass.Episode> getEpisodesList() {
+      return episodes_;
+    }
+    /**
+     * <pre>
+     * List of episodes for specific channel.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodeOrBuilder> 
+        getEpisodesOrBuilderList() {
+      return episodes_;
+    }
+    /**
+     * <pre>
+     * List of episodes for specific channel.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+     */
+    @java.lang.Override
+    public int getEpisodesCount() {
+      return episodes_.size();
+    }
+    /**
+     * <pre>
+     * List of episodes for specific channel.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.EpisodeOuterClass.Episode getEpisodes(int index) {
+      return episodes_.get(index);
+    }
+    /**
+     * <pre>
+     * List of episodes for specific channel.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodeOrBuilder getEpisodesOrBuilder(
+        int index) {
+      return episodes_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < episodes_.size(); i++) {
+        output.writeMessage(1, episodes_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < episodes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, episodes_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse other = (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse) obj;
+
+      if (!getEpisodesList()
+          .equals(other.getEpisodesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getEpisodesCount() > 0) {
+        hash = (37 * hash) + EPISODES_FIELD_NUMBER;
+        hash = (53 * hash) + getEpisodesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.video.v1.BatchGetEpisodesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.BatchGetEpisodesResponse)
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetEpisodesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetEpisodesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse.class, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEpisodesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (episodesBuilder_ == null) {
+          episodes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          episodesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetEpisodesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse build() {
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse buildPartial() {
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse result = new yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (episodesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            episodes_ = java.util.Collections.unmodifiableList(episodes_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.episodes_ = episodes_;
+        } else {
+          result.episodes_ = episodesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse) {
+          return mergeFrom((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse other) {
+        if (other == yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse.getDefaultInstance()) return this;
+        if (episodesBuilder_ == null) {
+          if (!other.episodes_.isEmpty()) {
+            if (episodes_.isEmpty()) {
+              episodes_ = other.episodes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEpisodesIsMutable();
+              episodes_.addAll(other.episodes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.episodes_.isEmpty()) {
+            if (episodesBuilder_.isEmpty()) {
+              episodesBuilder_.dispose();
+              episodesBuilder_ = null;
+              episodes_ = other.episodes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              episodesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEpisodesFieldBuilder() : null;
+            } else {
+              episodesBuilder_.addAllMessages(other.episodes_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.video.v1.EpisodeOuterClass.Episode> episodes_ =
+        java.util.Collections.emptyList();
+      private void ensureEpisodesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          episodes_ = new java.util.ArrayList<yandex.cloud.api.video.v1.EpisodeOuterClass.Episode>(episodes_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.video.v1.EpisodeOuterClass.Episode, yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.Builder, yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodeOrBuilder> episodesBuilder_;
+
+      /**
+       * <pre>
+       * List of episodes for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.video.v1.EpisodeOuterClass.Episode> getEpisodesList() {
+        if (episodesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(episodes_);
+        } else {
+          return episodesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of episodes for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+       */
+      public int getEpisodesCount() {
+        if (episodesBuilder_ == null) {
+          return episodes_.size();
+        } else {
+          return episodesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of episodes for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+       */
+      public yandex.cloud.api.video.v1.EpisodeOuterClass.Episode getEpisodes(int index) {
+        if (episodesBuilder_ == null) {
+          return episodes_.get(index);
+        } else {
+          return episodesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of episodes for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+       */
+      public Builder setEpisodes(
+          int index, yandex.cloud.api.video.v1.EpisodeOuterClass.Episode value) {
+        if (episodesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEpisodesIsMutable();
+          episodes_.set(index, value);
+          onChanged();
+        } else {
+          episodesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of episodes for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+       */
+      public Builder setEpisodes(
+          int index, yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.Builder builderForValue) {
+        if (episodesBuilder_ == null) {
+          ensureEpisodesIsMutable();
+          episodes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          episodesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of episodes for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+       */
+      public Builder addEpisodes(yandex.cloud.api.video.v1.EpisodeOuterClass.Episode value) {
+        if (episodesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEpisodesIsMutable();
+          episodes_.add(value);
+          onChanged();
+        } else {
+          episodesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of episodes for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+       */
+      public Builder addEpisodes(
+          int index, yandex.cloud.api.video.v1.EpisodeOuterClass.Episode value) {
+        if (episodesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEpisodesIsMutable();
+          episodes_.add(index, value);
+          onChanged();
+        } else {
+          episodesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of episodes for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+       */
+      public Builder addEpisodes(
+          yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.Builder builderForValue) {
+        if (episodesBuilder_ == null) {
+          ensureEpisodesIsMutable();
+          episodes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          episodesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of episodes for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+       */
+      public Builder addEpisodes(
+          int index, yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.Builder builderForValue) {
+        if (episodesBuilder_ == null) {
+          ensureEpisodesIsMutable();
+          episodes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          episodesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of episodes for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+       */
+      public Builder addAllEpisodes(
+          java.lang.Iterable<? extends yandex.cloud.api.video.v1.EpisodeOuterClass.Episode> values) {
+        if (episodesBuilder_ == null) {
+          ensureEpisodesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, episodes_);
+          onChanged();
+        } else {
+          episodesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of episodes for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+       */
+      public Builder clearEpisodes() {
+        if (episodesBuilder_ == null) {
+          episodes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          episodesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of episodes for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+       */
+      public Builder removeEpisodes(int index) {
+        if (episodesBuilder_ == null) {
+          ensureEpisodesIsMutable();
+          episodes_.remove(index);
+          onChanged();
+        } else {
+          episodesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of episodes for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+       */
+      public yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.Builder getEpisodesBuilder(
+          int index) {
+        return getEpisodesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of episodes for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+       */
+      public yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodeOrBuilder getEpisodesOrBuilder(
+          int index) {
+        if (episodesBuilder_ == null) {
+          return episodes_.get(index);  } else {
+          return episodesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of episodes for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodeOrBuilder> 
+           getEpisodesOrBuilderList() {
+        if (episodesBuilder_ != null) {
+          return episodesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(episodes_);
+        }
+      }
+      /**
+       * <pre>
+       * List of episodes for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+       */
+      public yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.Builder addEpisodesBuilder() {
+        return getEpisodesFieldBuilder().addBuilder(
+            yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of episodes for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+       */
+      public yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.Builder addEpisodesBuilder(
+          int index) {
+        return getEpisodesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of episodes for specific channel.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.Builder> 
+           getEpisodesBuilderList() {
+        return getEpisodesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.video.v1.EpisodeOuterClass.Episode, yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.Builder, yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodeOrBuilder> 
+          getEpisodesFieldBuilder() {
+        if (episodesBuilder_ == null) {
+          episodesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.video.v1.EpisodeOuterClass.Episode, yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.Builder, yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodeOrBuilder>(
+                  episodes_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          episodes_ = null;
+        }
+        return episodesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.BatchGetEpisodesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.BatchGetEpisodesResponse)
+    private static final yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse();
+    }
+
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BatchGetEpisodesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<BatchGetEpisodesResponse>() {
+      @java.lang.Override
+      public BatchGetEpisodesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BatchGetEpisodesResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BatchGetEpisodesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BatchGetEpisodesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CreateEpisodeRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.CreateEpisodeRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -3427,7 +5224,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the stream.
      * </pre>
      *
-     * <code>string stream_id = 100;</code>
+     * <code>string stream_id = 100 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return Whether the streamId field is set.
      */
     boolean hasStreamId();
@@ -3436,7 +5233,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the stream.
      * </pre>
      *
-     * <code>string stream_id = 100;</code>
+     * <code>string stream_id = 100 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The streamId.
      */
     java.lang.String getStreamId();
@@ -3445,7 +5242,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the stream.
      * </pre>
      *
-     * <code>string stream_id = 100;</code>
+     * <code>string stream_id = 100 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for streamId.
      */
     com.google.protobuf.ByteString
@@ -3456,7 +5253,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string line_id = 101;</code>
+     * <code>string line_id = 101 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return Whether the lineId field is set.
      */
     boolean hasLineId();
@@ -3465,7 +5262,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string line_id = 101;</code>
+     * <code>string line_id = 101 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The lineId.
      */
     java.lang.String getLineId();
@@ -3474,7 +5271,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string line_id = 101;</code>
+     * <code>string line_id = 101 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for lineId.
      */
     com.google.protobuf.ByteString
@@ -3485,7 +5282,7 @@ public final class EpisodeServiceOuterClass {
      * Episode title.
      * </pre>
      *
-     * <code>string title = 2;</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
      * @return The title.
      */
     java.lang.String getTitle();
@@ -3494,7 +5291,7 @@ public final class EpisodeServiceOuterClass {
      * Episode title.
      * </pre>
      *
-     * <code>string title = 2;</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for title.
      */
     com.google.protobuf.ByteString
@@ -3525,7 +5322,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the thumbnail.
      * </pre>
      *
-     * <code>string thumbnail_id = 4;</code>
+     * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The thumbnailId.
      */
     java.lang.String getThumbnailId();
@@ -3534,7 +5331,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the thumbnail.
      * </pre>
      *
-     * <code>string thumbnail_id = 4;</code>
+     * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for thumbnailId.
      */
     com.google.protobuf.ByteString
@@ -3660,6 +5457,33 @@ public final class EpisodeServiceOuterClass {
      * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
      */
     yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParamsOrBuilder getAuthSystemAccessOrBuilder();
+
+    /**
+     * <pre>
+     * Checking access rights using url's signature.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+     * @return Whether the signUrlAccess field is set.
+     */
+    boolean hasSignUrlAccess();
+    /**
+     * <pre>
+     * Checking access rights using url's signature.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+     * @return The signUrlAccess.
+     */
+    yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams getSignUrlAccess();
+    /**
+     * <pre>
+     * Checking access rights using url's signature.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+     */
+    yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParamsOrBuilder getSignUrlAccessOrBuilder();
 
     public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.CreateEpisodeRequest.ParentIdCase getParentIdCase();
 
@@ -3802,6 +5626,20 @@ public final class EpisodeServiceOuterClass {
               accessRightsCase_ = 1002;
               break;
             }
+            case 8026: {
+              yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.Builder subBuilder = null;
+              if (accessRightsCase_ == 1003) {
+                subBuilder = ((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams) accessRights_).toBuilder();
+              }
+              accessRights_ =
+                  input.readMessage(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams) accessRights_);
+                accessRights_ = subBuilder.buildPartial();
+              }
+              accessRightsCase_ = 1003;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3882,6 +5720,7 @@ public final class EpisodeServiceOuterClass {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       PUBLIC_ACCESS(1000),
       AUTH_SYSTEM_ACCESS(1002),
+      SIGN_URL_ACCESS(1003),
       ACCESSRIGHTS_NOT_SET(0);
       private final int value;
       private AccessRightsCase(int value) {
@@ -3901,6 +5740,7 @@ public final class EpisodeServiceOuterClass {
         switch (value) {
           case 1000: return PUBLIC_ACCESS;
           case 1002: return AUTH_SYSTEM_ACCESS;
+          case 1003: return SIGN_URL_ACCESS;
           case 0: return ACCESSRIGHTS_NOT_SET;
           default: return null;
         }
@@ -3922,7 +5762,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the stream.
      * </pre>
      *
-     * <code>string stream_id = 100;</code>
+     * <code>string stream_id = 100 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return Whether the streamId field is set.
      */
     public boolean hasStreamId() {
@@ -3933,7 +5773,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the stream.
      * </pre>
      *
-     * <code>string stream_id = 100;</code>
+     * <code>string stream_id = 100 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The streamId.
      */
     public java.lang.String getStreamId() {
@@ -3958,7 +5798,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the stream.
      * </pre>
      *
-     * <code>string stream_id = 100;</code>
+     * <code>string stream_id = 100 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for streamId.
      */
     public com.google.protobuf.ByteString
@@ -3986,7 +5826,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string line_id = 101;</code>
+     * <code>string line_id = 101 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return Whether the lineId field is set.
      */
     public boolean hasLineId() {
@@ -3997,7 +5837,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string line_id = 101;</code>
+     * <code>string line_id = 101 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The lineId.
      */
     public java.lang.String getLineId() {
@@ -4022,7 +5862,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the line.
      * </pre>
      *
-     * <code>string line_id = 101;</code>
+     * <code>string line_id = 101 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for lineId.
      */
     public com.google.protobuf.ByteString
@@ -4051,7 +5891,7 @@ public final class EpisodeServiceOuterClass {
      * Episode title.
      * </pre>
      *
-     * <code>string title = 2;</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
      * @return The title.
      */
     @java.lang.Override
@@ -4072,7 +5912,7 @@ public final class EpisodeServiceOuterClass {
      * Episode title.
      * </pre>
      *
-     * <code>string title = 2;</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for title.
      */
     @java.lang.Override
@@ -4143,7 +5983,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the thumbnail.
      * </pre>
      *
-     * <code>string thumbnail_id = 4;</code>
+     * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The thumbnailId.
      */
     @java.lang.Override
@@ -4164,7 +6004,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the thumbnail.
      * </pre>
      *
-     * <code>string thumbnail_id = 4;</code>
+     * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for thumbnailId.
      */
     @java.lang.Override
@@ -4362,6 +6202,49 @@ public final class EpisodeServiceOuterClass {
       return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.getDefaultInstance();
     }
 
+    public static final int SIGN_URL_ACCESS_FIELD_NUMBER = 1003;
+    /**
+     * <pre>
+     * Checking access rights using url's signature.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+     * @return Whether the signUrlAccess field is set.
+     */
+    @java.lang.Override
+    public boolean hasSignUrlAccess() {
+      return accessRightsCase_ == 1003;
+    }
+    /**
+     * <pre>
+     * Checking access rights using url's signature.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+     * @return The signUrlAccess.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams getSignUrlAccess() {
+      if (accessRightsCase_ == 1003) {
+         return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams) accessRights_;
+      }
+      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Checking access rights using url's signature.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParamsOrBuilder getSignUrlAccessOrBuilder() {
+      if (accessRightsCase_ == 1003) {
+         return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams) accessRights_;
+      }
+      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4406,6 +6289,9 @@ public final class EpisodeServiceOuterClass {
       if (accessRightsCase_ == 1002) {
         output.writeMessage(1002, (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) accessRights_);
       }
+      if (accessRightsCase_ == 1003) {
+        output.writeMessage(1003, (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams) accessRights_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4449,6 +6335,10 @@ public final class EpisodeServiceOuterClass {
       if (accessRightsCase_ == 1002) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1002, (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) accessRights_);
+      }
+      if (accessRightsCase_ == 1003) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1003, (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams) accessRights_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4506,6 +6396,10 @@ public final class EpisodeServiceOuterClass {
           if (!getAuthSystemAccess()
               .equals(other.getAuthSystemAccess())) return false;
           break;
+        case 1003:
+          if (!getSignUrlAccess()
+              .equals(other.getSignUrlAccess())) return false;
+          break;
         case 0:
         default:
       }
@@ -4557,6 +6451,10 @@ public final class EpisodeServiceOuterClass {
         case 1002:
           hash = (37 * hash) + AUTH_SYSTEM_ACCESS_FIELD_NUMBER;
           hash = (53 * hash) + getAuthSystemAccess().hashCode();
+          break;
+        case 1003:
+          hash = (37 * hash) + SIGN_URL_ACCESS_FIELD_NUMBER;
+          hash = (53 * hash) + getSignUrlAccess().hashCode();
           break;
         case 0:
         default:
@@ -4778,6 +6676,13 @@ public final class EpisodeServiceOuterClass {
             result.accessRights_ = authSystemAccessBuilder_.build();
           }
         }
+        if (accessRightsCase_ == 1003) {
+          if (signUrlAccessBuilder_ == null) {
+            result.accessRights_ = accessRights_;
+          } else {
+            result.accessRights_ = signUrlAccessBuilder_.build();
+          }
+        }
         result.parentIdCase_ = parentIdCase_;
         result.accessRightsCase_ = accessRightsCase_;
         onBuilt();
@@ -4875,6 +6780,10 @@ public final class EpisodeServiceOuterClass {
             mergeAuthSystemAccess(other.getAuthSystemAccess());
             break;
           }
+          case SIGN_URL_ACCESS: {
+            mergeSignUrlAccess(other.getSignUrlAccess());
+            break;
+          }
           case ACCESSRIGHTS_NOT_SET: {
             break;
           }
@@ -4943,7 +6852,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the stream.
        * </pre>
        *
-       * <code>string stream_id = 100;</code>
+       * <code>string stream_id = 100 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return Whether the streamId field is set.
        */
       @java.lang.Override
@@ -4955,7 +6864,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the stream.
        * </pre>
        *
-       * <code>string stream_id = 100;</code>
+       * <code>string stream_id = 100 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The streamId.
        */
       @java.lang.Override
@@ -4981,7 +6890,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the stream.
        * </pre>
        *
-       * <code>string stream_id = 100;</code>
+       * <code>string stream_id = 100 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for streamId.
        */
       @java.lang.Override
@@ -5008,7 +6917,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the stream.
        * </pre>
        *
-       * <code>string stream_id = 100;</code>
+       * <code>string stream_id = 100 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The streamId to set.
        * @return This builder for chaining.
        */
@@ -5027,7 +6936,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the stream.
        * </pre>
        *
-       * <code>string stream_id = 100;</code>
+       * <code>string stream_id = 100 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStreamId() {
@@ -5043,7 +6952,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the stream.
        * </pre>
        *
-       * <code>string stream_id = 100;</code>
+       * <code>string stream_id = 100 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for streamId to set.
        * @return This builder for chaining.
        */
@@ -5064,7 +6973,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string line_id = 101;</code>
+       * <code>string line_id = 101 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return Whether the lineId field is set.
        */
       @java.lang.Override
@@ -5076,7 +6985,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string line_id = 101;</code>
+       * <code>string line_id = 101 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The lineId.
        */
       @java.lang.Override
@@ -5102,7 +7011,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string line_id = 101;</code>
+       * <code>string line_id = 101 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for lineId.
        */
       @java.lang.Override
@@ -5129,7 +7038,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string line_id = 101;</code>
+       * <code>string line_id = 101 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The lineId to set.
        * @return This builder for chaining.
        */
@@ -5148,7 +7057,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string line_id = 101;</code>
+       * <code>string line_id = 101 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearLineId() {
@@ -5164,7 +7073,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the line.
        * </pre>
        *
-       * <code>string line_id = 101;</code>
+       * <code>string line_id = 101 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for lineId to set.
        * @return This builder for chaining.
        */
@@ -5186,7 +7095,7 @@ public final class EpisodeServiceOuterClass {
        * Episode title.
        * </pre>
        *
-       * <code>string title = 2;</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
        * @return The title.
        */
       public java.lang.String getTitle() {
@@ -5206,7 +7115,7 @@ public final class EpisodeServiceOuterClass {
        * Episode title.
        * </pre>
        *
-       * <code>string title = 2;</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
@@ -5227,7 +7136,7 @@ public final class EpisodeServiceOuterClass {
        * Episode title.
        * </pre>
        *
-       * <code>string title = 2;</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The title to set.
        * @return This builder for chaining.
        */
@@ -5246,7 +7155,7 @@ public final class EpisodeServiceOuterClass {
        * Episode title.
        * </pre>
        *
-       * <code>string title = 2;</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearTitle() {
@@ -5260,7 +7169,7 @@ public final class EpisodeServiceOuterClass {
        * Episode title.
        * </pre>
        *
-       * <code>string title = 2;</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
        */
@@ -5378,7 +7287,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the thumbnail.
        * </pre>
        *
-       * <code>string thumbnail_id = 4;</code>
+       * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The thumbnailId.
        */
       public java.lang.String getThumbnailId() {
@@ -5398,7 +7307,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the thumbnail.
        * </pre>
        *
-       * <code>string thumbnail_id = 4;</code>
+       * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for thumbnailId.
        */
       public com.google.protobuf.ByteString
@@ -5419,7 +7328,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the thumbnail.
        * </pre>
        *
-       * <code>string thumbnail_id = 4;</code>
+       * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The thumbnailId to set.
        * @return This builder for chaining.
        */
@@ -5438,7 +7347,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the thumbnail.
        * </pre>
        *
-       * <code>string thumbnail_id = 4;</code>
+       * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearThumbnailId() {
@@ -5452,7 +7361,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the thumbnail.
        * </pre>
        *
-       * <code>string thumbnail_id = 4;</code>
+       * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for thumbnailId to set.
        * @return This builder for chaining.
        */
@@ -6182,6 +8091,183 @@ public final class EpisodeServiceOuterClass {
         accessRightsCase_ = 1002;
         onChanged();;
         return authSystemAccessBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParamsOrBuilder> signUrlAccessBuilder_;
+      /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+       * @return Whether the signUrlAccess field is set.
+       */
+      @java.lang.Override
+      public boolean hasSignUrlAccess() {
+        return accessRightsCase_ == 1003;
+      }
+      /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+       * @return The signUrlAccess.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams getSignUrlAccess() {
+        if (signUrlAccessBuilder_ == null) {
+          if (accessRightsCase_ == 1003) {
+            return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams) accessRights_;
+          }
+          return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.getDefaultInstance();
+        } else {
+          if (accessRightsCase_ == 1003) {
+            return signUrlAccessBuilder_.getMessage();
+          }
+          return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+       */
+      public Builder setSignUrlAccess(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams value) {
+        if (signUrlAccessBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          accessRights_ = value;
+          onChanged();
+        } else {
+          signUrlAccessBuilder_.setMessage(value);
+        }
+        accessRightsCase_ = 1003;
+        return this;
+      }
+      /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+       */
+      public Builder setSignUrlAccess(
+          yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.Builder builderForValue) {
+        if (signUrlAccessBuilder_ == null) {
+          accessRights_ = builderForValue.build();
+          onChanged();
+        } else {
+          signUrlAccessBuilder_.setMessage(builderForValue.build());
+        }
+        accessRightsCase_ = 1003;
+        return this;
+      }
+      /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+       */
+      public Builder mergeSignUrlAccess(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams value) {
+        if (signUrlAccessBuilder_ == null) {
+          if (accessRightsCase_ == 1003 &&
+              accessRights_ != yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.getDefaultInstance()) {
+            accessRights_ = yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.newBuilder((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams) accessRights_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            accessRights_ = value;
+          }
+          onChanged();
+        } else {
+          if (accessRightsCase_ == 1003) {
+            signUrlAccessBuilder_.mergeFrom(value);
+          }
+          signUrlAccessBuilder_.setMessage(value);
+        }
+        accessRightsCase_ = 1003;
+        return this;
+      }
+      /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+       */
+      public Builder clearSignUrlAccess() {
+        if (signUrlAccessBuilder_ == null) {
+          if (accessRightsCase_ == 1003) {
+            accessRightsCase_ = 0;
+            accessRights_ = null;
+            onChanged();
+          }
+        } else {
+          if (accessRightsCase_ == 1003) {
+            accessRightsCase_ = 0;
+            accessRights_ = null;
+          }
+          signUrlAccessBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+       */
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.Builder getSignUrlAccessBuilder() {
+        return getSignUrlAccessFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParamsOrBuilder getSignUrlAccessOrBuilder() {
+        if ((accessRightsCase_ == 1003) && (signUrlAccessBuilder_ != null)) {
+          return signUrlAccessBuilder_.getMessageOrBuilder();
+        } else {
+          if (accessRightsCase_ == 1003) {
+            return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams) accessRights_;
+          }
+          return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParamsOrBuilder> 
+          getSignUrlAccessFieldBuilder() {
+        if (signUrlAccessBuilder_ == null) {
+          if (!(accessRightsCase_ == 1003)) {
+            accessRights_ = yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.getDefaultInstance();
+          }
+          signUrlAccessBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParamsOrBuilder>(
+                  (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams) accessRights_,
+                  getParentForChildren(),
+                  isClean());
+          accessRights_ = null;
+        }
+        accessRightsCase_ = 1003;
+        onChanged();;
+        return signUrlAccessBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7072,6 +9158,424 @@ public final class EpisodeServiceOuterClass {
 
   }
 
+  public interface EpisodeSignURLAccessParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.EpisodeSignURLAccessParams)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.video.v1.EpisodeSignURLAccessParams}
+   */
+  public static final class EpisodeSignURLAccessParams extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.EpisodeSignURLAccessParams)
+      EpisodeSignURLAccessParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EpisodeSignURLAccessParams.newBuilder() to construct.
+    private EpisodeSignURLAccessParams(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EpisodeSignURLAccessParams() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EpisodeSignURLAccessParams();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EpisodeSignURLAccessParams(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_EpisodeSignURLAccessParams_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_EpisodeSignURLAccessParams_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.class, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams other = (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.video.v1.EpisodeSignURLAccessParams}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.EpisodeSignURLAccessParams)
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_EpisodeSignURLAccessParams_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_EpisodeSignURLAccessParams_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.class, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_EpisodeSignURLAccessParams_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams getDefaultInstanceForType() {
+        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams build() {
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams buildPartial() {
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams result = new yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams) {
+          return mergeFrom((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams other) {
+        if (other == yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.EpisodeSignURLAccessParams)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.EpisodeSignURLAccessParams)
+    private static final yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams();
+    }
+
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EpisodeSignURLAccessParams>
+        PARSER = new com.google.protobuf.AbstractParser<EpisodeSignURLAccessParams>() {
+      @java.lang.Override
+      public EpisodeSignURLAccessParams parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EpisodeSignURLAccessParams(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EpisodeSignURLAccessParams> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EpisodeSignURLAccessParams> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CreateEpisodeMetadataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.CreateEpisodeMetadata)
       com.google.protobuf.MessageOrBuilder {
@@ -7685,7 +10189,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the episode.
      * </pre>
      *
-     * <code>string episode_id = 1;</code>
+     * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The episodeId.
      */
     java.lang.String getEpisodeId();
@@ -7694,7 +10198,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the episode.
      * </pre>
      *
-     * <code>string episode_id = 1;</code>
+     * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for episodeId.
      */
     com.google.protobuf.ByteString
@@ -7772,7 +10276,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the thumbnail.
      * </pre>
      *
-     * <code>string thumbnail_id = 5;</code>
+     * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The thumbnailId.
      */
     java.lang.String getThumbnailId();
@@ -7781,7 +10285,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the thumbnail.
      * </pre>
      *
-     * <code>string thumbnail_id = 5;</code>
+     * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for thumbnailId.
      */
     com.google.protobuf.ByteString
@@ -7895,6 +10399,33 @@ public final class EpisodeServiceOuterClass {
      * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
      */
     yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParamsOrBuilder getAuthSystemAccessOrBuilder();
+
+    /**
+     * <pre>
+     * Checking access rights using url's signature.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+     * @return Whether the signUrlAccess field is set.
+     */
+    boolean hasSignUrlAccess();
+    /**
+     * <pre>
+     * Checking access rights using url's signature.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+     * @return The signUrlAccess.
+     */
+    yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams getSignUrlAccess();
+    /**
+     * <pre>
+     * Checking access rights using url's signature.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+     */
+    yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParamsOrBuilder getSignUrlAccessOrBuilder();
 
     public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UpdateEpisodeRequest.AccessRightsCase getAccessRightsCase();
   }
@@ -8043,6 +10574,20 @@ public final class EpisodeServiceOuterClass {
               accessRightsCase_ = 1002;
               break;
             }
+            case 8026: {
+              yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.Builder subBuilder = null;
+              if (accessRightsCase_ == 1003) {
+                subBuilder = ((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams) accessRights_).toBuilder();
+              }
+              accessRights_ =
+                  input.readMessage(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams) accessRights_);
+                accessRights_ = subBuilder.buildPartial();
+              }
+              accessRightsCase_ = 1003;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -8082,6 +10627,7 @@ public final class EpisodeServiceOuterClass {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       PUBLIC_ACCESS(1000),
       AUTH_SYSTEM_ACCESS(1002),
+      SIGN_URL_ACCESS(1003),
       ACCESSRIGHTS_NOT_SET(0);
       private final int value;
       private AccessRightsCase(int value) {
@@ -8101,6 +10647,7 @@ public final class EpisodeServiceOuterClass {
         switch (value) {
           case 1000: return PUBLIC_ACCESS;
           case 1002: return AUTH_SYSTEM_ACCESS;
+          case 1003: return SIGN_URL_ACCESS;
           case 0: return ACCESSRIGHTS_NOT_SET;
           default: return null;
         }
@@ -8123,7 +10670,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the episode.
      * </pre>
      *
-     * <code>string episode_id = 1;</code>
+     * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The episodeId.
      */
     @java.lang.Override
@@ -8144,7 +10691,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the episode.
      * </pre>
      *
-     * <code>string episode_id = 1;</code>
+     * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for episodeId.
      */
     @java.lang.Override
@@ -8299,7 +10846,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the thumbnail.
      * </pre>
      *
-     * <code>string thumbnail_id = 5;</code>
+     * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The thumbnailId.
      */
     @java.lang.Override
@@ -8320,7 +10867,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the thumbnail.
      * </pre>
      *
-     * <code>string thumbnail_id = 5;</code>
+     * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for thumbnailId.
      */
     @java.lang.Override
@@ -8506,6 +11053,49 @@ public final class EpisodeServiceOuterClass {
       return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.getDefaultInstance();
     }
 
+    public static final int SIGN_URL_ACCESS_FIELD_NUMBER = 1003;
+    /**
+     * <pre>
+     * Checking access rights using url's signature.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+     * @return Whether the signUrlAccess field is set.
+     */
+    @java.lang.Override
+    public boolean hasSignUrlAccess() {
+      return accessRightsCase_ == 1003;
+    }
+    /**
+     * <pre>
+     * Checking access rights using url's signature.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+     * @return The signUrlAccess.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams getSignUrlAccess() {
+      if (accessRightsCase_ == 1003) {
+         return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams) accessRights_;
+      }
+      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Checking access rights using url's signature.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParamsOrBuilder getSignUrlAccessOrBuilder() {
+      if (accessRightsCase_ == 1003) {
+         return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams) accessRights_;
+      }
+      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8549,6 +11139,9 @@ public final class EpisodeServiceOuterClass {
       }
       if (accessRightsCase_ == 1002) {
         output.writeMessage(1002, (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) accessRights_);
+      }
+      if (accessRightsCase_ == 1003) {
+        output.writeMessage(1003, (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams) accessRights_);
       }
       unknownFields.writeTo(output);
     }
@@ -8594,6 +11187,10 @@ public final class EpisodeServiceOuterClass {
       if (accessRightsCase_ == 1002) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1002, (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) accessRights_);
+      }
+      if (accessRightsCase_ == 1003) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1003, (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams) accessRights_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8645,6 +11242,10 @@ public final class EpisodeServiceOuterClass {
           if (!getAuthSystemAccess()
               .equals(other.getAuthSystemAccess())) return false;
           break;
+        case 1003:
+          if (!getSignUrlAccess()
+              .equals(other.getSignUrlAccess())) return false;
+          break;
         case 0:
         default:
       }
@@ -8690,6 +11291,10 @@ public final class EpisodeServiceOuterClass {
         case 1002:
           hash = (37 * hash) + AUTH_SYSTEM_ACCESS_FIELD_NUMBER;
           hash = (53 * hash) + getAuthSystemAccess().hashCode();
+          break;
+        case 1003:
+          hash = (37 * hash) + SIGN_URL_ACCESS_FIELD_NUMBER;
+          hash = (53 * hash) + getSignUrlAccess().hashCode();
           break;
         case 0:
         default:
@@ -8917,6 +11522,13 @@ public final class EpisodeServiceOuterClass {
             result.accessRights_ = authSystemAccessBuilder_.build();
           }
         }
+        if (accessRightsCase_ == 1003) {
+          if (signUrlAccessBuilder_ == null) {
+            result.accessRights_ = accessRights_;
+          } else {
+            result.accessRights_ = signUrlAccessBuilder_.build();
+          }
+        }
         result.accessRightsCase_ = accessRightsCase_;
         onBuilt();
         return result;
@@ -9003,6 +11615,10 @@ public final class EpisodeServiceOuterClass {
             mergeAuthSystemAccess(other.getAuthSystemAccess());
             break;
           }
+          case SIGN_URL_ACCESS: {
+            mergeSignUrlAccess(other.getSignUrlAccess());
+            break;
+          }
           case ACCESSRIGHTS_NOT_SET: {
             break;
           }
@@ -9057,7 +11673,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The episodeId.
        */
       public java.lang.String getEpisodeId() {
@@ -9077,7 +11693,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for episodeId.
        */
       public com.google.protobuf.ByteString
@@ -9098,7 +11714,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The episodeId to set.
        * @return This builder for chaining.
        */
@@ -9117,7 +11733,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearEpisodeId() {
@@ -9131,7 +11747,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for episodeId to set.
        * @return This builder for chaining.
        */
@@ -9500,7 +12116,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the thumbnail.
        * </pre>
        *
-       * <code>string thumbnail_id = 5;</code>
+       * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The thumbnailId.
        */
       public java.lang.String getThumbnailId() {
@@ -9520,7 +12136,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the thumbnail.
        * </pre>
        *
-       * <code>string thumbnail_id = 5;</code>
+       * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for thumbnailId.
        */
       public com.google.protobuf.ByteString
@@ -9541,7 +12157,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the thumbnail.
        * </pre>
        *
-       * <code>string thumbnail_id = 5;</code>
+       * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The thumbnailId to set.
        * @return This builder for chaining.
        */
@@ -9560,7 +12176,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the thumbnail.
        * </pre>
        *
-       * <code>string thumbnail_id = 5;</code>
+       * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearThumbnailId() {
@@ -9574,7 +12190,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the thumbnail.
        * </pre>
        *
-       * <code>string thumbnail_id = 5;</code>
+       * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for thumbnailId to set.
        * @return This builder for chaining.
        */
@@ -10269,6 +12885,183 @@ public final class EpisodeServiceOuterClass {
         onChanged();;
         return authSystemAccessBuilder_;
       }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParamsOrBuilder> signUrlAccessBuilder_;
+      /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+       * @return Whether the signUrlAccess field is set.
+       */
+      @java.lang.Override
+      public boolean hasSignUrlAccess() {
+        return accessRightsCase_ == 1003;
+      }
+      /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+       * @return The signUrlAccess.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams getSignUrlAccess() {
+        if (signUrlAccessBuilder_ == null) {
+          if (accessRightsCase_ == 1003) {
+            return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams) accessRights_;
+          }
+          return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.getDefaultInstance();
+        } else {
+          if (accessRightsCase_ == 1003) {
+            return signUrlAccessBuilder_.getMessage();
+          }
+          return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+       */
+      public Builder setSignUrlAccess(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams value) {
+        if (signUrlAccessBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          accessRights_ = value;
+          onChanged();
+        } else {
+          signUrlAccessBuilder_.setMessage(value);
+        }
+        accessRightsCase_ = 1003;
+        return this;
+      }
+      /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+       */
+      public Builder setSignUrlAccess(
+          yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.Builder builderForValue) {
+        if (signUrlAccessBuilder_ == null) {
+          accessRights_ = builderForValue.build();
+          onChanged();
+        } else {
+          signUrlAccessBuilder_.setMessage(builderForValue.build());
+        }
+        accessRightsCase_ = 1003;
+        return this;
+      }
+      /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+       */
+      public Builder mergeSignUrlAccess(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams value) {
+        if (signUrlAccessBuilder_ == null) {
+          if (accessRightsCase_ == 1003 &&
+              accessRights_ != yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.getDefaultInstance()) {
+            accessRights_ = yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.newBuilder((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams) accessRights_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            accessRights_ = value;
+          }
+          onChanged();
+        } else {
+          if (accessRightsCase_ == 1003) {
+            signUrlAccessBuilder_.mergeFrom(value);
+          }
+          signUrlAccessBuilder_.setMessage(value);
+        }
+        accessRightsCase_ = 1003;
+        return this;
+      }
+      /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+       */
+      public Builder clearSignUrlAccess() {
+        if (signUrlAccessBuilder_ == null) {
+          if (accessRightsCase_ == 1003) {
+            accessRightsCase_ = 0;
+            accessRights_ = null;
+            onChanged();
+          }
+        } else {
+          if (accessRightsCase_ == 1003) {
+            accessRightsCase_ = 0;
+            accessRights_ = null;
+          }
+          signUrlAccessBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+       */
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.Builder getSignUrlAccessBuilder() {
+        return getSignUrlAccessFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParamsOrBuilder getSignUrlAccessOrBuilder() {
+        if ((accessRightsCase_ == 1003) && (signUrlAccessBuilder_ != null)) {
+          return signUrlAccessBuilder_.getMessageOrBuilder();
+        } else {
+          if (accessRightsCase_ == 1003) {
+            return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams) accessRights_;
+          }
+          return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.EpisodeSignURLAccessParams sign_url_access = 1003;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParamsOrBuilder> 
+          getSignUrlAccessFieldBuilder() {
+        if (signUrlAccessBuilder_ == null) {
+          if (!(accessRightsCase_ == 1003)) {
+            accessRights_ = yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.getDefaultInstance();
+          }
+          signUrlAccessBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParamsOrBuilder>(
+                  (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeSignURLAccessParams) accessRights_,
+                  getParentForChildren(),
+                  isClean());
+          accessRights_ = null;
+        }
+        accessRightsCase_ = 1003;
+        onChanged();;
+        return signUrlAccessBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -10935,7 +13728,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the episode.
      * </pre>
      *
-     * <code>string episode_id = 1;</code>
+     * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The episodeId.
      */
     java.lang.String getEpisodeId();
@@ -10944,7 +13737,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the episode.
      * </pre>
      *
-     * <code>string episode_id = 1;</code>
+     * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for episodeId.
      */
     com.google.protobuf.ByteString
@@ -11041,7 +13834,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the episode.
      * </pre>
      *
-     * <code>string episode_id = 1;</code>
+     * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The episodeId.
      */
     @java.lang.Override
@@ -11062,7 +13855,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the episode.
      * </pre>
      *
-     * <code>string episode_id = 1;</code>
+     * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for episodeId.
      */
     @java.lang.Override
@@ -11388,7 +14181,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The episodeId.
        */
       public java.lang.String getEpisodeId() {
@@ -11408,7 +14201,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for episodeId.
        */
       public com.google.protobuf.ByteString
@@ -11429,7 +14222,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The episodeId to set.
        * @return This builder for chaining.
        */
@@ -11448,7 +14241,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearEpisodeId() {
@@ -11462,7 +14255,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for episodeId to set.
        * @return This builder for chaining.
        */
@@ -12143,7 +14936,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the episode.
      * </pre>
      *
-     * <code>string episode_id = 1;</code>
+     * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The episodeId.
      */
     java.lang.String getEpisodeId();
@@ -12152,7 +14945,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the episode.
      * </pre>
      *
-     * <code>string episode_id = 1;</code>
+     * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for episodeId.
      */
     com.google.protobuf.ByteString
@@ -12350,7 +15143,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the episode.
      * </pre>
      *
-     * <code>string episode_id = 1;</code>
+     * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The episodeId.
      */
     @java.lang.Override
@@ -12371,7 +15164,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the episode.
      * </pre>
      *
-     * <code>string episode_id = 1;</code>
+     * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for episodeId.
      */
     @java.lang.Override
@@ -12843,7 +15636,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The episodeId.
        */
       public java.lang.String getEpisodeId() {
@@ -12863,7 +15656,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for episodeId.
        */
       public com.google.protobuf.ByteString
@@ -12884,7 +15677,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The episodeId to set.
        * @return This builder for chaining.
        */
@@ -12903,7 +15696,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearEpisodeId() {
@@ -12917,7 +15710,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for episodeId to set.
        * @return This builder for chaining.
        */
@@ -14716,7 +17509,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the episode.
      * </pre>
      *
-     * <code>string episode_id = 1;</code>
+     * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The episodeId.
      */
     java.lang.String getEpisodeId();
@@ -14725,7 +17518,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the episode.
      * </pre>
      *
-     * <code>string episode_id = 1;</code>
+     * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for episodeId.
      */
     com.google.protobuf.ByteString
@@ -14850,7 +17643,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the episode.
      * </pre>
      *
-     * <code>string episode_id = 1;</code>
+     * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The episodeId.
      */
     @java.lang.Override
@@ -14871,7 +17664,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the episode.
      * </pre>
      *
-     * <code>string episode_id = 1;</code>
+     * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for episodeId.
      */
     @java.lang.Override
@@ -15253,7 +18046,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The episodeId.
        */
       public java.lang.String getEpisodeId() {
@@ -15273,7 +18066,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for episodeId.
        */
       public com.google.protobuf.ByteString
@@ -15294,7 +18087,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The episodeId to set.
        * @return This builder for chaining.
        */
@@ -15313,7 +18106,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearEpisodeId() {
@@ -15327,7 +18120,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for episodeId to set.
        * @return This builder for chaining.
        */
@@ -17004,7 +19797,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the episode.
      * </pre>
      *
-     * <code>string episode_id = 1;</code>
+     * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The episodeId.
      */
     java.lang.String getEpisodeId();
@@ -17013,7 +19806,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the episode.
      * </pre>
      *
-     * <code>string episode_id = 1;</code>
+     * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for episodeId.
      */
     com.google.protobuf.ByteString
@@ -17110,7 +19903,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the episode.
      * </pre>
      *
-     * <code>string episode_id = 1;</code>
+     * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The episodeId.
      */
     @java.lang.Override
@@ -17131,7 +19924,7 @@ public final class EpisodeServiceOuterClass {
      * ID of the episode.
      * </pre>
      *
-     * <code>string episode_id = 1;</code>
+     * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for episodeId.
      */
     @java.lang.Override
@@ -17457,7 +20250,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The episodeId.
        */
       public java.lang.String getEpisodeId() {
@@ -17477,7 +20270,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for episodeId.
        */
       public com.google.protobuf.ByteString
@@ -17498,7 +20291,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The episodeId to set.
        * @return This builder for chaining.
        */
@@ -17517,7 +20310,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearEpisodeId() {
@@ -17531,7 +20324,7 @@ public final class EpisodeServiceOuterClass {
        * ID of the episode.
        * </pre>
        *
-       * <code>string episode_id = 1;</code>
+       * <code>string episode_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for episodeId to set.
        * @return This builder for chaining.
        */
@@ -18408,6 +21201,16 @@ public final class EpisodeServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_video_v1_ListEpisodesResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_BatchGetEpisodesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_BatchGetEpisodesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_BatchGetEpisodesResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_BatchGetEpisodesResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_video_v1_CreateEpisodeRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -18422,6 +21225,11 @@ public final class EpisodeServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_video_v1_EpisodeAuthSystemAccessParams_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_EpisodeSignURLAccessParams_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_EpisodeSignURLAccessParams_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_video_v1_CreateEpisodeMetadata_descriptor;
   private static final 
@@ -18507,98 +21315,117 @@ public final class EpisodeServiceOuterClass {
       "d_mask.proto\032\037google/protobuf/timestamp." +
       "proto\032 yandex/cloud/api/operation.proto\032" +
       "&yandex/cloud/operation/operation.proto\032" +
-      "#yandex/cloud/video/v1/episode.proto\032$ya" +
-      "ndex/cloud/video/v1/manifest.proto\"\'\n\021Ge" +
-      "tEpisodeRequest\022\022\n\nepisode_id\030\001 \001(\t\"\231\001\n\023" +
-      "ListEpisodesRequest\022\023\n\tstream_id\030\001 \001(\tH\000" +
-      "\022\021\n\007line_id\030\002 \001(\tH\000\022\021\n\tpage_size\030d \001(\003\022\022" +
-      "\n\npage_token\030e \001(\t\022\020\n\010order_by\030f \001(\t\022\016\n\006" +
-      "filter\030g \001(\tB\013\n\tparent_idJ\004\010\003\020d\"g\n\024ListE" +
-      "pisodesResponse\0220\n\010episodes\030\001 \003(\0132\036.yand" +
-      "ex.cloud.video.v1.Episode\022\027\n\017next_page_t" +
-      "oken\030d \001(\tJ\004\010\002\020d\"\310\003\n\024CreateEpisodeReques" +
-      "t\022\023\n\tstream_id\030d \001(\tH\000\022\021\n\007line_id\030e \001(\tH" +
-      "\000\022\r\n\005title\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\024\n" +
-      "\014thumbnail_id\030\004 \001(\t\022.\n\nstart_time\030\005 \001(\0132" +
+      "\035yandex/cloud/validation.proto\032#yandex/c" +
+      "loud/video/v1/episode.proto\032$yandex/clou" +
+      "d/video/v1/manifest.proto\"5\n\021GetEpisodeR" +
+      "equest\022 \n\nepisode_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\"\326\001\n\023ListEpisodesRequest\022\035\n\tstream_id\030\001 " +
+      "\001(\tB\010\212\3101\004<=50H\000\022\033\n\007line_id\030\002 \001(\tB\010\212\3101\004<=" +
+      "50H\000\022\035\n\tpage_size\030d \001(\003B\n\372\3071\006<=1000\022\035\n\np" +
+      "age_token\030e \001(\tB\t\212\3101\005<=200\022\020\n\010order_by\030f" +
+      " \001(\t\022\032\n\006filter\030g \001(\tB\n\212\3101\006<=1000B\021\n\tpare" +
+      "nt_id\022\004\300\3011\001J\004\010\003\020d\"g\n\024ListEpisodesRespons" +
+      "e\0220\n\010episodes\030\001 \003(\0132\036.yandex.cloud.video" +
+      ".v1.Episode\022\027\n\017next_page_token\030d \001(\tJ\004\010\002" +
+      "\020d\"b\n\027BatchGetEpisodesRequest\022 \n\nchannel" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022%\n\013episode_ids\030\002" +
+      " \003(\tB\020\202\3101\0041-50\212\3101\004<=50\"L\n\030BatchGetEpisod" +
+      "esResponse\0220\n\010episodes\030\001 \003(\0132\036.yandex.cl" +
+      "oud.video.v1.Episode\"\307\004\n\024CreateEpisodeRe" +
+      "quest\022\035\n\tstream_id\030d \001(\tB\010\212\3101\004<=50H\000\022\033\n\007" +
+      "line_id\030e \001(\tB\010\212\3101\004<=50H\000\022\023\n\005title\030\002 \001(\t" +
+      "B\004\350\3071\001\022\023\n\013description\030\003 \001(\t\022\036\n\014thumbnail" +
+      "_id\030\004 \001(\tB\010\212\3101\004<=50\022.\n\nstart_time\030\005 \001(\0132" +
       "\032.google.protobuf.Timestamp\022/\n\013finish_ti" +
       "me\030\006 \001(\0132\032.google.protobuf.Timestamp\022\023\n\013" +
       "dvr_seconds\030\007 \001(\003\022J\n\rpublic_access\030\350\007 \001(" +
       "\01320.yandex.cloud.video.v1.EpisodePublicA" +
       "ccessParamsH\001\022S\n\022auth_system_access\030\352\007 \001" +
       "(\01324.yandex.cloud.video.v1.EpisodeAuthSy" +
-      "stemAccessParamsH\001B\013\n\tparent_idB\017\n\racces" +
-      "s_rightsJ\005\010f\020\350\007J\004\010\010\020dJ\004\010\001\020\002J\006\010\351\007\020\352\007\"\033\n\031E" +
-      "pisodePublicAccessParams\"\037\n\035EpisodeAuthS" +
-      "ystemAccessParams\"+\n\025CreateEpisodeMetada" +
-      "ta\022\022\n\nepisode_id\030\001 \001(\t\"\313\003\n\024UpdateEpisode" +
-      "Request\022\022\n\nepisode_id\030\001 \001(\t\022.\n\nfield_mas" +
-      "k\030\002 \001(\0132\032.google.protobuf.FieldMask\022\r\n\005t" +
-      "itle\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022\024\n\014thumb" +
-      "nail_id\030\005 \001(\t\022.\n\nstart_time\030\006 \001(\0132\032.goog" +
-      "le.protobuf.Timestamp\022/\n\013finish_time\030\007 \001" +
-      "(\0132\032.google.protobuf.Timestamp\022\023\n\013dvr_se" +
-      "conds\030\010 \001(\003\022J\n\rpublic_access\030\350\007 \001(\01320.ya" +
-      "ndex.cloud.video.v1.EpisodePublicAccessP" +
-      "aramsH\000\022S\n\022auth_system_access\030\352\007 \001(\01324.y" +
-      "andex.cloud.video.v1.EpisodeAuthSystemAc" +
-      "cessParamsH\000B\017\n\raccess_rightsJ\005\010\t\020\350\007J\006\010\351" +
-      "\007\020\352\007\"+\n\025UpdateEpisodeMetadata\022\022\n\nepisode" +
-      "_id\030\001 \001(\t\"*\n\024DeleteEpisodeRequest\022\022\n\nepi" +
-      "sode_id\030\001 \001(\t\"+\n\025DeleteEpisodeMetadata\022\022" +
-      "\n\nepisode_id\030\001 \001(\t\"\330\001\n\033PerformEpisodeAct" +
-      "ionRequest\022\022\n\nepisode_id\030\001 \001(\t\022?\n\007publis" +
-      "h\030\352\007 \001(\0132+.yandex.cloud.video.v1.Publish" +
-      "EpisodeActionH\000\022C\n\tunpublish\030\353\007 \001(\0132-.ya" +
-      "ndex.cloud.video.v1.UnpublishEpisodeActi" +
-      "onH\000B\010\n\006actionJ\005\010\002\020\350\007J\006\010\350\007\020\351\007J\006\010\351\007\020\352\007\"\026\n" +
-      "\024PublishEpisodeAction\"\030\n\026UnpublishEpisod" +
-      "eAction\"2\n\034PerformEpisodeActionMetadata\022" +
-      "\022\n\nepisode_id\030\001 \001(\t\"l\n\032GetEpisodePlayerU" +
-      "RLRequest\022\022\n\nepisode_id\030\001 \001(\t\022:\n\006params\030" +
-      "\002 \001(\0132*.yandex.cloud.video.v1.EpisodePla" +
-      "yerParams\"E\n\023EpisodePlayerParams\022\014\n\004mute" +
-      "\030\001 \001(\010\022\020\n\010autoplay\030\002 \001(\010\022\016\n\006hidden\030\003 \001(\010" +
-      "\"?\n\033GetEpisodePlayerURLResponse\022\022\n\nplaye" +
-      "r_url\030\001 \001(\t\022\014\n\004html\030\002 \001(\t\"0\n\032GetEpisodeM" +
-      "anifestsRequest\022\022\n\nepisode_id\030\001 \001(\t\"Q\n\033G" +
-      "etEpisodeManifestsResponse\0222\n\tmanifests\030" +
-      "\001 \003(\0132\037.yandex.cloud.video.v1.Manifest2\260" +
-      "\n\n\016EpisodeService\022x\n\003Get\022(.yandex.cloud." +
-      "video.v1.GetEpisodeRequest\032\036.yandex.clou" +
-      "d.video.v1.Episode\"\'\202\323\344\223\002!\022\037/video/v1/ep" +
-      "isodes/{episode_id}\022{\n\004List\022*.yandex.clo" +
-      "ud.video.v1.ListEpisodesRequest\032+.yandex" +
-      ".cloud.video.v1.ListEpisodesResponse\"\032\202\323" +
-      "\344\223\002\024\022\022/video/v1/episodes\022\233\001\n\006Create\022+.ya" +
-      "ndex.cloud.video.v1.CreateEpisodeRequest" +
-      "\032!.yandex.cloud.operation.Operation\"A\202\323\344" +
-      "\223\002\027\"\022/video/v1/episodes:\001*\262\322* \n\025CreateEp" +
-      "isodeMetadata\022\007Episode\022\250\001\n\006Update\022+.yand" +
-      "ex.cloud.video.v1.UpdateEpisodeRequest\032!" +
-      ".yandex.cloud.operation.Operation\"N\202\323\344\223\002" +
-      "$2\037/video/v1/episodes/{episode_id}:\001*\262\322*" +
-      " \n\025UpdateEpisodeMetadata\022\007Episode\022\263\001\n\006De" +
-      "lete\022+.yandex.cloud.video.v1.DeleteEpiso" +
-      "deRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"Y\202\323\344\223\002!*\037/video/v1/episodes/{episod" +
-      "e_id}\262\322*.\n\025DeleteEpisodeMetadata\022\025google" +
-      ".protobuf.Empty\022\313\001\n\rPerformAction\0222.yand" +
-      "ex.cloud.video.v1.PerformEpisodeActionRe" +
+      "stemAccessParamsH\001\022M\n\017sign_url_access\030\353\007" +
+      " \001(\01321.yandex.cloud.video.v1.EpisodeSign" +
+      "URLAccessParamsH\001B\021\n\tparent_id\022\004\300\3011\001B\025\n\r" +
+      "access_rights\022\004\300\3011\001J\006\010\351\007\020\352\007J\004\010\001\020\002J\004\010\010\020dJ" +
+      "\005\010f\020\350\007\"\033\n\031EpisodePublicAccessParams\"\037\n\035E" +
+      "pisodeAuthSystemAccessParams\"\034\n\032EpisodeS" +
+      "ignURLAccessParams\"+\n\025CreateEpisodeMetad" +
+      "ata\022\022\n\nepisode_id\030\001 \001(\t\"\262\004\n\024UpdateEpisod" +
+      "eRequest\022 \n\nepisode_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022.\n\nfield_mask\030\002 \001(\0132\032.google.protobuf" +
+      ".FieldMask\022\r\n\005title\030\003 \001(\t\022\023\n\013description" +
+      "\030\004 \001(\t\022\036\n\014thumbnail_id\030\005 \001(\tB\010\212\3101\004<=50\022." +
+      "\n\nstart_time\030\006 \001(\0132\032.google.protobuf.Tim" +
+      "estamp\022/\n\013finish_time\030\007 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\022\023\n\013dvr_seconds\030\010 \001(\003\022J\n\r" +
+      "public_access\030\350\007 \001(\01320.yandex.cloud.vide" +
+      "o.v1.EpisodePublicAccessParamsH\000\022S\n\022auth" +
+      "_system_access\030\352\007 \001(\01324.yandex.cloud.vid" +
+      "eo.v1.EpisodeAuthSystemAccessParamsH\000\022M\n" +
+      "\017sign_url_access\030\353\007 \001(\01321.yandex.cloud.v" +
+      "ideo.v1.EpisodeSignURLAccessParamsH\000B\017\n\r" +
+      "access_rightsJ\006\010\351\007\020\352\007J\005\010\t\020\350\007\"+\n\025UpdateEp" +
+      "isodeMetadata\022\022\n\nepisode_id\030\001 \001(\t\"8\n\024Del" +
+      "eteEpisodeRequest\022 \n\nepisode_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\"+\n\025DeleteEpisodeMetadata\022\022\n\n" +
+      "episode_id\030\001 \001(\t\"\354\001\n\033PerformEpisodeActio" +
+      "nRequest\022 \n\nepisode_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022?\n\007publish\030\352\007 \001(\0132+.yandex.cloud.vide" +
+      "o.v1.PublishEpisodeActionH\000\022C\n\tunpublish" +
+      "\030\353\007 \001(\0132-.yandex.cloud.video.v1.Unpublis" +
+      "hEpisodeActionH\000B\016\n\006action\022\004\300\3011\001J\006\010\350\007\020\351\007" +
+      "J\006\010\351\007\020\352\007J\005\010\002\020\350\007\"\026\n\024PublishEpisodeAction\"" +
+      "\030\n\026UnpublishEpisodeAction\"2\n\034PerformEpis" +
+      "odeActionMetadata\022\022\n\nepisode_id\030\001 \001(\t\"z\n" +
+      "\032GetEpisodePlayerURLRequest\022 \n\nepisode_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022:\n\006params\030\002 \001(\0132*." +
+      "yandex.cloud.video.v1.EpisodePlayerParam" +
+      "s\"E\n\023EpisodePlayerParams\022\014\n\004mute\030\001 \001(\010\022\020" +
+      "\n\010autoplay\030\002 \001(\010\022\016\n\006hidden\030\003 \001(\010\"?\n\033GetE" +
+      "pisodePlayerURLResponse\022\022\n\nplayer_url\030\001 " +
+      "\001(\t\022\014\n\004html\030\002 \001(\t\">\n\032GetEpisodeManifests" +
+      "Request\022 \n\nepisode_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\"Q\n\033GetEpisodeManifestsResponse\0222\n\tmani" +
+      "fests\030\001 \003(\0132\037.yandex.cloud.video.v1.Mani" +
+      "fest2\306\013\n\016EpisodeService\022x\n\003Get\022(.yandex." +
+      "cloud.video.v1.GetEpisodeRequest\032\036.yande" +
+      "x.cloud.video.v1.Episode\"\'\202\323\344\223\002!\022\037/video" +
+      "/v1/episodes/{episode_id}\022{\n\004List\022*.yand" +
+      "ex.cloud.video.v1.ListEpisodesRequest\032+." +
+      "yandex.cloud.video.v1.ListEpisodesRespon" +
+      "se\"\032\202\323\344\223\002\024\022\022/video/v1/episodes\022\223\001\n\010Batch" +
+      "Get\022..yandex.cloud.video.v1.BatchGetEpis" +
+      "odesRequest\032/.yandex.cloud.video.v1.Batc" +
+      "hGetEpisodesResponse\"&\202\323\344\223\002 \"\033/video/v1/" +
+      "episodes:batchGet:\001*\022\233\001\n\006Create\022+.yandex" +
+      ".cloud.video.v1.CreateEpisodeRequest\032!.y" +
+      "andex.cloud.operation.Operation\"A\202\323\344\223\002\027\"" +
+      "\022/video/v1/episodes:\001*\262\322* \n\025CreateEpisod" +
+      "eMetadata\022\007Episode\022\250\001\n\006Update\022+.yandex.c" +
+      "loud.video.v1.UpdateEpisodeRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"N\202\323\344\223\002$2\037/" +
+      "video/v1/episodes/{episode_id}:\001*\262\322* \n\025U" +
+      "pdateEpisodeMetadata\022\007Episode\022\263\001\n\006Delete" +
+      "\022+.yandex.cloud.video.v1.DeleteEpisodeRe" +
       "quest\032!.yandex.cloud.operation.Operation" +
-      "\"c\202\323\344\223\0022\"-/video/v1/episodes/{episode_id" +
-      "}:performAction:\001*\262\322*\'\n\034PerformEpisodeAc" +
-      "tionMetadata\022\007Episode\022\253\001\n\014GetPlayerURL\0221" +
-      ".yandex.cloud.video.v1.GetEpisodePlayerU" +
-      "RLRequest\0322.yandex.cloud.video.v1.GetEpi" +
-      "sodePlayerURLResponse\"4\202\323\344\223\002.\022,/video/v1" +
-      "/episodes/{episode_id}:getPlayerUrl\022\253\001\n\014" +
-      "GetManifests\0221.yandex.cloud.video.v1.Get" +
-      "EpisodeManifestsRequest\0322.yandex.cloud.v" +
-      "ideo.v1.GetEpisodeManifestsResponse\"4\202\323\344" +
-      "\223\002.\022,/video/v1/episodes/{episode_id}:get" +
-      "ManifestsB\\\n\031yandex.cloud.api.video.v1Z?" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/video/v1;videob\006proto3"
+      "\"Y\202\323\344\223\002!*\037/video/v1/episodes/{episode_id" +
+      "}\262\322*.\n\025DeleteEpisodeMetadata\022\025google.pro" +
+      "tobuf.Empty\022\313\001\n\rPerformAction\0222.yandex.c" +
+      "loud.video.v1.PerformEpisodeActionReques" +
+      "t\032!.yandex.cloud.operation.Operation\"c\202\323" +
+      "\344\223\0022\"-/video/v1/episodes/{episode_id}:pe" +
+      "rformAction:\001*\262\322*\'\n\034PerformEpisodeAction" +
+      "Metadata\022\007Episode\022\253\001\n\014GetPlayerURL\0221.yan" +
+      "dex.cloud.video.v1.GetEpisodePlayerURLRe" +
+      "quest\0322.yandex.cloud.video.v1.GetEpisode" +
+      "PlayerURLResponse\"4\202\323\344\223\002.\022,/video/v1/epi" +
+      "sodes/{episode_id}:getPlayerUrl\022\253\001\n\014GetM" +
+      "anifests\0221.yandex.cloud.video.v1.GetEpis" +
+      "odeManifestsRequest\0322.yandex.cloud.video" +
+      ".v1.GetEpisodeManifestsResponse\"4\202\323\344\223\002.\022" +
+      ",/video/v1/episodes/{episode_id}:getMani" +
+      "festsB\\\n\031yandex.cloud.api.video.v1Z?gith" +
+      "ub.com/yandex-cloud/go-genproto/yandex/c" +
+      "loud/video/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18608,6 +21435,7 @@ public final class EpisodeServiceOuterClass {
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.video.v1.EpisodeOuterClass.getDescriptor(),
           yandex.cloud.api.video.v1.ManifestOuterClass.getDescriptor(),
         });
@@ -18629,104 +21457,122 @@ public final class EpisodeServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_ListEpisodesResponse_descriptor,
         new java.lang.String[] { "Episodes", "NextPageToken", });
-    internal_static_yandex_cloud_video_v1_CreateEpisodeRequest_descriptor =
+    internal_static_yandex_cloud_video_v1_BatchGetEpisodesRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_video_v1_BatchGetEpisodesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_BatchGetEpisodesRequest_descriptor,
+        new java.lang.String[] { "ChannelId", "EpisodeIds", });
+    internal_static_yandex_cloud_video_v1_BatchGetEpisodesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_video_v1_BatchGetEpisodesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_BatchGetEpisodesResponse_descriptor,
+        new java.lang.String[] { "Episodes", });
+    internal_static_yandex_cloud_video_v1_CreateEpisodeRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_video_v1_CreateEpisodeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_CreateEpisodeRequest_descriptor,
-        new java.lang.String[] { "StreamId", "LineId", "Title", "Description", "ThumbnailId", "StartTime", "FinishTime", "DvrSeconds", "PublicAccess", "AuthSystemAccess", "ParentId", "AccessRights", });
+        new java.lang.String[] { "StreamId", "LineId", "Title", "Description", "ThumbnailId", "StartTime", "FinishTime", "DvrSeconds", "PublicAccess", "AuthSystemAccess", "SignUrlAccess", "ParentId", "AccessRights", });
     internal_static_yandex_cloud_video_v1_EpisodePublicAccessParams_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_video_v1_EpisodePublicAccessParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_EpisodePublicAccessParams_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_video_v1_EpisodeAuthSystemAccessParams_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_video_v1_EpisodeAuthSystemAccessParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_EpisodeAuthSystemAccessParams_descriptor,
         new java.lang.String[] { });
+    internal_static_yandex_cloud_video_v1_EpisodeSignURLAccessParams_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_yandex_cloud_video_v1_EpisodeSignURLAccessParams_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_EpisodeSignURLAccessParams_descriptor,
+        new java.lang.String[] { });
     internal_static_yandex_cloud_video_v1_CreateEpisodeMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_video_v1_CreateEpisodeMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_CreateEpisodeMetadata_descriptor,
         new java.lang.String[] { "EpisodeId", });
     internal_static_yandex_cloud_video_v1_UpdateEpisodeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_video_v1_UpdateEpisodeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_UpdateEpisodeRequest_descriptor,
-        new java.lang.String[] { "EpisodeId", "FieldMask", "Title", "Description", "ThumbnailId", "StartTime", "FinishTime", "DvrSeconds", "PublicAccess", "AuthSystemAccess", "AccessRights", });
+        new java.lang.String[] { "EpisodeId", "FieldMask", "Title", "Description", "ThumbnailId", "StartTime", "FinishTime", "DvrSeconds", "PublicAccess", "AuthSystemAccess", "SignUrlAccess", "AccessRights", });
     internal_static_yandex_cloud_video_v1_UpdateEpisodeMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_video_v1_UpdateEpisodeMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_UpdateEpisodeMetadata_descriptor,
         new java.lang.String[] { "EpisodeId", });
     internal_static_yandex_cloud_video_v1_DeleteEpisodeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_video_v1_DeleteEpisodeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_DeleteEpisodeRequest_descriptor,
         new java.lang.String[] { "EpisodeId", });
     internal_static_yandex_cloud_video_v1_DeleteEpisodeMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_video_v1_DeleteEpisodeMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_DeleteEpisodeMetadata_descriptor,
         new java.lang.String[] { "EpisodeId", });
     internal_static_yandex_cloud_video_v1_PerformEpisodeActionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_video_v1_PerformEpisodeActionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_PerformEpisodeActionRequest_descriptor,
         new java.lang.String[] { "EpisodeId", "Publish", "Unpublish", "Action", });
     internal_static_yandex_cloud_video_v1_PublishEpisodeAction_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_video_v1_PublishEpisodeAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_PublishEpisodeAction_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_video_v1_UnpublishEpisodeAction_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_video_v1_UnpublishEpisodeAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_UnpublishEpisodeAction_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_video_v1_PerformEpisodeActionMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_video_v1_PerformEpisodeActionMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_PerformEpisodeActionMetadata_descriptor,
         new java.lang.String[] { "EpisodeId", });
     internal_static_yandex_cloud_video_v1_GetEpisodePlayerURLRequest_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_video_v1_GetEpisodePlayerURLRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_GetEpisodePlayerURLRequest_descriptor,
         new java.lang.String[] { "EpisodeId", "Params", });
     internal_static_yandex_cloud_video_v1_EpisodePlayerParams_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_yandex_cloud_video_v1_EpisodePlayerParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_EpisodePlayerParams_descriptor,
         new java.lang.String[] { "Mute", "Autoplay", "Hidden", });
     internal_static_yandex_cloud_video_v1_GetEpisodePlayerURLResponse_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_yandex_cloud_video_v1_GetEpisodePlayerURLResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_GetEpisodePlayerURLResponse_descriptor,
         new java.lang.String[] { "PlayerUrl", "Html", });
     internal_static_yandex_cloud_video_v1_GetEpisodeManifestsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_yandex_cloud_video_v1_GetEpisodeManifestsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_GetEpisodeManifestsRequest_descriptor,
         new java.lang.String[] { "EpisodeId", });
     internal_static_yandex_cloud_video_v1_GetEpisodeManifestsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_yandex_cloud_video_v1_GetEpisodeManifestsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_GetEpisodeManifestsResponse_descriptor,
@@ -18735,6 +21581,11 @@ public final class EpisodeServiceOuterClass {
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
+    registry.add(yandex.cloud.api.Validation.exactlyOne);
+    registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
+    registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
@@ -18742,6 +21593,7 @@ public final class EpisodeServiceOuterClass {
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.video.v1.EpisodeOuterClass.getDescriptor();
     yandex.cloud.api.video.v1.ManifestOuterClass.getDescriptor();
   }

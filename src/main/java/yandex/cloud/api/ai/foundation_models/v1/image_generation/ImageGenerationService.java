@@ -20,7 +20,7 @@ public final class ImageGenerationService {
 
     /**
      * <pre>
-     * The [ID of the model](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
+     * The [model URI](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -29,7 +29,7 @@ public final class ImageGenerationService {
     java.lang.String getModelUri();
     /**
      * <pre>
-     * The [ID of the model](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
+     * The [model URI](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -112,6 +112,7 @@ public final class ImageGenerationService {
   /**
    * <pre>
    * Request for the service to generate an image.
+   * For examples of usage, see [step-by-step guide](/docs/operations/yandexart/request).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.image_generation.ImageGenerationRequest}
@@ -228,7 +229,7 @@ public final class ImageGenerationService {
     private volatile java.lang.Object modelUri_;
     /**
      * <pre>
-     * The [ID of the model](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
+     * The [model URI](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -249,7 +250,7 @@ public final class ImageGenerationService {
     }
     /**
      * <pre>
-     * The [ID of the model](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
+     * The [model URI](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -554,6 +555,7 @@ public final class ImageGenerationService {
     /**
      * <pre>
      * Request for the service to generate an image.
+     * For examples of usage, see [step-by-step guide](/docs/operations/yandexart/request).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.image_generation.ImageGenerationRequest}
@@ -764,7 +766,7 @@ public final class ImageGenerationService {
       private java.lang.Object modelUri_ = "";
       /**
        * <pre>
-       * The [ID of the model](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
+       * The [model URI](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -784,7 +786,7 @@ public final class ImageGenerationService {
       }
       /**
        * <pre>
-       * The [ID of the model](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
+       * The [model URI](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -805,7 +807,7 @@ public final class ImageGenerationService {
       }
       /**
        * <pre>
-       * The [ID of the model](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
+       * The [model URI](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -824,7 +826,7 @@ public final class ImageGenerationService {
       }
       /**
        * <pre>
-       * The [ID of the model](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
+       * The [model URI](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -838,7 +840,7 @@ public final class ImageGenerationService {
       }
       /**
        * <pre>
-       * The [ID of the model](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
+       * The [model URI](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -1382,7 +1384,7 @@ public final class ImageGenerationService {
 
     /**
      * <pre>
-     * The image is serialized as an array of bytes encoded in base64.
+     * The image is serialized as an array of bytes encoded in [Base64](https://en.wikipedia.org/wiki/Base64).
      * </pre>
      *
      * <code>bytes image = 1;</code>
@@ -1508,7 +1510,7 @@ public final class ImageGenerationService {
     private com.google.protobuf.ByteString image_;
     /**
      * <pre>
-     * The image is serialized as an array of bytes encoded in base64.
+     * The image is serialized as an array of bytes encoded in [Base64](https://en.wikipedia.org/wiki/Base64).
      * </pre>
      *
      * <code>bytes image = 1;</code>
@@ -1891,7 +1893,7 @@ public final class ImageGenerationService {
       private com.google.protobuf.ByteString image_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <pre>
-       * The image is serialized as an array of bytes encoded in base64.
+       * The image is serialized as an array of bytes encoded in [Base64](https://en.wikipedia.org/wiki/Base64).
        * </pre>
        *
        * <code>bytes image = 1;</code>
@@ -1903,7 +1905,7 @@ public final class ImageGenerationService {
       }
       /**
        * <pre>
-       * The image is serialized as an array of bytes encoded in base64.
+       * The image is serialized as an array of bytes encoded in [Base64](https://en.wikipedia.org/wiki/Base64).
        * </pre>
        *
        * <code>bytes image = 1;</code>
@@ -1921,7 +1923,7 @@ public final class ImageGenerationService {
       }
       /**
        * <pre>
-       * The image is serialized as an array of bytes encoded in base64.
+       * The image is serialized as an array of bytes encoded in [Base64](https://en.wikipedia.org/wiki/Base64).
        * </pre>
        *
        * <code>bytes image = 1;</code>

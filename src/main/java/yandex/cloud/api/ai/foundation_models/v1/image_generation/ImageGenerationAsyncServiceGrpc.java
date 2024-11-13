@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * Service for obtaining images from input data.
+ * Service for creating images based on a text description. 
  * </pre>
  */
 @javax.annotation.Generated(
@@ -95,7 +95,7 @@ public final class ImageGenerationAsyncServiceGrpc {
 
   /**
    * <pre>
-   * Service for obtaining images from input data.
+   * Service for creating images based on a text description. 
    * </pre>
    */
   public static abstract class ImageGenerationAsyncServiceImplBase implements io.grpc.BindableService {
@@ -125,7 +125,7 @@ public final class ImageGenerationAsyncServiceGrpc {
 
   /**
    * <pre>
-   * Service for obtaining images from input data.
+   * Service for creating images based on a text description. 
    * </pre>
    */
   public static final class ImageGenerationAsyncServiceStub extends io.grpc.stub.AbstractAsyncStub<ImageGenerationAsyncServiceStub> {
@@ -154,7 +154,7 @@ public final class ImageGenerationAsyncServiceGrpc {
 
   /**
    * <pre>
-   * Service for obtaining images from input data.
+   * Service for creating images based on a text description. 
    * </pre>
    */
   public static final class ImageGenerationAsyncServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ImageGenerationAsyncServiceBlockingStub> {
@@ -182,7 +182,7 @@ public final class ImageGenerationAsyncServiceGrpc {
 
   /**
    * <pre>
-   * Service for obtaining images from input data.
+   * Service for creating images based on a text description. 
    * </pre>
    */
   public static final class ImageGenerationAsyncServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ImageGenerationAsyncServiceFutureStub> {

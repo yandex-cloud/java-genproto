@@ -80,6 +80,37 @@ public final class EpisodeServiceGrpc {
     return getListMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest,
+      yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse> getBatchGetMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "BatchGet",
+      requestType = yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest.class,
+      responseType = yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest,
+      yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse> getBatchGetMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse> getBatchGetMethod;
+    if ((getBatchGetMethod = EpisodeServiceGrpc.getBatchGetMethod) == null) {
+      synchronized (EpisodeServiceGrpc.class) {
+        if ((getBatchGetMethod = EpisodeServiceGrpc.getBatchGetMethod) == null) {
+          EpisodeServiceGrpc.getBatchGetMethod = getBatchGetMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BatchGet"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new EpisodeServiceMethodDescriptorSupplier("BatchGet"))
+              .build();
+        }
+      }
+    }
+    return getBatchGetMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.CreateEpisodeRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod;
 
@@ -339,6 +370,16 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
+     * Batch get episodes for channel.
+     * </pre>
+     */
+    public void batchGet(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBatchGetMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Create episode.
      * </pre>
      */
@@ -413,6 +454,13 @@ public final class EpisodeServiceGrpc {
                 yandex.cloud.api.video.v1.EpisodeServiceOuterClass.ListEpisodesRequest,
                 yandex.cloud.api.video.v1.EpisodeServiceOuterClass.ListEpisodesResponse>(
                   this, METHODID_LIST)))
+          .addMethod(
+            getBatchGetMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest,
+                yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse>(
+                  this, METHODID_BATCH_GET)))
           .addMethod(
             getCreateMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -496,6 +544,17 @@ public final class EpisodeServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.ListEpisodesResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Batch get episodes for channel.
+     * </pre>
+     */
+    public void batchGet(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getBatchGetMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -604,6 +663,16 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
+     * Batch get episodes for channel.
+     * </pre>
+     */
+    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse batchGet(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBatchGetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Create episode.
      * </pre>
      */
@@ -704,6 +773,17 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
+     * Batch get episodes for channel.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse> batchGet(
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getBatchGetMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Create episode.
      * </pre>
      */
@@ -771,12 +851,13 @@ public final class EpisodeServiceGrpc {
 
   private static final int METHODID_GET = 0;
   private static final int METHODID_LIST = 1;
-  private static final int METHODID_CREATE = 2;
-  private static final int METHODID_UPDATE = 3;
-  private static final int METHODID_DELETE = 4;
-  private static final int METHODID_PERFORM_ACTION = 5;
-  private static final int METHODID_GET_PLAYER_URL = 6;
-  private static final int METHODID_GET_MANIFESTS = 7;
+  private static final int METHODID_BATCH_GET = 2;
+  private static final int METHODID_CREATE = 3;
+  private static final int METHODID_UPDATE = 4;
+  private static final int METHODID_DELETE = 5;
+  private static final int METHODID_PERFORM_ACTION = 6;
+  private static final int METHODID_GET_PLAYER_URL = 7;
+  private static final int METHODID_GET_MANIFESTS = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -802,6 +883,10 @@ public final class EpisodeServiceGrpc {
         case METHODID_LIST:
           serviceImpl.list((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.ListEpisodesRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.ListEpisodesResponse>) responseObserver);
+          break;
+        case METHODID_BATCH_GET:
+          serviceImpl.batchGet((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse>) responseObserver);
           break;
         case METHODID_CREATE:
           serviceImpl.create((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.CreateEpisodeRequest) request,
@@ -890,6 +975,7 @@ public final class EpisodeServiceGrpc {
               .setSchemaDescriptor(new EpisodeServiceFileDescriptorSupplier())
               .addMethod(getGetMethod())
               .addMethod(getListMethod())
+              .addMethod(getBatchGetMethod())
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())

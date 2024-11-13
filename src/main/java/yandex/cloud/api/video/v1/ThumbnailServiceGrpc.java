@@ -18,6 +18,37 @@ public final class ThumbnailServiceGrpc {
   public static final String SERVICE_NAME = "yandex.cloud.video.v1.ThumbnailService";
 
   // Static method descriptors that strictly reflect the proto.
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest,
+      yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail> getGetMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Get",
+      requestType = yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest.class,
+      responseType = yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest,
+      yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail> getGetMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest, yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail> getGetMethod;
+    if ((getGetMethod = ThumbnailServiceGrpc.getGetMethod) == null) {
+      synchronized (ThumbnailServiceGrpc.class) {
+        if ((getGetMethod = ThumbnailServiceGrpc.getGetMethod) == null) {
+          ThumbnailServiceGrpc.getGetMethod = getGetMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest, yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail.getDefaultInstance()))
+              .setSchemaDescriptor(new ThumbnailServiceMethodDescriptorSupplier("Get"))
+              .build();
+        }
+      }
+    }
+    return getGetMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ListThumbnailRequest,
       yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ListThumbnailResponse> getListMethod;
 
@@ -142,6 +173,37 @@ public final class ThumbnailServiceGrpc {
     return getGenerateUploadURLMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Delete",
+      requestType = yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
+    if ((getDeleteMethod = ThumbnailServiceGrpc.getDeleteMethod) == null) {
+      synchronized (ThumbnailServiceGrpc.class) {
+        if ((getDeleteMethod = ThumbnailServiceGrpc.getDeleteMethod) == null) {
+          ThumbnailServiceGrpc.getDeleteMethod = getDeleteMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ThumbnailServiceMethodDescriptorSupplier("Delete"))
+              .build();
+        }
+      }
+    }
+    return getDeleteMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -195,6 +257,16 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
+     * Returns the specific thumbnail.
+     * </pre>
+     */
+    public void get(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * List thumbnails for channel.
      * </pre>
      */
@@ -233,8 +305,25 @@ public final class ThumbnailServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGenerateUploadURLMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Delete thumbnail.
+     * </pre>
+     */
+    public void delete(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getGetMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest,
+                yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail>(
+                  this, METHODID_GET)))
           .addMethod(
             getListMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -263,6 +352,13 @@ public final class ThumbnailServiceGrpc {
                 yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GenerateThumbnailUploadURLRequest,
                 yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GenerateThumbnailUploadURLResponse>(
                   this, METHODID_GENERATE_UPLOAD_URL)))
+          .addMethod(
+            getDeleteMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_DELETE)))
           .build();
     }
   }
@@ -282,6 +378,17 @@ public final class ThumbnailServiceGrpc {
     protected ThumbnailServiceStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ThumbnailServiceStub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Returns the specific thumbnail.
+     * </pre>
+     */
+    public void get(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -327,6 +434,17 @@ public final class ThumbnailServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGenerateUploadURLMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Delete thumbnail.
+     * </pre>
+     */
+    public void delete(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -344,6 +462,16 @@ public final class ThumbnailServiceGrpc {
     protected ThumbnailServiceBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ThumbnailServiceBlockingStub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Returns the specific thumbnail.
+     * </pre>
+     */
+    public yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail get(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
     /**
@@ -385,6 +513,16 @@ public final class ThumbnailServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGenerateUploadURLMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Delete thumbnail.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -402,6 +540,17 @@ public final class ThumbnailServiceGrpc {
     protected ThumbnailServiceFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ThumbnailServiceFutureStub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Returns the specific thumbnail.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail> get(
+        yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
     /**
@@ -447,12 +596,25 @@ public final class ThumbnailServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGenerateUploadURLMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Delete thumbnail.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
+        yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
+    }
   }
 
-  private static final int METHODID_LIST = 0;
-  private static final int METHODID_CREATE = 1;
-  private static final int METHODID_BATCH_GENERATE_DOWNLOAD_URLS = 2;
-  private static final int METHODID_GENERATE_UPLOAD_URL = 3;
+  private static final int METHODID_GET = 0;
+  private static final int METHODID_LIST = 1;
+  private static final int METHODID_CREATE = 2;
+  private static final int METHODID_BATCH_GENERATE_DOWNLOAD_URLS = 3;
+  private static final int METHODID_GENERATE_UPLOAD_URL = 4;
+  private static final int METHODID_DELETE = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -471,6 +633,10 @@ public final class ThumbnailServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_GET:
+          serviceImpl.get((yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail>) responseObserver);
+          break;
         case METHODID_LIST:
           serviceImpl.list((yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ListThumbnailRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ListThumbnailResponse>) responseObserver);
@@ -486,6 +652,10 @@ public final class ThumbnailServiceGrpc {
         case METHODID_GENERATE_UPLOAD_URL:
           serviceImpl.generateUploadURL((yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GenerateThumbnailUploadURLRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GenerateThumbnailUploadURLResponse>) responseObserver);
+          break;
+        case METHODID_DELETE:
+          serviceImpl.delete((yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -548,10 +718,12 @@ public final class ThumbnailServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ThumbnailServiceFileDescriptorSupplier())
+              .addMethod(getGetMethod())
               .addMethod(getListMethod())
               .addMethod(getCreateMethod())
               .addMethod(getBatchGenerateDownloadURLsMethod())
               .addMethod(getGenerateUploadURLMethod())
+              .addMethod(getDeleteMethod())
               .build();
         }
       }

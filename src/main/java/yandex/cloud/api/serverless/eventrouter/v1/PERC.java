@@ -507,6 +507,22 @@ public final class PERC {
        * <code>SUBJECT_NOT_FOUND = 5;</code>
        */
       SUBJECT_NOT_FOUND(5),
+      /**
+       * <pre>
+       * deletion in progress
+       * </pre>
+       *
+       * <code>DELETING = 7;</code>
+       */
+      DELETING(7),
+      /**
+       * <pre>
+       * creation in progress
+       * </pre>
+       *
+       * <code>CREATING = 8;</code>
+       */
+      CREATING(8),
       UNRECOGNIZED(-1),
       ;
 
@@ -550,6 +566,22 @@ public final class PERC {
        * <code>SUBJECT_NOT_FOUND = 5;</code>
        */
       public static final int SUBJECT_NOT_FOUND_VALUE = 5;
+      /**
+       * <pre>
+       * deletion in progress
+       * </pre>
+       *
+       * <code>DELETING = 7;</code>
+       */
+      public static final int DELETING_VALUE = 7;
+      /**
+       * <pre>
+       * creation in progress
+       * </pre>
+       *
+       * <code>CREATING = 8;</code>
+       */
+      public static final int CREATING_VALUE = 8;
 
 
       public final int getNumber() {
@@ -582,6 +614,8 @@ public final class PERC {
           case 3: return RESOURCE_NOT_FOUND;
           case 4: return PERMISSION_DENIED;
           case 5: return SUBJECT_NOT_FOUND;
+          case 7: return DELETING;
+          case 8: return CREATING;
           default: return null;
         }
       }
@@ -6447,7 +6481,7 @@ public final class PERC {
       "/connector.proto\022&yandex.cloud.serverles" +
       "s.eventrouter.v1\032\036google/protobuf/durati" +
       "on.proto\032\037google/protobuf/timestamp.prot" +
-      "o\032\035yandex/cloud/validation.proto\"\307\004\n\tCon" +
+      "o\032\035yandex/cloud/validation.proto\"\343\004\n\tCon" +
       "nector\022\n\n\002id\030\001 \001(\t\022\016\n\006bus_id\030\002 \001(\t\022\021\n\tfo" +
       "lder_id\030\003 \001(\t\022\020\n\010cloud_id\030\004 \001(\t\022.\n\ncreat" +
       "ed_at\030\005 \001(\0132\032.google.protobuf.Timestamp\022" +
@@ -6459,27 +6493,28 @@ public final class PERC {
       "\030\n \001(\010\022H\n\006status\030\013 \001(\01628.yandex.cloud.se" +
       "rverless.eventrouter.v1.Connector.Status" +
       "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001\"\200\001\n\006Status\022\026\n\022STATUS_UNSPECIFIED" +
+      "\001(\t:\0028\001\"\234\001\n\006Status\022\026\n\022STATUS_UNSPECIFIED" +
       "\020\000\022\013\n\007RUNNING\020\001\022\013\n\007STOPPED\020\002\022\026\n\022RESOURCE" +
       "_NOT_FOUND\020\003\022\025\n\021PERMISSION_DENIED\020\004\022\025\n\021S" +
-      "UBJECT_NOT_FOUND\020\005\"\262\001\n\006Source\022I\n\013data_st" +
-      "ream\030\001 \001(\01322.yandex.cloud.serverless.eve" +
-      "ntrouter.v1.DataStreamH\000\022M\n\rmessage_queu" +
-      "e\030\002 \001(\01324.yandex.cloud.serverless.eventr" +
-      "outer.v1.MessageQueueH\000B\016\n\006source\022\004\300\3011\001\"" +
-      "y\n\nDataStream\022\026\n\010database\030\001 \001(\tB\004\350\3071\001\022\031\n" +
-      "\013stream_name\030\002 \001(\tB\004\350\3071\001\022\026\n\010consumer\030\003 \001" +
-      "(\tB\004\350\3071\001\022 \n\022service_account_id\030\004 \001(\tB\004\350\307" +
-      "1\001\"\360\001\n\014MessageQueue\022\027\n\tqueue_arn\030\001 \001(\tB\004" +
-      "\350\3071\001\022(\n\022service_account_id\030\002 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\022@\n\022visibility_timeout\030\003 \001(\0132\031.goo" +
-      "gle.protobuf.DurationB\t\372\3071\005<=12h\022\034\n\nbatc" +
-      "h_size\030\004 \001(\003B\010\372\3071\004<=10\022=\n\017polling_timeou" +
-      "t\030\005 \001(\0132\031.google.protobuf.DurationB\t\372\3071\005" +
-      "<=20sB\212\001\n*yandex.cloud.api.serverless.ev" +
-      "entrouter.v1B\004PERCZVgithub.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/serverless/" +
-      "eventrouter/v1;eventrouterb\006proto3"
+      "UBJECT_NOT_FOUND\020\005\022\014\n\010DELETING\020\007\022\014\n\010CREA" +
+      "TING\020\010\"\262\001\n\006Source\022I\n\013data_stream\030\001 \001(\01322" +
+      ".yandex.cloud.serverless.eventrouter.v1." +
+      "DataStreamH\000\022M\n\rmessage_queue\030\002 \001(\01324.ya" +
+      "ndex.cloud.serverless.eventrouter.v1.Mes" +
+      "sageQueueH\000B\016\n\006source\022\004\300\3011\001\"y\n\nDataStrea" +
+      "m\022\026\n\010database\030\001 \001(\tB\004\350\3071\001\022\031\n\013stream_name" +
+      "\030\002 \001(\tB\004\350\3071\001\022\026\n\010consumer\030\003 \001(\tB\004\350\3071\001\022 \n\022" +
+      "service_account_id\030\004 \001(\tB\004\350\3071\001\"\360\001\n\014Messa" +
+      "geQueue\022\027\n\tqueue_arn\030\001 \001(\tB\004\350\3071\001\022(\n\022serv" +
+      "ice_account_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022@\n\022vi" +
+      "sibility_timeout\030\003 \001(\0132\031.google.protobuf" +
+      ".DurationB\t\372\3071\005<=12h\022\034\n\nbatch_size\030\004 \001(\003" +
+      "B\010\372\3071\004<=10\022=\n\017polling_timeout\030\005 \001(\0132\031.go" +
+      "ogle.protobuf.DurationB\t\372\3071\005<=20sB\212\001\n*ya" +
+      "ndex.cloud.api.serverless.eventrouter.v1" +
+      "B\004PERCZVgithub.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/serverless/eventrouter/" +
+      "v1;eventrouterb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

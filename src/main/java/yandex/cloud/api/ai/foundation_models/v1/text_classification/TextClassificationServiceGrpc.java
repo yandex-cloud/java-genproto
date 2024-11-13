@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * Service for classifying text from input text.
+ * Service for classifying the text requests provided in prompts.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -126,14 +126,16 @@ public final class TextClassificationServiceGrpc {
 
   /**
    * <pre>
-   * Service for classifying text from input text.
+   * Service for classifying the text requests provided in prompts.
    * </pre>
    */
   public static abstract class TextClassificationServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * RPC method for text classification.
+     * RPC method to classify text with tuned model.
+     * The names of the classes between which the model will be distributing requests 
+     * must be specified during model tuning and are not provided in the request.
      * </pre>
      */
     public void classify(yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.TextClassificationRequest request,
@@ -143,7 +145,10 @@ public final class TextClassificationServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for few-shot text classification.
+     * RPC method for binary and multi-class classification. 
+     * 
+     * You can provide up to 20 classes for few-shot text classification
+     * with optional examples.
      * </pre>
      */
     public void fewShotClassify(yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest request,
@@ -173,7 +178,7 @@ public final class TextClassificationServiceGrpc {
 
   /**
    * <pre>
-   * Service for classifying text from input text.
+   * Service for classifying the text requests provided in prompts.
    * </pre>
    */
   public static final class TextClassificationServiceStub extends io.grpc.stub.AbstractAsyncStub<TextClassificationServiceStub> {
@@ -190,7 +195,9 @@ public final class TextClassificationServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for text classification.
+     * RPC method to classify text with tuned model.
+     * The names of the classes between which the model will be distributing requests 
+     * must be specified during model tuning and are not provided in the request.
      * </pre>
      */
     public void classify(yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.TextClassificationRequest request,
@@ -201,7 +208,10 @@ public final class TextClassificationServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for few-shot text classification.
+     * RPC method for binary and multi-class classification. 
+     * 
+     * You can provide up to 20 classes for few-shot text classification
+     * with optional examples.
      * </pre>
      */
     public void fewShotClassify(yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest request,
@@ -213,7 +223,7 @@ public final class TextClassificationServiceGrpc {
 
   /**
    * <pre>
-   * Service for classifying text from input text.
+   * Service for classifying the text requests provided in prompts.
    * </pre>
    */
   public static final class TextClassificationServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<TextClassificationServiceBlockingStub> {
@@ -230,7 +240,9 @@ public final class TextClassificationServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for text classification.
+     * RPC method to classify text with tuned model.
+     * The names of the classes between which the model will be distributing requests 
+     * must be specified during model tuning and are not provided in the request.
      * </pre>
      */
     public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.TextClassificationResponse classify(yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.TextClassificationRequest request) {
@@ -240,7 +252,10 @@ public final class TextClassificationServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for few-shot text classification.
+     * RPC method for binary and multi-class classification. 
+     * 
+     * You can provide up to 20 classes for few-shot text classification
+     * with optional examples.
      * </pre>
      */
     public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse fewShotClassify(yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest request) {
@@ -251,7 +266,7 @@ public final class TextClassificationServiceGrpc {
 
   /**
    * <pre>
-   * Service for classifying text from input text.
+   * Service for classifying the text requests provided in prompts.
    * </pre>
    */
   public static final class TextClassificationServiceFutureStub extends io.grpc.stub.AbstractFutureStub<TextClassificationServiceFutureStub> {
@@ -268,7 +283,9 @@ public final class TextClassificationServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for text classification.
+     * RPC method to classify text with tuned model.
+     * The names of the classes between which the model will be distributing requests 
+     * must be specified during model tuning and are not provided in the request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.TextClassificationResponse> classify(
@@ -279,7 +296,10 @@ public final class TextClassificationServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for few-shot text classification.
+     * RPC method for binary and multi-class classification. 
+     * 
+     * You can provide up to 20 classes for few-shot text classification
+     * with optional examples.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse> fewShotClassify(

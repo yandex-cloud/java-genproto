@@ -2789,7 +2789,7 @@ public final class RegistryServiceOuterClass {
      * Kind of the registry.
      * </pre>
      *
-     * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4;</code>
+     * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4 [(.yandex.cloud.required) = true];</code>
      * @return The enum numeric value on the wire for kind.
      */
     int getKindValue();
@@ -2798,7 +2798,7 @@ public final class RegistryServiceOuterClass {
      * Kind of the registry.
      * </pre>
      *
-     * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4;</code>
+     * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4 [(.yandex.cloud.required) = true];</code>
      * @return The kind.
      */
     yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind getKind();
@@ -2808,7 +2808,7 @@ public final class RegistryServiceOuterClass {
      * Type of the registry.
      * </pre>
      *
-     * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5;</code>
+     * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5 [(.yandex.cloud.required) = true];</code>
      * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
@@ -2817,7 +2817,7 @@ public final class RegistryServiceOuterClass {
      * Type of the registry.
      * </pre>
      *
-     * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5;</code>
+     * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5 [(.yandex.cloud.required) = true];</code>
      * @return The type.
      */
     yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type getType();
@@ -3249,7 +3249,7 @@ public final class RegistryServiceOuterClass {
      * Kind of the registry.
      * </pre>
      *
-     * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4;</code>
+     * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4 [(.yandex.cloud.required) = true];</code>
      * @return The enum numeric value on the wire for kind.
      */
     @java.lang.Override public int getKindValue() {
@@ -3260,7 +3260,7 @@ public final class RegistryServiceOuterClass {
      * Kind of the registry.
      * </pre>
      *
-     * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4;</code>
+     * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4 [(.yandex.cloud.required) = true];</code>
      * @return The kind.
      */
     @java.lang.Override public yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind getKind() {
@@ -3276,7 +3276,7 @@ public final class RegistryServiceOuterClass {
      * Type of the registry.
      * </pre>
      *
-     * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5;</code>
+     * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5 [(.yandex.cloud.required) = true];</code>
      * @return The enum numeric value on the wire for type.
      */
     @java.lang.Override public int getTypeValue() {
@@ -3287,7 +3287,7 @@ public final class RegistryServiceOuterClass {
      * Type of the registry.
      * </pre>
      *
-     * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5;</code>
+     * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5 [(.yandex.cloud.required) = true];</code>
      * @return The type.
      */
     @java.lang.Override public yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type getType() {
@@ -4256,7 +4256,7 @@ public final class RegistryServiceOuterClass {
        * Kind of the registry.
        * </pre>
        *
-       * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4;</code>
+       * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4 [(.yandex.cloud.required) = true];</code>
        * @return The enum numeric value on the wire for kind.
        */
       @java.lang.Override public int getKindValue() {
@@ -4267,7 +4267,7 @@ public final class RegistryServiceOuterClass {
        * Kind of the registry.
        * </pre>
        *
-       * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4;</code>
+       * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4 [(.yandex.cloud.required) = true];</code>
        * @param value The enum numeric value on the wire for kind to set.
        * @return This builder for chaining.
        */
@@ -4282,7 +4282,7 @@ public final class RegistryServiceOuterClass {
        * Kind of the registry.
        * </pre>
        *
-       * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4;</code>
+       * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4 [(.yandex.cloud.required) = true];</code>
        * @return The kind.
        */
       @java.lang.Override
@@ -4296,7 +4296,7 @@ public final class RegistryServiceOuterClass {
        * Kind of the registry.
        * </pre>
        *
-       * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4;</code>
+       * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4 [(.yandex.cloud.required) = true];</code>
        * @param value The kind to set.
        * @return This builder for chaining.
        */
@@ -4314,7 +4314,7 @@ public final class RegistryServiceOuterClass {
        * Kind of the registry.
        * </pre>
        *
-       * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4;</code>
+       * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearKind() {
@@ -4330,7 +4330,7 @@ public final class RegistryServiceOuterClass {
        * Type of the registry.
        * </pre>
        *
-       * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5;</code>
+       * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5 [(.yandex.cloud.required) = true];</code>
        * @return The enum numeric value on the wire for type.
        */
       @java.lang.Override public int getTypeValue() {
@@ -4341,7 +4341,7 @@ public final class RegistryServiceOuterClass {
        * Type of the registry.
        * </pre>
        *
-       * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5;</code>
+       * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5 [(.yandex.cloud.required) = true];</code>
        * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
        */
@@ -4356,7 +4356,7 @@ public final class RegistryServiceOuterClass {
        * Type of the registry.
        * </pre>
        *
-       * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5;</code>
+       * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5 [(.yandex.cloud.required) = true];</code>
        * @return The type.
        */
       @java.lang.Override
@@ -4370,7 +4370,7 @@ public final class RegistryServiceOuterClass {
        * Type of the registry.
        * </pre>
        *
-       * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5;</code>
+       * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5 [(.yandex.cloud.required) = true];</code>
        * @param value The type to set.
        * @return This builder for chaining.
        */
@@ -4388,7 +4388,7 @@ public final class RegistryServiceOuterClass {
        * Type of the registry.
        * </pre>
        *
-       * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5;</code>
+       * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearType() {
@@ -16409,129 +16409,130 @@ public final class RegistryServiceOuterClass {
       "\3101\005<=100\"n\n\026ListRegistriesResponse\022;\n\nre" +
       "gistries\030\001 \003(\0132\'.yandex.cloud.cloudregis" +
       "try.v1.Registry\022\027\n\017next_page_token\030\002 \001(\t" +
-      "\"\224\005\n\025CreateRegistryRequest\022\037\n\tfolder_id\030" +
+      "\"\240\005\n\025CreateRegistryRequest\022\037\n\tfolder_id\030" +
       "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\004name\030\002 \001(\tB!\362\3071\035|" +
       "[a-z][-a-z0-9]{1,61}[a-z0-9]\022\221\001\n\006labels\030" +
       "\003 \003(\0132@.yandex.cloud.cloudregistry.v1.Cr" +
       "eateRegistryRequest.LabelsEntryB?\202\3101\004<=6" +
       "4\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020" +
-      "[a-z][-_0-9a-z]*\022:\n\004kind\030\004 \001(\0162,.yandex." +
-      "cloud.cloudregistry.v1.Registry.Kind\022:\n\004" +
-      "type\030\005 \001(\0162,.yandex.cloud.cloudregistry." +
-      "v1.Registry.Type\022#\n\013description\030\006 \001(\tB\016\350" +
-      "\3071\001\212\3101\006<=1024\022\225\001\n\nproperties\030\007 \003(\0132D.yan" +
-      "dex.cloud.cloudregistry.v1.CreateRegistr" +
-      "yRequest.PropertiesEntryB;\202\3101\004<=64\212\3101\004<=" +
-      "63\362\3071\016[-_0-9a-zA-Z]+\262\3101\006\032\0041-63\262\3101\013\022\t[a-z" +
-      "A-Z]+\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\0321\n\017PropertiesEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\026CreateRegistr" +
-      "yMetadata\022\023\n\013registry_id\030\001 \001(\t\"\317\004\n\025Updat" +
-      "eRegistryRequest\022!\n\013registry_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.googl" +
-      "e.protobuf.FieldMask\022/\n\004name\030\003 \001(\tB!\362\3071\035" +
-      "|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\221\001\n\006labels" +
-      "\030\004 \003(\0132@.yandex.cloud.cloudregistry.v1.U" +
-      "pdateRegistryRequest.LabelsEntryB?\202\3101\004<=" +
-      "64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022" +
-      "\020[a-z][-_0-9a-z]*\022#\n\013description\030\005 \001(\tB\016" +
-      "\350\3071\001\212\3101\006<=1024\022\225\001\n\nproperties\030\006 \003(\0132D.ya" +
-      "ndex.cloud.cloudregistry.v1.UpdateRegist" +
-      "ryRequest.PropertiesEntryB;\202\3101\004<=64\212\3101\004<" +
-      "=63\362\3071\016[-_0-9a-zA-Z]+\262\3101\006\032\0041-63\262\3101\013\022\t[a-" +
-      "zA-Z]+\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t:\0028\001\0321\n\017PropertiesEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\026UpdateRegist" +
-      "ryMetadata\022\023\n\013registry_id\030\001 \001(\t\":\n\025Delet" +
-      "eRegistryRequest\022!\n\013registry_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\"-\n\026DeleteRegistryMetadata\022\023\n" +
-      "\013registry_id\030\001 \001(\t\"\201\001\n\027SetIpPermissionsR" +
-      "equest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\022C\n\016ip_permissions\030\002 \003(\0132+.yandex.cloud" +
-      ".cloudregistry.v1.IpPermission\"\217\001\n\032Updat" +
-      "eIpPermissionsRequest\022!\n\013registry_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022N\n\024ip_permission_deltas" +
-      "\030\002 \003(\01320.yandex.cloud.cloudregistry.v1.I" +
-      "pPermissionDelta\"=\n\030ListIpPermissionsReq" +
-      "uest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"" +
-      "]\n\031ListIpPermissionsResponse\022@\n\013permissi" +
-      "ons\030\001 \003(\0132+.yandex.cloud.cloudregistry.v" +
-      "1.IpPermission\"/\n\030SetIpPermissionsMetada" +
-      "ta\022\023\n\013registry_id\030\001 \001(\t\"2\n\033UpdateIpPermi" +
-      "ssionsMetadata\022\023\n\013registry_id\030\001 \001(\t\"\306\001\n\024" +
-      "ListArtifactsRequest\022\035\n\013registry_id\030\001 \001(" +
-      "\tB\010\212\3101\004<=50\022Q\n\004path\030\002 \001(\tBC\362\3071?|[a-z0-9]" +
-      "+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-]" +
-      "[a-z0-9]+)*))*\022\035\n\tpage_size\030\003 \001(\003B\n\372\3071\0060" +
-      "-1000\022\035\n\npage_token\030\004 \001(\tB\t\212\3101\005<=100\"l\n\025" +
-      "ListArtifactsResponse\022:\n\tartifacts\030\001 \003(\013" +
-      "2\'.yandex.cloud.cloudregistry.v1.Artifac" +
-      "t\022\027\n\017next_page_token\030\002 \001(\t2\256\023\n\017RegistryS" +
-      "ervice\022\226\001\n\003Get\0221.yandex.cloud.cloudregis" +
-      "try.v1.GetRegistryRequest\032\'.yandex.cloud" +
-      ".cloudregistry.v1.Registry\"3\202\323\344\223\002-\022+/clo" +
-      "ud-registry/v1/registries/{registry_id}\022" +
-      "\232\001\n\004List\0224.yandex.cloud.cloudregistry.v1" +
-      ".ListRegistriesRequest\0325.yandex.cloud.cl" +
-      "oudregistry.v1.ListRegistriesResponse\"%\202" +
-      "\323\344\223\002\037\022\035/cloud-registry/v1/registries\022\261\001\n" +
-      "\006Create\0224.yandex.cloud.cloudregistry.v1." +
-      "CreateRegistryRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"N\202\323\344\223\002\"\"\035/cloud-registr" +
-      "y/v1/registries:\001*\262\322*\"\n\026CreateRegistryMe" +
-      "tadata\022\010Registry\022\277\001\n\006Update\0224.yandex.clo" +
-      "ud.cloudregistry.v1.UpdateRegistryReques" +
-      "t\032!.yandex.cloud.operation.Operation\"\\\202\323" +
-      "\344\223\00202+/cloud-registry/v1/registries/{reg" +
-      "istry_id}:\001*\262\322*\"\n\026UpdateRegistryMetadata" +
-      "\022\010Registry\022\311\001\n\006Delete\0224.yandex.cloud.clo" +
-      "udregistry.v1.DeleteRegistryRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"f\202\323\344\223\002-*+" +
+      "[a-z][-_0-9a-z]*\022@\n\004kind\030\004 \001(\0162,.yandex." +
+      "cloud.cloudregistry.v1.Registry.KindB\004\350\307" +
+      "1\001\022@\n\004type\030\005 \001(\0162,.yandex.cloud.cloudreg" +
+      "istry.v1.Registry.TypeB\004\350\3071\001\022#\n\013descript" +
+      "ion\030\006 \001(\tB\016\350\3071\001\212\3101\006<=1024\022\225\001\n\nproperties" +
+      "\030\007 \003(\0132D.yandex.cloud.cloudregistry.v1.C" +
+      "reateRegistryRequest.PropertiesEntryB;\202\310" +
+      "1\004<=64\212\3101\004<=63\362\3071\016[-_0-9a-zA-Z]+\262\3101\006\032\0041-" +
+      "63\262\3101\013\022\t[a-zA-Z]+\032-\n\013LabelsEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0321\n\017PropertiesEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\026C" +
+      "reateRegistryMetadata\022\023\n\013registry_id\030\001 \001" +
+      "(\t\"\317\004\n\025UpdateRegistryRequest\022!\n\013registry" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002" +
+      " \001(\0132\032.google.protobuf.FieldMask\022/\n\004name" +
+      "\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9" +
+      "]\022\221\001\n\006labels\030\004 \003(\0132@.yandex.cloud.cloudr" +
+      "egistry.v1.UpdateRegistryRequest.LabelsE" +
+      "ntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101" +
+      "\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022#\n\013descrip" +
+      "tion\030\005 \001(\tB\016\350\3071\001\212\3101\006<=1024\022\225\001\n\npropertie" +
+      "s\030\006 \003(\0132D.yandex.cloud.cloudregistry.v1." +
+      "UpdateRegistryRequest.PropertiesEntryB;\202" +
+      "\3101\004<=64\212\3101\004<=63\362\3071\016[-_0-9a-zA-Z]+\262\3101\006\032\0041" +
+      "-63\262\3101\013\022\t[a-zA-Z]+\032-\n\013LabelsEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0321\n\017PropertiesE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\026" +
+      "UpdateRegistryMetadata\022\023\n\013registry_id\030\001 " +
+      "\001(\t\":\n\025DeleteRegistryRequest\022!\n\013registry" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\026DeleteRegistr" +
+      "yMetadata\022\023\n\013registry_id\030\001 \001(\t\"\201\001\n\027SetIp" +
+      "PermissionsRequest\022!\n\013registry_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\022C\n\016ip_permissions\030\002 \003(\0132+." +
+      "yandex.cloud.cloudregistry.v1.IpPermissi" +
+      "on\"\217\001\n\032UpdateIpPermissionsRequest\022!\n\013reg" +
+      "istry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022N\n\024ip_permi" +
+      "ssion_deltas\030\002 \003(\01320.yandex.cloud.cloudr" +
+      "egistry.v1.IpPermissionDelta\"=\n\030ListIpPe" +
+      "rmissionsRequest\022!\n\013registry_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\"]\n\031ListIpPermissionsResponse" +
+      "\022@\n\013permissions\030\001 \003(\0132+.yandex.cloud.clo" +
+      "udregistry.v1.IpPermission\"/\n\030SetIpPermi" +
+      "ssionsMetadata\022\023\n\013registry_id\030\001 \001(\t\"2\n\033U" +
+      "pdateIpPermissionsMetadata\022\023\n\013registry_i" +
+      "d\030\001 \001(\t\"\306\001\n\024ListArtifactsRequest\022\035\n\013regi" +
+      "stry_id\030\001 \001(\tB\010\212\3101\004<=50\022Q\n\004path\030\002 \001(\tBC\362" +
+      "\3071?|[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0" +
+      "-9]+(?:[._-][a-z0-9]+)*))*\022\035\n\tpage_size\030" +
+      "\003 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\004 \001(\tB\t\212" +
+      "\3101\005<=100\"l\n\025ListArtifactsResponse\022:\n\tart" +
+      "ifacts\030\001 \003(\0132\'.yandex.cloud.cloudregistr" +
+      "y.v1.Artifact\022\027\n\017next_page_token\030\002 \001(\t2\256" +
+      "\023\n\017RegistryService\022\226\001\n\003Get\0221.yandex.clou" +
+      "d.cloudregistry.v1.GetRegistryRequest\032\'." +
+      "yandex.cloud.cloudregistry.v1.Registry\"3" +
+      "\202\323\344\223\002-\022+/cloud-registry/v1/registries/{r" +
+      "egistry_id}\022\232\001\n\004List\0224.yandex.cloud.clou" +
+      "dregistry.v1.ListRegistriesRequest\0325.yan" +
+      "dex.cloud.cloudregistry.v1.ListRegistrie" +
+      "sResponse\"%\202\323\344\223\002\037\022\035/cloud-registry/v1/re" +
+      "gistries\022\261\001\n\006Create\0224.yandex.cloud.cloud" +
+      "registry.v1.CreateRegistryRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"N\202\323\344\223\002\"\"\035/c" +
+      "loud-registry/v1/registries:\001*\262\322*\"\n\026Crea" +
+      "teRegistryMetadata\022\010Registry\022\277\001\n\006Update\022" +
+      "4.yandex.cloud.cloudregistry.v1.UpdateRe" +
+      "gistryRequest\032!.yandex.cloud.operation.O" +
+      "peration\"\\\202\323\344\223\00202+/cloud-registry/v1/reg" +
+      "istries/{registry_id}:\001*\262\322*\"\n\026UpdateRegi" +
+      "stryMetadata\022\010Registry\022\311\001\n\006Delete\0224.yand" +
+      "ex.cloud.cloudregistry.v1.DeleteRegistry" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"f\202\323\344\223\002-*+/cloud-registry/v1/registrie" +
+      "s/{registry_id}\262\322*/\n\026DeleteRegistryMetad" +
+      "ata\022\025google.protobuf.Empty\022\275\001\n\022ListAcces" +
+      "sBindings\022..yandex.cloud.access.ListAcce" +
+      "ssBindingsRequest\032/.yandex.cloud.access." +
+      "ListAccessBindingsResponse\"F\202\323\344\223\002@\022>/clo" +
+      "ud-registry/v1/registries/{resource_id}:" +
+      "listAccessBindings\022\355\001\n\021SetAccessBindings" +
+      "\022-.yandex.cloud.access.SetAccessBindings" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"\205\001\202\323\344\223\002B\"=/cloud-registry/v1/registri" +
+      "es/{resource_id}:setAccessBindings:\001*\262\322*" +
+      "9\n access.SetAccessBindingsMetadata\022\025goo" +
+      "gle.protobuf.Empty\022\371\001\n\024UpdateAccessBindi" +
+      "ngs\0220.yandex.cloud.access.UpdateAccessBi" +
+      "ndingsRequest\032!.yandex.cloud.operation.O" +
+      "peration\"\213\001\202\323\344\223\002E\"@/cloud-registry/v1/re" +
+      "gistries/{resource_id}:updateAccessBindi" +
+      "ngs:\001*\262\322*<\n#access.UpdateAccessBindingsM" +
+      "etadata\022\025google.protobuf.Empty\022\315\001\n\021ListI" +
+      "pPermissions\0227.yandex.cloud.cloudregistr" +
+      "y.v1.ListIpPermissionsRequest\0328.yandex.c" +
+      "loud.cloudregistry.v1.ListIpPermissionsR" +
+      "esponse\"E\202\323\344\223\002?\022=/cloud-registry/v1/regi" +
+      "stries/{registry_id}:listIpPermissions\022\353" +
+      "\001\n\020SetIpPermissions\0226.yandex.cloud.cloud" +
+      "registry.v1.SetIpPermissionsRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"|\202\323\344\223\002A\"<" +
       "/cloud-registry/v1/registries/{registry_" +
-      "id}\262\322*/\n\026DeleteRegistryMetadata\022\025google." +
-      "protobuf.Empty\022\275\001\n\022ListAccessBindings\022.." +
-      "yandex.cloud.access.ListAccessBindingsRe" +
-      "quest\032/.yandex.cloud.access.ListAccessBi" +
-      "ndingsResponse\"F\202\323\344\223\002@\022>/cloud-registry/" +
-      "v1/registries/{resource_id}:listAccessBi" +
-      "ndings\022\355\001\n\021SetAccessBindings\022-.yandex.cl" +
-      "oud.access.SetAccessBindingsRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"\205\001\202\323\344\223\002B\"" +
-      "=/cloud-registry/v1/registries/{resource" +
-      "_id}:setAccessBindings:\001*\262\322*9\n access.Se" +
-      "tAccessBindingsMetadata\022\025google.protobuf" +
-      ".Empty\022\371\001\n\024UpdateAccessBindings\0220.yandex" +
-      ".cloud.access.UpdateAccessBindingsReques" +
-      "t\032!.yandex.cloud.operation.Operation\"\213\001\202" +
-      "\323\344\223\002E\"@/cloud-registry/v1/registries/{re" +
-      "source_id}:updateAccessBindings:\001*\262\322*<\n#" +
-      "access.UpdateAccessBindingsMetadata\022\025goo" +
-      "gle.protobuf.Empty\022\315\001\n\021ListIpPermissions" +
-      "\0227.yandex.cloud.cloudregistry.v1.ListIpP" +
-      "ermissionsRequest\0328.yandex.cloud.cloudre" +
-      "gistry.v1.ListIpPermissionsResponse\"E\202\323\344" +
-      "\223\002?\022=/cloud-registry/v1/registries/{regi" +
-      "stry_id}:listIpPermissions\022\353\001\n\020SetIpPerm" +
-      "issions\0226.yandex.cloud.cloudregistry.v1." +
-      "SetIpPermissionsRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"|\202\323\344\223\002A\"</cloud-regis" +
-      "try/v1/registries/{registry_id}:setIpPer" +
-      "missions:\001*\262\322*1\n\030SetIpPermissionsMetadat" +
-      "a\022\025google.protobuf.Empty\022\370\001\n\023UpdateIpPer" +
-      "missions\0229.yandex.cloud.cloudregistry.v1" +
-      ".UpdateIpPermissionsRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"\202\001\202\323\344\223\002D\"?/cloud-" +
-      "registry/v1/registries/{registry_id}:upd" +
-      "ateIpPermissions:\001*\262\322*4\n\033UpdateIpPermiss" +
-      "ionsMetadata\022\025google.protobuf.Empty\022\275\001\n\r" +
-      "ListArtifacts\0223.yandex.cloud.cloudregist" +
-      "ry.v1.ListArtifactsRequest\0324.yandex.clou" +
-      "d.cloudregistry.v1.ListArtifactsResponse" +
-      "\"A\202\323\344\223\002;\0229/cloud-registry/v1/registries/" +
-      "{registry_id}:listArtifactsBt\n!yandex.cl" +
-      "oud.api.cloudregistry.v1ZOgithub.com/yan" +
-      "dex-cloud/go-genproto/yandex/cloud/cloud" +
-      "registry/v1;cloudregistryb\006proto3"
+      "id}:setIpPermissions:\001*\262\322*1\n\030SetIpPermis" +
+      "sionsMetadata\022\025google.protobuf.Empty\022\370\001\n" +
+      "\023UpdateIpPermissions\0229.yandex.cloud.clou" +
+      "dregistry.v1.UpdateIpPermissionsRequest\032" +
+      "!.yandex.cloud.operation.Operation\"\202\001\202\323\344" +
+      "\223\002D\"?/cloud-registry/v1/registries/{regi" +
+      "stry_id}:updateIpPermissions:\001*\262\322*4\n\033Upd" +
+      "ateIpPermissionsMetadata\022\025google.protobu" +
+      "f.Empty\022\275\001\n\rListArtifacts\0223.yandex.cloud" +
+      ".cloudregistry.v1.ListArtifactsRequest\0324" +
+      ".yandex.cloud.cloudregistry.v1.ListArtif" +
+      "actsResponse\"A\202\323\344\223\002;\0229/cloud-registry/v1" +
+      "/registries/{registry_id}:listArtifactsB" +
+      "t\n!yandex.cloud.api.cloudregistry.v1ZOgi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/cloudregistry/v1;cloudregistryb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

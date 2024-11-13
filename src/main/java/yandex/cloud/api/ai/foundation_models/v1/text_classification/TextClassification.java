@@ -20,7 +20,7 @@ public final class TextClassification {
 
     /**
      * <pre>
-     * A label with a class name.
+     * A class name label.
      * </pre>
      *
      * <code>string label = 1;</code>
@@ -29,7 +29,7 @@ public final class TextClassification {
     java.lang.String getLabel();
     /**
      * <pre>
-     * A label with a class name.
+     * A class name label.
      * </pre>
      *
      * <code>string label = 1;</code>
@@ -40,7 +40,7 @@ public final class TextClassification {
 
     /**
      * <pre>
-     * Confidence of item's belonging to a class.
+     * The probability of classifying text into a specific class.
      * </pre>
      *
      * <code>double confidence = 2;</code>
@@ -50,7 +50,7 @@ public final class TextClassification {
   }
   /**
    * <pre>
-   * A pair of text label and corresponding confidence used in classification problems.
+   * A pair of text labels and their corresponding confidence values.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel}
@@ -145,7 +145,7 @@ public final class TextClassification {
     private volatile java.lang.Object label_;
     /**
      * <pre>
-     * A label with a class name.
+     * A class name label.
      * </pre>
      *
      * <code>string label = 1;</code>
@@ -166,7 +166,7 @@ public final class TextClassification {
     }
     /**
      * <pre>
-     * A label with a class name.
+     * A class name label.
      * </pre>
      *
      * <code>string label = 1;</code>
@@ -191,7 +191,7 @@ public final class TextClassification {
     private double confidence_;
     /**
      * <pre>
-     * Confidence of item's belonging to a class.
+     * The probability of classifying text into a specific class.
      * </pre>
      *
      * <code>double confidence = 2;</code>
@@ -371,7 +371,7 @@ public final class TextClassification {
     }
     /**
      * <pre>
-     * A pair of text label and corresponding confidence used in classification problems.
+     * A pair of text labels and their corresponding confidence values.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel}
@@ -530,7 +530,7 @@ public final class TextClassification {
       private java.lang.Object label_ = "";
       /**
        * <pre>
-       * A label with a class name.
+       * A class name label.
        * </pre>
        *
        * <code>string label = 1;</code>
@@ -550,7 +550,7 @@ public final class TextClassification {
       }
       /**
        * <pre>
-       * A label with a class name.
+       * A class name label.
        * </pre>
        *
        * <code>string label = 1;</code>
@@ -571,7 +571,7 @@ public final class TextClassification {
       }
       /**
        * <pre>
-       * A label with a class name.
+       * A class name label.
        * </pre>
        *
        * <code>string label = 1;</code>
@@ -590,7 +590,7 @@ public final class TextClassification {
       }
       /**
        * <pre>
-       * A label with a class name.
+       * A class name label.
        * </pre>
        *
        * <code>string label = 1;</code>
@@ -604,7 +604,7 @@ public final class TextClassification {
       }
       /**
        * <pre>
-       * A label with a class name.
+       * A class name label.
        * </pre>
        *
        * <code>string label = 1;</code>
@@ -626,7 +626,7 @@ public final class TextClassification {
       private double confidence_ ;
       /**
        * <pre>
-       * Confidence of item's belonging to a class.
+       * The probability of classifying text into a specific class.
        * </pre>
        *
        * <code>double confidence = 2;</code>
@@ -638,7 +638,7 @@ public final class TextClassification {
       }
       /**
        * <pre>
-       * Confidence of item's belonging to a class.
+       * The probability of classifying text into a specific class.
        * </pre>
        *
        * <code>double confidence = 2;</code>
@@ -653,7 +653,7 @@ public final class TextClassification {
       }
       /**
        * <pre>
-       * Confidence of item's belonging to a class.
+       * The probability of classifying text into a specific class.
        * </pre>
        *
        * <code>double confidence = 2;</code>

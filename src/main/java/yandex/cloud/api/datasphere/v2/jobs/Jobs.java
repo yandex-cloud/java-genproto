@@ -26170,6 +26170,3879 @@ public final class Jobs {
 
   }
 
+  public interface JobMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v2.jobs.JobMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the job.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * ID of the job.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * Name of the job.
+     * </pre>
+     *
+     * <code>string name = 2;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of the job.
+     * </pre>
+     *
+     * <code>string name = 2;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Description of the job.
+     * </pre>
+     *
+     * <code>string description = 3;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Description of the job.
+     * </pre>
+     *
+     * <code>string description = 3;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Create job timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <pre>
+     * Create job timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+    /**
+     * <pre>
+     * Create job timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+
+    /**
+     * <pre>
+     * Start job timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp started_at = 5;</code>
+     * @return Whether the startedAt field is set.
+     */
+    boolean hasStartedAt();
+    /**
+     * <pre>
+     * Start job timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp started_at = 5;</code>
+     * @return The startedAt.
+     */
+    com.google.protobuf.Timestamp getStartedAt();
+    /**
+     * <pre>
+     * Start job timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp started_at = 5;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder();
+
+    /**
+     * <pre>
+     * Finish job timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp finished_at = 6;</code>
+     * @return Whether the finishedAt field is set.
+     */
+    boolean hasFinishedAt();
+    /**
+     * <pre>
+     * Finish job timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp finished_at = 6;</code>
+     * @return The finishedAt.
+     */
+    com.google.protobuf.Timestamp getFinishedAt();
+    /**
+     * <pre>
+     * Finish job timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp finished_at = 6;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getFinishedAtOrBuilder();
+
+    /**
+     * <pre>
+     * Job data expiration timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_expires_at = 7;</code>
+     * @return Whether the dataExpiresAt field is set.
+     */
+    boolean hasDataExpiresAt();
+    /**
+     * <pre>
+     * Job data expiration timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_expires_at = 7;</code>
+     * @return The dataExpiresAt.
+     */
+    com.google.protobuf.Timestamp getDataExpiresAt();
+    /**
+     * <pre>
+     * Job data expiration timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_expires_at = 7;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getDataExpiresAtOrBuilder();
+
+    /**
+     * <pre>
+     * Status of the job.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.JobStatus status = 8;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <pre>
+     * Status of the job.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.JobStatus status = 8;</code>
+     * @return The status.
+     */
+    yandex.cloud.api.datasphere.v2.jobs.Jobs.JobStatus getStatus();
+
+    /**
+     * <pre>
+     * Details.
+     * </pre>
+     *
+     * <code>string status_details = 9;</code>
+     * @return The statusDetails.
+     */
+    java.lang.String getStatusDetails();
+    /**
+     * <pre>
+     * Details.
+     * </pre>
+     *
+     * <code>string status_details = 9;</code>
+     * @return The bytes for statusDetails.
+     */
+    com.google.protobuf.ByteString
+        getStatusDetailsBytes();
+
+    /**
+     * <pre>
+     * ID of the user who created the job.
+     * </pre>
+     *
+     * <code>string created_by_id = 10;</code>
+     * @return The createdById.
+     */
+    java.lang.String getCreatedById();
+    /**
+     * <pre>
+     * ID of the user who created the job.
+     * </pre>
+     *
+     * <code>string created_by_id = 10;</code>
+     * @return The bytes for createdById.
+     */
+    com.google.protobuf.ByteString
+        getCreatedByIdBytes();
+
+    /**
+     * <pre>
+     * ID of the project.
+     * </pre>
+     *
+     * <code>string project_id = 11;</code>
+     * @return The projectId.
+     */
+    java.lang.String getProjectId();
+    /**
+     * <pre>
+     * ID of the project.
+     * </pre>
+     *
+     * <code>string project_id = 11;</code>
+     * @return The bytes for projectId.
+     */
+    com.google.protobuf.ByteString
+        getProjectIdBytes();
+
+    /**
+     * <pre>
+     * Reference to the parent job.
+     * </pre>
+     *
+     * <code>string parent_job_id = 12;</code>
+     * @return The parentJobId.
+     */
+    java.lang.String getParentJobId();
+    /**
+     * <pre>
+     * Reference to the parent job.
+     * </pre>
+     *
+     * <code>string parent_job_id = 12;</code>
+     * @return The bytes for parentJobId.
+     */
+    com.google.protobuf.ByteString
+        getParentJobIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v2.jobs.JobMetadata}
+   */
+  public static final class JobMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v2.jobs.JobMetadata)
+      JobMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use JobMetadata.newBuilder() to construct.
+    private JobMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private JobMetadata() {
+      id_ = "";
+      name_ = "";
+      description_ = "";
+      status_ = 0;
+      statusDetails_ = "";
+      createdById_ = "";
+      projectId_ = "";
+      parentJobId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new JobMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private JobMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (createdAt_ != null) {
+                subBuilder = createdAt_.toBuilder();
+              }
+              createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(createdAt_);
+                createdAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (startedAt_ != null) {
+                subBuilder = startedAt_.toBuilder();
+              }
+              startedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(startedAt_);
+                startedAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (finishedAt_ != null) {
+                subBuilder = finishedAt_.toBuilder();
+              }
+              finishedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(finishedAt_);
+                finishedAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 58: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (dataExpiresAt_ != null) {
+                subBuilder = dataExpiresAt_.toBuilder();
+              }
+              dataExpiresAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(dataExpiresAt_);
+                dataExpiresAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 64: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              statusDetails_ = s;
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              createdById_ = s;
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              projectId_ = s;
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              parentJobId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_JobMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_JobMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata.class, yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * ID of the job.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the job.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Name of the job.
+     * </pre>
+     *
+     * <code>string name = 2;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the job.
+     * </pre>
+     *
+     * <code>string name = 2;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Description of the job.
+     * </pre>
+     *
+     * <code>string description = 3;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Description of the job.
+     * </pre>
+     *
+     * <code>string description = 3;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <pre>
+     * Create job timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     * @return Whether the createdAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
+    }
+    /**
+     * <pre>
+     * Create job timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     * @return The createdAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <pre>
+     * Create job timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return getCreatedAt();
+    }
+
+    public static final int STARTED_AT_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp startedAt_;
+    /**
+     * <pre>
+     * Start job timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp started_at = 5;</code>
+     * @return Whether the startedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartedAt() {
+      return startedAt_ != null;
+    }
+    /**
+     * <pre>
+     * Start job timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp started_at = 5;</code>
+     * @return The startedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartedAt() {
+      return startedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startedAt_;
+    }
+    /**
+     * <pre>
+     * Start job timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp started_at = 5;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder() {
+      return getStartedAt();
+    }
+
+    public static final int FINISHED_AT_FIELD_NUMBER = 6;
+    private com.google.protobuf.Timestamp finishedAt_;
+    /**
+     * <pre>
+     * Finish job timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp finished_at = 6;</code>
+     * @return Whether the finishedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinishedAt() {
+      return finishedAt_ != null;
+    }
+    /**
+     * <pre>
+     * Finish job timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp finished_at = 6;</code>
+     * @return The finishedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getFinishedAt() {
+      return finishedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : finishedAt_;
+    }
+    /**
+     * <pre>
+     * Finish job timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp finished_at = 6;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getFinishedAtOrBuilder() {
+      return getFinishedAt();
+    }
+
+    public static final int DATA_EXPIRES_AT_FIELD_NUMBER = 7;
+    private com.google.protobuf.Timestamp dataExpiresAt_;
+    /**
+     * <pre>
+     * Job data expiration timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_expires_at = 7;</code>
+     * @return Whether the dataExpiresAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasDataExpiresAt() {
+      return dataExpiresAt_ != null;
+    }
+    /**
+     * <pre>
+     * Job data expiration timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_expires_at = 7;</code>
+     * @return The dataExpiresAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getDataExpiresAt() {
+      return dataExpiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dataExpiresAt_;
+    }
+    /**
+     * <pre>
+     * Job data expiration timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_expires_at = 7;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getDataExpiresAtOrBuilder() {
+      return getDataExpiresAt();
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 8;
+    private int status_;
+    /**
+     * <pre>
+     * Status of the job.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.JobStatus status = 8;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * Status of the job.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.JobStatus status = 8;</code>
+     * @return The status.
+     */
+    @java.lang.Override public yandex.cloud.api.datasphere.v2.jobs.Jobs.JobStatus getStatus() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.datasphere.v2.jobs.Jobs.JobStatus result = yandex.cloud.api.datasphere.v2.jobs.Jobs.JobStatus.valueOf(status_);
+      return result == null ? yandex.cloud.api.datasphere.v2.jobs.Jobs.JobStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int STATUS_DETAILS_FIELD_NUMBER = 9;
+    private volatile java.lang.Object statusDetails_;
+    /**
+     * <pre>
+     * Details.
+     * </pre>
+     *
+     * <code>string status_details = 9;</code>
+     * @return The statusDetails.
+     */
+    @java.lang.Override
+    public java.lang.String getStatusDetails() {
+      java.lang.Object ref = statusDetails_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        statusDetails_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Details.
+     * </pre>
+     *
+     * <code>string status_details = 9;</code>
+     * @return The bytes for statusDetails.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStatusDetailsBytes() {
+      java.lang.Object ref = statusDetails_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        statusDetails_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREATED_BY_ID_FIELD_NUMBER = 10;
+    private volatile java.lang.Object createdById_;
+    /**
+     * <pre>
+     * ID of the user who created the job.
+     * </pre>
+     *
+     * <code>string created_by_id = 10;</code>
+     * @return The createdById.
+     */
+    @java.lang.Override
+    public java.lang.String getCreatedById() {
+      java.lang.Object ref = createdById_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        createdById_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the user who created the job.
+     * </pre>
+     *
+     * <code>string created_by_id = 10;</code>
+     * @return The bytes for createdById.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatedByIdBytes() {
+      java.lang.Object ref = createdById_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        createdById_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROJECT_ID_FIELD_NUMBER = 11;
+    private volatile java.lang.Object projectId_;
+    /**
+     * <pre>
+     * ID of the project.
+     * </pre>
+     *
+     * <code>string project_id = 11;</code>
+     * @return The projectId.
+     */
+    @java.lang.Override
+    public java.lang.String getProjectId() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        projectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the project.
+     * </pre>
+     *
+     * <code>string project_id = 11;</code>
+     * @return The bytes for projectId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProjectIdBytes() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        projectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PARENT_JOB_ID_FIELD_NUMBER = 12;
+    private volatile java.lang.Object parentJobId_;
+    /**
+     * <pre>
+     * Reference to the parent job.
+     * </pre>
+     *
+     * <code>string parent_job_id = 12;</code>
+     * @return The parentJobId.
+     */
+    @java.lang.Override
+    public java.lang.String getParentJobId() {
+      java.lang.Object ref = parentJobId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        parentJobId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Reference to the parent job.
+     * </pre>
+     *
+     * <code>string parent_job_id = 12;</code>
+     * @return The bytes for parentJobId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getParentJobIdBytes() {
+      java.lang.Object ref = parentJobId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        parentJobId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      }
+      if (createdAt_ != null) {
+        output.writeMessage(4, getCreatedAt());
+      }
+      if (startedAt_ != null) {
+        output.writeMessage(5, getStartedAt());
+      }
+      if (finishedAt_ != null) {
+        output.writeMessage(6, getFinishedAt());
+      }
+      if (dataExpiresAt_ != null) {
+        output.writeMessage(7, getDataExpiresAt());
+      }
+      if (status_ != yandex.cloud.api.datasphere.v2.jobs.Jobs.JobStatus.JOB_STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(8, status_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(statusDetails_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, statusDetails_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdById_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, createdById_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, projectId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentJobId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, parentJobId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      if (createdAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getCreatedAt());
+      }
+      if (startedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getStartedAt());
+      }
+      if (finishedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getFinishedAt());
+      }
+      if (dataExpiresAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getDataExpiresAt());
+      }
+      if (status_ != yandex.cloud.api.datasphere.v2.jobs.Jobs.JobStatus.JOB_STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(8, status_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(statusDetails_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, statusDetails_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdById_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, createdById_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, projectId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentJobId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, parentJobId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata other = (yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
+      if (hasCreatedAt()) {
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
+      }
+      if (hasStartedAt() != other.hasStartedAt()) return false;
+      if (hasStartedAt()) {
+        if (!getStartedAt()
+            .equals(other.getStartedAt())) return false;
+      }
+      if (hasFinishedAt() != other.hasFinishedAt()) return false;
+      if (hasFinishedAt()) {
+        if (!getFinishedAt()
+            .equals(other.getFinishedAt())) return false;
+      }
+      if (hasDataExpiresAt() != other.hasDataExpiresAt()) return false;
+      if (hasDataExpiresAt()) {
+        if (!getDataExpiresAt()
+            .equals(other.getDataExpiresAt())) return false;
+      }
+      if (status_ != other.status_) return false;
+      if (!getStatusDetails()
+          .equals(other.getStatusDetails())) return false;
+      if (!getCreatedById()
+          .equals(other.getCreatedById())) return false;
+      if (!getProjectId()
+          .equals(other.getProjectId())) return false;
+      if (!getParentJobId()
+          .equals(other.getParentJobId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (hasCreatedAt()) {
+        hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedAt().hashCode();
+      }
+      if (hasStartedAt()) {
+        hash = (37 * hash) + STARTED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getStartedAt().hashCode();
+      }
+      if (hasFinishedAt()) {
+        hash = (37 * hash) + FINISHED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getFinishedAt().hashCode();
+      }
+      if (hasDataExpiresAt()) {
+        hash = (37 * hash) + DATA_EXPIRES_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getDataExpiresAt().hashCode();
+      }
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      hash = (37 * hash) + STATUS_DETAILS_FIELD_NUMBER;
+      hash = (53 * hash) + getStatusDetails().hashCode();
+      hash = (37 * hash) + CREATED_BY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCreatedById().hashCode();
+      hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectId().hashCode();
+      hash = (37 * hash) + PARENT_JOB_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getParentJobId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v2.jobs.JobMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v2.jobs.JobMetadata)
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_JobMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_JobMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata.class, yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        name_ = "";
+
+        description_ = "";
+
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+        if (startedAtBuilder_ == null) {
+          startedAt_ = null;
+        } else {
+          startedAt_ = null;
+          startedAtBuilder_ = null;
+        }
+        if (finishedAtBuilder_ == null) {
+          finishedAt_ = null;
+        } else {
+          finishedAt_ = null;
+          finishedAtBuilder_ = null;
+        }
+        if (dataExpiresAtBuilder_ == null) {
+          dataExpiresAt_ = null;
+        } else {
+          dataExpiresAt_ = null;
+          dataExpiresAtBuilder_ = null;
+        }
+        status_ = 0;
+
+        statusDetails_ = "";
+
+        createdById_ = "";
+
+        projectId_ = "";
+
+        parentJobId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_JobMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata build() {
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata buildPartial() {
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata result = new yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata(this);
+        result.id_ = id_;
+        result.name_ = name_;
+        result.description_ = description_;
+        if (createdAtBuilder_ == null) {
+          result.createdAt_ = createdAt_;
+        } else {
+          result.createdAt_ = createdAtBuilder_.build();
+        }
+        if (startedAtBuilder_ == null) {
+          result.startedAt_ = startedAt_;
+        } else {
+          result.startedAt_ = startedAtBuilder_.build();
+        }
+        if (finishedAtBuilder_ == null) {
+          result.finishedAt_ = finishedAt_;
+        } else {
+          result.finishedAt_ = finishedAtBuilder_.build();
+        }
+        if (dataExpiresAtBuilder_ == null) {
+          result.dataExpiresAt_ = dataExpiresAt_;
+        } else {
+          result.dataExpiresAt_ = dataExpiresAtBuilder_.build();
+        }
+        result.status_ = status_;
+        result.statusDetails_ = statusDetails_;
+        result.createdById_ = createdById_;
+        result.projectId_ = projectId_;
+        result.parentJobId_ = parentJobId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata) {
+          return mergeFrom((yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata other) {
+        if (other == yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
+        }
+        if (other.hasStartedAt()) {
+          mergeStartedAt(other.getStartedAt());
+        }
+        if (other.hasFinishedAt()) {
+          mergeFinishedAt(other.getFinishedAt());
+        }
+        if (other.hasDataExpiresAt()) {
+          mergeDataExpiresAt(other.getDataExpiresAt());
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (!other.getStatusDetails().isEmpty()) {
+          statusDetails_ = other.statusDetails_;
+          onChanged();
+        }
+        if (!other.getCreatedById().isEmpty()) {
+          createdById_ = other.createdById_;
+          onChanged();
+        }
+        if (!other.getProjectId().isEmpty()) {
+          projectId_ = other.projectId_;
+          onChanged();
+        }
+        if (!other.getParentJobId().isEmpty()) {
+          parentJobId_ = other.parentJobId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * ID of the job.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the job.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the job.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the job.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the job.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name of the job.
+       * </pre>
+       *
+       * <code>string name = 2;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the job.
+       * </pre>
+       *
+       * <code>string name = 2;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the job.
+       * </pre>
+       *
+       * <code>string name = 2;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the job.
+       * </pre>
+       *
+       * <code>string name = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the job.
+       * </pre>
+       *
+       * <code>string name = 2;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Description of the job.
+       * </pre>
+       *
+       * <code>string description = 3;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the job.
+       * </pre>
+       *
+       * <code>string description = 3;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the job.
+       * </pre>
+       *
+       * <code>string description = 3;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the job.
+       * </pre>
+       *
+       * <code>string description = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the job.
+       * </pre>
+       *
+       * <code>string description = 3;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp createdAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+      /**
+       * <pre>
+       * Create job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       * @return Whether the createdAt field is set.
+       */
+      public boolean hasCreatedAt() {
+        return createdAtBuilder_ != null || createdAt_ != null;
+      }
+      /**
+       * <pre>
+       * Create job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       * @return The createdAt.
+       */
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        } else {
+          return createdAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Create job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdAt_ = value;
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Create job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Create job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (createdAt_ != null) {
+            createdAt_ =
+              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+          } else {
+            createdAt_ = value;
+          }
+          onChanged();
+        } else {
+          createdAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Create job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       */
+      public Builder clearCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+          onChanged();
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Create job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+        
+        onChanged();
+        return getCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Create job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+        if (createdAtBuilder_ != null) {
+          return createdAtBuilder_.getMessageOrBuilder();
+        } else {
+          return createdAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        }
+      }
+      /**
+       * <pre>
+       * Create job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedAtFieldBuilder() {
+        if (createdAtBuilder_ == null) {
+          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          createdAt_ = null;
+        }
+        return createdAtBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp startedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startedAtBuilder_;
+      /**
+       * <pre>
+       * Start job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 5;</code>
+       * @return Whether the startedAt field is set.
+       */
+      public boolean hasStartedAt() {
+        return startedAtBuilder_ != null || startedAt_ != null;
+      }
+      /**
+       * <pre>
+       * Start job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 5;</code>
+       * @return The startedAt.
+       */
+      public com.google.protobuf.Timestamp getStartedAt() {
+        if (startedAtBuilder_ == null) {
+          return startedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startedAt_;
+        } else {
+          return startedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Start job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 5;</code>
+       */
+      public Builder setStartedAt(com.google.protobuf.Timestamp value) {
+        if (startedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startedAt_ = value;
+          onChanged();
+        } else {
+          startedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Start job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 5;</code>
+       */
+      public Builder setStartedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startedAtBuilder_ == null) {
+          startedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          startedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Start job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 5;</code>
+       */
+      public Builder mergeStartedAt(com.google.protobuf.Timestamp value) {
+        if (startedAtBuilder_ == null) {
+          if (startedAt_ != null) {
+            startedAt_ =
+              com.google.protobuf.Timestamp.newBuilder(startedAt_).mergeFrom(value).buildPartial();
+          } else {
+            startedAt_ = value;
+          }
+          onChanged();
+        } else {
+          startedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Start job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 5;</code>
+       */
+      public Builder clearStartedAt() {
+        if (startedAtBuilder_ == null) {
+          startedAt_ = null;
+          onChanged();
+        } else {
+          startedAt_ = null;
+          startedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Start job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 5;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartedAtBuilder() {
+        
+        onChanged();
+        return getStartedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Start job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 5;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder() {
+        if (startedAtBuilder_ != null) {
+          return startedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return startedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : startedAt_;
+        }
+      }
+      /**
+       * <pre>
+       * Start job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStartedAtFieldBuilder() {
+        if (startedAtBuilder_ == null) {
+          startedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStartedAt(),
+                  getParentForChildren(),
+                  isClean());
+          startedAt_ = null;
+        }
+        return startedAtBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp finishedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> finishedAtBuilder_;
+      /**
+       * <pre>
+       * Finish job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp finished_at = 6;</code>
+       * @return Whether the finishedAt field is set.
+       */
+      public boolean hasFinishedAt() {
+        return finishedAtBuilder_ != null || finishedAt_ != null;
+      }
+      /**
+       * <pre>
+       * Finish job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp finished_at = 6;</code>
+       * @return The finishedAt.
+       */
+      public com.google.protobuf.Timestamp getFinishedAt() {
+        if (finishedAtBuilder_ == null) {
+          return finishedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : finishedAt_;
+        } else {
+          return finishedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Finish job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp finished_at = 6;</code>
+       */
+      public Builder setFinishedAt(com.google.protobuf.Timestamp value) {
+        if (finishedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          finishedAt_ = value;
+          onChanged();
+        } else {
+          finishedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Finish job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp finished_at = 6;</code>
+       */
+      public Builder setFinishedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (finishedAtBuilder_ == null) {
+          finishedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          finishedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Finish job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp finished_at = 6;</code>
+       */
+      public Builder mergeFinishedAt(com.google.protobuf.Timestamp value) {
+        if (finishedAtBuilder_ == null) {
+          if (finishedAt_ != null) {
+            finishedAt_ =
+              com.google.protobuf.Timestamp.newBuilder(finishedAt_).mergeFrom(value).buildPartial();
+          } else {
+            finishedAt_ = value;
+          }
+          onChanged();
+        } else {
+          finishedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Finish job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp finished_at = 6;</code>
+       */
+      public Builder clearFinishedAt() {
+        if (finishedAtBuilder_ == null) {
+          finishedAt_ = null;
+          onChanged();
+        } else {
+          finishedAt_ = null;
+          finishedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Finish job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp finished_at = 6;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getFinishedAtBuilder() {
+        
+        onChanged();
+        return getFinishedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Finish job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp finished_at = 6;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getFinishedAtOrBuilder() {
+        if (finishedAtBuilder_ != null) {
+          return finishedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return finishedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : finishedAt_;
+        }
+      }
+      /**
+       * <pre>
+       * Finish job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp finished_at = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getFinishedAtFieldBuilder() {
+        if (finishedAtBuilder_ == null) {
+          finishedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getFinishedAt(),
+                  getParentForChildren(),
+                  isClean());
+          finishedAt_ = null;
+        }
+        return finishedAtBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp dataExpiresAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> dataExpiresAtBuilder_;
+      /**
+       * <pre>
+       * Job data expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_expires_at = 7;</code>
+       * @return Whether the dataExpiresAt field is set.
+       */
+      public boolean hasDataExpiresAt() {
+        return dataExpiresAtBuilder_ != null || dataExpiresAt_ != null;
+      }
+      /**
+       * <pre>
+       * Job data expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_expires_at = 7;</code>
+       * @return The dataExpiresAt.
+       */
+      public com.google.protobuf.Timestamp getDataExpiresAt() {
+        if (dataExpiresAtBuilder_ == null) {
+          return dataExpiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dataExpiresAt_;
+        } else {
+          return dataExpiresAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Job data expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_expires_at = 7;</code>
+       */
+      public Builder setDataExpiresAt(com.google.protobuf.Timestamp value) {
+        if (dataExpiresAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dataExpiresAt_ = value;
+          onChanged();
+        } else {
+          dataExpiresAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Job data expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_expires_at = 7;</code>
+       */
+      public Builder setDataExpiresAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (dataExpiresAtBuilder_ == null) {
+          dataExpiresAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          dataExpiresAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Job data expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_expires_at = 7;</code>
+       */
+      public Builder mergeDataExpiresAt(com.google.protobuf.Timestamp value) {
+        if (dataExpiresAtBuilder_ == null) {
+          if (dataExpiresAt_ != null) {
+            dataExpiresAt_ =
+              com.google.protobuf.Timestamp.newBuilder(dataExpiresAt_).mergeFrom(value).buildPartial();
+          } else {
+            dataExpiresAt_ = value;
+          }
+          onChanged();
+        } else {
+          dataExpiresAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Job data expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_expires_at = 7;</code>
+       */
+      public Builder clearDataExpiresAt() {
+        if (dataExpiresAtBuilder_ == null) {
+          dataExpiresAt_ = null;
+          onChanged();
+        } else {
+          dataExpiresAt_ = null;
+          dataExpiresAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Job data expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_expires_at = 7;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getDataExpiresAtBuilder() {
+        
+        onChanged();
+        return getDataExpiresAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Job data expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_expires_at = 7;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getDataExpiresAtOrBuilder() {
+        if (dataExpiresAtBuilder_ != null) {
+          return dataExpiresAtBuilder_.getMessageOrBuilder();
+        } else {
+          return dataExpiresAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : dataExpiresAt_;
+        }
+      }
+      /**
+       * <pre>
+       * Job data expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_expires_at = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getDataExpiresAtFieldBuilder() {
+        if (dataExpiresAtBuilder_ == null) {
+          dataExpiresAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getDataExpiresAt(),
+                  getParentForChildren(),
+                  isClean());
+          dataExpiresAt_ = null;
+        }
+        return dataExpiresAtBuilder_;
+      }
+
+      private int status_ = 0;
+      /**
+       * <pre>
+       * Status of the job.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.JobStatus status = 8;</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <pre>
+       * Status of the job.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.JobStatus status = 8;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status of the job.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.JobStatus status = 8;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.JobStatus getStatus() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.JobStatus result = yandex.cloud.api.datasphere.v2.jobs.Jobs.JobStatus.valueOf(status_);
+        return result == null ? yandex.cloud.api.datasphere.v2.jobs.Jobs.JobStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Status of the job.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.JobStatus status = 8;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(yandex.cloud.api.datasphere.v2.jobs.Jobs.JobStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status of the job.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.JobStatus status = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object statusDetails_ = "";
+      /**
+       * <pre>
+       * Details.
+       * </pre>
+       *
+       * <code>string status_details = 9;</code>
+       * @return The statusDetails.
+       */
+      public java.lang.String getStatusDetails() {
+        java.lang.Object ref = statusDetails_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          statusDetails_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Details.
+       * </pre>
+       *
+       * <code>string status_details = 9;</code>
+       * @return The bytes for statusDetails.
+       */
+      public com.google.protobuf.ByteString
+          getStatusDetailsBytes() {
+        java.lang.Object ref = statusDetails_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          statusDetails_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Details.
+       * </pre>
+       *
+       * <code>string status_details = 9;</code>
+       * @param value The statusDetails to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusDetails(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        statusDetails_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Details.
+       * </pre>
+       *
+       * <code>string status_details = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatusDetails() {
+        
+        statusDetails_ = getDefaultInstance().getStatusDetails();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Details.
+       * </pre>
+       *
+       * <code>string status_details = 9;</code>
+       * @param value The bytes for statusDetails to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusDetailsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        statusDetails_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object createdById_ = "";
+      /**
+       * <pre>
+       * ID of the user who created the job.
+       * </pre>
+       *
+       * <code>string created_by_id = 10;</code>
+       * @return The createdById.
+       */
+      public java.lang.String getCreatedById() {
+        java.lang.Object ref = createdById_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          createdById_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the user who created the job.
+       * </pre>
+       *
+       * <code>string created_by_id = 10;</code>
+       * @return The bytes for createdById.
+       */
+      public com.google.protobuf.ByteString
+          getCreatedByIdBytes() {
+        java.lang.Object ref = createdById_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          createdById_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the user who created the job.
+       * </pre>
+       *
+       * <code>string created_by_id = 10;</code>
+       * @param value The createdById to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatedById(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        createdById_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the user who created the job.
+       * </pre>
+       *
+       * <code>string created_by_id = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreatedById() {
+        
+        createdById_ = getDefaultInstance().getCreatedById();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the user who created the job.
+       * </pre>
+       *
+       * <code>string created_by_id = 10;</code>
+       * @param value The bytes for createdById to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatedByIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        createdById_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object projectId_ = "";
+      /**
+       * <pre>
+       * ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 11;</code>
+       * @return The projectId.
+       */
+      public java.lang.String getProjectId() {
+        java.lang.Object ref = projectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          projectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 11;</code>
+       * @return The bytes for projectId.
+       */
+      public com.google.protobuf.ByteString
+          getProjectIdBytes() {
+        java.lang.Object ref = projectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          projectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 11;</code>
+       * @param value The projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProjectId() {
+        
+        projectId_ = getDefaultInstance().getProjectId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 11;</code>
+       * @param value The bytes for projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object parentJobId_ = "";
+      /**
+       * <pre>
+       * Reference to the parent job.
+       * </pre>
+       *
+       * <code>string parent_job_id = 12;</code>
+       * @return The parentJobId.
+       */
+      public java.lang.String getParentJobId() {
+        java.lang.Object ref = parentJobId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          parentJobId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Reference to the parent job.
+       * </pre>
+       *
+       * <code>string parent_job_id = 12;</code>
+       * @return The bytes for parentJobId.
+       */
+      public com.google.protobuf.ByteString
+          getParentJobIdBytes() {
+        java.lang.Object ref = parentJobId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          parentJobId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Reference to the parent job.
+       * </pre>
+       *
+       * <code>string parent_job_id = 12;</code>
+       * @param value The parentJobId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParentJobId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        parentJobId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Reference to the parent job.
+       * </pre>
+       *
+       * <code>string parent_job_id = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearParentJobId() {
+        
+        parentJobId_ = getDefaultInstance().getParentJobId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Reference to the parent job.
+       * </pre>
+       *
+       * <code>string parent_job_id = 12;</code>
+       * @param value The bytes for parentJobId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParentJobIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        parentJobId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v2.jobs.JobMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v2.jobs.JobMetadata)
+    private static final yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata();
+    }
+
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<JobMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<JobMetadata>() {
+      @java.lang.Override
+      public JobMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new JobMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<JobMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<JobMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.JobMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface JobProgressOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v2.jobs.JobProgress)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Progress message
+     * </pre>
+     *
+     * <code>string message = 1;</code>
+     * @return The message.
+     */
+    java.lang.String getMessage();
+    /**
+     * <pre>
+     * Progress message
+     * </pre>
+     *
+     * <code>string message = 1;</code>
+     * @return The bytes for message.
+     */
+    com.google.protobuf.ByteString
+        getMessageBytes();
+
+    /**
+     * <pre>
+     * Progress of the job from 0 to 100
+     * </pre>
+     *
+     * <code>int64 progress = 2;</code>
+     * @return The progress.
+     */
+    long getProgress();
+
+    /**
+     * <pre>
+     * Progress create time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 3;</code>
+     * @return Whether the createTime field is set.
+     */
+    boolean hasCreateTime();
+    /**
+     * <pre>
+     * Progress create time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 3;</code>
+     * @return The createTime.
+     */
+    com.google.protobuf.Timestamp getCreateTime();
+    /**
+     * <pre>
+     * Progress create time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 3;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v2.jobs.JobProgress}
+   */
+  public static final class JobProgress extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v2.jobs.JobProgress)
+      JobProgressOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use JobProgress.newBuilder() to construct.
+    private JobProgress(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private JobProgress() {
+      message_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new JobProgress();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private JobProgress(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              message_ = s;
+              break;
+            }
+            case 16: {
+
+              progress_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (createTime_ != null) {
+                subBuilder = createTime_.toBuilder();
+              }
+              createTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(createTime_);
+                createTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_JobProgress_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_JobProgress_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress.class, yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress.Builder.class);
+    }
+
+    public static final int MESSAGE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object message_;
+    /**
+     * <pre>
+     * Progress message
+     * </pre>
+     *
+     * <code>string message = 1;</code>
+     * @return The message.
+     */
+    @java.lang.Override
+    public java.lang.String getMessage() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        message_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Progress message
+     * </pre>
+     *
+     * <code>string message = 1;</code>
+     * @return The bytes for message.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMessageBytes() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        message_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROGRESS_FIELD_NUMBER = 2;
+    private long progress_;
+    /**
+     * <pre>
+     * Progress of the job from 0 to 100
+     * </pre>
+     *
+     * <code>int64 progress = 2;</code>
+     * @return The progress.
+     */
+    @java.lang.Override
+    public long getProgress() {
+      return progress_;
+    }
+
+    public static final int CREATE_TIME_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp createTime_;
+    /**
+     * <pre>
+     * Progress create time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 3;</code>
+     * @return Whether the createTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreateTime() {
+      return createTime_ != null;
+    }
+    /**
+     * <pre>
+     * Progress create time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 3;</code>
+     * @return The createTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreateTime() {
+      return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
+    }
+    /**
+     * <pre>
+     * Progress create time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
+      return getCreateTime();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, message_);
+      }
+      if (progress_ != 0L) {
+        output.writeInt64(2, progress_);
+      }
+      if (createTime_ != null) {
+        output.writeMessage(3, getCreateTime());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, message_);
+      }
+      if (progress_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, progress_);
+      }
+      if (createTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCreateTime());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress other = (yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress) obj;
+
+      if (!getMessage()
+          .equals(other.getMessage())) return false;
+      if (getProgress()
+          != other.getProgress()) return false;
+      if (hasCreateTime() != other.hasCreateTime()) return false;
+      if (hasCreateTime()) {
+        if (!getCreateTime()
+            .equals(other.getCreateTime())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getMessage().hashCode();
+      hash = (37 * hash) + PROGRESS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getProgress());
+      if (hasCreateTime()) {
+        hash = (37 * hash) + CREATE_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getCreateTime().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v2.jobs.JobProgress}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v2.jobs.JobProgress)
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgressOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_JobProgress_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_JobProgress_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress.class, yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        message_ = "";
+
+        progress_ = 0L;
+
+        if (createTimeBuilder_ == null) {
+          createTime_ = null;
+        } else {
+          createTime_ = null;
+          createTimeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_JobProgress_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress build() {
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress buildPartial() {
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress result = new yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress(this);
+        result.message_ = message_;
+        result.progress_ = progress_;
+        if (createTimeBuilder_ == null) {
+          result.createTime_ = createTime_;
+        } else {
+          result.createTime_ = createTimeBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress) {
+          return mergeFrom((yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress other) {
+        if (other == yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress.getDefaultInstance()) return this;
+        if (!other.getMessage().isEmpty()) {
+          message_ = other.message_;
+          onChanged();
+        }
+        if (other.getProgress() != 0L) {
+          setProgress(other.getProgress());
+        }
+        if (other.hasCreateTime()) {
+          mergeCreateTime(other.getCreateTime());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object message_ = "";
+      /**
+       * <pre>
+       * Progress message
+       * </pre>
+       *
+       * <code>string message = 1;</code>
+       * @return The message.
+       */
+      public java.lang.String getMessage() {
+        java.lang.Object ref = message_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          message_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Progress message
+       * </pre>
+       *
+       * <code>string message = 1;</code>
+       * @return The bytes for message.
+       */
+      public com.google.protobuf.ByteString
+          getMessageBytes() {
+        java.lang.Object ref = message_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          message_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Progress message
+       * </pre>
+       *
+       * <code>string message = 1;</code>
+       * @param value The message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        message_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Progress message
+       * </pre>
+       *
+       * <code>string message = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessage() {
+        
+        message_ = getDefaultInstance().getMessage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Progress message
+       * </pre>
+       *
+       * <code>string message = 1;</code>
+       * @param value The bytes for message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        message_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long progress_ ;
+      /**
+       * <pre>
+       * Progress of the job from 0 to 100
+       * </pre>
+       *
+       * <code>int64 progress = 2;</code>
+       * @return The progress.
+       */
+      @java.lang.Override
+      public long getProgress() {
+        return progress_;
+      }
+      /**
+       * <pre>
+       * Progress of the job from 0 to 100
+       * </pre>
+       *
+       * <code>int64 progress = 2;</code>
+       * @param value The progress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProgress(long value) {
+        
+        progress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Progress of the job from 0 to 100
+       * </pre>
+       *
+       * <code>int64 progress = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProgress() {
+        
+        progress_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp createTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createTimeBuilder_;
+      /**
+       * <pre>
+       * Progress create time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp create_time = 3;</code>
+       * @return Whether the createTime field is set.
+       */
+      public boolean hasCreateTime() {
+        return createTimeBuilder_ != null || createTime_ != null;
+      }
+      /**
+       * <pre>
+       * Progress create time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp create_time = 3;</code>
+       * @return The createTime.
+       */
+      public com.google.protobuf.Timestamp getCreateTime() {
+        if (createTimeBuilder_ == null) {
+          return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
+        } else {
+          return createTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Progress create time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp create_time = 3;</code>
+       */
+      public Builder setCreateTime(com.google.protobuf.Timestamp value) {
+        if (createTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createTime_ = value;
+          onChanged();
+        } else {
+          createTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Progress create time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp create_time = 3;</code>
+       */
+      public Builder setCreateTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createTimeBuilder_ == null) {
+          createTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          createTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Progress create time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp create_time = 3;</code>
+       */
+      public Builder mergeCreateTime(com.google.protobuf.Timestamp value) {
+        if (createTimeBuilder_ == null) {
+          if (createTime_ != null) {
+            createTime_ =
+              com.google.protobuf.Timestamp.newBuilder(createTime_).mergeFrom(value).buildPartial();
+          } else {
+            createTime_ = value;
+          }
+          onChanged();
+        } else {
+          createTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Progress create time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp create_time = 3;</code>
+       */
+      public Builder clearCreateTime() {
+        if (createTimeBuilder_ == null) {
+          createTime_ = null;
+          onChanged();
+        } else {
+          createTime_ = null;
+          createTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Progress create time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp create_time = 3;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
+        
+        onChanged();
+        return getCreateTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Progress create time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp create_time = 3;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
+        if (createTimeBuilder_ != null) {
+          return createTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return createTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
+        }
+      }
+      /**
+       * <pre>
+       * Progress create time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp create_time = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreateTimeFieldBuilder() {
+        if (createTimeBuilder_ == null) {
+          createTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreateTime(),
+                  getParentForChildren(),
+                  isClean());
+          createTime_ = null;
+        }
+        return createTimeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v2.jobs.JobProgress)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v2.jobs.JobProgress)
+    private static final yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress();
+    }
+
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<JobProgress>
+        PARSER = new com.google.protobuf.AbstractParser<JobProgress>() {
+      @java.lang.Override
+      public JobProgress parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new JobProgress(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<JobProgress> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<JobProgress> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.JobProgress getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_datasphere_v2_jobs_JobParameters_descriptor;
   private static final 
@@ -26265,6 +30138,16 @@ public final class Jobs {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datasphere_v2_jobs_GracefulShutdownParameters_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v2_jobs_JobMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v2_jobs_JobMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v2_jobs_JobProgress_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v2_jobs_JobProgress_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -26367,16 +30250,29 @@ public final class Jobs {
       "OutputDataset\" \n\tJobResult\022\023\n\013return_cod" +
       "e\030\001 \001(\003\"X\n\032GracefulShutdownParameters\022*\n" +
       "\007timeout\030\001 \001(\0132\031.google.protobuf.Duratio" +
-      "n\022\016\n\006signal\030\002 \001(\003*O\n\023FileCompressionType" +
-      "\022%\n!FILE_COMPRESSION_TYPE_UNSPECIFIED\020\000\022" +
-      "\010\n\004NONE\020\001\022\007\n\003ZIP\020\002*\221\001\n\tJobStatus\022\032\n\026JOB_" +
-      "STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\r\n\tEX" +
-      "ECUTING\020\002\022\024\n\020UPLOADING_OUTPUT\020\003\022\013\n\007SUCCE" +
-      "SS\020\004\022\t\n\005ERROR\020\005\022\r\n\tCANCELLED\020\006\022\016\n\nCANCEL" +
-      "LING\020\007B{\n#yandex.cloud.api.datasphere.v2" +
-      ".jobsB\004JobsZNgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/datasphere/v2/jobs" +
-      ";datasphereb\006proto3"
+      "n\022\016\n\006signal\030\002 \001(\003\"\230\003\n\013JobMetadata\022\n\n\002id\030" +
+      "\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t" +
+      "\022.\n\ncreated_at\030\004 \001(\0132\032.google.protobuf.T" +
+      "imestamp\022.\n\nstarted_at\030\005 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\022/\n\013finished_at\030\006 \001(\0132\032." +
+      "google.protobuf.Timestamp\0223\n\017data_expire" +
+      "s_at\030\007 \001(\0132\032.google.protobuf.Timestamp\022:" +
+      "\n\006status\030\010 \001(\0162*.yandex.cloud.datasphere" +
+      ".v2.jobs.JobStatus\022\026\n\016status_details\030\t \001" +
+      "(\t\022\025\n\rcreated_by_id\030\n \001(\t\022\022\n\nproject_id\030" +
+      "\013 \001(\t\022\025\n\rparent_job_id\030\014 \001(\t\"a\n\013JobProgr" +
+      "ess\022\017\n\007message\030\001 \001(\t\022\020\n\010progress\030\002 \001(\003\022/" +
+      "\n\013create_time\030\003 \001(\0132\032.google.protobuf.Ti" +
+      "mestamp*O\n\023FileCompressionType\022%\n!FILE_C" +
+      "OMPRESSION_TYPE_UNSPECIFIED\020\000\022\010\n\004NONE\020\001\022" +
+      "\007\n\003ZIP\020\002*\221\001\n\tJobStatus\022\032\n\026JOB_STATUS_UNS" +
+      "PECIFIED\020\000\022\014\n\010CREATING\020\001\022\r\n\tEXECUTING\020\002\022" +
+      "\024\n\020UPLOADING_OUTPUT\020\003\022\013\n\007SUCCESS\020\004\022\t\n\005ER" +
+      "ROR\020\005\022\r\n\tCANCELLED\020\006\022\016\n\nCANCELLING\020\007B{\n#" +
+      "yandex.cloud.api.datasphere.v2.jobsB\004Job" +
+      "sZNgithub.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/datasphere/v2/jobs;dataspher" +
+      "eb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -26499,6 +30395,18 @@ public final class Jobs {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_GracefulShutdownParameters_descriptor,
         new java.lang.String[] { "Timeout", "Signal", });
+    internal_static_yandex_cloud_datasphere_v2_jobs_JobMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_yandex_cloud_datasphere_v2_jobs_JobMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v2_jobs_JobMetadata_descriptor,
+        new java.lang.String[] { "Id", "Name", "Description", "CreatedAt", "StartedAt", "FinishedAt", "DataExpiresAt", "Status", "StatusDetails", "CreatedById", "ProjectId", "ParentJobId", });
+    internal_static_yandex_cloud_datasphere_v2_jobs_JobProgress_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_yandex_cloud_datasphere_v2_jobs_JobProgress_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v2_jobs_JobProgress_descriptor,
+        new java.lang.String[] { "Message", "Progress", "CreateTime", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.size);

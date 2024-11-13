@@ -80,6 +80,37 @@ public final class AsyncRecognizerGrpc {
     return getGetRecognitionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest,
+      com.google.protobuf.Empty> getDeleteRecognitionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteRecognition",
+      requestType = yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest,
+      com.google.protobuf.Empty> getDeleteRecognitionMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest, com.google.protobuf.Empty> getDeleteRecognitionMethod;
+    if ((getDeleteRecognitionMethod = AsyncRecognizerGrpc.getDeleteRecognitionMethod) == null) {
+      synchronized (AsyncRecognizerGrpc.class) {
+        if ((getDeleteRecognitionMethod = AsyncRecognizerGrpc.getDeleteRecognitionMethod) == null) {
+          AsyncRecognizerGrpc.getDeleteRecognitionMethod = getDeleteRecognitionMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteRecognition"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new AsyncRecognizerMethodDescriptorSupplier("DeleteRecognition"))
+              .build();
+        }
+      }
+    }
+    return getDeleteRecognitionMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -145,6 +176,13 @@ public final class AsyncRecognizerGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRecognitionMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void deleteRecognition(yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteRecognitionMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -161,6 +199,13 @@ public final class AsyncRecognizerGrpc {
                 yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest,
                 yandex.cloud.api.ai.stt.v3.Stt.StreamingResponse>(
                   this, METHODID_GET_RECOGNITION)))
+          .addMethod(
+            getDeleteRecognitionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest,
+                com.google.protobuf.Empty>(
+                  this, METHODID_DELETE_RECOGNITION)))
           .build();
     }
   }
@@ -197,6 +242,14 @@ public final class AsyncRecognizerGrpc {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getGetRecognitionMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void deleteRecognition(yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteRecognitionMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -230,6 +283,13 @@ public final class AsyncRecognizerGrpc {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getGetRecognitionMethod(), getCallOptions(), request);
     }
+
+    /**
+     */
+    public com.google.protobuf.Empty deleteRecognition(yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteRecognitionMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -256,10 +316,19 @@ public final class AsyncRecognizerGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRecognizeFileMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteRecognition(
+        yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteRecognitionMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_RECOGNIZE_FILE = 0;
   private static final int METHODID_GET_RECOGNITION = 1;
+  private static final int METHODID_DELETE_RECOGNITION = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -285,6 +354,10 @@ public final class AsyncRecognizerGrpc {
         case METHODID_GET_RECOGNITION:
           serviceImpl.getRecognition((yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.stt.v3.Stt.StreamingResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_RECOGNITION:
+          serviceImpl.deleteRecognition((yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -349,6 +422,7 @@ public final class AsyncRecognizerGrpc {
               .setSchemaDescriptor(new AsyncRecognizerFileDescriptorSupplier())
               .addMethod(getRecognizeFileMethod())
               .addMethod(getGetRecognitionMethod())
+              .addMethod(getDeleteRecognitionMethod())
               .build();
         }
       }

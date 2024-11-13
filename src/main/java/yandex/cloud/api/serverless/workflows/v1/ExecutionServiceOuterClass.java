@@ -2693,6 +2693,1214 @@ public final class ExecutionServiceOuterClass {
 
   }
 
+  public interface TerminateExecutionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.workflows.v1.TerminateExecutionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the Workflow execution.
+     * </pre>
+     *
+     * <code>string execution_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The executionId.
+     */
+    java.lang.String getExecutionId();
+    /**
+     * <pre>
+     * ID of the Workflow execution.
+     * </pre>
+     *
+     * <code>string execution_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for executionId.
+     */
+    com.google.protobuf.ByteString
+        getExecutionIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.workflows.v1.TerminateExecutionRequest}
+   */
+  public static final class TerminateExecutionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.workflows.v1.TerminateExecutionRequest)
+      TerminateExecutionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TerminateExecutionRequest.newBuilder() to construct.
+    private TerminateExecutionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TerminateExecutionRequest() {
+      executionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TerminateExecutionRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TerminateExecutionRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              executionId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.internal_static_yandex_cloud_serverless_workflows_v1_TerminateExecutionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.internal_static_yandex_cloud_serverless_workflows_v1_TerminateExecutionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest.class, yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest.Builder.class);
+    }
+
+    public static final int EXECUTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object executionId_;
+    /**
+     * <pre>
+     * ID of the Workflow execution.
+     * </pre>
+     *
+     * <code>string execution_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The executionId.
+     */
+    @java.lang.Override
+    public java.lang.String getExecutionId() {
+      java.lang.Object ref = executionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        executionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the Workflow execution.
+     * </pre>
+     *
+     * <code>string execution_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for executionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExecutionIdBytes() {
+      java.lang.Object ref = executionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        executionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(executionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, executionId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(executionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, executionId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest other = (yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest) obj;
+
+      if (!getExecutionId()
+          .equals(other.getExecutionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + EXECUTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getExecutionId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.workflows.v1.TerminateExecutionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.workflows.v1.TerminateExecutionRequest)
+        yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.internal_static_yandex_cloud_serverless_workflows_v1_TerminateExecutionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.internal_static_yandex_cloud_serverless_workflows_v1_TerminateExecutionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest.class, yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        executionId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.internal_static_yandex_cloud_serverless_workflows_v1_TerminateExecutionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest build() {
+        yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest buildPartial() {
+        yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest result = new yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest(this);
+        result.executionId_ = executionId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest) {
+          return mergeFrom((yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest other) {
+        if (other == yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest.getDefaultInstance()) return this;
+        if (!other.getExecutionId().isEmpty()) {
+          executionId_ = other.executionId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object executionId_ = "";
+      /**
+       * <pre>
+       * ID of the Workflow execution.
+       * </pre>
+       *
+       * <code>string execution_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The executionId.
+       */
+      public java.lang.String getExecutionId() {
+        java.lang.Object ref = executionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          executionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Workflow execution.
+       * </pre>
+       *
+       * <code>string execution_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for executionId.
+       */
+      public com.google.protobuf.ByteString
+          getExecutionIdBytes() {
+        java.lang.Object ref = executionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          executionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Workflow execution.
+       * </pre>
+       *
+       * <code>string execution_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The executionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExecutionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        executionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Workflow execution.
+       * </pre>
+       *
+       * <code>string execution_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExecutionId() {
+        
+        executionId_ = getDefaultInstance().getExecutionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Workflow execution.
+       * </pre>
+       *
+       * <code>string execution_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for executionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExecutionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        executionId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.workflows.v1.TerminateExecutionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.workflows.v1.TerminateExecutionRequest)
+    private static final yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest();
+    }
+
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TerminateExecutionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<TerminateExecutionRequest>() {
+      @java.lang.Override
+      public TerminateExecutionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TerminateExecutionRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TerminateExecutionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TerminateExecutionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TerminateExecutionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.workflows.v1.TerminateExecutionResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the Workflow execution.
+     * </pre>
+     *
+     * <code>string execution_id = 1;</code>
+     * @return The executionId.
+     */
+    java.lang.String getExecutionId();
+    /**
+     * <pre>
+     * ID of the Workflow execution.
+     * </pre>
+     *
+     * <code>string execution_id = 1;</code>
+     * @return The bytes for executionId.
+     */
+    com.google.protobuf.ByteString
+        getExecutionIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.workflows.v1.TerminateExecutionResponse}
+   */
+  public static final class TerminateExecutionResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.workflows.v1.TerminateExecutionResponse)
+      TerminateExecutionResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TerminateExecutionResponse.newBuilder() to construct.
+    private TerminateExecutionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TerminateExecutionResponse() {
+      executionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TerminateExecutionResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TerminateExecutionResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              executionId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.internal_static_yandex_cloud_serverless_workflows_v1_TerminateExecutionResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.internal_static_yandex_cloud_serverless_workflows_v1_TerminateExecutionResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse.class, yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse.Builder.class);
+    }
+
+    public static final int EXECUTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object executionId_;
+    /**
+     * <pre>
+     * ID of the Workflow execution.
+     * </pre>
+     *
+     * <code>string execution_id = 1;</code>
+     * @return The executionId.
+     */
+    @java.lang.Override
+    public java.lang.String getExecutionId() {
+      java.lang.Object ref = executionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        executionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the Workflow execution.
+     * </pre>
+     *
+     * <code>string execution_id = 1;</code>
+     * @return The bytes for executionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExecutionIdBytes() {
+      java.lang.Object ref = executionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        executionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(executionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, executionId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(executionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, executionId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse other = (yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse) obj;
+
+      if (!getExecutionId()
+          .equals(other.getExecutionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + EXECUTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getExecutionId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.workflows.v1.TerminateExecutionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.workflows.v1.TerminateExecutionResponse)
+        yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.internal_static_yandex_cloud_serverless_workflows_v1_TerminateExecutionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.internal_static_yandex_cloud_serverless_workflows_v1_TerminateExecutionResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse.class, yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        executionId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.internal_static_yandex_cloud_serverless_workflows_v1_TerminateExecutionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse build() {
+        yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse buildPartial() {
+        yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse result = new yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse(this);
+        result.executionId_ = executionId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse) {
+          return mergeFrom((yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse other) {
+        if (other == yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse.getDefaultInstance()) return this;
+        if (!other.getExecutionId().isEmpty()) {
+          executionId_ = other.executionId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object executionId_ = "";
+      /**
+       * <pre>
+       * ID of the Workflow execution.
+       * </pre>
+       *
+       * <code>string execution_id = 1;</code>
+       * @return The executionId.
+       */
+      public java.lang.String getExecutionId() {
+        java.lang.Object ref = executionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          executionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Workflow execution.
+       * </pre>
+       *
+       * <code>string execution_id = 1;</code>
+       * @return The bytes for executionId.
+       */
+      public com.google.protobuf.ByteString
+          getExecutionIdBytes() {
+        java.lang.Object ref = executionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          executionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Workflow execution.
+       * </pre>
+       *
+       * <code>string execution_id = 1;</code>
+       * @param value The executionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExecutionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        executionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Workflow execution.
+       * </pre>
+       *
+       * <code>string execution_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExecutionId() {
+        
+        executionId_ = getDefaultInstance().getExecutionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Workflow execution.
+       * </pre>
+       *
+       * <code>string execution_id = 1;</code>
+       * @param value The bytes for executionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExecutionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        executionId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.workflows.v1.TerminateExecutionResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.workflows.v1.TerminateExecutionResponse)
+    private static final yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse();
+    }
+
+    public static yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TerminateExecutionResponse>
+        PARSER = new com.google.protobuf.AbstractParser<TerminateExecutionResponse>() {
+      @java.lang.Override
+      public TerminateExecutionResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TerminateExecutionResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TerminateExecutionResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TerminateExecutionResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.workflows.v1.ExecutionServiceOuterClass.TerminateExecutionResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface GetExecutionRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.workflows.v1.GetExecutionRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -8025,6 +9233,16 @@ public final class ExecutionServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_workflows_v1_StopExecutionResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_workflows_v1_TerminateExecutionRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_workflows_v1_TerminateExecutionRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_workflows_v1_TerminateExecutionResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_workflows_v1_TerminateExecutionResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_workflows_v1_GetExecutionRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -8076,50 +9294,57 @@ public final class ExecutionServiceOuterClass {
       "\".\n\026StartExecutionResponse\022\024\n\014execution_" +
       "id\030\001 \001(\t\"2\n\024StopExecutionRequest\022\032\n\014exec" +
       "ution_id\030\001 \001(\tB\004\350\3071\001\"-\n\025StopExecutionRes" +
-      "ponse\022\024\n\014execution_id\030\001 \001(\t\"1\n\023GetExecut" +
-      "ionRequest\022\032\n\014execution_id\030\001 \001(\tB\004\350\3071\001\"Z" +
-      "\n\024GetExecutionResponse\022B\n\texecution\030\001 \001(" +
-      "\0132/.yandex.cloud.serverless.workflows.v1" +
-      ".Execution\"8\n\032GetExecutionHistoryRequest" +
-      "\022\032\n\014execution_id\030\001 \001(\tB\004\350\3071\001\"\265\001\n\033GetExec" +
-      "utionHistoryResponse\022I\n\texecution\030\001 \001(\0132" +
-      "6.yandex.cloud.serverless.workflows.v1.E" +
-      "xecutionPreview\022K\n\007entries\030\002 \003(\01322.yande" +
-      "x.cloud.serverless.workflows.v1.HistoryE" +
-      "ntryB\006\202\3101\002>0\"{\n\025ListExecutionsRequest\022\031\n" +
-      "\013workflow_id\030\001 \001(\tB\004\350\3071\001\022#\n\tpage_size\030\002 " +
-      "\001(\003B\020\372\3071\0140-2147483647\022\022\n\npage_token\030\003 \001(" +
-      "\t\022\016\n\006filter\030\004 \001(\t\"}\n\026ListExecutionsRespo" +
-      "nse\022J\n\nexecutions\030\001 \003(\01326.yandex.cloud.s" +
-      "erverless.workflows.v1.ExecutionPreview\022" +
-      "\027\n\017next_page_token\030\002 \001(\t2\230\007\n\020ExecutionSe" +
-      "rvice\022\254\001\n\005Start\022;.yandex.cloud.serverles" +
-      "s.workflows.v1.StartExecutionRequest\032<.y" +
-      "andex.cloud.serverless.workflows.v1.Star" +
-      "tExecutionResponse\"(\202\323\344\223\002\"\"\035/workflows/v" +
-      "1/execution/start:\001*\022\264\001\n\004Stop\022:.yandex.c" +
-      "loud.serverless.workflows.v1.StopExecuti" +
-      "onRequest\032;.yandex.cloud.serverless.work" +
-      "flows.v1.StopExecutionResponse\"3\202\323\344\223\002-\"+" +
-      "/workflows/v1/execution/{execution_id}/s" +
-      "top\022\254\001\n\003Get\0229.yandex.cloud.serverless.wo" +
-      "rkflows.v1.GetExecutionRequest\032:.yandex." +
-      "cloud.serverless.workflows.v1.GetExecuti" +
-      "onResponse\".\202\323\344\223\002(\022&/workflows/v1/execut" +
-      "ion/{execution_id}\022\311\001\n\nGetHistory\022@.yand" +
-      "ex.cloud.serverless.workflows.v1.GetExec" +
-      "utionHistoryRequest\032A.yandex.cloud.serve" +
-      "rless.workflows.v1.GetExecutionHistoryRe" +
-      "sponse\"6\202\323\344\223\0020\022./workflows/v1/execution/" +
-      "{execution_id}/history\022\242\001\n\004List\022;.yandex" +
-      ".cloud.serverless.workflows.v1.ListExecu" +
-      "tionsRequest\032<.yandex.cloud.serverless.w" +
-      "orkflows.v1.ListExecutionsResponse\"\037\202\323\344\223" +
-      "\002\031\022\027/workflows/v1/executionB~\n(yandex.cl" +
-      "oud.api.serverless.workflows.v1ZRgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/serverless/workflows/v1;workflowsb\006pro" +
-      "to3"
+      "ponse\022\024\n\014execution_id\030\001 \001(\t\"7\n\031Terminate" +
+      "ExecutionRequest\022\032\n\014execution_id\030\001 \001(\tB\004" +
+      "\350\3071\001\"2\n\032TerminateExecutionResponse\022\024\n\014ex" +
+      "ecution_id\030\001 \001(\t\"1\n\023GetExecutionRequest\022" +
+      "\032\n\014execution_id\030\001 \001(\tB\004\350\3071\001\"Z\n\024GetExecut" +
+      "ionResponse\022B\n\texecution\030\001 \001(\0132/.yandex." +
+      "cloud.serverless.workflows.v1.Execution\"" +
+      "8\n\032GetExecutionHistoryRequest\022\032\n\014executi" +
+      "on_id\030\001 \001(\tB\004\350\3071\001\"\265\001\n\033GetExecutionHistor" +
+      "yResponse\022I\n\texecution\030\001 \001(\01326.yandex.cl" +
+      "oud.serverless.workflows.v1.ExecutionPre" +
+      "view\022K\n\007entries\030\002 \003(\01322.yandex.cloud.ser" +
+      "verless.workflows.v1.HistoryEntryB\006\202\3101\002>" +
+      "0\"{\n\025ListExecutionsRequest\022\031\n\013workflow_i" +
+      "d\030\001 \001(\tB\004\350\3071\001\022#\n\tpage_size\030\002 \001(\003B\020\372\3071\0140-" +
+      "2147483647\022\022\n\npage_token\030\003 \001(\t\022\016\n\006filter" +
+      "\030\004 \001(\t\"}\n\026ListExecutionsResponse\022J\n\nexec" +
+      "utions\030\001 \003(\01326.yandex.cloud.serverless.w" +
+      "orkflows.v1.ExecutionPreview\022\027\n\017next_pag" +
+      "e_token\030\002 \001(\t2\343\010\n\020ExecutionService\022\254\001\n\005S" +
+      "tart\022;.yandex.cloud.serverless.workflows" +
+      ".v1.StartExecutionRequest\032<.yandex.cloud" +
+      ".serverless.workflows.v1.StartExecutionR" +
+      "esponse\"(\202\323\344\223\002\"\"\035/workflows/v1/execution" +
+      "/start:\001*\022\264\001\n\004Stop\022:.yandex.cloud.server" +
+      "less.workflows.v1.StopExecutionRequest\032;" +
+      ".yandex.cloud.serverless.workflows.v1.St" +
+      "opExecutionResponse\"3\202\323\344\223\002-\"+/workflows/" +
+      "v1/execution/{execution_id}/stop\022\310\001\n\tTer" +
+      "minate\022?.yandex.cloud.serverless.workflo" +
+      "ws.v1.TerminateExecutionRequest\032@.yandex" +
+      ".cloud.serverless.workflows.v1.Terminate" +
+      "ExecutionResponse\"8\202\323\344\223\0022\"0/workflows/v1" +
+      "/execution/{execution_id}/terminate\022\254\001\n\003" +
+      "Get\0229.yandex.cloud.serverless.workflows." +
+      "v1.GetExecutionRequest\032:.yandex.cloud.se" +
+      "rverless.workflows.v1.GetExecutionRespon" +
+      "se\".\202\323\344\223\002(\022&/workflows/v1/execution/{exe" +
+      "cution_id}\022\311\001\n\nGetHistory\022@.yandex.cloud" +
+      ".serverless.workflows.v1.GetExecutionHis" +
+      "toryRequest\032A.yandex.cloud.serverless.wo" +
+      "rkflows.v1.GetExecutionHistoryResponse\"6" +
+      "\202\323\344\223\0020\022./workflows/v1/execution/{executi" +
+      "on_id}/history\022\242\001\n\004List\022;.yandex.cloud.s" +
+      "erverless.workflows.v1.ListExecutionsReq" +
+      "uest\032<.yandex.cloud.serverless.workflows" +
+      ".v1.ListExecutionsResponse\"\037\202\323\344\223\002\031\022\027/wor" +
+      "kflows/v1/executionB~\n(yandex.cloud.api." +
+      "serverless.workflows.v1ZRgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/server" +
+      "less/workflows/v1;workflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8153,38 +9378,50 @@ public final class ExecutionServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_workflows_v1_StopExecutionResponse_descriptor,
         new java.lang.String[] { "ExecutionId", });
-    internal_static_yandex_cloud_serverless_workflows_v1_GetExecutionRequest_descriptor =
+    internal_static_yandex_cloud_serverless_workflows_v1_TerminateExecutionRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_serverless_workflows_v1_TerminateExecutionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_workflows_v1_TerminateExecutionRequest_descriptor,
+        new java.lang.String[] { "ExecutionId", });
+    internal_static_yandex_cloud_serverless_workflows_v1_TerminateExecutionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_serverless_workflows_v1_TerminateExecutionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_workflows_v1_TerminateExecutionResponse_descriptor,
+        new java.lang.String[] { "ExecutionId", });
+    internal_static_yandex_cloud_serverless_workflows_v1_GetExecutionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_serverless_workflows_v1_GetExecutionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_workflows_v1_GetExecutionRequest_descriptor,
         new java.lang.String[] { "ExecutionId", });
     internal_static_yandex_cloud_serverless_workflows_v1_GetExecutionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_serverless_workflows_v1_GetExecutionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_workflows_v1_GetExecutionResponse_descriptor,
         new java.lang.String[] { "Execution", });
     internal_static_yandex_cloud_serverless_workflows_v1_GetExecutionHistoryRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_serverless_workflows_v1_GetExecutionHistoryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_workflows_v1_GetExecutionHistoryRequest_descriptor,
         new java.lang.String[] { "ExecutionId", });
     internal_static_yandex_cloud_serverless_workflows_v1_GetExecutionHistoryResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_serverless_workflows_v1_GetExecutionHistoryResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_workflows_v1_GetExecutionHistoryResponse_descriptor,
         new java.lang.String[] { "Execution", "Entries", });
     internal_static_yandex_cloud_serverless_workflows_v1_ListExecutionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_serverless_workflows_v1_ListExecutionsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_workflows_v1_ListExecutionsRequest_descriptor,
         new java.lang.String[] { "WorkflowId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_serverless_workflows_v1_ListExecutionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_serverless_workflows_v1_ListExecutionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_workflows_v1_ListExecutionsResponse_descriptor,

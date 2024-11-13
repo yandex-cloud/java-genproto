@@ -171,6 +171,10 @@ public final class ArtifactOuterClass {
     com.google.protobuf.TimestampOrBuilder getModifiedAtOrBuilder();
   }
   /**
+   * <pre>
+   * A Artifact resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.cloudregistry.v1.Artifact}
    */
   public static final class Artifact extends
@@ -1103,6 +1107,10 @@ public final class ArtifactOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A Artifact resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.cloudregistry.v1.Artifact}
      */
     public static final class Builder extends
