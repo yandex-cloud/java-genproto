@@ -112,7 +112,7 @@ public final class ImageGenerationService {
   /**
    * <pre>
    * Request for the service to generate an image.
-   * For examples of usage, see [step-by-step guide](/docs/operations/yandexart/request).
+   * For examples of usage, see [step-by-step guide](/docs/foundation-models/operations/yandexart/request).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.image_generation.ImageGenerationRequest}
@@ -555,7 +555,7 @@ public final class ImageGenerationService {
     /**
      * <pre>
      * Request for the service to generate an image.
-     * For examples of usage, see [step-by-step guide](/docs/operations/yandexart/request).
+     * For examples of usage, see [step-by-step guide](/docs/foundation-models/operations/yandexart/request).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.image_generation.ImageGenerationRequest}

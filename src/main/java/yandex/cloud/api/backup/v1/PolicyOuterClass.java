@@ -1935,7 +1935,7 @@ public final class PolicyOuterClass {
 
     /**
      * <pre>
-     * Format of the Acronis backup archive.
+     * Format of the Cyberprotect backup archive.
      * </pre>
      *
      * <code>.yandex.cloud.backup.v1.Format format = 2 [(.yandex.cloud.required) = true];</code>
@@ -1944,7 +1944,7 @@ public final class PolicyOuterClass {
     int getFormatValue();
     /**
      * <pre>
-     * Format of the Acronis backup archive.
+     * Format of the Cyberprotect backup archive.
      * </pre>
      *
      * <code>.yandex.cloud.backup.v1.Format format = 2 [(.yandex.cloud.required) = true];</code>
@@ -16499,7 +16499,7 @@ public final class PolicyOuterClass {
     private int format_;
     /**
      * <pre>
-     * Format of the Acronis backup archive.
+     * Format of the Cyberprotect backup archive.
      * </pre>
      *
      * <code>.yandex.cloud.backup.v1.Format format = 2 [(.yandex.cloud.required) = true];</code>
@@ -16510,7 +16510,7 @@ public final class PolicyOuterClass {
     }
     /**
      * <pre>
-     * Format of the Acronis backup archive.
+     * Format of the Cyberprotect backup archive.
      * </pre>
      *
      * <code>.yandex.cloud.backup.v1.Format format = 2 [(.yandex.cloud.required) = true];</code>
@@ -17672,7 +17672,7 @@ public final class PolicyOuterClass {
       private int format_ = 0;
       /**
        * <pre>
-       * Format of the Acronis backup archive.
+       * Format of the Cyberprotect backup archive.
        * </pre>
        *
        * <code>.yandex.cloud.backup.v1.Format format = 2 [(.yandex.cloud.required) = true];</code>
@@ -17683,7 +17683,7 @@ public final class PolicyOuterClass {
       }
       /**
        * <pre>
-       * Format of the Acronis backup archive.
+       * Format of the Cyberprotect backup archive.
        * </pre>
        *
        * <code>.yandex.cloud.backup.v1.Format format = 2 [(.yandex.cloud.required) = true];</code>
@@ -17698,7 +17698,7 @@ public final class PolicyOuterClass {
       }
       /**
        * <pre>
-       * Format of the Acronis backup archive.
+       * Format of the Cyberprotect backup archive.
        * </pre>
        *
        * <code>.yandex.cloud.backup.v1.Format format = 2 [(.yandex.cloud.required) = true];</code>
@@ -17712,7 +17712,7 @@ public final class PolicyOuterClass {
       }
       /**
        * <pre>
-       * Format of the Acronis backup archive.
+       * Format of the Cyberprotect backup archive.
        * </pre>
        *
        * <code>.yandex.cloud.backup.v1.Format format = 2 [(.yandex.cloud.required) = true];</code>
@@ -17730,7 +17730,7 @@ public final class PolicyOuterClass {
       }
       /**
        * <pre>
-       * Format of the Acronis backup archive.
+       * Format of the Cyberprotect backup archive.
        * </pre>
        *
        * <code>.yandex.cloud.backup.v1.Format format = 2 [(.yandex.cloud.required) = true];</code>
