@@ -360,6 +360,36 @@ public final class SearchIndexOuterClass {
      */
     yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndexOrBuilder getVectorSearchIndexOrBuilder();
 
+    /**
+     * <pre>
+     * Hybrid (vector-based + keyword-based) search index configuration
+     * This type is used for hybrid search, where documents are indexed using both keyword-based and vector-based search mechanisms.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 14;</code>
+     * @return Whether the hybridSearchIndex field is set.
+     */
+    boolean hasHybridSearchIndex();
+    /**
+     * <pre>
+     * Hybrid (vector-based + keyword-based) search index configuration
+     * This type is used for hybrid search, where documents are indexed using both keyword-based and vector-based search mechanisms.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 14;</code>
+     * @return The hybridSearchIndex.
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex getHybridSearchIndex();
+    /**
+     * <pre>
+     * Hybrid (vector-based + keyword-based) search index configuration
+     * This type is used for hybrid search, where documents are indexed using both keyword-based and vector-based search mechanisms.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 14;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndexOrBuilder getHybridSearchIndexOrBuilder();
+
     public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex.IndexTypeCase getIndexTypeCase();
   }
   /**
@@ -547,6 +577,20 @@ public final class SearchIndexOuterClass {
               indexTypeCase_ = 13;
               break;
             }
+            case 114: {
+              yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.Builder subBuilder = null;
+              if (indexTypeCase_ == 14) {
+                subBuilder = ((yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex) indexType_).toBuilder();
+              }
+              indexType_ =
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex) indexType_);
+                indexType_ = subBuilder.buildPartial();
+              }
+              indexTypeCase_ = 14;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -598,6 +642,7 @@ public final class SearchIndexOuterClass {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       TEXT_SEARCH_INDEX(12),
       VECTOR_SEARCH_INDEX(13),
+      HYBRID_SEARCH_INDEX(14),
       INDEXTYPE_NOT_SET(0);
       private final int value;
       private IndexTypeCase(int value) {
@@ -617,6 +662,7 @@ public final class SearchIndexOuterClass {
         switch (value) {
           case 12: return TEXT_SEARCH_INDEX;
           case 13: return VECTOR_SEARCH_INDEX;
+          case 14: return HYBRID_SEARCH_INDEX;
           case 0: return INDEXTYPE_NOT_SET;
           default: return null;
         }
@@ -1249,6 +1295,52 @@ public final class SearchIndexOuterClass {
       return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex.getDefaultInstance();
     }
 
+    public static final int HYBRID_SEARCH_INDEX_FIELD_NUMBER = 14;
+    /**
+     * <pre>
+     * Hybrid (vector-based + keyword-based) search index configuration
+     * This type is used for hybrid search, where documents are indexed using both keyword-based and vector-based search mechanisms.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 14;</code>
+     * @return Whether the hybridSearchIndex field is set.
+     */
+    @java.lang.Override
+    public boolean hasHybridSearchIndex() {
+      return indexTypeCase_ == 14;
+    }
+    /**
+     * <pre>
+     * Hybrid (vector-based + keyword-based) search index configuration
+     * This type is used for hybrid search, where documents are indexed using both keyword-based and vector-based search mechanisms.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 14;</code>
+     * @return The hybridSearchIndex.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex getHybridSearchIndex() {
+      if (indexTypeCase_ == 14) {
+         return (yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex) indexType_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Hybrid (vector-based + keyword-based) search index configuration
+     * This type is used for hybrid search, where documents are indexed using both keyword-based and vector-based search mechanisms.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 14;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndexOrBuilder getHybridSearchIndexOrBuilder() {
+      if (indexTypeCase_ == 14) {
+         return (yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex) indexType_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1304,6 +1396,9 @@ public final class SearchIndexOuterClass {
       }
       if (indexTypeCase_ == 13) {
         output.writeMessage(13, (yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex) indexType_);
+      }
+      if (indexTypeCase_ == 14) {
+        output.writeMessage(14, (yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex) indexType_);
       }
       unknownFields.writeTo(output);
     }
@@ -1366,6 +1461,10 @@ public final class SearchIndexOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, (yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex) indexType_);
       }
+      if (indexTypeCase_ == 14) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, (yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex) indexType_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1425,6 +1524,10 @@ public final class SearchIndexOuterClass {
           if (!getVectorSearchIndex()
               .equals(other.getVectorSearchIndex())) return false;
           break;
+        case 14:
+          if (!getHybridSearchIndex()
+              .equals(other.getHybridSearchIndex())) return false;
+          break;
         case 0:
         default:
       }
@@ -1479,6 +1582,10 @@ public final class SearchIndexOuterClass {
         case 13:
           hash = (37 * hash) + VECTOR_SEARCH_INDEX_FIELD_NUMBER;
           hash = (53 * hash) + getVectorSearchIndex().hashCode();
+          break;
+        case 14:
+          hash = (37 * hash) + HYBRID_SEARCH_INDEX_FIELD_NUMBER;
+          hash = (53 * hash) + getHybridSearchIndex().hashCode();
           break;
         case 0:
         default:
@@ -1750,6 +1857,13 @@ public final class SearchIndexOuterClass {
             result.indexType_ = vectorSearchIndexBuilder_.build();
           }
         }
+        if (indexTypeCase_ == 14) {
+          if (hybridSearchIndexBuilder_ == null) {
+            result.indexType_ = indexType_;
+          } else {
+            result.indexType_ = hybridSearchIndexBuilder_.build();
+          }
+        }
         result.indexTypeCase_ = indexTypeCase_;
         onBuilt();
         return result;
@@ -1844,6 +1958,10 @@ public final class SearchIndexOuterClass {
           }
           case VECTOR_SEARCH_INDEX: {
             mergeVectorSearchIndex(other.getVectorSearchIndex());
+            break;
+          }
+          case HYBRID_SEARCH_INDEX: {
+            mergeHybridSearchIndex(other.getHybridSearchIndex());
             break;
           }
           case INDEXTYPE_NOT_SET: {
@@ -3621,6 +3739,192 @@ public final class SearchIndexOuterClass {
         onChanged();;
         return vectorSearchIndexBuilder_;
       }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndexOrBuilder> hybridSearchIndexBuilder_;
+      /**
+       * <pre>
+       * Hybrid (vector-based + keyword-based) search index configuration
+       * This type is used for hybrid search, where documents are indexed using both keyword-based and vector-based search mechanisms.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 14;</code>
+       * @return Whether the hybridSearchIndex field is set.
+       */
+      @java.lang.Override
+      public boolean hasHybridSearchIndex() {
+        return indexTypeCase_ == 14;
+      }
+      /**
+       * <pre>
+       * Hybrid (vector-based + keyword-based) search index configuration
+       * This type is used for hybrid search, where documents are indexed using both keyword-based and vector-based search mechanisms.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 14;</code>
+       * @return The hybridSearchIndex.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex getHybridSearchIndex() {
+        if (hybridSearchIndexBuilder_ == null) {
+          if (indexTypeCase_ == 14) {
+            return (yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex) indexType_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.getDefaultInstance();
+        } else {
+          if (indexTypeCase_ == 14) {
+            return hybridSearchIndexBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Hybrid (vector-based + keyword-based) search index configuration
+       * This type is used for hybrid search, where documents are indexed using both keyword-based and vector-based search mechanisms.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 14;</code>
+       */
+      public Builder setHybridSearchIndex(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex value) {
+        if (hybridSearchIndexBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          indexType_ = value;
+          onChanged();
+        } else {
+          hybridSearchIndexBuilder_.setMessage(value);
+        }
+        indexTypeCase_ = 14;
+        return this;
+      }
+      /**
+       * <pre>
+       * Hybrid (vector-based + keyword-based) search index configuration
+       * This type is used for hybrid search, where documents are indexed using both keyword-based and vector-based search mechanisms.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 14;</code>
+       */
+      public Builder setHybridSearchIndex(
+          yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.Builder builderForValue) {
+        if (hybridSearchIndexBuilder_ == null) {
+          indexType_ = builderForValue.build();
+          onChanged();
+        } else {
+          hybridSearchIndexBuilder_.setMessage(builderForValue.build());
+        }
+        indexTypeCase_ = 14;
+        return this;
+      }
+      /**
+       * <pre>
+       * Hybrid (vector-based + keyword-based) search index configuration
+       * This type is used for hybrid search, where documents are indexed using both keyword-based and vector-based search mechanisms.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 14;</code>
+       */
+      public Builder mergeHybridSearchIndex(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex value) {
+        if (hybridSearchIndexBuilder_ == null) {
+          if (indexTypeCase_ == 14 &&
+              indexType_ != yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.getDefaultInstance()) {
+            indexType_ = yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.newBuilder((yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex) indexType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            indexType_ = value;
+          }
+          onChanged();
+        } else {
+          if (indexTypeCase_ == 14) {
+            hybridSearchIndexBuilder_.mergeFrom(value);
+          }
+          hybridSearchIndexBuilder_.setMessage(value);
+        }
+        indexTypeCase_ = 14;
+        return this;
+      }
+      /**
+       * <pre>
+       * Hybrid (vector-based + keyword-based) search index configuration
+       * This type is used for hybrid search, where documents are indexed using both keyword-based and vector-based search mechanisms.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 14;</code>
+       */
+      public Builder clearHybridSearchIndex() {
+        if (hybridSearchIndexBuilder_ == null) {
+          if (indexTypeCase_ == 14) {
+            indexTypeCase_ = 0;
+            indexType_ = null;
+            onChanged();
+          }
+        } else {
+          if (indexTypeCase_ == 14) {
+            indexTypeCase_ = 0;
+            indexType_ = null;
+          }
+          hybridSearchIndexBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Hybrid (vector-based + keyword-based) search index configuration
+       * This type is used for hybrid search, where documents are indexed using both keyword-based and vector-based search mechanisms.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 14;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.Builder getHybridSearchIndexBuilder() {
+        return getHybridSearchIndexFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Hybrid (vector-based + keyword-based) search index configuration
+       * This type is used for hybrid search, where documents are indexed using both keyword-based and vector-based search mechanisms.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 14;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndexOrBuilder getHybridSearchIndexOrBuilder() {
+        if ((indexTypeCase_ == 14) && (hybridSearchIndexBuilder_ != null)) {
+          return hybridSearchIndexBuilder_.getMessageOrBuilder();
+        } else {
+          if (indexTypeCase_ == 14) {
+            return (yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex) indexType_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Hybrid (vector-based + keyword-based) search index configuration
+       * This type is used for hybrid search, where documents are indexed using both keyword-based and vector-based search mechanisms.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 14;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndexOrBuilder> 
+          getHybridSearchIndexFieldBuilder() {
+        if (hybridSearchIndexBuilder_ == null) {
+          if (!(indexTypeCase_ == 14)) {
+            indexType_ = yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.getDefaultInstance();
+          }
+          hybridSearchIndexBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndexOrBuilder>(
+                  (yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex) indexType_,
+                  getParentForChildren(),
+                  isClean());
+          indexType_ = null;
+        }
+        indexTypeCase_ = 14;
+        onChanged();;
+        return hybridSearchIndexBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3681,6 +3985,7 @@ public final class SearchIndexOuterClass {
     /**
      * <pre>
      * Chunking strategy used to split text into smaller chunks before indexing.
+     * In the case of text search, tokens are individual text characters.
      * </pre>
      *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
@@ -3690,6 +3995,7 @@ public final class SearchIndexOuterClass {
     /**
      * <pre>
      * Chunking strategy used to split text into smaller chunks before indexing.
+     * In the case of text search, tokens are individual text characters.
      * </pre>
      *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
@@ -3699,6 +4005,7 @@ public final class SearchIndexOuterClass {
     /**
      * <pre>
      * Chunking strategy used to split text into smaller chunks before indexing.
+     * In the case of text search, tokens are individual text characters.
      * </pre>
      *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
@@ -3804,6 +4111,7 @@ public final class SearchIndexOuterClass {
     /**
      * <pre>
      * Chunking strategy used to split text into smaller chunks before indexing.
+     * In the case of text search, tokens are individual text characters.
      * </pre>
      *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
@@ -3816,6 +4124,7 @@ public final class SearchIndexOuterClass {
     /**
      * <pre>
      * Chunking strategy used to split text into smaller chunks before indexing.
+     * In the case of text search, tokens are individual text characters.
      * </pre>
      *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
@@ -3828,6 +4137,7 @@ public final class SearchIndexOuterClass {
     /**
      * <pre>
      * Chunking strategy used to split text into smaller chunks before indexing.
+     * In the case of text search, tokens are individual text characters.
      * </pre>
      *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
@@ -4162,6 +4472,7 @@ public final class SearchIndexOuterClass {
       /**
        * <pre>
        * Chunking strategy used to split text into smaller chunks before indexing.
+       * In the case of text search, tokens are individual text characters.
        * </pre>
        *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
@@ -4173,6 +4484,7 @@ public final class SearchIndexOuterClass {
       /**
        * <pre>
        * Chunking strategy used to split text into smaller chunks before indexing.
+       * In the case of text search, tokens are individual text characters.
        * </pre>
        *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
@@ -4188,6 +4500,7 @@ public final class SearchIndexOuterClass {
       /**
        * <pre>
        * Chunking strategy used to split text into smaller chunks before indexing.
+       * In the case of text search, tokens are individual text characters.
        * </pre>
        *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
@@ -4208,6 +4521,7 @@ public final class SearchIndexOuterClass {
       /**
        * <pre>
        * Chunking strategy used to split text into smaller chunks before indexing.
+       * In the case of text search, tokens are individual text characters.
        * </pre>
        *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
@@ -4226,6 +4540,7 @@ public final class SearchIndexOuterClass {
       /**
        * <pre>
        * Chunking strategy used to split text into smaller chunks before indexing.
+       * In the case of text search, tokens are individual text characters.
        * </pre>
        *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
@@ -4248,6 +4563,7 @@ public final class SearchIndexOuterClass {
       /**
        * <pre>
        * Chunking strategy used to split text into smaller chunks before indexing.
+       * In the case of text search, tokens are individual text characters.
        * </pre>
        *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
@@ -4266,6 +4582,7 @@ public final class SearchIndexOuterClass {
       /**
        * <pre>
        * Chunking strategy used to split text into smaller chunks before indexing.
+       * In the case of text search, tokens are individual text characters.
        * </pre>
        *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
@@ -4278,6 +4595,7 @@ public final class SearchIndexOuterClass {
       /**
        * <pre>
        * Chunking strategy used to split text into smaller chunks before indexing.
+       * In the case of text search, tokens are individual text characters.
        * </pre>
        *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
@@ -4293,6 +4611,7 @@ public final class SearchIndexOuterClass {
       /**
        * <pre>
        * Chunking strategy used to split text into smaller chunks before indexing.
+       * In the case of text search, tokens are individual text characters.
        * </pre>
        *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
@@ -4410,6 +4729,7 @@ public final class SearchIndexOuterClass {
     /**
      * <pre>
      * Chunking strategy used to split text into smaller chunks before indexing.
+     * In the case of vector search, tokens are produced by the tokenizer from the embedding model.
      * </pre>
      *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
@@ -4419,6 +4739,7 @@ public final class SearchIndexOuterClass {
     /**
      * <pre>
      * Chunking strategy used to split text into smaller chunks before indexing.
+     * In the case of vector search, tokens are produced by the tokenizer from the embedding model.
      * </pre>
      *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
@@ -4428,6 +4749,7 @@ public final class SearchIndexOuterClass {
     /**
      * <pre>
      * Chunking strategy used to split text into smaller chunks before indexing.
+     * In the case of vector search, tokens are produced by the tokenizer from the embedding model.
      * </pre>
      *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
@@ -4639,6 +4961,7 @@ public final class SearchIndexOuterClass {
     /**
      * <pre>
      * Chunking strategy used to split text into smaller chunks before indexing.
+     * In the case of vector search, tokens are produced by the tokenizer from the embedding model.
      * </pre>
      *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
@@ -4651,6 +4974,7 @@ public final class SearchIndexOuterClass {
     /**
      * <pre>
      * Chunking strategy used to split text into smaller chunks before indexing.
+     * In the case of vector search, tokens are produced by the tokenizer from the embedding model.
      * </pre>
      *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
@@ -4663,6 +4987,7 @@ public final class SearchIndexOuterClass {
     /**
      * <pre>
      * Chunking strategy used to split text into smaller chunks before indexing.
+     * In the case of vector search, tokens are produced by the tokenizer from the embedding model.
      * </pre>
      *
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
@@ -5223,6 +5548,7 @@ public final class SearchIndexOuterClass {
       /**
        * <pre>
        * Chunking strategy used to split text into smaller chunks before indexing.
+       * In the case of vector search, tokens are produced by the tokenizer from the embedding model.
        * </pre>
        *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
@@ -5234,6 +5560,7 @@ public final class SearchIndexOuterClass {
       /**
        * <pre>
        * Chunking strategy used to split text into smaller chunks before indexing.
+       * In the case of vector search, tokens are produced by the tokenizer from the embedding model.
        * </pre>
        *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
@@ -5249,6 +5576,7 @@ public final class SearchIndexOuterClass {
       /**
        * <pre>
        * Chunking strategy used to split text into smaller chunks before indexing.
+       * In the case of vector search, tokens are produced by the tokenizer from the embedding model.
        * </pre>
        *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
@@ -5269,6 +5597,7 @@ public final class SearchIndexOuterClass {
       /**
        * <pre>
        * Chunking strategy used to split text into smaller chunks before indexing.
+       * In the case of vector search, tokens are produced by the tokenizer from the embedding model.
        * </pre>
        *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
@@ -5287,6 +5616,7 @@ public final class SearchIndexOuterClass {
       /**
        * <pre>
        * Chunking strategy used to split text into smaller chunks before indexing.
+       * In the case of vector search, tokens are produced by the tokenizer from the embedding model.
        * </pre>
        *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
@@ -5309,6 +5639,7 @@ public final class SearchIndexOuterClass {
       /**
        * <pre>
        * Chunking strategy used to split text into smaller chunks before indexing.
+       * In the case of vector search, tokens are produced by the tokenizer from the embedding model.
        * </pre>
        *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
@@ -5327,6 +5658,7 @@ public final class SearchIndexOuterClass {
       /**
        * <pre>
        * Chunking strategy used to split text into smaller chunks before indexing.
+       * In the case of vector search, tokens are produced by the tokenizer from the embedding model.
        * </pre>
        *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
@@ -5339,6 +5671,7 @@ public final class SearchIndexOuterClass {
       /**
        * <pre>
        * Chunking strategy used to split text into smaller chunks before indexing.
+       * In the case of vector search, tokens are produced by the tokenizer from the embedding model.
        * </pre>
        *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
@@ -5354,6 +5687,7 @@ public final class SearchIndexOuterClass {
       /**
        * <pre>
        * Chunking strategy used to split text into smaller chunks before indexing.
+       * In the case of vector search, tokens are produced by the tokenizer from the embedding model.
        * </pre>
        *
        * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
@@ -5424,6 +5758,1657 @@ public final class SearchIndexOuterClass {
 
   }
 
+  public interface HybridSearchIndexOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Configuration for a traditional keyword-based text search index.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 1;</code>
+     * @return Whether the textSearchIndex field is set.
+     */
+    boolean hasTextSearchIndex();
+    /**
+     * <pre>
+     * Configuration for a traditional keyword-based text search index.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 1;</code>
+     * @return The textSearchIndex.
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex getTextSearchIndex();
+    /**
+     * <pre>
+     * Configuration for a traditional keyword-based text search index.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 1;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndexOrBuilder getTextSearchIndexOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration for a vector-based search index.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 2;</code>
+     * @return Whether the vectorSearchIndex field is set.
+     */
+    boolean hasVectorSearchIndex();
+    /**
+     * <pre>
+     * Configuration for a vector-based search index.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 2;</code>
+     * @return The vectorSearchIndex.
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex getVectorSearchIndex();
+    /**
+     * <pre>
+     * Configuration for a vector-based search index.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 2;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndexOrBuilder getVectorSearchIndexOrBuilder();
+
+    /**
+     * <pre>
+     * Common chunking strategy that applies to both text and vector search indexes.
+     * If provided, it overrides the individual chunking strategies in both `text_search_index` and `vector_search_index`.
+     * In this case, both text and vector search will use token-based chunking, where tokens are produced by the tokenizer of the embedding model.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
+     * @return Whether the chunkingStrategy field is set.
+     */
+    boolean hasChunkingStrategy();
+    /**
+     * <pre>
+     * Common chunking strategy that applies to both text and vector search indexes.
+     * If provided, it overrides the individual chunking strategies in both `text_search_index` and `vector_search_index`.
+     * In this case, both text and vector search will use token-based chunking, where tokens are produced by the tokenizer of the embedding model.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
+     * @return The chunkingStrategy.
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy getChunkingStrategy();
+    /**
+     * <pre>
+     * Common chunking strategy that applies to both text and vector search indexes.
+     * If provided, it overrides the individual chunking strategies in both `text_search_index` and `vector_search_index`.
+     * In this case, both text and vector search will use token-based chunking, where tokens are produced by the tokenizer of the embedding model.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategyOrBuilder getChunkingStrategyOrBuilder();
+
+    /**
+     * <pre>
+     * Normalization strategy for relevance scores from different indices. Default is MIN_MAX_STRATEGY
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.NormalizationStrategy normalization_strategy = 4;</code>
+     * @return The enum numeric value on the wire for normalizationStrategy.
+     */
+    int getNormalizationStrategyValue();
+    /**
+     * <pre>
+     * Normalization strategy for relevance scores from different indices. Default is MIN_MAX_STRATEGY
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.NormalizationStrategy normalization_strategy = 4;</code>
+     * @return The normalizationStrategy.
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.Common.NormalizationStrategy getNormalizationStrategy();
+
+    /**
+     * <pre>
+     * Combination strategy for merging rankings from different indices. Default is arithmetic mean
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.CombinationStrategy combination_strategy = 5;</code>
+     * @return Whether the combinationStrategy field is set.
+     */
+    boolean hasCombinationStrategy();
+    /**
+     * <pre>
+     * Combination strategy for merging rankings from different indices. Default is arithmetic mean
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.CombinationStrategy combination_strategy = 5;</code>
+     * @return The combinationStrategy.
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy getCombinationStrategy();
+    /**
+     * <pre>
+     * Combination strategy for merging rankings from different indices. Default is arithmetic mean
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.CombinationStrategy combination_strategy = 5;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategyOrBuilder getCombinationStrategyOrBuilder();
+  }
+  /**
+   * <pre>
+   * Defines the configuration for a hybrid (vector-based + keyword-based) search index. This type uses both embeddings and keyword-based search to represent documents and queries.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex}
+   */
+  public static final class HybridSearchIndex extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex)
+      HybridSearchIndexOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use HybridSearchIndex.newBuilder() to construct.
+    private HybridSearchIndex(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HybridSearchIndex() {
+      normalizationStrategy_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HybridSearchIndex();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private HybridSearchIndex(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex.Builder subBuilder = null;
+              if (textSearchIndex_ != null) {
+                subBuilder = textSearchIndex_.toBuilder();
+              }
+              textSearchIndex_ = input.readMessage(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(textSearchIndex_);
+                textSearchIndex_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex.Builder subBuilder = null;
+              if (vectorSearchIndex_ != null) {
+                subBuilder = vectorSearchIndex_.toBuilder();
+              }
+              vectorSearchIndex_ = input.readMessage(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(vectorSearchIndex_);
+                vectorSearchIndex_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.Builder subBuilder = null;
+              if (chunkingStrategy_ != null) {
+                subBuilder = chunkingStrategy_.toBuilder();
+              }
+              chunkingStrategy_ = input.readMessage(yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(chunkingStrategy_);
+                chunkingStrategy_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+
+              normalizationStrategy_ = rawValue;
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy.Builder subBuilder = null;
+              if (combinationStrategy_ != null) {
+                subBuilder = combinationStrategy_.toBuilder();
+              }
+              combinationStrategy_ = input.readMessage(yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(combinationStrategy_);
+                combinationStrategy_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.internal_static_yandex_cloud_ai_assistants_v1_searchindex_HybridSearchIndex_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.internal_static_yandex_cloud_ai_assistants_v1_searchindex_HybridSearchIndex_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.class, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.Builder.class);
+    }
+
+    public static final int TEXT_SEARCH_INDEX_FIELD_NUMBER = 1;
+    private yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex textSearchIndex_;
+    /**
+     * <pre>
+     * Configuration for a traditional keyword-based text search index.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 1;</code>
+     * @return Whether the textSearchIndex field is set.
+     */
+    @java.lang.Override
+    public boolean hasTextSearchIndex() {
+      return textSearchIndex_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for a traditional keyword-based text search index.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 1;</code>
+     * @return The textSearchIndex.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex getTextSearchIndex() {
+      return textSearchIndex_ == null ? yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex.getDefaultInstance() : textSearchIndex_;
+    }
+    /**
+     * <pre>
+     * Configuration for a traditional keyword-based text search index.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndexOrBuilder getTextSearchIndexOrBuilder() {
+      return getTextSearchIndex();
+    }
+
+    public static final int VECTOR_SEARCH_INDEX_FIELD_NUMBER = 2;
+    private yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex vectorSearchIndex_;
+    /**
+     * <pre>
+     * Configuration for a vector-based search index.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 2;</code>
+     * @return Whether the vectorSearchIndex field is set.
+     */
+    @java.lang.Override
+    public boolean hasVectorSearchIndex() {
+      return vectorSearchIndex_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for a vector-based search index.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 2;</code>
+     * @return The vectorSearchIndex.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex getVectorSearchIndex() {
+      return vectorSearchIndex_ == null ? yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex.getDefaultInstance() : vectorSearchIndex_;
+    }
+    /**
+     * <pre>
+     * Configuration for a vector-based search index.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndexOrBuilder getVectorSearchIndexOrBuilder() {
+      return getVectorSearchIndex();
+    }
+
+    public static final int CHUNKING_STRATEGY_FIELD_NUMBER = 3;
+    private yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy chunkingStrategy_;
+    /**
+     * <pre>
+     * Common chunking strategy that applies to both text and vector search indexes.
+     * If provided, it overrides the individual chunking strategies in both `text_search_index` and `vector_search_index`.
+     * In this case, both text and vector search will use token-based chunking, where tokens are produced by the tokenizer of the embedding model.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
+     * @return Whether the chunkingStrategy field is set.
+     */
+    @java.lang.Override
+    public boolean hasChunkingStrategy() {
+      return chunkingStrategy_ != null;
+    }
+    /**
+     * <pre>
+     * Common chunking strategy that applies to both text and vector search indexes.
+     * If provided, it overrides the individual chunking strategies in both `text_search_index` and `vector_search_index`.
+     * In this case, both text and vector search will use token-based chunking, where tokens are produced by the tokenizer of the embedding model.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
+     * @return The chunkingStrategy.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy getChunkingStrategy() {
+      return chunkingStrategy_ == null ? yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.getDefaultInstance() : chunkingStrategy_;
+    }
+    /**
+     * <pre>
+     * Common chunking strategy that applies to both text and vector search indexes.
+     * If provided, it overrides the individual chunking strategies in both `text_search_index` and `vector_search_index`.
+     * In this case, both text and vector search will use token-based chunking, where tokens are produced by the tokenizer of the embedding model.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategyOrBuilder getChunkingStrategyOrBuilder() {
+      return getChunkingStrategy();
+    }
+
+    public static final int NORMALIZATION_STRATEGY_FIELD_NUMBER = 4;
+    private int normalizationStrategy_;
+    /**
+     * <pre>
+     * Normalization strategy for relevance scores from different indices. Default is MIN_MAX_STRATEGY
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.NormalizationStrategy normalization_strategy = 4;</code>
+     * @return The enum numeric value on the wire for normalizationStrategy.
+     */
+    @java.lang.Override public int getNormalizationStrategyValue() {
+      return normalizationStrategy_;
+    }
+    /**
+     * <pre>
+     * Normalization strategy for relevance scores from different indices. Default is MIN_MAX_STRATEGY
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.NormalizationStrategy normalization_strategy = 4;</code>
+     * @return The normalizationStrategy.
+     */
+    @java.lang.Override public yandex.cloud.api.ai.assistants.v1.searchindex.Common.NormalizationStrategy getNormalizationStrategy() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.ai.assistants.v1.searchindex.Common.NormalizationStrategy result = yandex.cloud.api.ai.assistants.v1.searchindex.Common.NormalizationStrategy.valueOf(normalizationStrategy_);
+      return result == null ? yandex.cloud.api.ai.assistants.v1.searchindex.Common.NormalizationStrategy.UNRECOGNIZED : result;
+    }
+
+    public static final int COMBINATION_STRATEGY_FIELD_NUMBER = 5;
+    private yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy combinationStrategy_;
+    /**
+     * <pre>
+     * Combination strategy for merging rankings from different indices. Default is arithmetic mean
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.CombinationStrategy combination_strategy = 5;</code>
+     * @return Whether the combinationStrategy field is set.
+     */
+    @java.lang.Override
+    public boolean hasCombinationStrategy() {
+      return combinationStrategy_ != null;
+    }
+    /**
+     * <pre>
+     * Combination strategy for merging rankings from different indices. Default is arithmetic mean
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.CombinationStrategy combination_strategy = 5;</code>
+     * @return The combinationStrategy.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy getCombinationStrategy() {
+      return combinationStrategy_ == null ? yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy.getDefaultInstance() : combinationStrategy_;
+    }
+    /**
+     * <pre>
+     * Combination strategy for merging rankings from different indices. Default is arithmetic mean
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.CombinationStrategy combination_strategy = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategyOrBuilder getCombinationStrategyOrBuilder() {
+      return getCombinationStrategy();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (textSearchIndex_ != null) {
+        output.writeMessage(1, getTextSearchIndex());
+      }
+      if (vectorSearchIndex_ != null) {
+        output.writeMessage(2, getVectorSearchIndex());
+      }
+      if (chunkingStrategy_ != null) {
+        output.writeMessage(3, getChunkingStrategy());
+      }
+      if (normalizationStrategy_ != yandex.cloud.api.ai.assistants.v1.searchindex.Common.NormalizationStrategy.NORMALIZATION_STRATEGY_UNSPECIFIED.getNumber()) {
+        output.writeEnum(4, normalizationStrategy_);
+      }
+      if (combinationStrategy_ != null) {
+        output.writeMessage(5, getCombinationStrategy());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (textSearchIndex_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTextSearchIndex());
+      }
+      if (vectorSearchIndex_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getVectorSearchIndex());
+      }
+      if (chunkingStrategy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getChunkingStrategy());
+      }
+      if (normalizationStrategy_ != yandex.cloud.api.ai.assistants.v1.searchindex.Common.NormalizationStrategy.NORMALIZATION_STRATEGY_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, normalizationStrategy_);
+      }
+      if (combinationStrategy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getCombinationStrategy());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex other = (yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex) obj;
+
+      if (hasTextSearchIndex() != other.hasTextSearchIndex()) return false;
+      if (hasTextSearchIndex()) {
+        if (!getTextSearchIndex()
+            .equals(other.getTextSearchIndex())) return false;
+      }
+      if (hasVectorSearchIndex() != other.hasVectorSearchIndex()) return false;
+      if (hasVectorSearchIndex()) {
+        if (!getVectorSearchIndex()
+            .equals(other.getVectorSearchIndex())) return false;
+      }
+      if (hasChunkingStrategy() != other.hasChunkingStrategy()) return false;
+      if (hasChunkingStrategy()) {
+        if (!getChunkingStrategy()
+            .equals(other.getChunkingStrategy())) return false;
+      }
+      if (normalizationStrategy_ != other.normalizationStrategy_) return false;
+      if (hasCombinationStrategy() != other.hasCombinationStrategy()) return false;
+      if (hasCombinationStrategy()) {
+        if (!getCombinationStrategy()
+            .equals(other.getCombinationStrategy())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTextSearchIndex()) {
+        hash = (37 * hash) + TEXT_SEARCH_INDEX_FIELD_NUMBER;
+        hash = (53 * hash) + getTextSearchIndex().hashCode();
+      }
+      if (hasVectorSearchIndex()) {
+        hash = (37 * hash) + VECTOR_SEARCH_INDEX_FIELD_NUMBER;
+        hash = (53 * hash) + getVectorSearchIndex().hashCode();
+      }
+      if (hasChunkingStrategy()) {
+        hash = (37 * hash) + CHUNKING_STRATEGY_FIELD_NUMBER;
+        hash = (53 * hash) + getChunkingStrategy().hashCode();
+      }
+      hash = (37 * hash) + NORMALIZATION_STRATEGY_FIELD_NUMBER;
+      hash = (53 * hash) + normalizationStrategy_;
+      if (hasCombinationStrategy()) {
+        hash = (37 * hash) + COMBINATION_STRATEGY_FIELD_NUMBER;
+        hash = (53 * hash) + getCombinationStrategy().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Defines the configuration for a hybrid (vector-based + keyword-based) search index. This type uses both embeddings and keyword-based search to represent documents and queries.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex)
+        yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndexOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.internal_static_yandex_cloud_ai_assistants_v1_searchindex_HybridSearchIndex_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.internal_static_yandex_cloud_ai_assistants_v1_searchindex_HybridSearchIndex_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.class, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (textSearchIndexBuilder_ == null) {
+          textSearchIndex_ = null;
+        } else {
+          textSearchIndex_ = null;
+          textSearchIndexBuilder_ = null;
+        }
+        if (vectorSearchIndexBuilder_ == null) {
+          vectorSearchIndex_ = null;
+        } else {
+          vectorSearchIndex_ = null;
+          vectorSearchIndexBuilder_ = null;
+        }
+        if (chunkingStrategyBuilder_ == null) {
+          chunkingStrategy_ = null;
+        } else {
+          chunkingStrategy_ = null;
+          chunkingStrategyBuilder_ = null;
+        }
+        normalizationStrategy_ = 0;
+
+        if (combinationStrategyBuilder_ == null) {
+          combinationStrategy_ = null;
+        } else {
+          combinationStrategy_ = null;
+          combinationStrategyBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.internal_static_yandex_cloud_ai_assistants_v1_searchindex_HybridSearchIndex_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex build() {
+        yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex result = new yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex(this);
+        if (textSearchIndexBuilder_ == null) {
+          result.textSearchIndex_ = textSearchIndex_;
+        } else {
+          result.textSearchIndex_ = textSearchIndexBuilder_.build();
+        }
+        if (vectorSearchIndexBuilder_ == null) {
+          result.vectorSearchIndex_ = vectorSearchIndex_;
+        } else {
+          result.vectorSearchIndex_ = vectorSearchIndexBuilder_.build();
+        }
+        if (chunkingStrategyBuilder_ == null) {
+          result.chunkingStrategy_ = chunkingStrategy_;
+        } else {
+          result.chunkingStrategy_ = chunkingStrategyBuilder_.build();
+        }
+        result.normalizationStrategy_ = normalizationStrategy_;
+        if (combinationStrategyBuilder_ == null) {
+          result.combinationStrategy_ = combinationStrategy_;
+        } else {
+          result.combinationStrategy_ = combinationStrategyBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.getDefaultInstance()) return this;
+        if (other.hasTextSearchIndex()) {
+          mergeTextSearchIndex(other.getTextSearchIndex());
+        }
+        if (other.hasVectorSearchIndex()) {
+          mergeVectorSearchIndex(other.getVectorSearchIndex());
+        }
+        if (other.hasChunkingStrategy()) {
+          mergeChunkingStrategy(other.getChunkingStrategy());
+        }
+        if (other.normalizationStrategy_ != 0) {
+          setNormalizationStrategyValue(other.getNormalizationStrategyValue());
+        }
+        if (other.hasCombinationStrategy()) {
+          mergeCombinationStrategy(other.getCombinationStrategy());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex textSearchIndex_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndexOrBuilder> textSearchIndexBuilder_;
+      /**
+       * <pre>
+       * Configuration for a traditional keyword-based text search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 1;</code>
+       * @return Whether the textSearchIndex field is set.
+       */
+      public boolean hasTextSearchIndex() {
+        return textSearchIndexBuilder_ != null || textSearchIndex_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for a traditional keyword-based text search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 1;</code>
+       * @return The textSearchIndex.
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex getTextSearchIndex() {
+        if (textSearchIndexBuilder_ == null) {
+          return textSearchIndex_ == null ? yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex.getDefaultInstance() : textSearchIndex_;
+        } else {
+          return textSearchIndexBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for a traditional keyword-based text search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 1;</code>
+       */
+      public Builder setTextSearchIndex(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex value) {
+        if (textSearchIndexBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          textSearchIndex_ = value;
+          onChanged();
+        } else {
+          textSearchIndexBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for a traditional keyword-based text search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 1;</code>
+       */
+      public Builder setTextSearchIndex(
+          yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex.Builder builderForValue) {
+        if (textSearchIndexBuilder_ == null) {
+          textSearchIndex_ = builderForValue.build();
+          onChanged();
+        } else {
+          textSearchIndexBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for a traditional keyword-based text search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 1;</code>
+       */
+      public Builder mergeTextSearchIndex(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex value) {
+        if (textSearchIndexBuilder_ == null) {
+          if (textSearchIndex_ != null) {
+            textSearchIndex_ =
+              yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex.newBuilder(textSearchIndex_).mergeFrom(value).buildPartial();
+          } else {
+            textSearchIndex_ = value;
+          }
+          onChanged();
+        } else {
+          textSearchIndexBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for a traditional keyword-based text search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 1;</code>
+       */
+      public Builder clearTextSearchIndex() {
+        if (textSearchIndexBuilder_ == null) {
+          textSearchIndex_ = null;
+          onChanged();
+        } else {
+          textSearchIndex_ = null;
+          textSearchIndexBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for a traditional keyword-based text search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex.Builder getTextSearchIndexBuilder() {
+        
+        onChanged();
+        return getTextSearchIndexFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for a traditional keyword-based text search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndexOrBuilder getTextSearchIndexOrBuilder() {
+        if (textSearchIndexBuilder_ != null) {
+          return textSearchIndexBuilder_.getMessageOrBuilder();
+        } else {
+          return textSearchIndex_ == null ?
+              yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex.getDefaultInstance() : textSearchIndex_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for a traditional keyword-based text search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.TextSearchIndex text_search_index = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndexOrBuilder> 
+          getTextSearchIndexFieldBuilder() {
+        if (textSearchIndexBuilder_ == null) {
+          textSearchIndexBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndexOrBuilder>(
+                  getTextSearchIndex(),
+                  getParentForChildren(),
+                  isClean());
+          textSearchIndex_ = null;
+        }
+        return textSearchIndexBuilder_;
+      }
+
+      private yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex vectorSearchIndex_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndexOrBuilder> vectorSearchIndexBuilder_;
+      /**
+       * <pre>
+       * Configuration for a vector-based search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 2;</code>
+       * @return Whether the vectorSearchIndex field is set.
+       */
+      public boolean hasVectorSearchIndex() {
+        return vectorSearchIndexBuilder_ != null || vectorSearchIndex_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for a vector-based search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 2;</code>
+       * @return The vectorSearchIndex.
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex getVectorSearchIndex() {
+        if (vectorSearchIndexBuilder_ == null) {
+          return vectorSearchIndex_ == null ? yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex.getDefaultInstance() : vectorSearchIndex_;
+        } else {
+          return vectorSearchIndexBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for a vector-based search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 2;</code>
+       */
+      public Builder setVectorSearchIndex(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex value) {
+        if (vectorSearchIndexBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          vectorSearchIndex_ = value;
+          onChanged();
+        } else {
+          vectorSearchIndexBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for a vector-based search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 2;</code>
+       */
+      public Builder setVectorSearchIndex(
+          yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex.Builder builderForValue) {
+        if (vectorSearchIndexBuilder_ == null) {
+          vectorSearchIndex_ = builderForValue.build();
+          onChanged();
+        } else {
+          vectorSearchIndexBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for a vector-based search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 2;</code>
+       */
+      public Builder mergeVectorSearchIndex(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex value) {
+        if (vectorSearchIndexBuilder_ == null) {
+          if (vectorSearchIndex_ != null) {
+            vectorSearchIndex_ =
+              yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex.newBuilder(vectorSearchIndex_).mergeFrom(value).buildPartial();
+          } else {
+            vectorSearchIndex_ = value;
+          }
+          onChanged();
+        } else {
+          vectorSearchIndexBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for a vector-based search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 2;</code>
+       */
+      public Builder clearVectorSearchIndex() {
+        if (vectorSearchIndexBuilder_ == null) {
+          vectorSearchIndex_ = null;
+          onChanged();
+        } else {
+          vectorSearchIndex_ = null;
+          vectorSearchIndexBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for a vector-based search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 2;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex.Builder getVectorSearchIndexBuilder() {
+        
+        onChanged();
+        return getVectorSearchIndexFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for a vector-based search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 2;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndexOrBuilder getVectorSearchIndexOrBuilder() {
+        if (vectorSearchIndexBuilder_ != null) {
+          return vectorSearchIndexBuilder_.getMessageOrBuilder();
+        } else {
+          return vectorSearchIndex_ == null ?
+              yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex.getDefaultInstance() : vectorSearchIndex_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for a vector-based search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.VectorSearchIndex vector_search_index = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndexOrBuilder> 
+          getVectorSearchIndexFieldBuilder() {
+        if (vectorSearchIndexBuilder_ == null) {
+          vectorSearchIndexBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndexOrBuilder>(
+                  getVectorSearchIndex(),
+                  getParentForChildren(),
+                  isClean());
+          vectorSearchIndex_ = null;
+        }
+        return vectorSearchIndexBuilder_;
+      }
+
+      private yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy chunkingStrategy_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy, yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategyOrBuilder> chunkingStrategyBuilder_;
+      /**
+       * <pre>
+       * Common chunking strategy that applies to both text and vector search indexes.
+       * If provided, it overrides the individual chunking strategies in both `text_search_index` and `vector_search_index`.
+       * In this case, both text and vector search will use token-based chunking, where tokens are produced by the tokenizer of the embedding model.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
+       * @return Whether the chunkingStrategy field is set.
+       */
+      public boolean hasChunkingStrategy() {
+        return chunkingStrategyBuilder_ != null || chunkingStrategy_ != null;
+      }
+      /**
+       * <pre>
+       * Common chunking strategy that applies to both text and vector search indexes.
+       * If provided, it overrides the individual chunking strategies in both `text_search_index` and `vector_search_index`.
+       * In this case, both text and vector search will use token-based chunking, where tokens are produced by the tokenizer of the embedding model.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
+       * @return The chunkingStrategy.
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy getChunkingStrategy() {
+        if (chunkingStrategyBuilder_ == null) {
+          return chunkingStrategy_ == null ? yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.getDefaultInstance() : chunkingStrategy_;
+        } else {
+          return chunkingStrategyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Common chunking strategy that applies to both text and vector search indexes.
+       * If provided, it overrides the individual chunking strategies in both `text_search_index` and `vector_search_index`.
+       * In this case, both text and vector search will use token-based chunking, where tokens are produced by the tokenizer of the embedding model.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
+       */
+      public Builder setChunkingStrategy(yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy value) {
+        if (chunkingStrategyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          chunkingStrategy_ = value;
+          onChanged();
+        } else {
+          chunkingStrategyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Common chunking strategy that applies to both text and vector search indexes.
+       * If provided, it overrides the individual chunking strategies in both `text_search_index` and `vector_search_index`.
+       * In this case, both text and vector search will use token-based chunking, where tokens are produced by the tokenizer of the embedding model.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
+       */
+      public Builder setChunkingStrategy(
+          yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.Builder builderForValue) {
+        if (chunkingStrategyBuilder_ == null) {
+          chunkingStrategy_ = builderForValue.build();
+          onChanged();
+        } else {
+          chunkingStrategyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Common chunking strategy that applies to both text and vector search indexes.
+       * If provided, it overrides the individual chunking strategies in both `text_search_index` and `vector_search_index`.
+       * In this case, both text and vector search will use token-based chunking, where tokens are produced by the tokenizer of the embedding model.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
+       */
+      public Builder mergeChunkingStrategy(yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy value) {
+        if (chunkingStrategyBuilder_ == null) {
+          if (chunkingStrategy_ != null) {
+            chunkingStrategy_ =
+              yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.newBuilder(chunkingStrategy_).mergeFrom(value).buildPartial();
+          } else {
+            chunkingStrategy_ = value;
+          }
+          onChanged();
+        } else {
+          chunkingStrategyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Common chunking strategy that applies to both text and vector search indexes.
+       * If provided, it overrides the individual chunking strategies in both `text_search_index` and `vector_search_index`.
+       * In this case, both text and vector search will use token-based chunking, where tokens are produced by the tokenizer of the embedding model.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
+       */
+      public Builder clearChunkingStrategy() {
+        if (chunkingStrategyBuilder_ == null) {
+          chunkingStrategy_ = null;
+          onChanged();
+        } else {
+          chunkingStrategy_ = null;
+          chunkingStrategyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Common chunking strategy that applies to both text and vector search indexes.
+       * If provided, it overrides the individual chunking strategies in both `text_search_index` and `vector_search_index`.
+       * In this case, both text and vector search will use token-based chunking, where tokens are produced by the tokenizer of the embedding model.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.Builder getChunkingStrategyBuilder() {
+        
+        onChanged();
+        return getChunkingStrategyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Common chunking strategy that applies to both text and vector search indexes.
+       * If provided, it overrides the individual chunking strategies in both `text_search_index` and `vector_search_index`.
+       * In this case, both text and vector search will use token-based chunking, where tokens are produced by the tokenizer of the embedding model.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategyOrBuilder getChunkingStrategyOrBuilder() {
+        if (chunkingStrategyBuilder_ != null) {
+          return chunkingStrategyBuilder_.getMessageOrBuilder();
+        } else {
+          return chunkingStrategy_ == null ?
+              yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.getDefaultInstance() : chunkingStrategy_;
+        }
+      }
+      /**
+       * <pre>
+       * Common chunking strategy that applies to both text and vector search indexes.
+       * If provided, it overrides the individual chunking strategies in both `text_search_index` and `vector_search_index`.
+       * In this case, both text and vector search will use token-based chunking, where tokens are produced by the tokenizer of the embedding model.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy, yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategyOrBuilder> 
+          getChunkingStrategyFieldBuilder() {
+        if (chunkingStrategyBuilder_ == null) {
+          chunkingStrategyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy, yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategyOrBuilder>(
+                  getChunkingStrategy(),
+                  getParentForChildren(),
+                  isClean());
+          chunkingStrategy_ = null;
+        }
+        return chunkingStrategyBuilder_;
+      }
+
+      private int normalizationStrategy_ = 0;
+      /**
+       * <pre>
+       * Normalization strategy for relevance scores from different indices. Default is MIN_MAX_STRATEGY
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NormalizationStrategy normalization_strategy = 4;</code>
+       * @return The enum numeric value on the wire for normalizationStrategy.
+       */
+      @java.lang.Override public int getNormalizationStrategyValue() {
+        return normalizationStrategy_;
+      }
+      /**
+       * <pre>
+       * Normalization strategy for relevance scores from different indices. Default is MIN_MAX_STRATEGY
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NormalizationStrategy normalization_strategy = 4;</code>
+       * @param value The enum numeric value on the wire for normalizationStrategy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNormalizationStrategyValue(int value) {
+        
+        normalizationStrategy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Normalization strategy for relevance scores from different indices. Default is MIN_MAX_STRATEGY
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NormalizationStrategy normalization_strategy = 4;</code>
+       * @return The normalizationStrategy.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.NormalizationStrategy getNormalizationStrategy() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.ai.assistants.v1.searchindex.Common.NormalizationStrategy result = yandex.cloud.api.ai.assistants.v1.searchindex.Common.NormalizationStrategy.valueOf(normalizationStrategy_);
+        return result == null ? yandex.cloud.api.ai.assistants.v1.searchindex.Common.NormalizationStrategy.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Normalization strategy for relevance scores from different indices. Default is MIN_MAX_STRATEGY
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NormalizationStrategy normalization_strategy = 4;</code>
+       * @param value The normalizationStrategy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNormalizationStrategy(yandex.cloud.api.ai.assistants.v1.searchindex.Common.NormalizationStrategy value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        normalizationStrategy_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Normalization strategy for relevance scores from different indices. Default is MIN_MAX_STRATEGY
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NormalizationStrategy normalization_strategy = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNormalizationStrategy() {
+        
+        normalizationStrategy_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy combinationStrategy_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy, yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategyOrBuilder> combinationStrategyBuilder_;
+      /**
+       * <pre>
+       * Combination strategy for merging rankings from different indices. Default is arithmetic mean
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.CombinationStrategy combination_strategy = 5;</code>
+       * @return Whether the combinationStrategy field is set.
+       */
+      public boolean hasCombinationStrategy() {
+        return combinationStrategyBuilder_ != null || combinationStrategy_ != null;
+      }
+      /**
+       * <pre>
+       * Combination strategy for merging rankings from different indices. Default is arithmetic mean
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.CombinationStrategy combination_strategy = 5;</code>
+       * @return The combinationStrategy.
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy getCombinationStrategy() {
+        if (combinationStrategyBuilder_ == null) {
+          return combinationStrategy_ == null ? yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy.getDefaultInstance() : combinationStrategy_;
+        } else {
+          return combinationStrategyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Combination strategy for merging rankings from different indices. Default is arithmetic mean
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.CombinationStrategy combination_strategy = 5;</code>
+       */
+      public Builder setCombinationStrategy(yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy value) {
+        if (combinationStrategyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          combinationStrategy_ = value;
+          onChanged();
+        } else {
+          combinationStrategyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Combination strategy for merging rankings from different indices. Default is arithmetic mean
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.CombinationStrategy combination_strategy = 5;</code>
+       */
+      public Builder setCombinationStrategy(
+          yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy.Builder builderForValue) {
+        if (combinationStrategyBuilder_ == null) {
+          combinationStrategy_ = builderForValue.build();
+          onChanged();
+        } else {
+          combinationStrategyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Combination strategy for merging rankings from different indices. Default is arithmetic mean
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.CombinationStrategy combination_strategy = 5;</code>
+       */
+      public Builder mergeCombinationStrategy(yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy value) {
+        if (combinationStrategyBuilder_ == null) {
+          if (combinationStrategy_ != null) {
+            combinationStrategy_ =
+              yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy.newBuilder(combinationStrategy_).mergeFrom(value).buildPartial();
+          } else {
+            combinationStrategy_ = value;
+          }
+          onChanged();
+        } else {
+          combinationStrategyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Combination strategy for merging rankings from different indices. Default is arithmetic mean
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.CombinationStrategy combination_strategy = 5;</code>
+       */
+      public Builder clearCombinationStrategy() {
+        if (combinationStrategyBuilder_ == null) {
+          combinationStrategy_ = null;
+          onChanged();
+        } else {
+          combinationStrategy_ = null;
+          combinationStrategyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Combination strategy for merging rankings from different indices. Default is arithmetic mean
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.CombinationStrategy combination_strategy = 5;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy.Builder getCombinationStrategyBuilder() {
+        
+        onChanged();
+        return getCombinationStrategyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Combination strategy for merging rankings from different indices. Default is arithmetic mean
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.CombinationStrategy combination_strategy = 5;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategyOrBuilder getCombinationStrategyOrBuilder() {
+        if (combinationStrategyBuilder_ != null) {
+          return combinationStrategyBuilder_.getMessageOrBuilder();
+        } else {
+          return combinationStrategy_ == null ?
+              yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy.getDefaultInstance() : combinationStrategy_;
+        }
+      }
+      /**
+       * <pre>
+       * Combination strategy for merging rankings from different indices. Default is arithmetic mean
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.CombinationStrategy combination_strategy = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy, yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategyOrBuilder> 
+          getCombinationStrategyFieldBuilder() {
+        if (combinationStrategyBuilder_ == null) {
+          combinationStrategyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy, yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategyOrBuilder>(
+                  getCombinationStrategy(),
+                  getParentForChildren(),
+                  isClean());
+          combinationStrategy_ = null;
+        }
+        return combinationStrategyBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex)
+    private static final yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex();
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<HybridSearchIndex>
+        PARSER = new com.google.protobuf.AbstractParser<HybridSearchIndex>() {
+      @java.lang.Override
+      public HybridSearchIndex parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new HybridSearchIndex(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<HybridSearchIndex> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HybridSearchIndex> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_assistants_v1_searchindex_SearchIndex_descriptor;
   private static final 
@@ -5444,6 +7429,11 @@ public final class SearchIndexOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_assistants_v1_searchindex_VectorSearchIndex_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_searchindex_HybridSearchIndex_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_searchindex_HybridSearchIndex_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5458,7 +7448,7 @@ public final class SearchIndexOuterClass {
       "assistants.v1.searchindex\032#yandex/cloud/" +
       "ai/common/common.proto\0326yandex/cloud/ai/" +
       "assistants/v1/searchindex/common.proto\032\037" +
-      "google/protobuf/timestamp.proto\"\222\005\n\013Sear" +
+      "google/protobuf/timestamp.proto\"\357\005\n\013Sear" +
       "chIndex\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022\014" +
       "\n\004name\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022\022\n\ncre" +
       "ated_by\030\005 \001(\t\022.\n\ncreated_at\030\006 \001(\0132\032.goog" +
@@ -5473,19 +7463,34 @@ public final class SearchIndexOuterClass {
       "yandex.cloud.ai.assistants.v1.searchinde" +
       "x.TextSearchIndexH\000\022[\n\023vector_search_ind" +
       "ex\030\r \001(\0132<.yandex.cloud.ai.assistants.v1" +
-      ".searchindex.VectorSearchIndexH\000\032-\n\013Labe" +
-      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B" +
-      "\013\n\tIndexType\"i\n\017TextSearchIndex\022V\n\021chunk" +
-      "ing_strategy\030\001 \001(\0132;.yandex.cloud.ai.ass" +
-      "istants.v1.searchindex.ChunkingStrategy\"" +
-      "\241\001\n\021VectorSearchIndex\022\030\n\020doc_embedder_ur" +
-      "i\030\001 \001(\t\022\032\n\022query_embedder_uri\030\002 \001(\t\022V\n\021c" +
-      "hunking_strategy\030\003 \001(\0132;.yandex.cloud.ai" +
-      ".assistants.v1.searchindex.ChunkingStrat" +
-      "egyB\212\001\n-yandex.cloud.api.ai.assistants.v" +
-      "1.searchindexZYgithub.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/ai/assistants/v1" +
-      "/searchindex;searchindexb\006proto3"
+      ".searchindex.VectorSearchIndexH\000\022[\n\023hybr" +
+      "id_search_index\030\016 \001(\0132<.yandex.cloud.ai." +
+      "assistants.v1.searchindex.HybridSearchIn" +
+      "dexH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001B\013\n\tIndexType\"i\n\017TextSearchI" +
+      "ndex\022V\n\021chunking_strategy\030\001 \001(\0132;.yandex" +
+      ".cloud.ai.assistants.v1.searchindex.Chun" +
+      "kingStrategy\"\241\001\n\021VectorSearchIndex\022\030\n\020do" +
+      "c_embedder_uri\030\001 \001(\t\022\032\n\022query_embedder_u" +
+      "ri\030\002 \001(\t\022V\n\021chunking_strategy\030\003 \001(\0132;.ya" +
+      "ndex.cloud.ai.assistants.v1.searchindex." +
+      "ChunkingStrategy\"\335\003\n\021HybridSearchIndex\022U" +
+      "\n\021text_search_index\030\001 \001(\0132:.yandex.cloud" +
+      ".ai.assistants.v1.searchindex.TextSearch" +
+      "Index\022Y\n\023vector_search_index\030\002 \001(\0132<.yan" +
+      "dex.cloud.ai.assistants.v1.searchindex.V" +
+      "ectorSearchIndex\022V\n\021chunking_strategy\030\003 " +
+      "\001(\0132;.yandex.cloud.ai.assistants.v1.sear" +
+      "chindex.ChunkingStrategy\022`\n\026normalizatio" +
+      "n_strategy\030\004 \001(\0162@.yandex.cloud.ai.assis" +
+      "tants.v1.searchindex.NormalizationStrate" +
+      "gy\022\\\n\024combination_strategy\030\005 \001(\0132>.yande" +
+      "x.cloud.ai.assistants.v1.searchindex.Com" +
+      "binationStrategyB\212\001\n-yandex.cloud.api.ai" +
+      ".assistants.v1.searchindexZYgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/ai/" +
+      "assistants/v1/searchindex;searchindexb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5499,7 +7504,7 @@ public final class SearchIndexOuterClass {
     internal_static_yandex_cloud_ai_assistants_v1_searchindex_SearchIndex_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_searchindex_SearchIndex_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "Name", "Description", "CreatedBy", "CreatedAt", "UpdatedBy", "UpdatedAt", "ExpirationConfig", "ExpiresAt", "Labels", "TextSearchIndex", "VectorSearchIndex", "IndexType", });
+        new java.lang.String[] { "Id", "FolderId", "Name", "Description", "CreatedBy", "CreatedAt", "UpdatedBy", "UpdatedAt", "ExpirationConfig", "ExpiresAt", "Labels", "TextSearchIndex", "VectorSearchIndex", "HybridSearchIndex", "IndexType", });
     internal_static_yandex_cloud_ai_assistants_v1_searchindex_SearchIndex_LabelsEntry_descriptor =
       internal_static_yandex_cloud_ai_assistants_v1_searchindex_SearchIndex_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_ai_assistants_v1_searchindex_SearchIndex_LabelsEntry_fieldAccessorTable = new
@@ -5518,6 +7523,12 @@ public final class SearchIndexOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_searchindex_VectorSearchIndex_descriptor,
         new java.lang.String[] { "DocEmbedderUri", "QueryEmbedderUri", "ChunkingStrategy", });
+    internal_static_yandex_cloud_ai_assistants_v1_searchindex_HybridSearchIndex_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_ai_assistants_v1_searchindex_HybridSearchIndex_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_searchindex_HybridSearchIndex_descriptor,
+        new java.lang.String[] { "TextSearchIndex", "VectorSearchIndex", "ChunkingStrategy", "NormalizationStrategy", "CombinationStrategy", });
     yandex.cloud.api.ai.common.Common.getDescriptor();
     yandex.cloud.api.ai.assistants.v1.searchindex.Common.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();

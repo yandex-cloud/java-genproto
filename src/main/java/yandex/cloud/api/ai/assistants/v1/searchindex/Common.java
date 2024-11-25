@@ -14,6 +14,143 @@ public final class Common {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * <pre>
+   * Normalization strategy for relevance scores from different indices
+   * </pre>
+   *
+   * Protobuf enum {@code yandex.cloud.ai.assistants.v1.searchindex.NormalizationStrategy}
+   */
+  public enum NormalizationStrategy
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>NORMALIZATION_STRATEGY_UNSPECIFIED = 0;</code>
+     */
+    NORMALIZATION_STRATEGY_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * https://en.wikipedia.org/wiki/Feature_scaling#Rescaling_(min-max_normalization)
+     * </pre>
+     *
+     * <code>MIN_MAX = 1;</code>
+     */
+    MIN_MAX(1),
+    /**
+     * <pre>
+     * https://en.wikipedia.org/wiki/Cosine_similarity#L2-normalized_Euclidean_distance
+     * </pre>
+     *
+     * <code>L2 = 2;</code>
+     */
+    L2(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>NORMALIZATION_STRATEGY_UNSPECIFIED = 0;</code>
+     */
+    public static final int NORMALIZATION_STRATEGY_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * https://en.wikipedia.org/wiki/Feature_scaling#Rescaling_(min-max_normalization)
+     * </pre>
+     *
+     * <code>MIN_MAX = 1;</code>
+     */
+    public static final int MIN_MAX_VALUE = 1;
+    /**
+     * <pre>
+     * https://en.wikipedia.org/wiki/Cosine_similarity#L2-normalized_Euclidean_distance
+     * </pre>
+     *
+     * <code>L2 = 2;</code>
+     */
+    public static final int L2_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static NormalizationStrategy valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static NormalizationStrategy forNumber(int value) {
+      switch (value) {
+        case 0: return NORMALIZATION_STRATEGY_UNSPECIFIED;
+        case 1: return MIN_MAX;
+        case 2: return L2;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<NormalizationStrategy>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        NormalizationStrategy> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<NormalizationStrategy>() {
+            public NormalizationStrategy findValueByNumber(int number) {
+              return NormalizationStrategy.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.searchindex.Common.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final NormalizationStrategy[] VALUES = values();
+
+    public static NormalizationStrategy valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private NormalizationStrategy(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.ai.assistants.v1.searchindex.NormalizationStrategy)
+  }
+
   public interface StaticChunkingStrategyOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.searchindex.StaticChunkingStrategy)
       com.google.protobuf.MessageOrBuilder {
@@ -1375,6 +1512,3564 @@ public final class Common {
 
   }
 
+  public interface MeanCombinationStrategyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Technique for averaging relevance scores from different indices. Default is ARITHMETIC
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy.MeanEvaluationTechnique mean_evaluation_technique = 1;</code>
+     * @return The enum numeric value on the wire for meanEvaluationTechnique.
+     */
+    int getMeanEvaluationTechniqueValue();
+    /**
+     * <pre>
+     * Technique for averaging relevance scores from different indices. Default is ARITHMETIC
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy.MeanEvaluationTechnique mean_evaluation_technique = 1;</code>
+     * @return The meanEvaluationTechnique.
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.MeanEvaluationTechnique getMeanEvaluationTechnique();
+
+    /**
+     * <pre>
+     * Weights used for evaluating the weighted mean of relevance scores. The sum of the values must equal 1.0
+     * If not provided, all scores are given equal weight
+     * </pre>
+     *
+     * <code>repeated double weights = 2;</code>
+     * @return A list containing the weights.
+     */
+    java.util.List<java.lang.Double> getWeightsList();
+    /**
+     * <pre>
+     * Weights used for evaluating the weighted mean of relevance scores. The sum of the values must equal 1.0
+     * If not provided, all scores are given equal weight
+     * </pre>
+     *
+     * <code>repeated double weights = 2;</code>
+     * @return The count of weights.
+     */
+    int getWeightsCount();
+    /**
+     * <pre>
+     * Weights used for evaluating the weighted mean of relevance scores. The sum of the values must equal 1.0
+     * If not provided, all scores are given equal weight
+     * </pre>
+     *
+     * <code>repeated double weights = 2;</code>
+     * @param index The index of the element to return.
+     * @return The weights at the given index.
+     */
+    double getWeights(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy}
+   */
+  public static final class MeanCombinationStrategy extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy)
+      MeanCombinationStrategyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MeanCombinationStrategy.newBuilder() to construct.
+    private MeanCombinationStrategy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MeanCombinationStrategy() {
+      meanEvaluationTechnique_ = 0;
+      weights_ = emptyDoubleList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MeanCombinationStrategy();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MeanCombinationStrategy(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              meanEvaluationTechnique_ = rawValue;
+              break;
+            }
+            case 17: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                weights_ = newDoubleList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              weights_.addDouble(input.readDouble());
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                weights_ = newDoubleList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                weights_.addDouble(input.readDouble());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          weights_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.searchindex.Common.internal_static_yandex_cloud_ai_assistants_v1_searchindex_MeanCombinationStrategy_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.assistants.v1.searchindex.Common.internal_static_yandex_cloud_ai_assistants_v1_searchindex_MeanCombinationStrategy_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.class, yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy.MeanEvaluationTechnique}
+     */
+    public enum MeanEvaluationTechnique
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>MEAN_EVALUATION_TECHNIQUE_UNSPECIFIED = 0;</code>
+       */
+      MEAN_EVALUATION_TECHNIQUE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * https://en.wikipedia.org/wiki/Arithmetic_mean
+       * </pre>
+       *
+       * <code>ARITHMETIC = 1;</code>
+       */
+      ARITHMETIC(1),
+      /**
+       * <pre>
+       * https://en.wikipedia.org/wiki/Geometric_mean
+       * </pre>
+       *
+       * <code>GEOMETRIC = 2;</code>
+       */
+      GEOMETRIC(2),
+      /**
+       * <pre>
+       * https://en.wikipedia.org/wiki/Harmonic_mean
+       * </pre>
+       *
+       * <code>HARMONIC = 3;</code>
+       */
+      HARMONIC(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>MEAN_EVALUATION_TECHNIQUE_UNSPECIFIED = 0;</code>
+       */
+      public static final int MEAN_EVALUATION_TECHNIQUE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * https://en.wikipedia.org/wiki/Arithmetic_mean
+       * </pre>
+       *
+       * <code>ARITHMETIC = 1;</code>
+       */
+      public static final int ARITHMETIC_VALUE = 1;
+      /**
+       * <pre>
+       * https://en.wikipedia.org/wiki/Geometric_mean
+       * </pre>
+       *
+       * <code>GEOMETRIC = 2;</code>
+       */
+      public static final int GEOMETRIC_VALUE = 2;
+      /**
+       * <pre>
+       * https://en.wikipedia.org/wiki/Harmonic_mean
+       * </pre>
+       *
+       * <code>HARMONIC = 3;</code>
+       */
+      public static final int HARMONIC_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static MeanEvaluationTechnique valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static MeanEvaluationTechnique forNumber(int value) {
+        switch (value) {
+          case 0: return MEAN_EVALUATION_TECHNIQUE_UNSPECIFIED;
+          case 1: return ARITHMETIC;
+          case 2: return GEOMETRIC;
+          case 3: return HARMONIC;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<MeanEvaluationTechnique>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          MeanEvaluationTechnique> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<MeanEvaluationTechnique>() {
+              public MeanEvaluationTechnique findValueByNumber(int number) {
+                return MeanEvaluationTechnique.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final MeanEvaluationTechnique[] VALUES = values();
+
+      public static MeanEvaluationTechnique valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private MeanEvaluationTechnique(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy.MeanEvaluationTechnique)
+    }
+
+    public static final int MEAN_EVALUATION_TECHNIQUE_FIELD_NUMBER = 1;
+    private int meanEvaluationTechnique_;
+    /**
+     * <pre>
+     * Technique for averaging relevance scores from different indices. Default is ARITHMETIC
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy.MeanEvaluationTechnique mean_evaluation_technique = 1;</code>
+     * @return The enum numeric value on the wire for meanEvaluationTechnique.
+     */
+    @java.lang.Override public int getMeanEvaluationTechniqueValue() {
+      return meanEvaluationTechnique_;
+    }
+    /**
+     * <pre>
+     * Technique for averaging relevance scores from different indices. Default is ARITHMETIC
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy.MeanEvaluationTechnique mean_evaluation_technique = 1;</code>
+     * @return The meanEvaluationTechnique.
+     */
+    @java.lang.Override public yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.MeanEvaluationTechnique getMeanEvaluationTechnique() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.MeanEvaluationTechnique result = yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.MeanEvaluationTechnique.valueOf(meanEvaluationTechnique_);
+      return result == null ? yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.MeanEvaluationTechnique.UNRECOGNIZED : result;
+    }
+
+    public static final int WEIGHTS_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.DoubleList weights_;
+    /**
+     * <pre>
+     * Weights used for evaluating the weighted mean of relevance scores. The sum of the values must equal 1.0
+     * If not provided, all scores are given equal weight
+     * </pre>
+     *
+     * <code>repeated double weights = 2;</code>
+     * @return A list containing the weights.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Double>
+        getWeightsList() {
+      return weights_;
+    }
+    /**
+     * <pre>
+     * Weights used for evaluating the weighted mean of relevance scores. The sum of the values must equal 1.0
+     * If not provided, all scores are given equal weight
+     * </pre>
+     *
+     * <code>repeated double weights = 2;</code>
+     * @return The count of weights.
+     */
+    public int getWeightsCount() {
+      return weights_.size();
+    }
+    /**
+     * <pre>
+     * Weights used for evaluating the weighted mean of relevance scores. The sum of the values must equal 1.0
+     * If not provided, all scores are given equal weight
+     * </pre>
+     *
+     * <code>repeated double weights = 2;</code>
+     * @param index The index of the element to return.
+     * @return The weights at the given index.
+     */
+    public double getWeights(int index) {
+      return weights_.getDouble(index);
+    }
+    private int weightsMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (meanEvaluationTechnique_ != yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.MeanEvaluationTechnique.MEAN_EVALUATION_TECHNIQUE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, meanEvaluationTechnique_);
+      }
+      if (getWeightsList().size() > 0) {
+        output.writeUInt32NoTag(18);
+        output.writeUInt32NoTag(weightsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < weights_.size(); i++) {
+        output.writeDoubleNoTag(weights_.getDouble(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meanEvaluationTechnique_ != yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.MeanEvaluationTechnique.MEAN_EVALUATION_TECHNIQUE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, meanEvaluationTechnique_);
+      }
+      {
+        int dataSize = 0;
+        dataSize = 8 * getWeightsList().size();
+        size += dataSize;
+        if (!getWeightsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        weightsMemoizedSerializedSize = dataSize;
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy other = (yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy) obj;
+
+      if (meanEvaluationTechnique_ != other.meanEvaluationTechnique_) return false;
+      if (!getWeightsList()
+          .equals(other.getWeightsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MEAN_EVALUATION_TECHNIQUE_FIELD_NUMBER;
+      hash = (53 * hash) + meanEvaluationTechnique_;
+      if (getWeightsCount() > 0) {
+        hash = (37 * hash) + WEIGHTS_FIELD_NUMBER;
+        hash = (53 * hash) + getWeightsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy)
+        yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.Common.internal_static_yandex_cloud_ai_assistants_v1_searchindex_MeanCombinationStrategy_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.Common.internal_static_yandex_cloud_ai_assistants_v1_searchindex_MeanCombinationStrategy_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.class, yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        meanEvaluationTechnique_ = 0;
+
+        weights_ = emptyDoubleList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.Common.internal_static_yandex_cloud_ai_assistants_v1_searchindex_MeanCombinationStrategy_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy build() {
+        yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy result = new yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy(this);
+        int from_bitField0_ = bitField0_;
+        result.meanEvaluationTechnique_ = meanEvaluationTechnique_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          weights_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.weights_ = weights_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.getDefaultInstance()) return this;
+        if (other.meanEvaluationTechnique_ != 0) {
+          setMeanEvaluationTechniqueValue(other.getMeanEvaluationTechniqueValue());
+        }
+        if (!other.weights_.isEmpty()) {
+          if (weights_.isEmpty()) {
+            weights_ = other.weights_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureWeightsIsMutable();
+            weights_.addAll(other.weights_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int meanEvaluationTechnique_ = 0;
+      /**
+       * <pre>
+       * Technique for averaging relevance scores from different indices. Default is ARITHMETIC
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy.MeanEvaluationTechnique mean_evaluation_technique = 1;</code>
+       * @return The enum numeric value on the wire for meanEvaluationTechnique.
+       */
+      @java.lang.Override public int getMeanEvaluationTechniqueValue() {
+        return meanEvaluationTechnique_;
+      }
+      /**
+       * <pre>
+       * Technique for averaging relevance scores from different indices. Default is ARITHMETIC
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy.MeanEvaluationTechnique mean_evaluation_technique = 1;</code>
+       * @param value The enum numeric value on the wire for meanEvaluationTechnique to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMeanEvaluationTechniqueValue(int value) {
+        
+        meanEvaluationTechnique_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Technique for averaging relevance scores from different indices. Default is ARITHMETIC
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy.MeanEvaluationTechnique mean_evaluation_technique = 1;</code>
+       * @return The meanEvaluationTechnique.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.MeanEvaluationTechnique getMeanEvaluationTechnique() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.MeanEvaluationTechnique result = yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.MeanEvaluationTechnique.valueOf(meanEvaluationTechnique_);
+        return result == null ? yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.MeanEvaluationTechnique.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Technique for averaging relevance scores from different indices. Default is ARITHMETIC
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy.MeanEvaluationTechnique mean_evaluation_technique = 1;</code>
+       * @param value The meanEvaluationTechnique to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMeanEvaluationTechnique(yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.MeanEvaluationTechnique value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        meanEvaluationTechnique_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Technique for averaging relevance scores from different indices. Default is ARITHMETIC
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy.MeanEvaluationTechnique mean_evaluation_technique = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMeanEvaluationTechnique() {
+        
+        meanEvaluationTechnique_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.DoubleList weights_ = emptyDoubleList();
+      private void ensureWeightsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          weights_ = mutableCopy(weights_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Weights used for evaluating the weighted mean of relevance scores. The sum of the values must equal 1.0
+       * If not provided, all scores are given equal weight
+       * </pre>
+       *
+       * <code>repeated double weights = 2;</code>
+       * @return A list containing the weights.
+       */
+      public java.util.List<java.lang.Double>
+          getWeightsList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(weights_) : weights_;
+      }
+      /**
+       * <pre>
+       * Weights used for evaluating the weighted mean of relevance scores. The sum of the values must equal 1.0
+       * If not provided, all scores are given equal weight
+       * </pre>
+       *
+       * <code>repeated double weights = 2;</code>
+       * @return The count of weights.
+       */
+      public int getWeightsCount() {
+        return weights_.size();
+      }
+      /**
+       * <pre>
+       * Weights used for evaluating the weighted mean of relevance scores. The sum of the values must equal 1.0
+       * If not provided, all scores are given equal weight
+       * </pre>
+       *
+       * <code>repeated double weights = 2;</code>
+       * @param index The index of the element to return.
+       * @return The weights at the given index.
+       */
+      public double getWeights(int index) {
+        return weights_.getDouble(index);
+      }
+      /**
+       * <pre>
+       * Weights used for evaluating the weighted mean of relevance scores. The sum of the values must equal 1.0
+       * If not provided, all scores are given equal weight
+       * </pre>
+       *
+       * <code>repeated double weights = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The weights to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWeights(
+          int index, double value) {
+        ensureWeightsIsMutable();
+        weights_.setDouble(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Weights used for evaluating the weighted mean of relevance scores. The sum of the values must equal 1.0
+       * If not provided, all scores are given equal weight
+       * </pre>
+       *
+       * <code>repeated double weights = 2;</code>
+       * @param value The weights to add.
+       * @return This builder for chaining.
+       */
+      public Builder addWeights(double value) {
+        ensureWeightsIsMutable();
+        weights_.addDouble(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Weights used for evaluating the weighted mean of relevance scores. The sum of the values must equal 1.0
+       * If not provided, all scores are given equal weight
+       * </pre>
+       *
+       * <code>repeated double weights = 2;</code>
+       * @param values The weights to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllWeights(
+          java.lang.Iterable<? extends java.lang.Double> values) {
+        ensureWeightsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, weights_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Weights used for evaluating the weighted mean of relevance scores. The sum of the values must equal 1.0
+       * If not provided, all scores are given equal weight
+       * </pre>
+       *
+       * <code>repeated double weights = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWeights() {
+        weights_ = emptyDoubleList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy)
+    private static final yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy();
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MeanCombinationStrategy>
+        PARSER = new com.google.protobuf.AbstractParser<MeanCombinationStrategy>() {
+      @java.lang.Override
+      public MeanCombinationStrategy parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MeanCombinationStrategy(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MeanCombinationStrategy> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MeanCombinationStrategy> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ReciprocalRankFusionCombinationStrategyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.searchindex.ReciprocalRankFusionCombinationStrategy)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The parameter k for RRFscore. Default is 60
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value k = 1;</code>
+     * @return Whether the k field is set.
+     */
+    boolean hasK();
+    /**
+     * <pre>
+     * The parameter k for RRFscore. Default is 60
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value k = 1;</code>
+     * @return The k.
+     */
+    com.google.protobuf.Int64Value getK();
+    /**
+     * <pre>
+     * The parameter k for RRFscore. Default is 60
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value k = 1;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getKOrBuilder();
+  }
+  /**
+   * <pre>
+   * https://plg.uwaterloo.ca/~gvcormac/cormacksigir09-rrf.pdf
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.ReciprocalRankFusionCombinationStrategy}
+   */
+  public static final class ReciprocalRankFusionCombinationStrategy extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.searchindex.ReciprocalRankFusionCombinationStrategy)
+      ReciprocalRankFusionCombinationStrategyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ReciprocalRankFusionCombinationStrategy.newBuilder() to construct.
+    private ReciprocalRankFusionCombinationStrategy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ReciprocalRankFusionCombinationStrategy() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ReciprocalRankFusionCombinationStrategy();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ReciprocalRankFusionCombinationStrategy(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (k_ != null) {
+                subBuilder = k_.toBuilder();
+              }
+              k_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(k_);
+                k_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.searchindex.Common.internal_static_yandex_cloud_ai_assistants_v1_searchindex_ReciprocalRankFusionCombinationStrategy_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.assistants.v1.searchindex.Common.internal_static_yandex_cloud_ai_assistants_v1_searchindex_ReciprocalRankFusionCombinationStrategy_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy.class, yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy.Builder.class);
+    }
+
+    public static final int K_FIELD_NUMBER = 1;
+    private com.google.protobuf.Int64Value k_;
+    /**
+     * <pre>
+     * The parameter k for RRFscore. Default is 60
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value k = 1;</code>
+     * @return Whether the k field is set.
+     */
+    @java.lang.Override
+    public boolean hasK() {
+      return k_ != null;
+    }
+    /**
+     * <pre>
+     * The parameter k for RRFscore. Default is 60
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value k = 1;</code>
+     * @return The k.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getK() {
+      return k_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : k_;
+    }
+    /**
+     * <pre>
+     * The parameter k for RRFscore. Default is 60
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value k = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getKOrBuilder() {
+      return getK();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (k_ != null) {
+        output.writeMessage(1, getK());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (k_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getK());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy other = (yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy) obj;
+
+      if (hasK() != other.hasK()) return false;
+      if (hasK()) {
+        if (!getK()
+            .equals(other.getK())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasK()) {
+        hash = (37 * hash) + K_FIELD_NUMBER;
+        hash = (53 * hash) + getK().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * https://plg.uwaterloo.ca/~gvcormac/cormacksigir09-rrf.pdf
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.ReciprocalRankFusionCombinationStrategy}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.searchindex.ReciprocalRankFusionCombinationStrategy)
+        yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.Common.internal_static_yandex_cloud_ai_assistants_v1_searchindex_ReciprocalRankFusionCombinationStrategy_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.Common.internal_static_yandex_cloud_ai_assistants_v1_searchindex_ReciprocalRankFusionCombinationStrategy_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy.class, yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (kBuilder_ == null) {
+          k_ = null;
+        } else {
+          k_ = null;
+          kBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.Common.internal_static_yandex_cloud_ai_assistants_v1_searchindex_ReciprocalRankFusionCombinationStrategy_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy build() {
+        yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy result = new yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy(this);
+        if (kBuilder_ == null) {
+          result.k_ = k_;
+        } else {
+          result.k_ = kBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy.getDefaultInstance()) return this;
+        if (other.hasK()) {
+          mergeK(other.getK());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value k_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> kBuilder_;
+      /**
+       * <pre>
+       * The parameter k for RRFscore. Default is 60
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value k = 1;</code>
+       * @return Whether the k field is set.
+       */
+      public boolean hasK() {
+        return kBuilder_ != null || k_ != null;
+      }
+      /**
+       * <pre>
+       * The parameter k for RRFscore. Default is 60
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value k = 1;</code>
+       * @return The k.
+       */
+      public com.google.protobuf.Int64Value getK() {
+        if (kBuilder_ == null) {
+          return k_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : k_;
+        } else {
+          return kBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The parameter k for RRFscore. Default is 60
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value k = 1;</code>
+       */
+      public Builder setK(com.google.protobuf.Int64Value value) {
+        if (kBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          k_ = value;
+          onChanged();
+        } else {
+          kBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The parameter k for RRFscore. Default is 60
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value k = 1;</code>
+       */
+      public Builder setK(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (kBuilder_ == null) {
+          k_ = builderForValue.build();
+          onChanged();
+        } else {
+          kBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The parameter k for RRFscore. Default is 60
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value k = 1;</code>
+       */
+      public Builder mergeK(com.google.protobuf.Int64Value value) {
+        if (kBuilder_ == null) {
+          if (k_ != null) {
+            k_ =
+              com.google.protobuf.Int64Value.newBuilder(k_).mergeFrom(value).buildPartial();
+          } else {
+            k_ = value;
+          }
+          onChanged();
+        } else {
+          kBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The parameter k for RRFscore. Default is 60
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value k = 1;</code>
+       */
+      public Builder clearK() {
+        if (kBuilder_ == null) {
+          k_ = null;
+          onChanged();
+        } else {
+          k_ = null;
+          kBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The parameter k for RRFscore. Default is 60
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value k = 1;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getKBuilder() {
+        
+        onChanged();
+        return getKFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The parameter k for RRFscore. Default is 60
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value k = 1;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getKOrBuilder() {
+        if (kBuilder_ != null) {
+          return kBuilder_.getMessageOrBuilder();
+        } else {
+          return k_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : k_;
+        }
+      }
+      /**
+       * <pre>
+       * The parameter k for RRFscore. Default is 60
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value k = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getKFieldBuilder() {
+        if (kBuilder_ == null) {
+          kBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getK(),
+                  getParentForChildren(),
+                  isClean());
+          k_ = null;
+        }
+        return kBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.searchindex.ReciprocalRankFusionCombinationStrategy)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.searchindex.ReciprocalRankFusionCombinationStrategy)
+    private static final yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy();
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ReciprocalRankFusionCombinationStrategy>
+        PARSER = new com.google.protobuf.AbstractParser<ReciprocalRankFusionCombinationStrategy>() {
+      @java.lang.Override
+      public ReciprocalRankFusionCombinationStrategy parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ReciprocalRankFusionCombinationStrategy(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ReciprocalRankFusionCombinationStrategy> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ReciprocalRankFusionCombinationStrategy> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CombinationStrategyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.searchindex.CombinationStrategy)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy mean_combination = 1;</code>
+     * @return Whether the meanCombination field is set.
+     */
+    boolean hasMeanCombination();
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy mean_combination = 1;</code>
+     * @return The meanCombination.
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy getMeanCombination();
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy mean_combination = 1;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategyOrBuilder getMeanCombinationOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.ReciprocalRankFusionCombinationStrategy rrf_combination = 2;</code>
+     * @return Whether the rrfCombination field is set.
+     */
+    boolean hasRrfCombination();
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.ReciprocalRankFusionCombinationStrategy rrf_combination = 2;</code>
+     * @return The rrfCombination.
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy getRrfCombination();
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.ReciprocalRankFusionCombinationStrategy rrf_combination = 2;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategyOrBuilder getRrfCombinationOrBuilder();
+
+    public yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy.StrategyCase getStrategyCase();
+  }
+  /**
+   * <pre>
+   * Combination strategy for merging rankings from different indices
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.CombinationStrategy}
+   */
+  public static final class CombinationStrategy extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.searchindex.CombinationStrategy)
+      CombinationStrategyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CombinationStrategy.newBuilder() to construct.
+    private CombinationStrategy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CombinationStrategy() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CombinationStrategy();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CombinationStrategy(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.Builder subBuilder = null;
+              if (strategyCase_ == 1) {
+                subBuilder = ((yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy) strategy_).toBuilder();
+              }
+              strategy_ =
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy) strategy_);
+                strategy_ = subBuilder.buildPartial();
+              }
+              strategyCase_ = 1;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy.Builder subBuilder = null;
+              if (strategyCase_ == 2) {
+                subBuilder = ((yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy) strategy_).toBuilder();
+              }
+              strategy_ =
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy) strategy_);
+                strategy_ = subBuilder.buildPartial();
+              }
+              strategyCase_ = 2;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.searchindex.Common.internal_static_yandex_cloud_ai_assistants_v1_searchindex_CombinationStrategy_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.assistants.v1.searchindex.Common.internal_static_yandex_cloud_ai_assistants_v1_searchindex_CombinationStrategy_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy.class, yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy.Builder.class);
+    }
+
+    private int strategyCase_ = 0;
+    private java.lang.Object strategy_;
+    public enum StrategyCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      MEAN_COMBINATION(1),
+      RRF_COMBINATION(2),
+      STRATEGY_NOT_SET(0);
+      private final int value;
+      private StrategyCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static StrategyCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static StrategyCase forNumber(int value) {
+        switch (value) {
+          case 1: return MEAN_COMBINATION;
+          case 2: return RRF_COMBINATION;
+          case 0: return STRATEGY_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public StrategyCase
+    getStrategyCase() {
+      return StrategyCase.forNumber(
+          strategyCase_);
+    }
+
+    public static final int MEAN_COMBINATION_FIELD_NUMBER = 1;
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy mean_combination = 1;</code>
+     * @return Whether the meanCombination field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeanCombination() {
+      return strategyCase_ == 1;
+    }
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy mean_combination = 1;</code>
+     * @return The meanCombination.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy getMeanCombination() {
+      if (strategyCase_ == 1) {
+         return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy) strategy_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy mean_combination = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategyOrBuilder getMeanCombinationOrBuilder() {
+      if (strategyCase_ == 1) {
+         return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy) strategy_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.getDefaultInstance();
+    }
+
+    public static final int RRF_COMBINATION_FIELD_NUMBER = 2;
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.ReciprocalRankFusionCombinationStrategy rrf_combination = 2;</code>
+     * @return Whether the rrfCombination field is set.
+     */
+    @java.lang.Override
+    public boolean hasRrfCombination() {
+      return strategyCase_ == 2;
+    }
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.ReciprocalRankFusionCombinationStrategy rrf_combination = 2;</code>
+     * @return The rrfCombination.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy getRrfCombination() {
+      if (strategyCase_ == 2) {
+         return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy) strategy_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.ReciprocalRankFusionCombinationStrategy rrf_combination = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategyOrBuilder getRrfCombinationOrBuilder() {
+      if (strategyCase_ == 2) {
+         return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy) strategy_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (strategyCase_ == 1) {
+        output.writeMessage(1, (yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy) strategy_);
+      }
+      if (strategyCase_ == 2) {
+        output.writeMessage(2, (yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy) strategy_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (strategyCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy) strategy_);
+      }
+      if (strategyCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy) strategy_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy other = (yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy) obj;
+
+      if (!getStrategyCase().equals(other.getStrategyCase())) return false;
+      switch (strategyCase_) {
+        case 1:
+          if (!getMeanCombination()
+              .equals(other.getMeanCombination())) return false;
+          break;
+        case 2:
+          if (!getRrfCombination()
+              .equals(other.getRrfCombination())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (strategyCase_) {
+        case 1:
+          hash = (37 * hash) + MEAN_COMBINATION_FIELD_NUMBER;
+          hash = (53 * hash) + getMeanCombination().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + RRF_COMBINATION_FIELD_NUMBER;
+          hash = (53 * hash) + getRrfCombination().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Combination strategy for merging rankings from different indices
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.CombinationStrategy}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.searchindex.CombinationStrategy)
+        yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.Common.internal_static_yandex_cloud_ai_assistants_v1_searchindex_CombinationStrategy_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.Common.internal_static_yandex_cloud_ai_assistants_v1_searchindex_CombinationStrategy_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy.class, yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        strategyCase_ = 0;
+        strategy_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.Common.internal_static_yandex_cloud_ai_assistants_v1_searchindex_CombinationStrategy_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy build() {
+        yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy result = new yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy(this);
+        if (strategyCase_ == 1) {
+          if (meanCombinationBuilder_ == null) {
+            result.strategy_ = strategy_;
+          } else {
+            result.strategy_ = meanCombinationBuilder_.build();
+          }
+        }
+        if (strategyCase_ == 2) {
+          if (rrfCombinationBuilder_ == null) {
+            result.strategy_ = strategy_;
+          } else {
+            result.strategy_ = rrfCombinationBuilder_.build();
+          }
+        }
+        result.strategyCase_ = strategyCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy.getDefaultInstance()) return this;
+        switch (other.getStrategyCase()) {
+          case MEAN_COMBINATION: {
+            mergeMeanCombination(other.getMeanCombination());
+            break;
+          }
+          case RRF_COMBINATION: {
+            mergeRrfCombination(other.getRrfCombination());
+            break;
+          }
+          case STRATEGY_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int strategyCase_ = 0;
+      private java.lang.Object strategy_;
+      public StrategyCase
+          getStrategyCase() {
+        return StrategyCase.forNumber(
+            strategyCase_);
+      }
+
+      public Builder clearStrategy() {
+        strategyCase_ = 0;
+        strategy_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy, yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategyOrBuilder> meanCombinationBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy mean_combination = 1;</code>
+       * @return Whether the meanCombination field is set.
+       */
+      @java.lang.Override
+      public boolean hasMeanCombination() {
+        return strategyCase_ == 1;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy mean_combination = 1;</code>
+       * @return The meanCombination.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy getMeanCombination() {
+        if (meanCombinationBuilder_ == null) {
+          if (strategyCase_ == 1) {
+            return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy) strategy_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.getDefaultInstance();
+        } else {
+          if (strategyCase_ == 1) {
+            return meanCombinationBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy mean_combination = 1;</code>
+       */
+      public Builder setMeanCombination(yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy value) {
+        if (meanCombinationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          strategy_ = value;
+          onChanged();
+        } else {
+          meanCombinationBuilder_.setMessage(value);
+        }
+        strategyCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy mean_combination = 1;</code>
+       */
+      public Builder setMeanCombination(
+          yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.Builder builderForValue) {
+        if (meanCombinationBuilder_ == null) {
+          strategy_ = builderForValue.build();
+          onChanged();
+        } else {
+          meanCombinationBuilder_.setMessage(builderForValue.build());
+        }
+        strategyCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy mean_combination = 1;</code>
+       */
+      public Builder mergeMeanCombination(yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy value) {
+        if (meanCombinationBuilder_ == null) {
+          if (strategyCase_ == 1 &&
+              strategy_ != yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.getDefaultInstance()) {
+            strategy_ = yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.newBuilder((yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy) strategy_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            strategy_ = value;
+          }
+          onChanged();
+        } else {
+          if (strategyCase_ == 1) {
+            meanCombinationBuilder_.mergeFrom(value);
+          }
+          meanCombinationBuilder_.setMessage(value);
+        }
+        strategyCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy mean_combination = 1;</code>
+       */
+      public Builder clearMeanCombination() {
+        if (meanCombinationBuilder_ == null) {
+          if (strategyCase_ == 1) {
+            strategyCase_ = 0;
+            strategy_ = null;
+            onChanged();
+          }
+        } else {
+          if (strategyCase_ == 1) {
+            strategyCase_ = 0;
+            strategy_ = null;
+          }
+          meanCombinationBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy mean_combination = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.Builder getMeanCombinationBuilder() {
+        return getMeanCombinationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy mean_combination = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategyOrBuilder getMeanCombinationOrBuilder() {
+        if ((strategyCase_ == 1) && (meanCombinationBuilder_ != null)) {
+          return meanCombinationBuilder_.getMessageOrBuilder();
+        } else {
+          if (strategyCase_ == 1) {
+            return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy) strategy_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.MeanCombinationStrategy mean_combination = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy, yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategyOrBuilder> 
+          getMeanCombinationFieldBuilder() {
+        if (meanCombinationBuilder_ == null) {
+          if (!(strategyCase_ == 1)) {
+            strategy_ = yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.getDefaultInstance();
+          }
+          meanCombinationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy, yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategyOrBuilder>(
+                  (yandex.cloud.api.ai.assistants.v1.searchindex.Common.MeanCombinationStrategy) strategy_,
+                  getParentForChildren(),
+                  isClean());
+          strategy_ = null;
+        }
+        strategyCase_ = 1;
+        onChanged();;
+        return meanCombinationBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy, yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategyOrBuilder> rrfCombinationBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ReciprocalRankFusionCombinationStrategy rrf_combination = 2;</code>
+       * @return Whether the rrfCombination field is set.
+       */
+      @java.lang.Override
+      public boolean hasRrfCombination() {
+        return strategyCase_ == 2;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ReciprocalRankFusionCombinationStrategy rrf_combination = 2;</code>
+       * @return The rrfCombination.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy getRrfCombination() {
+        if (rrfCombinationBuilder_ == null) {
+          if (strategyCase_ == 2) {
+            return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy) strategy_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy.getDefaultInstance();
+        } else {
+          if (strategyCase_ == 2) {
+            return rrfCombinationBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ReciprocalRankFusionCombinationStrategy rrf_combination = 2;</code>
+       */
+      public Builder setRrfCombination(yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy value) {
+        if (rrfCombinationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          strategy_ = value;
+          onChanged();
+        } else {
+          rrfCombinationBuilder_.setMessage(value);
+        }
+        strategyCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ReciprocalRankFusionCombinationStrategy rrf_combination = 2;</code>
+       */
+      public Builder setRrfCombination(
+          yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy.Builder builderForValue) {
+        if (rrfCombinationBuilder_ == null) {
+          strategy_ = builderForValue.build();
+          onChanged();
+        } else {
+          rrfCombinationBuilder_.setMessage(builderForValue.build());
+        }
+        strategyCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ReciprocalRankFusionCombinationStrategy rrf_combination = 2;</code>
+       */
+      public Builder mergeRrfCombination(yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy value) {
+        if (rrfCombinationBuilder_ == null) {
+          if (strategyCase_ == 2 &&
+              strategy_ != yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy.getDefaultInstance()) {
+            strategy_ = yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy.newBuilder((yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy) strategy_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            strategy_ = value;
+          }
+          onChanged();
+        } else {
+          if (strategyCase_ == 2) {
+            rrfCombinationBuilder_.mergeFrom(value);
+          }
+          rrfCombinationBuilder_.setMessage(value);
+        }
+        strategyCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ReciprocalRankFusionCombinationStrategy rrf_combination = 2;</code>
+       */
+      public Builder clearRrfCombination() {
+        if (rrfCombinationBuilder_ == null) {
+          if (strategyCase_ == 2) {
+            strategyCase_ = 0;
+            strategy_ = null;
+            onChanged();
+          }
+        } else {
+          if (strategyCase_ == 2) {
+            strategyCase_ = 0;
+            strategy_ = null;
+          }
+          rrfCombinationBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ReciprocalRankFusionCombinationStrategy rrf_combination = 2;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy.Builder getRrfCombinationBuilder() {
+        return getRrfCombinationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ReciprocalRankFusionCombinationStrategy rrf_combination = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategyOrBuilder getRrfCombinationOrBuilder() {
+        if ((strategyCase_ == 2) && (rrfCombinationBuilder_ != null)) {
+          return rrfCombinationBuilder_.getMessageOrBuilder();
+        } else {
+          if (strategyCase_ == 2) {
+            return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy) strategy_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ReciprocalRankFusionCombinationStrategy rrf_combination = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy, yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategyOrBuilder> 
+          getRrfCombinationFieldBuilder() {
+        if (rrfCombinationBuilder_ == null) {
+          if (!(strategyCase_ == 2)) {
+            strategy_ = yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy.getDefaultInstance();
+          }
+          rrfCombinationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy, yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategyOrBuilder>(
+                  (yandex.cloud.api.ai.assistants.v1.searchindex.Common.ReciprocalRankFusionCombinationStrategy) strategy_,
+                  getParentForChildren(),
+                  isClean());
+          strategy_ = null;
+        }
+        strategyCase_ = 2;
+        onChanged();;
+        return rrfCombinationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.searchindex.CombinationStrategy)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.searchindex.CombinationStrategy)
+    private static final yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy();
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CombinationStrategy>
+        PARSER = new com.google.protobuf.AbstractParser<CombinationStrategy>() {
+      @java.lang.Override
+      public CombinationStrategy parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CombinationStrategy(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CombinationStrategy> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CombinationStrategy> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.Common.CombinationStrategy getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface NgramTokenizerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Minimum length of characters in a gram. Defaults to 3
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_gram = 1;</code>
+     * @return Whether the minGram field is set.
+     */
+    boolean hasMinGram();
+    /**
+     * <pre>
+     * Minimum length of characters in a gram. Defaults to 3
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_gram = 1;</code>
+     * @return The minGram.
+     */
+    com.google.protobuf.Int64Value getMinGram();
+    /**
+     * <pre>
+     * Minimum length of characters in a gram. Defaults to 3
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_gram = 1;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMinGramOrBuilder();
+
+    /**
+     * <pre>
+     * Maximum length of characters in a gram. Defaults to 4
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_gram = 2;</code>
+     * @return Whether the maxGram field is set.
+     */
+    boolean hasMaxGram();
+    /**
+     * <pre>
+     * Maximum length of characters in a gram. Defaults to 4
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_gram = 2;</code>
+     * @return The maxGram.
+     */
+    com.google.protobuf.Int64Value getMaxGram();
+    /**
+     * <pre>
+     * Maximum length of characters in a gram. Defaults to 4
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_gram = 2;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxGramOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer}
+   */
+  public static final class NgramTokenizer extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer)
+      NgramTokenizerOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use NgramTokenizer.newBuilder() to construct.
+    private NgramTokenizer(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private NgramTokenizer() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NgramTokenizer();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private NgramTokenizer(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (minGram_ != null) {
+                subBuilder = minGram_.toBuilder();
+              }
+              minGram_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(minGram_);
+                minGram_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxGram_ != null) {
+                subBuilder = maxGram_.toBuilder();
+              }
+              maxGram_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxGram_);
+                maxGram_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.searchindex.Common.internal_static_yandex_cloud_ai_assistants_v1_searchindex_NgramTokenizer_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.assistants.v1.searchindex.Common.internal_static_yandex_cloud_ai_assistants_v1_searchindex_NgramTokenizer_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.class, yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.Builder.class);
+    }
+
+    public static final int MIN_GRAM_FIELD_NUMBER = 1;
+    private com.google.protobuf.Int64Value minGram_;
+    /**
+     * <pre>
+     * Minimum length of characters in a gram. Defaults to 3
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_gram = 1;</code>
+     * @return Whether the minGram field is set.
+     */
+    @java.lang.Override
+    public boolean hasMinGram() {
+      return minGram_ != null;
+    }
+    /**
+     * <pre>
+     * Minimum length of characters in a gram. Defaults to 3
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_gram = 1;</code>
+     * @return The minGram.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMinGram() {
+      return minGram_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minGram_;
+    }
+    /**
+     * <pre>
+     * Minimum length of characters in a gram. Defaults to 3
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_gram = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMinGramOrBuilder() {
+      return getMinGram();
+    }
+
+    public static final int MAX_GRAM_FIELD_NUMBER = 2;
+    private com.google.protobuf.Int64Value maxGram_;
+    /**
+     * <pre>
+     * Maximum length of characters in a gram. Defaults to 4
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_gram = 2;</code>
+     * @return Whether the maxGram field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxGram() {
+      return maxGram_ != null;
+    }
+    /**
+     * <pre>
+     * Maximum length of characters in a gram. Defaults to 4
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_gram = 2;</code>
+     * @return The maxGram.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMaxGram() {
+      return maxGram_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxGram_;
+    }
+    /**
+     * <pre>
+     * Maximum length of characters in a gram. Defaults to 4
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_gram = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMaxGramOrBuilder() {
+      return getMaxGram();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (minGram_ != null) {
+        output.writeMessage(1, getMinGram());
+      }
+      if (maxGram_ != null) {
+        output.writeMessage(2, getMaxGram());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (minGram_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMinGram());
+      }
+      if (maxGram_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getMaxGram());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer other = (yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer) obj;
+
+      if (hasMinGram() != other.hasMinGram()) return false;
+      if (hasMinGram()) {
+        if (!getMinGram()
+            .equals(other.getMinGram())) return false;
+      }
+      if (hasMaxGram() != other.hasMaxGram()) return false;
+      if (hasMaxGram()) {
+        if (!getMaxGram()
+            .equals(other.getMaxGram())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMinGram()) {
+        hash = (37 * hash) + MIN_GRAM_FIELD_NUMBER;
+        hash = (53 * hash) + getMinGram().hashCode();
+      }
+      if (hasMaxGram()) {
+        hash = (37 * hash) + MAX_GRAM_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxGram().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer)
+        yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizerOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.Common.internal_static_yandex_cloud_ai_assistants_v1_searchindex_NgramTokenizer_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.Common.internal_static_yandex_cloud_ai_assistants_v1_searchindex_NgramTokenizer_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.class, yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (minGramBuilder_ == null) {
+          minGram_ = null;
+        } else {
+          minGram_ = null;
+          minGramBuilder_ = null;
+        }
+        if (maxGramBuilder_ == null) {
+          maxGram_ = null;
+        } else {
+          maxGram_ = null;
+          maxGramBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.Common.internal_static_yandex_cloud_ai_assistants_v1_searchindex_NgramTokenizer_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer build() {
+        yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer result = new yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer(this);
+        if (minGramBuilder_ == null) {
+          result.minGram_ = minGram_;
+        } else {
+          result.minGram_ = minGramBuilder_.build();
+        }
+        if (maxGramBuilder_ == null) {
+          result.maxGram_ = maxGram_;
+        } else {
+          result.maxGram_ = maxGramBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.getDefaultInstance()) return this;
+        if (other.hasMinGram()) {
+          mergeMinGram(other.getMinGram());
+        }
+        if (other.hasMaxGram()) {
+          mergeMaxGram(other.getMaxGram());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value minGram_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minGramBuilder_;
+      /**
+       * <pre>
+       * Minimum length of characters in a gram. Defaults to 3
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_gram = 1;</code>
+       * @return Whether the minGram field is set.
+       */
+      public boolean hasMinGram() {
+        return minGramBuilder_ != null || minGram_ != null;
+      }
+      /**
+       * <pre>
+       * Minimum length of characters in a gram. Defaults to 3
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_gram = 1;</code>
+       * @return The minGram.
+       */
+      public com.google.protobuf.Int64Value getMinGram() {
+        if (minGramBuilder_ == null) {
+          return minGram_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minGram_;
+        } else {
+          return minGramBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Minimum length of characters in a gram. Defaults to 3
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_gram = 1;</code>
+       */
+      public Builder setMinGram(com.google.protobuf.Int64Value value) {
+        if (minGramBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          minGram_ = value;
+          onChanged();
+        } else {
+          minGramBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum length of characters in a gram. Defaults to 3
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_gram = 1;</code>
+       */
+      public Builder setMinGram(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (minGramBuilder_ == null) {
+          minGram_ = builderForValue.build();
+          onChanged();
+        } else {
+          minGramBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum length of characters in a gram. Defaults to 3
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_gram = 1;</code>
+       */
+      public Builder mergeMinGram(com.google.protobuf.Int64Value value) {
+        if (minGramBuilder_ == null) {
+          if (minGram_ != null) {
+            minGram_ =
+              com.google.protobuf.Int64Value.newBuilder(minGram_).mergeFrom(value).buildPartial();
+          } else {
+            minGram_ = value;
+          }
+          onChanged();
+        } else {
+          minGramBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum length of characters in a gram. Defaults to 3
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_gram = 1;</code>
+       */
+      public Builder clearMinGram() {
+        if (minGramBuilder_ == null) {
+          minGram_ = null;
+          onChanged();
+        } else {
+          minGram_ = null;
+          minGramBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum length of characters in a gram. Defaults to 3
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_gram = 1;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMinGramBuilder() {
+        
+        onChanged();
+        return getMinGramFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Minimum length of characters in a gram. Defaults to 3
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_gram = 1;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMinGramOrBuilder() {
+        if (minGramBuilder_ != null) {
+          return minGramBuilder_.getMessageOrBuilder();
+        } else {
+          return minGram_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : minGram_;
+        }
+      }
+      /**
+       * <pre>
+       * Minimum length of characters in a gram. Defaults to 3
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_gram = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMinGramFieldBuilder() {
+        if (minGramBuilder_ == null) {
+          minGramBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMinGram(),
+                  getParentForChildren(),
+                  isClean());
+          minGram_ = null;
+        }
+        return minGramBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value maxGram_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxGramBuilder_;
+      /**
+       * <pre>
+       * Maximum length of characters in a gram. Defaults to 4
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_gram = 2;</code>
+       * @return Whether the maxGram field is set.
+       */
+      public boolean hasMaxGram() {
+        return maxGramBuilder_ != null || maxGram_ != null;
+      }
+      /**
+       * <pre>
+       * Maximum length of characters in a gram. Defaults to 4
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_gram = 2;</code>
+       * @return The maxGram.
+       */
+      public com.google.protobuf.Int64Value getMaxGram() {
+        if (maxGramBuilder_ == null) {
+          return maxGram_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxGram_;
+        } else {
+          return maxGramBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Maximum length of characters in a gram. Defaults to 4
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_gram = 2;</code>
+       */
+      public Builder setMaxGram(com.google.protobuf.Int64Value value) {
+        if (maxGramBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxGram_ = value;
+          onChanged();
+        } else {
+          maxGramBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum length of characters in a gram. Defaults to 4
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_gram = 2;</code>
+       */
+      public Builder setMaxGram(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxGramBuilder_ == null) {
+          maxGram_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxGramBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum length of characters in a gram. Defaults to 4
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_gram = 2;</code>
+       */
+      public Builder mergeMaxGram(com.google.protobuf.Int64Value value) {
+        if (maxGramBuilder_ == null) {
+          if (maxGram_ != null) {
+            maxGram_ =
+              com.google.protobuf.Int64Value.newBuilder(maxGram_).mergeFrom(value).buildPartial();
+          } else {
+            maxGram_ = value;
+          }
+          onChanged();
+        } else {
+          maxGramBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum length of characters in a gram. Defaults to 4
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_gram = 2;</code>
+       */
+      public Builder clearMaxGram() {
+        if (maxGramBuilder_ == null) {
+          maxGram_ = null;
+          onChanged();
+        } else {
+          maxGram_ = null;
+          maxGramBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum length of characters in a gram. Defaults to 4
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_gram = 2;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxGramBuilder() {
+        
+        onChanged();
+        return getMaxGramFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Maximum length of characters in a gram. Defaults to 4
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_gram = 2;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxGramOrBuilder() {
+        if (maxGramBuilder_ != null) {
+          return maxGramBuilder_.getMessageOrBuilder();
+        } else {
+          return maxGram_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxGram_;
+        }
+      }
+      /**
+       * <pre>
+       * Maximum length of characters in a gram. Defaults to 4
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_gram = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxGramFieldBuilder() {
+        if (maxGramBuilder_ == null) {
+          maxGramBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxGram(),
+                  getParentForChildren(),
+                  isClean());
+          maxGram_ = null;
+        }
+        return maxGramBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer)
+    private static final yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer();
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<NgramTokenizer>
+        PARSER = new com.google.protobuf.AbstractParser<NgramTokenizer>() {
+      @java.lang.Override
+      public NgramTokenizer parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new NgramTokenizer(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<NgramTokenizer> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<NgramTokenizer> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_assistants_v1_searchindex_StaticChunkingStrategy_descriptor;
   private static final 
@@ -1385,6 +5080,26 @@ public final class Common {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_assistants_v1_searchindex_ChunkingStrategy_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_searchindex_MeanCombinationStrategy_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_searchindex_MeanCombinationStrategy_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_searchindex_ReciprocalRankFusionCombinationStrategy_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_searchindex_ReciprocalRankFusionCombinationStrategy_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_searchindex_CombinationStrategy_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_searchindex_CombinationStrategy_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_searchindex_NgramTokenizer_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_searchindex_NgramTokenizer_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1396,20 +5111,42 @@ public final class Common {
     java.lang.String[] descriptorData = {
       "\n6yandex/cloud/ai/assistants/v1/searchin" +
       "dex/common.proto\022)yandex.cloud.ai.assist" +
-      "ants.v1.searchindex\"U\n\026StaticChunkingStr" +
-      "ategy\022\035\n\025max_chunk_size_tokens\030\001 \001(\003\022\034\n\024" +
-      "chunk_overlap_tokens\030\002 \001(\003\"|\n\020ChunkingSt" +
-      "rategy\022\\\n\017static_strategy\030\001 \001(\0132A.yandex" +
-      ".cloud.ai.assistants.v1.searchindex.Stat" +
-      "icChunkingStrategyH\000B\n\n\010StrategyB\212\001\n-yan" +
-      "dex.cloud.api.ai.assistants.v1.searchind" +
-      "exZYgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/ai/assistants/v1/searchinde" +
-      "x;searchindexb\006proto3"
+      "ants.v1.searchindex\032\036google/protobuf/wra" +
+      "ppers.proto\"U\n\026StaticChunkingStrategy\022\035\n" +
+      "\025max_chunk_size_tokens\030\001 \001(\003\022\034\n\024chunk_ov" +
+      "erlap_tokens\030\002 \001(\003\"|\n\020ChunkingStrategy\022\\" +
+      "\n\017static_strategy\030\001 \001(\0132A.yandex.cloud.a" +
+      "i.assistants.v1.searchindex.StaticChunki" +
+      "ngStrategyH\000B\n\n\010Strategy\"\234\002\n\027MeanCombina" +
+      "tionStrategy\022}\n\031mean_evaluation_techniqu" +
+      "e\030\001 \001(\0162Z.yandex.cloud.ai.assistants.v1." +
+      "searchindex.MeanCombinationStrategy.Mean" +
+      "EvaluationTechnique\022\017\n\007weights\030\002 \003(\001\"q\n\027" +
+      "MeanEvaluationTechnique\022)\n%MEAN_EVALUATI" +
+      "ON_TECHNIQUE_UNSPECIFIED\020\000\022\016\n\nARITHMETIC" +
+      "\020\001\022\r\n\tGEOMETRIC\020\002\022\014\n\010HARMONIC\020\003\"Q\n\'Recip" +
+      "rocalRankFusionCombinationStrategy\022&\n\001k\030" +
+      "\001 \001(\0132\033.google.protobuf.Int64Value\"\360\001\n\023C" +
+      "ombinationStrategy\022^\n\020mean_combination\030\001" +
+      " \001(\0132B.yandex.cloud.ai.assistants.v1.sea" +
+      "rchindex.MeanCombinationStrategyH\000\022m\n\017rr" +
+      "f_combination\030\002 \001(\0132R.yandex.cloud.ai.as" +
+      "sistants.v1.searchindex.ReciprocalRankFu" +
+      "sionCombinationStrategyH\000B\n\n\010Strategy\"n\n" +
+      "\016NgramTokenizer\022-\n\010min_gram\030\001 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\022-\n\010max_gram\030\002 \001(\013" +
+      "2\033.google.protobuf.Int64Value*T\n\025Normali" +
+      "zationStrategy\022&\n\"NORMALIZATION_STRATEGY" +
+      "_UNSPECIFIED\020\000\022\013\n\007MIN_MAX\020\001\022\006\n\002L2\020\002B\212\001\n-" +
+      "yandex.cloud.api.ai.assistants.v1.search" +
+      "indexZYgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/ai/assistants/v1/searchi" +
+      "ndex;searchindexb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.WrappersProto.getDescriptor(),
         });
     internal_static_yandex_cloud_ai_assistants_v1_searchindex_StaticChunkingStrategy_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1423,6 +5160,31 @@ public final class Common {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_searchindex_ChunkingStrategy_descriptor,
         new java.lang.String[] { "StaticStrategy", "Strategy", });
+    internal_static_yandex_cloud_ai_assistants_v1_searchindex_MeanCombinationStrategy_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_ai_assistants_v1_searchindex_MeanCombinationStrategy_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_searchindex_MeanCombinationStrategy_descriptor,
+        new java.lang.String[] { "MeanEvaluationTechnique", "Weights", });
+    internal_static_yandex_cloud_ai_assistants_v1_searchindex_ReciprocalRankFusionCombinationStrategy_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_ai_assistants_v1_searchindex_ReciprocalRankFusionCombinationStrategy_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_searchindex_ReciprocalRankFusionCombinationStrategy_descriptor,
+        new java.lang.String[] { "K", });
+    internal_static_yandex_cloud_ai_assistants_v1_searchindex_CombinationStrategy_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_ai_assistants_v1_searchindex_CombinationStrategy_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_searchindex_CombinationStrategy_descriptor,
+        new java.lang.String[] { "MeanCombination", "RrfCombination", "Strategy", });
+    internal_static_yandex_cloud_ai_assistants_v1_searchindex_NgramTokenizer_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_ai_assistants_v1_searchindex_NgramTokenizer_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_searchindex_NgramTokenizer_descriptor,
+        new java.lang.String[] { "MinGram", "MaxGram", });
+    com.google.protobuf.WrappersProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

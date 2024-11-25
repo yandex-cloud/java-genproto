@@ -1579,33 +1579,37 @@ public final class CloudApplicationServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\nByandex/cloud/cloudapps/workload/v1/clo" +
       "ud_application_service.proto\022\"yandex.clo" +
-      "ud.cloudapps.workload.v1\032\033google/protobu" +
-      "f/empty.proto\032\035yandex/cloud/validation.p" +
-      "roto\032:yandex/cloud/cloudapps/workload/v1" +
-      "/cloud_application.proto\"\352\001\n\030ResolveByWo" +
-      "rkloadRequest\022f\n\rworkload_type\030\001 \001(\0162I.y" +
-      "andex.cloud.cloudapps.workload.v1.Resolv" +
-      "eByWorkloadRequest.WorkloadTypeB\004\350\3071\001\022!\n" +
-      "\013workload_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"C\n\014Work" +
-      "loadType\022\035\n\031WORKLOAD_TYPE_UNSPECIFIED\020\000\022" +
-      "\024\n\020COMPUTE_INSTANCE\020\001\"l\n\031ResolveByWorklo" +
-      "adResponse\022O\n\021cloud_application\030\001 \001(\01324." +
-      "yandex.cloud.cloudapps.workload.v1.Cloud" +
-      "Application2\205\002\n\027CloudApplicationService\022" +
-      "U\n\003Get\022\026.google.protobuf.Empty\0324.yandex." +
-      "cloud.cloudapps.workload.v1.CloudApplica" +
-      "tion\"\000\022\222\001\n\021ResolveByWorkload\022<.yandex.cl" +
+      "ud.cloudapps.workload.v1\032\034google/api/ann" +
+      "otations.proto\032\033google/protobuf/empty.pr" +
+      "oto\032\035yandex/cloud/validation.proto\032:yand" +
+      "ex/cloud/cloudapps/workload/v1/cloud_app" +
+      "lication.proto\"\352\001\n\030ResolveByWorkloadRequ" +
+      "est\022f\n\rworkload_type\030\001 \001(\0162I.yandex.clou" +
+      "d.cloudapps.workload.v1.ResolveByWorkloa" +
+      "dRequest.WorkloadTypeB\004\350\3071\001\022!\n\013workload_" +
+      "id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"C\n\014WorkloadType\022\035" +
+      "\n\031WORKLOAD_TYPE_UNSPECIFIED\020\000\022\024\n\020COMPUTE" +
+      "_INSTANCE\020\001\"l\n\031ResolveByWorkloadResponse" +
+      "\022O\n\021cloud_application\030\001 \001(\01324.yandex.clo" +
+      "ud.cloudapps.workload.v1.CloudApplicatio" +
+      "n2\377\002\n\027CloudApplicationService\022\206\001\n\003Get\022\026." +
+      "google.protobuf.Empty\0324.yandex.cloud.clo" +
+      "udapps.workload.v1.CloudApplication\"1\202\323\344" +
+      "\223\002+\022)/cloudapps/workload/v1/cloud-applic" +
+      "ations\022\332\001\n\021ResolveByWorkload\022<.yandex.cl" +
       "oud.cloudapps.workload.v1.ResolveByWorkl" +
       "oadRequest\032=.yandex.cloud.cloudapps.work" +
-      "load.v1.ResolveByWorkloadResponse\"\000By\n&y" +
-      "andex.cloud.api.cloudapps.workload.v1ZOg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/cloudapps/workload/v1;workloadb\006" +
-      "proto3"
+      "load.v1.ResolveByWorkloadResponse\"H\202\323\344\223\002" +
+      "B\"=/cloudapps/workload/v1/cloud-applicat" +
+      "ions:resolve-by-workload:\001*By\n&yandex.cl" +
+      "oud.api.cloudapps.workload.v1ZOgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "cloudapps/workload/v1;workloadb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.cloudapps.workload.v1.CloudApplicationOuterClass.getDescriptor(),
@@ -1624,10 +1628,12 @@ public final class CloudApplicationServiceOuterClass {
         new java.lang.String[] { "CloudApplication", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.required);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.cloudapps.workload.v1.CloudApplicationOuterClass.getDescriptor();

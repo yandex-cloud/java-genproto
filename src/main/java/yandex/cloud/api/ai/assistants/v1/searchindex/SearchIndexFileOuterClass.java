@@ -104,21 +104,6 @@ public final class SearchIndexFileOuterClass {
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
-
-    /**
-     * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 5;</code>
-     * @return Whether the chunkingStrategy field is set.
-     */
-    boolean hasChunkingStrategy();
-    /**
-     * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 5;</code>
-     * @return The chunkingStrategy.
-     */
-    yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy getChunkingStrategy();
-    /**
-     * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 5;</code>
-     */
-    yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategyOrBuilder getChunkingStrategyOrBuilder();
   }
   /**
    * <pre>
@@ -199,19 +184,6 @@ public final class SearchIndexFileOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(createdAt_);
                 createdAt_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 42: {
-              yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.Builder subBuilder = null;
-              if (chunkingStrategy_ != null) {
-                subBuilder = chunkingStrategy_.toBuilder();
-              }
-              chunkingStrategy_ = input.readMessage(yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(chunkingStrategy_);
-                chunkingStrategy_ = subBuilder.buildPartial();
               }
 
               break;
@@ -424,32 +396,6 @@ public final class SearchIndexFileOuterClass {
       return getCreatedAt();
     }
 
-    public static final int CHUNKING_STRATEGY_FIELD_NUMBER = 5;
-    private yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy chunkingStrategy_;
-    /**
-     * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 5;</code>
-     * @return Whether the chunkingStrategy field is set.
-     */
-    @java.lang.Override
-    public boolean hasChunkingStrategy() {
-      return chunkingStrategy_ != null;
-    }
-    /**
-     * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 5;</code>
-     * @return The chunkingStrategy.
-     */
-    @java.lang.Override
-    public yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy getChunkingStrategy() {
-      return chunkingStrategy_ == null ? yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.getDefaultInstance() : chunkingStrategy_;
-    }
-    /**
-     * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 5;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategyOrBuilder getChunkingStrategyOrBuilder() {
-      return getChunkingStrategy();
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -476,9 +422,6 @@ public final class SearchIndexFileOuterClass {
       if (createdAt_ != null) {
         output.writeMessage(4, getCreatedAt());
       }
-      if (chunkingStrategy_ != null) {
-        output.writeMessage(5, getChunkingStrategy());
-      }
       unknownFields.writeTo(output);
     }
 
@@ -500,10 +443,6 @@ public final class SearchIndexFileOuterClass {
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getCreatedAt());
-      }
-      if (chunkingStrategy_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getChunkingStrategy());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -531,11 +470,6 @@ public final class SearchIndexFileOuterClass {
         if (!getCreatedAt()
             .equals(other.getCreatedAt())) return false;
       }
-      if (hasChunkingStrategy() != other.hasChunkingStrategy()) return false;
-      if (hasChunkingStrategy()) {
-        if (!getChunkingStrategy()
-            .equals(other.getChunkingStrategy())) return false;
-      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -556,10 +490,6 @@ public final class SearchIndexFileOuterClass {
       if (hasCreatedAt()) {
         hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getCreatedAt().hashCode();
-      }
-      if (hasChunkingStrategy()) {
-        hash = (37 * hash) + CHUNKING_STRATEGY_FIELD_NUMBER;
-        hash = (53 * hash) + getChunkingStrategy().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -710,12 +640,6 @@ public final class SearchIndexFileOuterClass {
           createdAt_ = null;
           createdAtBuilder_ = null;
         }
-        if (chunkingStrategyBuilder_ == null) {
-          chunkingStrategy_ = null;
-        } else {
-          chunkingStrategy_ = null;
-          chunkingStrategyBuilder_ = null;
-        }
         return this;
       }
 
@@ -749,11 +673,6 @@ public final class SearchIndexFileOuterClass {
           result.createdAt_ = createdAt_;
         } else {
           result.createdAt_ = createdAtBuilder_.build();
-        }
-        if (chunkingStrategyBuilder_ == null) {
-          result.chunkingStrategy_ = chunkingStrategy_;
-        } else {
-          result.chunkingStrategy_ = chunkingStrategyBuilder_.build();
         }
         onBuilt();
         return result;
@@ -817,9 +736,6 @@ public final class SearchIndexFileOuterClass {
         }
         if (other.hasCreatedAt()) {
           mergeCreatedAt(other.getCreatedAt());
-        }
-        if (other.hasChunkingStrategy()) {
-          mergeChunkingStrategy(other.getChunkingStrategy());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1292,125 +1208,6 @@ public final class SearchIndexFileOuterClass {
         }
         return createdAtBuilder_;
       }
-
-      private yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy chunkingStrategy_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy, yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategyOrBuilder> chunkingStrategyBuilder_;
-      /**
-       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 5;</code>
-       * @return Whether the chunkingStrategy field is set.
-       */
-      public boolean hasChunkingStrategy() {
-        return chunkingStrategyBuilder_ != null || chunkingStrategy_ != null;
-      }
-      /**
-       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 5;</code>
-       * @return The chunkingStrategy.
-       */
-      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy getChunkingStrategy() {
-        if (chunkingStrategyBuilder_ == null) {
-          return chunkingStrategy_ == null ? yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.getDefaultInstance() : chunkingStrategy_;
-        } else {
-          return chunkingStrategyBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 5;</code>
-       */
-      public Builder setChunkingStrategy(yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy value) {
-        if (chunkingStrategyBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          chunkingStrategy_ = value;
-          onChanged();
-        } else {
-          chunkingStrategyBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 5;</code>
-       */
-      public Builder setChunkingStrategy(
-          yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.Builder builderForValue) {
-        if (chunkingStrategyBuilder_ == null) {
-          chunkingStrategy_ = builderForValue.build();
-          onChanged();
-        } else {
-          chunkingStrategyBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 5;</code>
-       */
-      public Builder mergeChunkingStrategy(yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy value) {
-        if (chunkingStrategyBuilder_ == null) {
-          if (chunkingStrategy_ != null) {
-            chunkingStrategy_ =
-              yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.newBuilder(chunkingStrategy_).mergeFrom(value).buildPartial();
-          } else {
-            chunkingStrategy_ = value;
-          }
-          onChanged();
-        } else {
-          chunkingStrategyBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 5;</code>
-       */
-      public Builder clearChunkingStrategy() {
-        if (chunkingStrategyBuilder_ == null) {
-          chunkingStrategy_ = null;
-          onChanged();
-        } else {
-          chunkingStrategy_ = null;
-          chunkingStrategyBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 5;</code>
-       */
-      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.Builder getChunkingStrategyBuilder() {
-        
-        onChanged();
-        return getChunkingStrategyFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 5;</code>
-       */
-      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategyOrBuilder getChunkingStrategyOrBuilder() {
-        if (chunkingStrategyBuilder_ != null) {
-          return chunkingStrategyBuilder_.getMessageOrBuilder();
-        } else {
-          return chunkingStrategy_ == null ?
-              yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.getDefaultInstance() : chunkingStrategy_;
-        }
-      }
-      /**
-       * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 5;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy, yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategyOrBuilder> 
-          getChunkingStrategyFieldBuilder() {
-        if (chunkingStrategyBuilder_ == null) {
-          chunkingStrategyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy, yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategyOrBuilder>(
-                  getChunkingStrategy(),
-                  getParentForChildren(),
-                  isClean());
-          chunkingStrategy_ = null;
-        }
-        return chunkingStrategyBuilder_;
-      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1480,24 +1277,19 @@ public final class SearchIndexFileOuterClass {
     java.lang.String[] descriptorData = {
       "\nAyandex/cloud/ai/assistants/v1/searchin" +
       "dex/search_index_file.proto\022)yandex.clou" +
-      "d.ai.assistants.v1.searchindex\0326yandex/c" +
-      "loud/ai/assistants/v1/searchindex/common" +
-      ".proto\032\037google/protobuf/timestamp.proto\"" +
-      "\322\001\n\017SearchIndexFile\022\n\n\002id\030\001 \001(\t\022\027\n\017searc" +
-      "h_index_id\030\002 \001(\t\022\022\n\ncreated_by\030\003 \001(\t\022.\n\n" +
-      "created_at\030\004 \001(\0132\032.google.protobuf.Times" +
-      "tamp\022V\n\021chunking_strategy\030\005 \001(\0132;.yandex" +
-      ".cloud.ai.assistants.v1.searchindex.Chun" +
-      "kingStrategyB\212\001\n-yandex.cloud.api.ai.ass" +
-      "istants.v1.searchindexZYgithub.com/yande" +
-      "x-cloud/go-genproto/yandex/cloud/ai/assi" +
-      "stants/v1/searchindex;searchindexb\006proto" +
-      "3"
+      "d.ai.assistants.v1.searchindex\032\037google/p" +
+      "rotobuf/timestamp.proto\"z\n\017SearchIndexFi" +
+      "le\022\n\n\002id\030\001 \001(\t\022\027\n\017search_index_id\030\002 \001(\t\022" +
+      "\022\n\ncreated_by\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132" +
+      "\032.google.protobuf.TimestampB\212\001\n-yandex.c" +
+      "loud.api.ai.assistants.v1.searchindexZYg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/ai/assistants/v1/searchindex;sea" +
+      "rchindexb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          yandex.cloud.api.ai.assistants.v1.searchindex.Common.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_yandex_cloud_ai_assistants_v1_searchindex_SearchIndexFile_descriptor =
@@ -1505,8 +1297,7 @@ public final class SearchIndexFileOuterClass {
     internal_static_yandex_cloud_ai_assistants_v1_searchindex_SearchIndexFile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_searchindex_SearchIndexFile_descriptor,
-        new java.lang.String[] { "Id", "SearchIndexId", "CreatedBy", "CreatedAt", "ChunkingStrategy", });
-    yandex.cloud.api.ai.assistants.v1.searchindex.Common.getDescriptor();
+        new java.lang.String[] { "Id", "SearchIndexId", "CreatedBy", "CreatedAt", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

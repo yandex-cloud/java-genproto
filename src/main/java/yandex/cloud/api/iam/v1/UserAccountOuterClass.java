@@ -92,6 +92,21 @@ public final class UserAccountOuterClass {
      */
     yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccountOrBuilder getSamlUserAccountOrBuilder();
 
+    /**
+     * <code>.google.protobuf.Timestamp last_authenticated_at = 4;</code>
+     * @return Whether the lastAuthenticatedAt field is set.
+     */
+    boolean hasLastAuthenticatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp last_authenticated_at = 4;</code>
+     * @return The lastAuthenticatedAt.
+     */
+    com.google.protobuf.Timestamp getLastAuthenticatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp last_authenticated_at = 4;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getLastAuthenticatedAtOrBuilder();
+
     public yandex.cloud.api.iam.v1.UserAccountOuterClass.UserAccount.UserAccountCase getUserAccountCase();
   }
   /**
@@ -176,6 +191,19 @@ public final class UserAccountOuterClass {
                 userAccount_ = subBuilder.buildPartial();
               }
               userAccountCase_ = 3;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (lastAuthenticatedAt_ != null) {
+                subBuilder = lastAuthenticatedAt_.toBuilder();
+              }
+              lastAuthenticatedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lastAuthenticatedAt_);
+                lastAuthenticatedAt_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -383,6 +411,32 @@ public final class UserAccountOuterClass {
       return yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.getDefaultInstance();
     }
 
+    public static final int LAST_AUTHENTICATED_AT_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp lastAuthenticatedAt_;
+    /**
+     * <code>.google.protobuf.Timestamp last_authenticated_at = 4;</code>
+     * @return Whether the lastAuthenticatedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasLastAuthenticatedAt() {
+      return lastAuthenticatedAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp last_authenticated_at = 4;</code>
+     * @return The lastAuthenticatedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getLastAuthenticatedAt() {
+      return lastAuthenticatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastAuthenticatedAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp last_authenticated_at = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getLastAuthenticatedAtOrBuilder() {
+      return getLastAuthenticatedAt();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -406,6 +460,9 @@ public final class UserAccountOuterClass {
       if (userAccountCase_ == 3) {
         output.writeMessage(3, (yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount) userAccount_);
       }
+      if (lastAuthenticatedAt_ != null) {
+        output.writeMessage(4, getLastAuthenticatedAt());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -426,6 +483,10 @@ public final class UserAccountOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, (yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount) userAccount_);
       }
+      if (lastAuthenticatedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getLastAuthenticatedAt());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -443,6 +504,11 @@ public final class UserAccountOuterClass {
 
       if (!getId()
           .equals(other.getId())) return false;
+      if (hasLastAuthenticatedAt() != other.hasLastAuthenticatedAt()) return false;
+      if (hasLastAuthenticatedAt()) {
+        if (!getLastAuthenticatedAt()
+            .equals(other.getLastAuthenticatedAt())) return false;
+      }
       if (!getUserAccountCase().equals(other.getUserAccountCase())) return false;
       switch (userAccountCase_) {
         case 2:
@@ -469,6 +535,10 @@ public final class UserAccountOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId().hashCode();
+      if (hasLastAuthenticatedAt()) {
+        hash = (37 * hash) + LAST_AUTHENTICATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getLastAuthenticatedAt().hashCode();
+      }
       switch (userAccountCase_) {
         case 2:
           hash = (37 * hash) + YANDEX_PASSPORT_USER_ACCOUNT_FIELD_NUMBER;
@@ -620,6 +690,12 @@ public final class UserAccountOuterClass {
         super.clear();
         id_ = "";
 
+        if (lastAuthenticatedAtBuilder_ == null) {
+          lastAuthenticatedAt_ = null;
+        } else {
+          lastAuthenticatedAt_ = null;
+          lastAuthenticatedAtBuilder_ = null;
+        }
         userAccountCase_ = 0;
         userAccount_ = null;
         return this;
@@ -662,6 +738,11 @@ public final class UserAccountOuterClass {
           } else {
             result.userAccount_ = samlUserAccountBuilder_.build();
           }
+        }
+        if (lastAuthenticatedAtBuilder_ == null) {
+          result.lastAuthenticatedAt_ = lastAuthenticatedAt_;
+        } else {
+          result.lastAuthenticatedAt_ = lastAuthenticatedAtBuilder_.build();
         }
         result.userAccountCase_ = userAccountCase_;
         onBuilt();
@@ -715,6 +796,9 @@ public final class UserAccountOuterClass {
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           onChanged();
+        }
+        if (other.hasLastAuthenticatedAt()) {
+          mergeLastAuthenticatedAt(other.getLastAuthenticatedAt());
         }
         switch (other.getUserAccountCase()) {
           case YANDEX_PASSPORT_USER_ACCOUNT: {
@@ -1221,6 +1305,125 @@ public final class UserAccountOuterClass {
         userAccountCase_ = 3;
         onChanged();;
         return samlUserAccountBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp lastAuthenticatedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastAuthenticatedAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 4;</code>
+       * @return Whether the lastAuthenticatedAt field is set.
+       */
+      public boolean hasLastAuthenticatedAt() {
+        return lastAuthenticatedAtBuilder_ != null || lastAuthenticatedAt_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 4;</code>
+       * @return The lastAuthenticatedAt.
+       */
+      public com.google.protobuf.Timestamp getLastAuthenticatedAt() {
+        if (lastAuthenticatedAtBuilder_ == null) {
+          return lastAuthenticatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastAuthenticatedAt_;
+        } else {
+          return lastAuthenticatedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 4;</code>
+       */
+      public Builder setLastAuthenticatedAt(com.google.protobuf.Timestamp value) {
+        if (lastAuthenticatedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lastAuthenticatedAt_ = value;
+          onChanged();
+        } else {
+          lastAuthenticatedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 4;</code>
+       */
+      public Builder setLastAuthenticatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (lastAuthenticatedAtBuilder_ == null) {
+          lastAuthenticatedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          lastAuthenticatedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 4;</code>
+       */
+      public Builder mergeLastAuthenticatedAt(com.google.protobuf.Timestamp value) {
+        if (lastAuthenticatedAtBuilder_ == null) {
+          if (lastAuthenticatedAt_ != null) {
+            lastAuthenticatedAt_ =
+              com.google.protobuf.Timestamp.newBuilder(lastAuthenticatedAt_).mergeFrom(value).buildPartial();
+          } else {
+            lastAuthenticatedAt_ = value;
+          }
+          onChanged();
+        } else {
+          lastAuthenticatedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 4;</code>
+       */
+      public Builder clearLastAuthenticatedAt() {
+        if (lastAuthenticatedAtBuilder_ == null) {
+          lastAuthenticatedAt_ = null;
+          onChanged();
+        } else {
+          lastAuthenticatedAt_ = null;
+          lastAuthenticatedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 4;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getLastAuthenticatedAtBuilder() {
+        
+        onChanged();
+        return getLastAuthenticatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 4;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getLastAuthenticatedAtOrBuilder() {
+        if (lastAuthenticatedAtBuilder_ != null) {
+          return lastAuthenticatedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return lastAuthenticatedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : lastAuthenticatedAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getLastAuthenticatedAtFieldBuilder() {
+        if (lastAuthenticatedAtBuilder_ == null) {
+          lastAuthenticatedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getLastAuthenticatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          lastAuthenticatedAt_ = null;
+        }
+        return lastAuthenticatedAtBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3944,28 +4147,32 @@ public final class UserAccountOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n&yandex/cloud/iam/v1/user_account.proto" +
-      "\022\023yandex.cloud.iam.v1\032\035yandex/cloud/vali" +
-      "dation.proto\"\312\001\n\013UserAccount\022\n\n\002id\030\001 \001(\t" +
-      "\022V\n\034yandex_passport_user_account\030\002 \001(\0132." +
-      ".yandex.cloud.iam.v1.YandexPassportUserA" +
-      "ccountH\000\022A\n\021saml_user_account\030\003 \001(\0132$.ya" +
-      "ndex.cloud.iam.v1.SamlUserAccountH\000B\024\n\014u" +
-      "ser_account\022\004\300\3011\001\"A\n\031YandexPassportUserA" +
-      "ccount\022\r\n\005login\030\001 \001(\t\022\025\n\rdefault_email\030\002" +
-      " \001(\t\"\237\002\n\017SamlUserAccount\022#\n\rfederation_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\036\n\007name_id\030\002 \001(\tB\r" +
-      "\350\3071\001\212\3101\0051-256\022H\n\nattributes\030\003 \003(\01324.yand" +
-      "ex.cloud.iam.v1.SamlUserAccount.Attribut" +
-      "esEntry\032\032\n\tAttribute\022\r\n\005value\030\001 \003(\t\032a\n\017A" +
-      "ttributesEntry\022\013\n\003key\030\001 \001(\t\022=\n\005value\030\002 \001" +
-      "(\0132..yandex.cloud.iam.v1.SamlUserAccount" +
-      ".Attribute:\0028\001BV\n\027yandex.cloud.api.iam.v" +
-      "1Z;github.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/iam/v1;iamb\006proto3"
+      "\022\023yandex.cloud.iam.v1\032\037google/protobuf/t" +
+      "imestamp.proto\032\035yandex/cloud/validation." +
+      "proto\"\205\002\n\013UserAccount\022\n\n\002id\030\001 \001(\t\022V\n\034yan" +
+      "dex_passport_user_account\030\002 \001(\0132..yandex" +
+      ".cloud.iam.v1.YandexPassportUserAccountH" +
+      "\000\022A\n\021saml_user_account\030\003 \001(\0132$.yandex.cl" +
+      "oud.iam.v1.SamlUserAccountH\000\0229\n\025last_aut" +
+      "henticated_at\030\004 \001(\0132\032.google.protobuf.Ti" +
+      "mestampB\024\n\014user_account\022\004\300\3011\001\"A\n\031YandexP" +
+      "assportUserAccount\022\r\n\005login\030\001 \001(\t\022\025\n\rdef" +
+      "ault_email\030\002 \001(\t\"\237\002\n\017SamlUserAccount\022#\n\r" +
+      "federation_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\036\n\007nam" +
+      "e_id\030\002 \001(\tB\r\350\3071\001\212\3101\0051-256\022H\n\nattributes\030" +
+      "\003 \003(\01324.yandex.cloud.iam.v1.SamlUserAcco" +
+      "unt.AttributesEntry\032\032\n\tAttribute\022\r\n\005valu" +
+      "e\030\001 \003(\t\032a\n\017AttributesEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "=\n\005value\030\002 \001(\0132..yandex.cloud.iam.v1.Sam" +
+      "lUserAccount.Attribute:\0028\001BV\n\027yandex.clo" +
+      "ud.api.iam.v1Z;github.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/iam/v1;iamb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_iam_v1_UserAccount_descriptor =
@@ -3973,7 +4180,7 @@ public final class UserAccountOuterClass {
     internal_static_yandex_cloud_iam_v1_UserAccount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iam_v1_UserAccount_descriptor,
-        new java.lang.String[] { "Id", "YandexPassportUserAccount", "SamlUserAccount", "UserAccount", });
+        new java.lang.String[] { "Id", "YandexPassportUserAccount", "SamlUserAccount", "LastAuthenticatedAt", "UserAccount", });
     internal_static_yandex_cloud_iam_v1_YandexPassportUserAccount_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_iam_v1_YandexPassportUserAccount_fieldAccessorTable = new
@@ -4005,6 +4212,7 @@ public final class UserAccountOuterClass {
     registry.add(yandex.cloud.api.Validation.required);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

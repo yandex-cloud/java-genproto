@@ -24095,6 +24095,38 @@ public final class BackendGroupOuterClass {
        * @return The useHttp2.
        */
       boolean getUseHttp2();
+
+      /**
+       * <pre>
+       * A list of HTTP response statuses considered healthy.
+       * By default only 200 HTTP status code considered healthy.
+       * </pre>
+       *
+       * <code>repeated int64 expected_statuses = 4 [(.yandex.cloud.value) = "100-599", (.yandex.cloud.unique) = true];</code>
+       * @return A list containing the expectedStatuses.
+       */
+      java.util.List<java.lang.Long> getExpectedStatusesList();
+      /**
+       * <pre>
+       * A list of HTTP response statuses considered healthy.
+       * By default only 200 HTTP status code considered healthy.
+       * </pre>
+       *
+       * <code>repeated int64 expected_statuses = 4 [(.yandex.cloud.value) = "100-599", (.yandex.cloud.unique) = true];</code>
+       * @return The count of expectedStatuses.
+       */
+      int getExpectedStatusesCount();
+      /**
+       * <pre>
+       * A list of HTTP response statuses considered healthy.
+       * By default only 200 HTTP status code considered healthy.
+       * </pre>
+       *
+       * <code>repeated int64 expected_statuses = 4 [(.yandex.cloud.value) = "100-599", (.yandex.cloud.unique) = true];</code>
+       * @param index The index of the element to return.
+       * @return The expectedStatuses at the given index.
+       */
+      long getExpectedStatuses(int index);
     }
     /**
      * <pre>
@@ -24115,6 +24147,7 @@ public final class BackendGroupOuterClass {
       private HttpHealthCheck() {
         host_ = "";
         path_ = "";
+        expectedStatuses_ = emptyLongList();
       }
 
       @java.lang.Override
@@ -24137,6 +24170,7 @@ public final class BackendGroupOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
+        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -24164,6 +24198,27 @@ public final class BackendGroupOuterClass {
                 useHttp2_ = input.readBool();
                 break;
               }
+              case 32: {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  expectedStatuses_ = newLongList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                expectedStatuses_.addLong(input.readInt64());
+                break;
+              }
+              case 34: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                  expectedStatuses_ = newLongList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                while (input.getBytesUntilLimit() > 0) {
+                  expectedStatuses_.addLong(input.readInt64());
+                }
+                input.popLimit(limit);
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -24179,6 +24234,9 @@ public final class BackendGroupOuterClass {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            expectedStatuses_.makeImmutable(); // C
+          }
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
@@ -24306,6 +24364,49 @@ public final class BackendGroupOuterClass {
         return useHttp2_;
       }
 
+      public static final int EXPECTED_STATUSES_FIELD_NUMBER = 4;
+      private com.google.protobuf.Internal.LongList expectedStatuses_;
+      /**
+       * <pre>
+       * A list of HTTP response statuses considered healthy.
+       * By default only 200 HTTP status code considered healthy.
+       * </pre>
+       *
+       * <code>repeated int64 expected_statuses = 4 [(.yandex.cloud.value) = "100-599", (.yandex.cloud.unique) = true];</code>
+       * @return A list containing the expectedStatuses.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.Long>
+          getExpectedStatusesList() {
+        return expectedStatuses_;
+      }
+      /**
+       * <pre>
+       * A list of HTTP response statuses considered healthy.
+       * By default only 200 HTTP status code considered healthy.
+       * </pre>
+       *
+       * <code>repeated int64 expected_statuses = 4 [(.yandex.cloud.value) = "100-599", (.yandex.cloud.unique) = true];</code>
+       * @return The count of expectedStatuses.
+       */
+      public int getExpectedStatusesCount() {
+        return expectedStatuses_.size();
+      }
+      /**
+       * <pre>
+       * A list of HTTP response statuses considered healthy.
+       * By default only 200 HTTP status code considered healthy.
+       * </pre>
+       *
+       * <code>repeated int64 expected_statuses = 4 [(.yandex.cloud.value) = "100-599", (.yandex.cloud.unique) = true];</code>
+       * @param index The index of the element to return.
+       * @return The expectedStatuses at the given index.
+       */
+      public long getExpectedStatuses(int index) {
+        return expectedStatuses_.getLong(index);
+      }
+      private int expectedStatusesMemoizedSerializedSize = -1;
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -24320,6 +24421,7 @@ public final class BackendGroupOuterClass {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
+        getSerializedSize();
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(host_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, host_);
         }
@@ -24328,6 +24430,13 @@ public final class BackendGroupOuterClass {
         }
         if (useHttp2_ != false) {
           output.writeBool(3, useHttp2_);
+        }
+        if (getExpectedStatusesList().size() > 0) {
+          output.writeUInt32NoTag(34);
+          output.writeUInt32NoTag(expectedStatusesMemoizedSerializedSize);
+        }
+        for (int i = 0; i < expectedStatuses_.size(); i++) {
+          output.writeInt64NoTag(expectedStatuses_.getLong(i));
         }
         unknownFields.writeTo(output);
       }
@@ -24347,6 +24456,20 @@ public final class BackendGroupOuterClass {
         if (useHttp2_ != false) {
           size += com.google.protobuf.CodedOutputStream
             .computeBoolSize(3, useHttp2_);
+        }
+        {
+          int dataSize = 0;
+          for (int i = 0; i < expectedStatuses_.size(); i++) {
+            dataSize += com.google.protobuf.CodedOutputStream
+              .computeInt64SizeNoTag(expectedStatuses_.getLong(i));
+          }
+          size += dataSize;
+          if (!getExpectedStatusesList().isEmpty()) {
+            size += 1;
+            size += com.google.protobuf.CodedOutputStream
+                .computeInt32SizeNoTag(dataSize);
+          }
+          expectedStatusesMemoizedSerializedSize = dataSize;
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -24369,6 +24492,8 @@ public final class BackendGroupOuterClass {
             .equals(other.getPath())) return false;
         if (getUseHttp2()
             != other.getUseHttp2()) return false;
+        if (!getExpectedStatusesList()
+            .equals(other.getExpectedStatusesList())) return false;
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -24387,6 +24512,10 @@ public final class BackendGroupOuterClass {
         hash = (37 * hash) + USE_HTTP2_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getUseHttp2());
+        if (getExpectedStatusesCount() > 0) {
+          hash = (37 * hash) + EXPECTED_STATUSES_FIELD_NUMBER;
+          hash = (53 * hash) + getExpectedStatusesList().hashCode();
+        }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -24530,6 +24659,8 @@ public final class BackendGroupOuterClass {
 
           useHttp2_ = false;
 
+          expectedStatuses_ = emptyLongList();
+          bitField0_ = (bitField0_ & ~0x00000001);
           return this;
         }
 
@@ -24556,9 +24687,15 @@ public final class BackendGroupOuterClass {
         @java.lang.Override
         public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.HttpHealthCheck buildPartial() {
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.HttpHealthCheck result = new yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.HttpHealthCheck(this);
+          int from_bitField0_ = bitField0_;
           result.host_ = host_;
           result.path_ = path_;
           result.useHttp2_ = useHttp2_;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            expectedStatuses_.makeImmutable();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.expectedStatuses_ = expectedStatuses_;
           onBuilt();
           return result;
         }
@@ -24618,6 +24755,16 @@ public final class BackendGroupOuterClass {
           if (other.getUseHttp2() != false) {
             setUseHttp2(other.getUseHttp2());
           }
+          if (!other.expectedStatuses_.isEmpty()) {
+            if (expectedStatuses_.isEmpty()) {
+              expectedStatuses_ = other.expectedStatuses_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureExpectedStatusesIsMutable();
+              expectedStatuses_.addAll(other.expectedStatuses_);
+            }
+            onChanged();
+          }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
           return this;
@@ -24646,6 +24793,7 @@ public final class BackendGroupOuterClass {
           }
           return this;
         }
+        private int bitField0_;
 
         private java.lang.Object host_ = "";
         /**
@@ -24886,6 +25034,120 @@ public final class BackendGroupOuterClass {
         public Builder clearUseHttp2() {
           
           useHttp2_ = false;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.Internal.LongList expectedStatuses_ = emptyLongList();
+        private void ensureExpectedStatusesIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            expectedStatuses_ = mutableCopy(expectedStatuses_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+        /**
+         * <pre>
+         * A list of HTTP response statuses considered healthy.
+         * By default only 200 HTTP status code considered healthy.
+         * </pre>
+         *
+         * <code>repeated int64 expected_statuses = 4 [(.yandex.cloud.value) = "100-599", (.yandex.cloud.unique) = true];</code>
+         * @return A list containing the expectedStatuses.
+         */
+        public java.util.List<java.lang.Long>
+            getExpectedStatusesList() {
+          return ((bitField0_ & 0x00000001) != 0) ?
+                   java.util.Collections.unmodifiableList(expectedStatuses_) : expectedStatuses_;
+        }
+        /**
+         * <pre>
+         * A list of HTTP response statuses considered healthy.
+         * By default only 200 HTTP status code considered healthy.
+         * </pre>
+         *
+         * <code>repeated int64 expected_statuses = 4 [(.yandex.cloud.value) = "100-599", (.yandex.cloud.unique) = true];</code>
+         * @return The count of expectedStatuses.
+         */
+        public int getExpectedStatusesCount() {
+          return expectedStatuses_.size();
+        }
+        /**
+         * <pre>
+         * A list of HTTP response statuses considered healthy.
+         * By default only 200 HTTP status code considered healthy.
+         * </pre>
+         *
+         * <code>repeated int64 expected_statuses = 4 [(.yandex.cloud.value) = "100-599", (.yandex.cloud.unique) = true];</code>
+         * @param index The index of the element to return.
+         * @return The expectedStatuses at the given index.
+         */
+        public long getExpectedStatuses(int index) {
+          return expectedStatuses_.getLong(index);
+        }
+        /**
+         * <pre>
+         * A list of HTTP response statuses considered healthy.
+         * By default only 200 HTTP status code considered healthy.
+         * </pre>
+         *
+         * <code>repeated int64 expected_statuses = 4 [(.yandex.cloud.value) = "100-599", (.yandex.cloud.unique) = true];</code>
+         * @param index The index to set the value at.
+         * @param value The expectedStatuses to set.
+         * @return This builder for chaining.
+         */
+        public Builder setExpectedStatuses(
+            int index, long value) {
+          ensureExpectedStatusesIsMutable();
+          expectedStatuses_.setLong(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * A list of HTTP response statuses considered healthy.
+         * By default only 200 HTTP status code considered healthy.
+         * </pre>
+         *
+         * <code>repeated int64 expected_statuses = 4 [(.yandex.cloud.value) = "100-599", (.yandex.cloud.unique) = true];</code>
+         * @param value The expectedStatuses to add.
+         * @return This builder for chaining.
+         */
+        public Builder addExpectedStatuses(long value) {
+          ensureExpectedStatusesIsMutable();
+          expectedStatuses_.addLong(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * A list of HTTP response statuses considered healthy.
+         * By default only 200 HTTP status code considered healthy.
+         * </pre>
+         *
+         * <code>repeated int64 expected_statuses = 4 [(.yandex.cloud.value) = "100-599", (.yandex.cloud.unique) = true];</code>
+         * @param values The expectedStatuses to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllExpectedStatuses(
+            java.lang.Iterable<? extends java.lang.Long> values) {
+          ensureExpectedStatusesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, expectedStatuses_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * A list of HTTP response statuses considered healthy.
+         * By default only 200 HTTP status code considered healthy.
+         * </pre>
+         *
+         * <code>repeated int64 expected_statuses = 4 [(.yandex.cloud.value) = "100-599", (.yandex.cloud.unique) = true];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearExpectedStatuses() {
+          expectedStatuses_ = emptyLongList();
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
           return this;
         }
@@ -28200,7 +28462,7 @@ public final class BackendGroupOuterClass {
       "\t\022N\n\022validation_context\030\003 \001(\01322.yandex.c" +
       "loud.apploadbalancer.v1.ValidationContex" +
       "tJ\004\010\002\020\003\",\n\024StorageBucketBackend\022\024\n\006bucke" +
-      "t\030\001 \001(\tB\004\350\3071\001\"\240\007\n\013HealthCheck\0220\n\007timeout" +
+      "t\030\001 \001(\tB\004\350\3071\001\"\314\007\n\013HealthCheck\0220\n\007timeout" +
       "\030\001 \001(\0132\031.google.protobuf.DurationB\004\350\3071\001\022" +
       "1\n\010interval\030\002 \001(\0132\031.google.protobuf.Dura" +
       "tionB\004\350\3071\001\022\037\n\027interval_jitter_percent\030\003 " +
@@ -28219,17 +28481,18 @@ public final class BackendGroupOuterClass {
       "tSettingsH\001\032\206\001\n\021StreamHealthCheck\0226\n\004sen" +
       "d\030\001 \001(\0132(.yandex.cloud.apploadbalancer.v" +
       "1.Payload\0229\n\007receive\030\002 \001(\0132(.yandex.clou" +
-      "d.apploadbalancer.v1.Payload\032F\n\017HttpHeal" +
+      "d.apploadbalancer.v1.Payload\032r\n\017HttpHeal" +
       "thCheck\022\014\n\004host\030\001 \001(\t\022\022\n\004path\030\002 \001(\tB\004\350\3071" +
-      "\001\022\021\n\tuse_http2\030\003 \001(\010\032\'\n\017GrpcHealthCheck\022" +
-      "\024\n\014service_name\030\001 \001(\tB\023\n\013healthcheck\022\004\300\301" +
-      "1\001B\024\n\022transport_settings*T\n\021LoadBalancin" +
-      "gMode\022\017\n\013ROUND_ROBIN\020\000\022\n\n\006RANDOM\020\001\022\021\n\rLE" +
-      "AST_REQUEST\020\002\022\017\n\013MAGLEV_HASH\020\003Bz\n#yandex" +
-      ".cloud.api.apploadbalancer.v1ZSgithub.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "apploadbalancer/v1;apploadbalancerb\006prot" +
-      "o3"
+      "\001\022\021\n\tuse_http2\030\003 \001(\010\022*\n\021expected_statuse" +
+      "s\030\004 \003(\003B\017\372\3071\007100-599\220\3101\001\032\'\n\017GrpcHealthCh" +
+      "eck\022\024\n\014service_name\030\001 \001(\tB\023\n\013healthcheck" +
+      "\022\004\300\3011\001B\024\n\022transport_settings*T\n\021LoadBala" +
+      "ncingMode\022\017\n\013ROUND_ROBIN\020\000\022\n\n\006RANDOM\020\001\022\021" +
+      "\n\rLEAST_REQUEST\020\002\022\017\n\013MAGLEV_HASH\020\003Bz\n#ya" +
+      "ndex.cloud.api.apploadbalancer.v1ZSgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/apploadbalancer/v1;apploadbalancerb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -28360,7 +28623,7 @@ public final class BackendGroupOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_HealthCheck_HttpHealthCheck_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_HealthCheck_HttpHealthCheck_descriptor,
-        new java.lang.String[] { "Host", "Path", "UseHttp2", });
+        new java.lang.String[] { "Host", "Path", "UseHttp2", "ExpectedStatuses", });
     internal_static_yandex_cloud_apploadbalancer_v1_HealthCheck_GrpcHealthCheck_descriptor =
       internal_static_yandex_cloud_apploadbalancer_v1_HealthCheck_descriptor.getNestedTypes().get(2);
     internal_static_yandex_cloud_apploadbalancer_v1_HealthCheck_GrpcHealthCheck_fieldAccessorTable = new
@@ -28374,6 +28637,7 @@ public final class BackendGroupOuterClass {
     registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);
     registry.add(yandex.cloud.api.Validation.size);
+    registry.add(yandex.cloud.api.Validation.unique);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

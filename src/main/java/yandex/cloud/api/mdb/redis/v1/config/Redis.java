@@ -517,6 +517,60 @@ public final class Redis {
      * <code>.google.protobuf.BoolValue allow_data_loss = 19;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getAllowDataLossOrBuilder();
+
+    /**
+     * <pre>
+     * Use JIT for lua scripts and functions
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_luajit = 20;</code>
+     * @return Whether the useLuajit field is set.
+     */
+    boolean hasUseLuajit();
+    /**
+     * <pre>
+     * Use JIT for lua scripts and functions
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_luajit = 20;</code>
+     * @return The useLuajit.
+     */
+    com.google.protobuf.BoolValue getUseLuajit();
+    /**
+     * <pre>
+     * Use JIT for lua scripts and functions
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_luajit = 20;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getUseLuajitOrBuilder();
+
+    /**
+     * <pre>
+     * Allow redis to use io-threads
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue io_threads_allowed = 21;</code>
+     * @return Whether the ioThreadsAllowed field is set.
+     */
+    boolean hasIoThreadsAllowed();
+    /**
+     * <pre>
+     * Allow redis to use io-threads
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue io_threads_allowed = 21;</code>
+     * @return The ioThreadsAllowed.
+     */
+    com.google.protobuf.BoolValue getIoThreadsAllowed();
+    /**
+     * <pre>
+     * Allow redis to use io-threads
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue io_threads_allowed = 21;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getIoThreadsAllowedOrBuilder();
   }
   /**
    * <pre>
@@ -793,6 +847,32 @@ public final class Redis {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(allowDataLoss_);
                 allowDataLoss_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 162: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (useLuajit_ != null) {
+                subBuilder = useLuajit_.toBuilder();
+              }
+              useLuajit_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(useLuajit_);
+                useLuajit_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 170: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (ioThreadsAllowed_ != null) {
+                subBuilder = ioThreadsAllowed_.toBuilder();
+              }
+              ioThreadsAllowed_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(ioThreadsAllowed_);
+                ioThreadsAllowed_ = subBuilder.buildPartial();
               }
 
               break;
@@ -3011,6 +3091,82 @@ public final class Redis {
       return getAllowDataLoss();
     }
 
+    public static final int USE_LUAJIT_FIELD_NUMBER = 20;
+    private com.google.protobuf.BoolValue useLuajit_;
+    /**
+     * <pre>
+     * Use JIT for lua scripts and functions
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_luajit = 20;</code>
+     * @return Whether the useLuajit field is set.
+     */
+    @java.lang.Override
+    public boolean hasUseLuajit() {
+      return useLuajit_ != null;
+    }
+    /**
+     * <pre>
+     * Use JIT for lua scripts and functions
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_luajit = 20;</code>
+     * @return The useLuajit.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getUseLuajit() {
+      return useLuajit_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : useLuajit_;
+    }
+    /**
+     * <pre>
+     * Use JIT for lua scripts and functions
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_luajit = 20;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getUseLuajitOrBuilder() {
+      return getUseLuajit();
+    }
+
+    public static final int IO_THREADS_ALLOWED_FIELD_NUMBER = 21;
+    private com.google.protobuf.BoolValue ioThreadsAllowed_;
+    /**
+     * <pre>
+     * Allow redis to use io-threads
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue io_threads_allowed = 21;</code>
+     * @return Whether the ioThreadsAllowed field is set.
+     */
+    @java.lang.Override
+    public boolean hasIoThreadsAllowed() {
+      return ioThreadsAllowed_ != null;
+    }
+    /**
+     * <pre>
+     * Allow redis to use io-threads
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue io_threads_allowed = 21;</code>
+     * @return The ioThreadsAllowed.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getIoThreadsAllowed() {
+      return ioThreadsAllowed_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : ioThreadsAllowed_;
+    }
+    /**
+     * <pre>
+     * Allow redis to use io-threads
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue io_threads_allowed = 21;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getIoThreadsAllowedOrBuilder() {
+      return getIoThreadsAllowed();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3081,6 +3237,12 @@ public final class Redis {
       }
       if (allowDataLoss_ != null) {
         output.writeMessage(19, getAllowDataLoss());
+      }
+      if (useLuajit_ != null) {
+        output.writeMessage(20, getUseLuajit());
+      }
+      if (ioThreadsAllowed_ != null) {
+        output.writeMessage(21, getIoThreadsAllowed());
       }
       unknownFields.writeTo(output);
     }
@@ -3164,6 +3326,14 @@ public final class Redis {
       if (allowDataLoss_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(19, getAllowDataLoss());
+      }
+      if (useLuajit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(20, getUseLuajit());
+      }
+      if (ioThreadsAllowed_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(21, getIoThreadsAllowed());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3265,6 +3435,16 @@ public final class Redis {
         if (!getAllowDataLoss()
             .equals(other.getAllowDataLoss())) return false;
       }
+      if (hasUseLuajit() != other.hasUseLuajit()) return false;
+      if (hasUseLuajit()) {
+        if (!getUseLuajit()
+            .equals(other.getUseLuajit())) return false;
+      }
+      if (hasIoThreadsAllowed() != other.hasIoThreadsAllowed()) return false;
+      if (hasIoThreadsAllowed()) {
+        if (!getIoThreadsAllowed()
+            .equals(other.getIoThreadsAllowed())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3345,6 +3525,14 @@ public final class Redis {
       if (hasAllowDataLoss()) {
         hash = (37 * hash) + ALLOW_DATA_LOSS_FIELD_NUMBER;
         hash = (53 * hash) + getAllowDataLoss().hashCode();
+      }
+      if (hasUseLuajit()) {
+        hash = (37 * hash) + USE_LUAJIT_FIELD_NUMBER;
+        hash = (53 * hash) + getUseLuajit().hashCode();
+      }
+      if (hasIoThreadsAllowed()) {
+        hash = (37 * hash) + IO_THREADS_ALLOWED_FIELD_NUMBER;
+        hash = (53 * hash) + getIoThreadsAllowed().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3586,6 +3774,18 @@ public final class Redis {
           allowDataLoss_ = null;
           allowDataLossBuilder_ = null;
         }
+        if (useLuajitBuilder_ == null) {
+          useLuajit_ = null;
+        } else {
+          useLuajit_ = null;
+          useLuajitBuilder_ = null;
+        }
+        if (ioThreadsAllowedBuilder_ == null) {
+          ioThreadsAllowed_ = null;
+        } else {
+          ioThreadsAllowed_ = null;
+          ioThreadsAllowedBuilder_ = null;
+        }
         return this;
       }
 
@@ -3695,6 +3895,16 @@ public final class Redis {
         } else {
           result.allowDataLoss_ = allowDataLossBuilder_.build();
         }
+        if (useLuajitBuilder_ == null) {
+          result.useLuajit_ = useLuajit_;
+        } else {
+          result.useLuajit_ = useLuajitBuilder_.build();
+        }
+        if (ioThreadsAllowedBuilder_ == null) {
+          result.ioThreadsAllowed_ = ioThreadsAllowed_;
+        } else {
+          result.ioThreadsAllowed_ = ioThreadsAllowedBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -3801,6 +4011,12 @@ public final class Redis {
         }
         if (other.hasAllowDataLoss()) {
           mergeAllowDataLoss(other.getAllowDataLoss());
+        }
+        if (other.hasUseLuajit()) {
+          mergeUseLuajit(other.getUseLuajit());
+        }
+        if (other.hasIoThreadsAllowed()) {
+          mergeIoThreadsAllowed(other.getIoThreadsAllowed());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6600,6 +6816,316 @@ public final class Redis {
         }
         return allowDataLossBuilder_;
       }
+
+      private com.google.protobuf.BoolValue useLuajit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> useLuajitBuilder_;
+      /**
+       * <pre>
+       * Use JIT for lua scripts and functions
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_luajit = 20;</code>
+       * @return Whether the useLuajit field is set.
+       */
+      public boolean hasUseLuajit() {
+        return useLuajitBuilder_ != null || useLuajit_ != null;
+      }
+      /**
+       * <pre>
+       * Use JIT for lua scripts and functions
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_luajit = 20;</code>
+       * @return The useLuajit.
+       */
+      public com.google.protobuf.BoolValue getUseLuajit() {
+        if (useLuajitBuilder_ == null) {
+          return useLuajit_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : useLuajit_;
+        } else {
+          return useLuajitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Use JIT for lua scripts and functions
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_luajit = 20;</code>
+       */
+      public Builder setUseLuajit(com.google.protobuf.BoolValue value) {
+        if (useLuajitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          useLuajit_ = value;
+          onChanged();
+        } else {
+          useLuajitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Use JIT for lua scripts and functions
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_luajit = 20;</code>
+       */
+      public Builder setUseLuajit(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (useLuajitBuilder_ == null) {
+          useLuajit_ = builderForValue.build();
+          onChanged();
+        } else {
+          useLuajitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Use JIT for lua scripts and functions
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_luajit = 20;</code>
+       */
+      public Builder mergeUseLuajit(com.google.protobuf.BoolValue value) {
+        if (useLuajitBuilder_ == null) {
+          if (useLuajit_ != null) {
+            useLuajit_ =
+              com.google.protobuf.BoolValue.newBuilder(useLuajit_).mergeFrom(value).buildPartial();
+          } else {
+            useLuajit_ = value;
+          }
+          onChanged();
+        } else {
+          useLuajitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Use JIT for lua scripts and functions
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_luajit = 20;</code>
+       */
+      public Builder clearUseLuajit() {
+        if (useLuajitBuilder_ == null) {
+          useLuajit_ = null;
+          onChanged();
+        } else {
+          useLuajit_ = null;
+          useLuajitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Use JIT for lua scripts and functions
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_luajit = 20;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getUseLuajitBuilder() {
+        
+        onChanged();
+        return getUseLuajitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Use JIT for lua scripts and functions
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_luajit = 20;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getUseLuajitOrBuilder() {
+        if (useLuajitBuilder_ != null) {
+          return useLuajitBuilder_.getMessageOrBuilder();
+        } else {
+          return useLuajit_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : useLuajit_;
+        }
+      }
+      /**
+       * <pre>
+       * Use JIT for lua scripts and functions
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_luajit = 20;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getUseLuajitFieldBuilder() {
+        if (useLuajitBuilder_ == null) {
+          useLuajitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getUseLuajit(),
+                  getParentForChildren(),
+                  isClean());
+          useLuajit_ = null;
+        }
+        return useLuajitBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue ioThreadsAllowed_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> ioThreadsAllowedBuilder_;
+      /**
+       * <pre>
+       * Allow redis to use io-threads
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue io_threads_allowed = 21;</code>
+       * @return Whether the ioThreadsAllowed field is set.
+       */
+      public boolean hasIoThreadsAllowed() {
+        return ioThreadsAllowedBuilder_ != null || ioThreadsAllowed_ != null;
+      }
+      /**
+       * <pre>
+       * Allow redis to use io-threads
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue io_threads_allowed = 21;</code>
+       * @return The ioThreadsAllowed.
+       */
+      public com.google.protobuf.BoolValue getIoThreadsAllowed() {
+        if (ioThreadsAllowedBuilder_ == null) {
+          return ioThreadsAllowed_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : ioThreadsAllowed_;
+        } else {
+          return ioThreadsAllowedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Allow redis to use io-threads
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue io_threads_allowed = 21;</code>
+       */
+      public Builder setIoThreadsAllowed(com.google.protobuf.BoolValue value) {
+        if (ioThreadsAllowedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ioThreadsAllowed_ = value;
+          onChanged();
+        } else {
+          ioThreadsAllowedBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Allow redis to use io-threads
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue io_threads_allowed = 21;</code>
+       */
+      public Builder setIoThreadsAllowed(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (ioThreadsAllowedBuilder_ == null) {
+          ioThreadsAllowed_ = builderForValue.build();
+          onChanged();
+        } else {
+          ioThreadsAllowedBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Allow redis to use io-threads
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue io_threads_allowed = 21;</code>
+       */
+      public Builder mergeIoThreadsAllowed(com.google.protobuf.BoolValue value) {
+        if (ioThreadsAllowedBuilder_ == null) {
+          if (ioThreadsAllowed_ != null) {
+            ioThreadsAllowed_ =
+              com.google.protobuf.BoolValue.newBuilder(ioThreadsAllowed_).mergeFrom(value).buildPartial();
+          } else {
+            ioThreadsAllowed_ = value;
+          }
+          onChanged();
+        } else {
+          ioThreadsAllowedBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Allow redis to use io-threads
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue io_threads_allowed = 21;</code>
+       */
+      public Builder clearIoThreadsAllowed() {
+        if (ioThreadsAllowedBuilder_ == null) {
+          ioThreadsAllowed_ = null;
+          onChanged();
+        } else {
+          ioThreadsAllowed_ = null;
+          ioThreadsAllowedBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Allow redis to use io-threads
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue io_threads_allowed = 21;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getIoThreadsAllowedBuilder() {
+        
+        onChanged();
+        return getIoThreadsAllowedFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Allow redis to use io-threads
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue io_threads_allowed = 21;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getIoThreadsAllowedOrBuilder() {
+        if (ioThreadsAllowedBuilder_ != null) {
+          return ioThreadsAllowedBuilder_.getMessageOrBuilder();
+        } else {
+          return ioThreadsAllowed_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : ioThreadsAllowed_;
+        }
+      }
+      /**
+       * <pre>
+       * Allow redis to use io-threads
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue io_threads_allowed = 21;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getIoThreadsAllowedFieldBuilder() {
+        if (ioThreadsAllowedBuilder_ == null) {
+          ioThreadsAllowedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getIoThreadsAllowed(),
+                  getParentForChildren(),
+                  isClean());
+          ioThreadsAllowed_ = null;
+        }
+        return ioThreadsAllowedBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7902,7 +8428,7 @@ public final class Redis {
       "\n,yandex/cloud/mdb/redis/v1/config/redis" +
       ".proto\022 yandex.cloud.mdb.redis.v1.config" +
       "\032\036google/protobuf/wrappers.proto\032\035yandex" +
-      "/cloud/validation.proto\"\316\r\n\013RedisConfig\022" +
+      "/cloud/validation.proto\"\266\016\n\013RedisConfig\022" +
       "W\n\020maxmemory_policy\030\001 \001(\0162=.yandex.cloud" +
       ".mdb.redis.v1.config.RedisConfig.Maxmemo" +
       "ryPolicy\022,\n\007timeout\030\002 \001(\0132\033.google.proto" +
@@ -7935,27 +8461,29 @@ public final class Redis {
       "(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0" +
       "\022:\n\026turn_before_switchover\030\022 \001(\0132\032.googl" +
       "e.protobuf.BoolValue\0223\n\017allow_data_loss\030" +
-      "\023 \001(\0132\032.google.protobuf.BoolValue\032\325\001\n\027Cl" +
-      "ientOutputBufferLimit\0228\n\nhard_limit\030\001 \001(" +
-      "\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022" +
-      "8\n\nsoft_limit\030\003 \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\007\372\3071\003>=0\022:\n\014soft_seconds\030\005 \001(\0132" +
-      "\033.google.protobuf.Int64ValueB\007\372\3071\003>=0J\004\010" +
-      "\004\020\005J\004\010\002\020\003\"\304\001\n\017MaxmemoryPolicy\022 \n\034MAXMEMO" +
-      "RY_POLICY_UNSPECIFIED\020\000\022\020\n\014VOLATILE_LRU\020" +
-      "\001\022\017\n\013ALLKEYS_LRU\020\002\022\020\n\014VOLATILE_LFU\020\003\022\017\n\013" +
-      "ALLKEYS_LFU\020\004\022\023\n\017VOLATILE_RANDOM\020\005\022\022\n\016AL" +
-      "LKEYS_RANDOM\020\006\022\020\n\014VOLATILE_TTL\020\007\022\016\n\nNOEV" +
-      "ICTION\020\010\"\344\001\n\016RedisConfigSet\022G\n\020effective" +
-      "_config\030\001 \001(\0132-.yandex.cloud.mdb.redis.v" +
-      "1.config.RedisConfig\022B\n\013user_config\030\002 \001(" +
-      "\0132-.yandex.cloud.mdb.redis.v1.config.Red" +
-      "isConfig\022E\n\016default_config\030\003 \001(\0132-.yande" +
-      "x.cloud.mdb.redis.v1.config.RedisConfigB" +
-      "r\n$yandex.cloud.api.mdb.redis.v1.configZ" +
-      "Jgithub.com/yandex-cloud/go-genproto/yan" +
-      "dex/cloud/mdb/redis/v1/config;redisb\006pro" +
-      "to3"
+      "\023 \001(\0132\032.google.protobuf.BoolValue\022.\n\nuse" +
+      "_luajit\030\024 \001(\0132\032.google.protobuf.BoolValu" +
+      "e\0226\n\022io_threads_allowed\030\025 \001(\0132\032.google.p" +
+      "rotobuf.BoolValue\032\325\001\n\027ClientOutputBuffer" +
+      "Limit\0228\n\nhard_limit\030\001 \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\007\372\3071\003>=0\0228\n\nsoft_limit\030\003 " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=" +
+      "0\022:\n\014soft_seconds\030\005 \001(\0132\033.google.protobu" +
+      "f.Int64ValueB\007\372\3071\003>=0J\004\010\004\020\005J\004\010\002\020\003\"\304\001\n\017Ma" +
+      "xmemoryPolicy\022 \n\034MAXMEMORY_POLICY_UNSPEC" +
+      "IFIED\020\000\022\020\n\014VOLATILE_LRU\020\001\022\017\n\013ALLKEYS_LRU" +
+      "\020\002\022\020\n\014VOLATILE_LFU\020\003\022\017\n\013ALLKEYS_LFU\020\004\022\023\n" +
+      "\017VOLATILE_RANDOM\020\005\022\022\n\016ALLKEYS_RANDOM\020\006\022\020" +
+      "\n\014VOLATILE_TTL\020\007\022\016\n\nNOEVICTION\020\010\"\344\001\n\016Red" +
+      "isConfigSet\022G\n\020effective_config\030\001 \001(\0132-." +
+      "yandex.cloud.mdb.redis.v1.config.RedisCo" +
+      "nfig\022B\n\013user_config\030\002 \001(\0132-.yandex.cloud" +
+      ".mdb.redis.v1.config.RedisConfig\022E\n\016defa" +
+      "ult_config\030\003 \001(\0132-.yandex.cloud.mdb.redi" +
+      "s.v1.config.RedisConfigBr\n$yandex.cloud." +
+      "api.mdb.redis.v1.configZJgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/mdb/re" +
+      "dis/v1/config;redisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7968,7 +8496,7 @@ public final class Redis {
     internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig_descriptor,
-        new java.lang.String[] { "MaxmemoryPolicy", "Timeout", "Password", "Databases", "SlowlogLogSlowerThan", "SlowlogMaxLen", "NotifyKeyspaceEvents", "ClientOutputBufferLimitPubsub", "ClientOutputBufferLimitNormal", "MaxmemoryPercent", "LuaTimeLimit", "ReplBacklogSizePercent", "ClusterRequireFullCoverage", "ClusterAllowReadsWhenDown", "ClusterAllowPubsubshardWhenDown", "LfuDecayTime", "LfuLogFactor", "TurnBeforeSwitchover", "AllowDataLoss", });
+        new java.lang.String[] { "MaxmemoryPolicy", "Timeout", "Password", "Databases", "SlowlogLogSlowerThan", "SlowlogMaxLen", "NotifyKeyspaceEvents", "ClientOutputBufferLimitPubsub", "ClientOutputBufferLimitNormal", "MaxmemoryPercent", "LuaTimeLimit", "ReplBacklogSizePercent", "ClusterRequireFullCoverage", "ClusterAllowReadsWhenDown", "ClusterAllowPubsubshardWhenDown", "LfuDecayTime", "LfuLogFactor", "TurnBeforeSwitchover", "AllowDataLoss", "UseLuajit", "IoThreadsAllowed", });
     internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig_ClientOutputBufferLimit_descriptor =
       internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig_ClientOutputBufferLimit_fieldAccessorTable = new

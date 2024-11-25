@@ -246,6 +246,33 @@ public final class SearchIndexServiceOuterClass {
      */
     yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndexOrBuilder getVectorSearchIndexOrBuilder();
 
+    /**
+     * <pre>
+     * Configuration for a hybrid (vector-based + keyword-based) search index.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 9;</code>
+     * @return Whether the hybridSearchIndex field is set.
+     */
+    boolean hasHybridSearchIndex();
+    /**
+     * <pre>
+     * Configuration for a hybrid (vector-based + keyword-based) search index.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 9;</code>
+     * @return The hybridSearchIndex.
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex getHybridSearchIndex();
+    /**
+     * <pre>
+     * Configuration for a hybrid (vector-based + keyword-based) search index.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 9;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndexOrBuilder getHybridSearchIndexOrBuilder();
+
     public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexServiceOuterClass.CreateSearchIndexRequest.IndexTypeCase getIndexTypeCase();
   }
   /**
@@ -383,6 +410,20 @@ public final class SearchIndexServiceOuterClass {
               indexTypeCase_ = 8;
               break;
             }
+            case 74: {
+              yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.Builder subBuilder = null;
+              if (indexTypeCase_ == 9) {
+                subBuilder = ((yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex) indexType_).toBuilder();
+              }
+              indexType_ =
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex) indexType_);
+                indexType_ = subBuilder.buildPartial();
+              }
+              indexTypeCase_ = 9;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -437,6 +478,7 @@ public final class SearchIndexServiceOuterClass {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       TEXT_SEARCH_INDEX(7),
       VECTOR_SEARCH_INDEX(8),
+      HYBRID_SEARCH_INDEX(9),
       INDEXTYPE_NOT_SET(0);
       private final int value;
       private IndexTypeCase(int value) {
@@ -456,6 +498,7 @@ public final class SearchIndexServiceOuterClass {
         switch (value) {
           case 7: return TEXT_SEARCH_INDEX;
           case 8: return VECTOR_SEARCH_INDEX;
+          case 9: return HYBRID_SEARCH_INDEX;
           case 0: return INDEXTYPE_NOT_SET;
           default: return null;
         }
@@ -873,6 +916,49 @@ public final class SearchIndexServiceOuterClass {
       return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex.getDefaultInstance();
     }
 
+    public static final int HYBRID_SEARCH_INDEX_FIELD_NUMBER = 9;
+    /**
+     * <pre>
+     * Configuration for a hybrid (vector-based + keyword-based) search index.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 9;</code>
+     * @return Whether the hybridSearchIndex field is set.
+     */
+    @java.lang.Override
+    public boolean hasHybridSearchIndex() {
+      return indexTypeCase_ == 9;
+    }
+    /**
+     * <pre>
+     * Configuration for a hybrid (vector-based + keyword-based) search index.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 9;</code>
+     * @return The hybridSearchIndex.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex getHybridSearchIndex() {
+      if (indexTypeCase_ == 9) {
+         return (yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex) indexType_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Configuration for a hybrid (vector-based + keyword-based) search index.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 9;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndexOrBuilder getHybridSearchIndexOrBuilder() {
+      if (indexTypeCase_ == 9) {
+         return (yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex) indexType_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -913,6 +999,9 @@ public final class SearchIndexServiceOuterClass {
       }
       if (indexTypeCase_ == 8) {
         output.writeMessage(8, (yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex) indexType_);
+      }
+      if (indexTypeCase_ == 9) {
+        output.writeMessage(9, (yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex) indexType_);
       }
       unknownFields.writeTo(output);
     }
@@ -962,6 +1051,10 @@ public final class SearchIndexServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, (yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.VectorSearchIndex) indexType_);
       }
+      if (indexTypeCase_ == 9) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, (yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex) indexType_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1001,6 +1094,10 @@ public final class SearchIndexServiceOuterClass {
         case 8:
           if (!getVectorSearchIndex()
               .equals(other.getVectorSearchIndex())) return false;
+          break;
+        case 9:
+          if (!getHybridSearchIndex()
+              .equals(other.getHybridSearchIndex())) return false;
           break;
         case 0:
         default:
@@ -1042,6 +1139,10 @@ public final class SearchIndexServiceOuterClass {
         case 8:
           hash = (37 * hash) + VECTOR_SEARCH_INDEX_FIELD_NUMBER;
           hash = (53 * hash) + getVectorSearchIndex().hashCode();
+          break;
+        case 9:
+          hash = (37 * hash) + HYBRID_SEARCH_INDEX_FIELD_NUMBER;
+          hash = (53 * hash) + getHybridSearchIndex().hashCode();
           break;
         case 0:
         default:
@@ -1278,6 +1379,13 @@ public final class SearchIndexServiceOuterClass {
             result.indexType_ = vectorSearchIndexBuilder_.build();
           }
         }
+        if (indexTypeCase_ == 9) {
+          if (hybridSearchIndexBuilder_ == null) {
+            result.indexType_ = indexType_;
+          } else {
+            result.indexType_ = hybridSearchIndexBuilder_.build();
+          }
+        }
         result.indexTypeCase_ = indexTypeCase_;
         onBuilt();
         return result;
@@ -1361,6 +1469,10 @@ public final class SearchIndexServiceOuterClass {
           }
           case VECTOR_SEARCH_INDEX: {
             mergeVectorSearchIndex(other.getVectorSearchIndex());
+            break;
+          }
+          case HYBRID_SEARCH_INDEX: {
+            mergeHybridSearchIndex(other.getHybridSearchIndex());
             break;
           }
           case INDEXTYPE_NOT_SET: {
@@ -2492,6 +2604,183 @@ public final class SearchIndexServiceOuterClass {
         indexTypeCase_ = 8;
         onChanged();;
         return vectorSearchIndexBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndexOrBuilder> hybridSearchIndexBuilder_;
+      /**
+       * <pre>
+       * Configuration for a hybrid (vector-based + keyword-based) search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 9;</code>
+       * @return Whether the hybridSearchIndex field is set.
+       */
+      @java.lang.Override
+      public boolean hasHybridSearchIndex() {
+        return indexTypeCase_ == 9;
+      }
+      /**
+       * <pre>
+       * Configuration for a hybrid (vector-based + keyword-based) search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 9;</code>
+       * @return The hybridSearchIndex.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex getHybridSearchIndex() {
+        if (hybridSearchIndexBuilder_ == null) {
+          if (indexTypeCase_ == 9) {
+            return (yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex) indexType_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.getDefaultInstance();
+        } else {
+          if (indexTypeCase_ == 9) {
+            return hybridSearchIndexBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for a hybrid (vector-based + keyword-based) search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 9;</code>
+       */
+      public Builder setHybridSearchIndex(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex value) {
+        if (hybridSearchIndexBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          indexType_ = value;
+          onChanged();
+        } else {
+          hybridSearchIndexBuilder_.setMessage(value);
+        }
+        indexTypeCase_ = 9;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for a hybrid (vector-based + keyword-based) search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 9;</code>
+       */
+      public Builder setHybridSearchIndex(
+          yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.Builder builderForValue) {
+        if (hybridSearchIndexBuilder_ == null) {
+          indexType_ = builderForValue.build();
+          onChanged();
+        } else {
+          hybridSearchIndexBuilder_.setMessage(builderForValue.build());
+        }
+        indexTypeCase_ = 9;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for a hybrid (vector-based + keyword-based) search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 9;</code>
+       */
+      public Builder mergeHybridSearchIndex(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex value) {
+        if (hybridSearchIndexBuilder_ == null) {
+          if (indexTypeCase_ == 9 &&
+              indexType_ != yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.getDefaultInstance()) {
+            indexType_ = yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.newBuilder((yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex) indexType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            indexType_ = value;
+          }
+          onChanged();
+        } else {
+          if (indexTypeCase_ == 9) {
+            hybridSearchIndexBuilder_.mergeFrom(value);
+          }
+          hybridSearchIndexBuilder_.setMessage(value);
+        }
+        indexTypeCase_ = 9;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for a hybrid (vector-based + keyword-based) search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 9;</code>
+       */
+      public Builder clearHybridSearchIndex() {
+        if (hybridSearchIndexBuilder_ == null) {
+          if (indexTypeCase_ == 9) {
+            indexTypeCase_ = 0;
+            indexType_ = null;
+            onChanged();
+          }
+        } else {
+          if (indexTypeCase_ == 9) {
+            indexTypeCase_ = 0;
+            indexType_ = null;
+          }
+          hybridSearchIndexBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for a hybrid (vector-based + keyword-based) search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 9;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.Builder getHybridSearchIndexBuilder() {
+        return getHybridSearchIndexFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for a hybrid (vector-based + keyword-based) search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 9;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndexOrBuilder getHybridSearchIndexOrBuilder() {
+        if ((indexTypeCase_ == 9) && (hybridSearchIndexBuilder_ != null)) {
+          return hybridSearchIndexBuilder_.getMessageOrBuilder();
+        } else {
+          if (indexTypeCase_ == 9) {
+            return (yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex) indexType_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for a hybrid (vector-based + keyword-based) search index.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.HybridSearchIndex hybrid_search_index = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndexOrBuilder> 
+          getHybridSearchIndexFieldBuilder() {
+        if (hybridSearchIndexBuilder_ == null) {
+          if (!(indexTypeCase_ == 9)) {
+            indexType_ = yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.getDefaultInstance();
+          }
+          hybridSearchIndexBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndexOrBuilder>(
+                  (yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.HybridSearchIndex) indexType_,
+                  getParentForChildren(),
+                  isClean());
+          indexType_ = null;
+        }
+        indexTypeCase_ = 9;
+        onChanged();;
+        return hybridSearchIndexBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -8144,7 +8433,7 @@ public final class SearchIndexServiceOuterClass {
       ".proto\032&yandex/cloud/operation/operation" +
       ".proto\032\035yandex/cloud/validation.proto\032\034g" +
       "oogle/api/annotations.proto\032 google/prot" +
-      "obuf/field_mask.proto\"\200\004\n\030CreateSearchIn" +
+      "obuf/field_mask.proto\"\335\004\n\030CreateSearchIn" +
       "dexRequest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\022\020\n\010f" +
       "ile_ids\030\002 \003(\t\022\014\n\004name\030\003 \001(\t\022\023\n\013descripti" +
       "on\030\004 \001(\t\022C\n\021expiration_config\030\005 \001(\0132(.ya" +
@@ -8155,55 +8444,57 @@ public final class SearchIndexServiceOuterClass {
       "\0132:.yandex.cloud.ai.assistants.v1.search" +
       "index.TextSearchIndexH\000\022[\n\023vector_search" +
       "_index\030\010 \001(\0132<.yandex.cloud.ai.assistant" +
-      "s.v1.searchindex.VectorSearchIndexH\000\032-\n\013" +
-      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001B\013\n\tIndexType\"6\n\025GetSearchIndexReques" +
-      "t\022\035\n\017search_index_id\030\001 \001(\tB\004\350\3071\001\"\350\002\n\030Upd" +
-      "ateSearchIndexRequest\022\035\n\017search_index_id" +
-      "\030\001 \001(\tB\004\350\3071\001\0225\n\013update_mask\030\002 \001(\0132\032.goog" +
-      "le.protobuf.FieldMaskB\004\350\3071\001\022\014\n\004name\030\003 \001(" +
-      "\t\022\023\n\013description\030\004 \001(\t\022C\n\021expiration_con" +
-      "fig\030\005 \001(\0132(.yandex.cloud.ai.common.Expir" +
-      "ationConfig\022_\n\006labels\030\006 \003(\0132O.yandex.clo" +
-      "ud.ai.assistants.v1.searchindex.UpdateSe" +
-      "archIndexRequest.LabelsEntry\032-\n\013LabelsEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"9\n\030D" +
-      "eleteSearchIndexRequest\022\035\n\017search_index_" +
-      "id\030\001 \001(\tB\004\350\3071\001\"\033\n\031DeleteSearchIndexRespo" +
-      "nse\"Z\n\030ListSearchIndicesRequest\022\027\n\tfolde" +
-      "r_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tpage_size\030\002 \001(\003\022\022\n\np" +
-      "age_token\030\003 \001(\t\"}\n\031ListSearchIndicesResp" +
-      "onse\022G\n\007indices\030\001 \003(\01326.yandex.cloud.ai." +
-      "assistants.v1.searchindex.SearchIndex\022\027\n" +
-      "\017next_page_token\030\002 \001(\t2\274\007\n\022SearchIndexSe" +
-      "rvice\022\250\001\n\006Create\022C.yandex.cloud.ai.assis" +
-      "tants.v1.searchindex.CreateSearchIndexRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"6\262\322*\r\022\013SearchIndex\202\323\344\223\002\037\"\032/assistants/v" +
-      "1/searchIndex:\001*\022\265\001\n\003Get\022@.yandex.cloud." +
-      "ai.assistants.v1.searchindex.GetSearchIn" +
-      "dexRequest\0326.yandex.cloud.ai.assistants." +
-      "v1.searchindex.SearchIndex\"4\202\323\344\223\002.\022,/ass" +
-      "istants/v1/searchIndex/{search_index_id}" +
-      "\022\276\001\n\006Update\022C.yandex.cloud.ai.assistants" +
-      ".v1.searchindex.UpdateSearchIndexRequest" +
-      "\0326.yandex.cloud.ai.assistants.v1.searchi" +
-      "ndex.SearchIndex\"7\202\323\344\223\00212,/assistants/v1" +
-      "/searchIndex/{search_index_id}:\001*\022\311\001\n\006De" +
-      "lete\022C.yandex.cloud.ai.assistants.v1.sea" +
-      "rchindex.DeleteSearchIndexRequest\032D.yand" +
-      "ex.cloud.ai.assistants.v1.searchindex.De" +
-      "leteSearchIndexResponse\"4\202\323\344\223\002.*,/assist" +
-      "ants/v1/searchIndex/{search_index_id}\022\265\001" +
-      "\n\004List\022C.yandex.cloud.ai.assistants.v1.s" +
-      "earchindex.ListSearchIndicesRequest\032D.ya" +
-      "ndex.cloud.ai.assistants.v1.searchindex." +
-      "ListSearchIndicesResponse\"\"\202\323\344\223\002\034\022\032/assi" +
-      "stants/v1/searchIndexB\212\001\n-yandex.cloud.a" +
-      "pi.ai.assistants.v1.searchindexZYgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/ai/assistants/v1/searchindex;searchind" +
-      "exb\006proto3"
+      "s.v1.searchindex.VectorSearchIndexH\000\022[\n\023" +
+      "hybrid_search_index\030\t \001(\0132<.yandex.cloud" +
+      ".ai.assistants.v1.searchindex.HybridSear" +
+      "chIndexH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\001B\013\n\tIndexType\"6\n\025GetSear" +
+      "chIndexRequest\022\035\n\017search_index_id\030\001 \001(\tB" +
+      "\004\350\3071\001\"\350\002\n\030UpdateSearchIndexRequest\022\035\n\017se" +
+      "arch_index_id\030\001 \001(\tB\004\350\3071\001\0225\n\013update_mask" +
+      "\030\002 \001(\0132\032.google.protobuf.FieldMaskB\004\350\3071\001" +
+      "\022\014\n\004name\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022C\n\021e" +
+      "xpiration_config\030\005 \001(\0132(.yandex.cloud.ai" +
+      ".common.ExpirationConfig\022_\n\006labels\030\006 \003(\013" +
+      "2O.yandex.cloud.ai.assistants.v1.searchi" +
+      "ndex.UpdateSearchIndexRequest.LabelsEntr" +
+      "y\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\"9\n\030DeleteSearchIndexRequest\022\035\n\017" +
+      "search_index_id\030\001 \001(\tB\004\350\3071\001\"\033\n\031DeleteSea" +
+      "rchIndexResponse\"Z\n\030ListSearchIndicesReq" +
+      "uest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tpage_si" +
+      "ze\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\"}\n\031ListSear" +
+      "chIndicesResponse\022G\n\007indices\030\001 \003(\01326.yan" +
+      "dex.cloud.ai.assistants.v1.searchindex.S" +
+      "earchIndex\022\027\n\017next_page_token\030\002 \001(\t2\274\007\n\022" +
+      "SearchIndexService\022\250\001\n\006Create\022C.yandex.c" +
+      "loud.ai.assistants.v1.searchindex.Create" +
+      "SearchIndexRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"6\262\322*\r\022\013SearchIndex\202\323\344\223\002\037\"\032" +
+      "/assistants/v1/searchIndex:\001*\022\265\001\n\003Get\022@." +
+      "yandex.cloud.ai.assistants.v1.searchinde" +
+      "x.GetSearchIndexRequest\0326.yandex.cloud.a" +
+      "i.assistants.v1.searchindex.SearchIndex\"" +
+      "4\202\323\344\223\002.\022,/assistants/v1/searchIndex/{sea" +
+      "rch_index_id}\022\276\001\n\006Update\022C.yandex.cloud." +
+      "ai.assistants.v1.searchindex.UpdateSearc" +
+      "hIndexRequest\0326.yandex.cloud.ai.assistan" +
+      "ts.v1.searchindex.SearchIndex\"7\202\323\344\223\00212,/" +
+      "assistants/v1/searchIndex/{search_index_" +
+      "id}:\001*\022\311\001\n\006Delete\022C.yandex.cloud.ai.assi" +
+      "stants.v1.searchindex.DeleteSearchIndexR" +
+      "equest\032D.yandex.cloud.ai.assistants.v1.s" +
+      "earchindex.DeleteSearchIndexResponse\"4\202\323" +
+      "\344\223\002.*,/assistants/v1/searchIndex/{search" +
+      "_index_id}\022\265\001\n\004List\022C.yandex.cloud.ai.as" +
+      "sistants.v1.searchindex.ListSearchIndice" +
+      "sRequest\032D.yandex.cloud.ai.assistants.v1" +
+      ".searchindex.ListSearchIndicesResponse\"\"" +
+      "\202\323\344\223\002\034\022\032/assistants/v1/searchIndexB\212\001\n-y" +
+      "andex.cloud.api.ai.assistants.v1.searchi" +
+      "ndexZYgithub.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/ai/assistants/v1/searchin" +
+      "dex;searchindexb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8221,7 +8512,7 @@ public final class SearchIndexServiceOuterClass {
     internal_static_yandex_cloud_ai_assistants_v1_searchindex_CreateSearchIndexRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_searchindex_CreateSearchIndexRequest_descriptor,
-        new java.lang.String[] { "FolderId", "FileIds", "Name", "Description", "ExpirationConfig", "Labels", "TextSearchIndex", "VectorSearchIndex", "IndexType", });
+        new java.lang.String[] { "FolderId", "FileIds", "Name", "Description", "ExpirationConfig", "Labels", "TextSearchIndex", "VectorSearchIndex", "HybridSearchIndex", "IndexType", });
     internal_static_yandex_cloud_ai_assistants_v1_searchindex_CreateSearchIndexRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_ai_assistants_v1_searchindex_CreateSearchIndexRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_ai_assistants_v1_searchindex_CreateSearchIndexRequest_LabelsEntry_fieldAccessorTable = new

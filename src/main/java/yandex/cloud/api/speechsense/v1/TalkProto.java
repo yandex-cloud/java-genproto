@@ -171,6 +171,294 @@ public final class TalkProto {
     // @@protoc_insertion_point(enum_scope:yandex.cloud.speechsense.v1.FieldType)
   }
 
+  /**
+   * Protobuf enum {@code yandex.cloud.speechsense.v1.ProcessingState}
+   */
+  public enum ProcessingState
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>PROCESSING_STATE_UNSPECIFIED = 0;</code>
+     */
+    PROCESSING_STATE_UNSPECIFIED(0),
+    /**
+     * <code>PROCESSING_STATE_NOT_STARTED = 1;</code>
+     */
+    PROCESSING_STATE_NOT_STARTED(1),
+    /**
+     * <code>PROCESSING_STATE_PROCESSING = 2;</code>
+     */
+    PROCESSING_STATE_PROCESSING(2),
+    /**
+     * <code>PROCESSING_STATE_SUCCESS = 3;</code>
+     */
+    PROCESSING_STATE_SUCCESS(3),
+    /**
+     * <code>PROCESSING_STATE_FAILED = 4;</code>
+     */
+    PROCESSING_STATE_FAILED(4),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>PROCESSING_STATE_UNSPECIFIED = 0;</code>
+     */
+    public static final int PROCESSING_STATE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>PROCESSING_STATE_NOT_STARTED = 1;</code>
+     */
+    public static final int PROCESSING_STATE_NOT_STARTED_VALUE = 1;
+    /**
+     * <code>PROCESSING_STATE_PROCESSING = 2;</code>
+     */
+    public static final int PROCESSING_STATE_PROCESSING_VALUE = 2;
+    /**
+     * <code>PROCESSING_STATE_SUCCESS = 3;</code>
+     */
+    public static final int PROCESSING_STATE_SUCCESS_VALUE = 3;
+    /**
+     * <code>PROCESSING_STATE_FAILED = 4;</code>
+     */
+    public static final int PROCESSING_STATE_FAILED_VALUE = 4;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ProcessingState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ProcessingState forNumber(int value) {
+      switch (value) {
+        case 0: return PROCESSING_STATE_UNSPECIFIED;
+        case 1: return PROCESSING_STATE_NOT_STARTED;
+        case 2: return PROCESSING_STATE_PROCESSING;
+        case 3: return PROCESSING_STATE_SUCCESS;
+        case 4: return PROCESSING_STATE_FAILED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ProcessingState>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ProcessingState> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ProcessingState>() {
+            public ProcessingState findValueByNumber(int number) {
+              return ProcessingState.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.speechsense.v1.TalkProto.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final ProcessingState[] VALUES = values();
+
+    public static ProcessingState valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ProcessingState(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.speechsense.v1.ProcessingState)
+  }
+
+  /**
+   * Protobuf enum {@code yandex.cloud.speechsense.v1.Algorithm}
+   */
+  public enum Algorithm
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>ALGORITHM_UNSPECIFIED = 0;</code>
+     */
+    ALGORITHM_UNSPECIFIED(0),
+    /**
+     * <code>ALGORITHM_SPEECHKIT = 1;</code>
+     */
+    ALGORITHM_SPEECHKIT(1),
+    /**
+     * <code>ALGORITHM_YGPT = 2;</code>
+     */
+    ALGORITHM_YGPT(2),
+    /**
+     * <code>ALGORITHM_CLASSIFIER = 3;</code>
+     */
+    ALGORITHM_CLASSIFIER(3),
+    /**
+     * <code>ALGORITHM_SUMMARIZATION = 4;</code>
+     */
+    ALGORITHM_SUMMARIZATION(4),
+    /**
+     * <code>ALGORITHM_EMBEDDING = 5;</code>
+     */
+    ALGORITHM_EMBEDDING(5),
+    /**
+     * <code>ALGORITHM_STATISTICS = 6;</code>
+     */
+    ALGORITHM_STATISTICS(6),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>ALGORITHM_UNSPECIFIED = 0;</code>
+     */
+    public static final int ALGORITHM_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>ALGORITHM_SPEECHKIT = 1;</code>
+     */
+    public static final int ALGORITHM_SPEECHKIT_VALUE = 1;
+    /**
+     * <code>ALGORITHM_YGPT = 2;</code>
+     */
+    public static final int ALGORITHM_YGPT_VALUE = 2;
+    /**
+     * <code>ALGORITHM_CLASSIFIER = 3;</code>
+     */
+    public static final int ALGORITHM_CLASSIFIER_VALUE = 3;
+    /**
+     * <code>ALGORITHM_SUMMARIZATION = 4;</code>
+     */
+    public static final int ALGORITHM_SUMMARIZATION_VALUE = 4;
+    /**
+     * <code>ALGORITHM_EMBEDDING = 5;</code>
+     */
+    public static final int ALGORITHM_EMBEDDING_VALUE = 5;
+    /**
+     * <code>ALGORITHM_STATISTICS = 6;</code>
+     */
+    public static final int ALGORITHM_STATISTICS_VALUE = 6;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static Algorithm valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static Algorithm forNumber(int value) {
+      switch (value) {
+        case 0: return ALGORITHM_UNSPECIFIED;
+        case 1: return ALGORITHM_SPEECHKIT;
+        case 2: return ALGORITHM_YGPT;
+        case 3: return ALGORITHM_CLASSIFIER;
+        case 4: return ALGORITHM_SUMMARIZATION;
+        case 5: return ALGORITHM_EMBEDDING;
+        case 6: return ALGORITHM_STATISTICS;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Algorithm>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        Algorithm> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Algorithm>() {
+            public Algorithm findValueByNumber(int number) {
+              return Algorithm.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.speechsense.v1.TalkProto.getDescriptor().getEnumTypes().get(2);
+    }
+
+    private static final Algorithm[] VALUES = values();
+
+    public static Algorithm valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private Algorithm(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.speechsense.v1.Algorithm)
+  }
+
   public interface TalkOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.speechsense.v1.Talk)
       com.google.protobuf.MessageOrBuilder {
@@ -493,6 +781,21 @@ public final class TalkProto {
      * <code>.yandex.cloud.speechsense.v1.analysis.Summarization summarization = 18;</code>
      */
     yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.SummarizationOrBuilder getSummarizationOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.speechsense.v1.TalkState talk_state = 19;</code>
+     * @return Whether the talkState field is set.
+     */
+    boolean hasTalkState();
+    /**
+     * <code>.yandex.cloud.speechsense.v1.TalkState talk_state = 19;</code>
+     * @return The talkState.
+     */
+    yandex.cloud.api.speechsense.v1.TalkProto.TalkState getTalkState();
+    /**
+     * <code>.yandex.cloud.speechsense.v1.TalkState talk_state = 19;</code>
+     */
+    yandex.cloud.api.speechsense.v1.TalkProto.TalkStateOrBuilder getTalkStateOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.speechsense.v1.Talk}
@@ -728,6 +1031,19 @@ public final class TalkProto {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(summarization_);
                 summarization_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 154: {
+              yandex.cloud.api.speechsense.v1.TalkProto.TalkState.Builder subBuilder = null;
+              if (talkState_ != null) {
+                subBuilder = talkState_.toBuilder();
+              }
+              talkState_ = input.readMessage(yandex.cloud.api.speechsense.v1.TalkProto.TalkState.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(talkState_);
+                talkState_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1381,6 +1697,32 @@ public final class TalkProto {
       return getSummarization();
     }
 
+    public static final int TALK_STATE_FIELD_NUMBER = 19;
+    private yandex.cloud.api.speechsense.v1.TalkProto.TalkState talkState_;
+    /**
+     * <code>.yandex.cloud.speechsense.v1.TalkState talk_state = 19;</code>
+     * @return Whether the talkState field is set.
+     */
+    @java.lang.Override
+    public boolean hasTalkState() {
+      return talkState_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.speechsense.v1.TalkState talk_state = 19;</code>
+     * @return The talkState.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.speechsense.v1.TalkProto.TalkState getTalkState() {
+      return talkState_ == null ? yandex.cloud.api.speechsense.v1.TalkProto.TalkState.getDefaultInstance() : talkState_;
+    }
+    /**
+     * <code>.yandex.cloud.speechsense.v1.TalkState talk_state = 19;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.speechsense.v1.TalkProto.TalkStateOrBuilder getTalkStateOrBuilder() {
+      return getTalkState();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1448,6 +1790,9 @@ public final class TalkProto {
       }
       if (summarization_ != null) {
         output.writeMessage(18, getSummarization());
+      }
+      if (talkState_ != null) {
+        output.writeMessage(19, getTalkState());
       }
       unknownFields.writeTo(output);
     }
@@ -1527,6 +1872,10 @@ public final class TalkProto {
       if (summarization_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(18, getSummarization());
+      }
+      if (talkState_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, getTalkState());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1609,6 +1958,11 @@ public final class TalkProto {
         if (!getSummarization()
             .equals(other.getSummarization())) return false;
       }
+      if (hasTalkState() != other.hasTalkState()) return false;
+      if (hasTalkState()) {
+        if (!getTalkState()
+            .equals(other.getTalkState())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1679,6 +2033,10 @@ public final class TalkProto {
       if (hasSummarization()) {
         hash = (37 * hash) + SUMMARIZATION_FIELD_NUMBER;
         hash = (53 * hash) + getSummarization().hashCode();
+      }
+      if (hasTalkState()) {
+        hash = (37 * hash) + TALK_STATE_FIELD_NUMBER;
+        hash = (53 * hash) + getTalkState().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1894,6 +2252,12 @@ public final class TalkProto {
           summarization_ = null;
           summarizationBuilder_ = null;
         }
+        if (talkStateBuilder_ == null) {
+          talkState_ = null;
+        } else {
+          talkState_ = null;
+          talkStateBuilder_ = null;
+        }
         return this;
       }
 
@@ -1990,6 +2354,11 @@ public final class TalkProto {
           result.summarization_ = summarization_;
         } else {
           result.summarization_ = summarizationBuilder_.build();
+        }
+        if (talkStateBuilder_ == null) {
+          result.talkState_ = talkState_;
+        } else {
+          result.talkState_ = talkStateBuilder_.build();
         }
         onBuilt();
         return result;
@@ -2128,6 +2497,9 @@ public final class TalkProto {
         }
         if (other.hasSummarization()) {
           mergeSummarization(other.getSummarization());
+        }
+        if (other.hasTalkState()) {
+          mergeTalkState(other.getTalkState());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4302,6 +4674,125 @@ public final class TalkProto {
         }
         return summarizationBuilder_;
       }
+
+      private yandex.cloud.api.speechsense.v1.TalkProto.TalkState talkState_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.speechsense.v1.TalkProto.TalkState, yandex.cloud.api.speechsense.v1.TalkProto.TalkState.Builder, yandex.cloud.api.speechsense.v1.TalkProto.TalkStateOrBuilder> talkStateBuilder_;
+      /**
+       * <code>.yandex.cloud.speechsense.v1.TalkState talk_state = 19;</code>
+       * @return Whether the talkState field is set.
+       */
+      public boolean hasTalkState() {
+        return talkStateBuilder_ != null || talkState_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.TalkState talk_state = 19;</code>
+       * @return The talkState.
+       */
+      public yandex.cloud.api.speechsense.v1.TalkProto.TalkState getTalkState() {
+        if (talkStateBuilder_ == null) {
+          return talkState_ == null ? yandex.cloud.api.speechsense.v1.TalkProto.TalkState.getDefaultInstance() : talkState_;
+        } else {
+          return talkStateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.TalkState talk_state = 19;</code>
+       */
+      public Builder setTalkState(yandex.cloud.api.speechsense.v1.TalkProto.TalkState value) {
+        if (talkStateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          talkState_ = value;
+          onChanged();
+        } else {
+          talkStateBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.TalkState talk_state = 19;</code>
+       */
+      public Builder setTalkState(
+          yandex.cloud.api.speechsense.v1.TalkProto.TalkState.Builder builderForValue) {
+        if (talkStateBuilder_ == null) {
+          talkState_ = builderForValue.build();
+          onChanged();
+        } else {
+          talkStateBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.TalkState talk_state = 19;</code>
+       */
+      public Builder mergeTalkState(yandex.cloud.api.speechsense.v1.TalkProto.TalkState value) {
+        if (talkStateBuilder_ == null) {
+          if (talkState_ != null) {
+            talkState_ =
+              yandex.cloud.api.speechsense.v1.TalkProto.TalkState.newBuilder(talkState_).mergeFrom(value).buildPartial();
+          } else {
+            talkState_ = value;
+          }
+          onChanged();
+        } else {
+          talkStateBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.TalkState talk_state = 19;</code>
+       */
+      public Builder clearTalkState() {
+        if (talkStateBuilder_ == null) {
+          talkState_ = null;
+          onChanged();
+        } else {
+          talkState_ = null;
+          talkStateBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.TalkState talk_state = 19;</code>
+       */
+      public yandex.cloud.api.speechsense.v1.TalkProto.TalkState.Builder getTalkStateBuilder() {
+        
+        onChanged();
+        return getTalkStateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.TalkState talk_state = 19;</code>
+       */
+      public yandex.cloud.api.speechsense.v1.TalkProto.TalkStateOrBuilder getTalkStateOrBuilder() {
+        if (talkStateBuilder_ != null) {
+          return talkStateBuilder_.getMessageOrBuilder();
+        } else {
+          return talkState_ == null ?
+              yandex.cloud.api.speechsense.v1.TalkProto.TalkState.getDefaultInstance() : talkState_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.TalkState talk_state = 19;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.speechsense.v1.TalkProto.TalkState, yandex.cloud.api.speechsense.v1.TalkProto.TalkState.Builder, yandex.cloud.api.speechsense.v1.TalkProto.TalkStateOrBuilder> 
+          getTalkStateFieldBuilder() {
+        if (talkStateBuilder_ == null) {
+          talkStateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.speechsense.v1.TalkProto.TalkState, yandex.cloud.api.speechsense.v1.TalkProto.TalkState.Builder, yandex.cloud.api.speechsense.v1.TalkProto.TalkStateOrBuilder>(
+                  getTalkState(),
+                  getParentForChildren(),
+                  isClean());
+          talkState_ = null;
+        }
+        return talkStateBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4350,6 +4841,906 @@ public final class TalkProto {
 
     @java.lang.Override
     public yandex.cloud.api.speechsense.v1.TalkProto.Talk getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TalkStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.speechsense.v1.TalkState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.yandex.cloud.speechsense.v1.ProcessingState processing_state = 1;</code>
+     * @return The enum numeric value on the wire for processingState.
+     */
+    int getProcessingStateValue();
+    /**
+     * <code>.yandex.cloud.speechsense.v1.ProcessingState processing_state = 1;</code>
+     * @return The processingState.
+     */
+    yandex.cloud.api.speechsense.v1.TalkProto.ProcessingState getProcessingState();
+
+    /**
+     * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+     */
+    java.util.List<yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo> 
+        getAlgorithmProcessingInfosList();
+    /**
+     * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+     */
+    yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo getAlgorithmProcessingInfos(int index);
+    /**
+     * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+     */
+    int getAlgorithmProcessingInfosCount();
+    /**
+     * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfoOrBuilder> 
+        getAlgorithmProcessingInfosOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+     */
+    yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfoOrBuilder getAlgorithmProcessingInfosOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.speechsense.v1.TalkState}
+   */
+  public static final class TalkState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.speechsense.v1.TalkState)
+      TalkStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TalkState.newBuilder() to construct.
+    private TalkState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TalkState() {
+      processingState_ = 0;
+      algorithmProcessingInfos_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TalkState();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TalkState(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              processingState_ = rawValue;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                algorithmProcessingInfos_ = new java.util.ArrayList<yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              algorithmProcessingInfos_.add(
+                  input.readMessage(yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          algorithmProcessingInfos_ = java.util.Collections.unmodifiableList(algorithmProcessingInfos_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_TalkState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_TalkState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.speechsense.v1.TalkProto.TalkState.class, yandex.cloud.api.speechsense.v1.TalkProto.TalkState.Builder.class);
+    }
+
+    public static final int PROCESSING_STATE_FIELD_NUMBER = 1;
+    private int processingState_;
+    /**
+     * <code>.yandex.cloud.speechsense.v1.ProcessingState processing_state = 1;</code>
+     * @return The enum numeric value on the wire for processingState.
+     */
+    @java.lang.Override public int getProcessingStateValue() {
+      return processingState_;
+    }
+    /**
+     * <code>.yandex.cloud.speechsense.v1.ProcessingState processing_state = 1;</code>
+     * @return The processingState.
+     */
+    @java.lang.Override public yandex.cloud.api.speechsense.v1.TalkProto.ProcessingState getProcessingState() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.speechsense.v1.TalkProto.ProcessingState result = yandex.cloud.api.speechsense.v1.TalkProto.ProcessingState.valueOf(processingState_);
+      return result == null ? yandex.cloud.api.speechsense.v1.TalkProto.ProcessingState.UNRECOGNIZED : result;
+    }
+
+    public static final int ALGORITHM_PROCESSING_INFOS_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo> algorithmProcessingInfos_;
+    /**
+     * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo> getAlgorithmProcessingInfosList() {
+      return algorithmProcessingInfos_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfoOrBuilder> 
+        getAlgorithmProcessingInfosOrBuilderList() {
+      return algorithmProcessingInfos_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+     */
+    @java.lang.Override
+    public int getAlgorithmProcessingInfosCount() {
+      return algorithmProcessingInfos_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo getAlgorithmProcessingInfos(int index) {
+      return algorithmProcessingInfos_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfoOrBuilder getAlgorithmProcessingInfosOrBuilder(
+        int index) {
+      return algorithmProcessingInfos_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (processingState_ != yandex.cloud.api.speechsense.v1.TalkProto.ProcessingState.PROCESSING_STATE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, processingState_);
+      }
+      for (int i = 0; i < algorithmProcessingInfos_.size(); i++) {
+        output.writeMessage(2, algorithmProcessingInfos_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (processingState_ != yandex.cloud.api.speechsense.v1.TalkProto.ProcessingState.PROCESSING_STATE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, processingState_);
+      }
+      for (int i = 0; i < algorithmProcessingInfos_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, algorithmProcessingInfos_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.speechsense.v1.TalkProto.TalkState)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.speechsense.v1.TalkProto.TalkState other = (yandex.cloud.api.speechsense.v1.TalkProto.TalkState) obj;
+
+      if (processingState_ != other.processingState_) return false;
+      if (!getAlgorithmProcessingInfosList()
+          .equals(other.getAlgorithmProcessingInfosList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROCESSING_STATE_FIELD_NUMBER;
+      hash = (53 * hash) + processingState_;
+      if (getAlgorithmProcessingInfosCount() > 0) {
+        hash = (37 * hash) + ALGORITHM_PROCESSING_INFOS_FIELD_NUMBER;
+        hash = (53 * hash) + getAlgorithmProcessingInfosList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.speechsense.v1.TalkProto.TalkState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.TalkState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.TalkState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.TalkState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.TalkState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.TalkState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.TalkState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.TalkState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.TalkState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.TalkState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.TalkState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.TalkState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.speechsense.v1.TalkProto.TalkState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.speechsense.v1.TalkState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.speechsense.v1.TalkState)
+        yandex.cloud.api.speechsense.v1.TalkProto.TalkStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_TalkState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_TalkState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.speechsense.v1.TalkProto.TalkState.class, yandex.cloud.api.speechsense.v1.TalkProto.TalkState.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.speechsense.v1.TalkProto.TalkState.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAlgorithmProcessingInfosFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        processingState_ = 0;
+
+        if (algorithmProcessingInfosBuilder_ == null) {
+          algorithmProcessingInfos_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          algorithmProcessingInfosBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_TalkState_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkProto.TalkState getDefaultInstanceForType() {
+        return yandex.cloud.api.speechsense.v1.TalkProto.TalkState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkProto.TalkState build() {
+        yandex.cloud.api.speechsense.v1.TalkProto.TalkState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkProto.TalkState buildPartial() {
+        yandex.cloud.api.speechsense.v1.TalkProto.TalkState result = new yandex.cloud.api.speechsense.v1.TalkProto.TalkState(this);
+        int from_bitField0_ = bitField0_;
+        result.processingState_ = processingState_;
+        if (algorithmProcessingInfosBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            algorithmProcessingInfos_ = java.util.Collections.unmodifiableList(algorithmProcessingInfos_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.algorithmProcessingInfos_ = algorithmProcessingInfos_;
+        } else {
+          result.algorithmProcessingInfos_ = algorithmProcessingInfosBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.speechsense.v1.TalkProto.TalkState) {
+          return mergeFrom((yandex.cloud.api.speechsense.v1.TalkProto.TalkState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.speechsense.v1.TalkProto.TalkState other) {
+        if (other == yandex.cloud.api.speechsense.v1.TalkProto.TalkState.getDefaultInstance()) return this;
+        if (other.processingState_ != 0) {
+          setProcessingStateValue(other.getProcessingStateValue());
+        }
+        if (algorithmProcessingInfosBuilder_ == null) {
+          if (!other.algorithmProcessingInfos_.isEmpty()) {
+            if (algorithmProcessingInfos_.isEmpty()) {
+              algorithmProcessingInfos_ = other.algorithmProcessingInfos_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAlgorithmProcessingInfosIsMutable();
+              algorithmProcessingInfos_.addAll(other.algorithmProcessingInfos_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.algorithmProcessingInfos_.isEmpty()) {
+            if (algorithmProcessingInfosBuilder_.isEmpty()) {
+              algorithmProcessingInfosBuilder_.dispose();
+              algorithmProcessingInfosBuilder_ = null;
+              algorithmProcessingInfos_ = other.algorithmProcessingInfos_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              algorithmProcessingInfosBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAlgorithmProcessingInfosFieldBuilder() : null;
+            } else {
+              algorithmProcessingInfosBuilder_.addAllMessages(other.algorithmProcessingInfos_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.speechsense.v1.TalkProto.TalkState parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.speechsense.v1.TalkProto.TalkState) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int processingState_ = 0;
+      /**
+       * <code>.yandex.cloud.speechsense.v1.ProcessingState processing_state = 1;</code>
+       * @return The enum numeric value on the wire for processingState.
+       */
+      @java.lang.Override public int getProcessingStateValue() {
+        return processingState_;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.ProcessingState processing_state = 1;</code>
+       * @param value The enum numeric value on the wire for processingState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProcessingStateValue(int value) {
+        
+        processingState_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.ProcessingState processing_state = 1;</code>
+       * @return The processingState.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkProto.ProcessingState getProcessingState() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.speechsense.v1.TalkProto.ProcessingState result = yandex.cloud.api.speechsense.v1.TalkProto.ProcessingState.valueOf(processingState_);
+        return result == null ? yandex.cloud.api.speechsense.v1.TalkProto.ProcessingState.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.ProcessingState processing_state = 1;</code>
+       * @param value The processingState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProcessingState(yandex.cloud.api.speechsense.v1.TalkProto.ProcessingState value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        processingState_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.ProcessingState processing_state = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProcessingState() {
+        
+        processingState_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo> algorithmProcessingInfos_ =
+        java.util.Collections.emptyList();
+      private void ensureAlgorithmProcessingInfosIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          algorithmProcessingInfos_ = new java.util.ArrayList<yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo>(algorithmProcessingInfos_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo, yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo.Builder, yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfoOrBuilder> algorithmProcessingInfosBuilder_;
+
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo> getAlgorithmProcessingInfosList() {
+        if (algorithmProcessingInfosBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(algorithmProcessingInfos_);
+        } else {
+          return algorithmProcessingInfosBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+       */
+      public int getAlgorithmProcessingInfosCount() {
+        if (algorithmProcessingInfosBuilder_ == null) {
+          return algorithmProcessingInfos_.size();
+        } else {
+          return algorithmProcessingInfosBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+       */
+      public yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo getAlgorithmProcessingInfos(int index) {
+        if (algorithmProcessingInfosBuilder_ == null) {
+          return algorithmProcessingInfos_.get(index);
+        } else {
+          return algorithmProcessingInfosBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+       */
+      public Builder setAlgorithmProcessingInfos(
+          int index, yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo value) {
+        if (algorithmProcessingInfosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAlgorithmProcessingInfosIsMutable();
+          algorithmProcessingInfos_.set(index, value);
+          onChanged();
+        } else {
+          algorithmProcessingInfosBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+       */
+      public Builder setAlgorithmProcessingInfos(
+          int index, yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo.Builder builderForValue) {
+        if (algorithmProcessingInfosBuilder_ == null) {
+          ensureAlgorithmProcessingInfosIsMutable();
+          algorithmProcessingInfos_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          algorithmProcessingInfosBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+       */
+      public Builder addAlgorithmProcessingInfos(yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo value) {
+        if (algorithmProcessingInfosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAlgorithmProcessingInfosIsMutable();
+          algorithmProcessingInfos_.add(value);
+          onChanged();
+        } else {
+          algorithmProcessingInfosBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+       */
+      public Builder addAlgorithmProcessingInfos(
+          int index, yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo value) {
+        if (algorithmProcessingInfosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAlgorithmProcessingInfosIsMutable();
+          algorithmProcessingInfos_.add(index, value);
+          onChanged();
+        } else {
+          algorithmProcessingInfosBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+       */
+      public Builder addAlgorithmProcessingInfos(
+          yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo.Builder builderForValue) {
+        if (algorithmProcessingInfosBuilder_ == null) {
+          ensureAlgorithmProcessingInfosIsMutable();
+          algorithmProcessingInfos_.add(builderForValue.build());
+          onChanged();
+        } else {
+          algorithmProcessingInfosBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+       */
+      public Builder addAlgorithmProcessingInfos(
+          int index, yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo.Builder builderForValue) {
+        if (algorithmProcessingInfosBuilder_ == null) {
+          ensureAlgorithmProcessingInfosIsMutable();
+          algorithmProcessingInfos_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          algorithmProcessingInfosBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+       */
+      public Builder addAllAlgorithmProcessingInfos(
+          java.lang.Iterable<? extends yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo> values) {
+        if (algorithmProcessingInfosBuilder_ == null) {
+          ensureAlgorithmProcessingInfosIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, algorithmProcessingInfos_);
+          onChanged();
+        } else {
+          algorithmProcessingInfosBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+       */
+      public Builder clearAlgorithmProcessingInfos() {
+        if (algorithmProcessingInfosBuilder_ == null) {
+          algorithmProcessingInfos_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          algorithmProcessingInfosBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+       */
+      public Builder removeAlgorithmProcessingInfos(int index) {
+        if (algorithmProcessingInfosBuilder_ == null) {
+          ensureAlgorithmProcessingInfosIsMutable();
+          algorithmProcessingInfos_.remove(index);
+          onChanged();
+        } else {
+          algorithmProcessingInfosBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+       */
+      public yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo.Builder getAlgorithmProcessingInfosBuilder(
+          int index) {
+        return getAlgorithmProcessingInfosFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+       */
+      public yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfoOrBuilder getAlgorithmProcessingInfosOrBuilder(
+          int index) {
+        if (algorithmProcessingInfosBuilder_ == null) {
+          return algorithmProcessingInfos_.get(index);  } else {
+          return algorithmProcessingInfosBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfoOrBuilder> 
+           getAlgorithmProcessingInfosOrBuilderList() {
+        if (algorithmProcessingInfosBuilder_ != null) {
+          return algorithmProcessingInfosBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(algorithmProcessingInfos_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+       */
+      public yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo.Builder addAlgorithmProcessingInfosBuilder() {
+        return getAlgorithmProcessingInfosFieldBuilder().addBuilder(
+            yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+       */
+      public yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo.Builder addAlgorithmProcessingInfosBuilder(
+          int index) {
+        return getAlgorithmProcessingInfosFieldBuilder().addBuilder(
+            index, yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.AlgorithmProcessingInfo algorithm_processing_infos = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo.Builder> 
+           getAlgorithmProcessingInfosBuilderList() {
+        return getAlgorithmProcessingInfosFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo, yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo.Builder, yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfoOrBuilder> 
+          getAlgorithmProcessingInfosFieldBuilder() {
+        if (algorithmProcessingInfosBuilder_ == null) {
+          algorithmProcessingInfosBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo, yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo.Builder, yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfoOrBuilder>(
+                  algorithmProcessingInfos_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          algorithmProcessingInfos_ = null;
+        }
+        return algorithmProcessingInfosBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.speechsense.v1.TalkState)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.speechsense.v1.TalkState)
+    private static final yandex.cloud.api.speechsense.v1.TalkProto.TalkState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.speechsense.v1.TalkProto.TalkState();
+    }
+
+    public static yandex.cloud.api.speechsense.v1.TalkProto.TalkState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TalkState>
+        PARSER = new com.google.protobuf.AbstractParser<TalkState>() {
+      @java.lang.Override
+      public TalkState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TalkState(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TalkState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TalkState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.speechsense.v1.TalkProto.TalkState getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5296,16 +6687,658 @@ public final class TalkProto {
 
   }
 
+  public interface AlgorithmProcessingInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.speechsense.v1.AlgorithmProcessingInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.yandex.cloud.speechsense.v1.Algorithm algorithm = 1;</code>
+     * @return The enum numeric value on the wire for algorithm.
+     */
+    int getAlgorithmValue();
+    /**
+     * <code>.yandex.cloud.speechsense.v1.Algorithm algorithm = 1;</code>
+     * @return The algorithm.
+     */
+    yandex.cloud.api.speechsense.v1.TalkProto.Algorithm getAlgorithm();
+
+    /**
+     * <code>.yandex.cloud.speechsense.v1.ProcessingState processing_state = 2;</code>
+     * @return The enum numeric value on the wire for processingState.
+     */
+    int getProcessingStateValue();
+    /**
+     * <code>.yandex.cloud.speechsense.v1.ProcessingState processing_state = 2;</code>
+     * @return The processingState.
+     */
+    yandex.cloud.api.speechsense.v1.TalkProto.ProcessingState getProcessingState();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.speechsense.v1.AlgorithmProcessingInfo}
+   */
+  public static final class AlgorithmProcessingInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.speechsense.v1.AlgorithmProcessingInfo)
+      AlgorithmProcessingInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AlgorithmProcessingInfo.newBuilder() to construct.
+    private AlgorithmProcessingInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AlgorithmProcessingInfo() {
+      algorithm_ = 0;
+      processingState_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AlgorithmProcessingInfo();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AlgorithmProcessingInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              algorithm_ = rawValue;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              processingState_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_AlgorithmProcessingInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_AlgorithmProcessingInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo.class, yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo.Builder.class);
+    }
+
+    public static final int ALGORITHM_FIELD_NUMBER = 1;
+    private int algorithm_;
+    /**
+     * <code>.yandex.cloud.speechsense.v1.Algorithm algorithm = 1;</code>
+     * @return The enum numeric value on the wire for algorithm.
+     */
+    @java.lang.Override public int getAlgorithmValue() {
+      return algorithm_;
+    }
+    /**
+     * <code>.yandex.cloud.speechsense.v1.Algorithm algorithm = 1;</code>
+     * @return The algorithm.
+     */
+    @java.lang.Override public yandex.cloud.api.speechsense.v1.TalkProto.Algorithm getAlgorithm() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.speechsense.v1.TalkProto.Algorithm result = yandex.cloud.api.speechsense.v1.TalkProto.Algorithm.valueOf(algorithm_);
+      return result == null ? yandex.cloud.api.speechsense.v1.TalkProto.Algorithm.UNRECOGNIZED : result;
+    }
+
+    public static final int PROCESSING_STATE_FIELD_NUMBER = 2;
+    private int processingState_;
+    /**
+     * <code>.yandex.cloud.speechsense.v1.ProcessingState processing_state = 2;</code>
+     * @return The enum numeric value on the wire for processingState.
+     */
+    @java.lang.Override public int getProcessingStateValue() {
+      return processingState_;
+    }
+    /**
+     * <code>.yandex.cloud.speechsense.v1.ProcessingState processing_state = 2;</code>
+     * @return The processingState.
+     */
+    @java.lang.Override public yandex.cloud.api.speechsense.v1.TalkProto.ProcessingState getProcessingState() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.speechsense.v1.TalkProto.ProcessingState result = yandex.cloud.api.speechsense.v1.TalkProto.ProcessingState.valueOf(processingState_);
+      return result == null ? yandex.cloud.api.speechsense.v1.TalkProto.ProcessingState.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (algorithm_ != yandex.cloud.api.speechsense.v1.TalkProto.Algorithm.ALGORITHM_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, algorithm_);
+      }
+      if (processingState_ != yandex.cloud.api.speechsense.v1.TalkProto.ProcessingState.PROCESSING_STATE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, processingState_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (algorithm_ != yandex.cloud.api.speechsense.v1.TalkProto.Algorithm.ALGORITHM_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, algorithm_);
+      }
+      if (processingState_ != yandex.cloud.api.speechsense.v1.TalkProto.ProcessingState.PROCESSING_STATE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, processingState_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo other = (yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo) obj;
+
+      if (algorithm_ != other.algorithm_) return false;
+      if (processingState_ != other.processingState_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ALGORITHM_FIELD_NUMBER;
+      hash = (53 * hash) + algorithm_;
+      hash = (37 * hash) + PROCESSING_STATE_FIELD_NUMBER;
+      hash = (53 * hash) + processingState_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.speechsense.v1.AlgorithmProcessingInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.speechsense.v1.AlgorithmProcessingInfo)
+        yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_AlgorithmProcessingInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_AlgorithmProcessingInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo.class, yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        algorithm_ = 0;
+
+        processingState_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_AlgorithmProcessingInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo getDefaultInstanceForType() {
+        return yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo build() {
+        yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo buildPartial() {
+        yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo result = new yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo(this);
+        result.algorithm_ = algorithm_;
+        result.processingState_ = processingState_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo) {
+          return mergeFrom((yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo other) {
+        if (other == yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo.getDefaultInstance()) return this;
+        if (other.algorithm_ != 0) {
+          setAlgorithmValue(other.getAlgorithmValue());
+        }
+        if (other.processingState_ != 0) {
+          setProcessingStateValue(other.getProcessingStateValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int algorithm_ = 0;
+      /**
+       * <code>.yandex.cloud.speechsense.v1.Algorithm algorithm = 1;</code>
+       * @return The enum numeric value on the wire for algorithm.
+       */
+      @java.lang.Override public int getAlgorithmValue() {
+        return algorithm_;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.Algorithm algorithm = 1;</code>
+       * @param value The enum numeric value on the wire for algorithm to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAlgorithmValue(int value) {
+        
+        algorithm_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.Algorithm algorithm = 1;</code>
+       * @return The algorithm.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkProto.Algorithm getAlgorithm() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.speechsense.v1.TalkProto.Algorithm result = yandex.cloud.api.speechsense.v1.TalkProto.Algorithm.valueOf(algorithm_);
+        return result == null ? yandex.cloud.api.speechsense.v1.TalkProto.Algorithm.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.Algorithm algorithm = 1;</code>
+       * @param value The algorithm to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAlgorithm(yandex.cloud.api.speechsense.v1.TalkProto.Algorithm value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        algorithm_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.Algorithm algorithm = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAlgorithm() {
+        
+        algorithm_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int processingState_ = 0;
+      /**
+       * <code>.yandex.cloud.speechsense.v1.ProcessingState processing_state = 2;</code>
+       * @return The enum numeric value on the wire for processingState.
+       */
+      @java.lang.Override public int getProcessingStateValue() {
+        return processingState_;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.ProcessingState processing_state = 2;</code>
+       * @param value The enum numeric value on the wire for processingState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProcessingStateValue(int value) {
+        
+        processingState_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.ProcessingState processing_state = 2;</code>
+       * @return The processingState.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkProto.ProcessingState getProcessingState() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.speechsense.v1.TalkProto.ProcessingState result = yandex.cloud.api.speechsense.v1.TalkProto.ProcessingState.valueOf(processingState_);
+        return result == null ? yandex.cloud.api.speechsense.v1.TalkProto.ProcessingState.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.ProcessingState processing_state = 2;</code>
+       * @param value The processingState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProcessingState(yandex.cloud.api.speechsense.v1.TalkProto.ProcessingState value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        processingState_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.ProcessingState processing_state = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProcessingState() {
+        
+        processingState_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.speechsense.v1.AlgorithmProcessingInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.speechsense.v1.AlgorithmProcessingInfo)
+    private static final yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo();
+    }
+
+    public static yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AlgorithmProcessingInfo>
+        PARSER = new com.google.protobuf.AbstractParser<AlgorithmProcessingInfo>() {
+      @java.lang.Override
+      public AlgorithmProcessingInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AlgorithmProcessingInfo(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AlgorithmProcessingInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AlgorithmProcessingInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.speechsense.v1.TalkProto.AlgorithmProcessingInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_speechsense_v1_Talk_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_speechsense_v1_Talk_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_speechsense_v1_TalkState_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_speechsense_v1_TalkState_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_speechsense_v1_Field_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_speechsense_v1_Field_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_speechsense_v1_AlgorithmProcessingInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_speechsense_v1_AlgorithmProcessingInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5329,7 +7362,7 @@ public final class TalkProto {
       "sense/v1/analysis/transcription.proto\032;y" +
       "andex/cloud/speechsense/v1/analysis/text" +
       "_classifiers.proto\0321yandex/cloud/speechs" +
-      "ense/v1/analysis/points.proto\"\265\007\n\004Talk\022\n" +
+      "ense/v1/analysis/points.proto\"\361\007\n\004Talk\022\n" +
       "\n\002id\030\001 \001(\t\022\027\n\017organization_id\030\002 \001(\t\022\020\n\010s" +
       "pace_id\030\003 \001(\t\022\025\n\rconnection_id\030\004 \001(\t\022\023\n\013" +
       "project_ids\030\005 \003(\t\022\022\n\ncreated_by\030\006 \001(\t\022.\n" +
@@ -5353,17 +7386,36 @@ public final class TalkProto {
       "iers\030\021 \001(\01325.yandex.cloud.speechsense.v1" +
       ".analysis.TextClassifiers\022J\n\rsummarizati" +
       "on\030\022 \001(\01323.yandex.cloud.speechsense.v1.a" +
-      "nalysis.Summarization\"Z\n\005Field\022\014\n\004name\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t\0224\n\004type\030\003 \001(\0162&.yand" +
-      "ex.cloud.speechsense.v1.FieldType*\257\001\n\tFi" +
-      "eldType\022\032\n\026FIELD_TYPE_UNSPECIFIED\020\000\022\025\n\021F" +
-      "IELD_TYPE_STRING\020\001\022\025\n\021FIELD_TYPE_NUMBER\020" +
-      "\002\022\026\n\022FIELD_TYPE_DECIMAL\020\003\022\026\n\022FIELD_TYPE_" +
-      "BOOLEAN\020\004\022\023\n\017FIELD_TYPE_DATE\020\005\022\023\n\017FIELD_" +
-      "TYPE_JSON\020\006By\n\037yandex.cloud.api.speechse" +
-      "nse.v1B\tTalkProtoZKgithub.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/speechsense/" +
-      "v1;speechsenseb\006proto3"
+      "nalysis.Summarization\022:\n\ntalk_state\030\023 \001(" +
+      "\0132&.yandex.cloud.speechsense.v1.TalkStat" +
+      "e\"\255\001\n\tTalkState\022F\n\020processing_state\030\001 \001(" +
+      "\0162,.yandex.cloud.speechsense.v1.Processi" +
+      "ngState\022X\n\032algorithm_processing_infos\030\002 " +
+      "\003(\01324.yandex.cloud.speechsense.v1.Algori" +
+      "thmProcessingInfo\"Z\n\005Field\022\014\n\004name\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t\0224\n\004type\030\003 \001(\0162&.yandex.c" +
+      "loud.speechsense.v1.FieldType\"\234\001\n\027Algori" +
+      "thmProcessingInfo\0229\n\talgorithm\030\001 \001(\0162&.y" +
+      "andex.cloud.speechsense.v1.Algorithm\022F\n\020" +
+      "processing_state\030\002 \001(\0162,.yandex.cloud.sp" +
+      "eechsense.v1.ProcessingState*\257\001\n\tFieldTy" +
+      "pe\022\032\n\026FIELD_TYPE_UNSPECIFIED\020\000\022\025\n\021FIELD_" +
+      "TYPE_STRING\020\001\022\025\n\021FIELD_TYPE_NUMBER\020\002\022\026\n\022" +
+      "FIELD_TYPE_DECIMAL\020\003\022\026\n\022FIELD_TYPE_BOOLE" +
+      "AN\020\004\022\023\n\017FIELD_TYPE_DATE\020\005\022\023\n\017FIELD_TYPE_" +
+      "JSON\020\006*\261\001\n\017ProcessingState\022 \n\034PROCESSING" +
+      "_STATE_UNSPECIFIED\020\000\022 \n\034PROCESSING_STATE" +
+      "_NOT_STARTED\020\001\022\037\n\033PROCESSING_STATE_PROCE" +
+      "SSING\020\002\022\034\n\030PROCESSING_STATE_SUCCESS\020\003\022\033\n" +
+      "\027PROCESSING_STATE_FAILED\020\004*\275\001\n\tAlgorithm" +
+      "\022\031\n\025ALGORITHM_UNSPECIFIED\020\000\022\027\n\023ALGORITHM" +
+      "_SPEECHKIT\020\001\022\022\n\016ALGORITHM_YGPT\020\002\022\030\n\024ALGO" +
+      "RITHM_CLASSIFIER\020\003\022\033\n\027ALGORITHM_SUMMARIZ" +
+      "ATION\020\004\022\027\n\023ALGORITHM_EMBEDDING\020\005\022\030\n\024ALGO" +
+      "RITHM_STATISTICS\020\006By\n\037yandex.cloud.api.s" +
+      "peechsense.v1B\tTalkProtoZKgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/speec" +
+      "hsense/v1;speechsenseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5383,13 +7435,25 @@ public final class TalkProto {
     internal_static_yandex_cloud_speechsense_v1_Talk_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_speechsense_v1_Talk_descriptor,
-        new java.lang.String[] { "Id", "OrganizationId", "SpaceId", "ConnectionId", "ProjectIds", "CreatedBy", "CreatedAt", "ModifiedBy", "ModifiedAt", "TalkFields", "Transcription", "SpeechStatistics", "SilenceStatistics", "InterruptsStatistics", "ConversationStatistics", "Points", "TextClassifiers", "Summarization", });
-    internal_static_yandex_cloud_speechsense_v1_Field_descriptor =
+        new java.lang.String[] { "Id", "OrganizationId", "SpaceId", "ConnectionId", "ProjectIds", "CreatedBy", "CreatedAt", "ModifiedBy", "ModifiedAt", "TalkFields", "Transcription", "SpeechStatistics", "SilenceStatistics", "InterruptsStatistics", "ConversationStatistics", "Points", "TextClassifiers", "Summarization", "TalkState", });
+    internal_static_yandex_cloud_speechsense_v1_TalkState_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_speechsense_v1_TalkState_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_speechsense_v1_TalkState_descriptor,
+        new java.lang.String[] { "ProcessingState", "AlgorithmProcessingInfos", });
+    internal_static_yandex_cloud_speechsense_v1_Field_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_speechsense_v1_Field_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_speechsense_v1_Field_descriptor,
         new java.lang.String[] { "Name", "Value", "Type", });
+    internal_static_yandex_cloud_speechsense_v1_AlgorithmProcessingInfo_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_speechsense_v1_AlgorithmProcessingInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_speechsense_v1_AlgorithmProcessingInfo_descriptor,
+        new java.lang.String[] { "Algorithm", "ProcessingState", });
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.speechsense.v1.analysis.ConversationStatisticsProto.getDescriptor();
     yandex.cloud.api.speechsense.v1.analysis.InterruptsStatisticsProto.getDescriptor();
