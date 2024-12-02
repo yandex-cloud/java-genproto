@@ -233,22 +233,24 @@ public final class Dataset {
 
     /**
      * <pre>
-     * User ID of the dataset's creator.
+     *Deprecated. Use created_by instead
      * </pre>
      *
-     * <code>string created_by_id = 12;</code>
+     * <code>string created_by_id = 12 [deprecated = true];</code>
+     * @deprecated
      * @return The createdById.
      */
-    java.lang.String getCreatedById();
+    @java.lang.Deprecated java.lang.String getCreatedById();
     /**
      * <pre>
-     * User ID of the dataset's creator.
+     *Deprecated. Use created_by instead
      * </pre>
      *
-     * <code>string created_by_id = 12;</code>
+     * <code>string created_by_id = 12 [deprecated = true];</code>
+     * @deprecated
      * @return The bytes for createdById.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getCreatedByIdBytes();
 
     /**
@@ -304,6 +306,46 @@ public final class Dataset {
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * User ID of the dataset's creator.
+     * </pre>
+     *
+     * <code>string created_by = 14;</code>
+     * @return The createdBy.
+     */
+    java.lang.String getCreatedBy();
+    /**
+     * <pre>
+     * User ID of the dataset's creator.
+     * </pre>
+     *
+     * <code>string created_by = 14;</code>
+     * @return The bytes for createdBy.
+     */
+    com.google.protobuf.ByteString
+        getCreatedByBytes();
+
+    /**
+     * <pre>
+     * User ID of the dataset's last updater.
+     * </pre>
+     *
+     * <code>string updated_by = 15;</code>
+     * @return The updatedBy.
+     */
+    java.lang.String getUpdatedBy();
+    /**
+     * <pre>
+     * User ID of the dataset's last updater.
+     * </pre>
+     *
+     * <code>string updated_by = 15;</code>
+     * @return The bytes for updatedBy.
+     */
+    com.google.protobuf.ByteString
+        getUpdatedByBytes();
   }
   /**
    * <pre>
@@ -330,6 +372,8 @@ public final class Dataset {
       status_ = 0;
       taskType_ = "";
       createdById_ = "";
+      createdBy_ = "";
+      updatedBy_ = "";
     }
 
     @java.lang.Override
@@ -458,6 +502,18 @@ public final class Dataset {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 114: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              createdBy_ = s;
+              break;
+            }
+            case 122: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              updatedBy_ = s;
               break;
             }
             default: {
@@ -1065,14 +1121,15 @@ public final class Dataset {
     private volatile java.lang.Object createdById_;
     /**
      * <pre>
-     * User ID of the dataset's creator.
+     *Deprecated. Use created_by instead
      * </pre>
      *
-     * <code>string created_by_id = 12;</code>
+     * <code>string created_by_id = 12 [deprecated = true];</code>
+     * @deprecated
      * @return The createdById.
      */
     @java.lang.Override
-    public java.lang.String getCreatedById() {
+    @java.lang.Deprecated public java.lang.String getCreatedById() {
       java.lang.Object ref = createdById_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -1086,14 +1143,15 @@ public final class Dataset {
     }
     /**
      * <pre>
-     * User ID of the dataset's creator.
+     *Deprecated. Use created_by instead
      * </pre>
      *
-     * <code>string created_by_id = 12;</code>
+     * <code>string created_by_id = 12 [deprecated = true];</code>
+     * @deprecated
      * @return The bytes for createdById.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getCreatedByIdBytes() {
       java.lang.Object ref = createdById_;
       if (ref instanceof java.lang.String) {
@@ -1204,6 +1262,98 @@ public final class Dataset {
       return map.get(key);
     }
 
+    public static final int CREATED_BY_FIELD_NUMBER = 14;
+    private volatile java.lang.Object createdBy_;
+    /**
+     * <pre>
+     * User ID of the dataset's creator.
+     * </pre>
+     *
+     * <code>string created_by = 14;</code>
+     * @return The createdBy.
+     */
+    @java.lang.Override
+    public java.lang.String getCreatedBy() {
+      java.lang.Object ref = createdBy_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        createdBy_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * User ID of the dataset's creator.
+     * </pre>
+     *
+     * <code>string created_by = 14;</code>
+     * @return The bytes for createdBy.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatedByBytes() {
+      java.lang.Object ref = createdBy_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        createdBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UPDATED_BY_FIELD_NUMBER = 15;
+    private volatile java.lang.Object updatedBy_;
+    /**
+     * <pre>
+     * User ID of the dataset's last updater.
+     * </pre>
+     *
+     * <code>string updated_by = 15;</code>
+     * @return The updatedBy.
+     */
+    @java.lang.Override
+    public java.lang.String getUpdatedBy() {
+      java.lang.Object ref = updatedBy_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        updatedBy_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * User ID of the dataset's last updater.
+     * </pre>
+     *
+     * <code>string updated_by = 15;</code>
+     * @return The bytes for updatedBy.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUpdatedByBytes() {
+      java.lang.Object ref = updatedBy_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        updatedBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1260,6 +1410,12 @@ public final class Dataset {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           13);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdBy_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, createdBy_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(updatedBy_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, updatedBy_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1320,6 +1476,12 @@ public final class Dataset {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(13, labels__);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdBy_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, createdBy_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(updatedBy_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, updatedBy_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1366,6 +1528,10 @@ public final class Dataset {
           .equals(other.getCreatedById())) return false;
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (!getCreatedBy()
+          .equals(other.getCreatedBy())) return false;
+      if (!getUpdatedBy()
+          .equals(other.getUpdatedBy())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1411,6 +1577,10 @@ public final class Dataset {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
       }
+      hash = (37 * hash) + CREATED_BY_FIELD_NUMBER;
+      hash = (53 * hash) + getCreatedBy().hashCode();
+      hash = (37 * hash) + UPDATED_BY_FIELD_NUMBER;
+      hash = (53 * hash) + getUpdatedBy().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1603,6 +1773,10 @@ public final class Dataset {
         createdById_ = "";
 
         internalGetMutableLabels().clear();
+        createdBy_ = "";
+
+        updatedBy_ = "";
+
         return this;
       }
 
@@ -1652,6 +1826,8 @@ public final class Dataset {
         result.createdById_ = createdById_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        result.createdBy_ = createdBy_;
+        result.updatedBy_ = updatedBy_;
         onBuilt();
         return result;
       }
@@ -1745,6 +1921,14 @@ public final class Dataset {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (!other.getCreatedBy().isEmpty()) {
+          createdBy_ = other.createdBy_;
+          onChanged();
+        }
+        if (!other.getUpdatedBy().isEmpty()) {
+          updatedBy_ = other.updatedBy_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -2824,13 +3008,14 @@ public final class Dataset {
       private java.lang.Object createdById_ = "";
       /**
        * <pre>
-       * User ID of the dataset's creator.
+       *Deprecated. Use created_by instead
        * </pre>
        *
-       * <code>string created_by_id = 12;</code>
+       * <code>string created_by_id = 12 [deprecated = true];</code>
+       * @deprecated
        * @return The createdById.
        */
-      public java.lang.String getCreatedById() {
+      @java.lang.Deprecated public java.lang.String getCreatedById() {
         java.lang.Object ref = createdById_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -2844,13 +3029,14 @@ public final class Dataset {
       }
       /**
        * <pre>
-       * User ID of the dataset's creator.
+       *Deprecated. Use created_by instead
        * </pre>
        *
-       * <code>string created_by_id = 12;</code>
+       * <code>string created_by_id = 12 [deprecated = true];</code>
+       * @deprecated
        * @return The bytes for createdById.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getCreatedByIdBytes() {
         java.lang.Object ref = createdById_;
         if (ref instanceof String) {
@@ -2865,14 +3051,15 @@ public final class Dataset {
       }
       /**
        * <pre>
-       * User ID of the dataset's creator.
+       *Deprecated. Use created_by instead
        * </pre>
        *
-       * <code>string created_by_id = 12;</code>
+       * <code>string created_by_id = 12 [deprecated = true];</code>
+       * @deprecated
        * @param value The createdById to set.
        * @return This builder for chaining.
        */
-      public Builder setCreatedById(
+      @java.lang.Deprecated public Builder setCreatedById(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
@@ -2884,13 +3071,14 @@ public final class Dataset {
       }
       /**
        * <pre>
-       * User ID of the dataset's creator.
+       *Deprecated. Use created_by instead
        * </pre>
        *
-       * <code>string created_by_id = 12;</code>
+       * <code>string created_by_id = 12 [deprecated = true];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearCreatedById() {
+      @java.lang.Deprecated public Builder clearCreatedById() {
         
         createdById_ = getDefaultInstance().getCreatedById();
         onChanged();
@@ -2898,14 +3086,15 @@ public final class Dataset {
       }
       /**
        * <pre>
-       * User ID of the dataset's creator.
+       *Deprecated. Use created_by instead
        * </pre>
        *
-       * <code>string created_by_id = 12;</code>
+       * <code>string created_by_id = 12 [deprecated = true];</code>
+       * @deprecated
        * @param value The bytes for createdById to set.
        * @return This builder for chaining.
        */
-      public Builder setCreatedByIdBytes(
+      @java.lang.Deprecated public Builder setCreatedByIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -3073,6 +3262,198 @@ public final class Dataset {
           java.util.Map<java.lang.String, java.lang.String> values) {
         internalGetMutableLabels().getMutableMap()
             .putAll(values);
+        return this;
+      }
+
+      private java.lang.Object createdBy_ = "";
+      /**
+       * <pre>
+       * User ID of the dataset's creator.
+       * </pre>
+       *
+       * <code>string created_by = 14;</code>
+       * @return The createdBy.
+       */
+      public java.lang.String getCreatedBy() {
+        java.lang.Object ref = createdBy_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          createdBy_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User ID of the dataset's creator.
+       * </pre>
+       *
+       * <code>string created_by = 14;</code>
+       * @return The bytes for createdBy.
+       */
+      public com.google.protobuf.ByteString
+          getCreatedByBytes() {
+        java.lang.Object ref = createdBy_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          createdBy_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User ID of the dataset's creator.
+       * </pre>
+       *
+       * <code>string created_by = 14;</code>
+       * @param value The createdBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatedBy(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        createdBy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User ID of the dataset's creator.
+       * </pre>
+       *
+       * <code>string created_by = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreatedBy() {
+        
+        createdBy_ = getDefaultInstance().getCreatedBy();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User ID of the dataset's creator.
+       * </pre>
+       *
+       * <code>string created_by = 14;</code>
+       * @param value The bytes for createdBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatedByBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        createdBy_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object updatedBy_ = "";
+      /**
+       * <pre>
+       * User ID of the dataset's last updater.
+       * </pre>
+       *
+       * <code>string updated_by = 15;</code>
+       * @return The updatedBy.
+       */
+      public java.lang.String getUpdatedBy() {
+        java.lang.Object ref = updatedBy_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          updatedBy_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User ID of the dataset's last updater.
+       * </pre>
+       *
+       * <code>string updated_by = 15;</code>
+       * @return The bytes for updatedBy.
+       */
+      public com.google.protobuf.ByteString
+          getUpdatedByBytes() {
+        java.lang.Object ref = updatedBy_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          updatedBy_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User ID of the dataset's last updater.
+       * </pre>
+       *
+       * <code>string updated_by = 15;</code>
+       * @param value The updatedBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUpdatedBy(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        updatedBy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User ID of the dataset's last updater.
+       * </pre>
+       *
+       * <code>string updated_by = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUpdatedBy() {
+        
+        updatedBy_ = getDefaultInstance().getUpdatedBy();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User ID of the dataset's last updater.
+       * </pre>
+       *
+       * <code>string updated_by = 15;</code>
+       * @param value The bytes for updatedBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUpdatedByBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        updatedBy_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -4201,7 +4582,7 @@ public final class Dataset {
     java.lang.String[] descriptorData = {
       "\n(yandex/cloud/ai/dataset/v1/dataset.pro" +
       "to\022\032yandex.cloud.ai.dataset.v1\032\037google/p" +
-      "rotobuf/timestamp.proto\"\254\004\n\013DatasetInfo\022" +
+      "rotobuf/timestamp.proto\"\330\004\n\013DatasetInfo\022" +
       "\022\n\ndataset_id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022\014" +
       "\n\004name\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022\020\n\010met" +
       "adata\030\005 \001(\t\022>\n\006status\030\006 \001(\0162..yandex.clo" +
@@ -4209,18 +4590,19 @@ public final class Dataset {
       "ask_type\030\007 \001(\t\022.\n\ncreated_at\030\010 \001(\0132\032.goo" +
       "gle.protobuf.Timestamp\022.\n\nupdated_at\030\t \001" +
       "(\0132\032.google.protobuf.Timestamp\022\014\n\004rows\030\n" +
-      " \001(\003\022\022\n\nsize_bytes\030\013 \001(\003\022\025\n\rcreated_by_i" +
-      "d\030\014 \001(\t\022C\n\006labels\030\r \003(\01323.yandex.cloud.a" +
-      "i.dataset.v1.DatasetInfo.LabelsEntry\032-\n\013" +
-      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001\"a\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\t\n" +
-      "\005DRAFT\020\001\022\016\n\nVALIDATING\020\002\022\t\n\005READY\020\003\022\013\n\007I" +
-      "NVALID\020\004\022\014\n\010DELETING\020\005\"P\n\017ValidationErro" +
-      "r\022\r\n\005error\030\001 \001(\t\022\031\n\021error_description\030\002 " +
-      "\001(\t\022\023\n\013row_numbers\030\003 \003(\003Be\n\036yandex.cloud" +
-      ".api.ai.dataset.v1ZCgithub.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/ai/dataset/" +
-      "v1;fomob\006proto3"
+      " \001(\003\022\022\n\nsize_bytes\030\013 \001(\003\022\031\n\rcreated_by_i" +
+      "d\030\014 \001(\tB\002\030\001\022C\n\006labels\030\r \003(\01323.yandex.clo" +
+      "ud.ai.dataset.v1.DatasetInfo.LabelsEntry" +
+      "\022\022\n\ncreated_by\030\016 \001(\t\022\022\n\nupdated_by\030\017 \001(\t" +
+      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
+      "\001(\t:\0028\001\"a\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020" +
+      "\000\022\t\n\005DRAFT\020\001\022\016\n\nVALIDATING\020\002\022\t\n\005READY\020\003\022" +
+      "\013\n\007INVALID\020\004\022\014\n\010DELETING\020\005\"P\n\017Validation" +
+      "Error\022\r\n\005error\030\001 \001(\t\022\031\n\021error_descriptio" +
+      "n\030\002 \001(\t\022\023\n\013row_numbers\030\003 \003(\003Be\n\036yandex.c" +
+      "loud.api.ai.dataset.v1ZCgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/ai/data" +
+      "set/v1;fomob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4232,7 +4614,7 @@ public final class Dataset {
     internal_static_yandex_cloud_ai_dataset_v1_DatasetInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_dataset_v1_DatasetInfo_descriptor,
-        new java.lang.String[] { "DatasetId", "FolderId", "Name", "Description", "Metadata", "Status", "TaskType", "CreatedAt", "UpdatedAt", "Rows", "SizeBytes", "CreatedById", "Labels", });
+        new java.lang.String[] { "DatasetId", "FolderId", "Name", "Description", "Metadata", "Status", "TaskType", "CreatedAt", "UpdatedAt", "Rows", "SizeBytes", "CreatedById", "Labels", "CreatedBy", "UpdatedBy", });
     internal_static_yandex_cloud_ai_dataset_v1_DatasetInfo_LabelsEntry_descriptor =
       internal_static_yandex_cloud_ai_dataset_v1_DatasetInfo_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_ai_dataset_v1_DatasetInfo_LabelsEntry_fieldAccessorTable = new

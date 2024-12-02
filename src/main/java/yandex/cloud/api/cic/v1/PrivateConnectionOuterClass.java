@@ -543,45 +543,53 @@ public final class PrivateConnectionOuterClass {
        * <pre>
        * PeerIp.
        * It's an ip with just an ipAddress format without mask.
+       * Will be removed in some next release
        * </pre>
        *
-       * <code>repeated string next_hop = 2;</code>
+       * <code>repeated string next_hop = 2 [deprecated = true];</code>
+       * @deprecated
        * @return A list containing the nextHop.
        */
-      java.util.List<java.lang.String>
+      @java.lang.Deprecated java.util.List<java.lang.String>
           getNextHopList();
       /**
        * <pre>
        * PeerIp.
        * It's an ip with just an ipAddress format without mask.
+       * Will be removed in some next release
        * </pre>
        *
-       * <code>repeated string next_hop = 2;</code>
+       * <code>repeated string next_hop = 2 [deprecated = true];</code>
+       * @deprecated
        * @return The count of nextHop.
        */
-      int getNextHopCount();
+      @java.lang.Deprecated int getNextHopCount();
       /**
        * <pre>
        * PeerIp.
        * It's an ip with just an ipAddress format without mask.
+       * Will be removed in some next release
        * </pre>
        *
-       * <code>repeated string next_hop = 2;</code>
+       * <code>repeated string next_hop = 2 [deprecated = true];</code>
+       * @deprecated
        * @param index The index of the element to return.
        * @return The nextHop at the given index.
        */
-      java.lang.String getNextHop(int index);
+      @java.lang.Deprecated java.lang.String getNextHop(int index);
       /**
        * <pre>
        * PeerIp.
        * It's an ip with just an ipAddress format without mask.
+       * Will be removed in some next release
        * </pre>
        *
-       * <code>repeated string next_hop = 2;</code>
+       * <code>repeated string next_hop = 2 [deprecated = true];</code>
+       * @deprecated
        * @param index The index of the value to return.
        * @return The bytes of the nextHop at the given index.
        */
-      com.google.protobuf.ByteString
+      @java.lang.Deprecated com.google.protobuf.ByteString
           getNextHopBytes(int index);
     }
     /**
@@ -736,12 +744,14 @@ public final class PrivateConnectionOuterClass {
        * <pre>
        * PeerIp.
        * It's an ip with just an ipAddress format without mask.
+       * Will be removed in some next release
        * </pre>
        *
-       * <code>repeated string next_hop = 2;</code>
+       * <code>repeated string next_hop = 2 [deprecated = true];</code>
+       * @deprecated
        * @return A list containing the nextHop.
        */
-      public com.google.protobuf.ProtocolStringList
+      @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
           getNextHopList() {
         return nextHop_;
       }
@@ -749,38 +759,44 @@ public final class PrivateConnectionOuterClass {
        * <pre>
        * PeerIp.
        * It's an ip with just an ipAddress format without mask.
+       * Will be removed in some next release
        * </pre>
        *
-       * <code>repeated string next_hop = 2;</code>
+       * <code>repeated string next_hop = 2 [deprecated = true];</code>
+       * @deprecated
        * @return The count of nextHop.
        */
-      public int getNextHopCount() {
+      @java.lang.Deprecated public int getNextHopCount() {
         return nextHop_.size();
       }
       /**
        * <pre>
        * PeerIp.
        * It's an ip with just an ipAddress format without mask.
+       * Will be removed in some next release
        * </pre>
        *
-       * <code>repeated string next_hop = 2;</code>
+       * <code>repeated string next_hop = 2 [deprecated = true];</code>
+       * @deprecated
        * @param index The index of the element to return.
        * @return The nextHop at the given index.
        */
-      public java.lang.String getNextHop(int index) {
+      @java.lang.Deprecated public java.lang.String getNextHop(int index) {
         return nextHop_.get(index);
       }
       /**
        * <pre>
        * PeerIp.
        * It's an ip with just an ipAddress format without mask.
+       * Will be removed in some next release
        * </pre>
        *
-       * <code>repeated string next_hop = 2;</code>
+       * <code>repeated string next_hop = 2 [deprecated = true];</code>
+       * @deprecated
        * @param index The index of the value to return.
        * @return The bytes of the nextHop at the given index.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getNextHopBytes(int index) {
         return nextHop_.getByteString(index);
       }
@@ -1235,12 +1251,14 @@ public final class PrivateConnectionOuterClass {
          * <pre>
          * PeerIp.
          * It's an ip with just an ipAddress format without mask.
+         * Will be removed in some next release
          * </pre>
          *
-         * <code>repeated string next_hop = 2;</code>
+         * <code>repeated string next_hop = 2 [deprecated = true];</code>
+         * @deprecated
          * @return A list containing the nextHop.
          */
-        public com.google.protobuf.ProtocolStringList
+        @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
             getNextHopList() {
           return nextHop_.getUnmodifiableView();
         }
@@ -1248,38 +1266,44 @@ public final class PrivateConnectionOuterClass {
          * <pre>
          * PeerIp.
          * It's an ip with just an ipAddress format without mask.
+         * Will be removed in some next release
          * </pre>
          *
-         * <code>repeated string next_hop = 2;</code>
+         * <code>repeated string next_hop = 2 [deprecated = true];</code>
+         * @deprecated
          * @return The count of nextHop.
          */
-        public int getNextHopCount() {
+        @java.lang.Deprecated public int getNextHopCount() {
           return nextHop_.size();
         }
         /**
          * <pre>
          * PeerIp.
          * It's an ip with just an ipAddress format without mask.
+         * Will be removed in some next release
          * </pre>
          *
-         * <code>repeated string next_hop = 2;</code>
+         * <code>repeated string next_hop = 2 [deprecated = true];</code>
+         * @deprecated
          * @param index The index of the element to return.
          * @return The nextHop at the given index.
          */
-        public java.lang.String getNextHop(int index) {
+        @java.lang.Deprecated public java.lang.String getNextHop(int index) {
           return nextHop_.get(index);
         }
         /**
          * <pre>
          * PeerIp.
          * It's an ip with just an ipAddress format without mask.
+         * Will be removed in some next release
          * </pre>
          *
-         * <code>repeated string next_hop = 2;</code>
+         * <code>repeated string next_hop = 2 [deprecated = true];</code>
+         * @deprecated
          * @param index The index of the value to return.
          * @return The bytes of the nextHop at the given index.
          */
-        public com.google.protobuf.ByteString
+        @java.lang.Deprecated public com.google.protobuf.ByteString
             getNextHopBytes(int index) {
           return nextHop_.getByteString(index);
         }
@@ -1287,14 +1311,16 @@ public final class PrivateConnectionOuterClass {
          * <pre>
          * PeerIp.
          * It's an ip with just an ipAddress format without mask.
+         * Will be removed in some next release
          * </pre>
          *
-         * <code>repeated string next_hop = 2;</code>
+         * <code>repeated string next_hop = 2 [deprecated = true];</code>
+         * @deprecated
          * @param index The index to set the value at.
          * @param value The nextHop to set.
          * @return This builder for chaining.
          */
-        public Builder setNextHop(
+        @java.lang.Deprecated public Builder setNextHop(
             int index, java.lang.String value) {
           if (value == null) {
     throw new NullPointerException();
@@ -1308,13 +1334,15 @@ public final class PrivateConnectionOuterClass {
          * <pre>
          * PeerIp.
          * It's an ip with just an ipAddress format without mask.
+         * Will be removed in some next release
          * </pre>
          *
-         * <code>repeated string next_hop = 2;</code>
+         * <code>repeated string next_hop = 2 [deprecated = true];</code>
+         * @deprecated
          * @param value The nextHop to add.
          * @return This builder for chaining.
          */
-        public Builder addNextHop(
+        @java.lang.Deprecated public Builder addNextHop(
             java.lang.String value) {
           if (value == null) {
     throw new NullPointerException();
@@ -1328,13 +1356,15 @@ public final class PrivateConnectionOuterClass {
          * <pre>
          * PeerIp.
          * It's an ip with just an ipAddress format without mask.
+         * Will be removed in some next release
          * </pre>
          *
-         * <code>repeated string next_hop = 2;</code>
+         * <code>repeated string next_hop = 2 [deprecated = true];</code>
+         * @deprecated
          * @param values The nextHop to add.
          * @return This builder for chaining.
          */
-        public Builder addAllNextHop(
+        @java.lang.Deprecated public Builder addAllNextHop(
             java.lang.Iterable<java.lang.String> values) {
           ensureNextHopIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -1346,12 +1376,14 @@ public final class PrivateConnectionOuterClass {
          * <pre>
          * PeerIp.
          * It's an ip with just an ipAddress format without mask.
+         * Will be removed in some next release
          * </pre>
          *
-         * <code>repeated string next_hop = 2;</code>
+         * <code>repeated string next_hop = 2 [deprecated = true];</code>
+         * @deprecated
          * @return This builder for chaining.
          */
-        public Builder clearNextHop() {
+        @java.lang.Deprecated public Builder clearNextHop() {
           nextHop_ = com.google.protobuf.LazyStringArrayList.EMPTY;
           bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
@@ -1361,13 +1393,15 @@ public final class PrivateConnectionOuterClass {
          * <pre>
          * PeerIp.
          * It's an ip with just an ipAddress format without mask.
+         * Will be removed in some next release
          * </pre>
          *
-         * <code>repeated string next_hop = 2;</code>
+         * <code>repeated string next_hop = 2 [deprecated = true];</code>
+         * @deprecated
          * @param value The bytes of the nextHop to add.
          * @return This builder for chaining.
          */
-        public Builder addNextHopBytes(
+        @java.lang.Deprecated public Builder addNextHopBytes(
             com.google.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
@@ -4026,7 +4060,7 @@ public final class PrivateConnectionOuterClass {
       "\n,yandex/cloud/cic/v1/private_connection" +
       ".proto\022\023yandex.cloud.cic.v1\032\036google/prot" +
       "obuf/wrappers.proto\032!yandex/cloud/cic/v1" +
-      "/peering.proto\"\355\003\n\021PrivateConnection\022\n\n\002" +
+      "/peering.proto\"\361\003\n\021PrivateConnection\022\n\n\002" +
       "id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013description\030\003 " +
       "\001(\t\022\021\n\tfolder_id\030\005 \001(\t\022\021\n\tregion_id\030\006 \001(" +
       "\t\022\033\n\023trunk_connection_id\030\007 \001(\t\022,\n\007vlan_i" +
@@ -4037,11 +4071,11 @@ public final class PrivateConnectionOuterClass {
       "ticRoute\022B\n\006labels\030\030 \003(\01322.yandex.cloud." +
       "cic.v1.PrivateConnection.LabelsEntry\032-\n\013" +
       "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001\032/\n\013StaticRoute\022\016\n\006prefix\030\001 \001(\t\022\020\n\010ne" +
-      "xt_hop\030\002 \003(\tJ\004\010\004\020\005J\004\010\n\020\022J\004\010\023\020\030BV\n\027yandex" +
-      ".cloud.api.cic.v1Z;github.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/cic/v1;cicb\006" +
-      "proto3"
+      "\0028\001\0323\n\013StaticRoute\022\016\n\006prefix\030\001 \001(\t\022\024\n\010ne" +
+      "xt_hop\030\002 \003(\tB\002\030\001J\004\010\004\020\005J\004\010\n\020\022J\004\010\023\020\030BV\n\027ya" +
+      "ndex.cloud.api.cic.v1Z;github.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/cic/v1;c" +
+      "icb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

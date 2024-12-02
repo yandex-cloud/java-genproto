@@ -85,6 +85,25 @@ public final class SearchQueryOuterClass {
      * @return The page.
      */
     long getPage();
+
+    /**
+     * <pre>
+     * Typos autocorrections mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.searchapi.v2.SearchQuery.FixTypoMode fix_typo_mode = 5;</code>
+     * @return The enum numeric value on the wire for fixTypoMode.
+     */
+    int getFixTypoModeValue();
+    /**
+     * <pre>
+     * Typos autocorrections mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.searchapi.v2.SearchQuery.FixTypoMode fix_typo_mode = 5;</code>
+     * @return The fixTypoMode.
+     */
+    yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchQuery.FixTypoMode getFixTypoMode();
   }
   /**
    * Protobuf type {@code yandex.cloud.searchapi.v2.SearchQuery}
@@ -102,6 +121,7 @@ public final class SearchQueryOuterClass {
       searchType_ = 0;
       queryText_ = "";
       familyMode_ = 0;
+      fixTypoMode_ = 0;
     }
 
     @java.lang.Override
@@ -155,6 +175,12 @@ public final class SearchQueryOuterClass {
             case 32: {
 
               page_ = input.readInt64();
+              break;
+            }
+            case 40: {
+              int rawValue = input.readEnum();
+
+              fixTypoMode_ = rawValue;
               break;
             }
             default: {
@@ -493,6 +519,139 @@ public final class SearchQueryOuterClass {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.searchapi.v2.SearchQuery.FamilyMode)
     }
 
+    /**
+     * Protobuf enum {@code yandex.cloud.searchapi.v2.SearchQuery.FixTypoMode}
+     */
+    public enum FixTypoMode
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>FIX_TYPO_MODE_UNSPECIFIED = 0;</code>
+       */
+      FIX_TYPO_MODE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Automatically correct typos (default value).
+       * </pre>
+       *
+       * <code>FIX_TYPO_MODE_ON = 1;</code>
+       */
+      FIX_TYPO_MODE_ON(1),
+      /**
+       * <pre>
+       * Autocorrection is off.
+       * </pre>
+       *
+       * <code>FIX_TYPO_MODE_OFF = 2;</code>
+       */
+      FIX_TYPO_MODE_OFF(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>FIX_TYPO_MODE_UNSPECIFIED = 0;</code>
+       */
+      public static final int FIX_TYPO_MODE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Automatically correct typos (default value).
+       * </pre>
+       *
+       * <code>FIX_TYPO_MODE_ON = 1;</code>
+       */
+      public static final int FIX_TYPO_MODE_ON_VALUE = 1;
+      /**
+       * <pre>
+       * Autocorrection is off.
+       * </pre>
+       *
+       * <code>FIX_TYPO_MODE_OFF = 2;</code>
+       */
+      public static final int FIX_TYPO_MODE_OFF_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static FixTypoMode valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static FixTypoMode forNumber(int value) {
+        switch (value) {
+          case 0: return FIX_TYPO_MODE_UNSPECIFIED;
+          case 1: return FIX_TYPO_MODE_ON;
+          case 2: return FIX_TYPO_MODE_OFF;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<FixTypoMode>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          FixTypoMode> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<FixTypoMode>() {
+              public FixTypoMode findValueByNumber(int number) {
+                return FixTypoMode.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchQuery.getDescriptor().getEnumTypes().get(2);
+      }
+
+      private static final FixTypoMode[] VALUES = values();
+
+      public static FixTypoMode valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private FixTypoMode(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.searchapi.v2.SearchQuery.FixTypoMode)
+    }
+
     public static final int SEARCH_TYPE_FIELD_NUMBER = 1;
     private int searchType_;
     /**
@@ -608,6 +767,33 @@ public final class SearchQueryOuterClass {
       return page_;
     }
 
+    public static final int FIX_TYPO_MODE_FIELD_NUMBER = 5;
+    private int fixTypoMode_;
+    /**
+     * <pre>
+     * Typos autocorrections mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.searchapi.v2.SearchQuery.FixTypoMode fix_typo_mode = 5;</code>
+     * @return The enum numeric value on the wire for fixTypoMode.
+     */
+    @java.lang.Override public int getFixTypoModeValue() {
+      return fixTypoMode_;
+    }
+    /**
+     * <pre>
+     * Typos autocorrections mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.searchapi.v2.SearchQuery.FixTypoMode fix_typo_mode = 5;</code>
+     * @return The fixTypoMode.
+     */
+    @java.lang.Override public yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchQuery.FixTypoMode getFixTypoMode() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchQuery.FixTypoMode result = yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchQuery.FixTypoMode.valueOf(fixTypoMode_);
+      return result == null ? yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchQuery.FixTypoMode.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -634,6 +820,9 @@ public final class SearchQueryOuterClass {
       if (page_ != 0L) {
         output.writeInt64(4, page_);
       }
+      if (fixTypoMode_ != yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchQuery.FixTypoMode.FIX_TYPO_MODE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(5, fixTypoMode_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -658,6 +847,10 @@ public final class SearchQueryOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(4, page_);
       }
+      if (fixTypoMode_ != yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchQuery.FixTypoMode.FIX_TYPO_MODE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, fixTypoMode_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -679,6 +872,7 @@ public final class SearchQueryOuterClass {
       if (familyMode_ != other.familyMode_) return false;
       if (getPage()
           != other.getPage()) return false;
+      if (fixTypoMode_ != other.fixTypoMode_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -699,6 +893,8 @@ public final class SearchQueryOuterClass {
       hash = (37 * hash) + PAGE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getPage());
+      hash = (37 * hash) + FIX_TYPO_MODE_FIELD_NUMBER;
+      hash = (53 * hash) + fixTypoMode_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -840,6 +1036,8 @@ public final class SearchQueryOuterClass {
 
         page_ = 0L;
 
+        fixTypoMode_ = 0;
+
         return this;
       }
 
@@ -870,6 +1068,7 @@ public final class SearchQueryOuterClass {
         result.queryText_ = queryText_;
         result.familyMode_ = familyMode_;
         result.page_ = page_;
+        result.fixTypoMode_ = fixTypoMode_;
         onBuilt();
         return result;
       }
@@ -930,6 +1129,9 @@ public final class SearchQueryOuterClass {
         }
         if (other.getPage() != 0L) {
           setPage(other.getPage());
+        }
+        if (other.fixTypoMode_ != 0) {
+          setFixTypoModeValue(other.getFixTypoModeValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1246,6 +1448,80 @@ public final class SearchQueryOuterClass {
         onChanged();
         return this;
       }
+
+      private int fixTypoMode_ = 0;
+      /**
+       * <pre>
+       * Typos autocorrections mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.SearchQuery.FixTypoMode fix_typo_mode = 5;</code>
+       * @return The enum numeric value on the wire for fixTypoMode.
+       */
+      @java.lang.Override public int getFixTypoModeValue() {
+        return fixTypoMode_;
+      }
+      /**
+       * <pre>
+       * Typos autocorrections mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.SearchQuery.FixTypoMode fix_typo_mode = 5;</code>
+       * @param value The enum numeric value on the wire for fixTypoMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFixTypoModeValue(int value) {
+        
+        fixTypoMode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Typos autocorrections mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.SearchQuery.FixTypoMode fix_typo_mode = 5;</code>
+       * @return The fixTypoMode.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchQuery.FixTypoMode getFixTypoMode() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchQuery.FixTypoMode result = yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchQuery.FixTypoMode.valueOf(fixTypoMode_);
+        return result == null ? yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchQuery.FixTypoMode.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Typos autocorrections mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.SearchQuery.FixTypoMode fix_typo_mode = 5;</code>
+       * @param value The fixTypoMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFixTypoMode(yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchQuery.FixTypoMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        fixTypoMode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Typos autocorrections mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.SearchQuery.FixTypoMode fix_typo_mode = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFixTypoMode() {
+        
+        fixTypoMode_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1315,21 +1591,25 @@ public final class SearchQueryOuterClass {
     java.lang.String[] descriptorData = {
       "\n,yandex/cloud/searchapi/v2/search_query" +
       ".proto\022\031yandex.cloud.searchapi.v2\032\035yande" +
-      "x/cloud/validation.proto\"\270\003\n\013SearchQuery" +
+      "x/cloud/validation.proto\"\336\004\n\013SearchQuery" +
       "\022L\n\013search_type\030\001 \001(\01621.yandex.cloud.sea" +
       "rchapi.v2.SearchQuery.SearchTypeB\004\350\3071\001\022!" +
       "\n\nquery_text\030\002 \001(\tB\r\350\3071\001\212\3101\005<=400\022F\n\013fam" +
       "ily_mode\030\003 \001(\01621.yandex.cloud.searchapi." +
       "v2.SearchQuery.FamilyMode\022\025\n\004page\030\004 \001(\003B" +
-      "\007\372\3071\003>=0\"f\n\nSearchType\022\033\n\027SEARCH_TYPE_UN" +
-      "SPECIFIED\020\000\022\022\n\016SEARCH_TYPE_RU\020\001\022\022\n\016SEARC" +
-      "H_TYPE_TR\020\002\022\023\n\017SEARCH_TYPE_COM\020\003\"q\n\nFami" +
-      "lyMode\022\033\n\027FAMILY_MODE_UNSPECIFIED\020\000\022\024\n\020F" +
-      "AMILY_MODE_NONE\020\001\022\030\n\024FAMILY_MODE_MODERAT" +
-      "E\020\002\022\026\n\022FAMILY_MODE_STRICT\020\003Be\n\032yandex.cl" +
-      "oud.api.search.v2ZGgithub.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/searchapi/v2" +
-      ";searchapib\006proto3"
+      "\007\372\3071\003>=0\022I\n\rfix_typo_mode\030\005 \001(\01622.yandex" +
+      ".cloud.searchapi.v2.SearchQuery.FixTypoM" +
+      "ode\"f\n\nSearchType\022\033\n\027SEARCH_TYPE_UNSPECI" +
+      "FIED\020\000\022\022\n\016SEARCH_TYPE_RU\020\001\022\022\n\016SEARCH_TYP" +
+      "E_TR\020\002\022\023\n\017SEARCH_TYPE_COM\020\003\"q\n\nFamilyMod" +
+      "e\022\033\n\027FAMILY_MODE_UNSPECIFIED\020\000\022\024\n\020FAMILY" +
+      "_MODE_NONE\020\001\022\030\n\024FAMILY_MODE_MODERATE\020\002\022\026" +
+      "\n\022FAMILY_MODE_STRICT\020\003\"Y\n\013FixTypoMode\022\035\n" +
+      "\031FIX_TYPO_MODE_UNSPECIFIED\020\000\022\024\n\020FIX_TYPO" +
+      "_MODE_ON\020\001\022\025\n\021FIX_TYPO_MODE_OFF\020\002Be\n\032yan" +
+      "dex.cloud.api.search.v2ZGgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/search" +
+      "api/v2;searchapib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1341,7 +1621,7 @@ public final class SearchQueryOuterClass {
     internal_static_yandex_cloud_searchapi_v2_SearchQuery_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_searchapi_v2_SearchQuery_descriptor,
-        new java.lang.String[] { "SearchType", "QueryText", "FamilyMode", "Page", });
+        new java.lang.String[] { "SearchType", "QueryText", "FamilyMode", "Page", "FixTypoMode", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);

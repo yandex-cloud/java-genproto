@@ -158,7 +158,7 @@ public final class SearchService {
       SORT_ORDER_UNSPECIFIED(0),
       /**
        * <pre>
-       * Direct order from most recent to oldest (default)..
+       * Reverse order from oldest to most recent.
        * </pre>
        *
        * <code>SORT_ORDER_ASC = 1;</code>
@@ -166,7 +166,7 @@ public final class SearchService {
       SORT_ORDER_ASC(1),
       /**
        * <pre>
-       * Reverse order from oldest to most recent.
+       * Direct order from most recent to oldest (default).
        * </pre>
        *
        * <code>SORT_ORDER_DESC = 2;</code>
@@ -181,7 +181,7 @@ public final class SearchService {
       public static final int SORT_ORDER_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * Direct order from most recent to oldest (default)..
+       * Reverse order from oldest to most recent.
        * </pre>
        *
        * <code>SORT_ORDER_ASC = 1;</code>
@@ -189,7 +189,7 @@ public final class SearchService {
       public static final int SORT_ORDER_ASC_VALUE = 1;
       /**
        * <pre>
-       * Reverse order from oldest to most recent.
+       * Direct order from most recent to oldest (default).
        * </pre>
        *
        * <code>SORT_ORDER_DESC = 2;</code>
@@ -2013,6 +2013,45 @@ public final class SearchService {
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
+
+    /**
+     * <pre>
+     * Search results format.
+     * </pre>
+     *
+     * <code>.yandex.cloud.searchapi.v2.WebSearchRequest.Format response_format = 8;</code>
+     * @return The enum numeric value on the wire for responseFormat.
+     */
+    int getResponseFormatValue();
+    /**
+     * <pre>
+     * Search results format.
+     * </pre>
+     *
+     * <code>.yandex.cloud.searchapi.v2.WebSearchRequest.Format response_format = 8;</code>
+     * @return The responseFormat.
+     */
+    yandex.cloud.api.search.v2.SearchService.WebSearchRequest.Format getResponseFormat();
+
+    /**
+     * <pre>
+     * User-Agent request header value.
+     * </pre>
+     *
+     * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The userAgent.
+     */
+    java.lang.String getUserAgent();
+    /**
+     * <pre>
+     * User-Agent request header value.
+     * </pre>
+     *
+     * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The bytes for userAgent.
+     */
+    com.google.protobuf.ByteString
+        getUserAgentBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.searchapi.v2.WebSearchRequest}
@@ -2030,6 +2069,8 @@ public final class SearchService {
       region_ = "";
       l10N_ = 0;
       folderId_ = "";
+      responseFormat_ = 0;
+      userAgent_ = "";
     }
 
     @java.lang.Override
@@ -2122,6 +2163,18 @@ public final class SearchService {
               java.lang.String s = input.readStringRequireUtf8();
 
               folderId_ = s;
+              break;
+            }
+            case 64: {
+              int rawValue = input.readEnum();
+
+              responseFormat_ = rawValue;
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              userAgent_ = s;
               break;
             }
             default: {
@@ -2355,6 +2408,139 @@ public final class SearchService {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.searchapi.v2.WebSearchRequest.Localization)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.searchapi.v2.WebSearchRequest.Format}
+     */
+    public enum Format
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>FORMAT_UNSPECIFIED = 0;</code>
+       */
+      FORMAT_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * XML format (default value)
+       * </pre>
+       *
+       * <code>FORMAT_XML = 1;</code>
+       */
+      FORMAT_XML(1),
+      /**
+       * <pre>
+       * HTML format
+       * </pre>
+       *
+       * <code>FORMAT_HTML = 2;</code>
+       */
+      FORMAT_HTML(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>FORMAT_UNSPECIFIED = 0;</code>
+       */
+      public static final int FORMAT_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * XML format (default value)
+       * </pre>
+       *
+       * <code>FORMAT_XML = 1;</code>
+       */
+      public static final int FORMAT_XML_VALUE = 1;
+      /**
+       * <pre>
+       * HTML format
+       * </pre>
+       *
+       * <code>FORMAT_HTML = 2;</code>
+       */
+      public static final int FORMAT_HTML_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Format valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Format forNumber(int value) {
+        switch (value) {
+          case 0: return FORMAT_UNSPECIFIED;
+          case 1: return FORMAT_XML;
+          case 2: return FORMAT_HTML;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Format>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Format> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Format>() {
+              public Format findValueByNumber(int number) {
+                return Format.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.search.v2.SearchService.WebSearchRequest.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final Format[] VALUES = values();
+
+      public static Format valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Format(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.searchapi.v2.WebSearchRequest.Format)
     }
 
     public static final int QUERY_FIELD_NUMBER = 1;
@@ -2605,6 +2791,79 @@ public final class SearchService {
       }
     }
 
+    public static final int RESPONSE_FORMAT_FIELD_NUMBER = 8;
+    private int responseFormat_;
+    /**
+     * <pre>
+     * Search results format.
+     * </pre>
+     *
+     * <code>.yandex.cloud.searchapi.v2.WebSearchRequest.Format response_format = 8;</code>
+     * @return The enum numeric value on the wire for responseFormat.
+     */
+    @java.lang.Override public int getResponseFormatValue() {
+      return responseFormat_;
+    }
+    /**
+     * <pre>
+     * Search results format.
+     * </pre>
+     *
+     * <code>.yandex.cloud.searchapi.v2.WebSearchRequest.Format response_format = 8;</code>
+     * @return The responseFormat.
+     */
+    @java.lang.Override public yandex.cloud.api.search.v2.SearchService.WebSearchRequest.Format getResponseFormat() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.search.v2.SearchService.WebSearchRequest.Format result = yandex.cloud.api.search.v2.SearchService.WebSearchRequest.Format.valueOf(responseFormat_);
+      return result == null ? yandex.cloud.api.search.v2.SearchService.WebSearchRequest.Format.UNRECOGNIZED : result;
+    }
+
+    public static final int USER_AGENT_FIELD_NUMBER = 9;
+    private volatile java.lang.Object userAgent_;
+    /**
+     * <pre>
+     * User-Agent request header value.
+     * </pre>
+     *
+     * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The userAgent.
+     */
+    @java.lang.Override
+    public java.lang.String getUserAgent() {
+      java.lang.Object ref = userAgent_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userAgent_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * User-Agent request header value.
+     * </pre>
+     *
+     * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The bytes for userAgent.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUserAgentBytes() {
+      java.lang.Object ref = userAgent_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userAgent_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2640,6 +2899,12 @@ public final class SearchService {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, folderId_);
       }
+      if (responseFormat_ != yandex.cloud.api.search.v2.SearchService.WebSearchRequest.Format.FORMAT_UNSPECIFIED.getNumber()) {
+        output.writeEnum(8, responseFormat_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userAgent_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, userAgent_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2674,6 +2939,13 @@ public final class SearchService {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, folderId_);
+      }
+      if (responseFormat_ != yandex.cloud.api.search.v2.SearchService.WebSearchRequest.Format.FORMAT_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(8, responseFormat_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userAgent_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, userAgent_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2712,6 +2984,9 @@ public final class SearchService {
       if (l10N_ != other.l10N_) return false;
       if (!getFolderId()
           .equals(other.getFolderId())) return false;
+      if (responseFormat_ != other.responseFormat_) return false;
+      if (!getUserAgent()
+          .equals(other.getUserAgent())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2744,6 +3019,10 @@ public final class SearchService {
       hash = (53 * hash) + l10N_;
       hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getFolderId().hashCode();
+      hash = (37 * hash) + RESPONSE_FORMAT_FIELD_NUMBER;
+      hash = (53 * hash) + responseFormat_;
+      hash = (37 * hash) + USER_AGENT_FIELD_NUMBER;
+      hash = (53 * hash) + getUserAgent().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2903,6 +3182,10 @@ public final class SearchService {
 
         folderId_ = "";
 
+        responseFormat_ = 0;
+
+        userAgent_ = "";
+
         return this;
       }
 
@@ -2948,6 +3231,8 @@ public final class SearchService {
         result.region_ = region_;
         result.l10N_ = l10N_;
         result.folderId_ = folderId_;
+        result.responseFormat_ = responseFormat_;
+        result.userAgent_ = userAgent_;
         onBuilt();
         return result;
       }
@@ -3017,6 +3302,13 @@ public final class SearchService {
         }
         if (!other.getFolderId().isEmpty()) {
           folderId_ = other.folderId_;
+          onChanged();
+        }
+        if (other.responseFormat_ != 0) {
+          setResponseFormatValue(other.getResponseFormatValue());
+        }
+        if (!other.getUserAgent().isEmpty()) {
+          userAgent_ = other.userAgent_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -3821,6 +4113,176 @@ public final class SearchService {
         onChanged();
         return this;
       }
+
+      private int responseFormat_ = 0;
+      /**
+       * <pre>
+       * Search results format.
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.WebSearchRequest.Format response_format = 8;</code>
+       * @return The enum numeric value on the wire for responseFormat.
+       */
+      @java.lang.Override public int getResponseFormatValue() {
+        return responseFormat_;
+      }
+      /**
+       * <pre>
+       * Search results format.
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.WebSearchRequest.Format response_format = 8;</code>
+       * @param value The enum numeric value on the wire for responseFormat to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResponseFormatValue(int value) {
+        
+        responseFormat_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Search results format.
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.WebSearchRequest.Format response_format = 8;</code>
+       * @return The responseFormat.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.search.v2.SearchService.WebSearchRequest.Format getResponseFormat() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.search.v2.SearchService.WebSearchRequest.Format result = yandex.cloud.api.search.v2.SearchService.WebSearchRequest.Format.valueOf(responseFormat_);
+        return result == null ? yandex.cloud.api.search.v2.SearchService.WebSearchRequest.Format.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Search results format.
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.WebSearchRequest.Format response_format = 8;</code>
+       * @param value The responseFormat to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResponseFormat(yandex.cloud.api.search.v2.SearchService.WebSearchRequest.Format value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        responseFormat_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Search results format.
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.WebSearchRequest.Format response_format = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResponseFormat() {
+        
+        responseFormat_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object userAgent_ = "";
+      /**
+       * <pre>
+       * User-Agent request header value.
+       * </pre>
+       *
+       * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return The userAgent.
+       */
+      public java.lang.String getUserAgent() {
+        java.lang.Object ref = userAgent_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userAgent_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User-Agent request header value.
+       * </pre>
+       *
+       * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return The bytes for userAgent.
+       */
+      public com.google.protobuf.ByteString
+          getUserAgentBytes() {
+        java.lang.Object ref = userAgent_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userAgent_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User-Agent request header value.
+       * </pre>
+       *
+       * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @param value The userAgent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserAgent(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        userAgent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User-Agent request header value.
+       * </pre>
+       *
+       * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserAgent() {
+        
+        userAgent_ = getDefaultInstance().getUserAgent();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User-Agent request header value.
+       * </pre>
+       *
+       * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @param value The bytes for userAgent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserAgentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        userAgent_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3880,7 +4342,7 @@ public final class SearchService {
 
     /**
      * <pre>
-     * Search results, usually in XML format.
+     * Search results, either in XML or HTML format depending on the request settings.
      * </pre>
      *
      * <code>bytes raw_data = 1 [(.yandex.cloud.required) = true];</code>
@@ -3975,7 +4437,7 @@ public final class SearchService {
     private com.google.protobuf.ByteString rawData_;
     /**
      * <pre>
-     * Search results, usually in XML format.
+     * Search results, either in XML or HTML format depending on the request settings.
      * </pre>
      *
      * <code>bytes raw_data = 1 [(.yandex.cloud.required) = true];</code>
@@ -4291,7 +4753,7 @@ public final class SearchService {
       private com.google.protobuf.ByteString rawData_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <pre>
-       * Search results, usually in XML format.
+       * Search results, either in XML or HTML format depending on the request settings.
        * </pre>
        *
        * <code>bytes raw_data = 1 [(.yandex.cloud.required) = true];</code>
@@ -4303,7 +4765,7 @@ public final class SearchService {
       }
       /**
        * <pre>
-       * Search results, usually in XML format.
+       * Search results, either in XML or HTML format depending on the request settings.
        * </pre>
        *
        * <code>bytes raw_data = 1 [(.yandex.cloud.required) = true];</code>
@@ -4321,7 +4783,7 @@ public final class SearchService {
       }
       /**
        * <pre>
-       * Search results, usually in XML format.
+       * Search results, either in XML or HTML format depending on the request settings.
        * </pre>
        *
        * <code>bytes raw_data = 1 [(.yandex.cloud.required) = true];</code>
@@ -4435,7 +4897,7 @@ public final class SearchService {
       "\t\372\3071\0051-100\022\036\n\rdocs_in_group\030\003 \001(\003B\007\372\3071\0031" +
       "-3\"Q\n\tGroupMode\022\032\n\026GROUP_MODE_UNSPECIFIE" +
       "D\020\000\022\023\n\017GROUP_MODE_FLAT\020\001\022\023\n\017GROUP_MODE_D" +
-      "EEP\020\002\"\202\004\n\020WebSearchRequest\022;\n\005query\030\001 \001(" +
+      "EEP\020\002\"\261\005\n\020WebSearchRequest\022;\n\005query\030\001 \001(" +
       "\0132&.yandex.cloud.searchapi.v2.SearchQuer" +
       "yB\004\350\3071\001\0226\n\tsort_spec\030\002 \001(\0132#.yandex.clou" +
       "d.searchapi.v2.SortSpec\0228\n\ngroup_spec\030\003 " +
@@ -4443,20 +4905,27 @@ public final class SearchService {
       "c\022\035\n\014max_passages\030\004 \001(\003B\007\372\3071\0031-5\022\016\n\006regi" +
       "on\030\005 \001(\t\022F\n\004l10n\030\006 \001(\01628.yandex.cloud.se" +
       "archapi.v2.WebSearchRequest.Localization" +
-      "\022\033\n\tfolder_id\030\007 \001(\tB\010\212\3101\004<=50\"\252\001\n\014Locali" +
-      "zation\022\034\n\030LOCALIZATION_UNSPECIFIED\020\000\022\023\n\017" +
-      "LOCALIZATION_RU\020\001\022\023\n\017LOCALIZATION_UK\020\002\022\023" +
-      "\n\017LOCALIZATION_BE\020\003\022\023\n\017LOCALIZATION_KK\020\004" +
-      "\022\023\n\017LOCALIZATION_TR\020\005\022\023\n\017LOCALIZATION_EN" +
-      "\020\006\"+\n\021WebSearchResponse\022\026\n\010raw_data\030\001 \001(" +
-      "\014B\004\350\3071\0012\251\001\n\025WebSearchAsyncService\022\217\001\n\006Se" +
-      "arch\022+.yandex.cloud.searchapi.v2.WebSear" +
-      "chRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"5\262\322*\023\022\021WebSearchResponse\202\323\344\223\002\030\"\023/v2" +
-      "/web/searchAsync:\001*Be\n\032yandex.cloud.api." +
-      "search.v2ZGgithub.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/searchapi/v2;searcha" +
-      "pib\006proto3"
+      "\022\033\n\tfolder_id\030\007 \001(\tB\010\212\3101\004<=50\022K\n\017respons" +
+      "e_format\030\010 \001(\01622.yandex.cloud.searchapi." +
+      "v2.WebSearchRequest.Format\022\035\n\nuser_agent" +
+      "\030\t \001(\tB\t\212\3101\005<=200\"\252\001\n\014Localization\022\034\n\030LO" +
+      "CALIZATION_UNSPECIFIED\020\000\022\023\n\017LOCALIZATION" +
+      "_RU\020\001\022\023\n\017LOCALIZATION_UK\020\002\022\023\n\017LOCALIZATI" +
+      "ON_BE\020\003\022\023\n\017LOCALIZATION_KK\020\004\022\023\n\017LOCALIZA" +
+      "TION_TR\020\005\022\023\n\017LOCALIZATION_EN\020\006\"A\n\006Format" +
+      "\022\026\n\022FORMAT_UNSPECIFIED\020\000\022\016\n\nFORMAT_XML\020\001" +
+      "\022\017\n\013FORMAT_HTML\020\002\"+\n\021WebSearchResponse\022\026" +
+      "\n\010raw_data\030\001 \001(\014B\004\350\3071\0012\251\001\n\025WebSearchAsyn" +
+      "cService\022\217\001\n\006Search\022+.yandex.cloud.searc" +
+      "hapi.v2.WebSearchRequest\032!.yandex.cloud." +
+      "operation.Operation\"5\262\322*\023\022\021WebSearchResp" +
+      "onse\202\323\344\223\002\030\"\023/v2/web/searchAsync:\001*2y\n\020We" +
+      "bSearchService\022e\n\006Search\022+.yandex.cloud." +
+      "searchapi.v2.WebSearchRequest\032,.yandex.c" +
+      "loud.searchapi.v2.WebSearchResponse\"\000Be\n" +
+      "\032yandex.cloud.api.search.v2ZGgithub.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/se" +
+      "archapi/v2;searchapib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4484,7 +4953,7 @@ public final class SearchService {
     internal_static_yandex_cloud_searchapi_v2_WebSearchRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_searchapi_v2_WebSearchRequest_descriptor,
-        new java.lang.String[] { "Query", "SortSpec", "GroupSpec", "MaxPassages", "Region", "L10N", "FolderId", });
+        new java.lang.String[] { "Query", "SortSpec", "GroupSpec", "MaxPassages", "Region", "L10N", "FolderId", "ResponseFormat", "UserAgent", });
     internal_static_yandex_cloud_searchapi_v2_WebSearchResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_searchapi_v2_WebSearchResponse_fieldAccessorTable = new

@@ -2943,6 +2943,21 @@ public final class PERC {
      */
     yandex.cloud.api.serverless.eventrouter.v1.PERC.MessageQueueOrBuilder getMessageQueueOrBuilder();
 
+    /**
+     * <code>.yandex.cloud.serverless.eventrouter.v1.Timer timer = 3;</code>
+     * @return Whether the timer field is set.
+     */
+    boolean hasTimer();
+    /**
+     * <code>.yandex.cloud.serverless.eventrouter.v1.Timer timer = 3;</code>
+     * @return The timer.
+     */
+    yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer getTimer();
+    /**
+     * <code>.yandex.cloud.serverless.eventrouter.v1.Timer timer = 3;</code>
+     */
+    yandex.cloud.api.serverless.eventrouter.v1.PERC.TimerOrBuilder getTimerOrBuilder();
+
     public yandex.cloud.api.serverless.eventrouter.v1.PERC.Source.SourceCase getSourceCase();
   }
   /**
@@ -3018,6 +3033,20 @@ public final class PERC {
               sourceCase_ = 2;
               break;
             }
+            case 26: {
+              yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer.Builder subBuilder = null;
+              if (sourceCase_ == 3) {
+                subBuilder = ((yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer) source_).toBuilder();
+              }
+              source_ =
+                  input.readMessage(yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer) source_);
+                source_ = subBuilder.buildPartial();
+              }
+              sourceCase_ = 3;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3057,6 +3086,7 @@ public final class PERC {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       DATA_STREAM(1),
       MESSAGE_QUEUE(2),
+      TIMER(3),
       SOURCE_NOT_SET(0);
       private final int value;
       private SourceCase(int value) {
@@ -3076,6 +3106,7 @@ public final class PERC {
         switch (value) {
           case 1: return DATA_STREAM;
           case 2: return MESSAGE_QUEUE;
+          case 3: return TIMER;
           case 0: return SOURCE_NOT_SET;
           default: return null;
         }
@@ -3153,6 +3184,37 @@ public final class PERC {
       return yandex.cloud.api.serverless.eventrouter.v1.PERC.MessageQueue.getDefaultInstance();
     }
 
+    public static final int TIMER_FIELD_NUMBER = 3;
+    /**
+     * <code>.yandex.cloud.serverless.eventrouter.v1.Timer timer = 3;</code>
+     * @return Whether the timer field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimer() {
+      return sourceCase_ == 3;
+    }
+    /**
+     * <code>.yandex.cloud.serverless.eventrouter.v1.Timer timer = 3;</code>
+     * @return The timer.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer getTimer() {
+      if (sourceCase_ == 3) {
+         return (yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer) source_;
+      }
+      return yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.serverless.eventrouter.v1.Timer timer = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.eventrouter.v1.PERC.TimerOrBuilder getTimerOrBuilder() {
+      if (sourceCase_ == 3) {
+         return (yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer) source_;
+      }
+      return yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3173,6 +3235,9 @@ public final class PERC {
       if (sourceCase_ == 2) {
         output.writeMessage(2, (yandex.cloud.api.serverless.eventrouter.v1.PERC.MessageQueue) source_);
       }
+      if (sourceCase_ == 3) {
+        output.writeMessage(3, (yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer) source_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3189,6 +3254,10 @@ public final class PERC {
       if (sourceCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, (yandex.cloud.api.serverless.eventrouter.v1.PERC.MessageQueue) source_);
+      }
+      if (sourceCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer) source_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3215,6 +3284,10 @@ public final class PERC {
           if (!getMessageQueue()
               .equals(other.getMessageQueue())) return false;
           break;
+        case 3:
+          if (!getTimer()
+              .equals(other.getTimer())) return false;
+          break;
         case 0:
         default:
       }
@@ -3237,6 +3310,10 @@ public final class PERC {
         case 2:
           hash = (37 * hash) + MESSAGE_QUEUE_FIELD_NUMBER;
           hash = (53 * hash) + getMessageQueue().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + TIMER_FIELD_NUMBER;
+          hash = (53 * hash) + getTimer().hashCode();
           break;
         case 0:
         default:
@@ -3416,6 +3493,13 @@ public final class PERC {
             result.source_ = messageQueueBuilder_.build();
           }
         }
+        if (sourceCase_ == 3) {
+          if (timerBuilder_ == null) {
+            result.source_ = source_;
+          } else {
+            result.source_ = timerBuilder_.build();
+          }
+        }
         result.sourceCase_ = sourceCase_;
         onBuilt();
         return result;
@@ -3472,6 +3556,10 @@ public final class PERC {
           }
           case MESSAGE_QUEUE: {
             mergeMessageQueue(other.getMessageQueue());
+            break;
+          }
+          case TIMER: {
+            mergeTimer(other.getTimer());
             break;
           }
           case SOURCE_NOT_SET: {
@@ -3802,6 +3890,147 @@ public final class PERC {
         sourceCase_ = 2;
         onChanged();;
         return messageQueueBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer, yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer.Builder, yandex.cloud.api.serverless.eventrouter.v1.PERC.TimerOrBuilder> timerBuilder_;
+      /**
+       * <code>.yandex.cloud.serverless.eventrouter.v1.Timer timer = 3;</code>
+       * @return Whether the timer field is set.
+       */
+      @java.lang.Override
+      public boolean hasTimer() {
+        return sourceCase_ == 3;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.eventrouter.v1.Timer timer = 3;</code>
+       * @return The timer.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer getTimer() {
+        if (timerBuilder_ == null) {
+          if (sourceCase_ == 3) {
+            return (yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer) source_;
+          }
+          return yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer.getDefaultInstance();
+        } else {
+          if (sourceCase_ == 3) {
+            return timerBuilder_.getMessage();
+          }
+          return yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.serverless.eventrouter.v1.Timer timer = 3;</code>
+       */
+      public Builder setTimer(yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer value) {
+        if (timerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          source_ = value;
+          onChanged();
+        } else {
+          timerBuilder_.setMessage(value);
+        }
+        sourceCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.eventrouter.v1.Timer timer = 3;</code>
+       */
+      public Builder setTimer(
+          yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer.Builder builderForValue) {
+        if (timerBuilder_ == null) {
+          source_ = builderForValue.build();
+          onChanged();
+        } else {
+          timerBuilder_.setMessage(builderForValue.build());
+        }
+        sourceCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.eventrouter.v1.Timer timer = 3;</code>
+       */
+      public Builder mergeTimer(yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer value) {
+        if (timerBuilder_ == null) {
+          if (sourceCase_ == 3 &&
+              source_ != yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer.getDefaultInstance()) {
+            source_ = yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer.newBuilder((yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer) source_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            source_ = value;
+          }
+          onChanged();
+        } else {
+          if (sourceCase_ == 3) {
+            timerBuilder_.mergeFrom(value);
+          }
+          timerBuilder_.setMessage(value);
+        }
+        sourceCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.eventrouter.v1.Timer timer = 3;</code>
+       */
+      public Builder clearTimer() {
+        if (timerBuilder_ == null) {
+          if (sourceCase_ == 3) {
+            sourceCase_ = 0;
+            source_ = null;
+            onChanged();
+          }
+        } else {
+          if (sourceCase_ == 3) {
+            sourceCase_ = 0;
+            source_ = null;
+          }
+          timerBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.eventrouter.v1.Timer timer = 3;</code>
+       */
+      public yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer.Builder getTimerBuilder() {
+        return getTimerFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.serverless.eventrouter.v1.Timer timer = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.eventrouter.v1.PERC.TimerOrBuilder getTimerOrBuilder() {
+        if ((sourceCase_ == 3) && (timerBuilder_ != null)) {
+          return timerBuilder_.getMessageOrBuilder();
+        } else {
+          if (sourceCase_ == 3) {
+            return (yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer) source_;
+          }
+          return yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.serverless.eventrouter.v1.Timer timer = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer, yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer.Builder, yandex.cloud.api.serverless.eventrouter.v1.PERC.TimerOrBuilder> 
+          getTimerFieldBuilder() {
+        if (timerBuilder_ == null) {
+          if (!(sourceCase_ == 3)) {
+            source_ = yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer.getDefaultInstance();
+          }
+          timerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer, yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer.Builder, yandex.cloud.api.serverless.eventrouter.v1.PERC.TimerOrBuilder>(
+                  (yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer) source_,
+                  getParentForChildren(),
+                  isClean());
+          source_ = null;
+        }
+        sourceCase_ = 3;
+        onChanged();;
+        return timerBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6443,6 +6672,982 @@ public final class PERC {
 
   }
 
+  public interface TimerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.eventrouter.v1.Timer)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * cron expression, with second precision
+     * </pre>
+     *
+     * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The cronExpression.
+     */
+    java.lang.String getCronExpression();
+    /**
+     * <pre>
+     * cron expression, with second precision
+     * </pre>
+     *
+     * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for cronExpression.
+     */
+    com.google.protobuf.ByteString
+        getCronExpressionBytes();
+
+    /**
+     * <pre>
+     * time zone, e.g. Europe/Moscow 
+     * </pre>
+     *
+     * <code>string time_zone = 2;</code>
+     * @return The timeZone.
+     */
+    java.lang.String getTimeZone();
+    /**
+     * <pre>
+     * time zone, e.g. Europe/Moscow 
+     * </pre>
+     *
+     * <code>string time_zone = 2;</code>
+     * @return The bytes for timeZone.
+     */
+    com.google.protobuf.ByteString
+        getTimeZoneBytes();
+
+    /**
+     * <pre>
+     * payload to send to target
+     * </pre>
+     *
+     * <code>string payload = 4 [(.yandex.cloud.length) = "&lt;=4096"];</code>
+     * @return The payload.
+     */
+    java.lang.String getPayload();
+    /**
+     * <pre>
+     * payload to send to target
+     * </pre>
+     *
+     * <code>string payload = 4 [(.yandex.cloud.length) = "&lt;=4096"];</code>
+     * @return The bytes for payload.
+     */
+    com.google.protobuf.ByteString
+        getPayloadBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.eventrouter.v1.Timer}
+   */
+  public static final class Timer extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.eventrouter.v1.Timer)
+      TimerOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Timer.newBuilder() to construct.
+    private Timer(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Timer() {
+      cronExpression_ = "";
+      timeZone_ = "";
+      payload_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Timer();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Timer(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              cronExpression_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              timeZone_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              payload_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.eventrouter.v1.PERC.internal_static_yandex_cloud_serverless_eventrouter_v1_Timer_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.eventrouter.v1.PERC.internal_static_yandex_cloud_serverless_eventrouter_v1_Timer_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer.class, yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer.Builder.class);
+    }
+
+    public static final int CRON_EXPRESSION_FIELD_NUMBER = 1;
+    private volatile java.lang.Object cronExpression_;
+    /**
+     * <pre>
+     * cron expression, with second precision
+     * </pre>
+     *
+     * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The cronExpression.
+     */
+    @java.lang.Override
+    public java.lang.String getCronExpression() {
+      java.lang.Object ref = cronExpression_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cronExpression_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * cron expression, with second precision
+     * </pre>
+     *
+     * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for cronExpression.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCronExpressionBytes() {
+      java.lang.Object ref = cronExpression_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cronExpression_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TIME_ZONE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object timeZone_;
+    /**
+     * <pre>
+     * time zone, e.g. Europe/Moscow 
+     * </pre>
+     *
+     * <code>string time_zone = 2;</code>
+     * @return The timeZone.
+     */
+    @java.lang.Override
+    public java.lang.String getTimeZone() {
+      java.lang.Object ref = timeZone_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        timeZone_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * time zone, e.g. Europe/Moscow 
+     * </pre>
+     *
+     * <code>string time_zone = 2;</code>
+     * @return The bytes for timeZone.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTimeZoneBytes() {
+      java.lang.Object ref = timeZone_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        timeZone_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAYLOAD_FIELD_NUMBER = 4;
+    private volatile java.lang.Object payload_;
+    /**
+     * <pre>
+     * payload to send to target
+     * </pre>
+     *
+     * <code>string payload = 4 [(.yandex.cloud.length) = "&lt;=4096"];</code>
+     * @return The payload.
+     */
+    @java.lang.Override
+    public java.lang.String getPayload() {
+      java.lang.Object ref = payload_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        payload_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * payload to send to target
+     * </pre>
+     *
+     * <code>string payload = 4 [(.yandex.cloud.length) = "&lt;=4096"];</code>
+     * @return The bytes for payload.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPayloadBytes() {
+      java.lang.Object ref = payload_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        payload_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cronExpression_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cronExpression_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timeZone_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, timeZone_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payload_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, payload_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cronExpression_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cronExpression_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timeZone_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, timeZone_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payload_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, payload_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer other = (yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer) obj;
+
+      if (!getCronExpression()
+          .equals(other.getCronExpression())) return false;
+      if (!getTimeZone()
+          .equals(other.getTimeZone())) return false;
+      if (!getPayload()
+          .equals(other.getPayload())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CRON_EXPRESSION_FIELD_NUMBER;
+      hash = (53 * hash) + getCronExpression().hashCode();
+      hash = (37 * hash) + TIME_ZONE_FIELD_NUMBER;
+      hash = (53 * hash) + getTimeZone().hashCode();
+      hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
+      hash = (53 * hash) + getPayload().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.eventrouter.v1.Timer}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.eventrouter.v1.Timer)
+        yandex.cloud.api.serverless.eventrouter.v1.PERC.TimerOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.eventrouter.v1.PERC.internal_static_yandex_cloud_serverless_eventrouter_v1_Timer_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.eventrouter.v1.PERC.internal_static_yandex_cloud_serverless_eventrouter_v1_Timer_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer.class, yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        cronExpression_ = "";
+
+        timeZone_ = "";
+
+        payload_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.eventrouter.v1.PERC.internal_static_yandex_cloud_serverless_eventrouter_v1_Timer_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer build() {
+        yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer buildPartial() {
+        yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer result = new yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer(this);
+        result.cronExpression_ = cronExpression_;
+        result.timeZone_ = timeZone_;
+        result.payload_ = payload_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer) {
+          return mergeFrom((yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer other) {
+        if (other == yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer.getDefaultInstance()) return this;
+        if (!other.getCronExpression().isEmpty()) {
+          cronExpression_ = other.cronExpression_;
+          onChanged();
+        }
+        if (!other.getTimeZone().isEmpty()) {
+          timeZone_ = other.timeZone_;
+          onChanged();
+        }
+        if (!other.getPayload().isEmpty()) {
+          payload_ = other.payload_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object cronExpression_ = "";
+      /**
+       * <pre>
+       * cron expression, with second precision
+       * </pre>
+       *
+       * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The cronExpression.
+       */
+      public java.lang.String getCronExpression() {
+        java.lang.Object ref = cronExpression_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cronExpression_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * cron expression, with second precision
+       * </pre>
+       *
+       * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for cronExpression.
+       */
+      public com.google.protobuf.ByteString
+          getCronExpressionBytes() {
+        java.lang.Object ref = cronExpression_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cronExpression_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * cron expression, with second precision
+       * </pre>
+       *
+       * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The cronExpression to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCronExpression(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        cronExpression_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * cron expression, with second precision
+       * </pre>
+       *
+       * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCronExpression() {
+        
+        cronExpression_ = getDefaultInstance().getCronExpression();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * cron expression, with second precision
+       * </pre>
+       *
+       * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for cronExpression to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCronExpressionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cronExpression_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object timeZone_ = "";
+      /**
+       * <pre>
+       * time zone, e.g. Europe/Moscow 
+       * </pre>
+       *
+       * <code>string time_zone = 2;</code>
+       * @return The timeZone.
+       */
+      public java.lang.String getTimeZone() {
+        java.lang.Object ref = timeZone_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          timeZone_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * time zone, e.g. Europe/Moscow 
+       * </pre>
+       *
+       * <code>string time_zone = 2;</code>
+       * @return The bytes for timeZone.
+       */
+      public com.google.protobuf.ByteString
+          getTimeZoneBytes() {
+        java.lang.Object ref = timeZone_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          timeZone_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * time zone, e.g. Europe/Moscow 
+       * </pre>
+       *
+       * <code>string time_zone = 2;</code>
+       * @param value The timeZone to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeZone(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        timeZone_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * time zone, e.g. Europe/Moscow 
+       * </pre>
+       *
+       * <code>string time_zone = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimeZone() {
+        
+        timeZone_ = getDefaultInstance().getTimeZone();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * time zone, e.g. Europe/Moscow 
+       * </pre>
+       *
+       * <code>string time_zone = 2;</code>
+       * @param value The bytes for timeZone to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeZoneBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        timeZone_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object payload_ = "";
+      /**
+       * <pre>
+       * payload to send to target
+       * </pre>
+       *
+       * <code>string payload = 4 [(.yandex.cloud.length) = "&lt;=4096"];</code>
+       * @return The payload.
+       */
+      public java.lang.String getPayload() {
+        java.lang.Object ref = payload_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          payload_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * payload to send to target
+       * </pre>
+       *
+       * <code>string payload = 4 [(.yandex.cloud.length) = "&lt;=4096"];</code>
+       * @return The bytes for payload.
+       */
+      public com.google.protobuf.ByteString
+          getPayloadBytes() {
+        java.lang.Object ref = payload_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          payload_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * payload to send to target
+       * </pre>
+       *
+       * <code>string payload = 4 [(.yandex.cloud.length) = "&lt;=4096"];</code>
+       * @param value The payload to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayload(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        payload_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * payload to send to target
+       * </pre>
+       *
+       * <code>string payload = 4 [(.yandex.cloud.length) = "&lt;=4096"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPayload() {
+        
+        payload_ = getDefaultInstance().getPayload();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * payload to send to target
+       * </pre>
+       *
+       * <code>string payload = 4 [(.yandex.cloud.length) = "&lt;=4096"];</code>
+       * @param value The bytes for payload to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayloadBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        payload_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.eventrouter.v1.Timer)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.eventrouter.v1.Timer)
+    private static final yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer();
+    }
+
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Timer>
+        PARSER = new com.google.protobuf.AbstractParser<Timer>() {
+      @java.lang.Override
+      public Timer parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Timer(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Timer> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Timer> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.eventrouter.v1.PERC.Timer getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_eventrouter_v1_Connector_descriptor;
   private static final 
@@ -6468,6 +7673,11 @@ public final class PERC {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_eventrouter_v1_MessageQueue_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_eventrouter_v1_Timer_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_eventrouter_v1_Timer_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -6497,24 +7707,28 @@ public final class PERC {
       "\020\000\022\013\n\007RUNNING\020\001\022\013\n\007STOPPED\020\002\022\026\n\022RESOURCE" +
       "_NOT_FOUND\020\003\022\025\n\021PERMISSION_DENIED\020\004\022\025\n\021S" +
       "UBJECT_NOT_FOUND\020\005\022\014\n\010DELETING\020\007\022\014\n\010CREA" +
-      "TING\020\010\"\262\001\n\006Source\022I\n\013data_stream\030\001 \001(\01322" +
+      "TING\020\010\"\362\001\n\006Source\022I\n\013data_stream\030\001 \001(\01322" +
       ".yandex.cloud.serverless.eventrouter.v1." +
       "DataStreamH\000\022M\n\rmessage_queue\030\002 \001(\01324.ya" +
       "ndex.cloud.serverless.eventrouter.v1.Mes" +
-      "sageQueueH\000B\016\n\006source\022\004\300\3011\001\"y\n\nDataStrea" +
-      "m\022\026\n\010database\030\001 \001(\tB\004\350\3071\001\022\031\n\013stream_name" +
-      "\030\002 \001(\tB\004\350\3071\001\022\026\n\010consumer\030\003 \001(\tB\004\350\3071\001\022 \n\022" +
-      "service_account_id\030\004 \001(\tB\004\350\3071\001\"\360\001\n\014Messa" +
-      "geQueue\022\027\n\tqueue_arn\030\001 \001(\tB\004\350\3071\001\022(\n\022serv" +
-      "ice_account_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022@\n\022vi" +
-      "sibility_timeout\030\003 \001(\0132\031.google.protobuf" +
-      ".DurationB\t\372\3071\005<=12h\022\034\n\nbatch_size\030\004 \001(\003" +
-      "B\010\372\3071\004<=10\022=\n\017polling_timeout\030\005 \001(\0132\031.go" +
-      "ogle.protobuf.DurationB\t\372\3071\005<=20sB\212\001\n*ya" +
-      "ndex.cloud.api.serverless.eventrouter.v1" +
-      "B\004PERCZVgithub.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/serverless/eventrouter/" +
-      "v1;eventrouterb\006proto3"
+      "sageQueueH\000\022>\n\005timer\030\003 \001(\0132-.yandex.clou" +
+      "d.serverless.eventrouter.v1.TimerH\000B\016\n\006s" +
+      "ource\022\004\300\3011\001\"y\n\nDataStream\022\026\n\010database\030\001 " +
+      "\001(\tB\004\350\3071\001\022\031\n\013stream_name\030\002 \001(\tB\004\350\3071\001\022\026\n\010" +
+      "consumer\030\003 \001(\tB\004\350\3071\001\022 \n\022service_account_" +
+      "id\030\004 \001(\tB\004\350\3071\001\"\360\001\n\014MessageQueue\022\027\n\tqueue" +
+      "_arn\030\001 \001(\tB\004\350\3071\001\022(\n\022service_account_id\030\002" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022@\n\022visibility_timeout" +
+      "\030\003 \001(\0132\031.google.protobuf.DurationB\t\372\3071\005<" +
+      "=12h\022\034\n\nbatch_size\030\004 \001(\003B\010\372\3071\004<=10\022=\n\017po" +
+      "lling_timeout\030\005 \001(\0132\031.google.protobuf.Du" +
+      "rationB\t\372\3071\005<=20s\"e\n\005Timer\022&\n\017cron_expre" +
+      "ssion\030\001 \001(\tB\r\350\3071\001\212\3101\005<=100\022\021\n\ttime_zone\030" +
+      "\002 \001(\t\022\033\n\007payload\030\004 \001(\tB\n\212\3101\006<=4096J\004\010\003\020\004" +
+      "B\212\001\n*yandex.cloud.api.serverless.eventro" +
+      "uter.v1B\004PERCZVgithub.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/serverless/event" +
+      "router/v1;eventrouterb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6540,7 +7754,7 @@ public final class PERC {
     internal_static_yandex_cloud_serverless_eventrouter_v1_Source_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_eventrouter_v1_Source_descriptor,
-        new java.lang.String[] { "DataStream", "MessageQueue", "Source", });
+        new java.lang.String[] { "DataStream", "MessageQueue", "Timer", "Source", });
     internal_static_yandex_cloud_serverless_eventrouter_v1_DataStream_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_serverless_eventrouter_v1_DataStream_fieldAccessorTable = new
@@ -6553,6 +7767,12 @@ public final class PERC {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_eventrouter_v1_MessageQueue_descriptor,
         new java.lang.String[] { "QueueArn", "ServiceAccountId", "VisibilityTimeout", "BatchSize", "PollingTimeout", });
+    internal_static_yandex_cloud_serverless_eventrouter_v1_Timer_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_serverless_eventrouter_v1_Timer_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_eventrouter_v1_Timer_descriptor,
+        new java.lang.String[] { "CronExpression", "TimeZone", "Payload", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);

@@ -168,6 +168,10 @@ public final class Jobs {
      * <code>CANCELLING = 7;</code>
      */
     CANCELLING(7),
+    /**
+     * <code>PREPARING = 8;</code>
+     */
+    PREPARING(8),
     UNRECOGNIZED(-1),
     ;
 
@@ -203,6 +207,10 @@ public final class Jobs {
      * <code>CANCELLING = 7;</code>
      */
     public static final int CANCELLING_VALUE = 7;
+    /**
+     * <code>PREPARING = 8;</code>
+     */
+    public static final int PREPARING_VALUE = 8;
 
 
     public final int getNumber() {
@@ -237,6 +245,7 @@ public final class Jobs {
         case 5: return ERROR;
         case 6: return CANCELLED;
         case 7: return CANCELLING;
+        case 8: return PREPARING;
         default: return null;
       }
     }
@@ -9498,6 +9507,17 @@ public final class Jobs {
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
+    /**
+     * <code>.yandex.cloud.datasphere.v2.jobs.FileUploadError.ErrorType type = 4;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <code>.yandex.cloud.datasphere.v2.jobs.FileUploadError.ErrorType type = 4;</code>
+     * @return The type.
+     */
+    yandex.cloud.api.datasphere.v2.jobs.Jobs.FileUploadError.ErrorType getType();
+
     public yandex.cloud.api.datasphere.v2.jobs.Jobs.FileUploadError.FileTypeCase getFileTypeCase();
   }
   /**
@@ -9514,6 +9534,7 @@ public final class Jobs {
     }
     private FileUploadError() {
       description_ = "";
+      type_ = 0;
     }
 
     @java.lang.Override
@@ -9572,6 +9593,12 @@ public final class Jobs {
               description_ = s;
               break;
             }
+            case 32: {
+              int rawValue = input.readEnum();
+
+              type_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -9602,6 +9629,123 @@ public final class Jobs {
       return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_FileUploadError_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               yandex.cloud.api.datasphere.v2.jobs.Jobs.FileUploadError.class, yandex.cloud.api.datasphere.v2.jobs.Jobs.FileUploadError.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.datasphere.v2.jobs.FileUploadError.ErrorType}
+     */
+    public enum ErrorType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>ERROR_TYPE_UNSPECIFIED = 0;</code>
+       */
+      ERROR_TYPE_UNSPECIFIED(0),
+      /**
+       * <code>UPLOAD_FAILED = 1;</code>
+       */
+      UPLOAD_FAILED(1),
+      /**
+       * <code>NOT_FOUND = 2;</code>
+       */
+      NOT_FOUND(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>ERROR_TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int ERROR_TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>UPLOAD_FAILED = 1;</code>
+       */
+      public static final int UPLOAD_FAILED_VALUE = 1;
+      /**
+       * <code>NOT_FOUND = 2;</code>
+       */
+      public static final int NOT_FOUND_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ErrorType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static ErrorType forNumber(int value) {
+        switch (value) {
+          case 0: return ERROR_TYPE_UNSPECIFIED;
+          case 1: return UPLOAD_FAILED;
+          case 2: return NOT_FOUND;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<ErrorType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          ErrorType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ErrorType>() {
+              public ErrorType findValueByNumber(int number) {
+                return ErrorType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.FileUploadError.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final ErrorType[] VALUES = values();
+
+      public static ErrorType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private ErrorType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.datasphere.v2.jobs.FileUploadError.ErrorType)
     }
 
     private int fileTypeCase_ = 0;
@@ -9766,6 +9910,25 @@ public final class Jobs {
       }
     }
 
+    public static final int TYPE_FIELD_NUMBER = 4;
+    private int type_;
+    /**
+     * <code>.yandex.cloud.datasphere.v2.jobs.FileUploadError.ErrorType type = 4;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <code>.yandex.cloud.datasphere.v2.jobs.FileUploadError.ErrorType type = 4;</code>
+     * @return The type.
+     */
+    @java.lang.Override public yandex.cloud.api.datasphere.v2.jobs.Jobs.FileUploadError.ErrorType getType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.datasphere.v2.jobs.Jobs.FileUploadError.ErrorType result = yandex.cloud.api.datasphere.v2.jobs.Jobs.FileUploadError.ErrorType.valueOf(type_);
+      return result == null ? yandex.cloud.api.datasphere.v2.jobs.Jobs.FileUploadError.ErrorType.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9789,6 +9952,9 @@ public final class Jobs {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
+      if (type_ != yandex.cloud.api.datasphere.v2.jobs.Jobs.FileUploadError.ErrorType.ERROR_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(4, type_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -9808,6 +9974,10 @@ public final class Jobs {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
+      if (type_ != yandex.cloud.api.datasphere.v2.jobs.Jobs.FileUploadError.ErrorType.ERROR_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, type_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -9825,6 +9995,7 @@ public final class Jobs {
 
       if (!getDescription()
           .equals(other.getDescription())) return false;
+      if (type_ != other.type_) return false;
       if (!getFileTypeCase().equals(other.getFileTypeCase())) return false;
       switch (fileTypeCase_) {
         case 1:
@@ -9851,6 +10022,8 @@ public final class Jobs {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
       switch (fileTypeCase_) {
         case 1:
           hash = (37 * hash) + OUTPUT_FILE_DESC_FIELD_NUMBER;
@@ -9998,6 +10171,8 @@ public final class Jobs {
         super.clear();
         description_ = "";
 
+        type_ = 0;
+
         fileTypeCase_ = 0;
         fileType_ = null;
         return this;
@@ -10037,6 +10212,7 @@ public final class Jobs {
           result.fileType_ = fileType_;
         }
         result.description_ = description_;
+        result.type_ = type_;
         result.fileTypeCase_ = fileTypeCase_;
         onBuilt();
         return result;
@@ -10089,6 +10265,9 @@ public final class Jobs {
         if (!other.getDescription().isEmpty()) {
           description_ = other.description_;
           onChanged();
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
         }
         switch (other.getFileTypeCase()) {
           case OUTPUT_FILE_DESC: {
@@ -10459,6 +10638,60 @@ public final class Jobs {
   checkByteStringIsUtf8(value);
         
         description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int type_ = 0;
+      /**
+       * <code>.yandex.cloud.datasphere.v2.jobs.FileUploadError.ErrorType type = 4;</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <code>.yandex.cloud.datasphere.v2.jobs.FileUploadError.ErrorType type = 4;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datasphere.v2.jobs.FileUploadError.ErrorType type = 4;</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.FileUploadError.ErrorType getType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.FileUploadError.ErrorType result = yandex.cloud.api.datasphere.v2.jobs.Jobs.FileUploadError.ErrorType.valueOf(type_);
+        return result == null ? yandex.cloud.api.datasphere.v2.jobs.Jobs.FileUploadError.ErrorType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.datasphere.v2.jobs.FileUploadError.ErrorType type = 4;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(yandex.cloud.api.datasphere.v2.jobs.Jobs.FileUploadError.ErrorType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datasphere.v2.jobs.FileUploadError.ErrorType type = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
         onChanged();
         return this;
       }
@@ -30193,86 +30426,90 @@ public final class Jobs {
       "O\n\013StorageFile\0223\n\004file\030\001 \001(\0132%.yandex.cl" +
       "oud.datasphere.v2.jobs.File\022\013\n\003url\030\002 \001(\t" +
       "\"%\n\010FileDesc\022\014\n\004path\030\001 \001(\t\022\013\n\003var\030\002 \001(\t\"" +
-      "\223\001\n\017FileUploadError\022E\n\020output_file_desc\030" +
+      "\250\002\n\017FileUploadError\022E\n\020output_file_desc\030" +
       "\001 \001(\0132).yandex.cloud.datasphere.v2.jobs." +
       "FileDescH\000\022\027\n\rlog_file_name\030\002 \001(\tH\000\022\023\n\013d" +
-      "escription\030\003 \001(\tB\013\n\tfile_type\"\303\002\n\013Enviro" +
-      "nment\022D\n\004vars\030\001 \003(\01326.yandex.cloud.datas" +
-      "phere.v2.jobs.Environment.VarsEntry\022\"\n\030d" +
-      "ocker_image_resource_id\030\002 \001(\tH\000\022M\n\021docke" +
-      "r_image_spec\030\003 \001(\01320.yandex.cloud.datasp" +
-      "here.v2.jobs.DockerImageSpecH\000\022>\n\npython" +
-      "_env\030\004 \001(\0132*.yandex.cloud.datasphere.v2." +
-      "jobs.PythonEnv\032+\n\tVarsEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n\014docker_image\"\204\001\n\017" +
-      "DockerImageSpec\022\021\n\timage_url\030\001 \001(\t\022\020\n\010us" +
-      "ername\030\002 \001(\t\022\035\n\023password_plain_text\030\003 \001(" +
-      "\tH\000\022!\n\027password_ds_secret_name\030\004 \001(\tH\000B\n" +
-      "\n\010password\"\315\001\n\tPythonEnv\022\022\n\nconda_yaml\030\001" +
-      " \001(\t\022<\n\rlocal_modules\030\002 \003(\0132%.yandex.clo" +
-      "ud.datasphere.v2.jobs.File\022\026\n\016python_ver" +
-      "sion\030\003 \001(\t\022\024\n\014requirements\030\004 \003(\t\022@\n\013pip_" +
-      "options\030\005 \001(\0132+.yandex.cloud.datasphere." +
-      "v2.jobs.PipOptions\"a\n\nPipOptions\022\021\n\tinde" +
-      "x_url\030\001 \001(\t\022\030\n\020extra_index_urls\030\002 \003(\t\022\025\n" +
-      "\rtrusted_hosts\030\003 \003(\t\022\017\n\007no_deps\030\004 \001(\010\"\323\001" +
-      "\n\021OutputDatasetDesc\022\014\n\004name\030\001 \001(\t\022\023\n\013des" +
-      "cription\030\002 \001(\t\022N\n\006labels\030\003 \003(\0132>.yandex." +
-      "cloud.datasphere.v2.jobs.OutputDatasetDe" +
-      "sc.LabelsEntry\022\017\n\007size_gb\030\004 \001(\003\022\013\n\003var\030\005" +
-      " \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\t:\0028\001\"]\n\rOutputDataset\022@\n\004desc\030\001 \001" +
-      "(\01322.yandex.cloud.datasphere.v2.jobs.Out" +
-      "putDatasetDesc\022\n\n\002id\030\002 \001(\t\"\260\007\n\003Job\022\n\n\002id" +
-      "\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n\004desc\030\003 \001(\t\022.\n\ncr" +
-      "eated_at\030\004 \001(\0132\032.google.protobuf.Timesta" +
-      "mp\022/\n\013finished_at\030\005 \001(\0132\032.google.protobu" +
-      "f.Timestamp\022:\n\006status\030\006 \001(\0162*.yandex.clo" +
-      "ud.datasphere.v2.jobs.JobStatus\022\016\n\006confi" +
-      "g\030\007 \001(\t\022\025\n\rcreated_by_id\030\010 \001(\t\022\022\n\nprojec" +
-      "t_id\030\t \001(\t\022F\n\016job_parameters\030\n \001(\0132..yan" +
-      "dex.cloud.datasphere.v2.jobs.JobParamete" +
-      "rs\0223\n\017data_expires_at\030\013 \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\022\024\n\014data_cleared\030\014 \001(\010\022;\n" +
-      "\014output_files\030\r \003(\0132%.yandex.cloud.datas" +
-      "phere.v2.jobs.File\0228\n\tlog_files\030\016 \003(\0132%." +
-      "yandex.cloud.datasphere.v2.jobs.File\022?\n\020" +
-      "diagnostic_files\030\017 \003(\0132%.yandex.cloud.da" +
-      "tasphere.v2.jobs.File\022\027\n\017data_size_bytes" +
-      "\030\020 \001(\003\022.\n\nstarted_at\030\021 \001(\0132\032.google.prot" +
-      "obuf.Timestamp\022\026\n\016status_details\030\022 \001(\t\022V" +
-      "\n\032actual_cloud_instance_type\030\023 \001(\01322.yan" +
-      "dex.cloud.datasphere.v2.jobs.CloudInstan" +
-      "ceType\022\025\n\rparent_job_id\030\024 \001(\t\022E\n\013file_er" +
-      "rors\030\025 \003(\01320.yandex.cloud.datasphere.v2." +
-      "jobs.FileUploadError\022G\n\017output_datasets\030" +
-      "\026 \003(\0132..yandex.cloud.datasphere.v2.jobs." +
-      "OutputDataset\" \n\tJobResult\022\023\n\013return_cod" +
-      "e\030\001 \001(\003\"X\n\032GracefulShutdownParameters\022*\n" +
-      "\007timeout\030\001 \001(\0132\031.google.protobuf.Duratio" +
-      "n\022\016\n\006signal\030\002 \001(\003\"\230\003\n\013JobMetadata\022\n\n\002id\030" +
-      "\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t" +
-      "\022.\n\ncreated_at\030\004 \001(\0132\032.google.protobuf.T" +
-      "imestamp\022.\n\nstarted_at\030\005 \001(\0132\032.google.pr" +
-      "otobuf.Timestamp\022/\n\013finished_at\030\006 \001(\0132\032." +
-      "google.protobuf.Timestamp\0223\n\017data_expire" +
-      "s_at\030\007 \001(\0132\032.google.protobuf.Timestamp\022:" +
-      "\n\006status\030\010 \001(\0162*.yandex.cloud.datasphere" +
-      ".v2.jobs.JobStatus\022\026\n\016status_details\030\t \001" +
-      "(\t\022\025\n\rcreated_by_id\030\n \001(\t\022\022\n\nproject_id\030" +
-      "\013 \001(\t\022\025\n\rparent_job_id\030\014 \001(\t\"a\n\013JobProgr" +
-      "ess\022\017\n\007message\030\001 \001(\t\022\020\n\010progress\030\002 \001(\003\022/" +
-      "\n\013create_time\030\003 \001(\0132\032.google.protobuf.Ti" +
-      "mestamp*O\n\023FileCompressionType\022%\n!FILE_C" +
-      "OMPRESSION_TYPE_UNSPECIFIED\020\000\022\010\n\004NONE\020\001\022" +
-      "\007\n\003ZIP\020\002*\221\001\n\tJobStatus\022\032\n\026JOB_STATUS_UNS" +
-      "PECIFIED\020\000\022\014\n\010CREATING\020\001\022\r\n\tEXECUTING\020\002\022" +
-      "\024\n\020UPLOADING_OUTPUT\020\003\022\013\n\007SUCCESS\020\004\022\t\n\005ER" +
-      "ROR\020\005\022\r\n\tCANCELLED\020\006\022\016\n\nCANCELLING\020\007B{\n#" +
-      "yandex.cloud.api.datasphere.v2.jobsB\004Job" +
-      "sZNgithub.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/datasphere/v2/jobs;dataspher" +
-      "eb\006proto3"
+      "escription\030\003 \001(\t\022H\n\004type\030\004 \001(\0162:.yandex." +
+      "cloud.datasphere.v2.jobs.FileUploadError" +
+      ".ErrorType\"I\n\tErrorType\022\032\n\026ERROR_TYPE_UN" +
+      "SPECIFIED\020\000\022\021\n\rUPLOAD_FAILED\020\001\022\r\n\tNOT_FO" +
+      "UND\020\002B\013\n\tfile_type\"\303\002\n\013Environment\022D\n\004va" +
+      "rs\030\001 \003(\01326.yandex.cloud.datasphere.v2.jo" +
+      "bs.Environment.VarsEntry\022\"\n\030docker_image" +
+      "_resource_id\030\002 \001(\tH\000\022M\n\021docker_image_spe" +
+      "c\030\003 \001(\01320.yandex.cloud.datasphere.v2.job" +
+      "s.DockerImageSpecH\000\022>\n\npython_env\030\004 \001(\0132" +
+      "*.yandex.cloud.datasphere.v2.jobs.Python" +
+      "Env\032+\n\tVarsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001B\016\n\014docker_image\"\204\001\n\017DockerImage" +
+      "Spec\022\021\n\timage_url\030\001 \001(\t\022\020\n\010username\030\002 \001(" +
+      "\t\022\035\n\023password_plain_text\030\003 \001(\tH\000\022!\n\027pass" +
+      "word_ds_secret_name\030\004 \001(\tH\000B\n\n\010password\"" +
+      "\315\001\n\tPythonEnv\022\022\n\nconda_yaml\030\001 \001(\t\022<\n\rloc" +
+      "al_modules\030\002 \003(\0132%.yandex.cloud.datasphe" +
+      "re.v2.jobs.File\022\026\n\016python_version\030\003 \001(\t\022" +
+      "\024\n\014requirements\030\004 \003(\t\022@\n\013pip_options\030\005 \001" +
+      "(\0132+.yandex.cloud.datasphere.v2.jobs.Pip" +
+      "Options\"a\n\nPipOptions\022\021\n\tindex_url\030\001 \001(\t" +
+      "\022\030\n\020extra_index_urls\030\002 \003(\t\022\025\n\rtrusted_ho" +
+      "sts\030\003 \003(\t\022\017\n\007no_deps\030\004 \001(\010\"\323\001\n\021OutputDat" +
+      "asetDesc\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 " +
+      "\001(\t\022N\n\006labels\030\003 \003(\0132>.yandex.cloud.datas" +
+      "phere.v2.jobs.OutputDatasetDesc.LabelsEn" +
+      "try\022\017\n\007size_gb\030\004 \001(\003\022\013\n\003var\030\005 \001(\t\032-\n\013Lab" +
+      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "\"]\n\rOutputDataset\022@\n\004desc\030\001 \001(\01322.yandex" +
+      ".cloud.datasphere.v2.jobs.OutputDatasetD" +
+      "esc\022\n\n\002id\030\002 \001(\t\"\260\007\n\003Job\022\n\n\002id\030\001 \001(\t\022\014\n\004n" +
+      "ame\030\002 \001(\t\022\014\n\004desc\030\003 \001(\t\022.\n\ncreated_at\030\004 " +
+      "\001(\0132\032.google.protobuf.Timestamp\022/\n\013finis" +
+      "hed_at\030\005 \001(\0132\032.google.protobuf.Timestamp" +
+      "\022:\n\006status\030\006 \001(\0162*.yandex.cloud.datasphe" +
+      "re.v2.jobs.JobStatus\022\016\n\006config\030\007 \001(\t\022\025\n\r" +
+      "created_by_id\030\010 \001(\t\022\022\n\nproject_id\030\t \001(\t\022" +
+      "F\n\016job_parameters\030\n \001(\0132..yandex.cloud.d" +
+      "atasphere.v2.jobs.JobParameters\0223\n\017data_" +
+      "expires_at\030\013 \001(\0132\032.google.protobuf.Times" +
+      "tamp\022\024\n\014data_cleared\030\014 \001(\010\022;\n\014output_fil" +
+      "es\030\r \003(\0132%.yandex.cloud.datasphere.v2.jo" +
+      "bs.File\0228\n\tlog_files\030\016 \003(\0132%.yandex.clou" +
+      "d.datasphere.v2.jobs.File\022?\n\020diagnostic_" +
+      "files\030\017 \003(\0132%.yandex.cloud.datasphere.v2" +
+      ".jobs.File\022\027\n\017data_size_bytes\030\020 \001(\003\022.\n\ns" +
+      "tarted_at\030\021 \001(\0132\032.google.protobuf.Timest" +
+      "amp\022\026\n\016status_details\030\022 \001(\t\022V\n\032actual_cl" +
+      "oud_instance_type\030\023 \001(\01322.yandex.cloud.d" +
+      "atasphere.v2.jobs.CloudInstanceType\022\025\n\rp" +
+      "arent_job_id\030\024 \001(\t\022E\n\013file_errors\030\025 \003(\0132" +
+      "0.yandex.cloud.datasphere.v2.jobs.FileUp" +
+      "loadError\022G\n\017output_datasets\030\026 \003(\0132..yan" +
+      "dex.cloud.datasphere.v2.jobs.OutputDatas" +
+      "et\" \n\tJobResult\022\023\n\013return_code\030\001 \001(\003\"X\n\032" +
+      "GracefulShutdownParameters\022*\n\007timeout\030\001 " +
+      "\001(\0132\031.google.protobuf.Duration\022\016\n\006signal" +
+      "\030\002 \001(\003\"\230\003\n\013JobMetadata\022\n\n\002id\030\001 \001(\t\022\014\n\004na" +
+      "me\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022.\n\ncreated" +
+      "_at\030\004 \001(\0132\032.google.protobuf.Timestamp\022.\n" +
+      "\nstarted_at\030\005 \001(\0132\032.google.protobuf.Time" +
+      "stamp\022/\n\013finished_at\030\006 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\0223\n\017data_expires_at\030\007 \001(\0132" +
+      "\032.google.protobuf.Timestamp\022:\n\006status\030\010 " +
+      "\001(\0162*.yandex.cloud.datasphere.v2.jobs.Jo" +
+      "bStatus\022\026\n\016status_details\030\t \001(\t\022\025\n\rcreat" +
+      "ed_by_id\030\n \001(\t\022\022\n\nproject_id\030\013 \001(\t\022\025\n\rpa" +
+      "rent_job_id\030\014 \001(\t\"a\n\013JobProgress\022\017\n\007mess" +
+      "age\030\001 \001(\t\022\020\n\010progress\030\002 \001(\003\022/\n\013create_ti" +
+      "me\030\003 \001(\0132\032.google.protobuf.Timestamp*O\n\023" +
+      "FileCompressionType\022%\n!FILE_COMPRESSION_" +
+      "TYPE_UNSPECIFIED\020\000\022\010\n\004NONE\020\001\022\007\n\003ZIP\020\002*\240\001" +
+      "\n\tJobStatus\022\032\n\026JOB_STATUS_UNSPECIFIED\020\000\022" +
+      "\014\n\010CREATING\020\001\022\r\n\tEXECUTING\020\002\022\024\n\020UPLOADIN" +
+      "G_OUTPUT\020\003\022\013\n\007SUCCESS\020\004\022\t\n\005ERROR\020\005\022\r\n\tCA" +
+      "NCELLED\020\006\022\016\n\nCANCELLING\020\007\022\r\n\tPREPARING\020\010" +
+      "B{\n#yandex.cloud.api.datasphere.v2.jobsB" +
+      "\004JobsZNgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/datasphere/v2/jobs;datas" +
+      "phereb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -30328,7 +30565,7 @@ public final class Jobs {
     internal_static_yandex_cloud_datasphere_v2_jobs_FileUploadError_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_FileUploadError_descriptor,
-        new java.lang.String[] { "OutputFileDesc", "LogFileName", "Description", "FileType", });
+        new java.lang.String[] { "OutputFileDesc", "LogFileName", "Description", "Type", "FileType", });
     internal_static_yandex_cloud_datasphere_v2_jobs_Environment_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_datasphere_v2_jobs_Environment_fieldAccessorTable = new

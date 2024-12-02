@@ -328,6 +328,37 @@ public final class DatasetServiceGrpc {
     return getFinishMultipartUploadDraftMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesRequest,
+      yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesResponse> getListTypesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListTypes",
+      requestType = yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesRequest.class,
+      responseType = yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesRequest,
+      yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesResponse> getListTypesMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesRequest, yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesResponse> getListTypesMethod;
+    if ((getListTypesMethod = DatasetServiceGrpc.getListTypesMethod) == null) {
+      synchronized (DatasetServiceGrpc.class) {
+        if ((getListTypesMethod = DatasetServiceGrpc.getListTypesMethod) == null) {
+          DatasetServiceGrpc.getListTypesMethod = getListTypesMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesRequest, yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListTypes"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DatasetServiceMethodDescriptorSupplier("ListTypes"))
+              .build();
+        }
+      }
+    }
+    return getListTypesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -480,6 +511,16 @@ public final class DatasetServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFinishMultipartUploadDraftMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Returns a list of dataset types
+     * </pre>
+     */
+    public void listTypes(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTypesMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -552,6 +593,13 @@ public final class DatasetServiceGrpc {
                 yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.FinishMultipartUploadDraftRequest,
                 yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.FinishMultipartUploadDraftResponse>(
                   this, METHODID_FINISH_MULTIPART_UPLOAD_DRAFT)))
+          .addMethod(
+            getListTypesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesRequest,
+                yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesResponse>(
+                  this, METHODID_LIST_TYPES)))
           .build();
     }
   }
@@ -683,6 +731,17 @@ public final class DatasetServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getFinishMultipartUploadDraftMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Returns a list of dataset types
+     * </pre>
+     */
+    public void listTypes(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListTypesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -801,6 +860,16 @@ public final class DatasetServiceGrpc {
     public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.FinishMultipartUploadDraftResponse finishMultipartUploadDraft(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.FinishMultipartUploadDraftRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getFinishMultipartUploadDraftMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns a list of dataset types
+     * </pre>
+     */
+    public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesResponse listTypes(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListTypesMethod(), getCallOptions(), request);
     }
   }
 
@@ -931,6 +1000,17 @@ public final class DatasetServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getFinishMultipartUploadDraftMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Returns a list of dataset types
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesResponse> listTypes(
+        yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListTypesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_DESCRIBE = 0;
@@ -943,6 +1023,7 @@ public final class DatasetServiceGrpc {
   private static final int METHODID_GET_UPLOAD_DRAFT_URL = 7;
   private static final int METHODID_START_MULTIPART_UPLOAD_DRAFT = 8;
   private static final int METHODID_FINISH_MULTIPART_UPLOAD_DRAFT = 9;
+  private static final int METHODID_LIST_TYPES = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1000,6 +1081,10 @@ public final class DatasetServiceGrpc {
         case METHODID_FINISH_MULTIPART_UPLOAD_DRAFT:
           serviceImpl.finishMultipartUploadDraft((yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.FinishMultipartUploadDraftRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.FinishMultipartUploadDraftResponse>) responseObserver);
+          break;
+        case METHODID_LIST_TYPES:
+          serviceImpl.listTypes((yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1072,6 +1157,7 @@ public final class DatasetServiceGrpc {
               .addMethod(getGetUploadDraftUrlMethod())
               .addMethod(getStartMultipartUploadDraftMethod())
               .addMethod(getFinishMultipartUploadDraftMethod())
+              .addMethod(getListTypesMethod())
               .build();
         }
       }
