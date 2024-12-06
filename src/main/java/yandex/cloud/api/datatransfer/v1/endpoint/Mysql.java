@@ -3282,7 +3282,7 @@ public final class Mysql {
 
     /**
      * <pre>
-     * User for database access.
+     * User for database access. not required as may be in connection
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -3291,7 +3291,7 @@ public final class Mysql {
     java.lang.String getUser();
     /**
      * <pre>
-     * User for database access.
+     * User for database access. not required as may be in connection
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -3781,7 +3781,7 @@ public final class Mysql {
     private volatile java.lang.Object user_;
     /**
      * <pre>
-     * User for database access.
+     * User for database access. not required as may be in connection
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -3802,7 +3802,7 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * User for database access.
+     * User for database access. not required as may be in connection
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -4946,7 +4946,7 @@ public final class Mysql {
       private java.lang.Object user_ = "";
       /**
        * <pre>
-       * User for database access.
+       * User for database access. not required as may be in connection
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -4966,7 +4966,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * User for database access.
+       * User for database access. not required as may be in connection
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -4987,7 +4987,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * User for database access.
+       * User for database access. not required as may be in connection
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -5006,7 +5006,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * User for database access.
+       * User for database access. not required as may be in connection
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -5020,7 +5020,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * User for database access.
+       * User for database access. not required as may be in connection
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -6068,7 +6068,7 @@ public final class Mysql {
 
     /**
      * <pre>
-     * User for database access.
+     * User for database access. not required as may be in connection
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -6077,7 +6077,7 @@ public final class Mysql {
     java.lang.String getUser();
     /**
      * <pre>
-     * User for database access.
+     * User for database access. not required as may be in connection
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -6523,7 +6523,7 @@ public final class Mysql {
     private volatile java.lang.Object user_;
     /**
      * <pre>
-     * User for database access.
+     * User for database access. not required as may be in connection
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -6544,7 +6544,7 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * User for database access.
+     * User for database access. not required as may be in connection
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -7628,7 +7628,7 @@ public final class Mysql {
       private java.lang.Object user_ = "";
       /**
        * <pre>
-       * User for database access.
+       * User for database access. not required as may be in connection
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -7648,7 +7648,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * User for database access.
+       * User for database access. not required as may be in connection
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -7669,7 +7669,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * User for database access.
+       * User for database access. not required as may be in connection
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -7688,7 +7688,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * User for database access.
+       * User for database access. not required as may be in connection
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -7702,7 +7702,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * User for database access.
+       * User for database access. not required as may be in connection
        * </pre>
        *
        * <code>string user = 3;</code>

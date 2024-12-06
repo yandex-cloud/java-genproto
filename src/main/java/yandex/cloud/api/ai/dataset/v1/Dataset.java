@@ -346,6 +346,30 @@ public final class Dataset {
      */
     com.google.protobuf.ByteString
         getUpdatedByBytes();
+
+    /**
+     * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError> 
+        getValidationErrorList();
+    /**
+     * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+     */
+    yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError getValidationError(int index);
+    /**
+     * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+     */
+    int getValidationErrorCount();
+    /**
+     * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.dataset.v1.Dataset.ValidationErrorOrBuilder> 
+        getValidationErrorOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+     */
+    yandex.cloud.api.ai.dataset.v1.Dataset.ValidationErrorOrBuilder getValidationErrorOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -374,6 +398,7 @@ public final class Dataset {
       createdById_ = "";
       createdBy_ = "";
       updatedBy_ = "";
+      validationError_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -516,6 +541,15 @@ public final class Dataset {
               updatedBy_ = s;
               break;
             }
+            case 170: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                validationError_ = new java.util.ArrayList<yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              validationError_.add(
+                  input.readMessage(yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -531,6 +565,9 @@ public final class Dataset {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          validationError_ = java.util.Collections.unmodifiableList(validationError_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -1354,6 +1391,46 @@ public final class Dataset {
       }
     }
 
+    public static final int VALIDATION_ERROR_FIELD_NUMBER = 21;
+    private java.util.List<yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError> validationError_;
+    /**
+     * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError> getValidationErrorList() {
+      return validationError_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.dataset.v1.Dataset.ValidationErrorOrBuilder> 
+        getValidationErrorOrBuilderList() {
+      return validationError_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+     */
+    @java.lang.Override
+    public int getValidationErrorCount() {
+      return validationError_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError getValidationError(int index) {
+      return validationError_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.dataset.v1.Dataset.ValidationErrorOrBuilder getValidationErrorOrBuilder(
+        int index) {
+      return validationError_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1415,6 +1492,9 @@ public final class Dataset {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(updatedBy_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 15, updatedBy_);
+      }
+      for (int i = 0; i < validationError_.size(); i++) {
+        output.writeMessage(21, validationError_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -1482,6 +1562,10 @@ public final class Dataset {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(updatedBy_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, updatedBy_);
       }
+      for (int i = 0; i < validationError_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(21, validationError_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1532,6 +1616,8 @@ public final class Dataset {
           .equals(other.getCreatedBy())) return false;
       if (!getUpdatedBy()
           .equals(other.getUpdatedBy())) return false;
+      if (!getValidationErrorList()
+          .equals(other.getValidationErrorList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1581,6 +1667,10 @@ public final class Dataset {
       hash = (53 * hash) + getCreatedBy().hashCode();
       hash = (37 * hash) + UPDATED_BY_FIELD_NUMBER;
       hash = (53 * hash) + getUpdatedBy().hashCode();
+      if (getValidationErrorCount() > 0) {
+        hash = (37 * hash) + VALIDATION_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getValidationErrorList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1735,6 +1825,7 @@ public final class Dataset {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getValidationErrorFieldBuilder();
         }
       }
       @java.lang.Override
@@ -1777,6 +1868,12 @@ public final class Dataset {
 
         updatedBy_ = "";
 
+        if (validationErrorBuilder_ == null) {
+          validationError_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          validationErrorBuilder_.clear();
+        }
         return this;
       }
 
@@ -1828,6 +1925,15 @@ public final class Dataset {
         result.labels_.makeImmutable();
         result.createdBy_ = createdBy_;
         result.updatedBy_ = updatedBy_;
+        if (validationErrorBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            validationError_ = java.util.Collections.unmodifiableList(validationError_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.validationError_ = validationError_;
+        } else {
+          result.validationError_ = validationErrorBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1928,6 +2034,32 @@ public final class Dataset {
         if (!other.getUpdatedBy().isEmpty()) {
           updatedBy_ = other.updatedBy_;
           onChanged();
+        }
+        if (validationErrorBuilder_ == null) {
+          if (!other.validationError_.isEmpty()) {
+            if (validationError_.isEmpty()) {
+              validationError_ = other.validationError_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureValidationErrorIsMutable();
+              validationError_.addAll(other.validationError_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.validationError_.isEmpty()) {
+            if (validationErrorBuilder_.isEmpty()) {
+              validationErrorBuilder_.dispose();
+              validationErrorBuilder_ = null;
+              validationError_ = other.validationError_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              validationErrorBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getValidationErrorFieldBuilder() : null;
+            } else {
+              validationErrorBuilder_.addAllMessages(other.validationError_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3456,6 +3588,246 @@ public final class Dataset {
         onChanged();
         return this;
       }
+
+      private java.util.List<yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError> validationError_ =
+        java.util.Collections.emptyList();
+      private void ensureValidationErrorIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          validationError_ = new java.util.ArrayList<yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError>(validationError_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError, yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError.Builder, yandex.cloud.api.ai.dataset.v1.Dataset.ValidationErrorOrBuilder> validationErrorBuilder_;
+
+      /**
+       * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError> getValidationErrorList() {
+        if (validationErrorBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(validationError_);
+        } else {
+          return validationErrorBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+       */
+      public int getValidationErrorCount() {
+        if (validationErrorBuilder_ == null) {
+          return validationError_.size();
+        } else {
+          return validationErrorBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+       */
+      public yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError getValidationError(int index) {
+        if (validationErrorBuilder_ == null) {
+          return validationError_.get(index);
+        } else {
+          return validationErrorBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+       */
+      public Builder setValidationError(
+          int index, yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError value) {
+        if (validationErrorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValidationErrorIsMutable();
+          validationError_.set(index, value);
+          onChanged();
+        } else {
+          validationErrorBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+       */
+      public Builder setValidationError(
+          int index, yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError.Builder builderForValue) {
+        if (validationErrorBuilder_ == null) {
+          ensureValidationErrorIsMutable();
+          validationError_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          validationErrorBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+       */
+      public Builder addValidationError(yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError value) {
+        if (validationErrorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValidationErrorIsMutable();
+          validationError_.add(value);
+          onChanged();
+        } else {
+          validationErrorBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+       */
+      public Builder addValidationError(
+          int index, yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError value) {
+        if (validationErrorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValidationErrorIsMutable();
+          validationError_.add(index, value);
+          onChanged();
+        } else {
+          validationErrorBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+       */
+      public Builder addValidationError(
+          yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError.Builder builderForValue) {
+        if (validationErrorBuilder_ == null) {
+          ensureValidationErrorIsMutable();
+          validationError_.add(builderForValue.build());
+          onChanged();
+        } else {
+          validationErrorBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+       */
+      public Builder addValidationError(
+          int index, yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError.Builder builderForValue) {
+        if (validationErrorBuilder_ == null) {
+          ensureValidationErrorIsMutable();
+          validationError_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          validationErrorBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+       */
+      public Builder addAllValidationError(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError> values) {
+        if (validationErrorBuilder_ == null) {
+          ensureValidationErrorIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, validationError_);
+          onChanged();
+        } else {
+          validationErrorBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+       */
+      public Builder clearValidationError() {
+        if (validationErrorBuilder_ == null) {
+          validationError_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          validationErrorBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+       */
+      public Builder removeValidationError(int index) {
+        if (validationErrorBuilder_ == null) {
+          ensureValidationErrorIsMutable();
+          validationError_.remove(index);
+          onChanged();
+        } else {
+          validationErrorBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+       */
+      public yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError.Builder getValidationErrorBuilder(
+          int index) {
+        return getValidationErrorFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+       */
+      public yandex.cloud.api.ai.dataset.v1.Dataset.ValidationErrorOrBuilder getValidationErrorOrBuilder(
+          int index) {
+        if (validationErrorBuilder_ == null) {
+          return validationError_.get(index);  } else {
+          return validationErrorBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.dataset.v1.Dataset.ValidationErrorOrBuilder> 
+           getValidationErrorOrBuilderList() {
+        if (validationErrorBuilder_ != null) {
+          return validationErrorBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(validationError_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+       */
+      public yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError.Builder addValidationErrorBuilder() {
+        return getValidationErrorFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+       */
+      public yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError.Builder addValidationErrorBuilder(
+          int index) {
+        return getValidationErrorFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.dataset.v1.ValidationError validation_error = 21;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError.Builder> 
+           getValidationErrorBuilderList() {
+        return getValidationErrorFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError, yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError.Builder, yandex.cloud.api.ai.dataset.v1.Dataset.ValidationErrorOrBuilder> 
+          getValidationErrorFieldBuilder() {
+        if (validationErrorBuilder_ == null) {
+          validationErrorBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError, yandex.cloud.api.ai.dataset.v1.Dataset.ValidationError.Builder, yandex.cloud.api.ai.dataset.v1.Dataset.ValidationErrorOrBuilder>(
+                  validationError_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          validationError_ = null;
+        }
+        return validationErrorBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4582,7 +4954,7 @@ public final class Dataset {
     java.lang.String[] descriptorData = {
       "\n(yandex/cloud/ai/dataset/v1/dataset.pro" +
       "to\022\032yandex.cloud.ai.dataset.v1\032\037google/p" +
-      "rotobuf/timestamp.proto\"\330\004\n\013DatasetInfo\022" +
+      "rotobuf/timestamp.proto\"\245\005\n\013DatasetInfo\022" +
       "\022\n\ndataset_id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022\014" +
       "\n\004name\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022\020\n\010met" +
       "adata\030\005 \001(\t\022>\n\006status\030\006 \001(\0162..yandex.clo" +
@@ -4594,15 +4966,17 @@ public final class Dataset {
       "d\030\014 \001(\tB\002\030\001\022C\n\006labels\030\r \003(\01323.yandex.clo" +
       "ud.ai.dataset.v1.DatasetInfo.LabelsEntry" +
       "\022\022\n\ncreated_by\030\016 \001(\t\022\022\n\nupdated_by\030\017 \001(\t" +
-      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001\"a\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020" +
-      "\000\022\t\n\005DRAFT\020\001\022\016\n\nVALIDATING\020\002\022\t\n\005READY\020\003\022" +
-      "\013\n\007INVALID\020\004\022\014\n\010DELETING\020\005\"P\n\017Validation" +
-      "Error\022\r\n\005error\030\001 \001(\t\022\031\n\021error_descriptio" +
-      "n\030\002 \001(\t\022\023\n\013row_numbers\030\003 \003(\003Be\n\036yandex.c" +
-      "loud.api.ai.dataset.v1ZCgithub.com/yande" +
-      "x-cloud/go-genproto/yandex/cloud/ai/data" +
-      "set/v1;fomob\006proto3"
+      "\022E\n\020validation_error\030\025 \003(\0132+.yandex.clou" +
+      "d.ai.dataset.v1.ValidationError\032-\n\013Label" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"a" +
+      "\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\t\n\005DRAF" +
+      "T\020\001\022\016\n\nVALIDATING\020\002\022\t\n\005READY\020\003\022\013\n\007INVALI" +
+      "D\020\004\022\014\n\010DELETING\020\005J\004\010\020\020\025\"P\n\017ValidationErr" +
+      "or\022\r\n\005error\030\001 \001(\t\022\031\n\021error_description\030\002" +
+      " \001(\t\022\023\n\013row_numbers\030\003 \003(\003Be\n\036yandex.clou" +
+      "d.api.ai.dataset.v1ZCgithub.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/ai/dataset" +
+      "/v1;fomob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4614,7 +4988,7 @@ public final class Dataset {
     internal_static_yandex_cloud_ai_dataset_v1_DatasetInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_dataset_v1_DatasetInfo_descriptor,
-        new java.lang.String[] { "DatasetId", "FolderId", "Name", "Description", "Metadata", "Status", "TaskType", "CreatedAt", "UpdatedAt", "Rows", "SizeBytes", "CreatedById", "Labels", "CreatedBy", "UpdatedBy", });
+        new java.lang.String[] { "DatasetId", "FolderId", "Name", "Description", "Metadata", "Status", "TaskType", "CreatedAt", "UpdatedAt", "Rows", "SizeBytes", "CreatedById", "Labels", "CreatedBy", "UpdatedBy", "ValidationError", });
     internal_static_yandex_cloud_ai_dataset_v1_DatasetInfo_LabelsEntry_descriptor =
       internal_static_yandex_cloud_ai_dataset_v1_DatasetInfo_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_ai_dataset_v1_DatasetInfo_LabelsEntry_fieldAccessorTable = new

@@ -718,6 +718,33 @@ public final class Jobs {
      * <code>.yandex.cloud.datasphere.v2.jobs.GracefulShutdownParameters graceful_shutdown_parameters = 12;</code>
      */
     yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParametersOrBuilder getGracefulShutdownParametersOrBuilder();
+
+    /**
+     * <pre>
+     * Spark connector settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.SparkParameters spark_parameters = 13;</code>
+     * @return Whether the sparkParameters field is set.
+     */
+    boolean hasSparkParameters();
+    /**
+     * <pre>
+     * Spark connector settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.SparkParameters spark_parameters = 13;</code>
+     * @return The sparkParameters.
+     */
+    yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters getSparkParameters();
+    /**
+     * <pre>
+     * Spark connector settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.SparkParameters spark_parameters = 13;</code>
+     */
+    yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParametersOrBuilder getSparkParametersOrBuilder();
   }
   /**
    * <pre>
@@ -886,6 +913,19 @@ public final class Jobs {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(gracefulShutdownParameters_);
                 gracefulShutdownParameters_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 106: {
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters.Builder subBuilder = null;
+              if (sparkParameters_ != null) {
+                subBuilder = sparkParameters_.toBuilder();
+              }
+              sparkParameters_ = input.readMessage(yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(sparkParameters_);
+                sparkParameters_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1520,6 +1560,44 @@ public final class Jobs {
       return getGracefulShutdownParameters();
     }
 
+    public static final int SPARK_PARAMETERS_FIELD_NUMBER = 13;
+    private yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters sparkParameters_;
+    /**
+     * <pre>
+     * Spark connector settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.SparkParameters spark_parameters = 13;</code>
+     * @return Whether the sparkParameters field is set.
+     */
+    @java.lang.Override
+    public boolean hasSparkParameters() {
+      return sparkParameters_ != null;
+    }
+    /**
+     * <pre>
+     * Spark connector settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.SparkParameters spark_parameters = 13;</code>
+     * @return The sparkParameters.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters getSparkParameters() {
+      return sparkParameters_ == null ? yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters.getDefaultInstance() : sparkParameters_;
+    }
+    /**
+     * <pre>
+     * Spark connector settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.SparkParameters spark_parameters = 13;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParametersOrBuilder getSparkParametersOrBuilder() {
+      return getSparkParameters();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1569,6 +1647,9 @@ public final class Jobs {
       }
       if (gracefulShutdownParameters_ != null) {
         output.writeMessage(12, getGracefulShutdownParameters());
+      }
+      if (sparkParameters_ != null) {
+        output.writeMessage(13, getSparkParameters());
       }
       unknownFields.writeTo(output);
     }
@@ -1634,6 +1715,10 @@ public final class Jobs {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getGracefulShutdownParameters());
       }
+      if (sparkParameters_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getSparkParameters());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1681,6 +1766,11 @@ public final class Jobs {
       if (hasGracefulShutdownParameters()) {
         if (!getGracefulShutdownParameters()
             .equals(other.getGracefulShutdownParameters())) return false;
+      }
+      if (hasSparkParameters() != other.hasSparkParameters()) return false;
+      if (hasSparkParameters()) {
+        if (!getSparkParameters()
+            .equals(other.getSparkParameters())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -1737,6 +1827,10 @@ public final class Jobs {
       if (hasGracefulShutdownParameters()) {
         hash = (37 * hash) + GRACEFUL_SHUTDOWN_PARAMETERS_FIELD_NUMBER;
         hash = (53 * hash) + getGracefulShutdownParameters().hashCode();
+      }
+      if (hasSparkParameters()) {
+        hash = (37 * hash) + SPARK_PARAMETERS_FIELD_NUMBER;
+        hash = (53 * hash) + getSparkParameters().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1936,6 +2030,12 @@ public final class Jobs {
           gracefulShutdownParameters_ = null;
           gracefulShutdownParametersBuilder_ = null;
         }
+        if (sparkParametersBuilder_ == null) {
+          sparkParameters_ = null;
+        } else {
+          sparkParameters_ = null;
+          sparkParametersBuilder_ = null;
+        }
         return this;
       }
 
@@ -2034,6 +2134,11 @@ public final class Jobs {
           result.gracefulShutdownParameters_ = gracefulShutdownParameters_;
         } else {
           result.gracefulShutdownParameters_ = gracefulShutdownParametersBuilder_.build();
+        }
+        if (sparkParametersBuilder_ == null) {
+          result.sparkParameters_ = sparkParameters_;
+        } else {
+          result.sparkParameters_ = sparkParametersBuilder_.build();
         }
         onBuilt();
         return result;
@@ -2248,6 +2353,9 @@ public final class Jobs {
         }
         if (other.hasGracefulShutdownParameters()) {
           mergeGracefulShutdownParameters(other.getGracefulShutdownParameters());
+        }
+        if (other.hasSparkParameters()) {
+          mergeSparkParameters(other.getSparkParameters());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4733,6 +4841,161 @@ public final class Jobs {
           gracefulShutdownParameters_ = null;
         }
         return gracefulShutdownParametersBuilder_;
+      }
+
+      private yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters sparkParameters_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters, yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParametersOrBuilder> sparkParametersBuilder_;
+      /**
+       * <pre>
+       * Spark connector settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.SparkParameters spark_parameters = 13;</code>
+       * @return Whether the sparkParameters field is set.
+       */
+      public boolean hasSparkParameters() {
+        return sparkParametersBuilder_ != null || sparkParameters_ != null;
+      }
+      /**
+       * <pre>
+       * Spark connector settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.SparkParameters spark_parameters = 13;</code>
+       * @return The sparkParameters.
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters getSparkParameters() {
+        if (sparkParametersBuilder_ == null) {
+          return sparkParameters_ == null ? yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters.getDefaultInstance() : sparkParameters_;
+        } else {
+          return sparkParametersBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Spark connector settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.SparkParameters spark_parameters = 13;</code>
+       */
+      public Builder setSparkParameters(yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters value) {
+        if (sparkParametersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sparkParameters_ = value;
+          onChanged();
+        } else {
+          sparkParametersBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Spark connector settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.SparkParameters spark_parameters = 13;</code>
+       */
+      public Builder setSparkParameters(
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters.Builder builderForValue) {
+        if (sparkParametersBuilder_ == null) {
+          sparkParameters_ = builderForValue.build();
+          onChanged();
+        } else {
+          sparkParametersBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Spark connector settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.SparkParameters spark_parameters = 13;</code>
+       */
+      public Builder mergeSparkParameters(yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters value) {
+        if (sparkParametersBuilder_ == null) {
+          if (sparkParameters_ != null) {
+            sparkParameters_ =
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters.newBuilder(sparkParameters_).mergeFrom(value).buildPartial();
+          } else {
+            sparkParameters_ = value;
+          }
+          onChanged();
+        } else {
+          sparkParametersBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Spark connector settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.SparkParameters spark_parameters = 13;</code>
+       */
+      public Builder clearSparkParameters() {
+        if (sparkParametersBuilder_ == null) {
+          sparkParameters_ = null;
+          onChanged();
+        } else {
+          sparkParameters_ = null;
+          sparkParametersBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Spark connector settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.SparkParameters spark_parameters = 13;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters.Builder getSparkParametersBuilder() {
+        
+        onChanged();
+        return getSparkParametersFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Spark connector settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.SparkParameters spark_parameters = 13;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParametersOrBuilder getSparkParametersOrBuilder() {
+        if (sparkParametersBuilder_ != null) {
+          return sparkParametersBuilder_.getMessageOrBuilder();
+        } else {
+          return sparkParameters_ == null ?
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters.getDefaultInstance() : sparkParameters_;
+        }
+      }
+      /**
+       * <pre>
+       * Spark connector settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.SparkParameters spark_parameters = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters, yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParametersOrBuilder> 
+          getSparkParametersFieldBuilder() {
+        if (sparkParametersBuilder_ == null) {
+          sparkParametersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters, yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParametersOrBuilder>(
+                  getSparkParameters(),
+                  getParentForChildren(),
+                  isClean());
+          sparkParameters_ = null;
+        }
+        return sparkParametersBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -30276,6 +30539,610 @@ public final class Jobs {
 
   }
 
+  public interface SparkParametersOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v2.jobs.SparkParameters)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the Spark connector.
+     * </pre>
+     *
+     * <code>string connector_id = 1;</code>
+     * @return The connectorId.
+     */
+    java.lang.String getConnectorId();
+    /**
+     * <pre>
+     * ID of the Spark connector.
+     * </pre>
+     *
+     * <code>string connector_id = 1;</code>
+     * @return The bytes for connectorId.
+     */
+    com.google.protobuf.ByteString
+        getConnectorIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v2.jobs.SparkParameters}
+   */
+  public static final class SparkParameters extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v2.jobs.SparkParameters)
+      SparkParametersOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SparkParameters.newBuilder() to construct.
+    private SparkParameters(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SparkParameters() {
+      connectorId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SparkParameters();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SparkParameters(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              connectorId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_SparkParameters_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_SparkParameters_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters.class, yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters.Builder.class);
+    }
+
+    public static final int CONNECTOR_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object connectorId_;
+    /**
+     * <pre>
+     * ID of the Spark connector.
+     * </pre>
+     *
+     * <code>string connector_id = 1;</code>
+     * @return The connectorId.
+     */
+    @java.lang.Override
+    public java.lang.String getConnectorId() {
+      java.lang.Object ref = connectorId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        connectorId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the Spark connector.
+     * </pre>
+     *
+     * <code>string connector_id = 1;</code>
+     * @return The bytes for connectorId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConnectorIdBytes() {
+      java.lang.Object ref = connectorId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        connectorId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectorId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, connectorId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectorId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, connectorId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters other = (yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters) obj;
+
+      if (!getConnectorId()
+          .equals(other.getConnectorId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONNECTOR_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConnectorId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v2.jobs.SparkParameters}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v2.jobs.SparkParameters)
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParametersOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_SparkParameters_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_SparkParameters_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters.class, yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        connectorId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_SparkParameters_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters build() {
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters buildPartial() {
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters result = new yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters(this);
+        result.connectorId_ = connectorId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters) {
+          return mergeFrom((yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters other) {
+        if (other == yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters.getDefaultInstance()) return this;
+        if (!other.getConnectorId().isEmpty()) {
+          connectorId_ = other.connectorId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object connectorId_ = "";
+      /**
+       * <pre>
+       * ID of the Spark connector.
+       * </pre>
+       *
+       * <code>string connector_id = 1;</code>
+       * @return The connectorId.
+       */
+      public java.lang.String getConnectorId() {
+        java.lang.Object ref = connectorId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          connectorId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Spark connector.
+       * </pre>
+       *
+       * <code>string connector_id = 1;</code>
+       * @return The bytes for connectorId.
+       */
+      public com.google.protobuf.ByteString
+          getConnectorIdBytes() {
+        java.lang.Object ref = connectorId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          connectorId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Spark connector.
+       * </pre>
+       *
+       * <code>string connector_id = 1;</code>
+       * @param value The connectorId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectorId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        connectorId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Spark connector.
+       * </pre>
+       *
+       * <code>string connector_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConnectorId() {
+        
+        connectorId_ = getDefaultInstance().getConnectorId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Spark connector.
+       * </pre>
+       *
+       * <code>string connector_id = 1;</code>
+       * @param value The bytes for connectorId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectorIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        connectorId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v2.jobs.SparkParameters)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v2.jobs.SparkParameters)
+    private static final yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters();
+    }
+
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SparkParameters>
+        PARSER = new com.google.protobuf.AbstractParser<SparkParameters>() {
+      @java.lang.Override
+      public SparkParameters parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SparkParameters(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SparkParameters> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SparkParameters> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.SparkParameters getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_datasphere_v2_jobs_JobParameters_descriptor;
   private static final 
@@ -30381,6 +31248,11 @@ public final class Jobs {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datasphere_v2_jobs_JobProgress_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v2_jobs_SparkParameters_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v2_jobs_SparkParameters_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -30394,7 +31266,7 @@ public final class Jobs {
       "roto\022\037yandex.cloud.datasphere.v2.jobs\032\037g" +
       "oogle/protobuf/timestamp.proto\032\035yandex/c" +
       "loud/validation.proto\032\036google/protobuf/d" +
-      "uration.proto\"\300\005\n\rJobParameters\022:\n\013input" +
+      "uration.proto\"\214\006\n\rJobParameters\022:\n\013input" +
       "_files\030\001 \003(\0132%.yandex.cloud.datasphere.v" +
       "2.jobs.File\022?\n\014output_files\030\002 \003(\0132).yand" +
       "ex.cloud.datasphere.v2.jobs.FileDesc\022\024\n\014" +
@@ -30412,104 +31284,107 @@ public final class Jobs {
       "obs.OutputDatasetDesc\022a\n\034graceful_shutdo" +
       "wn_parameters\030\014 \001(\0132;.yandex.cloud.datas" +
       "phere.v2.jobs.GracefulShutdownParameters" +
-      "\"!\n\021CloudInstanceType\022\014\n\004name\030\001 \001(\t\"\262\001\n\026" +
-      "ExtendedWorkingStorage\022Q\n\004type\030\001 \001(\0162C.y" +
-      "andex.cloud.datasphere.v2.jobs.ExtendedW" +
-      "orkingStorage.StorageType\022\017\n\007size_gb\030\002 \001" +
-      "(\003\"4\n\013StorageType\022\034\n\030STORAGE_TYPE_UNSPEC" +
-      "IFIED\020\000\022\007\n\003SSD\020\001\"\'\n\010Argument\022\014\n\004name\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t\"\263\001\n\004File\0227\n\004desc\030\001 \001(\013" +
-      "2).yandex.cloud.datasphere.v2.jobs.FileD" +
-      "esc\022\016\n\006sha256\030\002 \001(\t\022\022\n\nsize_bytes\030\003 \001(\003\022" +
-      "N\n\020compression_type\030\004 \001(\01624.yandex.cloud" +
-      ".datasphere.v2.jobs.FileCompressionType\"" +
-      "O\n\013StorageFile\0223\n\004file\030\001 \001(\0132%.yandex.cl" +
-      "oud.datasphere.v2.jobs.File\022\013\n\003url\030\002 \001(\t" +
-      "\"%\n\010FileDesc\022\014\n\004path\030\001 \001(\t\022\013\n\003var\030\002 \001(\t\"" +
-      "\250\002\n\017FileUploadError\022E\n\020output_file_desc\030" +
-      "\001 \001(\0132).yandex.cloud.datasphere.v2.jobs." +
-      "FileDescH\000\022\027\n\rlog_file_name\030\002 \001(\tH\000\022\023\n\013d" +
-      "escription\030\003 \001(\t\022H\n\004type\030\004 \001(\0162:.yandex." +
-      "cloud.datasphere.v2.jobs.FileUploadError" +
-      ".ErrorType\"I\n\tErrorType\022\032\n\026ERROR_TYPE_UN" +
-      "SPECIFIED\020\000\022\021\n\rUPLOAD_FAILED\020\001\022\r\n\tNOT_FO" +
-      "UND\020\002B\013\n\tfile_type\"\303\002\n\013Environment\022D\n\004va" +
-      "rs\030\001 \003(\01326.yandex.cloud.datasphere.v2.jo" +
-      "bs.Environment.VarsEntry\022\"\n\030docker_image" +
-      "_resource_id\030\002 \001(\tH\000\022M\n\021docker_image_spe" +
-      "c\030\003 \001(\01320.yandex.cloud.datasphere.v2.job" +
-      "s.DockerImageSpecH\000\022>\n\npython_env\030\004 \001(\0132" +
-      "*.yandex.cloud.datasphere.v2.jobs.Python" +
-      "Env\032+\n\tVarsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001B\016\n\014docker_image\"\204\001\n\017DockerImage" +
-      "Spec\022\021\n\timage_url\030\001 \001(\t\022\020\n\010username\030\002 \001(" +
-      "\t\022\035\n\023password_plain_text\030\003 \001(\tH\000\022!\n\027pass" +
-      "word_ds_secret_name\030\004 \001(\tH\000B\n\n\010password\"" +
-      "\315\001\n\tPythonEnv\022\022\n\nconda_yaml\030\001 \001(\t\022<\n\rloc" +
-      "al_modules\030\002 \003(\0132%.yandex.cloud.datasphe" +
-      "re.v2.jobs.File\022\026\n\016python_version\030\003 \001(\t\022" +
-      "\024\n\014requirements\030\004 \003(\t\022@\n\013pip_options\030\005 \001" +
-      "(\0132+.yandex.cloud.datasphere.v2.jobs.Pip" +
-      "Options\"a\n\nPipOptions\022\021\n\tindex_url\030\001 \001(\t" +
-      "\022\030\n\020extra_index_urls\030\002 \003(\t\022\025\n\rtrusted_ho" +
-      "sts\030\003 \003(\t\022\017\n\007no_deps\030\004 \001(\010\"\323\001\n\021OutputDat" +
-      "asetDesc\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 " +
-      "\001(\t\022N\n\006labels\030\003 \003(\0132>.yandex.cloud.datas" +
-      "phere.v2.jobs.OutputDatasetDesc.LabelsEn" +
-      "try\022\017\n\007size_gb\030\004 \001(\003\022\013\n\003var\030\005 \001(\t\032-\n\013Lab" +
-      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
-      "\"]\n\rOutputDataset\022@\n\004desc\030\001 \001(\01322.yandex" +
-      ".cloud.datasphere.v2.jobs.OutputDatasetD" +
-      "esc\022\n\n\002id\030\002 \001(\t\"\260\007\n\003Job\022\n\n\002id\030\001 \001(\t\022\014\n\004n" +
-      "ame\030\002 \001(\t\022\014\n\004desc\030\003 \001(\t\022.\n\ncreated_at\030\004 " +
-      "\001(\0132\032.google.protobuf.Timestamp\022/\n\013finis" +
-      "hed_at\030\005 \001(\0132\032.google.protobuf.Timestamp" +
-      "\022:\n\006status\030\006 \001(\0162*.yandex.cloud.datasphe" +
-      "re.v2.jobs.JobStatus\022\016\n\006config\030\007 \001(\t\022\025\n\r" +
-      "created_by_id\030\010 \001(\t\022\022\n\nproject_id\030\t \001(\t\022" +
-      "F\n\016job_parameters\030\n \001(\0132..yandex.cloud.d" +
-      "atasphere.v2.jobs.JobParameters\0223\n\017data_" +
-      "expires_at\030\013 \001(\0132\032.google.protobuf.Times" +
-      "tamp\022\024\n\014data_cleared\030\014 \001(\010\022;\n\014output_fil" +
-      "es\030\r \003(\0132%.yandex.cloud.datasphere.v2.jo" +
-      "bs.File\0228\n\tlog_files\030\016 \003(\0132%.yandex.clou" +
-      "d.datasphere.v2.jobs.File\022?\n\020diagnostic_" +
-      "files\030\017 \003(\0132%.yandex.cloud.datasphere.v2" +
-      ".jobs.File\022\027\n\017data_size_bytes\030\020 \001(\003\022.\n\ns" +
-      "tarted_at\030\021 \001(\0132\032.google.protobuf.Timest" +
-      "amp\022\026\n\016status_details\030\022 \001(\t\022V\n\032actual_cl" +
-      "oud_instance_type\030\023 \001(\01322.yandex.cloud.d" +
-      "atasphere.v2.jobs.CloudInstanceType\022\025\n\rp" +
-      "arent_job_id\030\024 \001(\t\022E\n\013file_errors\030\025 \003(\0132" +
-      "0.yandex.cloud.datasphere.v2.jobs.FileUp" +
-      "loadError\022G\n\017output_datasets\030\026 \003(\0132..yan" +
-      "dex.cloud.datasphere.v2.jobs.OutputDatas" +
-      "et\" \n\tJobResult\022\023\n\013return_code\030\001 \001(\003\"X\n\032" +
-      "GracefulShutdownParameters\022*\n\007timeout\030\001 " +
-      "\001(\0132\031.google.protobuf.Duration\022\016\n\006signal" +
-      "\030\002 \001(\003\"\230\003\n\013JobMetadata\022\n\n\002id\030\001 \001(\t\022\014\n\004na" +
-      "me\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022.\n\ncreated" +
-      "_at\030\004 \001(\0132\032.google.protobuf.Timestamp\022.\n" +
-      "\nstarted_at\030\005 \001(\0132\032.google.protobuf.Time" +
-      "stamp\022/\n\013finished_at\030\006 \001(\0132\032.google.prot" +
-      "obuf.Timestamp\0223\n\017data_expires_at\030\007 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022:\n\006status\030\010 " +
-      "\001(\0162*.yandex.cloud.datasphere.v2.jobs.Jo" +
-      "bStatus\022\026\n\016status_details\030\t \001(\t\022\025\n\rcreat" +
-      "ed_by_id\030\n \001(\t\022\022\n\nproject_id\030\013 \001(\t\022\025\n\rpa" +
-      "rent_job_id\030\014 \001(\t\"a\n\013JobProgress\022\017\n\007mess" +
-      "age\030\001 \001(\t\022\020\n\010progress\030\002 \001(\003\022/\n\013create_ti" +
-      "me\030\003 \001(\0132\032.google.protobuf.Timestamp*O\n\023" +
-      "FileCompressionType\022%\n!FILE_COMPRESSION_" +
-      "TYPE_UNSPECIFIED\020\000\022\010\n\004NONE\020\001\022\007\n\003ZIP\020\002*\240\001" +
-      "\n\tJobStatus\022\032\n\026JOB_STATUS_UNSPECIFIED\020\000\022" +
-      "\014\n\010CREATING\020\001\022\r\n\tEXECUTING\020\002\022\024\n\020UPLOADIN" +
-      "G_OUTPUT\020\003\022\013\n\007SUCCESS\020\004\022\t\n\005ERROR\020\005\022\r\n\tCA" +
-      "NCELLED\020\006\022\016\n\nCANCELLING\020\007\022\r\n\tPREPARING\020\010" +
-      "B{\n#yandex.cloud.api.datasphere.v2.jobsB" +
-      "\004JobsZNgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/datasphere/v2/jobs;datas" +
-      "phereb\006proto3"
+      "\022J\n\020spark_parameters\030\r \001(\01320.yandex.clou" +
+      "d.datasphere.v2.jobs.SparkParameters\"!\n\021" +
+      "CloudInstanceType\022\014\n\004name\030\001 \001(\t\"\262\001\n\026Exte" +
+      "ndedWorkingStorage\022Q\n\004type\030\001 \001(\0162C.yande" +
+      "x.cloud.datasphere.v2.jobs.ExtendedWorki" +
+      "ngStorage.StorageType\022\017\n\007size_gb\030\002 \001(\003\"4" +
+      "\n\013StorageType\022\034\n\030STORAGE_TYPE_UNSPECIFIE" +
+      "D\020\000\022\007\n\003SSD\020\001\"\'\n\010Argument\022\014\n\004name\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t\"\263\001\n\004File\0227\n\004desc\030\001 \001(\0132).y" +
+      "andex.cloud.datasphere.v2.jobs.FileDesc\022" +
+      "\016\n\006sha256\030\002 \001(\t\022\022\n\nsize_bytes\030\003 \001(\003\022N\n\020c" +
+      "ompression_type\030\004 \001(\01624.yandex.cloud.dat" +
+      "asphere.v2.jobs.FileCompressionType\"O\n\013S" +
+      "torageFile\0223\n\004file\030\001 \001(\0132%.yandex.cloud." +
+      "datasphere.v2.jobs.File\022\013\n\003url\030\002 \001(\t\"%\n\010" +
+      "FileDesc\022\014\n\004path\030\001 \001(\t\022\013\n\003var\030\002 \001(\t\"\250\002\n\017" +
+      "FileUploadError\022E\n\020output_file_desc\030\001 \001(" +
+      "\0132).yandex.cloud.datasphere.v2.jobs.File" +
+      "DescH\000\022\027\n\rlog_file_name\030\002 \001(\tH\000\022\023\n\013descr" +
+      "iption\030\003 \001(\t\022H\n\004type\030\004 \001(\0162:.yandex.clou" +
+      "d.datasphere.v2.jobs.FileUploadError.Err" +
+      "orType\"I\n\tErrorType\022\032\n\026ERROR_TYPE_UNSPEC" +
+      "IFIED\020\000\022\021\n\rUPLOAD_FAILED\020\001\022\r\n\tNOT_FOUND\020" +
+      "\002B\013\n\tfile_type\"\303\002\n\013Environment\022D\n\004vars\030\001" +
+      " \003(\01326.yandex.cloud.datasphere.v2.jobs.E" +
+      "nvironment.VarsEntry\022\"\n\030docker_image_res" +
+      "ource_id\030\002 \001(\tH\000\022M\n\021docker_image_spec\030\003 " +
+      "\001(\01320.yandex.cloud.datasphere.v2.jobs.Do" +
+      "ckerImageSpecH\000\022>\n\npython_env\030\004 \001(\0132*.ya" +
+      "ndex.cloud.datasphere.v2.jobs.PythonEnv\032" +
+      "+\n\tVarsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001B\016\n\014docker_image\"\204\001\n\017DockerImageSpec" +
+      "\022\021\n\timage_url\030\001 \001(\t\022\020\n\010username\030\002 \001(\t\022\035\n" +
+      "\023password_plain_text\030\003 \001(\tH\000\022!\n\027password" +
+      "_ds_secret_name\030\004 \001(\tH\000B\n\n\010password\"\315\001\n\t" +
+      "PythonEnv\022\022\n\nconda_yaml\030\001 \001(\t\022<\n\rlocal_m" +
+      "odules\030\002 \003(\0132%.yandex.cloud.datasphere.v" +
+      "2.jobs.File\022\026\n\016python_version\030\003 \001(\t\022\024\n\014r" +
+      "equirements\030\004 \003(\t\022@\n\013pip_options\030\005 \001(\0132+" +
+      ".yandex.cloud.datasphere.v2.jobs.PipOpti" +
+      "ons\"a\n\nPipOptions\022\021\n\tindex_url\030\001 \001(\t\022\030\n\020" +
+      "extra_index_urls\030\002 \003(\t\022\025\n\rtrusted_hosts\030" +
+      "\003 \003(\t\022\017\n\007no_deps\030\004 \001(\010\"\323\001\n\021OutputDataset" +
+      "Desc\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022" +
+      "N\n\006labels\030\003 \003(\0132>.yandex.cloud.dataspher" +
+      "e.v2.jobs.OutputDatasetDesc.LabelsEntry\022" +
+      "\017\n\007size_gb\030\004 \001(\003\022\013\n\003var\030\005 \001(\t\032-\n\013LabelsE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"]\n\r" +
+      "OutputDataset\022@\n\004desc\030\001 \001(\01322.yandex.clo" +
+      "ud.datasphere.v2.jobs.OutputDatasetDesc\022" +
+      "\n\n\002id\030\002 \001(\t\"\260\007\n\003Job\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030" +
+      "\002 \001(\t\022\014\n\004desc\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132" +
+      "\032.google.protobuf.Timestamp\022/\n\013finished_" +
+      "at\030\005 \001(\0132\032.google.protobuf.Timestamp\022:\n\006" +
+      "status\030\006 \001(\0162*.yandex.cloud.datasphere.v" +
+      "2.jobs.JobStatus\022\016\n\006config\030\007 \001(\t\022\025\n\rcrea" +
+      "ted_by_id\030\010 \001(\t\022\022\n\nproject_id\030\t \001(\t\022F\n\016j" +
+      "ob_parameters\030\n \001(\0132..yandex.cloud.datas" +
+      "phere.v2.jobs.JobParameters\0223\n\017data_expi" +
+      "res_at\030\013 \001(\0132\032.google.protobuf.Timestamp" +
+      "\022\024\n\014data_cleared\030\014 \001(\010\022;\n\014output_files\030\r" +
+      " \003(\0132%.yandex.cloud.datasphere.v2.jobs.F" +
+      "ile\0228\n\tlog_files\030\016 \003(\0132%.yandex.cloud.da" +
+      "tasphere.v2.jobs.File\022?\n\020diagnostic_file" +
+      "s\030\017 \003(\0132%.yandex.cloud.datasphere.v2.job" +
+      "s.File\022\027\n\017data_size_bytes\030\020 \001(\003\022.\n\nstart" +
+      "ed_at\030\021 \001(\0132\032.google.protobuf.Timestamp\022" +
+      "\026\n\016status_details\030\022 \001(\t\022V\n\032actual_cloud_" +
+      "instance_type\030\023 \001(\01322.yandex.cloud.datas" +
+      "phere.v2.jobs.CloudInstanceType\022\025\n\rparen" +
+      "t_job_id\030\024 \001(\t\022E\n\013file_errors\030\025 \003(\01320.ya" +
+      "ndex.cloud.datasphere.v2.jobs.FileUpload" +
+      "Error\022G\n\017output_datasets\030\026 \003(\0132..yandex." +
+      "cloud.datasphere.v2.jobs.OutputDataset\" " +
+      "\n\tJobResult\022\023\n\013return_code\030\001 \001(\003\"X\n\032Grac" +
+      "efulShutdownParameters\022*\n\007timeout\030\001 \001(\0132" +
+      "\031.google.protobuf.Duration\022\016\n\006signal\030\002 \001" +
+      "(\003\"\230\003\n\013JobMetadata\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002" +
+      " \001(\t\022\023\n\013description\030\003 \001(\t\022.\n\ncreated_at\030" +
+      "\004 \001(\0132\032.google.protobuf.Timestamp\022.\n\nsta" +
+      "rted_at\030\005 \001(\0132\032.google.protobuf.Timestam" +
+      "p\022/\n\013finished_at\030\006 \001(\0132\032.google.protobuf" +
+      ".Timestamp\0223\n\017data_expires_at\030\007 \001(\0132\032.go" +
+      "ogle.protobuf.Timestamp\022:\n\006status\030\010 \001(\0162" +
+      "*.yandex.cloud.datasphere.v2.jobs.JobSta" +
+      "tus\022\026\n\016status_details\030\t \001(\t\022\025\n\rcreated_b" +
+      "y_id\030\n \001(\t\022\022\n\nproject_id\030\013 \001(\t\022\025\n\rparent" +
+      "_job_id\030\014 \001(\t\"a\n\013JobProgress\022\017\n\007message\030" +
+      "\001 \001(\t\022\020\n\010progress\030\002 \001(\003\022/\n\013create_time\030\003" +
+      " \001(\0132\032.google.protobuf.Timestamp\"\'\n\017Spar" +
+      "kParameters\022\024\n\014connector_id\030\001 \001(\t*O\n\023Fil" +
+      "eCompressionType\022%\n!FILE_COMPRESSION_TYP" +
+      "E_UNSPECIFIED\020\000\022\010\n\004NONE\020\001\022\007\n\003ZIP\020\002*\240\001\n\tJ" +
+      "obStatus\022\032\n\026JOB_STATUS_UNSPECIFIED\020\000\022\014\n\010" +
+      "CREATING\020\001\022\r\n\tEXECUTING\020\002\022\024\n\020UPLOADING_O" +
+      "UTPUT\020\003\022\013\n\007SUCCESS\020\004\022\t\n\005ERROR\020\005\022\r\n\tCANCE" +
+      "LLED\020\006\022\016\n\nCANCELLING\020\007\022\r\n\tPREPARING\020\010B{\n" +
+      "#yandex.cloud.api.datasphere.v2.jobsB\004Jo" +
+      "bsZNgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/datasphere/v2/jobs;datasphe" +
+      "reb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -30523,7 +31398,7 @@ public final class Jobs {
     internal_static_yandex_cloud_datasphere_v2_jobs_JobParameters_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_JobParameters_descriptor,
-        new java.lang.String[] { "InputFiles", "OutputFiles", "S3MountIds", "DatasetIds", "Cmd", "Env", "AttachProjectDisk", "CloudInstanceTypes", "ExtendedWorkingStorage", "Arguments", "OutputDatasets", "GracefulShutdownParameters", });
+        new java.lang.String[] { "InputFiles", "OutputFiles", "S3MountIds", "DatasetIds", "Cmd", "Env", "AttachProjectDisk", "CloudInstanceTypes", "ExtendedWorkingStorage", "Arguments", "OutputDatasets", "GracefulShutdownParameters", "SparkParameters", });
     internal_static_yandex_cloud_datasphere_v2_jobs_CloudInstanceType_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_datasphere_v2_jobs_CloudInstanceType_fieldAccessorTable = new
@@ -30644,6 +31519,12 @@ public final class Jobs {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_JobProgress_descriptor,
         new java.lang.String[] { "Message", "Progress", "CreateTime", });
+    internal_static_yandex_cloud_datasphere_v2_jobs_SparkParameters_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_yandex_cloud_datasphere_v2_jobs_SparkParameters_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v2_jobs_SparkParameters_descriptor,
+        new java.lang.String[] { "ConnectorId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.size);

@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * ThreadService provides operations for managing files within search indexes.
+ * SearchIndexFileService provides operations for managing files within search indexes.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -18,6 +18,37 @@ public final class SearchIndexFileServiceGrpc {
   public static final String SERVICE_NAME = "yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFileService";
 
   // Static method descriptors that strictly reflect the proto.
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getBatchCreateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "BatchCreate",
+      requestType = yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getBatchCreateMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getBatchCreateMethod;
+    if ((getBatchCreateMethod = SearchIndexFileServiceGrpc.getBatchCreateMethod) == null) {
+      synchronized (SearchIndexFileServiceGrpc.class) {
+        if ((getBatchCreateMethod = SearchIndexFileServiceGrpc.getBatchCreateMethod) == null) {
+          SearchIndexFileServiceGrpc.getBatchCreateMethod = getBatchCreateMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BatchCreate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new SearchIndexFileServiceMethodDescriptorSupplier("BatchCreate"))
+              .build();
+        }
+      }
+    }
+    return getBatchCreateMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.GetSearchIndexFileRequest,
       yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile> getGetMethod;
 
@@ -126,10 +157,20 @@ public final class SearchIndexFileServiceGrpc {
 
   /**
    * <pre>
-   * ThreadService provides operations for managing files within search indexes.
+   * SearchIndexFileService provides operations for managing files within search indexes.
    * </pre>
    */
   public static abstract class SearchIndexFileServiceImplBase implements io.grpc.BindableService {
+
+    /**
+     * <pre>
+     * Creates multiple files within a search index in [asynchronous mode](/docs/foundation-models/concepts/#working-mode).
+     * </pre>
+     */
+    public void batchCreate(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBatchCreateMethod(), responseObserver);
+    }
 
     /**
      * <pre>
@@ -154,6 +195,13 @@ public final class SearchIndexFileServiceGrpc {
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
+            getBatchCreateMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_BATCH_CREATE)))
+          .addMethod(
             getGetMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
@@ -173,7 +221,7 @@ public final class SearchIndexFileServiceGrpc {
 
   /**
    * <pre>
-   * ThreadService provides operations for managing files within search indexes.
+   * SearchIndexFileService provides operations for managing files within search indexes.
    * </pre>
    */
   public static final class SearchIndexFileServiceStub extends io.grpc.stub.AbstractAsyncStub<SearchIndexFileServiceStub> {
@@ -186,6 +234,17 @@ public final class SearchIndexFileServiceGrpc {
     protected SearchIndexFileServiceStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SearchIndexFileServiceStub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates multiple files within a search index in [asynchronous mode](/docs/foundation-models/concepts/#working-mode).
+     * </pre>
+     */
+    public void batchCreate(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getBatchCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -213,7 +272,7 @@ public final class SearchIndexFileServiceGrpc {
 
   /**
    * <pre>
-   * ThreadService provides operations for managing files within search indexes.
+   * SearchIndexFileService provides operations for managing files within search indexes.
    * </pre>
    */
   public static final class SearchIndexFileServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SearchIndexFileServiceBlockingStub> {
@@ -226,6 +285,16 @@ public final class SearchIndexFileServiceGrpc {
     protected SearchIndexFileServiceBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SearchIndexFileServiceBlockingStub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates multiple files within a search index in [asynchronous mode](/docs/foundation-models/concepts/#working-mode).
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation batchCreate(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBatchCreateMethod(), getCallOptions(), request);
     }
 
     /**
@@ -251,7 +320,7 @@ public final class SearchIndexFileServiceGrpc {
 
   /**
    * <pre>
-   * ThreadService provides operations for managing files within search indexes.
+   * SearchIndexFileService provides operations for managing files within search indexes.
    * </pre>
    */
   public static final class SearchIndexFileServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SearchIndexFileServiceFutureStub> {
@@ -264,6 +333,17 @@ public final class SearchIndexFileServiceGrpc {
     protected SearchIndexFileServiceFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SearchIndexFileServiceFutureStub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates multiple files within a search index in [asynchronous mode](/docs/foundation-models/concepts/#working-mode).
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> batchCreate(
+        yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getBatchCreateMethod(), getCallOptions()), request);
     }
 
     /**
@@ -289,8 +369,9 @@ public final class SearchIndexFileServiceGrpc {
     }
   }
 
-  private static final int METHODID_GET = 0;
-  private static final int METHODID_LIST = 1;
+  private static final int METHODID_BATCH_CREATE = 0;
+  private static final int METHODID_GET = 1;
+  private static final int METHODID_LIST = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -309,6 +390,10 @@ public final class SearchIndexFileServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_BATCH_CREATE:
+          serviceImpl.batchCreate((yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
         case METHODID_GET:
           serviceImpl.get((yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.GetSearchIndexFileRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile>) responseObserver);
@@ -378,6 +463,7 @@ public final class SearchIndexFileServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new SearchIndexFileServiceFileDescriptorSupplier())
+              .addMethod(getBatchCreateMethod())
               .addMethod(getGetMethod())
               .addMethod(getListMethod())
               .build();

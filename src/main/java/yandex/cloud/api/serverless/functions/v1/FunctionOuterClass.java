@@ -14,6 +14,147 @@ public final class FunctionOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code yandex.cloud.serverless.functions.v1.MetadataOption}
+   */
+  public enum MetadataOption
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * Option is default
+     * </pre>
+     *
+     * <code>METADATA_OPTION_UNSPECIFIED = 0;</code>
+     */
+    METADATA_OPTION_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * Option is enabled
+     * </pre>
+     *
+     * <code>ENABLED = 1;</code>
+     */
+    ENABLED(1),
+    /**
+     * <pre>
+     * Option is disabled
+     * </pre>
+     *
+     * <code>DISABLED = 2;</code>
+     */
+    DISABLED(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * Option is default
+     * </pre>
+     *
+     * <code>METADATA_OPTION_UNSPECIFIED = 0;</code>
+     */
+    public static final int METADATA_OPTION_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * Option is enabled
+     * </pre>
+     *
+     * <code>ENABLED = 1;</code>
+     */
+    public static final int ENABLED_VALUE = 1;
+    /**
+     * <pre>
+     * Option is disabled
+     * </pre>
+     *
+     * <code>DISABLED = 2;</code>
+     */
+    public static final int DISABLED_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static MetadataOption valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static MetadataOption forNumber(int value) {
+      switch (value) {
+        case 0: return METADATA_OPTION_UNSPECIFIED;
+        case 1: return ENABLED;
+        case 2: return DISABLED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<MetadataOption>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        MetadataOption> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<MetadataOption>() {
+            public MetadataOption findValueByNumber(int number) {
+              return MetadataOption.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final MetadataOption[] VALUES = values();
+
+    public static MetadataOption valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private MetadataOption(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.serverless.functions.v1.MetadataOption)
+  }
+
   public interface FunctionOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.functions.v1.Function)
       com.google.protobuf.MessageOrBuilder {
@@ -2952,6 +3093,33 @@ public final class FunctionOuterClass {
      */
     yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MountOrBuilder getMountsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Metadata options for the version.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.MetadataOptions metadata_options = 26;</code>
+     * @return Whether the metadataOptions field is set.
+     */
+    boolean hasMetadataOptions();
+    /**
+     * <pre>
+     * Metadata options for the version.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.MetadataOptions metadata_options = 26;</code>
+     * @return The metadataOptions.
+     */
+    yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions getMetadataOptions();
+    /**
+     * <pre>
+     * Metadata options for the version.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.MetadataOptions metadata_options = 26;</code>
+     */
+    yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptionsOrBuilder getMetadataOptionsOrBuilder();
   }
   /**
    * <pre>
@@ -3209,6 +3377,19 @@ public final class FunctionOuterClass {
               }
               mounts_.add(
                   input.readMessage(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.parser(), extensionRegistry));
+              break;
+            }
+            case 210: {
+              yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions.Builder subBuilder = null;
+              if (metadataOptions_ != null) {
+                subBuilder = metadataOptions_.toBuilder();
+              }
+              metadataOptions_ = input.readMessage(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(metadataOptions_);
+                metadataOptions_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -4444,6 +4625,44 @@ public final class FunctionOuterClass {
       return mounts_.get(index);
     }
 
+    public static final int METADATA_OPTIONS_FIELD_NUMBER = 26;
+    private yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions metadataOptions_;
+    /**
+     * <pre>
+     * Metadata options for the version.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.MetadataOptions metadata_options = 26;</code>
+     * @return Whether the metadataOptions field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetadataOptions() {
+      return metadataOptions_ != null;
+    }
+    /**
+     * <pre>
+     * Metadata options for the version.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.MetadataOptions metadata_options = 26;</code>
+     * @return The metadataOptions.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions getMetadataOptions() {
+      return metadataOptions_ == null ? yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions.getDefaultInstance() : metadataOptions_;
+    }
+    /**
+     * <pre>
+     * Metadata options for the version.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.MetadataOptions metadata_options = 26;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptionsOrBuilder getMetadataOptionsOrBuilder() {
+      return getMetadataOptions();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4529,6 +4748,9 @@ public final class FunctionOuterClass {
       }
       for (int i = 0; i < mounts_.size(); i++) {
         output.writeMessage(25, mounts_.get(i));
+      }
+      if (metadataOptions_ != null) {
+        output.writeMessage(26, getMetadataOptions());
       }
       unknownFields.writeTo(output);
     }
@@ -4637,6 +4859,10 @@ public final class FunctionOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(25, mounts_.get(i));
       }
+      if (metadataOptions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(26, getMetadataOptions());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4713,6 +4939,11 @@ public final class FunctionOuterClass {
           != other.getConcurrency()) return false;
       if (!getMountsList()
           .equals(other.getMountsList())) return false;
+      if (hasMetadataOptions() != other.hasMetadataOptions()) return false;
+      if (hasMetadataOptions()) {
+        if (!getMetadataOptions()
+            .equals(other.getMetadataOptions())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4794,6 +5025,10 @@ public final class FunctionOuterClass {
       if (getMountsCount() > 0) {
         hash = (37 * hash) + MOUNTS_FIELD_NUMBER;
         hash = (53 * hash) + getMountsList().hashCode();
+      }
+      if (hasMetadataOptions()) {
+        hash = (37 * hash) + METADATA_OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadataOptions().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -5039,6 +5274,12 @@ public final class FunctionOuterClass {
         } else {
           mountsBuilder_.clear();
         }
+        if (metadataOptionsBuilder_ == null) {
+          metadataOptions_ = null;
+        } else {
+          metadataOptions_ = null;
+          metadataOptionsBuilder_ = null;
+        }
         return this;
       }
 
@@ -5141,6 +5382,11 @@ public final class FunctionOuterClass {
           result.mounts_ = mounts_;
         } else {
           result.mounts_ = mountsBuilder_.build();
+        }
+        if (metadataOptionsBuilder_ == null) {
+          result.metadataOptions_ = metadataOptions_;
+        } else {
+          result.metadataOptions_ = metadataOptionsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -5335,6 +5581,9 @@ public final class FunctionOuterClass {
               mountsBuilder_.addAllMessages(other.mounts_);
             }
           }
+        }
+        if (other.hasMetadataOptions()) {
+          mergeMetadataOptions(other.getMetadataOptions());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8492,6 +8741,161 @@ public final class FunctionOuterClass {
           mounts_ = null;
         }
         return mountsBuilder_;
+      }
+
+      private yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions metadataOptions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptionsOrBuilder> metadataOptionsBuilder_;
+      /**
+       * <pre>
+       * Metadata options for the version.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.MetadataOptions metadata_options = 26;</code>
+       * @return Whether the metadataOptions field is set.
+       */
+      public boolean hasMetadataOptions() {
+        return metadataOptionsBuilder_ != null || metadataOptions_ != null;
+      }
+      /**
+       * <pre>
+       * Metadata options for the version.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.MetadataOptions metadata_options = 26;</code>
+       * @return The metadataOptions.
+       */
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions getMetadataOptions() {
+        if (metadataOptionsBuilder_ == null) {
+          return metadataOptions_ == null ? yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions.getDefaultInstance() : metadataOptions_;
+        } else {
+          return metadataOptionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Metadata options for the version.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.MetadataOptions metadata_options = 26;</code>
+       */
+      public Builder setMetadataOptions(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions value) {
+        if (metadataOptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metadataOptions_ = value;
+          onChanged();
+        } else {
+          metadataOptionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Metadata options for the version.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.MetadataOptions metadata_options = 26;</code>
+       */
+      public Builder setMetadataOptions(
+          yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions.Builder builderForValue) {
+        if (metadataOptionsBuilder_ == null) {
+          metadataOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          metadataOptionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Metadata options for the version.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.MetadataOptions metadata_options = 26;</code>
+       */
+      public Builder mergeMetadataOptions(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions value) {
+        if (metadataOptionsBuilder_ == null) {
+          if (metadataOptions_ != null) {
+            metadataOptions_ =
+              yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions.newBuilder(metadataOptions_).mergeFrom(value).buildPartial();
+          } else {
+            metadataOptions_ = value;
+          }
+          onChanged();
+        } else {
+          metadataOptionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Metadata options for the version.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.MetadataOptions metadata_options = 26;</code>
+       */
+      public Builder clearMetadataOptions() {
+        if (metadataOptionsBuilder_ == null) {
+          metadataOptions_ = null;
+          onChanged();
+        } else {
+          metadataOptions_ = null;
+          metadataOptionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Metadata options for the version.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.MetadataOptions metadata_options = 26;</code>
+       */
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions.Builder getMetadataOptionsBuilder() {
+        
+        onChanged();
+        return getMetadataOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Metadata options for the version.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.MetadataOptions metadata_options = 26;</code>
+       */
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptionsOrBuilder getMetadataOptionsOrBuilder() {
+        if (metadataOptionsBuilder_ != null) {
+          return metadataOptionsBuilder_.getMessageOrBuilder();
+        } else {
+          return metadataOptions_ == null ?
+              yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions.getDefaultInstance() : metadataOptions_;
+        }
+      }
+      /**
+       * <pre>
+       * Metadata options for the version.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.MetadataOptions metadata_options = 26;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptionsOrBuilder> 
+          getMetadataOptionsFieldBuilder() {
+        if (metadataOptionsBuilder_ == null) {
+          metadataOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptionsOrBuilder>(
+                  getMetadataOptions(),
+                  getParentForChildren(),
+                  isClean());
+          metadataOptions_ = null;
+        }
+        return metadataOptionsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -22597,6 +23001,710 @@ public final class FunctionOuterClass {
 
   }
 
+  public interface MetadataOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.functions.v1.MetadataOptions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Enabled access to GCE flavored metadata
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.MetadataOption gce_http_endpoint = 1;</code>
+     * @return The enum numeric value on the wire for gceHttpEndpoint.
+     */
+    int getGceHttpEndpointValue();
+    /**
+     * <pre>
+     * Enabled access to GCE flavored metadata
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.MetadataOption gce_http_endpoint = 1;</code>
+     * @return The gceHttpEndpoint.
+     */
+    yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOption getGceHttpEndpoint();
+
+    /**
+     * <pre>
+     * Enabled access to AWS flavored metadata (IMDSv1)
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.MetadataOption aws_v1_http_endpoint = 2;</code>
+     * @return The enum numeric value on the wire for awsV1HttpEndpoint.
+     */
+    int getAwsV1HttpEndpointValue();
+    /**
+     * <pre>
+     * Enabled access to AWS flavored metadata (IMDSv1)
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.MetadataOption aws_v1_http_endpoint = 2;</code>
+     * @return The awsV1HttpEndpoint.
+     */
+    yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOption getAwsV1HttpEndpoint();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.functions.v1.MetadataOptions}
+   */
+  public static final class MetadataOptions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.MetadataOptions)
+      MetadataOptionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MetadataOptions.newBuilder() to construct.
+    private MetadataOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MetadataOptions() {
+      gceHttpEndpoint_ = 0;
+      awsV1HttpEndpoint_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MetadataOptions();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MetadataOptions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              gceHttpEndpoint_ = rawValue;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              awsV1HttpEndpoint_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_MetadataOptions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_MetadataOptions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions.class, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions.Builder.class);
+    }
+
+    public static final int GCE_HTTP_ENDPOINT_FIELD_NUMBER = 1;
+    private int gceHttpEndpoint_;
+    /**
+     * <pre>
+     * Enabled access to GCE flavored metadata
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.MetadataOption gce_http_endpoint = 1;</code>
+     * @return The enum numeric value on the wire for gceHttpEndpoint.
+     */
+    @java.lang.Override public int getGceHttpEndpointValue() {
+      return gceHttpEndpoint_;
+    }
+    /**
+     * <pre>
+     * Enabled access to GCE flavored metadata
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.MetadataOption gce_http_endpoint = 1;</code>
+     * @return The gceHttpEndpoint.
+     */
+    @java.lang.Override public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOption getGceHttpEndpoint() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOption result = yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOption.valueOf(gceHttpEndpoint_);
+      return result == null ? yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOption.UNRECOGNIZED : result;
+    }
+
+    public static final int AWS_V1_HTTP_ENDPOINT_FIELD_NUMBER = 2;
+    private int awsV1HttpEndpoint_;
+    /**
+     * <pre>
+     * Enabled access to AWS flavored metadata (IMDSv1)
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.MetadataOption aws_v1_http_endpoint = 2;</code>
+     * @return The enum numeric value on the wire for awsV1HttpEndpoint.
+     */
+    @java.lang.Override public int getAwsV1HttpEndpointValue() {
+      return awsV1HttpEndpoint_;
+    }
+    /**
+     * <pre>
+     * Enabled access to AWS flavored metadata (IMDSv1)
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.MetadataOption aws_v1_http_endpoint = 2;</code>
+     * @return The awsV1HttpEndpoint.
+     */
+    @java.lang.Override public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOption getAwsV1HttpEndpoint() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOption result = yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOption.valueOf(awsV1HttpEndpoint_);
+      return result == null ? yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOption.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (gceHttpEndpoint_ != yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOption.METADATA_OPTION_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, gceHttpEndpoint_);
+      }
+      if (awsV1HttpEndpoint_ != yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOption.METADATA_OPTION_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, awsV1HttpEndpoint_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (gceHttpEndpoint_ != yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOption.METADATA_OPTION_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, gceHttpEndpoint_);
+      }
+      if (awsV1HttpEndpoint_ != yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOption.METADATA_OPTION_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, awsV1HttpEndpoint_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions other = (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions) obj;
+
+      if (gceHttpEndpoint_ != other.gceHttpEndpoint_) return false;
+      if (awsV1HttpEndpoint_ != other.awsV1HttpEndpoint_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + GCE_HTTP_ENDPOINT_FIELD_NUMBER;
+      hash = (53 * hash) + gceHttpEndpoint_;
+      hash = (37 * hash) + AWS_V1_HTTP_ENDPOINT_FIELD_NUMBER;
+      hash = (53 * hash) + awsV1HttpEndpoint_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.functions.v1.MetadataOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.functions.v1.MetadataOptions)
+        yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_MetadataOptions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_MetadataOptions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions.class, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        gceHttpEndpoint_ = 0;
+
+        awsV1HttpEndpoint_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_MetadataOptions_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions build() {
+        yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions buildPartial() {
+        yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions result = new yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions(this);
+        result.gceHttpEndpoint_ = gceHttpEndpoint_;
+        result.awsV1HttpEndpoint_ = awsV1HttpEndpoint_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions) {
+          return mergeFrom((yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions other) {
+        if (other == yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions.getDefaultInstance()) return this;
+        if (other.gceHttpEndpoint_ != 0) {
+          setGceHttpEndpointValue(other.getGceHttpEndpointValue());
+        }
+        if (other.awsV1HttpEndpoint_ != 0) {
+          setAwsV1HttpEndpointValue(other.getAwsV1HttpEndpointValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int gceHttpEndpoint_ = 0;
+      /**
+       * <pre>
+       * Enabled access to GCE flavored metadata
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.MetadataOption gce_http_endpoint = 1;</code>
+       * @return The enum numeric value on the wire for gceHttpEndpoint.
+       */
+      @java.lang.Override public int getGceHttpEndpointValue() {
+        return gceHttpEndpoint_;
+      }
+      /**
+       * <pre>
+       * Enabled access to GCE flavored metadata
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.MetadataOption gce_http_endpoint = 1;</code>
+       * @param value The enum numeric value on the wire for gceHttpEndpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGceHttpEndpointValue(int value) {
+        
+        gceHttpEndpoint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled access to GCE flavored metadata
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.MetadataOption gce_http_endpoint = 1;</code>
+       * @return The gceHttpEndpoint.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOption getGceHttpEndpoint() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOption result = yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOption.valueOf(gceHttpEndpoint_);
+        return result == null ? yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOption.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Enabled access to GCE flavored metadata
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.MetadataOption gce_http_endpoint = 1;</code>
+       * @param value The gceHttpEndpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGceHttpEndpoint(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOption value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        gceHttpEndpoint_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled access to GCE flavored metadata
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.MetadataOption gce_http_endpoint = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGceHttpEndpoint() {
+        
+        gceHttpEndpoint_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int awsV1HttpEndpoint_ = 0;
+      /**
+       * <pre>
+       * Enabled access to AWS flavored metadata (IMDSv1)
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.MetadataOption aws_v1_http_endpoint = 2;</code>
+       * @return The enum numeric value on the wire for awsV1HttpEndpoint.
+       */
+      @java.lang.Override public int getAwsV1HttpEndpointValue() {
+        return awsV1HttpEndpoint_;
+      }
+      /**
+       * <pre>
+       * Enabled access to AWS flavored metadata (IMDSv1)
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.MetadataOption aws_v1_http_endpoint = 2;</code>
+       * @param value The enum numeric value on the wire for awsV1HttpEndpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAwsV1HttpEndpointValue(int value) {
+        
+        awsV1HttpEndpoint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled access to AWS flavored metadata (IMDSv1)
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.MetadataOption aws_v1_http_endpoint = 2;</code>
+       * @return The awsV1HttpEndpoint.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOption getAwsV1HttpEndpoint() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOption result = yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOption.valueOf(awsV1HttpEndpoint_);
+        return result == null ? yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOption.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Enabled access to AWS flavored metadata (IMDSv1)
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.MetadataOption aws_v1_http_endpoint = 2;</code>
+       * @param value The awsV1HttpEndpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAwsV1HttpEndpoint(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOption value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        awsV1HttpEndpoint_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled access to AWS flavored metadata (IMDSv1)
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.MetadataOption aws_v1_http_endpoint = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAwsV1HttpEndpoint() {
+        
+        awsV1HttpEndpoint_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.functions.v1.MetadataOptions)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.functions.v1.MetadataOptions)
+    private static final yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions();
+    }
+
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MetadataOptions>
+        PARSER = new com.google.protobuf.AbstractParser<MetadataOptions>() {
+      @java.lang.Override
+      public MetadataOptions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MetadataOptions(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MetadataOptions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MetadataOptions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MetadataOptions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_functions_v1_Function_descriptor;
   private static final 
@@ -22692,6 +23800,11 @@ public final class FunctionOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_functions_v1_EmptyTarget_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_functions_v1_MetadataOptions_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_functions_v1_MetadataOptions_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -22718,7 +23831,7 @@ public final class FunctionOuterClass {
       "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
       "\t:\0028\001\"S\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022" +
       "\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETING\020\003\022" +
-      "\t\n\005ERROR\020\004J\004\010\007\020\010\"\240\n\n\007Version\022\n\n\002id\030\001 \001(\t" +
+      "\t\n\005ERROR\020\004J\004\010\007\020\010\"\361\n\n\007Version\022\n\n\002id\030\001 \001(\t" +
       "\022\023\n\013function_id\030\002 \001(\t\022\036\n\013description\030\003 \001" +
       "(\tB\t\212\3101\0050-256\022.\n\ncreated_at\030\005 \001(\0132\032.goog" +
       "le.protobuf.Timestamp\022\017\n\007runtime\030\006 \001(\t\022\022" +
@@ -22745,67 +23858,76 @@ public final class FunctionOuterClass {
       "rless.functions.v1.AsyncInvocationConfig" +
       "\022\022\n\ntmpfs_size\030\027 \001(\003\022\035\n\013concurrency\030\030 \001(" +
       "\003B\010\372\3071\0040-16\022;\n\006mounts\030\031 \003(\0132+.yandex.clo" +
-      "ud.serverless.functions.v1.Mount\0322\n\020Envi" +
-      "ronmentEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\032;\n\031NamedServiceAccountsEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"V\n\006Status\022\026\n\022S" +
-      "TATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACT" +
-      "IVE\020\002\022\014\n\010OBSOLETE\020\003\022\014\n\010DELETING\020\004J\004\010\004\020\005J" +
-      "\004\010\013\020\014J\004\010\017\020\020\"5\n\tResources\022(\n\006memory\030\001 \001(\003" +
-      "B\030\372\3071\024134217728-8589934592\"O\n\007Package\022\031\n" +
-      "\013bucket_name\030\001 \001(\tB\004\350\3071\001\022\031\n\013object_name\030" +
-      "\002 \001(\tB\004\350\3071\001\022\016\n\006sha256\030\003 \001(\t\"A\n\014Connectiv" +
-      "ity\022\022\n\nnetwork_id\030\001 \001(\t\022\035\n\tsubnet_id\030\002 \003" +
-      "(\tB\n\212\3101\002>0\220\3101\001\"\370\001\n\rScalingPolicy\022\023\n\013func" +
-      "tion_id\030\001 \001(\t\022\013\n\003tag\030\002 \001(\t\022.\n\ncreated_at" +
-      "\030\003 \001(\0132\032.google.protobuf.Timestamp\022/\n\013mo" +
-      "dified_at\030\004 \001(\0132\032.google.protobuf.Timest" +
-      "amp\022#\n\033provisioned_instances_count\030\006 \001(\003" +
-      "\022\034\n\024zone_instances_limit\030\007 \001(\003\022\033\n\023zone_r" +
-      "equests_limit\030\010 \001(\003J\004\010\005\020\006\"b\n\006Secret\022\n\n\002i" +
-      "d\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\022\013\n\003key\030\003 \001(\t" +
-      "\022\036\n\024environment_variable\030\004 \001(\tH\000B\013\n\trefe" +
-      "rence\"\340\001\n\nLogOptions\022\020\n\010disabled\030\001 \001(\010\022;" +
-      "\n\014log_group_id\030\002 \001(\tB#\362\3071\037([a-zA-Z][-a-z" +
-      "A-Z0-9_.]{0,63})?H\000\0228\n\tfolder_id\030\003 \001(\tB#" +
-      "\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\022:\n" +
-      "\tmin_level\030\004 \001(\0162\'.yandex.cloud.logging." +
-      "v1.LogLevel.LevelB\r\n\013destination\"\243\001\n\014Sto" +
-      "rageMount\0221\n\tbucket_id\030\001 \001(\tB\036\350\3071\001\212\3101\0043-" +
-      "63\362\3071\016[-.0-9a-zA-Z]*\022\016\n\006prefix\030\002 \001(\t\0229\n\020" +
-      "mount_point_name\030\003 \001(\tB\037\350\3071\001\212\3101\0051-100\362\3071" +
-      "\016[-_0-9a-zA-Z]*\022\021\n\tread_only\030\004 \001(\010:\002\030\001\"\203" +
-      "\004\n\005Mount\022-\n\004name\030\001 \001(\tB\037\350\3071\001\212\3101\0051-100\362\3071" +
-      "\016[-_0-9a-zA-Z]*\022>\n\004mode\030\003 \001(\01620.yandex.c" +
-      "loud.serverless.functions.v1.Mount.Mode\022" +
-      "S\n\016object_storage\030\n \001(\01329.yandex.cloud.s" +
-      "erverless.functions.v1.Mount.ObjectStora" +
-      "geH\000\022S\n\023ephemeral_disk_spec\030\013 \001(\01324.yand" +
-      "ex.cloud.serverless.functions.v1.Mount.D" +
-      "iskSpecH\000\032R\n\rObjectStorage\0221\n\tbucket_id\030" +
-      "\001 \001(\tB\036\350\3071\001\212\3101\0043-63\362\3071\016[-.0-9a-zA-Z]*\022\016\n" +
-      "\006prefix\030\002 \001(\t\0324\n\010DiskSpec\022\024\n\004size\030\001 \001(\003B" +
-      "\006\372\3071\002>0\022\022\n\nblock_size\030\002 \001(\003\";\n\004Mode\022\024\n\020M" +
-      "ODE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD" +
-      "_WRITE\020\002B\016\n\006target\022\004\300\3011\001J\004\010\002\020\003J\004\010\004\020\n\"\336\003\n" +
-      "\025AsyncInvocationConfig\022 \n\rretries_count\030" +
-      "\001 \001(\003B\t\372\3071\0050-100\022h\n\016success_target\030\002 \001(\013" +
-      "2J.yandex.cloud.serverless.functions.v1." +
-      "AsyncInvocationConfig.ResponseTargetB\004\350\307" +
-      "1\001\022h\n\016failure_target\030\003 \001(\0132J.yandex.clou" +
-      "d.serverless.functions.v1.AsyncInvocatio" +
-      "nConfig.ResponseTargetB\004\350\3071\001\022\032\n\022service_" +
-      "account_id\030\004 \001(\t\032\262\001\n\016ResponseTarget\022I\n\014e" +
-      "mpty_target\030\001 \001(\01321.yandex.cloud.serverl" +
-      "ess.functions.v1.EmptyTargetH\000\022E\n\nymq_ta" +
-      "rget\030\002 \001(\0132/.yandex.cloud.serverless.fun" +
-      "ctions.v1.YMQTargetH\000B\016\n\006target\022\004\300\3011\001\"N\n" +
-      "\tYMQTarget\022\027\n\tqueue_arn\030\001 \001(\tB\004\350\3071\001\022(\n\022s" +
-      "ervice_account_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\r\n" +
-      "\013EmptyTargetB~\n(yandex.cloud.api.serverl" +
-      "ess.functions.v1ZRgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/serverless/fu" +
-      "nctions/v1;functionsb\006proto3"
+      "ud.serverless.functions.v1.Mount\022O\n\020meta" +
+      "data_options\030\032 \001(\01325.yandex.cloud.server" +
+      "less.functions.v1.MetadataOptions\0322\n\020Env" +
+      "ironmentEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\t:\0028\001\032;\n\031NamedServiceAccountsEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"V\n\006Status\022\026\n\022" +
+      "STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006AC" +
+      "TIVE\020\002\022\014\n\010OBSOLETE\020\003\022\014\n\010DELETING\020\004J\004\010\004\020\005" +
+      "J\004\010\013\020\014J\004\010\017\020\020\"5\n\tResources\022(\n\006memory\030\001 \001(" +
+      "\003B\030\372\3071\024134217728-8589934592\"O\n\007Package\022\031" +
+      "\n\013bucket_name\030\001 \001(\tB\004\350\3071\001\022\031\n\013object_name" +
+      "\030\002 \001(\tB\004\350\3071\001\022\016\n\006sha256\030\003 \001(\t\"A\n\014Connecti" +
+      "vity\022\022\n\nnetwork_id\030\001 \001(\t\022\035\n\tsubnet_id\030\002 " +
+      "\003(\tB\n\212\3101\002>0\220\3101\001\"\370\001\n\rScalingPolicy\022\023\n\013fun" +
+      "ction_id\030\001 \001(\t\022\013\n\003tag\030\002 \001(\t\022.\n\ncreated_a" +
+      "t\030\003 \001(\0132\032.google.protobuf.Timestamp\022/\n\013m" +
+      "odified_at\030\004 \001(\0132\032.google.protobuf.Times" +
+      "tamp\022#\n\033provisioned_instances_count\030\006 \001(" +
+      "\003\022\034\n\024zone_instances_limit\030\007 \001(\003\022\033\n\023zone_" +
+      "requests_limit\030\010 \001(\003J\004\010\005\020\006\"b\n\006Secret\022\n\n\002" +
+      "id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\022\013\n\003key\030\003 \001(" +
+      "\t\022\036\n\024environment_variable\030\004 \001(\tH\000B\013\n\tref" +
+      "erence\"\340\001\n\nLogOptions\022\020\n\010disabled\030\001 \001(\010\022" +
+      ";\n\014log_group_id\030\002 \001(\tB#\362\3071\037([a-zA-Z][-a-" +
+      "zA-Z0-9_.]{0,63})?H\000\0228\n\tfolder_id\030\003 \001(\tB" +
+      "#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\022:" +
+      "\n\tmin_level\030\004 \001(\0162\'.yandex.cloud.logging" +
+      ".v1.LogLevel.LevelB\r\n\013destination\"\243\001\n\014St" +
+      "orageMount\0221\n\tbucket_id\030\001 \001(\tB\036\350\3071\001\212\3101\0043" +
+      "-63\362\3071\016[-.0-9a-zA-Z]*\022\016\n\006prefix\030\002 \001(\t\0229\n" +
+      "\020mount_point_name\030\003 \001(\tB\037\350\3071\001\212\3101\0051-100\362\307" +
+      "1\016[-_0-9a-zA-Z]*\022\021\n\tread_only\030\004 \001(\010:\002\030\001\"" +
+      "\203\004\n\005Mount\022-\n\004name\030\001 \001(\tB\037\350\3071\001\212\3101\0051-100\362\307" +
+      "1\016[-_0-9a-zA-Z]*\022>\n\004mode\030\003 \001(\01620.yandex." +
+      "cloud.serverless.functions.v1.Mount.Mode" +
+      "\022S\n\016object_storage\030\n \001(\01329.yandex.cloud." +
+      "serverless.functions.v1.Mount.ObjectStor" +
+      "ageH\000\022S\n\023ephemeral_disk_spec\030\013 \001(\01324.yan" +
+      "dex.cloud.serverless.functions.v1.Mount." +
+      "DiskSpecH\000\032R\n\rObjectStorage\0221\n\tbucket_id" +
+      "\030\001 \001(\tB\036\350\3071\001\212\3101\0043-63\362\3071\016[-.0-9a-zA-Z]*\022\016" +
+      "\n\006prefix\030\002 \001(\t\0324\n\010DiskSpec\022\024\n\004size\030\001 \001(\003" +
+      "B\006\372\3071\002>0\022\022\n\nblock_size\030\002 \001(\003\";\n\004Mode\022\024\n\020" +
+      "MODE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREA" +
+      "D_WRITE\020\002B\016\n\006target\022\004\300\3011\001J\004\010\002\020\003J\004\010\004\020\n\"\336\003" +
+      "\n\025AsyncInvocationConfig\022 \n\rretries_count" +
+      "\030\001 \001(\003B\t\372\3071\0050-100\022h\n\016success_target\030\002 \001(" +
+      "\0132J.yandex.cloud.serverless.functions.v1" +
+      ".AsyncInvocationConfig.ResponseTargetB\004\350" +
+      "\3071\001\022h\n\016failure_target\030\003 \001(\0132J.yandex.clo" +
+      "ud.serverless.functions.v1.AsyncInvocati" +
+      "onConfig.ResponseTargetB\004\350\3071\001\022\032\n\022service" +
+      "_account_id\030\004 \001(\t\032\262\001\n\016ResponseTarget\022I\n\014" +
+      "empty_target\030\001 \001(\01321.yandex.cloud.server" +
+      "less.functions.v1.EmptyTargetH\000\022E\n\nymq_t" +
+      "arget\030\002 \001(\0132/.yandex.cloud.serverless.fu" +
+      "nctions.v1.YMQTargetH\000B\016\n\006target\022\004\300\3011\001\"N" +
+      "\n\tYMQTarget\022\027\n\tqueue_arn\030\001 \001(\tB\004\350\3071\001\022(\n\022" +
+      "service_account_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\r" +
+      "\n\013EmptyTarget\"\266\001\n\017MetadataOptions\022O\n\021gce" +
+      "_http_endpoint\030\001 \001(\01624.yandex.cloud.serv" +
+      "erless.functions.v1.MetadataOption\022R\n\024aw" +
+      "s_v1_http_endpoint\030\002 \001(\01624.yandex.cloud." +
+      "serverless.functions.v1.MetadataOption*L" +
+      "\n\016MetadataOption\022\037\n\033METADATA_OPTION_UNSP" +
+      "ECIFIED\020\000\022\013\n\007ENABLED\020\001\022\014\n\010DISABLED\020\002B~\n(" +
+      "yandex.cloud.api.serverless.functions.v1" +
+      "ZRgithub.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/serverless/functions/v1;funct" +
+      "ionsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -22832,7 +23954,7 @@ public final class FunctionOuterClass {
     internal_static_yandex_cloud_serverless_functions_v1_Version_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_Version_descriptor,
-        new java.lang.String[] { "Id", "FunctionId", "Description", "CreatedAt", "Runtime", "Entrypoint", "Resources", "ExecutionTimeout", "ServiceAccountId", "ImageSize", "Status", "Tags", "Environment", "Connectivity", "NamedServiceAccounts", "Secrets", "LogOptions", "StorageMounts", "AsyncInvocationConfig", "TmpfsSize", "Concurrency", "Mounts", });
+        new java.lang.String[] { "Id", "FunctionId", "Description", "CreatedAt", "Runtime", "Entrypoint", "Resources", "ExecutionTimeout", "ServiceAccountId", "ImageSize", "Status", "Tags", "Environment", "Connectivity", "NamedServiceAccounts", "Secrets", "LogOptions", "StorageMounts", "AsyncInvocationConfig", "TmpfsSize", "Concurrency", "Mounts", "MetadataOptions", });
     internal_static_yandex_cloud_serverless_functions_v1_Version_EnvironmentEntry_descriptor =
       internal_static_yandex_cloud_serverless_functions_v1_Version_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_functions_v1_Version_EnvironmentEntry_fieldAccessorTable = new
@@ -22929,6 +24051,12 @@ public final class FunctionOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_EmptyTarget_descriptor,
         new java.lang.String[] { });
+    internal_static_yandex_cloud_serverless_functions_v1_MetadataOptions_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_serverless_functions_v1_MetadataOptions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_functions_v1_MetadataOptions_descriptor,
+        new java.lang.String[] { "GceHttpEndpoint", "AwsV1HttpEndpoint", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);

@@ -7946,7 +7946,7 @@ public final class Clickhouse {
 
     /**
      * <pre>
-     * While list of tables for replication. If none or empty list is presented - will
+     * White list of tables for replication. If none or empty list is presented - will
      * replicate all tables. Can contain * patterns.
      * </pre>
      *
@@ -7957,7 +7957,7 @@ public final class Clickhouse {
         getIncludeTablesList();
     /**
      * <pre>
-     * While list of tables for replication. If none or empty list is presented - will
+     * White list of tables for replication. If none or empty list is presented - will
      * replicate all tables. Can contain * patterns.
      * </pre>
      *
@@ -7967,7 +7967,7 @@ public final class Clickhouse {
     int getIncludeTablesCount();
     /**
      * <pre>
-     * While list of tables for replication. If none or empty list is presented - will
+     * White list of tables for replication. If none or empty list is presented - will
      * replicate all tables. Can contain * patterns.
      * </pre>
      *
@@ -7978,7 +7978,7 @@ public final class Clickhouse {
     java.lang.String getIncludeTables(int index);
     /**
      * <pre>
-     * While list of tables for replication. If none or empty list is presented - will
+     * White list of tables for replication. If none or empty list is presented - will
      * replicate all tables. Can contain * patterns.
      * </pre>
      *
@@ -8267,7 +8267,7 @@ public final class Clickhouse {
     private com.google.protobuf.LazyStringList includeTables_;
     /**
      * <pre>
-     * While list of tables for replication. If none or empty list is presented - will
+     * White list of tables for replication. If none or empty list is presented - will
      * replicate all tables. Can contain * patterns.
      * </pre>
      *
@@ -8280,7 +8280,7 @@ public final class Clickhouse {
     }
     /**
      * <pre>
-     * While list of tables for replication. If none or empty list is presented - will
+     * White list of tables for replication. If none or empty list is presented - will
      * replicate all tables. Can contain * patterns.
      * </pre>
      *
@@ -8292,7 +8292,7 @@ public final class Clickhouse {
     }
     /**
      * <pre>
-     * While list of tables for replication. If none or empty list is presented - will
+     * White list of tables for replication. If none or empty list is presented - will
      * replicate all tables. Can contain * patterns.
      * </pre>
      *
@@ -8305,7 +8305,7 @@ public final class Clickhouse {
     }
     /**
      * <pre>
-     * While list of tables for replication. If none or empty list is presented - will
+     * White list of tables for replication. If none or empty list is presented - will
      * replicate all tables. Can contain * patterns.
      * </pre>
      *
@@ -9075,7 +9075,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * While list of tables for replication. If none or empty list is presented - will
+       * White list of tables for replication. If none or empty list is presented - will
        * replicate all tables. Can contain * patterns.
        * </pre>
        *
@@ -9088,7 +9088,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * While list of tables for replication. If none or empty list is presented - will
+       * White list of tables for replication. If none or empty list is presented - will
        * replicate all tables. Can contain * patterns.
        * </pre>
        *
@@ -9100,7 +9100,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * While list of tables for replication. If none or empty list is presented - will
+       * White list of tables for replication. If none or empty list is presented - will
        * replicate all tables. Can contain * patterns.
        * </pre>
        *
@@ -9113,7 +9113,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * While list of tables for replication. If none or empty list is presented - will
+       * White list of tables for replication. If none or empty list is presented - will
        * replicate all tables. Can contain * patterns.
        * </pre>
        *
@@ -9127,7 +9127,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * While list of tables for replication. If none or empty list is presented - will
+       * White list of tables for replication. If none or empty list is presented - will
        * replicate all tables. Can contain * patterns.
        * </pre>
        *
@@ -9148,7 +9148,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * While list of tables for replication. If none or empty list is presented - will
+       * White list of tables for replication. If none or empty list is presented - will
        * replicate all tables. Can contain * patterns.
        * </pre>
        *
@@ -9168,7 +9168,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * While list of tables for replication. If none or empty list is presented - will
+       * White list of tables for replication. If none or empty list is presented - will
        * replicate all tables. Can contain * patterns.
        * </pre>
        *
@@ -9186,7 +9186,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * While list of tables for replication. If none or empty list is presented - will
+       * White list of tables for replication. If none or empty list is presented - will
        * replicate all tables. Can contain * patterns.
        * </pre>
        *
@@ -9201,7 +9201,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * While list of tables for replication. If none or empty list is presented - will
+       * White list of tables for replication. If none or empty list is presented - will
        * replicate all tables. Can contain * patterns.
        * </pre>
        *

@@ -126,6 +126,33 @@ public final class WidgetOuterClass {
      */
     yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidgetOrBuilder getChartOrBuilder();
 
+    /**
+     * <pre>
+     * Multi-source chart widget.
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget multi_source_chart = 6;</code>
+     * @return Whether the multiSourceChart field is set.
+     */
+    boolean hasMultiSourceChart();
+    /**
+     * <pre>
+     * Multi-source chart widget.
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget multi_source_chart = 6;</code>
+     * @return The multiSourceChart.
+     */
+    yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget getMultiSourceChart();
+    /**
+     * <pre>
+     * Multi-source chart widget.
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget multi_source_chart = 6;</code>
+     */
+    yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidgetOrBuilder getMultiSourceChartOrBuilder();
+
     public yandex.cloud.api.monitoring.v3.WidgetOuterClass.Widget.WidgetCase getWidgetCase();
   }
   /**
@@ -230,6 +257,20 @@ public final class WidgetOuterClass {
                 widget_ = subBuilder.buildPartial();
               }
               widgetCase_ = 5;
+              break;
+            }
+            case 50: {
+              yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.Builder subBuilder = null;
+              if (widgetCase_ == 6) {
+                subBuilder = ((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget) widget_).toBuilder();
+              }
+              widget_ =
+                  input.readMessage(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget) widget_);
+                widget_ = subBuilder.buildPartial();
+              }
+              widgetCase_ = 6;
               break;
             }
             default: {
@@ -1062,6 +1103,7 @@ public final class WidgetOuterClass {
       TEXT(2),
       TITLE(3),
       CHART(5),
+      MULTI_SOURCE_CHART(6),
       WIDGET_NOT_SET(0);
       private final int value;
       private WidgetCase(int value) {
@@ -1082,6 +1124,7 @@ public final class WidgetOuterClass {
           case 2: return TEXT;
           case 3: return TITLE;
           case 5: return CHART;
+          case 6: return MULTI_SOURCE_CHART;
           case 0: return WIDGET_NOT_SET;
           default: return null;
         }
@@ -1264,6 +1307,49 @@ public final class WidgetOuterClass {
       return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.getDefaultInstance();
     }
 
+    public static final int MULTI_SOURCE_CHART_FIELD_NUMBER = 6;
+    /**
+     * <pre>
+     * Multi-source chart widget.
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget multi_source_chart = 6;</code>
+     * @return Whether the multiSourceChart field is set.
+     */
+    @java.lang.Override
+    public boolean hasMultiSourceChart() {
+      return widgetCase_ == 6;
+    }
+    /**
+     * <pre>
+     * Multi-source chart widget.
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget multi_source_chart = 6;</code>
+     * @return The multiSourceChart.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget getMultiSourceChart() {
+      if (widgetCase_ == 6) {
+         return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget) widget_;
+      }
+      return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Multi-source chart widget.
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget multi_source_chart = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidgetOrBuilder getMultiSourceChartOrBuilder() {
+      if (widgetCase_ == 6) {
+         return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget) widget_;
+      }
+      return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1290,6 +1376,9 @@ public final class WidgetOuterClass {
       if (widgetCase_ == 5) {
         output.writeMessage(5, (yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget) widget_);
       }
+      if (widgetCase_ == 6) {
+        output.writeMessage(6, (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget) widget_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1314,6 +1403,10 @@ public final class WidgetOuterClass {
       if (widgetCase_ == 5) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, (yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget) widget_);
+      }
+      if (widgetCase_ == 6) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget) widget_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1349,6 +1442,10 @@ public final class WidgetOuterClass {
           if (!getChart()
               .equals(other.getChart())) return false;
           break;
+        case 6:
+          if (!getMultiSourceChart()
+              .equals(other.getMultiSourceChart())) return false;
+          break;
         case 0:
         default:
       }
@@ -1379,6 +1476,10 @@ public final class WidgetOuterClass {
         case 5:
           hash = (37 * hash) + CHART_FIELD_NUMBER;
           hash = (53 * hash) + getChart().hashCode();
+          break;
+        case 6:
+          hash = (37 * hash) + MULTI_SOURCE_CHART_FIELD_NUMBER;
+          hash = (53 * hash) + getMultiSourceChart().hashCode();
           break;
         case 0:
         default:
@@ -1580,6 +1681,13 @@ public final class WidgetOuterClass {
             result.widget_ = chartBuilder_.build();
           }
         }
+        if (widgetCase_ == 6) {
+          if (multiSourceChartBuilder_ == null) {
+            result.widget_ = widget_;
+          } else {
+            result.widget_ = multiSourceChartBuilder_.build();
+          }
+        }
         result.widgetCase_ = widgetCase_;
         onBuilt();
         return result;
@@ -1643,6 +1751,10 @@ public final class WidgetOuterClass {
           }
           case CHART: {
             mergeChart(other.getChart());
+            break;
+          }
+          case MULTI_SOURCE_CHART: {
+            mergeMultiSourceChart(other.getMultiSourceChart());
             break;
           }
           case WIDGET_NOT_SET: {
@@ -2378,6 +2490,183 @@ public final class WidgetOuterClass {
         onChanged();;
         return chartBuilder_;
       }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.Builder, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidgetOrBuilder> multiSourceChartBuilder_;
+      /**
+       * <pre>
+       * Multi-source chart widget.
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget multi_source_chart = 6;</code>
+       * @return Whether the multiSourceChart field is set.
+       */
+      @java.lang.Override
+      public boolean hasMultiSourceChart() {
+        return widgetCase_ == 6;
+      }
+      /**
+       * <pre>
+       * Multi-source chart widget.
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget multi_source_chart = 6;</code>
+       * @return The multiSourceChart.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget getMultiSourceChart() {
+        if (multiSourceChartBuilder_ == null) {
+          if (widgetCase_ == 6) {
+            return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget) widget_;
+          }
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.getDefaultInstance();
+        } else {
+          if (widgetCase_ == 6) {
+            return multiSourceChartBuilder_.getMessage();
+          }
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Multi-source chart widget.
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget multi_source_chart = 6;</code>
+       */
+      public Builder setMultiSourceChart(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget value) {
+        if (multiSourceChartBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          widget_ = value;
+          onChanged();
+        } else {
+          multiSourceChartBuilder_.setMessage(value);
+        }
+        widgetCase_ = 6;
+        return this;
+      }
+      /**
+       * <pre>
+       * Multi-source chart widget.
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget multi_source_chart = 6;</code>
+       */
+      public Builder setMultiSourceChart(
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.Builder builderForValue) {
+        if (multiSourceChartBuilder_ == null) {
+          widget_ = builderForValue.build();
+          onChanged();
+        } else {
+          multiSourceChartBuilder_.setMessage(builderForValue.build());
+        }
+        widgetCase_ = 6;
+        return this;
+      }
+      /**
+       * <pre>
+       * Multi-source chart widget.
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget multi_source_chart = 6;</code>
+       */
+      public Builder mergeMultiSourceChart(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget value) {
+        if (multiSourceChartBuilder_ == null) {
+          if (widgetCase_ == 6 &&
+              widget_ != yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.getDefaultInstance()) {
+            widget_ = yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.newBuilder((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget) widget_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            widget_ = value;
+          }
+          onChanged();
+        } else {
+          if (widgetCase_ == 6) {
+            multiSourceChartBuilder_.mergeFrom(value);
+          }
+          multiSourceChartBuilder_.setMessage(value);
+        }
+        widgetCase_ = 6;
+        return this;
+      }
+      /**
+       * <pre>
+       * Multi-source chart widget.
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget multi_source_chart = 6;</code>
+       */
+      public Builder clearMultiSourceChart() {
+        if (multiSourceChartBuilder_ == null) {
+          if (widgetCase_ == 6) {
+            widgetCase_ = 0;
+            widget_ = null;
+            onChanged();
+          }
+        } else {
+          if (widgetCase_ == 6) {
+            widgetCase_ = 0;
+            widget_ = null;
+          }
+          multiSourceChartBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Multi-source chart widget.
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget multi_source_chart = 6;</code>
+       */
+      public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.Builder getMultiSourceChartBuilder() {
+        return getMultiSourceChartFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Multi-source chart widget.
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget multi_source_chart = 6;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidgetOrBuilder getMultiSourceChartOrBuilder() {
+        if ((widgetCase_ == 6) && (multiSourceChartBuilder_ != null)) {
+          return multiSourceChartBuilder_.getMessageOrBuilder();
+        } else {
+          if (widgetCase_ == 6) {
+            return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget) widget_;
+          }
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Multi-source chart widget.
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget multi_source_chart = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.Builder, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidgetOrBuilder> 
+          getMultiSourceChartFieldBuilder() {
+        if (multiSourceChartBuilder_ == null) {
+          if (!(widgetCase_ == 6)) {
+            widget_ = yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.getDefaultInstance();
+          }
+          multiSourceChartBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.Builder, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidgetOrBuilder>(
+                  (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget) widget_,
+                  getParentForChildren(),
+                  isClean());
+          widget_ = null;
+        }
+        widgetCase_ = 6;
+        onChanged();;
+        return multiSourceChartBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2455,18 +2744,21 @@ public final class WidgetOuterClass {
       "oud/monitoring/v3/chart_widget.proto\032,ya" +
       "ndex/cloud/monitoring/v3/text_widget.pro" +
       "to\032-yandex/cloud/monitoring/v3/title_wid" +
-      "get.proto\"\307\002\n\006Widget\022C\n\010position\030\001 \001(\01321" +
-      ".yandex.cloud.monitoring.v3.Widget.Layou" +
-      "tPosition\0226\n\004text\030\002 \001(\0132&.yandex.cloud.m" +
-      "onitoring.v3.TextWidgetH\000\0228\n\005title\030\003 \001(\013" +
-      "2\'.yandex.cloud.monitoring.v3.TitleWidge" +
-      "tH\000\0228\n\005chart\030\005 \001(\0132\'.yandex.cloud.monito" +
-      "ring.v3.ChartWidgetH\000\032<\n\016LayoutPosition\022" +
-      "\t\n\001x\030\001 \001(\003\022\t\n\001y\030\002 \001(\003\022\t\n\001w\030\003 \001(\003\022\t\n\001h\030\004 " +
-      "\001(\003B\010\n\006widgetJ\004\010\004\020\005Bk\n\036yandex.cloud.api." +
-      "monitoring.v3ZIgithub.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/monitoring/v3;mo" +
-      "nitoringb\006proto3"
+      "get.proto\032:yandex/cloud/monitoring/v3/mu" +
+      "lti_source_chart_widget.proto\"\231\003\n\006Widget" +
+      "\022C\n\010position\030\001 \001(\01321.yandex.cloud.monito" +
+      "ring.v3.Widget.LayoutPosition\0226\n\004text\030\002 " +
+      "\001(\0132&.yandex.cloud.monitoring.v3.TextWid" +
+      "getH\000\0228\n\005title\030\003 \001(\0132\'.yandex.cloud.moni" +
+      "toring.v3.TitleWidgetH\000\0228\n\005chart\030\005 \001(\0132\'" +
+      ".yandex.cloud.monitoring.v3.ChartWidgetH" +
+      "\000\022P\n\022multi_source_chart\030\006 \001(\01322.yandex.c" +
+      "loud.monitoring.v3.MultiSourceChartWidge" +
+      "tH\000\032<\n\016LayoutPosition\022\t\n\001x\030\001 \001(\003\022\t\n\001y\030\002 " +
+      "\001(\003\022\t\n\001w\030\003 \001(\003\022\t\n\001h\030\004 \001(\003B\010\n\006widgetJ\004\010\004\020" +
+      "\005Bk\n\036yandex.cloud.api.monitoring.v3ZIgit" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/monitoring/v3;monitoringb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2474,13 +2766,14 @@ public final class WidgetOuterClass {
           yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.getDescriptor(),
           yandex.cloud.api.monitoring.v3.TextWidgetOuterClass.getDescriptor(),
           yandex.cloud.api.monitoring.v3.TitleWidgetOuterClass.getDescriptor(),
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_monitoring_v3_Widget_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_monitoring_v3_Widget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_Widget_descriptor,
-        new java.lang.String[] { "Position", "Text", "Title", "Chart", "Widget", });
+        new java.lang.String[] { "Position", "Text", "Title", "Chart", "MultiSourceChart", "Widget", });
     internal_static_yandex_cloud_monitoring_v3_Widget_LayoutPosition_descriptor =
       internal_static_yandex_cloud_monitoring_v3_Widget_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_monitoring_v3_Widget_LayoutPosition_fieldAccessorTable = new
@@ -2490,6 +2783,7 @@ public final class WidgetOuterClass {
     yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.getDescriptor();
     yandex.cloud.api.monitoring.v3.TextWidgetOuterClass.getDescriptor();
     yandex.cloud.api.monitoring.v3.TitleWidgetOuterClass.getDescriptor();
+    yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

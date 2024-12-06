@@ -22060,6 +22060,36 @@ public final class TuningServiceOuterClass {
      */
     yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParamsOrBuilder getTextToTextCompletionOrBuilder();
 
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+     * @return Whether the textClassificationMultilabel field is set.
+     */
+    boolean hasTextClassificationMultilabel();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+     * @return The textClassificationMultilabel.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams getTextClassificationMultilabel();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParamsOrBuilder getTextClassificationMultilabelOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+     * @return Whether the textClassificationMulticlass field is set.
+     */
+    boolean hasTextClassificationMulticlass();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+     * @return The textClassificationMulticlass.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams getTextClassificationMulticlass();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParamsOrBuilder getTextClassificationMulticlassOrBuilder();
+
     public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.GetOptionsResponse.TuningParamsCase getTuningParamsCase();
   }
   /**
@@ -22156,6 +22186,34 @@ public final class TuningServiceOuterClass {
               tuningParamsCase_ = 100;
               break;
             }
+            case 810: {
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.Builder subBuilder = null;
+              if (tuningParamsCase_ == 101) {
+                subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_).toBuilder();
+              }
+              tuningParams_ =
+                  input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_);
+                tuningParams_ = subBuilder.buildPartial();
+              }
+              tuningParamsCase_ = 101;
+              break;
+            }
+            case 818: {
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.Builder subBuilder = null;
+              if (tuningParamsCase_ == 102) {
+                subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_).toBuilder();
+              }
+              tuningParams_ =
+                  input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_);
+                tuningParams_ = subBuilder.buildPartial();
+              }
+              tuningParamsCase_ = 102;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -22200,6 +22258,8 @@ public final class TuningServiceOuterClass {
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       TEXT_TO_TEXT_COMPLETION(100),
+      TEXT_CLASSIFICATION_MULTILABEL(101),
+      TEXT_CLASSIFICATION_MULTICLASS(102),
       TUNINGPARAMS_NOT_SET(0);
       private final int value;
       private TuningParamsCase(int value) {
@@ -22218,6 +22278,8 @@ public final class TuningServiceOuterClass {
       public static TuningParamsCase forNumber(int value) {
         switch (value) {
           case 100: return TEXT_TO_TEXT_COMPLETION;
+          case 101: return TEXT_CLASSIFICATION_MULTILABEL;
+          case 102: return TEXT_CLASSIFICATION_MULTICLASS;
           case 0: return TUNINGPARAMS_NOT_SET;
           default: return null;
         }
@@ -22420,6 +22482,68 @@ public final class TuningServiceOuterClass {
       return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.getDefaultInstance();
     }
 
+    public static final int TEXT_CLASSIFICATION_MULTILABEL_FIELD_NUMBER = 101;
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+     * @return Whether the textClassificationMultilabel field is set.
+     */
+    @java.lang.Override
+    public boolean hasTextClassificationMultilabel() {
+      return tuningParamsCase_ == 101;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+     * @return The textClassificationMultilabel.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams getTextClassificationMultilabel() {
+      if (tuningParamsCase_ == 101) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParamsOrBuilder getTextClassificationMultilabelOrBuilder() {
+      if (tuningParamsCase_ == 101) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.getDefaultInstance();
+    }
+
+    public static final int TEXT_CLASSIFICATION_MULTICLASS_FIELD_NUMBER = 102;
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+     * @return Whether the textClassificationMulticlass field is set.
+     */
+    @java.lang.Override
+    public boolean hasTextClassificationMulticlass() {
+      return tuningParamsCase_ == 102;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+     * @return The textClassificationMulticlass.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams getTextClassificationMulticlass() {
+      if (tuningParamsCase_ == 102) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParamsOrBuilder getTextClassificationMulticlassOrBuilder() {
+      if (tuningParamsCase_ == 102) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -22449,6 +22573,12 @@ public final class TuningServiceOuterClass {
       if (tuningParamsCase_ == 100) {
         output.writeMessage(100, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams) tuningParams_);
       }
+      if (tuningParamsCase_ == 101) {
+        output.writeMessage(101, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_);
+      }
+      if (tuningParamsCase_ == 102) {
+        output.writeMessage(102, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -22475,6 +22605,14 @@ public final class TuningServiceOuterClass {
       if (tuningParamsCase_ == 100) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(100, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams) tuningParams_);
+      }
+      if (tuningParamsCase_ == 101) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(101, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_);
+      }
+      if (tuningParamsCase_ == 102) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(102, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -22504,6 +22642,14 @@ public final class TuningServiceOuterClass {
         case 100:
           if (!getTextToTextCompletion()
               .equals(other.getTextToTextCompletion())) return false;
+          break;
+        case 101:
+          if (!getTextClassificationMultilabel()
+              .equals(other.getTextClassificationMultilabel())) return false;
+          break;
+        case 102:
+          if (!getTextClassificationMulticlass()
+              .equals(other.getTextClassificationMulticlass())) return false;
           break;
         case 0:
         default:
@@ -22535,6 +22681,14 @@ public final class TuningServiceOuterClass {
         case 100:
           hash = (37 * hash) + TEXT_TO_TEXT_COMPLETION_FIELD_NUMBER;
           hash = (53 * hash) + getTextToTextCompletion().hashCode();
+          break;
+        case 101:
+          hash = (37 * hash) + TEXT_CLASSIFICATION_MULTILABEL_FIELD_NUMBER;
+          hash = (53 * hash) + getTextClassificationMultilabel().hashCode();
+          break;
+        case 102:
+          hash = (37 * hash) + TEXT_CLASSIFICATION_MULTICLASS_FIELD_NUMBER;
+          hash = (53 * hash) + getTextClassificationMulticlass().hashCode();
           break;
         case 0:
         default:
@@ -22746,6 +22900,20 @@ public final class TuningServiceOuterClass {
             result.tuningParams_ = textToTextCompletionBuilder_.build();
           }
         }
+        if (tuningParamsCase_ == 101) {
+          if (textClassificationMultilabelBuilder_ == null) {
+            result.tuningParams_ = tuningParams_;
+          } else {
+            result.tuningParams_ = textClassificationMultilabelBuilder_.build();
+          }
+        }
+        if (tuningParamsCase_ == 102) {
+          if (textClassificationMulticlassBuilder_ == null) {
+            result.tuningParams_ = tuningParams_;
+          } else {
+            result.tuningParams_ = textClassificationMulticlassBuilder_.build();
+          }
+        }
         result.tuningParamsCase_ = tuningParamsCase_;
         onBuilt();
         return result;
@@ -22858,6 +23026,14 @@ public final class TuningServiceOuterClass {
         switch (other.getTuningParamsCase()) {
           case TEXT_TO_TEXT_COMPLETION: {
             mergeTextToTextCompletion(other.getTextToTextCompletion());
+            break;
+          }
+          case TEXT_CLASSIFICATION_MULTILABEL: {
+            mergeTextClassificationMultilabel(other.getTextClassificationMultilabel());
+            break;
+          }
+          case TEXT_CLASSIFICATION_MULTICLASS: {
+            mergeTextClassificationMulticlass(other.getTextClassificationMulticlass());
             break;
           }
           case TUNINGPARAMS_NOT_SET: {
@@ -23681,6 +23857,288 @@ public final class TuningServiceOuterClass {
         onChanged();;
         return textToTextCompletionBuilder_;
       }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParamsOrBuilder> textClassificationMultilabelBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       * @return Whether the textClassificationMultilabel field is set.
+       */
+      @java.lang.Override
+      public boolean hasTextClassificationMultilabel() {
+        return tuningParamsCase_ == 101;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       * @return The textClassificationMultilabel.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams getTextClassificationMultilabel() {
+        if (textClassificationMultilabelBuilder_ == null) {
+          if (tuningParamsCase_ == 101) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.getDefaultInstance();
+        } else {
+          if (tuningParamsCase_ == 101) {
+            return textClassificationMultilabelBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       */
+      public Builder setTextClassificationMultilabel(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams value) {
+        if (textClassificationMultilabelBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tuningParams_ = value;
+          onChanged();
+        } else {
+          textClassificationMultilabelBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 101;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       */
+      public Builder setTextClassificationMultilabel(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.Builder builderForValue) {
+        if (textClassificationMultilabelBuilder_ == null) {
+          tuningParams_ = builderForValue.build();
+          onChanged();
+        } else {
+          textClassificationMultilabelBuilder_.setMessage(builderForValue.build());
+        }
+        tuningParamsCase_ = 101;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       */
+      public Builder mergeTextClassificationMultilabel(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams value) {
+        if (textClassificationMultilabelBuilder_ == null) {
+          if (tuningParamsCase_ == 101 &&
+              tuningParams_ != yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.getDefaultInstance()) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            tuningParams_ = value;
+          }
+          onChanged();
+        } else {
+          if (tuningParamsCase_ == 101) {
+            textClassificationMultilabelBuilder_.mergeFrom(value);
+          }
+          textClassificationMultilabelBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 101;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       */
+      public Builder clearTextClassificationMultilabel() {
+        if (textClassificationMultilabelBuilder_ == null) {
+          if (tuningParamsCase_ == 101) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+            onChanged();
+          }
+        } else {
+          if (tuningParamsCase_ == 101) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+          }
+          textClassificationMultilabelBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.Builder getTextClassificationMultilabelBuilder() {
+        return getTextClassificationMultilabelFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParamsOrBuilder getTextClassificationMultilabelOrBuilder() {
+        if ((tuningParamsCase_ == 101) && (textClassificationMultilabelBuilder_ != null)) {
+          return textClassificationMultilabelBuilder_.getMessageOrBuilder();
+        } else {
+          if (tuningParamsCase_ == 101) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParamsOrBuilder> 
+          getTextClassificationMultilabelFieldBuilder() {
+        if (textClassificationMultilabelBuilder_ == null) {
+          if (!(tuningParamsCase_ == 101)) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.getDefaultInstance();
+          }
+          textClassificationMultilabelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParamsOrBuilder>(
+                  (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_,
+                  getParentForChildren(),
+                  isClean());
+          tuningParams_ = null;
+        }
+        tuningParamsCase_ = 101;
+        onChanged();;
+        return textClassificationMultilabelBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParamsOrBuilder> textClassificationMulticlassBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       * @return Whether the textClassificationMulticlass field is set.
+       */
+      @java.lang.Override
+      public boolean hasTextClassificationMulticlass() {
+        return tuningParamsCase_ == 102;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       * @return The textClassificationMulticlass.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams getTextClassificationMulticlass() {
+        if (textClassificationMulticlassBuilder_ == null) {
+          if (tuningParamsCase_ == 102) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.getDefaultInstance();
+        } else {
+          if (tuningParamsCase_ == 102) {
+            return textClassificationMulticlassBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       */
+      public Builder setTextClassificationMulticlass(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams value) {
+        if (textClassificationMulticlassBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tuningParams_ = value;
+          onChanged();
+        } else {
+          textClassificationMulticlassBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 102;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       */
+      public Builder setTextClassificationMulticlass(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.Builder builderForValue) {
+        if (textClassificationMulticlassBuilder_ == null) {
+          tuningParams_ = builderForValue.build();
+          onChanged();
+        } else {
+          textClassificationMulticlassBuilder_.setMessage(builderForValue.build());
+        }
+        tuningParamsCase_ = 102;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       */
+      public Builder mergeTextClassificationMulticlass(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams value) {
+        if (textClassificationMulticlassBuilder_ == null) {
+          if (tuningParamsCase_ == 102 &&
+              tuningParams_ != yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.getDefaultInstance()) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            tuningParams_ = value;
+          }
+          onChanged();
+        } else {
+          if (tuningParamsCase_ == 102) {
+            textClassificationMulticlassBuilder_.mergeFrom(value);
+          }
+          textClassificationMulticlassBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 102;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       */
+      public Builder clearTextClassificationMulticlass() {
+        if (textClassificationMulticlassBuilder_ == null) {
+          if (tuningParamsCase_ == 102) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+            onChanged();
+          }
+        } else {
+          if (tuningParamsCase_ == 102) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+          }
+          textClassificationMulticlassBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.Builder getTextClassificationMulticlassBuilder() {
+        return getTextClassificationMulticlassFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParamsOrBuilder getTextClassificationMulticlassOrBuilder() {
+        if ((tuningParamsCase_ == 102) && (textClassificationMulticlassBuilder_ != null)) {
+          return textClassificationMulticlassBuilder_.getMessageOrBuilder();
+        } else {
+          if (tuningParamsCase_ == 102) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParamsOrBuilder> 
+          getTextClassificationMulticlassFieldBuilder() {
+        if (textClassificationMulticlassBuilder_ == null) {
+          if (!(tuningParamsCase_ == 102)) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.getDefaultInstance();
+          }
+          textClassificationMulticlassBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParamsOrBuilder>(
+                  (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_,
+                  getParentForChildren(),
+                  isClean());
+          tuningParams_ = null;
+        }
+        tuningParamsCase_ = 102;
+        onChanged();;
+        return textClassificationMulticlassBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -23971,7 +24429,7 @@ public final class TuningServiceOuterClass {
       "UrlRequest\022\025\n\007task_id\030\001 \001(\tB\004\350\3071\001\")\n\025Get" +
       "MetricsUrlResponse\022\020\n\010load_url\030\001 \001(\t\"*\n\021" +
       "GetOptionsRequest\022\025\n\007task_id\030\001 \001(\tB\004\350\3071\001" +
-      "\"\335\002\n\022GetOptionsResponse\022\017\n\007task_id\030\001 \001(\t" +
+      "\"\257\004\n\022GetOptionsResponse\022\017\n\007task_id\030\001 \001(\t" +
       "\022\026\n\016base_model_uri\030\002 \001(\t\022P\n\016train_datase" +
       "ts\030\003 \003(\01328.yandex.cloud.ai.tuning.v1.Tun" +
       "ingRequest.WeightedDataset\022U\n\023validation" +
@@ -23979,27 +24437,32 @@ public final class TuningServiceOuterClass {
       ".v1.TuningRequest.WeightedDataset\022^\n\027tex" +
       "t_to_text_completion\030d \001(\0132;.yandex.clou" +
       "d.ai.tuning.v1.TextToTextCompletionTunin" +
-      "gParamsH\000B\017\n\rtuning_paramsJ\004\010\005\020d2\254\005\n\rTun" +
-      "ingService\022y\n\004Tune\022(.yandex.cloud.ai.tun" +
-      "ing.v1.TuningRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"$\262\322* \n\016TuningMetadata\022\016T" +
-      "uningResponse\022e\n\004List\022-.yandex.cloud.ai." +
-      "tuning.v1.ListTuningsRequest\032..yandex.cl" +
-      "oud.ai.tuning.v1.ListTuningsResponse\022o\n\010" +
-      "Describe\0220.yandex.cloud.ai.tuning.v1.Des" +
-      "cribeTuningRequest\0321.yandex.cloud.ai.tun" +
-      "ing.v1.DescribeTuningResponse\022i\n\006Cancel\022" +
-      "..yandex.cloud.ai.tuning.v1.CancelTuning" +
-      "Request\032/.yandex.cloud.ai.tuning.v1.Canc" +
-      "elTuningResponse\022r\n\rGetMetricsUrl\022/.yand" +
-      "ex.cloud.ai.tuning.v1.GetMetricsUrlReque" +
-      "st\0320.yandex.cloud.ai.tuning.v1.GetMetric" +
-      "sUrlResponse\022i\n\nGetOptions\022,.yandex.clou" +
-      "d.ai.tuning.v1.GetOptionsRequest\032-.yande" +
-      "x.cloud.ai.tuning.v1.GetOptionsResponseB" +
-      "c\n\035yandex.cloud.api.ai.tuning.v1ZBgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/ai/tuning/v1;fomob\006proto3"
+      "gParamsH\000\022g\n\036text_classification_multila" +
+      "bel\030e \001(\0132=.yandex.cloud.ai.tuning.v1.Te" +
+      "xtClassificationMultilabelParamsH\000\022g\n\036te" +
+      "xt_classification_multiclass\030f \001(\0132=.yan" +
+      "dex.cloud.ai.tuning.v1.TextClassificatio" +
+      "nMulticlassParamsH\000B\017\n\rtuning_paramsJ\004\010\005" +
+      "\020d2\254\005\n\rTuningService\022y\n\004Tune\022(.yandex.cl" +
+      "oud.ai.tuning.v1.TuningRequest\032!.yandex." +
+      "cloud.operation.Operation\"$\262\322* \n\016TuningM" +
+      "etadata\022\016TuningResponse\022e\n\004List\022-.yandex" +
+      ".cloud.ai.tuning.v1.ListTuningsRequest\032." +
+      ".yandex.cloud.ai.tuning.v1.ListTuningsRe" +
+      "sponse\022o\n\010Describe\0220.yandex.cloud.ai.tun" +
+      "ing.v1.DescribeTuningRequest\0321.yandex.cl" +
+      "oud.ai.tuning.v1.DescribeTuningResponse\022" +
+      "i\n\006Cancel\022..yandex.cloud.ai.tuning.v1.Ca" +
+      "ncelTuningRequest\032/.yandex.cloud.ai.tuni" +
+      "ng.v1.CancelTuningResponse\022r\n\rGetMetrics" +
+      "Url\022/.yandex.cloud.ai.tuning.v1.GetMetri" +
+      "csUrlRequest\0320.yandex.cloud.ai.tuning.v1" +
+      ".GetMetricsUrlResponse\022i\n\nGetOptions\022,.y" +
+      "andex.cloud.ai.tuning.v1.GetOptionsReque" +
+      "st\032-.yandex.cloud.ai.tuning.v1.GetOption" +
+      "sResponseBc\n\035yandex.cloud.api.ai.tuning." +
+      "v1ZBgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/ai/tuning/v1;fomob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -24155,7 +24618,7 @@ public final class TuningServiceOuterClass {
     internal_static_yandex_cloud_ai_tuning_v1_GetOptionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_tuning_v1_GetOptionsResponse_descriptor,
-        new java.lang.String[] { "TaskId", "BaseModelUri", "TrainDatasets", "ValidationDatasets", "TextToTextCompletion", "TuningParams", });
+        new java.lang.String[] { "TaskId", "BaseModelUri", "TrainDatasets", "ValidationDatasets", "TextToTextCompletion", "TextClassificationMultilabel", "TextClassificationMulticlass", "TuningParams", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.OperationOuterClass.operation);

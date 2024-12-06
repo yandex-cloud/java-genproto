@@ -2787,6 +2787,17 @@ public final class Yds {
     boolean getSaveTxOrder();
 
     /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec compression_codec = 5;</code>
+     * @return The enum numeric value on the wire for compressionCodec.
+     */
+    int getCompressionCodecValue();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec compression_codec = 5;</code>
+     * @return The compressionCodec.
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Yds.YdsCompressionCodec getCompressionCodec();
+
+    /**
      * <pre>
      * Data serialization format
      * </pre>
@@ -2910,6 +2921,7 @@ public final class Yds {
       database_ = "";
       stream_ = "";
       serviceAccountId_ = "";
+      compressionCodec_ = 0;
       endpoint_ = "";
       subnetId_ = "";
       securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -2967,6 +2979,12 @@ public final class Yds {
             case 32: {
 
               saveTxOrder_ = input.readBool();
+              break;
+            }
+            case 40: {
+              int rawValue = input.readEnum();
+
+              compressionCodec_ = rawValue;
               break;
             }
             case 66: {
@@ -3193,6 +3211,25 @@ public final class Yds {
       return saveTxOrder_;
     }
 
+    public static final int COMPRESSION_CODEC_FIELD_NUMBER = 5;
+    private int compressionCodec_;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec compression_codec = 5;</code>
+     * @return The enum numeric value on the wire for compressionCodec.
+     */
+    @java.lang.Override public int getCompressionCodecValue() {
+      return compressionCodec_;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec compression_codec = 5;</code>
+     * @return The compressionCodec.
+     */
+    @java.lang.Override public yandex.cloud.api.datatransfer.v1.endpoint.Yds.YdsCompressionCodec getCompressionCodec() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.datatransfer.v1.endpoint.Yds.YdsCompressionCodec result = yandex.cloud.api.datatransfer.v1.endpoint.Yds.YdsCompressionCodec.valueOf(compressionCodec_);
+      return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Yds.YdsCompressionCodec.UNRECOGNIZED : result;
+    }
+
     public static final int SERIALIZER_FIELD_NUMBER = 8;
     private yandex.cloud.api.datatransfer.v1.endpoint.Serializers.Serializer serializer_;
     /**
@@ -3400,6 +3437,9 @@ public final class Yds {
       if (saveTxOrder_ != false) {
         output.writeBool(4, saveTxOrder_);
       }
+      if (compressionCodec_ != yandex.cloud.api.datatransfer.v1.endpoint.Yds.YdsCompressionCodec.YDS_COMPRESSION_CODEC_UNSPECIFIED.getNumber()) {
+        output.writeEnum(5, compressionCodec_);
+      }
       if (serializer_ != null) {
         output.writeMessage(8, getSerializer());
       }
@@ -3433,6 +3473,10 @@ public final class Yds {
       if (saveTxOrder_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(4, saveTxOrder_);
+      }
+      if (compressionCodec_ != yandex.cloud.api.datatransfer.v1.endpoint.Yds.YdsCompressionCodec.YDS_COMPRESSION_CODEC_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, compressionCodec_);
       }
       if (serializer_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -3475,6 +3519,7 @@ public final class Yds {
           .equals(other.getServiceAccountId())) return false;
       if (getSaveTxOrder()
           != other.getSaveTxOrder()) return false;
+      if (compressionCodec_ != other.compressionCodec_) return false;
       if (hasSerializer() != other.hasSerializer()) return false;
       if (hasSerializer()) {
         if (!getSerializer()
@@ -3506,6 +3551,8 @@ public final class Yds {
       hash = (37 * hash) + SAVE_TX_ORDER_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getSaveTxOrder());
+      hash = (37 * hash) + COMPRESSION_CODEC_FIELD_NUMBER;
+      hash = (53 * hash) + compressionCodec_;
       if (hasSerializer()) {
         hash = (37 * hash) + SERIALIZER_FIELD_NUMBER;
         hash = (53 * hash) + getSerializer().hashCode();
@@ -3659,6 +3706,8 @@ public final class Yds {
 
         saveTxOrder_ = false;
 
+        compressionCodec_ = 0;
+
         if (serializerBuilder_ == null) {
           serializer_ = null;
         } else {
@@ -3702,6 +3751,7 @@ public final class Yds {
         result.stream_ = stream_;
         result.serviceAccountId_ = serviceAccountId_;
         result.saveTxOrder_ = saveTxOrder_;
+        result.compressionCodec_ = compressionCodec_;
         if (serializerBuilder_ == null) {
           result.serializer_ = serializer_;
         } else {
@@ -3776,6 +3826,9 @@ public final class Yds {
         }
         if (other.getSaveTxOrder() != false) {
           setSaveTxOrder(other.getSaveTxOrder());
+        }
+        if (other.compressionCodec_ != 0) {
+          setCompressionCodecValue(other.getCompressionCodecValue());
         }
         if (other.hasSerializer()) {
           mergeSerializer(other.getSerializer());
@@ -4161,6 +4214,60 @@ public final class Yds {
       public Builder clearSaveTxOrder() {
         
         saveTxOrder_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int compressionCodec_ = 0;
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec compression_codec = 5;</code>
+       * @return The enum numeric value on the wire for compressionCodec.
+       */
+      @java.lang.Override public int getCompressionCodecValue() {
+        return compressionCodec_;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec compression_codec = 5;</code>
+       * @param value The enum numeric value on the wire for compressionCodec to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCompressionCodecValue(int value) {
+        
+        compressionCodec_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec compression_codec = 5;</code>
+       * @return The compressionCodec.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Yds.YdsCompressionCodec getCompressionCodec() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.datatransfer.v1.endpoint.Yds.YdsCompressionCodec result = yandex.cloud.api.datatransfer.v1.endpoint.Yds.YdsCompressionCodec.valueOf(compressionCodec_);
+        return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Yds.YdsCompressionCodec.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec compression_codec = 5;</code>
+       * @param value The compressionCodec to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCompressionCodec(yandex.cloud.api.datatransfer.v1.endpoint.Yds.YdsCompressionCodec value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        compressionCodec_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec compression_codec = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCompressionCodec() {
+        
+        compressionCodec_ = 0;
         onChanged();
         return this;
       }
@@ -4742,22 +4849,24 @@ public final class Yds {
       "sfer.v1.endpoint.Parser\022\030\n\020allow_ttl_rew" +
       "ind\030\013 \001(\010\022\020\n\010endpoint\030\024 \001(\t\022\021\n\tsubnet_id" +
       "\030\036 \001(\t\022\027\n\017security_groups\030\" \003(\t\022\020\n\010consu" +
-      "mer\030# \001(\tJ\004\010\003\020\010J\004\010\014\020\024J\004\010\025\020\036J\004\010\037\020\"\"\375\001\n\tYD" +
+      "mer\030# \001(\tJ\004\010\003\020\010J\004\010\014\020\024J\004\010\025\020\036J\004\010\037\020\"\"\324\002\n\tYD" +
       "STarget\022\020\n\010database\030\001 \001(\t\022\016\n\006stream\030\002 \001(" +
       "\t\022\032\n\022service_account_id\030\003 \001(\t\022\025\n\rsave_tx" +
-      "_order\030\004 \001(\010\022E\n\nserializer\030\010 \001(\01321.yande" +
-      "x.cloud.datatransfer.v1.endpoint.Seriali" +
-      "zer\022\020\n\010endpoint\030\024 \001(\t\022\021\n\tsubnet_id\030\036 \001(\t" +
-      "\022\027\n\017security_groups\030\" \003(\tJ\004\010\005\020\010J\004\010\t\020\024J\004\010" +
-      "\025\020\036J\004\010\037\020\"*\233\001\n\023YdsCompressionCodec\022%\n!YDS" +
-      "_COMPRESSION_CODEC_UNSPECIFIED\020\000\022\035\n\031YDS_" +
-      "COMPRESSION_CODEC_RAW\020\001\022\036\n\032YDS_COMPRESSI" +
-      "ON_CODEC_GZIP\020\002\022\036\n\032YDS_COMPRESSION_CODEC" +
-      "_ZSTD\020\004B\247\001\n)yandex.cloud.api.datatransfe" +
-      "r.v1.endpointZRgithub.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/datatransfer/v1/" +
-      "endpoint;endpoint\252\002%Yandex.Cloud.Datatra" +
-      "nsfer.V1.EndPointb\006proto3"
+      "_order\030\004 \001(\010\022U\n\021compression_codec\030\005 \001(\0162" +
+      ":.yandex.cloud.datatransfer.v1.endpoint." +
+      "YdsCompressionCodec\022E\n\nserializer\030\010 \001(\0132" +
+      "1.yandex.cloud.datatransfer.v1.endpoint." +
+      "Serializer\022\020\n\010endpoint\030\024 \001(\t\022\021\n\tsubnet_i" +
+      "d\030\036 \001(\t\022\027\n\017security_groups\030\" \003(\tJ\004\010\006\020\010J\004" +
+      "\010\t\020\024J\004\010\025\020\036J\004\010\037\020\"*\233\001\n\023YdsCompressionCodec" +
+      "\022%\n!YDS_COMPRESSION_CODEC_UNSPECIFIED\020\000\022" +
+      "\035\n\031YDS_COMPRESSION_CODEC_RAW\020\001\022\036\n\032YDS_CO" +
+      "MPRESSION_CODEC_GZIP\020\002\022\036\n\032YDS_COMPRESSIO" +
+      "N_CODEC_ZSTD\020\004B\247\001\n)yandex.cloud.api.data" +
+      "transfer.v1.endpointZRgithub.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/datatrans" +
+      "fer/v1/endpoint;endpoint\252\002%Yandex.Cloud." +
+      "Datatransfer.V1.EndPointb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4776,7 +4885,7 @@ public final class Yds {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_YDSTarget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_YDSTarget_descriptor,
-        new java.lang.String[] { "Database", "Stream", "ServiceAccountId", "SaveTxOrder", "Serializer", "Endpoint", "SubnetId", "SecurityGroups", });
+        new java.lang.String[] { "Database", "Stream", "ServiceAccountId", "SaveTxOrder", "CompressionCodec", "Serializer", "Endpoint", "SubnetId", "SecurityGroups", });
     yandex.cloud.api.datatransfer.v1.endpoint.Parsers.getDescriptor();
     yandex.cloud.api.datatransfer.v1.endpoint.Serializers.getDescriptor();
   }

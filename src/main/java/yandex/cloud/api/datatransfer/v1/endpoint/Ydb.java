@@ -429,6 +429,18 @@ public final class Ydb {
      */
     com.google.protobuf.ByteString
         getChangefeedCustomNameBytes();
+
+    /**
+     * <code>string changefeed_custom_consumer_name = 36;</code>
+     * @return The changefeedCustomConsumerName.
+     */
+    java.lang.String getChangefeedCustomConsumerName();
+    /**
+     * <code>string changefeed_custom_consumer_name = 36;</code>
+     * @return The bytes for changefeedCustomConsumerName.
+     */
+    com.google.protobuf.ByteString
+        getChangefeedCustomConsumerNameBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.YdbSource}
@@ -451,6 +463,7 @@ public final class Ydb {
       saKeyContent_ = "";
       securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       changefeedCustomName_ = "";
+      changefeedCustomConsumerName_ = "";
     }
 
     @java.lang.Override
@@ -536,6 +549,12 @@ public final class Ydb {
               java.lang.String s = input.readStringRequireUtf8();
 
               changefeedCustomName_ = s;
+              break;
+            }
+            case 290: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              changefeedCustomConsumerName_ = s;
               break;
             }
             default: {
@@ -930,6 +949,44 @@ public final class Ydb {
       }
     }
 
+    public static final int CHANGEFEED_CUSTOM_CONSUMER_NAME_FIELD_NUMBER = 36;
+    private volatile java.lang.Object changefeedCustomConsumerName_;
+    /**
+     * <code>string changefeed_custom_consumer_name = 36;</code>
+     * @return The changefeedCustomConsumerName.
+     */
+    @java.lang.Override
+    public java.lang.String getChangefeedCustomConsumerName() {
+      java.lang.Object ref = changefeedCustomConsumerName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        changefeedCustomConsumerName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string changefeed_custom_consumer_name = 36;</code>
+     * @return The bytes for changefeedCustomConsumerName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChangefeedCustomConsumerNameBytes() {
+      java.lang.Object ref = changefeedCustomConsumerName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        changefeedCustomConsumerName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -967,6 +1024,9 @@ public final class Ydb {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(changefeedCustomName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 35, changefeedCustomName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(changefeedCustomConsumerName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 36, changefeedCustomConsumerName_);
       }
       unknownFields.writeTo(output);
     }
@@ -1011,6 +1071,9 @@ public final class Ydb {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(changefeedCustomName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(35, changefeedCustomName_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(changefeedCustomConsumerName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(36, changefeedCustomConsumerName_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1042,6 +1105,8 @@ public final class Ydb {
           .equals(other.getSecurityGroupsList())) return false;
       if (!getChangefeedCustomName()
           .equals(other.getChangefeedCustomName())) return false;
+      if (!getChangefeedCustomConsumerName()
+          .equals(other.getChangefeedCustomConsumerName())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1073,6 +1138,8 @@ public final class Ydb {
       }
       hash = (37 * hash) + CHANGEFEED_CUSTOM_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getChangefeedCustomName().hashCode();
+      hash = (37 * hash) + CHANGEFEED_CUSTOM_CONSUMER_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getChangefeedCustomConsumerName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1222,6 +1289,8 @@ public final class Ydb {
         bitField0_ = (bitField0_ & ~0x00000002);
         changefeedCustomName_ = "";
 
+        changefeedCustomConsumerName_ = "";
+
         return this;
       }
 
@@ -1265,6 +1334,7 @@ public final class Ydb {
         }
         result.securityGroups_ = securityGroups_;
         result.changefeedCustomName_ = changefeedCustomName_;
+        result.changefeedCustomConsumerName_ = changefeedCustomConsumerName_;
         onBuilt();
         return result;
       }
@@ -1355,6 +1425,10 @@ public final class Ydb {
         }
         if (!other.getChangefeedCustomName().isEmpty()) {
           changefeedCustomName_ = other.changefeedCustomName_;
+          onChanged();
+        }
+        if (!other.getChangefeedCustomConsumerName().isEmpty()) {
+          changefeedCustomConsumerName_ = other.changefeedCustomConsumerName_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -2195,6 +2269,82 @@ public final class Ydb {
   checkByteStringIsUtf8(value);
         
         changefeedCustomName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object changefeedCustomConsumerName_ = "";
+      /**
+       * <code>string changefeed_custom_consumer_name = 36;</code>
+       * @return The changefeedCustomConsumerName.
+       */
+      public java.lang.String getChangefeedCustomConsumerName() {
+        java.lang.Object ref = changefeedCustomConsumerName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          changefeedCustomConsumerName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string changefeed_custom_consumer_name = 36;</code>
+       * @return The bytes for changefeedCustomConsumerName.
+       */
+      public com.google.protobuf.ByteString
+          getChangefeedCustomConsumerNameBytes() {
+        java.lang.Object ref = changefeedCustomConsumerName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          changefeedCustomConsumerName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string changefeed_custom_consumer_name = 36;</code>
+       * @param value The changefeedCustomConsumerName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChangefeedCustomConsumerName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        changefeedCustomConsumerName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string changefeed_custom_consumer_name = 36;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChangefeedCustomConsumerName() {
+        
+        changefeedCustomConsumerName_ = getDefaultInstance().getChangefeedCustomConsumerName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string changefeed_custom_consumer_name = 36;</code>
+       * @param value The bytes for changefeedCustomConsumerName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChangefeedCustomConsumerNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        changefeedCustomConsumerName_ = value;
         onChanged();
         return this;
       }
@@ -4440,33 +4590,34 @@ public final class Ydb {
     java.lang.String[] descriptorData = {
       "\n/yandex/cloud/datatransfer/v1/endpoint/" +
       "ydb.proto\022%yandex.cloud.datatransfer.v1." +
-      "endpoint\"\320\001\n\tYdbSource\022\020\n\010database\030\001 \001(\t" +
+      "endpoint\"\371\001\n\tYdbSource\022\020\n\010database\030\001 \001(\t" +
       "\022\020\n\010instance\030\002 \001(\t\022\r\n\005paths\030\005 \003(\t\022\032\n\022ser" +
       "vice_account_id\030\006 \001(\t\022\021\n\tsubnet_id\030\036 \001(\t" +
       "\022\026\n\016sa_key_content\030! \001(\t\022\027\n\017security_gro" +
       "ups\030\" \003(\t\022\036\n\026changefeed_custom_name\030# \001(" +
-      "\tJ\004\010\003\020\005J\004\010\007\020\036J\004\010\037\020!\"\203\003\n\tYdbTarget\022\020\n\010dat" +
-      "abase\030\001 \001(\t\022\020\n\010instance\030\002 \001(\t\022\014\n\004path\030\n " +
-      "\001(\t\022\032\n\022service_account_id\030\013 \001(\t\022O\n\016clean" +
-      "up_policy\030\025 \001(\01627.yandex.cloud.datatrans" +
-      "fer.v1.endpoint.YdbCleanupPolicy\022\021\n\tsubn" +
-      "et_id\030\036 \001(\t\022\026\n\016sa_key_content\030  \001(\t\022\027\n\017s" +
-      "ecurity_groups\030! \003(\t\022 \n\030is_table_column_" +
-      "oriented\030\" \001(\010\022Y\n\023default_compression\030# " +
-      "\001(\0162<.yandex.cloud.datatransfer.v1.endpo" +
-      "int.YdbDefaultCompressionJ\004\010\003\020\nJ\004\010\014\020\025J\004\010" +
-      "\026\020\036J\004\010\037\020 *t\n\020YdbCleanupPolicy\022\"\n\036YDB_CLE" +
-      "ANUP_POLICY_UNSPECIFIED\020\000\022\037\n\033YDB_CLEANUP" +
-      "_POLICY_DISABLED\020\001\022\033\n\027YDB_CLEANUP_POLICY" +
-      "_DROP\020\002*\207\001\n\025YdbDefaultCompression\022\'\n#YDB" +
-      "_DEFAULT_COMPRESSION_UNSPECIFIED\020\000\022$\n YD" +
-      "B_DEFAULT_COMPRESSION_DISABLED\020\001\022\037\n\033YDB_" +
-      "DEFAULT_COMPRESSION_LZ4\020\002B\247\001\n)yandex.clo" +
-      "ud.api.datatransfer.v1.endpointZRgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/datatransfer/v1/endpoint;endpoint\252\002%Ya" +
-      "ndex.Cloud.Datatransfer.V1.EndPointb\006pro" +
-      "to3"
+      "\t\022\'\n\037changefeed_custom_consumer_name\030$ \001" +
+      "(\tJ\004\010\003\020\005J\004\010\007\020\036J\004\010\037\020!\"\203\003\n\tYdbTarget\022\020\n\010da" +
+      "tabase\030\001 \001(\t\022\020\n\010instance\030\002 \001(\t\022\014\n\004path\030\n" +
+      " \001(\t\022\032\n\022service_account_id\030\013 \001(\t\022O\n\016clea" +
+      "nup_policy\030\025 \001(\01627.yandex.cloud.datatran" +
+      "sfer.v1.endpoint.YdbCleanupPolicy\022\021\n\tsub" +
+      "net_id\030\036 \001(\t\022\026\n\016sa_key_content\030  \001(\t\022\027\n\017" +
+      "security_groups\030! \003(\t\022 \n\030is_table_column" +
+      "_oriented\030\" \001(\010\022Y\n\023default_compression\030#" +
+      " \001(\0162<.yandex.cloud.datatransfer.v1.endp" +
+      "oint.YdbDefaultCompressionJ\004\010\003\020\nJ\004\010\014\020\025J\004" +
+      "\010\026\020\036J\004\010\037\020 *t\n\020YdbCleanupPolicy\022\"\n\036YDB_CL" +
+      "EANUP_POLICY_UNSPECIFIED\020\000\022\037\n\033YDB_CLEANU" +
+      "P_POLICY_DISABLED\020\001\022\033\n\027YDB_CLEANUP_POLIC" +
+      "Y_DROP\020\002*\207\001\n\025YdbDefaultCompression\022\'\n#YD" +
+      "B_DEFAULT_COMPRESSION_UNSPECIFIED\020\000\022$\n Y" +
+      "DB_DEFAULT_COMPRESSION_DISABLED\020\001\022\037\n\033YDB" +
+      "_DEFAULT_COMPRESSION_LZ4\020\002B\247\001\n)yandex.cl" +
+      "oud.api.datatransfer.v1.endpointZRgithub" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/datatransfer/v1/endpoint;endpoint\252\002%Y" +
+      "andex.Cloud.Datatransfer.V1.EndPointb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4477,7 +4628,7 @@ public final class Ydb {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_YdbSource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_YdbSource_descriptor,
-        new java.lang.String[] { "Database", "Instance", "Paths", "ServiceAccountId", "SubnetId", "SaKeyContent", "SecurityGroups", "ChangefeedCustomName", });
+        new java.lang.String[] { "Database", "Instance", "Paths", "ServiceAccountId", "SubnetId", "SaKeyContent", "SecurityGroups", "ChangefeedCustomName", "ChangefeedCustomConsumerName", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_YdbTarget_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_YdbTarget_fieldAccessorTable = new

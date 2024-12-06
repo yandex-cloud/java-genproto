@@ -18727,6 +18727,21 @@ public final class DatabaseOuterClass {
      */
     yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.FixedScaleOrBuilder getFixedScaleOrBuilder();
 
+    /**
+     * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale auto_scale = 2;</code>
+     * @return Whether the autoScale field is set.
+     */
+    boolean hasAutoScale();
+    /**
+     * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale auto_scale = 2;</code>
+     * @return The autoScale.
+     */
+    yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale getAutoScale();
+    /**
+     * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale auto_scale = 2;</code>
+     */
+    yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScaleOrBuilder getAutoScaleOrBuilder();
+
     public yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.ScaleTypeCase getScaleTypeCase();
   }
   /**
@@ -18786,6 +18801,20 @@ public final class DatabaseOuterClass {
                 scaleType_ = subBuilder.buildPartial();
               }
               scaleTypeCase_ = 1;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.Builder subBuilder = null;
+              if (scaleTypeCase_ == 2) {
+                subBuilder = ((yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale) scaleType_).toBuilder();
+              }
+              scaleType_ =
+                  input.readMessage(yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale) scaleType_);
+                scaleType_ = subBuilder.buildPartial();
+              }
+              scaleTypeCase_ = 2;
               break;
             }
             default: {
@@ -19309,12 +19338,1557 @@ public final class DatabaseOuterClass {
 
     }
 
+    public interface AutoScaleOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.ydb.v1.ScalePolicy.AutoScale)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Minimum number of nodes to which autoscaling can scale the database.
+       * </pre>
+       *
+       * <code>int64 min_size = 1 [(.yandex.cloud.value) = "&gt;=1"];</code>
+       * @return The minSize.
+       */
+      long getMinSize();
+
+      /**
+       * <pre>
+       * Maximum number of nodes to which autoscaling can scale the database.
+       * </pre>
+       *
+       * <code>int64 max_size = 2 [(.yandex.cloud.value) = "&gt;=1"];</code>
+       * @return The maxSize.
+       */
+      long getMaxSize();
+
+      /**
+       * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale.TargetTracking target_tracking = 3;</code>
+       * @return Whether the targetTracking field is set.
+       */
+      boolean hasTargetTracking();
+      /**
+       * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale.TargetTracking target_tracking = 3;</code>
+       * @return The targetTracking.
+       */
+      yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking getTargetTracking();
+      /**
+       * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale.TargetTracking target_tracking = 3;</code>
+       */
+      yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTrackingOrBuilder getTargetTrackingOrBuilder();
+
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.AutoScaleTypeCase getAutoScaleTypeCase();
+    }
+    /**
+     * <pre>
+     * Scale policy that dynamically changes the number of database nodes within a user-defined range.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ydb.v1.ScalePolicy.AutoScale}
+     */
+    public static final class AutoScale extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.ydb.v1.ScalePolicy.AutoScale)
+        AutoScaleOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use AutoScale.newBuilder() to construct.
+      private AutoScale(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private AutoScale() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new AutoScale();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private AutoScale(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                minSize_ = input.readInt64();
+                break;
+              }
+              case 16: {
+
+                maxSize_ = input.readInt64();
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking.Builder subBuilder = null;
+                if (autoScaleTypeCase_ == 3) {
+                  subBuilder = ((yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking) autoScaleType_).toBuilder();
+                }
+                autoScaleType_ =
+                    input.readMessage(yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking) autoScaleType_);
+                  autoScaleType_ = subBuilder.buildPartial();
+                }
+                autoScaleTypeCase_ = 3;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_ScalePolicy_AutoScale_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_ScalePolicy_AutoScale_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.class, yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.Builder.class);
+      }
+
+      public interface TargetTrackingOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:yandex.cloud.ydb.v1.ScalePolicy.AutoScale.TargetTracking)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         * A percentage of database nodes average CPU utilization.
+         * </pre>
+         *
+         * <code>int64 cpu_utilization_percent = 1 [(.yandex.cloud.value) = "10-90"];</code>
+         * @return Whether the cpuUtilizationPercent field is set.
+         */
+        boolean hasCpuUtilizationPercent();
+        /**
+         * <pre>
+         * A percentage of database nodes average CPU utilization.
+         * </pre>
+         *
+         * <code>int64 cpu_utilization_percent = 1 [(.yandex.cloud.value) = "10-90"];</code>
+         * @return The cpuUtilizationPercent.
+         */
+        long getCpuUtilizationPercent();
+
+        public yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking.TargetCase getTargetCase();
+      }
+      /**
+       * <pre>
+       * Autoscaling algorithm that tracks metric and reactively scale database nodes to keep metric
+       * close to the specified target value.
+       * </pre>
+       *
+       * Protobuf type {@code yandex.cloud.ydb.v1.ScalePolicy.AutoScale.TargetTracking}
+       */
+      public static final class TargetTracking extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:yandex.cloud.ydb.v1.ScalePolicy.AutoScale.TargetTracking)
+          TargetTrackingOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use TargetTracking.newBuilder() to construct.
+        private TargetTracking(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private TargetTracking() {
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new TargetTracking();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private TargetTracking(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  target_ = input.readInt64();
+                  targetCase_ = 1;
+                  break;
+                }
+                default: {
+                  if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_ScalePolicy_AutoScale_TargetTracking_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_ScalePolicy_AutoScale_TargetTracking_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking.class, yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking.Builder.class);
+        }
+
+        private int targetCase_ = 0;
+        private java.lang.Object target_;
+        public enum TargetCase
+            implements com.google.protobuf.Internal.EnumLite,
+                com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+          CPU_UTILIZATION_PERCENT(1),
+          TARGET_NOT_SET(0);
+          private final int value;
+          private TargetCase(int value) {
+            this.value = value;
+          }
+          /**
+           * @param value The number of the enum to look for.
+           * @return The enum associated with the given number.
+           * @deprecated Use {@link #forNumber(int)} instead.
+           */
+          @java.lang.Deprecated
+          public static TargetCase valueOf(int value) {
+            return forNumber(value);
+          }
+
+          public static TargetCase forNumber(int value) {
+            switch (value) {
+              case 1: return CPU_UTILIZATION_PERCENT;
+              case 0: return TARGET_NOT_SET;
+              default: return null;
+            }
+          }
+          public int getNumber() {
+            return this.value;
+          }
+        };
+
+        public TargetCase
+        getTargetCase() {
+          return TargetCase.forNumber(
+              targetCase_);
+        }
+
+        public static final int CPU_UTILIZATION_PERCENT_FIELD_NUMBER = 1;
+        /**
+         * <pre>
+         * A percentage of database nodes average CPU utilization.
+         * </pre>
+         *
+         * <code>int64 cpu_utilization_percent = 1 [(.yandex.cloud.value) = "10-90"];</code>
+         * @return Whether the cpuUtilizationPercent field is set.
+         */
+        @java.lang.Override
+        public boolean hasCpuUtilizationPercent() {
+          return targetCase_ == 1;
+        }
+        /**
+         * <pre>
+         * A percentage of database nodes average CPU utilization.
+         * </pre>
+         *
+         * <code>int64 cpu_utilization_percent = 1 [(.yandex.cloud.value) = "10-90"];</code>
+         * @return The cpuUtilizationPercent.
+         */
+        @java.lang.Override
+        public long getCpuUtilizationPercent() {
+          if (targetCase_ == 1) {
+            return (java.lang.Long) target_;
+          }
+          return 0L;
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (targetCase_ == 1) {
+            output.writeInt64(
+                1, (long)((java.lang.Long) target_));
+          }
+          unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (targetCase_ == 1) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt64Size(
+                  1, (long)((java.lang.Long) target_));
+          }
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking)) {
+            return super.equals(obj);
+          }
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking other = (yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking) obj;
+
+          if (!getTargetCase().equals(other.getTargetCase())) return false;
+          switch (targetCase_) {
+            case 1:
+              if (getCpuUtilizationPercent()
+                  != other.getCpuUtilizationPercent()) return false;
+              break;
+            case 0:
+            default:
+          }
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          switch (targetCase_) {
+            case 1:
+              hash = (37 * hash) + CPU_UTILIZATION_PERCENT_FIELD_NUMBER;
+              hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+                  getCpuUtilizationPercent());
+              break;
+            case 0:
+            default:
+          }
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * <pre>
+         * Autoscaling algorithm that tracks metric and reactively scale database nodes to keep metric
+         * close to the specified target value.
+         * </pre>
+         *
+         * Protobuf type {@code yandex.cloud.ydb.v1.ScalePolicy.AutoScale.TargetTracking}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:yandex.cloud.ydb.v1.ScalePolicy.AutoScale.TargetTracking)
+            yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTrackingOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_ScalePolicy_AutoScale_TargetTracking_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_ScalePolicy_AutoScale_TargetTracking_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking.class, yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking.Builder.class);
+          }
+
+          // Construct using yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            targetCase_ = 0;
+            target_ = null;
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_ScalePolicy_AutoScale_TargetTracking_descriptor;
+          }
+
+          @java.lang.Override
+          public yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking getDefaultInstanceForType() {
+            return yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking build() {
+            yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking buildPartial() {
+            yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking result = new yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking(this);
+            if (targetCase_ == 1) {
+              result.target_ = target_;
+            }
+            result.targetCase_ = targetCase_;
+            onBuilt();
+            return result;
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking) {
+              return mergeFrom((yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking other) {
+            if (other == yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking.getDefaultInstance()) return this;
+            switch (other.getTargetCase()) {
+              case CPU_UTILIZATION_PERCENT: {
+                setCpuUtilizationPercent(other.getCpuUtilizationPercent());
+                break;
+              }
+              case TARGET_NOT_SET: {
+                break;
+              }
+            }
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          private int targetCase_ = 0;
+          private java.lang.Object target_;
+          public TargetCase
+              getTargetCase() {
+            return TargetCase.forNumber(
+                targetCase_);
+          }
+
+          public Builder clearTarget() {
+            targetCase_ = 0;
+            target_ = null;
+            onChanged();
+            return this;
+          }
+
+
+          /**
+           * <pre>
+           * A percentage of database nodes average CPU utilization.
+           * </pre>
+           *
+           * <code>int64 cpu_utilization_percent = 1 [(.yandex.cloud.value) = "10-90"];</code>
+           * @return Whether the cpuUtilizationPercent field is set.
+           */
+          public boolean hasCpuUtilizationPercent() {
+            return targetCase_ == 1;
+          }
+          /**
+           * <pre>
+           * A percentage of database nodes average CPU utilization.
+           * </pre>
+           *
+           * <code>int64 cpu_utilization_percent = 1 [(.yandex.cloud.value) = "10-90"];</code>
+           * @return The cpuUtilizationPercent.
+           */
+          public long getCpuUtilizationPercent() {
+            if (targetCase_ == 1) {
+              return (java.lang.Long) target_;
+            }
+            return 0L;
+          }
+          /**
+           * <pre>
+           * A percentage of database nodes average CPU utilization.
+           * </pre>
+           *
+           * <code>int64 cpu_utilization_percent = 1 [(.yandex.cloud.value) = "10-90"];</code>
+           * @param value The cpuUtilizationPercent to set.
+           * @return This builder for chaining.
+           */
+          public Builder setCpuUtilizationPercent(long value) {
+            targetCase_ = 1;
+            target_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * A percentage of database nodes average CPU utilization.
+           * </pre>
+           *
+           * <code>int64 cpu_utilization_percent = 1 [(.yandex.cloud.value) = "10-90"];</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearCpuUtilizationPercent() {
+            if (targetCase_ == 1) {
+              targetCase_ = 0;
+              target_ = null;
+              onChanged();
+            }
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:yandex.cloud.ydb.v1.ScalePolicy.AutoScale.TargetTracking)
+        }
+
+        // @@protoc_insertion_point(class_scope:yandex.cloud.ydb.v1.ScalePolicy.AutoScale.TargetTracking)
+        private static final yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking();
+        }
+
+        public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<TargetTracking>
+            PARSER = new com.google.protobuf.AbstractParser<TargetTracking>() {
+          @java.lang.Override
+          public TargetTracking parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new TargetTracking(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<TargetTracking> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<TargetTracking> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      private int autoScaleTypeCase_ = 0;
+      private java.lang.Object autoScaleType_;
+      public enum AutoScaleTypeCase
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+        TARGET_TRACKING(3),
+        AUTOSCALETYPE_NOT_SET(0);
+        private final int value;
+        private AutoScaleTypeCase(int value) {
+          this.value = value;
+        }
+        /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static AutoScaleTypeCase valueOf(int value) {
+          return forNumber(value);
+        }
+
+        public static AutoScaleTypeCase forNumber(int value) {
+          switch (value) {
+            case 3: return TARGET_TRACKING;
+            case 0: return AUTOSCALETYPE_NOT_SET;
+            default: return null;
+          }
+        }
+        public int getNumber() {
+          return this.value;
+        }
+      };
+
+      public AutoScaleTypeCase
+      getAutoScaleTypeCase() {
+        return AutoScaleTypeCase.forNumber(
+            autoScaleTypeCase_);
+      }
+
+      public static final int MIN_SIZE_FIELD_NUMBER = 1;
+      private long minSize_;
+      /**
+       * <pre>
+       * Minimum number of nodes to which autoscaling can scale the database.
+       * </pre>
+       *
+       * <code>int64 min_size = 1 [(.yandex.cloud.value) = "&gt;=1"];</code>
+       * @return The minSize.
+       */
+      @java.lang.Override
+      public long getMinSize() {
+        return minSize_;
+      }
+
+      public static final int MAX_SIZE_FIELD_NUMBER = 2;
+      private long maxSize_;
+      /**
+       * <pre>
+       * Maximum number of nodes to which autoscaling can scale the database.
+       * </pre>
+       *
+       * <code>int64 max_size = 2 [(.yandex.cloud.value) = "&gt;=1"];</code>
+       * @return The maxSize.
+       */
+      @java.lang.Override
+      public long getMaxSize() {
+        return maxSize_;
+      }
+
+      public static final int TARGET_TRACKING_FIELD_NUMBER = 3;
+      /**
+       * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale.TargetTracking target_tracking = 3;</code>
+       * @return Whether the targetTracking field is set.
+       */
+      @java.lang.Override
+      public boolean hasTargetTracking() {
+        return autoScaleTypeCase_ == 3;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale.TargetTracking target_tracking = 3;</code>
+       * @return The targetTracking.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking getTargetTracking() {
+        if (autoScaleTypeCase_ == 3) {
+           return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking) autoScaleType_;
+        }
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking.getDefaultInstance();
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale.TargetTracking target_tracking = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTrackingOrBuilder getTargetTrackingOrBuilder() {
+        if (autoScaleTypeCase_ == 3) {
+           return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking) autoScaleType_;
+        }
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking.getDefaultInstance();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (minSize_ != 0L) {
+          output.writeInt64(1, minSize_);
+        }
+        if (maxSize_ != 0L) {
+          output.writeInt64(2, maxSize_);
+        }
+        if (autoScaleTypeCase_ == 3) {
+          output.writeMessage(3, (yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking) autoScaleType_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (minSize_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(1, minSize_);
+        }
+        if (maxSize_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(2, maxSize_);
+        }
+        if (autoScaleTypeCase_ == 3) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, (yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking) autoScaleType_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale other = (yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale) obj;
+
+        if (getMinSize()
+            != other.getMinSize()) return false;
+        if (getMaxSize()
+            != other.getMaxSize()) return false;
+        if (!getAutoScaleTypeCase().equals(other.getAutoScaleTypeCase())) return false;
+        switch (autoScaleTypeCase_) {
+          case 3:
+            if (!getTargetTracking()
+                .equals(other.getTargetTracking())) return false;
+            break;
+          case 0:
+          default:
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + MIN_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getMinSize());
+        hash = (37 * hash) + MAX_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getMaxSize());
+        switch (autoScaleTypeCase_) {
+          case 3:
+            hash = (37 * hash) + TARGET_TRACKING_FIELD_NUMBER;
+            hash = (53 * hash) + getTargetTracking().hashCode();
+            break;
+          case 0:
+          default:
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Scale policy that dynamically changes the number of database nodes within a user-defined range.
+       * </pre>
+       *
+       * Protobuf type {@code yandex.cloud.ydb.v1.ScalePolicy.AutoScale}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.ydb.v1.ScalePolicy.AutoScale)
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScaleOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_ScalePolicy_AutoScale_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_ScalePolicy_AutoScale_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.class, yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          minSize_ = 0L;
+
+          maxSize_ = 0L;
+
+          autoScaleTypeCase_ = 0;
+          autoScaleType_ = null;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_ScalePolicy_AutoScale_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale getDefaultInstanceForType() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale build() {
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale buildPartial() {
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale result = new yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale(this);
+          result.minSize_ = minSize_;
+          result.maxSize_ = maxSize_;
+          if (autoScaleTypeCase_ == 3) {
+            if (targetTrackingBuilder_ == null) {
+              result.autoScaleType_ = autoScaleType_;
+            } else {
+              result.autoScaleType_ = targetTrackingBuilder_.build();
+            }
+          }
+          result.autoScaleTypeCase_ = autoScaleTypeCase_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale) {
+            return mergeFrom((yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale other) {
+          if (other == yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.getDefaultInstance()) return this;
+          if (other.getMinSize() != 0L) {
+            setMinSize(other.getMinSize());
+          }
+          if (other.getMaxSize() != 0L) {
+            setMaxSize(other.getMaxSize());
+          }
+          switch (other.getAutoScaleTypeCase()) {
+            case TARGET_TRACKING: {
+              mergeTargetTracking(other.getTargetTracking());
+              break;
+            }
+            case AUTOSCALETYPE_NOT_SET: {
+              break;
+            }
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int autoScaleTypeCase_ = 0;
+        private java.lang.Object autoScaleType_;
+        public AutoScaleTypeCase
+            getAutoScaleTypeCase() {
+          return AutoScaleTypeCase.forNumber(
+              autoScaleTypeCase_);
+        }
+
+        public Builder clearAutoScaleType() {
+          autoScaleTypeCase_ = 0;
+          autoScaleType_ = null;
+          onChanged();
+          return this;
+        }
+
+
+        private long minSize_ ;
+        /**
+         * <pre>
+         * Minimum number of nodes to which autoscaling can scale the database.
+         * </pre>
+         *
+         * <code>int64 min_size = 1 [(.yandex.cloud.value) = "&gt;=1"];</code>
+         * @return The minSize.
+         */
+        @java.lang.Override
+        public long getMinSize() {
+          return minSize_;
+        }
+        /**
+         * <pre>
+         * Minimum number of nodes to which autoscaling can scale the database.
+         * </pre>
+         *
+         * <code>int64 min_size = 1 [(.yandex.cloud.value) = "&gt;=1"];</code>
+         * @param value The minSize to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMinSize(long value) {
+          
+          minSize_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Minimum number of nodes to which autoscaling can scale the database.
+         * </pre>
+         *
+         * <code>int64 min_size = 1 [(.yandex.cloud.value) = "&gt;=1"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMinSize() {
+          
+          minSize_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long maxSize_ ;
+        /**
+         * <pre>
+         * Maximum number of nodes to which autoscaling can scale the database.
+         * </pre>
+         *
+         * <code>int64 max_size = 2 [(.yandex.cloud.value) = "&gt;=1"];</code>
+         * @return The maxSize.
+         */
+        @java.lang.Override
+        public long getMaxSize() {
+          return maxSize_;
+        }
+        /**
+         * <pre>
+         * Maximum number of nodes to which autoscaling can scale the database.
+         * </pre>
+         *
+         * <code>int64 max_size = 2 [(.yandex.cloud.value) = "&gt;=1"];</code>
+         * @param value The maxSize to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMaxSize(long value) {
+          
+          maxSize_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum number of nodes to which autoscaling can scale the database.
+         * </pre>
+         *
+         * <code>int64 max_size = 2 [(.yandex.cloud.value) = "&gt;=1"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMaxSize() {
+          
+          maxSize_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking, yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTrackingOrBuilder> targetTrackingBuilder_;
+        /**
+         * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale.TargetTracking target_tracking = 3;</code>
+         * @return Whether the targetTracking field is set.
+         */
+        @java.lang.Override
+        public boolean hasTargetTracking() {
+          return autoScaleTypeCase_ == 3;
+        }
+        /**
+         * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale.TargetTracking target_tracking = 3;</code>
+         * @return The targetTracking.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking getTargetTracking() {
+          if (targetTrackingBuilder_ == null) {
+            if (autoScaleTypeCase_ == 3) {
+              return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking) autoScaleType_;
+            }
+            return yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking.getDefaultInstance();
+          } else {
+            if (autoScaleTypeCase_ == 3) {
+              return targetTrackingBuilder_.getMessage();
+            }
+            return yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale.TargetTracking target_tracking = 3;</code>
+         */
+        public Builder setTargetTracking(yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking value) {
+          if (targetTrackingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            autoScaleType_ = value;
+            onChanged();
+          } else {
+            targetTrackingBuilder_.setMessage(value);
+          }
+          autoScaleTypeCase_ = 3;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale.TargetTracking target_tracking = 3;</code>
+         */
+        public Builder setTargetTracking(
+            yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking.Builder builderForValue) {
+          if (targetTrackingBuilder_ == null) {
+            autoScaleType_ = builderForValue.build();
+            onChanged();
+          } else {
+            targetTrackingBuilder_.setMessage(builderForValue.build());
+          }
+          autoScaleTypeCase_ = 3;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale.TargetTracking target_tracking = 3;</code>
+         */
+        public Builder mergeTargetTracking(yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking value) {
+          if (targetTrackingBuilder_ == null) {
+            if (autoScaleTypeCase_ == 3 &&
+                autoScaleType_ != yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking.getDefaultInstance()) {
+              autoScaleType_ = yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking.newBuilder((yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking) autoScaleType_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              autoScaleType_ = value;
+            }
+            onChanged();
+          } else {
+            if (autoScaleTypeCase_ == 3) {
+              targetTrackingBuilder_.mergeFrom(value);
+            }
+            targetTrackingBuilder_.setMessage(value);
+          }
+          autoScaleTypeCase_ = 3;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale.TargetTracking target_tracking = 3;</code>
+         */
+        public Builder clearTargetTracking() {
+          if (targetTrackingBuilder_ == null) {
+            if (autoScaleTypeCase_ == 3) {
+              autoScaleTypeCase_ = 0;
+              autoScaleType_ = null;
+              onChanged();
+            }
+          } else {
+            if (autoScaleTypeCase_ == 3) {
+              autoScaleTypeCase_ = 0;
+              autoScaleType_ = null;
+            }
+            targetTrackingBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale.TargetTracking target_tracking = 3;</code>
+         */
+        public yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking.Builder getTargetTrackingBuilder() {
+          return getTargetTrackingFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale.TargetTracking target_tracking = 3;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTrackingOrBuilder getTargetTrackingOrBuilder() {
+          if ((autoScaleTypeCase_ == 3) && (targetTrackingBuilder_ != null)) {
+            return targetTrackingBuilder_.getMessageOrBuilder();
+          } else {
+            if (autoScaleTypeCase_ == 3) {
+              return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking) autoScaleType_;
+            }
+            return yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale.TargetTracking target_tracking = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking, yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTrackingOrBuilder> 
+            getTargetTrackingFieldBuilder() {
+          if (targetTrackingBuilder_ == null) {
+            if (!(autoScaleTypeCase_ == 3)) {
+              autoScaleType_ = yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking.getDefaultInstance();
+            }
+            targetTrackingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking, yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTrackingOrBuilder>(
+                    (yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.TargetTracking) autoScaleType_,
+                    getParentForChildren(),
+                    isClean());
+            autoScaleType_ = null;
+          }
+          autoScaleTypeCase_ = 3;
+          onChanged();;
+          return targetTrackingBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.ydb.v1.ScalePolicy.AutoScale)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.ydb.v1.ScalePolicy.AutoScale)
+      private static final yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale();
+      }
+
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<AutoScale>
+          PARSER = new com.google.protobuf.AbstractParser<AutoScale>() {
+        @java.lang.Override
+        public AutoScale parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new AutoScale(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<AutoScale> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<AutoScale> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     private int scaleTypeCase_ = 0;
     private java.lang.Object scaleType_;
     public enum ScaleTypeCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       FIXED_SCALE(1),
+      AUTO_SCALE(2),
       SCALETYPE_NOT_SET(0);
       private final int value;
       private ScaleTypeCase(int value) {
@@ -19333,6 +20907,7 @@ public final class DatabaseOuterClass {
       public static ScaleTypeCase forNumber(int value) {
         switch (value) {
           case 1: return FIXED_SCALE;
+          case 2: return AUTO_SCALE;
           case 0: return SCALETYPE_NOT_SET;
           default: return null;
         }
@@ -19379,6 +20954,37 @@ public final class DatabaseOuterClass {
       return yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.FixedScale.getDefaultInstance();
     }
 
+    public static final int AUTO_SCALE_FIELD_NUMBER = 2;
+    /**
+     * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale auto_scale = 2;</code>
+     * @return Whether the autoScale field is set.
+     */
+    @java.lang.Override
+    public boolean hasAutoScale() {
+      return scaleTypeCase_ == 2;
+    }
+    /**
+     * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale auto_scale = 2;</code>
+     * @return The autoScale.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale getAutoScale() {
+      if (scaleTypeCase_ == 2) {
+         return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale) scaleType_;
+      }
+      return yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale auto_scale = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScaleOrBuilder getAutoScaleOrBuilder() {
+      if (scaleTypeCase_ == 2) {
+         return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale) scaleType_;
+      }
+      return yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -19396,6 +21002,9 @@ public final class DatabaseOuterClass {
       if (scaleTypeCase_ == 1) {
         output.writeMessage(1, (yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.FixedScale) scaleType_);
       }
+      if (scaleTypeCase_ == 2) {
+        output.writeMessage(2, (yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale) scaleType_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -19408,6 +21017,10 @@ public final class DatabaseOuterClass {
       if (scaleTypeCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, (yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.FixedScale) scaleType_);
+      }
+      if (scaleTypeCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale) scaleType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -19430,6 +21043,10 @@ public final class DatabaseOuterClass {
           if (!getFixedScale()
               .equals(other.getFixedScale())) return false;
           break;
+        case 2:
+          if (!getAutoScale()
+              .equals(other.getAutoScale())) return false;
+          break;
         case 0:
         default:
       }
@@ -19448,6 +21065,10 @@ public final class DatabaseOuterClass {
         case 1:
           hash = (37 * hash) + FIXED_SCALE_FIELD_NUMBER;
           hash = (53 * hash) + getFixedScale().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + AUTO_SCALE_FIELD_NUMBER;
+          hash = (53 * hash) + getAutoScale().hashCode();
           break;
         case 0:
         default:
@@ -19620,6 +21241,13 @@ public final class DatabaseOuterClass {
             result.scaleType_ = fixedScaleBuilder_.build();
           }
         }
+        if (scaleTypeCase_ == 2) {
+          if (autoScaleBuilder_ == null) {
+            result.scaleType_ = scaleType_;
+          } else {
+            result.scaleType_ = autoScaleBuilder_.build();
+          }
+        }
         result.scaleTypeCase_ = scaleTypeCase_;
         onBuilt();
         return result;
@@ -19672,6 +21300,10 @@ public final class DatabaseOuterClass {
         switch (other.getScaleTypeCase()) {
           case FIXED_SCALE: {
             mergeFixedScale(other.getFixedScale());
+            break;
+          }
+          case AUTO_SCALE: {
+            mergeAutoScale(other.getAutoScale());
             break;
           }
           case SCALETYPE_NOT_SET: {
@@ -19861,6 +21493,147 @@ public final class DatabaseOuterClass {
         scaleTypeCase_ = 1;
         onChanged();;
         return fixedScaleBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale, yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScaleOrBuilder> autoScaleBuilder_;
+      /**
+       * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale auto_scale = 2;</code>
+       * @return Whether the autoScale field is set.
+       */
+      @java.lang.Override
+      public boolean hasAutoScale() {
+        return scaleTypeCase_ == 2;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale auto_scale = 2;</code>
+       * @return The autoScale.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale getAutoScale() {
+        if (autoScaleBuilder_ == null) {
+          if (scaleTypeCase_ == 2) {
+            return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale) scaleType_;
+          }
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.getDefaultInstance();
+        } else {
+          if (scaleTypeCase_ == 2) {
+            return autoScaleBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale auto_scale = 2;</code>
+       */
+      public Builder setAutoScale(yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale value) {
+        if (autoScaleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          scaleType_ = value;
+          onChanged();
+        } else {
+          autoScaleBuilder_.setMessage(value);
+        }
+        scaleTypeCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale auto_scale = 2;</code>
+       */
+      public Builder setAutoScale(
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.Builder builderForValue) {
+        if (autoScaleBuilder_ == null) {
+          scaleType_ = builderForValue.build();
+          onChanged();
+        } else {
+          autoScaleBuilder_.setMessage(builderForValue.build());
+        }
+        scaleTypeCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale auto_scale = 2;</code>
+       */
+      public Builder mergeAutoScale(yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale value) {
+        if (autoScaleBuilder_ == null) {
+          if (scaleTypeCase_ == 2 &&
+              scaleType_ != yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.getDefaultInstance()) {
+            scaleType_ = yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.newBuilder((yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale) scaleType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            scaleType_ = value;
+          }
+          onChanged();
+        } else {
+          if (scaleTypeCase_ == 2) {
+            autoScaleBuilder_.mergeFrom(value);
+          }
+          autoScaleBuilder_.setMessage(value);
+        }
+        scaleTypeCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale auto_scale = 2;</code>
+       */
+      public Builder clearAutoScale() {
+        if (autoScaleBuilder_ == null) {
+          if (scaleTypeCase_ == 2) {
+            scaleTypeCase_ = 0;
+            scaleType_ = null;
+            onChanged();
+          }
+        } else {
+          if (scaleTypeCase_ == 2) {
+            scaleTypeCase_ = 0;
+            scaleType_ = null;
+          }
+          autoScaleBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale auto_scale = 2;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.Builder getAutoScaleBuilder() {
+        return getAutoScaleFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale auto_scale = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScaleOrBuilder getAutoScaleOrBuilder() {
+        if ((scaleTypeCase_ == 2) && (autoScaleBuilder_ != null)) {
+          return autoScaleBuilder_.getMessageOrBuilder();
+        } else {
+          if (scaleTypeCase_ == 2) {
+            return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale) scaleType_;
+          }
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.ScalePolicy.AutoScale auto_scale = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale, yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScaleOrBuilder> 
+          getAutoScaleFieldBuilder() {
+        if (autoScaleBuilder_ == null) {
+          if (!(scaleTypeCase_ == 2)) {
+            scaleType_ = yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.getDefaultInstance();
+          }
+          autoScaleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale, yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScaleOrBuilder>(
+                  (yandex.cloud.api.ydb.v1.DatabaseOuterClass.ScalePolicy.AutoScale) scaleType_,
+                  getParentForChildren(),
+                  isClean());
+          scaleType_ = null;
+        }
+        scaleTypeCase_ = 2;
+        onChanged();;
+        return autoScaleBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -21524,6 +23297,16 @@ public final class DatabaseOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ydb_v1_ScalePolicy_FixedScale_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ydb_v1_ScalePolicy_AutoScale_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ydb_v1_ScalePolicy_AutoScale_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ydb_v1_ScalePolicy_AutoScale_TargetTracking_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ydb_v1_ScalePolicy_AutoScale_TargetTracking_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ydb_v1_StorageConfig_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -21620,24 +23403,32 @@ public final class DatabaseOuterClass {
       "\001(\010\022\035\n\025provisioned_rcu_limit\030\004 \001(\003\022\031\n\021to" +
       "pic_write_quota\030\005 \001(\003\"&\n\rZonalDatabase\022\025" +
       "\n\007zone_id\030\001 \001(\tB\004\350\3071\001\"+\n\020RegionalDatabas" +
-      "e\022\027\n\tregion_id\030\001 \001(\tB\004\350\3071\001\"\212\001\n\013ScalePoli" +
+      "e\022\027\n\tregion_id\030\001 \001(\tB\004\350\3071\001\"\317\003\n\013ScalePoli" +
       "cy\022B\n\013fixed_scale\030\001 \001(\0132+.yandex.cloud.y" +
-      "db.v1.ScalePolicy.FixedScaleH\000\032#\n\nFixedS" +
-      "cale\022\025\n\004size\030\001 \001(\003B\007\372\3071\003>=1B\022\n\nscale_typ" +
-      "e\022\004\300\3011\001\"q\n\rStorageConfig\022D\n\017storage_opti" +
-      "ons\030\001 \003(\0132\".yandex.cloud.ydb.v1.StorageO" +
-      "ptionB\007\202\3101\003>=1\022\032\n\022storage_size_limit\030\002 \001" +
-      "(\003\"=\n\rStorageOption\022\027\n\017storage_type_id\030\001" +
-      " \001(\t\022\023\n\013group_count\030\002 \001(\003*\355\001\n\025AlertEvalu" +
-      "ationStatus\022\'\n#ALERT_EVALUATION_STATUS_U" +
-      "NSPECIFIED\020\000\022\036\n\032ALERT_EVALUATION_STATUS_" +
-      "OK\020\001\022#\n\037ALERT_EVALUATION_STATUS_NO_DATA\020" +
-      "\002\022!\n\035ALERT_EVALUATION_STATUS_ERROR\020\003\022!\n\035" +
-      "ALERT_EVALUATION_STATUS_ALARM\020\004\022 \n\034ALERT" +
-      "_EVALUATION_STATUS_WARN\020\005BV\n\027yandex.clou" +
-      "d.api.ydb.v1Z;github.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/ydb/v1;ydbb\006proto" +
-      "3"
+      "db.v1.ScalePolicy.FixedScaleH\000\022@\n\nauto_s" +
+      "cale\030\002 \001(\0132*.yandex.cloud.ydb.v1.ScalePo" +
+      "licy.AutoScaleH\000\032#\n\nFixedScale\022\025\n\004size\030\001" +
+      " \001(\003B\007\372\3071\003>=1\032\200\002\n\tAutoScale\022\031\n\010min_size\030" +
+      "\001 \001(\003B\007\372\3071\003>=1\022\031\n\010max_size\030\002 \001(\003B\007\372\3071\003>=" +
+      "1\022T\n\017target_tracking\030\003 \001(\01329.yandex.clou" +
+      "d.ydb.v1.ScalePolicy.AutoScale.TargetTra" +
+      "ckingH\000\032N\n\016TargetTracking\022,\n\027cpu_utiliza" +
+      "tion_percent\030\001 \001(\003B\t\372\3071\00510-90H\000B\016\n\006targe" +
+      "t\022\004\300\3011\001B\027\n\017auto_scale_type\022\004\300\3011\001B\022\n\nscal" +
+      "e_type\022\004\300\3011\001\"q\n\rStorageConfig\022D\n\017storage" +
+      "_options\030\001 \003(\0132\".yandex.cloud.ydb.v1.Sto" +
+      "rageOptionB\007\202\3101\003>=1\022\032\n\022storage_size_limi" +
+      "t\030\002 \001(\003\"=\n\rStorageOption\022\027\n\017storage_type" +
+      "_id\030\001 \001(\t\022\023\n\013group_count\030\002 \001(\003*\355\001\n\025Alert" +
+      "EvaluationStatus\022\'\n#ALERT_EVALUATION_STA" +
+      "TUS_UNSPECIFIED\020\000\022\036\n\032ALERT_EVALUATION_ST" +
+      "ATUS_OK\020\001\022#\n\037ALERT_EVALUATION_STATUS_NO_" +
+      "DATA\020\002\022!\n\035ALERT_EVALUATION_STATUS_ERROR\020" +
+      "\003\022!\n\035ALERT_EVALUATION_STATUS_ALARM\020\004\022 \n\034" +
+      "ALERT_EVALUATION_STATUS_WARN\020\005BV\n\027yandex" +
+      ".cloud.api.ydb.v1Z;github.com/yandex-clo" +
+      "ud/go-genproto/yandex/cloud/ydb/v1;ydbb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21741,13 +23532,25 @@ public final class DatabaseOuterClass {
     internal_static_yandex_cloud_ydb_v1_ScalePolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_ScalePolicy_descriptor,
-        new java.lang.String[] { "FixedScale", "ScaleType", });
+        new java.lang.String[] { "FixedScale", "AutoScale", "ScaleType", });
     internal_static_yandex_cloud_ydb_v1_ScalePolicy_FixedScale_descriptor =
       internal_static_yandex_cloud_ydb_v1_ScalePolicy_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_ydb_v1_ScalePolicy_FixedScale_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_ScalePolicy_FixedScale_descriptor,
         new java.lang.String[] { "Size", });
+    internal_static_yandex_cloud_ydb_v1_ScalePolicy_AutoScale_descriptor =
+      internal_static_yandex_cloud_ydb_v1_ScalePolicy_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_ydb_v1_ScalePolicy_AutoScale_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ydb_v1_ScalePolicy_AutoScale_descriptor,
+        new java.lang.String[] { "MinSize", "MaxSize", "TargetTracking", "AutoScaleType", });
+    internal_static_yandex_cloud_ydb_v1_ScalePolicy_AutoScale_TargetTracking_descriptor =
+      internal_static_yandex_cloud_ydb_v1_ScalePolicy_AutoScale_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_ydb_v1_ScalePolicy_AutoScale_TargetTracking_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ydb_v1_ScalePolicy_AutoScale_TargetTracking_descriptor,
+        new java.lang.String[] { "CpuUtilizationPercent", "Target", });
     internal_static_yandex_cloud_ydb_v1_StorageConfig_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_ydb_v1_StorageConfig_fieldAccessorTable = new

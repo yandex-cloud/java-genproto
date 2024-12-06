@@ -14,6 +14,1603 @@ public final class SearchIndexFileServiceOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface BatchCreateSearchIndexFileRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.searchindex.BatchCreateSearchIndexFileRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string file_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the fileIds.
+     */
+    java.util.List<java.lang.String>
+        getFileIdsList();
+    /**
+     * <code>repeated string file_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of fileIds.
+     */
+    int getFileIdsCount();
+    /**
+     * <code>repeated string file_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The fileIds at the given index.
+     */
+    java.lang.String getFileIds(int index);
+    /**
+     * <code>repeated string file_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the fileIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getFileIdsBytes(int index);
+
+    /**
+     * <code>string search_index_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The searchIndexId.
+     */
+    java.lang.String getSearchIndexId();
+    /**
+     * <code>string search_index_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for searchIndexId.
+     */
+    com.google.protobuf.ByteString
+        getSearchIndexIdBytes();
+  }
+  /**
+   * <pre>
+   * Request message for creating multiple files within a search index.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.BatchCreateSearchIndexFileRequest}
+   */
+  public static final class BatchCreateSearchIndexFileRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.searchindex.BatchCreateSearchIndexFileRequest)
+      BatchCreateSearchIndexFileRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BatchCreateSearchIndexFileRequest.newBuilder() to construct.
+    private BatchCreateSearchIndexFileRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BatchCreateSearchIndexFileRequest() {
+      fileIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      searchIndexId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BatchCreateSearchIndexFileRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BatchCreateSearchIndexFileRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                fileIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              fileIds_.add(s);
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              searchIndexId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          fileIds_ = fileIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.internal_static_yandex_cloud_ai_assistants_v1_searchindex_BatchCreateSearchIndexFileRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.internal_static_yandex_cloud_ai_assistants_v1_searchindex_BatchCreateSearchIndexFileRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest.class, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest.Builder.class);
+    }
+
+    public static final int FILE_IDS_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList fileIds_;
+    /**
+     * <code>repeated string file_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the fileIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getFileIdsList() {
+      return fileIds_;
+    }
+    /**
+     * <code>repeated string file_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of fileIds.
+     */
+    public int getFileIdsCount() {
+      return fileIds_.size();
+    }
+    /**
+     * <code>repeated string file_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The fileIds at the given index.
+     */
+    public java.lang.String getFileIds(int index) {
+      return fileIds_.get(index);
+    }
+    /**
+     * <code>repeated string file_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the fileIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getFileIdsBytes(int index) {
+      return fileIds_.getByteString(index);
+    }
+
+    public static final int SEARCH_INDEX_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object searchIndexId_;
+    /**
+     * <code>string search_index_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The searchIndexId.
+     */
+    @java.lang.Override
+    public java.lang.String getSearchIndexId() {
+      java.lang.Object ref = searchIndexId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        searchIndexId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string search_index_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for searchIndexId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSearchIndexIdBytes() {
+      java.lang.Object ref = searchIndexId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        searchIndexId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < fileIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fileIds_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(searchIndexId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, searchIndexId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < fileIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(fileIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getFileIdsList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(searchIndexId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, searchIndexId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest other = (yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest) obj;
+
+      if (!getFileIdsList()
+          .equals(other.getFileIdsList())) return false;
+      if (!getSearchIndexId()
+          .equals(other.getSearchIndexId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getFileIdsCount() > 0) {
+        hash = (37 * hash) + FILE_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getFileIdsList().hashCode();
+      }
+      hash = (37 * hash) + SEARCH_INDEX_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSearchIndexId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Request message for creating multiple files within a search index.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.BatchCreateSearchIndexFileRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.searchindex.BatchCreateSearchIndexFileRequest)
+        yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.internal_static_yandex_cloud_ai_assistants_v1_searchindex_BatchCreateSearchIndexFileRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.internal_static_yandex_cloud_ai_assistants_v1_searchindex_BatchCreateSearchIndexFileRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest.class, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        fileIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        searchIndexId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.internal_static_yandex_cloud_ai_assistants_v1_searchindex_BatchCreateSearchIndexFileRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest build() {
+        yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest result = new yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          fileIds_ = fileIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.fileIds_ = fileIds_;
+        result.searchIndexId_ = searchIndexId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest.getDefaultInstance()) return this;
+        if (!other.fileIds_.isEmpty()) {
+          if (fileIds_.isEmpty()) {
+            fileIds_ = other.fileIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureFileIdsIsMutable();
+            fileIds_.addAll(other.fileIds_);
+          }
+          onChanged();
+        }
+        if (!other.getSearchIndexId().isEmpty()) {
+          searchIndexId_ = other.searchIndexId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList fileIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureFileIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          fileIds_ = new com.google.protobuf.LazyStringArrayList(fileIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string file_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return A list containing the fileIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getFileIdsList() {
+        return fileIds_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string file_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return The count of fileIds.
+       */
+      public int getFileIdsCount() {
+        return fileIds_.size();
+      }
+      /**
+       * <code>repeated string file_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the element to return.
+       * @return The fileIds at the given index.
+       */
+      public java.lang.String getFileIds(int index) {
+        return fileIds_.get(index);
+      }
+      /**
+       * <code>repeated string file_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the fileIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getFileIdsBytes(int index) {
+        return fileIds_.getByteString(index);
+      }
+      /**
+       * <code>repeated string file_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index to set the value at.
+       * @param value The fileIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFileIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFileIdsIsMutable();
+        fileIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string file_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The fileIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFileIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFileIdsIsMutable();
+        fileIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string file_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param values The fileIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllFileIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureFileIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, fileIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string file_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFileIds() {
+        fileIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string file_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The bytes of the fileIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFileIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureFileIdsIsMutable();
+        fileIds_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object searchIndexId_ = "";
+      /**
+       * <code>string search_index_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The searchIndexId.
+       */
+      public java.lang.String getSearchIndexId() {
+        java.lang.Object ref = searchIndexId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          searchIndexId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string search_index_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for searchIndexId.
+       */
+      public com.google.protobuf.ByteString
+          getSearchIndexIdBytes() {
+        java.lang.Object ref = searchIndexId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          searchIndexId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string search_index_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The searchIndexId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSearchIndexId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        searchIndexId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string search_index_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSearchIndexId() {
+        
+        searchIndexId_ = getDefaultInstance().getSearchIndexId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string search_index_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for searchIndexId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSearchIndexIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        searchIndexId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.searchindex.BatchCreateSearchIndexFileRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.searchindex.BatchCreateSearchIndexFileRequest)
+    private static final yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest();
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BatchCreateSearchIndexFileRequest>
+        PARSER = new com.google.protobuf.AbstractParser<BatchCreateSearchIndexFileRequest>() {
+      @java.lang.Override
+      public BatchCreateSearchIndexFileRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BatchCreateSearchIndexFileRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BatchCreateSearchIndexFileRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BatchCreateSearchIndexFileRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BatchCreateSearchIndexFileResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.searchindex.BatchCreateSearchIndexFileResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile> 
+        getFilesList();
+    /**
+     * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile getFiles(int index);
+    /**
+     * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+     */
+    int getFilesCount();
+    /**
+     * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFileOrBuilder> 
+        getFilesOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFileOrBuilder getFilesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Response message for the BatchCreate operation.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.BatchCreateSearchIndexFileResponse}
+   */
+  public static final class BatchCreateSearchIndexFileResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.searchindex.BatchCreateSearchIndexFileResponse)
+      BatchCreateSearchIndexFileResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BatchCreateSearchIndexFileResponse.newBuilder() to construct.
+    private BatchCreateSearchIndexFileResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BatchCreateSearchIndexFileResponse() {
+      files_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BatchCreateSearchIndexFileResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BatchCreateSearchIndexFileResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                files_ = new java.util.ArrayList<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              files_.add(
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          files_ = java.util.Collections.unmodifiableList(files_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.internal_static_yandex_cloud_ai_assistants_v1_searchindex_BatchCreateSearchIndexFileResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.internal_static_yandex_cloud_ai_assistants_v1_searchindex_BatchCreateSearchIndexFileResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse.class, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse.Builder.class);
+    }
+
+    public static final int FILES_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile> files_;
+    /**
+     * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile> getFilesList() {
+      return files_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFileOrBuilder> 
+        getFilesOrBuilderList() {
+      return files_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+     */
+    @java.lang.Override
+    public int getFilesCount() {
+      return files_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile getFiles(int index) {
+      return files_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFileOrBuilder getFilesOrBuilder(
+        int index) {
+      return files_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < files_.size(); i++) {
+        output.writeMessage(1, files_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < files_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, files_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse other = (yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse) obj;
+
+      if (!getFilesList()
+          .equals(other.getFilesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getFilesCount() > 0) {
+        hash = (37 * hash) + FILES_FIELD_NUMBER;
+        hash = (53 * hash) + getFilesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Response message for the BatchCreate operation.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.searchindex.BatchCreateSearchIndexFileResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.searchindex.BatchCreateSearchIndexFileResponse)
+        yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.internal_static_yandex_cloud_ai_assistants_v1_searchindex_BatchCreateSearchIndexFileResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.internal_static_yandex_cloud_ai_assistants_v1_searchindex_BatchCreateSearchIndexFileResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse.class, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFilesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (filesBuilder_ == null) {
+          files_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          filesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.internal_static_yandex_cloud_ai_assistants_v1_searchindex_BatchCreateSearchIndexFileResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse build() {
+        yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse result = new yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (filesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            files_ = java.util.Collections.unmodifiableList(files_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.files_ = files_;
+        } else {
+          result.files_ = filesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse.getDefaultInstance()) return this;
+        if (filesBuilder_ == null) {
+          if (!other.files_.isEmpty()) {
+            if (files_.isEmpty()) {
+              files_ = other.files_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureFilesIsMutable();
+              files_.addAll(other.files_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.files_.isEmpty()) {
+            if (filesBuilder_.isEmpty()) {
+              filesBuilder_.dispose();
+              filesBuilder_ = null;
+              files_ = other.files_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              filesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFilesFieldBuilder() : null;
+            } else {
+              filesBuilder_.addAllMessages(other.files_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile> files_ =
+        java.util.Collections.emptyList();
+      private void ensureFilesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          files_ = new java.util.ArrayList<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile>(files_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFileOrBuilder> filesBuilder_;
+
+      /**
+       * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile> getFilesList() {
+        if (filesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(files_);
+        } else {
+          return filesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+       */
+      public int getFilesCount() {
+        if (filesBuilder_ == null) {
+          return files_.size();
+        } else {
+          return filesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile getFiles(int index) {
+        if (filesBuilder_ == null) {
+          return files_.get(index);
+        } else {
+          return filesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+       */
+      public Builder setFiles(
+          int index, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile value) {
+        if (filesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFilesIsMutable();
+          files_.set(index, value);
+          onChanged();
+        } else {
+          filesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+       */
+      public Builder setFiles(
+          int index, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile.Builder builderForValue) {
+        if (filesBuilder_ == null) {
+          ensureFilesIsMutable();
+          files_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          filesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+       */
+      public Builder addFiles(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile value) {
+        if (filesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFilesIsMutable();
+          files_.add(value);
+          onChanged();
+        } else {
+          filesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+       */
+      public Builder addFiles(
+          int index, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile value) {
+        if (filesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFilesIsMutable();
+          files_.add(index, value);
+          onChanged();
+        } else {
+          filesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+       */
+      public Builder addFiles(
+          yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile.Builder builderForValue) {
+        if (filesBuilder_ == null) {
+          ensureFilesIsMutable();
+          files_.add(builderForValue.build());
+          onChanged();
+        } else {
+          filesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+       */
+      public Builder addFiles(
+          int index, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile.Builder builderForValue) {
+        if (filesBuilder_ == null) {
+          ensureFilesIsMutable();
+          files_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          filesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+       */
+      public Builder addAllFiles(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile> values) {
+        if (filesBuilder_ == null) {
+          ensureFilesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, files_);
+          onChanged();
+        } else {
+          filesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+       */
+      public Builder clearFiles() {
+        if (filesBuilder_ == null) {
+          files_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          filesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+       */
+      public Builder removeFiles(int index) {
+        if (filesBuilder_ == null) {
+          ensureFilesIsMutable();
+          files_.remove(index);
+          onChanged();
+        } else {
+          filesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile.Builder getFilesBuilder(
+          int index) {
+        return getFilesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFileOrBuilder getFilesOrBuilder(
+          int index) {
+        if (filesBuilder_ == null) {
+          return files_.get(index);  } else {
+          return filesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFileOrBuilder> 
+           getFilesOrBuilderList() {
+        if (filesBuilder_ != null) {
+          return filesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(files_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile.Builder addFilesBuilder() {
+        return getFilesFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile.Builder addFilesBuilder(
+          int index) {
+        return getFilesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.assistants.v1.searchindex.SearchIndexFile files = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile.Builder> 
+           getFilesBuilderList() {
+        return getFilesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFileOrBuilder> 
+          getFilesFieldBuilder() {
+        if (filesBuilder_ == null) {
+          filesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFile.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.SearchIndexFileOrBuilder>(
+                  files_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          files_ = null;
+        }
+        return filesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.searchindex.BatchCreateSearchIndexFileResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.searchindex.BatchCreateSearchIndexFileResponse)
+    private static final yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse();
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BatchCreateSearchIndexFileResponse>
+        PARSER = new com.google.protobuf.AbstractParser<BatchCreateSearchIndexFileResponse>() {
+      @java.lang.Override
+      public BatchCreateSearchIndexFileResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BatchCreateSearchIndexFileResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BatchCreateSearchIndexFileResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BatchCreateSearchIndexFileResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileServiceOuterClass.BatchCreateSearchIndexFileResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface GetSearchIndexFileRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.searchindex.GetSearchIndexFileRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -2801,6 +4398,16 @@ public final class SearchIndexFileServiceOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_searchindex_BatchCreateSearchIndexFileRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_searchindex_BatchCreateSearchIndexFileRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_searchindex_BatchCreateSearchIndexFileResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_searchindex_BatchCreateSearchIndexFileResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_assistants_v1_searchindex_GetSearchIndexFileRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -2828,53 +4435,80 @@ public final class SearchIndexFileServiceOuterClass {
       "dex/search_index_file_service.proto\022)yan" +
       "dex.cloud.ai.assistants.v1.searchindex\032A" +
       "yandex/cloud/ai/assistants/v1/searchinde" +
-      "x/search_index_file.proto\032\035yandex/cloud/" +
-      "validation.proto\032\034google/api/annotations" +
-      ".proto\"Q\n\031GetSearchIndexFileRequest\022\025\n\007f" +
-      "ile_id\030\001 \001(\tB\004\350\3071\001\022\035\n\017search_index_id\030\002 " +
-      "\001(\tB\004\350\3071\001\"c\n\033ListSearchIndexFilesRequest" +
-      "\022\035\n\017search_index_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tpage_" +
-      "size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\"\202\001\n\034ListS" +
-      "earchIndexFilesResponse\022I\n\005files\030\001 \003(\0132:" +
-      ".yandex.cloud.ai.assistants.v1.searchind" +
-      "ex.SearchIndexFile\022\027\n\017next_page_token\030\002 " +
-      "\001(\t2\272\003\n\026SearchIndexFileService\022\313\001\n\003Get\022D" +
-      ".yandex.cloud.ai.assistants.v1.searchind" +
-      "ex.GetSearchIndexFileRequest\032:.yandex.cl" +
-      "oud.ai.assistants.v1.searchindex.SearchI" +
-      "ndexFile\"B\202\323\344\223\002<\022:/assistants/v1/searchI" +
-      "ndexFile/{search_index_id}/{file_id}\022\321\001\n" +
-      "\004List\022F.yandex.cloud.ai.assistants.v1.se" +
-      "archindex.ListSearchIndexFilesRequest\032G." +
-      "yandex.cloud.ai.assistants.v1.searchinde" +
-      "x.ListSearchIndexFilesResponse\"8\202\323\344\223\0022\0220" +
-      "/assistants/v1/searchIndexFile/{search_i" +
-      "ndex_id}B\212\001\n-yandex.cloud.api.ai.assista" +
-      "nts.v1.searchindexZYgithub.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/ai/assistan" +
-      "ts/v1/searchindex;searchindexb\006proto3"
+      "x/search_index_file.proto\032 yandex/cloud/" +
+      "api/operation.proto\032&yandex/cloud/operat" +
+      "ion/operation.proto\032\035yandex/cloud/valida" +
+      "tion.proto\032\034google/api/annotations.proto" +
+      "\"\\\n!BatchCreateSearchIndexFileRequest\022\030\n" +
+      "\010file_ids\030\001 \003(\tB\006\202\3101\002>0\022\035\n\017search_index_" +
+      "id\030\002 \001(\tB\004\350\3071\001\"o\n\"BatchCreateSearchIndex" +
+      "FileResponse\022I\n\005files\030\001 \003(\0132:.yandex.clo" +
+      "ud.ai.assistants.v1.searchindex.SearchIn" +
+      "dexFile\"Q\n\031GetSearchIndexFileRequest\022\025\n\007" +
+      "file_id\030\001 \001(\tB\004\350\3071\001\022\035\n\017search_index_id\030\002" +
+      " \001(\tB\004\350\3071\001\"c\n\033ListSearchIndexFilesReques" +
+      "t\022\035\n\017search_index_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tpage" +
+      "_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\"\202\001\n\034List" +
+      "SearchIndexFilesResponse\022I\n\005files\030\001 \003(\0132" +
+      ":.yandex.cloud.ai.assistants.v1.searchin" +
+      "dex.SearchIndexFile\022\027\n\017next_page_token\030\002" +
+      " \001(\t2\232\005\n\026SearchIndexFileService\022\335\001\n\013Batc" +
+      "hCreate\022L.yandex.cloud.ai.assistants.v1." +
+      "searchindex.BatchCreateSearchIndexFileRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"]\262\322*$\022\"BatchCreateSearchIndexFileRespon" +
+      "se\202\323\344\223\002/\"*/assistants/v1/searchIndexFile" +
+      ":batchCreate:\001*\022\313\001\n\003Get\022D.yandex.cloud.a" +
+      "i.assistants.v1.searchindex.GetSearchInd" +
+      "exFileRequest\032:.yandex.cloud.ai.assistan" +
+      "ts.v1.searchindex.SearchIndexFile\"B\202\323\344\223\002" +
+      "<\022:/assistants/v1/searchIndexFile/{searc" +
+      "h_index_id}/{file_id}\022\321\001\n\004List\022F.yandex." +
+      "cloud.ai.assistants.v1.searchindex.ListS" +
+      "earchIndexFilesRequest\032G.yandex.cloud.ai" +
+      ".assistants.v1.searchindex.ListSearchInd" +
+      "exFilesResponse\"8\202\323\344\223\0022\0220/assistants/v1/" +
+      "searchIndexFile/{search_index_id}B\212\001\n-ya" +
+      "ndex.cloud.api.ai.assistants.v1.searchin" +
+      "dexZYgithub.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/ai/assistants/v1/searchind" +
+      "ex;searchindexb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.getDescriptor(),
+          yandex.cloud.api.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         });
-    internal_static_yandex_cloud_ai_assistants_v1_searchindex_GetSearchIndexFileRequest_descriptor =
+    internal_static_yandex_cloud_ai_assistants_v1_searchindex_BatchCreateSearchIndexFileRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_yandex_cloud_ai_assistants_v1_searchindex_BatchCreateSearchIndexFileRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_searchindex_BatchCreateSearchIndexFileRequest_descriptor,
+        new java.lang.String[] { "FileIds", "SearchIndexId", });
+    internal_static_yandex_cloud_ai_assistants_v1_searchindex_BatchCreateSearchIndexFileResponse_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_ai_assistants_v1_searchindex_BatchCreateSearchIndexFileResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_searchindex_BatchCreateSearchIndexFileResponse_descriptor,
+        new java.lang.String[] { "Files", });
+    internal_static_yandex_cloud_ai_assistants_v1_searchindex_GetSearchIndexFileRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_ai_assistants_v1_searchindex_GetSearchIndexFileRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_searchindex_GetSearchIndexFileRequest_descriptor,
         new java.lang.String[] { "FileId", "SearchIndexId", });
     internal_static_yandex_cloud_ai_assistants_v1_searchindex_ListSearchIndexFilesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_ai_assistants_v1_searchindex_ListSearchIndexFilesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_searchindex_ListSearchIndexFilesRequest_descriptor,
         new java.lang.String[] { "SearchIndexId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_ai_assistants_v1_searchindex_ListSearchIndexFilesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_ai_assistants_v1_searchindex_ListSearchIndexFilesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_searchindex_ListSearchIndexFilesResponse_descriptor,
@@ -2882,10 +4516,14 @@ public final class SearchIndexFileServiceOuterClass {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexFileOuterClass.getDescriptor();
+    yandex.cloud.api.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

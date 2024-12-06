@@ -1220,6 +1220,26 @@ public final class TalkServiceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * talk_id, blank if initial upload request and present on metadata update
+     * </pre>
+     *
+     * <code>string talk_id = 3;</code>
+     * @return The talkId.
+     */
+    java.lang.String getTalkId();
+    /**
+     * <pre>
+     * talk_id, blank if initial upload request and present on metadata update
+     * </pre>
+     *
+     * <code>string talk_id = 3;</code>
+     * @return The bytes for talkId.
+     */
+    com.google.protobuf.ByteString
+        getTalkIdBytes();
+
+    /**
      * <code>.yandex.cloud.speechsense.v1.TalkMetadata metadata = 1;</code>
      * @return Whether the metadata field is set.
      */
@@ -1278,6 +1298,7 @@ public final class TalkServiceProto {
       super(builder);
     }
     private UploadTalkRequest() {
+      talkId_ = "";
     }
 
     @java.lang.Override
@@ -1336,6 +1357,12 @@ public final class TalkServiceProto {
 
               break;
             }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              talkId_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -1366,6 +1393,52 @@ public final class TalkServiceProto {
       return yandex.cloud.api.speechsense.v1.TalkServiceProto.internal_static_yandex_cloud_speechsense_v1_UploadTalkRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadTalkRequest.class, yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadTalkRequest.Builder.class);
+    }
+
+    public static final int TALK_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object talkId_;
+    /**
+     * <pre>
+     * talk_id, blank if initial upload request and present on metadata update
+     * </pre>
+     *
+     * <code>string talk_id = 3;</code>
+     * @return The talkId.
+     */
+    @java.lang.Override
+    public java.lang.String getTalkId() {
+      java.lang.Object ref = talkId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        talkId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * talk_id, blank if initial upload request and present on metadata update
+     * </pre>
+     *
+     * <code>string talk_id = 3;</code>
+     * @return The bytes for talkId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTalkIdBytes() {
+      java.lang.Object ref = talkId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        talkId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int METADATA_FIELD_NUMBER = 1;
@@ -1452,6 +1525,9 @@ public final class TalkServiceProto {
       if (audio_ != null) {
         output.writeMessage(2, getAudio());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(talkId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, talkId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1469,6 +1545,9 @@ public final class TalkServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAudio());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(talkId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, talkId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1484,6 +1563,8 @@ public final class TalkServiceProto {
       }
       yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadTalkRequest other = (yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadTalkRequest) obj;
 
+      if (!getTalkId()
+          .equals(other.getTalkId())) return false;
       if (hasMetadata() != other.hasMetadata()) return false;
       if (hasMetadata()) {
         if (!getMetadata()
@@ -1505,6 +1586,8 @@ public final class TalkServiceProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TALK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTalkId().hashCode();
       if (hasMetadata()) {
         hash = (37 * hash) + METADATA_FIELD_NUMBER;
         hash = (53 * hash) + getMetadata().hashCode();
@@ -1650,6 +1733,8 @@ public final class TalkServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        talkId_ = "";
+
         if (metadataBuilder_ == null) {
           metadata_ = null;
         } else {
@@ -1688,6 +1773,7 @@ public final class TalkServiceProto {
       @java.lang.Override
       public yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadTalkRequest buildPartial() {
         yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadTalkRequest result = new yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadTalkRequest(this);
+        result.talkId_ = talkId_;
         if (metadataBuilder_ == null) {
           result.metadata_ = metadata_;
         } else {
@@ -1746,6 +1832,10 @@ public final class TalkServiceProto {
 
       public Builder mergeFrom(yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadTalkRequest other) {
         if (other == yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadTalkRequest.getDefaultInstance()) return this;
+        if (!other.getTalkId().isEmpty()) {
+          talkId_ = other.talkId_;
+          onChanged();
+        }
         if (other.hasMetadata()) {
           mergeMetadata(other.getMetadata());
         }
@@ -1778,6 +1868,102 @@ public final class TalkServiceProto {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object talkId_ = "";
+      /**
+       * <pre>
+       * talk_id, blank if initial upload request and present on metadata update
+       * </pre>
+       *
+       * <code>string talk_id = 3;</code>
+       * @return The talkId.
+       */
+      public java.lang.String getTalkId() {
+        java.lang.Object ref = talkId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          talkId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * talk_id, blank if initial upload request and present on metadata update
+       * </pre>
+       *
+       * <code>string talk_id = 3;</code>
+       * @return The bytes for talkId.
+       */
+      public com.google.protobuf.ByteString
+          getTalkIdBytes() {
+        java.lang.Object ref = talkId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          talkId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * talk_id, blank if initial upload request and present on metadata update
+       * </pre>
+       *
+       * <code>string talk_id = 3;</code>
+       * @param value The talkId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTalkId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        talkId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * talk_id, blank if initial upload request and present on metadata update
+       * </pre>
+       *
+       * <code>string talk_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTalkId() {
+        
+        talkId_ = getDefaultInstance().getTalkId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * talk_id, blank if initial upload request and present on metadata update
+       * </pre>
+       *
+       * <code>string talk_id = 3;</code>
+       * @param value The bytes for talkId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTalkIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        talkId_ = value;
+        onChanged();
         return this;
       }
 
@@ -2716,6 +2902,26 @@ public final class TalkServiceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * talk_id, blank if initial upload request and present on metadata update
+     * </pre>
+     *
+     * <code>string talk_id = 3;</code>
+     * @return The talkId.
+     */
+    java.lang.String getTalkId();
+    /**
+     * <pre>
+     * talk_id, blank if initial upload request and present on metadata update
+     * </pre>
+     *
+     * <code>string talk_id = 3;</code>
+     * @return The bytes for talkId.
+     */
+    com.google.protobuf.ByteString
+        getTalkIdBytes();
+
+    /**
      * <code>.yandex.cloud.speechsense.v1.TalkMetadata metadata = 1;</code>
      * @return Whether the metadata field is set.
      */
@@ -2762,6 +2968,7 @@ public final class TalkServiceProto {
       super(builder);
     }
     private UploadTextRequest() {
+      talkId_ = "";
     }
 
     @java.lang.Override
@@ -2820,6 +3027,12 @@ public final class TalkServiceProto {
 
               break;
             }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              talkId_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2850,6 +3063,52 @@ public final class TalkServiceProto {
       return yandex.cloud.api.speechsense.v1.TalkServiceProto.internal_static_yandex_cloud_speechsense_v1_UploadTextRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadTextRequest.class, yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadTextRequest.Builder.class);
+    }
+
+    public static final int TALK_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object talkId_;
+    /**
+     * <pre>
+     * talk_id, blank if initial upload request and present on metadata update
+     * </pre>
+     *
+     * <code>string talk_id = 3;</code>
+     * @return The talkId.
+     */
+    @java.lang.Override
+    public java.lang.String getTalkId() {
+      java.lang.Object ref = talkId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        talkId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * talk_id, blank if initial upload request and present on metadata update
+     * </pre>
+     *
+     * <code>string talk_id = 3;</code>
+     * @return The bytes for talkId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTalkIdBytes() {
+      java.lang.Object ref = talkId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        talkId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int METADATA_FIELD_NUMBER = 1;
@@ -2924,6 +3183,9 @@ public final class TalkServiceProto {
       if (textContent_ != null) {
         output.writeMessage(2, getTextContent());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(talkId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, talkId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2941,6 +3203,9 @@ public final class TalkServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTextContent());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(talkId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, talkId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2956,6 +3221,8 @@ public final class TalkServiceProto {
       }
       yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadTextRequest other = (yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadTextRequest) obj;
 
+      if (!getTalkId()
+          .equals(other.getTalkId())) return false;
       if (hasMetadata() != other.hasMetadata()) return false;
       if (hasMetadata()) {
         if (!getMetadata()
@@ -2977,6 +3244,8 @@ public final class TalkServiceProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TALK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTalkId().hashCode();
       if (hasMetadata()) {
         hash = (37 * hash) + METADATA_FIELD_NUMBER;
         hash = (53 * hash) + getMetadata().hashCode();
@@ -3122,6 +3391,8 @@ public final class TalkServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        talkId_ = "";
+
         if (metadataBuilder_ == null) {
           metadata_ = null;
         } else {
@@ -3160,6 +3431,7 @@ public final class TalkServiceProto {
       @java.lang.Override
       public yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadTextRequest buildPartial() {
         yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadTextRequest result = new yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadTextRequest(this);
+        result.talkId_ = talkId_;
         if (metadataBuilder_ == null) {
           result.metadata_ = metadata_;
         } else {
@@ -3218,6 +3490,10 @@ public final class TalkServiceProto {
 
       public Builder mergeFrom(yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadTextRequest other) {
         if (other == yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadTextRequest.getDefaultInstance()) return this;
+        if (!other.getTalkId().isEmpty()) {
+          talkId_ = other.talkId_;
+          onChanged();
+        }
         if (other.hasMetadata()) {
           mergeMetadata(other.getMetadata());
         }
@@ -3250,6 +3526,102 @@ public final class TalkServiceProto {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object talkId_ = "";
+      /**
+       * <pre>
+       * talk_id, blank if initial upload request and present on metadata update
+       * </pre>
+       *
+       * <code>string talk_id = 3;</code>
+       * @return The talkId.
+       */
+      public java.lang.String getTalkId() {
+        java.lang.Object ref = talkId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          talkId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * talk_id, blank if initial upload request and present on metadata update
+       * </pre>
+       *
+       * <code>string talk_id = 3;</code>
+       * @return The bytes for talkId.
+       */
+      public com.google.protobuf.ByteString
+          getTalkIdBytes() {
+        java.lang.Object ref = talkId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          talkId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * talk_id, blank if initial upload request and present on metadata update
+       * </pre>
+       *
+       * <code>string talk_id = 3;</code>
+       * @param value The talkId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTalkId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        talkId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * talk_id, blank if initial upload request and present on metadata update
+       * </pre>
+       *
+       * <code>string talk_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTalkId() {
+        
+        talkId_ = getDefaultInstance().getTalkId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * talk_id, blank if initial upload request and present on metadata update
+       * </pre>
+       *
+       * <code>string talk_id = 3;</code>
+       * @param value The bytes for talkId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTalkIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        talkId_ = value;
+        onChanged();
         return this;
       }
 
@@ -12663,65 +13035,66 @@ public final class TalkServiceProto {
       "equest\022=\n\010metadata\030\001 \001(\0132).yandex.cloud." +
       "speechsense.v1.TalkMetadataH\000\022C\n\005audio\030\002" +
       " \001(\01322.yandex.cloud.speechsense.v1.Audio" +
-      "StreamingRequestH\000B\007\n\005Event\"\212\001\n\021UploadTa" +
-      "lkRequest\022;\n\010metadata\030\001 \001(\0132).yandex.clo" +
-      "ud.speechsense.v1.TalkMetadata\0228\n\005audio\030" +
-      "\002 \001(\0132).yandex.cloud.speechsense.v1.Audi" +
-      "oRequest\"%\n\022UploadTalkResponse\022\017\n\007talk_i" +
-      "d\030\001 \001(\t\"\220\001\n\021UploadTextRequest\022;\n\010metadat" +
-      "a\030\001 \001(\0132).yandex.cloud.speechsense.v1.Ta" +
-      "lkMetadata\022>\n\014text_content\030\002 \001(\0132(.yande" +
-      "x.cloud.speechsense.v1.TextContent\"%\n\022Up" +
-      "loadTextResponse\022\017\n\007talk_id\030\001 \001(\t\"\325\001\n\014Ta" +
-      "lkMetadata\022\025\n\rconnection_id\030\001 \001(\t\022E\n\006fie" +
-      "lds\030\002 \003(\01325.yandex.cloud.speechsense.v1." +
-      "TalkMetadata.FieldsEntry\0228\n\005users\030\003 \003(\0132" +
-      ").yandex.cloud.speechsense.v1.UserMetada" +
-      "ta\032-\n\013FieldsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001\"\305\001\n\014UserMetadata\022\n\n\002id\030\001 \001(\t\0223" +
-      "\n\004role\030\002 \001(\0162%.yandex.cloud.speechsense." +
-      "v1.UserRole\022E\n\006fields\030\003 \003(\01325.yandex.clo" +
-      "ud.speechsense.v1.UserMetadata.FieldsEnt" +
-      "ry\032-\n\013FieldsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001\"\263\002\n\021SearchTalkRequest\022\027\n\017organ" +
-      "ization_id\030\001 \001(\t\022\020\n\010space_id\030\002 \001(\t\022\025\n\rco" +
-      "nnection_id\030\003 \001(\t\022\022\n\nproject_id\030\004 \001(\t\0224\n" +
-      "\007filters\030\005 \003(\0132#.yandex.cloud.speechsens" +
-      "e.v1.Filter\0221\n\005query\030\006 \001(\0132\".yandex.clou" +
-      "d.speechsense.v1.Query\022\021\n\tpage_size\030\007 \001(" +
-      "\003\022\022\n\npage_token\030\010 \001(\t\0228\n\tsort_data\030\t \001(\013" +
-      "2%.yandex.cloud.speechsense.v1.SortData\"" +
-      "T\n\022SearchTalkResponse\022\020\n\010talk_ids\030\001 \003(\t\022" +
-      "\023\n\013talks_count\030\002 \001(\003\022\027\n\017next_page_token\030" +
-      "\003 \001(\t\"\252\001\n\016GetTalkRequest\022\027\n\017organization" +
-      "_id\030\001 \001(\t\022\020\n\010space_id\030\002 \001(\t\022\025\n\rconnectio" +
-      "n_id\030\003 \001(\t\022\022\n\nproject_id\030\004 \001(\t\022\020\n\010talk_i" +
-      "ds\030\005 \003(\t\0220\n\014results_mask\030\006 \001(\0132\032.google." +
-      "protobuf.FieldMask\"B\n\017GetTalkResponse\022/\n" +
-      "\004talk\030\001 \003(\0132!.yandex.cloud.speechsense.v" +
-      "1.Talk*f\n\010UserRole\022\031\n\025USER_ROLE_UNSPECIF" +
-      "IED\020\000\022\026\n\022USER_ROLE_OPERATOR\020\001\022\024\n\020USER_RO" +
-      "LE_CLIENT\020\002\022\021\n\rUSER_ROLE_BOT\020\0032\376\004\n\013TalkS" +
-      "ervice\022s\n\016UploadAsStream\022..yandex.cloud." +
-      "speechsense.v1.StreamTalkRequest\032/.yande" +
-      "x.cloud.speechsense.v1.UploadTalkRespons" +
-      "e(\001\022k\n\006Upload\022..yandex.cloud.speechsense" +
-      ".v1.UploadTalkRequest\032/.yandex.cloud.spe" +
-      "echsense.v1.UploadTalkResponse\"\000\022o\n\nUplo" +
-      "adText\022..yandex.cloud.speechsense.v1.Upl" +
-      "oadTextRequest\032/.yandex.cloud.speechsens" +
-      "e.v1.UploadTextResponse\"\000\022\222\001\n\006Search\022..y" +
-      "andex.cloud.speechsense.v1.SearchTalkReq" +
-      "uest\032/.yandex.cloud.speechsense.v1.Searc" +
-      "hTalkResponse\"\'\202\323\344\223\002!\"\034/speechsense/v1/t" +
-      "alks/search:\001*\022\206\001\n\003Get\022+.yandex.cloud.sp" +
-      "eechsense.v1.GetTalkRequest\032,.yandex.clo" +
-      "ud.speechsense.v1.GetTalkResponse\"$\202\323\344\223\002" +
-      "\036\"\031/speechsense/v1/talks/get:\001*B\200\001\n\037yand" +
-      "ex.cloud.api.speechsense.v1B\020TalkService" +
-      "ProtoZKgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/speechsense/v1;speechsen" +
-      "seb\006proto3"
+      "StreamingRequestH\000B\007\n\005Event\"\233\001\n\021UploadTa" +
+      "lkRequest\022\017\n\007talk_id\030\003 \001(\t\022;\n\010metadata\030\001" +
+      " \001(\0132).yandex.cloud.speechsense.v1.TalkM" +
+      "etadata\0228\n\005audio\030\002 \001(\0132).yandex.cloud.sp" +
+      "eechsense.v1.AudioRequest\"%\n\022UploadTalkR" +
+      "esponse\022\017\n\007talk_id\030\001 \001(\t\"\241\001\n\021UploadTextR" +
+      "equest\022\017\n\007talk_id\030\003 \001(\t\022;\n\010metadata\030\001 \001(" +
+      "\0132).yandex.cloud.speechsense.v1.TalkMeta" +
+      "data\022>\n\014text_content\030\002 \001(\0132(.yandex.clou" +
+      "d.speechsense.v1.TextContent\"%\n\022UploadTe" +
+      "xtResponse\022\017\n\007talk_id\030\001 \001(\t\"\325\001\n\014TalkMeta" +
+      "data\022\025\n\rconnection_id\030\001 \001(\t\022E\n\006fields\030\002 " +
+      "\003(\01325.yandex.cloud.speechsense.v1.TalkMe" +
+      "tadata.FieldsEntry\0228\n\005users\030\003 \003(\0132).yand" +
+      "ex.cloud.speechsense.v1.UserMetadata\032-\n\013" +
+      "FieldsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001\"\305\001\n\014UserMetadata\022\n\n\002id\030\001 \001(\t\0223\n\004role" +
+      "\030\002 \001(\0162%.yandex.cloud.speechsense.v1.Use" +
+      "rRole\022E\n\006fields\030\003 \003(\01325.yandex.cloud.spe" +
+      "echsense.v1.UserMetadata.FieldsEntry\032-\n\013" +
+      "FieldsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001\"\263\002\n\021SearchTalkRequest\022\027\n\017organizatio" +
+      "n_id\030\001 \001(\t\022\020\n\010space_id\030\002 \001(\t\022\025\n\rconnecti" +
+      "on_id\030\003 \001(\t\022\022\n\nproject_id\030\004 \001(\t\0224\n\007filte" +
+      "rs\030\005 \003(\0132#.yandex.cloud.speechsense.v1.F" +
+      "ilter\0221\n\005query\030\006 \001(\0132\".yandex.cloud.spee" +
+      "chsense.v1.Query\022\021\n\tpage_size\030\007 \001(\003\022\022\n\np" +
+      "age_token\030\010 \001(\t\0228\n\tsort_data\030\t \001(\0132%.yan" +
+      "dex.cloud.speechsense.v1.SortData\"T\n\022Sea" +
+      "rchTalkResponse\022\020\n\010talk_ids\030\001 \003(\t\022\023\n\013tal" +
+      "ks_count\030\002 \001(\003\022\027\n\017next_page_token\030\003 \001(\t\"" +
+      "\252\001\n\016GetTalkRequest\022\027\n\017organization_id\030\001 " +
+      "\001(\t\022\020\n\010space_id\030\002 \001(\t\022\025\n\rconnection_id\030\003" +
+      " \001(\t\022\022\n\nproject_id\030\004 \001(\t\022\020\n\010talk_ids\030\005 \003" +
+      "(\t\0220\n\014results_mask\030\006 \001(\0132\032.google.protob" +
+      "uf.FieldMask\"B\n\017GetTalkResponse\022/\n\004talk\030" +
+      "\001 \003(\0132!.yandex.cloud.speechsense.v1.Talk" +
+      "*f\n\010UserRole\022\031\n\025USER_ROLE_UNSPECIFIED\020\000\022" +
+      "\026\n\022USER_ROLE_OPERATOR\020\001\022\024\n\020USER_ROLE_CLI" +
+      "ENT\020\002\022\021\n\rUSER_ROLE_BOT\020\0032\376\004\n\013TalkService" +
+      "\022s\n\016UploadAsStream\022..yandex.cloud.speech" +
+      "sense.v1.StreamTalkRequest\032/.yandex.clou" +
+      "d.speechsense.v1.UploadTalkResponse(\001\022k\n" +
+      "\006Upload\022..yandex.cloud.speechsense.v1.Up" +
+      "loadTalkRequest\032/.yandex.cloud.speechsen" +
+      "se.v1.UploadTalkResponse\"\000\022o\n\nUploadText" +
+      "\022..yandex.cloud.speechsense.v1.UploadTex" +
+      "tRequest\032/.yandex.cloud.speechsense.v1.U" +
+      "ploadTextResponse\"\000\022\222\001\n\006Search\022..yandex." +
+      "cloud.speechsense.v1.SearchTalkRequest\032/" +
+      ".yandex.cloud.speechsense.v1.SearchTalkR" +
+      "esponse\"\'\202\323\344\223\002!\"\034/speechsense/v1/talks/s" +
+      "earch:\001*\022\206\001\n\003Get\022+.yandex.cloud.speechse" +
+      "nse.v1.GetTalkRequest\032,.yandex.cloud.spe" +
+      "echsense.v1.GetTalkResponse\"$\202\323\344\223\002\036\"\031/sp" +
+      "eechsense/v1/talks/get:\001*B\200\001\n\037yandex.clo" +
+      "ud.api.speechsense.v1B\020TalkServiceProtoZ" +
+      "Kgithub.com/yandex-cloud/go-genproto/yan" +
+      "dex/cloud/speechsense/v1;speechsenseb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12744,7 +13117,7 @@ public final class TalkServiceProto {
     internal_static_yandex_cloud_speechsense_v1_UploadTalkRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_speechsense_v1_UploadTalkRequest_descriptor,
-        new java.lang.String[] { "Metadata", "Audio", });
+        new java.lang.String[] { "TalkId", "Metadata", "Audio", });
     internal_static_yandex_cloud_speechsense_v1_UploadTalkResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_speechsense_v1_UploadTalkResponse_fieldAccessorTable = new
@@ -12756,7 +13129,7 @@ public final class TalkServiceProto {
     internal_static_yandex_cloud_speechsense_v1_UploadTextRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_speechsense_v1_UploadTextRequest_descriptor,
-        new java.lang.String[] { "Metadata", "TextContent", });
+        new java.lang.String[] { "TalkId", "Metadata", "TextContent", });
     internal_static_yandex_cloud_speechsense_v1_UploadTextResponse_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_speechsense_v1_UploadTextResponse_fieldAccessorTable = new
