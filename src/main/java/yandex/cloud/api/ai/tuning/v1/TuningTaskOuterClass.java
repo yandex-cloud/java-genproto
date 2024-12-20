@@ -340,6 +340,10 @@ public final class TuningTaskOuterClass {
        * <code>FAILED = 5;</code>
        */
       FAILED(5),
+      /**
+       * <code>CANCELED = 6;</code>
+       */
+      CANCELED(6),
       UNRECOGNIZED(-1),
       ;
 
@@ -367,6 +371,10 @@ public final class TuningTaskOuterClass {
        * <code>FAILED = 5;</code>
        */
       public static final int FAILED_VALUE = 5;
+      /**
+       * <code>CANCELED = 6;</code>
+       */
+      public static final int CANCELED_VALUE = 6;
 
 
       public final int getNumber() {
@@ -399,6 +407,7 @@ public final class TuningTaskOuterClass {
           case 3: return IN_PROGRESS;
           case 4: return COMPLETED;
           case 5: return FAILED;
+          case 6: return CANCELED;
           default: return null;
         }
       }
@@ -2208,7 +2217,7 @@ public final class TuningTaskOuterClass {
     java.lang.String[] descriptorData = {
       "\n+yandex/cloud/ai/tuning/v1/tuning_task." +
       "proto\022\031yandex.cloud.ai.tuning.v1\032\037google" +
-      "/protobuf/timestamp.proto\"\313\003\n\nTuningTask" +
+      "/protobuf/timestamp.proto\"\331\003\n\nTuningTask" +
       "\022\017\n\007task_id\030\001 \001(\t\022\024\n\014operation_id\030\003 \001(\t\022" +
       "<\n\006status\030\004 \001(\0162,.yandex.cloud.ai.tuning" +
       ".v1.TuningTask.Status\022\021\n\tfolder_id\030\005 \001(\t" +
@@ -2217,12 +2226,13 @@ public final class TuningTaskOuterClass {
       "at\030\010 \001(\0132\032.google.protobuf.Timestamp\022/\n\013" +
       "finished_at\030\t \001(\0132\032.google.protobuf.Time" +
       "stamp\022\030\n\020source_model_uri\030\n \001(\t\022\030\n\020targe" +
-      "t_model_uri\030\013 \001(\t\"f\n\006Status\022\026\n\022STATUS_UN" +
+      "t_model_uri\030\013 \001(\t\"t\n\006Status\022\026\n\022STATUS_UN" +
       "SPECIFIED\020\000\022\013\n\007CREATED\020\001\022\013\n\007PENDING\020\002\022\017\n" +
       "\013IN_PROGRESS\020\003\022\r\n\tCOMPLETED\020\004\022\n\n\006FAILED\020" +
-      "\005J\004\010\002\020\003Bc\n\035yandex.cloud.api.ai.tuning.v1" +
-      "ZBgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/ai/tuning/v1;fomob\006proto3"
+      "\005\022\014\n\010CANCELED\020\006J\004\010\002\020\003Bc\n\035yandex.cloud.ap" +
+      "i.ai.tuning.v1ZBgithub.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/ai/tuning/v1;fo" +
+      "mob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

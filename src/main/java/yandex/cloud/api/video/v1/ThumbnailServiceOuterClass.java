@@ -647,7 +647,7 @@ public final class ThumbnailServiceOuterClass {
      * The maximum number of the results per page to return. Default value: 100.
      * </pre>
      *
-     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
      * @return The pageSize.
      */
     long getPageSize();
@@ -821,7 +821,7 @@ public final class ThumbnailServiceOuterClass {
      * The maximum number of the results per page to return. Default value: 100.
      * </pre>
      *
-     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
      * @return The pageSize.
      */
     @java.lang.Override
@@ -1314,7 +1314,7 @@ public final class ThumbnailServiceOuterClass {
        * The maximum number of the results per page to return. Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
        * @return The pageSize.
        */
       @java.lang.Override
@@ -1326,7 +1326,7 @@ public final class ThumbnailServiceOuterClass {
        * The maximum number of the results per page to return. Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
        */
@@ -1341,7 +1341,7 @@ public final class ThumbnailServiceOuterClass {
        * The maximum number of the results per page to return. Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageSize() {
@@ -3827,7 +3827,7 @@ public final class ThumbnailServiceOuterClass {
      * List of thumbnails IDs.
      * </pre>
      *
-     * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return A list containing the thumbnailIds.
      */
     java.util.List<java.lang.String>
@@ -3837,7 +3837,7 @@ public final class ThumbnailServiceOuterClass {
      * List of thumbnails IDs.
      * </pre>
      *
-     * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The count of thumbnailIds.
      */
     int getThumbnailIdsCount();
@@ -3846,7 +3846,7 @@ public final class ThumbnailServiceOuterClass {
      * List of thumbnails IDs.
      * </pre>
      *
-     * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the element to return.
      * @return The thumbnailIds at the given index.
      */
@@ -3856,7 +3856,7 @@ public final class ThumbnailServiceOuterClass {
      * List of thumbnails IDs.
      * </pre>
      *
-     * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the thumbnailIds at the given index.
      */
@@ -4014,7 +4014,7 @@ public final class ThumbnailServiceOuterClass {
      * List of thumbnails IDs.
      * </pre>
      *
-     * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return A list containing the thumbnailIds.
      */
     public com.google.protobuf.ProtocolStringList
@@ -4026,7 +4026,7 @@ public final class ThumbnailServiceOuterClass {
      * List of thumbnails IDs.
      * </pre>
      *
-     * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The count of thumbnailIds.
      */
     public int getThumbnailIdsCount() {
@@ -4037,7 +4037,7 @@ public final class ThumbnailServiceOuterClass {
      * List of thumbnails IDs.
      * </pre>
      *
-     * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the element to return.
      * @return The thumbnailIds at the given index.
      */
@@ -4049,7 +4049,7 @@ public final class ThumbnailServiceOuterClass {
      * List of thumbnails IDs.
      * </pre>
      *
-     * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the thumbnailIds at the given index.
      */
@@ -4504,7 +4504,7 @@ public final class ThumbnailServiceOuterClass {
        * List of thumbnails IDs.
        * </pre>
        *
-       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return A list containing the thumbnailIds.
        */
       public com.google.protobuf.ProtocolStringList
@@ -4516,7 +4516,7 @@ public final class ThumbnailServiceOuterClass {
        * List of thumbnails IDs.
        * </pre>
        *
-       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The count of thumbnailIds.
        */
       public int getThumbnailIdsCount() {
@@ -4527,7 +4527,7 @@ public final class ThumbnailServiceOuterClass {
        * List of thumbnails IDs.
        * </pre>
        *
-       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param index The index of the element to return.
        * @return The thumbnailIds at the given index.
        */
@@ -4539,7 +4539,7 @@ public final class ThumbnailServiceOuterClass {
        * List of thumbnails IDs.
        * </pre>
        *
-       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the thumbnailIds at the given index.
        */
@@ -4552,7 +4552,7 @@ public final class ThumbnailServiceOuterClass {
        * List of thumbnails IDs.
        * </pre>
        *
-       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param index The index to set the value at.
        * @param value The thumbnailIds to set.
        * @return This builder for chaining.
@@ -4572,7 +4572,7 @@ public final class ThumbnailServiceOuterClass {
        * List of thumbnails IDs.
        * </pre>
        *
-       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The thumbnailIds to add.
        * @return This builder for chaining.
        */
@@ -4591,7 +4591,7 @@ public final class ThumbnailServiceOuterClass {
        * List of thumbnails IDs.
        * </pre>
        *
-       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param values The thumbnailIds to add.
        * @return This builder for chaining.
        */
@@ -4608,7 +4608,7 @@ public final class ThumbnailServiceOuterClass {
        * List of thumbnails IDs.
        * </pre>
        *
-       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearThumbnailIds() {
@@ -4622,7 +4622,7 @@ public final class ThumbnailServiceOuterClass {
        * List of thumbnails IDs.
        * </pre>
        *
-       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes of the thumbnailIds to add.
        * @return This builder for chaining.
        */
@@ -8877,18 +8877,18 @@ public final class ThumbnailServiceOuterClass {
       "peration.proto\032\035yandex/cloud/validation." +
       "proto\032%yandex/cloud/video/v1/thumbnail.p" +
       "roto\"9\n\023GetThumbnailRequest\022\"\n\014thumbnail" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"x\n\024ListThumbnail" +
-      "Request\022\034\n\nchannel_id\030\001 \001(\tB\010\212\3101\004<=50\022\035\n" +
-      "\tpage_size\030d \001(\003B\n\372\3071\006<=1000\022\035\n\npage_tok" +
-      "en\030e \001(\tB\t\212\3101\005<=200J\004\010\002\020d\"l\n\025ListThumbna" +
-      "ilResponse\0224\n\nthumbnails\030\001 \003(\0132 .yandex." +
-      "cloud.video.v1.Thumbnail\022\027\n\017next_page_to" +
-      "ken\030d \001(\tJ\004\010\002\020d\"7\n\026CreateThumbnailReques" +
-      "t\022\035\n\nchannel_id\030\001 \001(\tB\t\212\3101\005<=200\"/\n\027Crea" +
-      "teThumbnailMetadata\022\024\n\014thumbnail_id\030\001 \001(" +
-      "\t\"n\n BatchGenerateDownloadURLsRequest\022!\n" +
-      "\nchannel_id\030\001 \001(\tB\r\350\3071\001\212\3101\005<=200\022\'\n\rthum" +
-      "bnail_ids\030\002 \003(\tB\020\202\3101\0041-50\212\3101\004<=50\"g\n!Bat" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"w\n\024ListThumbnail" +
+      "Request\022\034\n\nchannel_id\030\001 \001(\tB\010\212\3101\004<=50\022\034\n" +
+      "\tpage_size\030d \001(\003B\t\372\3071\005<=100\022\035\n\npage_toke" +
+      "n\030e \001(\tB\t\212\3101\005<=200J\004\010\002\020d\"l\n\025ListThumbnai" +
+      "lResponse\0224\n\nthumbnails\030\001 \003(\0132 .yandex.c" +
+      "loud.video.v1.Thumbnail\022\027\n\017next_page_tok" +
+      "en\030d \001(\tJ\004\010\002\020d\"7\n\026CreateThumbnailRequest" +
+      "\022\035\n\nchannel_id\030\001 \001(\tB\t\212\3101\005<=200\"/\n\027Creat" +
+      "eThumbnailMetadata\022\024\n\014thumbnail_id\030\001 \001(\t" +
+      "\"o\n BatchGenerateDownloadURLsRequest\022!\n\n" +
+      "channel_id\030\001 \001(\tB\r\350\3071\001\212\3101\005<=200\022(\n\rthumb" +
+      "nail_ids\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<=50\"g\n!Bat" +
       "chGenerateDownloadURLsResponse\022B\n\rdownlo" +
       "ad_urls\030\001 \003(\0132+.yandex.cloud.video.v1.Th" +
       "umbnailDownloadURL\"B\n\024ThumbnailDownloadU" +

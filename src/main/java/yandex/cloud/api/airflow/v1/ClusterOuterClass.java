@@ -5362,22 +5362,26 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Version of Apache that runs on the cluster.
+     * Version of Apache Airflow that runs on the cluster.
+     * Use `airlow_version` instead.
      * </pre>
      *
-     * <code>string version_id = 1;</code>
+     * <code>string version_id = 1 [deprecated = true];</code>
+     * @deprecated
      * @return The versionId.
      */
-    java.lang.String getVersionId();
+    @java.lang.Deprecated java.lang.String getVersionId();
     /**
      * <pre>
-     * Version of Apache that runs on the cluster.
+     * Version of Apache Airflow that runs on the cluster.
+     * Use `airlow_version` instead.
      * </pre>
      *
-     * <code>string version_id = 1;</code>
+     * <code>string version_id = 1 [deprecated = true];</code>
+     * @deprecated
      * @return The bytes for versionId.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getVersionIdBytes();
 
     /**
@@ -5568,6 +5572,46 @@ public final class ClusterOuterClass {
      * <code>.yandex.cloud.airflow.v1.LockboxConfig lockbox = 8;</code>
      */
     yandex.cloud.api.airflow.v1.ClusterOuterClass.LockboxConfigOrBuilder getLockboxOrBuilder();
+
+    /**
+     * <pre>
+     * Apache Airflow version. Format: "Major.Minor"
+     * </pre>
+     *
+     * <code>string airflow_version = 9;</code>
+     * @return The airflowVersion.
+     */
+    java.lang.String getAirflowVersion();
+    /**
+     * <pre>
+     * Apache Airflow version. Format: "Major.Minor"
+     * </pre>
+     *
+     * <code>string airflow_version = 9;</code>
+     * @return The bytes for airflowVersion.
+     */
+    com.google.protobuf.ByteString
+        getAirflowVersionBytes();
+
+    /**
+     * <pre>
+     * Python version. Format: "Major.Minor"
+     * </pre>
+     *
+     * <code>string python_version = 10;</code>
+     * @return The pythonVersion.
+     */
+    java.lang.String getPythonVersion();
+    /**
+     * <pre>
+     * Python version. Format: "Major.Minor"
+     * </pre>
+     *
+     * <code>string python_version = 10;</code>
+     * @return The bytes for pythonVersion.
+     */
+    com.google.protobuf.ByteString
+        getPythonVersionBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.airflow.v1.ClusterConfig}
@@ -5583,6 +5627,8 @@ public final class ClusterOuterClass {
     }
     private ClusterConfig() {
       versionId_ = "";
+      airflowVersion_ = "";
+      pythonVersion_ = "";
     }
 
     @java.lang.Override
@@ -5712,6 +5758,18 @@ public final class ClusterOuterClass {
 
               break;
             }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              airflowVersion_ = s;
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pythonVersion_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -5748,14 +5806,16 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object versionId_;
     /**
      * <pre>
-     * Version of Apache that runs on the cluster.
+     * Version of Apache Airflow that runs on the cluster.
+     * Use `airlow_version` instead.
      * </pre>
      *
-     * <code>string version_id = 1;</code>
+     * <code>string version_id = 1 [deprecated = true];</code>
+     * @deprecated
      * @return The versionId.
      */
     @java.lang.Override
-    public java.lang.String getVersionId() {
+    @java.lang.Deprecated public java.lang.String getVersionId() {
       java.lang.Object ref = versionId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -5769,14 +5829,16 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Version of Apache that runs on the cluster.
+     * Version of Apache Airflow that runs on the cluster.
+     * Use `airlow_version` instead.
      * </pre>
      *
-     * <code>string version_id = 1;</code>
+     * <code>string version_id = 1 [deprecated = true];</code>
+     * @deprecated
      * @return The bytes for versionId.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getVersionIdBytes() {
       java.lang.Object ref = versionId_;
       if (ref instanceof java.lang.String) {
@@ -6056,6 +6118,98 @@ public final class ClusterOuterClass {
       return getLockbox();
     }
 
+    public static final int AIRFLOW_VERSION_FIELD_NUMBER = 9;
+    private volatile java.lang.Object airflowVersion_;
+    /**
+     * <pre>
+     * Apache Airflow version. Format: "Major.Minor"
+     * </pre>
+     *
+     * <code>string airflow_version = 9;</code>
+     * @return The airflowVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getAirflowVersion() {
+      java.lang.Object ref = airflowVersion_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        airflowVersion_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Apache Airflow version. Format: "Major.Minor"
+     * </pre>
+     *
+     * <code>string airflow_version = 9;</code>
+     * @return The bytes for airflowVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAirflowVersionBytes() {
+      java.lang.Object ref = airflowVersion_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        airflowVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PYTHON_VERSION_FIELD_NUMBER = 10;
+    private volatile java.lang.Object pythonVersion_;
+    /**
+     * <pre>
+     * Python version. Format: "Major.Minor"
+     * </pre>
+     *
+     * <code>string python_version = 10;</code>
+     * @return The pythonVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getPythonVersion() {
+      java.lang.Object ref = pythonVersion_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pythonVersion_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Python version. Format: "Major.Minor"
+     * </pre>
+     *
+     * <code>string python_version = 10;</code>
+     * @return The bytes for pythonVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPythonVersionBytes() {
+      java.lang.Object ref = pythonVersion_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pythonVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6093,6 +6247,12 @@ public final class ClusterOuterClass {
       }
       if (lockbox_ != null) {
         output.writeMessage(8, getLockbox());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(airflowVersion_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, airflowVersion_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pythonVersion_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, pythonVersion_);
       }
       unknownFields.writeTo(output);
     }
@@ -6133,6 +6293,12 @@ public final class ClusterOuterClass {
       if (lockbox_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getLockbox());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(airflowVersion_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, airflowVersion_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pythonVersion_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, pythonVersion_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6186,6 +6352,10 @@ public final class ClusterOuterClass {
         if (!getLockbox()
             .equals(other.getLockbox())) return false;
       }
+      if (!getAirflowVersion()
+          .equals(other.getAirflowVersion())) return false;
+      if (!getPythonVersion()
+          .equals(other.getPythonVersion())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6227,6 +6397,10 @@ public final class ClusterOuterClass {
         hash = (37 * hash) + LOCKBOX_FIELD_NUMBER;
         hash = (53 * hash) + getLockbox().hashCode();
       }
+      hash = (37 * hash) + AIRFLOW_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getAirflowVersion().hashCode();
+      hash = (37 * hash) + PYTHON_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getPythonVersion().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6404,6 +6578,10 @@ public final class ClusterOuterClass {
           lockbox_ = null;
           lockboxBuilder_ = null;
         }
+        airflowVersion_ = "";
+
+        pythonVersion_ = "";
+
         return this;
       }
 
@@ -6466,6 +6644,8 @@ public final class ClusterOuterClass {
         } else {
           result.lockbox_ = lockboxBuilder_.build();
         }
+        result.airflowVersion_ = airflowVersion_;
+        result.pythonVersion_ = pythonVersion_;
         onBuilt();
         return result;
       }
@@ -6539,6 +6719,14 @@ public final class ClusterOuterClass {
         if (other.hasLockbox()) {
           mergeLockbox(other.getLockbox());
         }
+        if (!other.getAirflowVersion().isEmpty()) {
+          airflowVersion_ = other.airflowVersion_;
+          onChanged();
+        }
+        if (!other.getPythonVersion().isEmpty()) {
+          pythonVersion_ = other.pythonVersion_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -6571,13 +6759,15 @@ public final class ClusterOuterClass {
       private java.lang.Object versionId_ = "";
       /**
        * <pre>
-       * Version of Apache that runs on the cluster.
+       * Version of Apache Airflow that runs on the cluster.
+       * Use `airlow_version` instead.
        * </pre>
        *
-       * <code>string version_id = 1;</code>
+       * <code>string version_id = 1 [deprecated = true];</code>
+       * @deprecated
        * @return The versionId.
        */
-      public java.lang.String getVersionId() {
+      @java.lang.Deprecated public java.lang.String getVersionId() {
         java.lang.Object ref = versionId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -6591,13 +6781,15 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of Apache that runs on the cluster.
+       * Version of Apache Airflow that runs on the cluster.
+       * Use `airlow_version` instead.
        * </pre>
        *
-       * <code>string version_id = 1;</code>
+       * <code>string version_id = 1 [deprecated = true];</code>
+       * @deprecated
        * @return The bytes for versionId.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getVersionIdBytes() {
         java.lang.Object ref = versionId_;
         if (ref instanceof String) {
@@ -6612,14 +6804,16 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of Apache that runs on the cluster.
+       * Version of Apache Airflow that runs on the cluster.
+       * Use `airlow_version` instead.
        * </pre>
        *
-       * <code>string version_id = 1;</code>
+       * <code>string version_id = 1 [deprecated = true];</code>
+       * @deprecated
        * @param value The versionId to set.
        * @return This builder for chaining.
        */
-      public Builder setVersionId(
+      @java.lang.Deprecated public Builder setVersionId(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
@@ -6631,13 +6825,15 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of Apache that runs on the cluster.
+       * Version of Apache Airflow that runs on the cluster.
+       * Use `airlow_version` instead.
        * </pre>
        *
-       * <code>string version_id = 1;</code>
+       * <code>string version_id = 1 [deprecated = true];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearVersionId() {
+      @java.lang.Deprecated public Builder clearVersionId() {
         
         versionId_ = getDefaultInstance().getVersionId();
         onChanged();
@@ -6645,14 +6841,16 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of Apache that runs on the cluster.
+       * Version of Apache Airflow that runs on the cluster.
+       * Use `airlow_version` instead.
        * </pre>
        *
-       * <code>string version_id = 1;</code>
+       * <code>string version_id = 1 [deprecated = true];</code>
+       * @deprecated
        * @param value The bytes for versionId to set.
        * @return This builder for chaining.
        */
-      public Builder setVersionIdBytes(
+      @java.lang.Deprecated public Builder setVersionIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -7747,6 +7945,198 @@ public final class ClusterOuterClass {
           lockbox_ = null;
         }
         return lockboxBuilder_;
+      }
+
+      private java.lang.Object airflowVersion_ = "";
+      /**
+       * <pre>
+       * Apache Airflow version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string airflow_version = 9;</code>
+       * @return The airflowVersion.
+       */
+      public java.lang.String getAirflowVersion() {
+        java.lang.Object ref = airflowVersion_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          airflowVersion_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Apache Airflow version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string airflow_version = 9;</code>
+       * @return The bytes for airflowVersion.
+       */
+      public com.google.protobuf.ByteString
+          getAirflowVersionBytes() {
+        java.lang.Object ref = airflowVersion_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          airflowVersion_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Apache Airflow version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string airflow_version = 9;</code>
+       * @param value The airflowVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAirflowVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        airflowVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Apache Airflow version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string airflow_version = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAirflowVersion() {
+        
+        airflowVersion_ = getDefaultInstance().getAirflowVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Apache Airflow version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string airflow_version = 9;</code>
+       * @param value The bytes for airflowVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAirflowVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        airflowVersion_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pythonVersion_ = "";
+      /**
+       * <pre>
+       * Python version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string python_version = 10;</code>
+       * @return The pythonVersion.
+       */
+      public java.lang.String getPythonVersion() {
+        java.lang.Object ref = pythonVersion_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pythonVersion_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Python version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string python_version = 10;</code>
+       * @return The bytes for pythonVersion.
+       */
+      public com.google.protobuf.ByteString
+          getPythonVersionBytes() {
+        java.lang.Object ref = pythonVersion_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pythonVersion_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Python version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string python_version = 10;</code>
+       * @param value The pythonVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPythonVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pythonVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Python version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string python_version = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPythonVersion() {
+        
+        pythonVersion_ = getDefaultInstance().getPythonVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Python version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string python_version = 10;</code>
+       * @param value The bytes for pythonVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPythonVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pythonVersion_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -16936,48 +17326,50 @@ public final class ClusterOuterClass {
       "REATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010STO" +
       "PPING\020\004\022\013\n\007STOPPED\020\005\022\014\n\010STARTING\020\006\022\014\n\010UP" +
       "DATING\020\007J\004\010\007\020\010\"=\n\nMonitoring\022\014\n\004name\030\001 \001" +
-      "(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\322\003" +
-      "\n\rClusterConfig\022\022\n\nversion_id\030\001 \001(\t\0227\n\007a" +
-      "irflow\030\002 \001(\0132&.yandex.cloud.airflow.v1.A" +
-      "irflowConfig\022A\n\twebserver\030\003 \001(\0132(.yandex" +
-      ".cloud.airflow.v1.WebserverConfigB\004\350\3071\001\022" +
-      "A\n\tscheduler\030\004 \001(\0132(.yandex.cloud.airflo" +
-      "w.v1.SchedulerConfigB\004\350\3071\001\022;\n\ttriggerer\030" +
-      "\005 \001(\0132(.yandex.cloud.airflow.v1.Triggere" +
-      "rConfig\022;\n\006worker\030\006 \001(\0132%.yandex.cloud.a" +
-      "irflow.v1.WorkerConfigB\004\350\3071\001\022;\n\014dependen" +
-      "cies\030\007 \001(\0132%.yandex.cloud.airflow.v1.Dep" +
-      "endencies\0227\n\007lockbox\030\010 \001(\0132&.yandex.clou" +
-      "d.airflow.v1.LockboxConfig\"\202\001\n\rAirflowCo" +
-      "nfig\022B\n\006config\030\001 \003(\01322.yandex.cloud.airf" +
-      "low.v1.AirflowConfig.ConfigEntry\032-\n\013Conf" +
-      "igEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
-      "b\n\017WebserverConfig\022\030\n\005count\030\001 \001(\003B\t\372\3071\0051" +
-      "-512\0225\n\tresources\030\002 \001(\0132\".yandex.cloud.a" +
-      "irflow.v1.Resources\"b\n\017SchedulerConfig\022\030" +
-      "\n\005count\030\001 \001(\003B\t\372\3071\0051-512\0225\n\tresources\030\002 " +
-      "\001(\0132\".yandex.cloud.airflow.v1.Resources\"" +
-      "b\n\017TriggererConfig\022\030\n\005count\030\001 \001(\003B\t\372\3071\0050" +
-      "-512\0225\n\tresources\030\002 \001(\0132\".yandex.cloud.a" +
-      "irflow.v1.Resources\"\201\001\n\014WorkerConfig\022\034\n\t" +
-      "min_count\030\001 \001(\003B\t\372\3071\0050-512\022\034\n\tmax_count\030" +
-      "\002 \001(\003B\t\372\3071\0051-512\0225\n\tresources\030\003 \001(\0132\".ya" +
-      "ndex.cloud.airflow.v1.Resources\":\n\014Depen" +
-      "dencies\022\024\n\014pip_packages\030\001 \003(\t\022\024\n\014deb_pac" +
-      "kages\030\002 \003(\t\"?\n\rNetworkConfig\022\022\n\nsubnet_i" +
-      "ds\030\001 \003(\t\022\032\n\022security_group_ids\030\002 \003(\t\"\032\n\010" +
-      "S3Config\022\016\n\006bucket\030\003 \001(\t\"Q\n\016CodeSyncConf" +
-      "ig\022/\n\002s3\030\001 \001(\0132!.yandex.cloud.airflow.v1" +
-      ".S3ConfigH\000B\016\n\006source\022\004\300\3011\001\"\342\001\n\rLoggingC" +
-      "onfig\022\017\n\007enabled\030\001 \001(\010\0228\n\tfolder_id\030\002 \001(" +
-      "\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000" +
-      "\022;\n\014log_group_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a" +
-      "-zA-Z0-9_.]{0,63})?H\000\022:\n\tmin_level\030\004 \001(\016" +
-      "2\'.yandex.cloud.logging.v1.LogLevel.Leve" +
-      "lB\r\n\013destination\" \n\rLockboxConfig\022\017\n\007ena" +
-      "bled\030\001 \001(\010Bb\n\033yandex.cloud.api.airflow.v" +
-      "1ZCgithub.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/airflow/v1;airflowb\006proto3"
+      "(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\207\004" +
+      "\n\rClusterConfig\022\026\n\nversion_id\030\001 \001(\tB\002\030\001\022" +
+      "7\n\007airflow\030\002 \001(\0132&.yandex.cloud.airflow." +
+      "v1.AirflowConfig\022A\n\twebserver\030\003 \001(\0132(.ya" +
+      "ndex.cloud.airflow.v1.WebserverConfigB\004\350" +
+      "\3071\001\022A\n\tscheduler\030\004 \001(\0132(.yandex.cloud.ai" +
+      "rflow.v1.SchedulerConfigB\004\350\3071\001\022;\n\ttrigge" +
+      "rer\030\005 \001(\0132(.yandex.cloud.airflow.v1.Trig" +
+      "gererConfig\022;\n\006worker\030\006 \001(\0132%.yandex.clo" +
+      "ud.airflow.v1.WorkerConfigB\004\350\3071\001\022;\n\014depe" +
+      "ndencies\030\007 \001(\0132%.yandex.cloud.airflow.v1" +
+      ".Dependencies\0227\n\007lockbox\030\010 \001(\0132&.yandex." +
+      "cloud.airflow.v1.LockboxConfig\022\027\n\017airflo" +
+      "w_version\030\t \001(\t\022\026\n\016python_version\030\n \001(\t\"" +
+      "\202\001\n\rAirflowConfig\022B\n\006config\030\001 \003(\01322.yand" +
+      "ex.cloud.airflow.v1.AirflowConfig.Config" +
+      "Entry\032-\n\013ConfigEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001\"b\n\017WebserverConfig\022\030\n\005count" +
+      "\030\001 \001(\003B\t\372\3071\0051-512\0225\n\tresources\030\002 \001(\0132\".y" +
+      "andex.cloud.airflow.v1.Resources\"b\n\017Sche" +
+      "dulerConfig\022\030\n\005count\030\001 \001(\003B\t\372\3071\0051-512\0225\n" +
+      "\tresources\030\002 \001(\0132\".yandex.cloud.airflow." +
+      "v1.Resources\"b\n\017TriggererConfig\022\030\n\005count" +
+      "\030\001 \001(\003B\t\372\3071\0050-512\0225\n\tresources\030\002 \001(\0132\".y" +
+      "andex.cloud.airflow.v1.Resources\"\201\001\n\014Wor" +
+      "kerConfig\022\034\n\tmin_count\030\001 \001(\003B\t\372\3071\0050-512\022" +
+      "\034\n\tmax_count\030\002 \001(\003B\t\372\3071\0051-512\0225\n\tresourc" +
+      "es\030\003 \001(\0132\".yandex.cloud.airflow.v1.Resou" +
+      "rces\":\n\014Dependencies\022\024\n\014pip_packages\030\001 \003" +
+      "(\t\022\024\n\014deb_packages\030\002 \003(\t\"?\n\rNetworkConfi" +
+      "g\022\022\n\nsubnet_ids\030\001 \003(\t\022\032\n\022security_group_" +
+      "ids\030\002 \003(\t\"\032\n\010S3Config\022\016\n\006bucket\030\003 \001(\t\"Q\n" +
+      "\016CodeSyncConfig\022/\n\002s3\030\001 \001(\0132!.yandex.clo" +
+      "ud.airflow.v1.S3ConfigH\000B\016\n\006source\022\004\300\3011\001" +
+      "\"\342\001\n\rLoggingConfig\022\017\n\007enabled\030\001 \001(\010\0228\n\tf" +
+      "older_id\030\002 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9" +
+      "_.]{0,63})?H\000\022;\n\014log_group_id\030\003 \001(\tB#\362\3071" +
+      "\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\022:\n\tmi" +
+      "n_level\030\004 \001(\0162\'.yandex.cloud.logging.v1." +
+      "LogLevel.LevelB\r\n\013destination\" \n\rLockbox" +
+      "Config\022\017\n\007enabled\030\001 \001(\010Bb\n\033yandex.cloud." +
+      "api.airflow.v1ZCgithub.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/airflow/v1;airf" +
+      "lowb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17010,7 +17402,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_airflow_v1_ClusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_airflow_v1_ClusterConfig_descriptor,
-        new java.lang.String[] { "VersionId", "Airflow", "Webserver", "Scheduler", "Triggerer", "Worker", "Dependencies", "Lockbox", });
+        new java.lang.String[] { "VersionId", "Airflow", "Webserver", "Scheduler", "Triggerer", "Worker", "Dependencies", "Lockbox", "AirflowVersion", "PythonVersion", });
     internal_static_yandex_cloud_airflow_v1_AirflowConfig_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_airflow_v1_AirflowConfig_fieldAccessorTable = new

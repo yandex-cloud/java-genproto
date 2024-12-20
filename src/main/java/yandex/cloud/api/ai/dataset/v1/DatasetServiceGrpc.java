@@ -235,6 +235,37 @@ public final class DatasetServiceGrpc {
     return getListUploadFormatsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest,
+      yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse> getListUploadSchemasMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListUploadSchemas",
+      requestType = yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest.class,
+      responseType = yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest,
+      yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse> getListUploadSchemasMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest, yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse> getListUploadSchemasMethod;
+    if ((getListUploadSchemasMethod = DatasetServiceGrpc.getListUploadSchemasMethod) == null) {
+      synchronized (DatasetServiceGrpc.class) {
+        if ((getListUploadSchemasMethod = DatasetServiceGrpc.getListUploadSchemasMethod) == null) {
+          DatasetServiceGrpc.getListUploadSchemasMethod = getListUploadSchemasMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest, yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListUploadSchemas"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DatasetServiceMethodDescriptorSupplier("ListUploadSchemas"))
+              .build();
+        }
+      }
+    }
+    return getListUploadSchemasMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetUploadDraftUrlRequest,
       yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetUploadDraftUrlResponse> getGetUploadDraftUrlMethod;
 
@@ -359,6 +390,37 @@ public final class DatasetServiceGrpc {
     return getListTypesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest,
+      yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse> getGetPreviewMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetPreview",
+      requestType = yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest.class,
+      responseType = yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest,
+      yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse> getGetPreviewMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest, yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse> getGetPreviewMethod;
+    if ((getGetPreviewMethod = DatasetServiceGrpc.getGetPreviewMethod) == null) {
+      synchronized (DatasetServiceGrpc.class) {
+        if ((getGetPreviewMethod = DatasetServiceGrpc.getGetPreviewMethod) == null) {
+          DatasetServiceGrpc.getGetPreviewMethod = getGetPreviewMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest, yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPreview"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DatasetServiceMethodDescriptorSupplier("GetPreview"))
+              .build();
+        }
+      }
+    }
+    return getGetPreviewMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -472,12 +534,23 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Lists supported upload formats for the specified dataset task type.
+     * Deprecated. Use ListUploadSchemas.
      * </pre>
      */
+    @java.lang.Deprecated
     public void listUploadFormats(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadFormatsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadFormatsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListUploadFormatsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists supported dataset upload formats types and schemas for the specified dataset task type.
+     * </pre>
+     */
+    public void listUploadSchemas(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListUploadSchemasMethod(), responseObserver);
     }
 
     /**
@@ -519,6 +592,16 @@ public final class DatasetServiceGrpc {
     public void listTypes(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTypesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns a preview of dataset types
+     * </pre>
+     */
+    public void getPreview(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPreviewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -573,6 +656,13 @@ public final class DatasetServiceGrpc {
                 yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadFormatsResponse>(
                   this, METHODID_LIST_UPLOAD_FORMATS)))
           .addMethod(
+            getListUploadSchemasMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest,
+                yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse>(
+                  this, METHODID_LIST_UPLOAD_SCHEMAS)))
+          .addMethod(
             getGetUploadDraftUrlMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
@@ -600,6 +690,13 @@ public final class DatasetServiceGrpc {
                 yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesRequest,
                 yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesResponse>(
                   this, METHODID_LIST_TYPES)))
+          .addMethod(
+            getGetPreviewMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest,
+                yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse>(
+                  this, METHODID_GET_PREVIEW)))
           .build();
     }
   }
@@ -689,13 +786,25 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Lists supported upload formats for the specified dataset task type.
+     * Deprecated. Use ListUploadSchemas.
      * </pre>
      */
+    @java.lang.Deprecated
     public void listUploadFormats(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadFormatsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadFormatsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListUploadFormatsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists supported dataset upload formats types and schemas for the specified dataset task type.
+     * </pre>
+     */
+    public void listUploadSchemas(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListUploadSchemasMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -741,6 +850,17 @@ public final class DatasetServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListTypesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns a preview of dataset types
+     * </pre>
+     */
+    public void getPreview(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetPreviewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -823,12 +943,23 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Lists supported upload formats for the specified dataset task type.
+     * Deprecated. Use ListUploadSchemas.
      * </pre>
      */
+    @java.lang.Deprecated
     public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadFormatsResponse listUploadFormats(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadFormatsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListUploadFormatsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists supported dataset upload formats types and schemas for the specified dataset task type.
+     * </pre>
+     */
+    public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse listUploadSchemas(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListUploadSchemasMethod(), getCallOptions(), request);
     }
 
     /**
@@ -870,6 +1001,16 @@ public final class DatasetServiceGrpc {
     public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesResponse listTypes(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListTypesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns a preview of dataset types
+     * </pre>
+     */
+    public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse getPreview(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetPreviewMethod(), getCallOptions(), request);
     }
   }
 
@@ -958,13 +1099,25 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Lists supported upload formats for the specified dataset task type.
+     * Deprecated. Use ListUploadSchemas.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadFormatsResponse> listUploadFormats(
         yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadFormatsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListUploadFormatsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Lists supported dataset upload formats types and schemas for the specified dataset task type.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse> listUploadSchemas(
+        yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListUploadSchemasMethod(), getCallOptions()), request);
     }
 
     /**
@@ -1011,6 +1164,17 @@ public final class DatasetServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListTypesMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Returns a preview of dataset types
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse> getPreview(
+        yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetPreviewMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_DESCRIBE = 0;
@@ -1020,10 +1184,12 @@ public final class DatasetServiceGrpc {
   private static final int METHODID_DELETE = 4;
   private static final int METHODID_LIST = 5;
   private static final int METHODID_LIST_UPLOAD_FORMATS = 6;
-  private static final int METHODID_GET_UPLOAD_DRAFT_URL = 7;
-  private static final int METHODID_START_MULTIPART_UPLOAD_DRAFT = 8;
-  private static final int METHODID_FINISH_MULTIPART_UPLOAD_DRAFT = 9;
-  private static final int METHODID_LIST_TYPES = 10;
+  private static final int METHODID_LIST_UPLOAD_SCHEMAS = 7;
+  private static final int METHODID_GET_UPLOAD_DRAFT_URL = 8;
+  private static final int METHODID_START_MULTIPART_UPLOAD_DRAFT = 9;
+  private static final int METHODID_FINISH_MULTIPART_UPLOAD_DRAFT = 10;
+  private static final int METHODID_LIST_TYPES = 11;
+  private static final int METHODID_GET_PREVIEW = 12;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1070,6 +1236,10 @@ public final class DatasetServiceGrpc {
           serviceImpl.listUploadFormats((yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadFormatsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadFormatsResponse>) responseObserver);
           break;
+        case METHODID_LIST_UPLOAD_SCHEMAS:
+          serviceImpl.listUploadSchemas((yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse>) responseObserver);
+          break;
         case METHODID_GET_UPLOAD_DRAFT_URL:
           serviceImpl.getUploadDraftUrl((yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetUploadDraftUrlRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetUploadDraftUrlResponse>) responseObserver);
@@ -1085,6 +1255,10 @@ public final class DatasetServiceGrpc {
         case METHODID_LIST_TYPES:
           serviceImpl.listTypes((yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesResponse>) responseObserver);
+          break;
+        case METHODID_GET_PREVIEW:
+          serviceImpl.getPreview((yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1154,10 +1328,12 @@ public final class DatasetServiceGrpc {
               .addMethod(getDeleteMethod())
               .addMethod(getListMethod())
               .addMethod(getListUploadFormatsMethod())
+              .addMethod(getListUploadSchemasMethod())
               .addMethod(getGetUploadDraftUrlMethod())
               .addMethod(getStartMultipartUploadDraftMethod())
               .addMethod(getFinishMultipartUploadDraftMethod())
               .addMethod(getListTypesMethod())
+              .addMethod(getGetPreviewMethod())
               .build();
         }
       }

@@ -647,7 +647,7 @@ public final class StreamLineServiceOuterClass {
      * The maximum number of the results per page to return. Default value: 100.
      * </pre>
      *
-     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
      * @return The pageSize.
      */
     long getPageSize();
@@ -893,7 +893,7 @@ public final class StreamLineServiceOuterClass {
      * The maximum number of the results per page to return. Default value: 100.
      * </pre>
      *
-     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
      * @return The pageSize.
      */
     @java.lang.Override
@@ -1530,7 +1530,7 @@ public final class StreamLineServiceOuterClass {
        * The maximum number of the results per page to return. Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
        * @return The pageSize.
        */
       @java.lang.Override
@@ -1542,7 +1542,7 @@ public final class StreamLineServiceOuterClass {
        * The maximum number of the results per page to return. Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
        */
@@ -1557,7 +1557,7 @@ public final class StreamLineServiceOuterClass {
        * The maximum number of the results per page to return. Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageSize() {
@@ -3072,7 +3072,7 @@ public final class StreamLineServiceOuterClass {
      * List of requested stream line IDs.
      * </pre>
      *
-     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return A list containing the streamLineIds.
      */
     java.util.List<java.lang.String>
@@ -3082,7 +3082,7 @@ public final class StreamLineServiceOuterClass {
      * List of requested stream line IDs.
      * </pre>
      *
-     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The count of streamLineIds.
      */
     int getStreamLineIdsCount();
@@ -3091,7 +3091,7 @@ public final class StreamLineServiceOuterClass {
      * List of requested stream line IDs.
      * </pre>
      *
-     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the element to return.
      * @return The streamLineIds at the given index.
      */
@@ -3101,7 +3101,7 @@ public final class StreamLineServiceOuterClass {
      * List of requested stream line IDs.
      * </pre>
      *
-     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the streamLineIds at the given index.
      */
@@ -3259,7 +3259,7 @@ public final class StreamLineServiceOuterClass {
      * List of requested stream line IDs.
      * </pre>
      *
-     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return A list containing the streamLineIds.
      */
     public com.google.protobuf.ProtocolStringList
@@ -3271,7 +3271,7 @@ public final class StreamLineServiceOuterClass {
      * List of requested stream line IDs.
      * </pre>
      *
-     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The count of streamLineIds.
      */
     public int getStreamLineIdsCount() {
@@ -3282,7 +3282,7 @@ public final class StreamLineServiceOuterClass {
      * List of requested stream line IDs.
      * </pre>
      *
-     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the element to return.
      * @return The streamLineIds at the given index.
      */
@@ -3294,7 +3294,7 @@ public final class StreamLineServiceOuterClass {
      * List of requested stream line IDs.
      * </pre>
      *
-     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the streamLineIds at the given index.
      */
@@ -3749,7 +3749,7 @@ public final class StreamLineServiceOuterClass {
        * List of requested stream line IDs.
        * </pre>
        *
-       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return A list containing the streamLineIds.
        */
       public com.google.protobuf.ProtocolStringList
@@ -3761,7 +3761,7 @@ public final class StreamLineServiceOuterClass {
        * List of requested stream line IDs.
        * </pre>
        *
-       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The count of streamLineIds.
        */
       public int getStreamLineIdsCount() {
@@ -3772,7 +3772,7 @@ public final class StreamLineServiceOuterClass {
        * List of requested stream line IDs.
        * </pre>
        *
-       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param index The index of the element to return.
        * @return The streamLineIds at the given index.
        */
@@ -3784,7 +3784,7 @@ public final class StreamLineServiceOuterClass {
        * List of requested stream line IDs.
        * </pre>
        *
-       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the streamLineIds at the given index.
        */
@@ -3797,7 +3797,7 @@ public final class StreamLineServiceOuterClass {
        * List of requested stream line IDs.
        * </pre>
        *
-       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param index The index to set the value at.
        * @param value The streamLineIds to set.
        * @return This builder for chaining.
@@ -3817,7 +3817,7 @@ public final class StreamLineServiceOuterClass {
        * List of requested stream line IDs.
        * </pre>
        *
-       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The streamLineIds to add.
        * @return This builder for chaining.
        */
@@ -3836,7 +3836,7 @@ public final class StreamLineServiceOuterClass {
        * List of requested stream line IDs.
        * </pre>
        *
-       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param values The streamLineIds to add.
        * @return This builder for chaining.
        */
@@ -3853,7 +3853,7 @@ public final class StreamLineServiceOuterClass {
        * List of requested stream line IDs.
        * </pre>
        *
-       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStreamLineIds() {
@@ -3867,7 +3867,7 @@ public final class StreamLineServiceOuterClass {
        * List of requested stream line IDs.
        * </pre>
        *
-       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes of the streamLineIds to add.
        * @return This builder for chaining.
        */
@@ -14533,7 +14533,7 @@ public final class StreamLineServiceOuterClass {
      * List of line IDs.
      * </pre>
      *
-     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return A list containing the streamLineIds.
      */
     java.util.List<java.lang.String>
@@ -14543,7 +14543,7 @@ public final class StreamLineServiceOuterClass {
      * List of line IDs.
      * </pre>
      *
-     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The count of streamLineIds.
      */
     int getStreamLineIdsCount();
@@ -14552,7 +14552,7 @@ public final class StreamLineServiceOuterClass {
      * List of line IDs.
      * </pre>
      *
-     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the element to return.
      * @return The streamLineIds at the given index.
      */
@@ -14562,7 +14562,7 @@ public final class StreamLineServiceOuterClass {
      * List of line IDs.
      * </pre>
      *
-     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the streamLineIds at the given index.
      */
@@ -14720,7 +14720,7 @@ public final class StreamLineServiceOuterClass {
      * List of line IDs.
      * </pre>
      *
-     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return A list containing the streamLineIds.
      */
     public com.google.protobuf.ProtocolStringList
@@ -14732,7 +14732,7 @@ public final class StreamLineServiceOuterClass {
      * List of line IDs.
      * </pre>
      *
-     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The count of streamLineIds.
      */
     public int getStreamLineIdsCount() {
@@ -14743,7 +14743,7 @@ public final class StreamLineServiceOuterClass {
      * List of line IDs.
      * </pre>
      *
-     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the element to return.
      * @return The streamLineIds at the given index.
      */
@@ -14755,7 +14755,7 @@ public final class StreamLineServiceOuterClass {
      * List of line IDs.
      * </pre>
      *
-     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the streamLineIds at the given index.
      */
@@ -15210,7 +15210,7 @@ public final class StreamLineServiceOuterClass {
        * List of line IDs.
        * </pre>
        *
-       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return A list containing the streamLineIds.
        */
       public com.google.protobuf.ProtocolStringList
@@ -15222,7 +15222,7 @@ public final class StreamLineServiceOuterClass {
        * List of line IDs.
        * </pre>
        *
-       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The count of streamLineIds.
        */
       public int getStreamLineIdsCount() {
@@ -15233,7 +15233,7 @@ public final class StreamLineServiceOuterClass {
        * List of line IDs.
        * </pre>
        *
-       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param index The index of the element to return.
        * @return The streamLineIds at the given index.
        */
@@ -15245,7 +15245,7 @@ public final class StreamLineServiceOuterClass {
        * List of line IDs.
        * </pre>
        *
-       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the streamLineIds at the given index.
        */
@@ -15258,7 +15258,7 @@ public final class StreamLineServiceOuterClass {
        * List of line IDs.
        * </pre>
        *
-       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param index The index to set the value at.
        * @param value The streamLineIds to set.
        * @return This builder for chaining.
@@ -15278,7 +15278,7 @@ public final class StreamLineServiceOuterClass {
        * List of line IDs.
        * </pre>
        *
-       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The streamLineIds to add.
        * @return This builder for chaining.
        */
@@ -15297,7 +15297,7 @@ public final class StreamLineServiceOuterClass {
        * List of line IDs.
        * </pre>
        *
-       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param values The streamLineIds to add.
        * @return This builder for chaining.
        */
@@ -15314,7 +15314,7 @@ public final class StreamLineServiceOuterClass {
        * List of line IDs.
        * </pre>
        *
-       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStreamLineIds() {
@@ -15328,7 +15328,7 @@ public final class StreamLineServiceOuterClass {
        * List of line IDs.
        * </pre>
        *
-       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string stream_line_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes of the streamLineIds to add.
        * @return This builder for chaining.
        */
@@ -24742,17 +24742,17 @@ public final class StreamLineServiceOuterClass {
       "tion.proto\032\035yandex/cloud/validation.prot" +
       "o\032\'yandex/cloud/video/v1/stream_line.pro" +
       "to\"<\n\024GetStreamLineRequest\022$\n\016stream_lin" +
-      "e_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\254\001\n\026ListStreamL" +
+      "e_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\253\001\n\026ListStreamL" +
       "inesRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022\035\n\tpage_size\030d \001(\003B\n\372\3071\006<=1000\022\035\n\n" +
-      "page_token\030e \001(\tB\t\212\3101\005<=200\022\020\n\010order_by\030" +
-      "f \001(\t\022\032\n\006filter\030g \001(\tB\n\212\3101\006<=1000J\004\010\002\020d\"" +
-      "q\n\027ListStreamLinesResponse\0227\n\014stream_lin" +
-      "es\030\001 \003(\0132!.yandex.cloud.video.v1.StreamL" +
-      "ine\022\027\n\017next_page_token\030d \001(\tJ\004\010\002\020d\"i\n\032Ba" +
-      "tchGetStreamLinesRequest\022 \n\nchannel_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022)\n\017stream_line_ids\030\002 " +
-      "\003(\tB\020\202\3101\0041-50\212\3101\004<=50\"V\n\033BatchGetStreamL" +
+      "\004<=50\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=100\022\035\n\np" +
+      "age_token\030e \001(\tB\t\212\3101\005<=200\022\020\n\010order_by\030f" +
+      " \001(\t\022\032\n\006filter\030g \001(\tB\n\212\3101\006<=1000J\004\010\002\020d\"q" +
+      "\n\027ListStreamLinesResponse\0227\n\014stream_line" +
+      "s\030\001 \003(\0132!.yandex.cloud.video.v1.StreamLi" +
+      "ne\022\027\n\017next_page_token\030d \001(\tJ\004\010\002\020d\"j\n\032Bat" +
+      "chGetStreamLinesRequest\022 \n\nchannel_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022*\n\017stream_line_ids\030\002 \003" +
+      "(\tB\021\202\3101\0051-100\212\3101\004<=50\"V\n\033BatchGetStreamL" +
       "inesResponse\0227\n\014stream_lines\030\001 \003(\0132!.yan" +
       "dex.cloud.video.v1.StreamLine\"\347\006\n\027Create" +
       "StreamLineRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350" +
@@ -24800,78 +24800,78 @@ public final class StreamLineServiceOuterClass {
       "treamLineMetadata\022\026\n\016stream_line_id\030\001 \001(" +
       "\t\"?\n\027DeleteStreamLineRequest\022$\n\016stream_l" +
       "ine_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"2\n\030DeleteStre" +
-      "amLineMetadata\022\026\n\016stream_line_id\030\001 \001(\t\"l" +
+      "amLineMetadata\022\026\n\016stream_line_id\030\001 \001(\t\"m" +
       "\n\035BatchDeleteStreamLinesRequest\022 \n\nchann" +
-      "el_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022)\n\017stream_line" +
-      "_ids\030\002 \003(\tB\020\202\3101\0041-50\212\3101\004<=50\"9\n\036BatchDel" +
-      "eteStreamLinesMetadata\022\027\n\017stream_line_id" +
-      "s\030\001 \003(\t\"\323\001\n\030PerformLineActionRequest\022$\n\016" +
-      "stream_line_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022:\n\010ac" +
-      "tivate\030\350\007 \001(\0132%.yandex.cloud.video.v1.Ac" +
-      "tivateActionH\000\022>\n\ndeactivate\030\351\007 \001(\0132\'.ya" +
-      "ndex.cloud.video.v1.DeactivateActionH\000B\016" +
-      "\n\006action\022\004\300\3011\001J\005\010\002\020\350\007\"3\n\031PerformLineActi" +
-      "onMetadata\022\026\n\016stream_line_id\030\001 \001(\t\"\020\n\016RT" +
-      "MPPushParams\"\017\n\rSRTPushParams\"0\n\016RTMPPul" +
-      "lParams\022\036\n\003url\030\001 \001(\tB\021\350\3071\001\362\3071\trtmp://.*\"" +
-      ".\n\rSRTPullParams\022\035\n\003url\030\001 \001(\tB\020\350\3071\001\362\3071\010s" +
-      "rt://.*\"4\n\rTCPPullParams\022\035\n\003url\030\002 \001(\tB\020\350" +
-      "\3071\001\362\3071\010tcp://.*J\004\010\001\020\002\"0\n\016RTSPPullParams\022" +
-      "\036\n\003url\030\001 \001(\tB\021\350\3071\001\362\3071\trtsp://.*\"\022\n\020Manua" +
-      "lLineParams\"\020\n\016AutoLineParams\"\020\n\016Activat" +
-      "eAction\"\022\n\020DeactivateAction\";\n\023GetStream" +
-      "KeyRequest\022$\n\016stream_line_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\">\n\026UpdateStreamKeyRequest\022$\n\016st" +
-      "ream_line_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"1\n\027Upda" +
-      "teStreamKeyMetadata\022\026\n\016stream_line_id\030\001 " +
-      "\001(\t2\202\016\n\021StreamLineService\022\205\001\n\003Get\022+.yand" +
-      "ex.cloud.video.v1.GetStreamLineRequest\032!" +
-      ".yandex.cloud.video.v1.StreamLine\".\202\323\344\223\002" +
-      "(\022&/video/v1/streamLines/{stream_line_id" +
-      "}\022\204\001\n\004List\022-.yandex.cloud.video.v1.ListS" +
-      "treamLinesRequest\032..yandex.cloud.video.v" +
-      "1.ListStreamLinesResponse\"\035\202\323\344\223\002\027\022\025/vide" +
-      "o/v1/streamLines\022\234\001\n\010BatchGet\0221.yandex.c" +
-      "loud.video.v1.BatchGetStreamLinesRequest" +
-      "\0322.yandex.cloud.video.v1.BatchGetStreamL" +
-      "inesResponse\")\202\323\344\223\002#\"\036/video/v1/streamLi" +
-      "nes:batchGet:\001*\022\247\001\n\006Create\022..yandex.clou" +
-      "d.video.v1.CreateStreamLineRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"J\202\323\344\223\002\032\"\025/" +
-      "video/v1/streamLines:\001*\262\322*&\n\030CreateStrea" +
-      "mLineMetadata\022\nStreamLine\022\270\001\n\006Update\022..y" +
-      "andex.cloud.video.v1.UpdateStreamLineReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "[\202\323\344\223\002+2&/video/v1/streamLines/{stream_l" +
-      "ine_id}:\001*\262\322*&\n\030UpdateStreamLineMetadata" +
-      "\022\nStreamLine\022\300\001\n\006Delete\022..yandex.cloud.v" +
-      "ideo.v1.DeleteStreamLineRequest\032!.yandex" +
-      ".cloud.operation.Operation\"c\202\323\344\223\002(*&/vid" +
-      "eo/v1/streamLines/{stream_line_id}\262\322*1\n\030" +
-      "DeleteStreamLineMetadata\022\025google.protobu" +
-      "f.Empty\022\317\001\n\013BatchDelete\0224.yandex.cloud.v" +
-      "ideo.v1.BatchDeleteStreamLinesRequest\032!." +
-      "yandex.cloud.operation.Operation\"g\202\323\344\223\002&" +
-      "\"!/video/v1/streamLines:batchDelete:\001*\262\322" +
-      "*7\n\036BatchDeleteStreamLinesMetadata\022\025goog" +
-      "le.protobuf.Empty\022\317\001\n\rPerformAction\022/.ya" +
-      "ndex.cloud.video.v1.PerformLineActionReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "j\202\323\344\223\0029\"4/video/v1/streamLines/{stream_l" +
-      "ine_id}:performAction:\001*\262\322*\'\n\031PerformLin" +
-      "eActionMetadata\022\nStreamLine\022\235\001\n\014GetStrea" +
-      "mKey\022*.yandex.cloud.video.v1.GetStreamKe" +
-      "yRequest\032$.yandex.cloud.video.v1.PushStr" +
-      "eamKey\";\202\323\344\223\0025\0223/video/v1/streamLines/{s" +
-      "tream_line_id}:getStreamKey\022\322\001\n\017UpdateSt" +
-      "reamKey\022-.yandex.cloud.video.v1.UpdateSt" +
-      "reamKeyRequest\032!.yandex.cloud.operation." +
-      "Operation\"m\202\323\344\223\002;26/video/v1/streamLines" +
-      "/{stream_line_id}:updateStreamKey:\001*\262\322*(" +
-      "\n\027UpdateStreamKeyMetadata\022\rPushStreamKey" +
-      "B\\\n\031yandex.cloud.api.video.v1Z?github.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "video/v1;videob\006proto3"
+      "el_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022*\n\017stream_line" +
+      "_ids\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<=50\"9\n\036BatchDe" +
+      "leteStreamLinesMetadata\022\027\n\017stream_line_i" +
+      "ds\030\001 \003(\t\"\323\001\n\030PerformLineActionRequest\022$\n" +
+      "\016stream_line_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022:\n\010a" +
+      "ctivate\030\350\007 \001(\0132%.yandex.cloud.video.v1.A" +
+      "ctivateActionH\000\022>\n\ndeactivate\030\351\007 \001(\0132\'.y" +
+      "andex.cloud.video.v1.DeactivateActionH\000B" +
+      "\016\n\006action\022\004\300\3011\001J\005\010\002\020\350\007\"3\n\031PerformLineAct" +
+      "ionMetadata\022\026\n\016stream_line_id\030\001 \001(\t\"\020\n\016R" +
+      "TMPPushParams\"\017\n\rSRTPushParams\"0\n\016RTMPPu" +
+      "llParams\022\036\n\003url\030\001 \001(\tB\021\350\3071\001\362\3071\trtmp://.*" +
+      "\".\n\rSRTPullParams\022\035\n\003url\030\001 \001(\tB\020\350\3071\001\362\3071\010" +
+      "srt://.*\"4\n\rTCPPullParams\022\035\n\003url\030\002 \001(\tB\020" +
+      "\350\3071\001\362\3071\010tcp://.*J\004\010\001\020\002\"0\n\016RTSPPullParams" +
+      "\022\036\n\003url\030\001 \001(\tB\021\350\3071\001\362\3071\trtsp://.*\"\022\n\020Manu" +
+      "alLineParams\"\020\n\016AutoLineParams\"\020\n\016Activa" +
+      "teAction\"\022\n\020DeactivateAction\";\n\023GetStrea" +
+      "mKeyRequest\022$\n\016stream_line_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\">\n\026UpdateStreamKeyRequest\022$\n\016s" +
+      "tream_line_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"1\n\027Upd" +
+      "ateStreamKeyMetadata\022\026\n\016stream_line_id\030\001" +
+      " \001(\t2\202\016\n\021StreamLineService\022\205\001\n\003Get\022+.yan" +
+      "dex.cloud.video.v1.GetStreamLineRequest\032" +
+      "!.yandex.cloud.video.v1.StreamLine\".\202\323\344\223" +
+      "\002(\022&/video/v1/streamLines/{stream_line_i" +
+      "d}\022\204\001\n\004List\022-.yandex.cloud.video.v1.List" +
+      "StreamLinesRequest\032..yandex.cloud.video." +
+      "v1.ListStreamLinesResponse\"\035\202\323\344\223\002\027\022\025/vid" +
+      "eo/v1/streamLines\022\234\001\n\010BatchGet\0221.yandex." +
+      "cloud.video.v1.BatchGetStreamLinesReques" +
+      "t\0322.yandex.cloud.video.v1.BatchGetStream" +
+      "LinesResponse\")\202\323\344\223\002#\"\036/video/v1/streamL" +
+      "ines:batchGet:\001*\022\247\001\n\006Create\022..yandex.clo" +
+      "ud.video.v1.CreateStreamLineRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"J\202\323\344\223\002\032\"\025" +
+      "/video/v1/streamLines:\001*\262\322*&\n\030CreateStre" +
+      "amLineMetadata\022\nStreamLine\022\270\001\n\006Update\022.." +
+      "yandex.cloud.video.v1.UpdateStreamLineRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"[\202\323\344\223\002+2&/video/v1/streamLines/{stream_" +
+      "line_id}:\001*\262\322*&\n\030UpdateStreamLineMetadat" +
+      "a\022\nStreamLine\022\300\001\n\006Delete\022..yandex.cloud." +
+      "video.v1.DeleteStreamLineRequest\032!.yande" +
+      "x.cloud.operation.Operation\"c\202\323\344\223\002(*&/vi" +
+      "deo/v1/streamLines/{stream_line_id}\262\322*1\n" +
+      "\030DeleteStreamLineMetadata\022\025google.protob" +
+      "uf.Empty\022\317\001\n\013BatchDelete\0224.yandex.cloud." +
+      "video.v1.BatchDeleteStreamLinesRequest\032!" +
+      ".yandex.cloud.operation.Operation\"g\202\323\344\223\002" +
+      "&\"!/video/v1/streamLines:batchDelete:\001*\262" +
+      "\322*7\n\036BatchDeleteStreamLinesMetadata\022\025goo" +
+      "gle.protobuf.Empty\022\317\001\n\rPerformAction\022/.y" +
+      "andex.cloud.video.v1.PerformLineActionRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"j\202\323\344\223\0029\"4/video/v1/streamLines/{stream_" +
+      "line_id}:performAction:\001*\262\322*\'\n\031PerformLi" +
+      "neActionMetadata\022\nStreamLine\022\235\001\n\014GetStre" +
+      "amKey\022*.yandex.cloud.video.v1.GetStreamK" +
+      "eyRequest\032$.yandex.cloud.video.v1.PushSt" +
+      "reamKey\";\202\323\344\223\0025\0223/video/v1/streamLines/{" +
+      "stream_line_id}:getStreamKey\022\322\001\n\017UpdateS" +
+      "treamKey\022-.yandex.cloud.video.v1.UpdateS" +
+      "treamKeyRequest\032!.yandex.cloud.operation" +
+      ".Operation\"m\202\323\344\223\002;26/video/v1/streamLine" +
+      "s/{stream_line_id}:updateStreamKey:\001*\262\322*" +
+      "(\n\027UpdateStreamKeyMetadata\022\rPushStreamKe" +
+      "yB\\\n\031yandex.cloud.api.video.v1Z?github.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/video/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

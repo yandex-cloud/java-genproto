@@ -8755,7 +8755,7 @@ public final class FileServiceOuterClass {
       "e\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\"[\n\021ListFiles" +
       "Response\022-\n\005files\030\001 \003(\0132\036.yandex.cloud.a" +
       "i.files.v1.File\022\027\n\017next_page_token\030\002 \001(\t" +
-      "2\373\005\n\013FileService\022q\n\006Create\022+.yandex.clou" +
+      "2\372\005\n\013FileService\022q\n\006Create\022+.yandex.clou" +
       "d.ai.files.v1.CreateFileRequest\032\036.yandex" +
       ".cloud.ai.files.v1.File\"\032\202\323\344\223\002\024\"\017/files/" +
       "v1/files:\001*\022r\n\003Get\022(.yandex.cloud.ai.fil" +
@@ -8764,19 +8764,19 @@ public final class FileServiceOuterClass {
       "ile_id}\022\203\001\n\006GetUrl\022+.yandex.cloud.ai.fil" +
       "es.v1.GetFileUrlRequest\032,.yandex.cloud.a" +
       "i.files.v1.GetFileUrlResponse\"\036\202\323\344\223\002\030\022\026/" +
-      "files/v1/files:getUrl\022|\n\006Update\022+.yandex" +
+      "files/v1/files:getUrl\022{\n\006Update\022+.yandex" +
       ".cloud.ai.files.v1.UpdateFileRequest\032\036.y" +
-      "andex.cloud.ai.files.v1.File\"%\202\323\344\223\002\0372\032/f" +
-      "iles/v1/update/{file_id}:\001*\022\206\001\n\006Delete\022+" +
-      ".yandex.cloud.ai.files.v1.DeleteFileRequ" +
-      "est\032,.yandex.cloud.ai.files.v1.DeleteFil" +
-      "eResponse\"!\202\323\344\223\002\033*\031/files/v1/files/{file" +
-      "_id}\022x\n\004List\022*.yandex.cloud.ai.files.v1." +
-      "ListFilesRequest\032+.yandex.cloud.ai.files" +
-      ".v1.ListFilesResponse\"\027\202\323\344\223\002\021\022\017/files/v1" +
-      "/filesBb\n\034yandex.cloud.api.ai.files.v1ZB" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/ai/files/v1;filesb\006proto3"
+      "andex.cloud.ai.files.v1.File\"$\202\323\344\223\002\0362\031/f" +
+      "iles/v1/files/{file_id}:\001*\022\206\001\n\006Delete\022+." +
+      "yandex.cloud.ai.files.v1.DeleteFileReque" +
+      "st\032,.yandex.cloud.ai.files.v1.DeleteFile" +
+      "Response\"!\202\323\344\223\002\033*\031/files/v1/files/{file_" +
+      "id}\022x\n\004List\022*.yandex.cloud.ai.files.v1.L" +
+      "istFilesRequest\032+.yandex.cloud.ai.files." +
+      "v1.ListFilesResponse\"\027\202\323\344\223\002\021\022\017/files/v1/" +
+      "filesBb\n\034yandex.cloud.api.ai.files.v1ZBg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/ai/files/v1;filesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

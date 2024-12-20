@@ -627,7 +627,7 @@ public final class SubtitleServiceOuterClass {
      * The maximum number of the results per page to return.
      * </pre>
      *
-     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
      * @return The pageSize.
      */
     long getPageSize();
@@ -824,7 +824,7 @@ public final class SubtitleServiceOuterClass {
      * The maximum number of the results per page to return.
      * </pre>
      *
-     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
      * @return The pageSize.
      */
     @java.lang.Override
@@ -1323,7 +1323,7 @@ public final class SubtitleServiceOuterClass {
        * The maximum number of the results per page to return.
        * </pre>
        *
-       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
        * @return The pageSize.
        */
       @java.lang.Override
@@ -1335,7 +1335,7 @@ public final class SubtitleServiceOuterClass {
        * The maximum number of the results per page to return.
        * </pre>
        *
-       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
        */
@@ -1350,7 +1350,7 @@ public final class SubtitleServiceOuterClass {
        * The maximum number of the results per page to return.
        * </pre>
        *
-       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageSize() {
@@ -2619,7 +2619,7 @@ public final class SubtitleServiceOuterClass {
      * Valid ISO language code corresponding to the subtitle text must be provided.
      * </pre>
      *
-     * <code>string language = 1;</code>
+     * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
      * @return The language.
      */
     java.lang.String getLanguage();
@@ -2630,7 +2630,7 @@ public final class SubtitleServiceOuterClass {
      * Valid ISO language code corresponding to the subtitle text must be provided.
      * </pre>
      *
-     * <code>string language = 1;</code>
+     * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
      * @return The bytes for language.
      */
     com.google.protobuf.ByteString
@@ -2918,7 +2918,7 @@ public final class SubtitleServiceOuterClass {
      * Valid ISO language code corresponding to the subtitle text must be provided.
      * </pre>
      *
-     * <code>string language = 1;</code>
+     * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
      * @return The language.
      */
     @java.lang.Override
@@ -2941,7 +2941,7 @@ public final class SubtitleServiceOuterClass {
      * Valid ISO language code corresponding to the subtitle text must be provided.
      * </pre>
      *
-     * <code>string language = 1;</code>
+     * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
      * @return The bytes for language.
      */
     @java.lang.Override
@@ -3556,7 +3556,7 @@ public final class SubtitleServiceOuterClass {
        * Valid ISO language code corresponding to the subtitle text must be provided.
        * </pre>
        *
-       * <code>string language = 1;</code>
+       * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
        * @return The language.
        */
       public java.lang.String getLanguage() {
@@ -3578,7 +3578,7 @@ public final class SubtitleServiceOuterClass {
        * Valid ISO language code corresponding to the subtitle text must be provided.
        * </pre>
        *
-       * <code>string language = 1;</code>
+       * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
        * @return The bytes for language.
        */
       public com.google.protobuf.ByteString
@@ -3601,7 +3601,7 @@ public final class SubtitleServiceOuterClass {
        * Valid ISO language code corresponding to the subtitle text must be provided.
        * </pre>
        *
-       * <code>string language = 1;</code>
+       * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
        * @param value The language to set.
        * @return This builder for chaining.
        */
@@ -3622,7 +3622,7 @@ public final class SubtitleServiceOuterClass {
        * Valid ISO language code corresponding to the subtitle text must be provided.
        * </pre>
        *
-       * <code>string language = 1;</code>
+       * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
        * @return This builder for chaining.
        */
       public Builder clearLanguage() {
@@ -3638,7 +3638,7 @@ public final class SubtitleServiceOuterClass {
        * Valid ISO language code corresponding to the subtitle text must be provided.
        * </pre>
        *
-       * <code>string language = 1;</code>
+       * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
        * @param value The bytes for language to set.
        * @return This builder for chaining.
        */
@@ -7764,50 +7764,50 @@ public final class SubtitleServiceOuterClass {
       "eration.proto\032\035yandex/cloud/validation.p" +
       "roto\032$yandex/cloud/video/v1/subtitle.pro" +
       "to\"7\n\022GetSubtitleRequest\022!\n\013subtitle_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\223\001\n\024ListSubtitlesReq" +
-      "uest\022\035\n\tpage_size\030d \001(\003B\n\372\3071\006<=1000\022\035\n\np" +
-      "age_token\030e \001(\tB\t\212\3101\005<=200\022\035\n\010video_id\030\350" +
-      "\007 \001(\tB\010\212\3101\004<=50H\000B\021\n\tparent_id\022\004\300\3011\001J\004\010\001" +
-      "\020dJ\005\010f\020\350\007\"j\n\025ListSubtitlesResponse\0222\n\tsu" +
-      "btitles\030\001 \003(\0132\037.yandex.cloud.video.v1.Su" +
-      "btitle\022\027\n\017next_page_token\030d \001(\tJ\004\010\002\020d\"\311\001" +
-      "\n\025CreateSubtitleRequest\022\020\n\010language\030\001 \001(" +
-      "\t\022\r\n\005label\030\002 \001(\t\022\035\n\010video_id\030\350\007 \001(\tB\010\212\3101" +
-      "\004<=50H\000\022>\n\006upload\030\314\010 \001(\0132+.yandex.cloud." +
-      "video.v1.SubtitleUploadParamsH\001B\021\n\tparen" +
-      "t_id\022\004\300\3011\001B\016\n\006source\022\004\300\3011\001J\005\010\003\020\350\007J\006\010\351\007\020\314" +
-      "\010\".\n\024SubtitleUploadParams\022\026\n\010filename\030\001 " +
-      "\001(\tB\004\350\3071\001\"-\n\026CreateSubtitleMetadata\022\023\n\013s" +
-      "ubtitle_id\030\001 \001(\t\"E\n GenerateSubtitleUplo" +
-      "adURLRequest\022!\n\013subtitle_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\"7\n!GenerateSubtitleUploadURLResp" +
-      "onse\022\022\n\nupload_url\030\001 \001(\t\":\n\025DeleteSubtit" +
-      "leRequest\022!\n\013subtitle_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\"-\n\026DeleteSubtitleMetadata\022\023\n\013subtit" +
-      "le_id\030\001 \001(\t2\261\006\n\017SubtitleService\022|\n\003Get\022)" +
-      ".yandex.cloud.video.v1.GetSubtitleReques" +
-      "t\032\037.yandex.cloud.video.v1.Subtitle\")\202\323\344\223" +
-      "\002#\022!/video/v1/subtitles/{subtitle_id}\022~\n" +
-      "\004List\022+.yandex.cloud.video.v1.ListSubtit" +
-      "lesRequest\032,.yandex.cloud.video.v1.ListS" +
-      "ubtitlesResponse\"\033\202\323\344\223\002\025\022\023/video/v1/subt" +
-      "itles\022\237\001\n\006Create\022,.yandex.cloud.video.v1" +
-      ".CreateSubtitleRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"D\202\323\344\223\002\030\"\023/video/v1/sub" +
-      "titles:\001*\262\322*\"\n\026CreateSubtitleMetadata\022\010S" +
-      "ubtitle\022\303\001\n\021GenerateUploadURL\0227.yandex.c" +
-      "loud.video.v1.GenerateSubtitleUploadURLR" +
-      "equest\0328.yandex.cloud.video.v1.GenerateS" +
-      "ubtitleUploadURLResponse\";\202\323\344\223\0025\0223/video" +
-      "/v1/subtitles/{subtitle_id}:generateUplo" +
-      "adURL\022\267\001\n\006Delete\022,.yandex.cloud.video.v1" +
-      ".DeleteSubtitleRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"\\\202\323\344\223\002#*!/video/v1/sub" +
-      "titles/{subtitle_id}\262\322*/\n\026DeleteSubtitle" +
-      "Metadata\022\025google.protobuf.EmptyB\\\n\031yande" +
-      "x.cloud.api.video.v1Z?github.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/video/v1;" +
-      "videob\006proto3"
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\222\001\n\024ListSubtitlesReq" +
+      "uest\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=100\022\035\n\npa" +
+      "ge_token\030e \001(\tB\t\212\3101\005<=200\022\035\n\010video_id\030\350\007" +
+      " \001(\tB\010\212\3101\004<=50H\000B\021\n\tparent_id\022\004\300\3011\001J\004\010\001\020" +
+      "dJ\005\010f\020\350\007\"j\n\025ListSubtitlesResponse\0222\n\tsub" +
+      "titles\030\001 \003(\0132\037.yandex.cloud.video.v1.Sub" +
+      "title\022\027\n\017next_page_token\030d \001(\tJ\004\010\002\020d\"\322\001\n" +
+      "\025CreateSubtitleRequest\022\031\n\010language\030\001 \001(\t" +
+      "B\007\212\3101\0032-3\022\r\n\005label\030\002 \001(\t\022\035\n\010video_id\030\350\007 " +
+      "\001(\tB\010\212\3101\004<=50H\000\022>\n\006upload\030\314\010 \001(\0132+.yande" +
+      "x.cloud.video.v1.SubtitleUploadParamsH\001B" +
+      "\021\n\tparent_id\022\004\300\3011\001B\016\n\006source\022\004\300\3011\001J\005\010\003\020\350" +
+      "\007J\006\010\351\007\020\314\010\".\n\024SubtitleUploadParams\022\026\n\010fil" +
+      "ename\030\001 \001(\tB\004\350\3071\001\"-\n\026CreateSubtitleMetad" +
+      "ata\022\023\n\013subtitle_id\030\001 \001(\t\"E\n GenerateSubt" +
+      "itleUploadURLRequest\022!\n\013subtitle_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\"7\n!GenerateSubtitleUploa" +
+      "dURLResponse\022\022\n\nupload_url\030\001 \001(\t\":\n\025Dele" +
+      "teSubtitleRequest\022!\n\013subtitle_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\"-\n\026DeleteSubtitleMetadata\022\023" +
+      "\n\013subtitle_id\030\001 \001(\t2\261\006\n\017SubtitleService\022" +
+      "|\n\003Get\022).yandex.cloud.video.v1.GetSubtit" +
+      "leRequest\032\037.yandex.cloud.video.v1.Subtit" +
+      "le\")\202\323\344\223\002#\022!/video/v1/subtitles/{subtitl" +
+      "e_id}\022~\n\004List\022+.yandex.cloud.video.v1.Li" +
+      "stSubtitlesRequest\032,.yandex.cloud.video." +
+      "v1.ListSubtitlesResponse\"\033\202\323\344\223\002\025\022\023/video" +
+      "/v1/subtitles\022\237\001\n\006Create\022,.yandex.cloud." +
+      "video.v1.CreateSubtitleRequest\032!.yandex." +
+      "cloud.operation.Operation\"D\202\323\344\223\002\030\"\023/vide" +
+      "o/v1/subtitles:\001*\262\322*\"\n\026CreateSubtitleMet" +
+      "adata\022\010Subtitle\022\303\001\n\021GenerateUploadURL\0227." +
+      "yandex.cloud.video.v1.GenerateSubtitleUp" +
+      "loadURLRequest\0328.yandex.cloud.video.v1.G" +
+      "enerateSubtitleUploadURLResponse\";\202\323\344\223\0025" +
+      "\0223/video/v1/subtitles/{subtitle_id}:gene" +
+      "rateUploadURL\022\267\001\n\006Delete\022,.yandex.cloud." +
+      "video.v1.DeleteSubtitleRequest\032!.yandex." +
+      "cloud.operation.Operation\"\\\202\323\344\223\002#*!/vide" +
+      "o/v1/subtitles/{subtitle_id}\262\322*/\n\026Delete" +
+      "SubtitleMetadata\022\025google.protobuf.EmptyB" +
+      "\\\n\031yandex.cloud.api.video.v1Z?github.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/v" +
+      "ideo/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

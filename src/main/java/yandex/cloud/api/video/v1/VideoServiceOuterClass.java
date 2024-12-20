@@ -647,7 +647,7 @@ public final class VideoServiceOuterClass {
      * The maximum number of the results per page to return. Default value: 100.
      * </pre>
      *
-     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
      * @return The pageSize.
      */
     long getPageSize();
@@ -893,7 +893,7 @@ public final class VideoServiceOuterClass {
      * The maximum number of the results per page to return. Default value: 100.
      * </pre>
      *
-     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
      * @return The pageSize.
      */
     @java.lang.Override
@@ -1530,7 +1530,7 @@ public final class VideoServiceOuterClass {
        * The maximum number of the results per page to return. Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
        * @return The pageSize.
        */
       @java.lang.Override
@@ -1542,7 +1542,7 @@ public final class VideoServiceOuterClass {
        * The maximum number of the results per page to return. Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
        */
@@ -1557,7 +1557,7 @@ public final class VideoServiceOuterClass {
        * The maximum number of the results per page to return. Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageSize() {
@@ -2960,7 +2960,7 @@ public final class VideoServiceOuterClass {
      * List of requested video IDs.
      * </pre>
      *
-     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return A list containing the videoIds.
      */
     java.util.List<java.lang.String>
@@ -2970,7 +2970,7 @@ public final class VideoServiceOuterClass {
      * List of requested video IDs.
      * </pre>
      *
-     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The count of videoIds.
      */
     int getVideoIdsCount();
@@ -2979,7 +2979,7 @@ public final class VideoServiceOuterClass {
      * List of requested video IDs.
      * </pre>
      *
-     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the element to return.
      * @return The videoIds at the given index.
      */
@@ -2989,7 +2989,7 @@ public final class VideoServiceOuterClass {
      * List of requested video IDs.
      * </pre>
      *
-     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the videoIds at the given index.
      */
@@ -3147,7 +3147,7 @@ public final class VideoServiceOuterClass {
      * List of requested video IDs.
      * </pre>
      *
-     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return A list containing the videoIds.
      */
     public com.google.protobuf.ProtocolStringList
@@ -3159,7 +3159,7 @@ public final class VideoServiceOuterClass {
      * List of requested video IDs.
      * </pre>
      *
-     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The count of videoIds.
      */
     public int getVideoIdsCount() {
@@ -3170,7 +3170,7 @@ public final class VideoServiceOuterClass {
      * List of requested video IDs.
      * </pre>
      *
-     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the element to return.
      * @return The videoIds at the given index.
      */
@@ -3182,7 +3182,7 @@ public final class VideoServiceOuterClass {
      * List of requested video IDs.
      * </pre>
      *
-     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the videoIds at the given index.
      */
@@ -3637,7 +3637,7 @@ public final class VideoServiceOuterClass {
        * List of requested video IDs.
        * </pre>
        *
-       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return A list containing the videoIds.
        */
       public com.google.protobuf.ProtocolStringList
@@ -3649,7 +3649,7 @@ public final class VideoServiceOuterClass {
        * List of requested video IDs.
        * </pre>
        *
-       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The count of videoIds.
        */
       public int getVideoIdsCount() {
@@ -3660,7 +3660,7 @@ public final class VideoServiceOuterClass {
        * List of requested video IDs.
        * </pre>
        *
-       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param index The index of the element to return.
        * @return The videoIds at the given index.
        */
@@ -3672,7 +3672,7 @@ public final class VideoServiceOuterClass {
        * List of requested video IDs.
        * </pre>
        *
-       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the videoIds at the given index.
        */
@@ -3685,7 +3685,7 @@ public final class VideoServiceOuterClass {
        * List of requested video IDs.
        * </pre>
        *
-       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param index The index to set the value at.
        * @param value The videoIds to set.
        * @return This builder for chaining.
@@ -3705,7 +3705,7 @@ public final class VideoServiceOuterClass {
        * List of requested video IDs.
        * </pre>
        *
-       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The videoIds to add.
        * @return This builder for chaining.
        */
@@ -3724,7 +3724,7 @@ public final class VideoServiceOuterClass {
        * List of requested video IDs.
        * </pre>
        *
-       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param values The videoIds to add.
        * @return This builder for chaining.
        */
@@ -3741,7 +3741,7 @@ public final class VideoServiceOuterClass {
        * List of requested video IDs.
        * </pre>
        *
-       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearVideoIds() {
@@ -3755,7 +3755,7 @@ public final class VideoServiceOuterClass {
        * List of requested video IDs.
        * </pre>
        *
-       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes of the videoIds to add.
        * @return This builder for chaining.
        */
@@ -16599,7 +16599,7 @@ public final class VideoServiceOuterClass {
      * List of video IDs.
      * </pre>
      *
-     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return A list containing the videoIds.
      */
     java.util.List<java.lang.String>
@@ -16609,7 +16609,7 @@ public final class VideoServiceOuterClass {
      * List of video IDs.
      * </pre>
      *
-     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The count of videoIds.
      */
     int getVideoIdsCount();
@@ -16618,7 +16618,7 @@ public final class VideoServiceOuterClass {
      * List of video IDs.
      * </pre>
      *
-     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the element to return.
      * @return The videoIds at the given index.
      */
@@ -16628,7 +16628,7 @@ public final class VideoServiceOuterClass {
      * List of video IDs.
      * </pre>
      *
-     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the videoIds at the given index.
      */
@@ -16786,7 +16786,7 @@ public final class VideoServiceOuterClass {
      * List of video IDs.
      * </pre>
      *
-     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return A list containing the videoIds.
      */
     public com.google.protobuf.ProtocolStringList
@@ -16798,7 +16798,7 @@ public final class VideoServiceOuterClass {
      * List of video IDs.
      * </pre>
      *
-     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The count of videoIds.
      */
     public int getVideoIdsCount() {
@@ -16809,7 +16809,7 @@ public final class VideoServiceOuterClass {
      * List of video IDs.
      * </pre>
      *
-     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the element to return.
      * @return The videoIds at the given index.
      */
@@ -16821,7 +16821,7 @@ public final class VideoServiceOuterClass {
      * List of video IDs.
      * </pre>
      *
-     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the videoIds at the given index.
      */
@@ -17276,7 +17276,7 @@ public final class VideoServiceOuterClass {
        * List of video IDs.
        * </pre>
        *
-       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return A list containing the videoIds.
        */
       public com.google.protobuf.ProtocolStringList
@@ -17288,7 +17288,7 @@ public final class VideoServiceOuterClass {
        * List of video IDs.
        * </pre>
        *
-       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The count of videoIds.
        */
       public int getVideoIdsCount() {
@@ -17299,7 +17299,7 @@ public final class VideoServiceOuterClass {
        * List of video IDs.
        * </pre>
        *
-       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param index The index of the element to return.
        * @return The videoIds at the given index.
        */
@@ -17311,7 +17311,7 @@ public final class VideoServiceOuterClass {
        * List of video IDs.
        * </pre>
        *
-       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the videoIds at the given index.
        */
@@ -17324,7 +17324,7 @@ public final class VideoServiceOuterClass {
        * List of video IDs.
        * </pre>
        *
-       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param index The index to set the value at.
        * @param value The videoIds to set.
        * @return This builder for chaining.
@@ -17344,7 +17344,7 @@ public final class VideoServiceOuterClass {
        * List of video IDs.
        * </pre>
        *
-       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The videoIds to add.
        * @return This builder for chaining.
        */
@@ -17363,7 +17363,7 @@ public final class VideoServiceOuterClass {
        * List of video IDs.
        * </pre>
        *
-       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param values The videoIds to add.
        * @return This builder for chaining.
        */
@@ -17380,7 +17380,7 @@ public final class VideoServiceOuterClass {
        * List of video IDs.
        * </pre>
        *
-       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearVideoIds() {
@@ -17394,7 +17394,7 @@ public final class VideoServiceOuterClass {
        * List of video IDs.
        * </pre>
        *
-       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes of the videoIds to add.
        * @return This builder for chaining.
        */
@@ -24594,15 +24594,15 @@ public final class VideoServiceOuterClass {
       "dex/cloud/video/v1/manifest.proto\032!yande" +
       "x/cloud/video/v1/video.proto\"1\n\017GetVideo" +
       "Request\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"" +
-      "\246\001\n\020ListVideoRequest\022 \n\nchannel_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030d \001(\003B\n\372\3071\006<" +
-      "=1000\022\035\n\npage_token\030e \001(\tB\t\212\3101\005<=200\022\020\n\010" +
-      "order_by\030f \001(\t\022\032\n\006filter\030g \001(\tB\n\212\3101\006<=10" +
-      "00J\004\010\002\020d\"`\n\021ListVideoResponse\022,\n\006videos\030" +
-      "\001 \003(\0132\034.yandex.cloud.video.v1.Video\022\027\n\017n" +
-      "ext_page_token\030d \001(\tJ\004\010\002\020d\"^\n\025BatchGetVi" +
-      "deosRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022#\n\tvideo_ids\030\002 \003(\tB\020\202\3101\0041-50\212\3101\004<=" +
+      "\245\001\n\020ListVideoRequest\022 \n\nchannel_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<" +
+      "=100\022\035\n\npage_token\030e \001(\tB\t\212\3101\005<=200\022\020\n\010o" +
+      "rder_by\030f \001(\t\022\032\n\006filter\030g \001(\tB\n\212\3101\006<=100" +
+      "0J\004\010\002\020d\"`\n\021ListVideoResponse\022,\n\006videos\030\001" +
+      " \003(\0132\034.yandex.cloud.video.v1.Video\022\027\n\017ne" +
+      "xt_page_token\030d \001(\tJ\004\010\002\020d\"_\n\025BatchGetVid" +
+      "eosRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022$\n\tvideo_ids\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<=" +
       "50\"F\n\026BatchGetVideosResponse\022,\n\006videos\030\001" +
       " \003(\0132\034.yandex.cloud.video.v1.Video\"\344\005\n\022C" +
       "reateVideoRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350" +
@@ -24652,76 +24652,76 @@ public final class VideoServiceOuterClass {
       "\014subtitle_ids\030\003 \003(\t\"*\n\026TranscodeVideoMet" +
       "adata\022\020\n\010video_id\030\001 \001(\t\"4\n\022DeleteVideoRe" +
       "quest\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\'\n" +
-      "\023DeleteVideoMetadata\022\020\n\010video_id\030\001 \001(\t\"a" +
+      "\023DeleteVideoMetadata\022\020\n\010video_id\030\001 \001(\t\"b" +
       "\n\030BatchDeleteVideosRequest\022 \n\nchannel_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\tvideo_ids\030\002 \003(\tB" +
-      "\020\202\3101\0041-50\212\3101\004<=50\".\n\031BatchDeleteVideosMe" +
-      "tadata\022\021\n\tvideo_ids\030\001 \003(\t\"\324\001\n\031PerformVid" +
-      "eoActionRequest\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\022=\n\007publish\030\350\007 \001(\0132).yandex.cloud" +
-      ".video.v1.PublishVideoActionH\000\022A\n\tunpubl" +
-      "ish\030\351\007 \001(\0132+.yandex.cloud.video.v1.Unpub" +
-      "lishVideoActionH\000B\016\n\006action\022\004\300\3011\001J\005\010\002\020\350\007" +
-      "\"\024\n\022PublishVideoAction\"\026\n\024UnpublishVideo" +
-      "Action\".\n\032PerformVideoActionMetadata\022\020\n\010" +
-      "video_id\030\001 \001(\t\"t\n\030GetVideoPlayerURLReque" +
-      "st\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0228\n\006pa" +
-      "rams\030\002 \001(\0132(.yandex.cloud.video.v1.Video" +
-      "PlayerParams\"C\n\021VideoPlayerParams\022\014\n\004mut" +
-      "e\030\001 \001(\010\022\020\n\010autoplay\030\002 \001(\010\022\016\n\006hidden\030\003 \001(" +
-      "\010\"=\n\031GetVideoPlayerURLResponse\022\022\n\nplayer" +
-      "_url\030\001 \001(\t\022\014\n\004html\030\002 \001(\t\":\n\030GetVideoMani" +
-      "festsRequest\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\"O\n\031GetVideoManifestsResponse\0222\n\tman" +
-      "ifests\030\001 \003(\0132\037.yandex.cloud.video.v1.Man" +
-      "ifest2\361\r\n\014VideoService\022p\n\003Get\022&.yandex.c" +
-      "loud.video.v1.GetVideoRequest\032\034.yandex.c" +
-      "loud.video.v1.Video\"#\202\323\344\223\002\035\022\033/video/v1/v" +
-      "ideos/{video_id}\022s\n\004List\022\'.yandex.cloud." +
-      "video.v1.ListVideoRequest\032(.yandex.cloud" +
-      ".video.v1.ListVideoResponse\"\030\202\323\344\223\002\022\022\020/vi" +
-      "deo/v1/videos\022\215\001\n\010BatchGet\022,.yandex.clou" +
-      "d.video.v1.BatchGetVideosRequest\032-.yande" +
-      "x.cloud.video.v1.BatchGetVideosResponse\"" +
-      "$\202\323\344\223\002\036\"\031/video/v1/videos:batchGet:\001*\022\223\001" +
-      "\n\006Create\022).yandex.cloud.video.v1.CreateV" +
-      "ideoRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\";\202\323\344\223\002\025\"\020/video/v1/videos:\001*\262\322*\034\n" +
-      "\023CreateVideoMetadata\022\005Video\022\236\001\n\006Update\022)" +
-      ".yandex.cloud.video.v1.UpdateVideoReques" +
-      "t\032!.yandex.cloud.operation.Operation\"F\202\323" +
-      "\344\223\002 2\033/video/v1/videos/{video_id}:\001*\262\322*\034" +
-      "\n\023UpdateVideoMetadata\022\005Video\022\261\001\n\tTransco" +
-      "de\022,.yandex.cloud.video.v1.TranscodeVide" +
-      "oRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"S\202\323\344\223\002*\"%/video/v1/videos/{video_id}" +
-      ":transcode:\001*\262\322*\037\n\026TranscodeVideoMetadat" +
-      "a\022\005Video\022\253\001\n\006Delete\022).yandex.cloud.video" +
-      ".v1.DeleteVideoRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"S\202\323\344\223\002\035*\033/video/v1/vid" +
-      "eos/{video_id}\262\322*,\n\023DeleteVideoMetadata\022" +
-      "\025google.protobuf.Empty\022\300\001\n\013BatchDelete\022/" +
-      ".yandex.cloud.video.v1.BatchDeleteVideos" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"]\202\323\344\223\002!\"\034/video/v1/videos:batchDelete" +
-      ":\001*\262\322*2\n\031BatchDeleteVideosMetadata\022\025goog" +
-      "le.protobuf.Empty\022\301\001\n\rPerformAction\0220.ya" +
-      "ndex.cloud.video.v1.PerformVideoActionRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"[\202\323\344\223\002.\")/video/v1/videos/{video_id}:pe" +
-      "rformAction:\001*\262\322*#\n\032PerformVideoActionMe" +
-      "tadata\022\005Video\022\243\001\n\014GetPlayerURL\022/.yandex." +
-      "cloud.video.v1.GetVideoPlayerURLRequest\032" +
-      "0.yandex.cloud.video.v1.GetVideoPlayerUR" +
-      "LResponse\"0\202\323\344\223\002*\022(/video/v1/videos/{vid" +
-      "eo_id}:getPlayerURL\022\243\001\n\014GetManifests\022/.y" +
-      "andex.cloud.video.v1.GetVideoManifestsRe" +
-      "quest\0320.yandex.cloud.video.v1.GetVideoMa" +
-      "nifestsResponse\"0\202\323\344\223\002*\022(/video/v1/video" +
-      "s/{video_id}:getManifestsB\\\n\031yandex.clou" +
-      "d.api.video.v1Z?github.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/video/v1;videob" +
-      "\006proto3"
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022$\n\tvideo_ids\030\002 \003(\tB" +
+      "\021\202\3101\0051-100\212\3101\004<=50\".\n\031BatchDeleteVideosM" +
+      "etadata\022\021\n\tvideo_ids\030\001 \003(\t\"\324\001\n\031PerformVi" +
+      "deoActionRequest\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\022=\n\007publish\030\350\007 \001(\0132).yandex.clou" +
+      "d.video.v1.PublishVideoActionH\000\022A\n\tunpub" +
+      "lish\030\351\007 \001(\0132+.yandex.cloud.video.v1.Unpu" +
+      "blishVideoActionH\000B\016\n\006action\022\004\300\3011\001J\005\010\002\020\350" +
+      "\007\"\024\n\022PublishVideoAction\"\026\n\024UnpublishVide" +
+      "oAction\".\n\032PerformVideoActionMetadata\022\020\n" +
+      "\010video_id\030\001 \001(\t\"t\n\030GetVideoPlayerURLRequ" +
+      "est\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0228\n\006p" +
+      "arams\030\002 \001(\0132(.yandex.cloud.video.v1.Vide" +
+      "oPlayerParams\"C\n\021VideoPlayerParams\022\014\n\004mu" +
+      "te\030\001 \001(\010\022\020\n\010autoplay\030\002 \001(\010\022\016\n\006hidden\030\003 \001" +
+      "(\010\"=\n\031GetVideoPlayerURLResponse\022\022\n\nplaye" +
+      "r_url\030\001 \001(\t\022\014\n\004html\030\002 \001(\t\":\n\030GetVideoMan" +
+      "ifestsRequest\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\"O\n\031GetVideoManifestsResponse\0222\n\tma" +
+      "nifests\030\001 \003(\0132\037.yandex.cloud.video.v1.Ma" +
+      "nifest2\361\r\n\014VideoService\022p\n\003Get\022&.yandex." +
+      "cloud.video.v1.GetVideoRequest\032\034.yandex." +
+      "cloud.video.v1.Video\"#\202\323\344\223\002\035\022\033/video/v1/" +
+      "videos/{video_id}\022s\n\004List\022\'.yandex.cloud" +
+      ".video.v1.ListVideoRequest\032(.yandex.clou" +
+      "d.video.v1.ListVideoResponse\"\030\202\323\344\223\002\022\022\020/v" +
+      "ideo/v1/videos\022\215\001\n\010BatchGet\022,.yandex.clo" +
+      "ud.video.v1.BatchGetVideosRequest\032-.yand" +
+      "ex.cloud.video.v1.BatchGetVideosResponse" +
+      "\"$\202\323\344\223\002\036\"\031/video/v1/videos:batchGet:\001*\022\223" +
+      "\001\n\006Create\022).yandex.cloud.video.v1.Create" +
+      "VideoRequest\032!.yandex.cloud.operation.Op" +
+      "eration\";\202\323\344\223\002\025\"\020/video/v1/videos:\001*\262\322*\034" +
+      "\n\023CreateVideoMetadata\022\005Video\022\236\001\n\006Update\022" +
+      ").yandex.cloud.video.v1.UpdateVideoReque" +
+      "st\032!.yandex.cloud.operation.Operation\"F\202" +
+      "\323\344\223\002 2\033/video/v1/videos/{video_id}:\001*\262\322*" +
+      "\034\n\023UpdateVideoMetadata\022\005Video\022\261\001\n\tTransc" +
+      "ode\022,.yandex.cloud.video.v1.TranscodeVid" +
+      "eoRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"S\202\323\344\223\002*\"%/video/v1/videos/{video_id" +
+      "}:transcode:\001*\262\322*\037\n\026TranscodeVideoMetada" +
+      "ta\022\005Video\022\253\001\n\006Delete\022).yandex.cloud.vide" +
+      "o.v1.DeleteVideoRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"S\202\323\344\223\002\035*\033/video/v1/vi" +
+      "deos/{video_id}\262\322*,\n\023DeleteVideoMetadata" +
+      "\022\025google.protobuf.Empty\022\300\001\n\013BatchDelete\022" +
+      "/.yandex.cloud.video.v1.BatchDeleteVideo" +
+      "sRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"]\202\323\344\223\002!\"\034/video/v1/videos:batchDelet" +
+      "e:\001*\262\322*2\n\031BatchDeleteVideosMetadata\022\025goo" +
+      "gle.protobuf.Empty\022\301\001\n\rPerformAction\0220.y" +
+      "andex.cloud.video.v1.PerformVideoActionR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"[\202\323\344\223\002.\")/video/v1/videos/{video_id}:p" +
+      "erformAction:\001*\262\322*#\n\032PerformVideoActionM" +
+      "etadata\022\005Video\022\243\001\n\014GetPlayerURL\022/.yandex" +
+      ".cloud.video.v1.GetVideoPlayerURLRequest" +
+      "\0320.yandex.cloud.video.v1.GetVideoPlayerU" +
+      "RLResponse\"0\202\323\344\223\002*\022(/video/v1/videos/{vi" +
+      "deo_id}:getPlayerURL\022\243\001\n\014GetManifests\022/." +
+      "yandex.cloud.video.v1.GetVideoManifestsR" +
+      "equest\0320.yandex.cloud.video.v1.GetVideoM" +
+      "anifestsResponse\"0\202\323\344\223\002*\022(/video/v1/vide" +
+      "os/{video_id}:getManifestsB\\\n\031yandex.clo" +
+      "ud.api.video.v1Z?github.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/video/v1;video" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

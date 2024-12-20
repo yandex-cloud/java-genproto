@@ -2753,20 +2753,63 @@ public final class ApiKeyServiceOuterClass {
      * Scope of the API key.
      * </pre>
      *
-     * <code>string scope = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string scope = 3 [deprecated = true, (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @deprecated
      * @return The scope.
      */
-    java.lang.String getScope();
+    @java.lang.Deprecated java.lang.String getScope();
     /**
      * <pre>
      * Scope of the API key.
      * </pre>
      *
-     * <code>string scope = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string scope = 3 [deprecated = true, (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @deprecated
      * @return The bytes for scope.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getScopeBytes();
+
+    /**
+     * <pre>
+     * Scopes of the API key.
+     * </pre>
+     *
+     * <code>repeated string scopes = 5 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return A list containing the scopes.
+     */
+    java.util.List<java.lang.String>
+        getScopesList();
+    /**
+     * <pre>
+     * Scopes of the API key.
+     * </pre>
+     *
+     * <code>repeated string scopes = 5 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The count of scopes.
+     */
+    int getScopesCount();
+    /**
+     * <pre>
+     * Scopes of the API key.
+     * </pre>
+     *
+     * <code>repeated string scopes = 5 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @param index The index of the element to return.
+     * @return The scopes at the given index.
+     */
+    java.lang.String getScopes(int index);
+    /**
+     * <pre>
+     * Scopes of the API key.
+     * </pre>
+     *
+     * <code>repeated string scopes = 5 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the scopes at the given index.
+     */
+    com.google.protobuf.ByteString
+        getScopesBytes(int index);
 
     /**
      * <pre>
@@ -2811,6 +2854,7 @@ public final class ApiKeyServiceOuterClass {
       serviceAccountId_ = "";
       description_ = "";
       scope_ = "";
+      scopes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -2833,6 +2877,7 @@ public final class ApiKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2874,6 +2919,15 @@ public final class ApiKeyServiceOuterClass {
 
               break;
             }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                scopes_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              scopes_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2889,6 +2943,9 @@ public final class ApiKeyServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          scopes_ = scopes_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -3009,11 +3066,12 @@ public final class ApiKeyServiceOuterClass {
      * Scope of the API key.
      * </pre>
      *
-     * <code>string scope = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string scope = 3 [deprecated = true, (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @deprecated
      * @return The scope.
      */
     @java.lang.Override
-    public java.lang.String getScope() {
+    @java.lang.Deprecated public java.lang.String getScope() {
       java.lang.Object ref = scope_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -3030,11 +3088,12 @@ public final class ApiKeyServiceOuterClass {
      * Scope of the API key.
      * </pre>
      *
-     * <code>string scope = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string scope = 3 [deprecated = true, (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @deprecated
      * @return The bytes for scope.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getScopeBytes() {
       java.lang.Object ref = scope_;
       if (ref instanceof java.lang.String) {
@@ -3046,6 +3105,57 @@ public final class ApiKeyServiceOuterClass {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int SCOPES_FIELD_NUMBER = 5;
+    private com.google.protobuf.LazyStringList scopes_;
+    /**
+     * <pre>
+     * Scopes of the API key.
+     * </pre>
+     *
+     * <code>repeated string scopes = 5 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return A list containing the scopes.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getScopesList() {
+      return scopes_;
+    }
+    /**
+     * <pre>
+     * Scopes of the API key.
+     * </pre>
+     *
+     * <code>repeated string scopes = 5 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The count of scopes.
+     */
+    public int getScopesCount() {
+      return scopes_.size();
+    }
+    /**
+     * <pre>
+     * Scopes of the API key.
+     * </pre>
+     *
+     * <code>repeated string scopes = 5 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @param index The index of the element to return.
+     * @return The scopes at the given index.
+     */
+    public java.lang.String getScopes(int index) {
+      return scopes_.get(index);
+    }
+    /**
+     * <pre>
+     * Scopes of the API key.
+     * </pre>
+     *
+     * <code>repeated string scopes = 5 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the scopes at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getScopesBytes(int index) {
+      return scopes_.getByteString(index);
     }
 
     public static final int EXPIRES_AT_FIELD_NUMBER = 4;
@@ -3112,6 +3222,9 @@ public final class ApiKeyServiceOuterClass {
       if (expiresAt_ != null) {
         output.writeMessage(4, getExpiresAt());
       }
+      for (int i = 0; i < scopes_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, scopes_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3134,6 +3247,14 @@ public final class ApiKeyServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getExpiresAt());
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < scopes_.size(); i++) {
+          dataSize += computeStringSizeNoTag(scopes_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getScopesList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3155,6 +3276,8 @@ public final class ApiKeyServiceOuterClass {
           .equals(other.getDescription())) return false;
       if (!getScope()
           .equals(other.getScope())) return false;
+      if (!getScopesList()
+          .equals(other.getScopesList())) return false;
       if (hasExpiresAt() != other.hasExpiresAt()) return false;
       if (hasExpiresAt()) {
         if (!getExpiresAt()
@@ -3177,6 +3300,10 @@ public final class ApiKeyServiceOuterClass {
       hash = (53 * hash) + getDescription().hashCode();
       hash = (37 * hash) + SCOPE_FIELD_NUMBER;
       hash = (53 * hash) + getScope().hashCode();
+      if (getScopesCount() > 0) {
+        hash = (37 * hash) + SCOPES_FIELD_NUMBER;
+        hash = (53 * hash) + getScopesList().hashCode();
+      }
       if (hasExpiresAt()) {
         hash = (37 * hash) + EXPIRES_AT_FIELD_NUMBER;
         hash = (53 * hash) + getExpiresAt().hashCode();
@@ -3320,6 +3447,8 @@ public final class ApiKeyServiceOuterClass {
 
         scope_ = "";
 
+        scopes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (expiresAtBuilder_ == null) {
           expiresAt_ = null;
         } else {
@@ -3352,9 +3481,15 @@ public final class ApiKeyServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.CreateApiKeyRequest buildPartial() {
         yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.CreateApiKeyRequest result = new yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.CreateApiKeyRequest(this);
+        int from_bitField0_ = bitField0_;
         result.serviceAccountId_ = serviceAccountId_;
         result.description_ = description_;
         result.scope_ = scope_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          scopes_ = scopes_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.scopes_ = scopes_;
         if (expiresAtBuilder_ == null) {
           result.expiresAt_ = expiresAt_;
         } else {
@@ -3420,6 +3555,16 @@ public final class ApiKeyServiceOuterClass {
           scope_ = other.scope_;
           onChanged();
         }
+        if (!other.scopes_.isEmpty()) {
+          if (scopes_.isEmpty()) {
+            scopes_ = other.scopes_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureScopesIsMutable();
+            scopes_.addAll(other.scopes_);
+          }
+          onChanged();
+        }
         if (other.hasExpiresAt()) {
           mergeExpiresAt(other.getExpiresAt());
         }
@@ -3451,6 +3596,7 @@ public final class ApiKeyServiceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object serviceAccountId_ = "";
       /**
@@ -3660,10 +3806,11 @@ public final class ApiKeyServiceOuterClass {
        * Scope of the API key.
        * </pre>
        *
-       * <code>string scope = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string scope = 3 [deprecated = true, (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @deprecated
        * @return The scope.
        */
-      public java.lang.String getScope() {
+      @java.lang.Deprecated public java.lang.String getScope() {
         java.lang.Object ref = scope_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -3680,10 +3827,11 @@ public final class ApiKeyServiceOuterClass {
        * Scope of the API key.
        * </pre>
        *
-       * <code>string scope = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string scope = 3 [deprecated = true, (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @deprecated
        * @return The bytes for scope.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getScopeBytes() {
         java.lang.Object ref = scope_;
         if (ref instanceof String) {
@@ -3701,11 +3849,12 @@ public final class ApiKeyServiceOuterClass {
        * Scope of the API key.
        * </pre>
        *
-       * <code>string scope = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string scope = 3 [deprecated = true, (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @deprecated
        * @param value The scope to set.
        * @return This builder for chaining.
        */
-      public Builder setScope(
+      @java.lang.Deprecated public Builder setScope(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
@@ -3720,10 +3869,11 @@ public final class ApiKeyServiceOuterClass {
        * Scope of the API key.
        * </pre>
        *
-       * <code>string scope = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string scope = 3 [deprecated = true, (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearScope() {
+      @java.lang.Deprecated public Builder clearScope() {
         
         scope_ = getDefaultInstance().getScope();
         onChanged();
@@ -3734,11 +3884,12 @@ public final class ApiKeyServiceOuterClass {
        * Scope of the API key.
        * </pre>
        *
-       * <code>string scope = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string scope = 3 [deprecated = true, (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @deprecated
        * @param value The bytes for scope to set.
        * @return This builder for chaining.
        */
-      public Builder setScopeBytes(
+      @java.lang.Deprecated public Builder setScopeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -3746,6 +3897,152 @@ public final class ApiKeyServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         scope_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList scopes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureScopesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          scopes_ = new com.google.protobuf.LazyStringArrayList(scopes_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Scopes of the API key.
+       * </pre>
+       *
+       * <code>repeated string scopes = 5 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return A list containing the scopes.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getScopesList() {
+        return scopes_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Scopes of the API key.
+       * </pre>
+       *
+       * <code>repeated string scopes = 5 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The count of scopes.
+       */
+      public int getScopesCount() {
+        return scopes_.size();
+      }
+      /**
+       * <pre>
+       * Scopes of the API key.
+       * </pre>
+       *
+       * <code>repeated string scopes = 5 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param index The index of the element to return.
+       * @return The scopes at the given index.
+       */
+      public java.lang.String getScopes(int index) {
+        return scopes_.get(index);
+      }
+      /**
+       * <pre>
+       * Scopes of the API key.
+       * </pre>
+       *
+       * <code>repeated string scopes = 5 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the scopes at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getScopesBytes(int index) {
+        return scopes_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Scopes of the API key.
+       * </pre>
+       *
+       * <code>repeated string scopes = 5 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param index The index to set the value at.
+       * @param value The scopes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopes(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureScopesIsMutable();
+        scopes_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Scopes of the API key.
+       * </pre>
+       *
+       * <code>repeated string scopes = 5 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The scopes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addScopes(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureScopesIsMutable();
+        scopes_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Scopes of the API key.
+       * </pre>
+       *
+       * <code>repeated string scopes = 5 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param values The scopes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllScopes(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureScopesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, scopes_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Scopes of the API key.
+       * </pre>
+       *
+       * <code>repeated string scopes = 5 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopes() {
+        scopes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Scopes of the API key.
+       * </pre>
+       *
+       * <code>repeated string scopes = 5 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes of the scopes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addScopesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureScopesIsMutable();
+        scopes_.add(value);
         onChanged();
         return this;
       }
@@ -4896,6 +5193,74 @@ public final class ApiKeyServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Scopes of the API key.
+     * </pre>
+     *
+     * <code>repeated string scopes = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return A list containing the scopes.
+     */
+    java.util.List<java.lang.String>
+        getScopesList();
+    /**
+     * <pre>
+     * Scopes of the API key.
+     * </pre>
+     *
+     * <code>repeated string scopes = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The count of scopes.
+     */
+    int getScopesCount();
+    /**
+     * <pre>
+     * Scopes of the API key.
+     * </pre>
+     *
+     * <code>repeated string scopes = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @param index The index of the element to return.
+     * @return The scopes at the given index.
+     */
+    java.lang.String getScopes(int index);
+    /**
+     * <pre>
+     * Scopes of the API key.
+     * </pre>
+     *
+     * <code>repeated string scopes = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the scopes at the given index.
+     */
+    com.google.protobuf.ByteString
+        getScopesBytes(int index);
+
+    /**
+     * <pre>
+     * API key expiration timestamp, if not specified, then the API key doesn't expire
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 5;</code>
+     * @return Whether the expiresAt field is set.
+     */
+    boolean hasExpiresAt();
+    /**
+     * <pre>
+     * API key expiration timestamp, if not specified, then the API key doesn't expire
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 5;</code>
+     * @return The expiresAt.
+     */
+    com.google.protobuf.Timestamp getExpiresAt();
+    /**
+     * <pre>
+     * API key expiration timestamp, if not specified, then the API key doesn't expire
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 5;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.iam.v1.UpdateApiKeyRequest}
@@ -4912,6 +5277,7 @@ public final class ApiKeyServiceOuterClass {
     private UpdateApiKeyRequest() {
       apiKeyId_ = "";
       description_ = "";
+      scopes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -4934,6 +5300,7 @@ public final class ApiKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4969,6 +5336,28 @@ public final class ApiKeyServiceOuterClass {
               description_ = s;
               break;
             }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                scopes_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              scopes_.add(s);
+              break;
+            }
+            case 42: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (expiresAt_ != null) {
+                subBuilder = expiresAt_.toBuilder();
+              }
+              expiresAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(expiresAt_);
+                expiresAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4984,6 +5373,9 @@ public final class ApiKeyServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          scopes_ = scopes_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -5133,6 +5525,95 @@ public final class ApiKeyServiceOuterClass {
       }
     }
 
+    public static final int SCOPES_FIELD_NUMBER = 4;
+    private com.google.protobuf.LazyStringList scopes_;
+    /**
+     * <pre>
+     * Scopes of the API key.
+     * </pre>
+     *
+     * <code>repeated string scopes = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return A list containing the scopes.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getScopesList() {
+      return scopes_;
+    }
+    /**
+     * <pre>
+     * Scopes of the API key.
+     * </pre>
+     *
+     * <code>repeated string scopes = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The count of scopes.
+     */
+    public int getScopesCount() {
+      return scopes_.size();
+    }
+    /**
+     * <pre>
+     * Scopes of the API key.
+     * </pre>
+     *
+     * <code>repeated string scopes = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @param index The index of the element to return.
+     * @return The scopes at the given index.
+     */
+    public java.lang.String getScopes(int index) {
+      return scopes_.get(index);
+    }
+    /**
+     * <pre>
+     * Scopes of the API key.
+     * </pre>
+     *
+     * <code>repeated string scopes = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the scopes at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getScopesBytes(int index) {
+      return scopes_.getByteString(index);
+    }
+
+    public static final int EXPIRES_AT_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp expiresAt_;
+    /**
+     * <pre>
+     * API key expiration timestamp, if not specified, then the API key doesn't expire
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 5;</code>
+     * @return Whether the expiresAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasExpiresAt() {
+      return expiresAt_ != null;
+    }
+    /**
+     * <pre>
+     * API key expiration timestamp, if not specified, then the API key doesn't expire
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 5;</code>
+     * @return The expiresAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getExpiresAt() {
+      return expiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
+    }
+    /**
+     * <pre>
+     * API key expiration timestamp, if not specified, then the API key doesn't expire
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 5;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder() {
+      return getExpiresAt();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5156,6 +5637,12 @@ public final class ApiKeyServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
+      for (int i = 0; i < scopes_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, scopes_.getRaw(i));
+      }
+      if (expiresAt_ != null) {
+        output.writeMessage(5, getExpiresAt());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5174,6 +5661,18 @@ public final class ApiKeyServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < scopes_.size(); i++) {
+          dataSize += computeStringSizeNoTag(scopes_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getScopesList().size();
+      }
+      if (expiresAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getExpiresAt());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5199,6 +5698,13 @@ public final class ApiKeyServiceOuterClass {
       }
       if (!getDescription()
           .equals(other.getDescription())) return false;
+      if (!getScopesList()
+          .equals(other.getScopesList())) return false;
+      if (hasExpiresAt() != other.hasExpiresAt()) return false;
+      if (hasExpiresAt()) {
+        if (!getExpiresAt()
+            .equals(other.getExpiresAt())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5218,6 +5724,14 @@ public final class ApiKeyServiceOuterClass {
       }
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
+      if (getScopesCount() > 0) {
+        hash = (37 * hash) + SCOPES_FIELD_NUMBER;
+        hash = (53 * hash) + getScopesList().hashCode();
+      }
+      if (hasExpiresAt()) {
+        hash = (37 * hash) + EXPIRES_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getExpiresAt().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5361,6 +5875,14 @@ public final class ApiKeyServiceOuterClass {
         }
         description_ = "";
 
+        scopes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (expiresAtBuilder_ == null) {
+          expiresAt_ = null;
+        } else {
+          expiresAt_ = null;
+          expiresAtBuilder_ = null;
+        }
         return this;
       }
 
@@ -5387,6 +5909,7 @@ public final class ApiKeyServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.UpdateApiKeyRequest buildPartial() {
         yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.UpdateApiKeyRequest result = new yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.UpdateApiKeyRequest(this);
+        int from_bitField0_ = bitField0_;
         result.apiKeyId_ = apiKeyId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
@@ -5394,6 +5917,16 @@ public final class ApiKeyServiceOuterClass {
           result.updateMask_ = updateMaskBuilder_.build();
         }
         result.description_ = description_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          scopes_ = scopes_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.scopes_ = scopes_;
+        if (expiresAtBuilder_ == null) {
+          result.expiresAt_ = expiresAt_;
+        } else {
+          result.expiresAt_ = expiresAtBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -5453,6 +5986,19 @@ public final class ApiKeyServiceOuterClass {
           description_ = other.description_;
           onChanged();
         }
+        if (!other.scopes_.isEmpty()) {
+          if (scopes_.isEmpty()) {
+            scopes_ = other.scopes_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureScopesIsMutable();
+            scopes_.addAll(other.scopes_);
+          }
+          onChanged();
+        }
+        if (other.hasExpiresAt()) {
+          mergeExpiresAt(other.getExpiresAt());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -5481,6 +6027,7 @@ public final class ApiKeyServiceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object apiKeyId_ = "";
       /**
@@ -5832,6 +6379,307 @@ public final class ApiKeyServiceOuterClass {
         description_ = value;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.LazyStringList scopes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureScopesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          scopes_ = new com.google.protobuf.LazyStringArrayList(scopes_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Scopes of the API key.
+       * </pre>
+       *
+       * <code>repeated string scopes = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return A list containing the scopes.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getScopesList() {
+        return scopes_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Scopes of the API key.
+       * </pre>
+       *
+       * <code>repeated string scopes = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The count of scopes.
+       */
+      public int getScopesCount() {
+        return scopes_.size();
+      }
+      /**
+       * <pre>
+       * Scopes of the API key.
+       * </pre>
+       *
+       * <code>repeated string scopes = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param index The index of the element to return.
+       * @return The scopes at the given index.
+       */
+      public java.lang.String getScopes(int index) {
+        return scopes_.get(index);
+      }
+      /**
+       * <pre>
+       * Scopes of the API key.
+       * </pre>
+       *
+       * <code>repeated string scopes = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the scopes at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getScopesBytes(int index) {
+        return scopes_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Scopes of the API key.
+       * </pre>
+       *
+       * <code>repeated string scopes = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param index The index to set the value at.
+       * @param value The scopes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopes(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureScopesIsMutable();
+        scopes_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Scopes of the API key.
+       * </pre>
+       *
+       * <code>repeated string scopes = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The scopes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addScopes(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureScopesIsMutable();
+        scopes_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Scopes of the API key.
+       * </pre>
+       *
+       * <code>repeated string scopes = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param values The scopes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllScopes(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureScopesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, scopes_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Scopes of the API key.
+       * </pre>
+       *
+       * <code>repeated string scopes = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopes() {
+        scopes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Scopes of the API key.
+       * </pre>
+       *
+       * <code>repeated string scopes = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes of the scopes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addScopesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureScopesIsMutable();
+        scopes_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp expiresAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> expiresAtBuilder_;
+      /**
+       * <pre>
+       * API key expiration timestamp, if not specified, then the API key doesn't expire
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 5;</code>
+       * @return Whether the expiresAt field is set.
+       */
+      public boolean hasExpiresAt() {
+        return expiresAtBuilder_ != null || expiresAt_ != null;
+      }
+      /**
+       * <pre>
+       * API key expiration timestamp, if not specified, then the API key doesn't expire
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 5;</code>
+       * @return The expiresAt.
+       */
+      public com.google.protobuf.Timestamp getExpiresAt() {
+        if (expiresAtBuilder_ == null) {
+          return expiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
+        } else {
+          return expiresAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * API key expiration timestamp, if not specified, then the API key doesn't expire
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 5;</code>
+       */
+      public Builder setExpiresAt(com.google.protobuf.Timestamp value) {
+        if (expiresAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          expiresAt_ = value;
+          onChanged();
+        } else {
+          expiresAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * API key expiration timestamp, if not specified, then the API key doesn't expire
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 5;</code>
+       */
+      public Builder setExpiresAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (expiresAtBuilder_ == null) {
+          expiresAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          expiresAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * API key expiration timestamp, if not specified, then the API key doesn't expire
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 5;</code>
+       */
+      public Builder mergeExpiresAt(com.google.protobuf.Timestamp value) {
+        if (expiresAtBuilder_ == null) {
+          if (expiresAt_ != null) {
+            expiresAt_ =
+              com.google.protobuf.Timestamp.newBuilder(expiresAt_).mergeFrom(value).buildPartial();
+          } else {
+            expiresAt_ = value;
+          }
+          onChanged();
+        } else {
+          expiresAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * API key expiration timestamp, if not specified, then the API key doesn't expire
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 5;</code>
+       */
+      public Builder clearExpiresAt() {
+        if (expiresAtBuilder_ == null) {
+          expiresAt_ = null;
+          onChanged();
+        } else {
+          expiresAt_ = null;
+          expiresAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * API key expiration timestamp, if not specified, then the API key doesn't expire
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 5;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getExpiresAtBuilder() {
+        
+        onChanged();
+        return getExpiresAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * API key expiration timestamp, if not specified, then the API key doesn't expire
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 5;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder() {
+        if (expiresAtBuilder_ != null) {
+          return expiresAtBuilder_.getMessageOrBuilder();
+        } else {
+          return expiresAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
+        }
+      }
+      /**
+       * <pre>
+       * API key expiration timestamp, if not specified, then the API key doesn't expire
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getExpiresAtFieldBuilder() {
+        if (expiresAtBuilder_ == null) {
+          expiresAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getExpiresAt(),
+                  getParentForChildren(),
+                  isClean());
+          expiresAt_ = null;
+        }
+        return expiresAtBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11466,58 +12314,61 @@ public final class ApiKeyServiceOuterClass {
       "0-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=2000\"]" +
       "\n\023ListApiKeysResponse\022-\n\010api_keys\030\001 \003(\0132" +
       "\033.yandex.cloud.iam.v1.ApiKey\022\027\n\017next_pag" +
-      "e_token\030\002 \001(\t\"\245\001\n\023CreateApiKeyRequest\022$\n" +
+      "e_token\030\002 \001(\t\"\313\001\n\023CreateApiKeyRequest\022$\n" +
       "\022service_account_id\030\001 \001(\tB\010\212\3101\004<=50\022\036\n\013d" +
-      "escription\030\002 \001(\tB\t\212\3101\005<=256\022\030\n\005scope\030\003 \001" +
-      "(\tB\t\212\3101\005<=256\022.\n\nexpires_at\030\004 \001(\0132\032.goog" +
-      "le.protobuf.Timestamp\"T\n\024CreateApiKeyRes" +
-      "ponse\022,\n\007api_key\030\001 \001(\0132\033.yandex.cloud.ia" +
-      "m.v1.ApiKey\022\016\n\006secret\030\002 \001(\t\"\210\001\n\023UpdateAp" +
-      "iKeyRequest\022 \n\napi_key_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.prot" +
-      "obuf.FieldMask\022\036\n\013description\030\003 \001(\tB\t\212\3101" +
-      "\005<=256\"*\n\024UpdateApiKeyMetadata\022\022\n\napi_ke" +
-      "y_id\030\001 \001(\t\"7\n\023DeleteApiKeyRequest\022 \n\napi" +
-      "_key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024DeleteApi" +
-      "KeyMetadata\022\022\n\napi_key_id\030\001 \001(\t\"~\n\033ListA" +
-      "piKeyOperationsRequest\022 \n\napi_key_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
-      "\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=2000\"" +
-      "n\n\034ListApiKeyOperationsResponse\0225\n\nopera" +
-      "tions\030\001 \003(\0132!.yandex.cloud.operation.Ope" +
-      "ration\022\027\n\017next_page_token\030\002 \001(\t\"X\n\027ListA" +
-      "piKeyScopesRequest\022\035\n\tpage_size\030\001 \001(\003B\n\372" +
-      "\3071\0060-1000\022\036\n\npage_token\030\002 \001(\tB\n\212\3101\006<=200" +
-      "0\"C\n\030ListApiKeyScopesResponse\022\016\n\006scopes\030" +
-      "\001 \003(\t\022\027\n\017next_page_token\030\002 \001(\t2\366\007\n\rApiKe" +
-      "yService\022r\n\004List\022\'.yandex.cloud.iam.v1.L" +
-      "istApiKeysRequest\032(.yandex.cloud.iam.v1." +
-      "ListApiKeysResponse\"\027\202\323\344\223\002\021\022\017/iam/v1/api" +
-      "Keys\022o\n\003Get\022%.yandex.cloud.iam.v1.GetApi" +
-      "KeyRequest\032\033.yandex.cloud.iam.v1.ApiKey\"" +
-      "$\202\323\344\223\002\036\022\034/iam/v1/apiKeys/{api_key_id}\022y\n" +
-      "\006Create\022(.yandex.cloud.iam.v1.CreateApiK" +
-      "eyRequest\032).yandex.cloud.iam.v1.CreateAp" +
-      "iKeyResponse\"\032\202\323\344\223\002\024\"\017/iam/v1/apiKeys:\001*" +
-      "\022\240\001\n\006Update\022(.yandex.cloud.iam.v1.Update" +
-      "ApiKeyRequest\032!.yandex.cloud.operation.O" +
-      "peration\"I\202\323\344\223\002!2\034/iam/v1/apiKeys/{api_k" +
-      "ey_id}:\001*\262\322*\036\n\024UpdateApiKeyMetadata\022\006Api" +
-      "Key\022\254\001\n\006Delete\022(.yandex.cloud.iam.v1.Del" +
-      "eteApiKeyRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"U\202\323\344\223\002\036*\034/iam/v1/apiKeys/{ap" +
-      "i_key_id}\262\322*-\n\024DeleteApiKeyMetadata\022\025goo" +
-      "gle.protobuf.Empty\022\246\001\n\016ListOperations\0220." +
-      "yandex.cloud.iam.v1.ListApiKeyOperations" +
-      "Request\0321.yandex.cloud.iam.v1.ListApiKey" +
-      "OperationsResponse\"/\202\323\344\223\002)\022\'/iam/v1/apiK" +
-      "eys/{api_key_id}/operations\022\211\001\n\nListScop" +
-      "es\022,.yandex.cloud.iam.v1.ListApiKeyScope" +
-      "sRequest\032-.yandex.cloud.iam.v1.ListApiKe" +
-      "yScopesResponse\"\036\202\323\344\223\002\030\022\026/iam/v1/apiKeys" +
-      "/scopesBV\n\027yandex.cloud.api.iam.v1Z;gith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/iam/v1;iamb\006proto3"
+      "escription\030\002 \001(\tB\t\212\3101\005<=256\022\032\n\005scope\030\003 \001" +
+      "(\tB\013\030\001\212\3101\005<=256\022\"\n\006scopes\030\005 \003(\tB\022\202\3101\005<=1" +
+      "00\212\3101\005<=256\022.\n\nexpires_at\030\004 \001(\0132\032.google" +
+      ".protobuf.Timestamp\"T\n\024CreateApiKeyRespo" +
+      "nse\022,\n\007api_key\030\001 \001(\0132\033.yandex.cloud.iam." +
+      "v1.ApiKey\022\016\n\006secret\030\002 \001(\t\"\334\001\n\023UpdateApiK" +
+      "eyRequest\022 \n\napi_key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022/\n\013update_mask\030\002 \001(\0132\032.google.protob" +
+      "uf.FieldMask\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<" +
+      "=256\022\"\n\006scopes\030\004 \003(\tB\022\202\3101\0051-100\212\3101\005<=256" +
+      "\022.\n\nexpires_at\030\005 \001(\0132\032.google.protobuf.T" +
+      "imestamp\"*\n\024UpdateApiKeyMetadata\022\022\n\napi_" +
+      "key_id\030\001 \001(\t\"7\n\023DeleteApiKeyRequest\022 \n\na" +
+      "pi_key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024DeleteA" +
+      "piKeyMetadata\022\022\n\napi_key_id\030\001 \001(\t\"~\n\033Lis" +
+      "tApiKeyOperationsRequest\022 \n\napi_key_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
+      "\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=200" +
+      "0\"n\n\034ListApiKeyOperationsResponse\0225\n\nope" +
+      "rations\030\001 \003(\0132!.yandex.cloud.operation.O" +
+      "peration\022\027\n\017next_page_token\030\002 \001(\t\"X\n\027Lis" +
+      "tApiKeyScopesRequest\022\035\n\tpage_size\030\001 \001(\003B" +
+      "\n\372\3071\0060-1000\022\036\n\npage_token\030\002 \001(\tB\n\212\3101\006<=2" +
+      "000\"C\n\030ListApiKeyScopesResponse\022\016\n\006scope" +
+      "s\030\001 \003(\t\022\027\n\017next_page_token\030\002 \001(\t2\366\007\n\rApi" +
+      "KeyService\022r\n\004List\022\'.yandex.cloud.iam.v1" +
+      ".ListApiKeysRequest\032(.yandex.cloud.iam.v" +
+      "1.ListApiKeysResponse\"\027\202\323\344\223\002\021\022\017/iam/v1/a" +
+      "piKeys\022o\n\003Get\022%.yandex.cloud.iam.v1.GetA" +
+      "piKeyRequest\032\033.yandex.cloud.iam.v1.ApiKe" +
+      "y\"$\202\323\344\223\002\036\022\034/iam/v1/apiKeys/{api_key_id}\022" +
+      "y\n\006Create\022(.yandex.cloud.iam.v1.CreateAp" +
+      "iKeyRequest\032).yandex.cloud.iam.v1.Create" +
+      "ApiKeyResponse\"\032\202\323\344\223\002\024\"\017/iam/v1/apiKeys:" +
+      "\001*\022\240\001\n\006Update\022(.yandex.cloud.iam.v1.Upda" +
+      "teApiKeyRequest\032!.yandex.cloud.operation" +
+      ".Operation\"I\202\323\344\223\002!2\034/iam/v1/apiKeys/{api" +
+      "_key_id}:\001*\262\322*\036\n\024UpdateApiKeyMetadata\022\006A" +
+      "piKey\022\254\001\n\006Delete\022(.yandex.cloud.iam.v1.D" +
+      "eleteApiKeyRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"U\202\323\344\223\002\036*\034/iam/v1/apiKeys/{" +
+      "api_key_id}\262\322*-\n\024DeleteApiKeyMetadata\022\025g" +
+      "oogle.protobuf.Empty\022\246\001\n\016ListOperations\022" +
+      "0.yandex.cloud.iam.v1.ListApiKeyOperatio" +
+      "nsRequest\0321.yandex.cloud.iam.v1.ListApiK" +
+      "eyOperationsResponse\"/\202\323\344\223\002)\022\'/iam/v1/ap" +
+      "iKeys/{api_key_id}/operations\022\211\001\n\nListSc" +
+      "opes\022,.yandex.cloud.iam.v1.ListApiKeySco" +
+      "pesRequest\032-.yandex.cloud.iam.v1.ListApi" +
+      "KeyScopesResponse\"\036\202\323\344\223\002\030\022\026/iam/v1/apiKe" +
+      "ys/scopesBV\n\027yandex.cloud.api.iam.v1Z;gi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/iam/v1;iamb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11553,7 +12404,7 @@ public final class ApiKeyServiceOuterClass {
     internal_static_yandex_cloud_iam_v1_CreateApiKeyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iam_v1_CreateApiKeyRequest_descriptor,
-        new java.lang.String[] { "ServiceAccountId", "Description", "Scope", "ExpiresAt", });
+        new java.lang.String[] { "ServiceAccountId", "Description", "Scope", "Scopes", "ExpiresAt", });
     internal_static_yandex_cloud_iam_v1_CreateApiKeyResponse_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_iam_v1_CreateApiKeyResponse_fieldAccessorTable = new
@@ -11565,7 +12416,7 @@ public final class ApiKeyServiceOuterClass {
     internal_static_yandex_cloud_iam_v1_UpdateApiKeyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iam_v1_UpdateApiKeyRequest_descriptor,
-        new java.lang.String[] { "ApiKeyId", "UpdateMask", "Description", });
+        new java.lang.String[] { "ApiKeyId", "UpdateMask", "Description", "Scopes", "ExpiresAt", });
     internal_static_yandex_cloud_iam_v1_UpdateApiKeyMetadata_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_iam_v1_UpdateApiKeyMetadata_fieldAccessorTable = new
@@ -11614,6 +12465,7 @@ public final class ApiKeyServiceOuterClass {
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

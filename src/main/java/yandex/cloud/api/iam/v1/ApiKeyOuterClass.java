@@ -137,20 +137,63 @@ public final class ApiKeyOuterClass {
      * Scope of the API key. 0-256 characters long.
      * </pre>
      *
-     * <code>string scope = 6;</code>
+     * <code>string scope = 6 [deprecated = true];</code>
+     * @deprecated
      * @return The scope.
      */
-    java.lang.String getScope();
+    @java.lang.Deprecated java.lang.String getScope();
     /**
      * <pre>
      * Scope of the API key. 0-256 characters long.
      * </pre>
      *
-     * <code>string scope = 6;</code>
+     * <code>string scope = 6 [deprecated = true];</code>
+     * @deprecated
      * @return The bytes for scope.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getScopeBytes();
+
+    /**
+     * <pre>
+     * Scopes of the API key. 0-256 characters long.
+     * </pre>
+     *
+     * <code>repeated string scopes = 8;</code>
+     * @return A list containing the scopes.
+     */
+    java.util.List<java.lang.String>
+        getScopesList();
+    /**
+     * <pre>
+     * Scopes of the API key. 0-256 characters long.
+     * </pre>
+     *
+     * <code>repeated string scopes = 8;</code>
+     * @return The count of scopes.
+     */
+    int getScopesCount();
+    /**
+     * <pre>
+     * Scopes of the API key. 0-256 characters long.
+     * </pre>
+     *
+     * <code>repeated string scopes = 8;</code>
+     * @param index The index of the element to return.
+     * @return The scopes at the given index.
+     */
+    java.lang.String getScopes(int index);
+    /**
+     * <pre>
+     * Scopes of the API key. 0-256 characters long.
+     * </pre>
+     *
+     * <code>repeated string scopes = 8;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the scopes at the given index.
+     */
+    com.google.protobuf.ByteString
+        getScopesBytes(int index);
 
     /**
      * <pre>
@@ -200,6 +243,7 @@ public final class ApiKeyOuterClass {
       serviceAccountId_ = "";
       description_ = "";
       scope_ = "";
+      scopes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -222,6 +266,7 @@ public final class ApiKeyOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -295,6 +340,15 @@ public final class ApiKeyOuterClass {
 
               break;
             }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                scopes_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              scopes_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -310,6 +364,9 @@ public final class ApiKeyOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          scopes_ = scopes_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -548,11 +605,12 @@ public final class ApiKeyOuterClass {
      * Scope of the API key. 0-256 characters long.
      * </pre>
      *
-     * <code>string scope = 6;</code>
+     * <code>string scope = 6 [deprecated = true];</code>
+     * @deprecated
      * @return The scope.
      */
     @java.lang.Override
-    public java.lang.String getScope() {
+    @java.lang.Deprecated public java.lang.String getScope() {
       java.lang.Object ref = scope_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -569,11 +627,12 @@ public final class ApiKeyOuterClass {
      * Scope of the API key. 0-256 characters long.
      * </pre>
      *
-     * <code>string scope = 6;</code>
+     * <code>string scope = 6 [deprecated = true];</code>
+     * @deprecated
      * @return The bytes for scope.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getScopeBytes() {
       java.lang.Object ref = scope_;
       if (ref instanceof java.lang.String) {
@@ -585,6 +644,57 @@ public final class ApiKeyOuterClass {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int SCOPES_FIELD_NUMBER = 8;
+    private com.google.protobuf.LazyStringList scopes_;
+    /**
+     * <pre>
+     * Scopes of the API key. 0-256 characters long.
+     * </pre>
+     *
+     * <code>repeated string scopes = 8;</code>
+     * @return A list containing the scopes.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getScopesList() {
+      return scopes_;
+    }
+    /**
+     * <pre>
+     * Scopes of the API key. 0-256 characters long.
+     * </pre>
+     *
+     * <code>repeated string scopes = 8;</code>
+     * @return The count of scopes.
+     */
+    public int getScopesCount() {
+      return scopes_.size();
+    }
+    /**
+     * <pre>
+     * Scopes of the API key. 0-256 characters long.
+     * </pre>
+     *
+     * <code>repeated string scopes = 8;</code>
+     * @param index The index of the element to return.
+     * @return The scopes at the given index.
+     */
+    public java.lang.String getScopes(int index) {
+      return scopes_.get(index);
+    }
+    /**
+     * <pre>
+     * Scopes of the API key. 0-256 characters long.
+     * </pre>
+     *
+     * <code>repeated string scopes = 8;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the scopes at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getScopesBytes(int index) {
+      return scopes_.getByteString(index);
     }
 
     public static final int EXPIRES_AT_FIELD_NUMBER = 7;
@@ -660,6 +770,9 @@ public final class ApiKeyOuterClass {
       if (expiresAt_ != null) {
         output.writeMessage(7, getExpiresAt());
       }
+      for (int i = 0; i < scopes_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, scopes_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -692,6 +805,14 @@ public final class ApiKeyOuterClass {
       if (expiresAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getExpiresAt());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < scopes_.size(); i++) {
+          dataSize += computeStringSizeNoTag(scopes_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getScopesList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -726,6 +847,8 @@ public final class ApiKeyOuterClass {
       }
       if (!getScope()
           .equals(other.getScope())) return false;
+      if (!getScopesList()
+          .equals(other.getScopesList())) return false;
       if (hasExpiresAt() != other.hasExpiresAt()) return false;
       if (hasExpiresAt()) {
         if (!getExpiresAt()
@@ -758,6 +881,10 @@ public final class ApiKeyOuterClass {
       }
       hash = (37 * hash) + SCOPE_FIELD_NUMBER;
       hash = (53 * hash) + getScope().hashCode();
+      if (getScopesCount() > 0) {
+        hash = (37 * hash) + SCOPES_FIELD_NUMBER;
+        hash = (53 * hash) + getScopesList().hashCode();
+      }
       if (hasExpiresAt()) {
         hash = (37 * hash) + EXPIRES_AT_FIELD_NUMBER;
         hash = (53 * hash) + getExpiresAt().hashCode();
@@ -919,6 +1046,8 @@ public final class ApiKeyOuterClass {
         }
         scope_ = "";
 
+        scopes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (expiresAtBuilder_ == null) {
           expiresAt_ = null;
         } else {
@@ -951,6 +1080,7 @@ public final class ApiKeyOuterClass {
       @java.lang.Override
       public yandex.cloud.api.iam.v1.ApiKeyOuterClass.ApiKey buildPartial() {
         yandex.cloud.api.iam.v1.ApiKeyOuterClass.ApiKey result = new yandex.cloud.api.iam.v1.ApiKeyOuterClass.ApiKey(this);
+        int from_bitField0_ = bitField0_;
         result.id_ = id_;
         result.serviceAccountId_ = serviceAccountId_;
         if (createdAtBuilder_ == null) {
@@ -965,6 +1095,11 @@ public final class ApiKeyOuterClass {
           result.lastUsedAt_ = lastUsedAtBuilder_.build();
         }
         result.scope_ = scope_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          scopes_ = scopes_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.scopes_ = scopes_;
         if (expiresAtBuilder_ == null) {
           result.expiresAt_ = expiresAt_;
         } else {
@@ -1040,6 +1175,16 @@ public final class ApiKeyOuterClass {
           scope_ = other.scope_;
           onChanged();
         }
+        if (!other.scopes_.isEmpty()) {
+          if (scopes_.isEmpty()) {
+            scopes_ = other.scopes_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureScopesIsMutable();
+            scopes_.addAll(other.scopes_);
+          }
+          onChanged();
+        }
         if (other.hasExpiresAt()) {
           mergeExpiresAt(other.getExpiresAt());
         }
@@ -1071,6 +1216,7 @@ public final class ApiKeyOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -1676,10 +1822,11 @@ public final class ApiKeyOuterClass {
        * Scope of the API key. 0-256 characters long.
        * </pre>
        *
-       * <code>string scope = 6;</code>
+       * <code>string scope = 6 [deprecated = true];</code>
+       * @deprecated
        * @return The scope.
        */
-      public java.lang.String getScope() {
+      @java.lang.Deprecated public java.lang.String getScope() {
         java.lang.Object ref = scope_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -1696,10 +1843,11 @@ public final class ApiKeyOuterClass {
        * Scope of the API key. 0-256 characters long.
        * </pre>
        *
-       * <code>string scope = 6;</code>
+       * <code>string scope = 6 [deprecated = true];</code>
+       * @deprecated
        * @return The bytes for scope.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getScopeBytes() {
         java.lang.Object ref = scope_;
         if (ref instanceof String) {
@@ -1717,11 +1865,12 @@ public final class ApiKeyOuterClass {
        * Scope of the API key. 0-256 characters long.
        * </pre>
        *
-       * <code>string scope = 6;</code>
+       * <code>string scope = 6 [deprecated = true];</code>
+       * @deprecated
        * @param value The scope to set.
        * @return This builder for chaining.
        */
-      public Builder setScope(
+      @java.lang.Deprecated public Builder setScope(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
@@ -1736,10 +1885,11 @@ public final class ApiKeyOuterClass {
        * Scope of the API key. 0-256 characters long.
        * </pre>
        *
-       * <code>string scope = 6;</code>
+       * <code>string scope = 6 [deprecated = true];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearScope() {
+      @java.lang.Deprecated public Builder clearScope() {
         
         scope_ = getDefaultInstance().getScope();
         onChanged();
@@ -1750,11 +1900,12 @@ public final class ApiKeyOuterClass {
        * Scope of the API key. 0-256 characters long.
        * </pre>
        *
-       * <code>string scope = 6;</code>
+       * <code>string scope = 6 [deprecated = true];</code>
+       * @deprecated
        * @param value The bytes for scope to set.
        * @return This builder for chaining.
        */
-      public Builder setScopeBytes(
+      @java.lang.Deprecated public Builder setScopeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -1762,6 +1913,152 @@ public final class ApiKeyOuterClass {
   checkByteStringIsUtf8(value);
         
         scope_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList scopes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureScopesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          scopes_ = new com.google.protobuf.LazyStringArrayList(scopes_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Scopes of the API key. 0-256 characters long.
+       * </pre>
+       *
+       * <code>repeated string scopes = 8;</code>
+       * @return A list containing the scopes.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getScopesList() {
+        return scopes_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Scopes of the API key. 0-256 characters long.
+       * </pre>
+       *
+       * <code>repeated string scopes = 8;</code>
+       * @return The count of scopes.
+       */
+      public int getScopesCount() {
+        return scopes_.size();
+      }
+      /**
+       * <pre>
+       * Scopes of the API key. 0-256 characters long.
+       * </pre>
+       *
+       * <code>repeated string scopes = 8;</code>
+       * @param index The index of the element to return.
+       * @return The scopes at the given index.
+       */
+      public java.lang.String getScopes(int index) {
+        return scopes_.get(index);
+      }
+      /**
+       * <pre>
+       * Scopes of the API key. 0-256 characters long.
+       * </pre>
+       *
+       * <code>repeated string scopes = 8;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the scopes at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getScopesBytes(int index) {
+        return scopes_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Scopes of the API key. 0-256 characters long.
+       * </pre>
+       *
+       * <code>repeated string scopes = 8;</code>
+       * @param index The index to set the value at.
+       * @param value The scopes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopes(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureScopesIsMutable();
+        scopes_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Scopes of the API key. 0-256 characters long.
+       * </pre>
+       *
+       * <code>repeated string scopes = 8;</code>
+       * @param value The scopes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addScopes(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureScopesIsMutable();
+        scopes_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Scopes of the API key. 0-256 characters long.
+       * </pre>
+       *
+       * <code>repeated string scopes = 8;</code>
+       * @param values The scopes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllScopes(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureScopesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, scopes_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Scopes of the API key. 0-256 characters long.
+       * </pre>
+       *
+       * <code>repeated string scopes = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopes() {
+        scopes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Scopes of the API key. 0-256 characters long.
+       * </pre>
+       *
+       * <code>repeated string scopes = 8;</code>
+       * @param value The bytes of the scopes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addScopesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureScopesIsMutable();
+        scopes_.add(value);
         onChanged();
         return this;
       }
@@ -1989,15 +2286,15 @@ public final class ApiKeyOuterClass {
     java.lang.String[] descriptorData = {
       "\n!yandex/cloud/iam/v1/api_key.proto\022\023yan" +
       "dex.cloud.iam.v1\032\037google/protobuf/timest" +
-      "amp.proto\"\346\001\n\006ApiKey\022\n\n\002id\030\001 \001(\t\022\032\n\022serv" +
+      "amp.proto\"\372\001\n\006ApiKey\022\n\n\002id\030\001 \001(\t\022\032\n\022serv" +
       "ice_account_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\013" +
       "2\032.google.protobuf.Timestamp\022\023\n\013descript" +
       "ion\030\004 \001(\t\0220\n\014last_used_at\030\005 \001(\0132\032.google" +
-      ".protobuf.Timestamp\022\r\n\005scope\030\006 \001(\t\022.\n\nex" +
-      "pires_at\030\007 \001(\0132\032.google.protobuf.Timesta" +
-      "mpBV\n\027yandex.cloud.api.iam.v1Z;github.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "iam/v1;iamb\006proto3"
+      ".protobuf.Timestamp\022\021\n\005scope\030\006 \001(\tB\002\030\001\022\016" +
+      "\n\006scopes\030\010 \003(\t\022.\n\nexpires_at\030\007 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampBV\n\027yandex.cloud.a" +
+      "pi.iam.v1Z;github.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/iam/v1;iamb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2009,7 +2306,7 @@ public final class ApiKeyOuterClass {
     internal_static_yandex_cloud_iam_v1_ApiKey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iam_v1_ApiKey_descriptor,
-        new java.lang.String[] { "Id", "ServiceAccountId", "CreatedAt", "Description", "LastUsedAt", "Scope", "ExpiresAt", });
+        new java.lang.String[] { "Id", "ServiceAccountId", "CreatedAt", "Description", "LastUsedAt", "Scope", "Scopes", "ExpiresAt", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

@@ -5696,6 +5696,33 @@ public final class BucketServiceOuterClass {
      * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
      */
     yandex.cloud.api.storage.v1.BucketOuterClass.EncryptionOrBuilder getEncryptionOrBuilder();
+
+    /**
+     * <pre>
+     * requires permission s3:PutBucketAllowedPrivateEndpoints
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 15;</code>
+     * @return Whether the allowedPrivateEndpoints field is set.
+     */
+    boolean hasAllowedPrivateEndpoints();
+    /**
+     * <pre>
+     * requires permission s3:PutBucketAllowedPrivateEndpoints
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 15;</code>
+     * @return The allowedPrivateEndpoints.
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints getAllowedPrivateEndpoints();
+    /**
+     * <pre>
+     * requires permission s3:PutBucketAllowedPrivateEndpoints
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 15;</code>
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpointsOrBuilder getAllowedPrivateEndpointsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.storage.v1.UpdateBucketRequest}
@@ -5886,6 +5913,19 @@ public final class BucketServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(encryption_);
                 encryption_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 122: {
+              yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints.Builder subBuilder = null;
+              if (allowedPrivateEndpoints_ != null) {
+                subBuilder = allowedPrivateEndpoints_.toBuilder();
+              }
+              allowedPrivateEndpoints_ = input.readMessage(yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(allowedPrivateEndpoints_);
+                allowedPrivateEndpoints_ = subBuilder.buildPartial();
               }
 
               break;
@@ -6558,6 +6598,44 @@ public final class BucketServiceOuterClass {
       return getEncryption();
     }
 
+    public static final int ALLOWED_PRIVATE_ENDPOINTS_FIELD_NUMBER = 15;
+    private yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints allowedPrivateEndpoints_;
+    /**
+     * <pre>
+     * requires permission s3:PutBucketAllowedPrivateEndpoints
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 15;</code>
+     * @return Whether the allowedPrivateEndpoints field is set.
+     */
+    @java.lang.Override
+    public boolean hasAllowedPrivateEndpoints() {
+      return allowedPrivateEndpoints_ != null;
+    }
+    /**
+     * <pre>
+     * requires permission s3:PutBucketAllowedPrivateEndpoints
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 15;</code>
+     * @return The allowedPrivateEndpoints.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints getAllowedPrivateEndpoints() {
+      return allowedPrivateEndpoints_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints.getDefaultInstance() : allowedPrivateEndpoints_;
+    }
+    /**
+     * <pre>
+     * requires permission s3:PutBucketAllowedPrivateEndpoints
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 15;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpointsOrBuilder getAllowedPrivateEndpointsOrBuilder() {
+      return getAllowedPrivateEndpoints();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6613,6 +6691,9 @@ public final class BucketServiceOuterClass {
       }
       if (encryption_ != null) {
         output.writeMessage(14, getEncryption());
+      }
+      if (allowedPrivateEndpoints_ != null) {
+        output.writeMessage(15, getAllowedPrivateEndpoints());
       }
       unknownFields.writeTo(output);
     }
@@ -6677,6 +6758,10 @@ public final class BucketServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, getEncryption());
       }
+      if (allowedPrivateEndpoints_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getAllowedPrivateEndpoints());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6740,6 +6825,11 @@ public final class BucketServiceOuterClass {
         if (!getEncryption()
             .equals(other.getEncryption())) return false;
       }
+      if (hasAllowedPrivateEndpoints() != other.hasAllowedPrivateEndpoints()) return false;
+      if (hasAllowedPrivateEndpoints()) {
+        if (!getAllowedPrivateEndpoints()
+            .equals(other.getAllowedPrivateEndpoints())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6799,6 +6889,10 @@ public final class BucketServiceOuterClass {
       if (hasEncryption()) {
         hash = (37 * hash) + ENCRYPTION_FIELD_NUMBER;
         hash = (53 * hash) + getEncryption().hashCode();
+      }
+      if (hasAllowedPrivateEndpoints()) {
+        hash = (37 * hash) + ALLOWED_PRIVATE_ENDPOINTS_FIELD_NUMBER;
+        hash = (53 * hash) + getAllowedPrivateEndpoints().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -7004,6 +7098,12 @@ public final class BucketServiceOuterClass {
           encryption_ = null;
           encryptionBuilder_ = null;
         }
+        if (allowedPrivateEndpointsBuilder_ == null) {
+          allowedPrivateEndpoints_ = null;
+        } else {
+          allowedPrivateEndpoints_ = null;
+          allowedPrivateEndpointsBuilder_ = null;
+        }
         return this;
       }
 
@@ -7096,6 +7196,11 @@ public final class BucketServiceOuterClass {
           result.encryption_ = encryption_;
         } else {
           result.encryption_ = encryptionBuilder_.build();
+        }
+        if (allowedPrivateEndpointsBuilder_ == null) {
+          result.allowedPrivateEndpoints_ = allowedPrivateEndpoints_;
+        } else {
+          result.allowedPrivateEndpoints_ = allowedPrivateEndpointsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -7257,6 +7362,9 @@ public final class BucketServiceOuterClass {
         }
         if (other.hasEncryption()) {
           mergeEncryption(other.getEncryption());
+        }
+        if (other.hasAllowedPrivateEndpoints()) {
+          mergeAllowedPrivateEndpoints(other.getAllowedPrivateEndpoints());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9761,6 +9869,161 @@ public final class BucketServiceOuterClass {
           encryption_ = null;
         }
         return encryptionBuilder_;
+      }
+
+      private yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints allowedPrivateEndpoints_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints, yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpointsOrBuilder> allowedPrivateEndpointsBuilder_;
+      /**
+       * <pre>
+       * requires permission s3:PutBucketAllowedPrivateEndpoints
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 15;</code>
+       * @return Whether the allowedPrivateEndpoints field is set.
+       */
+      public boolean hasAllowedPrivateEndpoints() {
+        return allowedPrivateEndpointsBuilder_ != null || allowedPrivateEndpoints_ != null;
+      }
+      /**
+       * <pre>
+       * requires permission s3:PutBucketAllowedPrivateEndpoints
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 15;</code>
+       * @return The allowedPrivateEndpoints.
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints getAllowedPrivateEndpoints() {
+        if (allowedPrivateEndpointsBuilder_ == null) {
+          return allowedPrivateEndpoints_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints.getDefaultInstance() : allowedPrivateEndpoints_;
+        } else {
+          return allowedPrivateEndpointsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * requires permission s3:PutBucketAllowedPrivateEndpoints
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 15;</code>
+       */
+      public Builder setAllowedPrivateEndpoints(yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints value) {
+        if (allowedPrivateEndpointsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          allowedPrivateEndpoints_ = value;
+          onChanged();
+        } else {
+          allowedPrivateEndpointsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * requires permission s3:PutBucketAllowedPrivateEndpoints
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 15;</code>
+       */
+      public Builder setAllowedPrivateEndpoints(
+          yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints.Builder builderForValue) {
+        if (allowedPrivateEndpointsBuilder_ == null) {
+          allowedPrivateEndpoints_ = builderForValue.build();
+          onChanged();
+        } else {
+          allowedPrivateEndpointsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * requires permission s3:PutBucketAllowedPrivateEndpoints
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 15;</code>
+       */
+      public Builder mergeAllowedPrivateEndpoints(yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints value) {
+        if (allowedPrivateEndpointsBuilder_ == null) {
+          if (allowedPrivateEndpoints_ != null) {
+            allowedPrivateEndpoints_ =
+              yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints.newBuilder(allowedPrivateEndpoints_).mergeFrom(value).buildPartial();
+          } else {
+            allowedPrivateEndpoints_ = value;
+          }
+          onChanged();
+        } else {
+          allowedPrivateEndpointsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * requires permission s3:PutBucketAllowedPrivateEndpoints
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 15;</code>
+       */
+      public Builder clearAllowedPrivateEndpoints() {
+        if (allowedPrivateEndpointsBuilder_ == null) {
+          allowedPrivateEndpoints_ = null;
+          onChanged();
+        } else {
+          allowedPrivateEndpoints_ = null;
+          allowedPrivateEndpointsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * requires permission s3:PutBucketAllowedPrivateEndpoints
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 15;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints.Builder getAllowedPrivateEndpointsBuilder() {
+        
+        onChanged();
+        return getAllowedPrivateEndpointsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * requires permission s3:PutBucketAllowedPrivateEndpoints
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 15;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpointsOrBuilder getAllowedPrivateEndpointsOrBuilder() {
+        if (allowedPrivateEndpointsBuilder_ != null) {
+          return allowedPrivateEndpointsBuilder_.getMessageOrBuilder();
+        } else {
+          return allowedPrivateEndpoints_ == null ?
+              yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints.getDefaultInstance() : allowedPrivateEndpoints_;
+        }
+      }
+      /**
+       * <pre>
+       * requires permission s3:PutBucketAllowedPrivateEndpoints
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints, yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpointsOrBuilder> 
+          getAllowedPrivateEndpointsFieldBuilder() {
+        if (allowedPrivateEndpointsBuilder_ == null) {
+          allowedPrivateEndpointsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints, yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpointsOrBuilder>(
+                  getAllowedPrivateEndpoints(),
+                  getParentForChildren(),
+                  isClean());
+          allowedPrivateEndpoints_ = null;
+        }
+        return allowedPrivateEndpointsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -17499,7 +17762,7 @@ public final class BucketServiceOuterClass {
       "nonymousAccessFlags\022)\n\003acl\030\007 \001(\0132\034.yande" +
       "x.cloud.storage.v1.ACL\022*\n\004tags\030\010 \003(\0132\034.y" +
       "andex.cloud.storage.v1.TagJ\004\010\003\020\004\"$\n\024Crea" +
-      "teBucketMetadata\022\014\n\004name\030\001 \001(\t\"\302\005\n\023Updat" +
+      "teBucketMetadata\022\014\n\004name\030\001 \001(\t\"\235\006\n\023Updat" +
       "eBucketRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\0225\n\013up" +
       "date_mask\030\002 \001(\0132\032.google.protobuf.FieldM" +
       "askB\004\350\3071\001\022M\n\026anonymous_access_flags\030\003 \001(" +
@@ -17517,67 +17780,69 @@ public final class BucketServiceOuterClass {
       "dex.cloud.storage.v1.Tag\0228\n\013object_lock\030" +
       "\r \001(\0132#.yandex.cloud.storage.v1.ObjectLo" +
       "ck\0227\n\nencryption\030\016 \001(\0132#.yandex.cloud.st" +
-      "orage.v1.Encryption\"$\n\024UpdateBucketMetad" +
-      "ata\022\014\n\004name\030\001 \001(\t\")\n\023DeleteBucketRequest" +
-      "\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\"$\n\024DeleteBucketMeta" +
-      "data\022\014\n\004name\030\001 \001(\t\"+\n\025GetBucketStatsRequ" +
-      "est\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\"1\n\033GetBucketHTTP" +
-      "SConfigRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\"n\n\034Se" +
-      "lfManagedHTTPSConfigParams\022&\n\017certificat" +
-      "e_pem\030\001 \001(\tB\r\212\3101\t<=3145728\022&\n\017private_ke" +
-      "y_pem\030\002 \001(\tB\r\212\3101\t<=3145728\"=\n#Certificat" +
-      "eManagerHTTPSConfigParams\022\026\n\016certificate" +
-      "_id\030\001 \001(\t\"\355\001\n\033SetBucketHTTPSConfigReques" +
-      "t\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022M\n\014self_managed\030\002 " +
-      "\001(\01325.yandex.cloud.storage.v1.SelfManage" +
-      "dHTTPSConfigParamsH\000\022[\n\023certificate_mana" +
-      "ger\030\003 \001(\0132<.yandex.cloud.storage.v1.Cert" +
-      "ificateManagerHTTPSConfigParamsH\000B\016\n\006par" +
-      "ams\022\004\300\3011\001\",\n\034SetBucketHTTPSConfigMetadat" +
-      "a\022\014\n\004name\030\001 \001(\t\"4\n\036DeleteBucketHTTPSConf" +
-      "igRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\"/\n\037DeleteB" +
-      "ucketHTTPSConfigMetadata\022\014\n\004name\030\001 \001(\t2\341" +
-      "\013\n\rBucketService\022~\n\004List\022+.yandex.cloud." +
-      "storage.v1.ListBucketsRequest\032,.yandex.c" +
-      "loud.storage.v1.ListBucketsResponse\"\033\202\323\344" +
-      "\223\002\025\022\023/storage/v1/buckets\022u\n\003Get\022).yandex" +
-      ".cloud.storage.v1.GetBucketRequest\032\037.yan" +
-      "dex.cloud.storage.v1.Bucket\"\"\202\323\344\223\002\034\022\032/st" +
-      "orage/v1/buckets/{name}\022\233\001\n\006Create\022,.yan" +
-      "dex.cloud.storage.v1.CreateBucketRequest" +
-      "\032!.yandex.cloud.operation.Operation\"@\202\323\344" +
-      "\223\002\030\"\023/storage/v1/buckets:\001*\262\322*\036\n\024CreateB" +
-      "ucketMetadata\022\006Bucket\022\242\001\n\006Update\022,.yande" +
-      "x.cloud.storage.v1.UpdateBucketRequest\032!" +
-      ".yandex.cloud.operation.Operation\"G\202\323\344\223\002" +
-      "\0372\032/storage/v1/buckets/{name}:\001*\262\322*\036\n\024Up" +
-      "dateBucketMetadata\022\006Bucket\022\256\001\n\006Delete\022,." +
-      "yandex.cloud.storage.v1.DeleteBucketRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"S" +
-      "\202\323\344\223\002\034*\032/storage/v1/buckets/{name}\262\322*-\n\024" +
-      "DeleteBucketMetadata\022\025google.protobuf.Em" +
-      "pty\022\215\001\n\010GetStats\022..yandex.cloud.storage." +
-      "v1.GetBucketStatsRequest\032$.yandex.cloud." +
-      "storage.v1.BucketStats\"+\202\323\344\223\002%\022#/storage" +
-      "/v1/buckets/{name}:getStats\022\237\001\n\016GetHTTPS" +
-      "Config\0224.yandex.cloud.storage.v1.GetBuck" +
-      "etHTTPSConfigRequest\032$.yandex.cloud.stor" +
-      "age.v1.HTTPSConfig\"1\202\323\344\223\002+\022)/storage/v1/" +
-      "buckets/{name}:getHttpsConfig\022\316\001\n\016SetHTT" +
-      "PSConfig\0224.yandex.cloud.storage.v1.SetBu" +
-      "cketHTTPSConfigRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"c\202\323\344\223\002.\")/storage/v1/b" +
-      "uckets/{name}:setHttpsConfig:\001*\262\322*+\n\034Set" +
-      "BucketHTTPSConfigMetadata\022\013HTTPSConfig\022\341" +
-      "\001\n\021DeleteHTTPSConfig\0227.yandex.cloud.stor" +
-      "age.v1.DeleteBucketHTTPSConfigRequest\032!." +
-      "yandex.cloud.operation.Operation\"p\202\323\344\223\002." +
-      "\",/storage/v1/buckets/{name}:deleteHttps" +
-      "Config\262\322*8\n\037DeleteBucketHTTPSConfigMetad" +
-      "ata\022\025google.protobuf.EmptyBb\n\033yandex.clo" +
-      "ud.api.storage.v1ZCgithub.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/storage/v1;s" +
-      "torageb\006proto3"
+      "orage.v1.Encryption\022Y\n\031allowed_private_e" +
+      "ndpoints\030\017 \001(\01326.yandex.cloud.storage.v1" +
+      ".BucketAllowedPrivateEndpoints\"$\n\024Update" +
+      "BucketMetadata\022\014\n\004name\030\001 \001(\t\")\n\023DeleteBu" +
+      "cketRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\"$\n\024Delet" +
+      "eBucketMetadata\022\014\n\004name\030\001 \001(\t\"+\n\025GetBuck" +
+      "etStatsRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\"1\n\033Ge" +
+      "tBucketHTTPSConfigRequest\022\022\n\004name\030\001 \001(\tB" +
+      "\004\350\3071\001\"n\n\034SelfManagedHTTPSConfigParams\022&\n" +
+      "\017certificate_pem\030\001 \001(\tB\r\212\3101\t<=3145728\022&\n" +
+      "\017private_key_pem\030\002 \001(\tB\r\212\3101\t<=3145728\"=\n" +
+      "#CertificateManagerHTTPSConfigParams\022\026\n\016" +
+      "certificate_id\030\001 \001(\t\"\355\001\n\033SetBucketHTTPSC" +
+      "onfigRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022M\n\014self" +
+      "_managed\030\002 \001(\01325.yandex.cloud.storage.v1" +
+      ".SelfManagedHTTPSConfigParamsH\000\022[\n\023certi" +
+      "ficate_manager\030\003 \001(\0132<.yandex.cloud.stor" +
+      "age.v1.CertificateManagerHTTPSConfigPara" +
+      "msH\000B\016\n\006params\022\004\300\3011\001\",\n\034SetBucketHTTPSCo" +
+      "nfigMetadata\022\014\n\004name\030\001 \001(\t\"4\n\036DeleteBuck" +
+      "etHTTPSConfigRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001" +
+      "\"/\n\037DeleteBucketHTTPSConfigMetadata\022\014\n\004n" +
+      "ame\030\001 \001(\t2\341\013\n\rBucketService\022~\n\004List\022+.ya" +
+      "ndex.cloud.storage.v1.ListBucketsRequest" +
+      "\032,.yandex.cloud.storage.v1.ListBucketsRe" +
+      "sponse\"\033\202\323\344\223\002\025\022\023/storage/v1/buckets\022u\n\003G" +
+      "et\022).yandex.cloud.storage.v1.GetBucketRe" +
+      "quest\032\037.yandex.cloud.storage.v1.Bucket\"\"" +
+      "\202\323\344\223\002\034\022\032/storage/v1/buckets/{name}\022\233\001\n\006C" +
+      "reate\022,.yandex.cloud.storage.v1.CreateBu" +
+      "cketRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"@\202\323\344\223\002\030\"\023/storage/v1/buckets:\001*\262\322" +
+      "*\036\n\024CreateBucketMetadata\022\006Bucket\022\242\001\n\006Upd" +
+      "ate\022,.yandex.cloud.storage.v1.UpdateBuck" +
+      "etRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"G\202\323\344\223\002\0372\032/storage/v1/buckets/{name}" +
+      ":\001*\262\322*\036\n\024UpdateBucketMetadata\022\006Bucket\022\256\001" +
+      "\n\006Delete\022,.yandex.cloud.storage.v1.Delet" +
+      "eBucketRequest\032!.yandex.cloud.operation." +
+      "Operation\"S\202\323\344\223\002\034*\032/storage/v1/buckets/{" +
+      "name}\262\322*-\n\024DeleteBucketMetadata\022\025google." +
+      "protobuf.Empty\022\215\001\n\010GetStats\022..yandex.clo" +
+      "ud.storage.v1.GetBucketStatsRequest\032$.ya" +
+      "ndex.cloud.storage.v1.BucketStats\"+\202\323\344\223\002" +
+      "%\022#/storage/v1/buckets/{name}:getStats\022\237" +
+      "\001\n\016GetHTTPSConfig\0224.yandex.cloud.storage" +
+      ".v1.GetBucketHTTPSConfigRequest\032$.yandex" +
+      ".cloud.storage.v1.HTTPSConfig\"1\202\323\344\223\002+\022)/" +
+      "storage/v1/buckets/{name}:getHttpsConfig" +
+      "\022\316\001\n\016SetHTTPSConfig\0224.yandex.cloud.stora" +
+      "ge.v1.SetBucketHTTPSConfigRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"c\202\323\344\223\002.\")/s" +
+      "torage/v1/buckets/{name}:setHttpsConfig:" +
+      "\001*\262\322*+\n\034SetBucketHTTPSConfigMetadata\022\013HT" +
+      "TPSConfig\022\341\001\n\021DeleteHTTPSConfig\0227.yandex" +
+      ".cloud.storage.v1.DeleteBucketHTTPSConfi" +
+      "gRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"p\202\323\344\223\002.\",/storage/v1/buckets/{name}:" +
+      "deleteHttpsConfig\262\322*8\n\037DeleteBucketHTTPS" +
+      "ConfigMetadata\022\025google.protobuf.EmptyBb\n" +
+      "\033yandex.cloud.api.storage.v1ZCgithub.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/s" +
+      "torage/v1;storageb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17625,7 +17890,7 @@ public final class BucketServiceOuterClass {
     internal_static_yandex_cloud_storage_v1_UpdateBucketRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_storage_v1_UpdateBucketRequest_descriptor,
-        new java.lang.String[] { "Name", "UpdateMask", "AnonymousAccessFlags", "DefaultStorageClass", "MaxSize", "Cors", "WebsiteSettings", "Versioning", "LifecycleRules", "Policy", "Acl", "Tags", "ObjectLock", "Encryption", });
+        new java.lang.String[] { "Name", "UpdateMask", "AnonymousAccessFlags", "DefaultStorageClass", "MaxSize", "Cors", "WebsiteSettings", "Versioning", "LifecycleRules", "Policy", "Acl", "Tags", "ObjectLock", "Encryption", "AllowedPrivateEndpoints", });
     internal_static_yandex_cloud_storage_v1_UpdateBucketMetadata_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_storage_v1_UpdateBucketMetadata_fieldAccessorTable = new

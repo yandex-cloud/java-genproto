@@ -49,6 +49,37 @@ public final class PayloadServiceGrpc {
     return getGetMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest,
+      yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse> getGetExMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetEx",
+      requestType = yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest.class,
+      responseType = yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest,
+      yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse> getGetExMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest, yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse> getGetExMethod;
+    if ((getGetExMethod = PayloadServiceGrpc.getGetExMethod) == null) {
+      synchronized (PayloadServiceGrpc.class) {
+        if ((getGetExMethod = PayloadServiceGrpc.getGetExMethod) == null) {
+          PayloadServiceGrpc.getGetExMethod = getGetExMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest, yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetEx"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new PayloadServiceMethodDescriptorSupplier("GetEx"))
+              .build();
+        }
+      }
+    }
+    return getGetExMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -111,6 +142,13 @@ public final class PayloadServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void getEx(yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetExMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -120,6 +158,13 @@ public final class PayloadServiceGrpc {
                 yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetPayloadRequest,
                 yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload>(
                   this, METHODID_GET)))
+          .addMethod(
+            getGetExMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest,
+                yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse>(
+                  this, METHODID_GET_EX)))
           .build();
     }
   }
@@ -152,6 +197,14 @@ public final class PayloadServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getEx(yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetExMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -180,6 +233,13 @@ public final class PayloadServiceGrpc {
     public yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload get(yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetPayloadRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse getEx(yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetExMethod(), getCallOptions(), request);
     }
   }
 
@@ -211,9 +271,18 @@ public final class PayloadServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse> getEx(
+        yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetExMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
+  private static final int METHODID_GET_EX = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -235,6 +304,10 @@ public final class PayloadServiceGrpc {
         case METHODID_GET:
           serviceImpl.get((yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetPayloadRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload>) responseObserver);
+          break;
+        case METHODID_GET_EX:
+          serviceImpl.getEx((yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -298,6 +371,7 @@ public final class PayloadServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new PayloadServiceFileDescriptorSupplier())
               .addMethod(getGetMethod())
+              .addMethod(getGetExMethod())
               .build();
         }
       }

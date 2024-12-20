@@ -19417,6 +19417,1515 @@ public final class DatasetServiceOuterClass {
 
   }
 
+  public interface ListUploadSchemasRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.dataset.v1.ListUploadSchemasRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Dataset task type to list schemas.
+     * </pre>
+     *
+     * <code>string task_type = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The taskType.
+     */
+    java.lang.String getTaskType();
+    /**
+     * <pre>
+     * Dataset task type to list schemas.
+     * </pre>
+     *
+     * <code>string task_type = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for taskType.
+     */
+    com.google.protobuf.ByteString
+        getTaskTypeBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.dataset.v1.ListUploadSchemasRequest}
+   */
+  public static final class ListUploadSchemasRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.dataset.v1.ListUploadSchemasRequest)
+      ListUploadSchemasRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListUploadSchemasRequest.newBuilder() to construct.
+    private ListUploadSchemasRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListUploadSchemasRequest() {
+      taskType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListUploadSchemasRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListUploadSchemasRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              taskType_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.internal_static_yandex_cloud_ai_dataset_v1_ListUploadSchemasRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.internal_static_yandex_cloud_ai_dataset_v1_ListUploadSchemasRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest.class, yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest.Builder.class);
+    }
+
+    public static final int TASK_TYPE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object taskType_;
+    /**
+     * <pre>
+     * Dataset task type to list schemas.
+     * </pre>
+     *
+     * <code>string task_type = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The taskType.
+     */
+    @java.lang.Override
+    public java.lang.String getTaskType() {
+      java.lang.Object ref = taskType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        taskType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Dataset task type to list schemas.
+     * </pre>
+     *
+     * <code>string task_type = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for taskType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTaskTypeBytes() {
+      java.lang.Object ref = taskType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        taskType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(taskType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, taskType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(taskType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, taskType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest other = (yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest) obj;
+
+      if (!getTaskType()
+          .equals(other.getTaskType())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TASK_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getTaskType().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.dataset.v1.ListUploadSchemasRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.dataset.v1.ListUploadSchemasRequest)
+        yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.internal_static_yandex_cloud_ai_dataset_v1_ListUploadSchemasRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.internal_static_yandex_cloud_ai_dataset_v1_ListUploadSchemasRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest.class, yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        taskType_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.internal_static_yandex_cloud_ai_dataset_v1_ListUploadSchemasRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest build() {
+        yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest buildPartial() {
+        yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest result = new yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest(this);
+        result.taskType_ = taskType_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest) {
+          return mergeFrom((yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest other) {
+        if (other == yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest.getDefaultInstance()) return this;
+        if (!other.getTaskType().isEmpty()) {
+          taskType_ = other.taskType_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object taskType_ = "";
+      /**
+       * <pre>
+       * Dataset task type to list schemas.
+       * </pre>
+       *
+       * <code>string task_type = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The taskType.
+       */
+      public java.lang.String getTaskType() {
+        java.lang.Object ref = taskType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          taskType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Dataset task type to list schemas.
+       * </pre>
+       *
+       * <code>string task_type = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for taskType.
+       */
+      public com.google.protobuf.ByteString
+          getTaskTypeBytes() {
+        java.lang.Object ref = taskType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          taskType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Dataset task type to list schemas.
+       * </pre>
+       *
+       * <code>string task_type = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The taskType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTaskType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        taskType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Dataset task type to list schemas.
+       * </pre>
+       *
+       * <code>string task_type = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTaskType() {
+        
+        taskType_ = getDefaultInstance().getTaskType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Dataset task type to list schemas.
+       * </pre>
+       *
+       * <code>string task_type = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for taskType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTaskTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        taskType_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.dataset.v1.ListUploadSchemasRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.dataset.v1.ListUploadSchemasRequest)
+    private static final yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest();
+    }
+
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListUploadSchemasRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListUploadSchemasRequest>() {
+      @java.lang.Override
+      public ListUploadSchemasRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListUploadSchemasRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListUploadSchemasRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListUploadSchemasRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListUploadSchemasResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.dataset.v1.ListUploadSchemasResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of dataset schemas for the specified dataset task type.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema> 
+        getSchemasList();
+    /**
+     * <pre>
+     * List of dataset schemas for the specified dataset task type.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+     */
+    yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema getSchemas(int index);
+    /**
+     * <pre>
+     * List of dataset schemas for the specified dataset task type.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+     */
+    int getSchemasCount();
+    /**
+     * <pre>
+     * List of dataset schemas for the specified dataset task type.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchemaOrBuilder> 
+        getSchemasOrBuilderList();
+    /**
+     * <pre>
+     * List of dataset schemas for the specified dataset task type.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+     */
+    yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchemaOrBuilder getSchemasOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.dataset.v1.ListUploadSchemasResponse}
+   */
+  public static final class ListUploadSchemasResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.dataset.v1.ListUploadSchemasResponse)
+      ListUploadSchemasResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListUploadSchemasResponse.newBuilder() to construct.
+    private ListUploadSchemasResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListUploadSchemasResponse() {
+      schemas_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListUploadSchemasResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListUploadSchemasResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                schemas_ = new java.util.ArrayList<yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              schemas_.add(
+                  input.readMessage(yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          schemas_ = java.util.Collections.unmodifiableList(schemas_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.internal_static_yandex_cloud_ai_dataset_v1_ListUploadSchemasResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.internal_static_yandex_cloud_ai_dataset_v1_ListUploadSchemasResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse.class, yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse.Builder.class);
+    }
+
+    public static final int SCHEMAS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema> schemas_;
+    /**
+     * <pre>
+     * List of dataset schemas for the specified dataset task type.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema> getSchemasList() {
+      return schemas_;
+    }
+    /**
+     * <pre>
+     * List of dataset schemas for the specified dataset task type.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchemaOrBuilder> 
+        getSchemasOrBuilderList() {
+      return schemas_;
+    }
+    /**
+     * <pre>
+     * List of dataset schemas for the specified dataset task type.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+     */
+    @java.lang.Override
+    public int getSchemasCount() {
+      return schemas_.size();
+    }
+    /**
+     * <pre>
+     * List of dataset schemas for the specified dataset task type.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema getSchemas(int index) {
+      return schemas_.get(index);
+    }
+    /**
+     * <pre>
+     * List of dataset schemas for the specified dataset task type.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchemaOrBuilder getSchemasOrBuilder(
+        int index) {
+      return schemas_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < schemas_.size(); i++) {
+        output.writeMessage(1, schemas_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < schemas_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, schemas_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse other = (yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse) obj;
+
+      if (!getSchemasList()
+          .equals(other.getSchemasList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSchemasCount() > 0) {
+        hash = (37 * hash) + SCHEMAS_FIELD_NUMBER;
+        hash = (53 * hash) + getSchemasList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.dataset.v1.ListUploadSchemasResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.dataset.v1.ListUploadSchemasResponse)
+        yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.internal_static_yandex_cloud_ai_dataset_v1_ListUploadSchemasResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.internal_static_yandex_cloud_ai_dataset_v1_ListUploadSchemasResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse.class, yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSchemasFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (schemasBuilder_ == null) {
+          schemas_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          schemasBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.internal_static_yandex_cloud_ai_dataset_v1_ListUploadSchemasResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse build() {
+        yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse buildPartial() {
+        yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse result = new yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (schemasBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            schemas_ = java.util.Collections.unmodifiableList(schemas_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.schemas_ = schemas_;
+        } else {
+          result.schemas_ = schemasBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse) {
+          return mergeFrom((yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse other) {
+        if (other == yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse.getDefaultInstance()) return this;
+        if (schemasBuilder_ == null) {
+          if (!other.schemas_.isEmpty()) {
+            if (schemas_.isEmpty()) {
+              schemas_ = other.schemas_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSchemasIsMutable();
+              schemas_.addAll(other.schemas_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.schemas_.isEmpty()) {
+            if (schemasBuilder_.isEmpty()) {
+              schemasBuilder_.dispose();
+              schemasBuilder_ = null;
+              schemas_ = other.schemas_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              schemasBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSchemasFieldBuilder() : null;
+            } else {
+              schemasBuilder_.addAllMessages(other.schemas_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema> schemas_ =
+        java.util.Collections.emptyList();
+      private void ensureSchemasIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          schemas_ = new java.util.ArrayList<yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema>(schemas_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema, yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema.Builder, yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchemaOrBuilder> schemasBuilder_;
+
+      /**
+       * <pre>
+       * List of dataset schemas for the specified dataset task type.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema> getSchemasList() {
+        if (schemasBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(schemas_);
+        } else {
+          return schemasBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of dataset schemas for the specified dataset task type.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+       */
+      public int getSchemasCount() {
+        if (schemasBuilder_ == null) {
+          return schemas_.size();
+        } else {
+          return schemasBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of dataset schemas for the specified dataset task type.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+       */
+      public yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema getSchemas(int index) {
+        if (schemasBuilder_ == null) {
+          return schemas_.get(index);
+        } else {
+          return schemasBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of dataset schemas for the specified dataset task type.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+       */
+      public Builder setSchemas(
+          int index, yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema value) {
+        if (schemasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSchemasIsMutable();
+          schemas_.set(index, value);
+          onChanged();
+        } else {
+          schemasBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of dataset schemas for the specified dataset task type.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+       */
+      public Builder setSchemas(
+          int index, yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema.Builder builderForValue) {
+        if (schemasBuilder_ == null) {
+          ensureSchemasIsMutable();
+          schemas_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          schemasBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of dataset schemas for the specified dataset task type.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+       */
+      public Builder addSchemas(yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema value) {
+        if (schemasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSchemasIsMutable();
+          schemas_.add(value);
+          onChanged();
+        } else {
+          schemasBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of dataset schemas for the specified dataset task type.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+       */
+      public Builder addSchemas(
+          int index, yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema value) {
+        if (schemasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSchemasIsMutable();
+          schemas_.add(index, value);
+          onChanged();
+        } else {
+          schemasBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of dataset schemas for the specified dataset task type.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+       */
+      public Builder addSchemas(
+          yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema.Builder builderForValue) {
+        if (schemasBuilder_ == null) {
+          ensureSchemasIsMutable();
+          schemas_.add(builderForValue.build());
+          onChanged();
+        } else {
+          schemasBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of dataset schemas for the specified dataset task type.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+       */
+      public Builder addSchemas(
+          int index, yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema.Builder builderForValue) {
+        if (schemasBuilder_ == null) {
+          ensureSchemasIsMutable();
+          schemas_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          schemasBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of dataset schemas for the specified dataset task type.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+       */
+      public Builder addAllSchemas(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema> values) {
+        if (schemasBuilder_ == null) {
+          ensureSchemasIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, schemas_);
+          onChanged();
+        } else {
+          schemasBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of dataset schemas for the specified dataset task type.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+       */
+      public Builder clearSchemas() {
+        if (schemasBuilder_ == null) {
+          schemas_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          schemasBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of dataset schemas for the specified dataset task type.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+       */
+      public Builder removeSchemas(int index) {
+        if (schemasBuilder_ == null) {
+          ensureSchemasIsMutable();
+          schemas_.remove(index);
+          onChanged();
+        } else {
+          schemasBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of dataset schemas for the specified dataset task type.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+       */
+      public yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema.Builder getSchemasBuilder(
+          int index) {
+        return getSchemasFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of dataset schemas for the specified dataset task type.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+       */
+      public yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchemaOrBuilder getSchemasOrBuilder(
+          int index) {
+        if (schemasBuilder_ == null) {
+          return schemas_.get(index);  } else {
+          return schemasBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of dataset schemas for the specified dataset task type.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchemaOrBuilder> 
+           getSchemasOrBuilderList() {
+        if (schemasBuilder_ != null) {
+          return schemasBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(schemas_);
+        }
+      }
+      /**
+       * <pre>
+       * List of dataset schemas for the specified dataset task type.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+       */
+      public yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema.Builder addSchemasBuilder() {
+        return getSchemasFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of dataset schemas for the specified dataset task type.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+       */
+      public yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema.Builder addSchemasBuilder(
+          int index) {
+        return getSchemasFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of dataset schemas for the specified dataset task type.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetUploadSchema schemas = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema.Builder> 
+           getSchemasBuilderList() {
+        return getSchemasFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema, yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema.Builder, yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchemaOrBuilder> 
+          getSchemasFieldBuilder() {
+        if (schemasBuilder_ == null) {
+          schemasBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema, yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchema.Builder, yandex.cloud.api.ai.dataset.v1.Dataset.DatasetUploadSchemaOrBuilder>(
+                  schemas_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          schemas_ = null;
+        }
+        return schemasBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.dataset.v1.ListUploadSchemasResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.dataset.v1.ListUploadSchemasResponse)
+    private static final yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse();
+    }
+
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListUploadSchemasResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListUploadSchemasResponse>() {
+      @java.lang.Override
+      public ListUploadSchemasResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListUploadSchemasResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListUploadSchemasResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListUploadSchemasResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ListTypesRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.dataset.v1.ListTypesRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -20541,6 +22050,1502 @@ public final class DatasetServiceOuterClass {
 
   }
 
+  public interface GetDatasetPreviewRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.dataset.v1.GetDatasetPreviewRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the dataset.
+     * </pre>
+     *
+     * <code>string dataset_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The datasetId.
+     */
+    java.lang.String getDatasetId();
+    /**
+     * <pre>
+     * ID of the dataset.
+     * </pre>
+     *
+     * <code>string dataset_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for datasetId.
+     */
+    com.google.protobuf.ByteString
+        getDatasetIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.dataset.v1.GetDatasetPreviewRequest}
+   */
+  public static final class GetDatasetPreviewRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.dataset.v1.GetDatasetPreviewRequest)
+      GetDatasetPreviewRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetDatasetPreviewRequest.newBuilder() to construct.
+    private GetDatasetPreviewRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetDatasetPreviewRequest() {
+      datasetId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetDatasetPreviewRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetDatasetPreviewRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              datasetId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.internal_static_yandex_cloud_ai_dataset_v1_GetDatasetPreviewRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.internal_static_yandex_cloud_ai_dataset_v1_GetDatasetPreviewRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest.class, yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest.Builder.class);
+    }
+
+    public static final int DATASET_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object datasetId_;
+    /**
+     * <pre>
+     * ID of the dataset.
+     * </pre>
+     *
+     * <code>string dataset_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The datasetId.
+     */
+    @java.lang.Override
+    public java.lang.String getDatasetId() {
+      java.lang.Object ref = datasetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        datasetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the dataset.
+     * </pre>
+     *
+     * <code>string dataset_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for datasetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDatasetIdBytes() {
+      java.lang.Object ref = datasetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        datasetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest other = (yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest) obj;
+
+      if (!getDatasetId()
+          .equals(other.getDatasetId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DATASET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDatasetId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.dataset.v1.GetDatasetPreviewRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.dataset.v1.GetDatasetPreviewRequest)
+        yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.internal_static_yandex_cloud_ai_dataset_v1_GetDatasetPreviewRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.internal_static_yandex_cloud_ai_dataset_v1_GetDatasetPreviewRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest.class, yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        datasetId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.internal_static_yandex_cloud_ai_dataset_v1_GetDatasetPreviewRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest build() {
+        yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest buildPartial() {
+        yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest result = new yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest(this);
+        result.datasetId_ = datasetId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest) {
+          return mergeFrom((yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest other) {
+        if (other == yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest.getDefaultInstance()) return this;
+        if (!other.getDatasetId().isEmpty()) {
+          datasetId_ = other.datasetId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object datasetId_ = "";
+      /**
+       * <pre>
+       * ID of the dataset.
+       * </pre>
+       *
+       * <code>string dataset_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The datasetId.
+       */
+      public java.lang.String getDatasetId() {
+        java.lang.Object ref = datasetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          datasetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the dataset.
+       * </pre>
+       *
+       * <code>string dataset_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for datasetId.
+       */
+      public com.google.protobuf.ByteString
+          getDatasetIdBytes() {
+        java.lang.Object ref = datasetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          datasetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the dataset.
+       * </pre>
+       *
+       * <code>string dataset_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The datasetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatasetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        datasetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the dataset.
+       * </pre>
+       *
+       * <code>string dataset_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDatasetId() {
+        
+        datasetId_ = getDefaultInstance().getDatasetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the dataset.
+       * </pre>
+       *
+       * <code>string dataset_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for datasetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatasetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        datasetId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.dataset.v1.GetDatasetPreviewRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.dataset.v1.GetDatasetPreviewRequest)
+    private static final yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest();
+    }
+
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetDatasetPreviewRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetDatasetPreviewRequest>() {
+      @java.lang.Override
+      public GetDatasetPreviewRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetDatasetPreviewRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetDatasetPreviewRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetDatasetPreviewRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetDatasetPreviewResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.dataset.v1.GetDatasetPreviewResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the dataset.
+     * </pre>
+     *
+     * <code>string dataset_id = 1;</code>
+     * @return The datasetId.
+     */
+    java.lang.String getDatasetId();
+    /**
+     * <pre>
+     * ID of the dataset.
+     * </pre>
+     *
+     * <code>string dataset_id = 1;</code>
+     * @return The bytes for datasetId.
+     */
+    com.google.protobuf.ByteString
+        getDatasetIdBytes();
+
+    /**
+     * <pre>
+     * List of dataset preview lines
+     * </pre>
+     *
+     * <code>repeated string preview_lines = 2;</code>
+     * @return A list containing the previewLines.
+     */
+    java.util.List<java.lang.String>
+        getPreviewLinesList();
+    /**
+     * <pre>
+     * List of dataset preview lines
+     * </pre>
+     *
+     * <code>repeated string preview_lines = 2;</code>
+     * @return The count of previewLines.
+     */
+    int getPreviewLinesCount();
+    /**
+     * <pre>
+     * List of dataset preview lines
+     * </pre>
+     *
+     * <code>repeated string preview_lines = 2;</code>
+     * @param index The index of the element to return.
+     * @return The previewLines at the given index.
+     */
+    java.lang.String getPreviewLines(int index);
+    /**
+     * <pre>
+     * List of dataset preview lines
+     * </pre>
+     *
+     * <code>repeated string preview_lines = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the previewLines at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPreviewLinesBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.dataset.v1.GetDatasetPreviewResponse}
+   */
+  public static final class GetDatasetPreviewResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.dataset.v1.GetDatasetPreviewResponse)
+      GetDatasetPreviewResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetDatasetPreviewResponse.newBuilder() to construct.
+    private GetDatasetPreviewResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetDatasetPreviewResponse() {
+      datasetId_ = "";
+      previewLines_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetDatasetPreviewResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetDatasetPreviewResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              datasetId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                previewLines_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              previewLines_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          previewLines_ = previewLines_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.internal_static_yandex_cloud_ai_dataset_v1_GetDatasetPreviewResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.internal_static_yandex_cloud_ai_dataset_v1_GetDatasetPreviewResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse.class, yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse.Builder.class);
+    }
+
+    public static final int DATASET_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object datasetId_;
+    /**
+     * <pre>
+     * ID of the dataset.
+     * </pre>
+     *
+     * <code>string dataset_id = 1;</code>
+     * @return The datasetId.
+     */
+    @java.lang.Override
+    public java.lang.String getDatasetId() {
+      java.lang.Object ref = datasetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        datasetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the dataset.
+     * </pre>
+     *
+     * <code>string dataset_id = 1;</code>
+     * @return The bytes for datasetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDatasetIdBytes() {
+      java.lang.Object ref = datasetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        datasetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PREVIEW_LINES_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList previewLines_;
+    /**
+     * <pre>
+     * List of dataset preview lines
+     * </pre>
+     *
+     * <code>repeated string preview_lines = 2;</code>
+     * @return A list containing the previewLines.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPreviewLinesList() {
+      return previewLines_;
+    }
+    /**
+     * <pre>
+     * List of dataset preview lines
+     * </pre>
+     *
+     * <code>repeated string preview_lines = 2;</code>
+     * @return The count of previewLines.
+     */
+    public int getPreviewLinesCount() {
+      return previewLines_.size();
+    }
+    /**
+     * <pre>
+     * List of dataset preview lines
+     * </pre>
+     *
+     * <code>repeated string preview_lines = 2;</code>
+     * @param index The index of the element to return.
+     * @return The previewLines at the given index.
+     */
+    public java.lang.String getPreviewLines(int index) {
+      return previewLines_.get(index);
+    }
+    /**
+     * <pre>
+     * List of dataset preview lines
+     * </pre>
+     *
+     * <code>repeated string preview_lines = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the previewLines at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPreviewLinesBytes(int index) {
+      return previewLines_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetId_);
+      }
+      for (int i = 0; i < previewLines_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, previewLines_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < previewLines_.size(); i++) {
+          dataSize += computeStringSizeNoTag(previewLines_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getPreviewLinesList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse other = (yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse) obj;
+
+      if (!getDatasetId()
+          .equals(other.getDatasetId())) return false;
+      if (!getPreviewLinesList()
+          .equals(other.getPreviewLinesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DATASET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDatasetId().hashCode();
+      if (getPreviewLinesCount() > 0) {
+        hash = (37 * hash) + PREVIEW_LINES_FIELD_NUMBER;
+        hash = (53 * hash) + getPreviewLinesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.dataset.v1.GetDatasetPreviewResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.dataset.v1.GetDatasetPreviewResponse)
+        yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.internal_static_yandex_cloud_ai_dataset_v1_GetDatasetPreviewResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.internal_static_yandex_cloud_ai_dataset_v1_GetDatasetPreviewResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse.class, yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        datasetId_ = "";
+
+        previewLines_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.internal_static_yandex_cloud_ai_dataset_v1_GetDatasetPreviewResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse build() {
+        yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse buildPartial() {
+        yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse result = new yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse(this);
+        int from_bitField0_ = bitField0_;
+        result.datasetId_ = datasetId_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          previewLines_ = previewLines_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.previewLines_ = previewLines_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse) {
+          return mergeFrom((yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse other) {
+        if (other == yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse.getDefaultInstance()) return this;
+        if (!other.getDatasetId().isEmpty()) {
+          datasetId_ = other.datasetId_;
+          onChanged();
+        }
+        if (!other.previewLines_.isEmpty()) {
+          if (previewLines_.isEmpty()) {
+            previewLines_ = other.previewLines_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensurePreviewLinesIsMutable();
+            previewLines_.addAll(other.previewLines_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object datasetId_ = "";
+      /**
+       * <pre>
+       * ID of the dataset.
+       * </pre>
+       *
+       * <code>string dataset_id = 1;</code>
+       * @return The datasetId.
+       */
+      public java.lang.String getDatasetId() {
+        java.lang.Object ref = datasetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          datasetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the dataset.
+       * </pre>
+       *
+       * <code>string dataset_id = 1;</code>
+       * @return The bytes for datasetId.
+       */
+      public com.google.protobuf.ByteString
+          getDatasetIdBytes() {
+        java.lang.Object ref = datasetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          datasetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the dataset.
+       * </pre>
+       *
+       * <code>string dataset_id = 1;</code>
+       * @param value The datasetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatasetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        datasetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the dataset.
+       * </pre>
+       *
+       * <code>string dataset_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDatasetId() {
+        
+        datasetId_ = getDefaultInstance().getDatasetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the dataset.
+       * </pre>
+       *
+       * <code>string dataset_id = 1;</code>
+       * @param value The bytes for datasetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatasetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        datasetId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList previewLines_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensurePreviewLinesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          previewLines_ = new com.google.protobuf.LazyStringArrayList(previewLines_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * List of dataset preview lines
+       * </pre>
+       *
+       * <code>repeated string preview_lines = 2;</code>
+       * @return A list containing the previewLines.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getPreviewLinesList() {
+        return previewLines_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of dataset preview lines
+       * </pre>
+       *
+       * <code>repeated string preview_lines = 2;</code>
+       * @return The count of previewLines.
+       */
+      public int getPreviewLinesCount() {
+        return previewLines_.size();
+      }
+      /**
+       * <pre>
+       * List of dataset preview lines
+       * </pre>
+       *
+       * <code>repeated string preview_lines = 2;</code>
+       * @param index The index of the element to return.
+       * @return The previewLines at the given index.
+       */
+      public java.lang.String getPreviewLines(int index) {
+        return previewLines_.get(index);
+      }
+      /**
+       * <pre>
+       * List of dataset preview lines
+       * </pre>
+       *
+       * <code>repeated string preview_lines = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the previewLines at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getPreviewLinesBytes(int index) {
+        return previewLines_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of dataset preview lines
+       * </pre>
+       *
+       * <code>repeated string preview_lines = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The previewLines to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPreviewLines(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePreviewLinesIsMutable();
+        previewLines_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of dataset preview lines
+       * </pre>
+       *
+       * <code>repeated string preview_lines = 2;</code>
+       * @param value The previewLines to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPreviewLines(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePreviewLinesIsMutable();
+        previewLines_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of dataset preview lines
+       * </pre>
+       *
+       * <code>repeated string preview_lines = 2;</code>
+       * @param values The previewLines to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPreviewLines(
+          java.lang.Iterable<java.lang.String> values) {
+        ensurePreviewLinesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, previewLines_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of dataset preview lines
+       * </pre>
+       *
+       * <code>repeated string preview_lines = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPreviewLines() {
+        previewLines_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of dataset preview lines
+       * </pre>
+       *
+       * <code>repeated string preview_lines = 2;</code>
+       * @param value The bytes of the previewLines to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPreviewLinesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensurePreviewLinesIsMutable();
+        previewLines_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.dataset.v1.GetDatasetPreviewResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.dataset.v1.GetDatasetPreviewResponse)
+    private static final yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse();
+    }
+
+    public static yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetDatasetPreviewResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetDatasetPreviewResponse>() {
+      @java.lang.Override
+      public GetDatasetPreviewResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetDatasetPreviewResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetDatasetPreviewResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetDatasetPreviewResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_dataset_v1_DescribeDatasetRequest_descriptor;
   private static final 
@@ -20662,6 +23667,16 @@ public final class DatasetServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_dataset_v1_ListUploadFormatsResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_dataset_v1_ListUploadSchemasRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_dataset_v1_ListUploadSchemasRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_dataset_v1_ListUploadSchemasResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_dataset_v1_ListUploadSchemasResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_dataset_v1_ListTypesRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -20671,6 +23686,16 @@ public final class DatasetServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_dataset_v1_ListTypesResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_dataset_v1_GetDatasetPreviewRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_dataset_v1_GetDatasetPreviewRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_dataset_v1_GetDatasetPreviewResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_dataset_v1_GetDatasetPreviewResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -20743,46 +23768,60 @@ public final class DatasetServiceOuterClass {
       "Info\022\027\n\017next_page_token\030\002 \001(\t\"3\n\030ListUpl" +
       "oadFormatsRequest\022\027\n\ttask_type\030\001 \001(\tB\004\350\307" +
       "1\001\",\n\031ListUploadFormatsResponse\022\017\n\007forma" +
-      "ts\030\001 \003(\t\"\022\n\020ListTypesRequest\"\"\n\021ListType" +
-      "sResponse\022\r\n\005types\030\001 \003(\t2\202\013\n\016DatasetServ" +
-      "ice\022s\n\010Describe\0222.yandex.cloud.ai.datase" +
-      "t.v1.DescribeDatasetRequest\0323.yandex.clo" +
-      "ud.ai.dataset.v1.DescribeDatasetResponse" +
-      "\022\231\001\n\010Validate\0222.yandex.cloud.ai.dataset." +
-      "v1.ValidateDatasetRequest\032!.yandex.cloud" +
-      ".operation.Operation\"6\262\322*2\n\027ValidateData" +
-      "setMetadata\022\027ValidateDatasetResponse\022m\n\006" +
-      "Create\0220.yandex.cloud.ai.dataset.v1.Crea" +
-      "teDatasetRequest\0321.yandex.cloud.ai.datas" +
-      "et.v1.CreateDatasetResponse\022m\n\006Update\0220." +
-      "yandex.cloud.ai.dataset.v1.UpdateDataset" +
-      "Request\0321.yandex.cloud.ai.dataset.v1.Upd" +
-      "ateDatasetResponse\022m\n\006Delete\0220.yandex.cl" +
-      "oud.ai.dataset.v1.DeleteDatasetRequest\0321" +
-      ".yandex.cloud.ai.dataset.v1.DeleteDatase" +
-      "tResponse\022i\n\004List\022/.yandex.cloud.ai.data" +
-      "set.v1.ListDatasetsRequest\0320.yandex.clou" +
-      "d.ai.dataset.v1.ListDatasetsResponse\022\200\001\n" +
-      "\021ListUploadFormats\0224.yandex.cloud.ai.dat" +
-      "aset.v1.ListUploadFormatsRequest\0325.yande" +
-      "x.cloud.ai.dataset.v1.ListUploadFormatsR" +
-      "esponse\022\200\001\n\021GetUploadDraftUrl\0224.yandex.c" +
-      "loud.ai.dataset.v1.GetUploadDraftUrlRequ" +
-      "est\0325.yandex.cloud.ai.dataset.v1.GetUplo" +
-      "adDraftUrlResponse\022\230\001\n\031StartMultipartUpl" +
-      "oadDraft\022<.yandex.cloud.ai.dataset.v1.St" +
-      "artMultipartUploadDraftRequest\032=.yandex." +
-      "cloud.ai.dataset.v1.StartMultipartUpload" +
-      "DraftResponse\022\233\001\n\032FinishMultipartUploadD" +
-      "raft\022=.yandex.cloud.ai.dataset.v1.Finish" +
-      "MultipartUploadDraftRequest\032>.yandex.clo" +
-      "ud.ai.dataset.v1.FinishMultipartUploadDr" +
-      "aftResponse\022h\n\tListTypes\022,.yandex.cloud." +
-      "ai.dataset.v1.ListTypesRequest\032-.yandex." +
-      "cloud.ai.dataset.v1.ListTypesResponseBe\n" +
-      "\036yandex.cloud.api.ai.dataset.v1ZCgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/ai/dataset/v1;fomob\006proto3"
+      "ts\030\001 \003(\t\"3\n\030ListUploadSchemasRequest\022\027\n\t" +
+      "task_type\030\001 \001(\tB\004\350\3071\001\"]\n\031ListUploadSchem" +
+      "asResponse\022@\n\007schemas\030\001 \003(\0132/.yandex.clo" +
+      "ud.ai.dataset.v1.DatasetUploadSchema\"\022\n\020" +
+      "ListTypesRequest\"\"\n\021ListTypesResponse\022\r\n" +
+      "\005types\030\001 \003(\t\"4\n\030GetDatasetPreviewRequest" +
+      "\022\030\n\ndataset_id\030\001 \001(\tB\004\350\3071\001\"F\n\031GetDataset" +
+      "PreviewResponse\022\022\n\ndataset_id\030\001 \001(\t\022\025\n\rp" +
+      "review_lines\030\002 \003(\t2\205\r\n\016DatasetService\022s\n" +
+      "\010Describe\0222.yandex.cloud.ai.dataset.v1.D" +
+      "escribeDatasetRequest\0323.yandex.cloud.ai." +
+      "dataset.v1.DescribeDatasetResponse\022\231\001\n\010V" +
+      "alidate\0222.yandex.cloud.ai.dataset.v1.Val" +
+      "idateDatasetRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"6\262\322*2\n\027ValidateDatasetMet" +
+      "adata\022\027ValidateDatasetResponse\022m\n\006Create" +
+      "\0220.yandex.cloud.ai.dataset.v1.CreateData" +
+      "setRequest\0321.yandex.cloud.ai.dataset.v1." +
+      "CreateDatasetResponse\022m\n\006Update\0220.yandex" +
+      ".cloud.ai.dataset.v1.UpdateDatasetReques" +
+      "t\0321.yandex.cloud.ai.dataset.v1.UpdateDat" +
+      "asetResponse\022m\n\006Delete\0220.yandex.cloud.ai" +
+      ".dataset.v1.DeleteDatasetRequest\0321.yande" +
+      "x.cloud.ai.dataset.v1.DeleteDatasetRespo" +
+      "nse\022i\n\004List\022/.yandex.cloud.ai.dataset.v1" +
+      ".ListDatasetsRequest\0320.yandex.cloud.ai.d" +
+      "ataset.v1.ListDatasetsResponse\022\205\001\n\021ListU" +
+      "ploadFormats\0224.yandex.cloud.ai.dataset.v" +
+      "1.ListUploadFormatsRequest\0325.yandex.clou" +
+      "d.ai.dataset.v1.ListUploadFormatsRespons" +
+      "e\"\003\210\002\001\022\200\001\n\021ListUploadSchemas\0224.yandex.cl" +
+      "oud.ai.dataset.v1.ListUploadSchemasReque" +
+      "st\0325.yandex.cloud.ai.dataset.v1.ListUplo" +
+      "adSchemasResponse\022\200\001\n\021GetUploadDraftUrl\022" +
+      "4.yandex.cloud.ai.dataset.v1.GetUploadDr" +
+      "aftUrlRequest\0325.yandex.cloud.ai.dataset." +
+      "v1.GetUploadDraftUrlResponse\022\230\001\n\031StartMu" +
+      "ltipartUploadDraft\022<.yandex.cloud.ai.dat" +
+      "aset.v1.StartMultipartUploadDraftRequest" +
+      "\032=.yandex.cloud.ai.dataset.v1.StartMulti" +
+      "partUploadDraftResponse\022\233\001\n\032FinishMultip" +
+      "artUploadDraft\022=.yandex.cloud.ai.dataset" +
+      ".v1.FinishMultipartUploadDraftRequest\032>." +
+      "yandex.cloud.ai.dataset.v1.FinishMultipa" +
+      "rtUploadDraftResponse\022h\n\tListTypes\022,.yan" +
+      "dex.cloud.ai.dataset.v1.ListTypesRequest" +
+      "\032-.yandex.cloud.ai.dataset.v1.ListTypesR" +
+      "esponse\022y\n\nGetPreview\0224.yandex.cloud.ai." +
+      "dataset.v1.GetDatasetPreviewRequest\0325.ya" +
+      "ndex.cloud.ai.dataset.v1.GetDatasetPrevi" +
+      "ewResponseBe\n\036yandex.cloud.api.ai.datase" +
+      "t.v1ZCgithub.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/ai/dataset/v1;fomob\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -20937,18 +23976,42 @@ public final class DatasetServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_dataset_v1_ListUploadFormatsResponse_descriptor,
         new java.lang.String[] { "Formats", });
-    internal_static_yandex_cloud_ai_dataset_v1_ListTypesRequest_descriptor =
+    internal_static_yandex_cloud_ai_dataset_v1_ListUploadSchemasRequest_descriptor =
       getDescriptor().getMessageTypes().get(22);
+    internal_static_yandex_cloud_ai_dataset_v1_ListUploadSchemasRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_dataset_v1_ListUploadSchemasRequest_descriptor,
+        new java.lang.String[] { "TaskType", });
+    internal_static_yandex_cloud_ai_dataset_v1_ListUploadSchemasResponse_descriptor =
+      getDescriptor().getMessageTypes().get(23);
+    internal_static_yandex_cloud_ai_dataset_v1_ListUploadSchemasResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_dataset_v1_ListUploadSchemasResponse_descriptor,
+        new java.lang.String[] { "Schemas", });
+    internal_static_yandex_cloud_ai_dataset_v1_ListTypesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(24);
     internal_static_yandex_cloud_ai_dataset_v1_ListTypesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_dataset_v1_ListTypesRequest_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_ai_dataset_v1_ListTypesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_yandex_cloud_ai_dataset_v1_ListTypesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_dataset_v1_ListTypesResponse_descriptor,
         new java.lang.String[] { "Types", });
+    internal_static_yandex_cloud_ai_dataset_v1_GetDatasetPreviewRequest_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_yandex_cloud_ai_dataset_v1_GetDatasetPreviewRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_dataset_v1_GetDatasetPreviewRequest_descriptor,
+        new java.lang.String[] { "DatasetId", });
+    internal_static_yandex_cloud_ai_dataset_v1_GetDatasetPreviewResponse_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_yandex_cloud_ai_dataset_v1_GetDatasetPreviewResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_dataset_v1_GetDatasetPreviewResponse_descriptor,
+        new java.lang.String[] { "DatasetId", "PreviewLines", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.OperationOuterClass.operation);

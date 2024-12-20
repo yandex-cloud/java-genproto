@@ -56653,6 +56653,33 @@ public final class ClusterServiceOuterClass {
      */
     yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
 
+    /**
+     * <pre>
+     * Retain period of automatically created backup in days
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+     * @return Whether the backupRetainPeriodDays field is set.
+     */
+    boolean hasBackupRetainPeriodDays();
+    /**
+     * <pre>
+     * Retain period of automatically created backup in days
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+     * @return The backupRetainPeriodDays.
+     */
+    com.google.protobuf.Int64Value getBackupRetainPeriodDays();
+    /**
+     * <pre>
+     * Retain period of automatically created backup in days
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder();
+
     public yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.ConfigSpec.RedisSpecCase getRedisSpecCase();
   }
   /**
@@ -56824,6 +56851,19 @@ public final class ClusterServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(diskSizeAutoscaling_);
                 diskSizeAutoscaling_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 106: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (backupRetainPeriodDays_ != null) {
+                subBuilder = backupRetainPeriodDays_.toBuilder();
+              }
+              backupRetainPeriodDays_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(backupRetainPeriodDays_);
+                backupRetainPeriodDays_ = subBuilder.buildPartial();
               }
 
               break;
@@ -57265,6 +57305,44 @@ public final class ClusterServiceOuterClass {
       return getDiskSizeAutoscaling();
     }
 
+    public static final int BACKUP_RETAIN_PERIOD_DAYS_FIELD_NUMBER = 13;
+    private com.google.protobuf.Int64Value backupRetainPeriodDays_;
+    /**
+     * <pre>
+     * Retain period of automatically created backup in days
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+     * @return Whether the backupRetainPeriodDays field is set.
+     */
+    @java.lang.Override
+    public boolean hasBackupRetainPeriodDays() {
+      return backupRetainPeriodDays_ != null;
+    }
+    /**
+     * <pre>
+     * Retain period of automatically created backup in days
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+     * @return The backupRetainPeriodDays.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getBackupRetainPeriodDays() {
+      return backupRetainPeriodDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backupRetainPeriodDays_;
+    }
+    /**
+     * <pre>
+     * Retain period of automatically created backup in days
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder() {
+      return getBackupRetainPeriodDays();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -57308,6 +57386,9 @@ public final class ClusterServiceOuterClass {
       }
       if (diskSizeAutoscaling_ != null) {
         output.writeMessage(12, getDiskSizeAutoscaling());
+      }
+      if (backupRetainPeriodDays_ != null) {
+        output.writeMessage(13, getBackupRetainPeriodDays());
       }
       unknownFields.writeTo(output);
     }
@@ -57357,6 +57438,10 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getDiskSizeAutoscaling());
       }
+      if (backupRetainPeriodDays_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getBackupRetainPeriodDays());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -57398,6 +57483,11 @@ public final class ClusterServiceOuterClass {
       if (hasDiskSizeAutoscaling()) {
         if (!getDiskSizeAutoscaling()
             .equals(other.getDiskSizeAutoscaling())) return false;
+      }
+      if (hasBackupRetainPeriodDays() != other.hasBackupRetainPeriodDays()) return false;
+      if (hasBackupRetainPeriodDays()) {
+        if (!getBackupRetainPeriodDays()
+            .equals(other.getBackupRetainPeriodDays())) return false;
       }
       if (!getRedisSpecCase().equals(other.getRedisSpecCase())) return false;
       switch (redisSpecCase_) {
@@ -57452,6 +57542,10 @@ public final class ClusterServiceOuterClass {
       if (hasDiskSizeAutoscaling()) {
         hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
         hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
+      }
+      if (hasBackupRetainPeriodDays()) {
+        hash = (37 * hash) + BACKUP_RETAIN_PERIOD_DAYS_FIELD_NUMBER;
+        hash = (53 * hash) + getBackupRetainPeriodDays().hashCode();
       }
       switch (redisSpecCase_) {
         case 2:
@@ -57638,6 +57732,12 @@ public final class ClusterServiceOuterClass {
           diskSizeAutoscaling_ = null;
           diskSizeAutoscalingBuilder_ = null;
         }
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDays_ = null;
+        } else {
+          backupRetainPeriodDays_ = null;
+          backupRetainPeriodDaysBuilder_ = null;
+        }
         redisSpecCase_ = 0;
         redisSpec_ = null;
         return this;
@@ -57720,6 +57820,11 @@ public final class ClusterServiceOuterClass {
         } else {
           result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
         }
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          result.backupRetainPeriodDays_ = backupRetainPeriodDays_;
+        } else {
+          result.backupRetainPeriodDays_ = backupRetainPeriodDaysBuilder_.build();
+        }
         result.redisSpecCase_ = redisSpecCase_;
         onBuilt();
         return result;
@@ -57787,6 +57892,9 @@ public final class ClusterServiceOuterClass {
         }
         if (other.hasDiskSizeAutoscaling()) {
           mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
+        }
+        if (other.hasBackupRetainPeriodDays()) {
+          mergeBackupRetainPeriodDays(other.getBackupRetainPeriodDays());
         }
         switch (other.getRedisSpecCase()) {
           case REDIS_CONFIG_5_0: {
@@ -59287,6 +59395,161 @@ public final class ClusterServiceOuterClass {
         }
         return diskSizeAutoscalingBuilder_;
       }
+
+      private com.google.protobuf.Int64Value backupRetainPeriodDays_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backupRetainPeriodDaysBuilder_;
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+       * @return Whether the backupRetainPeriodDays field is set.
+       */
+      public boolean hasBackupRetainPeriodDays() {
+        return backupRetainPeriodDaysBuilder_ != null || backupRetainPeriodDays_ != null;
+      }
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+       * @return The backupRetainPeriodDays.
+       */
+      public com.google.protobuf.Int64Value getBackupRetainPeriodDays() {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          return backupRetainPeriodDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backupRetainPeriodDays_;
+        } else {
+          return backupRetainPeriodDaysBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+       */
+      public Builder setBackupRetainPeriodDays(com.google.protobuf.Int64Value value) {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          backupRetainPeriodDays_ = value;
+          onChanged();
+        } else {
+          backupRetainPeriodDaysBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+       */
+      public Builder setBackupRetainPeriodDays(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDays_ = builderForValue.build();
+          onChanged();
+        } else {
+          backupRetainPeriodDaysBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+       */
+      public Builder mergeBackupRetainPeriodDays(com.google.protobuf.Int64Value value) {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          if (backupRetainPeriodDays_ != null) {
+            backupRetainPeriodDays_ =
+              com.google.protobuf.Int64Value.newBuilder(backupRetainPeriodDays_).mergeFrom(value).buildPartial();
+          } else {
+            backupRetainPeriodDays_ = value;
+          }
+          onChanged();
+        } else {
+          backupRetainPeriodDaysBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+       */
+      public Builder clearBackupRetainPeriodDays() {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDays_ = null;
+          onChanged();
+        } else {
+          backupRetainPeriodDays_ = null;
+          backupRetainPeriodDaysBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getBackupRetainPeriodDaysBuilder() {
+        
+        onChanged();
+        return getBackupRetainPeriodDaysFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder() {
+        if (backupRetainPeriodDaysBuilder_ != null) {
+          return backupRetainPeriodDaysBuilder_.getMessageOrBuilder();
+        } else {
+          return backupRetainPeriodDays_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : backupRetainPeriodDays_;
+        }
+      }
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getBackupRetainPeriodDaysFieldBuilder() {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDaysBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getBackupRetainPeriodDays(),
+                  getParentForChildren(),
+                  isClean());
+          backupRetainPeriodDays_ = null;
+        }
+        return backupRetainPeriodDaysBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -59854,7 +60117,7 @@ public final class ClusterServiceOuterClass {
       "ard_name\030\003 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-" +
       "]*\0225\n\020replica_priority\030\004 \001(\0132\033.google.pr" +
       "otobuf.Int64Value\022\030\n\020assign_public_ip\030\005 " +
-      "\001(\010\"\333\005\n\nConfigSpec\022\017\n\007version\030\001 \001(\t\022]\n\020r" +
+      "\001(\010\"\233\006\n\nConfigSpec\022\017\n\007version\030\001 \001(\t\022]\n\020r" +
       "edis_config_5_0\030\002 \001(\01320.yandex.cloud.mdb" +
       ".redis.v1.config.RedisConfig5_0H\000R\017redis" +
       "Config_5_0\022]\n\020redis_config_6_0\030\006 \001(\01320.y" +
@@ -59871,135 +60134,137 @@ public final class ClusterServiceOuterClass {
       ".redis.v1.Access\022<\n\005redis\030\013 \001(\0132-.yandex" +
       ".cloud.mdb.redis.v1.config.RedisConfig\022M" +
       "\n\025disk_size_autoscaling\030\014 \001(\0132..yandex.c" +
-      "loud.mdb.redis.v1.DiskSizeAutoscalingB\014\n" +
-      "\nredis_specJ\004\010\t\020\0132\355&\n\016ClusterService\022\210\001\n" +
-      "\003Get\022,.yandex.cloud.mdb.redis.v1.GetClus" +
-      "terRequest\032\".yandex.cloud.mdb.redis.v1.C" +
-      "luster\"/\202\323\344\223\002)\022\'/managed-redis/v1/cluste" +
-      "rs/{cluster_id}\022\213\001\n\004List\022..yandex.cloud." +
-      "mdb.redis.v1.ListClustersRequest\032/.yande" +
-      "x.cloud.mdb.redis.v1.ListClustersRespons" +
-      "e\"\"\202\323\344\223\002\034\022\032/managed-redis/v1/clusters\022\247\001" +
-      "\n\006Create\022/.yandex.cloud.mdb.redis.v1.Cre" +
-      "ateClusterRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"I\202\323\344\223\002\037\"\032/managed-redis/v1/" +
-      "clusters:\001*\262\322* \n\025CreateClusterMetadata\022\007" +
-      "Cluster\022\264\001\n\006Update\022/.yandex.cloud.mdb.re" +
-      "dis.v1.UpdateClusterRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"V\202\323\344\223\002,2\'/managed" +
-      "-redis/v1/clusters/{cluster_id}:\001*\262\322* \n\025" +
-      "UpdateClusterMetadata\022\007Cluster\022\277\001\n\006Delet" +
-      "e\022/.yandex.cloud.mdb.redis.v1.DeleteClus" +
-      "terRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"a\202\323\344\223\002)*\'/managed-redis/v1/cluster" +
-      "s/{cluster_id}\262\322*.\n\025DeleteClusterMetadat" +
-      "a\022\025google.protobuf.Empty\022\264\001\n\005Start\022..yan" +
-      "dex.cloud.mdb.redis.v1.StartClusterReque" +
-      "st\032!.yandex.cloud.operation.Operation\"X\202" +
-      "\323\344\223\002/\"-/managed-redis/v1/clusters/{clust" +
-      "er_id}:start\262\322*\037\n\024StartClusterMetadata\022\007" +
-      "Cluster\022\260\001\n\004Stop\022-.yandex.cloud.mdb.redi" +
-      "s.v1.StopClusterRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"V\202\323\344\223\002.\",/managed-red" +
-      "is/v1/clusters/{cluster_id}:stop\262\322*\036\n\023St" +
-      "opClusterMetadata\022\007Cluster\022\263\001\n\004Move\022-.ya" +
-      "ndex.cloud.mdb.redis.v1.MoveClusterReque" +
-      "st\032!.yandex.cloud.operation.Operation\"Y\202" +
-      "\323\344\223\0021\",/managed-redis/v1/clusters/{clust" +
-      "er_id}:move:\001*\262\322*\036\n\023MoveClusterMetadata\022" +
-      "\007Cluster\022\270\001\n\006Backup\022/.yandex.cloud.mdb.r" +
-      "edis.v1.BackupClusterRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"Z\202\323\344\223\0020\"./manage" +
-      "d-redis/v1/clusters/{cluster_id}:backup\262" +
-      "\322* \n\025BackupClusterMetadata\022\007Cluster\022\262\001\n\007" +
-      "Restore\0220.yandex.cloud.mdb.redis.v1.Rest" +
-      "oreClusterRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"R\202\323\344\223\002\'\"\"/managed-redis/v1/" +
-      "clusters:restore:\001*\262\322*!\n\026RestoreClusterM" +
-      "etadata\022\007Cluster\022\351\001\n\025RescheduleMaintenan" +
-      "ce\0227.yandex.cloud.mdb.redis.v1.Reschedul" +
-      "eMaintenanceRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"t\202\323\344\223\002B\"=/managed-redis/v" +
-      "1/clusters/{cluster_id}:rescheduleMainte" +
-      "nance:\001*\262\322*(\n\035RescheduleMaintenanceMetad" +
-      "ata\022\007Cluster\022\327\001\n\rStartFailover\0226.yandex." +
-      "cloud.mdb.redis.v1.StartClusterFailoverR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"k\202\323\344\223\002:\"5/managed-redis/v1/clusters/{c" +
-      "luster_id}:startFailover:\001*\262\322*\'\n\034StartCl" +
-      "usterFailoverMetadata\022\007Cluster\022\247\001\n\010ListL" +
-      "ogs\0221.yandex.cloud.mdb.redis.v1.ListClus" +
-      "terLogsRequest\0322.yandex.cloud.mdb.redis." +
-      "v1.ListClusterLogsResponse\"4\202\323\344\223\002.\022,/man" +
-      "aged-redis/v1/clusters/{cluster_id}:logs" +
-      "\022\254\001\n\nStreamLogs\0223.yandex.cloud.mdb.redis" +
-      ".v1.StreamClusterLogsRequest\032*.yandex.cl" +
-      "oud.mdb.redis.v1.StreamLogRecord\";\202\323\344\223\0025" +
-      "\0223/managed-redis/v1/clusters/{cluster_id" +
-      "}:stream_logs0\001\022\277\001\n\016ListOperations\0227.yan" +
-      "dex.cloud.mdb.redis.v1.ListClusterOperat" +
-      "ionsRequest\0328.yandex.cloud.mdb.redis.v1." +
-      "ListClusterOperationsResponse\":\202\323\344\223\0024\0222/" +
-      "managed-redis/v1/clusters/{cluster_id}/o" +
-      "perations\022\263\001\n\013ListBackups\0224.yandex.cloud" +
-      ".mdb.redis.v1.ListClusterBackupsRequest\032" +
-      "5.yandex.cloud.mdb.redis.v1.ListClusterB" +
-      "ackupsResponse\"7\202\323\344\223\0021\022//managed-redis/v" +
-      "1/clusters/{cluster_id}/backups\022\253\001\n\tList" +
-      "Hosts\0222.yandex.cloud.mdb.redis.v1.ListCl" +
-      "usterHostsRequest\0323.yandex.cloud.mdb.red" +
-      "is.v1.ListClusterHostsResponse\"5\202\323\344\223\002/\022-" +
-      "/managed-redis/v1/clusters/{cluster_id}/" +
-      "hosts\022\332\001\n\010AddHosts\0221.yandex.cloud.mdb.re" +
-      "dis.v1.AddClusterHostsRequest\032!.yandex.c" +
-      "loud.operation.Operation\"x\202\323\344\223\002>\"9/manag" +
-      "ed-redis/v1/clusters/{cluster_id}/hosts:" +
-      "batchCreate:\001*\262\322*0\n\027AddClusterHostsMetad" +
-      "ata\022\025google.protobuf.Empty\022\343\001\n\013DeleteHos" +
-      "ts\0224.yandex.cloud.mdb.redis.v1.DeleteClu" +
-      "sterHostsRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"{\202\323\344\223\002>\"9/managed-redis/v1/c" +
-      "lusters/{cluster_id}/hosts:batchDelete:\001" +
-      "*\262\322*3\n\032DeleteClusterHostsMetadata\022\025googl" +
-      "e.protobuf.Empty\022\343\001\n\013UpdateHosts\0224.yande" +
-      "x.cloud.mdb.redis.v1.UpdateClusterHostsR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"{\202\323\344\223\002>\"9/managed-redis/v1/clusters/{c" +
-      "luster_id}/hosts:batchUpdate:\001*\262\322*3\n\032Upd" +
-      "ateClusterHostsMetadata\022\025google.protobuf" +
-      ".Empty\022\244\001\n\010GetShard\0221.yandex.cloud.mdb.r" +
-      "edis.v1.GetClusterShardRequest\032 .yandex." +
-      "cloud.mdb.redis.v1.Shard\"C\202\323\344\223\002=\022;/manag" +
-      "ed-redis/v1/clusters/{cluster_id}/shards" +
-      "/{shard_name}\022\257\001\n\nListShards\0223.yandex.cl" +
-      "oud.mdb.redis.v1.ListClusterShardsReques" +
-      "t\0324.yandex.cloud.mdb.redis.v1.ListCluste" +
-      "rShardsResponse\"6\202\323\344\223\0020\022./managed-redis/" +
-      "v1/clusters/{cluster_id}/shards\022\277\001\n\010AddS" +
-      "hard\0221.yandex.cloud.mdb.redis.v1.AddClus" +
-      "terShardRequest\032!.yandex.cloud.operation" +
-      ".Operation\"]\202\323\344\223\0023\"./managed-redis/v1/cl" +
-      "usters/{cluster_id}/shards:\001*\262\322* \n\027AddCl" +
-      "usterShardMetadata\022\005Shard\022\342\001\n\013DeleteShar" +
-      "d\0224.yandex.cloud.mdb.redis.v1.DeleteClus" +
-      "terShardRequest\032!.yandex.cloud.operation" +
-      ".Operation\"z\202\323\344\223\002=*;/managed-redis/v1/cl" +
-      "usters/{cluster_id}/shards/{shard_name}\262" +
-      "\322*3\n\032DeleteClusterShardMetadata\022\025google." +
-      "protobuf.Empty\022\304\001\n\tRebalance\0222.yandex.cl" +
-      "oud.mdb.redis.v1.RebalanceClusterRequest" +
-      "\032!.yandex.cloud.operation.Operation\"`\202\323\344" +
-      "\223\0023\"1/managed-redis/v1/clusters/{cluster" +
-      "_id}:rebalance\262\322*#\n\030RebalanceClusterMeta" +
-      "data\022\007Cluster\022\331\001\n\016EnableSharding\0227.yande" +
-      "x.cloud.mdb.redis.v1.EnableShardingClust" +
-      "erRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"k\202\323\344\223\0029\"7/managed-redis/v1/clusters" +
-      "/{cluster_id}:enable_sharding\262\322*(\n\035Enabl" +
-      "eShardingClusterMetadata\022\007ClusterBd\n\035yan" +
-      "dex.cloud.api.mdb.redis.v1ZCgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/mdb" +
-      "/redis/v1;redisb\006proto3"
+      "loud.mdb.redis.v1.DiskSizeAutoscaling\022>\n" +
+      "\031backup_retain_period_days\030\r \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\014\n\nredis_specJ\004\010\t\020" +
+      "\0132\355&\n\016ClusterService\022\210\001\n\003Get\022,.yandex.cl" +
+      "oud.mdb.redis.v1.GetClusterRequest\032\".yan" +
+      "dex.cloud.mdb.redis.v1.Cluster\"/\202\323\344\223\002)\022\'" +
+      "/managed-redis/v1/clusters/{cluster_id}\022" +
+      "\213\001\n\004List\022..yandex.cloud.mdb.redis.v1.Lis" +
+      "tClustersRequest\032/.yandex.cloud.mdb.redi" +
+      "s.v1.ListClustersResponse\"\"\202\323\344\223\002\034\022\032/mana" +
+      "ged-redis/v1/clusters\022\247\001\n\006Create\022/.yande" +
+      "x.cloud.mdb.redis.v1.CreateClusterReques" +
+      "t\032!.yandex.cloud.operation.Operation\"I\202\323" +
+      "\344\223\002\037\"\032/managed-redis/v1/clusters:\001*\262\322* \n" +
+      "\025CreateClusterMetadata\022\007Cluster\022\264\001\n\006Upda" +
+      "te\022/.yandex.cloud.mdb.redis.v1.UpdateClu" +
+      "sterRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"V\202\323\344\223\002,2\'/managed-redis/v1/cluste" +
+      "rs/{cluster_id}:\001*\262\322* \n\025UpdateClusterMet" +
+      "adata\022\007Cluster\022\277\001\n\006Delete\022/.yandex.cloud" +
+      ".mdb.redis.v1.DeleteClusterRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"a\202\323\344\223\002)*\'/" +
+      "managed-redis/v1/clusters/{cluster_id}\262\322" +
+      "*.\n\025DeleteClusterMetadata\022\025google.protob" +
+      "uf.Empty\022\264\001\n\005Start\022..yandex.cloud.mdb.re" +
+      "dis.v1.StartClusterRequest\032!.yandex.clou" +
+      "d.operation.Operation\"X\202\323\344\223\002/\"-/managed-" +
+      "redis/v1/clusters/{cluster_id}:start\262\322*\037" +
+      "\n\024StartClusterMetadata\022\007Cluster\022\260\001\n\004Stop" +
+      "\022-.yandex.cloud.mdb.redis.v1.StopCluster" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"V\202\323\344\223\002.\",/managed-redis/v1/clusters/{" +
+      "cluster_id}:stop\262\322*\036\n\023StopClusterMetadat" +
+      "a\022\007Cluster\022\263\001\n\004Move\022-.yandex.cloud.mdb.r" +
+      "edis.v1.MoveClusterRequest\032!.yandex.clou" +
+      "d.operation.Operation\"Y\202\323\344\223\0021\",/managed-" +
+      "redis/v1/clusters/{cluster_id}:move:\001*\262\322" +
+      "*\036\n\023MoveClusterMetadata\022\007Cluster\022\270\001\n\006Bac" +
+      "kup\022/.yandex.cloud.mdb.redis.v1.BackupCl" +
+      "usterRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"Z\202\323\344\223\0020\"./managed-redis/v1/clust" +
+      "ers/{cluster_id}:backup\262\322* \n\025BackupClust" +
+      "erMetadata\022\007Cluster\022\262\001\n\007Restore\0220.yandex" +
+      ".cloud.mdb.redis.v1.RestoreClusterReques" +
+      "t\032!.yandex.cloud.operation.Operation\"R\202\323" +
+      "\344\223\002\'\"\"/managed-redis/v1/clusters:restore" +
+      ":\001*\262\322*!\n\026RestoreClusterMetadata\022\007Cluster" +
+      "\022\351\001\n\025RescheduleMaintenance\0227.yandex.clou" +
+      "d.mdb.redis.v1.RescheduleMaintenanceRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"t" +
+      "\202\323\344\223\002B\"=/managed-redis/v1/clusters/{clus" +
+      "ter_id}:rescheduleMaintenance:\001*\262\322*(\n\035Re" +
+      "scheduleMaintenanceMetadata\022\007Cluster\022\327\001\n" +
+      "\rStartFailover\0226.yandex.cloud.mdb.redis." +
+      "v1.StartClusterFailoverRequest\032!.yandex." +
+      "cloud.operation.Operation\"k\202\323\344\223\002:\"5/mana" +
+      "ged-redis/v1/clusters/{cluster_id}:start" +
+      "Failover:\001*\262\322*\'\n\034StartClusterFailoverMet" +
+      "adata\022\007Cluster\022\247\001\n\010ListLogs\0221.yandex.clo" +
+      "ud.mdb.redis.v1.ListClusterLogsRequest\0322" +
+      ".yandex.cloud.mdb.redis.v1.ListClusterLo" +
+      "gsResponse\"4\202\323\344\223\002.\022,/managed-redis/v1/cl" +
+      "usters/{cluster_id}:logs\022\254\001\n\nStreamLogs\022" +
+      "3.yandex.cloud.mdb.redis.v1.StreamCluste" +
+      "rLogsRequest\032*.yandex.cloud.mdb.redis.v1" +
+      ".StreamLogRecord\";\202\323\344\223\0025\0223/managed-redis" +
+      "/v1/clusters/{cluster_id}:stream_logs0\001\022" +
+      "\277\001\n\016ListOperations\0227.yandex.cloud.mdb.re" +
+      "dis.v1.ListClusterOperationsRequest\0328.ya" +
+      "ndex.cloud.mdb.redis.v1.ListClusterOpera" +
+      "tionsResponse\":\202\323\344\223\0024\0222/managed-redis/v1" +
+      "/clusters/{cluster_id}/operations\022\263\001\n\013Li" +
+      "stBackups\0224.yandex.cloud.mdb.redis.v1.Li" +
+      "stClusterBackupsRequest\0325.yandex.cloud.m" +
+      "db.redis.v1.ListClusterBackupsResponse\"7" +
+      "\202\323\344\223\0021\022//managed-redis/v1/clusters/{clus" +
+      "ter_id}/backups\022\253\001\n\tListHosts\0222.yandex.c" +
+      "loud.mdb.redis.v1.ListClusterHostsReques" +
+      "t\0323.yandex.cloud.mdb.redis.v1.ListCluste" +
+      "rHostsResponse\"5\202\323\344\223\002/\022-/managed-redis/v" +
+      "1/clusters/{cluster_id}/hosts\022\332\001\n\010AddHos" +
+      "ts\0221.yandex.cloud.mdb.redis.v1.AddCluste" +
+      "rHostsRequest\032!.yandex.cloud.operation.O" +
+      "peration\"x\202\323\344\223\002>\"9/managed-redis/v1/clus" +
+      "ters/{cluster_id}/hosts:batchCreate:\001*\262\322" +
+      "*0\n\027AddClusterHostsMetadata\022\025google.prot" +
+      "obuf.Empty\022\343\001\n\013DeleteHosts\0224.yandex.clou" +
+      "d.mdb.redis.v1.DeleteClusterHostsRequest" +
+      "\032!.yandex.cloud.operation.Operation\"{\202\323\344" +
+      "\223\002>\"9/managed-redis/v1/clusters/{cluster" +
+      "_id}/hosts:batchDelete:\001*\262\322*3\n\032DeleteClu" +
+      "sterHostsMetadata\022\025google.protobuf.Empty" +
+      "\022\343\001\n\013UpdateHosts\0224.yandex.cloud.mdb.redi" +
+      "s.v1.UpdateClusterHostsRequest\032!.yandex." +
+      "cloud.operation.Operation\"{\202\323\344\223\002>\"9/mana" +
+      "ged-redis/v1/clusters/{cluster_id}/hosts" +
+      ":batchUpdate:\001*\262\322*3\n\032UpdateClusterHostsM" +
+      "etadata\022\025google.protobuf.Empty\022\244\001\n\010GetSh" +
+      "ard\0221.yandex.cloud.mdb.redis.v1.GetClust" +
+      "erShardRequest\032 .yandex.cloud.mdb.redis." +
+      "v1.Shard\"C\202\323\344\223\002=\022;/managed-redis/v1/clus" +
+      "ters/{cluster_id}/shards/{shard_name}\022\257\001" +
+      "\n\nListShards\0223.yandex.cloud.mdb.redis.v1" +
+      ".ListClusterShardsRequest\0324.yandex.cloud" +
+      ".mdb.redis.v1.ListClusterShardsResponse\"" +
+      "6\202\323\344\223\0020\022./managed-redis/v1/clusters/{clu" +
+      "ster_id}/shards\022\277\001\n\010AddShard\0221.yandex.cl" +
+      "oud.mdb.redis.v1.AddClusterShardRequest\032" +
+      "!.yandex.cloud.operation.Operation\"]\202\323\344\223" +
+      "\0023\"./managed-redis/v1/clusters/{cluster_" +
+      "id}/shards:\001*\262\322* \n\027AddClusterShardMetada" +
+      "ta\022\005Shard\022\342\001\n\013DeleteShard\0224.yandex.cloud" +
+      ".mdb.redis.v1.DeleteClusterShardRequest\032" +
+      "!.yandex.cloud.operation.Operation\"z\202\323\344\223" +
+      "\002=*;/managed-redis/v1/clusters/{cluster_" +
+      "id}/shards/{shard_name}\262\322*3\n\032DeleteClust" +
+      "erShardMetadata\022\025google.protobuf.Empty\022\304" +
+      "\001\n\tRebalance\0222.yandex.cloud.mdb.redis.v1" +
+      ".RebalanceClusterRequest\032!.yandex.cloud." +
+      "operation.Operation\"`\202\323\344\223\0023\"1/managed-re" +
+      "dis/v1/clusters/{cluster_id}:rebalance\262\322" +
+      "*#\n\030RebalanceClusterMetadata\022\007Cluster\022\331\001" +
+      "\n\016EnableSharding\0227.yandex.cloud.mdb.redi" +
+      "s.v1.EnableShardingClusterRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"k\202\323\344\223\0029\"7/m" +
+      "anaged-redis/v1/clusters/{cluster_id}:en" +
+      "able_sharding\262\322*(\n\035EnableShardingCluster" +
+      "Metadata\022\007ClusterBd\n\035yandex.cloud.api.md" +
+      "b.redis.v1ZCgithub.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/mdb/redis/v1;redisb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -60368,7 +60633,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_redis_v1_ConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_ConfigSpec_descriptor,
-        new java.lang.String[] { "Version", "RedisConfig50", "RedisConfig60", "RedisConfig62", "RedisConfig70", "Resources", "BackupWindowStart", "Access", "Redis", "DiskSizeAutoscaling", "RedisSpec", });
+        new java.lang.String[] { "Version", "RedisConfig50", "RedisConfig60", "RedisConfig62", "RedisConfig70", "Resources", "BackupWindowStart", "Access", "Redis", "DiskSizeAutoscaling", "BackupRetainPeriodDays", "RedisSpec", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

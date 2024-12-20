@@ -647,7 +647,7 @@ public final class ChannelServiceOuterClass {
      * The maximum number of the results per page to return. Default value: 100.
      * </pre>
      *
-     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
      * @return The pageSize.
      */
     long getPageSize();
@@ -893,7 +893,7 @@ public final class ChannelServiceOuterClass {
      * The maximum number of the results per page to return. Default value: 100.
      * </pre>
      *
-     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
      * @return The pageSize.
      */
     @java.lang.Override
@@ -1530,7 +1530,7 @@ public final class ChannelServiceOuterClass {
        * The maximum number of the results per page to return. Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
        * @return The pageSize.
        */
       @java.lang.Override
@@ -1542,7 +1542,7 @@ public final class ChannelServiceOuterClass {
        * The maximum number of the results per page to return. Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
        */
@@ -1557,7 +1557,7 @@ public final class ChannelServiceOuterClass {
        * The maximum number of the results per page to return. Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageSize() {
@@ -8477,7 +8477,7 @@ public final class ChannelServiceOuterClass {
      * List of channel IDs.
      * </pre>
      *
-     * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return A list containing the channelIds.
      */
     java.util.List<java.lang.String>
@@ -8487,7 +8487,7 @@ public final class ChannelServiceOuterClass {
      * List of channel IDs.
      * </pre>
      *
-     * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The count of channelIds.
      */
     int getChannelIdsCount();
@@ -8496,7 +8496,7 @@ public final class ChannelServiceOuterClass {
      * List of channel IDs.
      * </pre>
      *
-     * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the element to return.
      * @return The channelIds at the given index.
      */
@@ -8506,7 +8506,7 @@ public final class ChannelServiceOuterClass {
      * List of channel IDs.
      * </pre>
      *
-     * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the channelIds at the given index.
      */
@@ -8664,7 +8664,7 @@ public final class ChannelServiceOuterClass {
      * List of channel IDs.
      * </pre>
      *
-     * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return A list containing the channelIds.
      */
     public com.google.protobuf.ProtocolStringList
@@ -8676,7 +8676,7 @@ public final class ChannelServiceOuterClass {
      * List of channel IDs.
      * </pre>
      *
-     * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The count of channelIds.
      */
     public int getChannelIdsCount() {
@@ -8687,7 +8687,7 @@ public final class ChannelServiceOuterClass {
      * List of channel IDs.
      * </pre>
      *
-     * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the element to return.
      * @return The channelIds at the given index.
      */
@@ -8699,7 +8699,7 @@ public final class ChannelServiceOuterClass {
      * List of channel IDs.
      * </pre>
      *
-     * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the channelIds at the given index.
      */
@@ -9154,7 +9154,7 @@ public final class ChannelServiceOuterClass {
        * List of channel IDs.
        * </pre>
        *
-       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return A list containing the channelIds.
        */
       public com.google.protobuf.ProtocolStringList
@@ -9166,7 +9166,7 @@ public final class ChannelServiceOuterClass {
        * List of channel IDs.
        * </pre>
        *
-       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The count of channelIds.
        */
       public int getChannelIdsCount() {
@@ -9177,7 +9177,7 @@ public final class ChannelServiceOuterClass {
        * List of channel IDs.
        * </pre>
        *
-       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param index The index of the element to return.
        * @return The channelIds at the given index.
        */
@@ -9189,7 +9189,7 @@ public final class ChannelServiceOuterClass {
        * List of channel IDs.
        * </pre>
        *
-       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the channelIds at the given index.
        */
@@ -9202,7 +9202,7 @@ public final class ChannelServiceOuterClass {
        * List of channel IDs.
        * </pre>
        *
-       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param index The index to set the value at.
        * @param value The channelIds to set.
        * @return This builder for chaining.
@@ -9222,7 +9222,7 @@ public final class ChannelServiceOuterClass {
        * List of channel IDs.
        * </pre>
        *
-       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The channelIds to add.
        * @return This builder for chaining.
        */
@@ -9241,7 +9241,7 @@ public final class ChannelServiceOuterClass {
        * List of channel IDs.
        * </pre>
        *
-       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param values The channelIds to add.
        * @return This builder for chaining.
        */
@@ -9258,7 +9258,7 @@ public final class ChannelServiceOuterClass {
        * List of channel IDs.
        * </pre>
        *
-       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearChannelIds() {
@@ -9272,7 +9272,7 @@ public final class ChannelServiceOuterClass {
        * List of channel IDs.
        * </pre>
        *
-       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-50", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>repeated string channel_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes of the channelIds to add.
        * @return This builder for chaining.
        */
@@ -10128,37 +10128,37 @@ public final class ChannelServiceOuterClass {
       ".proto\032\035yandex/cloud/validation.proto\032#y" +
       "andex/cloud/video/v1/channel.proto\"5\n\021Ge" +
       "tChannelRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\"\256\001\n\023ListChannelsRequest\022%\n\017org" +
-      "anization_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage" +
-      "_size\030d \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030e " +
-      "\001(\tB\t\212\3101\005<=200\022\020\n\010order_by\030f \001(\t\022\032\n\006filt" +
-      "er\030g \001(\tB\n\212\3101\006<=1000J\004\010\002\020d\"g\n\024ListChanne" +
-      "lsResponse\0220\n\010channels\030\001 \003(\0132\036.yandex.cl" +
-      "oud.video.v1.Channel\022\027\n\017next_page_token\030" +
-      "d \001(\tJ\004\010\002\020d\"\255\002\n\024CreateChannelRequest\022%\n\017" +
-      "organization_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\023\n\005t" +
-      "itle\030\002 \001(\tB\004\350\3071\001\022\023\n\013description\030\003 \001(\t\022\215\001" +
-      "\n\006labels\030\310\001 \003(\01327.yandex.cloud.video.v1." +
-      "CreateChannelRequest.LabelsEntryBC\202\3101\004<=" +
-      "64\212\3101\004<=63\362\3071\017[-_.@:/0-9a-z]*\262\3101\006\032\004<=63\262" +
-      "\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\005\010\004\020\310\001\"+\n\025C" +
-      "reateChannelMetadata\022\022\n\nchannel_id\030\001 \001(\t" +
-      "\"\322\002\n\024UpdateChannelRequest\022 \n\nchannel_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022.\n\nfield_mask\030\002 \001(\0132" +
-      "\032.google.protobuf.FieldMask\022\r\n\005title\030\003 \001" +
-      "(\t\022\023\n\013description\030\004 \001(\t\022\215\001\n\006labels\030\310\001 \003(" +
-      "\01327.yandex.cloud.video.v1.UpdateChannelR" +
-      "equest.LabelsEntryBC\202\3101\004<=64\212\3101\004<=63\362\3071\017" +
-      "[-_.@:/0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0" +
-      "-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001J\005\010\005\020\310\001\"+\n\025UpdateChannelMe" +
-      "tadata\022\022\n\nchannel_id\030\001 \001(\t\"8\n\024DeleteChan" +
-      "nelRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\"+\n\025DeleteChannelMetadata\022\022\n\nchannel" +
-      "_id\030\001 \001(\t\"j\n\032BatchDeleteChannelsRequest\022" +
-      "%\n\017organization_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022%" +
-      "\n\013channel_ids\030\002 \003(\tB\020\202\3101\0041-50\212\3101\004<=50\"2\n" +
+      "\001\212\3101\004<=50\"\255\001\n\023ListChannelsRequest\022%\n\017org" +
+      "anization_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\034\n\tpage" +
+      "_size\030d \001(\003B\t\372\3071\005<=100\022\035\n\npage_token\030e \001" +
+      "(\tB\t\212\3101\005<=200\022\020\n\010order_by\030f \001(\t\022\032\n\006filte" +
+      "r\030g \001(\tB\n\212\3101\006<=1000J\004\010\002\020d\"g\n\024ListChannel" +
+      "sResponse\0220\n\010channels\030\001 \003(\0132\036.yandex.clo" +
+      "ud.video.v1.Channel\022\027\n\017next_page_token\030d" +
+      " \001(\tJ\004\010\002\020d\"\255\002\n\024CreateChannelRequest\022%\n\017o" +
+      "rganization_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\023\n\005ti" +
+      "tle\030\002 \001(\tB\004\350\3071\001\022\023\n\013description\030\003 \001(\t\022\215\001\n" +
+      "\006labels\030\310\001 \003(\01327.yandex.cloud.video.v1.C" +
+      "reateChannelRequest.LabelsEntryBC\202\3101\004<=6" +
+      "4\212\3101\004<=63\362\3071\017[-_.@:/0-9a-z]*\262\3101\006\032\004<=63\262\310" +
+      "1\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\005\010\004\020\310\001\"+\n\025Cr" +
+      "eateChannelMetadata\022\022\n\nchannel_id\030\001 \001(\t\"" +
+      "\322\002\n\024UpdateChannelRequest\022 \n\nchannel_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022.\n\nfield_mask\030\002 \001(\0132\032" +
+      ".google.protobuf.FieldMask\022\r\n\005title\030\003 \001(" +
+      "\t\022\023\n\013description\030\004 \001(\t\022\215\001\n\006labels\030\310\001 \003(\013" +
+      "27.yandex.cloud.video.v1.UpdateChannelRe" +
+      "quest.LabelsEntryBC\202\3101\004<=64\212\3101\004<=63\362\3071\017[" +
+      "-_.@:/0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-" +
+      "9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001J\005\010\005\020\310\001\"+\n\025UpdateChannelMet" +
+      "adata\022\022\n\nchannel_id\030\001 \001(\t\"8\n\024DeleteChann" +
+      "elRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\"+\n\025DeleteChannelMetadata\022\022\n\nchannel_" +
+      "id\030\001 \001(\t\"k\n\032BatchDeleteChannelsRequest\022%" +
+      "\n\017organization_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022&\n" +
+      "\013channel_ids\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<=50\"2\n" +
       "\033BatchDeleteChannelsMetadata\022\023\n\013channel_" +
       "ids\030\001 \003(\t2\317\007\n\016ChannelService\022x\n\003Get\022(.ya" +
       "ndex.cloud.video.v1.GetChannelRequest\032\036." +

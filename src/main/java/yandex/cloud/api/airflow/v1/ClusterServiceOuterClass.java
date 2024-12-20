@@ -6541,6 +6541,46 @@ public final class ClusterServiceOuterClass {
      * <code>.yandex.cloud.airflow.v1.LockboxConfig lockbox = 8;</code>
      */
     yandex.cloud.api.airflow.v1.ClusterOuterClass.LockboxConfigOrBuilder getLockboxOrBuilder();
+
+    /**
+     * <pre>
+     * Apache Airflow version. Format: "Major.Minor"
+     * </pre>
+     *
+     * <code>string airflow_version = 9;</code>
+     * @return The airflowVersion.
+     */
+    java.lang.String getAirflowVersion();
+    /**
+     * <pre>
+     * Apache Airflow version. Format: "Major.Minor"
+     * </pre>
+     *
+     * <code>string airflow_version = 9;</code>
+     * @return The bytes for airflowVersion.
+     */
+    com.google.protobuf.ByteString
+        getAirflowVersionBytes();
+
+    /**
+     * <pre>
+     * Python version. Format: "Major.Minor"
+     * </pre>
+     *
+     * <code>string python_version = 10;</code>
+     * @return The pythonVersion.
+     */
+    java.lang.String getPythonVersion();
+    /**
+     * <pre>
+     * Python version. Format: "Major.Minor"
+     * </pre>
+     *
+     * <code>string python_version = 10;</code>
+     * @return The bytes for pythonVersion.
+     */
+    com.google.protobuf.ByteString
+        getPythonVersionBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.airflow.v1.UpdateClusterConfigSpec}
@@ -6555,6 +6595,8 @@ public final class ClusterServiceOuterClass {
       super(builder);
     }
     private UpdateClusterConfigSpec() {
+      airflowVersion_ = "";
+      pythonVersion_ = "";
     }
 
     @java.lang.Override
@@ -6676,6 +6718,18 @@ public final class ClusterServiceOuterClass {
                 lockbox_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              airflowVersion_ = s;
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pythonVersion_ = s;
               break;
             }
             default: {
@@ -6976,6 +7030,98 @@ public final class ClusterServiceOuterClass {
       return getLockbox();
     }
 
+    public static final int AIRFLOW_VERSION_FIELD_NUMBER = 9;
+    private volatile java.lang.Object airflowVersion_;
+    /**
+     * <pre>
+     * Apache Airflow version. Format: "Major.Minor"
+     * </pre>
+     *
+     * <code>string airflow_version = 9;</code>
+     * @return The airflowVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getAirflowVersion() {
+      java.lang.Object ref = airflowVersion_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        airflowVersion_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Apache Airflow version. Format: "Major.Minor"
+     * </pre>
+     *
+     * <code>string airflow_version = 9;</code>
+     * @return The bytes for airflowVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAirflowVersionBytes() {
+      java.lang.Object ref = airflowVersion_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        airflowVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PYTHON_VERSION_FIELD_NUMBER = 10;
+    private volatile java.lang.Object pythonVersion_;
+    /**
+     * <pre>
+     * Python version. Format: "Major.Minor"
+     * </pre>
+     *
+     * <code>string python_version = 10;</code>
+     * @return The pythonVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getPythonVersion() {
+      java.lang.Object ref = pythonVersion_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pythonVersion_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Python version. Format: "Major.Minor"
+     * </pre>
+     *
+     * <code>string python_version = 10;</code>
+     * @return The bytes for pythonVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPythonVersionBytes() {
+      java.lang.Object ref = pythonVersion_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pythonVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7010,6 +7156,12 @@ public final class ClusterServiceOuterClass {
       }
       if (lockbox_ != null) {
         output.writeMessage(8, getLockbox());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(airflowVersion_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, airflowVersion_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pythonVersion_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, pythonVersion_);
       }
       unknownFields.writeTo(output);
     }
@@ -7047,6 +7199,12 @@ public final class ClusterServiceOuterClass {
       if (lockbox_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getLockbox());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(airflowVersion_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, airflowVersion_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pythonVersion_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, pythonVersion_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7098,6 +7256,10 @@ public final class ClusterServiceOuterClass {
         if (!getLockbox()
             .equals(other.getLockbox())) return false;
       }
+      if (!getAirflowVersion()
+          .equals(other.getAirflowVersion())) return false;
+      if (!getPythonVersion()
+          .equals(other.getPythonVersion())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7137,6 +7299,10 @@ public final class ClusterServiceOuterClass {
         hash = (37 * hash) + LOCKBOX_FIELD_NUMBER;
         hash = (53 * hash) + getLockbox().hashCode();
       }
+      hash = (37 * hash) + AIRFLOW_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getAirflowVersion().hashCode();
+      hash = (37 * hash) + PYTHON_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getPythonVersion().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7312,6 +7478,10 @@ public final class ClusterServiceOuterClass {
           lockbox_ = null;
           lockboxBuilder_ = null;
         }
+        airflowVersion_ = "";
+
+        pythonVersion_ = "";
+
         return this;
       }
 
@@ -7373,6 +7543,8 @@ public final class ClusterServiceOuterClass {
         } else {
           result.lockbox_ = lockboxBuilder_.build();
         }
+        result.airflowVersion_ = airflowVersion_;
+        result.pythonVersion_ = pythonVersion_;
         onBuilt();
         return result;
       }
@@ -7441,6 +7613,14 @@ public final class ClusterServiceOuterClass {
         }
         if (other.hasLockbox()) {
           mergeLockbox(other.getLockbox());
+        }
+        if (!other.getAirflowVersion().isEmpty()) {
+          airflowVersion_ = other.airflowVersion_;
+          onChanged();
+        }
+        if (!other.getPythonVersion().isEmpty()) {
+          pythonVersion_ = other.pythonVersion_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8554,6 +8734,198 @@ public final class ClusterServiceOuterClass {
           lockbox_ = null;
         }
         return lockboxBuilder_;
+      }
+
+      private java.lang.Object airflowVersion_ = "";
+      /**
+       * <pre>
+       * Apache Airflow version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string airflow_version = 9;</code>
+       * @return The airflowVersion.
+       */
+      public java.lang.String getAirflowVersion() {
+        java.lang.Object ref = airflowVersion_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          airflowVersion_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Apache Airflow version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string airflow_version = 9;</code>
+       * @return The bytes for airflowVersion.
+       */
+      public com.google.protobuf.ByteString
+          getAirflowVersionBytes() {
+        java.lang.Object ref = airflowVersion_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          airflowVersion_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Apache Airflow version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string airflow_version = 9;</code>
+       * @param value The airflowVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAirflowVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        airflowVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Apache Airflow version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string airflow_version = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAirflowVersion() {
+        
+        airflowVersion_ = getDefaultInstance().getAirflowVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Apache Airflow version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string airflow_version = 9;</code>
+       * @param value The bytes for airflowVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAirflowVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        airflowVersion_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pythonVersion_ = "";
+      /**
+       * <pre>
+       * Python version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string python_version = 10;</code>
+       * @return The pythonVersion.
+       */
+      public java.lang.String getPythonVersion() {
+        java.lang.Object ref = pythonVersion_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pythonVersion_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Python version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string python_version = 10;</code>
+       * @return The bytes for pythonVersion.
+       */
+      public com.google.protobuf.ByteString
+          getPythonVersionBytes() {
+        java.lang.Object ref = pythonVersion_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pythonVersion_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Python version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string python_version = 10;</code>
+       * @param value The pythonVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPythonVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pythonVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Python version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string python_version = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPythonVersion() {
+        
+        pythonVersion_ = getDefaultInstance().getPythonVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Python version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string python_version = 10;</code>
+       * @param value The bytes for pythonVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPythonVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pythonVersion_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -18692,7 +19064,7 @@ public final class ClusterServiceOuterClass {
       "fig\022%\n\016admin_password\030\014 \001(\tB\r\350\3071\001\212\3101\0058-1" +
       "28\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
       "\002 \001(\t:\0028\001J\004\010\005\020\006\"+\n\025CreateClusterMetadata" +
-      "\022\022\n\ncluster_id\030\001 \001(\t\"\274\003\n\027UpdateClusterCo" +
+      "\022\022\n\ncluster_id\030\001 \001(\t\"\355\003\n\027UpdateClusterCo" +
       "nfigSpec\0227\n\007airflow\030\002 \001(\0132&.yandex.cloud" +
       ".airflow.v1.AirflowConfig\022;\n\twebserver\030\003" +
       " \001(\0132(.yandex.cloud.airflow.v1.Webserver" +
@@ -18703,78 +19075,80 @@ public final class ClusterServiceOuterClass {
       "airflow.v1.WorkerConfig\022;\n\014dependencies\030" +
       "\007 \001(\0132%.yandex.cloud.airflow.v1.Dependen" +
       "cies\0227\n\007lockbox\030\010 \001(\0132&.yandex.cloud.air" +
-      "flow.v1.LockboxConfigJ\004\010\001\020\002\"5\n\027UpdateNet" +
-      "workConfigSpec\022\032\n\022security_group_ids\030\001 \003" +
-      "(\t\"\275\005\n\024UpdateClusterRequest\022 \n\ncluster_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001" +
-      "(\0132\032.google.protobuf.FieldMask\022/\n\004name\030\003" +
-      " \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022" +
-      "\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\212\001\n\006labe" +
-      "ls\030\005 \003(\01329.yandex.cloud.airflow.v1.Updat" +
-      "eClusterRequest.LabelsEntryB?\202\3101\004<=64\212\3101" +
-      "\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z" +
-      "][-_0-9a-z]*\022E\n\013config_spec\030\006 \001(\01320.yand" +
-      "ex.cloud.airflow.v1.UpdateClusterConfigS" +
-      "pec\022:\n\tcode_sync\030\007 \001(\0132\'.yandex.cloud.ai" +
-      "rflow.v1.CodeSyncConfig\022F\n\014network_spec\030" +
-      "\010 \001(\01320.yandex.cloud.airflow.v1.UpdateNe" +
-      "tworkConfigSpec\022\033\n\023deletion_protection\030\t" +
-      " \001(\010\022$\n\022service_account_id\030\n \001(\tB\010\212\3101\004<=" +
-      "50\0227\n\007logging\030\013 \001(\0132&.yandex.cloud.airfl" +
-      "ow.v1.LoggingConfig\032-\n\013LabelsEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateClus" +
-      "terMetadata\022\022\n\ncluster_id\030\001 \001(\t\"8\n\024Delet" +
-      "eClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\"+\n\025DeleteClusterMetadata\022\022\n\ncl" +
-      "uster_id\030\001 \001(\t\"7\n\023StartClusterRequest\022 \n" +
-      "\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024Start" +
-      "ClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022S" +
-      "topClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\")\n\023StopClusterMetadata\022\022\n\ncl" +
-      "uster_id\030\001 \001(\t\"~\n\034ListClusterOperationsR" +
+      "flow.v1.LockboxConfig\022\027\n\017airflow_version" +
+      "\030\t \001(\t\022\026\n\016python_version\030\n \001(\tJ\004\010\001\020\002\"5\n\027" +
+      "UpdateNetworkConfigSpec\022\032\n\022security_grou" +
+      "p_ids\030\001 \003(\t\"\275\005\n\024UpdateClusterRequest\022 \n\n" +
+      "cluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update" +
+      "_mask\030\002 \001(\0132\032.google.protobuf.FieldMask\022" +
+      "/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}" +
+      "[a-z0-9]\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256" +
+      "\022\212\001\n\006labels\030\005 \003(\01329.yandex.cloud.airflow" +
+      ".v1.UpdateClusterRequest.LabelsEntryB?\202\310" +
+      "1\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262" +
+      "\3101\022\022\020[a-z][-_0-9a-z]*\022E\n\013config_spec\030\006 \001" +
+      "(\01320.yandex.cloud.airflow.v1.UpdateClust" +
+      "erConfigSpec\022:\n\tcode_sync\030\007 \001(\0132\'.yandex" +
+      ".cloud.airflow.v1.CodeSyncConfig\022F\n\014netw" +
+      "ork_spec\030\010 \001(\01320.yandex.cloud.airflow.v1" +
+      ".UpdateNetworkConfigSpec\022\033\n\023deletion_pro" +
+      "tection\030\t \001(\010\022$\n\022service_account_id\030\n \001(" +
+      "\tB\010\212\3101\004<=50\0227\n\007logging\030\013 \001(\0132&.yandex.cl" +
+      "oud.airflow.v1.LoggingConfig\032-\n\013LabelsEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025U" +
+      "pdateClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t" +
+      "\"8\n\024DeleteClusterRequest\022 \n\ncluster_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025DeleteClusterMetad" +
+      "ata\022\022\n\ncluster_id\030\001 \001(\t\"7\n\023StartClusterR" +
       "equest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_" +
-      "token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListClusterOpe" +
-      "rationsResponse\0225\n\noperations\030\001 \003(\0132!.ya" +
-      "ndex.cloud.operation.Operation\022\027\n\017next_p" +
-      "age_token\030\002 \001(\t2\362\n\n\016ClusterService\022\206\001\n\003G" +
-      "et\022*.yandex.cloud.airflow.v1.GetClusterR" +
-      "equest\032 .yandex.cloud.airflow.v1.Cluster" +
-      "\"1\202\323\344\223\002+\022)/managed-airflow/v1/clusters/{" +
-      "cluster_id}\022\211\001\n\004List\022,.yandex.cloud.airf" +
-      "low.v1.ListClustersRequest\032-.yandex.clou" +
-      "d.airflow.v1.ListClustersResponse\"$\202\323\344\223\002" +
-      "\036\022\034/managed-airflow/v1/clusters\022\247\001\n\006Crea" +
-      "te\022-.yandex.cloud.airflow.v1.CreateClust" +
-      "erRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"K\202\323\344\223\002!\"\034/managed-airflow/v1/cluste" +
-      "rs:\001*\262\322* \n\025CreateClusterMetadata\022\007Cluste" +
-      "r\022\264\001\n\006Update\022-.yandex.cloud.airflow.v1.U" +
-      "pdateClusterRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"X\202\323\344\223\002.2)/managed-airflow" +
-      "/v1/clusters/{cluster_id}:\001*\262\322* \n\025Update" +
-      "ClusterMetadata\022\007Cluster\022\277\001\n\006Delete\022-.ya" +
-      "ndex.cloud.airflow.v1.DeleteClusterReque" +
-      "st\032!.yandex.cloud.operation.Operation\"c\202" +
-      "\323\344\223\002+*)/managed-airflow/v1/clusters/{clu" +
-      "ster_id}\262\322*.\n\025DeleteClusterMetadata\022\025goo" +
-      "gle.protobuf.Empty\022\264\001\n\005Start\022,.yandex.cl" +
-      "oud.airflow.v1.StartClusterRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"Z\202\323\344\223\0021\"//" +
-      "managed-airflow/v1/clusters/{cluster_id}" +
-      ":start\262\322*\037\n\024StartClusterMetadata\022\007Cluste" +
-      "r\022\260\001\n\004Stop\022+.yandex.cloud.airflow.v1.Sto" +
-      "pClusterRequest\032!.yandex.cloud.operation" +
-      ".Operation\"X\202\323\344\223\0020\"./managed-airflow/v1/" +
-      "clusters/{cluster_id}:stop\262\322*\036\n\023StopClus" +
-      "terMetadata\022\007Cluster\022\275\001\n\016ListOperations\022" +
-      "5.yandex.cloud.airflow.v1.ListClusterOpe" +
-      "rationsRequest\0326.yandex.cloud.airflow.v1" +
-      ".ListClusterOperationsResponse\"<\202\323\344\223\0026\0224" +
-      "/managed-airflow/v1/clusters/{cluster_id" +
-      "}/operationsBb\n\033yandex.cloud.api.airflow" +
-      ".v1ZCgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/airflow/v1;airflowb\006proto3"
+      "\"*\n\024StartClusterMetadata\022\022\n\ncluster_id\030\001" +
+      " \001(\t\"6\n\022StopClusterRequest\022 \n\ncluster_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023StopClusterMetad" +
+      "ata\022\022\n\ncluster_id\030\001 \001(\t\"~\n\034ListClusterOp" +
+      "erationsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000" +
+      "\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListC" +
+      "lusterOperationsResponse\0225\n\noperations\030\001" +
+      " \003(\0132!.yandex.cloud.operation.Operation\022" +
+      "\027\n\017next_page_token\030\002 \001(\t2\362\n\n\016ClusterServ" +
+      "ice\022\206\001\n\003Get\022*.yandex.cloud.airflow.v1.Ge" +
+      "tClusterRequest\032 .yandex.cloud.airflow.v" +
+      "1.Cluster\"1\202\323\344\223\002+\022)/managed-airflow/v1/c" +
+      "lusters/{cluster_id}\022\211\001\n\004List\022,.yandex.c" +
+      "loud.airflow.v1.ListClustersRequest\032-.ya" +
+      "ndex.cloud.airflow.v1.ListClustersRespon" +
+      "se\"$\202\323\344\223\002\036\022\034/managed-airflow/v1/clusters" +
+      "\022\247\001\n\006Create\022-.yandex.cloud.airflow.v1.Cr" +
+      "eateClusterRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"K\202\323\344\223\002!\"\034/managed-airflow/" +
+      "v1/clusters:\001*\262\322* \n\025CreateClusterMetadat" +
+      "a\022\007Cluster\022\264\001\n\006Update\022-.yandex.cloud.air" +
+      "flow.v1.UpdateClusterRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"X\202\323\344\223\002.2)/manage" +
+      "d-airflow/v1/clusters/{cluster_id}:\001*\262\322*" +
+      " \n\025UpdateClusterMetadata\022\007Cluster\022\277\001\n\006De" +
+      "lete\022-.yandex.cloud.airflow.v1.DeleteClu" +
+      "sterRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"c\202\323\344\223\002+*)/managed-airflow/v1/clus" +
+      "ters/{cluster_id}\262\322*.\n\025DeleteClusterMeta" +
+      "data\022\025google.protobuf.Empty\022\264\001\n\005Start\022,." +
+      "yandex.cloud.airflow.v1.StartClusterRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"Z" +
+      "\202\323\344\223\0021\"//managed-airflow/v1/clusters/{cl" +
+      "uster_id}:start\262\322*\037\n\024StartClusterMetadat" +
+      "a\022\007Cluster\022\260\001\n\004Stop\022+.yandex.cloud.airfl" +
+      "ow.v1.StopClusterRequest\032!.yandex.cloud." +
+      "operation.Operation\"X\202\323\344\223\0020\"./managed-ai" +
+      "rflow/v1/clusters/{cluster_id}:stop\262\322*\036\n" +
+      "\023StopClusterMetadata\022\007Cluster\022\275\001\n\016ListOp" +
+      "erations\0225.yandex.cloud.airflow.v1.ListC" +
+      "lusterOperationsRequest\0326.yandex.cloud.a" +
+      "irflow.v1.ListClusterOperationsResponse\"" +
+      "<\202\323\344\223\0026\0224/managed-airflow/v1/clusters/{c" +
+      "luster_id}/operationsBb\n\033yandex.cloud.ap" +
+      "i.airflow.v1ZCgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/airflow/v1;airflo" +
+      "wb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18827,7 +19201,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_airflow_v1_UpdateClusterConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_airflow_v1_UpdateClusterConfigSpec_descriptor,
-        new java.lang.String[] { "Airflow", "Webserver", "Scheduler", "Triggerer", "Worker", "Dependencies", "Lockbox", });
+        new java.lang.String[] { "Airflow", "Webserver", "Scheduler", "Triggerer", "Worker", "Dependencies", "Lockbox", "AirflowVersion", "PythonVersion", });
     internal_static_yandex_cloud_airflow_v1_UpdateNetworkConfigSpec_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_airflow_v1_UpdateNetworkConfigSpec_fieldAccessorTable = new

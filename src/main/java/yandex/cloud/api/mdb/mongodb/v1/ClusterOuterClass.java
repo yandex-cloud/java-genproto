@@ -81905,6 +81905,16 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
+     * Allow access for Web SQL.
+     * </pre>
+     *
+     * <code>bool web_sql = 2;</code>
+     * @return The webSql.
+     */
+    boolean getWebSql();
+
+    /**
+     * <pre>
      * Allow access for DataTransfer.
      * </pre>
      *
@@ -81963,6 +81973,11 @@ public final class ClusterOuterClass {
               dataLens_ = input.readBool();
               break;
             }
+            case 16: {
+
+              webSql_ = input.readBool();
+              break;
+            }
             case 24: {
 
               dataTransfer_ = input.readBool();
@@ -82015,6 +82030,21 @@ public final class ClusterOuterClass {
       return dataLens_;
     }
 
+    public static final int WEB_SQL_FIELD_NUMBER = 2;
+    private boolean webSql_;
+    /**
+     * <pre>
+     * Allow access for Web SQL.
+     * </pre>
+     *
+     * <code>bool web_sql = 2;</code>
+     * @return The webSql.
+     */
+    @java.lang.Override
+    public boolean getWebSql() {
+      return webSql_;
+    }
+
     public static final int DATA_TRANSFER_FIELD_NUMBER = 3;
     private boolean dataTransfer_;
     /**
@@ -82047,6 +82077,9 @@ public final class ClusterOuterClass {
       if (dataLens_ != false) {
         output.writeBool(1, dataLens_);
       }
+      if (webSql_ != false) {
+        output.writeBool(2, webSql_);
+      }
       if (dataTransfer_ != false) {
         output.writeBool(3, dataTransfer_);
       }
@@ -82062,6 +82095,10 @@ public final class ClusterOuterClass {
       if (dataLens_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, dataLens_);
+      }
+      if (webSql_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, webSql_);
       }
       if (dataTransfer_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -82084,6 +82121,8 @@ public final class ClusterOuterClass {
 
       if (getDataLens()
           != other.getDataLens()) return false;
+      if (getWebSql()
+          != other.getWebSql()) return false;
       if (getDataTransfer()
           != other.getDataTransfer()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -82100,6 +82139,9 @@ public final class ClusterOuterClass {
       hash = (37 * hash) + DATA_LENS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDataLens());
+      hash = (37 * hash) + WEB_SQL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getWebSql());
       hash = (37 * hash) + DATA_TRANSFER_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDataTransfer());
@@ -82238,6 +82280,8 @@ public final class ClusterOuterClass {
         super.clear();
         dataLens_ = false;
 
+        webSql_ = false;
+
         dataTransfer_ = false;
 
         return this;
@@ -82267,6 +82311,7 @@ public final class ClusterOuterClass {
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Access buildPartial() {
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Access result = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Access(this);
         result.dataLens_ = dataLens_;
+        result.webSql_ = webSql_;
         result.dataTransfer_ = dataTransfer_;
         onBuilt();
         return result;
@@ -82318,6 +82363,9 @@ public final class ClusterOuterClass {
         if (other == yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Access.getDefaultInstance()) return this;
         if (other.getDataLens() != false) {
           setDataLens(other.getDataLens());
+        }
+        if (other.getWebSql() != false) {
+          setWebSql(other.getWebSql());
         }
         if (other.getDataTransfer() != false) {
           setDataTransfer(other.getDataTransfer());
@@ -82390,6 +82438,49 @@ public final class ClusterOuterClass {
       public Builder clearDataLens() {
         
         dataLens_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean webSql_ ;
+      /**
+       * <pre>
+       * Allow access for Web SQL.
+       * </pre>
+       *
+       * <code>bool web_sql = 2;</code>
+       * @return The webSql.
+       */
+      @java.lang.Override
+      public boolean getWebSql() {
+        return webSql_;
+      }
+      /**
+       * <pre>
+       * Allow access for Web SQL.
+       * </pre>
+       *
+       * <code>bool web_sql = 2;</code>
+       * @param value The webSql to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWebSql(boolean value) {
+        
+        webSql_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Allow access for Web SQL.
+       * </pre>
+       *
+       * <code>bool web_sql = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWebSql() {
+        
+        webSql_ = false;
         onChanged();
         return this;
       }
@@ -84944,19 +85035,19 @@ public final class ClusterOuterClass {
       "\002\022\014\n\010MONGOCFG\020\003\"1\n\006Health\022\022\n\016HEALTH_UNKN" +
       "OWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022" +
       "\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_size" +
-      "\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"8\n\006Access\022\021" +
-      "\n\tdata_lens\030\001 \001(\010\022\025\n\rdata_transfer\030\003 \001(\010" +
-      "J\004\010\002\020\003\"9\n\034PerformanceDiagnosticsConfig\022\031" +
-      "\n\021profiling_enabled\030\001 \001(\010\"\347\001\n\023DiskSizeAu" +
-      "toscaling\022K\n\027planned_usage_threshold\030\001 \001" +
-      "(\0132\033.google.protobuf.Int64ValueB\r\350\3071\000\372\3071" +
-      "\0050-100\022M\n\031emergency_usage_threshold\030\002 \001(" +
-      "\0132\033.google.protobuf.Int64ValueB\r\350\3071\000\372\3071\005" +
-      "0-100\0224\n\017disk_size_limit\030\003 \001(\0132\033.google." +
-      "protobuf.Int64ValueBj\n\037yandex.cloud.api." +
-      "mdb.mongodb.v1ZGgithub.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/mdb/mongodb/v1;" +
-      "mongodbb\006proto3"
+      "\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"C\n\006Access\022\021" +
+      "\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\022\025\n\rda" +
+      "ta_transfer\030\003 \001(\010\"9\n\034PerformanceDiagnost" +
+      "icsConfig\022\031\n\021profiling_enabled\030\001 \001(\010\"\347\001\n" +
+      "\023DiskSizeAutoscaling\022K\n\027planned_usage_th" +
+      "reshold\030\001 \001(\0132\033.google.protobuf.Int64Val" +
+      "ueB\r\350\3071\000\372\3071\0050-100\022M\n\031emergency_usage_thr" +
+      "eshold\030\002 \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\r\350\3071\000\372\3071\0050-100\0224\n\017disk_size_limit\030\003 \001(" +
+      "\0132\033.google.protobuf.Int64ValueBj\n\037yandex" +
+      ".cloud.api.mdb.mongodb.v1ZGgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/mdb/" +
+      "mongodb/v1;mongodbb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -85342,7 +85433,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_mongodb_v1_Access_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Access_descriptor,
-        new java.lang.String[] { "DataLens", "DataTransfer", });
+        new java.lang.String[] { "DataLens", "WebSql", "DataTransfer", });
     internal_static_yandex_cloud_mdb_mongodb_v1_PerformanceDiagnosticsConfig_descriptor =
       getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_mdb_mongodb_v1_PerformanceDiagnosticsConfig_fieldAccessorTable = new

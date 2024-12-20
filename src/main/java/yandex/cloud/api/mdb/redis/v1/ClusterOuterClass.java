@@ -6402,6 +6402,33 @@ public final class ClusterOuterClass {
      */
     yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
 
+    /**
+     * <pre>
+     * Retain period of automatically created backup in days
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+     * @return Whether the backupRetainPeriodDays field is set.
+     */
+    boolean hasBackupRetainPeriodDays();
+    /**
+     * <pre>
+     * Retain period of automatically created backup in days
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+     * @return The backupRetainPeriodDays.
+     */
+    com.google.protobuf.Int64Value getBackupRetainPeriodDays();
+    /**
+     * <pre>
+     * Retain period of automatically created backup in days
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder();
+
     public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ClusterConfig.RedisConfigCase getRedisConfigCase();
   }
   /**
@@ -6573,6 +6600,19 @@ public final class ClusterOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(diskSizeAutoscaling_);
                 diskSizeAutoscaling_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 106: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (backupRetainPeriodDays_ != null) {
+                subBuilder = backupRetainPeriodDays_.toBuilder();
+              }
+              backupRetainPeriodDays_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(backupRetainPeriodDays_);
+                backupRetainPeriodDays_ = subBuilder.buildPartial();
               }
 
               break;
@@ -7062,6 +7102,44 @@ public final class ClusterOuterClass {
       return getDiskSizeAutoscaling();
     }
 
+    public static final int BACKUP_RETAIN_PERIOD_DAYS_FIELD_NUMBER = 13;
+    private com.google.protobuf.Int64Value backupRetainPeriodDays_;
+    /**
+     * <pre>
+     * Retain period of automatically created backup in days
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+     * @return Whether the backupRetainPeriodDays field is set.
+     */
+    @java.lang.Override
+    public boolean hasBackupRetainPeriodDays() {
+      return backupRetainPeriodDays_ != null;
+    }
+    /**
+     * <pre>
+     * Retain period of automatically created backup in days
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+     * @return The backupRetainPeriodDays.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getBackupRetainPeriodDays() {
+      return backupRetainPeriodDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backupRetainPeriodDays_;
+    }
+    /**
+     * <pre>
+     * Retain period of automatically created backup in days
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder() {
+      return getBackupRetainPeriodDays();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7105,6 +7183,9 @@ public final class ClusterOuterClass {
       }
       if (diskSizeAutoscaling_ != null) {
         output.writeMessage(10, getDiskSizeAutoscaling());
+      }
+      if (backupRetainPeriodDays_ != null) {
+        output.writeMessage(13, getBackupRetainPeriodDays());
       }
       unknownFields.writeTo(output);
     }
@@ -7154,6 +7235,10 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getDiskSizeAutoscaling());
       }
+      if (backupRetainPeriodDays_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getBackupRetainPeriodDays());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7195,6 +7280,11 @@ public final class ClusterOuterClass {
       if (hasDiskSizeAutoscaling()) {
         if (!getDiskSizeAutoscaling()
             .equals(other.getDiskSizeAutoscaling())) return false;
+      }
+      if (hasBackupRetainPeriodDays() != other.hasBackupRetainPeriodDays()) return false;
+      if (hasBackupRetainPeriodDays()) {
+        if (!getBackupRetainPeriodDays()
+            .equals(other.getBackupRetainPeriodDays())) return false;
       }
       if (!getRedisConfigCase().equals(other.getRedisConfigCase())) return false;
       switch (redisConfigCase_) {
@@ -7249,6 +7339,10 @@ public final class ClusterOuterClass {
       if (hasDiskSizeAutoscaling()) {
         hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
         hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
+      }
+      if (hasBackupRetainPeriodDays()) {
+        hash = (37 * hash) + BACKUP_RETAIN_PERIOD_DAYS_FIELD_NUMBER;
+        hash = (53 * hash) + getBackupRetainPeriodDays().hashCode();
       }
       switch (redisConfigCase_) {
         case 2:
@@ -7435,6 +7529,12 @@ public final class ClusterOuterClass {
           diskSizeAutoscaling_ = null;
           diskSizeAutoscalingBuilder_ = null;
         }
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDays_ = null;
+        } else {
+          backupRetainPeriodDays_ = null;
+          backupRetainPeriodDaysBuilder_ = null;
+        }
         redisConfigCase_ = 0;
         redisConfig_ = null;
         return this;
@@ -7517,6 +7617,11 @@ public final class ClusterOuterClass {
         } else {
           result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
         }
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          result.backupRetainPeriodDays_ = backupRetainPeriodDays_;
+        } else {
+          result.backupRetainPeriodDays_ = backupRetainPeriodDaysBuilder_.build();
+        }
         result.redisConfigCase_ = redisConfigCase_;
         onBuilt();
         return result;
@@ -7584,6 +7689,9 @@ public final class ClusterOuterClass {
         }
         if (other.hasDiskSizeAutoscaling()) {
           mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
+        }
+        if (other.hasBackupRetainPeriodDays()) {
+          mergeBackupRetainPeriodDays(other.getBackupRetainPeriodDays());
         }
         switch (other.getRedisConfigCase()) {
           case REDIS_CONFIG_5_0: {
@@ -9227,6 +9335,161 @@ public final class ClusterOuterClass {
           diskSizeAutoscaling_ = null;
         }
         return diskSizeAutoscalingBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value backupRetainPeriodDays_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backupRetainPeriodDaysBuilder_;
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+       * @return Whether the backupRetainPeriodDays field is set.
+       */
+      public boolean hasBackupRetainPeriodDays() {
+        return backupRetainPeriodDaysBuilder_ != null || backupRetainPeriodDays_ != null;
+      }
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+       * @return The backupRetainPeriodDays.
+       */
+      public com.google.protobuf.Int64Value getBackupRetainPeriodDays() {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          return backupRetainPeriodDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backupRetainPeriodDays_;
+        } else {
+          return backupRetainPeriodDaysBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+       */
+      public Builder setBackupRetainPeriodDays(com.google.protobuf.Int64Value value) {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          backupRetainPeriodDays_ = value;
+          onChanged();
+        } else {
+          backupRetainPeriodDaysBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+       */
+      public Builder setBackupRetainPeriodDays(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDays_ = builderForValue.build();
+          onChanged();
+        } else {
+          backupRetainPeriodDaysBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+       */
+      public Builder mergeBackupRetainPeriodDays(com.google.protobuf.Int64Value value) {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          if (backupRetainPeriodDays_ != null) {
+            backupRetainPeriodDays_ =
+              com.google.protobuf.Int64Value.newBuilder(backupRetainPeriodDays_).mergeFrom(value).buildPartial();
+          } else {
+            backupRetainPeriodDays_ = value;
+          }
+          onChanged();
+        } else {
+          backupRetainPeriodDaysBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+       */
+      public Builder clearBackupRetainPeriodDays() {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDays_ = null;
+          onChanged();
+        } else {
+          backupRetainPeriodDays_ = null;
+          backupRetainPeriodDaysBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getBackupRetainPeriodDaysBuilder() {
+        
+        onChanged();
+        return getBackupRetainPeriodDaysFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder() {
+        if (backupRetainPeriodDaysBuilder_ != null) {
+          return backupRetainPeriodDaysBuilder_.getMessageOrBuilder();
+        } else {
+          return backupRetainPeriodDays_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : backupRetainPeriodDays_;
+        }
+      }
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getBackupRetainPeriodDaysFieldBuilder() {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDaysBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getBackupRetainPeriodDays(),
+                  getParentForChildren(),
+                  isClean());
+          backupRetainPeriodDays_ = null;
+        }
+        return backupRetainPeriodDaysBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -16958,7 +17221,7 @@ public final class ClusterOuterClass {
       "\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020" +
       "\006\022\014\n\010STARTING\020\007\"\"\n\017PersistenceMode\022\006\n\002ON" +
       "\020\000\022\007\n\003OFF\020\001\"=\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022" +
-      "\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\351\005\n\rC" +
+      "\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\265\006\n\rC" +
       "lusterConfig\022\017\n\007version\030\001 \001(\t\022`\n\020redis_c" +
       "onfig_5_0\030\002 \001(\01323.yandex.cloud.mdb.redis" +
       ".v1.config.RedisConfigSet5_0H\000R\017redisCon" +
@@ -16977,39 +17240,41 @@ public final class ClusterOuterClass {
       "yandex.cloud.mdb.redis.v1.config.RedisCo" +
       "nfigSet\022M\n\025disk_size_autoscaling\030\n \001(\0132." +
       ".yandex.cloud.mdb.redis.v1.DiskSizeAutos" +
-      "calingB\016\n\014redis_config\")\n\005Shard\022\014\n\004name\030" +
-      "\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\"\200\004\n\004Host\022\014\n\004na" +
-      "me\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030" +
-      "\003 \001(\t\022\021\n\tsubnet_id\030\004 \001(\t\0227\n\tresources\030\005 " +
-      "\001(\0132$.yandex.cloud.mdb.redis.v1.Resource" +
-      "s\0222\n\004role\030\006 \001(\0162$.yandex.cloud.mdb.redis" +
-      ".v1.Host.Role\0226\n\006health\030\007 \001(\0162&.yandex.c" +
-      "loud.mdb.redis.v1.Host.Health\0224\n\010service" +
-      "s\030\010 \003(\0132\".yandex.cloud.mdb.redis.v1.Serv" +
-      "ice\022\022\n\nshard_name\030\t \001(\t\0225\n\020replica_prior" +
-      "ity\030\n \001(\0132\033.google.protobuf.Int64Value\022\030" +
-      "\n\020assign_public_ip\030\013 \001(\010\"1\n\004Role\022\020\n\014ROLE" +
-      "_UNKNOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007REPLICA\020\002\"?\n\006H" +
-      "ealth\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004" +
-      "DEAD\020\002\022\014\n\010DEGRADED\020\003\"\367\001\n\007Service\0225\n\004type" +
-      "\030\001 \001(\0162\'.yandex.cloud.mdb.redis.v1.Servi" +
-      "ce.Type\0229\n\006health\030\002 \001(\0162).yandex.cloud.m" +
-      "db.redis.v1.Service.Health\"G\n\004Type\022\024\n\020TY" +
-      "PE_UNSPECIFIED\020\000\022\t\n\005REDIS\020\001\022\013\n\007ARBITER\020\002" +
-      "\022\021\n\rREDIS_CLUSTER\020\003\"1\n\006Health\022\022\n\016HEALTH_" +
-      "UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResour" +
-      "ces\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_" +
-      "size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\",\n\006Acce" +
-      "ss\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\"\347" +
-      "\001\n\023DiskSizeAutoscaling\022K\n\027planned_usage_" +
-      "threshold\030\001 \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\r\350\3071\000\372\3071\0050-100\022M\n\031emergency_usage_t" +
-      "hreshold\030\002 \001(\0132\033.google.protobuf.Int64Va" +
-      "lueB\r\350\3071\000\372\3071\0050-100\0224\n\017disk_size_limit\030\003 " +
-      "\001(\0132\033.google.protobuf.Int64ValueBd\n\035yand" +
-      "ex.cloud.api.mdb.redis.v1ZCgithub.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/mdb/" +
-      "redis/v1;redisb\006proto3"
+      "caling\022>\n\031backup_retain_period_days\030\r \001(" +
+      "\0132\033.google.protobuf.Int64ValueB\016\n\014redis_" +
+      "configJ\004\010\013\020\014J\004\010\014\020\r\")\n\005Shard\022\014\n\004name\030\001 \001(" +
+      "\t\022\022\n\ncluster_id\030\002 \001(\t\"\200\004\n\004Host\022\014\n\004name\030\001" +
+      " \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(" +
+      "\t\022\021\n\tsubnet_id\030\004 \001(\t\0227\n\tresources\030\005 \001(\0132" +
+      "$.yandex.cloud.mdb.redis.v1.Resources\0222\n" +
+      "\004role\030\006 \001(\0162$.yandex.cloud.mdb.redis.v1." +
+      "Host.Role\0226\n\006health\030\007 \001(\0162&.yandex.cloud" +
+      ".mdb.redis.v1.Host.Health\0224\n\010services\030\010 " +
+      "\003(\0132\".yandex.cloud.mdb.redis.v1.Service\022" +
+      "\022\n\nshard_name\030\t \001(\t\0225\n\020replica_priority\030" +
+      "\n \001(\0132\033.google.protobuf.Int64Value\022\030\n\020as" +
+      "sign_public_ip\030\013 \001(\010\"1\n\004Role\022\020\n\014ROLE_UNK" +
+      "NOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007REPLICA\020\002\"?\n\006Healt" +
+      "h\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD" +
+      "\020\002\022\014\n\010DEGRADED\020\003\"\367\001\n\007Service\0225\n\004type\030\001 \001" +
+      "(\0162\'.yandex.cloud.mdb.redis.v1.Service.T" +
+      "ype\0229\n\006health\030\002 \001(\0162).yandex.cloud.mdb.r" +
+      "edis.v1.Service.Health\"G\n\004Type\022\024\n\020TYPE_U" +
+      "NSPECIFIED\020\000\022\t\n\005REDIS\020\001\022\013\n\007ARBITER\020\002\022\021\n\r" +
+      "REDIS_CLUSTER\020\003\"1\n\006Health\022\022\n\016HEALTH_UNKN" +
+      "OWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022" +
+      "\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_size" +
+      "\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\",\n\006Access\022\021" +
+      "\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\"\347\001\n\023D" +
+      "iskSizeAutoscaling\022K\n\027planned_usage_thre" +
+      "shold\030\001 \001(\0132\033.google.protobuf.Int64Value" +
+      "B\r\350\3071\000\372\3071\0050-100\022M\n\031emergency_usage_thres" +
+      "hold\030\002 \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\r\350\3071\000\372\3071\0050-100\0224\n\017disk_size_limit\030\003 \001(\0132" +
+      "\033.google.protobuf.Int64ValueBd\n\035yandex.c" +
+      "loud.api.mdb.redis.v1ZCgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/mdb/redi" +
+      "s/v1;redisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17048,7 +17313,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_redis_v1_ClusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_ClusterConfig_descriptor,
-        new java.lang.String[] { "Version", "RedisConfig50", "RedisConfig60", "RedisConfig62", "RedisConfig70", "Resources", "BackupWindowStart", "Access", "Redis", "DiskSizeAutoscaling", "RedisConfig", });
+        new java.lang.String[] { "Version", "RedisConfig50", "RedisConfig60", "RedisConfig62", "RedisConfig70", "Resources", "BackupWindowStart", "Access", "Redis", "DiskSizeAutoscaling", "BackupRetainPeriodDays", "RedisConfig", });
     internal_static_yandex_cloud_mdb_redis_v1_Shard_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_redis_v1_Shard_fieldAccessorTable = new

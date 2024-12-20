@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * ThreadService provides operations for managing search indexes.
+ * SearchIndexService provides operations for managing search indexes.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -219,7 +219,7 @@ public final class SearchIndexServiceGrpc {
 
   /**
    * <pre>
-   * ThreadService provides operations for managing search indexes.
+   * SearchIndexService provides operations for managing search indexes.
    * </pre>
    */
   public static abstract class SearchIndexServiceImplBase implements io.grpc.BindableService {
@@ -317,7 +317,7 @@ public final class SearchIndexServiceGrpc {
 
   /**
    * <pre>
-   * ThreadService provides operations for managing search indexes.
+   * SearchIndexService provides operations for managing search indexes.
    * </pre>
    */
   public static final class SearchIndexServiceStub extends io.grpc.stub.AbstractAsyncStub<SearchIndexServiceStub> {
@@ -390,7 +390,7 @@ public final class SearchIndexServiceGrpc {
 
   /**
    * <pre>
-   * ThreadService provides operations for managing search indexes.
+   * SearchIndexService provides operations for managing search indexes.
    * </pre>
    */
   public static final class SearchIndexServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SearchIndexServiceBlockingStub> {
@@ -458,7 +458,7 @@ public final class SearchIndexServiceGrpc {
 
   /**
    * <pre>
-   * ThreadService provides operations for managing search indexes.
+   * SearchIndexService provides operations for managing search indexes.
    * </pre>
    */
   public static final class SearchIndexServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SearchIndexServiceFutureStub> {

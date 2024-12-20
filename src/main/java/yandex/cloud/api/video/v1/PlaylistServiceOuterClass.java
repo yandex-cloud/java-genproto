@@ -647,7 +647,7 @@ public final class PlaylistServiceOuterClass {
      * The maximum number of the results per page to return.
      * </pre>
      *
-     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
      * @return The pageSize.
      */
     long getPageSize();
@@ -891,7 +891,7 @@ public final class PlaylistServiceOuterClass {
      * The maximum number of the results per page to return.
      * </pre>
      *
-     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
      * @return The pageSize.
      */
     @java.lang.Override
@@ -1526,7 +1526,7 @@ public final class PlaylistServiceOuterClass {
        * The maximum number of the results per page to return.
        * </pre>
        *
-       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
        * @return The pageSize.
        */
       @java.lang.Override
@@ -1538,7 +1538,7 @@ public final class PlaylistServiceOuterClass {
        * The maximum number of the results per page to return.
        * </pre>
        *
-       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
        */
@@ -1553,7 +1553,7 @@ public final class PlaylistServiceOuterClass {
        * The maximum number of the results per page to return.
        * </pre>
        *
-       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageSize() {
@@ -12612,71 +12612,71 @@ public final class PlaylistServiceOuterClass {
       "n.proto\032\035yandex/cloud/validation.proto\032$" +
       "yandex/cloud/video/v1/playlist.proto\"7\n\022" +
       "GetPlaylistRequest\022!\n\013playlist_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\"\252\001\n\024ListPlaylistsRequest\022 " +
-      "\n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage" +
-      "_size\030d \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030e " +
-      "\001(\tB\t\212\3101\005<=200\022\020\n\010order_by\030f \001(\t\022\032\n\006filt" +
-      "er\030g \001(\tB\n\212\3101\006<=1000J\004\010\002\020d\"j\n\025ListPlayli" +
-      "stsResponse\0222\n\tplaylists\030\001 \003(\0132\037.yandex." +
-      "cloud.video.v1.Playlist\022\027\n\017next_page_tok" +
-      "en\030d \001(\tJ\004\010\002\020d\"\242\001\n\025CreatePlaylistRequest" +
-      "\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\023\n\005ti" +
-      "tle\030\002 \001(\tB\004\350\3071\001\022\023\n\013description\030\003 \001(\t\022=\n\005" +
-      "items\030\004 \003(\0132#.yandex.cloud.video.v1.Play" +
-      "listItemB\t\202\3101\005<=100\"-\n\026CreatePlaylistMet" +
-      "adata\022\023\n\013playlist_id\030\001 \001(\t\"\315\001\n\025UpdatePla" +
-      "ylistRequest\022!\n\013playlist_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\022.\n\nfield_mask\030\002 \001(\0132\032.google.pro" +
-      "tobuf.FieldMask\022\r\n\005title\030\003 \001(\t\022\023\n\013descri" +
-      "ption\030\004 \001(\t\022=\n\005items\030\005 \003(\0132#.yandex.clou" +
-      "d.video.v1.PlaylistItemB\t\202\3101\005<=100\"-\n\026Up" +
-      "datePlaylistMetadata\022\023\n\013playlist_id\030\001 \001(" +
-      "\t\":\n\025DeletePlaylistRequest\022!\n\013playlist_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\026DeletePlaylistM" +
-      "etadata\022\023\n\013playlist_id\030\001 \001(\t\"h\n\033BatchDel" +
-      "etePlaylistsRequest\022 \n\nchannel_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022\'\n\014playlist_ids\030\002 \003(\tB\021\202\3101" +
-      "\0051-100\212\3101\004<=50\"4\n\034BatchDeletePlaylistsMe" +
-      "tadata\022\024\n\014playlist_ids\030\001 \003(\t\"}\n\033GetPlayl" +
-      "istPlayerURLRequest\022!\n\013playlist_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022;\n\006params\030\002 \001(\0132+.yandex." +
-      "cloud.video.v1.PlaylistPlayerParams\"F\n\024P" +
-      "laylistPlayerParams\022\014\n\004mute\030\001 \001(\010\022\020\n\010aut" +
-      "oplay\030\002 \001(\010\022\016\n\006hidden\030\003 \001(\010\"@\n\034GetPlayli" +
-      "stPlayerURLResponse\022\022\n\nplayer_url\030\001 \001(\t\022" +
-      "\014\n\004html\030\002 \001(\t2\231\t\n\017PlaylistService\022|\n\003Get" +
-      "\022).yandex.cloud.video.v1.GetPlaylistRequ" +
-      "est\032\037.yandex.cloud.video.v1.Playlist\")\202\323" +
-      "\344\223\002#\022!/video/v1/playlists/{playlist_id}\022" +
-      "~\n\004List\022+.yandex.cloud.video.v1.ListPlay" +
-      "listsRequest\032,.yandex.cloud.video.v1.Lis" +
-      "tPlaylistsResponse\"\033\202\323\344\223\002\025\022\023/video/v1/pl" +
-      "aylists\022\237\001\n\006Create\022,.yandex.cloud.video." +
-      "v1.CreatePlaylistRequest\032!.yandex.cloud." +
-      "operation.Operation\"D\202\323\344\223\002\030\"\023/video/v1/p" +
-      "laylists:\001*\262\322*\"\n\026CreatePlaylistMetadata\022" +
-      "\010Playlist\022\255\001\n\006Update\022,.yandex.cloud.vide" +
-      "o.v1.UpdatePlaylistRequest\032!.yandex.clou" +
-      "d.operation.Operation\"R\202\323\344\223\002&2!/video/v1" +
-      "/playlists/{playlist_id}:\001*\262\322*\"\n\026UpdateP" +
-      "laylistMetadata\022\010Playlist\022\267\001\n\006Delete\022,.y" +
-      "andex.cloud.video.v1.DeletePlaylistReque" +
-      "st\032!.yandex.cloud.operation.Operation\"\\\202" +
-      "\323\344\223\002#*!/video/v1/playlists/{playlist_id}" +
-      "\262\322*/\n\026DeletePlaylistMetadata\022\025google.pro" +
-      "tobuf.Empty\022\311\001\n\013BatchDelete\0222.yandex.clo" +
-      "ud.video.v1.BatchDeletePlaylistsRequest\032" +
-      "!.yandex.cloud.operation.Operation\"c\202\323\344\223" +
-      "\002$\"\037/video/v1/playlists:batchDelete:\001*\262\322" +
-      "*5\n\034BatchDeletePlaylistsMetadata\022\025google" +
-      ".protobuf.Empty\022\257\001\n\014GetPlayerURL\0222.yande" +
-      "x.cloud.video.v1.GetPlaylistPlayerURLReq" +
-      "uest\0323.yandex.cloud.video.v1.GetPlaylist" +
-      "PlayerURLResponse\"6\202\323\344\223\0020\022./video/v1/pla" +
-      "ylists/{playlist_id}:getPlayerURLB\\\n\031yan" +
-      "dex.cloud.api.video.v1Z?github.com/yande" +
-      "x-cloud/go-genproto/yandex/cloud/video/v" +
-      "1;videob\006proto3"
+      "\014\350\3071\001\212\3101\004<=50\"\251\001\n\024ListPlaylistsRequest\022 " +
+      "\n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\034\n\tpage" +
+      "_size\030d \001(\003B\t\372\3071\005<=100\022\035\n\npage_token\030e \001" +
+      "(\tB\t\212\3101\005<=200\022\020\n\010order_by\030f \001(\t\022\032\n\006filte" +
+      "r\030g \001(\tB\n\212\3101\006<=1000J\004\010\002\020d\"j\n\025ListPlaylis" +
+      "tsResponse\0222\n\tplaylists\030\001 \003(\0132\037.yandex.c" +
+      "loud.video.v1.Playlist\022\027\n\017next_page_toke" +
+      "n\030d \001(\tJ\004\010\002\020d\"\242\001\n\025CreatePlaylistRequest\022" +
+      " \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\023\n\005tit" +
+      "le\030\002 \001(\tB\004\350\3071\001\022\023\n\013description\030\003 \001(\t\022=\n\005i" +
+      "tems\030\004 \003(\0132#.yandex.cloud.video.v1.Playl" +
+      "istItemB\t\202\3101\005<=100\"-\n\026CreatePlaylistMeta" +
+      "data\022\023\n\013playlist_id\030\001 \001(\t\"\315\001\n\025UpdatePlay" +
+      "listRequest\022!\n\013playlist_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022.\n\nfield_mask\030\002 \001(\0132\032.google.prot" +
+      "obuf.FieldMask\022\r\n\005title\030\003 \001(\t\022\023\n\013descrip" +
+      "tion\030\004 \001(\t\022=\n\005items\030\005 \003(\0132#.yandex.cloud" +
+      ".video.v1.PlaylistItemB\t\202\3101\005<=100\"-\n\026Upd" +
+      "atePlaylistMetadata\022\023\n\013playlist_id\030\001 \001(\t" +
+      "\":\n\025DeletePlaylistRequest\022!\n\013playlist_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\026DeletePlaylistMe" +
+      "tadata\022\023\n\013playlist_id\030\001 \001(\t\"h\n\033BatchDele" +
+      "tePlaylistsRequest\022 \n\nchannel_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022\'\n\014playlist_ids\030\002 \003(\tB\021\202\3101\005" +
+      "1-100\212\3101\004<=50\"4\n\034BatchDeletePlaylistsMet" +
+      "adata\022\024\n\014playlist_ids\030\001 \003(\t\"}\n\033GetPlayli" +
+      "stPlayerURLRequest\022!\n\013playlist_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\022;\n\006params\030\002 \001(\0132+.yandex.c" +
+      "loud.video.v1.PlaylistPlayerParams\"F\n\024Pl" +
+      "aylistPlayerParams\022\014\n\004mute\030\001 \001(\010\022\020\n\010auto" +
+      "play\030\002 \001(\010\022\016\n\006hidden\030\003 \001(\010\"@\n\034GetPlaylis" +
+      "tPlayerURLResponse\022\022\n\nplayer_url\030\001 \001(\t\022\014" +
+      "\n\004html\030\002 \001(\t2\231\t\n\017PlaylistService\022|\n\003Get\022" +
+      ").yandex.cloud.video.v1.GetPlaylistReque" +
+      "st\032\037.yandex.cloud.video.v1.Playlist\")\202\323\344" +
+      "\223\002#\022!/video/v1/playlists/{playlist_id}\022~" +
+      "\n\004List\022+.yandex.cloud.video.v1.ListPlayl" +
+      "istsRequest\032,.yandex.cloud.video.v1.List" +
+      "PlaylistsResponse\"\033\202\323\344\223\002\025\022\023/video/v1/pla" +
+      "ylists\022\237\001\n\006Create\022,.yandex.cloud.video.v" +
+      "1.CreatePlaylistRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"D\202\323\344\223\002\030\"\023/video/v1/pl" +
+      "aylists:\001*\262\322*\"\n\026CreatePlaylistMetadata\022\010" +
+      "Playlist\022\255\001\n\006Update\022,.yandex.cloud.video" +
+      ".v1.UpdatePlaylistRequest\032!.yandex.cloud" +
+      ".operation.Operation\"R\202\323\344\223\002&2!/video/v1/" +
+      "playlists/{playlist_id}:\001*\262\322*\"\n\026UpdatePl" +
+      "aylistMetadata\022\010Playlist\022\267\001\n\006Delete\022,.ya" +
+      "ndex.cloud.video.v1.DeletePlaylistReques" +
+      "t\032!.yandex.cloud.operation.Operation\"\\\202\323" +
+      "\344\223\002#*!/video/v1/playlists/{playlist_id}\262" +
+      "\322*/\n\026DeletePlaylistMetadata\022\025google.prot" +
+      "obuf.Empty\022\311\001\n\013BatchDelete\0222.yandex.clou" +
+      "d.video.v1.BatchDeletePlaylistsRequest\032!" +
+      ".yandex.cloud.operation.Operation\"c\202\323\344\223\002" +
+      "$\"\037/video/v1/playlists:batchDelete:\001*\262\322*" +
+      "5\n\034BatchDeletePlaylistsMetadata\022\025google." +
+      "protobuf.Empty\022\257\001\n\014GetPlayerURL\0222.yandex" +
+      ".cloud.video.v1.GetPlaylistPlayerURLRequ" +
+      "est\0323.yandex.cloud.video.v1.GetPlaylistP" +
+      "layerURLResponse\"6\202\323\344\223\0020\022./video/v1/play" +
+      "lists/{playlist_id}:getPlayerURLB\\\n\031yand" +
+      "ex.cloud.api.video.v1Z?github.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/video/v1" +
+      ";videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

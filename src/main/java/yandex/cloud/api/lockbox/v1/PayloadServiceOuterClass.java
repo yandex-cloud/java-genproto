@@ -804,11 +804,2705 @@ public final class PayloadServiceOuterClass {
 
   }
 
+  public interface GetExRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.lockbox.v1.GetExRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string secret_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the secretId field is set.
+     */
+    boolean hasSecretId();
+    /**
+     * <code>string secret_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The secretId.
+     */
+    java.lang.String getSecretId();
+    /**
+     * <code>string secret_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for secretId.
+     */
+    com.google.protobuf.ByteString
+        getSecretIdBytes();
+
+    /**
+     * <code>.yandex.cloud.lockbox.v1.FolderAndName folder_and_name = 2;</code>
+     * @return Whether the folderAndName field is set.
+     */
+    boolean hasFolderAndName();
+    /**
+     * <code>.yandex.cloud.lockbox.v1.FolderAndName folder_and_name = 2;</code>
+     * @return The folderAndName.
+     */
+    yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName getFolderAndName();
+    /**
+     * <code>.yandex.cloud.lockbox.v1.FolderAndName folder_and_name = 2;</code>
+     */
+    yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndNameOrBuilder getFolderAndNameOrBuilder();
+
+    /**
+     * <code>string version_id = 21 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The versionId.
+     */
+    java.lang.String getVersionId();
+    /**
+     * <code>string version_id = 21 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for versionId.
+     */
+    com.google.protobuf.ByteString
+        getVersionIdBytes();
+
+    public yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest.IdentifierCase getIdentifierCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.lockbox.v1.GetExRequest}
+   */
+  public static final class GetExRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.lockbox.v1.GetExRequest)
+      GetExRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetExRequest.newBuilder() to construct.
+    private GetExRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetExRequest() {
+      versionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetExRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetExRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              identifierCase_ = 1;
+              identifier_ = s;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName.Builder subBuilder = null;
+              if (identifierCase_ == 2) {
+                subBuilder = ((yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName) identifier_).toBuilder();
+              }
+              identifier_ =
+                  input.readMessage(yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName) identifier_);
+                identifier_ = subBuilder.buildPartial();
+              }
+              identifierCase_ = 2;
+              break;
+            }
+            case 170: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              versionId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.internal_static_yandex_cloud_lockbox_v1_GetExRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.internal_static_yandex_cloud_lockbox_v1_GetExRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest.class, yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest.Builder.class);
+    }
+
+    private int identifierCase_ = 0;
+    private java.lang.Object identifier_;
+    public enum IdentifierCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      SECRET_ID(1),
+      FOLDER_AND_NAME(2),
+      IDENTIFIER_NOT_SET(0);
+      private final int value;
+      private IdentifierCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static IdentifierCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static IdentifierCase forNumber(int value) {
+        switch (value) {
+          case 1: return SECRET_ID;
+          case 2: return FOLDER_AND_NAME;
+          case 0: return IDENTIFIER_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public IdentifierCase
+    getIdentifierCase() {
+      return IdentifierCase.forNumber(
+          identifierCase_);
+    }
+
+    public static final int SECRET_ID_FIELD_NUMBER = 1;
+    /**
+     * <code>string secret_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the secretId field is set.
+     */
+    public boolean hasSecretId() {
+      return identifierCase_ == 1;
+    }
+    /**
+     * <code>string secret_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The secretId.
+     */
+    public java.lang.String getSecretId() {
+      java.lang.Object ref = "";
+      if (identifierCase_ == 1) {
+        ref = identifier_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (identifierCase_ == 1) {
+          identifier_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>string secret_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for secretId.
+     */
+    public com.google.protobuf.ByteString
+        getSecretIdBytes() {
+      java.lang.Object ref = "";
+      if (identifierCase_ == 1) {
+        ref = identifier_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (identifierCase_ == 1) {
+          identifier_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FOLDER_AND_NAME_FIELD_NUMBER = 2;
+    /**
+     * <code>.yandex.cloud.lockbox.v1.FolderAndName folder_and_name = 2;</code>
+     * @return Whether the folderAndName field is set.
+     */
+    @java.lang.Override
+    public boolean hasFolderAndName() {
+      return identifierCase_ == 2;
+    }
+    /**
+     * <code>.yandex.cloud.lockbox.v1.FolderAndName folder_and_name = 2;</code>
+     * @return The folderAndName.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName getFolderAndName() {
+      if (identifierCase_ == 2) {
+         return (yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName) identifier_;
+      }
+      return yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.lockbox.v1.FolderAndName folder_and_name = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndNameOrBuilder getFolderAndNameOrBuilder() {
+      if (identifierCase_ == 2) {
+         return (yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName) identifier_;
+      }
+      return yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName.getDefaultInstance();
+    }
+
+    public static final int VERSION_ID_FIELD_NUMBER = 21;
+    private volatile java.lang.Object versionId_;
+    /**
+     * <code>string version_id = 21 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The versionId.
+     */
+    @java.lang.Override
+    public java.lang.String getVersionId() {
+      java.lang.Object ref = versionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        versionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string version_id = 21 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for versionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVersionIdBytes() {
+      java.lang.Object ref = versionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        versionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (identifierCase_ == 1) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, identifier_);
+      }
+      if (identifierCase_ == 2) {
+        output.writeMessage(2, (yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName) identifier_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 21, versionId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (identifierCase_ == 1) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, identifier_);
+      }
+      if (identifierCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName) identifier_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, versionId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest other = (yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest) obj;
+
+      if (!getVersionId()
+          .equals(other.getVersionId())) return false;
+      if (!getIdentifierCase().equals(other.getIdentifierCase())) return false;
+      switch (identifierCase_) {
+        case 1:
+          if (!getSecretId()
+              .equals(other.getSecretId())) return false;
+          break;
+        case 2:
+          if (!getFolderAndName()
+              .equals(other.getFolderAndName())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VERSION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getVersionId().hashCode();
+      switch (identifierCase_) {
+        case 1:
+          hash = (37 * hash) + SECRET_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getSecretId().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + FOLDER_AND_NAME_FIELD_NUMBER;
+          hash = (53 * hash) + getFolderAndName().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.lockbox.v1.GetExRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.lockbox.v1.GetExRequest)
+        yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.internal_static_yandex_cloud_lockbox_v1_GetExRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.internal_static_yandex_cloud_lockbox_v1_GetExRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest.class, yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        versionId_ = "";
+
+        identifierCase_ = 0;
+        identifier_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.internal_static_yandex_cloud_lockbox_v1_GetExRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest build() {
+        yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest buildPartial() {
+        yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest result = new yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest(this);
+        if (identifierCase_ == 1) {
+          result.identifier_ = identifier_;
+        }
+        if (identifierCase_ == 2) {
+          if (folderAndNameBuilder_ == null) {
+            result.identifier_ = identifier_;
+          } else {
+            result.identifier_ = folderAndNameBuilder_.build();
+          }
+        }
+        result.versionId_ = versionId_;
+        result.identifierCase_ = identifierCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest) {
+          return mergeFrom((yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest other) {
+        if (other == yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest.getDefaultInstance()) return this;
+        if (!other.getVersionId().isEmpty()) {
+          versionId_ = other.versionId_;
+          onChanged();
+        }
+        switch (other.getIdentifierCase()) {
+          case SECRET_ID: {
+            identifierCase_ = 1;
+            identifier_ = other.identifier_;
+            onChanged();
+            break;
+          }
+          case FOLDER_AND_NAME: {
+            mergeFolderAndName(other.getFolderAndName());
+            break;
+          }
+          case IDENTIFIER_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int identifierCase_ = 0;
+      private java.lang.Object identifier_;
+      public IdentifierCase
+          getIdentifierCase() {
+        return IdentifierCase.forNumber(
+            identifierCase_);
+      }
+
+      public Builder clearIdentifier() {
+        identifierCase_ = 0;
+        identifier_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      /**
+       * <code>string secret_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return Whether the secretId field is set.
+       */
+      @java.lang.Override
+      public boolean hasSecretId() {
+        return identifierCase_ == 1;
+      }
+      /**
+       * <code>string secret_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The secretId.
+       */
+      @java.lang.Override
+      public java.lang.String getSecretId() {
+        java.lang.Object ref = "";
+        if (identifierCase_ == 1) {
+          ref = identifier_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (identifierCase_ == 1) {
+            identifier_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string secret_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for secretId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSecretIdBytes() {
+        java.lang.Object ref = "";
+        if (identifierCase_ == 1) {
+          ref = identifier_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (identifierCase_ == 1) {
+            identifier_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string secret_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The secretId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  identifierCase_ = 1;
+        identifier_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string secret_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretId() {
+        if (identifierCase_ == 1) {
+          identifierCase_ = 0;
+          identifier_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string secret_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for secretId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        identifierCase_ = 1;
+        identifier_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName, yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName.Builder, yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndNameOrBuilder> folderAndNameBuilder_;
+      /**
+       * <code>.yandex.cloud.lockbox.v1.FolderAndName folder_and_name = 2;</code>
+       * @return Whether the folderAndName field is set.
+       */
+      @java.lang.Override
+      public boolean hasFolderAndName() {
+        return identifierCase_ == 2;
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.FolderAndName folder_and_name = 2;</code>
+       * @return The folderAndName.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName getFolderAndName() {
+        if (folderAndNameBuilder_ == null) {
+          if (identifierCase_ == 2) {
+            return (yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName) identifier_;
+          }
+          return yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName.getDefaultInstance();
+        } else {
+          if (identifierCase_ == 2) {
+            return folderAndNameBuilder_.getMessage();
+          }
+          return yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.FolderAndName folder_and_name = 2;</code>
+       */
+      public Builder setFolderAndName(yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName value) {
+        if (folderAndNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          identifier_ = value;
+          onChanged();
+        } else {
+          folderAndNameBuilder_.setMessage(value);
+        }
+        identifierCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.FolderAndName folder_and_name = 2;</code>
+       */
+      public Builder setFolderAndName(
+          yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName.Builder builderForValue) {
+        if (folderAndNameBuilder_ == null) {
+          identifier_ = builderForValue.build();
+          onChanged();
+        } else {
+          folderAndNameBuilder_.setMessage(builderForValue.build());
+        }
+        identifierCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.FolderAndName folder_and_name = 2;</code>
+       */
+      public Builder mergeFolderAndName(yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName value) {
+        if (folderAndNameBuilder_ == null) {
+          if (identifierCase_ == 2 &&
+              identifier_ != yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName.getDefaultInstance()) {
+            identifier_ = yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName.newBuilder((yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName) identifier_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            identifier_ = value;
+          }
+          onChanged();
+        } else {
+          if (identifierCase_ == 2) {
+            folderAndNameBuilder_.mergeFrom(value);
+          }
+          folderAndNameBuilder_.setMessage(value);
+        }
+        identifierCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.FolderAndName folder_and_name = 2;</code>
+       */
+      public Builder clearFolderAndName() {
+        if (folderAndNameBuilder_ == null) {
+          if (identifierCase_ == 2) {
+            identifierCase_ = 0;
+            identifier_ = null;
+            onChanged();
+          }
+        } else {
+          if (identifierCase_ == 2) {
+            identifierCase_ = 0;
+            identifier_ = null;
+          }
+          folderAndNameBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.FolderAndName folder_and_name = 2;</code>
+       */
+      public yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName.Builder getFolderAndNameBuilder() {
+        return getFolderAndNameFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.FolderAndName folder_and_name = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndNameOrBuilder getFolderAndNameOrBuilder() {
+        if ((identifierCase_ == 2) && (folderAndNameBuilder_ != null)) {
+          return folderAndNameBuilder_.getMessageOrBuilder();
+        } else {
+          if (identifierCase_ == 2) {
+            return (yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName) identifier_;
+          }
+          return yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.FolderAndName folder_and_name = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName, yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName.Builder, yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndNameOrBuilder> 
+          getFolderAndNameFieldBuilder() {
+        if (folderAndNameBuilder_ == null) {
+          if (!(identifierCase_ == 2)) {
+            identifier_ = yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName.getDefaultInstance();
+          }
+          folderAndNameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName, yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName.Builder, yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndNameOrBuilder>(
+                  (yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName) identifier_,
+                  getParentForChildren(),
+                  isClean());
+          identifier_ = null;
+        }
+        identifierCase_ = 2;
+        onChanged();;
+        return folderAndNameBuilder_;
+      }
+
+      private java.lang.Object versionId_ = "";
+      /**
+       * <code>string version_id = 21 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The versionId.
+       */
+      public java.lang.String getVersionId() {
+        java.lang.Object ref = versionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          versionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string version_id = 21 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for versionId.
+       */
+      public com.google.protobuf.ByteString
+          getVersionIdBytes() {
+        java.lang.Object ref = versionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          versionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string version_id = 21 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The versionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        versionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string version_id = 21 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersionId() {
+        
+        versionId_ = getDefaultInstance().getVersionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string version_id = 21 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for versionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        versionId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.lockbox.v1.GetExRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.lockbox.v1.GetExRequest)
+    private static final yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest();
+    }
+
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetExRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetExRequest>() {
+      @java.lang.Override
+      public GetExRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetExRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetExRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetExRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FolderAndNameOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.lockbox.v1.FolderAndName)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
+     */
+    java.lang.String getFolderId();
+    /**
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
+
+    /**
+     * <code>string secret_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The secretName.
+     */
+    java.lang.String getSecretName();
+    /**
+     * <code>string secret_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for secretName.
+     */
+    com.google.protobuf.ByteString
+        getSecretNameBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.lockbox.v1.FolderAndName}
+   */
+  public static final class FolderAndName extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.lockbox.v1.FolderAndName)
+      FolderAndNameOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FolderAndName.newBuilder() to construct.
+    private FolderAndName(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FolderAndName() {
+      folderId_ = "";
+      secretName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FolderAndName();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FolderAndName(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              folderId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretName_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.internal_static_yandex_cloud_lockbox_v1_FolderAndName_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.internal_static_yandex_cloud_lockbox_v1_FolderAndName_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName.class, yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName.Builder.class);
+    }
+
+    public static final int FOLDER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object folderId_;
+    /**
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
+     */
+    @java.lang.Override
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        folderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        folderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SECRET_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object secretName_;
+    /**
+     * <code>string secret_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The secretName.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretName() {
+      java.lang.Object ref = secretName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string secret_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for secretName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretNameBytes() {
+      java.lang.Object ref = secretName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secretName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, secretName_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secretName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, secretName_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName other = (yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName) obj;
+
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getSecretName()
+          .equals(other.getSecretName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFolderId().hashCode();
+      hash = (37 * hash) + SECRET_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretName().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.lockbox.v1.FolderAndName}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.lockbox.v1.FolderAndName)
+        yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndNameOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.internal_static_yandex_cloud_lockbox_v1_FolderAndName_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.internal_static_yandex_cloud_lockbox_v1_FolderAndName_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName.class, yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        folderId_ = "";
+
+        secretName_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.internal_static_yandex_cloud_lockbox_v1_FolderAndName_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName getDefaultInstanceForType() {
+        return yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName build() {
+        yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName buildPartial() {
+        yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName result = new yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName(this);
+        result.folderId_ = folderId_;
+        result.secretName_ = secretName_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName) {
+          return mergeFrom((yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName other) {
+        if (other == yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName.getDefaultInstance()) return this;
+        if (!other.getFolderId().isEmpty()) {
+          folderId_ = other.folderId_;
+          onChanged();
+        }
+        if (!other.getSecretName().isEmpty()) {
+          secretName_ = other.secretName_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object folderId_ = "";
+      /**
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
+       */
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
+       */
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFolderId() {
+        
+        folderId_ = getDefaultInstance().getFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object secretName_ = "";
+      /**
+       * <code>string secret_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The secretName.
+       */
+      public java.lang.String getSecretName() {
+        java.lang.Object ref = secretName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string secret_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for secretName.
+       */
+      public com.google.protobuf.ByteString
+          getSecretNameBytes() {
+        java.lang.Object ref = secretName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string secret_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The secretName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string secret_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretName() {
+        
+        secretName_ = getDefaultInstance().getSecretName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string secret_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for secretName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretName_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.lockbox.v1.FolderAndName)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.lockbox.v1.FolderAndName)
+    private static final yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName();
+    }
+
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FolderAndName>
+        PARSER = new com.google.protobuf.AbstractParser<FolderAndName>() {
+      @java.lang.Override
+      public FolderAndName parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FolderAndName(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FolderAndName> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FolderAndName> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.FolderAndName getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetExResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.lockbox.v1.GetExResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string version_id = 1;</code>
+     * @return The versionId.
+     */
+    java.lang.String getVersionId();
+    /**
+     * <code>string version_id = 1;</code>
+     * @return The bytes for versionId.
+     */
+    com.google.protobuf.ByteString
+        getVersionIdBytes();
+
+    /**
+     * <code>map&lt;string, bytes&gt; entries = 2;</code>
+     */
+    int getEntriesCount();
+    /**
+     * <code>map&lt;string, bytes&gt; entries = 2;</code>
+     */
+    boolean containsEntries(
+        java.lang.String key);
+    /**
+     * Use {@link #getEntriesMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.google.protobuf.ByteString>
+    getEntries();
+    /**
+     * <code>map&lt;string, bytes&gt; entries = 2;</code>
+     */
+    java.util.Map<java.lang.String, com.google.protobuf.ByteString>
+    getEntriesMap();
+    /**
+     * <code>map&lt;string, bytes&gt; entries = 2;</code>
+     */
+
+    com.google.protobuf.ByteString getEntriesOrDefault(
+        java.lang.String key,
+        com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;string, bytes&gt; entries = 2;</code>
+     */
+
+    com.google.protobuf.ByteString getEntriesOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.lockbox.v1.GetExResponse}
+   */
+  public static final class GetExResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.lockbox.v1.GetExResponse)
+      GetExResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetExResponse.newBuilder() to construct.
+    private GetExResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetExResponse() {
+      versionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetExResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetExResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              versionId_ = s;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                entries_ = com.google.protobuf.MapField.newMapField(
+                    EntriesDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.ByteString>
+              entries__ = input.readMessage(
+                  EntriesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              entries_.getMutableMap().put(
+                  entries__.getKey(), entries__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.internal_static_yandex_cloud_lockbox_v1_GetExResponse_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 2:
+          return internalGetEntries();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.internal_static_yandex_cloud_lockbox_v1_GetExResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse.class, yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse.Builder.class);
+    }
+
+    public static final int VERSION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object versionId_;
+    /**
+     * <code>string version_id = 1;</code>
+     * @return The versionId.
+     */
+    @java.lang.Override
+    public java.lang.String getVersionId() {
+      java.lang.Object ref = versionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        versionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string version_id = 1;</code>
+     * @return The bytes for versionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVersionIdBytes() {
+      java.lang.Object ref = versionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        versionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENTRIES_FIELD_NUMBER = 2;
+    private static final class EntriesDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, com.google.protobuf.ByteString>newDefaultInstance(
+                  yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.internal_static_yandex_cloud_lockbox_v1_GetExResponse_EntriesEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, com.google.protobuf.ByteString> entries_;
+    private com.google.protobuf.MapField<java.lang.String, com.google.protobuf.ByteString>
+    internalGetEntries() {
+      if (entries_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            EntriesDefaultEntryHolder.defaultEntry);
+      }
+      return entries_;
+    }
+
+    public int getEntriesCount() {
+      return internalGetEntries().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, bytes&gt; entries = 2;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsEntries(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetEntries().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getEntriesMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getEntries() {
+      return getEntriesMap();
+    }
+    /**
+     * <code>map&lt;string, bytes&gt; entries = 2;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getEntriesMap() {
+      return internalGetEntries().getMap();
+    }
+    /**
+     * <code>map&lt;string, bytes&gt; entries = 2;</code>
+     */
+    @java.lang.Override
+
+    public com.google.protobuf.ByteString getEntriesOrDefault(
+        java.lang.String key,
+        com.google.protobuf.ByteString defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.google.protobuf.ByteString> map =
+          internalGetEntries().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, bytes&gt; entries = 2;</code>
+     */
+    @java.lang.Override
+
+    public com.google.protobuf.ByteString getEntriesOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.google.protobuf.ByteString> map =
+          internalGetEntries().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, versionId_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetEntries(),
+          EntriesDefaultEntryHolder.defaultEntry,
+          2);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, versionId_);
+      }
+      for (java.util.Map.Entry<java.lang.String, com.google.protobuf.ByteString> entry
+           : internalGetEntries().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.ByteString>
+        entries__ = EntriesDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, entries__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse other = (yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse) obj;
+
+      if (!getVersionId()
+          .equals(other.getVersionId())) return false;
+      if (!internalGetEntries().equals(
+          other.internalGetEntries())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VERSION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getVersionId().hashCode();
+      if (!internalGetEntries().getMap().isEmpty()) {
+        hash = (37 * hash) + ENTRIES_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetEntries().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.lockbox.v1.GetExResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.lockbox.v1.GetExResponse)
+        yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.internal_static_yandex_cloud_lockbox_v1_GetExResponse_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetEntries();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetMutableEntries();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.internal_static_yandex_cloud_lockbox_v1_GetExResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse.class, yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        versionId_ = "";
+
+        internalGetMutableEntries().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.internal_static_yandex_cloud_lockbox_v1_GetExResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse build() {
+        yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse buildPartial() {
+        yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse result = new yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse(this);
+        int from_bitField0_ = bitField0_;
+        result.versionId_ = versionId_;
+        result.entries_ = internalGetEntries();
+        result.entries_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse) {
+          return mergeFrom((yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse other) {
+        if (other == yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse.getDefaultInstance()) return this;
+        if (!other.getVersionId().isEmpty()) {
+          versionId_ = other.versionId_;
+          onChanged();
+        }
+        internalGetMutableEntries().mergeFrom(
+            other.internalGetEntries());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object versionId_ = "";
+      /**
+       * <code>string version_id = 1;</code>
+       * @return The versionId.
+       */
+      public java.lang.String getVersionId() {
+        java.lang.Object ref = versionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          versionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string version_id = 1;</code>
+       * @return The bytes for versionId.
+       */
+      public com.google.protobuf.ByteString
+          getVersionIdBytes() {
+        java.lang.Object ref = versionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          versionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string version_id = 1;</code>
+       * @param value The versionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        versionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string version_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersionId() {
+        
+        versionId_ = getDefaultInstance().getVersionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string version_id = 1;</code>
+       * @param value The bytes for versionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        versionId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, com.google.protobuf.ByteString> entries_;
+      private com.google.protobuf.MapField<java.lang.String, com.google.protobuf.ByteString>
+      internalGetEntries() {
+        if (entries_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              EntriesDefaultEntryHolder.defaultEntry);
+        }
+        return entries_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, com.google.protobuf.ByteString>
+      internalGetMutableEntries() {
+        onChanged();;
+        if (entries_ == null) {
+          entries_ = com.google.protobuf.MapField.newMapField(
+              EntriesDefaultEntryHolder.defaultEntry);
+        }
+        if (!entries_.isMutable()) {
+          entries_ = entries_.copy();
+        }
+        return entries_;
+      }
+
+      public int getEntriesCount() {
+        return internalGetEntries().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; entries = 2;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsEntries(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetEntries().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getEntriesMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getEntries() {
+        return getEntriesMap();
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; entries = 2;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getEntriesMap() {
+        return internalGetEntries().getMap();
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; entries = 2;</code>
+       */
+      @java.lang.Override
+
+      public com.google.protobuf.ByteString getEntriesOrDefault(
+          java.lang.String key,
+          com.google.protobuf.ByteString defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, com.google.protobuf.ByteString> map =
+            internalGetEntries().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; entries = 2;</code>
+       */
+      @java.lang.Override
+
+      public com.google.protobuf.ByteString getEntriesOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, com.google.protobuf.ByteString> map =
+            internalGetEntries().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearEntries() {
+        internalGetMutableEntries().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; entries = 2;</code>
+       */
+
+      public Builder removeEntries(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableEntries().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.protobuf.ByteString>
+      getMutableEntries() {
+        return internalGetMutableEntries().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; entries = 2;</code>
+       */
+      public Builder putEntries(
+          java.lang.String key,
+          com.google.protobuf.ByteString value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableEntries().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; entries = 2;</code>
+       */
+
+      public Builder putAllEntries(
+          java.util.Map<java.lang.String, com.google.protobuf.ByteString> values) {
+        internalGetMutableEntries().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.lockbox.v1.GetExResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.lockbox.v1.GetExResponse)
+    private static final yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse();
+    }
+
+    public static yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetExResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetExResponse>() {
+      @java.lang.Override
+      public GetExResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetExResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetExResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetExResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_lockbox_v1_GetPayloadRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_lockbox_v1_GetPayloadRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_lockbox_v1_GetExRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_lockbox_v1_GetExRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_lockbox_v1_FolderAndName_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_lockbox_v1_FolderAndName_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_lockbox_v1_GetExResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_lockbox_v1_GetExResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_lockbox_v1_GetExResponse_EntriesEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_lockbox_v1_GetExResponse_EntriesEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -824,13 +3518,27 @@ public final class PayloadServiceOuterClass {
       "kbox/v1/payload.proto\032\035yandex/cloud/vali" +
       "dation.proto\"R\n\021GetPayloadRequest\022\037\n\tsec" +
       "ret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\034\n\nversion_id" +
-      "\030\002 \001(\tB\010\212\3101\004<=502\227\001\n\016PayloadService\022\204\001\n\003" +
-      "Get\022*.yandex.cloud.lockbox.v1.GetPayload" +
-      "Request\032 .yandex.cloud.lockbox.v1.Payloa" +
-      "d\"/\202\323\344\223\002)\022\'/lockbox/v1/secrets/{secret_i" +
-      "d}/payloadBb\n\033yandex.cloud.api.lockbox.v" +
-      "1ZCgithub.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/lockbox/v1;lockboxb\006proto3"
+      "\030\002 \001(\tB\010\212\3101\004<=50\"\250\001\n\014GetExRequest\022\035\n\tsec" +
+      "ret_id\030\001 \001(\tB\010\212\3101\004<=50H\000\022A\n\017folder_and_n" +
+      "ame\030\002 \001(\0132&.yandex.cloud.lockbox.v1.Fold" +
+      "erAndNameH\000\022\034\n\nversion_id\030\025 \001(\tB\010\212\3101\004<=5" +
+      "0B\022\n\nidentifier\022\004\300\3011\001J\004\010\003\020\025\"T\n\rFolderAnd" +
+      "Name\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\"\n" +
+      "\013secret_name\030\002 \001(\tB\r\350\3071\001\212\3101\005<=100\"\231\001\n\rGe" +
+      "tExResponse\022\022\n\nversion_id\030\001 \001(\t\022D\n\007entri" +
+      "es\030\002 \003(\01323.yandex.cloud.lockbox.v1.GetEx" +
+      "Response.EntriesEntry\032.\n\014EntriesEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\014:\0028\0012\222\002\n\016Payloa" +
+      "dService\022\204\001\n\003Get\022*.yandex.cloud.lockbox." +
+      "v1.GetPayloadRequest\032 .yandex.cloud.lock" +
+      "box.v1.Payload\"/\202\323\344\223\002)\022\'/lockbox/v1/secr" +
+      "ets/{secret_id}/payload\022y\n\005GetEx\022%.yande" +
+      "x.cloud.lockbox.v1.GetExRequest\032&.yandex" +
+      ".cloud.lockbox.v1.GetExResponse\"!\202\323\344\223\002\033\022" +
+      "\031/lockbox/v1/secrets:getExBb\n\033yandex.clo" +
+      "ud.api.lockbox.v1ZCgithub.com/yandex-clo" +
+      "ud/go-genproto/yandex/cloud/lockbox/v1;l" +
+      "ockboxb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -845,9 +3553,34 @@ public final class PayloadServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_lockbox_v1_GetPayloadRequest_descriptor,
         new java.lang.String[] { "SecretId", "VersionId", });
+    internal_static_yandex_cloud_lockbox_v1_GetExRequest_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_lockbox_v1_GetExRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_lockbox_v1_GetExRequest_descriptor,
+        new java.lang.String[] { "SecretId", "FolderAndName", "VersionId", "Identifier", });
+    internal_static_yandex_cloud_lockbox_v1_FolderAndName_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_lockbox_v1_FolderAndName_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_lockbox_v1_FolderAndName_descriptor,
+        new java.lang.String[] { "FolderId", "SecretName", });
+    internal_static_yandex_cloud_lockbox_v1_GetExResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_lockbox_v1_GetExResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_lockbox_v1_GetExResponse_descriptor,
+        new java.lang.String[] { "VersionId", "Entries", });
+    internal_static_yandex_cloud_lockbox_v1_GetExResponse_EntriesEntry_descriptor =
+      internal_static_yandex_cloud_lockbox_v1_GetExResponse_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_lockbox_v1_GetExResponse_EntriesEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_lockbox_v1_GetExResponse_EntriesEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(yandex.cloud.api.Validation.exactlyOne);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.required);
     com.google.protobuf.Descriptors.FileDescriptor

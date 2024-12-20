@@ -67,6 +67,17 @@ public final class TuningServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
+
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTask.Status status = 4;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTask.Status status = 4;</code>
+     * @return The status.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningTaskOuterClass.TuningTask.Status getStatus();
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.tuning.v1.ListTuningsRequest}
@@ -83,6 +94,7 @@ public final class TuningServiceOuterClass {
     private ListTuningsRequest() {
       folderId_ = "";
       pageToken_ = "";
+      status_ = 0;
     }
 
     @java.lang.Override
@@ -130,6 +142,12 @@ public final class TuningServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               pageToken_ = s;
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
               break;
             }
             default: {
@@ -271,6 +289,25 @@ public final class TuningServiceOuterClass {
       }
     }
 
+    public static final int STATUS_FIELD_NUMBER = 4;
+    private int status_;
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTask.Status status = 4;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTask.Status status = 4;</code>
+     * @return The status.
+     */
+    @java.lang.Override public yandex.cloud.api.ai.tuning.v1.TuningTaskOuterClass.TuningTask.Status getStatus() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.ai.tuning.v1.TuningTaskOuterClass.TuningTask.Status result = yandex.cloud.api.ai.tuning.v1.TuningTaskOuterClass.TuningTask.Status.valueOf(status_);
+      return result == null ? yandex.cloud.api.ai.tuning.v1.TuningTaskOuterClass.TuningTask.Status.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -294,6 +331,9 @@ public final class TuningServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
+      if (status_ != yandex.cloud.api.ai.tuning.v1.TuningTaskOuterClass.TuningTask.Status.STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(4, status_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -312,6 +352,10 @@ public final class TuningServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      if (status_ != yandex.cloud.api.ai.tuning.v1.TuningTaskOuterClass.TuningTask.Status.STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, status_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -334,6 +378,7 @@ public final class TuningServiceOuterClass {
           != other.getPageSize()) return false;
       if (!getPageToken()
           .equals(other.getPageToken())) return false;
+      if (status_ != other.status_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -352,6 +397,8 @@ public final class TuningServiceOuterClass {
           getPageSize());
       hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + getPageToken().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -491,6 +538,8 @@ public final class TuningServiceOuterClass {
 
         pageToken_ = "";
 
+        status_ = 0;
+
         return this;
       }
 
@@ -520,6 +569,7 @@ public final class TuningServiceOuterClass {
         result.folderId_ = folderId_;
         result.pageSize_ = pageSize_;
         result.pageToken_ = pageToken_;
+        result.status_ = status_;
         onBuilt();
         return result;
       }
@@ -578,6 +628,9 @@ public final class TuningServiceOuterClass {
         if (!other.getPageToken().isEmpty()) {
           pageToken_ = other.pageToken_;
           onChanged();
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -839,6 +892,60 @@ public final class TuningServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         pageToken_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int status_ = 0;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTask.Status status = 4;</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTask.Status status = 4;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTask.Status status = 4;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningTaskOuterClass.TuningTask.Status getStatus() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.ai.tuning.v1.TuningTaskOuterClass.TuningTask.Status result = yandex.cloud.api.ai.tuning.v1.TuningTaskOuterClass.TuningTask.Status.valueOf(status_);
+        return result == null ? yandex.cloud.api.ai.tuning.v1.TuningTaskOuterClass.TuningTask.Status.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTask.Status status = 4;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(yandex.cloud.api.ai.tuning.v1.TuningTaskOuterClass.TuningTask.Status value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTask.Status status = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
         onChanged();
         return this;
       }
@@ -5162,6 +5269,18 @@ public final class TuningServiceOuterClass {
      * @return The status.
      */
     yandex.cloud.api.ai.tuning.v1.TuningTaskOuterClass.TuningTask.Status getStatus();
+
+    /**
+     * <code>int64 total_steps = 3;</code>
+     * @return The totalSteps.
+     */
+    long getTotalSteps();
+
+    /**
+     * <code>int64 current_step = 4;</code>
+     * @return The currentStep.
+     */
+    long getCurrentStep();
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.tuning.v1.TuningMetadata}
@@ -5220,6 +5339,16 @@ public final class TuningServiceOuterClass {
               int rawValue = input.readEnum();
 
               status_ = rawValue;
+              break;
+            }
+            case 24: {
+
+              totalSteps_ = input.readInt64();
+              break;
+            }
+            case 32: {
+
+              currentStep_ = input.readInt64();
               break;
             }
             default: {
@@ -5311,6 +5440,28 @@ public final class TuningServiceOuterClass {
       return result == null ? yandex.cloud.api.ai.tuning.v1.TuningTaskOuterClass.TuningTask.Status.UNRECOGNIZED : result;
     }
 
+    public static final int TOTAL_STEPS_FIELD_NUMBER = 3;
+    private long totalSteps_;
+    /**
+     * <code>int64 total_steps = 3;</code>
+     * @return The totalSteps.
+     */
+    @java.lang.Override
+    public long getTotalSteps() {
+      return totalSteps_;
+    }
+
+    public static final int CURRENT_STEP_FIELD_NUMBER = 4;
+    private long currentStep_;
+    /**
+     * <code>int64 current_step = 4;</code>
+     * @return The currentStep.
+     */
+    @java.lang.Override
+    public long getCurrentStep() {
+      return currentStep_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5331,6 +5482,12 @@ public final class TuningServiceOuterClass {
       if (status_ != yandex.cloud.api.ai.tuning.v1.TuningTaskOuterClass.TuningTask.Status.STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(2, status_);
       }
+      if (totalSteps_ != 0L) {
+        output.writeInt64(3, totalSteps_);
+      }
+      if (currentStep_ != 0L) {
+        output.writeInt64(4, currentStep_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5346,6 +5503,14 @@ public final class TuningServiceOuterClass {
       if (status_ != yandex.cloud.api.ai.tuning.v1.TuningTaskOuterClass.TuningTask.Status.STATUS_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, status_);
+      }
+      if (totalSteps_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, totalSteps_);
+      }
+      if (currentStep_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, currentStep_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5365,6 +5530,10 @@ public final class TuningServiceOuterClass {
       if (!getTuningTaskId()
           .equals(other.getTuningTaskId())) return false;
       if (status_ != other.status_) return false;
+      if (getTotalSteps()
+          != other.getTotalSteps()) return false;
+      if (getCurrentStep()
+          != other.getCurrentStep()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5380,6 +5549,12 @@ public final class TuningServiceOuterClass {
       hash = (53 * hash) + getTuningTaskId().hashCode();
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      hash = (37 * hash) + TOTAL_STEPS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotalSteps());
+      hash = (37 * hash) + CURRENT_STEP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCurrentStep());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5517,6 +5692,10 @@ public final class TuningServiceOuterClass {
 
         status_ = 0;
 
+        totalSteps_ = 0L;
+
+        currentStep_ = 0L;
+
         return this;
       }
 
@@ -5545,6 +5724,8 @@ public final class TuningServiceOuterClass {
         yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningMetadata result = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningMetadata(this);
         result.tuningTaskId_ = tuningTaskId_;
         result.status_ = status_;
+        result.totalSteps_ = totalSteps_;
+        result.currentStep_ = currentStep_;
         onBuilt();
         return result;
       }
@@ -5599,6 +5780,12 @@ public final class TuningServiceOuterClass {
         }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
+        }
+        if (other.getTotalSteps() != 0L) {
+          setTotalSteps(other.getTotalSteps());
+        }
+        if (other.getCurrentStep() != 0L) {
+          setCurrentStep(other.getCurrentStep());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5755,6 +5942,68 @@ public final class TuningServiceOuterClass {
       public Builder clearStatus() {
         
         status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long totalSteps_ ;
+      /**
+       * <code>int64 total_steps = 3;</code>
+       * @return The totalSteps.
+       */
+      @java.lang.Override
+      public long getTotalSteps() {
+        return totalSteps_;
+      }
+      /**
+       * <code>int64 total_steps = 3;</code>
+       * @param value The totalSteps to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalSteps(long value) {
+        
+        totalSteps_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 total_steps = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalSteps() {
+        
+        totalSteps_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long currentStep_ ;
+      /**
+       * <code>int64 current_step = 4;</code>
+       * @return The currentStep.
+       */
+      @java.lang.Override
+      public long getCurrentStep() {
+        return currentStep_;
+      }
+      /**
+       * <code>int64 current_step = 4;</code>
+       * @param value The currentStep to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrentStep(long value) {
+        
+        currentStep_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 current_step = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurrentStep() {
+        
+        currentStep_ = 0L;
         onChanged();
         return this;
       }
@@ -24330,139 +24579,142 @@ public final class TuningServiceOuterClass {
       "ai/tuning/v1/tuning_types.proto\0321yandex/" +
       "cloud/ai/tuning/v1/tuning_optimizers.pro" +
       "to\0321yandex/cloud/ai/tuning/v1/tuning_sch" +
-      "edulers.proto\"T\n\022ListTuningsRequest\022\027\n\tf" +
-      "older_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tpage_size\030\002 \001(\003\022" +
-      "\022\n\npage_token\030\003 \001(\t\"k\n\023ListTuningsRespon" +
-      "se\022;\n\014tuning_tasks\030\001 \003(\0132%.yandex.cloud." +
-      "ai.tuning.v1.TuningTask\022\027\n\017next_page_tok" +
-      "en\030\002 \001(\t\"5\n\025DescribeTuningRequest\022\034\n\016tun" +
-      "ing_task_id\030\001 \001(\tB\004\350\3071\001\"T\n\026DescribeTunin" +
-      "gResponse\022:\n\013tuning_task\030\001 \001(\0132%.yandex." +
-      "cloud.ai.tuning.v1.TuningTask\"3\n\023CancelT" +
-      "uningRequest\022\034\n\016tuning_task_id\030\001 \001(\tB\004\350\307" +
-      "1\001\".\n\024CancelTuningResponse\022\026\n\016tuning_tas" +
-      "k_id\030\001 \001(\t\"\214\001\n\016TuningResponse\022\026\n\016tuning_" +
-      "task_id\030\003 \001(\t\022<\n\006status\030\004 \001(\0162,.yandex.c" +
-      "loud.ai.tuning.v1.TuningTask.Status\022\030\n\020t" +
-      "arget_model_uri\030\005 \001(\tJ\004\010\001\020\002J\004\010\002\020\003\"f\n\016Tun" +
-      "ingMetadata\022\026\n\016tuning_task_id\030\001 \001(\t\022<\n\006s" +
-      "tatus\030\002 \001(\0162,.yandex.cloud.ai.tuning.v1." +
-      "TuningTask.Status\"\206\006\n\rTuningRequest\022\034\n\016b" +
-      "ase_model_uri\030\001 \001(\tB\004\350\3071\001\022X\n\016train_datas" +
-      "ets\030\002 \003(\01328.yandex.cloud.ai.tuning.v1.Tu" +
-      "ningRequest.WeightedDatasetB\006\202\3101\002>0\022U\n\023v" +
-      "alidation_datasets\030\003 \003(\01328.yandex.cloud." +
-      "ai.tuning.v1.TuningRequest.WeightedDatas" +
-      "et\022^\n\027text_to_text_completion\030d \001(\0132;.ya" +
-      "ndex.cloud.ai.tuning.v1.TextToTextComple" +
-      "tionTuningParamsH\000\022g\n\036text_classificatio" +
-      "n_multilabel\030e \001(\0132=.yandex.cloud.ai.tun" +
-      "ing.v1.TextClassificationMultilabelParam" +
-      "sH\000\022g\n\036text_classification_multiclass\030f " +
-      "\001(\0132=.yandex.cloud.ai.tuning.v1.TextClas" +
-      "sificationMulticlassParamsH\000\022\r\n\004name\030\310\001 " +
-      "\001(\t\022\024\n\013description\030\311\001 \001(\t\022E\n\006labels\030\312\001 \003" +
-      "(\01324.yandex.cloud.ai.tuning.v1.TuningReq" +
-      "uest.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032;\n\017WeightedDatas" +
-      "et\022\030\n\ndataset_id\030\001 \001(\tB\004\350\3071\001\022\016\n\006weight\030\002" +
-      " \001(\001B\017\n\rtuning_paramsJ\004\010\004\020dJ\005\010g\020\310\001\"\211\006\n T" +
-      "extToTextCompletionTuningParams\022\014\n\004seed\030" +
-      "\001 \001(\003\022\n\n\002lr\030\002 \001(\001\022\021\n\tn_samples\030\003 \001(\003\022\034\n\024" +
-      "additional_arguments\030\007 \001(\t\0229\n\004lora\030d \001(\013" +
-      "2).yandex.cloud.ai.tuning.v1.TuningTypeL" +
-      "oraH\000\022F\n\013prompt_tune\030e \001(\0132/.yandex.clou" +
-      "d.ai.tuning.v1.TuningTypePromptTuneH\000\022Y\n" +
-      "\tscheduler\030\310\001 \001(\0132E.yandex.cloud.ai.tuni" +
-      "ng.v1.TextToTextCompletionTuningParams.S" +
-      "cheduler\022Y\n\toptimizer\030\311\001 \001(\0132E.yandex.cl" +
-      "oud.ai.tuning.v1.TextToTextCompletionTun" +
-      "ingParams.Optimizer\032\355\001\n\tScheduler\022<\n\006lin" +
-      "ear\030\001 \001(\0132*.yandex.cloud.ai.tuning.v1.Sc" +
-      "hedulerLinearH\000\022@\n\010constant\030\002 \001(\0132,.yand" +
-      "ex.cloud.ai.tuning.v1.SchedulerConstantH" +
-      "\000\022<\n\006cosine\030\003 \001(\0132*.yandex.cloud.ai.tuni" +
-      "ng.v1.SchedulerCosineH\000\022\024\n\014warmup_ratio\030" +
-      "e \001(\001B\006\n\004typeJ\004\010\004\020e\032O\n\tOptimizer\022:\n\005adam" +
-      "w\030\001 \001(\0132).yandex.cloud.ai.tuning.v1.Opti" +
-      "mizerAdamwH\000B\006\n\004typeB\r\n\013tuning_typeJ\004\010\004\020" +
-      "\007J\004\010\010\020dJ\005\010f\020\310\001\"\217\006\n\"TextClassificationMul" +
-      "tilabelParams\022\014\n\004seed\030\001 \001(\003\022\n\n\002lr\030\002 \001(\001\022" +
-      "\021\n\tn_samples\030\003 \001(\003\022\034\n\024additional_argumen" +
-      "ts\030\007 \001(\t\0229\n\004lora\030d \001(\0132).yandex.cloud.ai" +
-      ".tuning.v1.TuningTypeLoraH\000\022F\n\013prompt_tu" +
-      "ne\030e \001(\0132/.yandex.cloud.ai.tuning.v1.Tun" +
-      "ingTypePromptTuneH\000\022[\n\tscheduler\030\310\001 \001(\0132" +
+      "edulers.proto\"\222\001\n\022ListTuningsRequest\022\027\n\t" +
+      "folder_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tpage_size\030\002 \001(\003" +
+      "\022\022\n\npage_token\030\003 \001(\t\022<\n\006status\030\004 \001(\0162,.y" +
+      "andex.cloud.ai.tuning.v1.TuningTask.Stat" +
+      "us\"k\n\023ListTuningsResponse\022;\n\014tuning_task" +
+      "s\030\001 \003(\0132%.yandex.cloud.ai.tuning.v1.Tuni" +
+      "ngTask\022\027\n\017next_page_token\030\002 \001(\t\"5\n\025Descr" +
+      "ibeTuningRequest\022\034\n\016tuning_task_id\030\001 \001(\t" +
+      "B\004\350\3071\001\"T\n\026DescribeTuningResponse\022:\n\013tuni" +
+      "ng_task\030\001 \001(\0132%.yandex.cloud.ai.tuning.v" +
+      "1.TuningTask\"3\n\023CancelTuningRequest\022\034\n\016t" +
+      "uning_task_id\030\001 \001(\tB\004\350\3071\001\".\n\024CancelTunin" +
+      "gResponse\022\026\n\016tuning_task_id\030\001 \001(\t\"\214\001\n\016Tu" +
+      "ningResponse\022\026\n\016tuning_task_id\030\003 \001(\t\022<\n\006" +
+      "status\030\004 \001(\0162,.yandex.cloud.ai.tuning.v1" +
+      ".TuningTask.Status\022\030\n\020target_model_uri\030\005" +
+      " \001(\tJ\004\010\001\020\002J\004\010\002\020\003\"\221\001\n\016TuningMetadata\022\026\n\016t" +
+      "uning_task_id\030\001 \001(\t\022<\n\006status\030\002 \001(\0162,.ya" +
+      "ndex.cloud.ai.tuning.v1.TuningTask.Statu" +
+      "s\022\023\n\013total_steps\030\003 \001(\003\022\024\n\014current_step\030\004" +
+      " \001(\003\"\206\006\n\rTuningRequest\022\034\n\016base_model_uri" +
+      "\030\001 \001(\tB\004\350\3071\001\022X\n\016train_datasets\030\002 \003(\01328.y" +
+      "andex.cloud.ai.tuning.v1.TuningRequest.W" +
+      "eightedDatasetB\006\202\3101\002>0\022U\n\023validation_dat" +
+      "asets\030\003 \003(\01328.yandex.cloud.ai.tuning.v1." +
+      "TuningRequest.WeightedDataset\022^\n\027text_to" +
+      "_text_completion\030d \001(\0132;.yandex.cloud.ai" +
+      ".tuning.v1.TextToTextCompletionTuningPar" +
+      "amsH\000\022g\n\036text_classification_multilabel\030" +
+      "e \001(\0132=.yandex.cloud.ai.tuning.v1.TextCl" +
+      "assificationMultilabelParamsH\000\022g\n\036text_c" +
+      "lassification_multiclass\030f \001(\0132=.yandex." +
+      "cloud.ai.tuning.v1.TextClassificationMul" +
+      "ticlassParamsH\000\022\r\n\004name\030\310\001 \001(\t\022\024\n\013descri" +
+      "ption\030\311\001 \001(\t\022E\n\006labels\030\312\001 \003(\01324.yandex.c" +
+      "loud.ai.tuning.v1.TuningRequest.LabelsEn" +
+      "try\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\032;\n\017WeightedDataset\022\030\n\ndataset" +
+      "_id\030\001 \001(\tB\004\350\3071\001\022\016\n\006weight\030\002 \001(\001B\017\n\rtunin" +
+      "g_paramsJ\004\010\004\020dJ\005\010g\020\310\001\"\211\006\n TextToTextComp" +
+      "letionTuningParams\022\014\n\004seed\030\001 \001(\003\022\n\n\002lr\030\002" +
+      " \001(\001\022\021\n\tn_samples\030\003 \001(\003\022\034\n\024additional_ar" +
+      "guments\030\007 \001(\t\0229\n\004lora\030d \001(\0132).yandex.clo" +
+      "ud.ai.tuning.v1.TuningTypeLoraH\000\022F\n\013prom" +
+      "pt_tune\030e \001(\0132/.yandex.cloud.ai.tuning.v" +
+      "1.TuningTypePromptTuneH\000\022Y\n\tscheduler\030\310\001" +
+      " \001(\0132E.yandex.cloud.ai.tuning.v1.TextToT" +
+      "extCompletionTuningParams.Scheduler\022Y\n\to" +
+      "ptimizer\030\311\001 \001(\0132E.yandex.cloud.ai.tuning" +
+      ".v1.TextToTextCompletionTuningParams.Opt" +
+      "imizer\032\355\001\n\tScheduler\022<\n\006linear\030\001 \001(\0132*.y" +
+      "andex.cloud.ai.tuning.v1.SchedulerLinear" +
+      "H\000\022@\n\010constant\030\002 \001(\0132,.yandex.cloud.ai.t" +
+      "uning.v1.SchedulerConstantH\000\022<\n\006cosine\030\003" +
+      " \001(\0132*.yandex.cloud.ai.tuning.v1.Schedul" +
+      "erCosineH\000\022\024\n\014warmup_ratio\030e \001(\001B\006\n\004type" +
+      "J\004\010\004\020e\032O\n\tOptimizer\022:\n\005adamw\030\001 \001(\0132).yan" +
+      "dex.cloud.ai.tuning.v1.OptimizerAdamwH\000B" +
+      "\006\n\004typeB\r\n\013tuning_typeJ\004\010\004\020\007J\004\010\010\020dJ\005\010f\020\310" +
+      "\001\"\217\006\n\"TextClassificationMultilabelParams" +
+      "\022\014\n\004seed\030\001 \001(\003\022\n\n\002lr\030\002 \001(\001\022\021\n\tn_samples\030" +
+      "\003 \001(\003\022\034\n\024additional_arguments\030\007 \001(\t\0229\n\004l" +
+      "ora\030d \001(\0132).yandex.cloud.ai.tuning.v1.Tu" +
+      "ningTypeLoraH\000\022F\n\013prompt_tune\030e \001(\0132/.ya" +
+      "ndex.cloud.ai.tuning.v1.TuningTypePrompt" +
+      "TuneH\000\022[\n\tscheduler\030\310\001 \001(\0132G.yandex.clou" +
+      "d.ai.tuning.v1.TextClassificationMultila" +
+      "belParams.Scheduler\022[\n\toptimizer\030\311\001 \001(\0132" +
       "G.yandex.cloud.ai.tuning.v1.TextClassifi" +
-      "cationMultilabelParams.Scheduler\022[\n\topti" +
-      "mizer\030\311\001 \001(\0132G.yandex.cloud.ai.tuning.v1" +
-      ".TextClassificationMultilabelParams.Opti" +
-      "mizer\032\355\001\n\tScheduler\022<\n\006linear\030\001 \001(\0132*.ya" +
-      "ndex.cloud.ai.tuning.v1.SchedulerLinearH" +
-      "\000\022@\n\010constant\030\002 \001(\0132,.yandex.cloud.ai.tu" +
-      "ning.v1.SchedulerConstantH\000\022<\n\006cosine\030\003 " +
-      "\001(\0132*.yandex.cloud.ai.tuning.v1.Schedule" +
-      "rCosineH\000\022\024\n\014warmup_ratio\030e \001(\001B\006\n\004typeJ" +
-      "\004\010\004\020e\032O\n\tOptimizer\022:\n\005adamw\030\001 \001(\0132).yand" +
-      "ex.cloud.ai.tuning.v1.OptimizerAdamwH\000B\006" +
-      "\n\004typeB\r\n\013tuning_typeJ\004\010\004\020\007J\004\010\010\020dJ\005\010f\020\310\001" +
-      "\"\217\006\n\"TextClassificationMulticlassParams\022" +
-      "\014\n\004seed\030\001 \001(\003\022\n\n\002lr\030\002 \001(\001\022\021\n\tn_samples\030\003" +
-      " \001(\003\022\034\n\024additional_arguments\030\007 \001(\t\0229\n\004lo" +
-      "ra\030d \001(\0132).yandex.cloud.ai.tuning.v1.Tun" +
-      "ingTypeLoraH\000\022F\n\013prompt_tune\030e \001(\0132/.yan" +
-      "dex.cloud.ai.tuning.v1.TuningTypePromptT" +
-      "uneH\000\022[\n\tscheduler\030\310\001 \001(\0132G.yandex.cloud" +
+      "cationMultilabelParams.Optimizer\032\355\001\n\tSch" +
+      "eduler\022<\n\006linear\030\001 \001(\0132*.yandex.cloud.ai" +
+      ".tuning.v1.SchedulerLinearH\000\022@\n\010constant" +
+      "\030\002 \001(\0132,.yandex.cloud.ai.tuning.v1.Sched" +
+      "ulerConstantH\000\022<\n\006cosine\030\003 \001(\0132*.yandex." +
+      "cloud.ai.tuning.v1.SchedulerCosineH\000\022\024\n\014" +
+      "warmup_ratio\030e \001(\001B\006\n\004typeJ\004\010\004\020e\032O\n\tOpti" +
+      "mizer\022:\n\005adamw\030\001 \001(\0132).yandex.cloud.ai.t" +
+      "uning.v1.OptimizerAdamwH\000B\006\n\004typeB\r\n\013tun" +
+      "ing_typeJ\004\010\004\020\007J\004\010\010\020dJ\005\010f\020\310\001\"\217\006\n\"TextClas" +
+      "sificationMulticlassParams\022\014\n\004seed\030\001 \001(\003" +
+      "\022\n\n\002lr\030\002 \001(\001\022\021\n\tn_samples\030\003 \001(\003\022\034\n\024addit" +
+      "ional_arguments\030\007 \001(\t\0229\n\004lora\030d \001(\0132).ya" +
+      "ndex.cloud.ai.tuning.v1.TuningTypeLoraH\000" +
+      "\022F\n\013prompt_tune\030e \001(\0132/.yandex.cloud.ai." +
+      "tuning.v1.TuningTypePromptTuneH\000\022[\n\tsche" +
+      "duler\030\310\001 \001(\0132G.yandex.cloud.ai.tuning.v1" +
+      ".TextClassificationMulticlassParams.Sche" +
+      "duler\022[\n\toptimizer\030\311\001 \001(\0132G.yandex.cloud" +
       ".ai.tuning.v1.TextClassificationMulticla" +
-      "ssParams.Scheduler\022[\n\toptimizer\030\311\001 \001(\0132G" +
-      ".yandex.cloud.ai.tuning.v1.TextClassific" +
-      "ationMulticlassParams.Optimizer\032\355\001\n\tSche" +
-      "duler\022<\n\006linear\030\001 \001(\0132*.yandex.cloud.ai." +
-      "tuning.v1.SchedulerLinearH\000\022@\n\010constant\030" +
-      "\002 \001(\0132,.yandex.cloud.ai.tuning.v1.Schedu" +
-      "lerConstantH\000\022<\n\006cosine\030\003 \001(\0132*.yandex.c" +
-      "loud.ai.tuning.v1.SchedulerCosineH\000\022\024\n\014w" +
-      "armup_ratio\030e \001(\001B\006\n\004typeJ\004\010\004\020e\032O\n\tOptim" +
-      "izer\022:\n\005adamw\030\001 \001(\0132).yandex.cloud.ai.tu" +
-      "ning.v1.OptimizerAdamwH\000B\006\n\004typeB\r\n\013tuni" +
-      "ng_typeJ\004\010\004\020\007J\004\010\010\020dJ\005\010f\020\310\001\"-\n\024GetMetrics" +
-      "UrlRequest\022\025\n\007task_id\030\001 \001(\tB\004\350\3071\001\")\n\025Get" +
-      "MetricsUrlResponse\022\020\n\010load_url\030\001 \001(\t\"*\n\021" +
-      "GetOptionsRequest\022\025\n\007task_id\030\001 \001(\tB\004\350\3071\001" +
-      "\"\257\004\n\022GetOptionsResponse\022\017\n\007task_id\030\001 \001(\t" +
-      "\022\026\n\016base_model_uri\030\002 \001(\t\022P\n\016train_datase" +
-      "ts\030\003 \003(\01328.yandex.cloud.ai.tuning.v1.Tun" +
-      "ingRequest.WeightedDataset\022U\n\023validation" +
-      "_datasets\030\004 \003(\01328.yandex.cloud.ai.tuning" +
-      ".v1.TuningRequest.WeightedDataset\022^\n\027tex" +
-      "t_to_text_completion\030d \001(\0132;.yandex.clou" +
-      "d.ai.tuning.v1.TextToTextCompletionTunin" +
-      "gParamsH\000\022g\n\036text_classification_multila" +
-      "bel\030e \001(\0132=.yandex.cloud.ai.tuning.v1.Te" +
-      "xtClassificationMultilabelParamsH\000\022g\n\036te" +
-      "xt_classification_multiclass\030f \001(\0132=.yan" +
-      "dex.cloud.ai.tuning.v1.TextClassificatio" +
-      "nMulticlassParamsH\000B\017\n\rtuning_paramsJ\004\010\005" +
-      "\020d2\254\005\n\rTuningService\022y\n\004Tune\022(.yandex.cl" +
-      "oud.ai.tuning.v1.TuningRequest\032!.yandex." +
-      "cloud.operation.Operation\"$\262\322* \n\016TuningM" +
-      "etadata\022\016TuningResponse\022e\n\004List\022-.yandex" +
-      ".cloud.ai.tuning.v1.ListTuningsRequest\032." +
-      ".yandex.cloud.ai.tuning.v1.ListTuningsRe" +
-      "sponse\022o\n\010Describe\0220.yandex.cloud.ai.tun" +
-      "ing.v1.DescribeTuningRequest\0321.yandex.cl" +
-      "oud.ai.tuning.v1.DescribeTuningResponse\022" +
-      "i\n\006Cancel\022..yandex.cloud.ai.tuning.v1.Ca" +
-      "ncelTuningRequest\032/.yandex.cloud.ai.tuni" +
-      "ng.v1.CancelTuningResponse\022r\n\rGetMetrics" +
-      "Url\022/.yandex.cloud.ai.tuning.v1.GetMetri" +
-      "csUrlRequest\0320.yandex.cloud.ai.tuning.v1" +
-      ".GetMetricsUrlResponse\022i\n\nGetOptions\022,.y" +
-      "andex.cloud.ai.tuning.v1.GetOptionsReque" +
-      "st\032-.yandex.cloud.ai.tuning.v1.GetOption" +
-      "sResponseBc\n\035yandex.cloud.api.ai.tuning." +
-      "v1ZBgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/ai/tuning/v1;fomob\006proto3"
+      "ssParams.Optimizer\032\355\001\n\tScheduler\022<\n\006line" +
+      "ar\030\001 \001(\0132*.yandex.cloud.ai.tuning.v1.Sch" +
+      "edulerLinearH\000\022@\n\010constant\030\002 \001(\0132,.yande" +
+      "x.cloud.ai.tuning.v1.SchedulerConstantH\000" +
+      "\022<\n\006cosine\030\003 \001(\0132*.yandex.cloud.ai.tunin" +
+      "g.v1.SchedulerCosineH\000\022\024\n\014warmup_ratio\030e" +
+      " \001(\001B\006\n\004typeJ\004\010\004\020e\032O\n\tOptimizer\022:\n\005adamw" +
+      "\030\001 \001(\0132).yandex.cloud.ai.tuning.v1.Optim" +
+      "izerAdamwH\000B\006\n\004typeB\r\n\013tuning_typeJ\004\010\004\020\007" +
+      "J\004\010\010\020dJ\005\010f\020\310\001\"-\n\024GetMetricsUrlRequest\022\025\n" +
+      "\007task_id\030\001 \001(\tB\004\350\3071\001\")\n\025GetMetricsUrlRes" +
+      "ponse\022\020\n\010load_url\030\001 \001(\t\"*\n\021GetOptionsReq" +
+      "uest\022\025\n\007task_id\030\001 \001(\tB\004\350\3071\001\"\257\004\n\022GetOptio" +
+      "nsResponse\022\017\n\007task_id\030\001 \001(\t\022\026\n\016base_mode" +
+      "l_uri\030\002 \001(\t\022P\n\016train_datasets\030\003 \003(\01328.ya" +
+      "ndex.cloud.ai.tuning.v1.TuningRequest.We" +
+      "ightedDataset\022U\n\023validation_datasets\030\004 \003" +
+      "(\01328.yandex.cloud.ai.tuning.v1.TuningReq" +
+      "uest.WeightedDataset\022^\n\027text_to_text_com" +
+      "pletion\030d \001(\0132;.yandex.cloud.ai.tuning.v" +
+      "1.TextToTextCompletionTuningParamsH\000\022g\n\036" +
+      "text_classification_multilabel\030e \001(\0132=.y" +
+      "andex.cloud.ai.tuning.v1.TextClassificat" +
+      "ionMultilabelParamsH\000\022g\n\036text_classifica" +
+      "tion_multiclass\030f \001(\0132=.yandex.cloud.ai." +
+      "tuning.v1.TextClassificationMulticlassPa" +
+      "ramsH\000B\017\n\rtuning_paramsJ\004\010\005\020d2\254\005\n\rTuning" +
+      "Service\022y\n\004Tune\022(.yandex.cloud.ai.tuning" +
+      ".v1.TuningRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"$\262\322* \n\016TuningMetadata\022\016Tuni" +
+      "ngResponse\022e\n\004List\022-.yandex.cloud.ai.tun" +
+      "ing.v1.ListTuningsRequest\032..yandex.cloud" +
+      ".ai.tuning.v1.ListTuningsResponse\022o\n\010Des" +
+      "cribe\0220.yandex.cloud.ai.tuning.v1.Descri" +
+      "beTuningRequest\0321.yandex.cloud.ai.tuning" +
+      ".v1.DescribeTuningResponse\022i\n\006Cancel\022..y" +
+      "andex.cloud.ai.tuning.v1.CancelTuningReq" +
+      "uest\032/.yandex.cloud.ai.tuning.v1.CancelT" +
+      "uningResponse\022r\n\rGetMetricsUrl\022/.yandex." +
+      "cloud.ai.tuning.v1.GetMetricsUrlRequest\032" +
+      "0.yandex.cloud.ai.tuning.v1.GetMetricsUr" +
+      "lResponse\022i\n\nGetOptions\022,.yandex.cloud.a" +
+      "i.tuning.v1.GetOptionsRequest\032-.yandex.c" +
+      "loud.ai.tuning.v1.GetOptionsResponseBc\n\035" +
+      "yandex.cloud.api.ai.tuning.v1ZBgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "ai/tuning/v1;fomob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -24480,7 +24732,7 @@ public final class TuningServiceOuterClass {
     internal_static_yandex_cloud_ai_tuning_v1_ListTuningsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_tuning_v1_ListTuningsRequest_descriptor,
-        new java.lang.String[] { "FolderId", "PageSize", "PageToken", });
+        new java.lang.String[] { "FolderId", "PageSize", "PageToken", "Status", });
     internal_static_yandex_cloud_ai_tuning_v1_ListTuningsResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_ai_tuning_v1_ListTuningsResponse_fieldAccessorTable = new
@@ -24522,7 +24774,7 @@ public final class TuningServiceOuterClass {
     internal_static_yandex_cloud_ai_tuning_v1_TuningMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_tuning_v1_TuningMetadata_descriptor,
-        new java.lang.String[] { "TuningTaskId", "Status", });
+        new java.lang.String[] { "TuningTaskId", "Status", "TotalSteps", "CurrentStep", });
     internal_static_yandex_cloud_ai_tuning_v1_TuningRequest_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_ai_tuning_v1_TuningRequest_fieldAccessorTable = new
