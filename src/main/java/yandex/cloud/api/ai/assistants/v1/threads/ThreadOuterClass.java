@@ -319,6 +319,50 @@ public final class ThreadOuterClass {
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * List of tools that are available for assistants to use in this thread.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.assistants.v1.Common.Tool> 
+        getToolsList();
+    /**
+     * <pre>
+     * List of tools that are available for assistants to use in this thread.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.Tool getTools(int index);
+    /**
+     * <pre>
+     * List of tools that are available for assistants to use in this thread.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+     */
+    int getToolsCount();
+    /**
+     * <pre>
+     * List of tools that are available for assistants to use in this thread.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder> 
+        getToolsOrBuilderList();
+    /**
+     * <pre>
+     * List of tools that are available for assistants to use in this thread.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder getToolsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.Thread}
@@ -340,6 +384,7 @@ public final class ThreadOuterClass {
       defaultMessageAuthorId_ = "";
       createdBy_ = "";
       updatedBy_ = "";
+      tools_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -480,6 +525,15 @@ public final class ThreadOuterClass {
                   labels__.getKey(), labels__.getValue());
               break;
             }
+            case 106: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                tools_ = new java.util.ArrayList<yandex.cloud.api.ai.assistants.v1.Common.Tool>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              tools_.add(
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.Tool.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -495,6 +549,9 @@ public final class ThreadOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          tools_ = java.util.Collections.unmodifiableList(tools_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -1095,6 +1152,66 @@ public final class ThreadOuterClass {
       return map.get(key);
     }
 
+    public static final int TOOLS_FIELD_NUMBER = 13;
+    private java.util.List<yandex.cloud.api.ai.assistants.v1.Common.Tool> tools_;
+    /**
+     * <pre>
+     * List of tools that are available for assistants to use in this thread.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.assistants.v1.Common.Tool> getToolsList() {
+      return tools_;
+    }
+    /**
+     * <pre>
+     * List of tools that are available for assistants to use in this thread.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder> 
+        getToolsOrBuilderList() {
+      return tools_;
+    }
+    /**
+     * <pre>
+     * List of tools that are available for assistants to use in this thread.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+     */
+    @java.lang.Override
+    public int getToolsCount() {
+      return tools_.size();
+    }
+    /**
+     * <pre>
+     * List of tools that are available for assistants to use in this thread.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.Tool getTools(int index) {
+      return tools_.get(index);
+    }
+    /**
+     * <pre>
+     * List of tools that are available for assistants to use in this thread.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder getToolsOrBuilder(
+        int index) {
+      return tools_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1148,6 +1265,9 @@ public final class ThreadOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           12);
+      for (int i = 0; i < tools_.size(); i++) {
+        output.writeMessage(13, tools_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1204,6 +1324,10 @@ public final class ThreadOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(12, labels__);
       }
+      for (int i = 0; i < tools_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, tools_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1255,6 +1379,8 @@ public final class ThreadOuterClass {
       }
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (!getToolsList()
+          .equals(other.getToolsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1299,6 +1425,10 @@ public final class ThreadOuterClass {
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      if (getToolsCount() > 0) {
+        hash = (37 * hash) + TOOLS_FIELD_NUMBER;
+        hash = (53 * hash) + getToolsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1450,6 +1580,7 @@ public final class ThreadOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getToolsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -1494,6 +1625,12 @@ public final class ThreadOuterClass {
           expiresAtBuilder_ = null;
         }
         internalGetMutableLabels().clear();
+        if (toolsBuilder_ == null) {
+          tools_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          toolsBuilder_.clear();
+        }
         return this;
       }
 
@@ -1550,6 +1687,15 @@ public final class ThreadOuterClass {
         }
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        if (toolsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            tools_ = java.util.Collections.unmodifiableList(tools_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.tools_ = tools_;
+        } else {
+          result.tools_ = toolsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1640,6 +1786,32 @@ public final class ThreadOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (toolsBuilder_ == null) {
+          if (!other.tools_.isEmpty()) {
+            if (tools_.isEmpty()) {
+              tools_ = other.tools_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureToolsIsMutable();
+              tools_.addAll(other.tools_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tools_.isEmpty()) {
+            if (toolsBuilder_.isEmpty()) {
+              toolsBuilder_.dispose();
+              toolsBuilder_ = null;
+              tools_ = other.tools_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              toolsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getToolsFieldBuilder() : null;
+            } else {
+              toolsBuilder_.addAllMessages(other.tools_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -3120,6 +3292,318 @@ public final class ThreadOuterClass {
             .putAll(values);
         return this;
       }
+
+      private java.util.List<yandex.cloud.api.ai.assistants.v1.Common.Tool> tools_ =
+        java.util.Collections.emptyList();
+      private void ensureToolsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          tools_ = new java.util.ArrayList<yandex.cloud.api.ai.assistants.v1.Common.Tool>(tools_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.Tool, yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder, yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder> toolsBuilder_;
+
+      /**
+       * <pre>
+       * List of tools that are available for assistants to use in this thread.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.assistants.v1.Common.Tool> getToolsList() {
+        if (toolsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tools_);
+        } else {
+          return toolsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of tools that are available for assistants to use in this thread.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+       */
+      public int getToolsCount() {
+        if (toolsBuilder_ == null) {
+          return tools_.size();
+        } else {
+          return toolsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of tools that are available for assistants to use in this thread.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.Tool getTools(int index) {
+        if (toolsBuilder_ == null) {
+          return tools_.get(index);
+        } else {
+          return toolsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of tools that are available for assistants to use in this thread.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+       */
+      public Builder setTools(
+          int index, yandex.cloud.api.ai.assistants.v1.Common.Tool value) {
+        if (toolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureToolsIsMutable();
+          tools_.set(index, value);
+          onChanged();
+        } else {
+          toolsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tools that are available for assistants to use in this thread.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+       */
+      public Builder setTools(
+          int index, yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder builderForValue) {
+        if (toolsBuilder_ == null) {
+          ensureToolsIsMutable();
+          tools_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          toolsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tools that are available for assistants to use in this thread.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+       */
+      public Builder addTools(yandex.cloud.api.ai.assistants.v1.Common.Tool value) {
+        if (toolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureToolsIsMutable();
+          tools_.add(value);
+          onChanged();
+        } else {
+          toolsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tools that are available for assistants to use in this thread.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+       */
+      public Builder addTools(
+          int index, yandex.cloud.api.ai.assistants.v1.Common.Tool value) {
+        if (toolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureToolsIsMutable();
+          tools_.add(index, value);
+          onChanged();
+        } else {
+          toolsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tools that are available for assistants to use in this thread.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+       */
+      public Builder addTools(
+          yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder builderForValue) {
+        if (toolsBuilder_ == null) {
+          ensureToolsIsMutable();
+          tools_.add(builderForValue.build());
+          onChanged();
+        } else {
+          toolsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tools that are available for assistants to use in this thread.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+       */
+      public Builder addTools(
+          int index, yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder builderForValue) {
+        if (toolsBuilder_ == null) {
+          ensureToolsIsMutable();
+          tools_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          toolsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tools that are available for assistants to use in this thread.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+       */
+      public Builder addAllTools(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.assistants.v1.Common.Tool> values) {
+        if (toolsBuilder_ == null) {
+          ensureToolsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tools_);
+          onChanged();
+        } else {
+          toolsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tools that are available for assistants to use in this thread.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+       */
+      public Builder clearTools() {
+        if (toolsBuilder_ == null) {
+          tools_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          toolsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tools that are available for assistants to use in this thread.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+       */
+      public Builder removeTools(int index) {
+        if (toolsBuilder_ == null) {
+          ensureToolsIsMutable();
+          tools_.remove(index);
+          onChanged();
+        } else {
+          toolsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tools that are available for assistants to use in this thread.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder getToolsBuilder(
+          int index) {
+        return getToolsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of tools that are available for assistants to use in this thread.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder getToolsOrBuilder(
+          int index) {
+        if (toolsBuilder_ == null) {
+          return tools_.get(index);  } else {
+          return toolsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of tools that are available for assistants to use in this thread.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder> 
+           getToolsOrBuilderList() {
+        if (toolsBuilder_ != null) {
+          return toolsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tools_);
+        }
+      }
+      /**
+       * <pre>
+       * List of tools that are available for assistants to use in this thread.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder addToolsBuilder() {
+        return getToolsFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.assistants.v1.Common.Tool.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of tools that are available for assistants to use in this thread.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder addToolsBuilder(
+          int index) {
+        return getToolsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.assistants.v1.Common.Tool.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of tools that are available for assistants to use in this thread.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 13;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder> 
+           getToolsBuilderList() {
+        return getToolsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.Tool, yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder, yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder> 
+          getToolsFieldBuilder() {
+        if (toolsBuilder_ == null) {
+          toolsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.Common.Tool, yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder, yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder>(
+                  tools_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tools_ = null;
+        }
+        return toolsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3194,28 +3678,31 @@ public final class ThreadOuterClass {
     java.lang.String[] descriptorData = {
       "\n2yandex/cloud/ai/assistants/v1/threads/" +
       "thread.proto\022%yandex.cloud.ai.assistants" +
-      ".v1.threads\032#yandex/cloud/ai/common/comm" +
-      "on.proto\032\037google/protobuf/timestamp.prot" +
-      "o\"\344\003\n\006Thread\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 " +
-      "\001(\t\022\014\n\004name\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022!" +
-      "\n\031default_message_author_id\030\005 \001(\t\022\022\n\ncre" +
-      "ated_by\030\006 \001(\t\022.\n\ncreated_at\030\007 \001(\0132\032.goog" +
-      "le.protobuf.Timestamp\022\022\n\nupdated_by\030\010 \001(" +
-      "\t\022.\n\nupdated_at\030\t \001(\0132\032.google.protobuf." +
-      "Timestamp\022C\n\021expiration_config\030\n \001(\0132(.y" +
-      "andex.cloud.ai.common.ExpirationConfig\022." +
-      "\n\nexpires_at\030\013 \001(\0132\032.google.protobuf.Tim" +
-      "estamp\022I\n\006labels\030\014 \003(\01329.yandex.cloud.ai" +
-      ".assistants.v1.threads.Thread.LabelsEntr" +
-      "y\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001B~\n)yandex.cloud.api.ai.assistan" +
-      "ts.v1.threadsZQgithub.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/ai/assistants/v1" +
-      "/threads;threadsb\006proto3"
+      ".v1.threads\032*yandex/cloud/ai/assistants/" +
+      "v1/common.proto\032#yandex/cloud/ai/common/" +
+      "common.proto\032\037google/protobuf/timestamp." +
+      "proto\"\230\004\n\006Thread\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_i" +
+      "d\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\023\n\013description\030\004 \001" +
+      "(\t\022!\n\031default_message_author_id\030\005 \001(\t\022\022\n" +
+      "\ncreated_by\030\006 \001(\t\022.\n\ncreated_at\030\007 \001(\0132\032." +
+      "google.protobuf.Timestamp\022\022\n\nupdated_by\030" +
+      "\010 \001(\t\022.\n\nupdated_at\030\t \001(\0132\032.google.proto" +
+      "buf.Timestamp\022C\n\021expiration_config\030\n \001(\013" +
+      "2(.yandex.cloud.ai.common.ExpirationConf" +
+      "ig\022.\n\nexpires_at\030\013 \001(\0132\032.google.protobuf" +
+      ".Timestamp\022I\n\006labels\030\014 \003(\01329.yandex.clou" +
+      "d.ai.assistants.v1.threads.Thread.Labels" +
+      "Entry\0222\n\005tools\030\r \003(\0132#.yandex.cloud.ai.a" +
+      "ssistants.v1.Tool\032-\n\013LabelsEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B~\n)yandex.cloud" +
+      ".api.ai.assistants.v1.threadsZQgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "ai/assistants/v1/threads;threadsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          yandex.cloud.api.ai.assistants.v1.Common.getDescriptor(),
           yandex.cloud.api.ai.common.Common.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
@@ -3224,13 +3711,14 @@ public final class ThreadOuterClass {
     internal_static_yandex_cloud_ai_assistants_v1_threads_Thread_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_threads_Thread_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "Name", "Description", "DefaultMessageAuthorId", "CreatedBy", "CreatedAt", "UpdatedBy", "UpdatedAt", "ExpirationConfig", "ExpiresAt", "Labels", });
+        new java.lang.String[] { "Id", "FolderId", "Name", "Description", "DefaultMessageAuthorId", "CreatedBy", "CreatedAt", "UpdatedBy", "UpdatedAt", "ExpirationConfig", "ExpiresAt", "Labels", "Tools", });
     internal_static_yandex_cloud_ai_assistants_v1_threads_Thread_LabelsEntry_descriptor =
       internal_static_yandex_cloud_ai_assistants_v1_threads_Thread_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_ai_assistants_v1_threads_Thread_LabelsEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_threads_Thread_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
+    yandex.cloud.api.ai.assistants.v1.Common.getDescriptor();
     yandex.cloud.api.ai.common.Common.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }

@@ -3134,7 +3134,7 @@ public final class FilesystemServiceOuterClass {
      * Name of the filesystem. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -3143,7 +3143,7 @@ public final class FilesystemServiceOuterClass {
      * Name of the filesystem. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -3504,7 +3504,7 @@ public final class FilesystemServiceOuterClass {
      * Name of the filesystem. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -3525,7 +3525,7 @@ public final class FilesystemServiceOuterClass {
      * Name of the filesystem. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -4389,7 +4389,7 @@ public final class FilesystemServiceOuterClass {
        * Name of the filesystem. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -4409,7 +4409,7 @@ public final class FilesystemServiceOuterClass {
        * Name of the filesystem. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -4430,7 +4430,7 @@ public final class FilesystemServiceOuterClass {
        * Name of the filesystem. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -4449,7 +4449,7 @@ public final class FilesystemServiceOuterClass {
        * Name of the filesystem. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -4463,7 +4463,7 @@ public final class FilesystemServiceOuterClass {
        * Name of the filesystem. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -5767,7 +5767,7 @@ public final class FilesystemServiceOuterClass {
      * New name of the filesystem. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -5776,7 +5776,7 @@ public final class FilesystemServiceOuterClass {
      * New name of the filesystem. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -6131,7 +6131,7 @@ public final class FilesystemServiceOuterClass {
      * New name of the filesystem. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -6152,7 +6152,7 @@ public final class FilesystemServiceOuterClass {
      * New name of the filesystem. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -7049,7 +7049,7 @@ public final class FilesystemServiceOuterClass {
        * New name of the filesystem. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -7069,7 +7069,7 @@ public final class FilesystemServiceOuterClass {
        * New name of the filesystem. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -7090,7 +7090,7 @@ public final class FilesystemServiceOuterClass {
        * New name of the filesystem. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -7109,7 +7109,7 @@ public final class FilesystemServiceOuterClass {
        * New name of the filesystem. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -7123,7 +7123,7 @@ public final class FilesystemServiceOuterClass {
        * New name of the filesystem. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -11469,87 +11469,87 @@ public final class FilesystemServiceOuterClass {
       "\n\212\3101\006<=1000\022\033\n\010order_by\030\005 \001(\tB\t\212\3101\005<=100" +
       "\"l\n\027ListFilesystemsResponse\0228\n\013filesyste" +
       "ms\030\001 \003(\0132#.yandex.cloud.compute.v1.Files" +
-      "ystem\022\027\n\017next_page_token\030\002 \001(\t\"\267\003\n\027Creat" +
+      "ystem\022\027\n\017next_page_token\030\002 \001(\t\"\270\003\n\027Creat" +
       "eFilesystemRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-" +
-      "a-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\003" +
-      " \001(\tB\t\212\3101\005<=256\022\225\001\n\006labels\030\004 \003(\0132<.yande" +
-      "x.cloud.compute.v1.CreateFilesystemReque" +
-      "st.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_." +
-      "/\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0" +
-      "-9a-z]*\022\031\n\007type_id\030\005 \001(\tB\010\212\3101\004<=50\022\035\n\007zo" +
-      "ne_id\030\006 \001(\tB\014\350\3071\001\212\3101\004<=50\022\022\n\004size\030\007 \001(\003B" +
-      "\004\350\3071\001\022\022\n\nblock_size\030\010 \001(\003\032-\n\013LabelsEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"1\n\030Crea" +
-      "teFilesystemMetadata\022\025\n\rfilesystem_id\030\001 " +
-      "\001(\t\"\230\003\n\027UpdateFilesystemRequest\022#\n\rfiles" +
-      "ystem_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_m" +
-      "ask\030\002 \001(\0132\032.google.protobuf.FieldMask\0222\n" +
-      "\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[" +
-      "a-z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=25" +
-      "6\022\225\001\n\006labels\030\005 \003(\0132<.yandex.cloud.comput" +
-      "e.v1.UpdateFilesystemRequest.LabelsEntry" +
-      "BG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101" +
-      "\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\014\n\004siz" +
-      "e\030\006 \001(\003\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\"1\n\030UpdateFilesystemMetada" +
-      "ta\022\025\n\rfilesystem_id\030\001 \001(\t\">\n\027DeleteFiles" +
-      "ystemRequest\022#\n\rfilesystem_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\"1\n\030DeleteFilesystemMetadata\022\025\n" +
-      "\rfilesystem_id\030\001 \001(\t\"\204\001\n\037ListFilesystemO" +
-      "perationsRequest\022#\n\rfilesystem_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=" +
-      "1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"r\n L" +
-      "istFilesystemOperationsResponse\0225\n\nopera" +
-      "tions\030\001 \003(\0132!.yandex.cloud.operation.Ope" +
-      "ration\022\027\n\017next_page_token\030\002 \001(\t2\333\r\n\021File" +
-      "systemService\022\212\001\n\003Get\022-.yandex.cloud.com" +
-      "pute.v1.GetFilesystemRequest\032#.yandex.cl" +
-      "oud.compute.v1.Filesystem\"/\202\323\344\223\002)\022\'/comp" +
-      "ute/v1/filesystems/{filesystem_id}\022\212\001\n\004L" +
-      "ist\022/.yandex.cloud.compute.v1.ListFilesy" +
-      "stemsRequest\0320.yandex.cloud.compute.v1.L" +
-      "istFilesystemsResponse\"\037\202\323\344\223\002\031\022\027/compute" +
-      "/v1/filesystems\022\253\001\n\006Create\0220.yandex.clou" +
-      "d.compute.v1.CreateFilesystemRequest\032!.y" +
-      "andex.cloud.operation.Operation\"L\202\323\344\223\002\034\"" +
-      "\027/compute/v1/filesystems:\001*\262\322*&\n\030CreateF" +
-      "ilesystemMetadata\022\nFilesystem\022\273\001\n\006Update" +
-      "\0220.yandex.cloud.compute.v1.UpdateFilesys" +
-      "temRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"\\\202\323\344\223\002,2\'/compute/v1/filesystems/{" +
-      "filesystem_id}:\001*\262\322*&\n\030UpdateFilesystemM" +
-      "etadata\022\nFilesystem\022\303\001\n\006Delete\0220.yandex." +
-      "cloud.compute.v1.DeleteFilesystemRequest" +
-      "\032!.yandex.cloud.operation.Operation\"d\202\323\344" +
-      "\223\002)*\'/compute/v1/filesystems/{filesystem" +
-      "_id}\262\322*1\n\030DeleteFilesystemMetadata\022\025goog" +
-      "le.protobuf.Empty\022\301\001\n\016ListOperations\0228.y" +
-      "andex.cloud.compute.v1.ListFilesystemOpe" +
-      "rationsRequest\0329.yandex.cloud.compute.v1" +
-      ".ListFilesystemOperationsResponse\":\202\323\344\223\002" +
-      "4\0222/compute/v1/filesystems/{filesystem_i" +
-      "d}/operations\022\267\001\n\022ListAccessBindings\022..y" +
-      "andex.cloud.access.ListAccessBindingsReq" +
-      "uest\032/.yandex.cloud.access.ListAccessBin" +
-      "dingsResponse\"@\202\323\344\223\002:\0228/compute/v1/files" +
-      "ystems/{resource_id}:listAccessBindings\022" +
-      "\366\001\n\021SetAccessBindings\022-.yandex.cloud.acc" +
-      "ess.SetAccessBindingsRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"\216\001\202\323\344\223\002<\"7/compu" +
-      "te/v1/filesystems/{resource_id}:setAcces" +
-      "sBindings:\001*\262\322*H\n access.SetAccessBindin" +
-      "gsMetadata\022$access.AccessBindingsOperati" +
-      "onResult\022\202\002\n\024UpdateAccessBindings\0220.yand" +
-      "ex.cloud.access.UpdateAccessBindingsRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"\224" +
-      "\001\202\323\344\223\002?\":/compute/v1/filesystems/{resour" +
-      "ce_id}:updateAccessBindings:\001*\262\322*K\n#acce" +
-      "ss.UpdateAccessBindingsMetadata\022$access." +
-      "AccessBindingsOperationResultBb\n\033yandex." +
-      "cloud.api.compute.v1ZCgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/compute/v" +
-      "1;computeb\006proto3"
+      "\3071\001\212\3101\004<=50\0223\n\004name\030\002 \001(\tB%\362\3071!|[a-z]([-" +
+      "_a-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030" +
+      "\003 \001(\tB\t\212\3101\005<=256\022\225\001\n\006labels\030\004 \003(\0132<.yand" +
+      "ex.cloud.compute.v1.CreateFilesystemRequ" +
+      "est.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_" +
+      "./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@" +
+      "0-9a-z]*\022\031\n\007type_id\030\005 \001(\tB\010\212\3101\004<=50\022\035\n\007z" +
+      "one_id\030\006 \001(\tB\014\350\3071\001\212\3101\004<=50\022\022\n\004size\030\007 \001(\003" +
+      "B\004\350\3071\001\022\022\n\nblock_size\030\010 \001(\003\032-\n\013LabelsEntr" +
+      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"1\n\030Cre" +
+      "ateFilesystemMetadata\022\025\n\rfilesystem_id\030\001" +
+      " \001(\t\"\231\003\n\027UpdateFilesystemRequest\022#\n\rfile" +
+      "system_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_" +
+      "mask\030\002 \001(\0132\032.google.protobuf.FieldMask\0223" +
+      "\n\004name\030\003 \001(\tB%\362\3071!|[a-z]([-_a-z0-9]{0,61" +
+      "}[a-z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=" +
+      "256\022\225\001\n\006labels\030\005 \003(\0132<.yandex.cloud.comp" +
+      "ute.v1.UpdateFilesystemRequest.LabelsEnt" +
+      "ryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262" +
+      "\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\014\n\004s" +
+      "ize\030\006 \001(\003\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\001\"1\n\030UpdateFilesystemMeta" +
+      "data\022\025\n\rfilesystem_id\030\001 \001(\t\">\n\027DeleteFil" +
+      "esystemRequest\022#\n\rfilesystem_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\"1\n\030DeleteFilesystemMetadata\022" +
+      "\025\n\rfilesystem_id\030\001 \001(\t\"\204\001\n\037ListFilesyste" +
+      "mOperationsRequest\022#\n\rfilesystem_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006" +
+      "<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"r\n" +
+      " ListFilesystemOperationsResponse\0225\n\nope" +
+      "rations\030\001 \003(\0132!.yandex.cloud.operation.O" +
+      "peration\022\027\n\017next_page_token\030\002 \001(\t2\333\r\n\021Fi" +
+      "lesystemService\022\212\001\n\003Get\022-.yandex.cloud.c" +
+      "ompute.v1.GetFilesystemRequest\032#.yandex." +
+      "cloud.compute.v1.Filesystem\"/\202\323\344\223\002)\022\'/co" +
+      "mpute/v1/filesystems/{filesystem_id}\022\212\001\n" +
+      "\004List\022/.yandex.cloud.compute.v1.ListFile" +
+      "systemsRequest\0320.yandex.cloud.compute.v1" +
+      ".ListFilesystemsResponse\"\037\202\323\344\223\002\031\022\027/compu" +
+      "te/v1/filesystems\022\253\001\n\006Create\0220.yandex.cl" +
+      "oud.compute.v1.CreateFilesystemRequest\032!" +
+      ".yandex.cloud.operation.Operation\"L\202\323\344\223\002" +
+      "\034\"\027/compute/v1/filesystems:\001*\262\322*&\n\030Creat" +
+      "eFilesystemMetadata\022\nFilesystem\022\273\001\n\006Upda" +
+      "te\0220.yandex.cloud.compute.v1.UpdateFiles" +
+      "ystemRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"\\\202\323\344\223\002,2\'/compute/v1/filesystems" +
+      "/{filesystem_id}:\001*\262\322*&\n\030UpdateFilesyste" +
+      "mMetadata\022\nFilesystem\022\303\001\n\006Delete\0220.yande" +
+      "x.cloud.compute.v1.DeleteFilesystemReque" +
+      "st\032!.yandex.cloud.operation.Operation\"d\202" +
+      "\323\344\223\002)*\'/compute/v1/filesystems/{filesyst" +
+      "em_id}\262\322*1\n\030DeleteFilesystemMetadata\022\025go" +
+      "ogle.protobuf.Empty\022\301\001\n\016ListOperations\0228" +
+      ".yandex.cloud.compute.v1.ListFilesystemO" +
+      "perationsRequest\0329.yandex.cloud.compute." +
+      "v1.ListFilesystemOperationsResponse\":\202\323\344" +
+      "\223\0024\0222/compute/v1/filesystems/{filesystem" +
+      "_id}/operations\022\267\001\n\022ListAccessBindings\022." +
+      ".yandex.cloud.access.ListAccessBindingsR" +
+      "equest\032/.yandex.cloud.access.ListAccessB" +
+      "indingsResponse\"@\202\323\344\223\002:\0228/compute/v1/fil" +
+      "esystems/{resource_id}:listAccessBinding" +
+      "s\022\366\001\n\021SetAccessBindings\022-.yandex.cloud.a" +
+      "ccess.SetAccessBindingsRequest\032!.yandex." +
+      "cloud.operation.Operation\"\216\001\202\323\344\223\002<\"7/com" +
+      "pute/v1/filesystems/{resource_id}:setAcc" +
+      "essBindings:\001*\262\322*H\n access.SetAccessBind" +
+      "ingsMetadata\022$access.AccessBindingsOpera" +
+      "tionResult\022\202\002\n\024UpdateAccessBindings\0220.ya" +
+      "ndex.cloud.access.UpdateAccessBindingsRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"\224\001\202\323\344\223\002?\":/compute/v1/filesystems/{reso" +
+      "urce_id}:updateAccessBindings:\001*\262\322*K\n#ac" +
+      "cess.UpdateAccessBindingsMetadata\022$acces" +
+      "s.AccessBindingsOperationResultBb\n\033yande" +
+      "x.cloud.api.compute.v1ZCgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/compute" +
+      "/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

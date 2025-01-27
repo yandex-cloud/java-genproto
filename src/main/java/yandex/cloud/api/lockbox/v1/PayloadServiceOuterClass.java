@@ -2592,23 +2592,35 @@ public final class PayloadServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string version_id = 1;</code>
+     * <code>string secret_id = 1;</code>
+     * @return The secretId.
+     */
+    java.lang.String getSecretId();
+    /**
+     * <code>string secret_id = 1;</code>
+     * @return The bytes for secretId.
+     */
+    com.google.protobuf.ByteString
+        getSecretIdBytes();
+
+    /**
+     * <code>string version_id = 2;</code>
      * @return The versionId.
      */
     java.lang.String getVersionId();
     /**
-     * <code>string version_id = 1;</code>
+     * <code>string version_id = 2;</code>
      * @return The bytes for versionId.
      */
     com.google.protobuf.ByteString
         getVersionIdBytes();
 
     /**
-     * <code>map&lt;string, bytes&gt; entries = 2;</code>
+     * <code>map&lt;string, bytes&gt; entries = 3;</code>
      */
     int getEntriesCount();
     /**
-     * <code>map&lt;string, bytes&gt; entries = 2;</code>
+     * <code>map&lt;string, bytes&gt; entries = 3;</code>
      */
     boolean containsEntries(
         java.lang.String key);
@@ -2619,19 +2631,19 @@ public final class PayloadServiceOuterClass {
     java.util.Map<java.lang.String, com.google.protobuf.ByteString>
     getEntries();
     /**
-     * <code>map&lt;string, bytes&gt; entries = 2;</code>
+     * <code>map&lt;string, bytes&gt; entries = 3;</code>
      */
     java.util.Map<java.lang.String, com.google.protobuf.ByteString>
     getEntriesMap();
     /**
-     * <code>map&lt;string, bytes&gt; entries = 2;</code>
+     * <code>map&lt;string, bytes&gt; entries = 3;</code>
      */
 
     com.google.protobuf.ByteString getEntriesOrDefault(
         java.lang.String key,
         com.google.protobuf.ByteString defaultValue);
     /**
-     * <code>map&lt;string, bytes&gt; entries = 2;</code>
+     * <code>map&lt;string, bytes&gt; entries = 3;</code>
      */
 
     com.google.protobuf.ByteString getEntriesOrThrow(
@@ -2650,6 +2662,7 @@ public final class PayloadServiceOuterClass {
       super(builder);
     }
     private GetExResponse() {
+      secretId_ = "";
       versionId_ = "";
     }
 
@@ -2687,10 +2700,16 @@ public final class PayloadServiceOuterClass {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              versionId_ = s;
+              secretId_ = s;
               break;
             }
             case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              versionId_ = s;
+              break;
+            }
+            case 26: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 entries_ = com.google.protobuf.MapField.newMapField(
                     EntriesDefaultEntryHolder.defaultEntry);
@@ -2732,7 +2751,7 @@ public final class PayloadServiceOuterClass {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
-        case 2:
+        case 3:
           return internalGetEntries();
         default:
           throw new RuntimeException(
@@ -2747,10 +2766,48 @@ public final class PayloadServiceOuterClass {
               yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse.class, yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse.Builder.class);
     }
 
-    public static final int VERSION_ID_FIELD_NUMBER = 1;
+    public static final int SECRET_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object secretId_;
+    /**
+     * <code>string secret_id = 1;</code>
+     * @return The secretId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretId() {
+      java.lang.Object ref = secretId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string secret_id = 1;</code>
+     * @return The bytes for secretId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretIdBytes() {
+      java.lang.Object ref = secretId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VERSION_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object versionId_;
     /**
-     * <code>string version_id = 1;</code>
+     * <code>string version_id = 2;</code>
      * @return The versionId.
      */
     @java.lang.Override
@@ -2767,7 +2824,7 @@ public final class PayloadServiceOuterClass {
       }
     }
     /**
-     * <code>string version_id = 1;</code>
+     * <code>string version_id = 2;</code>
      * @return The bytes for versionId.
      */
     @java.lang.Override
@@ -2785,7 +2842,7 @@ public final class PayloadServiceOuterClass {
       }
     }
 
-    public static final int ENTRIES_FIELD_NUMBER = 2;
+    public static final int ENTRIES_FIELD_NUMBER = 3;
     private static final class EntriesDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.String, com.google.protobuf.ByteString> defaultEntry =
@@ -2812,7 +2869,7 @@ public final class PayloadServiceOuterClass {
       return internalGetEntries().getMap().size();
     }
     /**
-     * <code>map&lt;string, bytes&gt; entries = 2;</code>
+     * <code>map&lt;string, bytes&gt; entries = 3;</code>
      */
 
     @java.lang.Override
@@ -2830,7 +2887,7 @@ public final class PayloadServiceOuterClass {
       return getEntriesMap();
     }
     /**
-     * <code>map&lt;string, bytes&gt; entries = 2;</code>
+     * <code>map&lt;string, bytes&gt; entries = 3;</code>
      */
     @java.lang.Override
 
@@ -2838,7 +2895,7 @@ public final class PayloadServiceOuterClass {
       return internalGetEntries().getMap();
     }
     /**
-     * <code>map&lt;string, bytes&gt; entries = 2;</code>
+     * <code>map&lt;string, bytes&gt; entries = 3;</code>
      */
     @java.lang.Override
 
@@ -2851,7 +2908,7 @@ public final class PayloadServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, bytes&gt; entries = 2;</code>
+     * <code>map&lt;string, bytes&gt; entries = 3;</code>
      */
     @java.lang.Override
 
@@ -2880,15 +2937,18 @@ public final class PayloadServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secretId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, secretId_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, versionId_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, versionId_);
       }
       com.google.protobuf.GeneratedMessageV3
         .serializeStringMapTo(
           output,
           internalGetEntries(),
           EntriesDefaultEntryHolder.defaultEntry,
-          2);
+          3);
       unknownFields.writeTo(output);
     }
 
@@ -2898,8 +2958,11 @@ public final class PayloadServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secretId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, secretId_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, versionId_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, versionId_);
       }
       for (java.util.Map.Entry<java.lang.String, com.google.protobuf.ByteString> entry
            : internalGetEntries().getMap().entrySet()) {
@@ -2909,7 +2972,7 @@ public final class PayloadServiceOuterClass {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(2, entries__);
+            .computeMessageSize(3, entries__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2926,6 +2989,8 @@ public final class PayloadServiceOuterClass {
       }
       yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse other = (yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse) obj;
 
+      if (!getSecretId()
+          .equals(other.getSecretId())) return false;
       if (!getVersionId()
           .equals(other.getVersionId())) return false;
       if (!internalGetEntries().equals(
@@ -2941,6 +3006,8 @@ public final class PayloadServiceOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SECRET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretId().hashCode();
       hash = (37 * hash) + VERSION_ID_FIELD_NUMBER;
       hash = (53 * hash) + getVersionId().hashCode();
       if (!internalGetEntries().getMap().isEmpty()) {
@@ -3058,7 +3125,7 @@ public final class PayloadServiceOuterClass {
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
-          case 2:
+          case 3:
             return internalGetEntries();
           default:
             throw new RuntimeException(
@@ -3069,7 +3136,7 @@ public final class PayloadServiceOuterClass {
       protected com.google.protobuf.MapField internalGetMutableMapField(
           int number) {
         switch (number) {
-          case 2:
+          case 3:
             return internalGetMutableEntries();
           default:
             throw new RuntimeException(
@@ -3102,6 +3169,8 @@ public final class PayloadServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        secretId_ = "";
+
         versionId_ = "";
 
         internalGetMutableEntries().clear();
@@ -3132,6 +3201,7 @@ public final class PayloadServiceOuterClass {
       public yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse buildPartial() {
         yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse result = new yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse(this);
         int from_bitField0_ = bitField0_;
+        result.secretId_ = secretId_;
         result.versionId_ = versionId_;
         result.entries_ = internalGetEntries();
         result.entries_.makeImmutable();
@@ -3183,6 +3253,10 @@ public final class PayloadServiceOuterClass {
 
       public Builder mergeFrom(yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse other) {
         if (other == yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetExResponse.getDefaultInstance()) return this;
+        if (!other.getSecretId().isEmpty()) {
+          secretId_ = other.secretId_;
+          onChanged();
+        }
         if (!other.getVersionId().isEmpty()) {
           versionId_ = other.versionId_;
           onChanged();
@@ -3219,9 +3293,85 @@ public final class PayloadServiceOuterClass {
       }
       private int bitField0_;
 
+      private java.lang.Object secretId_ = "";
+      /**
+       * <code>string secret_id = 1;</code>
+       * @return The secretId.
+       */
+      public java.lang.String getSecretId() {
+        java.lang.Object ref = secretId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string secret_id = 1;</code>
+       * @return The bytes for secretId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretIdBytes() {
+        java.lang.Object ref = secretId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string secret_id = 1;</code>
+       * @param value The secretId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string secret_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretId() {
+        
+        secretId_ = getDefaultInstance().getSecretId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string secret_id = 1;</code>
+       * @param value The bytes for secretId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretId_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object versionId_ = "";
       /**
-       * <code>string version_id = 1;</code>
+       * <code>string version_id = 2;</code>
        * @return The versionId.
        */
       public java.lang.String getVersionId() {
@@ -3237,7 +3387,7 @@ public final class PayloadServiceOuterClass {
         }
       }
       /**
-       * <code>string version_id = 1;</code>
+       * <code>string version_id = 2;</code>
        * @return The bytes for versionId.
        */
       public com.google.protobuf.ByteString
@@ -3254,7 +3404,7 @@ public final class PayloadServiceOuterClass {
         }
       }
       /**
-       * <code>string version_id = 1;</code>
+       * <code>string version_id = 2;</code>
        * @param value The versionId to set.
        * @return This builder for chaining.
        */
@@ -3269,7 +3419,7 @@ public final class PayloadServiceOuterClass {
         return this;
       }
       /**
-       * <code>string version_id = 1;</code>
+       * <code>string version_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearVersionId() {
@@ -3279,7 +3429,7 @@ public final class PayloadServiceOuterClass {
         return this;
       }
       /**
-       * <code>string version_id = 1;</code>
+       * <code>string version_id = 2;</code>
        * @param value The bytes for versionId to set.
        * @return This builder for chaining.
        */
@@ -3322,7 +3472,7 @@ public final class PayloadServiceOuterClass {
         return internalGetEntries().getMap().size();
       }
       /**
-       * <code>map&lt;string, bytes&gt; entries = 2;</code>
+       * <code>map&lt;string, bytes&gt; entries = 3;</code>
        */
 
       @java.lang.Override
@@ -3340,7 +3490,7 @@ public final class PayloadServiceOuterClass {
         return getEntriesMap();
       }
       /**
-       * <code>map&lt;string, bytes&gt; entries = 2;</code>
+       * <code>map&lt;string, bytes&gt; entries = 3;</code>
        */
       @java.lang.Override
 
@@ -3348,7 +3498,7 @@ public final class PayloadServiceOuterClass {
         return internalGetEntries().getMap();
       }
       /**
-       * <code>map&lt;string, bytes&gt; entries = 2;</code>
+       * <code>map&lt;string, bytes&gt; entries = 3;</code>
        */
       @java.lang.Override
 
@@ -3361,7 +3511,7 @@ public final class PayloadServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, bytes&gt; entries = 2;</code>
+       * <code>map&lt;string, bytes&gt; entries = 3;</code>
        */
       @java.lang.Override
 
@@ -3382,7 +3532,7 @@ public final class PayloadServiceOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;string, bytes&gt; entries = 2;</code>
+       * <code>map&lt;string, bytes&gt; entries = 3;</code>
        */
 
       public Builder removeEntries(
@@ -3401,7 +3551,7 @@ public final class PayloadServiceOuterClass {
         return internalGetMutableEntries().getMutableMap();
       }
       /**
-       * <code>map&lt;string, bytes&gt; entries = 2;</code>
+       * <code>map&lt;string, bytes&gt; entries = 3;</code>
        */
       public Builder putEntries(
           java.lang.String key,
@@ -3416,7 +3566,7 @@ public final class PayloadServiceOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;string, bytes&gt; entries = 2;</code>
+       * <code>map&lt;string, bytes&gt; entries = 3;</code>
        */
 
       public Builder putAllEntries(
@@ -3524,21 +3674,21 @@ public final class PayloadServiceOuterClass {
       "erAndNameH\000\022\034\n\nversion_id\030\025 \001(\tB\010\212\3101\004<=5" +
       "0B\022\n\nidentifier\022\004\300\3011\001J\004\010\003\020\025\"T\n\rFolderAnd" +
       "Name\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\"\n" +
-      "\013secret_name\030\002 \001(\tB\r\350\3071\001\212\3101\005<=100\"\231\001\n\rGe" +
-      "tExResponse\022\022\n\nversion_id\030\001 \001(\t\022D\n\007entri" +
-      "es\030\002 \003(\01323.yandex.cloud.lockbox.v1.GetEx" +
-      "Response.EntriesEntry\032.\n\014EntriesEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\014:\0028\0012\222\002\n\016Payloa" +
-      "dService\022\204\001\n\003Get\022*.yandex.cloud.lockbox." +
-      "v1.GetPayloadRequest\032 .yandex.cloud.lock" +
-      "box.v1.Payload\"/\202\323\344\223\002)\022\'/lockbox/v1/secr" +
-      "ets/{secret_id}/payload\022y\n\005GetEx\022%.yande" +
-      "x.cloud.lockbox.v1.GetExRequest\032&.yandex" +
-      ".cloud.lockbox.v1.GetExResponse\"!\202\323\344\223\002\033\022" +
-      "\031/lockbox/v1/secrets:getExBb\n\033yandex.clo" +
-      "ud.api.lockbox.v1ZCgithub.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/lockbox/v1;l" +
-      "ockboxb\006proto3"
+      "\013secret_name\030\002 \001(\tB\r\350\3071\001\212\3101\005<=100\"\254\001\n\rGe" +
+      "tExResponse\022\021\n\tsecret_id\030\001 \001(\t\022\022\n\nversio" +
+      "n_id\030\002 \001(\t\022D\n\007entries\030\003 \003(\01323.yandex.clo" +
+      "ud.lockbox.v1.GetExResponse.EntriesEntry" +
+      "\032.\n\014EntriesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\014:\0028\0012\222\002\n\016PayloadService\022\204\001\n\003Get\022*.ya" +
+      "ndex.cloud.lockbox.v1.GetPayloadRequest\032" +
+      " .yandex.cloud.lockbox.v1.Payload\"/\202\323\344\223\002" +
+      ")\022\'/lockbox/v1/secrets/{secret_id}/paylo" +
+      "ad\022y\n\005GetEx\022%.yandex.cloud.lockbox.v1.Ge" +
+      "tExRequest\032&.yandex.cloud.lockbox.v1.Get" +
+      "ExResponse\"!\202\323\344\223\002\033\022\031/lockbox/v1/secrets:" +
+      "getExBb\n\033yandex.cloud.api.lockbox.v1ZCgi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/lockbox/v1;lockboxb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3570,7 +3720,7 @@ public final class PayloadServiceOuterClass {
     internal_static_yandex_cloud_lockbox_v1_GetExResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_lockbox_v1_GetExResponse_descriptor,
-        new java.lang.String[] { "VersionId", "Entries", });
+        new java.lang.String[] { "SecretId", "VersionId", "Entries", });
     internal_static_yandex_cloud_lockbox_v1_GetExResponse_EntriesEntry_descriptor =
       internal_static_yandex_cloud_lockbox_v1_GetExResponse_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_lockbox_v1_GetExResponse_EntriesEntry_fieldAccessorTable = new

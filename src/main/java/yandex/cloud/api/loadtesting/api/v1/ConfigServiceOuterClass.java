@@ -23,7 +23,7 @@ public final class ConfigServiceOuterClass {
      * ID of the folder to create a config in.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
@@ -32,7 +32,7 @@ public final class ConfigServiceOuterClass {
      * ID of the folder to create a config in.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
@@ -232,7 +232,7 @@ public final class ConfigServiceOuterClass {
      * ID of the folder to create a config in.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The folderId.
      */
     @java.lang.Override
@@ -253,7 +253,7 @@ public final class ConfigServiceOuterClass {
      * ID of the folder to create a config in.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The bytes for folderId.
      */
     @java.lang.Override
@@ -761,7 +761,7 @@ public final class ConfigServiceOuterClass {
        * ID of the folder to create a config in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @return The folderId.
        */
       public java.lang.String getFolderId() {
@@ -781,7 +781,7 @@ public final class ConfigServiceOuterClass {
        * ID of the folder to create a config in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
@@ -802,7 +802,7 @@ public final class ConfigServiceOuterClass {
        * ID of the folder to create a config in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
        */
@@ -821,7 +821,7 @@ public final class ConfigServiceOuterClass {
        * ID of the folder to create a config in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFolderId() {
@@ -835,7 +835,7 @@ public final class ConfigServiceOuterClass {
        * ID of the folder to create a config in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
        */
@@ -5797,7 +5797,7 @@ public final class ConfigServiceOuterClass {
       "cloud/validation.proto\0323yandex/cloud/loa" +
       "dtesting/api/v1/config/config.proto\"k\n\023C" +
       "reateConfigRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022\025\n\013yaml_string\030\002 \001(\tH\000\022\014\n\004na" +
+      "\3071\001\212\3101\004<=54\022\025\n\013yaml_string\030\002 \001(\tH\000\022\014\n\004na" +
       "me\030\n \001(\tB\010\n\006configJ\004\010\003\020\n\")\n\024CreateConfig" +
       "Metadata\022\021\n\tconfig_id\030\001 \001(\t\"%\n\020GetConfig" +
       "Request\022\021\n\tconfig_id\030\001 \001(\t\"j\n\022ListConfig" +

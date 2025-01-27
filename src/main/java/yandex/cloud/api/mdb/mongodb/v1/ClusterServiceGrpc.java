@@ -1021,7 +1021,6 @@ public final class ClusterServiceGrpc {
     /**
      * <pre>
      * Retrieves logs for the specified MongoDB cluster.
-     * See the [Logs](/yandex-mdb-guide/concepts/logs.html) section in the developers guide for detailed logs description.
      * </pre>
      */
     public void listLogs(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ListClusterLogsRequest request,
@@ -1519,7 +1518,6 @@ public final class ClusterServiceGrpc {
     /**
      * <pre>
      * Retrieves logs for the specified MongoDB cluster.
-     * See the [Logs](/yandex-mdb-guide/concepts/logs.html) section in the developers guide for detailed logs description.
      * </pre>
      */
     public void listLogs(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ListClusterLogsRequest request,
@@ -1828,7 +1826,6 @@ public final class ClusterServiceGrpc {
     /**
      * <pre>
      * Retrieves logs for the specified MongoDB cluster.
-     * See the [Logs](/yandex-mdb-guide/concepts/logs.html) section in the developers guide for detailed logs description.
      * </pre>
      */
     public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ListClusterLogsResponse listLogs(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ListClusterLogsRequest request) {
@@ -2133,7 +2130,6 @@ public final class ClusterServiceGrpc {
     /**
      * <pre>
      * Retrieves logs for the specified MongoDB cluster.
-     * See the [Logs](/yandex-mdb-guide/concepts/logs.html) section in the developers guide for detailed logs description.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ListClusterLogsResponse> listLogs(

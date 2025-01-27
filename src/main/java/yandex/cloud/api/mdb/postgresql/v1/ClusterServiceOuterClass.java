@@ -3288,6 +3288,33 @@ public final class ClusterServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getHostGroupIdsBytes(int index);
+
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 14;</code>
+     * @return Whether the maintenanceWindow field is set.
+     */
+    boolean hasMaintenanceWindow();
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 14;</code>
+     * @return The maintenanceWindow.
+     */
+    yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 14;</code>
+     */
+    yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.CreateClusterRequest}
@@ -3449,6 +3476,19 @@ public final class ClusterServiceOuterClass {
                 mutable_bitField0_ |= 0x00000020;
               }
               hostGroupIds_.add(s);
+              break;
+            }
+            case 114: {
+              yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow.Builder subBuilder = null;
+              if (maintenanceWindow_ != null) {
+                subBuilder = maintenanceWindow_.toBuilder();
+              }
+              maintenanceWindow_ = input.readMessage(yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maintenanceWindow_);
+                maintenanceWindow_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -4157,6 +4197,44 @@ public final class ClusterServiceOuterClass {
       return hostGroupIds_.getByteString(index);
     }
 
+    public static final int MAINTENANCE_WINDOW_FIELD_NUMBER = 14;
+    private yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 14;</code>
+     * @return Whether the maintenanceWindow field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaintenanceWindow() {
+      return maintenanceWindow_ != null;
+    }
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 14;</code>
+     * @return The maintenanceWindow.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+      return maintenanceWindow_ == null ? yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+    }
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 14;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+      return getMaintenanceWindow();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4212,6 +4290,9 @@ public final class ClusterServiceOuterClass {
       }
       for (int i = 0; i < hostGroupIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 13, hostGroupIds_.getRaw(i));
+      }
+      if (maintenanceWindow_ != null) {
+        output.writeMessage(14, getMaintenanceWindow());
       }
       unknownFields.writeTo(output);
     }
@@ -4284,6 +4365,10 @@ public final class ClusterServiceOuterClass {
         size += dataSize;
         size += 1 * getHostGroupIdsList().size();
       }
+      if (maintenanceWindow_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getMaintenanceWindow());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4327,6 +4412,11 @@ public final class ClusterServiceOuterClass {
           != other.getDeletionProtection()) return false;
       if (!getHostGroupIdsList()
           .equals(other.getHostGroupIdsList())) return false;
+      if (hasMaintenanceWindow() != other.hasMaintenanceWindow()) return false;
+      if (hasMaintenanceWindow()) {
+        if (!getMaintenanceWindow()
+            .equals(other.getMaintenanceWindow())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4378,6 +4468,10 @@ public final class ClusterServiceOuterClass {
       if (getHostGroupIdsCount() > 0) {
         hash = (37 * hash) + HOST_GROUP_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getHostGroupIdsList().hashCode();
+      }
+      if (hasMaintenanceWindow()) {
+        hash = (37 * hash) + MAINTENANCE_WINDOW_FIELD_NUMBER;
+        hash = (53 * hash) + getMaintenanceWindow().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4578,6 +4672,12 @@ public final class ClusterServiceOuterClass {
 
         hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000020);
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
         return this;
       }
 
@@ -4655,6 +4755,11 @@ public final class ClusterServiceOuterClass {
           bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.hostGroupIds_ = hostGroupIds_;
+        if (maintenanceWindowBuilder_ == null) {
+          result.maintenanceWindow_ = maintenanceWindow_;
+        } else {
+          result.maintenanceWindow_ = maintenanceWindowBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -4827,6 +4932,9 @@ public final class ClusterServiceOuterClass {
             hostGroupIds_.addAll(other.hostGroupIds_);
           }
           onChanged();
+        }
+        if (other.hasMaintenanceWindow()) {
+          mergeMaintenanceWindow(other.getMaintenanceWindow());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6906,6 +7014,161 @@ public final class ClusterServiceOuterClass {
         hostGroupIds_.add(value);
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 14;</code>
+       * @return Whether the maintenanceWindow field is set.
+       */
+      public boolean hasMaintenanceWindow() {
+        return maintenanceWindowBuilder_ != null || maintenanceWindow_ != null;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 14;</code>
+       * @return The maintenanceWindow.
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          return maintenanceWindow_ == null ? yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        } else {
+          return maintenanceWindowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 14;</code>
+       */
+      public Builder setMaintenanceWindow(yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maintenanceWindow_ = value;
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 14;</code>
+       */
+      public Builder setMaintenanceWindow(
+          yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow.Builder builderForValue) {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = builderForValue.build();
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 14;</code>
+       */
+      public Builder mergeMaintenanceWindow(yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (maintenanceWindow_ != null) {
+            maintenanceWindow_ =
+              yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow.newBuilder(maintenanceWindow_).mergeFrom(value).buildPartial();
+          } else {
+            maintenanceWindow_ = value;
+          }
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 14;</code>
+       */
+      public Builder clearMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+          onChanged();
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 14;</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow.Builder getMaintenanceWindowBuilder() {
+        
+        onChanged();
+        return getMaintenanceWindowFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 14;</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+        if (maintenanceWindowBuilder_ != null) {
+          return maintenanceWindowBuilder_.getMessageOrBuilder();
+        } else {
+          return maintenanceWindow_ == null ?
+              yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        }
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 14;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindowOrBuilder> 
+          getMaintenanceWindowFieldBuilder() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindowOrBuilder>(
+                  getMaintenanceWindow(),
+                  getParentForChildren(),
+                  isClean());
+          maintenanceWindow_ = null;
+        }
+        return maintenanceWindowBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -61689,7 +61952,7 @@ public final class ClusterServiceOuterClass {
       "lter\030\004 \001(\tB\n\212\3101\006<=1000\"j\n\024ListClustersRe" +
       "sponse\0229\n\010clusters\030\001 \003(\0132\'.yandex.cloud." +
       "mdb.postgresql.v1.Cluster\022\027\n\017next_page_t" +
-      "oken\030\002 \001(\t\"\246\006\n\024CreateClusterRequest\022\037\n\tf" +
+      "oken\030\002 \001(\t\"\365\006\n\024CreateClusterRequest\022\037\n\tf" +
       "older_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004name\030\002 \001" +
       "(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013de" +
       "scription\030\003 \001(\tB\t\212\3101\005<=256\022\221\001\n\006labels\030\004 " +
@@ -61708,375 +61971,377 @@ public final class ClusterServiceOuterClass {
       "v1.HostSpecB\004\350\3071\001\022 \n\nnetwork_id\030\n \001(\tB\014\350" +
       "\3071\001\212\3101\004<=50\022\032\n\022security_group_ids\030\013 \003(\t\022" +
       "\033\n\023deletion_protection\030\014 \001(\010\022\026\n\016host_gro" +
-      "up_ids\030\r \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025CreateClusterMeta" +
-      "data\022\022\n\ncluster_id\030\001 \001(\t\"\343\004\n\024UpdateClust" +
-      "erRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022/\n\013update_mask\030\002 \001(\0132\032.google.protob" +
-      "uf.FieldMask\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<" +
-      "=256\022\221\001\n\006labels\030\004 \003(\0132@.yandex.cloud.mdb" +
-      ".postgresql.v1.UpdateClusterRequest.Labe" +
-      "lsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*" +
-      "\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022?\n\013conf" +
-      "ig_spec\030\005 \001(\0132*.yandex.cloud.mdb.postgre" +
-      "sql.v1.ConfigSpec\022(\n\004name\030\006 \001(\tB\032\212\3101\004<=6" +
-      "3\362\3071\016[a-zA-Z0-9_-]*\022M\n\022maintenance_windo" +
-      "w\030\007 \001(\01321.yandex.cloud.mdb.postgresql.v1" +
-      ".MaintenanceWindow\022\032\n\022security_group_ids" +
-      "\030\010 \003(\t\022\033\n\023deletion_protection\030\t \001(\010\022\034\n\nn" +
-      "etwork_id\030\013 \001(\tB\010\212\3101\004<=50\032-\n\013LabelsEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\n\020\013\"+" +
-      "\n\025UpdateClusterMetadata\022\022\n\ncluster_id\030\001 " +
-      "\001(\t\"8\n\024DeleteClusterRequest\022 \n\ncluster_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025DeleteClusterMe" +
-      "tadata\022\022\n\ncluster_id\030\001 \001(\t\"7\n\023StartClust" +
-      "erRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\"*\n\024StartClusterMetadata\022\022\n\ncluster_i" +
-      "d\030\001 \001(\t\"6\n\022StopClusterRequest\022 \n\ncluster" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023StopClusterMe" +
-      "tadata\022\022\n\ncluster_id\030\001 \001(\t\"c\n\022MoveCluste" +
+      "up_ids\030\r \003(\t\022M\n\022maintenance_window\030\016 \001(\013" +
+      "21.yandex.cloud.mdb.postgresql.v1.Mainte" +
+      "nanceWindow\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025CreateClusterMetad" +
+      "ata\022\022\n\ncluster_id\030\001 \001(\t\"\343\004\n\024UpdateCluste" +
       "rRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022+\n\025destination_folder_id\030\002 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\"b\n\023MoveClusterMetadata\022\022\n\ncluste" +
-      "r_id\030\001 \001(\t\022\030\n\020source_folder_id\030\002 \001(\t\022\035\n\025" +
-      "destination_folder_id\030\003 \001(\t\"8\n\024BackupClu" +
-      "sterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\">\n\025BackupClusterMetadata\022\022\n\ncluste" +
-      "r_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t\"\361\005\n\025Restor" +
-      "eClusterRequest\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001" +
-      "\022(\n\004time\030\002 \001(\0132\032.google.protobuf.Timesta" +
-      "mp\022\026\n\016time_inclusive\030\003 \001(\010\022,\n\004name\030\004 \001(\t" +
-      "B\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013desc" +
-      "ription\030\005 \001(\tB\t\212\3101\005<=256\022\222\001\n\006labels\030\006 \003(" +
-      "\0132A.yandex.cloud.mdb.postgresql.v1.Resto" +
-      "reClusterRequest.LabelsEntryB?\202\3101\004<=64\212\310" +
-      "1\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-" +
-      "z][-_0-9a-z]*\022N\n\013environment\030\007 \001(\01623.yan" +
-      "dex.cloud.mdb.postgresql.v1.Cluster.Envi" +
-      "ronmentB\004\350\3071\001\022E\n\013config_spec\030\010 \001(\0132*.yan" +
-      "dex.cloud.mdb.postgresql.v1.ConfigSpecB\004" +
-      "\350\3071\001\022D\n\nhost_specs\030\t \003(\0132(.yandex.cloud." +
-      "mdb.postgresql.v1.HostSpecB\006\202\3101\002>0\022 \n\nne" +
-      "twork_id\030\n \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\tfolder_i" +
-      "d\030\013 \001(\tB\010\212\3101\004<=50\022\032\n\022security_group_ids\030" +
-      "\014 \003(\t\022\033\n\023deletion_protection\030\r \001(\010\022\026\n\016ho" +
-      "st_group_ids\030\016 \003(\t\032-\n\013LabelsEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"?\n\026RestoreClus" +
-      "terMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tbacku" +
-      "p_id\030\002 \001(\t\"]\n\033StartClusterFailoverReques" +
-      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\034\n\th" +
-      "ost_name\030\002 \001(\tB\t\212\3101\005<=253\"2\n\034StartCluste" +
-      "rFailoverMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\317\002" +
-      "\n\034RescheduleMaintenanceRequest\022 \n\ncluste" +
-      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022j\n\017reschedule_t" +
-      "ype\030\002 \001(\0162K.yandex.cloud.mdb.postgresql." +
-      "v1.RescheduleMaintenanceRequest.Reschedu" +
-      "leTypeB\004\350\3071\001\0221\n\rdelayed_until\030\003 \001(\0132\032.go" +
-      "ogle.protobuf.Timestamp\"n\n\016RescheduleTyp" +
-      "e\022\037\n\033RESCHEDULE_TYPE_UNSPECIFIED\020\000\022\r\n\tIM" +
-      "MEDIATE\020\001\022\031\n\025NEXT_AVAILABLE_WINDOW\020\002\022\021\n\r" +
-      "SPECIFIC_TIME\020\003\"l\n\035RescheduleMaintenance" +
-      "Metadata\022\022\n\ncluster_id\030\001 \001(\t\0221\n\rdelayed_" +
-      "until\030\004 \001(\0132\032.google.protobuf.TimestampJ" +
-      "\004\010\002\020\004\"\263\001\n\tLogRecord\022-\n\ttimestamp\030\001 \001(\0132\032" +
-      ".google.protobuf.Timestamp\022G\n\007message\030\002 " +
-      "\003(\01326.yandex.cloud.mdb.postgresql.v1.Log" +
-      "Record.MessageEntry\032.\n\014MessageEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\256\003\n\026ListClus" +
-      "terLogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022X\n\014servi" +
-      "ce_type\030\003 \001(\0162B.yandex.cloud.mdb.postgre" +
-      "sql.v1.ListClusterLogsRequest.ServiceTyp" +
-      "e\022-\n\tfrom_time\030\004 \001(\0132\032.google.protobuf.T" +
-      "imestamp\022+\n\007to_time\030\005 \001(\0132\032.google.proto" +
-      "buf.Timestamp\022\035\n\tpage_size\030\006 \001(\003B\n\372\3071\006<=" +
-      "1000\022\035\n\npage_token\030\007 \001(\tB\t\212\3101\005<=100\022\036\n\026a" +
-      "lways_next_page_token\030\010 \001(\010\"G\n\013ServiceTy" +
-      "pe\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\016\n\nPOST" +
-      "GRESQL\020\001\022\n\n\006POOLER\020\002\"k\n\027ListClusterLogsR" +
-      "esponse\0227\n\004logs\030\001 \003(\0132).yandex.cloud.mdb" +
-      ".postgresql.v1.LogRecord\022\027\n\017next_page_to" +
-      "ken\030\002 \001(\t\"g\n\017StreamLogRecord\0229\n\006record\030\001" +
-      " \001(\0132).yandex.cloud.mdb.postgresql.v1.Lo" +
-      "gRecord\022\031\n\021next_record_token\030\002 \001(\t\"\221\003\n\030S" +
-      "treamClusterLogsRequest\022 \n\ncluster_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t" +
-      "\022Z\n\014service_type\030\003 \001(\0162D.yandex.cloud.md" +
-      "b.postgresql.v1.StreamClusterLogsRequest" +
-      ".ServiceType\022-\n\tfrom_time\030\004 \001(\0132\032.google" +
-      ".protobuf.Timestamp\022+\n\007to_time\030\005 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\022\037\n\014record_token" +
-      "\030\006 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\007 \001(\tB\n\212\3101\006<" +
-      "=1000\"G\n\013ServiceType\022\034\n\030SERVICE_TYPE_UNS" +
-      "PECIFIED\020\000\022\016\n\nPOSTGRESQL\020\001\022\n\n\006POOLER\020\002\"~" +
-      "\n\034ListClusterOperationsRequest\022 \n\ncluste" +
-      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 " +
-      "\001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
-      "\005<=100\"o\n\035ListClusterOperationsResponse\022" +
-      "5\n\noperations\030\001 \003(\0132!.yandex.cloud.opera" +
-      "tion.Operation\022\027\n\017next_page_token\030\002 \001(\t\"" +
-      "{\n\031ListClusterBackupsRequest\022 \n\ncluster_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(" +
-      "\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<" +
-      "=100\"n\n\032ListClusterBackupsResponse\0227\n\007ba" +
-      "ckups\030\001 \003(\0132&.yandex.cloud.mdb.postgresq" +
-      "l.v1.Backup\022\027\n\017next_page_token\030\002 \001(\t\"y\n\027" +
-      "ListClusterHostsRequest\022 \n\ncluster_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\307" +
-      "1\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"" +
-      "h\n\030ListClusterHostsResponse\0223\n\005hosts\030\001 \003" +
-      "(\0132$.yandex.cloud.mdb.postgresql.v1.Host" +
-      "\022\027\n\017next_page_token\030\002 \001(\t\"\200\001\n\026AddCluster" +
-      "HostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\022D\n\nhost_specs\030\002 \003(\0132(.yandex.clou" +
-      "d.mdb.postgresql.v1.HostSpecB\006\202\3101\002>0\"A\n\027" +
-      "AddClusterHostsMetadata\022\022\n\ncluster_id\030\001 " +
-      "\001(\t\022\022\n\nhost_names\030\002 \003(\t\"b\n\031DeleteCluster" +
-      "HostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\022#\n\nhost_names\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=" +
-      "253\"D\n\032DeleteClusterHostsMetadata\022\022\n\nclu" +
-      "ster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"\220\001\n\031Up" +
-      "dateClusterHostsRequest\022 \n\ncluster_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022Q\n\021update_host_specs\030\002" +
-      " \003(\0132..yandex.cloud.mdb.postgresql.v1.Up" +
-      "dateHostSpecB\006\202\3101\002>0\"D\n\032UpdateClusterHos" +
-      "tsMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_n" +
-      "ames\030\002 \003(\t\"\204\002\n\016UpdateHostSpec\022\027\n\thost_na" +
-      "me\030\001 \001(\tB\004\350\3071\001\022\032\n\022replication_source\030\002 \001" +
-      "(\t\022-\n\010priority\030\003 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\022C\n\013config_spec\030\004 \001(\0132..yandex." +
-      "cloud.mdb.postgresql.v1.ConfigHostSpec\022/" +
-      "\n\013update_mask\030\005 \001(\0132\032.google.protobuf.Fi" +
-      "eldMask\022\030\n\020assign_public_ip\030\006 \001(\010\"\354\001\n\010Ho" +
-      "stSpec\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004<=50\022\033\n\tsub" +
-      "net_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_public_" +
-      "ip\030\003 \001(\010\022\032\n\022replication_source\030\004 \001(\t\022-\n\010" +
-      "priority\030\005 \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\022C\n\013config_spec\030\006 \001(\0132..yandex.cloud." +
-      "mdb.postgresql.v1.ConfigHostSpec\"\234\024\n\nCon" +
-      "figSpec\022\017\n\007version\030\001 \001(\t\022q\n\025postgresql_c" +
-      "onfig_9_6\030\002 \001(\0132:.yandex.cloud.mdb.postg" +
-      "resql.v1.config.PostgresqlConfig9_6H\000R\024p" +
-      "ostgresqlConfig_9_6\022w\n\027postgresql_config" +
-      "_10_1c\030\n \001(\0132<.yandex.cloud.mdb.postgres" +
-      "ql.v1.config.PostgresqlConfig10_1CH\000R\026po" +
-      "stgresqlConfig_10_1c\022n\n\024postgresql_confi" +
-      "g_10\030\003 \001(\01329.yandex.cloud.mdb.postgresql" +
-      ".v1.config.PostgresqlConfig10H\000R\023postgre" +
-      "sqlConfig_10\022n\n\024postgresql_config_11\030\007 \001" +
-      "(\01329.yandex.cloud.mdb.postgresql.v1.conf" +
-      "ig.PostgresqlConfig11H\000R\023postgresqlConfi" +
-      "g_11\022w\n\027postgresql_config_11_1c\030\r \001(\0132<." +
-      "yandex.cloud.mdb.postgresql.v1.config.Po" +
-      "stgresqlConfig11_1CH\000R\026postgresqlConfig_" +
-      "11_1c\022n\n\024postgresql_config_12\030\013 \001(\01329.ya" +
-      "ndex.cloud.mdb.postgresql.v1.config.Post" +
-      "gresqlConfig12H\000R\023postgresqlConfig_12\022w\n" +
-      "\027postgresql_config_12_1c\030\016 \001(\0132<.yandex." +
-      "cloud.mdb.postgresql.v1.config.Postgresq" +
-      "lConfig12_1CH\000R\026postgresqlConfig_12_1c\022n" +
-      "\n\024postgresql_config_13\030\017 \001(\01329.yandex.cl" +
-      "oud.mdb.postgresql.v1.config.PostgresqlC" +
-      "onfig13H\000R\023postgresqlConfig_13\022w\n\027postgr" +
-      "esql_config_13_1c\030\022 \001(\0132<.yandex.cloud.m" +
-      "db.postgresql.v1.config.PostgresqlConfig" +
-      "13_1CH\000R\026postgresqlConfig_13_1c\022n\n\024postg" +
-      "resql_config_14\030\020 \001(\01329.yandex.cloud.mdb" +
-      ".postgresql.v1.config.PostgresqlConfig14" +
-      "H\000R\023postgresqlConfig_14\022w\n\027postgresql_co" +
-      "nfig_14_1c\030\023 \001(\0132<.yandex.cloud.mdb.post" +
-      "gresql.v1.config.PostgresqlConfig14_1CH\000" +
-      "R\026postgresqlConfig_14_1c\022n\n\024postgresql_c" +
-      "onfig_15\030\025 \001(\01329.yandex.cloud.mdb.postgr" +
-      "esql.v1.config.PostgresqlConfig15H\000R\023pos" +
-      "tgresqlConfig_15\022w\n\027postgresql_config_15" +
-      "_1c\030\026 \001(\0132<.yandex.cloud.mdb.postgresql." +
-      "v1.config.PostgresqlConfig15_1CH\000R\026postg" +
-      "resqlConfig_15_1c\022n\n\024postgresql_config_1" +
-      "6\030\030 \001(\01329.yandex.cloud.mdb.postgresql.v1" +
-      ".config.PostgresqlConfig16H\000R\023postgresql" +
-      "Config_16\022w\n\027postgresql_config_16_1c\030\031 \001" +
-      "(\0132<.yandex.cloud.mdb.postgresql.v1.conf" +
-      "ig.PostgresqlConfig16_1CH\000R\026postgresqlCo" +
-      "nfig_16_1c\022n\n\024postgresql_config_17\030\033 \001(\013" +
-      "29.yandex.cloud.mdb.postgresql.v1.config" +
-      ".PostgresqlConfig17H\000R\023postgresqlConfig_" +
-      "17\022w\n\027postgresql_config_17_1c\030\034 \001(\0132<.ya" +
-      "ndex.cloud.mdb.postgresql.v1.config.Post" +
-      "gresqlConfig17_1CH\000R\026postgresqlConfig_17" +
-      "_1c\022M\n\rpooler_config\030\004 \001(\01326.yandex.clou" +
-      "d.mdb.postgresql.v1.ConnectionPoolerConf" +
-      "ig\022<\n\tresources\030\005 \001(\0132).yandex.cloud.mdb" +
-      ".postgresql.v1.Resources\0220\n\014autofailover" +
-      "\030\006 \001(\0132\032.google.protobuf.BoolValue\0223\n\023ba" +
-      "ckup_window_start\030\010 \001(\0132\026.google.type.Ti" +
-      "meOfDay\022H\n\031backup_retain_period_days\030\021 \001" +
-      "(\0132\033.google.protobuf.Int64ValueB\010\372\3071\0047-6" +
-      "0\0226\n\006access\030\t \001(\0132&.yandex.cloud.mdb.pos" +
-      "tgresql.v1.Access\022W\n\027performance_diagnos" +
-      "tics\030\014 \001(\01326.yandex.cloud.mdb.postgresql" +
-      ".v1.PerformanceDiagnostics\022R\n\025disk_size_" +
-      "autoscaling\030\027 \001(\01323.yandex.cloud.mdb.pos" +
-      "tgresql.v1.DiskSizeAutoscalingB\023\n\021postgr" +
-      "esql_configJ\004\010\024\020\025J\004\010\032\020\033\"\350\020\n\016ConfigHostSp" +
-      "ec\022y\n\025postgresql_config_9_6\030\001 \001(\0132>.yand" +
-      "ex.cloud.mdb.postgresql.v1.config.Postgr" +
-      "esqlHostConfig9_6H\000R\030postgresqlHostConfi" +
-      "g_9_6\022\177\n\027postgresql_config_10_1c\030\004 \001(\0132@" +
-      ".yandex.cloud.mdb.postgresql.v1.config.P" +
-      "ostgresqlHostConfig10_1CH\000R\032postgresqlHo" +
-      "stConfig_10_1c\022v\n\024postgresql_config_10\030\002" +
-      " \001(\0132=.yandex.cloud.mdb.postgresql.v1.co" +
-      "nfig.PostgresqlHostConfig10H\000R\027postgresq" +
-      "lHostConfig_10\022v\n\024postgresql_config_11\030\003" +
-      " \001(\0132=.yandex.cloud.mdb.postgresql.v1.co" +
-      "nfig.PostgresqlHostConfig11H\000R\027postgresq" +
-      "lHostConfig_11\022\177\n\027postgresql_config_11_1" +
-      "c\030\006 \001(\0132@.yandex.cloud.mdb.postgresql.v1" +
-      ".config.PostgresqlHostConfig11_1CH\000R\032pos" +
-      "tgresqlHostConfig_11_1c\022v\n\024postgresql_co" +
-      "nfig_12\030\005 \001(\0132=.yandex.cloud.mdb.postgre" +
-      "sql.v1.config.PostgresqlHostConfig12H\000R\027" +
-      "postgresqlHostConfig_12\022\177\n\027postgresql_co" +
-      "nfig_12_1c\030\007 \001(\0132@.yandex.cloud.mdb.post" +
-      "gresql.v1.config.PostgresqlHostConfig12_" +
-      "1CH\000R\032postgresqlHostConfig_12_1c\022v\n\024post" +
-      "gresql_config_13\030\010 \001(\0132=.yandex.cloud.md" +
-      "b.postgresql.v1.config.PostgresqlHostCon" +
-      "fig13H\000R\027postgresqlHostConfig_13\022\177\n\027post" +
-      "gresql_config_13_1c\030\n \001(\0132@.yandex.cloud" +
-      ".mdb.postgresql.v1.config.PostgresqlHost" +
-      "Config13_1CH\000R\032postgresqlHostConfig_13_1" +
-      "c\022v\n\024postgresql_config_14\030\t \001(\0132=.yandex" +
-      ".cloud.mdb.postgresql.v1.config.Postgres" +
-      "qlHostConfig14H\000R\027postgresqlHostConfig_1" +
-      "4\022\177\n\027postgresql_config_14_1c\030\013 \001(\0132@.yan" +
+      "50\022/\n\013update_mask\030\002 \001(\0132\032.google.protobu" +
+      "f.FieldMask\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=" +
+      "256\022\221\001\n\006labels\030\004 \003(\0132@.yandex.cloud.mdb." +
+      "postgresql.v1.UpdateClusterRequest.Label" +
+      "sEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262" +
+      "\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022?\n\013confi" +
+      "g_spec\030\005 \001(\0132*.yandex.cloud.mdb.postgres" +
+      "ql.v1.ConfigSpec\022(\n\004name\030\006 \001(\tB\032\212\3101\004<=63" +
+      "\362\3071\016[a-zA-Z0-9_-]*\022M\n\022maintenance_window" +
+      "\030\007 \001(\01321.yandex.cloud.mdb.postgresql.v1." +
+      "MaintenanceWindow\022\032\n\022security_group_ids\030" +
+      "\010 \003(\t\022\033\n\023deletion_protection\030\t \001(\010\022\034\n\nne" +
+      "twork_id\030\013 \001(\tB\010\212\3101\004<=50\032-\n\013LabelsEntry\022" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\n\020\013\"+\n" +
+      "\025UpdateClusterMetadata\022\022\n\ncluster_id\030\001 \001" +
+      "(\t\"8\n\024DeleteClusterRequest\022 \n\ncluster_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025DeleteClusterMet" +
+      "adata\022\022\n\ncluster_id\030\001 \001(\t\"7\n\023StartCluste" +
+      "rRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\"*\n\024StartClusterMetadata\022\022\n\ncluster_id" +
+      "\030\001 \001(\t\"6\n\022StopClusterRequest\022 \n\ncluster_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023StopClusterMet" +
+      "adata\022\022\n\ncluster_id\030\001 \001(\t\"c\n\022MoveCluster" +
+      "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\022+\n\025destination_folder_id\030\002 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\"b\n\023MoveClusterMetadata\022\022\n\ncluster" +
+      "_id\030\001 \001(\t\022\030\n\020source_folder_id\030\002 \001(\t\022\035\n\025d" +
+      "estination_folder_id\030\003 \001(\t\"8\n\024BackupClus" +
+      "terRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\">\n\025BackupClusterMetadata\022\022\n\ncluster" +
+      "_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t\"\361\005\n\025Restore" +
+      "ClusterRequest\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001\022" +
+      "(\n\004time\030\002 \001(\0132\032.google.protobuf.Timestam" +
+      "p\022\026\n\016time_inclusive\030\003 \001(\010\022,\n\004name\030\004 \001(\tB" +
+      "\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013descr" +
+      "iption\030\005 \001(\tB\t\212\3101\005<=256\022\222\001\n\006labels\030\006 \003(\013" +
+      "2A.yandex.cloud.mdb.postgresql.v1.Restor" +
+      "eClusterRequest.LabelsEntryB?\202\3101\004<=64\212\3101" +
+      "\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z" +
+      "][-_0-9a-z]*\022N\n\013environment\030\007 \001(\01623.yand" +
+      "ex.cloud.mdb.postgresql.v1.Cluster.Envir" +
+      "onmentB\004\350\3071\001\022E\n\013config_spec\030\010 \001(\0132*.yand" +
+      "ex.cloud.mdb.postgresql.v1.ConfigSpecB\004\350" +
+      "\3071\001\022D\n\nhost_specs\030\t \003(\0132(.yandex.cloud.m" +
+      "db.postgresql.v1.HostSpecB\006\202\3101\002>0\022 \n\nnet" +
+      "work_id\030\n \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\tfolder_id" +
+      "\030\013 \001(\tB\010\212\3101\004<=50\022\032\n\022security_group_ids\030\014" +
+      " \003(\t\022\033\n\023deletion_protection\030\r \001(\010\022\026\n\016hos" +
+      "t_group_ids\030\016 \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"?\n\026RestoreClust" +
+      "erMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tbackup" +
+      "_id\030\002 \001(\t\"]\n\033StartClusterFailoverRequest" +
+      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\034\n\tho" +
+      "st_name\030\002 \001(\tB\t\212\3101\005<=253\"2\n\034StartCluster" +
+      "FailoverMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\317\002\n" +
+      "\034RescheduleMaintenanceRequest\022 \n\ncluster" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022j\n\017reschedule_ty" +
+      "pe\030\002 \001(\0162K.yandex.cloud.mdb.postgresql.v" +
+      "1.RescheduleMaintenanceRequest.Reschedul" +
+      "eTypeB\004\350\3071\001\0221\n\rdelayed_until\030\003 \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\"n\n\016RescheduleType" +
+      "\022\037\n\033RESCHEDULE_TYPE_UNSPECIFIED\020\000\022\r\n\tIMM" +
+      "EDIATE\020\001\022\031\n\025NEXT_AVAILABLE_WINDOW\020\002\022\021\n\rS" +
+      "PECIFIC_TIME\020\003\"l\n\035RescheduleMaintenanceM" +
+      "etadata\022\022\n\ncluster_id\030\001 \001(\t\0221\n\rdelayed_u" +
+      "ntil\030\004 \001(\0132\032.google.protobuf.TimestampJ\004" +
+      "\010\002\020\004\"\263\001\n\tLogRecord\022-\n\ttimestamp\030\001 \001(\0132\032." +
+      "google.protobuf.Timestamp\022G\n\007message\030\002 \003" +
+      "(\01326.yandex.cloud.mdb.postgresql.v1.LogR" +
+      "ecord.MessageEntry\032.\n\014MessageEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\256\003\n\026ListClust" +
+      "erLogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022X\n\014servic" +
+      "e_type\030\003 \001(\0162B.yandex.cloud.mdb.postgres" +
+      "ql.v1.ListClusterLogsRequest.ServiceType" +
+      "\022-\n\tfrom_time\030\004 \001(\0132\032.google.protobuf.Ti" +
+      "mestamp\022+\n\007to_time\030\005 \001(\0132\032.google.protob" +
+      "uf.Timestamp\022\035\n\tpage_size\030\006 \001(\003B\n\372\3071\006<=1" +
+      "000\022\035\n\npage_token\030\007 \001(\tB\t\212\3101\005<=100\022\036\n\026al" +
+      "ways_next_page_token\030\010 \001(\010\"G\n\013ServiceTyp" +
+      "e\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\016\n\nPOSTG" +
+      "RESQL\020\001\022\n\n\006POOLER\020\002\"k\n\027ListClusterLogsRe" +
+      "sponse\0227\n\004logs\030\001 \003(\0132).yandex.cloud.mdb." +
+      "postgresql.v1.LogRecord\022\027\n\017next_page_tok" +
+      "en\030\002 \001(\t\"g\n\017StreamLogRecord\0229\n\006record\030\001 " +
+      "\001(\0132).yandex.cloud.mdb.postgresql.v1.Log" +
+      "Record\022\031\n\021next_record_token\030\002 \001(\t\"\221\003\n\030St" +
+      "reamClusterLogsRequest\022 \n\ncluster_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022" +
+      "Z\n\014service_type\030\003 \001(\0162D.yandex.cloud.mdb" +
+      ".postgresql.v1.StreamClusterLogsRequest." +
+      "ServiceType\022-\n\tfrom_time\030\004 \001(\0132\032.google." +
+      "protobuf.Timestamp\022+\n\007to_time\030\005 \001(\0132\032.go" +
+      "ogle.protobuf.Timestamp\022\037\n\014record_token\030" +
+      "\006 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\007 \001(\tB\n\212\3101\006<=" +
+      "1000\"G\n\013ServiceType\022\034\n\030SERVICE_TYPE_UNSP" +
+      "ECIFIED\020\000\022\016\n\nPOSTGRESQL\020\001\022\n\n\006POOLER\020\002\"~\n" +
+      "\034ListClusterOperationsRequest\022 \n\ncluster" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001" +
+      "(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
+      "<=100\"o\n\035ListClusterOperationsResponse\0225" +
+      "\n\noperations\030\001 \003(\0132!.yandex.cloud.operat" +
+      "ion.Operation\022\027\n\017next_page_token\030\002 \001(\t\"{" +
+      "\n\031ListClusterBackupsRequest\022 \n\ncluster_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003" +
+      "B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=" +
+      "100\"n\n\032ListClusterBackupsResponse\0227\n\007bac" +
+      "kups\030\001 \003(\0132&.yandex.cloud.mdb.postgresql" +
+      ".v1.Backup\022\027\n\017next_page_token\030\002 \001(\t\"y\n\027L" +
+      "istClusterHostsRequest\022 \n\ncluster_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
+      "\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"h" +
+      "\n\030ListClusterHostsResponse\0223\n\005hosts\030\001 \003(" +
+      "\0132$.yandex.cloud.mdb.postgresql.v1.Host\022" +
+      "\027\n\017next_page_token\030\002 \001(\t\"\200\001\n\026AddClusterH" +
+      "ostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022D\n\nhost_specs\030\002 \003(\0132(.yandex.cloud" +
+      ".mdb.postgresql.v1.HostSpecB\006\202\3101\002>0\"A\n\027A" +
+      "ddClusterHostsMetadata\022\022\n\ncluster_id\030\001 \001" +
+      "(\t\022\022\n\nhost_names\030\002 \003(\t\"b\n\031DeleteClusterH" +
+      "ostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022#\n\nhost_names\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=2" +
+      "53\"D\n\032DeleteClusterHostsMetadata\022\022\n\nclus" +
+      "ter_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"\220\001\n\031Upd" +
+      "ateClusterHostsRequest\022 \n\ncluster_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022Q\n\021update_host_specs\030\002 " +
+      "\003(\0132..yandex.cloud.mdb.postgresql.v1.Upd" +
+      "ateHostSpecB\006\202\3101\002>0\"D\n\032UpdateClusterHost" +
+      "sMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_na" +
+      "mes\030\002 \003(\t\"\204\002\n\016UpdateHostSpec\022\027\n\thost_nam" +
+      "e\030\001 \001(\tB\004\350\3071\001\022\032\n\022replication_source\030\002 \001(" +
+      "\t\022-\n\010priority\030\003 \001(\0132\033.google.protobuf.In" +
+      "t64Value\022C\n\013config_spec\030\004 \001(\0132..yandex.c" +
+      "loud.mdb.postgresql.v1.ConfigHostSpec\022/\n" +
+      "\013update_mask\030\005 \001(\0132\032.google.protobuf.Fie" +
+      "ldMask\022\030\n\020assign_public_ip\030\006 \001(\010\"\354\001\n\010Hos" +
+      "tSpec\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004<=50\022\033\n\tsubn" +
+      "et_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_public_i" +
+      "p\030\003 \001(\010\022\032\n\022replication_source\030\004 \001(\t\022-\n\010p" +
+      "riority\030\005 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022C\n\013config_spec\030\006 \001(\0132..yandex.cloud.m" +
+      "db.postgresql.v1.ConfigHostSpec\"\234\024\n\nConf" +
+      "igSpec\022\017\n\007version\030\001 \001(\t\022q\n\025postgresql_co" +
+      "nfig_9_6\030\002 \001(\0132:.yandex.cloud.mdb.postgr" +
+      "esql.v1.config.PostgresqlConfig9_6H\000R\024po" +
+      "stgresqlConfig_9_6\022w\n\027postgresql_config_" +
+      "10_1c\030\n \001(\0132<.yandex.cloud.mdb.postgresq" +
+      "l.v1.config.PostgresqlConfig10_1CH\000R\026pos" +
+      "tgresqlConfig_10_1c\022n\n\024postgresql_config" +
+      "_10\030\003 \001(\01329.yandex.cloud.mdb.postgresql." +
+      "v1.config.PostgresqlConfig10H\000R\023postgres" +
+      "qlConfig_10\022n\n\024postgresql_config_11\030\007 \001(" +
+      "\01329.yandex.cloud.mdb.postgresql.v1.confi" +
+      "g.PostgresqlConfig11H\000R\023postgresqlConfig" +
+      "_11\022w\n\027postgresql_config_11_1c\030\r \001(\0132<.y" +
+      "andex.cloud.mdb.postgresql.v1.config.Pos" +
+      "tgresqlConfig11_1CH\000R\026postgresqlConfig_1" +
+      "1_1c\022n\n\024postgresql_config_12\030\013 \001(\01329.yan" +
       "dex.cloud.mdb.postgresql.v1.config.Postg" +
-      "resqlHostConfig14_1CH\000R\032postgresqlHostCo" +
-      "nfig_14_1c\022v\n\024postgresql_config_15\030\014 \001(\013" +
-      "2=.yandex.cloud.mdb.postgresql.v1.config" +
-      ".PostgresqlHostConfig15H\000R\027postgresqlHos" +
-      "tConfig_15\022\177\n\027postgresql_config_15_1c\030\r " +
-      "\001(\0132@.yandex.cloud.mdb.postgresql.v1.con" +
-      "fig.PostgresqlHostConfig15_1CH\000R\032postgre" +
-      "sqlHostConfig_15_1c\022v\n\024postgresql_config" +
-      "_16\030\016 \001(\0132=.yandex.cloud.mdb.postgresql." +
-      "v1.config.PostgresqlHostConfig16H\000R\027post" +
-      "gresqlHostConfig_16\022\177\n\027postgresql_config" +
-      "_16_1c\030\017 \001(\0132@.yandex.cloud.mdb.postgres" +
-      "ql.v1.config.PostgresqlHostConfig16_1CH\000" +
-      "R\032postgresqlHostConfig_16_1c\022v\n\024postgres" +
-      "ql_config_17\030\020 \001(\0132=.yandex.cloud.mdb.po" +
-      "stgresql.v1.config.PostgresqlHostConfig1" +
-      "7H\000R\027postgresqlHostConfig_17\022\177\n\027postgres" +
-      "ql_config_17_1c\030\021 \001(\0132@.yandex.cloud.mdb" +
+      "resqlConfig12H\000R\023postgresqlConfig_12\022w\n\027" +
+      "postgresql_config_12_1c\030\016 \001(\0132<.yandex.c" +
+      "loud.mdb.postgresql.v1.config.Postgresql" +
+      "Config12_1CH\000R\026postgresqlConfig_12_1c\022n\n" +
+      "\024postgresql_config_13\030\017 \001(\01329.yandex.clo" +
+      "ud.mdb.postgresql.v1.config.PostgresqlCo" +
+      "nfig13H\000R\023postgresqlConfig_13\022w\n\027postgre" +
+      "sql_config_13_1c\030\022 \001(\0132<.yandex.cloud.md" +
+      "b.postgresql.v1.config.PostgresqlConfig1" +
+      "3_1CH\000R\026postgresqlConfig_13_1c\022n\n\024postgr" +
+      "esql_config_14\030\020 \001(\01329.yandex.cloud.mdb." +
+      "postgresql.v1.config.PostgresqlConfig14H" +
+      "\000R\023postgresqlConfig_14\022w\n\027postgresql_con" +
+      "fig_14_1c\030\023 \001(\0132<.yandex.cloud.mdb.postg" +
+      "resql.v1.config.PostgresqlConfig14_1CH\000R" +
+      "\026postgresqlConfig_14_1c\022n\n\024postgresql_co" +
+      "nfig_15\030\025 \001(\01329.yandex.cloud.mdb.postgre" +
+      "sql.v1.config.PostgresqlConfig15H\000R\023post" +
+      "gresqlConfig_15\022w\n\027postgresql_config_15_" +
+      "1c\030\026 \001(\0132<.yandex.cloud.mdb.postgresql.v" +
+      "1.config.PostgresqlConfig15_1CH\000R\026postgr" +
+      "esqlConfig_15_1c\022n\n\024postgresql_config_16" +
+      "\030\030 \001(\01329.yandex.cloud.mdb.postgresql.v1." +
+      "config.PostgresqlConfig16H\000R\023postgresqlC" +
+      "onfig_16\022w\n\027postgresql_config_16_1c\030\031 \001(" +
+      "\0132<.yandex.cloud.mdb.postgresql.v1.confi" +
+      "g.PostgresqlConfig16_1CH\000R\026postgresqlCon" +
+      "fig_16_1c\022n\n\024postgresql_config_17\030\033 \001(\0132" +
+      "9.yandex.cloud.mdb.postgresql.v1.config." +
+      "PostgresqlConfig17H\000R\023postgresqlConfig_1" +
+      "7\022w\n\027postgresql_config_17_1c\030\034 \001(\0132<.yan" +
+      "dex.cloud.mdb.postgresql.v1.config.Postg" +
+      "resqlConfig17_1CH\000R\026postgresqlConfig_17_" +
+      "1c\022M\n\rpooler_config\030\004 \001(\01326.yandex.cloud" +
+      ".mdb.postgresql.v1.ConnectionPoolerConfi" +
+      "g\022<\n\tresources\030\005 \001(\0132).yandex.cloud.mdb." +
+      "postgresql.v1.Resources\0220\n\014autofailover\030" +
+      "\006 \001(\0132\032.google.protobuf.BoolValue\0223\n\023bac" +
+      "kup_window_start\030\010 \001(\0132\026.google.type.Tim" +
+      "eOfDay\022H\n\031backup_retain_period_days\030\021 \001(" +
+      "\0132\033.google.protobuf.Int64ValueB\010\372\3071\0047-60" +
+      "\0226\n\006access\030\t \001(\0132&.yandex.cloud.mdb.post" +
+      "gresql.v1.Access\022W\n\027performance_diagnost" +
+      "ics\030\014 \001(\01326.yandex.cloud.mdb.postgresql." +
+      "v1.PerformanceDiagnostics\022R\n\025disk_size_a" +
+      "utoscaling\030\027 \001(\01323.yandex.cloud.mdb.post" +
+      "gresql.v1.DiskSizeAutoscalingB\023\n\021postgre" +
+      "sql_configJ\004\010\024\020\025J\004\010\032\020\033\"\350\020\n\016ConfigHostSpe" +
+      "c\022y\n\025postgresql_config_9_6\030\001 \001(\0132>.yande" +
+      "x.cloud.mdb.postgresql.v1.config.Postgre" +
+      "sqlHostConfig9_6H\000R\030postgresqlHostConfig" +
+      "_9_6\022\177\n\027postgresql_config_10_1c\030\004 \001(\0132@." +
+      "yandex.cloud.mdb.postgresql.v1.config.Po" +
+      "stgresqlHostConfig10_1CH\000R\032postgresqlHos" +
+      "tConfig_10_1c\022v\n\024postgresql_config_10\030\002 " +
+      "\001(\0132=.yandex.cloud.mdb.postgresql.v1.con" +
+      "fig.PostgresqlHostConfig10H\000R\027postgresql" +
+      "HostConfig_10\022v\n\024postgresql_config_11\030\003 " +
+      "\001(\0132=.yandex.cloud.mdb.postgresql.v1.con" +
+      "fig.PostgresqlHostConfig11H\000R\027postgresql" +
+      "HostConfig_11\022\177\n\027postgresql_config_11_1c" +
+      "\030\006 \001(\0132@.yandex.cloud.mdb.postgresql.v1." +
+      "config.PostgresqlHostConfig11_1CH\000R\032post" +
+      "gresqlHostConfig_11_1c\022v\n\024postgresql_con" +
+      "fig_12\030\005 \001(\0132=.yandex.cloud.mdb.postgres" +
+      "ql.v1.config.PostgresqlHostConfig12H\000R\027p" +
+      "ostgresqlHostConfig_12\022\177\n\027postgresql_con" +
+      "fig_12_1c\030\007 \001(\0132@.yandex.cloud.mdb.postg" +
+      "resql.v1.config.PostgresqlHostConfig12_1" +
+      "CH\000R\032postgresqlHostConfig_12_1c\022v\n\024postg" +
+      "resql_config_13\030\010 \001(\0132=.yandex.cloud.mdb" +
       ".postgresql.v1.config.PostgresqlHostConf" +
-      "ig17_1CH\000R\032postgresqlHostConfig_17_1cB\023\n" +
-      "\021postgresql_config2\267\037\n\016ClusterService\022\227\001" +
-      "\n\003Get\0221.yandex.cloud.mdb.postgresql.v1.G" +
-      "etClusterRequest\032\'.yandex.cloud.mdb.post" +
-      "gresql.v1.Cluster\"4\202\323\344\223\002.\022,/managed-post" +
-      "gresql/v1/clusters/{cluster_id}\022\232\001\n\004List" +
-      "\0223.yandex.cloud.mdb.postgresql.v1.ListCl" +
-      "ustersRequest\0324.yandex.cloud.mdb.postgre" +
-      "sql.v1.ListClustersResponse\"\'\202\323\344\223\002!\022\037/ma" +
-      "naged-postgresql/v1/clusters\022\261\001\n\006Create\022" +
-      "4.yandex.cloud.mdb.postgresql.v1.CreateC" +
-      "lusterRequest\032!.yandex.cloud.operation.O" +
-      "peration\"N\202\323\344\223\002$\"\037/managed-postgresql/v1" +
-      "/clusters:\001*\262\322* \n\025CreateClusterMetadata\022" +
-      "\007Cluster\022\276\001\n\006Update\0224.yandex.cloud.mdb.p" +
-      "ostgresql.v1.UpdateClusterRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"[\202\323\344\223\00212,/m" +
-      "anaged-postgresql/v1/clusters/{cluster_i" +
-      "d}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Cluste" +
-      "r\022\311\001\n\006Delete\0224.yandex.cloud.mdb.postgres" +
-      "ql.v1.DeleteClusterRequest\032!.yandex.clou" +
-      "d.operation.Operation\"f\202\323\344\223\002.*,/managed-" +
-      "postgresql/v1/clusters/{cluster_id}\262\322*.\n" +
-      "\025DeleteClusterMetadata\022\025google.protobuf." +
-      "Empty\022\276\001\n\005Start\0223.yandex.cloud.mdb.postg" +
-      "resql.v1.StartClusterRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"]\202\323\344\223\0024\"2/manage" +
-      "d-postgresql/v1/clusters/{cluster_id}:st" +
-      "art\262\322*\037\n\024StartClusterMetadata\022\007Cluster\022\272" +
-      "\001\n\004Stop\0222.yandex.cloud.mdb.postgresql.v1" +
-      ".StopClusterRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"[\202\323\344\223\0023\"1/managed-postgre" +
-      "sql/v1/clusters/{cluster_id}:stop\262\322*\036\n\023S" +
-      "topClusterMetadata\022\007Cluster\022\275\001\n\004Move\0222.y" +
-      "andex.cloud.mdb.postgresql.v1.MoveCluste" +
-      "rRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"^\202\323\344\223\0026\"1/managed-postgresql/v1/clus" +
-      "ters/{cluster_id}:move:\001*\262\322*\036\n\023MoveClust" +
-      "erMetadata\022\007Cluster\022\302\001\n\006Backup\0224.yandex." +
-      "cloud.mdb.postgresql.v1.BackupClusterReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "_\202\323\344\223\0025\"3/managed-postgresql/v1/clusters" +
-      "/{cluster_id}:backup\262\322* \n\025BackupClusterM" +
-      "etadata\022\007Cluster\022\274\001\n\007Restore\0225.yandex.cl" +
-      "oud.mdb.postgresql.v1.RestoreClusterRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"W" +
-      "\202\323\344\223\002,\"\'/managed-postgresql/v1/clusters:" +
-      "restore:\001*\262\322*!\n\026RestoreClusterMetadata\022\007",
-      "Cluster\022\363\001\n\025RescheduleMaintenance\022<.yand" +
-      "ex.cloud.mdb.postgresql.v1.RescheduleMai" +
-      "ntenanceRequest\032!.yandex.cloud.operation" +
-      ".Operation\"y\202\323\344\223\002G\"B/managed-postgresql/" +
-      "v1/clusters/{cluster_id}:rescheduleMaint" +
-      "enance:\001*\262\322*(\n\035RescheduleMaintenanceMeta" +
-      "data\022\007Cluster\022\341\001\n\rStartFailover\022;.yandex" +
-      ".cloud.mdb.postgresql.v1.StartClusterFai" +
-      "loverRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"p\202\323\344\223\002?\":/managed-postgresql/v1/" +
-      "clusters/{cluster_id}:startFailover:\001*\262\322" +
-      "*\'\n\034StartClusterFailoverMetadata\022\007Cluste" +
-      "r\022\266\001\n\010ListLogs\0226.yandex.cloud.mdb.postgr" +
-      "esql.v1.ListClusterLogsRequest\0327.yandex." +
-      "cloud.mdb.postgresql.v1.ListClusterLogsR" +
-      "esponse\"9\202\323\344\223\0023\0221/managed-postgresql/v1/" +
-      "clusters/{cluster_id}:logs\022\273\001\n\nStreamLog" +
-      "s\0228.yandex.cloud.mdb.postgresql.v1.Strea" +
-      "mClusterLogsRequest\032/.yandex.cloud.mdb.p" +
-      "ostgresql.v1.StreamLogRecord\"@\202\323\344\223\002:\0228/m" +
-      "anaged-postgresql/v1/clusters/{cluster_i" +
-      "d}:stream_logs0\001\022\316\001\n\016ListOperations\022<.ya" +
+      "ig13H\000R\027postgresqlHostConfig_13\022\177\n\027postg" +
+      "resql_config_13_1c\030\n \001(\0132@.yandex.cloud." +
+      "mdb.postgresql.v1.config.PostgresqlHostC" +
+      "onfig13_1CH\000R\032postgresqlHostConfig_13_1c" +
+      "\022v\n\024postgresql_config_14\030\t \001(\0132=.yandex." +
+      "cloud.mdb.postgresql.v1.config.Postgresq" +
+      "lHostConfig14H\000R\027postgresqlHostConfig_14" +
+      "\022\177\n\027postgresql_config_14_1c\030\013 \001(\0132@.yand" +
+      "ex.cloud.mdb.postgresql.v1.config.Postgr" +
+      "esqlHostConfig14_1CH\000R\032postgresqlHostCon" +
+      "fig_14_1c\022v\n\024postgresql_config_15\030\014 \001(\0132" +
+      "=.yandex.cloud.mdb.postgresql.v1.config." +
+      "PostgresqlHostConfig15H\000R\027postgresqlHost" +
+      "Config_15\022\177\n\027postgresql_config_15_1c\030\r \001" +
+      "(\0132@.yandex.cloud.mdb.postgresql.v1.conf" +
+      "ig.PostgresqlHostConfig15_1CH\000R\032postgres" +
+      "qlHostConfig_15_1c\022v\n\024postgresql_config_" +
+      "16\030\016 \001(\0132=.yandex.cloud.mdb.postgresql.v" +
+      "1.config.PostgresqlHostConfig16H\000R\027postg" +
+      "resqlHostConfig_16\022\177\n\027postgresql_config_" +
+      "16_1c\030\017 \001(\0132@.yandex.cloud.mdb.postgresq" +
+      "l.v1.config.PostgresqlHostConfig16_1CH\000R" +
+      "\032postgresqlHostConfig_16_1c\022v\n\024postgresq" +
+      "l_config_17\030\020 \001(\0132=.yandex.cloud.mdb.pos" +
+      "tgresql.v1.config.PostgresqlHostConfig17" +
+      "H\000R\027postgresqlHostConfig_17\022\177\n\027postgresq" +
+      "l_config_17_1c\030\021 \001(\0132@.yandex.cloud.mdb." +
+      "postgresql.v1.config.PostgresqlHostConfi" +
+      "g17_1CH\000R\032postgresqlHostConfig_17_1cB\023\n\021" +
+      "postgresql_config2\267\037\n\016ClusterService\022\227\001\n" +
+      "\003Get\0221.yandex.cloud.mdb.postgresql.v1.Ge" +
+      "tClusterRequest\032\'.yandex.cloud.mdb.postg" +
+      "resql.v1.Cluster\"4\202\323\344\223\002.\022,/managed-postg" +
+      "resql/v1/clusters/{cluster_id}\022\232\001\n\004List\022" +
+      "3.yandex.cloud.mdb.postgresql.v1.ListClu" +
+      "stersRequest\0324.yandex.cloud.mdb.postgres" +
+      "ql.v1.ListClustersResponse\"\'\202\323\344\223\002!\022\037/man" +
+      "aged-postgresql/v1/clusters\022\261\001\n\006Create\0224" +
+      ".yandex.cloud.mdb.postgresql.v1.CreateCl" +
+      "usterRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"N\202\323\344\223\002$\"\037/managed-postgresql/v1/" +
+      "clusters:\001*\262\322* \n\025CreateClusterMetadata\022\007" +
+      "Cluster\022\276\001\n\006Update\0224.yandex.cloud.mdb.po" +
+      "stgresql.v1.UpdateClusterRequest\032!.yande" +
+      "x.cloud.operation.Operation\"[\202\323\344\223\00212,/ma" +
+      "naged-postgresql/v1/clusters/{cluster_id" +
+      "}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Cluster" +
+      "\022\311\001\n\006Delete\0224.yandex.cloud.mdb.postgresq" +
+      "l.v1.DeleteClusterRequest\032!.yandex.cloud" +
+      ".operation.Operation\"f\202\323\344\223\002.*,/managed-p" +
+      "ostgresql/v1/clusters/{cluster_id}\262\322*.\n\025" +
+      "DeleteClusterMetadata\022\025google.protobuf.E" +
+      "mpty\022\276\001\n\005Start\0223.yandex.cloud.mdb.postgr" +
+      "esql.v1.StartClusterRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"]\202\323\344\223\0024\"2/managed" +
+      "-postgresql/v1/clusters/{cluster_id}:sta" +
+      "rt\262\322*\037\n\024StartClusterMetadata\022\007Cluster\022\272\001" +
+      "\n\004Stop\0222.yandex.cloud.mdb.postgresql.v1." +
+      "StopClusterRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"[\202\323\344\223\0023\"1/managed-postgres" +
+      "ql/v1/clusters/{cluster_id}:stop\262\322*\036\n\023St" +
+      "opClusterMetadata\022\007Cluster\022\275\001\n\004Move\0222.ya" +
+      "ndex.cloud.mdb.postgresql.v1.MoveCluster" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"^\202\323\344\223\0026\"1/managed-postgresql/v1/clust" +
+      "ers/{cluster_id}:move:\001*\262\322*\036\n\023MoveCluste" +
+      "rMetadata\022\007Cluster\022\302\001\n\006Backup\0224.yandex.c" +
+      "loud.mdb.postgresql.v1.BackupClusterRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"_" +
+      "\202\323\344\223\0025\"3/managed-postgresql/v1/clusters/" +
+      "{cluster_id}:backup\262\322* \n\025BackupClusterMe" +
+      "tadata\022\007Cluster\022\274\001\n\007Restore\0225.yandex.clo" +
+      "ud.mdb.postgresql.v1.RestoreClusterReque" +
+      "st\032!.yandex.cloud.operation.Operation\"W\202",
+      "\323\344\223\002,\"\'/managed-postgresql/v1/clusters:r" +
+      "estore:\001*\262\322*!\n\026RestoreClusterMetadata\022\007C" +
+      "luster\022\363\001\n\025RescheduleMaintenance\022<.yande" +
+      "x.cloud.mdb.postgresql.v1.RescheduleMain" +
+      "tenanceRequest\032!.yandex.cloud.operation." +
+      "Operation\"y\202\323\344\223\002G\"B/managed-postgresql/v" +
+      "1/clusters/{cluster_id}:rescheduleMainte" +
+      "nance:\001*\262\322*(\n\035RescheduleMaintenanceMetad" +
+      "ata\022\007Cluster\022\341\001\n\rStartFailover\022;.yandex." +
+      "cloud.mdb.postgresql.v1.StartClusterFail" +
+      "overRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"p\202\323\344\223\002?\":/managed-postgresql/v1/c" +
+      "lusters/{cluster_id}:startFailover:\001*\262\322*" +
+      "\'\n\034StartClusterFailoverMetadata\022\007Cluster" +
+      "\022\266\001\n\010ListLogs\0226.yandex.cloud.mdb.postgre" +
+      "sql.v1.ListClusterLogsRequest\0327.yandex.c" +
+      "loud.mdb.postgresql.v1.ListClusterLogsRe" +
+      "sponse\"9\202\323\344\223\0023\0221/managed-postgresql/v1/c" +
+      "lusters/{cluster_id}:logs\022\273\001\n\nStreamLogs" +
+      "\0228.yandex.cloud.mdb.postgresql.v1.Stream" +
+      "ClusterLogsRequest\032/.yandex.cloud.mdb.po" +
+      "stgresql.v1.StreamLogRecord\"@\202\323\344\223\002:\0228/ma" +
+      "naged-postgresql/v1/clusters/{cluster_id" +
+      "}:stream_logs0\001\022\316\001\n\016ListOperations\022<.yan" +
+      "dex.cloud.mdb.postgresql.v1.ListClusterO" +
+      "perationsRequest\032=.yandex.cloud.mdb.post" +
+      "gresql.v1.ListClusterOperationsResponse\"" +
+      "?\202\323\344\223\0029\0227/managed-postgresql/v1/clusters" +
+      "/{cluster_id}/operations\022\302\001\n\013ListBackups" +
+      "\0229.yandex.cloud.mdb.postgresql.v1.ListCl" +
+      "usterBackupsRequest\032:.yandex.cloud.mdb.p" +
+      "ostgresql.v1.ListClusterBackupsResponse\"" +
+      "<\202\323\344\223\0026\0224/managed-postgresql/v1/clusters" +
+      "/{cluster_id}/backups\022\272\001\n\tListHosts\0227.ya" +
       "ndex.cloud.mdb.postgresql.v1.ListCluster" +
-      "OperationsRequest\032=.yandex.cloud.mdb.pos" +
-      "tgresql.v1.ListClusterOperationsResponse" +
-      "\"?\202\323\344\223\0029\0227/managed-postgresql/v1/cluster" +
-      "s/{cluster_id}/operations\022\302\001\n\013ListBackup" +
-      "s\0229.yandex.cloud.mdb.postgresql.v1.ListC" +
-      "lusterBackupsRequest\032:.yandex.cloud.mdb." +
-      "postgresql.v1.ListClusterBackupsResponse" +
-      "\"<\202\323\344\223\0026\0224/managed-postgresql/v1/cluster" +
-      "s/{cluster_id}/backups\022\272\001\n\tListHosts\0227.y" +
-      "andex.cloud.mdb.postgresql.v1.ListCluste" +
-      "rHostsRequest\0328.yandex.cloud.mdb.postgre" +
-      "sql.v1.ListClusterHostsResponse\":\202\323\344\223\0024\022" +
-      "2/managed-postgresql/v1/clusters/{cluste" +
-      "r_id}/hosts\022\344\001\n\010AddHosts\0226.yandex.cloud." +
-      "mdb.postgresql.v1.AddClusterHostsRequest" +
-      "\032!.yandex.cloud.operation.Operation\"}\202\323\344" +
-      "\223\002C\">/managed-postgresql/v1/clusters/{cl" +
-      "uster_id}/hosts:batchCreate:\001*\262\322*0\n\027AddC" +
+      "HostsRequest\0328.yandex.cloud.mdb.postgres" +
+      "ql.v1.ListClusterHostsResponse\":\202\323\344\223\0024\0222" +
+      "/managed-postgresql/v1/clusters/{cluster" +
+      "_id}/hosts\022\344\001\n\010AddHosts\0226.yandex.cloud.m" +
+      "db.postgresql.v1.AddClusterHostsRequest\032" +
+      "!.yandex.cloud.operation.Operation\"}\202\323\344\223" +
+      "\002C\">/managed-postgresql/v1/clusters/{clu" +
+      "ster_id}/hosts:batchCreate:\001*\262\322*0\n\027AddCl" +
+      "usterHostsMetadata\022\025google.protobuf.Empt" +
+      "y\022\356\001\n\013DeleteHosts\0229.yandex.cloud.mdb.pos" +
+      "tgresql.v1.DeleteClusterHostsRequest\032!.y" +
+      "andex.cloud.operation.Operation\"\200\001\202\323\344\223\002C" +
+      "\">/managed-postgresql/v1/clusters/{clust" +
+      "er_id}/hosts:batchDelete:\001*\262\322*3\n\032DeleteC" +
       "lusterHostsMetadata\022\025google.protobuf.Emp" +
-      "ty\022\356\001\n\013DeleteHosts\0229.yandex.cloud.mdb.po" +
-      "stgresql.v1.DeleteClusterHostsRequest\032!." +
+      "ty\022\356\001\n\013UpdateHosts\0229.yandex.cloud.mdb.po" +
+      "stgresql.v1.UpdateClusterHostsRequest\032!." +
       "yandex.cloud.operation.Operation\"\200\001\202\323\344\223\002" +
       "C\">/managed-postgresql/v1/clusters/{clus" +
-      "ter_id}/hosts:batchDelete:\001*\262\322*3\n\032Delete" +
+      "ter_id}/hosts:batchUpdate:\001*\262\322*3\n\032Update" +
       "ClusterHostsMetadata\022\025google.protobuf.Em" +
-      "pty\022\356\001\n\013UpdateHosts\0229.yandex.cloud.mdb.p" +
-      "ostgresql.v1.UpdateClusterHostsRequest\032!" +
-      ".yandex.cloud.operation.Operation\"\200\001\202\323\344\223" +
-      "\002C\">/managed-postgresql/v1/clusters/{clu" +
-      "ster_id}/hosts:batchUpdate:\001*\262\322*3\n\032Updat" +
-      "eClusterHostsMetadata\022\025google.protobuf.E" +
-      "mptyBs\n\"yandex.cloud.api.mdb.postgresql." +
-      "v1ZMgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/mdb/postgresql/v1;postgresq" +
-      "lb\006proto3"
+      "ptyBs\n\"yandex.cloud.api.mdb.postgresql.v" +
+      "1ZMgithub.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/mdb/postgresql/v1;postgresql" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -62152,7 +62417,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_CreateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_CreateClusterRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Environment", "ConfigSpec", "DatabaseSpecs", "UserSpecs", "HostSpecs", "NetworkId", "SecurityGroupIds", "DeletionProtection", "HostGroupIds", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Environment", "ConfigSpec", "DatabaseSpecs", "UserSpecs", "HostSpecs", "NetworkId", "SecurityGroupIds", "DeletionProtection", "HostGroupIds", "MaintenanceWindow", });
     internal_static_yandex_cloud_mdb_postgresql_v1_CreateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_postgresql_v1_CreateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_postgresql_v1_CreateClusterRequest_LabelsEntry_fieldAccessorTable = new

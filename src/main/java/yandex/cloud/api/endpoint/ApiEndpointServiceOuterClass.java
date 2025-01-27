@@ -587,21 +587,24 @@ public final class ApiEndpointServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 page_size = 1;</code>
+     * <code>int64 page_size = 1 [deprecated = true];</code>
+     * @deprecated
      * @return The pageSize.
      */
-    long getPageSize();
+    @java.lang.Deprecated long getPageSize();
 
     /**
-     * <code>string page_token = 2;</code>
+     * <code>string page_token = 2 [deprecated = true];</code>
+     * @deprecated
      * @return The pageToken.
      */
-    java.lang.String getPageToken();
+    @java.lang.Deprecated java.lang.String getPageToken();
     /**
-     * <code>string page_token = 2;</code>
+     * <code>string page_token = 2 [deprecated = true];</code>
+     * @deprecated
      * @return The bytes for pageToken.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getPageTokenBytes();
   }
   /**
@@ -696,22 +699,24 @@ public final class ApiEndpointServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 1;
     private long pageSize_;
     /**
-     * <code>int64 page_size = 1;</code>
+     * <code>int64 page_size = 1 [deprecated = true];</code>
+     * @deprecated
      * @return The pageSize.
      */
     @java.lang.Override
-    public long getPageSize() {
+    @java.lang.Deprecated public long getPageSize() {
       return pageSize_;
     }
 
     public static final int PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object pageToken_;
     /**
-     * <code>string page_token = 2;</code>
+     * <code>string page_token = 2 [deprecated = true];</code>
+     * @deprecated
      * @return The pageToken.
      */
     @java.lang.Override
-    public java.lang.String getPageToken() {
+    @java.lang.Deprecated public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -724,11 +729,12 @@ public final class ApiEndpointServiceOuterClass {
       }
     }
     /**
-     * <code>string page_token = 2;</code>
+     * <code>string page_token = 2 [deprecated = true];</code>
+     * @deprecated
      * @return The bytes for pageToken.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -1064,29 +1070,32 @@ public final class ApiEndpointServiceOuterClass {
 
       private long pageSize_ ;
       /**
-       * <code>int64 page_size = 1;</code>
+       * <code>int64 page_size = 1 [deprecated = true];</code>
+       * @deprecated
        * @return The pageSize.
        */
       @java.lang.Override
-      public long getPageSize() {
+      @java.lang.Deprecated public long getPageSize() {
         return pageSize_;
       }
       /**
-       * <code>int64 page_size = 1;</code>
+       * <code>int64 page_size = 1 [deprecated = true];</code>
+       * @deprecated
        * @param value The pageSize to set.
        * @return This builder for chaining.
        */
-      public Builder setPageSize(long value) {
+      @java.lang.Deprecated public Builder setPageSize(long value) {
         
         pageSize_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int64 page_size = 1;</code>
+       * <code>int64 page_size = 1 [deprecated = true];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearPageSize() {
+      @java.lang.Deprecated public Builder clearPageSize() {
         
         pageSize_ = 0L;
         onChanged();
@@ -1095,10 +1104,11 @@ public final class ApiEndpointServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
-       * <code>string page_token = 2;</code>
+       * <code>string page_token = 2 [deprecated = true];</code>
+       * @deprecated
        * @return The pageToken.
        */
-      public java.lang.String getPageToken() {
+      @java.lang.Deprecated public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -1111,10 +1121,11 @@ public final class ApiEndpointServiceOuterClass {
         }
       }
       /**
-       * <code>string page_token = 2;</code>
+       * <code>string page_token = 2 [deprecated = true];</code>
+       * @deprecated
        * @return The bytes for pageToken.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getPageTokenBytes() {
         java.lang.Object ref = pageToken_;
         if (ref instanceof String) {
@@ -1128,11 +1139,12 @@ public final class ApiEndpointServiceOuterClass {
         }
       }
       /**
-       * <code>string page_token = 2;</code>
+       * <code>string page_token = 2 [deprecated = true];</code>
+       * @deprecated
        * @param value The pageToken to set.
        * @return This builder for chaining.
        */
-      public Builder setPageToken(
+      @java.lang.Deprecated public Builder setPageToken(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
@@ -1143,21 +1155,23 @@ public final class ApiEndpointServiceOuterClass {
         return this;
       }
       /**
-       * <code>string page_token = 2;</code>
+       * <code>string page_token = 2 [deprecated = true];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearPageToken() {
+      @java.lang.Deprecated public Builder clearPageToken() {
         
         pageToken_ = getDefaultInstance().getPageToken();
         onChanged();
         return this;
       }
       /**
-       * <code>string page_token = 2;</code>
+       * <code>string page_token = 2 [deprecated = true];</code>
+       * @deprecated
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
        */
-      public Builder setPageTokenBytes(
+      @java.lang.Deprecated public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -2192,21 +2206,21 @@ public final class ApiEndpointServiceOuterClass {
       "vice.proto\022\025yandex.cloud.endpoint\032\034googl" +
       "e/api/annotations.proto\032(yandex/cloud/en" +
       "dpoint/api_endpoint.proto\"0\n\025GetApiEndpo" +
-      "intRequest\022\027\n\017api_endpoint_id\030\001 \001(\t\"@\n\027L" +
-      "istApiEndpointsRequest\022\021\n\tpage_size\030\001 \001(" +
-      "\003\022\022\n\npage_token\030\002 \001(\t\"j\n\030ListApiEndpoint" +
-      "sResponse\0225\n\tendpoints\030\001 \003(\0132\".yandex.cl" +
-      "oud.endpoint.ApiEndpoint\022\027\n\017next_page_to" +
-      "ken\030\002 \001(\t2\220\002\n\022ApiEndpointService\022}\n\003Get\022" +
-      ",.yandex.cloud.endpoint.GetApiEndpointRe" +
-      "quest\032\".yandex.cloud.endpoint.ApiEndpoin" +
-      "t\"$\202\323\344\223\002\036\022\034/endpoints/{api_endpoint_id}\022" +
-      "{\n\004List\022..yandex.cloud.endpoint.ListApiE" +
-      "ndpointsRequest\032/.yandex.cloud.endpoint." +
-      "ListApiEndpointsResponse\"\022\202\323\344\223\002\014\022\n/endpo" +
-      "intsB_\n\031yandex.cloud.api.endpointZBgithu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/endpoint;endpointb\006proto3"
+      "intRequest\022\027\n\017api_endpoint_id\030\001 \001(\t\"H\n\027L" +
+      "istApiEndpointsRequest\022\025\n\tpage_size\030\001 \001(" +
+      "\003B\002\030\001\022\026\n\npage_token\030\002 \001(\tB\002\030\001\"j\n\030ListApi" +
+      "EndpointsResponse\0225\n\tendpoints\030\001 \003(\0132\".y" +
+      "andex.cloud.endpoint.ApiEndpoint\022\027\n\017next" +
+      "_page_token\030\002 \001(\t2\220\002\n\022ApiEndpointService" +
+      "\022}\n\003Get\022,.yandex.cloud.endpoint.GetApiEn" +
+      "dpointRequest\032\".yandex.cloud.endpoint.Ap" +
+      "iEndpoint\"$\202\323\344\223\002\036\022\034/endpoints/{api_endpo" +
+      "int_id}\022{\n\004List\022..yandex.cloud.endpoint." +
+      "ListApiEndpointsRequest\032/.yandex.cloud.e" +
+      "ndpoint.ListApiEndpointsResponse\"\022\202\323\344\223\002\014" +
+      "\022\n/endpointsB_\n\031yandex.cloud.api.endpoin" +
+      "tZBgithub.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/endpoint;endpointb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -297,6 +297,37 @@ public final class DatasetServiceGrpc {
     return getGetUploadDraftUrlMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDownloadUrlsRequest,
+      yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDownloadUrlsResponse> getGetDownloadUrlsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetDownloadUrls",
+      requestType = yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDownloadUrlsRequest.class,
+      responseType = yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDownloadUrlsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDownloadUrlsRequest,
+      yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDownloadUrlsResponse> getGetDownloadUrlsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDownloadUrlsRequest, yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDownloadUrlsResponse> getGetDownloadUrlsMethod;
+    if ((getGetDownloadUrlsMethod = DatasetServiceGrpc.getGetDownloadUrlsMethod) == null) {
+      synchronized (DatasetServiceGrpc.class) {
+        if ((getGetDownloadUrlsMethod = DatasetServiceGrpc.getGetDownloadUrlsMethod) == null) {
+          DatasetServiceGrpc.getGetDownloadUrlsMethod = getGetDownloadUrlsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDownloadUrlsRequest, yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDownloadUrlsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDownloadUrls"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDownloadUrlsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDownloadUrlsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DatasetServiceMethodDescriptorSupplier("GetDownloadUrls"))
+              .build();
+        }
+      }
+    }
+    return getGetDownloadUrlsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.StartMultipartUploadDraftRequest,
       yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.StartMultipartUploadDraftResponse> getStartMultipartUploadDraftMethod;
 
@@ -419,6 +450,37 @@ public final class DatasetServiceGrpc {
       }
     }
     return getGetPreviewMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListOperationsIdsRequest,
+      yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListOperationsIdsResponse> getListOperationsIdsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListOperationsIds",
+      requestType = yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListOperationsIdsRequest.class,
+      responseType = yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListOperationsIdsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListOperationsIdsRequest,
+      yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListOperationsIdsResponse> getListOperationsIdsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListOperationsIdsRequest, yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListOperationsIdsResponse> getListOperationsIdsMethod;
+    if ((getListOperationsIdsMethod = DatasetServiceGrpc.getListOperationsIdsMethod) == null) {
+      synchronized (DatasetServiceGrpc.class) {
+        if ((getListOperationsIdsMethod = DatasetServiceGrpc.getListOperationsIdsMethod) == null) {
+          DatasetServiceGrpc.getListOperationsIdsMethod = getListOperationsIdsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListOperationsIdsRequest, yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListOperationsIdsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperationsIds"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListOperationsIdsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListOperationsIdsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DatasetServiceMethodDescriptorSupplier("ListOperationsIds"))
+              .build();
+        }
+      }
+    }
+    return getListOperationsIdsMethod;
   }
 
   /**
@@ -566,6 +628,16 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
+     * Get urls to download dataset
+     * </pre>
+     */
+    public void getDownloadUrls(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDownloadUrlsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDownloadUrlsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDownloadUrlsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Returns a list of S3 presigned URLs for multipart upload of dataset.
      * </pre>
      */
@@ -602,6 +674,13 @@ public final class DatasetServiceGrpc {
     public void getPreview(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPreviewMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void listOperationsIds(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListOperationsIdsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListOperationsIdsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsIdsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -670,6 +749,13 @@ public final class DatasetServiceGrpc {
                 yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetUploadDraftUrlResponse>(
                   this, METHODID_GET_UPLOAD_DRAFT_URL)))
           .addMethod(
+            getGetDownloadUrlsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDownloadUrlsRequest,
+                yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDownloadUrlsResponse>(
+                  this, METHODID_GET_DOWNLOAD_URLS)))
+          .addMethod(
             getStartMultipartUploadDraftMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
@@ -697,6 +783,13 @@ public final class DatasetServiceGrpc {
                 yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest,
                 yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse>(
                   this, METHODID_GET_PREVIEW)))
+          .addMethod(
+            getListOperationsIdsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListOperationsIdsRequest,
+                yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListOperationsIdsResponse>(
+                  this, METHODID_LIST_OPERATIONS_IDS)))
           .build();
     }
   }
@@ -821,6 +914,17 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
+     * Get urls to download dataset
+     * </pre>
+     */
+    public void getDownloadUrls(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDownloadUrlsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDownloadUrlsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetDownloadUrlsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Returns a list of S3 presigned URLs for multipart upload of dataset.
      * </pre>
      */
@@ -861,6 +965,14 @@ public final class DatasetServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetPreviewMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void listOperationsIds(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListOperationsIdsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListOperationsIdsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListOperationsIdsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -975,6 +1087,16 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
+     * Get urls to download dataset
+     * </pre>
+     */
+    public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDownloadUrlsResponse getDownloadUrls(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDownloadUrlsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetDownloadUrlsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Returns a list of S3 presigned URLs for multipart upload of dataset.
      * </pre>
      */
@@ -1011,6 +1133,13 @@ public final class DatasetServiceGrpc {
     public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse getPreview(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPreviewMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListOperationsIdsResponse listOperationsIds(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListOperationsIdsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListOperationsIdsMethod(), getCallOptions(), request);
     }
   }
 
@@ -1134,6 +1263,17 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
+     * Get urls to download dataset
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDownloadUrlsResponse> getDownloadUrls(
+        yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDownloadUrlsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetDownloadUrlsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Returns a list of S3 presigned URLs for multipart upload of dataset.
      * </pre>
      */
@@ -1175,6 +1315,14 @@ public final class DatasetServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetPreviewMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListOperationsIdsResponse> listOperationsIds(
+        yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListOperationsIdsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListOperationsIdsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_DESCRIBE = 0;
@@ -1186,10 +1334,12 @@ public final class DatasetServiceGrpc {
   private static final int METHODID_LIST_UPLOAD_FORMATS = 6;
   private static final int METHODID_LIST_UPLOAD_SCHEMAS = 7;
   private static final int METHODID_GET_UPLOAD_DRAFT_URL = 8;
-  private static final int METHODID_START_MULTIPART_UPLOAD_DRAFT = 9;
-  private static final int METHODID_FINISH_MULTIPART_UPLOAD_DRAFT = 10;
-  private static final int METHODID_LIST_TYPES = 11;
-  private static final int METHODID_GET_PREVIEW = 12;
+  private static final int METHODID_GET_DOWNLOAD_URLS = 9;
+  private static final int METHODID_START_MULTIPART_UPLOAD_DRAFT = 10;
+  private static final int METHODID_FINISH_MULTIPART_UPLOAD_DRAFT = 11;
+  private static final int METHODID_LIST_TYPES = 12;
+  private static final int METHODID_GET_PREVIEW = 13;
+  private static final int METHODID_LIST_OPERATIONS_IDS = 14;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1244,6 +1394,10 @@ public final class DatasetServiceGrpc {
           serviceImpl.getUploadDraftUrl((yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetUploadDraftUrlRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetUploadDraftUrlResponse>) responseObserver);
           break;
+        case METHODID_GET_DOWNLOAD_URLS:
+          serviceImpl.getDownloadUrls((yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDownloadUrlsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDownloadUrlsResponse>) responseObserver);
+          break;
         case METHODID_START_MULTIPART_UPLOAD_DRAFT:
           serviceImpl.startMultipartUploadDraft((yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.StartMultipartUploadDraftRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.StartMultipartUploadDraftResponse>) responseObserver);
@@ -1259,6 +1413,10 @@ public final class DatasetServiceGrpc {
         case METHODID_GET_PREVIEW:
           serviceImpl.getPreview((yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.GetDatasetPreviewResponse>) responseObserver);
+          break;
+        case METHODID_LIST_OPERATIONS_IDS:
+          serviceImpl.listOperationsIds((yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListOperationsIdsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListOperationsIdsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1330,10 +1488,12 @@ public final class DatasetServiceGrpc {
               .addMethod(getListUploadFormatsMethod())
               .addMethod(getListUploadSchemasMethod())
               .addMethod(getGetUploadDraftUrlMethod())
+              .addMethod(getGetDownloadUrlsMethod())
               .addMethod(getStartMultipartUploadDraftMethod())
               .addMethod(getFinishMultipartUploadDraftMethod())
               .addMethod(getListTypesMethod())
               .addMethod(getGetPreviewMethod())
+              .addMethod(getListOperationsIdsMethod())
               .build();
         }
       }

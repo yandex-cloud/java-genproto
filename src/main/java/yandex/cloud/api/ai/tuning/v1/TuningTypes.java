@@ -25,6 +25,10 @@ public final class TuningTypes {
     long getRank();
 
     /**
+     * <pre>
+     * Integer value
+     * </pre>
+     *
      * <code>double alpha = 2;</code>
      * @return The alpha.
      */
@@ -169,6 +173,10 @@ public final class TuningTypes {
     public static final int ALPHA_FIELD_NUMBER = 2;
     private double alpha_;
     /**
+     * <pre>
+     * Integer value
+     * </pre>
+     *
      * <code>double alpha = 2;</code>
      * @return The alpha.
      */
@@ -642,6 +650,10 @@ public final class TuningTypes {
 
       private double alpha_ ;
       /**
+       * <pre>
+       * Integer value
+       * </pre>
+       *
        * <code>double alpha = 2;</code>
        * @return The alpha.
        */
@@ -650,6 +662,10 @@ public final class TuningTypes {
         return alpha_;
       }
       /**
+       * <pre>
+       * Integer value
+       * </pre>
+       *
        * <code>double alpha = 2;</code>
        * @param value The alpha to set.
        * @return This builder for chaining.
@@ -661,6 +677,10 @@ public final class TuningTypes {
         return this;
       }
       /**
+       * <pre>
+       * Integer value
+       * </pre>
+       *
        * <code>double alpha = 2;</code>
        * @return This builder for chaining.
        */

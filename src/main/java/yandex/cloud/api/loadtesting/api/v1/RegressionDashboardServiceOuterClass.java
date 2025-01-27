@@ -23,7 +23,7 @@ public final class RegressionDashboardServiceOuterClass {
      * ID of the folder to create a regression dashboard in.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
@@ -32,7 +32,7 @@ public final class RegressionDashboardServiceOuterClass {
      * ID of the folder to create a regression dashboard in.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
@@ -223,7 +223,7 @@ public final class RegressionDashboardServiceOuterClass {
      * ID of the folder to create a regression dashboard in.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The folderId.
      */
     @java.lang.Override
@@ -244,7 +244,7 @@ public final class RegressionDashboardServiceOuterClass {
      * ID of the folder to create a regression dashboard in.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The bytes for folderId.
      */
     @java.lang.Override
@@ -764,7 +764,7 @@ public final class RegressionDashboardServiceOuterClass {
        * ID of the folder to create a regression dashboard in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @return The folderId.
        */
       public java.lang.String getFolderId() {
@@ -784,7 +784,7 @@ public final class RegressionDashboardServiceOuterClass {
        * ID of the folder to create a regression dashboard in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
@@ -805,7 +805,7 @@ public final class RegressionDashboardServiceOuterClass {
        * ID of the folder to create a regression dashboard in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
        */
@@ -824,7 +824,7 @@ public final class RegressionDashboardServiceOuterClass {
        * ID of the folder to create a regression dashboard in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFolderId() {
@@ -838,7 +838,7 @@ public final class RegressionDashboardServiceOuterClass {
        * ID of the folder to create a regression dashboard in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
        */
@@ -3864,7 +3864,7 @@ public final class RegressionDashboardServiceOuterClass {
      * ID of the folder to list dashboards in.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
@@ -3873,7 +3873,7 @@ public final class RegressionDashboardServiceOuterClass {
      * ID of the folder to list dashboards in.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
@@ -4074,7 +4074,7 @@ public final class RegressionDashboardServiceOuterClass {
      * ID of the folder to list dashboards in.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The folderId.
      */
     @java.lang.Override
@@ -4095,7 +4095,7 @@ public final class RegressionDashboardServiceOuterClass {
      * ID of the folder to list dashboards in.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The bytes for folderId.
      */
     @java.lang.Override
@@ -4615,7 +4615,7 @@ public final class RegressionDashboardServiceOuterClass {
        * ID of the folder to list dashboards in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @return The folderId.
        */
       public java.lang.String getFolderId() {
@@ -4635,7 +4635,7 @@ public final class RegressionDashboardServiceOuterClass {
        * ID of the folder to list dashboards in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
@@ -4656,7 +4656,7 @@ public final class RegressionDashboardServiceOuterClass {
        * ID of the folder to list dashboards in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
        */
@@ -4675,7 +4675,7 @@ public final class RegressionDashboardServiceOuterClass {
        * ID of the folder to list dashboards in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFolderId() {
@@ -4689,7 +4689,7 @@ public final class RegressionDashboardServiceOuterClass {
        * ID of the folder to list dashboards in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
        */
@@ -8554,7 +8554,7 @@ public final class RegressionDashboardServiceOuterClass {
       ":yandex/cloud/loadtesting/api/v1/regress" +
       "ion/dashboard.proto\032\035yandex/cloud/valida" +
       "tion.proto\"\345\001\n CreateRegressionDashboard" +
-      "Request\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "Request\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=54" +
       "\022/\n\004name\030\002 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61" +
       "}[a-z0-9]\022\037\n\013description\030\003 \001(\tB\n\212\3101\006<=10" +
       "24\022N\n\007content\030\004 \001(\0132=.yandex.cloud.loadt" +
@@ -8567,7 +8567,7 @@ public final class RegressionDashboardServiceOuterClass {
       "\212\3101\004<=50\022\014\n\004etag\030\002 \001(\t\"9\n!DeleteRegressi" +
       "onDashboardMetadata\022\024\n\014dashboard_id\030\001 \001(" +
       "\t\"\242\001\n\037ListRegressionDashboardsRequest\022\037\n" +
-      "\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_s" +
+      "\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=54\022\035\n\tpage_s" +
       "ize\030\003 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\004 \001(" +
       "\tB\t\212\3101\005<=100\022\032\n\006filter\030\005 \001(\tB\n\212\3101\006<=1000" +
       "J\004\010\002\020\003\"\221\001\n ListRegressionDashboardsRespo" +

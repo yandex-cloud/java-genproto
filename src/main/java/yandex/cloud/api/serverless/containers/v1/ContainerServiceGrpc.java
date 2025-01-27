@@ -546,7 +546,7 @@ public final class ContainerServiceGrpc {
     /**
      * <pre>
      * Returns the specified revision of a container.
-     * To get the list of available revision, make a [ListRevisions] request.
+     * To get the list of available revisions, make a [ListRevisions] request.
      * </pre>
      */
     public void getRevision(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRevisionRequest request,
@@ -800,7 +800,7 @@ public final class ContainerServiceGrpc {
     /**
      * <pre>
      * Returns the specified revision of a container.
-     * To get the list of available revision, make a [ListRevisions] request.
+     * To get the list of available revisions, make a [ListRevisions] request.
      * </pre>
      */
     public void getRevision(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRevisionRequest request,
@@ -957,7 +957,7 @@ public final class ContainerServiceGrpc {
     /**
      * <pre>
      * Returns the specified revision of a container.
-     * To get the list of available revision, make a [ListRevisions] request.
+     * To get the list of available revisions, make a [ListRevisions] request.
      * </pre>
      */
     public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision getRevision(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRevisionRequest request) {
@@ -1115,7 +1115,7 @@ public final class ContainerServiceGrpc {
     /**
      * <pre>
      * Returns the specified revision of a container.
-     * To get the list of available revision, make a [ListRevisions] request.
+     * To get the list of available revisions, make a [ListRevisions] request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision> getRevision(

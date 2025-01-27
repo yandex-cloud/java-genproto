@@ -13122,6 +13122,33 @@ public final class AT {
 
       /**
        * <pre>
+       * Filter is allowed only if service = dns
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.DnsDataEventsFilter dns_filter = 5;</code>
+       * @return Whether the dnsFilter field is set.
+       */
+      boolean hasDnsFilter();
+      /**
+       * <pre>
+       * Filter is allowed only if service = dns
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.DnsDataEventsFilter dns_filter = 5;</code>
+       * @return The dnsFilter.
+       */
+      yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter getDnsFilter();
+      /**
+       * <pre>
+       * Filter is allowed only if service = dns
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.DnsDataEventsFilter dns_filter = 5;</code>
+       */
+      yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilterOrBuilder getDnsFilterOrBuilder();
+
+      /**
+       * <pre>
        * A list of resources which will be monitored by the trail
        * </pre>
        *
@@ -13165,6 +13192,8 @@ public final class AT {
           int index);
 
       public yandex.cloud.api.audittrails.v1.AT.Trail.DataEventsFiltering.AdditionalRulesCase getAdditionalRulesCase();
+
+      public yandex.cloud.api.audittrails.v1.AT.Trail.DataEventsFiltering.ServiceSpecificRulesCase getServiceSpecificRulesCase();
     }
     /**
      * <pre>
@@ -13261,6 +13290,20 @@ public final class AT {
                     input.readMessage(yandex.cloud.api.audittrails.v1.AT.Trail.Resource.parser(), extensionRegistry));
                 break;
               }
+              case 42: {
+                yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter.Builder subBuilder = null;
+                if (serviceSpecificRulesCase_ == 5) {
+                  subBuilder = ((yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter) serviceSpecificRules_).toBuilder();
+                }
+                serviceSpecificRules_ =
+                    input.readMessage(yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter) serviceSpecificRules_);
+                  serviceSpecificRules_ = subBuilder.buildPartial();
+                }
+                serviceSpecificRulesCase_ = 5;
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -13335,6 +13378,45 @@ public final class AT {
       getAdditionalRulesCase() {
         return AdditionalRulesCase.forNumber(
             additionalRulesCase_);
+      }
+
+      private int serviceSpecificRulesCase_ = 0;
+      private java.lang.Object serviceSpecificRules_;
+      public enum ServiceSpecificRulesCase
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+        DNS_FILTER(5),
+        SERVICESPECIFICRULES_NOT_SET(0);
+        private final int value;
+        private ServiceSpecificRulesCase(int value) {
+          this.value = value;
+        }
+        /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static ServiceSpecificRulesCase valueOf(int value) {
+          return forNumber(value);
+        }
+
+        public static ServiceSpecificRulesCase forNumber(int value) {
+          switch (value) {
+            case 5: return DNS_FILTER;
+            case 0: return SERVICESPECIFICRULES_NOT_SET;
+            default: return null;
+          }
+        }
+        public int getNumber() {
+          return this.value;
+        }
+      };
+
+      public ServiceSpecificRulesCase
+      getServiceSpecificRulesCase() {
+        return ServiceSpecificRulesCase.forNumber(
+            serviceSpecificRulesCase_);
       }
 
       public static final int SERVICE_FIELD_NUMBER = 1;
@@ -13475,6 +13557,49 @@ public final class AT {
         return yandex.cloud.api.audittrails.v1.AT.Trail.EventTypes.getDefaultInstance();
       }
 
+      public static final int DNS_FILTER_FIELD_NUMBER = 5;
+      /**
+       * <pre>
+       * Filter is allowed only if service = dns
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.DnsDataEventsFilter dns_filter = 5;</code>
+       * @return Whether the dnsFilter field is set.
+       */
+      @java.lang.Override
+      public boolean hasDnsFilter() {
+        return serviceSpecificRulesCase_ == 5;
+      }
+      /**
+       * <pre>
+       * Filter is allowed only if service = dns
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.DnsDataEventsFilter dns_filter = 5;</code>
+       * @return The dnsFilter.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter getDnsFilter() {
+        if (serviceSpecificRulesCase_ == 5) {
+           return (yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter) serviceSpecificRules_;
+        }
+        return yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Filter is allowed only if service = dns
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.DnsDataEventsFilter dns_filter = 5;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilterOrBuilder getDnsFilterOrBuilder() {
+        if (serviceSpecificRulesCase_ == 5) {
+           return (yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter) serviceSpecificRules_;
+        }
+        return yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter.getDefaultInstance();
+      }
+
       public static final int RESOURCE_SCOPES_FIELD_NUMBER = 4;
       private java.util.List<yandex.cloud.api.audittrails.v1.AT.Trail.Resource> resourceScopes_;
       /**
@@ -13561,6 +13686,9 @@ public final class AT {
         for (int i = 0; i < resourceScopes_.size(); i++) {
           output.writeMessage(4, resourceScopes_.get(i));
         }
+        if (serviceSpecificRulesCase_ == 5) {
+          output.writeMessage(5, (yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter) serviceSpecificRules_);
+        }
         unknownFields.writeTo(output);
       }
 
@@ -13584,6 +13712,10 @@ public final class AT {
         for (int i = 0; i < resourceScopes_.size(); i++) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(4, resourceScopes_.get(i));
+        }
+        if (serviceSpecificRulesCase_ == 5) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, (yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter) serviceSpecificRules_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -13617,6 +13749,15 @@ public final class AT {
           case 0:
           default:
         }
+        if (!getServiceSpecificRulesCase().equals(other.getServiceSpecificRulesCase())) return false;
+        switch (serviceSpecificRulesCase_) {
+          case 5:
+            if (!getDnsFilter()
+                .equals(other.getDnsFilter())) return false;
+            break;
+          case 0:
+          default:
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -13642,6 +13783,14 @@ public final class AT {
           case 3:
             hash = (37 * hash) + EXCLUDED_EVENTS_FIELD_NUMBER;
             hash = (53 * hash) + getExcludedEvents().hashCode();
+            break;
+          case 0:
+          default:
+        }
+        switch (serviceSpecificRulesCase_) {
+          case 5:
+            hash = (37 * hash) + DNS_FILTER_FIELD_NUMBER;
+            hash = (53 * hash) + getDnsFilter().hashCode();
             break;
           case 0:
           default:
@@ -13794,6 +13943,8 @@ public final class AT {
           }
           additionalRulesCase_ = 0;
           additionalRules_ = null;
+          serviceSpecificRulesCase_ = 0;
+          serviceSpecificRules_ = null;
           return this;
         }
 
@@ -13836,6 +13987,13 @@ public final class AT {
               result.additionalRules_ = excludedEventsBuilder_.build();
             }
           }
+          if (serviceSpecificRulesCase_ == 5) {
+            if (dnsFilterBuilder_ == null) {
+              result.serviceSpecificRules_ = serviceSpecificRules_;
+            } else {
+              result.serviceSpecificRules_ = dnsFilterBuilder_.build();
+            }
+          }
           if (resourceScopesBuilder_ == null) {
             if (((bitField0_ & 0x00000001) != 0)) {
               resourceScopes_ = java.util.Collections.unmodifiableList(resourceScopes_);
@@ -13846,6 +14004,7 @@ public final class AT {
             result.resourceScopes_ = resourceScopesBuilder_.build();
           }
           result.additionalRulesCase_ = additionalRulesCase_;
+          result.serviceSpecificRulesCase_ = serviceSpecificRulesCase_;
           onBuilt();
           return result;
         }
@@ -13937,6 +14096,15 @@ public final class AT {
               break;
             }
           }
+          switch (other.getServiceSpecificRulesCase()) {
+            case DNS_FILTER: {
+              mergeDnsFilter(other.getDnsFilter());
+              break;
+            }
+            case SERVICESPECIFICRULES_NOT_SET: {
+              break;
+            }
+          }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
           return this;
@@ -13976,6 +14144,21 @@ public final class AT {
         public Builder clearAdditionalRules() {
           additionalRulesCase_ = 0;
           additionalRules_ = null;
+          onChanged();
+          return this;
+        }
+
+        private int serviceSpecificRulesCase_ = 0;
+        private java.lang.Object serviceSpecificRules_;
+        public ServiceSpecificRulesCase
+            getServiceSpecificRulesCase() {
+          return ServiceSpecificRulesCase.forNumber(
+              serviceSpecificRulesCase_);
+        }
+
+        public Builder clearServiceSpecificRules() {
+          serviceSpecificRulesCase_ = 0;
+          serviceSpecificRules_ = null;
           onChanged();
           return this;
         }
@@ -14448,6 +14631,183 @@ public final class AT {
           additionalRulesCase_ = 3;
           onChanged();;
           return excludedEventsBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter, yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter.Builder, yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilterOrBuilder> dnsFilterBuilder_;
+        /**
+         * <pre>
+         * Filter is allowed only if service = dns
+         * </pre>
+         *
+         * <code>.yandex.cloud.audittrails.v1.Trail.DnsDataEventsFilter dns_filter = 5;</code>
+         * @return Whether the dnsFilter field is set.
+         */
+        @java.lang.Override
+        public boolean hasDnsFilter() {
+          return serviceSpecificRulesCase_ == 5;
+        }
+        /**
+         * <pre>
+         * Filter is allowed only if service = dns
+         * </pre>
+         *
+         * <code>.yandex.cloud.audittrails.v1.Trail.DnsDataEventsFilter dns_filter = 5;</code>
+         * @return The dnsFilter.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter getDnsFilter() {
+          if (dnsFilterBuilder_ == null) {
+            if (serviceSpecificRulesCase_ == 5) {
+              return (yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter) serviceSpecificRules_;
+            }
+            return yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter.getDefaultInstance();
+          } else {
+            if (serviceSpecificRulesCase_ == 5) {
+              return dnsFilterBuilder_.getMessage();
+            }
+            return yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Filter is allowed only if service = dns
+         * </pre>
+         *
+         * <code>.yandex.cloud.audittrails.v1.Trail.DnsDataEventsFilter dns_filter = 5;</code>
+         */
+        public Builder setDnsFilter(yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter value) {
+          if (dnsFilterBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            serviceSpecificRules_ = value;
+            onChanged();
+          } else {
+            dnsFilterBuilder_.setMessage(value);
+          }
+          serviceSpecificRulesCase_ = 5;
+          return this;
+        }
+        /**
+         * <pre>
+         * Filter is allowed only if service = dns
+         * </pre>
+         *
+         * <code>.yandex.cloud.audittrails.v1.Trail.DnsDataEventsFilter dns_filter = 5;</code>
+         */
+        public Builder setDnsFilter(
+            yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter.Builder builderForValue) {
+          if (dnsFilterBuilder_ == null) {
+            serviceSpecificRules_ = builderForValue.build();
+            onChanged();
+          } else {
+            dnsFilterBuilder_.setMessage(builderForValue.build());
+          }
+          serviceSpecificRulesCase_ = 5;
+          return this;
+        }
+        /**
+         * <pre>
+         * Filter is allowed only if service = dns
+         * </pre>
+         *
+         * <code>.yandex.cloud.audittrails.v1.Trail.DnsDataEventsFilter dns_filter = 5;</code>
+         */
+        public Builder mergeDnsFilter(yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter value) {
+          if (dnsFilterBuilder_ == null) {
+            if (serviceSpecificRulesCase_ == 5 &&
+                serviceSpecificRules_ != yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter.getDefaultInstance()) {
+              serviceSpecificRules_ = yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter.newBuilder((yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter) serviceSpecificRules_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              serviceSpecificRules_ = value;
+            }
+            onChanged();
+          } else {
+            if (serviceSpecificRulesCase_ == 5) {
+              dnsFilterBuilder_.mergeFrom(value);
+            }
+            dnsFilterBuilder_.setMessage(value);
+          }
+          serviceSpecificRulesCase_ = 5;
+          return this;
+        }
+        /**
+         * <pre>
+         * Filter is allowed only if service = dns
+         * </pre>
+         *
+         * <code>.yandex.cloud.audittrails.v1.Trail.DnsDataEventsFilter dns_filter = 5;</code>
+         */
+        public Builder clearDnsFilter() {
+          if (dnsFilterBuilder_ == null) {
+            if (serviceSpecificRulesCase_ == 5) {
+              serviceSpecificRulesCase_ = 0;
+              serviceSpecificRules_ = null;
+              onChanged();
+            }
+          } else {
+            if (serviceSpecificRulesCase_ == 5) {
+              serviceSpecificRulesCase_ = 0;
+              serviceSpecificRules_ = null;
+            }
+            dnsFilterBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Filter is allowed only if service = dns
+         * </pre>
+         *
+         * <code>.yandex.cloud.audittrails.v1.Trail.DnsDataEventsFilter dns_filter = 5;</code>
+         */
+        public yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter.Builder getDnsFilterBuilder() {
+          return getDnsFilterFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Filter is allowed only if service = dns
+         * </pre>
+         *
+         * <code>.yandex.cloud.audittrails.v1.Trail.DnsDataEventsFilter dns_filter = 5;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilterOrBuilder getDnsFilterOrBuilder() {
+          if ((serviceSpecificRulesCase_ == 5) && (dnsFilterBuilder_ != null)) {
+            return dnsFilterBuilder_.getMessageOrBuilder();
+          } else {
+            if (serviceSpecificRulesCase_ == 5) {
+              return (yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter) serviceSpecificRules_;
+            }
+            return yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Filter is allowed only if service = dns
+         * </pre>
+         *
+         * <code>.yandex.cloud.audittrails.v1.Trail.DnsDataEventsFilter dns_filter = 5;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter, yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter.Builder, yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilterOrBuilder> 
+            getDnsFilterFieldBuilder() {
+          if (dnsFilterBuilder_ == null) {
+            if (!(serviceSpecificRulesCase_ == 5)) {
+              serviceSpecificRules_ = yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter.getDefaultInstance();
+            }
+            dnsFilterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter, yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter.Builder, yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilterOrBuilder>(
+                    (yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter) serviceSpecificRules_,
+                    getParentForChildren(),
+                    isClean());
+            serviceSpecificRules_ = null;
+          }
+          serviceSpecificRulesCase_ = 5;
+          onChanged();;
+          return dnsFilterBuilder_;
         }
 
         private java.util.List<yandex.cloud.api.audittrails.v1.AT.Trail.Resource> resourceScopes_ =
@@ -17546,6 +17906,515 @@ public final class AT {
 
       @java.lang.Override
       public yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface DnsDataEventsFilterOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.audittrails.v1.Trail.DnsDataEventsFilter)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Only recursive queries will be delivered
+       * </pre>
+       *
+       * <code>bool only_recursive_queries = 1;</code>
+       * @return The onlyRecursiveQueries.
+       */
+      boolean getOnlyRecursiveQueries();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.audittrails.v1.Trail.DnsDataEventsFilter}
+     */
+    public static final class DnsDataEventsFilter extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.audittrails.v1.Trail.DnsDataEventsFilter)
+        DnsDataEventsFilterOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use DnsDataEventsFilter.newBuilder() to construct.
+      private DnsDataEventsFilter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private DnsDataEventsFilter() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new DnsDataEventsFilter();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private DnsDataEventsFilter(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                onlyRecursiveQueries_ = input.readBool();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.audittrails.v1.AT.internal_static_yandex_cloud_audittrails_v1_Trail_DnsDataEventsFilter_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.audittrails.v1.AT.internal_static_yandex_cloud_audittrails_v1_Trail_DnsDataEventsFilter_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter.class, yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter.Builder.class);
+      }
+
+      public static final int ONLY_RECURSIVE_QUERIES_FIELD_NUMBER = 1;
+      private boolean onlyRecursiveQueries_;
+      /**
+       * <pre>
+       * Only recursive queries will be delivered
+       * </pre>
+       *
+       * <code>bool only_recursive_queries = 1;</code>
+       * @return The onlyRecursiveQueries.
+       */
+      @java.lang.Override
+      public boolean getOnlyRecursiveQueries() {
+        return onlyRecursiveQueries_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (onlyRecursiveQueries_ != false) {
+          output.writeBool(1, onlyRecursiveQueries_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (onlyRecursiveQueries_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(1, onlyRecursiveQueries_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter other = (yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter) obj;
+
+        if (getOnlyRecursiveQueries()
+            != other.getOnlyRecursiveQueries()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + ONLY_RECURSIVE_QUERIES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getOnlyRecursiveQueries());
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.audittrails.v1.Trail.DnsDataEventsFilter}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.audittrails.v1.Trail.DnsDataEventsFilter)
+          yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilterOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.audittrails.v1.AT.internal_static_yandex_cloud_audittrails_v1_Trail_DnsDataEventsFilter_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.audittrails.v1.AT.internal_static_yandex_cloud_audittrails_v1_Trail_DnsDataEventsFilter_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter.class, yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          onlyRecursiveQueries_ = false;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.audittrails.v1.AT.internal_static_yandex_cloud_audittrails_v1_Trail_DnsDataEventsFilter_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter getDefaultInstanceForType() {
+          return yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter build() {
+          yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter buildPartial() {
+          yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter result = new yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter(this);
+          result.onlyRecursiveQueries_ = onlyRecursiveQueries_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter) {
+            return mergeFrom((yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter other) {
+          if (other == yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter.getDefaultInstance()) return this;
+          if (other.getOnlyRecursiveQueries() != false) {
+            setOnlyRecursiveQueries(other.getOnlyRecursiveQueries());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private boolean onlyRecursiveQueries_ ;
+        /**
+         * <pre>
+         * Only recursive queries will be delivered
+         * </pre>
+         *
+         * <code>bool only_recursive_queries = 1;</code>
+         * @return The onlyRecursiveQueries.
+         */
+        @java.lang.Override
+        public boolean getOnlyRecursiveQueries() {
+          return onlyRecursiveQueries_;
+        }
+        /**
+         * <pre>
+         * Only recursive queries will be delivered
+         * </pre>
+         *
+         * <code>bool only_recursive_queries = 1;</code>
+         * @param value The onlyRecursiveQueries to set.
+         * @return This builder for chaining.
+         */
+        public Builder setOnlyRecursiveQueries(boolean value) {
+          
+          onlyRecursiveQueries_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Only recursive queries will be delivered
+         * </pre>
+         *
+         * <code>bool only_recursive_queries = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearOnlyRecursiveQueries() {
+          
+          onlyRecursiveQueries_ = false;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.audittrails.v1.Trail.DnsDataEventsFilter)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.audittrails.v1.Trail.DnsDataEventsFilter)
+      private static final yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter();
+      }
+
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<DnsDataEventsFilter>
+          PARSER = new com.google.protobuf.AbstractParser<DnsDataEventsFilter>() {
+        @java.lang.Override
+        public DnsDataEventsFilter parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new DnsDataEventsFilter(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<DnsDataEventsFilter> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<DnsDataEventsFilter> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -20667,6 +21536,11 @@ public final class AT {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_audittrails_v1_Trail_FilteringPolicy_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_audittrails_v1_Trail_DnsDataEventsFilter_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_audittrails_v1_Trail_DnsDataEventsFilter_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -20679,7 +21553,7 @@ public final class AT {
       "\n\'yandex/cloud/audittrails/v1/trail.prot" +
       "o\022\033yandex.cloud.audittrails.v1\032\037google/p" +
       "rotobuf/timestamp.proto\032\035yandex/cloud/va" +
-      "lidation.proto\"\206\033\n\005Trail\022\n\n\002id\030\001 \001(\t\022\037\n\t" +
+      "lidation.proto\"\245\034\n\005Trail\022\n\n\002id\030\001 \001(\t\022\037\n\t" +
       "folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\0224\n\ncreated" +
       "_at\030\003 \001(\0132\032.google.protobuf.TimestampB\004\350" +
       "\3071\001\0224\n\nupdated_at\030\004 \001(\0132\032.google.protobu" +
@@ -20742,34 +21616,38 @@ public final class AT {
       "\030\001 \001(\01626.yandex.cloud.audittrails.v1.Tra" +
       "il.EventCategoryFilterB\004\350\3071\001\022L\n\004type\030\002 \001" +
       "(\01628.yandex.cloud.audittrails.v1.Trail.E" +
-      "ventAccessTypeFilterB\004\350\3071\001\032\246\002\n\023DataEvent" +
+      "ventAccessTypeFilterB\004\350\3071\001\032\216\003\n\023DataEvent" +
       "sFiltering\022\025\n\007service\030\001 \001(\tB\004\350\3071\001\022H\n\017inc" +
       "luded_events\030\002 \001(\0132-.yandex.cloud.auditt" +
       "rails.v1.Trail.EventTypesH\000\022H\n\017excluded_" +
       "events\030\003 \001(\0132-.yandex.cloud.audittrails." +
-      "v1.Trail.EventTypesH\000\022P\n\017resource_scopes" +
-      "\030\004 \003(\0132+.yandex.cloud.audittrails.v1.Tra" +
-      "il.ResourceB\n\202\3101\0061-1024B\022\n\020additional_ru" +
-      "les\032-\n\nEventTypes\022\037\n\013event_types\030\001 \003(\tB\n" +
-      "\202\3101\0061-1024\032m\n\031ManagementEventsFiltering\022" +
-      "P\n\017resource_scopes\030\001 \003(\0132+.yandex.cloud." +
-      "audittrails.v1.Trail.ResourceB\n\202\3101\0061-102" +
-      "4\032\326\001\n\017FilteringPolicy\022d\n\030management_even" +
-      "ts_filter\030\001 \001(\0132<.yandex.cloud.audittrai" +
-      "ls.v1.Trail.ManagementEventsFilteringB\004\350" +
-      "\3071\000\022]\n\023data_events_filters\030\002 \003(\01326.yande" +
-      "x.cloud.audittrails.v1.Trail.DataEventsF" +
-      "ilteringB\010\202\3101\004<128\"D\n\006Status\022\026\n\022STATUS_U" +
-      "NSPECIFIED\020\000\022\n\n\006ACTIVE\020\001\022\t\n\005ERROR\020\002\022\013\n\007D" +
-      "ELETED\020\003\"_\n\023EventCategoryFilter\022%\n!EVENT" +
-      "_CATEGORY_FILTER_UNSPECIFIED\020\000\022\021\n\rCONTRO" +
-      "L_PLANE\020\001\022\016\n\nDATA_PLANE\020\002\"V\n\025EventAccess" +
-      "TypeFilter\022(\n$EVENT_ACCESS_TYPE_FILTER_U" +
-      "NSPECIFIED\020\000\022\t\n\005WRITE\020\001\022\010\n\004READ\020\002J\004\010\r\020\016B" +
-      "r\n\037yandex.cloud.api.audittrails.v1B\002ATZK" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/audittrails/v1;audittrailsb\006pro" +
-      "to3"
+      "v1.Trail.EventTypesH\000\022L\n\ndns_filter\030\005 \001(" +
+      "\01326.yandex.cloud.audittrails.v1.Trail.Dn" +
+      "sDataEventsFilterH\001\022P\n\017resource_scopes\030\004" +
+      " \003(\0132+.yandex.cloud.audittrails.v1.Trail" +
+      ".ResourceB\n\202\3101\0061-1024B\022\n\020additional_rule" +
+      "sB\030\n\026service_specific_rules\032-\n\nEventType" +
+      "s\022\037\n\013event_types\030\001 \003(\tB\n\202\3101\0061-1024\032m\n\031Ma" +
+      "nagementEventsFiltering\022P\n\017resource_scop" +
+      "es\030\001 \003(\0132+.yandex.cloud.audittrails.v1.T" +
+      "rail.ResourceB\n\202\3101\0061-1024\032\326\001\n\017FilteringP" +
+      "olicy\022d\n\030management_events_filter\030\001 \001(\0132" +
+      "<.yandex.cloud.audittrails.v1.Trail.Mana" +
+      "gementEventsFilteringB\004\350\3071\000\022]\n\023data_even" +
+      "ts_filters\030\002 \003(\01326.yandex.cloud.audittra" +
+      "ils.v1.Trail.DataEventsFilteringB\010\202\3101\004<1" +
+      "28\0325\n\023DnsDataEventsFilter\022\036\n\026only_recurs" +
+      "ive_queries\030\001 \001(\010\"D\n\006Status\022\026\n\022STATUS_UN" +
+      "SPECIFIED\020\000\022\n\n\006ACTIVE\020\001\022\t\n\005ERROR\020\002\022\013\n\007DE" +
+      "LETED\020\003\"_\n\023EventCategoryFilter\022%\n!EVENT_" +
+      "CATEGORY_FILTER_UNSPECIFIED\020\000\022\021\n\rCONTROL" +
+      "_PLANE\020\001\022\016\n\nDATA_PLANE\020\002\"V\n\025EventAccessT" +
+      "ypeFilter\022(\n$EVENT_ACCESS_TYPE_FILTER_UN" +
+      "SPECIFIED\020\000\022\t\n\005WRITE\020\001\022\010\n\004READ\020\002J\004\010\r\020\016Br" +
+      "\n\037yandex.cloud.api.audittrails.v1B\002ATZKg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/audittrails/v1;audittrailsb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -20872,7 +21750,7 @@ public final class AT {
     internal_static_yandex_cloud_audittrails_v1_Trail_DataEventsFiltering_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_audittrails_v1_Trail_DataEventsFiltering_descriptor,
-        new java.lang.String[] { "Service", "IncludedEvents", "ExcludedEvents", "ResourceScopes", "AdditionalRules", });
+        new java.lang.String[] { "Service", "IncludedEvents", "ExcludedEvents", "DnsFilter", "ResourceScopes", "AdditionalRules", "ServiceSpecificRules", });
     internal_static_yandex_cloud_audittrails_v1_Trail_EventTypes_descriptor =
       internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(15);
     internal_static_yandex_cloud_audittrails_v1_Trail_EventTypes_fieldAccessorTable = new
@@ -20891,6 +21769,12 @@ public final class AT {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_audittrails_v1_Trail_FilteringPolicy_descriptor,
         new java.lang.String[] { "ManagementEventsFilter", "DataEventsFilters", });
+    internal_static_yandex_cloud_audittrails_v1_Trail_DnsDataEventsFilter_descriptor =
+      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(18);
+    internal_static_yandex_cloud_audittrails_v1_Trail_DnsDataEventsFilter_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_audittrails_v1_Trail_DnsDataEventsFilter_descriptor,
+        new java.lang.String[] { "OnlyRecursiveQueries", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);

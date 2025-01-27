@@ -357,7 +357,7 @@ public final class GpuClusterOuterClass {
   }
   /**
    * <pre>
-   * A GPU cluster. For details about the concept, see [documentation](/docs/compute/concepts/gpu-cluster).
+   * A GPU cluster. For details about the concept, see [documentation](/docs/compute/concepts/gpus#gpu-clusters).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.compute.v1.GpuCluster}
@@ -1366,7 +1366,7 @@ public final class GpuClusterOuterClass {
     }
     /**
      * <pre>
-     * A GPU cluster. For details about the concept, see [documentation](/docs/compute/concepts/gpu-cluster).
+     * A GPU cluster. For details about the concept, see [documentation](/docs/compute/concepts/gpus#gpu-clusters).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.compute.v1.GpuCluster}

@@ -1838,7 +1838,7 @@ public final class ReportServiceOuterClass {
      * ID of the folder containing tests.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
@@ -1847,7 +1847,7 @@ public final class ReportServiceOuterClass {
      * ID of the folder containing tests.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
@@ -2040,7 +2040,7 @@ public final class ReportServiceOuterClass {
      * ID of the folder containing tests.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The folderId.
      */
     @java.lang.Override
@@ -2061,7 +2061,7 @@ public final class ReportServiceOuterClass {
      * ID of the folder containing tests.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The bytes for folderId.
      */
     @java.lang.Override
@@ -2583,7 +2583,7 @@ public final class ReportServiceOuterClass {
        * ID of the folder containing tests.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @return The folderId.
        */
       public java.lang.String getFolderId() {
@@ -2603,7 +2603,7 @@ public final class ReportServiceOuterClass {
        * ID of the folder containing tests.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
@@ -2624,7 +2624,7 @@ public final class ReportServiceOuterClass {
        * ID of the folder containing tests.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
        */
@@ -2643,7 +2643,7 @@ public final class ReportServiceOuterClass {
        * ID of the folder containing tests.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFolderId() {
@@ -2657,7 +2657,7 @@ public final class ReportServiceOuterClass {
        * ID of the folder containing tests.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
        */
@@ -4222,7 +4222,7 @@ public final class ReportServiceOuterClass {
       "\030\001 \001(\t\022C\n\005value\030\002 \001(\01324.yandex.cloud.loa" +
       "dtesting.api.v1.report.table.Report:\0028\001\"" +
       "\305\001\n\037CalculateReportKpiValuesRequest\022\037\n\tf" +
-      "older_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\013test_fil" +
+      "older_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=54\022#\n\013test_fil" +
       "ter\030\002 \001(\tB\016\350\3071\001\212\3101\006<=1000\022\034\n\ttest_case\030\003" +
       " \001(\tB\t\212\3101\005<=100\022>\n\003kpi\030\004 \001(\0132+.yandex.cl" +
       "oud.loadtesting.api.v1.report.KpiB\004\350\3071\001\"" +

@@ -3161,7 +3161,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * Name of the placement group.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -3170,7 +3170,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * Name of the placement group.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -3583,7 +3583,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * Name of the placement group.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -3604,7 +3604,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * Name of the placement group.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -4494,7 +4494,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * Name of the placement group.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -4514,7 +4514,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * Name of the placement group.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -4535,7 +4535,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * Name of the placement group.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -4554,7 +4554,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * Name of the placement group.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -4568,7 +4568,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * Name of the placement group.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -6008,7 +6008,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * Name of the placement group.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -6017,7 +6017,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * Name of the placement group.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -6332,7 +6332,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * Name of the placement group.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -6353,7 +6353,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * Name of the placement group.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -7197,7 +7197,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * Name of the placement group.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -7217,7 +7217,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * Name of the placement group.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -7238,7 +7238,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * Name of the placement group.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -7257,7 +7257,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * Name of the placement group.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -7271,7 +7271,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * Name of the placement group.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -13611,111 +13611,111 @@ public final class DiskPlacementGroupServiceOuterClass {
       "00\"\206\001\n\037ListDiskPlacementGroupsResponse\022J" +
       "\n\025disk_placement_groups\030\001 \003(\0132+.yandex.c" +
       "loud.compute.v1.DiskPlacementGroup\022\027\n\017ne" +
-      "xt_page_token\030\002 \001(\t\"\334\004\n\037CreateDiskPlacem" +
+      "xt_page_token\030\002 \001(\t\"\335\004\n\037CreateDiskPlacem" +
       "entGroupRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z" +
-      "0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\003 \001(" +
-      "\tB\t\212\3101\005<=256\022\235\001\n\006labels\030\004 \003(\0132D.yandex.c" +
-      "loud.compute.v1.CreateDiskPlacementGroup" +
-      "Request.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071" +
-      "\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_" +
-      "./\\@0-9a-z]*\022\035\n\007zone_id\030\005 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022Y\n\031spread_placement_strategy\030\006 \001(\01324" +
-      ".yandex.cloud.compute.v1.DiskSpreadPlace" +
-      "mentStrategyH\000\022_\n\034partition_placement_st" +
-      "rategy\030\007 \001(\01327.yandex.cloud.compute.v1.D" +
-      "iskPartitionPlacementStrategyH\000\032-\n\013Label" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\032" +
-      "\n\022placement_strategy\022\004\300\3011\001\"C\n CreateDisk" +
-      "PlacementGroupMetadata\022\037\n\027disk_placement" +
-      "_group_id\030\001 \001(\t\"\244\003\n\037UpdateDiskPlacementG" +
-      "roupRequest\022-\n\027disk_placement_group_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132" +
-      "\032.google.protobuf.FieldMask\0222\n\004name\030\003 \001(" +
-      "\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022" +
-      "\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\235\001\n\006labe" +
-      "ls\030\005 \003(\0132D.yandex.cloud.compute.v1.Updat" +
-      "eDiskPlacementGroupRequest.LabelsEntryBG" +
-      "\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032" +
-      "\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\032-\n\013Label" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"C" +
-      "\n UpdateDiskPlacementGroupMetadata\022\037\n\027di" +
-      "sk_placement_group_id\030\001 \001(\t\"P\n\037DeleteDis" +
-      "kPlacementGroupRequest\022-\n\027disk_placement" +
-      "_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"C\n DeleteD" +
-      "iskPlacementGroupMetadata\022\037\n\027disk_placem" +
-      "ent_group_id\030\001 \001(\t\"\221\001\n\"ListDiskPlacement" +
-      "GroupDisksRequest\022-\n\027disk_placement_grou" +
-      "p_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 " +
-      "\001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
-      "\005<=100\"l\n#ListDiskPlacementGroupDisksRes" +
-      "ponse\022,\n\005disks\030\001 \003(\0132\035.yandex.cloud.comp" +
-      "ute.v1.Disk\022\027\n\017next_page_token\030\002 \001(\t\"\226\001\n" +
-      "\'ListDiskPlacementGroupOperationsRequest" +
-      "\022-\n\027disk_placement_group_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035" +
-      "\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"z\n(ListDis" +
-      "kPlacementGroupOperationsResponse\0225\n\nope" +
-      "rations\030\001 \003(\0132!.yandex.cloud.operation.O" +
-      "peration\022\027\n\017next_page_token\030\002 \001(\t2\225\021\n\031Di" +
-      "skPlacementGroupService\022\254\001\n\003Get\0225.yandex" +
-      ".cloud.compute.v1.GetDiskPlacementGroupR" +
-      "equest\032+.yandex.cloud.compute.v1.DiskPla" +
-      "cementGroup\"A\202\323\344\223\002;\0229/compute/v1/diskPla" +
-      "cementGroups/{disk_placement_group_id}\022\242" +
-      "\001\n\004List\0227.yandex.cloud.compute.v1.ListDi" +
-      "skPlacementGroupsRequest\0328.yandex.cloud." +
-      "compute.v1.ListDiskPlacementGroupsRespon" +
-      "se\"\'\202\323\344\223\002!\022\037/compute/v1/diskPlacementGro" +
-      "ups\022\313\001\n\006Create\0228.yandex.cloud.compute.v1" +
-      ".CreateDiskPlacementGroupRequest\032!.yande" +
-      "x.cloud.operation.Operation\"d\202\323\344\223\002$\"\037/co" +
-      "mpute/v1/diskPlacementGroups:\001*\262\322*6\n Cre" +
-      "ateDiskPlacementGroupMetadata\022\022DiskPlace" +
-      "mentGroup\022\345\001\n\006Update\0228.yandex.cloud.comp" +
-      "ute.v1.UpdateDiskPlacementGroupRequest\032!" +
-      ".yandex.cloud.operation.Operation\"~\202\323\344\223\002" +
-      ">29/compute/v1/diskPlacementGroups/{disk" +
-      "_placement_group_id}:\001*\262\322*6\n UpdateDiskP" +
-      "lacementGroupMetadata\022\022DiskPlacementGrou" +
-      "p\022\345\001\n\006Delete\0228.yandex.cloud.compute.v1.D" +
-      "eleteDiskPlacementGroupRequest\032!.yandex." +
-      "cloud.operation.Operation\"~\202\323\344\223\002;*9/comp" +
-      "ute/v1/diskPlacementGroups/{disk_placeme" +
-      "nt_group_id}\262\322*9\n DeleteDiskPlacementGro" +
-      "upMetadata\022\025google.protobuf.Empty\022\317\001\n\tLi" +
-      "stDisks\022;.yandex.cloud.compute.v1.ListDi" +
-      "skPlacementGroupDisksRequest\032<.yandex.cl" +
-      "oud.compute.v1.ListDiskPlacementGroupDis" +
-      "ksResponse\"G\202\323\344\223\002A\022?/compute/v1/diskPlac" +
-      "ementGroups/{disk_placement_group_id}/di" +
-      "sks\022\343\001\n\016ListOperations\022@.yandex.cloud.co" +
-      "mpute.v1.ListDiskPlacementGroupOperation" +
-      "sRequest\032A.yandex.cloud.compute.v1.ListD" +
-      "iskPlacementGroupOperationsResponse\"L\202\323\344" +
-      "\223\002F\022D/compute/v1/diskPlacementGroups/{di" +
-      "sk_placement_group_id}/operations\022\277\001\n\022Li" +
-      "stAccessBindings\022..yandex.cloud.access.L" +
-      "istAccessBindingsRequest\032/.yandex.cloud." +
-      "access.ListAccessBindingsResponse\"H\202\323\344\223\002" +
-      "B\022@/compute/v1/diskPlacementGroups/{reso" +
-      "urce_id}:listAccessBindings\022\376\001\n\021SetAcces" +
-      "sBindings\022-.yandex.cloud.access.SetAcces" +
-      "sBindingsRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"\226\001\202\323\344\223\002D\"?/compute/v1/diskPl" +
-      "acementGroups/{resource_id}:setAccessBin" +
-      "dings:\001*\262\322*H\n access.SetAccessBindingsMe" +
-      "tadata\022$access.AccessBindingsOperationRe" +
-      "sult\022\212\002\n\024UpdateAccessBindings\0220.yandex.c" +
-      "loud.access.UpdateAccessBindingsRequest\032" +
-      "!.yandex.cloud.operation.Operation\"\234\001\202\323\344" +
-      "\223\002G\"B/compute/v1/diskPlacementGroups/{re" +
-      "source_id}:updateAccessBindings:\001*\262\322*K\n#" +
-      "access.UpdateAccessBindingsMetadata\022$acc" +
-      "ess.AccessBindingsOperationResultBb\n\033yan" +
-      "dex.cloud.api.compute.v1ZCgithub.com/yan" +
-      "dex-cloud/go-genproto/yandex/cloud/compu" +
-      "te/v1;computeb\006proto3"
+      "\212\3101\004<=50\0223\n\004name\030\002 \001(\tB%\362\3071!|[a-z]([-_a-" +
+      "z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\003 \001" +
+      "(\tB\t\212\3101\005<=256\022\235\001\n\006labels\030\004 \003(\0132D.yandex." +
+      "cloud.compute.v1.CreateDiskPlacementGrou" +
+      "pRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\307" +
+      "1\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-" +
+      "_./\\@0-9a-z]*\022\035\n\007zone_id\030\005 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022Y\n\031spread_placement_strategy\030\006 \001(\0132" +
+      "4.yandex.cloud.compute.v1.DiskSpreadPlac" +
+      "ementStrategyH\000\022_\n\034partition_placement_s" +
+      "trategy\030\007 \001(\01327.yandex.cloud.compute.v1." +
+      "DiskPartitionPlacementStrategyH\000\032-\n\013Labe" +
+      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B" +
+      "\032\n\022placement_strategy\022\004\300\3011\001\"C\n CreateDis" +
+      "kPlacementGroupMetadata\022\037\n\027disk_placemen" +
+      "t_group_id\030\001 \001(\t\"\245\003\n\037UpdateDiskPlacement" +
+      "GroupRequest\022-\n\027disk_placement_group_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\013" +
+      "2\032.google.protobuf.FieldMask\0223\n\004name\030\003 \001" +
+      "(\tB%\362\3071!|[a-z]([-_a-z0-9]{0,61}[a-z0-9])" +
+      "?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\235\001\n\006la" +
+      "bels\030\005 \003(\0132D.yandex.cloud.compute.v1.Upd" +
+      "ateDiskPlacementGroupRequest.LabelsEntry" +
+      "BG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101" +
+      "\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\032-\n\013Lab" +
+      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "\"C\n UpdateDiskPlacementGroupMetadata\022\037\n\027" +
+      "disk_placement_group_id\030\001 \001(\t\"P\n\037DeleteD" +
+      "iskPlacementGroupRequest\022-\n\027disk_placeme" +
+      "nt_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"C\n Delet" +
+      "eDiskPlacementGroupMetadata\022\037\n\027disk_plac" +
+      "ement_group_id\030\001 \001(\t\"\221\001\n\"ListDiskPlaceme" +
+      "ntGroupDisksRequest\022-\n\027disk_placement_gr" +
+      "oup_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030" +
+      "\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212" +
+      "\3101\005<=100\"l\n#ListDiskPlacementGroupDisksR" +
+      "esponse\022,\n\005disks\030\001 \003(\0132\035.yandex.cloud.co" +
+      "mpute.v1.Disk\022\027\n\017next_page_token\030\002 \001(\t\"\226" +
+      "\001\n\'ListDiskPlacementGroupOperationsReque" +
+      "st\022-\n\027disk_placement_group_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000" +
+      "\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"z\n(ListD" +
+      "iskPlacementGroupOperationsResponse\0225\n\no" +
+      "perations\030\001 \003(\0132!.yandex.cloud.operation" +
+      ".Operation\022\027\n\017next_page_token\030\002 \001(\t2\225\021\n\031" +
+      "DiskPlacementGroupService\022\254\001\n\003Get\0225.yand" +
+      "ex.cloud.compute.v1.GetDiskPlacementGrou" +
+      "pRequest\032+.yandex.cloud.compute.v1.DiskP" +
+      "lacementGroup\"A\202\323\344\223\002;\0229/compute/v1/diskP" +
+      "lacementGroups/{disk_placement_group_id}" +
+      "\022\242\001\n\004List\0227.yandex.cloud.compute.v1.List" +
+      "DiskPlacementGroupsRequest\0328.yandex.clou" +
+      "d.compute.v1.ListDiskPlacementGroupsResp" +
+      "onse\"\'\202\323\344\223\002!\022\037/compute/v1/diskPlacementG" +
+      "roups\022\313\001\n\006Create\0228.yandex.cloud.compute." +
+      "v1.CreateDiskPlacementGroupRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"d\202\323\344\223\002$\"\037/" +
+      "compute/v1/diskPlacementGroups:\001*\262\322*6\n C" +
+      "reateDiskPlacementGroupMetadata\022\022DiskPla" +
+      "cementGroup\022\345\001\n\006Update\0228.yandex.cloud.co" +
+      "mpute.v1.UpdateDiskPlacementGroupRequest" +
+      "\032!.yandex.cloud.operation.Operation\"~\202\323\344" +
+      "\223\002>29/compute/v1/diskPlacementGroups/{di" +
+      "sk_placement_group_id}:\001*\262\322*6\n UpdateDis" +
+      "kPlacementGroupMetadata\022\022DiskPlacementGr" +
+      "oup\022\345\001\n\006Delete\0228.yandex.cloud.compute.v1" +
+      ".DeleteDiskPlacementGroupRequest\032!.yande" +
+      "x.cloud.operation.Operation\"~\202\323\344\223\002;*9/co" +
+      "mpute/v1/diskPlacementGroups/{disk_place" +
+      "ment_group_id}\262\322*9\n DeleteDiskPlacementG" +
+      "roupMetadata\022\025google.protobuf.Empty\022\317\001\n\t" +
+      "ListDisks\022;.yandex.cloud.compute.v1.List" +
+      "DiskPlacementGroupDisksRequest\032<.yandex." +
+      "cloud.compute.v1.ListDiskPlacementGroupD" +
+      "isksResponse\"G\202\323\344\223\002A\022?/compute/v1/diskPl" +
+      "acementGroups/{disk_placement_group_id}/" +
+      "disks\022\343\001\n\016ListOperations\022@.yandex.cloud." +
+      "compute.v1.ListDiskPlacementGroupOperati" +
+      "onsRequest\032A.yandex.cloud.compute.v1.Lis" +
+      "tDiskPlacementGroupOperationsResponse\"L\202" +
+      "\323\344\223\002F\022D/compute/v1/diskPlacementGroups/{" +
+      "disk_placement_group_id}/operations\022\277\001\n\022" +
+      "ListAccessBindings\022..yandex.cloud.access" +
+      ".ListAccessBindingsRequest\032/.yandex.clou" +
+      "d.access.ListAccessBindingsResponse\"H\202\323\344" +
+      "\223\002B\022@/compute/v1/diskPlacementGroups/{re" +
+      "source_id}:listAccessBindings\022\376\001\n\021SetAcc" +
+      "essBindings\022-.yandex.cloud.access.SetAcc" +
+      "essBindingsRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"\226\001\202\323\344\223\002D\"?/compute/v1/disk" +
+      "PlacementGroups/{resource_id}:setAccessB" +
+      "indings:\001*\262\322*H\n access.SetAccessBindings" +
+      "Metadata\022$access.AccessBindingsOperation" +
+      "Result\022\212\002\n\024UpdateAccessBindings\0220.yandex" +
+      ".cloud.access.UpdateAccessBindingsReques" +
+      "t\032!.yandex.cloud.operation.Operation\"\234\001\202" +
+      "\323\344\223\002G\"B/compute/v1/diskPlacementGroups/{" +
+      "resource_id}:updateAccessBindings:\001*\262\322*K" +
+      "\n#access.UpdateAccessBindingsMetadata\022$a" +
+      "ccess.AccessBindingsOperationResultBb\n\033y" +
+      "andex.cloud.api.compute.v1ZCgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/com" +
+      "pute/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

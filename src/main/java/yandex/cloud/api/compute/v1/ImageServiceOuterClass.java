@@ -3951,7 +3951,7 @@ public final class ImageServiceOuterClass {
      * Name of the image.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -3960,7 +3960,7 @@ public final class ImageServiceOuterClass {
      * Name of the image.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -4225,7 +4225,8 @@ public final class ImageServiceOuterClass {
      * <pre>
      * URI of the source image to create the new image from.
      * Currently only supports links to images that are stored in Object Storage.
-     * Currently only supports Qcow2, VMDK, and RAW formats.
+     * Must be a valid [pre-signed URL](/docs/storage/concepts/pre-signed-urls).
+     * Currently only supports Qcow2, VMDK, and RAW image formats.
      * </pre>
      *
      * <code>string uri = 11;</code>
@@ -4236,7 +4237,8 @@ public final class ImageServiceOuterClass {
      * <pre>
      * URI of the source image to create the new image from.
      * Currently only supports links to images that are stored in Object Storage.
-     * Currently only supports Qcow2, VMDK, and RAW formats.
+     * Must be a valid [pre-signed URL](/docs/storage/concepts/pre-signed-urls).
+     * Currently only supports Qcow2, VMDK, and RAW image formats.
      * </pre>
      *
      * <code>string uri = 11;</code>
@@ -4247,7 +4249,8 @@ public final class ImageServiceOuterClass {
      * <pre>
      * URI of the source image to create the new image from.
      * Currently only supports links to images that are stored in Object Storage.
-     * Currently only supports Qcow2, VMDK, and RAW formats.
+     * Must be a valid [pre-signed URL](/docs/storage/concepts/pre-signed-urls).
+     * Currently only supports Qcow2, VMDK, and RAW image formats.
      * </pre>
      *
      * <code>string uri = 11;</code>
@@ -4632,7 +4635,7 @@ public final class ImageServiceOuterClass {
      * Name of the image.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -4653,7 +4656,7 @@ public final class ImageServiceOuterClass {
      * Name of the image.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -5146,7 +5149,8 @@ public final class ImageServiceOuterClass {
      * <pre>
      * URI of the source image to create the new image from.
      * Currently only supports links to images that are stored in Object Storage.
-     * Currently only supports Qcow2, VMDK, and RAW formats.
+     * Must be a valid [pre-signed URL](/docs/storage/concepts/pre-signed-urls).
+     * Currently only supports Qcow2, VMDK, and RAW image formats.
      * </pre>
      *
      * <code>string uri = 11;</code>
@@ -5159,7 +5163,8 @@ public final class ImageServiceOuterClass {
      * <pre>
      * URI of the source image to create the new image from.
      * Currently only supports links to images that are stored in Object Storage.
-     * Currently only supports Qcow2, VMDK, and RAW formats.
+     * Must be a valid [pre-signed URL](/docs/storage/concepts/pre-signed-urls).
+     * Currently only supports Qcow2, VMDK, and RAW image formats.
      * </pre>
      *
      * <code>string uri = 11;</code>
@@ -5186,7 +5191,8 @@ public final class ImageServiceOuterClass {
      * <pre>
      * URI of the source image to create the new image from.
      * Currently only supports links to images that are stored in Object Storage.
-     * Currently only supports Qcow2, VMDK, and RAW formats.
+     * Must be a valid [pre-signed URL](/docs/storage/concepts/pre-signed-urls).
+     * Currently only supports Qcow2, VMDK, and RAW image formats.
      * </pre>
      *
      * <code>string uri = 11;</code>
@@ -6073,7 +6079,7 @@ public final class ImageServiceOuterClass {
        * Name of the image.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -6093,7 +6099,7 @@ public final class ImageServiceOuterClass {
        * Name of the image.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -6114,7 +6120,7 @@ public final class ImageServiceOuterClass {
        * Name of the image.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -6133,7 +6139,7 @@ public final class ImageServiceOuterClass {
        * Name of the image.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -6147,7 +6153,7 @@ public final class ImageServiceOuterClass {
        * Name of the image.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -7123,7 +7129,8 @@ public final class ImageServiceOuterClass {
        * <pre>
        * URI of the source image to create the new image from.
        * Currently only supports links to images that are stored in Object Storage.
-       * Currently only supports Qcow2, VMDK, and RAW formats.
+       * Must be a valid [pre-signed URL](/docs/storage/concepts/pre-signed-urls).
+       * Currently only supports Qcow2, VMDK, and RAW image formats.
        * </pre>
        *
        * <code>string uri = 11;</code>
@@ -7137,7 +7144,8 @@ public final class ImageServiceOuterClass {
        * <pre>
        * URI of the source image to create the new image from.
        * Currently only supports links to images that are stored in Object Storage.
-       * Currently only supports Qcow2, VMDK, and RAW formats.
+       * Must be a valid [pre-signed URL](/docs/storage/concepts/pre-signed-urls).
+       * Currently only supports Qcow2, VMDK, and RAW image formats.
        * </pre>
        *
        * <code>string uri = 11;</code>
@@ -7165,7 +7173,8 @@ public final class ImageServiceOuterClass {
        * <pre>
        * URI of the source image to create the new image from.
        * Currently only supports links to images that are stored in Object Storage.
-       * Currently only supports Qcow2, VMDK, and RAW formats.
+       * Must be a valid [pre-signed URL](/docs/storage/concepts/pre-signed-urls).
+       * Currently only supports Qcow2, VMDK, and RAW image formats.
        * </pre>
        *
        * <code>string uri = 11;</code>
@@ -7194,7 +7203,8 @@ public final class ImageServiceOuterClass {
        * <pre>
        * URI of the source image to create the new image from.
        * Currently only supports links to images that are stored in Object Storage.
-       * Currently only supports Qcow2, VMDK, and RAW formats.
+       * Must be a valid [pre-signed URL](/docs/storage/concepts/pre-signed-urls).
+       * Currently only supports Qcow2, VMDK, and RAW image formats.
        * </pre>
        *
        * <code>string uri = 11;</code>
@@ -7215,7 +7225,8 @@ public final class ImageServiceOuterClass {
        * <pre>
        * URI of the source image to create the new image from.
        * Currently only supports links to images that are stored in Object Storage.
-       * Currently only supports Qcow2, VMDK, and RAW formats.
+       * Must be a valid [pre-signed URL](/docs/storage/concepts/pre-signed-urls).
+       * Currently only supports Qcow2, VMDK, and RAW image formats.
        * </pre>
        *
        * <code>string uri = 11;</code>
@@ -7233,7 +7244,8 @@ public final class ImageServiceOuterClass {
        * <pre>
        * URI of the source image to create the new image from.
        * Currently only supports links to images that are stored in Object Storage.
-       * Currently only supports Qcow2, VMDK, and RAW formats.
+       * Must be a valid [pre-signed URL](/docs/storage/concepts/pre-signed-urls).
+       * Currently only supports Qcow2, VMDK, and RAW image formats.
        * </pre>
        *
        * <code>string uri = 11;</code>
@@ -8337,7 +8349,7 @@ public final class ImageServiceOuterClass {
      * Name of the image.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -8346,7 +8358,7 @@ public final class ImageServiceOuterClass {
      * Name of the image.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -8677,7 +8689,7 @@ public final class ImageServiceOuterClass {
      * Name of the image.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -8698,7 +8710,7 @@ public final class ImageServiceOuterClass {
      * Name of the image.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -9576,7 +9588,7 @@ public final class ImageServiceOuterClass {
        * Name of the image.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -9596,7 +9608,7 @@ public final class ImageServiceOuterClass {
        * Name of the image.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -9617,7 +9629,7 @@ public final class ImageServiceOuterClass {
        * Name of the image.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -9636,7 +9648,7 @@ public final class ImageServiceOuterClass {
        * Name of the image.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -9650,7 +9662,7 @@ public final class ImageServiceOuterClass {
        * Name of the image.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -13963,94 +13975,94 @@ public final class ImageServiceOuterClass {
       "\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\022\033\n\010or" +
       "der_by\030\005 \001(\tB\t\212\3101\005<=100\"]\n\022ListImagesRes" +
       "ponse\022.\n\006images\030\001 \003(\0132\036.yandex.cloud.com" +
-      "pute.v1.Image\022\027\n\017next_page_token\030\002 \001(\t\"\323" +
+      "pute.v1.Image\022\027\n\017next_page_token\030\002 \001(\t\"\324" +
       "\005\n\022CreateImageRequest\022\037\n\tfolder_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]" +
-      "([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descriptio" +
-      "n\030\003 \001(\tB\t\212\3101\005<=256\022\220\001\n\006labels\030\004 \003(\01327.ya" +
-      "ndex.cloud.compute.v1.CreateImageRequest" +
-      ".LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\" +
-      "@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9" +
-      "a-z]*\0221\n\006family\030\005 \001(\tB!\362\3071\035|[a-z][-a-z0-" +
-      "9]{1,61}[a-z0-9]\0220\n\rmin_disk_size\030\006 \001(\003B" +
-      "\031\372\3071\0254194304-4398046511104\022\035\n\013product_id" +
-      "s\030\007 \003(\tB\010\212\3101\004<=50\022\034\n\010image_id\030\010 \001(\tB\010\212\3101" +
-      "\004<=50H\000\022\033\n\007disk_id\030\t \001(\tB\010\212\3101\004<=50H\000\022\037\n\013" +
-      "snapshot_id\030\n \001(\tB\010\212\3101\004<=50H\000\022\r\n\003uri\030\013 \001" +
-      "(\tH\000\022\'\n\002os\030\014 \001(\0132\033.yandex.cloud.compute." +
-      "v1.Os\022\016\n\006pooled\030\021 \001(\010\022H\n\023hardware_genera" +
-      "tion\030\022 \001(\0132+.yandex.cloud.compute.v1.Har" +
-      "dwareGeneration\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n\006source\022\004\300\3011\001J\004" +
-      "\010\r\020\021\"\'\n\023CreateImageMetadata\022\020\n\010image_id\030" +
-      "\001 \001(\t\"\255\003\n\022UpdateImageRequest\022\036\n\010image_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(" +
-      "\0132\032.google.protobuf.FieldMask\0222\n\004name\030\003 " +
-      "\001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])" +
-      "?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\0220\n\rmin" +
-      "_disk_size\030\005 \001(\003B\031\372\3071\0254194304-4398046511" +
-      "104\022\220\001\n\006labels\030\006 \003(\01327.yandex.cloud.comp" +
-      "ute.v1.UpdateImageRequest.LabelsEntryBG\202" +
-      "\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\004" +
-      "1-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\032-\n\013Labels" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\'\n" +
-      "\023UpdateImageMetadata\022\020\n\010image_id\030\001 \001(\t\"4" +
-      "\n\022DeleteImageRequest\022\036\n\010image_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\"\'\n\023DeleteImageMetadata\022\020\n\010i" +
-      "mage_id\030\001 \001(\t\"z\n\032ListImageOperationsRequ" +
-      "est\022\036\n\010image_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tp" +
-      "age_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token" +
-      "\030\003 \001(\tB\t\212\3101\005<=100\"m\n\033ListImageOperations" +
-      "Response\0225\n\noperations\030\001 \003(\0132!.yandex.cl" +
-      "oud.operation.Operation\022\027\n\017next_page_tok" +
-      "en\030\002 \001(\t2\346\r\n\014ImageService\022v\n\003Get\022(.yande" +
-      "x.cloud.compute.v1.GetImageRequest\032\036.yan" +
-      "dex.cloud.compute.v1.Image\"%\202\323\344\223\002\037\022\035/com" +
-      "pute/v1/images/{image_id}\022\226\001\n\021GetLatestB" +
-      "yFamily\0226.yandex.cloud.compute.v1.GetIma" +
-      "geLatestByFamilyRequest\032\036.yandex.cloud.c" +
-      "ompute.v1.Image\")\202\323\344\223\002#\022!/compute/v1/ima" +
-      "ges:latestByFamily\022{\n\004List\022*.yandex.clou" +
-      "d.compute.v1.ListImagesRequest\032+.yandex." +
-      "cloud.compute.v1.ListImagesResponse\"\032\202\323\344" +
-      "\223\002\024\022\022/compute/v1/images\022\227\001\n\006Create\022+.yan" +
-      "dex.cloud.compute.v1.CreateImageRequest\032" +
-      "!.yandex.cloud.operation.Operation\"=\202\323\344\223" +
-      "\002\027\"\022/compute/v1/images:\001*\262\322*\034\n\023CreateIma" +
-      "geMetadata\022\005Image\022\242\001\n\006Update\022+.yandex.cl" +
-      "oud.compute.v1.UpdateImageRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"H\202\323\344\223\002\"2\035/c" +
-      "ompute/v1/images/{image_id}:\001*\262\322*\034\n\023Upda" +
-      "teImageMetadata\022\005Image\022\257\001\n\006Delete\022+.yand" +
-      "ex.cloud.compute.v1.DeleteImageRequest\032!" +
-      ".yandex.cloud.operation.Operation\"U\202\323\344\223\002" +
-      "\037*\035/compute/v1/images/{image_id}\262\322*,\n\023De" +
-      "leteImageMetadata\022\025google.protobuf.Empty" +
-      "\022\255\001\n\016ListOperations\0223.yandex.cloud.compu" +
-      "te.v1.ListImageOperationsRequest\0324.yande" +
-      "x.cloud.compute.v1.ListImageOperationsRe" +
-      "sponse\"0\202\323\344\223\002*\022(/compute/v1/images/{imag" +
-      "e_id}/operations\022\262\001\n\022ListAccessBindings\022" +
-      "..yandex.cloud.access.ListAccessBindings" +
-      "Request\032/.yandex.cloud.access.ListAccess" +
-      "BindingsResponse\";\202\323\344\223\0025\0223/compute/v1/im" +
-      "ages/{resource_id}:listAccessBindings\022\361\001" +
-      "\n\021SetAccessBindings\022-.yandex.cloud.acces" +
-      "s.SetAccessBindingsRequest\032!.yandex.clou" +
-      "d.operation.Operation\"\211\001\202\323\344\223\0027\"2/compute" +
-      "/v1/images/{resource_id}:setAccessBindin" +
-      "gs:\001*\262\322*H\n access.SetAccessBindingsMetad" +
-      "ata\022$access.AccessBindingsOperationResul" +
-      "t\022\375\001\n\024UpdateAccessBindings\0220.yandex.clou" +
-      "d.access.UpdateAccessBindingsRequest\032!.y" +
-      "andex.cloud.operation.Operation\"\217\001\202\323\344\223\002:" +
-      "\"5/compute/v1/images/{resource_id}:updat" +
-      "eAccessBindings:\001*\262\322*K\n#access.UpdateAcc" +
-      "essBindingsMetadata\022$access.AccessBindin" +
-      "gsOperationResultBb\n\033yandex.cloud.api.co" +
-      "mpute.v1ZCgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/compute/v1;computeb\006p" +
-      "roto3"
+      "B\014\350\3071\001\212\3101\004<=50\0223\n\004name\030\002 \001(\tB%\362\3071!|[a-z]" +
+      "([-_a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descripti" +
+      "on\030\003 \001(\tB\t\212\3101\005<=256\022\220\001\n\006labels\030\004 \003(\01327.y" +
+      "andex.cloud.compute.v1.CreateImageReques" +
+      "t.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./" +
+      "\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-" +
+      "9a-z]*\0221\n\006family\030\005 \001(\tB!\362\3071\035|[a-z][-a-z0" +
+      "-9]{1,61}[a-z0-9]\0220\n\rmin_disk_size\030\006 \001(\003" +
+      "B\031\372\3071\0254194304-4398046511104\022\035\n\013product_i" +
+      "ds\030\007 \003(\tB\010\212\3101\004<=50\022\034\n\010image_id\030\010 \001(\tB\010\212\310" +
+      "1\004<=50H\000\022\033\n\007disk_id\030\t \001(\tB\010\212\3101\004<=50H\000\022\037\n" +
+      "\013snapshot_id\030\n \001(\tB\010\212\3101\004<=50H\000\022\r\n\003uri\030\013 " +
+      "\001(\tH\000\022\'\n\002os\030\014 \001(\0132\033.yandex.cloud.compute" +
+      ".v1.Os\022\016\n\006pooled\030\021 \001(\010\022H\n\023hardware_gener" +
+      "ation\030\022 \001(\0132+.yandex.cloud.compute.v1.Ha" +
+      "rdwareGeneration\032-\n\013LabelsEntry\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n\006source\022\004\300\3011\001J" +
+      "\004\010\r\020\021\"\'\n\023CreateImageMetadata\022\020\n\010image_id" +
+      "\030\001 \001(\t\"\256\003\n\022UpdateImageRequest\022\036\n\010image_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001" +
+      "(\0132\032.google.protobuf.FieldMask\0223\n\004name\030\003" +
+      " \001(\tB%\362\3071!|[a-z]([-_a-z0-9]{0,61}[a-z0-9" +
+      "])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\0220\n\rm" +
+      "in_disk_size\030\005 \001(\003B\031\372\3071\0254194304-43980465" +
+      "11104\022\220\001\n\006labels\030\006 \003(\01327.yandex.cloud.co" +
+      "mpute.v1.UpdateImageRequest.LabelsEntryB" +
+      "G\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006" +
+      "\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\032-\n\013Labe" +
+      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
+      "\'\n\023UpdateImageMetadata\022\020\n\010image_id\030\001 \001(\t" +
+      "\"4\n\022DeleteImageRequest\022\036\n\010image_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\"\'\n\023DeleteImageMetadata\022\020\n" +
+      "\010image_id\030\001 \001(\t\"z\n\032ListImageOperationsRe" +
+      "quest\022\036\n\010image_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n" +
+      "\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_tok" +
+      "en\030\003 \001(\tB\t\212\3101\005<=100\"m\n\033ListImageOperatio" +
+      "nsResponse\0225\n\noperations\030\001 \003(\0132!.yandex." +
+      "cloud.operation.Operation\022\027\n\017next_page_t" +
+      "oken\030\002 \001(\t2\346\r\n\014ImageService\022v\n\003Get\022(.yan" +
+      "dex.cloud.compute.v1.GetImageRequest\032\036.y" +
+      "andex.cloud.compute.v1.Image\"%\202\323\344\223\002\037\022\035/c" +
+      "ompute/v1/images/{image_id}\022\226\001\n\021GetLates" +
+      "tByFamily\0226.yandex.cloud.compute.v1.GetI" +
+      "mageLatestByFamilyRequest\032\036.yandex.cloud" +
+      ".compute.v1.Image\")\202\323\344\223\002#\022!/compute/v1/i" +
+      "mages:latestByFamily\022{\n\004List\022*.yandex.cl" +
+      "oud.compute.v1.ListImagesRequest\032+.yande" +
+      "x.cloud.compute.v1.ListImagesResponse\"\032\202" +
+      "\323\344\223\002\024\022\022/compute/v1/images\022\227\001\n\006Create\022+.y" +
+      "andex.cloud.compute.v1.CreateImageReques" +
+      "t\032!.yandex.cloud.operation.Operation\"=\202\323" +
+      "\344\223\002\027\"\022/compute/v1/images:\001*\262\322*\034\n\023CreateI" +
+      "mageMetadata\022\005Image\022\242\001\n\006Update\022+.yandex." +
+      "cloud.compute.v1.UpdateImageRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"H\202\323\344\223\002\"2\035" +
+      "/compute/v1/images/{image_id}:\001*\262\322*\034\n\023Up" +
+      "dateImageMetadata\022\005Image\022\257\001\n\006Delete\022+.ya" +
+      "ndex.cloud.compute.v1.DeleteImageRequest" +
+      "\032!.yandex.cloud.operation.Operation\"U\202\323\344" +
+      "\223\002\037*\035/compute/v1/images/{image_id}\262\322*,\n\023" +
+      "DeleteImageMetadata\022\025google.protobuf.Emp" +
+      "ty\022\255\001\n\016ListOperations\0223.yandex.cloud.com" +
+      "pute.v1.ListImageOperationsRequest\0324.yan" +
+      "dex.cloud.compute.v1.ListImageOperations" +
+      "Response\"0\202\323\344\223\002*\022(/compute/v1/images/{im" +
+      "age_id}/operations\022\262\001\n\022ListAccessBinding" +
+      "s\022..yandex.cloud.access.ListAccessBindin" +
+      "gsRequest\032/.yandex.cloud.access.ListAcce" +
+      "ssBindingsResponse\";\202\323\344\223\0025\0223/compute/v1/" +
+      "images/{resource_id}:listAccessBindings\022" +
+      "\361\001\n\021SetAccessBindings\022-.yandex.cloud.acc" +
+      "ess.SetAccessBindingsRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"\211\001\202\323\344\223\0027\"2/compu" +
+      "te/v1/images/{resource_id}:setAccessBind" +
+      "ings:\001*\262\322*H\n access.SetAccessBindingsMet" +
+      "adata\022$access.AccessBindingsOperationRes" +
+      "ult\022\375\001\n\024UpdateAccessBindings\0220.yandex.cl" +
+      "oud.access.UpdateAccessBindingsRequest\032!" +
+      ".yandex.cloud.operation.Operation\"\217\001\202\323\344\223" +
+      "\002:\"5/compute/v1/images/{resource_id}:upd" +
+      "ateAccessBindings:\001*\262\322*K\n#access.UpdateA" +
+      "ccessBindingsMetadata\022$access.AccessBind" +
+      "ingsOperationResultBb\n\033yandex.cloud.api." +
+      "compute.v1ZCgithub.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/compute/v1;computeb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

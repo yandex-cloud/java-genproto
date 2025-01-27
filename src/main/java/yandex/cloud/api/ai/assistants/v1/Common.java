@@ -50,6 +50,53 @@ public final class Common {
      * <code>.google.protobuf.Int64Value max_prompt_tokens = 1;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMaxPromptTokensOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.AutoStrategy auto_strategy = 2;</code>
+     * @return Whether the autoStrategy field is set.
+     */
+    boolean hasAutoStrategy();
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.AutoStrategy auto_strategy = 2;</code>
+     * @return The autoStrategy.
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy getAutoStrategy();
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.AutoStrategy auto_strategy = 2;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategyOrBuilder getAutoStrategyOrBuilder();
+
+    /**
+     * <pre>
+     * Retains only the last `num_messages` messages in the thread.
+     * If these messages exceed `max_prompt_tokens`, older messages will be further truncated to fit the limit.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.LastMessagesStrategy last_messages_strategy = 3;</code>
+     * @return Whether the lastMessagesStrategy field is set.
+     */
+    boolean hasLastMessagesStrategy();
+    /**
+     * <pre>
+     * Retains only the last `num_messages` messages in the thread.
+     * If these messages exceed `max_prompt_tokens`, older messages will be further truncated to fit the limit.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.LastMessagesStrategy last_messages_strategy = 3;</code>
+     * @return The lastMessagesStrategy.
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy getLastMessagesStrategy();
+    /**
+     * <pre>
+     * Retains only the last `num_messages` messages in the thread.
+     * If these messages exceed `max_prompt_tokens`, older messages will be further truncated to fit the limit.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.LastMessagesStrategy last_messages_strategy = 3;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategyOrBuilder getLastMessagesStrategyOrBuilder();
+
+    public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.TruncationStrategyCase getTruncationStrategyCase();
   }
   /**
    * <pre>
@@ -113,6 +160,34 @@ public final class Common {
 
               break;
             }
+            case 18: {
+              yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy.Builder subBuilder = null;
+              if (truncationStrategyCase_ == 2) {
+                subBuilder = ((yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy) truncationStrategy_).toBuilder();
+              }
+              truncationStrategy_ =
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy) truncationStrategy_);
+                truncationStrategy_ = subBuilder.buildPartial();
+              }
+              truncationStrategyCase_ = 2;
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy.Builder subBuilder = null;
+              if (truncationStrategyCase_ == 3) {
+                subBuilder = ((yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy) truncationStrategy_).toBuilder();
+              }
+              truncationStrategy_ =
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy) truncationStrategy_);
+                truncationStrategy_ = subBuilder.buildPartial();
+              }
+              truncationStrategyCase_ = 3;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -143,6 +218,995 @@ public final class Common {
       return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.class, yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.Builder.class);
+    }
+
+    public interface AutoStrategyOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.PromptTruncationOptions.AutoStrategy)
+        com.google.protobuf.MessageOrBuilder {
+    }
+    /**
+     * <pre>
+     * Auto truncation strategy.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.PromptTruncationOptions.AutoStrategy}
+     */
+    public static final class AutoStrategy extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.PromptTruncationOptions.AutoStrategy)
+        AutoStrategyOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use AutoStrategy.newBuilder() to construct.
+      private AutoStrategy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private AutoStrategy() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new AutoStrategy();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private AutoStrategy(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_AutoStrategy_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_AutoStrategy_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy.class, yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy.Builder.class);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy other = (yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy) obj;
+
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Auto truncation strategy.
+       * </pre>
+       *
+       * Protobuf type {@code yandex.cloud.ai.assistants.v1.PromptTruncationOptions.AutoStrategy}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.PromptTruncationOptions.AutoStrategy)
+          yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategyOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_AutoStrategy_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_AutoStrategy_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy.class, yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_AutoStrategy_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy getDefaultInstanceForType() {
+          return yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy build() {
+          yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy buildPartial() {
+          yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy result = new yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy(this);
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy) {
+            return mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy other) {
+          if (other == yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy.getDefaultInstance()) return this;
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.PromptTruncationOptions.AutoStrategy)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.PromptTruncationOptions.AutoStrategy)
+      private static final yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy();
+      }
+
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<AutoStrategy>
+          PARSER = new com.google.protobuf.AbstractParser<AutoStrategy>() {
+        @java.lang.Override
+        public AutoStrategy parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new AutoStrategy(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<AutoStrategy> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<AutoStrategy> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface LastMessagesStrategyOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.PromptTruncationOptions.LastMessagesStrategy)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * The number of most recent messages to retain in the prompt.
+       * If these messages exceed `max_prompt_tokens`, older messages will be further truncated to fit the limit.
+       * </pre>
+       *
+       * <code>int64 num_messages = 1;</code>
+       * @return The numMessages.
+       */
+      long getNumMessages();
+    }
+    /**
+     * <pre>
+     * Truncates the prompt by retaining only the last `num_messages` messages in the thread.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.PromptTruncationOptions.LastMessagesStrategy}
+     */
+    public static final class LastMessagesStrategy extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.PromptTruncationOptions.LastMessagesStrategy)
+        LastMessagesStrategyOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use LastMessagesStrategy.newBuilder() to construct.
+      private LastMessagesStrategy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private LastMessagesStrategy() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new LastMessagesStrategy();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private LastMessagesStrategy(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                numMessages_ = input.readInt64();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_LastMessagesStrategy_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_LastMessagesStrategy_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy.class, yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy.Builder.class);
+      }
+
+      public static final int NUM_MESSAGES_FIELD_NUMBER = 1;
+      private long numMessages_;
+      /**
+       * <pre>
+       * The number of most recent messages to retain in the prompt.
+       * If these messages exceed `max_prompt_tokens`, older messages will be further truncated to fit the limit.
+       * </pre>
+       *
+       * <code>int64 num_messages = 1;</code>
+       * @return The numMessages.
+       */
+      @java.lang.Override
+      public long getNumMessages() {
+        return numMessages_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (numMessages_ != 0L) {
+          output.writeInt64(1, numMessages_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (numMessages_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(1, numMessages_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy other = (yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy) obj;
+
+        if (getNumMessages()
+            != other.getNumMessages()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + NUM_MESSAGES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getNumMessages());
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Truncates the prompt by retaining only the last `num_messages` messages in the thread.
+       * </pre>
+       *
+       * Protobuf type {@code yandex.cloud.ai.assistants.v1.PromptTruncationOptions.LastMessagesStrategy}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.PromptTruncationOptions.LastMessagesStrategy)
+          yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategyOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_LastMessagesStrategy_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_LastMessagesStrategy_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy.class, yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          numMessages_ = 0L;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_LastMessagesStrategy_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy getDefaultInstanceForType() {
+          return yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy build() {
+          yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy buildPartial() {
+          yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy result = new yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy(this);
+          result.numMessages_ = numMessages_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy) {
+            return mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy other) {
+          if (other == yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy.getDefaultInstance()) return this;
+          if (other.getNumMessages() != 0L) {
+            setNumMessages(other.getNumMessages());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private long numMessages_ ;
+        /**
+         * <pre>
+         * The number of most recent messages to retain in the prompt.
+         * If these messages exceed `max_prompt_tokens`, older messages will be further truncated to fit the limit.
+         * </pre>
+         *
+         * <code>int64 num_messages = 1;</code>
+         * @return The numMessages.
+         */
+        @java.lang.Override
+        public long getNumMessages() {
+          return numMessages_;
+        }
+        /**
+         * <pre>
+         * The number of most recent messages to retain in the prompt.
+         * If these messages exceed `max_prompt_tokens`, older messages will be further truncated to fit the limit.
+         * </pre>
+         *
+         * <code>int64 num_messages = 1;</code>
+         * @param value The numMessages to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNumMessages(long value) {
+          
+          numMessages_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The number of most recent messages to retain in the prompt.
+         * If these messages exceed `max_prompt_tokens`, older messages will be further truncated to fit the limit.
+         * </pre>
+         *
+         * <code>int64 num_messages = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearNumMessages() {
+          
+          numMessages_ = 0L;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.PromptTruncationOptions.LastMessagesStrategy)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.PromptTruncationOptions.LastMessagesStrategy)
+      private static final yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy();
+      }
+
+      public static yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<LastMessagesStrategy>
+          PARSER = new com.google.protobuf.AbstractParser<LastMessagesStrategy>() {
+        @java.lang.Override
+        public LastMessagesStrategy parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new LastMessagesStrategy(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<LastMessagesStrategy> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<LastMessagesStrategy> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int truncationStrategyCase_ = 0;
+    private java.lang.Object truncationStrategy_;
+    public enum TruncationStrategyCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      AUTO_STRATEGY(2),
+      LAST_MESSAGES_STRATEGY(3),
+      TRUNCATIONSTRATEGY_NOT_SET(0);
+      private final int value;
+      private TruncationStrategyCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TruncationStrategyCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TruncationStrategyCase forNumber(int value) {
+        switch (value) {
+          case 2: return AUTO_STRATEGY;
+          case 3: return LAST_MESSAGES_STRATEGY;
+          case 0: return TRUNCATIONSTRATEGY_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TruncationStrategyCase
+    getTruncationStrategyCase() {
+      return TruncationStrategyCase.forNumber(
+          truncationStrategyCase_);
     }
 
     public static final int MAX_PROMPT_TOKENS_FIELD_NUMBER = 1;
@@ -189,6 +1253,83 @@ public final class Common {
       return getMaxPromptTokens();
     }
 
+    public static final int AUTO_STRATEGY_FIELD_NUMBER = 2;
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.AutoStrategy auto_strategy = 2;</code>
+     * @return Whether the autoStrategy field is set.
+     */
+    @java.lang.Override
+    public boolean hasAutoStrategy() {
+      return truncationStrategyCase_ == 2;
+    }
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.AutoStrategy auto_strategy = 2;</code>
+     * @return The autoStrategy.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy getAutoStrategy() {
+      if (truncationStrategyCase_ == 2) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy) truncationStrategy_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.AutoStrategy auto_strategy = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategyOrBuilder getAutoStrategyOrBuilder() {
+      if (truncationStrategyCase_ == 2) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy) truncationStrategy_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy.getDefaultInstance();
+    }
+
+    public static final int LAST_MESSAGES_STRATEGY_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * Retains only the last `num_messages` messages in the thread.
+     * If these messages exceed `max_prompt_tokens`, older messages will be further truncated to fit the limit.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.LastMessagesStrategy last_messages_strategy = 3;</code>
+     * @return Whether the lastMessagesStrategy field is set.
+     */
+    @java.lang.Override
+    public boolean hasLastMessagesStrategy() {
+      return truncationStrategyCase_ == 3;
+    }
+    /**
+     * <pre>
+     * Retains only the last `num_messages` messages in the thread.
+     * If these messages exceed `max_prompt_tokens`, older messages will be further truncated to fit the limit.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.LastMessagesStrategy last_messages_strategy = 3;</code>
+     * @return The lastMessagesStrategy.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy getLastMessagesStrategy() {
+      if (truncationStrategyCase_ == 3) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy) truncationStrategy_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Retains only the last `num_messages` messages in the thread.
+     * If these messages exceed `max_prompt_tokens`, older messages will be further truncated to fit the limit.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.LastMessagesStrategy last_messages_strategy = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategyOrBuilder getLastMessagesStrategyOrBuilder() {
+      if (truncationStrategyCase_ == 3) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy) truncationStrategy_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -206,6 +1347,12 @@ public final class Common {
       if (maxPromptTokens_ != null) {
         output.writeMessage(1, getMaxPromptTokens());
       }
+      if (truncationStrategyCase_ == 2) {
+        output.writeMessage(2, (yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy) truncationStrategy_);
+      }
+      if (truncationStrategyCase_ == 3) {
+        output.writeMessage(3, (yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy) truncationStrategy_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -218,6 +1365,14 @@ public final class Common {
       if (maxPromptTokens_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMaxPromptTokens());
+      }
+      if (truncationStrategyCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy) truncationStrategy_);
+      }
+      if (truncationStrategyCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy) truncationStrategy_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -239,6 +1394,19 @@ public final class Common {
         if (!getMaxPromptTokens()
             .equals(other.getMaxPromptTokens())) return false;
       }
+      if (!getTruncationStrategyCase().equals(other.getTruncationStrategyCase())) return false;
+      switch (truncationStrategyCase_) {
+        case 2:
+          if (!getAutoStrategy()
+              .equals(other.getAutoStrategy())) return false;
+          break;
+        case 3:
+          if (!getLastMessagesStrategy()
+              .equals(other.getLastMessagesStrategy())) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -253,6 +1421,18 @@ public final class Common {
       if (hasMaxPromptTokens()) {
         hash = (37 * hash) + MAX_PROMPT_TOKENS_FIELD_NUMBER;
         hash = (53 * hash) + getMaxPromptTokens().hashCode();
+      }
+      switch (truncationStrategyCase_) {
+        case 2:
+          hash = (37 * hash) + AUTO_STRATEGY_FIELD_NUMBER;
+          hash = (53 * hash) + getAutoStrategy().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + LAST_MESSAGES_STRATEGY_FIELD_NUMBER;
+          hash = (53 * hash) + getLastMessagesStrategy().hashCode();
+          break;
+        case 0:
+        default:
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -397,6 +1577,8 @@ public final class Common {
           maxPromptTokens_ = null;
           maxPromptTokensBuilder_ = null;
         }
+        truncationStrategyCase_ = 0;
+        truncationStrategy_ = null;
         return this;
       }
 
@@ -428,6 +1610,21 @@ public final class Common {
         } else {
           result.maxPromptTokens_ = maxPromptTokensBuilder_.build();
         }
+        if (truncationStrategyCase_ == 2) {
+          if (autoStrategyBuilder_ == null) {
+            result.truncationStrategy_ = truncationStrategy_;
+          } else {
+            result.truncationStrategy_ = autoStrategyBuilder_.build();
+          }
+        }
+        if (truncationStrategyCase_ == 3) {
+          if (lastMessagesStrategyBuilder_ == null) {
+            result.truncationStrategy_ = truncationStrategy_;
+          } else {
+            result.truncationStrategy_ = lastMessagesStrategyBuilder_.build();
+          }
+        }
+        result.truncationStrategyCase_ = truncationStrategyCase_;
         onBuilt();
         return result;
       }
@@ -479,6 +1676,19 @@ public final class Common {
         if (other.hasMaxPromptTokens()) {
           mergeMaxPromptTokens(other.getMaxPromptTokens());
         }
+        switch (other.getTruncationStrategyCase()) {
+          case AUTO_STRATEGY: {
+            mergeAutoStrategy(other.getAutoStrategy());
+            break;
+          }
+          case LAST_MESSAGES_STRATEGY: {
+            mergeLastMessagesStrategy(other.getLastMessagesStrategy());
+            break;
+          }
+          case TRUNCATIONSTRATEGY_NOT_SET: {
+            break;
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -507,6 +1717,21 @@ public final class Common {
         }
         return this;
       }
+      private int truncationStrategyCase_ = 0;
+      private java.lang.Object truncationStrategy_;
+      public TruncationStrategyCase
+          getTruncationStrategyCase() {
+        return TruncationStrategyCase.forNumber(
+            truncationStrategyCase_);
+      }
+
+      public Builder clearTruncationStrategy() {
+        truncationStrategyCase_ = 0;
+        truncationStrategy_ = null;
+        onChanged();
+        return this;
+      }
+
 
       private com.google.protobuf.Int64Value maxPromptTokens_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -679,6 +1904,333 @@ public final class Common {
           maxPromptTokens_ = null;
         }
         return maxPromptTokensBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy, yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy.Builder, yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategyOrBuilder> autoStrategyBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.AutoStrategy auto_strategy = 2;</code>
+       * @return Whether the autoStrategy field is set.
+       */
+      @java.lang.Override
+      public boolean hasAutoStrategy() {
+        return truncationStrategyCase_ == 2;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.AutoStrategy auto_strategy = 2;</code>
+       * @return The autoStrategy.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy getAutoStrategy() {
+        if (autoStrategyBuilder_ == null) {
+          if (truncationStrategyCase_ == 2) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy) truncationStrategy_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy.getDefaultInstance();
+        } else {
+          if (truncationStrategyCase_ == 2) {
+            return autoStrategyBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.AutoStrategy auto_strategy = 2;</code>
+       */
+      public Builder setAutoStrategy(yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy value) {
+        if (autoStrategyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          truncationStrategy_ = value;
+          onChanged();
+        } else {
+          autoStrategyBuilder_.setMessage(value);
+        }
+        truncationStrategyCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.AutoStrategy auto_strategy = 2;</code>
+       */
+      public Builder setAutoStrategy(
+          yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy.Builder builderForValue) {
+        if (autoStrategyBuilder_ == null) {
+          truncationStrategy_ = builderForValue.build();
+          onChanged();
+        } else {
+          autoStrategyBuilder_.setMessage(builderForValue.build());
+        }
+        truncationStrategyCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.AutoStrategy auto_strategy = 2;</code>
+       */
+      public Builder mergeAutoStrategy(yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy value) {
+        if (autoStrategyBuilder_ == null) {
+          if (truncationStrategyCase_ == 2 &&
+              truncationStrategy_ != yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy.getDefaultInstance()) {
+            truncationStrategy_ = yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy.newBuilder((yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy) truncationStrategy_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            truncationStrategy_ = value;
+          }
+          onChanged();
+        } else {
+          if (truncationStrategyCase_ == 2) {
+            autoStrategyBuilder_.mergeFrom(value);
+          }
+          autoStrategyBuilder_.setMessage(value);
+        }
+        truncationStrategyCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.AutoStrategy auto_strategy = 2;</code>
+       */
+      public Builder clearAutoStrategy() {
+        if (autoStrategyBuilder_ == null) {
+          if (truncationStrategyCase_ == 2) {
+            truncationStrategyCase_ = 0;
+            truncationStrategy_ = null;
+            onChanged();
+          }
+        } else {
+          if (truncationStrategyCase_ == 2) {
+            truncationStrategyCase_ = 0;
+            truncationStrategy_ = null;
+          }
+          autoStrategyBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.AutoStrategy auto_strategy = 2;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy.Builder getAutoStrategyBuilder() {
+        return getAutoStrategyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.AutoStrategy auto_strategy = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategyOrBuilder getAutoStrategyOrBuilder() {
+        if ((truncationStrategyCase_ == 2) && (autoStrategyBuilder_ != null)) {
+          return autoStrategyBuilder_.getMessageOrBuilder();
+        } else {
+          if (truncationStrategyCase_ == 2) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy) truncationStrategy_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.AutoStrategy auto_strategy = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy, yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy.Builder, yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategyOrBuilder> 
+          getAutoStrategyFieldBuilder() {
+        if (autoStrategyBuilder_ == null) {
+          if (!(truncationStrategyCase_ == 2)) {
+            truncationStrategy_ = yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy.getDefaultInstance();
+          }
+          autoStrategyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy, yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy.Builder, yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategyOrBuilder>(
+                  (yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.AutoStrategy) truncationStrategy_,
+                  getParentForChildren(),
+                  isClean());
+          truncationStrategy_ = null;
+        }
+        truncationStrategyCase_ = 2;
+        onChanged();;
+        return autoStrategyBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy, yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy.Builder, yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategyOrBuilder> lastMessagesStrategyBuilder_;
+      /**
+       * <pre>
+       * Retains only the last `num_messages` messages in the thread.
+       * If these messages exceed `max_prompt_tokens`, older messages will be further truncated to fit the limit.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.LastMessagesStrategy last_messages_strategy = 3;</code>
+       * @return Whether the lastMessagesStrategy field is set.
+       */
+      @java.lang.Override
+      public boolean hasLastMessagesStrategy() {
+        return truncationStrategyCase_ == 3;
+      }
+      /**
+       * <pre>
+       * Retains only the last `num_messages` messages in the thread.
+       * If these messages exceed `max_prompt_tokens`, older messages will be further truncated to fit the limit.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.LastMessagesStrategy last_messages_strategy = 3;</code>
+       * @return The lastMessagesStrategy.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy getLastMessagesStrategy() {
+        if (lastMessagesStrategyBuilder_ == null) {
+          if (truncationStrategyCase_ == 3) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy) truncationStrategy_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy.getDefaultInstance();
+        } else {
+          if (truncationStrategyCase_ == 3) {
+            return lastMessagesStrategyBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Retains only the last `num_messages` messages in the thread.
+       * If these messages exceed `max_prompt_tokens`, older messages will be further truncated to fit the limit.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.LastMessagesStrategy last_messages_strategy = 3;</code>
+       */
+      public Builder setLastMessagesStrategy(yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy value) {
+        if (lastMessagesStrategyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          truncationStrategy_ = value;
+          onChanged();
+        } else {
+          lastMessagesStrategyBuilder_.setMessage(value);
+        }
+        truncationStrategyCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * Retains only the last `num_messages` messages in the thread.
+       * If these messages exceed `max_prompt_tokens`, older messages will be further truncated to fit the limit.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.LastMessagesStrategy last_messages_strategy = 3;</code>
+       */
+      public Builder setLastMessagesStrategy(
+          yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy.Builder builderForValue) {
+        if (lastMessagesStrategyBuilder_ == null) {
+          truncationStrategy_ = builderForValue.build();
+          onChanged();
+        } else {
+          lastMessagesStrategyBuilder_.setMessage(builderForValue.build());
+        }
+        truncationStrategyCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * Retains only the last `num_messages` messages in the thread.
+       * If these messages exceed `max_prompt_tokens`, older messages will be further truncated to fit the limit.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.LastMessagesStrategy last_messages_strategy = 3;</code>
+       */
+      public Builder mergeLastMessagesStrategy(yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy value) {
+        if (lastMessagesStrategyBuilder_ == null) {
+          if (truncationStrategyCase_ == 3 &&
+              truncationStrategy_ != yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy.getDefaultInstance()) {
+            truncationStrategy_ = yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy.newBuilder((yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy) truncationStrategy_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            truncationStrategy_ = value;
+          }
+          onChanged();
+        } else {
+          if (truncationStrategyCase_ == 3) {
+            lastMessagesStrategyBuilder_.mergeFrom(value);
+          }
+          lastMessagesStrategyBuilder_.setMessage(value);
+        }
+        truncationStrategyCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * Retains only the last `num_messages` messages in the thread.
+       * If these messages exceed `max_prompt_tokens`, older messages will be further truncated to fit the limit.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.LastMessagesStrategy last_messages_strategy = 3;</code>
+       */
+      public Builder clearLastMessagesStrategy() {
+        if (lastMessagesStrategyBuilder_ == null) {
+          if (truncationStrategyCase_ == 3) {
+            truncationStrategyCase_ = 0;
+            truncationStrategy_ = null;
+            onChanged();
+          }
+        } else {
+          if (truncationStrategyCase_ == 3) {
+            truncationStrategyCase_ = 0;
+            truncationStrategy_ = null;
+          }
+          lastMessagesStrategyBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Retains only the last `num_messages` messages in the thread.
+       * If these messages exceed `max_prompt_tokens`, older messages will be further truncated to fit the limit.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.LastMessagesStrategy last_messages_strategy = 3;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy.Builder getLastMessagesStrategyBuilder() {
+        return getLastMessagesStrategyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Retains only the last `num_messages` messages in the thread.
+       * If these messages exceed `max_prompt_tokens`, older messages will be further truncated to fit the limit.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.LastMessagesStrategy last_messages_strategy = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategyOrBuilder getLastMessagesStrategyOrBuilder() {
+        if ((truncationStrategyCase_ == 3) && (lastMessagesStrategyBuilder_ != null)) {
+          return lastMessagesStrategyBuilder_.getMessageOrBuilder();
+        } else {
+          if (truncationStrategyCase_ == 3) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy) truncationStrategy_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Retains only the last `num_messages` messages in the thread.
+       * If these messages exceed `max_prompt_tokens`, older messages will be further truncated to fit the limit.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.PromptTruncationOptions.LastMessagesStrategy last_messages_strategy = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy, yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy.Builder, yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategyOrBuilder> 
+          getLastMessagesStrategyFieldBuilder() {
+        if (lastMessagesStrategyBuilder_ == null) {
+          if (!(truncationStrategyCase_ == 3)) {
+            truncationStrategy_ = yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy.getDefaultInstance();
+          }
+          lastMessagesStrategyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy, yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy.Builder, yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategyOrBuilder>(
+                  (yandex.cloud.api.ai.assistants.v1.Common.PromptTruncationOptions.LastMessagesStrategy) truncationStrategy_,
+                  getParentForChildren(),
+                  isClean());
+          truncationStrategy_ = null;
+        }
+        truncationStrategyCase_ = 3;
+        onChanged();;
+        return lastMessagesStrategyBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1730,6 +3282,4479 @@ public final class Common {
 
   }
 
+  public interface ToolOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.Tool)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * SearchIndexTool tool that performs search across specified indexes.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
+     * @return Whether the searchIndex field is set.
+     */
+    boolean hasSearchIndex();
+    /**
+     * <pre>
+     * SearchIndexTool tool that performs search across specified indexes.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
+     * @return The searchIndex.
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool getSearchIndex();
+    /**
+     * <pre>
+     * SearchIndexTool tool that performs search across specified indexes.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.SearchIndexToolOrBuilder getSearchIndexOrBuilder();
+
+    /**
+     * <pre>
+     * Function tool that can be invoked by the assistant.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.FunctionTool function = 2;</code>
+     * @return Whether the function field is set.
+     */
+    boolean hasFunction();
+    /**
+     * <pre>
+     * Function tool that can be invoked by the assistant.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.FunctionTool function = 2;</code>
+     * @return The function.
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.FunctionTool getFunction();
+    /**
+     * <pre>
+     * Function tool that can be invoked by the assistant.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.FunctionTool function = 2;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.FunctionToolOrBuilder getFunctionOrBuilder();
+
+    public yandex.cloud.api.ai.assistants.v1.Common.Tool.ToolTypeCase getToolTypeCase();
+  }
+  /**
+   * <pre>
+   * Represents a general tool that can be one of several types.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.Tool}
+   */
+  public static final class Tool extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.Tool)
+      ToolOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Tool.newBuilder() to construct.
+    private Tool(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Tool() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Tool();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Tool(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.Builder subBuilder = null;
+              if (toolTypeCase_ == 1) {
+                subBuilder = ((yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool) toolType_).toBuilder();
+              }
+              toolType_ =
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool) toolType_);
+                toolType_ = subBuilder.buildPartial();
+              }
+              toolTypeCase_ = 1;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.ai.assistants.v1.Common.FunctionTool.Builder subBuilder = null;
+              if (toolTypeCase_ == 2) {
+                subBuilder = ((yandex.cloud.api.ai.assistants.v1.Common.FunctionTool) toolType_).toBuilder();
+              }
+              toolType_ =
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.FunctionTool.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.FunctionTool) toolType_);
+                toolType_ = subBuilder.buildPartial();
+              }
+              toolTypeCase_ = 2;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_Tool_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_Tool_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.assistants.v1.Common.Tool.class, yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder.class);
+    }
+
+    private int toolTypeCase_ = 0;
+    private java.lang.Object toolType_;
+    public enum ToolTypeCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      SEARCH_INDEX(1),
+      FUNCTION(2),
+      TOOLTYPE_NOT_SET(0);
+      private final int value;
+      private ToolTypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ToolTypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ToolTypeCase forNumber(int value) {
+        switch (value) {
+          case 1: return SEARCH_INDEX;
+          case 2: return FUNCTION;
+          case 0: return TOOLTYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ToolTypeCase
+    getToolTypeCase() {
+      return ToolTypeCase.forNumber(
+          toolTypeCase_);
+    }
+
+    public static final int SEARCH_INDEX_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * SearchIndexTool tool that performs search across specified indexes.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
+     * @return Whether the searchIndex field is set.
+     */
+    @java.lang.Override
+    public boolean hasSearchIndex() {
+      return toolTypeCase_ == 1;
+    }
+    /**
+     * <pre>
+     * SearchIndexTool tool that performs search across specified indexes.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
+     * @return The searchIndex.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool getSearchIndex() {
+      if (toolTypeCase_ == 1) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool) toolType_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * SearchIndexTool tool that performs search across specified indexes.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.SearchIndexToolOrBuilder getSearchIndexOrBuilder() {
+      if (toolTypeCase_ == 1) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool) toolType_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.getDefaultInstance();
+    }
+
+    public static final int FUNCTION_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * Function tool that can be invoked by the assistant.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.FunctionTool function = 2;</code>
+     * @return Whether the function field is set.
+     */
+    @java.lang.Override
+    public boolean hasFunction() {
+      return toolTypeCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Function tool that can be invoked by the assistant.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.FunctionTool function = 2;</code>
+     * @return The function.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.FunctionTool getFunction() {
+      if (toolTypeCase_ == 2) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.FunctionTool) toolType_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.FunctionTool.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Function tool that can be invoked by the assistant.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.FunctionTool function = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.FunctionToolOrBuilder getFunctionOrBuilder() {
+      if (toolTypeCase_ == 2) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.FunctionTool) toolType_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.FunctionTool.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (toolTypeCase_ == 1) {
+        output.writeMessage(1, (yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool) toolType_);
+      }
+      if (toolTypeCase_ == 2) {
+        output.writeMessage(2, (yandex.cloud.api.ai.assistants.v1.Common.FunctionTool) toolType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (toolTypeCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool) toolType_);
+      }
+      if (toolTypeCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (yandex.cloud.api.ai.assistants.v1.Common.FunctionTool) toolType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.Common.Tool)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.assistants.v1.Common.Tool other = (yandex.cloud.api.ai.assistants.v1.Common.Tool) obj;
+
+      if (!getToolTypeCase().equals(other.getToolTypeCase())) return false;
+      switch (toolTypeCase_) {
+        case 1:
+          if (!getSearchIndex()
+              .equals(other.getSearchIndex())) return false;
+          break;
+        case 2:
+          if (!getFunction()
+              .equals(other.getFunction())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (toolTypeCase_) {
+        case 1:
+          hash = (37 * hash) + SEARCH_INDEX_FIELD_NUMBER;
+          hash = (53 * hash) + getSearchIndex().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + FUNCTION_FIELD_NUMBER;
+          hash = (53 * hash) + getFunction().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.Common.Tool parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.Tool parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.Tool parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.Tool parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.Tool parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.Tool parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.Tool parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.Tool parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.Tool parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.Tool parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.Tool parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.Tool parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.Common.Tool prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents a general tool that can be one of several types.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.Tool}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.Tool)
+        yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_Tool_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_Tool_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.Common.Tool.class, yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.assistants.v1.Common.Tool.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        toolTypeCase_ = 0;
+        toolType_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_Tool_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.Tool getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.Common.Tool.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.Tool build() {
+        yandex.cloud.api.ai.assistants.v1.Common.Tool result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.Tool buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.Common.Tool result = new yandex.cloud.api.ai.assistants.v1.Common.Tool(this);
+        if (toolTypeCase_ == 1) {
+          if (searchIndexBuilder_ == null) {
+            result.toolType_ = toolType_;
+          } else {
+            result.toolType_ = searchIndexBuilder_.build();
+          }
+        }
+        if (toolTypeCase_ == 2) {
+          if (functionBuilder_ == null) {
+            result.toolType_ = toolType_;
+          } else {
+            result.toolType_ = functionBuilder_.build();
+          }
+        }
+        result.toolTypeCase_ = toolTypeCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.Common.Tool) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.Tool)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.Common.Tool other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.Common.Tool.getDefaultInstance()) return this;
+        switch (other.getToolTypeCase()) {
+          case SEARCH_INDEX: {
+            mergeSearchIndex(other.getSearchIndex());
+            break;
+          }
+          case FUNCTION: {
+            mergeFunction(other.getFunction());
+            break;
+          }
+          case TOOLTYPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.assistants.v1.Common.Tool parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.Common.Tool) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int toolTypeCase_ = 0;
+      private java.lang.Object toolType_;
+      public ToolTypeCase
+          getToolTypeCase() {
+        return ToolTypeCase.forNumber(
+            toolTypeCase_);
+      }
+
+      public Builder clearToolType() {
+        toolTypeCase_ = 0;
+        toolType_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool, yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.Builder, yandex.cloud.api.ai.assistants.v1.Common.SearchIndexToolOrBuilder> searchIndexBuilder_;
+      /**
+       * <pre>
+       * SearchIndexTool tool that performs search across specified indexes.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
+       * @return Whether the searchIndex field is set.
+       */
+      @java.lang.Override
+      public boolean hasSearchIndex() {
+        return toolTypeCase_ == 1;
+      }
+      /**
+       * <pre>
+       * SearchIndexTool tool that performs search across specified indexes.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
+       * @return The searchIndex.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool getSearchIndex() {
+        if (searchIndexBuilder_ == null) {
+          if (toolTypeCase_ == 1) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool) toolType_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.getDefaultInstance();
+        } else {
+          if (toolTypeCase_ == 1) {
+            return searchIndexBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * SearchIndexTool tool that performs search across specified indexes.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
+       */
+      public Builder setSearchIndex(yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool value) {
+        if (searchIndexBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          toolType_ = value;
+          onChanged();
+        } else {
+          searchIndexBuilder_.setMessage(value);
+        }
+        toolTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * SearchIndexTool tool that performs search across specified indexes.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
+       */
+      public Builder setSearchIndex(
+          yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.Builder builderForValue) {
+        if (searchIndexBuilder_ == null) {
+          toolType_ = builderForValue.build();
+          onChanged();
+        } else {
+          searchIndexBuilder_.setMessage(builderForValue.build());
+        }
+        toolTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * SearchIndexTool tool that performs search across specified indexes.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
+       */
+      public Builder mergeSearchIndex(yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool value) {
+        if (searchIndexBuilder_ == null) {
+          if (toolTypeCase_ == 1 &&
+              toolType_ != yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.getDefaultInstance()) {
+            toolType_ = yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.newBuilder((yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool) toolType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            toolType_ = value;
+          }
+          onChanged();
+        } else {
+          if (toolTypeCase_ == 1) {
+            searchIndexBuilder_.mergeFrom(value);
+          }
+          searchIndexBuilder_.setMessage(value);
+        }
+        toolTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * SearchIndexTool tool that performs search across specified indexes.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
+       */
+      public Builder clearSearchIndex() {
+        if (searchIndexBuilder_ == null) {
+          if (toolTypeCase_ == 1) {
+            toolTypeCase_ = 0;
+            toolType_ = null;
+            onChanged();
+          }
+        } else {
+          if (toolTypeCase_ == 1) {
+            toolTypeCase_ = 0;
+            toolType_ = null;
+          }
+          searchIndexBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * SearchIndexTool tool that performs search across specified indexes.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.Builder getSearchIndexBuilder() {
+        return getSearchIndexFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * SearchIndexTool tool that performs search across specified indexes.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.SearchIndexToolOrBuilder getSearchIndexOrBuilder() {
+        if ((toolTypeCase_ == 1) && (searchIndexBuilder_ != null)) {
+          return searchIndexBuilder_.getMessageOrBuilder();
+        } else {
+          if (toolTypeCase_ == 1) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool) toolType_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * SearchIndexTool tool that performs search across specified indexes.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool, yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.Builder, yandex.cloud.api.ai.assistants.v1.Common.SearchIndexToolOrBuilder> 
+          getSearchIndexFieldBuilder() {
+        if (searchIndexBuilder_ == null) {
+          if (!(toolTypeCase_ == 1)) {
+            toolType_ = yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.getDefaultInstance();
+          }
+          searchIndexBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool, yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.Builder, yandex.cloud.api.ai.assistants.v1.Common.SearchIndexToolOrBuilder>(
+                  (yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool) toolType_,
+                  getParentForChildren(),
+                  isClean());
+          toolType_ = null;
+        }
+        toolTypeCase_ = 1;
+        onChanged();;
+        return searchIndexBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.FunctionTool, yandex.cloud.api.ai.assistants.v1.Common.FunctionTool.Builder, yandex.cloud.api.ai.assistants.v1.Common.FunctionToolOrBuilder> functionBuilder_;
+      /**
+       * <pre>
+       * Function tool that can be invoked by the assistant.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionTool function = 2;</code>
+       * @return Whether the function field is set.
+       */
+      @java.lang.Override
+      public boolean hasFunction() {
+        return toolTypeCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Function tool that can be invoked by the assistant.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionTool function = 2;</code>
+       * @return The function.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.FunctionTool getFunction() {
+        if (functionBuilder_ == null) {
+          if (toolTypeCase_ == 2) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.FunctionTool) toolType_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.FunctionTool.getDefaultInstance();
+        } else {
+          if (toolTypeCase_ == 2) {
+            return functionBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.FunctionTool.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Function tool that can be invoked by the assistant.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionTool function = 2;</code>
+       */
+      public Builder setFunction(yandex.cloud.api.ai.assistants.v1.Common.FunctionTool value) {
+        if (functionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          toolType_ = value;
+          onChanged();
+        } else {
+          functionBuilder_.setMessage(value);
+        }
+        toolTypeCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Function tool that can be invoked by the assistant.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionTool function = 2;</code>
+       */
+      public Builder setFunction(
+          yandex.cloud.api.ai.assistants.v1.Common.FunctionTool.Builder builderForValue) {
+        if (functionBuilder_ == null) {
+          toolType_ = builderForValue.build();
+          onChanged();
+        } else {
+          functionBuilder_.setMessage(builderForValue.build());
+        }
+        toolTypeCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Function tool that can be invoked by the assistant.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionTool function = 2;</code>
+       */
+      public Builder mergeFunction(yandex.cloud.api.ai.assistants.v1.Common.FunctionTool value) {
+        if (functionBuilder_ == null) {
+          if (toolTypeCase_ == 2 &&
+              toolType_ != yandex.cloud.api.ai.assistants.v1.Common.FunctionTool.getDefaultInstance()) {
+            toolType_ = yandex.cloud.api.ai.assistants.v1.Common.FunctionTool.newBuilder((yandex.cloud.api.ai.assistants.v1.Common.FunctionTool) toolType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            toolType_ = value;
+          }
+          onChanged();
+        } else {
+          if (toolTypeCase_ == 2) {
+            functionBuilder_.mergeFrom(value);
+          }
+          functionBuilder_.setMessage(value);
+        }
+        toolTypeCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Function tool that can be invoked by the assistant.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionTool function = 2;</code>
+       */
+      public Builder clearFunction() {
+        if (functionBuilder_ == null) {
+          if (toolTypeCase_ == 2) {
+            toolTypeCase_ = 0;
+            toolType_ = null;
+            onChanged();
+          }
+        } else {
+          if (toolTypeCase_ == 2) {
+            toolTypeCase_ = 0;
+            toolType_ = null;
+          }
+          functionBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Function tool that can be invoked by the assistant.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionTool function = 2;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.FunctionTool.Builder getFunctionBuilder() {
+        return getFunctionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Function tool that can be invoked by the assistant.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionTool function = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.FunctionToolOrBuilder getFunctionOrBuilder() {
+        if ((toolTypeCase_ == 2) && (functionBuilder_ != null)) {
+          return functionBuilder_.getMessageOrBuilder();
+        } else {
+          if (toolTypeCase_ == 2) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.FunctionTool) toolType_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.FunctionTool.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Function tool that can be invoked by the assistant.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionTool function = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.FunctionTool, yandex.cloud.api.ai.assistants.v1.Common.FunctionTool.Builder, yandex.cloud.api.ai.assistants.v1.Common.FunctionToolOrBuilder> 
+          getFunctionFieldBuilder() {
+        if (functionBuilder_ == null) {
+          if (!(toolTypeCase_ == 2)) {
+            toolType_ = yandex.cloud.api.ai.assistants.v1.Common.FunctionTool.getDefaultInstance();
+          }
+          functionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.Common.FunctionTool, yandex.cloud.api.ai.assistants.v1.Common.FunctionTool.Builder, yandex.cloud.api.ai.assistants.v1.Common.FunctionToolOrBuilder>(
+                  (yandex.cloud.api.ai.assistants.v1.Common.FunctionTool) toolType_,
+                  getParentForChildren(),
+                  isClean());
+          toolType_ = null;
+        }
+        toolTypeCase_ = 2;
+        onChanged();;
+        return functionBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.Tool)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.Tool)
+    private static final yandex.cloud.api.ai.assistants.v1.Common.Tool DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.Common.Tool();
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.Common.Tool getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Tool>
+        PARSER = new com.google.protobuf.AbstractParser<Tool>() {
+      @java.lang.Override
+      public Tool parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Tool(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Tool> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Tool> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.Tool getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ToolCallOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.ToolCall)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Represents a call to a function.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.FunctionCall function_call = 1;</code>
+     * @return Whether the functionCall field is set.
+     */
+    boolean hasFunctionCall();
+    /**
+     * <pre>
+     * Represents a call to a function.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.FunctionCall function_call = 1;</code>
+     * @return The functionCall.
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.FunctionCall getFunctionCall();
+    /**
+     * <pre>
+     * Represents a call to a function.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.FunctionCall function_call = 1;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.FunctionCallOrBuilder getFunctionCallOrBuilder();
+
+    public yandex.cloud.api.ai.assistants.v1.Common.ToolCall.ToolCallTypeCase getToolCallTypeCase();
+  }
+  /**
+   * <pre>
+   * Represents a call to a tool.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.ToolCall}
+   */
+  public static final class ToolCall extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.ToolCall)
+      ToolCallOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ToolCall.newBuilder() to construct.
+    private ToolCall(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ToolCall() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ToolCall();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ToolCall(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.ai.assistants.v1.Common.FunctionCall.Builder subBuilder = null;
+              if (toolCallTypeCase_ == 1) {
+                subBuilder = ((yandex.cloud.api.ai.assistants.v1.Common.FunctionCall) toolCallType_).toBuilder();
+              }
+              toolCallType_ =
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.FunctionCall.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.FunctionCall) toolCallType_);
+                toolCallType_ = subBuilder.buildPartial();
+              }
+              toolCallTypeCase_ = 1;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_ToolCall_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_ToolCall_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.assistants.v1.Common.ToolCall.class, yandex.cloud.api.ai.assistants.v1.Common.ToolCall.Builder.class);
+    }
+
+    private int toolCallTypeCase_ = 0;
+    private java.lang.Object toolCallType_;
+    public enum ToolCallTypeCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      FUNCTION_CALL(1),
+      TOOLCALLTYPE_NOT_SET(0);
+      private final int value;
+      private ToolCallTypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ToolCallTypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ToolCallTypeCase forNumber(int value) {
+        switch (value) {
+          case 1: return FUNCTION_CALL;
+          case 0: return TOOLCALLTYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ToolCallTypeCase
+    getToolCallTypeCase() {
+      return ToolCallTypeCase.forNumber(
+          toolCallTypeCase_);
+    }
+
+    public static final int FUNCTION_CALL_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * Represents a call to a function.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.FunctionCall function_call = 1;</code>
+     * @return Whether the functionCall field is set.
+     */
+    @java.lang.Override
+    public boolean hasFunctionCall() {
+      return toolCallTypeCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Represents a call to a function.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.FunctionCall function_call = 1;</code>
+     * @return The functionCall.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.FunctionCall getFunctionCall() {
+      if (toolCallTypeCase_ == 1) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.FunctionCall) toolCallType_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.FunctionCall.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Represents a call to a function.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.FunctionCall function_call = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.FunctionCallOrBuilder getFunctionCallOrBuilder() {
+      if (toolCallTypeCase_ == 1) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.FunctionCall) toolCallType_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.FunctionCall.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (toolCallTypeCase_ == 1) {
+        output.writeMessage(1, (yandex.cloud.api.ai.assistants.v1.Common.FunctionCall) toolCallType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (toolCallTypeCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (yandex.cloud.api.ai.assistants.v1.Common.FunctionCall) toolCallType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.Common.ToolCall)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.assistants.v1.Common.ToolCall other = (yandex.cloud.api.ai.assistants.v1.Common.ToolCall) obj;
+
+      if (!getToolCallTypeCase().equals(other.getToolCallTypeCase())) return false;
+      switch (toolCallTypeCase_) {
+        case 1:
+          if (!getFunctionCall()
+              .equals(other.getFunctionCall())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (toolCallTypeCase_) {
+        case 1:
+          hash = (37 * hash) + FUNCTION_CALL_FIELD_NUMBER;
+          hash = (53 * hash) + getFunctionCall().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCall parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCall parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCall parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCall parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCall parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCall parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCall parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCall parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCall parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCall parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCall parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCall parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.Common.ToolCall prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents a call to a tool.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.ToolCall}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.ToolCall)
+        yandex.cloud.api.ai.assistants.v1.Common.ToolCallOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_ToolCall_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_ToolCall_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.Common.ToolCall.class, yandex.cloud.api.ai.assistants.v1.Common.ToolCall.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.assistants.v1.Common.ToolCall.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        toolCallTypeCase_ = 0;
+        toolCallType_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_ToolCall_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolCall getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.Common.ToolCall.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolCall build() {
+        yandex.cloud.api.ai.assistants.v1.Common.ToolCall result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolCall buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.Common.ToolCall result = new yandex.cloud.api.ai.assistants.v1.Common.ToolCall(this);
+        if (toolCallTypeCase_ == 1) {
+          if (functionCallBuilder_ == null) {
+            result.toolCallType_ = toolCallType_;
+          } else {
+            result.toolCallType_ = functionCallBuilder_.build();
+          }
+        }
+        result.toolCallTypeCase_ = toolCallTypeCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.Common.ToolCall) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.ToolCall)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.Common.ToolCall other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.Common.ToolCall.getDefaultInstance()) return this;
+        switch (other.getToolCallTypeCase()) {
+          case FUNCTION_CALL: {
+            mergeFunctionCall(other.getFunctionCall());
+            break;
+          }
+          case TOOLCALLTYPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.assistants.v1.Common.ToolCall parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.Common.ToolCall) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int toolCallTypeCase_ = 0;
+      private java.lang.Object toolCallType_;
+      public ToolCallTypeCase
+          getToolCallTypeCase() {
+        return ToolCallTypeCase.forNumber(
+            toolCallTypeCase_);
+      }
+
+      public Builder clearToolCallType() {
+        toolCallTypeCase_ = 0;
+        toolCallType_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.FunctionCall, yandex.cloud.api.ai.assistants.v1.Common.FunctionCall.Builder, yandex.cloud.api.ai.assistants.v1.Common.FunctionCallOrBuilder> functionCallBuilder_;
+      /**
+       * <pre>
+       * Represents a call to a function.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionCall function_call = 1;</code>
+       * @return Whether the functionCall field is set.
+       */
+      @java.lang.Override
+      public boolean hasFunctionCall() {
+        return toolCallTypeCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Represents a call to a function.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionCall function_call = 1;</code>
+       * @return The functionCall.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.FunctionCall getFunctionCall() {
+        if (functionCallBuilder_ == null) {
+          if (toolCallTypeCase_ == 1) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.FunctionCall) toolCallType_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.FunctionCall.getDefaultInstance();
+        } else {
+          if (toolCallTypeCase_ == 1) {
+            return functionCallBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.FunctionCall.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Represents a call to a function.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionCall function_call = 1;</code>
+       */
+      public Builder setFunctionCall(yandex.cloud.api.ai.assistants.v1.Common.FunctionCall value) {
+        if (functionCallBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          toolCallType_ = value;
+          onChanged();
+        } else {
+          functionCallBuilder_.setMessage(value);
+        }
+        toolCallTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents a call to a function.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionCall function_call = 1;</code>
+       */
+      public Builder setFunctionCall(
+          yandex.cloud.api.ai.assistants.v1.Common.FunctionCall.Builder builderForValue) {
+        if (functionCallBuilder_ == null) {
+          toolCallType_ = builderForValue.build();
+          onChanged();
+        } else {
+          functionCallBuilder_.setMessage(builderForValue.build());
+        }
+        toolCallTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents a call to a function.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionCall function_call = 1;</code>
+       */
+      public Builder mergeFunctionCall(yandex.cloud.api.ai.assistants.v1.Common.FunctionCall value) {
+        if (functionCallBuilder_ == null) {
+          if (toolCallTypeCase_ == 1 &&
+              toolCallType_ != yandex.cloud.api.ai.assistants.v1.Common.FunctionCall.getDefaultInstance()) {
+            toolCallType_ = yandex.cloud.api.ai.assistants.v1.Common.FunctionCall.newBuilder((yandex.cloud.api.ai.assistants.v1.Common.FunctionCall) toolCallType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            toolCallType_ = value;
+          }
+          onChanged();
+        } else {
+          if (toolCallTypeCase_ == 1) {
+            functionCallBuilder_.mergeFrom(value);
+          }
+          functionCallBuilder_.setMessage(value);
+        }
+        toolCallTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents a call to a function.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionCall function_call = 1;</code>
+       */
+      public Builder clearFunctionCall() {
+        if (functionCallBuilder_ == null) {
+          if (toolCallTypeCase_ == 1) {
+            toolCallTypeCase_ = 0;
+            toolCallType_ = null;
+            onChanged();
+          }
+        } else {
+          if (toolCallTypeCase_ == 1) {
+            toolCallTypeCase_ = 0;
+            toolCallType_ = null;
+          }
+          functionCallBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents a call to a function.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionCall function_call = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.FunctionCall.Builder getFunctionCallBuilder() {
+        return getFunctionCallFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Represents a call to a function.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionCall function_call = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.FunctionCallOrBuilder getFunctionCallOrBuilder() {
+        if ((toolCallTypeCase_ == 1) && (functionCallBuilder_ != null)) {
+          return functionCallBuilder_.getMessageOrBuilder();
+        } else {
+          if (toolCallTypeCase_ == 1) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.FunctionCall) toolCallType_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.FunctionCall.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Represents a call to a function.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionCall function_call = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.FunctionCall, yandex.cloud.api.ai.assistants.v1.Common.FunctionCall.Builder, yandex.cloud.api.ai.assistants.v1.Common.FunctionCallOrBuilder> 
+          getFunctionCallFieldBuilder() {
+        if (functionCallBuilder_ == null) {
+          if (!(toolCallTypeCase_ == 1)) {
+            toolCallType_ = yandex.cloud.api.ai.assistants.v1.Common.FunctionCall.getDefaultInstance();
+          }
+          functionCallBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.Common.FunctionCall, yandex.cloud.api.ai.assistants.v1.Common.FunctionCall.Builder, yandex.cloud.api.ai.assistants.v1.Common.FunctionCallOrBuilder>(
+                  (yandex.cloud.api.ai.assistants.v1.Common.FunctionCall) toolCallType_,
+                  getParentForChildren(),
+                  isClean());
+          toolCallType_ = null;
+        }
+        toolCallTypeCase_ = 1;
+        onChanged();;
+        return functionCallBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.ToolCall)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.ToolCall)
+    private static final yandex.cloud.api.ai.assistants.v1.Common.ToolCall DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.Common.ToolCall();
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCall getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ToolCall>
+        PARSER = new com.google.protobuf.AbstractParser<ToolCall>() {
+      @java.lang.Override
+      public ToolCall parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ToolCall(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ToolCall> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ToolCall> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.ToolCall getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ToolCallListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.ToolCallList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * A list of tool calls to be executed.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.assistants.v1.Common.ToolCall> 
+        getToolCallsList();
+    /**
+     * <pre>
+     * A list of tool calls to be executed.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.ToolCall getToolCalls(int index);
+    /**
+     * <pre>
+     * A list of tool calls to be executed.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+     */
+    int getToolCallsCount();
+    /**
+     * <pre>
+     * A list of tool calls to be executed.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.assistants.v1.Common.ToolCallOrBuilder> 
+        getToolCallsOrBuilderList();
+    /**
+     * <pre>
+     * A list of tool calls to be executed.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.ToolCallOrBuilder getToolCallsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Represents a list of tool calls.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.ToolCallList}
+   */
+  public static final class ToolCallList extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.ToolCallList)
+      ToolCallListOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ToolCallList.newBuilder() to construct.
+    private ToolCallList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ToolCallList() {
+      toolCalls_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ToolCallList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ToolCallList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                toolCalls_ = new java.util.ArrayList<yandex.cloud.api.ai.assistants.v1.Common.ToolCall>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              toolCalls_.add(
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.ToolCall.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          toolCalls_ = java.util.Collections.unmodifiableList(toolCalls_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_ToolCallList_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_ToolCallList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.assistants.v1.Common.ToolCallList.class, yandex.cloud.api.ai.assistants.v1.Common.ToolCallList.Builder.class);
+    }
+
+    public static final int TOOL_CALLS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.ai.assistants.v1.Common.ToolCall> toolCalls_;
+    /**
+     * <pre>
+     * A list of tool calls to be executed.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.assistants.v1.Common.ToolCall> getToolCallsList() {
+      return toolCalls_;
+    }
+    /**
+     * <pre>
+     * A list of tool calls to be executed.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.Common.ToolCallOrBuilder> 
+        getToolCallsOrBuilderList() {
+      return toolCalls_;
+    }
+    /**
+     * <pre>
+     * A list of tool calls to be executed.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+     */
+    @java.lang.Override
+    public int getToolCallsCount() {
+      return toolCalls_.size();
+    }
+    /**
+     * <pre>
+     * A list of tool calls to be executed.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.ToolCall getToolCalls(int index) {
+      return toolCalls_.get(index);
+    }
+    /**
+     * <pre>
+     * A list of tool calls to be executed.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.ToolCallOrBuilder getToolCallsOrBuilder(
+        int index) {
+      return toolCalls_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < toolCalls_.size(); i++) {
+        output.writeMessage(1, toolCalls_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < toolCalls_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, toolCalls_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.Common.ToolCallList)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.assistants.v1.Common.ToolCallList other = (yandex.cloud.api.ai.assistants.v1.Common.ToolCallList) obj;
+
+      if (!getToolCallsList()
+          .equals(other.getToolCallsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getToolCallsCount() > 0) {
+        hash = (37 * hash) + TOOL_CALLS_FIELD_NUMBER;
+        hash = (53 * hash) + getToolCallsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCallList parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCallList parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCallList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCallList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCallList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCallList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCallList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCallList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCallList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCallList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCallList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCallList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.Common.ToolCallList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents a list of tool calls.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.ToolCallList}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.ToolCallList)
+        yandex.cloud.api.ai.assistants.v1.Common.ToolCallListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_ToolCallList_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_ToolCallList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.Common.ToolCallList.class, yandex.cloud.api.ai.assistants.v1.Common.ToolCallList.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.assistants.v1.Common.ToolCallList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getToolCallsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (toolCallsBuilder_ == null) {
+          toolCalls_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          toolCallsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_ToolCallList_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolCallList getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.Common.ToolCallList.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolCallList build() {
+        yandex.cloud.api.ai.assistants.v1.Common.ToolCallList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolCallList buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.Common.ToolCallList result = new yandex.cloud.api.ai.assistants.v1.Common.ToolCallList(this);
+        int from_bitField0_ = bitField0_;
+        if (toolCallsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            toolCalls_ = java.util.Collections.unmodifiableList(toolCalls_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.toolCalls_ = toolCalls_;
+        } else {
+          result.toolCalls_ = toolCallsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.Common.ToolCallList) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.ToolCallList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.Common.ToolCallList other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.Common.ToolCallList.getDefaultInstance()) return this;
+        if (toolCallsBuilder_ == null) {
+          if (!other.toolCalls_.isEmpty()) {
+            if (toolCalls_.isEmpty()) {
+              toolCalls_ = other.toolCalls_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureToolCallsIsMutable();
+              toolCalls_.addAll(other.toolCalls_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.toolCalls_.isEmpty()) {
+            if (toolCallsBuilder_.isEmpty()) {
+              toolCallsBuilder_.dispose();
+              toolCallsBuilder_ = null;
+              toolCalls_ = other.toolCalls_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              toolCallsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getToolCallsFieldBuilder() : null;
+            } else {
+              toolCallsBuilder_.addAllMessages(other.toolCalls_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.assistants.v1.Common.ToolCallList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.Common.ToolCallList) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.ai.assistants.v1.Common.ToolCall> toolCalls_ =
+        java.util.Collections.emptyList();
+      private void ensureToolCallsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          toolCalls_ = new java.util.ArrayList<yandex.cloud.api.ai.assistants.v1.Common.ToolCall>(toolCalls_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.ToolCall, yandex.cloud.api.ai.assistants.v1.Common.ToolCall.Builder, yandex.cloud.api.ai.assistants.v1.Common.ToolCallOrBuilder> toolCallsBuilder_;
+
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.assistants.v1.Common.ToolCall> getToolCallsList() {
+        if (toolCallsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(toolCalls_);
+        } else {
+          return toolCallsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+       */
+      public int getToolCallsCount() {
+        if (toolCallsBuilder_ == null) {
+          return toolCalls_.size();
+        } else {
+          return toolCallsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolCall getToolCalls(int index) {
+        if (toolCallsBuilder_ == null) {
+          return toolCalls_.get(index);
+        } else {
+          return toolCallsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+       */
+      public Builder setToolCalls(
+          int index, yandex.cloud.api.ai.assistants.v1.Common.ToolCall value) {
+        if (toolCallsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureToolCallsIsMutable();
+          toolCalls_.set(index, value);
+          onChanged();
+        } else {
+          toolCallsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+       */
+      public Builder setToolCalls(
+          int index, yandex.cloud.api.ai.assistants.v1.Common.ToolCall.Builder builderForValue) {
+        if (toolCallsBuilder_ == null) {
+          ensureToolCallsIsMutable();
+          toolCalls_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          toolCallsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+       */
+      public Builder addToolCalls(yandex.cloud.api.ai.assistants.v1.Common.ToolCall value) {
+        if (toolCallsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureToolCallsIsMutable();
+          toolCalls_.add(value);
+          onChanged();
+        } else {
+          toolCallsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+       */
+      public Builder addToolCalls(
+          int index, yandex.cloud.api.ai.assistants.v1.Common.ToolCall value) {
+        if (toolCallsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureToolCallsIsMutable();
+          toolCalls_.add(index, value);
+          onChanged();
+        } else {
+          toolCallsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+       */
+      public Builder addToolCalls(
+          yandex.cloud.api.ai.assistants.v1.Common.ToolCall.Builder builderForValue) {
+        if (toolCallsBuilder_ == null) {
+          ensureToolCallsIsMutable();
+          toolCalls_.add(builderForValue.build());
+          onChanged();
+        } else {
+          toolCallsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+       */
+      public Builder addToolCalls(
+          int index, yandex.cloud.api.ai.assistants.v1.Common.ToolCall.Builder builderForValue) {
+        if (toolCallsBuilder_ == null) {
+          ensureToolCallsIsMutable();
+          toolCalls_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          toolCallsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+       */
+      public Builder addAllToolCalls(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.assistants.v1.Common.ToolCall> values) {
+        if (toolCallsBuilder_ == null) {
+          ensureToolCallsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, toolCalls_);
+          onChanged();
+        } else {
+          toolCallsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+       */
+      public Builder clearToolCalls() {
+        if (toolCallsBuilder_ == null) {
+          toolCalls_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          toolCallsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+       */
+      public Builder removeToolCalls(int index) {
+        if (toolCallsBuilder_ == null) {
+          ensureToolCallsIsMutable();
+          toolCalls_.remove(index);
+          onChanged();
+        } else {
+          toolCallsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolCall.Builder getToolCallsBuilder(
+          int index) {
+        return getToolCallsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolCallOrBuilder getToolCallsOrBuilder(
+          int index) {
+        if (toolCallsBuilder_ == null) {
+          return toolCalls_.get(index);  } else {
+          return toolCallsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.Common.ToolCallOrBuilder> 
+           getToolCallsOrBuilderList() {
+        if (toolCallsBuilder_ != null) {
+          return toolCallsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(toolCalls_);
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolCall.Builder addToolCallsBuilder() {
+        return getToolCallsFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.assistants.v1.Common.ToolCall.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolCall.Builder addToolCallsBuilder(
+          int index) {
+        return getToolCallsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.assistants.v1.Common.ToolCall.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * A list of tool calls to be executed.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolCall tool_calls = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.assistants.v1.Common.ToolCall.Builder> 
+           getToolCallsBuilderList() {
+        return getToolCallsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.ToolCall, yandex.cloud.api.ai.assistants.v1.Common.ToolCall.Builder, yandex.cloud.api.ai.assistants.v1.Common.ToolCallOrBuilder> 
+          getToolCallsFieldBuilder() {
+        if (toolCallsBuilder_ == null) {
+          toolCallsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.Common.ToolCall, yandex.cloud.api.ai.assistants.v1.Common.ToolCall.Builder, yandex.cloud.api.ai.assistants.v1.Common.ToolCallOrBuilder>(
+                  toolCalls_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          toolCalls_ = null;
+        }
+        return toolCallsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.ToolCallList)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.ToolCallList)
+    private static final yandex.cloud.api.ai.assistants.v1.Common.ToolCallList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.Common.ToolCallList();
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolCallList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ToolCallList>
+        PARSER = new com.google.protobuf.AbstractParser<ToolCallList>() {
+      @java.lang.Override
+      public ToolCallList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ToolCallList(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ToolCallList> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ToolCallList> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.ToolCallList getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ToolResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.ToolResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Represents the result of a function call.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.FunctionResult function_result = 1;</code>
+     * @return Whether the functionResult field is set.
+     */
+    boolean hasFunctionResult();
+    /**
+     * <pre>
+     * Represents the result of a function call.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.FunctionResult function_result = 1;</code>
+     * @return The functionResult.
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.FunctionResult getFunctionResult();
+    /**
+     * <pre>
+     * Represents the result of a function call.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.FunctionResult function_result = 1;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.FunctionResultOrBuilder getFunctionResultOrBuilder();
+
+    public yandex.cloud.api.ai.assistants.v1.Common.ToolResult.ToolResultTypeCase getToolResultTypeCase();
+  }
+  /**
+   * <pre>
+   * Represents the result of a tool call.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.ToolResult}
+   */
+  public static final class ToolResult extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.ToolResult)
+      ToolResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ToolResult.newBuilder() to construct.
+    private ToolResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ToolResult() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ToolResult();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ToolResult(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.ai.assistants.v1.Common.FunctionResult.Builder subBuilder = null;
+              if (toolResultTypeCase_ == 1) {
+                subBuilder = ((yandex.cloud.api.ai.assistants.v1.Common.FunctionResult) toolResultType_).toBuilder();
+              }
+              toolResultType_ =
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.FunctionResult.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.FunctionResult) toolResultType_);
+                toolResultType_ = subBuilder.buildPartial();
+              }
+              toolResultTypeCase_ = 1;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_ToolResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_ToolResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.assistants.v1.Common.ToolResult.class, yandex.cloud.api.ai.assistants.v1.Common.ToolResult.Builder.class);
+    }
+
+    private int toolResultTypeCase_ = 0;
+    private java.lang.Object toolResultType_;
+    public enum ToolResultTypeCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      FUNCTION_RESULT(1),
+      TOOLRESULTTYPE_NOT_SET(0);
+      private final int value;
+      private ToolResultTypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ToolResultTypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ToolResultTypeCase forNumber(int value) {
+        switch (value) {
+          case 1: return FUNCTION_RESULT;
+          case 0: return TOOLRESULTTYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ToolResultTypeCase
+    getToolResultTypeCase() {
+      return ToolResultTypeCase.forNumber(
+          toolResultTypeCase_);
+    }
+
+    public static final int FUNCTION_RESULT_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * Represents the result of a function call.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.FunctionResult function_result = 1;</code>
+     * @return Whether the functionResult field is set.
+     */
+    @java.lang.Override
+    public boolean hasFunctionResult() {
+      return toolResultTypeCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Represents the result of a function call.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.FunctionResult function_result = 1;</code>
+     * @return The functionResult.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.FunctionResult getFunctionResult() {
+      if (toolResultTypeCase_ == 1) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.FunctionResult) toolResultType_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.FunctionResult.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Represents the result of a function call.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.FunctionResult function_result = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.FunctionResultOrBuilder getFunctionResultOrBuilder() {
+      if (toolResultTypeCase_ == 1) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.FunctionResult) toolResultType_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.FunctionResult.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (toolResultTypeCase_ == 1) {
+        output.writeMessage(1, (yandex.cloud.api.ai.assistants.v1.Common.FunctionResult) toolResultType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (toolResultTypeCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (yandex.cloud.api.ai.assistants.v1.Common.FunctionResult) toolResultType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.Common.ToolResult)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.assistants.v1.Common.ToolResult other = (yandex.cloud.api.ai.assistants.v1.Common.ToolResult) obj;
+
+      if (!getToolResultTypeCase().equals(other.getToolResultTypeCase())) return false;
+      switch (toolResultTypeCase_) {
+        case 1:
+          if (!getFunctionResult()
+              .equals(other.getFunctionResult())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (toolResultTypeCase_) {
+        case 1:
+          hash = (37 * hash) + FUNCTION_RESULT_FIELD_NUMBER;
+          hash = (53 * hash) + getFunctionResult().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.Common.ToolResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents the result of a tool call.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.ToolResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.ToolResult)
+        yandex.cloud.api.ai.assistants.v1.Common.ToolResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_ToolResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_ToolResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.Common.ToolResult.class, yandex.cloud.api.ai.assistants.v1.Common.ToolResult.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.assistants.v1.Common.ToolResult.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        toolResultTypeCase_ = 0;
+        toolResultType_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_ToolResult_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolResult getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.Common.ToolResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolResult build() {
+        yandex.cloud.api.ai.assistants.v1.Common.ToolResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolResult buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.Common.ToolResult result = new yandex.cloud.api.ai.assistants.v1.Common.ToolResult(this);
+        if (toolResultTypeCase_ == 1) {
+          if (functionResultBuilder_ == null) {
+            result.toolResultType_ = toolResultType_;
+          } else {
+            result.toolResultType_ = functionResultBuilder_.build();
+          }
+        }
+        result.toolResultTypeCase_ = toolResultTypeCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.Common.ToolResult) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.ToolResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.Common.ToolResult other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.Common.ToolResult.getDefaultInstance()) return this;
+        switch (other.getToolResultTypeCase()) {
+          case FUNCTION_RESULT: {
+            mergeFunctionResult(other.getFunctionResult());
+            break;
+          }
+          case TOOLRESULTTYPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.assistants.v1.Common.ToolResult parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.Common.ToolResult) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int toolResultTypeCase_ = 0;
+      private java.lang.Object toolResultType_;
+      public ToolResultTypeCase
+          getToolResultTypeCase() {
+        return ToolResultTypeCase.forNumber(
+            toolResultTypeCase_);
+      }
+
+      public Builder clearToolResultType() {
+        toolResultTypeCase_ = 0;
+        toolResultType_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.FunctionResult, yandex.cloud.api.ai.assistants.v1.Common.FunctionResult.Builder, yandex.cloud.api.ai.assistants.v1.Common.FunctionResultOrBuilder> functionResultBuilder_;
+      /**
+       * <pre>
+       * Represents the result of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionResult function_result = 1;</code>
+       * @return Whether the functionResult field is set.
+       */
+      @java.lang.Override
+      public boolean hasFunctionResult() {
+        return toolResultTypeCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Represents the result of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionResult function_result = 1;</code>
+       * @return The functionResult.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.FunctionResult getFunctionResult() {
+        if (functionResultBuilder_ == null) {
+          if (toolResultTypeCase_ == 1) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.FunctionResult) toolResultType_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.FunctionResult.getDefaultInstance();
+        } else {
+          if (toolResultTypeCase_ == 1) {
+            return functionResultBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.FunctionResult.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Represents the result of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionResult function_result = 1;</code>
+       */
+      public Builder setFunctionResult(yandex.cloud.api.ai.assistants.v1.Common.FunctionResult value) {
+        if (functionResultBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          toolResultType_ = value;
+          onChanged();
+        } else {
+          functionResultBuilder_.setMessage(value);
+        }
+        toolResultTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents the result of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionResult function_result = 1;</code>
+       */
+      public Builder setFunctionResult(
+          yandex.cloud.api.ai.assistants.v1.Common.FunctionResult.Builder builderForValue) {
+        if (functionResultBuilder_ == null) {
+          toolResultType_ = builderForValue.build();
+          onChanged();
+        } else {
+          functionResultBuilder_.setMessage(builderForValue.build());
+        }
+        toolResultTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents the result of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionResult function_result = 1;</code>
+       */
+      public Builder mergeFunctionResult(yandex.cloud.api.ai.assistants.v1.Common.FunctionResult value) {
+        if (functionResultBuilder_ == null) {
+          if (toolResultTypeCase_ == 1 &&
+              toolResultType_ != yandex.cloud.api.ai.assistants.v1.Common.FunctionResult.getDefaultInstance()) {
+            toolResultType_ = yandex.cloud.api.ai.assistants.v1.Common.FunctionResult.newBuilder((yandex.cloud.api.ai.assistants.v1.Common.FunctionResult) toolResultType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            toolResultType_ = value;
+          }
+          onChanged();
+        } else {
+          if (toolResultTypeCase_ == 1) {
+            functionResultBuilder_.mergeFrom(value);
+          }
+          functionResultBuilder_.setMessage(value);
+        }
+        toolResultTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents the result of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionResult function_result = 1;</code>
+       */
+      public Builder clearFunctionResult() {
+        if (functionResultBuilder_ == null) {
+          if (toolResultTypeCase_ == 1) {
+            toolResultTypeCase_ = 0;
+            toolResultType_ = null;
+            onChanged();
+          }
+        } else {
+          if (toolResultTypeCase_ == 1) {
+            toolResultTypeCase_ = 0;
+            toolResultType_ = null;
+          }
+          functionResultBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents the result of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionResult function_result = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.FunctionResult.Builder getFunctionResultBuilder() {
+        return getFunctionResultFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Represents the result of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionResult function_result = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.FunctionResultOrBuilder getFunctionResultOrBuilder() {
+        if ((toolResultTypeCase_ == 1) && (functionResultBuilder_ != null)) {
+          return functionResultBuilder_.getMessageOrBuilder();
+        } else {
+          if (toolResultTypeCase_ == 1) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.FunctionResult) toolResultType_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.FunctionResult.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Represents the result of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.FunctionResult function_result = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.FunctionResult, yandex.cloud.api.ai.assistants.v1.Common.FunctionResult.Builder, yandex.cloud.api.ai.assistants.v1.Common.FunctionResultOrBuilder> 
+          getFunctionResultFieldBuilder() {
+        if (functionResultBuilder_ == null) {
+          if (!(toolResultTypeCase_ == 1)) {
+            toolResultType_ = yandex.cloud.api.ai.assistants.v1.Common.FunctionResult.getDefaultInstance();
+          }
+          functionResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.Common.FunctionResult, yandex.cloud.api.ai.assistants.v1.Common.FunctionResult.Builder, yandex.cloud.api.ai.assistants.v1.Common.FunctionResultOrBuilder>(
+                  (yandex.cloud.api.ai.assistants.v1.Common.FunctionResult) toolResultType_,
+                  getParentForChildren(),
+                  isClean());
+          toolResultType_ = null;
+        }
+        toolResultTypeCase_ = 1;
+        onChanged();;
+        return functionResultBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.ToolResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.ToolResult)
+    private static final yandex.cloud.api.ai.assistants.v1.Common.ToolResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.Common.ToolResult();
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ToolResult>
+        PARSER = new com.google.protobuf.AbstractParser<ToolResult>() {
+      @java.lang.Override
+      public ToolResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ToolResult(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ToolResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ToolResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.ToolResult getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ToolResultListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.ToolResultList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * A list of tool results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.assistants.v1.Common.ToolResult> 
+        getToolResultsList();
+    /**
+     * <pre>
+     * A list of tool results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.ToolResult getToolResults(int index);
+    /**
+     * <pre>
+     * A list of tool results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+     */
+    int getToolResultsCount();
+    /**
+     * <pre>
+     * A list of tool results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.assistants.v1.Common.ToolResultOrBuilder> 
+        getToolResultsOrBuilderList();
+    /**
+     * <pre>
+     * A list of tool results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.ToolResultOrBuilder getToolResultsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Represents a list of tool results.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.ToolResultList}
+   */
+  public static final class ToolResultList extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.ToolResultList)
+      ToolResultListOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ToolResultList.newBuilder() to construct.
+    private ToolResultList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ToolResultList() {
+      toolResults_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ToolResultList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ToolResultList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                toolResults_ = new java.util.ArrayList<yandex.cloud.api.ai.assistants.v1.Common.ToolResult>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              toolResults_.add(
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.ToolResult.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          toolResults_ = java.util.Collections.unmodifiableList(toolResults_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_ToolResultList_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_ToolResultList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.class, yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.Builder.class);
+    }
+
+    public static final int TOOL_RESULTS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.ai.assistants.v1.Common.ToolResult> toolResults_;
+    /**
+     * <pre>
+     * A list of tool results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.assistants.v1.Common.ToolResult> getToolResultsList() {
+      return toolResults_;
+    }
+    /**
+     * <pre>
+     * A list of tool results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.Common.ToolResultOrBuilder> 
+        getToolResultsOrBuilderList() {
+      return toolResults_;
+    }
+    /**
+     * <pre>
+     * A list of tool results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+     */
+    @java.lang.Override
+    public int getToolResultsCount() {
+      return toolResults_.size();
+    }
+    /**
+     * <pre>
+     * A list of tool results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.ToolResult getToolResults(int index) {
+      return toolResults_.get(index);
+    }
+    /**
+     * <pre>
+     * A list of tool results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.ToolResultOrBuilder getToolResultsOrBuilder(
+        int index) {
+      return toolResults_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < toolResults_.size(); i++) {
+        output.writeMessage(1, toolResults_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < toolResults_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, toolResults_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.Common.ToolResultList)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.assistants.v1.Common.ToolResultList other = (yandex.cloud.api.ai.assistants.v1.Common.ToolResultList) obj;
+
+      if (!getToolResultsList()
+          .equals(other.getToolResultsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getToolResultsCount() > 0) {
+        hash = (37 * hash) + TOOL_RESULTS_FIELD_NUMBER;
+        hash = (53 * hash) + getToolResultsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResultList parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResultList parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResultList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResultList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResultList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResultList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResultList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResultList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResultList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResultList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResultList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResultList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.Common.ToolResultList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents a list of tool results.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.ToolResultList}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.ToolResultList)
+        yandex.cloud.api.ai.assistants.v1.Common.ToolResultListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_ToolResultList_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_ToolResultList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.class, yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getToolResultsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (toolResultsBuilder_ == null) {
+          toolResults_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          toolResultsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_ToolResultList_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolResultList getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolResultList build() {
+        yandex.cloud.api.ai.assistants.v1.Common.ToolResultList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolResultList buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.Common.ToolResultList result = new yandex.cloud.api.ai.assistants.v1.Common.ToolResultList(this);
+        int from_bitField0_ = bitField0_;
+        if (toolResultsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            toolResults_ = java.util.Collections.unmodifiableList(toolResults_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.toolResults_ = toolResults_;
+        } else {
+          result.toolResults_ = toolResultsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.Common.ToolResultList) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.ToolResultList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.Common.ToolResultList other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.getDefaultInstance()) return this;
+        if (toolResultsBuilder_ == null) {
+          if (!other.toolResults_.isEmpty()) {
+            if (toolResults_.isEmpty()) {
+              toolResults_ = other.toolResults_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureToolResultsIsMutable();
+              toolResults_.addAll(other.toolResults_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.toolResults_.isEmpty()) {
+            if (toolResultsBuilder_.isEmpty()) {
+              toolResultsBuilder_.dispose();
+              toolResultsBuilder_ = null;
+              toolResults_ = other.toolResults_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              toolResultsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getToolResultsFieldBuilder() : null;
+            } else {
+              toolResultsBuilder_.addAllMessages(other.toolResults_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.assistants.v1.Common.ToolResultList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.Common.ToolResultList) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.ai.assistants.v1.Common.ToolResult> toolResults_ =
+        java.util.Collections.emptyList();
+      private void ensureToolResultsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          toolResults_ = new java.util.ArrayList<yandex.cloud.api.ai.assistants.v1.Common.ToolResult>(toolResults_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.ToolResult, yandex.cloud.api.ai.assistants.v1.Common.ToolResult.Builder, yandex.cloud.api.ai.assistants.v1.Common.ToolResultOrBuilder> toolResultsBuilder_;
+
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.assistants.v1.Common.ToolResult> getToolResultsList() {
+        if (toolResultsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(toolResults_);
+        } else {
+          return toolResultsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+       */
+      public int getToolResultsCount() {
+        if (toolResultsBuilder_ == null) {
+          return toolResults_.size();
+        } else {
+          return toolResultsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolResult getToolResults(int index) {
+        if (toolResultsBuilder_ == null) {
+          return toolResults_.get(index);
+        } else {
+          return toolResultsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+       */
+      public Builder setToolResults(
+          int index, yandex.cloud.api.ai.assistants.v1.Common.ToolResult value) {
+        if (toolResultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureToolResultsIsMutable();
+          toolResults_.set(index, value);
+          onChanged();
+        } else {
+          toolResultsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+       */
+      public Builder setToolResults(
+          int index, yandex.cloud.api.ai.assistants.v1.Common.ToolResult.Builder builderForValue) {
+        if (toolResultsBuilder_ == null) {
+          ensureToolResultsIsMutable();
+          toolResults_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          toolResultsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+       */
+      public Builder addToolResults(yandex.cloud.api.ai.assistants.v1.Common.ToolResult value) {
+        if (toolResultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureToolResultsIsMutable();
+          toolResults_.add(value);
+          onChanged();
+        } else {
+          toolResultsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+       */
+      public Builder addToolResults(
+          int index, yandex.cloud.api.ai.assistants.v1.Common.ToolResult value) {
+        if (toolResultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureToolResultsIsMutable();
+          toolResults_.add(index, value);
+          onChanged();
+        } else {
+          toolResultsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+       */
+      public Builder addToolResults(
+          yandex.cloud.api.ai.assistants.v1.Common.ToolResult.Builder builderForValue) {
+        if (toolResultsBuilder_ == null) {
+          ensureToolResultsIsMutable();
+          toolResults_.add(builderForValue.build());
+          onChanged();
+        } else {
+          toolResultsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+       */
+      public Builder addToolResults(
+          int index, yandex.cloud.api.ai.assistants.v1.Common.ToolResult.Builder builderForValue) {
+        if (toolResultsBuilder_ == null) {
+          ensureToolResultsIsMutable();
+          toolResults_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          toolResultsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+       */
+      public Builder addAllToolResults(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.assistants.v1.Common.ToolResult> values) {
+        if (toolResultsBuilder_ == null) {
+          ensureToolResultsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, toolResults_);
+          onChanged();
+        } else {
+          toolResultsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+       */
+      public Builder clearToolResults() {
+        if (toolResultsBuilder_ == null) {
+          toolResults_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          toolResultsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+       */
+      public Builder removeToolResults(int index) {
+        if (toolResultsBuilder_ == null) {
+          ensureToolResultsIsMutable();
+          toolResults_.remove(index);
+          onChanged();
+        } else {
+          toolResultsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolResult.Builder getToolResultsBuilder(
+          int index) {
+        return getToolResultsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolResultOrBuilder getToolResultsOrBuilder(
+          int index) {
+        if (toolResultsBuilder_ == null) {
+          return toolResults_.get(index);  } else {
+          return toolResultsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.Common.ToolResultOrBuilder> 
+           getToolResultsOrBuilderList() {
+        if (toolResultsBuilder_ != null) {
+          return toolResultsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(toolResults_);
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolResult.Builder addToolResultsBuilder() {
+        return getToolResultsFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.assistants.v1.Common.ToolResult.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolResult.Builder addToolResultsBuilder(
+          int index) {
+        return getToolResultsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.assistants.v1.Common.ToolResult.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * A list of tool results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.ToolResult tool_results = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.assistants.v1.Common.ToolResult.Builder> 
+           getToolResultsBuilderList() {
+        return getToolResultsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.ToolResult, yandex.cloud.api.ai.assistants.v1.Common.ToolResult.Builder, yandex.cloud.api.ai.assistants.v1.Common.ToolResultOrBuilder> 
+          getToolResultsFieldBuilder() {
+        if (toolResultsBuilder_ == null) {
+          toolResultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.Common.ToolResult, yandex.cloud.api.ai.assistants.v1.Common.ToolResult.Builder, yandex.cloud.api.ai.assistants.v1.Common.ToolResultOrBuilder>(
+                  toolResults_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          toolResults_ = null;
+        }
+        return toolResultsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.ToolResultList)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.ToolResultList)
+    private static final yandex.cloud.api.ai.assistants.v1.Common.ToolResultList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.Common.ToolResultList();
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.Common.ToolResultList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ToolResultList>
+        PARSER = new com.google.protobuf.AbstractParser<ToolResultList>() {
+      @java.lang.Override
+      public ToolResultList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ToolResultList(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ToolResultList> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ToolResultList> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.ToolResultList getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface SearchIndexToolOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.SearchIndexTool)
       com.google.protobuf.MessageOrBuilder {
@@ -2737,63 +8762,106 @@ public final class Common {
 
   }
 
-  public interface ToolOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.Tool)
+  public interface FunctionToolOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.FunctionTool)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
-     * SearchIndexTool tool that performs search across specified indexes.
+     * The name of the function.
      * </pre>
      *
-     * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
-     * @return Whether the searchIndex field is set.
+     * <code>string name = 1;</code>
+     * @return The name.
      */
-    boolean hasSearchIndex();
+    java.lang.String getName();
     /**
      * <pre>
-     * SearchIndexTool tool that performs search across specified indexes.
+     * The name of the function.
      * </pre>
      *
-     * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
-     * @return The searchIndex.
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
-    yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool getSearchIndex();
-    /**
-     * <pre>
-     * SearchIndexTool tool that performs search across specified indexes.
-     * </pre>
-     *
-     * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
-     */
-    yandex.cloud.api.ai.assistants.v1.Common.SearchIndexToolOrBuilder getSearchIndexOrBuilder();
+    com.google.protobuf.ByteString
+        getNameBytes();
 
-    public yandex.cloud.api.ai.assistants.v1.Common.Tool.ToolTypeCase getToolTypeCase();
+    /**
+     * <pre>
+     * A description of the function's purpose or behavior.
+     * </pre>
+     *
+     * <code>string description = 2;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * A description of the function's purpose or behavior.
+     * </pre>
+     *
+     * <code>string description = 2;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * A JSON Schema that defines the expected parameters for the function.
+     * The schema should describe the required fields, their types, and any constraints or default values.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct parameters = 3;</code>
+     * @return Whether the parameters field is set.
+     */
+    boolean hasParameters();
+    /**
+     * <pre>
+     * A JSON Schema that defines the expected parameters for the function.
+     * The schema should describe the required fields, their types, and any constraints or default values.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct parameters = 3;</code>
+     * @return The parameters.
+     */
+    com.google.protobuf.Struct getParameters();
+    /**
+     * <pre>
+     * A JSON Schema that defines the expected parameters for the function.
+     * The schema should describe the required fields, their types, and any constraints or default values.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct parameters = 3;</code>
+     */
+    com.google.protobuf.StructOrBuilder getParametersOrBuilder();
   }
   /**
    * <pre>
-   * Represents a general tool that can be one of several types.
+   * Represents a function tool that can be invoked by the assistant.
    * </pre>
    *
-   * Protobuf type {@code yandex.cloud.ai.assistants.v1.Tool}
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.FunctionTool}
    */
-  public static final class Tool extends
+  public static final class FunctionTool extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.Tool)
-      ToolOrBuilder {
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.FunctionTool)
+      FunctionToolOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use Tool.newBuilder() to construct.
-    private Tool(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use FunctionTool.newBuilder() to construct.
+    private FunctionTool(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private Tool() {
+    private FunctionTool() {
+      name_ = "";
+      description_ = "";
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new Tool();
+      return new FunctionTool();
     }
 
     @java.lang.Override
@@ -2801,7 +8869,7 @@ public final class Common {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Tool(
+    private FunctionTool(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2820,17 +8888,28 @@ public final class Common {
               done = true;
               break;
             case 10: {
-              yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.Builder subBuilder = null;
-              if (toolTypeCase_ == 1) {
-                subBuilder = ((yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool) toolType_).toBuilder();
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Struct.Builder subBuilder = null;
+              if (parameters_ != null) {
+                subBuilder = parameters_.toBuilder();
               }
-              toolType_ =
-                  input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.parser(), extensionRegistry);
+              parameters_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool) toolType_);
-                toolType_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(parameters_);
+                parameters_ = subBuilder.buildPartial();
               }
-              toolTypeCase_ = 1;
+
               break;
             }
             default: {
@@ -2854,97 +8933,148 @@ public final class Common {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_Tool_descriptor;
+      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_FunctionTool_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_Tool_fieldAccessorTable
+      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_FunctionTool_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.ai.assistants.v1.Common.Tool.class, yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder.class);
+              yandex.cloud.api.ai.assistants.v1.Common.FunctionTool.class, yandex.cloud.api.ai.assistants.v1.Common.FunctionTool.Builder.class);
     }
 
-    private int toolTypeCase_ = 0;
-    private java.lang.Object toolType_;
-    public enum ToolTypeCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      SEARCH_INDEX(1),
-      TOOLTYPE_NOT_SET(0);
-      private final int value;
-      private ToolTypeCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static ToolTypeCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static ToolTypeCase forNumber(int value) {
-        switch (value) {
-          case 1: return SEARCH_INDEX;
-          case 0: return TOOLTYPE_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
-    public ToolTypeCase
-    getToolTypeCase() {
-      return ToolTypeCase.forNumber(
-          toolTypeCase_);
-    }
-
-    public static final int SEARCH_INDEX_FIELD_NUMBER = 1;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
     /**
      * <pre>
-     * SearchIndexTool tool that performs search across specified indexes.
+     * The name of the function.
      * </pre>
      *
-     * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
-     * @return Whether the searchIndex field is set.
+     * <code>string name = 1;</code>
+     * @return The name.
      */
     @java.lang.Override
-    public boolean hasSearchIndex() {
-      return toolTypeCase_ == 1;
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
-     * SearchIndexTool tool that performs search across specified indexes.
+     * The name of the function.
      * </pre>
      *
-     * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
-     * @return The searchIndex.
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     @java.lang.Override
-    public yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool getSearchIndex() {
-      if (toolTypeCase_ == 1) {
-         return (yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool) toolType_;
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
       }
-      return yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.getDefaultInstance();
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * A description of the function's purpose or behavior.
+     * </pre>
+     *
+     * <code>string description = 2;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
-     * SearchIndexTool tool that performs search across specified indexes.
+     * A description of the function's purpose or behavior.
      * </pre>
      *
-     * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
+     * <code>string description = 2;</code>
+     * @return The bytes for description.
      */
     @java.lang.Override
-    public yandex.cloud.api.ai.assistants.v1.Common.SearchIndexToolOrBuilder getSearchIndexOrBuilder() {
-      if (toolTypeCase_ == 1) {
-         return (yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool) toolType_;
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
       }
-      return yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.getDefaultInstance();
+    }
+
+    public static final int PARAMETERS_FIELD_NUMBER = 3;
+    private com.google.protobuf.Struct parameters_;
+    /**
+     * <pre>
+     * A JSON Schema that defines the expected parameters for the function.
+     * The schema should describe the required fields, their types, and any constraints or default values.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct parameters = 3;</code>
+     * @return Whether the parameters field is set.
+     */
+    @java.lang.Override
+    public boolean hasParameters() {
+      return parameters_ != null;
+    }
+    /**
+     * <pre>
+     * A JSON Schema that defines the expected parameters for the function.
+     * The schema should describe the required fields, their types, and any constraints or default values.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct parameters = 3;</code>
+     * @return The parameters.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getParameters() {
+      return parameters_ == null ? com.google.protobuf.Struct.getDefaultInstance() : parameters_;
+    }
+    /**
+     * <pre>
+     * A JSON Schema that defines the expected parameters for the function.
+     * The schema should describe the required fields, their types, and any constraints or default values.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct parameters = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StructOrBuilder getParametersOrBuilder() {
+      return getParameters();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2961,8 +9091,14 @@ public final class Common {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (toolTypeCase_ == 1) {
-        output.writeMessage(1, (yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool) toolType_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (parameters_ != null) {
+        output.writeMessage(3, getParameters());
       }
       unknownFields.writeTo(output);
     }
@@ -2973,9 +9109,15 @@ public final class Common {
       if (size != -1) return size;
 
       size = 0;
-      if (toolTypeCase_ == 1) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (parameters_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool) toolType_);
+          .computeMessageSize(3, getParameters());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2987,19 +9129,19 @@ public final class Common {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.Common.Tool)) {
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.Common.FunctionTool)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.ai.assistants.v1.Common.Tool other = (yandex.cloud.api.ai.assistants.v1.Common.Tool) obj;
+      yandex.cloud.api.ai.assistants.v1.Common.FunctionTool other = (yandex.cloud.api.ai.assistants.v1.Common.FunctionTool) obj;
 
-      if (!getToolTypeCase().equals(other.getToolTypeCase())) return false;
-      switch (toolTypeCase_) {
-        case 1:
-          if (!getSearchIndex()
-              .equals(other.getSearchIndex())) return false;
-          break;
-        case 0:
-        default:
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasParameters() != other.hasParameters()) return false;
+      if (hasParameters()) {
+        if (!getParameters()
+            .equals(other.getParameters())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -3012,82 +9154,82 @@ public final class Common {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      switch (toolTypeCase_) {
-        case 1:
-          hash = (37 * hash) + SEARCH_INDEX_FIELD_NUMBER;
-          hash = (53 * hash) + getSearchIndex().hashCode();
-          break;
-        case 0:
-        default:
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (hasParameters()) {
+        hash = (37 * hash) + PARAMETERS_FIELD_NUMBER;
+        hash = (53 * hash) + getParameters().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static yandex.cloud.api.ai.assistants.v1.Common.Tool parseFrom(
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionTool parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.ai.assistants.v1.Common.Tool parseFrom(
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionTool parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.ai.assistants.v1.Common.Tool parseFrom(
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionTool parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.ai.assistants.v1.Common.Tool parseFrom(
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionTool parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.ai.assistants.v1.Common.Tool parseFrom(byte[] data)
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionTool parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.ai.assistants.v1.Common.Tool parseFrom(
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionTool parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.ai.assistants.v1.Common.Tool parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionTool parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.ai.assistants.v1.Common.Tool parseFrom(
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionTool parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.ai.assistants.v1.Common.Tool parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionTool parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.ai.assistants.v1.Common.Tool parseDelimitedFrom(
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionTool parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.ai.assistants.v1.Common.Tool parseFrom(
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionTool parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.ai.assistants.v1.Common.Tool parseFrom(
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionTool parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3100,7 +9242,7 @@ public final class Common {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.Common.Tool prototype) {
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.Common.FunctionTool prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -3117,29 +9259,29 @@ public final class Common {
     }
     /**
      * <pre>
-     * Represents a general tool that can be one of several types.
+     * Represents a function tool that can be invoked by the assistant.
      * </pre>
      *
-     * Protobuf type {@code yandex.cloud.ai.assistants.v1.Tool}
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.FunctionTool}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.Tool)
-        yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder {
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.FunctionTool)
+        yandex.cloud.api.ai.assistants.v1.Common.FunctionToolOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_Tool_descriptor;
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_FunctionTool_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_Tool_fieldAccessorTable
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_FunctionTool_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.ai.assistants.v1.Common.Tool.class, yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder.class);
+                yandex.cloud.api.ai.assistants.v1.Common.FunctionTool.class, yandex.cloud.api.ai.assistants.v1.Common.FunctionTool.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.ai.assistants.v1.Common.Tool.newBuilder()
+      // Construct using yandex.cloud.api.ai.assistants.v1.Common.FunctionTool.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -3157,25 +9299,33 @@ public final class Common {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        toolTypeCase_ = 0;
-        toolType_ = null;
+        name_ = "";
+
+        description_ = "";
+
+        if (parametersBuilder_ == null) {
+          parameters_ = null;
+        } else {
+          parameters_ = null;
+          parametersBuilder_ = null;
+        }
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_Tool_descriptor;
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_FunctionTool_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.ai.assistants.v1.Common.Tool getDefaultInstanceForType() {
-        return yandex.cloud.api.ai.assistants.v1.Common.Tool.getDefaultInstance();
+      public yandex.cloud.api.ai.assistants.v1.Common.FunctionTool getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.Common.FunctionTool.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.ai.assistants.v1.Common.Tool build() {
-        yandex.cloud.api.ai.assistants.v1.Common.Tool result = buildPartial();
+      public yandex.cloud.api.ai.assistants.v1.Common.FunctionTool build() {
+        yandex.cloud.api.ai.assistants.v1.Common.FunctionTool result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -3183,16 +9333,15 @@ public final class Common {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.ai.assistants.v1.Common.Tool buildPartial() {
-        yandex.cloud.api.ai.assistants.v1.Common.Tool result = new yandex.cloud.api.ai.assistants.v1.Common.Tool(this);
-        if (toolTypeCase_ == 1) {
-          if (searchIndexBuilder_ == null) {
-            result.toolType_ = toolType_;
-          } else {
-            result.toolType_ = searchIndexBuilder_.build();
-          }
+      public yandex.cloud.api.ai.assistants.v1.Common.FunctionTool buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.Common.FunctionTool result = new yandex.cloud.api.ai.assistants.v1.Common.FunctionTool(this);
+        result.name_ = name_;
+        result.description_ = description_;
+        if (parametersBuilder_ == null) {
+          result.parameters_ = parameters_;
+        } else {
+          result.parameters_ = parametersBuilder_.build();
         }
-        result.toolTypeCase_ = toolTypeCase_;
         onBuilt();
         return result;
       }
@@ -3231,22 +9380,1972 @@ public final class Common {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.ai.assistants.v1.Common.Tool) {
-          return mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.Tool)other);
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.Common.FunctionTool) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.FunctionTool)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.Common.Tool other) {
-        if (other == yandex.cloud.api.ai.assistants.v1.Common.Tool.getDefaultInstance()) return this;
-        switch (other.getToolTypeCase()) {
-          case SEARCH_INDEX: {
-            mergeSearchIndex(other.getSearchIndex());
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.Common.FunctionTool other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.Common.FunctionTool.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        if (other.hasParameters()) {
+          mergeParameters(other.getParameters());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.assistants.v1.Common.FunctionTool parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.Common.FunctionTool) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * The name of the function.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the function.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the function.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the function.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the function.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * A description of the function's purpose or behavior.
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A description of the function's purpose or behavior.
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A description of the function's purpose or behavior.
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A description of the function's purpose or behavior.
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A description of the function's purpose or behavior.
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Struct parameters_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> parametersBuilder_;
+      /**
+       * <pre>
+       * A JSON Schema that defines the expected parameters for the function.
+       * The schema should describe the required fields, their types, and any constraints or default values.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct parameters = 3;</code>
+       * @return Whether the parameters field is set.
+       */
+      public boolean hasParameters() {
+        return parametersBuilder_ != null || parameters_ != null;
+      }
+      /**
+       * <pre>
+       * A JSON Schema that defines the expected parameters for the function.
+       * The schema should describe the required fields, their types, and any constraints or default values.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct parameters = 3;</code>
+       * @return The parameters.
+       */
+      public com.google.protobuf.Struct getParameters() {
+        if (parametersBuilder_ == null) {
+          return parameters_ == null ? com.google.protobuf.Struct.getDefaultInstance() : parameters_;
+        } else {
+          return parametersBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * A JSON Schema that defines the expected parameters for the function.
+       * The schema should describe the required fields, their types, and any constraints or default values.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct parameters = 3;</code>
+       */
+      public Builder setParameters(com.google.protobuf.Struct value) {
+        if (parametersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          parameters_ = value;
+          onChanged();
+        } else {
+          parametersBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A JSON Schema that defines the expected parameters for the function.
+       * The schema should describe the required fields, their types, and any constraints or default values.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct parameters = 3;</code>
+       */
+      public Builder setParameters(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        if (parametersBuilder_ == null) {
+          parameters_ = builderForValue.build();
+          onChanged();
+        } else {
+          parametersBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A JSON Schema that defines the expected parameters for the function.
+       * The schema should describe the required fields, their types, and any constraints or default values.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct parameters = 3;</code>
+       */
+      public Builder mergeParameters(com.google.protobuf.Struct value) {
+        if (parametersBuilder_ == null) {
+          if (parameters_ != null) {
+            parameters_ =
+              com.google.protobuf.Struct.newBuilder(parameters_).mergeFrom(value).buildPartial();
+          } else {
+            parameters_ = value;
+          }
+          onChanged();
+        } else {
+          parametersBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A JSON Schema that defines the expected parameters for the function.
+       * The schema should describe the required fields, their types, and any constraints or default values.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct parameters = 3;</code>
+       */
+      public Builder clearParameters() {
+        if (parametersBuilder_ == null) {
+          parameters_ = null;
+          onChanged();
+        } else {
+          parameters_ = null;
+          parametersBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A JSON Schema that defines the expected parameters for the function.
+       * The schema should describe the required fields, their types, and any constraints or default values.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct parameters = 3;</code>
+       */
+      public com.google.protobuf.Struct.Builder getParametersBuilder() {
+        
+        onChanged();
+        return getParametersFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * A JSON Schema that defines the expected parameters for the function.
+       * The schema should describe the required fields, their types, and any constraints or default values.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct parameters = 3;</code>
+       */
+      public com.google.protobuf.StructOrBuilder getParametersOrBuilder() {
+        if (parametersBuilder_ != null) {
+          return parametersBuilder_.getMessageOrBuilder();
+        } else {
+          return parameters_ == null ?
+              com.google.protobuf.Struct.getDefaultInstance() : parameters_;
+        }
+      }
+      /**
+       * <pre>
+       * A JSON Schema that defines the expected parameters for the function.
+       * The schema should describe the required fields, their types, and any constraints or default values.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct parameters = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+          getParametersFieldBuilder() {
+        if (parametersBuilder_ == null) {
+          parametersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
+                  getParameters(),
+                  getParentForChildren(),
+                  isClean());
+          parameters_ = null;
+        }
+        return parametersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.FunctionTool)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.FunctionTool)
+    private static final yandex.cloud.api.ai.assistants.v1.Common.FunctionTool DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.Common.FunctionTool();
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionTool getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FunctionTool>
+        PARSER = new com.google.protobuf.AbstractParser<FunctionTool>() {
+      @java.lang.Override
+      public FunctionTool parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FunctionTool(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FunctionTool> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FunctionTool> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.FunctionTool getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FunctionCallOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.FunctionCall)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The name of the function being called.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * The name of the function being called.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * The structured arguments passed to the function.
+     * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct arguments = 2;</code>
+     * @return Whether the arguments field is set.
+     */
+    boolean hasArguments();
+    /**
+     * <pre>
+     * The structured arguments passed to the function.
+     * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct arguments = 2;</code>
+     * @return The arguments.
+     */
+    com.google.protobuf.Struct getArguments();
+    /**
+     * <pre>
+     * The structured arguments passed to the function.
+     * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct arguments = 2;</code>
+     */
+    com.google.protobuf.StructOrBuilder getArgumentsOrBuilder();
+  }
+  /**
+   * <pre>
+   * Represents the invocation of a function with specific arguments.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.FunctionCall}
+   */
+  public static final class FunctionCall extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.FunctionCall)
+      FunctionCallOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FunctionCall.newBuilder() to construct.
+    private FunctionCall(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FunctionCall() {
+      name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FunctionCall();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FunctionCall(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Struct.Builder subBuilder = null;
+              if (arguments_ != null) {
+                subBuilder = arguments_.toBuilder();
+              }
+              arguments_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(arguments_);
+                arguments_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_FunctionCall_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_FunctionCall_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.assistants.v1.Common.FunctionCall.class, yandex.cloud.api.ai.assistants.v1.Common.FunctionCall.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * The name of the function being called.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The name of the function being called.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ARGUMENTS_FIELD_NUMBER = 2;
+    private com.google.protobuf.Struct arguments_;
+    /**
+     * <pre>
+     * The structured arguments passed to the function.
+     * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct arguments = 2;</code>
+     * @return Whether the arguments field is set.
+     */
+    @java.lang.Override
+    public boolean hasArguments() {
+      return arguments_ != null;
+    }
+    /**
+     * <pre>
+     * The structured arguments passed to the function.
+     * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct arguments = 2;</code>
+     * @return The arguments.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getArguments() {
+      return arguments_ == null ? com.google.protobuf.Struct.getDefaultInstance() : arguments_;
+    }
+    /**
+     * <pre>
+     * The structured arguments passed to the function.
+     * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct arguments = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StructOrBuilder getArgumentsOrBuilder() {
+      return getArguments();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (arguments_ != null) {
+        output.writeMessage(2, getArguments());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (arguments_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getArguments());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.Common.FunctionCall)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.assistants.v1.Common.FunctionCall other = (yandex.cloud.api.ai.assistants.v1.Common.FunctionCall) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasArguments() != other.hasArguments()) return false;
+      if (hasArguments()) {
+        if (!getArguments()
+            .equals(other.getArguments())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      if (hasArguments()) {
+        hash = (37 * hash) + ARGUMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getArguments().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionCall parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionCall parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionCall parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionCall parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionCall parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionCall parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionCall parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionCall parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionCall parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionCall parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionCall parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionCall parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.Common.FunctionCall prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents the invocation of a function with specific arguments.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.FunctionCall}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.FunctionCall)
+        yandex.cloud.api.ai.assistants.v1.Common.FunctionCallOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_FunctionCall_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_FunctionCall_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.Common.FunctionCall.class, yandex.cloud.api.ai.assistants.v1.Common.FunctionCall.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.assistants.v1.Common.FunctionCall.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+
+        if (argumentsBuilder_ == null) {
+          arguments_ = null;
+        } else {
+          arguments_ = null;
+          argumentsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_FunctionCall_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.FunctionCall getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.Common.FunctionCall.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.FunctionCall build() {
+        yandex.cloud.api.ai.assistants.v1.Common.FunctionCall result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.FunctionCall buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.Common.FunctionCall result = new yandex.cloud.api.ai.assistants.v1.Common.FunctionCall(this);
+        result.name_ = name_;
+        if (argumentsBuilder_ == null) {
+          result.arguments_ = arguments_;
+        } else {
+          result.arguments_ = argumentsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.Common.FunctionCall) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.FunctionCall)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.Common.FunctionCall other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.Common.FunctionCall.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasArguments()) {
+          mergeArguments(other.getArguments());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.assistants.v1.Common.FunctionCall parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.Common.FunctionCall) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * The name of the function being called.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the function being called.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the function being called.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the function being called.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the function being called.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Struct arguments_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> argumentsBuilder_;
+      /**
+       * <pre>
+       * The structured arguments passed to the function.
+       * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct arguments = 2;</code>
+       * @return Whether the arguments field is set.
+       */
+      public boolean hasArguments() {
+        return argumentsBuilder_ != null || arguments_ != null;
+      }
+      /**
+       * <pre>
+       * The structured arguments passed to the function.
+       * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct arguments = 2;</code>
+       * @return The arguments.
+       */
+      public com.google.protobuf.Struct getArguments() {
+        if (argumentsBuilder_ == null) {
+          return arguments_ == null ? com.google.protobuf.Struct.getDefaultInstance() : arguments_;
+        } else {
+          return argumentsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The structured arguments passed to the function.
+       * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct arguments = 2;</code>
+       */
+      public Builder setArguments(com.google.protobuf.Struct value) {
+        if (argumentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          arguments_ = value;
+          onChanged();
+        } else {
+          argumentsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The structured arguments passed to the function.
+       * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct arguments = 2;</code>
+       */
+      public Builder setArguments(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        if (argumentsBuilder_ == null) {
+          arguments_ = builderForValue.build();
+          onChanged();
+        } else {
+          argumentsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The structured arguments passed to the function.
+       * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct arguments = 2;</code>
+       */
+      public Builder mergeArguments(com.google.protobuf.Struct value) {
+        if (argumentsBuilder_ == null) {
+          if (arguments_ != null) {
+            arguments_ =
+              com.google.protobuf.Struct.newBuilder(arguments_).mergeFrom(value).buildPartial();
+          } else {
+            arguments_ = value;
+          }
+          onChanged();
+        } else {
+          argumentsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The structured arguments passed to the function.
+       * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct arguments = 2;</code>
+       */
+      public Builder clearArguments() {
+        if (argumentsBuilder_ == null) {
+          arguments_ = null;
+          onChanged();
+        } else {
+          arguments_ = null;
+          argumentsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The structured arguments passed to the function.
+       * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct arguments = 2;</code>
+       */
+      public com.google.protobuf.Struct.Builder getArgumentsBuilder() {
+        
+        onChanged();
+        return getArgumentsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The structured arguments passed to the function.
+       * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct arguments = 2;</code>
+       */
+      public com.google.protobuf.StructOrBuilder getArgumentsOrBuilder() {
+        if (argumentsBuilder_ != null) {
+          return argumentsBuilder_.getMessageOrBuilder();
+        } else {
+          return arguments_ == null ?
+              com.google.protobuf.Struct.getDefaultInstance() : arguments_;
+        }
+      }
+      /**
+       * <pre>
+       * The structured arguments passed to the function.
+       * These arguments must adhere to the JSON Schema defined in the corresponding function's parameters.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct arguments = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+          getArgumentsFieldBuilder() {
+        if (argumentsBuilder_ == null) {
+          argumentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
+                  getArguments(),
+                  getParentForChildren(),
+                  isClean());
+          arguments_ = null;
+        }
+        return argumentsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.FunctionCall)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.FunctionCall)
+    private static final yandex.cloud.api.ai.assistants.v1.Common.FunctionCall DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.Common.FunctionCall();
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionCall getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FunctionCall>
+        PARSER = new com.google.protobuf.AbstractParser<FunctionCall>() {
+      @java.lang.Override
+      public FunctionCall parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FunctionCall(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FunctionCall> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FunctionCall> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.FunctionCall getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FunctionResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.FunctionResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The name of the function that was executed.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * The name of the function that was executed.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * The result of the function call, represented as a string.
+     * This field can be used to store the output of the function.
+     * </pre>
+     *
+     * <code>string content = 2;</code>
+     * @return Whether the content field is set.
+     */
+    boolean hasContent();
+    /**
+     * <pre>
+     * The result of the function call, represented as a string.
+     * This field can be used to store the output of the function.
+     * </pre>
+     *
+     * <code>string content = 2;</code>
+     * @return The content.
+     */
+    java.lang.String getContent();
+    /**
+     * <pre>
+     * The result of the function call, represented as a string.
+     * This field can be used to store the output of the function.
+     * </pre>
+     *
+     * <code>string content = 2;</code>
+     * @return The bytes for content.
+     */
+    com.google.protobuf.ByteString
+        getContentBytes();
+
+    public yandex.cloud.api.ai.assistants.v1.Common.FunctionResult.ContentTypeCase getContentTypeCase();
+  }
+  /**
+   * <pre>
+   * Represents the result of a function call.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.FunctionResult}
+   */
+  public static final class FunctionResult extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.FunctionResult)
+      FunctionResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FunctionResult.newBuilder() to construct.
+    private FunctionResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FunctionResult() {
+      name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FunctionResult();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FunctionResult(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              contentTypeCase_ = 2;
+              contentType_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_FunctionResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_FunctionResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.assistants.v1.Common.FunctionResult.class, yandex.cloud.api.ai.assistants.v1.Common.FunctionResult.Builder.class);
+    }
+
+    private int contentTypeCase_ = 0;
+    private java.lang.Object contentType_;
+    public enum ContentTypeCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      CONTENT(2),
+      CONTENTTYPE_NOT_SET(0);
+      private final int value;
+      private ContentTypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ContentTypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ContentTypeCase forNumber(int value) {
+        switch (value) {
+          case 2: return CONTENT;
+          case 0: return CONTENTTYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ContentTypeCase
+    getContentTypeCase() {
+      return ContentTypeCase.forNumber(
+          contentTypeCase_);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * The name of the function that was executed.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The name of the function that was executed.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTENT_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * The result of the function call, represented as a string.
+     * This field can be used to store the output of the function.
+     * </pre>
+     *
+     * <code>string content = 2;</code>
+     * @return Whether the content field is set.
+     */
+    public boolean hasContent() {
+      return contentTypeCase_ == 2;
+    }
+    /**
+     * <pre>
+     * The result of the function call, represented as a string.
+     * This field can be used to store the output of the function.
+     * </pre>
+     *
+     * <code>string content = 2;</code>
+     * @return The content.
+     */
+    public java.lang.String getContent() {
+      java.lang.Object ref = "";
+      if (contentTypeCase_ == 2) {
+        ref = contentType_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (contentTypeCase_ == 2) {
+          contentType_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The result of the function call, represented as a string.
+     * This field can be used to store the output of the function.
+     * </pre>
+     *
+     * <code>string content = 2;</code>
+     * @return The bytes for content.
+     */
+    public com.google.protobuf.ByteString
+        getContentBytes() {
+      java.lang.Object ref = "";
+      if (contentTypeCase_ == 2) {
+        ref = contentType_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (contentTypeCase_ == 2) {
+          contentType_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (contentTypeCase_ == 2) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, contentType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (contentTypeCase_ == 2) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, contentType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.Common.FunctionResult)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.assistants.v1.Common.FunctionResult other = (yandex.cloud.api.ai.assistants.v1.Common.FunctionResult) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getContentTypeCase().equals(other.getContentTypeCase())) return false;
+      switch (contentTypeCase_) {
+        case 2:
+          if (!getContent()
+              .equals(other.getContent())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      switch (contentTypeCase_) {
+        case 2:
+          hash = (37 * hash) + CONTENT_FIELD_NUMBER;
+          hash = (53 * hash) + getContent().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.Common.FunctionResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents the result of a function call.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.FunctionResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.FunctionResult)
+        yandex.cloud.api.ai.assistants.v1.Common.FunctionResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_FunctionResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_FunctionResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.Common.FunctionResult.class, yandex.cloud.api.ai.assistants.v1.Common.FunctionResult.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.assistants.v1.Common.FunctionResult.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+
+        contentTypeCase_ = 0;
+        contentType_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_FunctionResult_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.FunctionResult getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.Common.FunctionResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.FunctionResult build() {
+        yandex.cloud.api.ai.assistants.v1.Common.FunctionResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.FunctionResult buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.Common.FunctionResult result = new yandex.cloud.api.ai.assistants.v1.Common.FunctionResult(this);
+        result.name_ = name_;
+        if (contentTypeCase_ == 2) {
+          result.contentType_ = contentType_;
+        }
+        result.contentTypeCase_ = contentTypeCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.Common.FunctionResult) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.FunctionResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.Common.FunctionResult other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.Common.FunctionResult.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        switch (other.getContentTypeCase()) {
+          case CONTENT: {
+            contentTypeCase_ = 2;
+            contentType_ = other.contentType_;
+            onChanged();
             break;
           }
-          case TOOLTYPE_NOT_SET: {
+          case CONTENTTYPE_NOT_SET: {
             break;
           }
         }
@@ -3265,11 +11364,11 @@ public final class Common {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.ai.assistants.v1.Common.Tool parsedMessage = null;
+        yandex.cloud.api.ai.assistants.v1.Common.FunctionResult parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.ai.assistants.v1.Common.Tool) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.Common.FunctionResult) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -3278,197 +11377,243 @@ public final class Common {
         }
         return this;
       }
-      private int toolTypeCase_ = 0;
-      private java.lang.Object toolType_;
-      public ToolTypeCase
-          getToolTypeCase() {
-        return ToolTypeCase.forNumber(
-            toolTypeCase_);
+      private int contentTypeCase_ = 0;
+      private java.lang.Object contentType_;
+      public ContentTypeCase
+          getContentTypeCase() {
+        return ContentTypeCase.forNumber(
+            contentTypeCase_);
       }
 
-      public Builder clearToolType() {
-        toolTypeCase_ = 0;
-        toolType_ = null;
+      public Builder clearContentType() {
+        contentTypeCase_ = 0;
+        contentType_ = null;
         onChanged();
         return this;
       }
 
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool, yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.Builder, yandex.cloud.api.ai.assistants.v1.Common.SearchIndexToolOrBuilder> searchIndexBuilder_;
+      private java.lang.Object name_ = "";
       /**
        * <pre>
-       * SearchIndexTool tool that performs search across specified indexes.
+       * The name of the function that was executed.
        * </pre>
        *
-       * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
-       * @return Whether the searchIndex field is set.
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the function that was executed.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the function that was executed.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the function that was executed.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the function that was executed.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * The result of the function call, represented as a string.
+       * This field can be used to store the output of the function.
+       * </pre>
+       *
+       * <code>string content = 2;</code>
+       * @return Whether the content field is set.
        */
       @java.lang.Override
-      public boolean hasSearchIndex() {
-        return toolTypeCase_ == 1;
+      public boolean hasContent() {
+        return contentTypeCase_ == 2;
       }
       /**
        * <pre>
-       * SearchIndexTool tool that performs search across specified indexes.
+       * The result of the function call, represented as a string.
+       * This field can be used to store the output of the function.
        * </pre>
        *
-       * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
-       * @return The searchIndex.
+       * <code>string content = 2;</code>
+       * @return The content.
        */
       @java.lang.Override
-      public yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool getSearchIndex() {
-        if (searchIndexBuilder_ == null) {
-          if (toolTypeCase_ == 1) {
-            return (yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool) toolType_;
+      public java.lang.String getContent() {
+        java.lang.Object ref = "";
+        if (contentTypeCase_ == 2) {
+          ref = contentType_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (contentTypeCase_ == 2) {
+            contentType_ = s;
           }
-          return yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.getDefaultInstance();
+          return s;
         } else {
-          if (toolTypeCase_ == 1) {
-            return searchIndexBuilder_.getMessage();
-          }
-          return yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.getDefaultInstance();
+          return (java.lang.String) ref;
         }
       }
       /**
        * <pre>
-       * SearchIndexTool tool that performs search across specified indexes.
+       * The result of the function call, represented as a string.
+       * This field can be used to store the output of the function.
        * </pre>
        *
-       * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
-       */
-      public Builder setSearchIndex(yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool value) {
-        if (searchIndexBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          toolType_ = value;
-          onChanged();
-        } else {
-          searchIndexBuilder_.setMessage(value);
-        }
-        toolTypeCase_ = 1;
-        return this;
-      }
-      /**
-       * <pre>
-       * SearchIndexTool tool that performs search across specified indexes.
-       * </pre>
-       *
-       * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
-       */
-      public Builder setSearchIndex(
-          yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.Builder builderForValue) {
-        if (searchIndexBuilder_ == null) {
-          toolType_ = builderForValue.build();
-          onChanged();
-        } else {
-          searchIndexBuilder_.setMessage(builderForValue.build());
-        }
-        toolTypeCase_ = 1;
-        return this;
-      }
-      /**
-       * <pre>
-       * SearchIndexTool tool that performs search across specified indexes.
-       * </pre>
-       *
-       * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
-       */
-      public Builder mergeSearchIndex(yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool value) {
-        if (searchIndexBuilder_ == null) {
-          if (toolTypeCase_ == 1 &&
-              toolType_ != yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.getDefaultInstance()) {
-            toolType_ = yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.newBuilder((yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool) toolType_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            toolType_ = value;
-          }
-          onChanged();
-        } else {
-          if (toolTypeCase_ == 1) {
-            searchIndexBuilder_.mergeFrom(value);
-          }
-          searchIndexBuilder_.setMessage(value);
-        }
-        toolTypeCase_ = 1;
-        return this;
-      }
-      /**
-       * <pre>
-       * SearchIndexTool tool that performs search across specified indexes.
-       * </pre>
-       *
-       * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
-       */
-      public Builder clearSearchIndex() {
-        if (searchIndexBuilder_ == null) {
-          if (toolTypeCase_ == 1) {
-            toolTypeCase_ = 0;
-            toolType_ = null;
-            onChanged();
-          }
-        } else {
-          if (toolTypeCase_ == 1) {
-            toolTypeCase_ = 0;
-            toolType_ = null;
-          }
-          searchIndexBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * SearchIndexTool tool that performs search across specified indexes.
-       * </pre>
-       *
-       * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
-       */
-      public yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.Builder getSearchIndexBuilder() {
-        return getSearchIndexFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * SearchIndexTool tool that performs search across specified indexes.
-       * </pre>
-       *
-       * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
+       * <code>string content = 2;</code>
+       * @return The bytes for content.
        */
       @java.lang.Override
-      public yandex.cloud.api.ai.assistants.v1.Common.SearchIndexToolOrBuilder getSearchIndexOrBuilder() {
-        if ((toolTypeCase_ == 1) && (searchIndexBuilder_ != null)) {
-          return searchIndexBuilder_.getMessageOrBuilder();
-        } else {
-          if (toolTypeCase_ == 1) {
-            return (yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool) toolType_;
+      public com.google.protobuf.ByteString
+          getContentBytes() {
+        java.lang.Object ref = "";
+        if (contentTypeCase_ == 2) {
+          ref = contentType_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (contentTypeCase_ == 2) {
+            contentType_ = b;
           }
-          return yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.getDefaultInstance();
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
        * <pre>
-       * SearchIndexTool tool that performs search across specified indexes.
+       * The result of the function call, represented as a string.
+       * This field can be used to store the output of the function.
        * </pre>
        *
-       * <code>.yandex.cloud.ai.assistants.v1.SearchIndexTool search_index = 1;</code>
+       * <code>string content = 2;</code>
+       * @param value The content to set.
+       * @return This builder for chaining.
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool, yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.Builder, yandex.cloud.api.ai.assistants.v1.Common.SearchIndexToolOrBuilder> 
-          getSearchIndexFieldBuilder() {
-        if (searchIndexBuilder_ == null) {
-          if (!(toolTypeCase_ == 1)) {
-            toolType_ = yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.getDefaultInstance();
-          }
-          searchIndexBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool, yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool.Builder, yandex.cloud.api.ai.assistants.v1.Common.SearchIndexToolOrBuilder>(
-                  (yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool) toolType_,
-                  getParentForChildren(),
-                  isClean());
-          toolType_ = null;
+      public Builder setContent(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  contentTypeCase_ = 2;
+        contentType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The result of the function call, represented as a string.
+       * This field can be used to store the output of the function.
+       * </pre>
+       *
+       * <code>string content = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContent() {
+        if (contentTypeCase_ == 2) {
+          contentTypeCase_ = 0;
+          contentType_ = null;
+          onChanged();
         }
-        toolTypeCase_ = 1;
-        onChanged();;
-        return searchIndexBuilder_;
+        return this;
+      }
+      /**
+       * <pre>
+       * The result of the function call, represented as a string.
+       * This field can be used to store the output of the function.
+       * </pre>
+       *
+       * <code>string content = 2;</code>
+       * @param value The bytes for content to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        contentTypeCase_ = 2;
+        contentType_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3483,41 +11628,41 @@ public final class Common {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.Tool)
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.FunctionResult)
     }
 
-    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.Tool)
-    private static final yandex.cloud.api.ai.assistants.v1.Common.Tool DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.FunctionResult)
+    private static final yandex.cloud.api.ai.assistants.v1.Common.FunctionResult DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.Common.Tool();
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.Common.FunctionResult();
     }
 
-    public static yandex.cloud.api.ai.assistants.v1.Common.Tool getDefaultInstance() {
+    public static yandex.cloud.api.ai.assistants.v1.Common.FunctionResult getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Tool>
-        PARSER = new com.google.protobuf.AbstractParser<Tool>() {
+    private static final com.google.protobuf.Parser<FunctionResult>
+        PARSER = new com.google.protobuf.AbstractParser<FunctionResult>() {
       @java.lang.Override
-      public Tool parsePartialFrom(
+      public FunctionResult parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Tool(input, extensionRegistry);
+        return new FunctionResult(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<Tool> parser() {
+    public static com.google.protobuf.Parser<FunctionResult> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Tool> getParserForType() {
+    public com.google.protobuf.Parser<FunctionResult> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public yandex.cloud.api.ai.assistants.v1.Common.Tool getDefaultInstanceForType() {
+    public yandex.cloud.api.ai.assistants.v1.Common.FunctionResult getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3529,20 +11674,65 @@ public final class Common {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_AutoStrategy_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_AutoStrategy_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_LastMessagesStrategy_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_LastMessagesStrategy_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_assistants_v1_CompletionOptions_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_assistants_v1_CompletionOptions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_Tool_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_Tool_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_ToolCall_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_ToolCall_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_ToolCallList_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_ToolCallList_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_ToolResult_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_ToolResult_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_ToolResultList_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_ToolResultList_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_assistants_v1_SearchIndexTool_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_assistants_v1_SearchIndexTool_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_yandex_cloud_ai_assistants_v1_Tool_descriptor;
+    internal_static_yandex_cloud_ai_assistants_v1_FunctionTool_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_yandex_cloud_ai_assistants_v1_Tool_fieldAccessorTable;
+      internal_static_yandex_cloud_ai_assistants_v1_FunctionTool_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_FunctionCall_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_FunctionCall_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_FunctionResult_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_FunctionResult_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3553,25 +11743,51 @@ public final class Common {
   static {
     java.lang.String[] descriptorData = {
       "\n*yandex/cloud/ai/assistants/v1/common.p" +
-      "roto\022\035yandex.cloud.ai.assistants.v1\032\036goo" +
-      "gle/protobuf/wrappers.proto\"Q\n\027PromptTru" +
-      "ncationOptions\0226\n\021max_prompt_tokens\030\001 \001(" +
-      "\0132\033.google.protobuf.Int64Value\"w\n\021Comple" +
+      "roto\022\035yandex.cloud.ai.assistants.v1\032\034goo" +
+      "gle/protobuf/struct.proto\032\036google/protob" +
+      "uf/wrappers.proto\"\362\002\n\027PromptTruncationOp" +
+      "tions\0226\n\021max_prompt_tokens\030\001 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\022\\\n\rauto_strategy\030\002" +
+      " \001(\0132C.yandex.cloud.ai.assistants.v1.Pro" +
+      "mptTruncationOptions.AutoStrategyH\000\022m\n\026l" +
+      "ast_messages_strategy\030\003 \001(\0132K.yandex.clo" +
+      "ud.ai.assistants.v1.PromptTruncationOpti" +
+      "ons.LastMessagesStrategyH\000\032\016\n\014AutoStrate" +
+      "gy\032,\n\024LastMessagesStrategy\022\024\n\014num_messag" +
+      "es\030\001 \001(\003B\024\n\022TruncationStrategy\"w\n\021Comple" +
       "tionOptions\022/\n\nmax_tokens\030\002 \001(\0132\033.google" +
       ".protobuf.Int64Value\0221\n\013temperature\030\003 \001(" +
-      "\0132\034.google.protobuf.DoubleValue\"a\n\017Searc" +
-      "hIndexTool\022\030\n\020search_index_ids\030\001 \003(\t\0224\n\017" +
-      "max_num_results\030\002 \001(\0132\033.google.protobuf." +
-      "Int64Value\"Z\n\004Tool\022F\n\014search_index\030\001 \001(\013" +
-      "2..yandex.cloud.ai.assistants.v1.SearchI" +
-      "ndexToolH\000B\n\n\010ToolTypeBq\n!yandex.cloud.a" +
-      "pi.ai.assistants.v1ZLgithub.com/yandex-c" +
-      "loud/go-genproto/yandex/cloud/ai/assista" +
-      "nts/v1;assistantsb\006proto3"
+      "\0132\034.google.protobuf.DoubleValue\"\233\001\n\004Tool" +
+      "\022F\n\014search_index\030\001 \001(\0132..yandex.cloud.ai" +
+      ".assistants.v1.SearchIndexToolH\000\022?\n\010func" +
+      "tion\030\002 \001(\0132+.yandex.cloud.ai.assistants." +
+      "v1.FunctionToolH\000B\n\n\010ToolType\"`\n\010ToolCal" +
+      "l\022D\n\rfunction_call\030\001 \001(\0132+.yandex.cloud." +
+      "ai.assistants.v1.FunctionCallH\000B\016\n\014ToolC" +
+      "allType\"K\n\014ToolCallList\022;\n\ntool_calls\030\001 " +
+      "\003(\0132\'.yandex.cloud.ai.assistants.v1.Tool" +
+      "Call\"h\n\nToolResult\022H\n\017function_result\030\001 " +
+      "\001(\0132-.yandex.cloud.ai.assistants.v1.Func" +
+      "tionResultH\000B\020\n\016ToolResultType\"Q\n\016ToolRe" +
+      "sultList\022?\n\014tool_results\030\001 \003(\0132).yandex." +
+      "cloud.ai.assistants.v1.ToolResult\"a\n\017Sea" +
+      "rchIndexTool\022\030\n\020search_index_ids\030\001 \003(\t\0224" +
+      "\n\017max_num_results\030\002 \001(\0132\033.google.protobu" +
+      "f.Int64Value\"^\n\014FunctionTool\022\014\n\004name\030\001 \001" +
+      "(\t\022\023\n\013description\030\002 \001(\t\022+\n\nparameters\030\003 " +
+      "\001(\0132\027.google.protobuf.Struct\"H\n\014Function" +
+      "Call\022\014\n\004name\030\001 \001(\t\022*\n\targuments\030\002 \001(\0132\027." +
+      "google.protobuf.Struct\"@\n\016FunctionResult" +
+      "\022\014\n\004name\030\001 \001(\t\022\021\n\007content\030\002 \001(\tH\000B\r\n\013Con" +
+      "tentTypeBq\n!yandex.cloud.api.ai.assistan" +
+      "ts.v1ZLgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/ai/assistants/v1;assista" +
+      "ntsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.StructProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
         });
     internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_descriptor =
@@ -3579,25 +11795,80 @@ public final class Common {
     internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_descriptor,
-        new java.lang.String[] { "MaxPromptTokens", });
+        new java.lang.String[] { "MaxPromptTokens", "AutoStrategy", "LastMessagesStrategy", "TruncationStrategy", });
+    internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_AutoStrategy_descriptor =
+      internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_AutoStrategy_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_AutoStrategy_descriptor,
+        new java.lang.String[] { });
+    internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_LastMessagesStrategy_descriptor =
+      internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_LastMessagesStrategy_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_LastMessagesStrategy_descriptor,
+        new java.lang.String[] { "NumMessages", });
     internal_static_yandex_cloud_ai_assistants_v1_CompletionOptions_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_ai_assistants_v1_CompletionOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_CompletionOptions_descriptor,
         new java.lang.String[] { "MaxTokens", "Temperature", });
-    internal_static_yandex_cloud_ai_assistants_v1_SearchIndexTool_descriptor =
+    internal_static_yandex_cloud_ai_assistants_v1_Tool_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_ai_assistants_v1_Tool_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_Tool_descriptor,
+        new java.lang.String[] { "SearchIndex", "Function", "ToolType", });
+    internal_static_yandex_cloud_ai_assistants_v1_ToolCall_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_ai_assistants_v1_ToolCall_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_ToolCall_descriptor,
+        new java.lang.String[] { "FunctionCall", "ToolCallType", });
+    internal_static_yandex_cloud_ai_assistants_v1_ToolCallList_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_ai_assistants_v1_ToolCallList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_ToolCallList_descriptor,
+        new java.lang.String[] { "ToolCalls", });
+    internal_static_yandex_cloud_ai_assistants_v1_ToolResult_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_ai_assistants_v1_ToolResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_ToolResult_descriptor,
+        new java.lang.String[] { "FunctionResult", "ToolResultType", });
+    internal_static_yandex_cloud_ai_assistants_v1_ToolResultList_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_ai_assistants_v1_ToolResultList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_ToolResultList_descriptor,
+        new java.lang.String[] { "ToolResults", });
+    internal_static_yandex_cloud_ai_assistants_v1_SearchIndexTool_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_ai_assistants_v1_SearchIndexTool_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_SearchIndexTool_descriptor,
         new java.lang.String[] { "SearchIndexIds", "MaxNumResults", });
-    internal_static_yandex_cloud_ai_assistants_v1_Tool_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_yandex_cloud_ai_assistants_v1_Tool_fieldAccessorTable = new
+    internal_static_yandex_cloud_ai_assistants_v1_FunctionTool_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_yandex_cloud_ai_assistants_v1_FunctionTool_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_yandex_cloud_ai_assistants_v1_Tool_descriptor,
-        new java.lang.String[] { "SearchIndex", "ToolType", });
+        internal_static_yandex_cloud_ai_assistants_v1_FunctionTool_descriptor,
+        new java.lang.String[] { "Name", "Description", "Parameters", });
+    internal_static_yandex_cloud_ai_assistants_v1_FunctionCall_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_ai_assistants_v1_FunctionCall_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_FunctionCall_descriptor,
+        new java.lang.String[] { "Name", "Arguments", });
+    internal_static_yandex_cloud_ai_assistants_v1_FunctionResult_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_ai_assistants_v1_FunctionResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_FunctionResult_descriptor,
+        new java.lang.String[] { "Name", "Content", "ContentType", });
+    com.google.protobuf.StructProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
   }
 

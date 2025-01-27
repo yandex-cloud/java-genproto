@@ -4011,6 +4011,35 @@ public final class SearchIndexOuterClass {
      * <code>.yandex.cloud.ai.assistants.v1.searchindex.ChunkingStrategy chunking_strategy = 1;</code>
      */
     yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategyOrBuilder getChunkingStrategyOrBuilder();
+
+    /**
+     * <pre>
+     * Tokenizer that generates n-grams.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+     * @return Whether the ngramTokenizer field is set.
+     */
+    boolean hasNgramTokenizer();
+    /**
+     * <pre>
+     * Tokenizer that generates n-grams.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+     * @return The ngramTokenizer.
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer getNgramTokenizer();
+    /**
+     * <pre>
+     * Tokenizer that generates n-grams.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizerOrBuilder getNgramTokenizerOrBuilder();
+
+    public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex.TextTokenizerCase getTextTokenizerCase();
   }
   /**
    * <pre>
@@ -4074,6 +4103,20 @@ public final class SearchIndexOuterClass {
 
               break;
             }
+            case 18: {
+              yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.Builder subBuilder = null;
+              if (textTokenizerCase_ == 2) {
+                subBuilder = ((yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer) textTokenizer_).toBuilder();
+              }
+              textTokenizer_ =
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer) textTokenizer_);
+                textTokenizer_ = subBuilder.buildPartial();
+              }
+              textTokenizerCase_ = 2;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4104,6 +4147,45 @@ public final class SearchIndexOuterClass {
       return yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.internal_static_yandex_cloud_ai_assistants_v1_searchindex_TextSearchIndex_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex.class, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex.Builder.class);
+    }
+
+    private int textTokenizerCase_ = 0;
+    private java.lang.Object textTokenizer_;
+    public enum TextTokenizerCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      NGRAM_TOKENIZER(2),
+      TEXTTOKENIZER_NOT_SET(0);
+      private final int value;
+      private TextTokenizerCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TextTokenizerCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TextTokenizerCase forNumber(int value) {
+        switch (value) {
+          case 2: return NGRAM_TOKENIZER;
+          case 0: return TEXTTOKENIZER_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TextTokenizerCase
+    getTextTokenizerCase() {
+      return TextTokenizerCase.forNumber(
+          textTokenizerCase_);
     }
 
     public static final int CHUNKING_STRATEGY_FIELD_NUMBER = 1;
@@ -4147,6 +4229,49 @@ public final class SearchIndexOuterClass {
       return getChunkingStrategy();
     }
 
+    public static final int NGRAM_TOKENIZER_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * Tokenizer that generates n-grams.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+     * @return Whether the ngramTokenizer field is set.
+     */
+    @java.lang.Override
+    public boolean hasNgramTokenizer() {
+      return textTokenizerCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Tokenizer that generates n-grams.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+     * @return The ngramTokenizer.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer getNgramTokenizer() {
+      if (textTokenizerCase_ == 2) {
+         return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer) textTokenizer_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Tokenizer that generates n-grams.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizerOrBuilder getNgramTokenizerOrBuilder() {
+      if (textTokenizerCase_ == 2) {
+         return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer) textTokenizer_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4164,6 +4289,9 @@ public final class SearchIndexOuterClass {
       if (chunkingStrategy_ != null) {
         output.writeMessage(1, getChunkingStrategy());
       }
+      if (textTokenizerCase_ == 2) {
+        output.writeMessage(2, (yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer) textTokenizer_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4176,6 +4304,10 @@ public final class SearchIndexOuterClass {
       if (chunkingStrategy_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getChunkingStrategy());
+      }
+      if (textTokenizerCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer) textTokenizer_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4197,6 +4329,15 @@ public final class SearchIndexOuterClass {
         if (!getChunkingStrategy()
             .equals(other.getChunkingStrategy())) return false;
       }
+      if (!getTextTokenizerCase().equals(other.getTextTokenizerCase())) return false;
+      switch (textTokenizerCase_) {
+        case 2:
+          if (!getNgramTokenizer()
+              .equals(other.getNgramTokenizer())) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4211,6 +4352,14 @@ public final class SearchIndexOuterClass {
       if (hasChunkingStrategy()) {
         hash = (37 * hash) + CHUNKING_STRATEGY_FIELD_NUMBER;
         hash = (53 * hash) + getChunkingStrategy().hashCode();
+      }
+      switch (textTokenizerCase_) {
+        case 2:
+          hash = (37 * hash) + NGRAM_TOKENIZER_FIELD_NUMBER;
+          hash = (53 * hash) + getNgramTokenizer().hashCode();
+          break;
+        case 0:
+        default:
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4355,6 +4504,8 @@ public final class SearchIndexOuterClass {
           chunkingStrategy_ = null;
           chunkingStrategyBuilder_ = null;
         }
+        textTokenizerCase_ = 0;
+        textTokenizer_ = null;
         return this;
       }
 
@@ -4386,6 +4537,14 @@ public final class SearchIndexOuterClass {
         } else {
           result.chunkingStrategy_ = chunkingStrategyBuilder_.build();
         }
+        if (textTokenizerCase_ == 2) {
+          if (ngramTokenizerBuilder_ == null) {
+            result.textTokenizer_ = textTokenizer_;
+          } else {
+            result.textTokenizer_ = ngramTokenizerBuilder_.build();
+          }
+        }
+        result.textTokenizerCase_ = textTokenizerCase_;
         onBuilt();
         return result;
       }
@@ -4437,6 +4596,15 @@ public final class SearchIndexOuterClass {
         if (other.hasChunkingStrategy()) {
           mergeChunkingStrategy(other.getChunkingStrategy());
         }
+        switch (other.getTextTokenizerCase()) {
+          case NGRAM_TOKENIZER: {
+            mergeNgramTokenizer(other.getNgramTokenizer());
+            break;
+          }
+          case TEXTTOKENIZER_NOT_SET: {
+            break;
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -4465,6 +4633,21 @@ public final class SearchIndexOuterClass {
         }
         return this;
       }
+      private int textTokenizerCase_ = 0;
+      private java.lang.Object textTokenizer_;
+      public TextTokenizerCase
+          getTextTokenizerCase() {
+        return TextTokenizerCase.forNumber(
+            textTokenizerCase_);
+      }
+
+      public Builder clearTextTokenizer() {
+        textTokenizerCase_ = 0;
+        textTokenizer_ = null;
+        onChanged();
+        return this;
+      }
+
 
       private yandex.cloud.api.ai.assistants.v1.searchindex.Common.ChunkingStrategy chunkingStrategy_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4628,6 +4811,183 @@ public final class SearchIndexOuterClass {
           chunkingStrategy_ = null;
         }
         return chunkingStrategyBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer, yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizerOrBuilder> ngramTokenizerBuilder_;
+      /**
+       * <pre>
+       * Tokenizer that generates n-grams.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+       * @return Whether the ngramTokenizer field is set.
+       */
+      @java.lang.Override
+      public boolean hasNgramTokenizer() {
+        return textTokenizerCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Tokenizer that generates n-grams.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+       * @return The ngramTokenizer.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer getNgramTokenizer() {
+        if (ngramTokenizerBuilder_ == null) {
+          if (textTokenizerCase_ == 2) {
+            return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer) textTokenizer_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.getDefaultInstance();
+        } else {
+          if (textTokenizerCase_ == 2) {
+            return ngramTokenizerBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Tokenizer that generates n-grams.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+       */
+      public Builder setNgramTokenizer(yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer value) {
+        if (ngramTokenizerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          textTokenizer_ = value;
+          onChanged();
+        } else {
+          ngramTokenizerBuilder_.setMessage(value);
+        }
+        textTokenizerCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Tokenizer that generates n-grams.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+       */
+      public Builder setNgramTokenizer(
+          yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.Builder builderForValue) {
+        if (ngramTokenizerBuilder_ == null) {
+          textTokenizer_ = builderForValue.build();
+          onChanged();
+        } else {
+          ngramTokenizerBuilder_.setMessage(builderForValue.build());
+        }
+        textTokenizerCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Tokenizer that generates n-grams.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+       */
+      public Builder mergeNgramTokenizer(yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer value) {
+        if (ngramTokenizerBuilder_ == null) {
+          if (textTokenizerCase_ == 2 &&
+              textTokenizer_ != yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.getDefaultInstance()) {
+            textTokenizer_ = yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.newBuilder((yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer) textTokenizer_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            textTokenizer_ = value;
+          }
+          onChanged();
+        } else {
+          if (textTokenizerCase_ == 2) {
+            ngramTokenizerBuilder_.mergeFrom(value);
+          }
+          ngramTokenizerBuilder_.setMessage(value);
+        }
+        textTokenizerCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Tokenizer that generates n-grams.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+       */
+      public Builder clearNgramTokenizer() {
+        if (ngramTokenizerBuilder_ == null) {
+          if (textTokenizerCase_ == 2) {
+            textTokenizerCase_ = 0;
+            textTokenizer_ = null;
+            onChanged();
+          }
+        } else {
+          if (textTokenizerCase_ == 2) {
+            textTokenizerCase_ = 0;
+            textTokenizer_ = null;
+          }
+          ngramTokenizerBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Tokenizer that generates n-grams.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.Builder getNgramTokenizerBuilder() {
+        return getNgramTokenizerFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Tokenizer that generates n-grams.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizerOrBuilder getNgramTokenizerOrBuilder() {
+        if ((textTokenizerCase_ == 2) && (ngramTokenizerBuilder_ != null)) {
+          return ngramTokenizerBuilder_.getMessageOrBuilder();
+        } else {
+          if (textTokenizerCase_ == 2) {
+            return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer) textTokenizer_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Tokenizer that generates n-grams.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer, yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizerOrBuilder> 
+          getNgramTokenizerFieldBuilder() {
+        if (ngramTokenizerBuilder_ == null) {
+          if (!(textTokenizerCase_ == 2)) {
+            textTokenizer_ = yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.getDefaultInstance();
+          }
+          ngramTokenizerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer, yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizerOrBuilder>(
+                  (yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer) textTokenizer_,
+                  getParentForChildren(),
+                  isClean());
+          textTokenizer_ = null;
+        }
+        textTokenizerCase_ = 2;
+        onChanged();;
+        return ngramTokenizerBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7467,30 +7827,32 @@ public final class SearchIndexOuterClass {
       "id_search_index\030\016 \001(\0132<.yandex.cloud.ai." +
       "assistants.v1.searchindex.HybridSearchIn" +
       "dexH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001B\013\n\tIndexType\"i\n\017TextSearchI" +
-      "ndex\022V\n\021chunking_strategy\030\001 \001(\0132;.yandex" +
-      ".cloud.ai.assistants.v1.searchindex.Chun" +
-      "kingStrategy\"\241\001\n\021VectorSearchIndex\022\030\n\020do" +
-      "c_embedder_uri\030\001 \001(\t\022\032\n\022query_embedder_u" +
-      "ri\030\002 \001(\t\022V\n\021chunking_strategy\030\003 \001(\0132;.ya" +
-      "ndex.cloud.ai.assistants.v1.searchindex." +
-      "ChunkingStrategy\"\335\003\n\021HybridSearchIndex\022U" +
-      "\n\021text_search_index\030\001 \001(\0132:.yandex.cloud" +
-      ".ai.assistants.v1.searchindex.TextSearch" +
-      "Index\022Y\n\023vector_search_index\030\002 \001(\0132<.yan" +
-      "dex.cloud.ai.assistants.v1.searchindex.V" +
-      "ectorSearchIndex\022V\n\021chunking_strategy\030\003 " +
-      "\001(\0132;.yandex.cloud.ai.assistants.v1.sear" +
-      "chindex.ChunkingStrategy\022`\n\026normalizatio" +
-      "n_strategy\030\004 \001(\0162@.yandex.cloud.ai.assis" +
-      "tants.v1.searchindex.NormalizationStrate" +
-      "gy\022\\\n\024combination_strategy\030\005 \001(\0132>.yande" +
-      "x.cloud.ai.assistants.v1.searchindex.Com" +
-      "binationStrategyB\212\001\n-yandex.cloud.api.ai" +
-      ".assistants.v1.searchindexZYgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/ai/" +
-      "assistants/v1/searchindex;searchindexb\006p" +
-      "roto3"
+      "ue\030\002 \001(\t:\0028\001B\013\n\tIndexType\"\320\001\n\017TextSearch" +
+      "Index\022V\n\021chunking_strategy\030\001 \001(\0132;.yande" +
+      "x.cloud.ai.assistants.v1.searchindex.Chu" +
+      "nkingStrategy\022T\n\017ngram_tokenizer\030\002 \001(\01329" +
+      ".yandex.cloud.ai.assistants.v1.searchind" +
+      "ex.NgramTokenizerH\000B\017\n\rTextTokenizer\"\241\001\n" +
+      "\021VectorSearchIndex\022\030\n\020doc_embedder_uri\030\001" +
+      " \001(\t\022\032\n\022query_embedder_uri\030\002 \001(\t\022V\n\021chun" +
+      "king_strategy\030\003 \001(\0132;.yandex.cloud.ai.as" +
+      "sistants.v1.searchindex.ChunkingStrategy" +
+      "\"\335\003\n\021HybridSearchIndex\022U\n\021text_search_in" +
+      "dex\030\001 \001(\0132:.yandex.cloud.ai.assistants.v" +
+      "1.searchindex.TextSearchIndex\022Y\n\023vector_" +
+      "search_index\030\002 \001(\0132<.yandex.cloud.ai.ass" +
+      "istants.v1.searchindex.VectorSearchIndex" +
+      "\022V\n\021chunking_strategy\030\003 \001(\0132;.yandex.clo" +
+      "ud.ai.assistants.v1.searchindex.Chunking" +
+      "Strategy\022`\n\026normalization_strategy\030\004 \001(\016" +
+      "2@.yandex.cloud.ai.assistants.v1.searchi" +
+      "ndex.NormalizationStrategy\022\\\n\024combinatio" +
+      "n_strategy\030\005 \001(\0132>.yandex.cloud.ai.assis" +
+      "tants.v1.searchindex.CombinationStrategy" +
+      "B\212\001\n-yandex.cloud.api.ai.assistants.v1.s" +
+      "earchindexZYgithub.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/ai/assistants/v1/se" +
+      "archindex;searchindexb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7516,7 +7878,7 @@ public final class SearchIndexOuterClass {
     internal_static_yandex_cloud_ai_assistants_v1_searchindex_TextSearchIndex_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_searchindex_TextSearchIndex_descriptor,
-        new java.lang.String[] { "ChunkingStrategy", });
+        new java.lang.String[] { "ChunkingStrategy", "NgramTokenizer", "TextTokenizer", });
     internal_static_yandex_cloud_ai_assistants_v1_searchindex_VectorSearchIndex_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_ai_assistants_v1_searchindex_VectorSearchIndex_fieldAccessorTable = new

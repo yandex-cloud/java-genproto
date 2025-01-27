@@ -225,6 +225,50 @@ public final class RunServiceOuterClass {
      * @return The stream.
      */
     boolean getStream();
+
+    /**
+     * <pre>
+     * List of tools that are available for the assistant to use in this run.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.assistants.v1.Common.Tool> 
+        getToolsList();
+    /**
+     * <pre>
+     * List of tools that are available for the assistant to use in this run.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.Tool getTools(int index);
+    /**
+     * <pre>
+     * List of tools that are available for the assistant to use in this run.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+     */
+    int getToolsCount();
+    /**
+     * <pre>
+     * List of tools that are available for the assistant to use in this run.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder> 
+        getToolsOrBuilderList();
+    /**
+     * <pre>
+     * List of tools that are available for the assistant to use in this run.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder getToolsOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -246,6 +290,7 @@ public final class RunServiceOuterClass {
       assistantId_ = "";
       threadId_ = "";
       additionalMessages_ = java.util.Collections.emptyList();
+      tools_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -344,6 +389,15 @@ public final class RunServiceOuterClass {
               stream_ = input.readBool();
               break;
             }
+            case 66: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                tools_ = new java.util.ArrayList<yandex.cloud.api.ai.assistants.v1.Common.Tool>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              tools_.add(
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.Tool.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -361,6 +415,9 @@ public final class RunServiceOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000002) != 0)) {
           additionalMessages_ = java.util.Collections.unmodifiableList(additionalMessages_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          tools_ = java.util.Collections.unmodifiableList(tools_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -737,6 +794,66 @@ public final class RunServiceOuterClass {
       return stream_;
     }
 
+    public static final int TOOLS_FIELD_NUMBER = 8;
+    private java.util.List<yandex.cloud.api.ai.assistants.v1.Common.Tool> tools_;
+    /**
+     * <pre>
+     * List of tools that are available for the assistant to use in this run.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.assistants.v1.Common.Tool> getToolsList() {
+      return tools_;
+    }
+    /**
+     * <pre>
+     * List of tools that are available for the assistant to use in this run.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder> 
+        getToolsOrBuilderList() {
+      return tools_;
+    }
+    /**
+     * <pre>
+     * List of tools that are available for the assistant to use in this run.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+     */
+    @java.lang.Override
+    public int getToolsCount() {
+      return tools_.size();
+    }
+    /**
+     * <pre>
+     * List of tools that are available for the assistant to use in this run.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.Tool getTools(int index) {
+      return tools_.get(index);
+    }
+    /**
+     * <pre>
+     * List of tools that are available for the assistant to use in this run.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder getToolsOrBuilder(
+        int index) {
+      return tools_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -774,6 +891,9 @@ public final class RunServiceOuterClass {
       }
       if (stream_ != false) {
         output.writeBool(7, stream_);
+      }
+      for (int i = 0; i < tools_.size(); i++) {
+        output.writeMessage(8, tools_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -816,6 +936,10 @@ public final class RunServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(7, stream_);
       }
+      for (int i = 0; i < tools_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, tools_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -851,6 +975,8 @@ public final class RunServiceOuterClass {
       }
       if (getStream()
           != other.getStream()) return false;
+      if (!getToolsList()
+          .equals(other.getToolsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -885,6 +1011,10 @@ public final class RunServiceOuterClass {
       hash = (37 * hash) + STREAM_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getStream());
+      if (getToolsCount() > 0) {
+        hash = (37 * hash) + TOOLS_FIELD_NUMBER;
+        hash = (53 * hash) + getToolsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1040,6 +1170,7 @@ public final class RunServiceOuterClass {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getAdditionalMessagesFieldBuilder();
+          getToolsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -1070,6 +1201,12 @@ public final class RunServiceOuterClass {
         }
         stream_ = false;
 
+        if (toolsBuilder_ == null) {
+          tools_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          toolsBuilder_.clear();
+        }
         return this;
       }
 
@@ -1121,6 +1258,15 @@ public final class RunServiceOuterClass {
           result.customCompletionOptions_ = customCompletionOptionsBuilder_.build();
         }
         result.stream_ = stream_;
+        if (toolsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            tools_ = java.util.Collections.unmodifiableList(tools_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.tools_ = tools_;
+        } else {
+          result.tools_ = toolsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1213,6 +1359,32 @@ public final class RunServiceOuterClass {
         }
         if (other.getStream() != false) {
           setStream(other.getStream());
+        }
+        if (toolsBuilder_ == null) {
+          if (!other.tools_.isEmpty()) {
+            if (tools_.isEmpty()) {
+              tools_ = other.tools_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureToolsIsMutable();
+              tools_.addAll(other.tools_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tools_.isEmpty()) {
+            if (toolsBuilder_.isEmpty()) {
+              toolsBuilder_.dispose();
+              toolsBuilder_ = null;
+              tools_ = other.tools_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              toolsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getToolsFieldBuilder() : null;
+            } else {
+              toolsBuilder_.addAllMessages(other.tools_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2277,6 +2449,318 @@ public final class RunServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private java.util.List<yandex.cloud.api.ai.assistants.v1.Common.Tool> tools_ =
+        java.util.Collections.emptyList();
+      private void ensureToolsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          tools_ = new java.util.ArrayList<yandex.cloud.api.ai.assistants.v1.Common.Tool>(tools_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.Tool, yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder, yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder> toolsBuilder_;
+
+      /**
+       * <pre>
+       * List of tools that are available for the assistant to use in this run.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.assistants.v1.Common.Tool> getToolsList() {
+        if (toolsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tools_);
+        } else {
+          return toolsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of tools that are available for the assistant to use in this run.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+       */
+      public int getToolsCount() {
+        if (toolsBuilder_ == null) {
+          return tools_.size();
+        } else {
+          return toolsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of tools that are available for the assistant to use in this run.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.Tool getTools(int index) {
+        if (toolsBuilder_ == null) {
+          return tools_.get(index);
+        } else {
+          return toolsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of tools that are available for the assistant to use in this run.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+       */
+      public Builder setTools(
+          int index, yandex.cloud.api.ai.assistants.v1.Common.Tool value) {
+        if (toolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureToolsIsMutable();
+          tools_.set(index, value);
+          onChanged();
+        } else {
+          toolsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tools that are available for the assistant to use in this run.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+       */
+      public Builder setTools(
+          int index, yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder builderForValue) {
+        if (toolsBuilder_ == null) {
+          ensureToolsIsMutable();
+          tools_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          toolsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tools that are available for the assistant to use in this run.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+       */
+      public Builder addTools(yandex.cloud.api.ai.assistants.v1.Common.Tool value) {
+        if (toolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureToolsIsMutable();
+          tools_.add(value);
+          onChanged();
+        } else {
+          toolsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tools that are available for the assistant to use in this run.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+       */
+      public Builder addTools(
+          int index, yandex.cloud.api.ai.assistants.v1.Common.Tool value) {
+        if (toolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureToolsIsMutable();
+          tools_.add(index, value);
+          onChanged();
+        } else {
+          toolsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tools that are available for the assistant to use in this run.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+       */
+      public Builder addTools(
+          yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder builderForValue) {
+        if (toolsBuilder_ == null) {
+          ensureToolsIsMutable();
+          tools_.add(builderForValue.build());
+          onChanged();
+        } else {
+          toolsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tools that are available for the assistant to use in this run.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+       */
+      public Builder addTools(
+          int index, yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder builderForValue) {
+        if (toolsBuilder_ == null) {
+          ensureToolsIsMutable();
+          tools_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          toolsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tools that are available for the assistant to use in this run.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+       */
+      public Builder addAllTools(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.assistants.v1.Common.Tool> values) {
+        if (toolsBuilder_ == null) {
+          ensureToolsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tools_);
+          onChanged();
+        } else {
+          toolsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tools that are available for the assistant to use in this run.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+       */
+      public Builder clearTools() {
+        if (toolsBuilder_ == null) {
+          tools_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          toolsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tools that are available for the assistant to use in this run.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+       */
+      public Builder removeTools(int index) {
+        if (toolsBuilder_ == null) {
+          ensureToolsIsMutable();
+          tools_.remove(index);
+          onChanged();
+        } else {
+          toolsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tools that are available for the assistant to use in this run.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder getToolsBuilder(
+          int index) {
+        return getToolsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of tools that are available for the assistant to use in this run.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder getToolsOrBuilder(
+          int index) {
+        if (toolsBuilder_ == null) {
+          return tools_.get(index);  } else {
+          return toolsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of tools that are available for the assistant to use in this run.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder> 
+           getToolsOrBuilderList() {
+        if (toolsBuilder_ != null) {
+          return toolsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tools_);
+        }
+      }
+      /**
+       * <pre>
+       * List of tools that are available for the assistant to use in this run.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder addToolsBuilder() {
+        return getToolsFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.assistants.v1.Common.Tool.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of tools that are available for the assistant to use in this run.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder addToolsBuilder(
+          int index) {
+        return getToolsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.assistants.v1.Common.Tool.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of tools that are available for the assistant to use in this run.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.Tool tools = 8;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder> 
+           getToolsBuilderList() {
+        return getToolsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.Tool, yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder, yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder> 
+          getToolsFieldBuilder() {
+        if (toolsBuilder_ == null) {
+          toolsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.Common.Tool, yandex.cloud.api.ai.assistants.v1.Common.Tool.Builder, yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder>(
+                  tools_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tools_ = null;
+        }
+        return toolsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3200,6 +3684,1233 @@ public final class RunServiceOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.ListenRunRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AttachRunRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.runs.AttachRunRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the run to listen to.
+     * </pre>
+     *
+     * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The runId.
+     */
+    java.lang.String getRunId();
+    /**
+     * <pre>
+     * ID of the run to listen to.
+     * </pre>
+     *
+     * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for runId.
+     */
+    com.google.protobuf.ByteString
+        getRunIdBytes();
+
+    /**
+     * <pre>
+     * Starting index for events. If provided, listening will start from this event.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
+     * @return Whether the eventsStartIdx field is set.
+     */
+    boolean hasEventsStartIdx();
+    /**
+     * <pre>
+     * Starting index for events. If provided, listening will start from this event.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
+     * @return The eventsStartIdx.
+     */
+    com.google.protobuf.Int64Value getEventsStartIdx();
+    /**
+     * <pre>
+     * Starting index for events. If provided, listening will start from this event.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getEventsStartIdxOrBuilder();
+
+    /**
+     * <pre>
+     * A list of tool results to submit to the run, such as the output of a function call.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 3;</code>
+     * @return Whether the toolResultList field is set.
+     */
+    boolean hasToolResultList();
+    /**
+     * <pre>
+     * A list of tool results to submit to the run, such as the output of a function call.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 3;</code>
+     * @return The toolResultList.
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.ToolResultList getToolResultList();
+    /**
+     * <pre>
+     * A list of tool results to submit to the run, such as the output of a function call.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 3;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.ToolResultListOrBuilder getToolResultListOrBuilder();
+
+    public yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest.EventCase getEventCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.AttachRunRequest}
+   */
+  public static final class AttachRunRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.runs.AttachRunRequest)
+      AttachRunRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AttachRunRequest.newBuilder() to construct.
+    private AttachRunRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AttachRunRequest() {
+      runId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AttachRunRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AttachRunRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              runId_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (eventsStartIdx_ != null) {
+                subBuilder = eventsStartIdx_.toBuilder();
+              }
+              eventsStartIdx_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(eventsStartIdx_);
+                eventsStartIdx_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.Builder subBuilder = null;
+              if (eventCase_ == 3) {
+                subBuilder = ((yandex.cloud.api.ai.assistants.v1.Common.ToolResultList) event_).toBuilder();
+              }
+              event_ =
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.ToolResultList) event_);
+                event_ = subBuilder.buildPartial();
+              }
+              eventCase_ = 3;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.internal_static_yandex_cloud_ai_assistants_v1_runs_AttachRunRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.internal_static_yandex_cloud_ai_assistants_v1_runs_AttachRunRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest.class, yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest.Builder.class);
+    }
+
+    private int eventCase_ = 0;
+    private java.lang.Object event_;
+    public enum EventCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      TOOL_RESULT_LIST(3),
+      EVENT_NOT_SET(0);
+      private final int value;
+      private EventCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static EventCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static EventCase forNumber(int value) {
+        switch (value) {
+          case 3: return TOOL_RESULT_LIST;
+          case 0: return EVENT_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public EventCase
+    getEventCase() {
+      return EventCase.forNumber(
+          eventCase_);
+    }
+
+    public static final int RUN_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object runId_;
+    /**
+     * <pre>
+     * ID of the run to listen to.
+     * </pre>
+     *
+     * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The runId.
+     */
+    @java.lang.Override
+    public java.lang.String getRunId() {
+      java.lang.Object ref = runId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        runId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the run to listen to.
+     * </pre>
+     *
+     * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for runId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRunIdBytes() {
+      java.lang.Object ref = runId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        runId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EVENTS_START_IDX_FIELD_NUMBER = 2;
+    private com.google.protobuf.Int64Value eventsStartIdx_;
+    /**
+     * <pre>
+     * Starting index for events. If provided, listening will start from this event.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
+     * @return Whether the eventsStartIdx field is set.
+     */
+    @java.lang.Override
+    public boolean hasEventsStartIdx() {
+      return eventsStartIdx_ != null;
+    }
+    /**
+     * <pre>
+     * Starting index for events. If provided, listening will start from this event.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
+     * @return The eventsStartIdx.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getEventsStartIdx() {
+      return eventsStartIdx_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : eventsStartIdx_;
+    }
+    /**
+     * <pre>
+     * Starting index for events. If provided, listening will start from this event.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getEventsStartIdxOrBuilder() {
+      return getEventsStartIdx();
+    }
+
+    public static final int TOOL_RESULT_LIST_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * A list of tool results to submit to the run, such as the output of a function call.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 3;</code>
+     * @return Whether the toolResultList field is set.
+     */
+    @java.lang.Override
+    public boolean hasToolResultList() {
+      return eventCase_ == 3;
+    }
+    /**
+     * <pre>
+     * A list of tool results to submit to the run, such as the output of a function call.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 3;</code>
+     * @return The toolResultList.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.ToolResultList getToolResultList() {
+      if (eventCase_ == 3) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.ToolResultList) event_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * A list of tool results to submit to the run, such as the output of a function call.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.ToolResultListOrBuilder getToolResultListOrBuilder() {
+      if (eventCase_ == 3) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.ToolResultList) event_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(runId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, runId_);
+      }
+      if (eventsStartIdx_ != null) {
+        output.writeMessage(2, getEventsStartIdx());
+      }
+      if (eventCase_ == 3) {
+        output.writeMessage(3, (yandex.cloud.api.ai.assistants.v1.Common.ToolResultList) event_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(runId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, runId_);
+      }
+      if (eventsStartIdx_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getEventsStartIdx());
+      }
+      if (eventCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (yandex.cloud.api.ai.assistants.v1.Common.ToolResultList) event_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest other = (yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest) obj;
+
+      if (!getRunId()
+          .equals(other.getRunId())) return false;
+      if (hasEventsStartIdx() != other.hasEventsStartIdx()) return false;
+      if (hasEventsStartIdx()) {
+        if (!getEventsStartIdx()
+            .equals(other.getEventsStartIdx())) return false;
+      }
+      if (!getEventCase().equals(other.getEventCase())) return false;
+      switch (eventCase_) {
+        case 3:
+          if (!getToolResultList()
+              .equals(other.getToolResultList())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RUN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRunId().hashCode();
+      if (hasEventsStartIdx()) {
+        hash = (37 * hash) + EVENTS_START_IDX_FIELD_NUMBER;
+        hash = (53 * hash) + getEventsStartIdx().hashCode();
+      }
+      switch (eventCase_) {
+        case 3:
+          hash = (37 * hash) + TOOL_RESULT_LIST_FIELD_NUMBER;
+          hash = (53 * hash) + getToolResultList().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.AttachRunRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.runs.AttachRunRequest)
+        yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.internal_static_yandex_cloud_ai_assistants_v1_runs_AttachRunRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.internal_static_yandex_cloud_ai_assistants_v1_runs_AttachRunRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest.class, yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        runId_ = "";
+
+        if (eventsStartIdxBuilder_ == null) {
+          eventsStartIdx_ = null;
+        } else {
+          eventsStartIdx_ = null;
+          eventsStartIdxBuilder_ = null;
+        }
+        eventCase_ = 0;
+        event_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.internal_static_yandex_cloud_ai_assistants_v1_runs_AttachRunRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest build() {
+        yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest result = new yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest(this);
+        result.runId_ = runId_;
+        if (eventsStartIdxBuilder_ == null) {
+          result.eventsStartIdx_ = eventsStartIdx_;
+        } else {
+          result.eventsStartIdx_ = eventsStartIdxBuilder_.build();
+        }
+        if (eventCase_ == 3) {
+          if (toolResultListBuilder_ == null) {
+            result.event_ = event_;
+          } else {
+            result.event_ = toolResultListBuilder_.build();
+          }
+        }
+        result.eventCase_ = eventCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest.getDefaultInstance()) return this;
+        if (!other.getRunId().isEmpty()) {
+          runId_ = other.runId_;
+          onChanged();
+        }
+        if (other.hasEventsStartIdx()) {
+          mergeEventsStartIdx(other.getEventsStartIdx());
+        }
+        switch (other.getEventCase()) {
+          case TOOL_RESULT_LIST: {
+            mergeToolResultList(other.getToolResultList());
+            break;
+          }
+          case EVENT_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int eventCase_ = 0;
+      private java.lang.Object event_;
+      public EventCase
+          getEventCase() {
+        return EventCase.forNumber(
+            eventCase_);
+      }
+
+      public Builder clearEvent() {
+        eventCase_ = 0;
+        event_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private java.lang.Object runId_ = "";
+      /**
+       * <pre>
+       * ID of the run to listen to.
+       * </pre>
+       *
+       * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The runId.
+       */
+      public java.lang.String getRunId() {
+        java.lang.Object ref = runId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          runId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the run to listen to.
+       * </pre>
+       *
+       * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for runId.
+       */
+      public com.google.protobuf.ByteString
+          getRunIdBytes() {
+        java.lang.Object ref = runId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          runId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the run to listen to.
+       * </pre>
+       *
+       * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The runId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRunId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        runId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the run to listen to.
+       * </pre>
+       *
+       * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRunId() {
+        
+        runId_ = getDefaultInstance().getRunId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the run to listen to.
+       * </pre>
+       *
+       * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for runId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRunIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        runId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value eventsStartIdx_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> eventsStartIdxBuilder_;
+      /**
+       * <pre>
+       * Starting index for events. If provided, listening will start from this event.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
+       * @return Whether the eventsStartIdx field is set.
+       */
+      public boolean hasEventsStartIdx() {
+        return eventsStartIdxBuilder_ != null || eventsStartIdx_ != null;
+      }
+      /**
+       * <pre>
+       * Starting index for events. If provided, listening will start from this event.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
+       * @return The eventsStartIdx.
+       */
+      public com.google.protobuf.Int64Value getEventsStartIdx() {
+        if (eventsStartIdxBuilder_ == null) {
+          return eventsStartIdx_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : eventsStartIdx_;
+        } else {
+          return eventsStartIdxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Starting index for events. If provided, listening will start from this event.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
+       */
+      public Builder setEventsStartIdx(com.google.protobuf.Int64Value value) {
+        if (eventsStartIdxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          eventsStartIdx_ = value;
+          onChanged();
+        } else {
+          eventsStartIdxBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Starting index for events. If provided, listening will start from this event.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
+       */
+      public Builder setEventsStartIdx(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (eventsStartIdxBuilder_ == null) {
+          eventsStartIdx_ = builderForValue.build();
+          onChanged();
+        } else {
+          eventsStartIdxBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Starting index for events. If provided, listening will start from this event.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
+       */
+      public Builder mergeEventsStartIdx(com.google.protobuf.Int64Value value) {
+        if (eventsStartIdxBuilder_ == null) {
+          if (eventsStartIdx_ != null) {
+            eventsStartIdx_ =
+              com.google.protobuf.Int64Value.newBuilder(eventsStartIdx_).mergeFrom(value).buildPartial();
+          } else {
+            eventsStartIdx_ = value;
+          }
+          onChanged();
+        } else {
+          eventsStartIdxBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Starting index for events. If provided, listening will start from this event.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
+       */
+      public Builder clearEventsStartIdx() {
+        if (eventsStartIdxBuilder_ == null) {
+          eventsStartIdx_ = null;
+          onChanged();
+        } else {
+          eventsStartIdx_ = null;
+          eventsStartIdxBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Starting index for events. If provided, listening will start from this event.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getEventsStartIdxBuilder() {
+        
+        onChanged();
+        return getEventsStartIdxFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Starting index for events. If provided, listening will start from this event.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getEventsStartIdxOrBuilder() {
+        if (eventsStartIdxBuilder_ != null) {
+          return eventsStartIdxBuilder_.getMessageOrBuilder();
+        } else {
+          return eventsStartIdx_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : eventsStartIdx_;
+        }
+      }
+      /**
+       * <pre>
+       * Starting index for events. If provided, listening will start from this event.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value events_start_idx = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getEventsStartIdxFieldBuilder() {
+        if (eventsStartIdxBuilder_ == null) {
+          eventsStartIdxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getEventsStartIdx(),
+                  getParentForChildren(),
+                  isClean());
+          eventsStartIdx_ = null;
+        }
+        return eventsStartIdxBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.ToolResultList, yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.Builder, yandex.cloud.api.ai.assistants.v1.Common.ToolResultListOrBuilder> toolResultListBuilder_;
+      /**
+       * <pre>
+       * A list of tool results to submit to the run, such as the output of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 3;</code>
+       * @return Whether the toolResultList field is set.
+       */
+      @java.lang.Override
+      public boolean hasToolResultList() {
+        return eventCase_ == 3;
+      }
+      /**
+       * <pre>
+       * A list of tool results to submit to the run, such as the output of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 3;</code>
+       * @return The toolResultList.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolResultList getToolResultList() {
+        if (toolResultListBuilder_ == null) {
+          if (eventCase_ == 3) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.ToolResultList) event_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.getDefaultInstance();
+        } else {
+          if (eventCase_ == 3) {
+            return toolResultListBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool results to submit to the run, such as the output of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 3;</code>
+       */
+      public Builder setToolResultList(yandex.cloud.api.ai.assistants.v1.Common.ToolResultList value) {
+        if (toolResultListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          event_ = value;
+          onChanged();
+        } else {
+          toolResultListBuilder_.setMessage(value);
+        }
+        eventCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results to submit to the run, such as the output of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 3;</code>
+       */
+      public Builder setToolResultList(
+          yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.Builder builderForValue) {
+        if (toolResultListBuilder_ == null) {
+          event_ = builderForValue.build();
+          onChanged();
+        } else {
+          toolResultListBuilder_.setMessage(builderForValue.build());
+        }
+        eventCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results to submit to the run, such as the output of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 3;</code>
+       */
+      public Builder mergeToolResultList(yandex.cloud.api.ai.assistants.v1.Common.ToolResultList value) {
+        if (toolResultListBuilder_ == null) {
+          if (eventCase_ == 3 &&
+              event_ != yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.getDefaultInstance()) {
+            event_ = yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.newBuilder((yandex.cloud.api.ai.assistants.v1.Common.ToolResultList) event_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            event_ = value;
+          }
+          onChanged();
+        } else {
+          if (eventCase_ == 3) {
+            toolResultListBuilder_.mergeFrom(value);
+          }
+          toolResultListBuilder_.setMessage(value);
+        }
+        eventCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results to submit to the run, such as the output of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 3;</code>
+       */
+      public Builder clearToolResultList() {
+        if (toolResultListBuilder_ == null) {
+          if (eventCase_ == 3) {
+            eventCase_ = 0;
+            event_ = null;
+            onChanged();
+          }
+        } else {
+          if (eventCase_ == 3) {
+            eventCase_ = 0;
+            event_ = null;
+          }
+          toolResultListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results to submit to the run, such as the output of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 3;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.Builder getToolResultListBuilder() {
+        return getToolResultListFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * A list of tool results to submit to the run, such as the output of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolResultListOrBuilder getToolResultListOrBuilder() {
+        if ((eventCase_ == 3) && (toolResultListBuilder_ != null)) {
+          return toolResultListBuilder_.getMessageOrBuilder();
+        } else {
+          if (eventCase_ == 3) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.ToolResultList) event_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool results to submit to the run, such as the output of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.ToolResultList, yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.Builder, yandex.cloud.api.ai.assistants.v1.Common.ToolResultListOrBuilder> 
+          getToolResultListFieldBuilder() {
+        if (toolResultListBuilder_ == null) {
+          if (!(eventCase_ == 3)) {
+            event_ = yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.getDefaultInstance();
+          }
+          toolResultListBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.Common.ToolResultList, yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.Builder, yandex.cloud.api.ai.assistants.v1.Common.ToolResultListOrBuilder>(
+                  (yandex.cloud.api.ai.assistants.v1.Common.ToolResultList) event_,
+                  getParentForChildren(),
+                  isClean());
+          event_ = null;
+        }
+        eventCase_ = 3;
+        onChanged();;
+        return toolResultListBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.runs.AttachRunRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.runs.AttachRunRequest)
+    private static final yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest();
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AttachRunRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AttachRunRequest>() {
+      @java.lang.Override
+      public AttachRunRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AttachRunRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AttachRunRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AttachRunRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7156,6 +8867,33 @@ public final class RunServiceOuterClass {
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.MessageOrBuilder getCompletedMessageOrBuilder();
 
+    /**
+     * <pre>
+     * A list of tool calls requested by the assistant.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.ToolCallList tool_call_list = 6;</code>
+     * @return Whether the toolCallList field is set.
+     */
+    boolean hasToolCallList();
+    /**
+     * <pre>
+     * A list of tool calls requested by the assistant.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.ToolCallList tool_call_list = 6;</code>
+     * @return The toolCallList.
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.ToolCallList getToolCallList();
+    /**
+     * <pre>
+     * A list of tool calls requested by the assistant.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.ToolCallList tool_call_list = 6;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.ToolCallListOrBuilder getToolCallListOrBuilder();
+
     public yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamEvent.EventDataCase getEventDataCase();
   }
   /**
@@ -7269,6 +9007,20 @@ public final class RunServiceOuterClass {
               eventDataCase_ = 5;
               break;
             }
+            case 50: {
+              yandex.cloud.api.ai.assistants.v1.Common.ToolCallList.Builder subBuilder = null;
+              if (eventDataCase_ == 6) {
+                subBuilder = ((yandex.cloud.api.ai.assistants.v1.Common.ToolCallList) eventData_).toBuilder();
+              }
+              eventData_ =
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.ToolCallList.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.ToolCallList) eventData_);
+                eventData_ = subBuilder.buildPartial();
+              }
+              eventDataCase_ = 6;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -7342,6 +9094,14 @@ public final class RunServiceOuterClass {
        * <code>DONE = 3;</code>
        */
       DONE(3),
+      /**
+       * <pre>
+       * The run is waiting for tool calls to be executed and their results to be submitted.
+       * </pre>
+       *
+       * <code>TOOL_CALLS = 4;</code>
+       */
+      TOOL_CALLS(4),
       UNRECOGNIZED(-1),
       ;
 
@@ -7377,6 +9137,14 @@ public final class RunServiceOuterClass {
        * <code>DONE = 3;</code>
        */
       public static final int DONE_VALUE = 3;
+      /**
+       * <pre>
+       * The run is waiting for tool calls to be executed and their results to be submitted.
+       * </pre>
+       *
+       * <code>TOOL_CALLS = 4;</code>
+       */
+      public static final int TOOL_CALLS_VALUE = 4;
 
 
       public final int getNumber() {
@@ -7407,6 +9175,7 @@ public final class RunServiceOuterClass {
           case 1: return PARTIAL_MESSAGE;
           case 2: return ERROR;
           case 3: return DONE;
+          case 4: return TOOL_CALLS;
           default: return null;
         }
       }
@@ -7471,6 +9240,7 @@ public final class RunServiceOuterClass {
       ERROR(3),
       PARTIAL_MESSAGE(4),
       COMPLETED_MESSAGE(5),
+      TOOL_CALL_LIST(6),
       EVENTDATA_NOT_SET(0);
       private final int value;
       private EventDataCase(int value) {
@@ -7491,6 +9261,7 @@ public final class RunServiceOuterClass {
           case 3: return ERROR;
           case 4: return PARTIAL_MESSAGE;
           case 5: return COMPLETED_MESSAGE;
+          case 6: return TOOL_CALL_LIST;
           case 0: return EVENTDATA_NOT_SET;
           default: return null;
         }
@@ -7700,6 +9471,49 @@ public final class RunServiceOuterClass {
       return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message.getDefaultInstance();
     }
 
+    public static final int TOOL_CALL_LIST_FIELD_NUMBER = 6;
+    /**
+     * <pre>
+     * A list of tool calls requested by the assistant.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.ToolCallList tool_call_list = 6;</code>
+     * @return Whether the toolCallList field is set.
+     */
+    @java.lang.Override
+    public boolean hasToolCallList() {
+      return eventDataCase_ == 6;
+    }
+    /**
+     * <pre>
+     * A list of tool calls requested by the assistant.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.ToolCallList tool_call_list = 6;</code>
+     * @return The toolCallList.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.ToolCallList getToolCallList() {
+      if (eventDataCase_ == 6) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.ToolCallList) eventData_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.ToolCallList.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * A list of tool calls requested by the assistant.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.ToolCallList tool_call_list = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.ToolCallListOrBuilder getToolCallListOrBuilder() {
+      if (eventDataCase_ == 6) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.ToolCallList) eventData_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.ToolCallList.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7729,6 +9543,9 @@ public final class RunServiceOuterClass {
       if (eventDataCase_ == 5) {
         output.writeMessage(5, (yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message) eventData_);
       }
+      if (eventDataCase_ == 6) {
+        output.writeMessage(6, (yandex.cloud.api.ai.assistants.v1.Common.ToolCallList) eventData_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -7757,6 +9574,10 @@ public final class RunServiceOuterClass {
       if (eventDataCase_ == 5) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, (yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message) eventData_);
+      }
+      if (eventDataCase_ == 6) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, (yandex.cloud.api.ai.assistants.v1.Common.ToolCallList) eventData_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7793,6 +9614,10 @@ public final class RunServiceOuterClass {
           if (!getCompletedMessage()
               .equals(other.getCompletedMessage())) return false;
           break;
+        case 6:
+          if (!getToolCallList()
+              .equals(other.getToolCallList())) return false;
+          break;
         case 0:
         default:
       }
@@ -7825,6 +9650,10 @@ public final class RunServiceOuterClass {
         case 5:
           hash = (37 * hash) + COMPLETED_MESSAGE_FIELD_NUMBER;
           hash = (53 * hash) + getCompletedMessage().hashCode();
+          break;
+        case 6:
+          hash = (37 * hash) + TOOL_CALL_LIST_FIELD_NUMBER;
+          hash = (53 * hash) + getToolCallList().hashCode();
           break;
         case 0:
         default:
@@ -8029,6 +9858,13 @@ public final class RunServiceOuterClass {
             result.eventData_ = completedMessageBuilder_.build();
           }
         }
+        if (eventDataCase_ == 6) {
+          if (toolCallListBuilder_ == null) {
+            result.eventData_ = eventData_;
+          } else {
+            result.eventData_ = toolCallListBuilder_.build();
+          }
+        }
         result.eventDataCase_ = eventDataCase_;
         onBuilt();
         return result;
@@ -8095,6 +9931,10 @@ public final class RunServiceOuterClass {
           }
           case COMPLETED_MESSAGE: {
             mergeCompletedMessage(other.getCompletedMessage());
+            break;
+          }
+          case TOOL_CALL_LIST: {
+            mergeToolCallList(other.getToolCallList());
             break;
           }
           case EVENTDATA_NOT_SET: {
@@ -8904,6 +10744,183 @@ public final class RunServiceOuterClass {
         onChanged();;
         return completedMessageBuilder_;
       }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.ToolCallList, yandex.cloud.api.ai.assistants.v1.Common.ToolCallList.Builder, yandex.cloud.api.ai.assistants.v1.Common.ToolCallListOrBuilder> toolCallListBuilder_;
+      /**
+       * <pre>
+       * A list of tool calls requested by the assistant.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolCallList tool_call_list = 6;</code>
+       * @return Whether the toolCallList field is set.
+       */
+      @java.lang.Override
+      public boolean hasToolCallList() {
+        return eventDataCase_ == 6;
+      }
+      /**
+       * <pre>
+       * A list of tool calls requested by the assistant.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolCallList tool_call_list = 6;</code>
+       * @return The toolCallList.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolCallList getToolCallList() {
+        if (toolCallListBuilder_ == null) {
+          if (eventDataCase_ == 6) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.ToolCallList) eventData_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.ToolCallList.getDefaultInstance();
+        } else {
+          if (eventDataCase_ == 6) {
+            return toolCallListBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.ToolCallList.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool calls requested by the assistant.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolCallList tool_call_list = 6;</code>
+       */
+      public Builder setToolCallList(yandex.cloud.api.ai.assistants.v1.Common.ToolCallList value) {
+        if (toolCallListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          eventData_ = value;
+          onChanged();
+        } else {
+          toolCallListBuilder_.setMessage(value);
+        }
+        eventDataCase_ = 6;
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool calls requested by the assistant.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolCallList tool_call_list = 6;</code>
+       */
+      public Builder setToolCallList(
+          yandex.cloud.api.ai.assistants.v1.Common.ToolCallList.Builder builderForValue) {
+        if (toolCallListBuilder_ == null) {
+          eventData_ = builderForValue.build();
+          onChanged();
+        } else {
+          toolCallListBuilder_.setMessage(builderForValue.build());
+        }
+        eventDataCase_ = 6;
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool calls requested by the assistant.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolCallList tool_call_list = 6;</code>
+       */
+      public Builder mergeToolCallList(yandex.cloud.api.ai.assistants.v1.Common.ToolCallList value) {
+        if (toolCallListBuilder_ == null) {
+          if (eventDataCase_ == 6 &&
+              eventData_ != yandex.cloud.api.ai.assistants.v1.Common.ToolCallList.getDefaultInstance()) {
+            eventData_ = yandex.cloud.api.ai.assistants.v1.Common.ToolCallList.newBuilder((yandex.cloud.api.ai.assistants.v1.Common.ToolCallList) eventData_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            eventData_ = value;
+          }
+          onChanged();
+        } else {
+          if (eventDataCase_ == 6) {
+            toolCallListBuilder_.mergeFrom(value);
+          }
+          toolCallListBuilder_.setMessage(value);
+        }
+        eventDataCase_ = 6;
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool calls requested by the assistant.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolCallList tool_call_list = 6;</code>
+       */
+      public Builder clearToolCallList() {
+        if (toolCallListBuilder_ == null) {
+          if (eventDataCase_ == 6) {
+            eventDataCase_ = 0;
+            eventData_ = null;
+            onChanged();
+          }
+        } else {
+          if (eventDataCase_ == 6) {
+            eventDataCase_ = 0;
+            eventData_ = null;
+          }
+          toolCallListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool calls requested by the assistant.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolCallList tool_call_list = 6;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolCallList.Builder getToolCallListBuilder() {
+        return getToolCallListFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * A list of tool calls requested by the assistant.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolCallList tool_call_list = 6;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolCallListOrBuilder getToolCallListOrBuilder() {
+        if ((eventDataCase_ == 6) && (toolCallListBuilder_ != null)) {
+          return toolCallListBuilder_.getMessageOrBuilder();
+        } else {
+          if (eventDataCase_ == 6) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.ToolCallList) eventData_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.ToolCallList.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool calls requested by the assistant.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolCallList tool_call_list = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.ToolCallList, yandex.cloud.api.ai.assistants.v1.Common.ToolCallList.Builder, yandex.cloud.api.ai.assistants.v1.Common.ToolCallListOrBuilder> 
+          getToolCallListFieldBuilder() {
+        if (toolCallListBuilder_ == null) {
+          if (!(eventDataCase_ == 6)) {
+            eventData_ = yandex.cloud.api.ai.assistants.v1.Common.ToolCallList.getDefaultInstance();
+          }
+          toolCallListBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.Common.ToolCallList, yandex.cloud.api.ai.assistants.v1.Common.ToolCallList.Builder, yandex.cloud.api.ai.assistants.v1.Common.ToolCallListOrBuilder>(
+                  (yandex.cloud.api.ai.assistants.v1.Common.ToolCallList) eventData_,
+                  getParentForChildren(),
+                  isClean());
+          eventData_ = null;
+        }
+        eventDataCase_ = 6;
+        onChanged();;
+        return toolCallListBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8973,6 +10990,11 @@ public final class RunServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_assistants_v1_runs_ListenRunRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_runs_AttachRunRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_runs_AttachRunRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_assistants_v1_runs_GetRunRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -9020,7 +11042,7 @@ public final class RunServiceOuterClass {
       "i/assistants/v1/runs/run.proto\032\035yandex/c" +
       "loud/validation.proto\032\034google/api/annota" +
       "tions.proto\032\036google/protobuf/wrappers.pr" +
-      "oto\"\340\003\n\020CreateRunRequest\022\032\n\014assistant_id" +
+      "oto\"\224\004\n\020CreateRunRequest\022\032\n\014assistant_id" +
       "\030\001 \001(\tB\004\350\3071\001\022\027\n\tthread_id\030\002 \001(\tB\004\350\3071\001\022P\n" +
       "\006labels\030\003 \003(\0132@.yandex.cloud.ai.assistan" +
       "ts.v1.runs.CreateRunRequest.LabelsEntry\022" +
@@ -9030,54 +11052,65 @@ public final class RunServiceOuterClass {
       "(\01326.yandex.cloud.ai.assistants.v1.Promp" +
       "tTruncationOptions\022S\n\031custom_completion_" +
       "options\030\006 \001(\01320.yandex.cloud.ai.assistan" +
-      "ts.v1.CompletionOptions\022\016\n\006stream\030\007 \001(\010\032" +
-      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\"_\n\020ListenRunRequest\022\024\n\006run_id\030\001 \001" +
-      "(\tB\004\350\3071\001\0225\n\020events_start_idx\030\002 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\"%\n\rGetRunRequest" +
-      "\022\024\n\006run_id\030\001 \001(\tB\004\350\3071\001\"4\n\031GetLastRunByTh" +
-      "readRequest\022\027\n\tthread_id\030\001 \001(\tB\004\350\3071\001\"Q\n\017" +
-      "ListRunsRequest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001" +
-      "\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\"" +
-      "b\n\020ListRunsResponse\0225\n\004runs\030\001 \003(\0132\'.yand" +
-      "ex.cloud.ai.assistants.v1.runs.Run\022\027\n\017ne" +
-      "xt_page_token\030\002 \001(\t\"K\n\014StreamCursor\022\031\n\021c" +
-      "urrent_event_idx\030\001 \001(\003\022 \n\030num_user_event" +
-      "s_received\030\002 \001(\003\"\324\003\n\013StreamEvent\022M\n\neven" +
-      "t_type\030\001 \001(\01629.yandex.cloud.ai.assistant" +
-      "s.v1.runs.StreamEvent.EventType\022G\n\rstrea" +
-      "m_cursor\030\002 \001(\01320.yandex.cloud.ai.assista" +
-      "nts.v1.runs.StreamCursor\022.\n\005error\030\003 \001(\0132" +
-      "\035.yandex.cloud.ai.common.ErrorH\000\022P\n\017part" +
-      "ial_message\030\004 \001(\01325.yandex.cloud.ai.assi" +
-      "stants.v1.threads.MessageContentH\000\022K\n\021co" +
-      "mpleted_message\030\005 \001(\0132..yandex.cloud.ai." +
-      "assistants.v1.threads.MessageH\000\"Q\n\tEvent" +
-      "Type\022\032\n\026EVENT_TYPE_UNSPECIFIED\020\000\022\023\n\017PART" +
-      "IAL_MESSAGE\020\001\022\t\n\005ERROR\020\002\022\010\n\004DONE\020\003B\013\n\tEv" +
-      "entData2\356\005\n\nRunService\022\207\001\n\006Create\0224.yand" +
-      "ex.cloud.ai.assistants.v1.runs.CreateRun" +
-      "Request\032\'.yandex.cloud.ai.assistants.v1." +
-      "runs.Run\"\036\202\323\344\223\002\030\"\023/assistants/v1/runs:\001*" +
-      "\022\225\001\n\006Listen\0224.yandex.cloud.ai.assistants" +
-      ".v1.runs.ListenRunRequest\032/.yandex.cloud" +
-      ".ai.assistants.v1.runs.StreamEvent\"\"\202\323\344\223" +
-      "\002\034\022\032/assistants/v1/runs/listen0\001\022\207\001\n\003Get" +
-      "\0221.yandex.cloud.ai.assistants.v1.runs.Ge" +
-      "tRunRequest\032\'.yandex.cloud.ai.assistants" +
-      ".v1.runs.Run\"$\202\323\344\223\002\036\022\034/assistants/v1/run" +
-      "s/{run_id}\022\242\001\n\017GetLastByThread\022=.yandex." +
-      "cloud.ai.assistants.v1.runs.GetLastRunBy" +
-      "ThreadRequest\032\'.yandex.cloud.ai.assistan" +
-      "ts.v1.runs.Run\"\'\202\323\344\223\002!\022\037/assistants/v1/r" +
-      "uns:getByThread\022\216\001\n\004List\0223.yandex.cloud." +
-      "ai.assistants.v1.runs.ListRunsRequest\0324." +
-      "yandex.cloud.ai.assistants.v1.runs.ListR" +
-      "unsResponse\"\033\202\323\344\223\002\025\022\023/assistants/v1/runs" +
-      "Bu\n&yandex.cloud.api.ai.assistants.v1.ru" +
-      "nsZKgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/ai/assistants/v1/runs;runsb" +
-      "\006proto3"
+      "ts.v1.CompletionOptions\022\016\n\006stream\030\007 \001(\010\022" +
+      "2\n\005tools\030\010 \003(\0132#.yandex.cloud.ai.assista" +
+      "nts.v1.Tool\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001\"_\n\020ListenRunRequest\022\024" +
+      "\n\006run_id\030\001 \001(\tB\004\350\3071\001\0225\n\020events_start_idx" +
+      "\030\002 \001(\0132\033.google.protobuf.Int64Value\"\263\001\n\020" +
+      "AttachRunRequest\022\024\n\006run_id\030\001 \001(\tB\004\350\3071\001\0225" +
+      "\n\020events_start_idx\030\002 \001(\0132\033.google.protob" +
+      "uf.Int64Value\022I\n\020tool_result_list\030\003 \001(\0132" +
+      "-.yandex.cloud.ai.assistants.v1.ToolResu" +
+      "ltListH\000B\007\n\005Event\"%\n\rGetRunRequest\022\024\n\006ru" +
+      "n_id\030\001 \001(\tB\004\350\3071\001\"4\n\031GetLastRunByThreadRe" +
+      "quest\022\027\n\tthread_id\030\001 \001(\tB\004\350\3071\001\"Q\n\017ListRu" +
+      "nsRequest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tpa" +
+      "ge_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\"b\n\020Lis" +
+      "tRunsResponse\0225\n\004runs\030\001 \003(\0132\'.yandex.clo" +
+      "ud.ai.assistants.v1.runs.Run\022\027\n\017next_pag" +
+      "e_token\030\002 \001(\t\"K\n\014StreamCursor\022\031\n\021current" +
+      "_event_idx\030\001 \001(\003\022 \n\030num_user_events_rece" +
+      "ived\030\002 \001(\003\"\253\004\n\013StreamEvent\022M\n\nevent_type" +
+      "\030\001 \001(\01629.yandex.cloud.ai.assistants.v1.r" +
+      "uns.StreamEvent.EventType\022G\n\rstream_curs" +
+      "or\030\002 \001(\01320.yandex.cloud.ai.assistants.v1" +
+      ".runs.StreamCursor\022.\n\005error\030\003 \001(\0132\035.yand" +
+      "ex.cloud.ai.common.ErrorH\000\022P\n\017partial_me" +
+      "ssage\030\004 \001(\01325.yandex.cloud.ai.assistants" +
+      ".v1.threads.MessageContentH\000\022K\n\021complete" +
+      "d_message\030\005 \001(\0132..yandex.cloud.ai.assist" +
+      "ants.v1.threads.MessageH\000\022E\n\016tool_call_l" +
+      "ist\030\006 \001(\0132+.yandex.cloud.ai.assistants.v" +
+      "1.ToolCallListH\000\"a\n\tEventType\022\032\n\026EVENT_T" +
+      "YPE_UNSPECIFIED\020\000\022\023\n\017PARTIAL_MESSAGE\020\001\022\t" +
+      "\n\005ERROR\020\002\022\010\n\004DONE\020\003\022\016\n\nTOOL_CALLS\020\004B\013\n\tE" +
+      "ventData2\343\006\n\nRunService\022\207\001\n\006Create\0224.yan" +
+      "dex.cloud.ai.assistants.v1.runs.CreateRu" +
+      "nRequest\032\'.yandex.cloud.ai.assistants.v1" +
+      ".runs.Run\"\036\202\323\344\223\002\030\"\023/assistants/v1/runs:\001" +
+      "*\022\225\001\n\006Listen\0224.yandex.cloud.ai.assistant" +
+      "s.v1.runs.ListenRunRequest\032/.yandex.clou" +
+      "d.ai.assistants.v1.runs.StreamEvent\"\"\202\323\344" +
+      "\223\002\034\022\032/assistants/v1/runs/listen0\001\022s\n\006Att" +
+      "ach\0224.yandex.cloud.ai.assistants.v1.runs" +
+      ".AttachRunRequest\032/.yandex.cloud.ai.assi" +
+      "stants.v1.runs.StreamEvent(\0010\001\022\207\001\n\003Get\0221" +
+      ".yandex.cloud.ai.assistants.v1.runs.GetR" +
+      "unRequest\032\'.yandex.cloud.ai.assistants.v" +
+      "1.runs.Run\"$\202\323\344\223\002\036\022\034/assistants/v1/runs/" +
+      "{run_id}\022\242\001\n\017GetLastByThread\022=.yandex.cl" +
+      "oud.ai.assistants.v1.runs.GetLastRunByTh" +
+      "readRequest\032\'.yandex.cloud.ai.assistants" +
+      ".v1.runs.Run\"\'\202\323\344\223\002!\022\037/assistants/v1/run" +
+      "s:getByThread\022\216\001\n\004List\0223.yandex.cloud.ai" +
+      ".assistants.v1.runs.ListRunsRequest\0324.ya" +
+      "ndex.cloud.ai.assistants.v1.runs.ListRun" +
+      "sResponse\"\033\202\323\344\223\002\025\022\023/assistants/v1/runsBu" +
+      "\n&yandex.cloud.api.ai.assistants.v1.runs" +
+      "ZKgithub.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/ai/assistants/v1/runs;runsb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9095,7 +11128,7 @@ public final class RunServiceOuterClass {
     internal_static_yandex_cloud_ai_assistants_v1_runs_CreateRunRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_runs_CreateRunRequest_descriptor,
-        new java.lang.String[] { "AssistantId", "ThreadId", "Labels", "AdditionalMessages", "CustomPromptTruncationOptions", "CustomCompletionOptions", "Stream", });
+        new java.lang.String[] { "AssistantId", "ThreadId", "Labels", "AdditionalMessages", "CustomPromptTruncationOptions", "CustomCompletionOptions", "Stream", "Tools", });
     internal_static_yandex_cloud_ai_assistants_v1_runs_CreateRunRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_ai_assistants_v1_runs_CreateRunRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_ai_assistants_v1_runs_CreateRunRequest_LabelsEntry_fieldAccessorTable = new
@@ -9108,42 +11141,48 @@ public final class RunServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_runs_ListenRunRequest_descriptor,
         new java.lang.String[] { "RunId", "EventsStartIdx", });
-    internal_static_yandex_cloud_ai_assistants_v1_runs_GetRunRequest_descriptor =
+    internal_static_yandex_cloud_ai_assistants_v1_runs_AttachRunRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_ai_assistants_v1_runs_AttachRunRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_runs_AttachRunRequest_descriptor,
+        new java.lang.String[] { "RunId", "EventsStartIdx", "ToolResultList", "Event", });
+    internal_static_yandex_cloud_ai_assistants_v1_runs_GetRunRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_ai_assistants_v1_runs_GetRunRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_runs_GetRunRequest_descriptor,
         new java.lang.String[] { "RunId", });
     internal_static_yandex_cloud_ai_assistants_v1_runs_GetLastRunByThreadRequest_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_ai_assistants_v1_runs_GetLastRunByThreadRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_runs_GetLastRunByThreadRequest_descriptor,
         new java.lang.String[] { "ThreadId", });
     internal_static_yandex_cloud_ai_assistants_v1_runs_ListRunsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_ai_assistants_v1_runs_ListRunsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_runs_ListRunsRequest_descriptor,
         new java.lang.String[] { "FolderId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_ai_assistants_v1_runs_ListRunsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_ai_assistants_v1_runs_ListRunsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_runs_ListRunsResponse_descriptor,
         new java.lang.String[] { "Runs", "NextPageToken", });
     internal_static_yandex_cloud_ai_assistants_v1_runs_StreamCursor_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_ai_assistants_v1_runs_StreamCursor_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_runs_StreamCursor_descriptor,
         new java.lang.String[] { "CurrentEventIdx", "NumUserEventsReceived", });
     internal_static_yandex_cloud_ai_assistants_v1_runs_StreamEvent_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_ai_assistants_v1_runs_StreamEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_runs_StreamEvent_descriptor,
-        new java.lang.String[] { "EventType", "StreamCursor", "Error", "PartialMessage", "CompletedMessage", "EventData", });
+        new java.lang.String[] { "EventType", "StreamCursor", "Error", "PartialMessage", "CompletedMessage", "ToolCallList", "EventData", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

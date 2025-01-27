@@ -3161,7 +3161,7 @@ public final class HostGroupServiceOuterClass {
      * Name of the group.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -3170,7 +3170,7 @@ public final class HostGroupServiceOuterClass {
      * Name of the group.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -3549,7 +3549,7 @@ public final class HostGroupServiceOuterClass {
      * Name of the group.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -3570,7 +3570,7 @@ public final class HostGroupServiceOuterClass {
      * Name of the group.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -4462,7 +4462,7 @@ public final class HostGroupServiceOuterClass {
        * Name of the group.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -4482,7 +4482,7 @@ public final class HostGroupServiceOuterClass {
        * Name of the group.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -4503,7 +4503,7 @@ public final class HostGroupServiceOuterClass {
        * Name of the group.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -4522,7 +4522,7 @@ public final class HostGroupServiceOuterClass {
        * Name of the group.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -4536,7 +4536,7 @@ public final class HostGroupServiceOuterClass {
        * Name of the group.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -5942,7 +5942,7 @@ public final class HostGroupServiceOuterClass {
      * Name of the group.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -5951,7 +5951,7 @@ public final class HostGroupServiceOuterClass {
      * Name of the group.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -6332,7 +6332,7 @@ public final class HostGroupServiceOuterClass {
      * Name of the group.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -6353,7 +6353,7 @@ public final class HostGroupServiceOuterClass {
      * Name of the group.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -7308,7 +7308,7 @@ public final class HostGroupServiceOuterClass {
        * Name of the group.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -7328,7 +7328,7 @@ public final class HostGroupServiceOuterClass {
        * Name of the group.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -7349,7 +7349,7 @@ public final class HostGroupServiceOuterClass {
        * Name of the group.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -7368,7 +7368,7 @@ public final class HostGroupServiceOuterClass {
        * Name of the group.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -7382,7 +7382,7 @@ public final class HostGroupServiceOuterClass {
        * Name of the group.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -18409,125 +18409,125 @@ public final class HostGroupServiceOuterClass {
       "=1000\022\033\n\010order_by\030\005 \001(\tB\t\212\3101\005<=100\"j\n\026Li" +
       "stHostGroupsResponse\0227\n\013host_groups\030\001 \003(" +
       "\0132\".yandex.cloud.compute.v1.HostGroup\022\027\n" +
-      "\017next_page_token\030\002 \001(\t\"\225\004\n\026CreateHostGro" +
+      "\017next_page_token\030\002 \001(\t\"\226\004\n\026CreateHostGro" +
       "upRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0" +
-      ",61}[a-z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101" +
-      "\005<=256\022\224\001\n\006labels\030\004 \003(\0132;.yandex.cloud.c" +
-      "ompute.v1.CreateHostGroupRequest.LabelsE" +
-      "ntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]" +
-      "*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\035\n" +
-      "\007zone_id\030\005 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\007type_id\030" +
-      "\006 \001(\tB\014\350\3071\001\212\3101\004<=50\022F\n\022maintenance_polic" +
-      "y\030\007 \001(\0162*.yandex.cloud.compute.v1.Mainte" +
-      "nancePolicy\022:\n\014scale_policy\030\010 \001(\0132$.yand" +
-      "ex.cloud.compute.v1.ScalePolicy\032-\n\013Label" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"0" +
-      "\n\027CreateHostGroupMetadata\022\025\n\rhost_group_" +
-      "id\030\001 \001(\t\"\214\004\n\026UpdateHostGroupRequest\022#\n\rh" +
-      "ost_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013upda" +
-      "te_mask\030\002 \001(\0132\032.google.protobuf.FieldMas" +
-      "k\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0," +
-      "61}[a-z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005" +
-      "<=256\022\224\001\n\006labels\030\005 \003(\0132;.yandex.cloud.co" +
-      "mpute.v1.UpdateHostGroupRequest.LabelsEn" +
-      "tryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*" +
-      "\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022F\n\022" +
-      "maintenance_policy\030\006 \001(\0162*.yandex.cloud." +
-      "compute.v1.MaintenancePolicy\022:\n\014scale_po" +
-      "licy\030\007 \001(\0132$.yandex.cloud.compute.v1.Sca" +
-      "lePolicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001\"0\n\027UpdateHostGroupMetada" +
-      "ta\022\025\n\rhost_group_id\030\001 \001(\t\"=\n\026DeleteHostG" +
-      "roupRequest\022#\n\rhost_group_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\"0\n\027DeleteHostGroupMetadata\022\025\n\rh" +
-      "ost_group_id\030\001 \001(\t\"\236\001\n\035ListHostGroupInst" +
-      "ancesRequest\022#\n\rhost_group_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000" +
-      "\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filte" +
-      "r\030\004 \001(\tB\n\212\3101\006<=1000\"o\n\036ListHostGroupInst" +
-      "ancesResponse\0224\n\tinstances\030\001 \003(\0132!.yande" +
-      "x.cloud.compute.v1.Instance\022\027\n\017next_page" +
-      "_token\030\002 \001(\t\"~\n\031ListHostGroupHostsReques" +
-      "t\022#\n\rhost_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035" +
-      "\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_to" +
-      "ken\030\003 \001(\tB\t\212\3101\005<=100\"c\n\032ListHostGroupHos" +
-      "tsResponse\022,\n\005hosts\030\001 \003(\0132\035.yandex.cloud" +
-      ".compute.v1.Host\022\027\n\017next_page_token\030\002 \001(" +
-      "\t\"\302\001\n\032UpdateHostGroupHostRequest\022#\n\rhost" +
-      "_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\007host_id" +
-      "\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\003 \001(" +
-      "\0132\032.google.protobuf.FieldMask\022/\n\013deadlin" +
-      "e_at\030\004 \001(\0132\032.google.protobuf.Timestamp\"E" +
-      "\n\033UpdateHostGroupHostMetadata\022\025\n\rhost_gr" +
-      "oup_id\030\001 \001(\t\022\017\n\007host_id\030\002 \001(\t\"\203\001\n\036ListHo" +
-      "stGroupOperationsRequest\022#\n\rhost_group_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003" +
-      "B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=" +
-      "100\"q\n\037ListHostGroupOperationsResponse\0225" +
-      "\n\noperations\030\001 \003(\0132!.yandex.cloud.operat" +
-      "ion.Operation\022\027\n\017next_page_token\030\002 \001(\t2\376" +
-      "\021\n\020HostGroupService\022\207\001\n\003Get\022,.yandex.clo" +
-      "ud.compute.v1.GetHostGroupRequest\032\".yand" +
-      "ex.cloud.compute.v1.HostGroup\".\202\323\344\223\002(\022&/" +
-      "compute/v1/hostGroups/{host_group_id}\022\207\001" +
-      "\n\004List\022..yandex.cloud.compute.v1.ListHos" +
-      "tGroupsRequest\032/.yandex.cloud.compute.v1" +
-      ".ListHostGroupsResponse\"\036\202\323\344\223\002\030\022\026/comput" +
-      "e/v1/hostGroups\022\247\001\n\006Create\022/.yandex.clou" +
-      "d.compute.v1.CreateHostGroupRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"I\202\323\344\223\002\033\"\026" +
-      "/compute/v1/hostGroups:\001*\262\322*$\n\027CreateHos" +
-      "tGroupMetadata\022\tHostGroup\022\267\001\n\006Update\022/.y" +
-      "andex.cloud.compute.v1.UpdateHostGroupRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"Y\202\323\344\223\002+2&/compute/v1/hostGroups/{host_g" +
-      "roup_id}:\001*\262\322*$\n\027UpdateHostGroupMetadata" +
-      "\022\tHostGroup\022\300\001\n\006Delete\022/.yandex.cloud.co" +
-      "mpute.v1.DeleteHostGroupRequest\032!.yandex" +
-      ".cloud.operation.Operation\"b\202\323\344\223\002(*&/com" +
-      "pute/v1/hostGroups/{host_group_id}\262\322*0\n\027" +
-      "DeleteHostGroupMetadata\022\025google.protobuf" +
-      ".Empty\022\276\001\n\016ListOperations\0227.yandex.cloud" +
-      ".compute.v1.ListHostGroupOperationsReque" +
-      "st\0328.yandex.cloud.compute.v1.ListHostGro" +
-      "upOperationsResponse\"9\202\323\344\223\0023\0221/compute/v" +
-      "1/hostGroups/{host_group_id}/operations\022" +
-      "\272\001\n\rListInstances\0226.yandex.cloud.compute" +
-      ".v1.ListHostGroupInstancesRequest\0327.yand" +
-      "ex.cloud.compute.v1.ListHostGroupInstanc" +
-      "esResponse\"8\202\323\344\223\0022\0220/compute/v1/hostGrou" +
-      "ps/{host_group_id}/instances\022\252\001\n\tListHos" +
-      "ts\0222.yandex.cloud.compute.v1.ListHostGro" +
-      "upHostsRequest\0323.yandex.cloud.compute.v1" +
-      ".ListHostGroupHostsResponse\"4\202\323\344\223\002.\022,/co" +
-      "mpute/v1/hostGroups/{host_group_id}/host" +
-      "s\022\316\001\n\nUpdateHost\0223.yandex.cloud.compute." +
-      "v1.UpdateHostGroupHostRequest\032!.yandex.c" +
-      "loud.operation.Operation\"h\202\323\344\223\002;26/compu" +
-      "te/v1/hostGroups/{host_group_id}/hosts/{" +
-      "host_id}:\001*\262\322*#\n\033UpdateHostGroupHostMeta" +
-      "data\022\004Host\022\266\001\n\022ListAccessBindings\022..yand" +
-      "ex.cloud.access.ListAccessBindingsReques" +
-      "t\032/.yandex.cloud.access.ListAccessBindin" +
-      "gsResponse\"?\202\323\344\223\0029\0227/compute/v1/hostGrou" +
-      "ps/{resource_id}:listAccessBindings\022\365\001\n\021" +
-      "SetAccessBindings\022-.yandex.cloud.access." +
-      "SetAccessBindingsRequest\032!.yandex.cloud." +
-      "operation.Operation\"\215\001\202\323\344\223\002;\"6/compute/v" +
-      "1/hostGroups/{resource_id}:setAccessBind" +
-      "ings:\001*\262\322*H\n access.SetAccessBindingsMet" +
-      "adata\022$access.AccessBindingsOperationRes" +
-      "ult\022\201\002\n\024UpdateAccessBindings\0220.yandex.cl" +
-      "oud.access.UpdateAccessBindingsRequest\032!" +
-      ".yandex.cloud.operation.Operation\"\223\001\202\323\344\223" +
-      "\002>\"9/compute/v1/hostGroups/{resource_id}" +
-      ":updateAccessBindings:\001*\262\322*K\n#access.Upd" +
-      "ateAccessBindingsMetadata\022$access.Access" +
-      "BindingsOperationResultBb\n\033yandex.cloud." +
-      "api.compute.v1ZCgithub.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/compute/v1;comp" +
-      "uteb\006proto3"
+      "50\0223\n\004name\030\002 \001(\tB%\362\3071!|[a-z]([-_a-z0-9]{" +
+      "0,61}[a-z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\310" +
+      "1\005<=256\022\224\001\n\006labels\030\004 \003(\0132;.yandex.cloud." +
+      "compute.v1.CreateHostGroupRequest.Labels" +
+      "EntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z" +
+      "]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\035" +
+      "\n\007zone_id\030\005 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\007type_id" +
+      "\030\006 \001(\tB\014\350\3071\001\212\3101\004<=50\022F\n\022maintenance_poli" +
+      "cy\030\007 \001(\0162*.yandex.cloud.compute.v1.Maint" +
+      "enancePolicy\022:\n\014scale_policy\030\010 \001(\0132$.yan" +
+      "dex.cloud.compute.v1.ScalePolicy\032-\n\013Labe" +
+      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
+      "0\n\027CreateHostGroupMetadata\022\025\n\rhost_group" +
+      "_id\030\001 \001(\t\"\215\004\n\026UpdateHostGroupRequest\022#\n\r" +
+      "host_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013upd" +
+      "ate_mask\030\002 \001(\0132\032.google.protobuf.FieldMa" +
+      "sk\0223\n\004name\030\003 \001(\tB%\362\3071!|[a-z]([-_a-z0-9]{" +
+      "0,61}[a-z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\310" +
+      "1\005<=256\022\224\001\n\006labels\030\005 \003(\0132;.yandex.cloud." +
+      "compute.v1.UpdateHostGroupRequest.Labels" +
+      "EntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z" +
+      "]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022F" +
+      "\n\022maintenance_policy\030\006 \001(\0162*.yandex.clou" +
+      "d.compute.v1.MaintenancePolicy\022:\n\014scale_" +
+      "policy\030\007 \001(\0132$.yandex.cloud.compute.v1.S" +
+      "calePolicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001\"0\n\027UpdateHostGroupMeta" +
+      "data\022\025\n\rhost_group_id\030\001 \001(\t\"=\n\026DeleteHos" +
+      "tGroupRequest\022#\n\rhost_group_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\"0\n\027DeleteHostGroupMetadata\022\025\n" +
+      "\rhost_group_id\030\001 \001(\t\"\236\001\n\035ListHostGroupIn" +
+      "stancesRequest\022#\n\rhost_group_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=10" +
+      "00\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006fil" +
+      "ter\030\004 \001(\tB\n\212\3101\006<=1000\"o\n\036ListHostGroupIn" +
+      "stancesResponse\0224\n\tinstances\030\001 \003(\0132!.yan" +
+      "dex.cloud.compute.v1.Instance\022\027\n\017next_pa" +
+      "ge_token\030\002 \001(\t\"~\n\031ListHostGroupHostsRequ" +
+      "est\022#\n\rhost_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_" +
+      "token\030\003 \001(\tB\t\212\3101\005<=100\"c\n\032ListHostGroupH" +
+      "ostsResponse\022,\n\005hosts\030\001 \003(\0132\035.yandex.clo" +
+      "ud.compute.v1.Host\022\027\n\017next_page_token\030\002 " +
+      "\001(\t\"\302\001\n\032UpdateHostGroupHostRequest\022#\n\rho" +
+      "st_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\007host_" +
+      "id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\003 " +
+      "\001(\0132\032.google.protobuf.FieldMask\022/\n\013deadl" +
+      "ine_at\030\004 \001(\0132\032.google.protobuf.Timestamp" +
+      "\"E\n\033UpdateHostGroupHostMetadata\022\025\n\rhost_" +
+      "group_id\030\001 \001(\t\022\017\n\007host_id\030\002 \001(\t\"\203\001\n\036List" +
+      "HostGroupOperationsRequest\022#\n\rhost_group" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001" +
+      "(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
+      "<=100\"q\n\037ListHostGroupOperationsResponse" +
+      "\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.oper" +
+      "ation.Operation\022\027\n\017next_page_token\030\002 \001(\t" +
+      "2\376\021\n\020HostGroupService\022\207\001\n\003Get\022,.yandex.c" +
+      "loud.compute.v1.GetHostGroupRequest\032\".ya" +
+      "ndex.cloud.compute.v1.HostGroup\".\202\323\344\223\002(\022" +
+      "&/compute/v1/hostGroups/{host_group_id}\022" +
+      "\207\001\n\004List\022..yandex.cloud.compute.v1.ListH" +
+      "ostGroupsRequest\032/.yandex.cloud.compute." +
+      "v1.ListHostGroupsResponse\"\036\202\323\344\223\002\030\022\026/comp" +
+      "ute/v1/hostGroups\022\247\001\n\006Create\022/.yandex.cl" +
+      "oud.compute.v1.CreateHostGroupRequest\032!." +
+      "yandex.cloud.operation.Operation\"I\202\323\344\223\002\033" +
+      "\"\026/compute/v1/hostGroups:\001*\262\322*$\n\027CreateH" +
+      "ostGroupMetadata\022\tHostGroup\022\267\001\n\006Update\022/" +
+      ".yandex.cloud.compute.v1.UpdateHostGroup" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"Y\202\323\344\223\002+2&/compute/v1/hostGroups/{host" +
+      "_group_id}:\001*\262\322*$\n\027UpdateHostGroupMetada" +
+      "ta\022\tHostGroup\022\300\001\n\006Delete\022/.yandex.cloud." +
+      "compute.v1.DeleteHostGroupRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"b\202\323\344\223\002(*&/c" +
+      "ompute/v1/hostGroups/{host_group_id}\262\322*0" +
+      "\n\027DeleteHostGroupMetadata\022\025google.protob" +
+      "uf.Empty\022\276\001\n\016ListOperations\0227.yandex.clo" +
+      "ud.compute.v1.ListHostGroupOperationsReq" +
+      "uest\0328.yandex.cloud.compute.v1.ListHostG" +
+      "roupOperationsResponse\"9\202\323\344\223\0023\0221/compute" +
+      "/v1/hostGroups/{host_group_id}/operation" +
+      "s\022\272\001\n\rListInstances\0226.yandex.cloud.compu" +
+      "te.v1.ListHostGroupInstancesRequest\0327.ya" +
+      "ndex.cloud.compute.v1.ListHostGroupInsta" +
+      "ncesResponse\"8\202\323\344\223\0022\0220/compute/v1/hostGr" +
+      "oups/{host_group_id}/instances\022\252\001\n\tListH" +
+      "osts\0222.yandex.cloud.compute.v1.ListHostG" +
+      "roupHostsRequest\0323.yandex.cloud.compute." +
+      "v1.ListHostGroupHostsResponse\"4\202\323\344\223\002.\022,/" +
+      "compute/v1/hostGroups/{host_group_id}/ho" +
+      "sts\022\316\001\n\nUpdateHost\0223.yandex.cloud.comput" +
+      "e.v1.UpdateHostGroupHostRequest\032!.yandex" +
+      ".cloud.operation.Operation\"h\202\323\344\223\002;26/com" +
+      "pute/v1/hostGroups/{host_group_id}/hosts" +
+      "/{host_id}:\001*\262\322*#\n\033UpdateHostGroupHostMe" +
+      "tadata\022\004Host\022\266\001\n\022ListAccessBindings\022..ya" +
+      "ndex.cloud.access.ListAccessBindingsRequ" +
+      "est\032/.yandex.cloud.access.ListAccessBind" +
+      "ingsResponse\"?\202\323\344\223\0029\0227/compute/v1/hostGr" +
+      "oups/{resource_id}:listAccessBindings\022\365\001" +
+      "\n\021SetAccessBindings\022-.yandex.cloud.acces" +
+      "s.SetAccessBindingsRequest\032!.yandex.clou" +
+      "d.operation.Operation\"\215\001\202\323\344\223\002;\"6/compute" +
+      "/v1/hostGroups/{resource_id}:setAccessBi" +
+      "ndings:\001*\262\322*H\n access.SetAccessBindingsM" +
+      "etadata\022$access.AccessBindingsOperationR" +
+      "esult\022\201\002\n\024UpdateAccessBindings\0220.yandex." +
+      "cloud.access.UpdateAccessBindingsRequest" +
+      "\032!.yandex.cloud.operation.Operation\"\223\001\202\323" +
+      "\344\223\002>\"9/compute/v1/hostGroups/{resource_i" +
+      "d}:updateAccessBindings:\001*\262\322*K\n#access.U" +
+      "pdateAccessBindingsMetadata\022$access.Acce" +
+      "ssBindingsOperationResultBb\n\033yandex.clou" +
+      "d.api.compute.v1ZCgithub.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/compute/v1;co" +
+      "mputeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

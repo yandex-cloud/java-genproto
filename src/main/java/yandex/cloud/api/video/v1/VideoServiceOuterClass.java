@@ -20779,6 +20779,33 @@ public final class VideoServiceOuterClass {
      * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 2;</code>
      */
     yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <pre>
+     * Optional field, used to set custom url expiration duration for videos with sign_url_access
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+     * @return Whether the signedUrlExpirationDuration field is set.
+     */
+    boolean hasSignedUrlExpirationDuration();
+    /**
+     * <pre>
+     * Optional field, used to set custom url expiration duration for videos with sign_url_access
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+     * @return The signedUrlExpirationDuration.
+     */
+    com.google.protobuf.Duration getSignedUrlExpirationDuration();
+    /**
+     * <pre>
+     * Optional field, used to set custom url expiration duration for videos with sign_url_access
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+     */
+    com.google.protobuf.DurationOrBuilder getSignedUrlExpirationDurationOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.video.v1.GetVideoPlayerURLRequest}
@@ -20841,6 +20868,19 @@ public final class VideoServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(params_);
                 params_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (signedUrlExpirationDuration_ != null) {
+                subBuilder = signedUrlExpirationDuration_.toBuilder();
+              }
+              signedUrlExpirationDuration_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(signedUrlExpirationDuration_);
+                signedUrlExpirationDuration_ = subBuilder.buildPartial();
               }
 
               break;
@@ -20949,6 +20989,44 @@ public final class VideoServiceOuterClass {
       return getParams();
     }
 
+    public static final int SIGNED_URL_EXPIRATION_DURATION_FIELD_NUMBER = 3;
+    private com.google.protobuf.Duration signedUrlExpirationDuration_;
+    /**
+     * <pre>
+     * Optional field, used to set custom url expiration duration for videos with sign_url_access
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+     * @return Whether the signedUrlExpirationDuration field is set.
+     */
+    @java.lang.Override
+    public boolean hasSignedUrlExpirationDuration() {
+      return signedUrlExpirationDuration_ != null;
+    }
+    /**
+     * <pre>
+     * Optional field, used to set custom url expiration duration for videos with sign_url_access
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+     * @return The signedUrlExpirationDuration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getSignedUrlExpirationDuration() {
+      return signedUrlExpirationDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : signedUrlExpirationDuration_;
+    }
+    /**
+     * <pre>
+     * Optional field, used to set custom url expiration duration for videos with sign_url_access
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getSignedUrlExpirationDurationOrBuilder() {
+      return getSignedUrlExpirationDuration();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -20969,6 +21047,9 @@ public final class VideoServiceOuterClass {
       if (params_ != null) {
         output.writeMessage(2, getParams());
       }
+      if (signedUrlExpirationDuration_ != null) {
+        output.writeMessage(3, getSignedUrlExpirationDuration());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -20984,6 +21065,10 @@ public final class VideoServiceOuterClass {
       if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getParams());
+      }
+      if (signedUrlExpirationDuration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getSignedUrlExpirationDuration());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -21007,6 +21092,11 @@ public final class VideoServiceOuterClass {
         if (!getParams()
             .equals(other.getParams())) return false;
       }
+      if (hasSignedUrlExpirationDuration() != other.hasSignedUrlExpirationDuration()) return false;
+      if (hasSignedUrlExpirationDuration()) {
+        if (!getSignedUrlExpirationDuration()
+            .equals(other.getSignedUrlExpirationDuration())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -21023,6 +21113,10 @@ public final class VideoServiceOuterClass {
       if (hasParams()) {
         hash = (37 * hash) + PARAMS_FIELD_NUMBER;
         hash = (53 * hash) + getParams().hashCode();
+      }
+      if (hasSignedUrlExpirationDuration()) {
+        hash = (37 * hash) + SIGNED_URL_EXPIRATION_DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getSignedUrlExpirationDuration().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -21165,6 +21259,12 @@ public final class VideoServiceOuterClass {
           params_ = null;
           paramsBuilder_ = null;
         }
+        if (signedUrlExpirationDurationBuilder_ == null) {
+          signedUrlExpirationDuration_ = null;
+        } else {
+          signedUrlExpirationDuration_ = null;
+          signedUrlExpirationDurationBuilder_ = null;
+        }
         return this;
       }
 
@@ -21196,6 +21296,11 @@ public final class VideoServiceOuterClass {
           result.params_ = params_;
         } else {
           result.params_ = paramsBuilder_.build();
+        }
+        if (signedUrlExpirationDurationBuilder_ == null) {
+          result.signedUrlExpirationDuration_ = signedUrlExpirationDuration_;
+        } else {
+          result.signedUrlExpirationDuration_ = signedUrlExpirationDurationBuilder_.build();
         }
         onBuilt();
         return result;
@@ -21251,6 +21356,9 @@ public final class VideoServiceOuterClass {
         }
         if (other.hasParams()) {
           mergeParams(other.getParams());
+        }
+        if (other.hasSignedUrlExpirationDuration()) {
+          mergeSignedUrlExpirationDuration(other.getSignedUrlExpirationDuration());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -21494,6 +21602,161 @@ public final class VideoServiceOuterClass {
           params_ = null;
         }
         return paramsBuilder_;
+      }
+
+      private com.google.protobuf.Duration signedUrlExpirationDuration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> signedUrlExpirationDurationBuilder_;
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+       * @return Whether the signedUrlExpirationDuration field is set.
+       */
+      public boolean hasSignedUrlExpirationDuration() {
+        return signedUrlExpirationDurationBuilder_ != null || signedUrlExpirationDuration_ != null;
+      }
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+       * @return The signedUrlExpirationDuration.
+       */
+      public com.google.protobuf.Duration getSignedUrlExpirationDuration() {
+        if (signedUrlExpirationDurationBuilder_ == null) {
+          return signedUrlExpirationDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : signedUrlExpirationDuration_;
+        } else {
+          return signedUrlExpirationDurationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+       */
+      public Builder setSignedUrlExpirationDuration(com.google.protobuf.Duration value) {
+        if (signedUrlExpirationDurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          signedUrlExpirationDuration_ = value;
+          onChanged();
+        } else {
+          signedUrlExpirationDurationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+       */
+      public Builder setSignedUrlExpirationDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (signedUrlExpirationDurationBuilder_ == null) {
+          signedUrlExpirationDuration_ = builderForValue.build();
+          onChanged();
+        } else {
+          signedUrlExpirationDurationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+       */
+      public Builder mergeSignedUrlExpirationDuration(com.google.protobuf.Duration value) {
+        if (signedUrlExpirationDurationBuilder_ == null) {
+          if (signedUrlExpirationDuration_ != null) {
+            signedUrlExpirationDuration_ =
+              com.google.protobuf.Duration.newBuilder(signedUrlExpirationDuration_).mergeFrom(value).buildPartial();
+          } else {
+            signedUrlExpirationDuration_ = value;
+          }
+          onChanged();
+        } else {
+          signedUrlExpirationDurationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+       */
+      public Builder clearSignedUrlExpirationDuration() {
+        if (signedUrlExpirationDurationBuilder_ == null) {
+          signedUrlExpirationDuration_ = null;
+          onChanged();
+        } else {
+          signedUrlExpirationDuration_ = null;
+          signedUrlExpirationDurationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+       */
+      public com.google.protobuf.Duration.Builder getSignedUrlExpirationDurationBuilder() {
+        
+        onChanged();
+        return getSignedUrlExpirationDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getSignedUrlExpirationDurationOrBuilder() {
+        if (signedUrlExpirationDurationBuilder_ != null) {
+          return signedUrlExpirationDurationBuilder_.getMessageOrBuilder();
+        } else {
+          return signedUrlExpirationDuration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : signedUrlExpirationDuration_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getSignedUrlExpirationDurationFieldBuilder() {
+        if (signedUrlExpirationDurationBuilder_ == null) {
+          signedUrlExpirationDurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getSignedUrlExpirationDuration(),
+                  getParentForChildren(),
+                  isClean());
+          signedUrlExpirationDuration_ = null;
+        }
+        return signedUrlExpirationDurationBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -24587,146 +24850,149 @@ public final class VideoServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n)yandex/cloud/video/v1/video_service.pr" +
       "oto\022\025yandex.cloud.video.v1\032\034google/api/a" +
-      "nnotations.proto\032 google/protobuf/field_" +
-      "mask.proto\032 yandex/cloud/api/operation.p" +
-      "roto\032&yandex/cloud/operation/operation.p" +
-      "roto\032\035yandex/cloud/validation.proto\032$yan" +
-      "dex/cloud/video/v1/manifest.proto\032!yande" +
-      "x/cloud/video/v1/video.proto\"1\n\017GetVideo" +
-      "Request\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"" +
-      "\245\001\n\020ListVideoRequest\022 \n\nchannel_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<" +
-      "=100\022\035\n\npage_token\030e \001(\tB\t\212\3101\005<=200\022\020\n\010o" +
-      "rder_by\030f \001(\t\022\032\n\006filter\030g \001(\tB\n\212\3101\006<=100" +
-      "0J\004\010\002\020d\"`\n\021ListVideoResponse\022,\n\006videos\030\001" +
-      " \003(\0132\034.yandex.cloud.video.v1.Video\022\027\n\017ne" +
-      "xt_page_token\030d \001(\tJ\004\010\002\020d\"_\n\025BatchGetVid" +
-      "eosRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022$\n\tvideo_ids\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<=" +
-      "50\"F\n\026BatchGetVideosResponse\022,\n\006videos\030\001" +
-      " \003(\0132\034.yandex.cloud.video.v1.Video\"\344\005\n\022C" +
-      "reateVideoRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022\023\n\005title\030\002 \001(\tB\004\350\3071\001\022\023\n\013desc" +
-      "ription\030\003 \001(\t\022\036\n\014thumbnail_id\030\004 \001(\tB\010\212\3101" +
-      "\004<=50\022<\n\016auto_transcode\030\005 \001(\0162$.yandex.c" +
-      "loud.video.v1.AutoTranscode\022\213\001\n\006labels\030\310" +
-      "\001 \003(\01325.yandex.cloud.video.v1.CreateVide" +
-      "oRequest.LabelsEntryBC\202\3101\004<=64\212\3101\004<=63\362\307" +
-      "1\017[-_.@:/0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-" +
-      "_0-9a-z]*\0227\n\004tusd\030\350\007 \001(\0132&.yandex.cloud." +
-      "video.v1.VideoTUSDParamsH\000\022H\n\rpublic_acc" +
-      "ess\030\320\017 \001(\0132..yandex.cloud.video.v1.Video" +
-      "PublicAccessParamsH\001\022Q\n\022auth_system_acce" +
-      "ss\030\322\017 \001(\01322.yandex.cloud.video.v1.VideoA" +
-      "uthSystemAccessParamsH\001\022K\n\017sign_url_acce" +
-      "ss\030\323\017 \001(\0132/.yandex.cloud.video.v1.VideoS" +
-      "ignURLAccessParamsH\001\032-\n\013LabelsEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n\006source\022\004\300" +
-      "\3011\001B\025\n\raccess_rights\022\004\300\3011\001J\006\010\321\017\020\322\017J\005\010\006\020\310" +
-      "\001J\006\010\311\001\020\350\007J\006\010\351\007\020\320\017\"?\n\017VideoTUSDParams\022\031\n\t" +
-      "file_size\030\001 \001(\003B\006\372\3071\002>0\022\021\n\tfile_name\030\002 \001" +
-      "(\t\"\031\n\027VideoPublicAccessParams\"\035\n\033VideoAu" +
-      "thSystemAccessParams\"\032\n\030VideoSignURLAcce" +
-      "ssParams\"\'\n\023CreateVideoMetadata\022\020\n\010video" +
-      "_id\030\001 \001(\t\"\265\005\n\022UpdateVideoRequest\022\036\n\010vide" +
-      "o_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022.\n\nfield_mask\030\002" +
-      " \001(\0132\032.google.protobuf.FieldMask\022\r\n\005titl" +
-      "e\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022\036\n\014thumbnai" +
-      "l_id\030\005 \001(\tB\010\212\3101\004<=50\022<\n\016auto_transcode\030\006" +
-      " \001(\0162$.yandex.cloud.video.v1.AutoTransco" +
-      "de\022\213\001\n\006labels\030\310\001 \003(\01325.yandex.cloud.vide" +
-      "o.v1.UpdateVideoRequest.LabelsEntryBC\202\3101" +
-      "\004<=64\212\3101\004<=63\362\3071\017[-_.@:/0-9a-z]*\262\3101\006\032\004<=" +
-      "63\262\3101\022\022\020[a-z][-_0-9a-z]*\022H\n\rpublic_acces" +
-      "s\030\320\017 \001(\0132..yandex.cloud.video.v1.VideoPu" +
-      "blicAccessParamsH\000\022Q\n\022auth_system_access" +
-      "\030\322\017 \001(\01322.yandex.cloud.video.v1.VideoAut" +
-      "hSystemAccessParamsH\000\022K\n\017sign_url_access" +
-      "\030\323\017 \001(\0132/.yandex.cloud.video.v1.VideoSig" +
-      "nURLAccessParamsH\000\032-\n\013LabelsEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\017\n\raccess_righ" +
-      "tsJ\006\010\321\017\020\322\017J\005\010\007\020\310\001J\006\010\311\001\020\320\017\"\'\n\023UpdateVideo" +
-      "Metadata\022\020\n\010video_id\030\001 \001(\t\"o\n\025TranscodeV" +
-      "ideoRequest\022\020\n\010video_id\030\001 \001(\t\022.\n\nfield_m" +
-      "ask\030\002 \001(\0132\032.google.protobuf.FieldMask\022\024\n" +
-      "\014subtitle_ids\030\003 \003(\t\"*\n\026TranscodeVideoMet" +
-      "adata\022\020\n\010video_id\030\001 \001(\t\"4\n\022DeleteVideoRe" +
-      "quest\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\'\n" +
-      "\023DeleteVideoMetadata\022\020\n\010video_id\030\001 \001(\t\"b" +
-      "\n\030BatchDeleteVideosRequest\022 \n\nchannel_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022$\n\tvideo_ids\030\002 \003(\tB" +
-      "\021\202\3101\0051-100\212\3101\004<=50\".\n\031BatchDeleteVideosM" +
-      "etadata\022\021\n\tvideo_ids\030\001 \003(\t\"\324\001\n\031PerformVi" +
-      "deoActionRequest\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022=\n\007publish\030\350\007 \001(\0132).yandex.clou" +
-      "d.video.v1.PublishVideoActionH\000\022A\n\tunpub" +
-      "lish\030\351\007 \001(\0132+.yandex.cloud.video.v1.Unpu" +
-      "blishVideoActionH\000B\016\n\006action\022\004\300\3011\001J\005\010\002\020\350" +
-      "\007\"\024\n\022PublishVideoAction\"\026\n\024UnpublishVide" +
-      "oAction\".\n\032PerformVideoActionMetadata\022\020\n" +
-      "\010video_id\030\001 \001(\t\"t\n\030GetVideoPlayerURLRequ" +
-      "est\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0228\n\006p" +
-      "arams\030\002 \001(\0132(.yandex.cloud.video.v1.Vide" +
-      "oPlayerParams\"C\n\021VideoPlayerParams\022\014\n\004mu" +
-      "te\030\001 \001(\010\022\020\n\010autoplay\030\002 \001(\010\022\016\n\006hidden\030\003 \001" +
-      "(\010\"=\n\031GetVideoPlayerURLResponse\022\022\n\nplaye" +
-      "r_url\030\001 \001(\t\022\014\n\004html\030\002 \001(\t\":\n\030GetVideoMan" +
-      "ifestsRequest\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\"O\n\031GetVideoManifestsResponse\0222\n\tma" +
-      "nifests\030\001 \003(\0132\037.yandex.cloud.video.v1.Ma" +
-      "nifest2\361\r\n\014VideoService\022p\n\003Get\022&.yandex." +
-      "cloud.video.v1.GetVideoRequest\032\034.yandex." +
-      "cloud.video.v1.Video\"#\202\323\344\223\002\035\022\033/video/v1/" +
-      "videos/{video_id}\022s\n\004List\022\'.yandex.cloud" +
-      ".video.v1.ListVideoRequest\032(.yandex.clou" +
-      "d.video.v1.ListVideoResponse\"\030\202\323\344\223\002\022\022\020/v" +
-      "ideo/v1/videos\022\215\001\n\010BatchGet\022,.yandex.clo" +
-      "ud.video.v1.BatchGetVideosRequest\032-.yand" +
-      "ex.cloud.video.v1.BatchGetVideosResponse" +
-      "\"$\202\323\344\223\002\036\"\031/video/v1/videos:batchGet:\001*\022\223" +
-      "\001\n\006Create\022).yandex.cloud.video.v1.Create" +
-      "VideoRequest\032!.yandex.cloud.operation.Op" +
-      "eration\";\202\323\344\223\002\025\"\020/video/v1/videos:\001*\262\322*\034" +
-      "\n\023CreateVideoMetadata\022\005Video\022\236\001\n\006Update\022" +
-      ").yandex.cloud.video.v1.UpdateVideoReque" +
-      "st\032!.yandex.cloud.operation.Operation\"F\202" +
-      "\323\344\223\002 2\033/video/v1/videos/{video_id}:\001*\262\322*" +
-      "\034\n\023UpdateVideoMetadata\022\005Video\022\261\001\n\tTransc" +
-      "ode\022,.yandex.cloud.video.v1.TranscodeVid" +
-      "eoRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"S\202\323\344\223\002*\"%/video/v1/videos/{video_id" +
-      "}:transcode:\001*\262\322*\037\n\026TranscodeVideoMetada" +
-      "ta\022\005Video\022\253\001\n\006Delete\022).yandex.cloud.vide" +
-      "o.v1.DeleteVideoRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"S\202\323\344\223\002\035*\033/video/v1/vi" +
-      "deos/{video_id}\262\322*,\n\023DeleteVideoMetadata" +
-      "\022\025google.protobuf.Empty\022\300\001\n\013BatchDelete\022" +
-      "/.yandex.cloud.video.v1.BatchDeleteVideo" +
-      "sRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"]\202\323\344\223\002!\"\034/video/v1/videos:batchDelet" +
-      "e:\001*\262\322*2\n\031BatchDeleteVideosMetadata\022\025goo" +
-      "gle.protobuf.Empty\022\301\001\n\rPerformAction\0220.y" +
-      "andex.cloud.video.v1.PerformVideoActionR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"[\202\323\344\223\002.\")/video/v1/videos/{video_id}:p" +
-      "erformAction:\001*\262\322*#\n\032PerformVideoActionM" +
-      "etadata\022\005Video\022\243\001\n\014GetPlayerURL\022/.yandex" +
-      ".cloud.video.v1.GetVideoPlayerURLRequest" +
-      "\0320.yandex.cloud.video.v1.GetVideoPlayerU" +
-      "RLResponse\"0\202\323\344\223\002*\022(/video/v1/videos/{vi" +
-      "deo_id}:getPlayerURL\022\243\001\n\014GetManifests\022/." +
-      "yandex.cloud.video.v1.GetVideoManifestsR" +
-      "equest\0320.yandex.cloud.video.v1.GetVideoM" +
-      "anifestsResponse\"0\202\323\344\223\002*\022(/video/v1/vide" +
-      "os/{video_id}:getManifestsB\\\n\031yandex.clo" +
-      "ud.api.video.v1Z?github.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/video/v1;video" +
-      "b\006proto3"
+      "nnotations.proto\032\036google/protobuf/durati" +
+      "on.proto\032 google/protobuf/field_mask.pro" +
+      "to\032 yandex/cloud/api/operation.proto\032&ya" +
+      "ndex/cloud/operation/operation.proto\032\035ya" +
+      "ndex/cloud/validation.proto\032$yandex/clou" +
+      "d/video/v1/manifest.proto\032!yandex/cloud/" +
+      "video/v1/video.proto\"1\n\017GetVideoRequest\022" +
+      "\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\245\001\n\020List" +
+      "VideoRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=100\022\035\n\n" +
+      "page_token\030e \001(\tB\t\212\3101\005<=200\022\020\n\010order_by\030" +
+      "f \001(\t\022\032\n\006filter\030g \001(\tB\n\212\3101\006<=1000J\004\010\002\020d\"" +
+      "`\n\021ListVideoResponse\022,\n\006videos\030\001 \003(\0132\034.y" +
+      "andex.cloud.video.v1.Video\022\027\n\017next_page_" +
+      "token\030d \001(\tJ\004\010\002\020d\"_\n\025BatchGetVideosReque" +
+      "st\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022$\n\t" +
+      "video_ids\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<=50\"F\n\026Ba" +
+      "tchGetVideosResponse\022,\n\006videos\030\001 \003(\0132\034.y" +
+      "andex.cloud.video.v1.Video\"\344\005\n\022CreateVid" +
+      "eoRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022\023\n\005title\030\002 \001(\tB\004\350\3071\001\022\023\n\013description\030" +
+      "\003 \001(\t\022\036\n\014thumbnail_id\030\004 \001(\tB\010\212\3101\004<=50\022<\n" +
+      "\016auto_transcode\030\005 \001(\0162$.yandex.cloud.vid" +
+      "eo.v1.AutoTranscode\022\213\001\n\006labels\030\310\001 \003(\01325." +
+      "yandex.cloud.video.v1.CreateVideoRequest" +
+      ".LabelsEntryBC\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_.@:" +
+      "/0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]" +
+      "*\0227\n\004tusd\030\350\007 \001(\0132&.yandex.cloud.video.v1" +
+      ".VideoTUSDParamsH\000\022H\n\rpublic_access\030\320\017 \001" +
+      "(\0132..yandex.cloud.video.v1.VideoPublicAc" +
+      "cessParamsH\001\022Q\n\022auth_system_access\030\322\017 \001(" +
+      "\01322.yandex.cloud.video.v1.VideoAuthSyste" +
+      "mAccessParamsH\001\022K\n\017sign_url_access\030\323\017 \001(" +
+      "\0132/.yandex.cloud.video.v1.VideoSignURLAc" +
+      "cessParamsH\001\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n\006source\022\004\300\3011\001B\025\n\ra" +
+      "ccess_rights\022\004\300\3011\001J\006\010\321\017\020\322\017J\005\010\006\020\310\001J\006\010\311\001\020\350" +
+      "\007J\006\010\351\007\020\320\017\"?\n\017VideoTUSDParams\022\031\n\tfile_siz" +
+      "e\030\001 \001(\003B\006\372\3071\002>0\022\021\n\tfile_name\030\002 \001(\t\"\031\n\027Vi" +
+      "deoPublicAccessParams\"\035\n\033VideoAuthSystem" +
+      "AccessParams\"\032\n\030VideoSignURLAccessParams" +
+      "\"\'\n\023CreateVideoMetadata\022\020\n\010video_id\030\001 \001(" +
+      "\t\"\265\005\n\022UpdateVideoRequest\022\036\n\010video_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022.\n\nfield_mask\030\002 \001(\0132\032.g" +
+      "oogle.protobuf.FieldMask\022\r\n\005title\030\003 \001(\t\022" +
+      "\023\n\013description\030\004 \001(\t\022\036\n\014thumbnail_id\030\005 \001" +
+      "(\tB\010\212\3101\004<=50\022<\n\016auto_transcode\030\006 \001(\0162$.y" +
+      "andex.cloud.video.v1.AutoTranscode\022\213\001\n\006l" +
+      "abels\030\310\001 \003(\01325.yandex.cloud.video.v1.Upd" +
+      "ateVideoRequest.LabelsEntryBC\202\3101\004<=64\212\3101" +
+      "\004<=63\362\3071\017[-_.@:/0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020" +
+      "[a-z][-_0-9a-z]*\022H\n\rpublic_access\030\320\017 \001(\013" +
+      "2..yandex.cloud.video.v1.VideoPublicAcce" +
+      "ssParamsH\000\022Q\n\022auth_system_access\030\322\017 \001(\0132" +
+      "2.yandex.cloud.video.v1.VideoAuthSystemA" +
+      "ccessParamsH\000\022K\n\017sign_url_access\030\323\017 \001(\0132" +
+      "/.yandex.cloud.video.v1.VideoSignURLAcce" +
+      "ssParamsH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001B\017\n\raccess_rightsJ\006\010\321\017\020" +
+      "\322\017J\005\010\007\020\310\001J\006\010\311\001\020\320\017\"\'\n\023UpdateVideoMetadata" +
+      "\022\020\n\010video_id\030\001 \001(\t\"o\n\025TranscodeVideoRequ" +
+      "est\022\020\n\010video_id\030\001 \001(\t\022.\n\nfield_mask\030\002 \001(" +
+      "\0132\032.google.protobuf.FieldMask\022\024\n\014subtitl" +
+      "e_ids\030\003 \003(\t\"*\n\026TranscodeVideoMetadata\022\020\n" +
+      "\010video_id\030\001 \001(\t\"4\n\022DeleteVideoRequest\022\036\n" +
+      "\010video_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\'\n\023DeleteV" +
+      "ideoMetadata\022\020\n\010video_id\030\001 \001(\t\"b\n\030BatchD" +
+      "eleteVideosRequest\022 \n\nchannel_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022$\n\tvideo_ids\030\002 \003(\tB\021\202\3101\0051-1" +
+      "00\212\3101\004<=50\".\n\031BatchDeleteVideosMetadata\022" +
+      "\021\n\tvideo_ids\030\001 \003(\t\"\324\001\n\031PerformVideoActio" +
+      "nRequest\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022=\n\007publish\030\350\007 \001(\0132).yandex.cloud.video." +
+      "v1.PublishVideoActionH\000\022A\n\tunpublish\030\351\007 " +
+      "\001(\0132+.yandex.cloud.video.v1.UnpublishVid" +
+      "eoActionH\000B\016\n\006action\022\004\300\3011\001J\005\010\002\020\350\007\"\024\n\022Pub" +
+      "lishVideoAction\"\026\n\024UnpublishVideoAction\"" +
+      ".\n\032PerformVideoActionMetadata\022\020\n\010video_i" +
+      "d\030\001 \001(\t\"\267\001\n\030GetVideoPlayerURLRequest\022\036\n\010" +
+      "video_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0228\n\006params\030\002" +
+      " \001(\0132(.yandex.cloud.video.v1.VideoPlayer" +
+      "Params\022A\n\036signed_url_expiration_duration" +
+      "\030\003 \001(\0132\031.google.protobuf.Duration\"C\n\021Vid" +
+      "eoPlayerParams\022\014\n\004mute\030\001 \001(\010\022\020\n\010autoplay" +
+      "\030\002 \001(\010\022\016\n\006hidden\030\003 \001(\010\"=\n\031GetVideoPlayer" +
+      "URLResponse\022\022\n\nplayer_url\030\001 \001(\t\022\014\n\004html\030" +
+      "\002 \001(\t\":\n\030GetVideoManifestsRequest\022\036\n\010vid" +
+      "eo_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"O\n\031GetVideoMan" +
+      "ifestsResponse\0222\n\tmanifests\030\001 \003(\0132\037.yand" +
+      "ex.cloud.video.v1.Manifest2\361\r\n\014VideoServ" +
+      "ice\022p\n\003Get\022&.yandex.cloud.video.v1.GetVi" +
+      "deoRequest\032\034.yandex.cloud.video.v1.Video" +
+      "\"#\202\323\344\223\002\035\022\033/video/v1/videos/{video_id}\022s\n" +
+      "\004List\022\'.yandex.cloud.video.v1.ListVideoR" +
+      "equest\032(.yandex.cloud.video.v1.ListVideo" +
+      "Response\"\030\202\323\344\223\002\022\022\020/video/v1/videos\022\215\001\n\010B" +
+      "atchGet\022,.yandex.cloud.video.v1.BatchGet" +
+      "VideosRequest\032-.yandex.cloud.video.v1.Ba" +
+      "tchGetVideosResponse\"$\202\323\344\223\002\036\"\031/video/v1/" +
+      "videos:batchGet:\001*\022\223\001\n\006Create\022).yandex.c" +
+      "loud.video.v1.CreateVideoRequest\032!.yande" +
+      "x.cloud.operation.Operation\";\202\323\344\223\002\025\"\020/vi" +
+      "deo/v1/videos:\001*\262\322*\034\n\023CreateVideoMetadat" +
+      "a\022\005Video\022\236\001\n\006Update\022).yandex.cloud.video" +
+      ".v1.UpdateVideoRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"F\202\323\344\223\002 2\033/video/v1/vid" +
+      "eos/{video_id}:\001*\262\322*\034\n\023UpdateVideoMetada" +
+      "ta\022\005Video\022\261\001\n\tTranscode\022,.yandex.cloud.v" +
+      "ideo.v1.TranscodeVideoRequest\032!.yandex.c" +
+      "loud.operation.Operation\"S\202\323\344\223\002*\"%/video" +
+      "/v1/videos/{video_id}:transcode:\001*\262\322*\037\n\026" +
+      "TranscodeVideoMetadata\022\005Video\022\253\001\n\006Delete" +
+      "\022).yandex.cloud.video.v1.DeleteVideoRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"S" +
+      "\202\323\344\223\002\035*\033/video/v1/videos/{video_id}\262\322*,\n" +
+      "\023DeleteVideoMetadata\022\025google.protobuf.Em" +
+      "pty\022\300\001\n\013BatchDelete\022/.yandex.cloud.video" +
+      ".v1.BatchDeleteVideosRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"]\202\323\344\223\002!\"\034/video/" +
+      "v1/videos:batchDelete:\001*\262\322*2\n\031BatchDelet" +
+      "eVideosMetadata\022\025google.protobuf.Empty\022\301" +
+      "\001\n\rPerformAction\0220.yandex.cloud.video.v1" +
+      ".PerformVideoActionRequest\032!.yandex.clou" +
+      "d.operation.Operation\"[\202\323\344\223\002.\")/video/v1" +
+      "/videos/{video_id}:performAction:\001*\262\322*#\n" +
+      "\032PerformVideoActionMetadata\022\005Video\022\243\001\n\014G" +
+      "etPlayerURL\022/.yandex.cloud.video.v1.GetV" +
+      "ideoPlayerURLRequest\0320.yandex.cloud.vide" +
+      "o.v1.GetVideoPlayerURLResponse\"0\202\323\344\223\002*\022(" +
+      "/video/v1/videos/{video_id}:getPlayerURL" +
+      "\022\243\001\n\014GetManifests\022/.yandex.cloud.video.v" +
+      "1.GetVideoManifestsRequest\0320.yandex.clou" +
+      "d.video.v1.GetVideoManifestsResponse\"0\202\323" +
+      "\344\223\002*\022(/video/v1/videos/{video_id}:getMan" +
+      "ifestsB\\\n\031yandex.cloud.api.video.v1Z?git" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/video/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
@@ -24889,7 +25155,7 @@ public final class VideoServiceOuterClass {
     internal_static_yandex_cloud_video_v1_GetVideoPlayerURLRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_GetVideoPlayerURLRequest_descriptor,
-        new java.lang.String[] { "VideoId", "Params", });
+        new java.lang.String[] { "VideoId", "Params", "SignedUrlExpirationDuration", });
     internal_static_yandex_cloud_video_v1_VideoPlayerParams_descriptor =
       getDescriptor().getMessageTypes().get(24);
     internal_static_yandex_cloud_video_v1_VideoPlayerParams_fieldAccessorTable = new
@@ -24928,6 +25194,7 @@ public final class VideoServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();

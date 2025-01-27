@@ -10053,6 +10053,33 @@ public final class PolicyOuterClass {
        * @return The weeklyBackupDay.
        */
       yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Day getWeeklyBackupDay();
+
+      /**
+       * <pre>
+       * Task failure settings in case of failure of scheduled task, not applicable to  manually launched tasks
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.PolicySettings.RetriesConfiguration task_failure = 7;</code>
+       * @return Whether the taskFailure field is set.
+       */
+      boolean hasTaskFailure();
+      /**
+       * <pre>
+       * Task failure settings in case of failure of scheduled task, not applicable to  manually launched tasks
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.PolicySettings.RetriesConfiguration task_failure = 7;</code>
+       * @return The taskFailure.
+       */
+      yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfiguration getTaskFailure();
+      /**
+       * <pre>
+       * Task failure settings in case of failure of scheduled task, not applicable to  manually launched tasks
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.PolicySettings.RetriesConfiguration task_failure = 7;</code>
+       */
+      yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfigurationOrBuilder getTaskFailureOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.backup.v1.PolicySettings.Scheduling}
@@ -10145,6 +10172,19 @@ public final class PolicyOuterClass {
                 int rawValue = input.readEnum();
 
                 weeklyBackupDay_ = rawValue;
+                break;
+              }
+              case 58: {
+                yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfiguration.Builder subBuilder = null;
+                if (taskFailure_ != null) {
+                  subBuilder = taskFailure_.toBuilder();
+                }
+                taskFailure_ = input.readMessage(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfiguration.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(taskFailure_);
+                  taskFailure_ = subBuilder.buildPartial();
+                }
+
                 break;
               }
               default: {
@@ -15275,6 +15315,44 @@ public final class PolicyOuterClass {
         return result == null ? yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Day.UNRECOGNIZED : result;
       }
 
+      public static final int TASK_FAILURE_FIELD_NUMBER = 7;
+      private yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfiguration taskFailure_;
+      /**
+       * <pre>
+       * Task failure settings in case of failure of scheduled task, not applicable to  manually launched tasks
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.PolicySettings.RetriesConfiguration task_failure = 7;</code>
+       * @return Whether the taskFailure field is set.
+       */
+      @java.lang.Override
+      public boolean hasTaskFailure() {
+        return taskFailure_ != null;
+      }
+      /**
+       * <pre>
+       * Task failure settings in case of failure of scheduled task, not applicable to  manually launched tasks
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.PolicySettings.RetriesConfiguration task_failure = 7;</code>
+       * @return The taskFailure.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfiguration getTaskFailure() {
+        return taskFailure_ == null ? yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfiguration.getDefaultInstance() : taskFailure_;
+      }
+      /**
+       * <pre>
+       * Task failure settings in case of failure of scheduled task, not applicable to  manually launched tasks
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.PolicySettings.RetriesConfiguration task_failure = 7;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfigurationOrBuilder getTaskFailureOrBuilder() {
+        return getTaskFailure();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -15306,6 +15384,9 @@ public final class PolicyOuterClass {
         }
         if (weeklyBackupDay_ != yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Day.DAY_UNSPECIFIED.getNumber()) {
           output.writeEnum(6, weeklyBackupDay_);
+        }
+        if (taskFailure_ != null) {
+          output.writeMessage(7, getTaskFailure());
         }
         unknownFields.writeTo(output);
       }
@@ -15340,6 +15421,10 @@ public final class PolicyOuterClass {
           size += com.google.protobuf.CodedOutputStream
             .computeEnumSize(6, weeklyBackupDay_);
         }
+        if (taskFailure_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(7, getTaskFailure());
+        }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
         return size;
@@ -15368,6 +15453,11 @@ public final class PolicyOuterClass {
         }
         if (scheme_ != other.scheme_) return false;
         if (weeklyBackupDay_ != other.weeklyBackupDay_) return false;
+        if (hasTaskFailure() != other.hasTaskFailure()) return false;
+        if (hasTaskFailure()) {
+          if (!getTaskFailure()
+              .equals(other.getTaskFailure())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -15397,6 +15487,10 @@ public final class PolicyOuterClass {
         hash = (53 * hash) + scheme_;
         hash = (37 * hash) + WEEKLY_BACKUP_DAY_FIELD_NUMBER;
         hash = (53 * hash) + weeklyBackupDay_;
+        if (hasTaskFailure()) {
+          hash = (37 * hash) + TASK_FAILURE_FIELD_NUMBER;
+          hash = (53 * hash) + getTaskFailure().hashCode();
+        }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -15551,6 +15645,12 @@ public final class PolicyOuterClass {
 
           weeklyBackupDay_ = 0;
 
+          if (taskFailureBuilder_ == null) {
+            taskFailure_ = null;
+          } else {
+            taskFailure_ = null;
+            taskFailureBuilder_ = null;
+          }
           return this;
         }
 
@@ -15596,6 +15696,11 @@ public final class PolicyOuterClass {
           }
           result.scheme_ = scheme_;
           result.weeklyBackupDay_ = weeklyBackupDay_;
+          if (taskFailureBuilder_ == null) {
+            result.taskFailure_ = taskFailure_;
+          } else {
+            result.taskFailure_ = taskFailureBuilder_.build();
+          }
           onBuilt();
           return result;
         }
@@ -15684,6 +15789,9 @@ public final class PolicyOuterClass {
           }
           if (other.weeklyBackupDay_ != 0) {
             setWeeklyBackupDayValue(other.getWeeklyBackupDayValue());
+          }
+          if (other.hasTaskFailure()) {
+            mergeTaskFailure(other.getTaskFailure());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -16414,6 +16522,161 @@ public final class PolicyOuterClass {
           weeklyBackupDay_ = 0;
           onChanged();
           return this;
+        }
+
+        private yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfiguration taskFailure_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfiguration, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfiguration.Builder, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfigurationOrBuilder> taskFailureBuilder_;
+        /**
+         * <pre>
+         * Task failure settings in case of failure of scheduled task, not applicable to  manually launched tasks
+         * </pre>
+         *
+         * <code>.yandex.cloud.backup.v1.PolicySettings.RetriesConfiguration task_failure = 7;</code>
+         * @return Whether the taskFailure field is set.
+         */
+        public boolean hasTaskFailure() {
+          return taskFailureBuilder_ != null || taskFailure_ != null;
+        }
+        /**
+         * <pre>
+         * Task failure settings in case of failure of scheduled task, not applicable to  manually launched tasks
+         * </pre>
+         *
+         * <code>.yandex.cloud.backup.v1.PolicySettings.RetriesConfiguration task_failure = 7;</code>
+         * @return The taskFailure.
+         */
+        public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfiguration getTaskFailure() {
+          if (taskFailureBuilder_ == null) {
+            return taskFailure_ == null ? yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfiguration.getDefaultInstance() : taskFailure_;
+          } else {
+            return taskFailureBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Task failure settings in case of failure of scheduled task, not applicable to  manually launched tasks
+         * </pre>
+         *
+         * <code>.yandex.cloud.backup.v1.PolicySettings.RetriesConfiguration task_failure = 7;</code>
+         */
+        public Builder setTaskFailure(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfiguration value) {
+          if (taskFailureBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            taskFailure_ = value;
+            onChanged();
+          } else {
+            taskFailureBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Task failure settings in case of failure of scheduled task, not applicable to  manually launched tasks
+         * </pre>
+         *
+         * <code>.yandex.cloud.backup.v1.PolicySettings.RetriesConfiguration task_failure = 7;</code>
+         */
+        public Builder setTaskFailure(
+            yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfiguration.Builder builderForValue) {
+          if (taskFailureBuilder_ == null) {
+            taskFailure_ = builderForValue.build();
+            onChanged();
+          } else {
+            taskFailureBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Task failure settings in case of failure of scheduled task, not applicable to  manually launched tasks
+         * </pre>
+         *
+         * <code>.yandex.cloud.backup.v1.PolicySettings.RetriesConfiguration task_failure = 7;</code>
+         */
+        public Builder mergeTaskFailure(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfiguration value) {
+          if (taskFailureBuilder_ == null) {
+            if (taskFailure_ != null) {
+              taskFailure_ =
+                yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfiguration.newBuilder(taskFailure_).mergeFrom(value).buildPartial();
+            } else {
+              taskFailure_ = value;
+            }
+            onChanged();
+          } else {
+            taskFailureBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Task failure settings in case of failure of scheduled task, not applicable to  manually launched tasks
+         * </pre>
+         *
+         * <code>.yandex.cloud.backup.v1.PolicySettings.RetriesConfiguration task_failure = 7;</code>
+         */
+        public Builder clearTaskFailure() {
+          if (taskFailureBuilder_ == null) {
+            taskFailure_ = null;
+            onChanged();
+          } else {
+            taskFailure_ = null;
+            taskFailureBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Task failure settings in case of failure of scheduled task, not applicable to  manually launched tasks
+         * </pre>
+         *
+         * <code>.yandex.cloud.backup.v1.PolicySettings.RetriesConfiguration task_failure = 7;</code>
+         */
+        public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfiguration.Builder getTaskFailureBuilder() {
+          
+          onChanged();
+          return getTaskFailureFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Task failure settings in case of failure of scheduled task, not applicable to  manually launched tasks
+         * </pre>
+         *
+         * <code>.yandex.cloud.backup.v1.PolicySettings.RetriesConfiguration task_failure = 7;</code>
+         */
+        public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfigurationOrBuilder getTaskFailureOrBuilder() {
+          if (taskFailureBuilder_ != null) {
+            return taskFailureBuilder_.getMessageOrBuilder();
+          } else {
+            return taskFailure_ == null ?
+                yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfiguration.getDefaultInstance() : taskFailure_;
+          }
+        }
+        /**
+         * <pre>
+         * Task failure settings in case of failure of scheduled task, not applicable to  manually launched tasks
+         * </pre>
+         *
+         * <code>.yandex.cloud.backup.v1.PolicySettings.RetriesConfiguration task_failure = 7;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfiguration, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfiguration.Builder, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfigurationOrBuilder> 
+            getTaskFailureFieldBuilder() {
+          if (taskFailureBuilder_ == null) {
+            taskFailureBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfiguration, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfiguration.Builder, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RetriesConfigurationOrBuilder>(
+                    getTaskFailure(),
+                    getParentForChildren(),
+                    isClean());
+            taskFailure_ = null;
+          }
+          return taskFailureBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -20834,7 +21097,7 @@ public final class PolicyOuterClass {
       "\n\nupdated_at\030\004 \001(\0132\032.google.protobuf.Tim" +
       "estamp\022\017\n\007enabled\030\005 \001(\010\0228\n\010settings\030\006 \001(" +
       "\0132&.yandex.cloud.backup.v1.PolicySetting" +
-      "s\022\021\n\tfolder_id\030\007 \001(\t\"\257 \n\016PolicySettings\022" +
+      "s\022\021\n\tfolder_id\030\007 \001(\t\"\202!\n\016PolicySettings\022" +
       "M\n\013compression\030\001 \001(\01622.yandex.cloud.back" +
       "up.v1.PolicySettings.CompressionB\004\350\3071\001\0224" +
       "\n\006format\030\002 \001(\0162\036.yandex.cloud.backup.v1." +
@@ -20888,7 +21151,7 @@ public final class PolicyOuterClass {
       ".RepeatePeriod\022B\n\007max_age\030\002 \001(\0132/.yandex" +
       ".cloud.backup.v1.PolicySettings.Interval" +
       "H\000\022\023\n\tmax_count\030\003 \001(\003H\000B\021\n\tcondition\022\004\300\301" +
-      "1\001J\004\010\002\020\003\032\232\014\n\nScheduling\022X\n\013backup_sets\030\001" +
+      "1\001J\004\010\002\020\003\032\355\014\n\nScheduling\022X\n\013backup_sets\030\001" +
       " \003(\0132;.yandex.cloud.backup.v1.PolicySett" +
       "ings.Scheduling.BackupSetB\006\202\3101\002>0\022\017\n\007ena" +
       "bled\030\002 \001(\010\022\034\n\024max_parallel_backups\030\003 \001(\003" +
@@ -20897,59 +21160,62 @@ public final class PolicyOuterClass {
       "N\n\006scheme\030\005 \001(\01628.yandex.cloud.backup.v1" +
       ".PolicySettings.Scheduling.SchemeB\004\350\3071\001\022" +
       "K\n\021weekly_backup_day\030\006 \001(\0162*.yandex.clou" +
-      "d.backup.v1.PolicySettings.DayB\004\350\3071\001\032\356\007\n" +
-      "\tBackupSet\022P\n\004time\030\001 \001(\0132@.yandex.cloud." +
-      "backup.v1.PolicySettings.Scheduling.Back" +
-      "upSet.TimeH\000\022m\n\024since_last_exec_time\030\002 \001" +
-      "(\0132M.yandex.cloud.backup.v1.PolicySettin" +
-      "gs.Scheduling.BackupSet.SinceLastExecTim" +
-      "eH\000\022N\n\004type\030\003 \001(\0162@.yandex.cloud.backup." +
-      "v1.PolicySettings.Scheduling.BackupSet.T" +
-      "ype\032\372\003\n\004Time\022B\n\010weekdays\030\001 \003(\0162*.yandex." +
-      "cloud.backup.v1.PolicySettings.DayB\004\220\3101\001" +
-      "\022C\n\trepeat_at\030\002 \003(\01320.yandex.cloud.backu" +
-      "p.v1.PolicySettings.TimeOfDay\022E\n\014repeat_" +
-      "every\030\003 \001(\0132/.yandex.cloud.backup.v1.Pol" +
-      "icySettings.Interval\022C\n\ttime_from\030\004 \001(\0132" +
-      "0.yandex.cloud.backup.v1.PolicySettings." +
-      "TimeOfDay\022A\n\007time_to\030\005 \001(\01320.yandex.clou" +
-      "d.backup.v1.PolicySettings.TimeOfDay\022\027\n\t" +
-      "monthdays\030\006 \003(\003B\004\220\3101\001\022!\n\031include_last_da" +
-      "y_of_month\030\007 \001(\010\022\024\n\006months\030\010 \003(\003B\004\220\3101\001\022H" +
-      "\n\004type\030\t \001(\01624.yandex.cloud.backup.v1.Po" +
-      "licySettings.RepeatePeriodB\004\350\3071\001\032Y\n\021Sinc" +
-      "eLastExecTime\022D\n\005delay\030\001 \001(\0132/.yandex.cl" +
-      "oud.backup.v1.PolicySettings.IntervalB\004\350" +
-      "\3071\001\"g\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\r\n\tTYP" +
-      "E_AUTO\020\001\022\r\n\tTYPE_FULL\020\002\022\024\n\020TYPE_INCREMEN" +
-      "TAL\020\003\022\025\n\021TYPE_DIFFERENTIAL\020\004B\017\n\007setting\022" +
-      "\004\300\3011\001\"\245\001\n\006Scheme\022\026\n\022SCHEME_UNSPECIFIED\020\000" +
-      "\022\n\n\006SIMPLE\020\001\022\017\n\013ALWAYS_FULL\020\002\022\026\n\022ALWAYS_" +
-      "INCREMENTAL\020\003\022\026\n\022WEEKLY_INCREMENTAL\020\004\022!\n" +
-      "\035WEEKLY_FULL_DAILY_INCREMENTAL\020\005\022\n\n\006CUST" +
-      "OM\020\006\022\007\n\003CDP\020\007\"R\n\013Compression\022\033\n\027COMPRESS" +
-      "ION_UNSPECIFIED\020\000\022\n\n\006NORMAL\020\001\022\010\n\004HIGH\020\002\022" +
-      "\007\n\003MAX\020\003\022\007\n\003OFF\020\004\"_\n\rRepeatePeriod\022\036\n\032RE" +
-      "PEATE_PERIOD_UNSPECIFIED\020\000\022\n\n\006HOURLY\020\001\022\t" +
-      "\n\005DAILY\020\002\022\n\n\006WEEKLY\020\003\022\013\n\007MONTHLY\020\004\"v\n\003Da" +
-      "y\022\023\n\017DAY_UNSPECIFIED\020\000\022\n\n\006MONDAY\020\001\022\013\n\007TU" +
-      "ESDAY\020\002\022\r\n\tWEDNESDAY\020\003\022\014\n\010THURSDAY\020\004\022\n\n\006" +
-      "FRIDAY\020\005\022\014\n\010SATURDAY\020\006\022\n\n\006SUNDAY\020\007\"v\n\024Ch" +
-      "angedBlockTracking\022&\n\"CHANGED_BLOCK_TRAC" +
-      "KING_UNSPECIFIED\020\000\022\022\n\016USE_IF_ENABLED\020\001\022\022" +
-      "\n\016ENABLE_AND_USE\020\002\022\016\n\nDO_NOT_USE\020\003J\004\010\r\020\016" +
-      "J\004\010\016\020\017\"\242\002\n\021PolicyApplication\022\021\n\tpolicy_i" +
-      "d\030\001 \001(\t\022\033\n\023compute_instance_id\030\002 \001(\t\022\017\n\007" +
-      "enabled\030\003 \001(\010\022@\n\006status\030\004 \001(\01620.yandex.c" +
-      "loud.backup.v1.PolicyApplication.Status\022" +
-      ".\n\ncreated_at\030\005 \001(\0132\032.google.protobuf.Ti" +
-      "mestamp\022\025\n\ris_processing\030\006 \001(\010\"C\n\006Status" +
-      "\022\026\n\022STATUS_UNSPECIFIED\020\000\022\006\n\002OK\020\001\022\013\n\007RUNN" +
-      "ING\020\002\022\014\n\010DISABLED\020\003*J\n\006Format\022\026\n\022FORMAT_" +
-      "UNSPECIFIED\020\000\022\016\n\nVERSION_11\020\001\022\016\n\nVERSION" +
-      "_12\020\002\022\010\n\004AUTO\020\003B_\n\032yandex.cloud.api.back" +
-      "up.v1ZAgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/backup/v1;backupb\006proto3"
+      "d.backup.v1.PolicySettings.DayB\004\350\3071\001\022Q\n\014" +
+      "task_failure\030\007 \001(\0132;.yandex.cloud.backup" +
+      ".v1.PolicySettings.RetriesConfiguration\032" +
+      "\356\007\n\tBackupSet\022P\n\004time\030\001 \001(\0132@.yandex.clo" +
+      "ud.backup.v1.PolicySettings.Scheduling.B" +
+      "ackupSet.TimeH\000\022m\n\024since_last_exec_time\030" +
+      "\002 \001(\0132M.yandex.cloud.backup.v1.PolicySet" +
+      "tings.Scheduling.BackupSet.SinceLastExec" +
+      "TimeH\000\022N\n\004type\030\003 \001(\0162@.yandex.cloud.back" +
+      "up.v1.PolicySettings.Scheduling.BackupSe" +
+      "t.Type\032\372\003\n\004Time\022B\n\010weekdays\030\001 \003(\0162*.yand" +
+      "ex.cloud.backup.v1.PolicySettings.DayB\004\220" +
+      "\3101\001\022C\n\trepeat_at\030\002 \003(\01320.yandex.cloud.ba" +
+      "ckup.v1.PolicySettings.TimeOfDay\022E\n\014repe" +
+      "at_every\030\003 \001(\0132/.yandex.cloud.backup.v1." +
+      "PolicySettings.Interval\022C\n\ttime_from\030\004 \001" +
+      "(\01320.yandex.cloud.backup.v1.PolicySettin" +
+      "gs.TimeOfDay\022A\n\007time_to\030\005 \001(\01320.yandex.c" +
+      "loud.backup.v1.PolicySettings.TimeOfDay\022" +
+      "\027\n\tmonthdays\030\006 \003(\003B\004\220\3101\001\022!\n\031include_last" +
+      "_day_of_month\030\007 \001(\010\022\024\n\006months\030\010 \003(\003B\004\220\3101" +
+      "\001\022H\n\004type\030\t \001(\01624.yandex.cloud.backup.v1" +
+      ".PolicySettings.RepeatePeriodB\004\350\3071\001\032Y\n\021S" +
+      "inceLastExecTime\022D\n\005delay\030\001 \001(\0132/.yandex" +
+      ".cloud.backup.v1.PolicySettings.Interval" +
+      "B\004\350\3071\001\"g\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\r\n\t" +
+      "TYPE_AUTO\020\001\022\r\n\tTYPE_FULL\020\002\022\024\n\020TYPE_INCRE" +
+      "MENTAL\020\003\022\025\n\021TYPE_DIFFERENTIAL\020\004B\017\n\007setti" +
+      "ng\022\004\300\3011\001\"\245\001\n\006Scheme\022\026\n\022SCHEME_UNSPECIFIE" +
+      "D\020\000\022\n\n\006SIMPLE\020\001\022\017\n\013ALWAYS_FULL\020\002\022\026\n\022ALWA" +
+      "YS_INCREMENTAL\020\003\022\026\n\022WEEKLY_INCREMENTAL\020\004" +
+      "\022!\n\035WEEKLY_FULL_DAILY_INCREMENTAL\020\005\022\n\n\006C" +
+      "USTOM\020\006\022\007\n\003CDP\020\007\"R\n\013Compression\022\033\n\027COMPR" +
+      "ESSION_UNSPECIFIED\020\000\022\n\n\006NORMAL\020\001\022\010\n\004HIGH" +
+      "\020\002\022\007\n\003MAX\020\003\022\007\n\003OFF\020\004\"_\n\rRepeatePeriod\022\036\n" +
+      "\032REPEATE_PERIOD_UNSPECIFIED\020\000\022\n\n\006HOURLY\020" +
+      "\001\022\t\n\005DAILY\020\002\022\n\n\006WEEKLY\020\003\022\013\n\007MONTHLY\020\004\"v\n" +
+      "\003Day\022\023\n\017DAY_UNSPECIFIED\020\000\022\n\n\006MONDAY\020\001\022\013\n" +
+      "\007TUESDAY\020\002\022\r\n\tWEDNESDAY\020\003\022\014\n\010THURSDAY\020\004\022" +
+      "\n\n\006FRIDAY\020\005\022\014\n\010SATURDAY\020\006\022\n\n\006SUNDAY\020\007\"v\n" +
+      "\024ChangedBlockTracking\022&\n\"CHANGED_BLOCK_T" +
+      "RACKING_UNSPECIFIED\020\000\022\022\n\016USE_IF_ENABLED\020" +
+      "\001\022\022\n\016ENABLE_AND_USE\020\002\022\016\n\nDO_NOT_USE\020\003J\004\010" +
+      "\r\020\016J\004\010\016\020\017\"\242\002\n\021PolicyApplication\022\021\n\tpolic" +
+      "y_id\030\001 \001(\t\022\033\n\023compute_instance_id\030\002 \001(\t\022" +
+      "\017\n\007enabled\030\003 \001(\010\022@\n\006status\030\004 \001(\01620.yande" +
+      "x.cloud.backup.v1.PolicyApplication.Stat" +
+      "us\022.\n\ncreated_at\030\005 \001(\0132\032.google.protobuf" +
+      ".Timestamp\022\025\n\ris_processing\030\006 \001(\010\"C\n\006Sta" +
+      "tus\022\026\n\022STATUS_UNSPECIFIED\020\000\022\006\n\002OK\020\001\022\013\n\007R" +
+      "UNNING\020\002\022\014\n\010DISABLED\020\003*J\n\006Format\022\026\n\022FORM" +
+      "AT_UNSPECIFIED\020\000\022\016\n\nVERSION_11\020\001\022\016\n\nVERS" +
+      "ION_12\020\002\022\010\n\004AUTO\020\003B_\n\032yandex.cloud.api.b" +
+      "ackup.v1ZAgithub.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/backup/v1;backupb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21028,7 +21294,7 @@ public final class PolicyOuterClass {
     internal_static_yandex_cloud_backup_v1_PolicySettings_Scheduling_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_PolicySettings_Scheduling_descriptor,
-        new java.lang.String[] { "BackupSets", "Enabled", "MaxParallelBackups", "RandMaxDelay", "Scheme", "WeeklyBackupDay", });
+        new java.lang.String[] { "BackupSets", "Enabled", "MaxParallelBackups", "RandMaxDelay", "Scheme", "WeeklyBackupDay", "TaskFailure", });
     internal_static_yandex_cloud_backup_v1_PolicySettings_Scheduling_BackupSet_descriptor =
       internal_static_yandex_cloud_backup_v1_PolicySettings_Scheduling_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_backup_v1_PolicySettings_Scheduling_BackupSet_fieldAccessorTable = new

@@ -90,6 +90,33 @@ public final class TextCommon {
      * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMaxTokensOrBuilder();
+
+    /**
+     * <pre>
+     * Configures reasoning capabilities for the model, allowing it to perform internal reasoning before responding.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ReasoningOptions reasoning_options = 4;</code>
+     * @return Whether the reasoningOptions field is set.
+     */
+    boolean hasReasoningOptions();
+    /**
+     * <pre>
+     * Configures reasoning capabilities for the model, allowing it to perform internal reasoning before responding.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ReasoningOptions reasoning_options = 4;</code>
+     * @return The reasoningOptions.
+     */
+    yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions getReasoningOptions();
+    /**
+     * <pre>
+     * Configures reasoning capabilities for the model, allowing it to perform internal reasoning before responding.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ReasoningOptions reasoning_options = 4;</code>
+     */
+    yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptionsOrBuilder getReasoningOptionsOrBuilder();
   }
   /**
    * <pre>
@@ -167,6 +194,19 @@ public final class TextCommon {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(maxTokens_);
                 maxTokens_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.Builder subBuilder = null;
+              if (reasoningOptions_ != null) {
+                subBuilder = reasoningOptions_.toBuilder();
+              }
+              reasoningOptions_ = input.readMessage(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(reasoningOptions_);
+                reasoningOptions_ = subBuilder.buildPartial();
               }
 
               break;
@@ -303,6 +343,44 @@ public final class TextCommon {
       return getMaxTokens();
     }
 
+    public static final int REASONING_OPTIONS_FIELD_NUMBER = 4;
+    private yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions reasoningOptions_;
+    /**
+     * <pre>
+     * Configures reasoning capabilities for the model, allowing it to perform internal reasoning before responding.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ReasoningOptions reasoning_options = 4;</code>
+     * @return Whether the reasoningOptions field is set.
+     */
+    @java.lang.Override
+    public boolean hasReasoningOptions() {
+      return reasoningOptions_ != null;
+    }
+    /**
+     * <pre>
+     * Configures reasoning capabilities for the model, allowing it to perform internal reasoning before responding.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ReasoningOptions reasoning_options = 4;</code>
+     * @return The reasoningOptions.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions getReasoningOptions() {
+      return reasoningOptions_ == null ? yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.getDefaultInstance() : reasoningOptions_;
+    }
+    /**
+     * <pre>
+     * Configures reasoning capabilities for the model, allowing it to perform internal reasoning before responding.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ReasoningOptions reasoning_options = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptionsOrBuilder getReasoningOptionsOrBuilder() {
+      return getReasoningOptions();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -326,6 +404,9 @@ public final class TextCommon {
       if (maxTokens_ != null) {
         output.writeMessage(3, getMaxTokens());
       }
+      if (reasoningOptions_ != null) {
+        output.writeMessage(4, getReasoningOptions());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -346,6 +427,10 @@ public final class TextCommon {
       if (maxTokens_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getMaxTokens());
+      }
+      if (reasoningOptions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getReasoningOptions());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -374,6 +459,11 @@ public final class TextCommon {
         if (!getMaxTokens()
             .equals(other.getMaxTokens())) return false;
       }
+      if (hasReasoningOptions() != other.hasReasoningOptions()) return false;
+      if (hasReasoningOptions()) {
+        if (!getReasoningOptions()
+            .equals(other.getReasoningOptions())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -395,6 +485,10 @@ public final class TextCommon {
       if (hasMaxTokens()) {
         hash = (37 * hash) + MAX_TOKENS_FIELD_NUMBER;
         hash = (53 * hash) + getMaxTokens().hashCode();
+      }
+      if (hasReasoningOptions()) {
+        hash = (37 * hash) + REASONING_OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getReasoningOptions().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -547,6 +641,12 @@ public final class TextCommon {
           maxTokens_ = null;
           maxTokensBuilder_ = null;
         }
+        if (reasoningOptionsBuilder_ == null) {
+          reasoningOptions_ = null;
+        } else {
+          reasoningOptions_ = null;
+          reasoningOptionsBuilder_ = null;
+        }
         return this;
       }
 
@@ -583,6 +683,11 @@ public final class TextCommon {
           result.maxTokens_ = maxTokens_;
         } else {
           result.maxTokens_ = maxTokensBuilder_.build();
+        }
+        if (reasoningOptionsBuilder_ == null) {
+          result.reasoningOptions_ = reasoningOptions_;
+        } else {
+          result.reasoningOptions_ = reasoningOptionsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -640,6 +745,9 @@ public final class TextCommon {
         }
         if (other.hasMaxTokens()) {
           mergeMaxTokens(other.getMaxTokens());
+        }
+        if (other.hasReasoningOptions()) {
+          mergeReasoningOptions(other.getReasoningOptions());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1049,6 +1157,161 @@ public final class TextCommon {
         }
         return maxTokensBuilder_;
       }
+
+      private yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions reasoningOptions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptionsOrBuilder> reasoningOptionsBuilder_;
+      /**
+       * <pre>
+       * Configures reasoning capabilities for the model, allowing it to perform internal reasoning before responding.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ReasoningOptions reasoning_options = 4;</code>
+       * @return Whether the reasoningOptions field is set.
+       */
+      public boolean hasReasoningOptions() {
+        return reasoningOptionsBuilder_ != null || reasoningOptions_ != null;
+      }
+      /**
+       * <pre>
+       * Configures reasoning capabilities for the model, allowing it to perform internal reasoning before responding.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ReasoningOptions reasoning_options = 4;</code>
+       * @return The reasoningOptions.
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions getReasoningOptions() {
+        if (reasoningOptionsBuilder_ == null) {
+          return reasoningOptions_ == null ? yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.getDefaultInstance() : reasoningOptions_;
+        } else {
+          return reasoningOptionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configures reasoning capabilities for the model, allowing it to perform internal reasoning before responding.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ReasoningOptions reasoning_options = 4;</code>
+       */
+      public Builder setReasoningOptions(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions value) {
+        if (reasoningOptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          reasoningOptions_ = value;
+          onChanged();
+        } else {
+          reasoningOptionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configures reasoning capabilities for the model, allowing it to perform internal reasoning before responding.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ReasoningOptions reasoning_options = 4;</code>
+       */
+      public Builder setReasoningOptions(
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.Builder builderForValue) {
+        if (reasoningOptionsBuilder_ == null) {
+          reasoningOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          reasoningOptionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configures reasoning capabilities for the model, allowing it to perform internal reasoning before responding.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ReasoningOptions reasoning_options = 4;</code>
+       */
+      public Builder mergeReasoningOptions(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions value) {
+        if (reasoningOptionsBuilder_ == null) {
+          if (reasoningOptions_ != null) {
+            reasoningOptions_ =
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.newBuilder(reasoningOptions_).mergeFrom(value).buildPartial();
+          } else {
+            reasoningOptions_ = value;
+          }
+          onChanged();
+        } else {
+          reasoningOptionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configures reasoning capabilities for the model, allowing it to perform internal reasoning before responding.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ReasoningOptions reasoning_options = 4;</code>
+       */
+      public Builder clearReasoningOptions() {
+        if (reasoningOptionsBuilder_ == null) {
+          reasoningOptions_ = null;
+          onChanged();
+        } else {
+          reasoningOptions_ = null;
+          reasoningOptionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configures reasoning capabilities for the model, allowing it to perform internal reasoning before responding.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ReasoningOptions reasoning_options = 4;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.Builder getReasoningOptionsBuilder() {
+        
+        onChanged();
+        return getReasoningOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configures reasoning capabilities for the model, allowing it to perform internal reasoning before responding.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ReasoningOptions reasoning_options = 4;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptionsOrBuilder getReasoningOptionsOrBuilder() {
+        if (reasoningOptionsBuilder_ != null) {
+          return reasoningOptionsBuilder_.getMessageOrBuilder();
+        } else {
+          return reasoningOptions_ == null ?
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.getDefaultInstance() : reasoningOptions_;
+        }
+      }
+      /**
+       * <pre>
+       * Configures reasoning capabilities for the model, allowing it to perform internal reasoning before responding.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ReasoningOptions reasoning_options = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptionsOrBuilder> 
+          getReasoningOptionsFieldBuilder() {
+        if (reasoningOptionsBuilder_ == null) {
+          reasoningOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptionsOrBuilder>(
+                  getReasoningOptions(),
+                  getParentForChildren(),
+                  isClean());
+          reasoningOptions_ = null;
+        }
+        return reasoningOptionsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1097,6 +1360,720 @@ public final class TextCommon {
 
     @java.lang.Override
     public yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ReasoningOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.foundation_models.v1.ReasoningOptions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Specifies the reasoning mode to be used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ReasoningOptions.ReasoningMode mode = 1;</code>
+     * @return The enum numeric value on the wire for mode.
+     */
+    int getModeValue();
+    /**
+     * <pre>
+     * Specifies the reasoning mode to be used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ReasoningOptions.ReasoningMode mode = 1;</code>
+     * @return The mode.
+     */
+    yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.ReasoningMode getMode();
+  }
+  /**
+   * <pre>
+   * Represents reasoning options that enable the model's ability to perform internal reasoning before generating a response.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.ReasoningOptions}
+   */
+  public static final class ReasoningOptions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.foundation_models.v1.ReasoningOptions)
+      ReasoningOptionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ReasoningOptions.newBuilder() to construct.
+    private ReasoningOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ReasoningOptions() {
+      mode_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ReasoningOptions();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ReasoningOptions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              mode_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ReasoningOptions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ReasoningOptions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.class, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * Enum representing the reasoning mode.
+     * </pre>
+     *
+     * Protobuf enum {@code yandex.cloud.ai.foundation_models.v1.ReasoningOptions.ReasoningMode}
+     */
+    public enum ReasoningMode
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * Unspecified reasoning mode.
+       * </pre>
+       *
+       * <code>REASONING_MODE_UNSPECIFIED = 0;</code>
+       */
+      REASONING_MODE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Disables reasoning. The model will generate a response without performing any internal reasoning.
+       * </pre>
+       *
+       * <code>DISABLED = 1;</code>
+       */
+      DISABLED(1),
+      /**
+       * <pre>
+       * Enables reasoning in a hidden manner without exposing the reasoning steps to the user.
+       * </pre>
+       *
+       * <code>ENABLED_HIDDEN = 2;</code>
+       */
+      ENABLED_HIDDEN(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * Unspecified reasoning mode.
+       * </pre>
+       *
+       * <code>REASONING_MODE_UNSPECIFIED = 0;</code>
+       */
+      public static final int REASONING_MODE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Disables reasoning. The model will generate a response without performing any internal reasoning.
+       * </pre>
+       *
+       * <code>DISABLED = 1;</code>
+       */
+      public static final int DISABLED_VALUE = 1;
+      /**
+       * <pre>
+       * Enables reasoning in a hidden manner without exposing the reasoning steps to the user.
+       * </pre>
+       *
+       * <code>ENABLED_HIDDEN = 2;</code>
+       */
+      public static final int ENABLED_HIDDEN_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ReasoningMode valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static ReasoningMode forNumber(int value) {
+        switch (value) {
+          case 0: return REASONING_MODE_UNSPECIFIED;
+          case 1: return DISABLED;
+          case 2: return ENABLED_HIDDEN;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<ReasoningMode>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          ReasoningMode> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ReasoningMode>() {
+              public ReasoningMode findValueByNumber(int number) {
+                return ReasoningMode.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final ReasoningMode[] VALUES = values();
+
+      public static ReasoningMode valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private ReasoningMode(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.ai.foundation_models.v1.ReasoningOptions.ReasoningMode)
+    }
+
+    public static final int MODE_FIELD_NUMBER = 1;
+    private int mode_;
+    /**
+     * <pre>
+     * Specifies the reasoning mode to be used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ReasoningOptions.ReasoningMode mode = 1;</code>
+     * @return The enum numeric value on the wire for mode.
+     */
+    @java.lang.Override public int getModeValue() {
+      return mode_;
+    }
+    /**
+     * <pre>
+     * Specifies the reasoning mode to be used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ReasoningOptions.ReasoningMode mode = 1;</code>
+     * @return The mode.
+     */
+    @java.lang.Override public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.ReasoningMode getMode() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.ReasoningMode result = yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.ReasoningMode.valueOf(mode_);
+      return result == null ? yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.ReasoningMode.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (mode_ != yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.ReasoningMode.REASONING_MODE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, mode_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (mode_ != yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.ReasoningMode.REASONING_MODE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, mode_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions other = (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions) obj;
+
+      if (mode_ != other.mode_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MODE_FIELD_NUMBER;
+      hash = (53 * hash) + mode_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents reasoning options that enable the model's ability to perform internal reasoning before generating a response.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.ReasoningOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.foundation_models.v1.ReasoningOptions)
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ReasoningOptions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ReasoningOptions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.class, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        mode_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ReasoningOptions_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions build() {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions buildPartial() {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions result = new yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions(this);
+        result.mode_ = mode_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions) {
+          return mergeFrom((yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions other) {
+        if (other == yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.getDefaultInstance()) return this;
+        if (other.mode_ != 0) {
+          setModeValue(other.getModeValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int mode_ = 0;
+      /**
+       * <pre>
+       * Specifies the reasoning mode to be used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ReasoningOptions.ReasoningMode mode = 1;</code>
+       * @return The enum numeric value on the wire for mode.
+       */
+      @java.lang.Override public int getModeValue() {
+        return mode_;
+      }
+      /**
+       * <pre>
+       * Specifies the reasoning mode to be used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ReasoningOptions.ReasoningMode mode = 1;</code>
+       * @param value The enum numeric value on the wire for mode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModeValue(int value) {
+        
+        mode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the reasoning mode to be used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ReasoningOptions.ReasoningMode mode = 1;</code>
+       * @return The mode.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.ReasoningMode getMode() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.ReasoningMode result = yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.ReasoningMode.valueOf(mode_);
+        return result == null ? yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.ReasoningMode.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Specifies the reasoning mode to be used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ReasoningOptions.ReasoningMode mode = 1;</code>
+       * @param value The mode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMode(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions.ReasoningMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        mode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the reasoning mode to be used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ReasoningOptions.ReasoningMode mode = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMode() {
+        
+        mode_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.foundation_models.v1.ReasoningOptions)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.foundation_models.v1.ReasoningOptions)
+    private static final yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions();
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ReasoningOptions>
+        PARSER = new com.google.protobuf.AbstractParser<ReasoningOptions>() {
+      @java.lang.Override
+      public ReasoningOptions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ReasoningOptions(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ReasoningOptions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ReasoningOptions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ReasoningOptions getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2668,6 +3645,33 @@ public final class TextCommon {
      * @return The totalTokens.
      */
     long getTotalTokens();
+
+    /**
+     * <pre>
+     * Provides additional information about how the completion tokens were utilized.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ContentUsage.CompletionTokensDetails completion_tokens_details = 4;</code>
+     * @return Whether the completionTokensDetails field is set.
+     */
+    boolean hasCompletionTokensDetails();
+    /**
+     * <pre>
+     * Provides additional information about how the completion tokens were utilized.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ContentUsage.CompletionTokensDetails completion_tokens_details = 4;</code>
+     * @return The completionTokensDetails.
+     */
+    yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails getCompletionTokensDetails();
+    /**
+     * <pre>
+     * Provides additional information about how the completion tokens were utilized.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ContentUsage.CompletionTokensDetails completion_tokens_details = 4;</code>
+     */
+    yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetailsOrBuilder getCompletionTokensDetailsOrBuilder();
   }
   /**
    * <pre>
@@ -2733,6 +3737,19 @@ public final class TextCommon {
               totalTokens_ = input.readInt64();
               break;
             }
+            case 34: {
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails.Builder subBuilder = null;
+              if (completionTokensDetails_ != null) {
+                subBuilder = completionTokensDetails_.toBuilder();
+              }
+              completionTokensDetails_ = input.readMessage(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(completionTokensDetails_);
+                completionTokensDetails_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2763,6 +3780,523 @@ public final class TextCommon {
       return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ContentUsage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.class, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.Builder.class);
+    }
+
+    public interface CompletionTokensDetailsOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.foundation_models.v1.ContentUsage.CompletionTokensDetails)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * The number of tokens used specifically for internal reasoning performed by the model.
+       * </pre>
+       *
+       * <code>int64 reasoning_tokens = 1;</code>
+       * @return The reasoningTokens.
+       */
+      long getReasoningTokens();
+    }
+    /**
+     * <pre>
+     * Provides additional information about how the completion tokens were utilized.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.ContentUsage.CompletionTokensDetails}
+     */
+    public static final class CompletionTokensDetails extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.ai.foundation_models.v1.ContentUsage.CompletionTokensDetails)
+        CompletionTokensDetailsOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use CompletionTokensDetails.newBuilder() to construct.
+      private CompletionTokensDetails(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private CompletionTokensDetails() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new CompletionTokensDetails();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private CompletionTokensDetails(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                reasoningTokens_ = input.readInt64();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ContentUsage_CompletionTokensDetails_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ContentUsage_CompletionTokensDetails_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails.class, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails.Builder.class);
+      }
+
+      public static final int REASONING_TOKENS_FIELD_NUMBER = 1;
+      private long reasoningTokens_;
+      /**
+       * <pre>
+       * The number of tokens used specifically for internal reasoning performed by the model.
+       * </pre>
+       *
+       * <code>int64 reasoning_tokens = 1;</code>
+       * @return The reasoningTokens.
+       */
+      @java.lang.Override
+      public long getReasoningTokens() {
+        return reasoningTokens_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (reasoningTokens_ != 0L) {
+          output.writeInt64(1, reasoningTokens_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (reasoningTokens_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(1, reasoningTokens_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails other = (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails) obj;
+
+        if (getReasoningTokens()
+            != other.getReasoningTokens()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + REASONING_TOKENS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getReasoningTokens());
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Provides additional information about how the completion tokens were utilized.
+       * </pre>
+       *
+       * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.ContentUsage.CompletionTokensDetails}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.foundation_models.v1.ContentUsage.CompletionTokensDetails)
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetailsOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ContentUsage_CompletionTokensDetails_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ContentUsage_CompletionTokensDetails_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails.class, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          reasoningTokens_ = 0L;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_ContentUsage_CompletionTokensDetails_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails getDefaultInstanceForType() {
+          return yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails build() {
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails buildPartial() {
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails result = new yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails(this);
+          result.reasoningTokens_ = reasoningTokens_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails) {
+            return mergeFrom((yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails other) {
+          if (other == yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails.getDefaultInstance()) return this;
+          if (other.getReasoningTokens() != 0L) {
+            setReasoningTokens(other.getReasoningTokens());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private long reasoningTokens_ ;
+        /**
+         * <pre>
+         * The number of tokens used specifically for internal reasoning performed by the model.
+         * </pre>
+         *
+         * <code>int64 reasoning_tokens = 1;</code>
+         * @return The reasoningTokens.
+         */
+        @java.lang.Override
+        public long getReasoningTokens() {
+          return reasoningTokens_;
+        }
+        /**
+         * <pre>
+         * The number of tokens used specifically for internal reasoning performed by the model.
+         * </pre>
+         *
+         * <code>int64 reasoning_tokens = 1;</code>
+         * @param value The reasoningTokens to set.
+         * @return This builder for chaining.
+         */
+        public Builder setReasoningTokens(long value) {
+          
+          reasoningTokens_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The number of tokens used specifically for internal reasoning performed by the model.
+         * </pre>
+         *
+         * <code>int64 reasoning_tokens = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearReasoningTokens() {
+          
+          reasoningTokens_ = 0L;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.foundation_models.v1.ContentUsage.CompletionTokensDetails)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.ai.foundation_models.v1.ContentUsage.CompletionTokensDetails)
+      private static final yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails();
+      }
+
+      public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<CompletionTokensDetails>
+          PARSER = new com.google.protobuf.AbstractParser<CompletionTokensDetails>() {
+        @java.lang.Override
+        public CompletionTokensDetails parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new CompletionTokensDetails(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<CompletionTokensDetails> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<CompletionTokensDetails> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
     }
 
     public static final int INPUT_TEXT_TOKENS_FIELD_NUMBER = 1;
@@ -2810,6 +4344,44 @@ public final class TextCommon {
       return totalTokens_;
     }
 
+    public static final int COMPLETION_TOKENS_DETAILS_FIELD_NUMBER = 4;
+    private yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails completionTokensDetails_;
+    /**
+     * <pre>
+     * Provides additional information about how the completion tokens were utilized.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ContentUsage.CompletionTokensDetails completion_tokens_details = 4;</code>
+     * @return Whether the completionTokensDetails field is set.
+     */
+    @java.lang.Override
+    public boolean hasCompletionTokensDetails() {
+      return completionTokensDetails_ != null;
+    }
+    /**
+     * <pre>
+     * Provides additional information about how the completion tokens were utilized.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ContentUsage.CompletionTokensDetails completion_tokens_details = 4;</code>
+     * @return The completionTokensDetails.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails getCompletionTokensDetails() {
+      return completionTokensDetails_ == null ? yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails.getDefaultInstance() : completionTokensDetails_;
+    }
+    /**
+     * <pre>
+     * Provides additional information about how the completion tokens were utilized.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.ContentUsage.CompletionTokensDetails completion_tokens_details = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetailsOrBuilder getCompletionTokensDetailsOrBuilder() {
+      return getCompletionTokensDetails();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2833,6 +4405,9 @@ public final class TextCommon {
       if (totalTokens_ != 0L) {
         output.writeInt64(3, totalTokens_);
       }
+      if (completionTokensDetails_ != null) {
+        output.writeMessage(4, getCompletionTokensDetails());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2853,6 +4428,10 @@ public final class TextCommon {
       if (totalTokens_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, totalTokens_);
+      }
+      if (completionTokensDetails_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getCompletionTokensDetails());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2875,6 +4454,11 @@ public final class TextCommon {
           != other.getCompletionTokens()) return false;
       if (getTotalTokens()
           != other.getTotalTokens()) return false;
+      if (hasCompletionTokensDetails() != other.hasCompletionTokensDetails()) return false;
+      if (hasCompletionTokensDetails()) {
+        if (!getCompletionTokensDetails()
+            .equals(other.getCompletionTokensDetails())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2895,6 +4479,10 @@ public final class TextCommon {
       hash = (37 * hash) + TOTAL_TOKENS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getTotalTokens());
+      if (hasCompletionTokensDetails()) {
+        hash = (37 * hash) + COMPLETION_TOKENS_DETAILS_FIELD_NUMBER;
+        hash = (53 * hash) + getCompletionTokensDetails().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3038,6 +4626,12 @@ public final class TextCommon {
 
         totalTokens_ = 0L;
 
+        if (completionTokensDetailsBuilder_ == null) {
+          completionTokensDetails_ = null;
+        } else {
+          completionTokensDetails_ = null;
+          completionTokensDetailsBuilder_ = null;
+        }
         return this;
       }
 
@@ -3067,6 +4661,11 @@ public final class TextCommon {
         result.inputTextTokens_ = inputTextTokens_;
         result.completionTokens_ = completionTokens_;
         result.totalTokens_ = totalTokens_;
+        if (completionTokensDetailsBuilder_ == null) {
+          result.completionTokensDetails_ = completionTokensDetails_;
+        } else {
+          result.completionTokensDetails_ = completionTokensDetailsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -3123,6 +4722,9 @@ public final class TextCommon {
         }
         if (other.getTotalTokens() != 0L) {
           setTotalTokens(other.getTotalTokens());
+        }
+        if (other.hasCompletionTokensDetails()) {
+          mergeCompletionTokensDetails(other.getCompletionTokensDetails());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3280,6 +4882,161 @@ public final class TextCommon {
         totalTokens_ = 0L;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails completionTokensDetails_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetailsOrBuilder> completionTokensDetailsBuilder_;
+      /**
+       * <pre>
+       * Provides additional information about how the completion tokens were utilized.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ContentUsage.CompletionTokensDetails completion_tokens_details = 4;</code>
+       * @return Whether the completionTokensDetails field is set.
+       */
+      public boolean hasCompletionTokensDetails() {
+        return completionTokensDetailsBuilder_ != null || completionTokensDetails_ != null;
+      }
+      /**
+       * <pre>
+       * Provides additional information about how the completion tokens were utilized.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ContentUsage.CompletionTokensDetails completion_tokens_details = 4;</code>
+       * @return The completionTokensDetails.
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails getCompletionTokensDetails() {
+        if (completionTokensDetailsBuilder_ == null) {
+          return completionTokensDetails_ == null ? yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails.getDefaultInstance() : completionTokensDetails_;
+        } else {
+          return completionTokensDetailsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Provides additional information about how the completion tokens were utilized.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ContentUsage.CompletionTokensDetails completion_tokens_details = 4;</code>
+       */
+      public Builder setCompletionTokensDetails(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails value) {
+        if (completionTokensDetailsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          completionTokensDetails_ = value;
+          onChanged();
+        } else {
+          completionTokensDetailsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Provides additional information about how the completion tokens were utilized.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ContentUsage.CompletionTokensDetails completion_tokens_details = 4;</code>
+       */
+      public Builder setCompletionTokensDetails(
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails.Builder builderForValue) {
+        if (completionTokensDetailsBuilder_ == null) {
+          completionTokensDetails_ = builderForValue.build();
+          onChanged();
+        } else {
+          completionTokensDetailsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Provides additional information about how the completion tokens were utilized.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ContentUsage.CompletionTokensDetails completion_tokens_details = 4;</code>
+       */
+      public Builder mergeCompletionTokensDetails(yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails value) {
+        if (completionTokensDetailsBuilder_ == null) {
+          if (completionTokensDetails_ != null) {
+            completionTokensDetails_ =
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails.newBuilder(completionTokensDetails_).mergeFrom(value).buildPartial();
+          } else {
+            completionTokensDetails_ = value;
+          }
+          onChanged();
+        } else {
+          completionTokensDetailsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Provides additional information about how the completion tokens were utilized.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ContentUsage.CompletionTokensDetails completion_tokens_details = 4;</code>
+       */
+      public Builder clearCompletionTokensDetails() {
+        if (completionTokensDetailsBuilder_ == null) {
+          completionTokensDetails_ = null;
+          onChanged();
+        } else {
+          completionTokensDetails_ = null;
+          completionTokensDetailsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Provides additional information about how the completion tokens were utilized.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ContentUsage.CompletionTokensDetails completion_tokens_details = 4;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails.Builder getCompletionTokensDetailsBuilder() {
+        
+        onChanged();
+        return getCompletionTokensDetailsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Provides additional information about how the completion tokens were utilized.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ContentUsage.CompletionTokensDetails completion_tokens_details = 4;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetailsOrBuilder getCompletionTokensDetailsOrBuilder() {
+        if (completionTokensDetailsBuilder_ != null) {
+          return completionTokensDetailsBuilder_.getMessageOrBuilder();
+        } else {
+          return completionTokensDetails_ == null ?
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails.getDefaultInstance() : completionTokensDetails_;
+        }
+      }
+      /**
+       * <pre>
+       * Provides additional information about how the completion tokens were utilized.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.ContentUsage.CompletionTokensDetails completion_tokens_details = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetailsOrBuilder> 
+          getCompletionTokensDetailsFieldBuilder() {
+        if (completionTokensDetailsBuilder_ == null) {
+          completionTokensDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetails.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.ContentUsage.CompletionTokensDetailsOrBuilder>(
+                  getCompletionTokensDetails(),
+                  getParentForChildren(),
+                  isClean());
+          completionTokensDetails_ = null;
+        }
+        return completionTokensDetailsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12254,6 +14011,11 @@ public final class TextCommon {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_foundation_models_v1_CompletionOptions_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_foundation_models_v1_ReasoningOptions_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_foundation_models_v1_ReasoningOptions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_foundation_models_v1_Message_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -12263,6 +14025,11 @@ public final class TextCommon {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_foundation_models_v1_ContentUsage_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_foundation_models_v1_ContentUsage_CompletionTokensDetails_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_foundation_models_v1_ContentUsage_CompletionTokensDetails_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_foundation_models_v1_Alternative_descriptor;
   private static final 
@@ -12325,51 +14092,62 @@ public final class TextCommon {
       "\n6yandex/cloud/ai/foundation_models/v1/t" +
       "ext_common.proto\022$yandex.cloud.ai.founda" +
       "tion_models.v1\032\034google/protobuf/struct.p" +
-      "roto\032\036google/protobuf/wrappers.proto\"\207\001\n" +
+      "roto\032\036google/protobuf/wrappers.proto\"\332\001\n" +
       "\021CompletionOptions\022\016\n\006stream\030\001 \001(\010\0221\n\013te" +
       "mperature\030\002 \001(\0132\034.google.protobuf.Double" +
       "Value\022/\n\nmax_tokens\030\003 \001(\0132\033.google.proto" +
-      "buf.Int64Value\"\322\001\n\007Message\022\014\n\004role\030\001 \001(\t" +
-      "\022\016\n\004text\030\002 \001(\tH\000\022L\n\016tool_call_list\030\003 \001(\013" +
-      "22.yandex.cloud.ai.foundation_models.v1." +
-      "ToolCallListH\000\022P\n\020tool_result_list\030\004 \001(\013" +
-      "24.yandex.cloud.ai.foundation_models.v1." +
-      "ToolResultListH\000B\t\n\007Content\"Z\n\014ContentUs" +
-      "age\022\031\n\021input_text_tokens\030\001 \001(\003\022\031\n\021comple" +
-      "tion_tokens\030\002 \001(\003\022\024\n\014total_tokens\030\003 \001(\003\"" +
-      "\214\003\n\013Alternative\022>\n\007message\030\001 \001(\0132-.yande" +
-      "x.cloud.ai.foundation_models.v1.Message\022" +
-      "S\n\006status\030\002 \001(\0162C.yandex.cloud.ai.founda" +
-      "tion_models.v1.Alternative.AlternativeSt" +
-      "atus\"\347\001\n\021AlternativeStatus\022\"\n\036ALTERNATIV" +
-      "E_STATUS_UNSPECIFIED\020\000\022\036\n\032ALTERNATIVE_ST" +
-      "ATUS_PARTIAL\020\001\022&\n\"ALTERNATIVE_STATUS_TRU" +
-      "NCATED_FINAL\020\002\022\034\n\030ALTERNATIVE_STATUS_FIN" +
-      "AL\020\003\022%\n!ALTERNATIVE_STATUS_CONTENT_FILTE" +
-      "R\020\004\022!\n\035ALTERNATIVE_STATUS_TOOL_CALLS\020\005\"2" +
-      "\n\005Token\022\n\n\002id\030\001 \001(\003\022\014\n\004text\030\002 \001(\t\022\017\n\007spe" +
-      "cial\030\003 \001(\010\"Z\n\004Tool\022F\n\010function\030\001 \001(\01322.y" +
-      "andex.cloud.ai.foundation_models.v1.Func" +
-      "tionToolH\000B\n\n\010ToolType\"^\n\014FunctionTool\022\014" +
-      "\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022+\n\npar" +
-      "ameters\030\003 \001(\0132\027.google.protobuf.Struct\"g" +
-      "\n\010ToolCall\022K\n\rfunction_call\030\001 \001(\01322.yand" +
-      "ex.cloud.ai.foundation_models.v1.Functio" +
-      "nCallH\000B\016\n\014ToolCallType\"H\n\014FunctionCall\022" +
-      "\014\n\004name\030\001 \001(\t\022*\n\targuments\030\002 \001(\0132\027.googl" +
-      "e.protobuf.Struct\"R\n\014ToolCallList\022B\n\ntoo" +
-      "l_calls\030\001 \003(\0132..yandex.cloud.ai.foundati" +
-      "on_models.v1.ToolCall\"o\n\nToolResult\022O\n\017f" +
-      "unction_result\030\001 \001(\01324.yandex.cloud.ai.f" +
-      "oundation_models.v1.FunctionResultH\000B\020\n\016" +
-      "ToolResultType\"@\n\016FunctionResult\022\014\n\004name" +
-      "\030\001 \001(\t\022\021\n\007content\030\002 \001(\tH\000B\r\n\013ContentType" +
-      "\"X\n\016ToolResultList\022F\n\014tool_results\030\001 \003(\013" +
-      "20.yandex.cloud.ai.foundation_models.v1." +
-      "ToolResultB\206\001\n(yandex.cloud.api.ai.found" +
-      "ation_models.v1ZZgithub.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/ai/foundation_" +
-      "models/v1;foundation_modelsb\006proto3"
+      "buf.Int64Value\022Q\n\021reasoning_options\030\004 \001(" +
+      "\01326.yandex.cloud.ai.foundation_models.v1" +
+      ".ReasoningOptions\"\271\001\n\020ReasoningOptions\022R" +
+      "\n\004mode\030\001 \001(\0162D.yandex.cloud.ai.foundatio" +
+      "n_models.v1.ReasoningOptions.ReasoningMo" +
+      "de\"Q\n\rReasoningMode\022\036\n\032REASONING_MODE_UN" +
+      "SPECIFIED\020\000\022\014\n\010DISABLED\020\001\022\022\n\016ENABLED_HID" +
+      "DEN\020\002\"\322\001\n\007Message\022\014\n\004role\030\001 \001(\t\022\016\n\004text\030" +
+      "\002 \001(\tH\000\022L\n\016tool_call_list\030\003 \001(\01322.yandex" +
+      ".cloud.ai.foundation_models.v1.ToolCallL" +
+      "istH\000\022P\n\020tool_result_list\030\004 \001(\01324.yandex" +
+      ".cloud.ai.foundation_models.v1.ToolResul" +
+      "tListH\000B\t\n\007Content\"\376\001\n\014ContentUsage\022\031\n\021i" +
+      "nput_text_tokens\030\001 \001(\003\022\031\n\021completion_tok" +
+      "ens\030\002 \001(\003\022\024\n\014total_tokens\030\003 \001(\003\022m\n\031compl" +
+      "etion_tokens_details\030\004 \001(\0132J.yandex.clou" +
+      "d.ai.foundation_models.v1.ContentUsage.C" +
+      "ompletionTokensDetails\0323\n\027CompletionToke" +
+      "nsDetails\022\030\n\020reasoning_tokens\030\001 \001(\003\"\214\003\n\013" +
+      "Alternative\022>\n\007message\030\001 \001(\0132-.yandex.cl" +
+      "oud.ai.foundation_models.v1.Message\022S\n\006s" +
+      "tatus\030\002 \001(\0162C.yandex.cloud.ai.foundation" +
+      "_models.v1.Alternative.AlternativeStatus" +
+      "\"\347\001\n\021AlternativeStatus\022\"\n\036ALTERNATIVE_ST" +
+      "ATUS_UNSPECIFIED\020\000\022\036\n\032ALTERNATIVE_STATUS" +
+      "_PARTIAL\020\001\022&\n\"ALTERNATIVE_STATUS_TRUNCAT" +
+      "ED_FINAL\020\002\022\034\n\030ALTERNATIVE_STATUS_FINAL\020\003" +
+      "\022%\n!ALTERNATIVE_STATUS_CONTENT_FILTER\020\004\022" +
+      "!\n\035ALTERNATIVE_STATUS_TOOL_CALLS\020\005\"2\n\005To" +
+      "ken\022\n\n\002id\030\001 \001(\003\022\014\n\004text\030\002 \001(\t\022\017\n\007special" +
+      "\030\003 \001(\010\"Z\n\004Tool\022F\n\010function\030\001 \001(\01322.yande" +
+      "x.cloud.ai.foundation_models.v1.Function" +
+      "ToolH\000B\n\n\010ToolType\"^\n\014FunctionTool\022\014\n\004na" +
+      "me\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022+\n\nparamet" +
+      "ers\030\003 \001(\0132\027.google.protobuf.Struct\"g\n\010To" +
+      "olCall\022K\n\rfunction_call\030\001 \001(\01322.yandex.c" +
+      "loud.ai.foundation_models.v1.FunctionCal" +
+      "lH\000B\016\n\014ToolCallType\"H\n\014FunctionCall\022\014\n\004n" +
+      "ame\030\001 \001(\t\022*\n\targuments\030\002 \001(\0132\027.google.pr" +
+      "otobuf.Struct\"R\n\014ToolCallList\022B\n\ntool_ca" +
+      "lls\030\001 \003(\0132..yandex.cloud.ai.foundation_m" +
+      "odels.v1.ToolCall\"o\n\nToolResult\022O\n\017funct" +
+      "ion_result\030\001 \001(\01324.yandex.cloud.ai.found" +
+      "ation_models.v1.FunctionResultH\000B\020\n\016Tool" +
+      "ResultType\"@\n\016FunctionResult\022\014\n\004name\030\001 \001" +
+      "(\t\022\021\n\007content\030\002 \001(\tH\000B\r\n\013ContentType\"X\n\016" +
+      "ToolResultList\022F\n\014tool_results\030\001 \003(\01320.y" +
+      "andex.cloud.ai.foundation_models.v1.Tool" +
+      "ResultB\206\001\n(yandex.cloud.api.ai.foundatio" +
+      "n_models.v1ZZgithub.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/ai/foundation_mode" +
+      "ls/v1;foundation_modelsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12382,75 +14160,87 @@ public final class TextCommon {
     internal_static_yandex_cloud_ai_foundation_models_v1_CompletionOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_CompletionOptions_descriptor,
-        new java.lang.String[] { "Stream", "Temperature", "MaxTokens", });
-    internal_static_yandex_cloud_ai_foundation_models_v1_Message_descriptor =
+        new java.lang.String[] { "Stream", "Temperature", "MaxTokens", "ReasoningOptions", });
+    internal_static_yandex_cloud_ai_foundation_models_v1_ReasoningOptions_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_ai_foundation_models_v1_ReasoningOptions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_foundation_models_v1_ReasoningOptions_descriptor,
+        new java.lang.String[] { "Mode", });
+    internal_static_yandex_cloud_ai_foundation_models_v1_Message_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_ai_foundation_models_v1_Message_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_Message_descriptor,
         new java.lang.String[] { "Role", "Text", "ToolCallList", "ToolResultList", "Content", });
     internal_static_yandex_cloud_ai_foundation_models_v1_ContentUsage_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_ai_foundation_models_v1_ContentUsage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_ContentUsage_descriptor,
-        new java.lang.String[] { "InputTextTokens", "CompletionTokens", "TotalTokens", });
+        new java.lang.String[] { "InputTextTokens", "CompletionTokens", "TotalTokens", "CompletionTokensDetails", });
+    internal_static_yandex_cloud_ai_foundation_models_v1_ContentUsage_CompletionTokensDetails_descriptor =
+      internal_static_yandex_cloud_ai_foundation_models_v1_ContentUsage_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_ai_foundation_models_v1_ContentUsage_CompletionTokensDetails_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_foundation_models_v1_ContentUsage_CompletionTokensDetails_descriptor,
+        new java.lang.String[] { "ReasoningTokens", });
     internal_static_yandex_cloud_ai_foundation_models_v1_Alternative_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_ai_foundation_models_v1_Alternative_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_Alternative_descriptor,
         new java.lang.String[] { "Message", "Status", });
     internal_static_yandex_cloud_ai_foundation_models_v1_Token_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_ai_foundation_models_v1_Token_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_Token_descriptor,
         new java.lang.String[] { "Id", "Text", "Special", });
     internal_static_yandex_cloud_ai_foundation_models_v1_Tool_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_ai_foundation_models_v1_Tool_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_Tool_descriptor,
         new java.lang.String[] { "Function", "ToolType", });
     internal_static_yandex_cloud_ai_foundation_models_v1_FunctionTool_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_ai_foundation_models_v1_FunctionTool_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_FunctionTool_descriptor,
         new java.lang.String[] { "Name", "Description", "Parameters", });
     internal_static_yandex_cloud_ai_foundation_models_v1_ToolCall_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_ai_foundation_models_v1_ToolCall_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_ToolCall_descriptor,
         new java.lang.String[] { "FunctionCall", "ToolCallType", });
     internal_static_yandex_cloud_ai_foundation_models_v1_FunctionCall_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_ai_foundation_models_v1_FunctionCall_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_FunctionCall_descriptor,
         new java.lang.String[] { "Name", "Arguments", });
     internal_static_yandex_cloud_ai_foundation_models_v1_ToolCallList_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_ai_foundation_models_v1_ToolCallList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_ToolCallList_descriptor,
         new java.lang.String[] { "ToolCalls", });
     internal_static_yandex_cloud_ai_foundation_models_v1_ToolResult_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_ai_foundation_models_v1_ToolResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_ToolResult_descriptor,
         new java.lang.String[] { "FunctionResult", "ToolResultType", });
     internal_static_yandex_cloud_ai_foundation_models_v1_FunctionResult_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_ai_foundation_models_v1_FunctionResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_FunctionResult_descriptor,
         new java.lang.String[] { "Name", "Content", "ContentType", });
     internal_static_yandex_cloud_ai_foundation_models_v1_ToolResultList_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_ai_foundation_models_v1_ToolResultList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_ToolResultList_descriptor,

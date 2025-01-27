@@ -23,7 +23,7 @@ public final class TestServiceOuterClass {
      * ID of the folder to create a test in.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
@@ -32,7 +32,7 @@ public final class TestServiceOuterClass {
      * ID of the folder to create a test in.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
@@ -232,7 +232,7 @@ public final class TestServiceOuterClass {
      * ID of the folder to create a test in.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The folderId.
      */
     @java.lang.Override
@@ -253,7 +253,7 @@ public final class TestServiceOuterClass {
      * ID of the folder to create a test in.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The bytes for folderId.
      */
     @java.lang.Override
@@ -769,7 +769,7 @@ public final class TestServiceOuterClass {
        * ID of the folder to create a test in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @return The folderId.
        */
       public java.lang.String getFolderId() {
@@ -789,7 +789,7 @@ public final class TestServiceOuterClass {
        * ID of the folder to create a test in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
@@ -810,7 +810,7 @@ public final class TestServiceOuterClass {
        * ID of the folder to create a test in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
        */
@@ -829,7 +829,7 @@ public final class TestServiceOuterClass {
        * ID of the folder to create a test in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFolderId() {
@@ -843,7 +843,7 @@ public final class TestServiceOuterClass {
        * ID of the folder to create a test in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
        */
@@ -7519,7 +7519,7 @@ public final class TestServiceOuterClass {
       "/cloud/loadtesting/api/v1/test/test.prot" +
       "o\032\035yandex/cloud/validation.proto\"\321\001\n\021Cre" +
       "ateTestRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\022V\n\016configurations\030\002 \003(\0132>.yandex" +
+      "\3101\004<=54\022V\n\016configurations\030\002 \003(\0132>.yandex" +
       ".cloud.loadtesting.api.v1.test.SingleAge" +
       "ntConfiguration\022C\n\014test_details\030\003 \001(\0132-." +
       "yandex.cloud.loadtesting.api.v1.test.Det" +

@@ -201,6 +201,37 @@ public final class TuningServiceGrpc {
     return getGetOptionsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsRequest,
+      yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsResponse> getListErrorsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListErrors",
+      requestType = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsRequest.class,
+      responseType = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsRequest,
+      yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsResponse> getListErrorsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsRequest, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsResponse> getListErrorsMethod;
+    if ((getListErrorsMethod = TuningServiceGrpc.getListErrorsMethod) == null) {
+      synchronized (TuningServiceGrpc.class) {
+        if ((getListErrorsMethod = TuningServiceGrpc.getListErrorsMethod) == null) {
+          TuningServiceGrpc.getListErrorsMethod = getListErrorsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsRequest, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListErrors"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TuningServiceMethodDescriptorSupplier("ListErrors"))
+              .build();
+        }
+      }
+    }
+    return getListErrorsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -291,6 +322,13 @@ public final class TuningServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetOptionsMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void listErrors(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListErrorsMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -335,6 +373,13 @@ public final class TuningServiceGrpc {
                 yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.GetOptionsRequest,
                 yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.GetOptionsResponse>(
                   this, METHODID_GET_OPTIONS)))
+          .addMethod(
+            getListErrorsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsRequest,
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsResponse>(
+                  this, METHODID_LIST_ERRORS)))
           .build();
     }
   }
@@ -400,6 +445,14 @@ public final class TuningServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetOptionsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void listErrors(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListErrorsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -456,6 +509,13 @@ public final class TuningServiceGrpc {
     public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.GetOptionsResponse getOptions(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.GetOptionsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetOptionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsResponse listErrors(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListErrorsMethod(), getCallOptions(), request);
     }
   }
 
@@ -520,6 +580,14 @@ public final class TuningServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetOptionsMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsResponse> listErrors(
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListErrorsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_TUNE = 0;
@@ -528,6 +596,7 @@ public final class TuningServiceGrpc {
   private static final int METHODID_CANCEL = 3;
   private static final int METHODID_GET_METRICS_URL = 4;
   private static final int METHODID_GET_OPTIONS = 5;
+  private static final int METHODID_LIST_ERRORS = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -569,6 +638,10 @@ public final class TuningServiceGrpc {
         case METHODID_GET_OPTIONS:
           serviceImpl.getOptions((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.GetOptionsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.GetOptionsResponse>) responseObserver);
+          break;
+        case METHODID_LIST_ERRORS:
+          serviceImpl.listErrors((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -637,6 +710,7 @@ public final class TuningServiceGrpc {
               .addMethod(getCancelMethod())
               .addMethod(getGetMetricsUrlMethod())
               .addMethod(getGetOptionsMethod())
+              .addMethod(getListErrorsMethod())
               .build();
         }
       }

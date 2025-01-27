@@ -10108,6 +10108,72 @@ public final class Config {
      * <code>.google.protobuf.BoolValue gp_add_column_inherits_table_setting = 10;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getGpAddColumnInheritsTableSettingOrBuilder();
+
+    /**
+     * <pre>
+     * Controls whether the Greenplum Database Global Deadlock Detector is enabled to manage concurrent UPDATE and DELETE operations on heap tables to improve performance. See Inserting, Updating, and Deleting Datain the Greenplum Database Administrator Guide. The default is off, the Global Deadlock Detector is deactivated.
+     * If the Global Deadlock Detector is deactivated (the default), Greenplum Database runs concurrent update and delete operations on a heap table serially.
+     * If the Global Deadlock Detector is enabled, concurrent updates are permitted and the Global Deadlock Detector determines when a deadlock exists, and breaks the deadlock by cancelling one or more backend processes associated with the youngest transaction(s) involved.
+     * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_enable_global_deadlock_detector
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue gp_enable_global_deadlock_detector = 11;</code>
+     * @return Whether the gpEnableGlobalDeadlockDetector field is set.
+     */
+    boolean hasGpEnableGlobalDeadlockDetector();
+    /**
+     * <pre>
+     * Controls whether the Greenplum Database Global Deadlock Detector is enabled to manage concurrent UPDATE and DELETE operations on heap tables to improve performance. See Inserting, Updating, and Deleting Datain the Greenplum Database Administrator Guide. The default is off, the Global Deadlock Detector is deactivated.
+     * If the Global Deadlock Detector is deactivated (the default), Greenplum Database runs concurrent update and delete operations on a heap table serially.
+     * If the Global Deadlock Detector is enabled, concurrent updates are permitted and the Global Deadlock Detector determines when a deadlock exists, and breaks the deadlock by cancelling one or more backend processes associated with the youngest transaction(s) involved.
+     * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_enable_global_deadlock_detector
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue gp_enable_global_deadlock_detector = 11;</code>
+     * @return The gpEnableGlobalDeadlockDetector.
+     */
+    com.google.protobuf.BoolValue getGpEnableGlobalDeadlockDetector();
+    /**
+     * <pre>
+     * Controls whether the Greenplum Database Global Deadlock Detector is enabled to manage concurrent UPDATE and DELETE operations on heap tables to improve performance. See Inserting, Updating, and Deleting Datain the Greenplum Database Administrator Guide. The default is off, the Global Deadlock Detector is deactivated.
+     * If the Global Deadlock Detector is deactivated (the default), Greenplum Database runs concurrent update and delete operations on a heap table serially.
+     * If the Global Deadlock Detector is enabled, concurrent updates are permitted and the Global Deadlock Detector determines when a deadlock exists, and breaks the deadlock by cancelling one or more backend processes associated with the youngest transaction(s) involved.
+     * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_enable_global_deadlock_detector
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue gp_enable_global_deadlock_detector = 11;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getGpEnableGlobalDeadlockDetectorOrBuilder();
+
+    /**
+     * <pre>
+     * Specifies the executing interval (in seconds) of the global deadlock detector background worker process.
+     * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_global_deadlock_detector_period
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_global_deadlock_detector_period = 12;</code>
+     * @return Whether the gpGlobalDeadlockDetectorPeriod field is set.
+     */
+    boolean hasGpGlobalDeadlockDetectorPeriod();
+    /**
+     * <pre>
+     * Specifies the executing interval (in seconds) of the global deadlock detector background worker process.
+     * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_global_deadlock_detector_period
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_global_deadlock_detector_period = 12;</code>
+     * @return The gpGlobalDeadlockDetectorPeriod.
+     */
+    com.google.protobuf.Int64Value getGpGlobalDeadlockDetectorPeriod();
+    /**
+     * <pre>
+     * Specifies the executing interval (in seconds) of the global deadlock detector background worker process.
+     * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_global_deadlock_detector_period
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_global_deadlock_detector_period = 12;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getGpGlobalDeadlockDetectorPeriodOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.GreenplumConfig6}
@@ -10274,6 +10340,32 @@ public final class Config {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(gpAddColumnInheritsTableSetting_);
                 gpAddColumnInheritsTableSetting_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (gpEnableGlobalDeadlockDetector_ != null) {
+                subBuilder = gpEnableGlobalDeadlockDetector_.toBuilder();
+              }
+              gpEnableGlobalDeadlockDetector_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(gpEnableGlobalDeadlockDetector_);
+                gpEnableGlobalDeadlockDetector_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (gpGlobalDeadlockDetectorPeriod_ != null) {
+                subBuilder = gpGlobalDeadlockDetectorPeriod_.toBuilder();
+              }
+              gpGlobalDeadlockDetectorPeriod_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(gpGlobalDeadlockDetectorPeriod_);
+                gpGlobalDeadlockDetectorPeriod_ = subBuilder.buildPartial();
               }
 
               break;
@@ -10738,6 +10830,94 @@ public final class Config {
       return getGpAddColumnInheritsTableSetting();
     }
 
+    public static final int GP_ENABLE_GLOBAL_DEADLOCK_DETECTOR_FIELD_NUMBER = 11;
+    private com.google.protobuf.BoolValue gpEnableGlobalDeadlockDetector_;
+    /**
+     * <pre>
+     * Controls whether the Greenplum Database Global Deadlock Detector is enabled to manage concurrent UPDATE and DELETE operations on heap tables to improve performance. See Inserting, Updating, and Deleting Datain the Greenplum Database Administrator Guide. The default is off, the Global Deadlock Detector is deactivated.
+     * If the Global Deadlock Detector is deactivated (the default), Greenplum Database runs concurrent update and delete operations on a heap table serially.
+     * If the Global Deadlock Detector is enabled, concurrent updates are permitted and the Global Deadlock Detector determines when a deadlock exists, and breaks the deadlock by cancelling one or more backend processes associated with the youngest transaction(s) involved.
+     * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_enable_global_deadlock_detector
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue gp_enable_global_deadlock_detector = 11;</code>
+     * @return Whether the gpEnableGlobalDeadlockDetector field is set.
+     */
+    @java.lang.Override
+    public boolean hasGpEnableGlobalDeadlockDetector() {
+      return gpEnableGlobalDeadlockDetector_ != null;
+    }
+    /**
+     * <pre>
+     * Controls whether the Greenplum Database Global Deadlock Detector is enabled to manage concurrent UPDATE and DELETE operations on heap tables to improve performance. See Inserting, Updating, and Deleting Datain the Greenplum Database Administrator Guide. The default is off, the Global Deadlock Detector is deactivated.
+     * If the Global Deadlock Detector is deactivated (the default), Greenplum Database runs concurrent update and delete operations on a heap table serially.
+     * If the Global Deadlock Detector is enabled, concurrent updates are permitted and the Global Deadlock Detector determines when a deadlock exists, and breaks the deadlock by cancelling one or more backend processes associated with the youngest transaction(s) involved.
+     * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_enable_global_deadlock_detector
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue gp_enable_global_deadlock_detector = 11;</code>
+     * @return The gpEnableGlobalDeadlockDetector.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getGpEnableGlobalDeadlockDetector() {
+      return gpEnableGlobalDeadlockDetector_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : gpEnableGlobalDeadlockDetector_;
+    }
+    /**
+     * <pre>
+     * Controls whether the Greenplum Database Global Deadlock Detector is enabled to manage concurrent UPDATE and DELETE operations on heap tables to improve performance. See Inserting, Updating, and Deleting Datain the Greenplum Database Administrator Guide. The default is off, the Global Deadlock Detector is deactivated.
+     * If the Global Deadlock Detector is deactivated (the default), Greenplum Database runs concurrent update and delete operations on a heap table serially.
+     * If the Global Deadlock Detector is enabled, concurrent updates are permitted and the Global Deadlock Detector determines when a deadlock exists, and breaks the deadlock by cancelling one or more backend processes associated with the youngest transaction(s) involved.
+     * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_enable_global_deadlock_detector
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue gp_enable_global_deadlock_detector = 11;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getGpEnableGlobalDeadlockDetectorOrBuilder() {
+      return getGpEnableGlobalDeadlockDetector();
+    }
+
+    public static final int GP_GLOBAL_DEADLOCK_DETECTOR_PERIOD_FIELD_NUMBER = 12;
+    private com.google.protobuf.Int64Value gpGlobalDeadlockDetectorPeriod_;
+    /**
+     * <pre>
+     * Specifies the executing interval (in seconds) of the global deadlock detector background worker process.
+     * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_global_deadlock_detector_period
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_global_deadlock_detector_period = 12;</code>
+     * @return Whether the gpGlobalDeadlockDetectorPeriod field is set.
+     */
+    @java.lang.Override
+    public boolean hasGpGlobalDeadlockDetectorPeriod() {
+      return gpGlobalDeadlockDetectorPeriod_ != null;
+    }
+    /**
+     * <pre>
+     * Specifies the executing interval (in seconds) of the global deadlock detector background worker process.
+     * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_global_deadlock_detector_period
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_global_deadlock_detector_period = 12;</code>
+     * @return The gpGlobalDeadlockDetectorPeriod.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getGpGlobalDeadlockDetectorPeriod() {
+      return gpGlobalDeadlockDetectorPeriod_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpGlobalDeadlockDetectorPeriod_;
+    }
+    /**
+     * <pre>
+     * Specifies the executing interval (in seconds) of the global deadlock detector background worker process.
+     * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_global_deadlock_detector_period
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_global_deadlock_detector_period = 12;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getGpGlobalDeadlockDetectorPeriodOrBuilder() {
+      return getGpGlobalDeadlockDetectorPeriod();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10781,6 +10961,12 @@ public final class Config {
       }
       if (gpAddColumnInheritsTableSetting_ != null) {
         output.writeMessage(10, getGpAddColumnInheritsTableSetting());
+      }
+      if (gpEnableGlobalDeadlockDetector_ != null) {
+        output.writeMessage(11, getGpEnableGlobalDeadlockDetector());
+      }
+      if (gpGlobalDeadlockDetectorPeriod_ != null) {
+        output.writeMessage(12, getGpGlobalDeadlockDetectorPeriod());
       }
       unknownFields.writeTo(output);
     }
@@ -10830,6 +11016,14 @@ public final class Config {
       if (gpAddColumnInheritsTableSetting_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getGpAddColumnInheritsTableSetting());
+      }
+      if (gpEnableGlobalDeadlockDetector_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getGpEnableGlobalDeadlockDetector());
+      }
+      if (gpGlobalDeadlockDetectorPeriod_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getGpGlobalDeadlockDetectorPeriod());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10892,6 +11086,16 @@ public final class Config {
         if (!getGpAddColumnInheritsTableSetting()
             .equals(other.getGpAddColumnInheritsTableSetting())) return false;
       }
+      if (hasGpEnableGlobalDeadlockDetector() != other.hasGpEnableGlobalDeadlockDetector()) return false;
+      if (hasGpEnableGlobalDeadlockDetector()) {
+        if (!getGpEnableGlobalDeadlockDetector()
+            .equals(other.getGpEnableGlobalDeadlockDetector())) return false;
+      }
+      if (hasGpGlobalDeadlockDetectorPeriod() != other.hasGpGlobalDeadlockDetectorPeriod()) return false;
+      if (hasGpGlobalDeadlockDetectorPeriod()) {
+        if (!getGpGlobalDeadlockDetectorPeriod()
+            .equals(other.getGpGlobalDeadlockDetectorPeriod())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10940,6 +11144,14 @@ public final class Config {
       if (hasGpAddColumnInheritsTableSetting()) {
         hash = (37 * hash) + GP_ADD_COLUMN_INHERITS_TABLE_SETTING_FIELD_NUMBER;
         hash = (53 * hash) + getGpAddColumnInheritsTableSetting().hashCode();
+      }
+      if (hasGpEnableGlobalDeadlockDetector()) {
+        hash = (37 * hash) + GP_ENABLE_GLOBAL_DEADLOCK_DETECTOR_FIELD_NUMBER;
+        hash = (53 * hash) + getGpEnableGlobalDeadlockDetector().hashCode();
+      }
+      if (hasGpGlobalDeadlockDetectorPeriod()) {
+        hash = (37 * hash) + GP_GLOBAL_DEADLOCK_DETECTOR_PERIOD_FIELD_NUMBER;
+        hash = (53 * hash) + getGpGlobalDeadlockDetectorPeriod().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -11130,6 +11342,18 @@ public final class Config {
           gpAddColumnInheritsTableSetting_ = null;
           gpAddColumnInheritsTableSettingBuilder_ = null;
         }
+        if (gpEnableGlobalDeadlockDetectorBuilder_ == null) {
+          gpEnableGlobalDeadlockDetector_ = null;
+        } else {
+          gpEnableGlobalDeadlockDetector_ = null;
+          gpEnableGlobalDeadlockDetectorBuilder_ = null;
+        }
+        if (gpGlobalDeadlockDetectorPeriodBuilder_ == null) {
+          gpGlobalDeadlockDetectorPeriod_ = null;
+        } else {
+          gpGlobalDeadlockDetectorPeriod_ = null;
+          gpGlobalDeadlockDetectorPeriodBuilder_ = null;
+        }
         return this;
       }
 
@@ -11201,6 +11425,16 @@ public final class Config {
           result.gpAddColumnInheritsTableSetting_ = gpAddColumnInheritsTableSetting_;
         } else {
           result.gpAddColumnInheritsTableSetting_ = gpAddColumnInheritsTableSettingBuilder_.build();
+        }
+        if (gpEnableGlobalDeadlockDetectorBuilder_ == null) {
+          result.gpEnableGlobalDeadlockDetector_ = gpEnableGlobalDeadlockDetector_;
+        } else {
+          result.gpEnableGlobalDeadlockDetector_ = gpEnableGlobalDeadlockDetectorBuilder_.build();
+        }
+        if (gpGlobalDeadlockDetectorPeriodBuilder_ == null) {
+          result.gpGlobalDeadlockDetectorPeriod_ = gpGlobalDeadlockDetectorPeriod_;
+        } else {
+          result.gpGlobalDeadlockDetectorPeriod_ = gpGlobalDeadlockDetectorPeriodBuilder_.build();
         }
         onBuilt();
         return result;
@@ -11279,6 +11513,12 @@ public final class Config {
         }
         if (other.hasGpAddColumnInheritsTableSetting()) {
           mergeGpAddColumnInheritsTableSetting(other.getGpAddColumnInheritsTableSetting());
+        }
+        if (other.hasGpEnableGlobalDeadlockDetector()) {
+          mergeGpEnableGlobalDeadlockDetector(other.getGpEnableGlobalDeadlockDetector());
+        }
+        if (other.hasGpGlobalDeadlockDetectorPeriod()) {
+          mergeGpGlobalDeadlockDetectorPeriod(other.getGpGlobalDeadlockDetectorPeriod());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -12949,6 +13189,352 @@ public final class Config {
           gpAddColumnInheritsTableSetting_ = null;
         }
         return gpAddColumnInheritsTableSettingBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue gpEnableGlobalDeadlockDetector_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> gpEnableGlobalDeadlockDetectorBuilder_;
+      /**
+       * <pre>
+       * Controls whether the Greenplum Database Global Deadlock Detector is enabled to manage concurrent UPDATE and DELETE operations on heap tables to improve performance. See Inserting, Updating, and Deleting Datain the Greenplum Database Administrator Guide. The default is off, the Global Deadlock Detector is deactivated.
+       * If the Global Deadlock Detector is deactivated (the default), Greenplum Database runs concurrent update and delete operations on a heap table serially.
+       * If the Global Deadlock Detector is enabled, concurrent updates are permitted and the Global Deadlock Detector determines when a deadlock exists, and breaks the deadlock by cancelling one or more backend processes associated with the youngest transaction(s) involved.
+       * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_enable_global_deadlock_detector
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_enable_global_deadlock_detector = 11;</code>
+       * @return Whether the gpEnableGlobalDeadlockDetector field is set.
+       */
+      public boolean hasGpEnableGlobalDeadlockDetector() {
+        return gpEnableGlobalDeadlockDetectorBuilder_ != null || gpEnableGlobalDeadlockDetector_ != null;
+      }
+      /**
+       * <pre>
+       * Controls whether the Greenplum Database Global Deadlock Detector is enabled to manage concurrent UPDATE and DELETE operations on heap tables to improve performance. See Inserting, Updating, and Deleting Datain the Greenplum Database Administrator Guide. The default is off, the Global Deadlock Detector is deactivated.
+       * If the Global Deadlock Detector is deactivated (the default), Greenplum Database runs concurrent update and delete operations on a heap table serially.
+       * If the Global Deadlock Detector is enabled, concurrent updates are permitted and the Global Deadlock Detector determines when a deadlock exists, and breaks the deadlock by cancelling one or more backend processes associated with the youngest transaction(s) involved.
+       * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_enable_global_deadlock_detector
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_enable_global_deadlock_detector = 11;</code>
+       * @return The gpEnableGlobalDeadlockDetector.
+       */
+      public com.google.protobuf.BoolValue getGpEnableGlobalDeadlockDetector() {
+        if (gpEnableGlobalDeadlockDetectorBuilder_ == null) {
+          return gpEnableGlobalDeadlockDetector_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : gpEnableGlobalDeadlockDetector_;
+        } else {
+          return gpEnableGlobalDeadlockDetectorBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Controls whether the Greenplum Database Global Deadlock Detector is enabled to manage concurrent UPDATE and DELETE operations on heap tables to improve performance. See Inserting, Updating, and Deleting Datain the Greenplum Database Administrator Guide. The default is off, the Global Deadlock Detector is deactivated.
+       * If the Global Deadlock Detector is deactivated (the default), Greenplum Database runs concurrent update and delete operations on a heap table serially.
+       * If the Global Deadlock Detector is enabled, concurrent updates are permitted and the Global Deadlock Detector determines when a deadlock exists, and breaks the deadlock by cancelling one or more backend processes associated with the youngest transaction(s) involved.
+       * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_enable_global_deadlock_detector
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_enable_global_deadlock_detector = 11;</code>
+       */
+      public Builder setGpEnableGlobalDeadlockDetector(com.google.protobuf.BoolValue value) {
+        if (gpEnableGlobalDeadlockDetectorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gpEnableGlobalDeadlockDetector_ = value;
+          onChanged();
+        } else {
+          gpEnableGlobalDeadlockDetectorBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls whether the Greenplum Database Global Deadlock Detector is enabled to manage concurrent UPDATE and DELETE operations on heap tables to improve performance. See Inserting, Updating, and Deleting Datain the Greenplum Database Administrator Guide. The default is off, the Global Deadlock Detector is deactivated.
+       * If the Global Deadlock Detector is deactivated (the default), Greenplum Database runs concurrent update and delete operations on a heap table serially.
+       * If the Global Deadlock Detector is enabled, concurrent updates are permitted and the Global Deadlock Detector determines when a deadlock exists, and breaks the deadlock by cancelling one or more backend processes associated with the youngest transaction(s) involved.
+       * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_enable_global_deadlock_detector
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_enable_global_deadlock_detector = 11;</code>
+       */
+      public Builder setGpEnableGlobalDeadlockDetector(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (gpEnableGlobalDeadlockDetectorBuilder_ == null) {
+          gpEnableGlobalDeadlockDetector_ = builderForValue.build();
+          onChanged();
+        } else {
+          gpEnableGlobalDeadlockDetectorBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls whether the Greenplum Database Global Deadlock Detector is enabled to manage concurrent UPDATE and DELETE operations on heap tables to improve performance. See Inserting, Updating, and Deleting Datain the Greenplum Database Administrator Guide. The default is off, the Global Deadlock Detector is deactivated.
+       * If the Global Deadlock Detector is deactivated (the default), Greenplum Database runs concurrent update and delete operations on a heap table serially.
+       * If the Global Deadlock Detector is enabled, concurrent updates are permitted and the Global Deadlock Detector determines when a deadlock exists, and breaks the deadlock by cancelling one or more backend processes associated with the youngest transaction(s) involved.
+       * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_enable_global_deadlock_detector
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_enable_global_deadlock_detector = 11;</code>
+       */
+      public Builder mergeGpEnableGlobalDeadlockDetector(com.google.protobuf.BoolValue value) {
+        if (gpEnableGlobalDeadlockDetectorBuilder_ == null) {
+          if (gpEnableGlobalDeadlockDetector_ != null) {
+            gpEnableGlobalDeadlockDetector_ =
+              com.google.protobuf.BoolValue.newBuilder(gpEnableGlobalDeadlockDetector_).mergeFrom(value).buildPartial();
+          } else {
+            gpEnableGlobalDeadlockDetector_ = value;
+          }
+          onChanged();
+        } else {
+          gpEnableGlobalDeadlockDetectorBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls whether the Greenplum Database Global Deadlock Detector is enabled to manage concurrent UPDATE and DELETE operations on heap tables to improve performance. See Inserting, Updating, and Deleting Datain the Greenplum Database Administrator Guide. The default is off, the Global Deadlock Detector is deactivated.
+       * If the Global Deadlock Detector is deactivated (the default), Greenplum Database runs concurrent update and delete operations on a heap table serially.
+       * If the Global Deadlock Detector is enabled, concurrent updates are permitted and the Global Deadlock Detector determines when a deadlock exists, and breaks the deadlock by cancelling one or more backend processes associated with the youngest transaction(s) involved.
+       * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_enable_global_deadlock_detector
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_enable_global_deadlock_detector = 11;</code>
+       */
+      public Builder clearGpEnableGlobalDeadlockDetector() {
+        if (gpEnableGlobalDeadlockDetectorBuilder_ == null) {
+          gpEnableGlobalDeadlockDetector_ = null;
+          onChanged();
+        } else {
+          gpEnableGlobalDeadlockDetector_ = null;
+          gpEnableGlobalDeadlockDetectorBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls whether the Greenplum Database Global Deadlock Detector is enabled to manage concurrent UPDATE and DELETE operations on heap tables to improve performance. See Inserting, Updating, and Deleting Datain the Greenplum Database Administrator Guide. The default is off, the Global Deadlock Detector is deactivated.
+       * If the Global Deadlock Detector is deactivated (the default), Greenplum Database runs concurrent update and delete operations on a heap table serially.
+       * If the Global Deadlock Detector is enabled, concurrent updates are permitted and the Global Deadlock Detector determines when a deadlock exists, and breaks the deadlock by cancelling one or more backend processes associated with the youngest transaction(s) involved.
+       * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_enable_global_deadlock_detector
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_enable_global_deadlock_detector = 11;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getGpEnableGlobalDeadlockDetectorBuilder() {
+        
+        onChanged();
+        return getGpEnableGlobalDeadlockDetectorFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Controls whether the Greenplum Database Global Deadlock Detector is enabled to manage concurrent UPDATE and DELETE operations on heap tables to improve performance. See Inserting, Updating, and Deleting Datain the Greenplum Database Administrator Guide. The default is off, the Global Deadlock Detector is deactivated.
+       * If the Global Deadlock Detector is deactivated (the default), Greenplum Database runs concurrent update and delete operations on a heap table serially.
+       * If the Global Deadlock Detector is enabled, concurrent updates are permitted and the Global Deadlock Detector determines when a deadlock exists, and breaks the deadlock by cancelling one or more backend processes associated with the youngest transaction(s) involved.
+       * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_enable_global_deadlock_detector
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_enable_global_deadlock_detector = 11;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getGpEnableGlobalDeadlockDetectorOrBuilder() {
+        if (gpEnableGlobalDeadlockDetectorBuilder_ != null) {
+          return gpEnableGlobalDeadlockDetectorBuilder_.getMessageOrBuilder();
+        } else {
+          return gpEnableGlobalDeadlockDetector_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : gpEnableGlobalDeadlockDetector_;
+        }
+      }
+      /**
+       * <pre>
+       * Controls whether the Greenplum Database Global Deadlock Detector is enabled to manage concurrent UPDATE and DELETE operations on heap tables to improve performance. See Inserting, Updating, and Deleting Datain the Greenplum Database Administrator Guide. The default is off, the Global Deadlock Detector is deactivated.
+       * If the Global Deadlock Detector is deactivated (the default), Greenplum Database runs concurrent update and delete operations on a heap table serially.
+       * If the Global Deadlock Detector is enabled, concurrent updates are permitted and the Global Deadlock Detector determines when a deadlock exists, and breaks the deadlock by cancelling one or more backend processes associated with the youngest transaction(s) involved.
+       * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_enable_global_deadlock_detector
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_enable_global_deadlock_detector = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getGpEnableGlobalDeadlockDetectorFieldBuilder() {
+        if (gpEnableGlobalDeadlockDetectorBuilder_ == null) {
+          gpEnableGlobalDeadlockDetectorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getGpEnableGlobalDeadlockDetector(),
+                  getParentForChildren(),
+                  isClean());
+          gpEnableGlobalDeadlockDetector_ = null;
+        }
+        return gpEnableGlobalDeadlockDetectorBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value gpGlobalDeadlockDetectorPeriod_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gpGlobalDeadlockDetectorPeriodBuilder_;
+      /**
+       * <pre>
+       * Specifies the executing interval (in seconds) of the global deadlock detector background worker process.
+       * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_global_deadlock_detector_period
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_global_deadlock_detector_period = 12;</code>
+       * @return Whether the gpGlobalDeadlockDetectorPeriod field is set.
+       */
+      public boolean hasGpGlobalDeadlockDetectorPeriod() {
+        return gpGlobalDeadlockDetectorPeriodBuilder_ != null || gpGlobalDeadlockDetectorPeriod_ != null;
+      }
+      /**
+       * <pre>
+       * Specifies the executing interval (in seconds) of the global deadlock detector background worker process.
+       * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_global_deadlock_detector_period
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_global_deadlock_detector_period = 12;</code>
+       * @return The gpGlobalDeadlockDetectorPeriod.
+       */
+      public com.google.protobuf.Int64Value getGpGlobalDeadlockDetectorPeriod() {
+        if (gpGlobalDeadlockDetectorPeriodBuilder_ == null) {
+          return gpGlobalDeadlockDetectorPeriod_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpGlobalDeadlockDetectorPeriod_;
+        } else {
+          return gpGlobalDeadlockDetectorPeriodBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specifies the executing interval (in seconds) of the global deadlock detector background worker process.
+       * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_global_deadlock_detector_period
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_global_deadlock_detector_period = 12;</code>
+       */
+      public Builder setGpGlobalDeadlockDetectorPeriod(com.google.protobuf.Int64Value value) {
+        if (gpGlobalDeadlockDetectorPeriodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gpGlobalDeadlockDetectorPeriod_ = value;
+          onChanged();
+        } else {
+          gpGlobalDeadlockDetectorPeriodBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the executing interval (in seconds) of the global deadlock detector background worker process.
+       * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_global_deadlock_detector_period
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_global_deadlock_detector_period = 12;</code>
+       */
+      public Builder setGpGlobalDeadlockDetectorPeriod(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (gpGlobalDeadlockDetectorPeriodBuilder_ == null) {
+          gpGlobalDeadlockDetectorPeriod_ = builderForValue.build();
+          onChanged();
+        } else {
+          gpGlobalDeadlockDetectorPeriodBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the executing interval (in seconds) of the global deadlock detector background worker process.
+       * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_global_deadlock_detector_period
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_global_deadlock_detector_period = 12;</code>
+       */
+      public Builder mergeGpGlobalDeadlockDetectorPeriod(com.google.protobuf.Int64Value value) {
+        if (gpGlobalDeadlockDetectorPeriodBuilder_ == null) {
+          if (gpGlobalDeadlockDetectorPeriod_ != null) {
+            gpGlobalDeadlockDetectorPeriod_ =
+              com.google.protobuf.Int64Value.newBuilder(gpGlobalDeadlockDetectorPeriod_).mergeFrom(value).buildPartial();
+          } else {
+            gpGlobalDeadlockDetectorPeriod_ = value;
+          }
+          onChanged();
+        } else {
+          gpGlobalDeadlockDetectorPeriodBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the executing interval (in seconds) of the global deadlock detector background worker process.
+       * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_global_deadlock_detector_period
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_global_deadlock_detector_period = 12;</code>
+       */
+      public Builder clearGpGlobalDeadlockDetectorPeriod() {
+        if (gpGlobalDeadlockDetectorPeriodBuilder_ == null) {
+          gpGlobalDeadlockDetectorPeriod_ = null;
+          onChanged();
+        } else {
+          gpGlobalDeadlockDetectorPeriod_ = null;
+          gpGlobalDeadlockDetectorPeriodBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the executing interval (in seconds) of the global deadlock detector background worker process.
+       * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_global_deadlock_detector_period
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_global_deadlock_detector_period = 12;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getGpGlobalDeadlockDetectorPeriodBuilder() {
+        
+        onChanged();
+        return getGpGlobalDeadlockDetectorPeriodFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specifies the executing interval (in seconds) of the global deadlock detector background worker process.
+       * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_global_deadlock_detector_period
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_global_deadlock_detector_period = 12;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getGpGlobalDeadlockDetectorPeriodOrBuilder() {
+        if (gpGlobalDeadlockDetectorPeriodBuilder_ != null) {
+          return gpGlobalDeadlockDetectorPeriodBuilder_.getMessageOrBuilder();
+        } else {
+          return gpGlobalDeadlockDetectorPeriod_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : gpGlobalDeadlockDetectorPeriod_;
+        }
+      }
+      /**
+       * <pre>
+       * Specifies the executing interval (in seconds) of the global deadlock detector background worker process.
+       * https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_global_deadlock_detector_period
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_global_deadlock_detector_period = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getGpGlobalDeadlockDetectorPeriodFieldBuilder() {
+        if (gpGlobalDeadlockDetectorPeriodBuilder_ == null) {
+          gpGlobalDeadlockDetectorPeriodBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getGpGlobalDeadlockDetectorPeriod(),
+                  getParentForChildren(),
+                  isClean());
+          gpGlobalDeadlockDetectorPeriod_ = null;
+        }
+        return gpGlobalDeadlockDetectorPeriodBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -32277,7 +32863,7 @@ public final class Config {
       "\001 \001(\0132(.yandex.cloud.mdb.greenplum.v1.Re" +
       "sources\"V\n\027SegmentSubclusterConfig\022;\n\tre" +
       "sources\030\001 \001(\0132(.yandex.cloud.mdb.greenpl" +
-      "um.v1.Resources\"\226\005\n\020GreenplumConfig6\0224\n\017" +
+      "um.v1.Resources\"\247\006\n\020GreenplumConfig6\0224\n\017" +
       "max_connections\030\001 \001(\0132\033.google.protobuf." +
       "Int64Value\022;\n\026max_slot_wal_keep_size\030\002 \001" +
       "(\0132\033.google.protobuf.Int64Value\022B\n\035gp_wo" +
@@ -32294,111 +32880,114 @@ public final class Config {
       "\0162+.yandex.cloud.mdb.greenplum.v1.LogSta" +
       "tement\022H\n$gp_add_column_inherits_table_s" +
       "etting\030\n \001(\0132\032.google.protobuf.BoolValue" +
-      "\"\323\003\n\023GreenplumConfig6_17\0224\n\017max_connecti" +
-      "ons\030\001 \001(\0132\033.google.protobuf.Int64Value\022;" +
-      "\n\026max_slot_wal_keep_size\030\002 \001(\0132\033.google." +
-      "protobuf.Int64Value\022B\n\035gp_workfile_limit" +
-      "_per_segment\030\003 \001(\0132\033.google.protobuf.Int" +
-      "64Value\022@\n\033gp_workfile_limit_per_query\030\004" +
-      " \001(\0132\033.google.protobuf.Int64Value\022F\n!gp_" +
-      "workfile_limit_files_per_query\030\005 \001(\0132\033.g" +
-      "oogle.protobuf.Int64Value\022>\n\031max_prepare" +
-      "d_transactions\030\006 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\022;\n\027gp_workfile_compression\030\007 \001" +
-      "(\0132\032.google.protobuf.BoolValue\"\317\004\n\023Green" +
-      "plumConfig6_19\0224\n\017max_connections\030\001 \001(\0132" +
-      "\033.google.protobuf.Int64Value\022;\n\026max_slot" +
-      "_wal_keep_size\030\002 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\022B\n\035gp_workfile_limit_per_segme" +
-      "nt\030\003 \001(\0132\033.google.protobuf.Int64Value\022@\n" +
-      "\033gp_workfile_limit_per_query\030\004 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\022F\n!gp_workfile_l" +
-      "imit_files_per_query\030\005 \001(\0132\033.google.prot" +
-      "obuf.Int64Value\022>\n\031max_prepared_transact" +
-      "ions\030\006 \001(\0132\033.google.protobuf.Int64Value\022" +
-      ";\n\027gp_workfile_compression\030\007 \001(\0132\032.googl" +
-      "e.protobuf.BoolValue\0226\n\021max_statement_me" +
-      "m\030\010 \001(\0132\033.google.protobuf.Int64Value\022B\n\r" +
-      "log_statement\030\t \001(\0162+.yandex.cloud.mdb.g" +
-      "reenplum.v1.LogStatement\"\231\005\n\023GreenplumCo" +
-      "nfig6_21\0224\n\017max_connections\030\001 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\022;\n\026max_slot_wal_k" +
-      "eep_size\030\002 \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\022B\n\035gp_workfile_limit_per_segment\030\003 \001" +
-      "(\0132\033.google.protobuf.Int64Value\022@\n\033gp_wo" +
-      "rkfile_limit_per_query\030\004 \001(\0132\033.google.pr" +
-      "otobuf.Int64Value\022F\n!gp_workfile_limit_f" +
-      "iles_per_query\030\005 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\022>\n\031max_prepared_transactions\030\006" +
-      " \001(\0132\033.google.protobuf.Int64Value\022;\n\027gp_" +
-      "workfile_compression\030\007 \001(\0132\032.google.prot" +
-      "obuf.BoolValue\0226\n\021max_statement_mem\030\010 \001(" +
-      "\0132\033.google.protobuf.Int64Value\022B\n\rlog_st" +
-      "atement\030\t \001(\0162+.yandex.cloud.mdb.greenpl" +
-      "um.v1.LogStatement\022H\n$gp_add_column_inhe" +
-      "rits_table_setting\030\n \001(\0132\032.google.protob" +
-      "uf.BoolValue\"\231\005\n\023GreenplumConfig6_22\0224\n\017" +
-      "max_connections\030\001 \001(\0132\033.google.protobuf." +
-      "Int64Value\022;\n\026max_slot_wal_keep_size\030\002 \001" +
-      "(\0132\033.google.protobuf.Int64Value\022B\n\035gp_wo" +
-      "rkfile_limit_per_segment\030\003 \001(\0132\033.google." +
-      "protobuf.Int64Value\022@\n\033gp_workfile_limit" +
-      "_per_query\030\004 \001(\0132\033.google.protobuf.Int64" +
-      "Value\022F\n!gp_workfile_limit_files_per_que" +
-      "ry\030\005 \001(\0132\033.google.protobuf.Int64Value\022>\n" +
-      "\031max_prepared_transactions\030\006 \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\022;\n\027gp_workfile_com" +
-      "pression\030\007 \001(\0132\032.google.protobuf.BoolVal" +
-      "ue\0226\n\021max_statement_mem\030\010 \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\022B\n\rlog_statement\030\t \001(" +
-      "\0162+.yandex.cloud.mdb.greenplum.v1.LogSta" +
-      "tement\022H\n$gp_add_column_inherits_table_s" +
-      "etting\030\n \001(\0132\032.google.protobuf.BoolValue" +
-      "\"\201\002\n\026GreenplumConfigSet6_17\022R\n\020effective" +
-      "_config\030\001 \001(\01322.yandex.cloud.mdb.greenpl" +
-      "um.v1.GreenplumConfig6_17B\004\350\3071\001\022G\n\013user_" +
-      "config\030\002 \001(\01322.yandex.cloud.mdb.greenplu" +
-      "m.v1.GreenplumConfig6_17\022J\n\016default_conf" +
-      "ig\030\003 \001(\01322.yandex.cloud.mdb.greenplum.v1" +
-      ".GreenplumConfig6_17\"\201\002\n\026GreenplumConfig" +
-      "Set6_19\022R\n\020effective_config\030\001 \001(\01322.yand" +
+      "\022F\n\"gp_enable_global_deadlock_detector\030\013" +
+      " \001(\0132\032.google.protobuf.BoolValue\022G\n\"gp_g" +
+      "lobal_deadlock_detector_period\030\014 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\"\323\003\n\023GreenplumC" +
+      "onfig6_17\0224\n\017max_connections\030\001 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\022;\n\026max_slot_wal_" +
+      "keep_size\030\002 \001(\0132\033.google.protobuf.Int64V" +
+      "alue\022B\n\035gp_workfile_limit_per_segment\030\003 " +
+      "\001(\0132\033.google.protobuf.Int64Value\022@\n\033gp_w" +
+      "orkfile_limit_per_query\030\004 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\022F\n!gp_workfile_limit_" +
+      "files_per_query\030\005 \001(\0132\033.google.protobuf." +
+      "Int64Value\022>\n\031max_prepared_transactions\030" +
+      "\006 \001(\0132\033.google.protobuf.Int64Value\022;\n\027gp" +
+      "_workfile_compression\030\007 \001(\0132\032.google.pro" +
+      "tobuf.BoolValue\"\317\004\n\023GreenplumConfig6_19\022" +
+      "4\n\017max_connections\030\001 \001(\0132\033.google.protob" +
+      "uf.Int64Value\022;\n\026max_slot_wal_keep_size\030" +
+      "\002 \001(\0132\033.google.protobuf.Int64Value\022B\n\035gp" +
+      "_workfile_limit_per_segment\030\003 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\022@\n\033gp_workfile_li" +
+      "mit_per_query\030\004 \001(\0132\033.google.protobuf.In" +
+      "t64Value\022F\n!gp_workfile_limit_files_per_" +
+      "query\030\005 \001(\0132\033.google.protobuf.Int64Value" +
+      "\022>\n\031max_prepared_transactions\030\006 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\022;\n\027gp_workfile_" +
+      "compression\030\007 \001(\0132\032.google.protobuf.Bool" +
+      "Value\0226\n\021max_statement_mem\030\010 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\022B\n\rlog_statement\030\t" +
+      " \001(\0162+.yandex.cloud.mdb.greenplum.v1.Log" +
+      "Statement\"\231\005\n\023GreenplumConfig6_21\0224\n\017max" +
+      "_connections\030\001 \001(\0132\033.google.protobuf.Int" +
+      "64Value\022;\n\026max_slot_wal_keep_size\030\002 \001(\0132" +
+      "\033.google.protobuf.Int64Value\022B\n\035gp_workf" +
+      "ile_limit_per_segment\030\003 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022@\n\033gp_workfile_limit_pe" +
+      "r_query\030\004 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022F\n!gp_workfile_limit_files_per_query\030" +
+      "\005 \001(\0132\033.google.protobuf.Int64Value\022>\n\031ma" +
+      "x_prepared_transactions\030\006 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\022;\n\027gp_workfile_compre" +
+      "ssion\030\007 \001(\0132\032.google.protobuf.BoolValue\022" +
+      "6\n\021max_statement_mem\030\010 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022B\n\rlog_statement\030\t \001(\0162+" +
+      ".yandex.cloud.mdb.greenplum.v1.LogStatem" +
+      "ent\022H\n$gp_add_column_inherits_table_sett" +
+      "ing\030\n \001(\0132\032.google.protobuf.BoolValue\"\231\005" +
+      "\n\023GreenplumConfig6_22\0224\n\017max_connections" +
+      "\030\001 \001(\0132\033.google.protobuf.Int64Value\022;\n\026m" +
+      "ax_slot_wal_keep_size\030\002 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022B\n\035gp_workfile_limit_pe" +
+      "r_segment\030\003 \001(\0132\033.google.protobuf.Int64V" +
+      "alue\022@\n\033gp_workfile_limit_per_query\030\004 \001(" +
+      "\0132\033.google.protobuf.Int64Value\022F\n!gp_wor" +
+      "kfile_limit_files_per_query\030\005 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\022>\n\031max_prepared_t" +
+      "ransactions\030\006 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\022;\n\027gp_workfile_compression\030\007 \001(\0132" +
+      "\032.google.protobuf.BoolValue\0226\n\021max_state" +
+      "ment_mem\030\010 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\022B\n\rlog_statement\030\t \001(\0162+.yandex.clou" +
+      "d.mdb.greenplum.v1.LogStatement\022H\n$gp_ad" +
+      "d_column_inherits_table_setting\030\n \001(\0132\032." +
+      "google.protobuf.BoolValue\"\201\002\n\026GreenplumC" +
+      "onfigSet6_17\022R\n\020effective_config\030\001 \001(\01322" +
+      ".yandex.cloud.mdb.greenplum.v1.Greenplum" +
+      "Config6_17B\004\350\3071\001\022G\n\013user_config\030\002 \001(\01322." +
+      "yandex.cloud.mdb.greenplum.v1.GreenplumC" +
+      "onfig6_17\022J\n\016default_config\030\003 \001(\01322.yand" +
       "ex.cloud.mdb.greenplum.v1.GreenplumConfi" +
-      "g6_19B\004\350\3071\001\022G\n\013user_config\030\002 \001(\01322.yande" +
-      "x.cloud.mdb.greenplum.v1.GreenplumConfig" +
-      "6_19\022J\n\016default_config\030\003 \001(\01322.yandex.cl" +
-      "oud.mdb.greenplum.v1.GreenplumConfig6_19" +
-      "\"\201\002\n\026GreenplumConfigSet6_21\022R\n\020effective" +
-      "_config\030\001 \001(\01322.yandex.cloud.mdb.greenpl" +
-      "um.v1.GreenplumConfig6_21B\004\350\3071\001\022G\n\013user_" +
-      "config\030\002 \001(\01322.yandex.cloud.mdb.greenplu" +
-      "m.v1.GreenplumConfig6_21\022J\n\016default_conf" +
-      "ig\030\003 \001(\01322.yandex.cloud.mdb.greenplum.v1" +
-      ".GreenplumConfig6_21\"\201\002\n\026GreenplumConfig" +
-      "Set6_22\022R\n\020effective_config\030\001 \001(\01322.yand" +
+      "g6_17\"\201\002\n\026GreenplumConfigSet6_19\022R\n\020effe" +
+      "ctive_config\030\001 \001(\01322.yandex.cloud.mdb.gr" +
+      "eenplum.v1.GreenplumConfig6_19B\004\350\3071\001\022G\n\013" +
+      "user_config\030\002 \001(\01322.yandex.cloud.mdb.gre" +
+      "enplum.v1.GreenplumConfig6_19\022J\n\016default" +
+      "_config\030\003 \001(\01322.yandex.cloud.mdb.greenpl" +
+      "um.v1.GreenplumConfig6_19\"\201\002\n\026GreenplumC" +
+      "onfigSet6_21\022R\n\020effective_config\030\001 \001(\01322" +
+      ".yandex.cloud.mdb.greenplum.v1.Greenplum" +
+      "Config6_21B\004\350\3071\001\022G\n\013user_config\030\002 \001(\01322." +
+      "yandex.cloud.mdb.greenplum.v1.GreenplumC" +
+      "onfig6_21\022J\n\016default_config\030\003 \001(\01322.yand" +
       "ex.cloud.mdb.greenplum.v1.GreenplumConfi" +
-      "g6_22B\004\350\3071\001\022G\n\013user_config\030\002 \001(\01322.yande" +
-      "x.cloud.mdb.greenplum.v1.GreenplumConfig" +
-      "6_22\022J\n\016default_config\030\003 \001(\01322.yandex.cl" +
-      "oud.mdb.greenplum.v1.GreenplumConfig6_22" +
-      "\"\365\001\n\023GreenplumConfigSet6\022O\n\020effective_co" +
-      "nfig\030\001 \001(\0132/.yandex.cloud.mdb.greenplum." +
-      "v1.GreenplumConfig6B\004\350\3071\001\022D\n\013user_config" +
-      "\030\002 \001(\0132/.yandex.cloud.mdb.greenplum.v1.G" +
-      "reenplumConfig6\022G\n\016default_config\030\003 \001(\0132" +
-      "/.yandex.cloud.mdb.greenplum.v1.Greenplu" +
-      "mConfig6\"\215\002\n\031ConnectionPoolerConfigSet\022U" +
-      "\n\020effective_config\030\001 \001(\01325.yandex.cloud." +
-      "mdb.greenplum.v1.ConnectionPoolerConfigB" +
-      "\004\350\3071\001\022J\n\013user_config\030\002 \001(\01325.yandex.clou" +
-      "d.mdb.greenplum.v1.ConnectionPoolerConfi" +
-      "g\022M\n\016default_config\030\003 \001(\01325.yandex.cloud" +
-      ".mdb.greenplum.v1.ConnectionPoolerConfig" +
-      "*R\n\014LogStatement\022\035\n\031LOG_STATEMENT_UNSPEC" +
-      "IFIED\020\000\022\010\n\004NONE\020\001\022\007\n\003DDL\020\002\022\007\n\003MOD\020\003\022\007\n\003A" +
-      "LL\020\004Bp\n!yandex.cloud.api.mdb.greenplum.v" +
-      "1ZKgithub.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/mdb/greenplum/v1;greenplumb\006" +
-      "proto3"
+      "g6_21\"\201\002\n\026GreenplumConfigSet6_22\022R\n\020effe" +
+      "ctive_config\030\001 \001(\01322.yandex.cloud.mdb.gr" +
+      "eenplum.v1.GreenplumConfig6_22B\004\350\3071\001\022G\n\013" +
+      "user_config\030\002 \001(\01322.yandex.cloud.mdb.gre" +
+      "enplum.v1.GreenplumConfig6_22\022J\n\016default" +
+      "_config\030\003 \001(\01322.yandex.cloud.mdb.greenpl" +
+      "um.v1.GreenplumConfig6_22\"\365\001\n\023GreenplumC" +
+      "onfigSet6\022O\n\020effective_config\030\001 \001(\0132/.ya" +
+      "ndex.cloud.mdb.greenplum.v1.GreenplumCon" +
+      "fig6B\004\350\3071\001\022D\n\013user_config\030\002 \001(\0132/.yandex" +
+      ".cloud.mdb.greenplum.v1.GreenplumConfig6" +
+      "\022G\n\016default_config\030\003 \001(\0132/.yandex.cloud." +
+      "mdb.greenplum.v1.GreenplumConfig6\"\215\002\n\031Co" +
+      "nnectionPoolerConfigSet\022U\n\020effective_con" +
+      "fig\030\001 \001(\01325.yandex.cloud.mdb.greenplum.v" +
+      "1.ConnectionPoolerConfigB\004\350\3071\001\022J\n\013user_c" +
+      "onfig\030\002 \001(\01325.yandex.cloud.mdb.greenplum" +
+      ".v1.ConnectionPoolerConfig\022M\n\016default_co" +
+      "nfig\030\003 \001(\01325.yandex.cloud.mdb.greenplum." +
+      "v1.ConnectionPoolerConfig*R\n\014LogStatemen" +
+      "t\022\035\n\031LOG_STATEMENT_UNSPECIFIED\020\000\022\010\n\004NONE" +
+      "\020\001\022\007\n\003DDL\020\002\022\007\n\003MOD\020\003\022\007\n\003ALL\020\004Bp\n!yandex." +
+      "cloud.api.mdb.greenplum.v1ZKgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/mdb" +
+      "/greenplum/v1;greenplumb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -32471,7 +33060,7 @@ public final class Config {
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_descriptor,
-        new java.lang.String[] { "MaxConnections", "MaxSlotWalKeepSize", "GpWorkfileLimitPerSegment", "GpWorkfileLimitPerQuery", "GpWorkfileLimitFilesPerQuery", "MaxPreparedTransactions", "GpWorkfileCompression", "MaxStatementMem", "LogStatement", "GpAddColumnInheritsTableSetting", });
+        new java.lang.String[] { "MaxConnections", "MaxSlotWalKeepSize", "GpWorkfileLimitPerSegment", "GpWorkfileLimitPerQuery", "GpWorkfileLimitFilesPerQuery", "MaxPreparedTransactions", "GpWorkfileCompression", "MaxStatementMem", "LogStatement", "GpAddColumnInheritsTableSetting", "GpEnableGlobalDeadlockDetector", "GpGlobalDeadlockDetectorPeriod", });
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_17_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_17_fieldAccessorTable = new

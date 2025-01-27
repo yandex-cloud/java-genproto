@@ -80,6 +80,37 @@ public final class RunServiceGrpc {
     return getListenMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest,
+      yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamEvent> getAttachMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Attach",
+      requestType = yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest.class,
+      responseType = yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamEvent.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest,
+      yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamEvent> getAttachMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest, yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamEvent> getAttachMethod;
+    if ((getAttachMethod = RunServiceGrpc.getAttachMethod) == null) {
+      synchronized (RunServiceGrpc.class) {
+        if ((getAttachMethod = RunServiceGrpc.getAttachMethod) == null) {
+          RunServiceGrpc.getAttachMethod = getAttachMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest, yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamEvent>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Attach"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamEvent.getDefaultInstance()))
+              .setSchemaDescriptor(new RunServiceMethodDescriptorSupplier("Attach"))
+              .build();
+        }
+      }
+    }
+    return getAttachMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.GetRunRequest,
       yandex.cloud.api.ai.assistants.v1.runs.RunOuterClass.Run> getGetMethod;
 
@@ -248,6 +279,18 @@ public final class RunServiceGrpc {
 
     /**
      * <pre>
+     * Bi-directional streaming method to interact with a specific run.
+     * Like `Listen`, `Attach` streams events from the run, but also allows clients to send events back.
+     * For example, it can be used to submit function call results when the run is waiting for user input.
+     * </pre>
+     */
+    public io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest> attach(
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamEvent> responseObserver) {
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getAttachMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Retrieve details of a specific run by its ID.
      * </pre>
      */
@@ -292,6 +335,13 @@ public final class RunServiceGrpc {
                 yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.ListenRunRequest,
                 yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamEvent>(
                   this, METHODID_LISTEN)))
+          .addMethod(
+            getAttachMethod(),
+            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+              new MethodHandlers<
+                yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest,
+                yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamEvent>(
+                  this, METHODID_ATTACH)))
           .addMethod(
             getGetMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -356,6 +406,19 @@ public final class RunServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamEvent> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListenMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Bi-directional streaming method to interact with a specific run.
+     * Like `Listen`, `Attach` streams events from the run, but also allows clients to send events back.
+     * For example, it can be used to submit function call results when the run is waiting for user input.
+     * </pre>
+     */
+    public io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.AttachRunRequest> attach(
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamEvent> responseObserver) {
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
+          getChannel().newCall(getAttachMethod(), getCallOptions()), responseObserver);
     }
 
     /**
@@ -530,6 +593,7 @@ public final class RunServiceGrpc {
   private static final int METHODID_GET = 2;
   private static final int METHODID_GET_LAST_BY_THREAD = 3;
   private static final int METHODID_LIST = 4;
+  private static final int METHODID_ATTACH = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -578,6 +642,9 @@ public final class RunServiceGrpc {
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_ATTACH:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.attach(
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.StreamEvent>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -631,6 +698,7 @@ public final class RunServiceGrpc {
               .setSchemaDescriptor(new RunServiceFileDescriptorSupplier())
               .addMethod(getCreateMethod())
               .addMethod(getListenMethod())
+              .addMethod(getAttachMethod())
               .addMethod(getGetMethod())
               .addMethod(getGetLastByThreadMethod())
               .addMethod(getListMethod())

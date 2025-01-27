@@ -3311,8 +3311,8 @@ public final class CustomerServiceOuterClass {
      * <pre>
      * ID of the reseller that customer will be associated with.&lt;/br&gt;
      * Value must match either one of the three regular expressions:
-     * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$`
-     * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32})$`
+     * &lt;/br&gt;- `^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$`
+     * &lt;/br&gt;- `^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32}$`
      * &lt;/br&gt;- `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`
      * </pre>
      *
@@ -3324,8 +3324,8 @@ public final class CustomerServiceOuterClass {
      * <pre>
      * ID of the reseller that customer will be associated with.&lt;/br&gt;
      * Value must match either one of the three regular expressions:
-     * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$`
-     * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32})$`
+     * &lt;/br&gt;- `^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$`
+     * &lt;/br&gt;- `^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32}$`
      * &lt;/br&gt;- `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`
      * </pre>
      *
@@ -3494,8 +3494,8 @@ public final class CustomerServiceOuterClass {
      * <pre>
      * ID of the reseller that customer will be associated with.&lt;/br&gt;
      * Value must match either one of the three regular expressions:
-     * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$`
-     * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32})$`
+     * &lt;/br&gt;- `^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$`
+     * &lt;/br&gt;- `^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32}$`
      * &lt;/br&gt;- `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`
      * </pre>
      *
@@ -3519,8 +3519,8 @@ public final class CustomerServiceOuterClass {
      * <pre>
      * ID of the reseller that customer will be associated with.&lt;/br&gt;
      * Value must match either one of the three regular expressions:
-     * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$`
-     * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32})$`
+     * &lt;/br&gt;- `^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$`
+     * &lt;/br&gt;- `^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32}$`
      * &lt;/br&gt;- `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`
      * </pre>
      *
@@ -3982,8 +3982,8 @@ public final class CustomerServiceOuterClass {
        * <pre>
        * ID of the reseller that customer will be associated with.&lt;/br&gt;
        * Value must match either one of the three regular expressions:
-       * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$`
-       * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32})$`
+       * &lt;/br&gt;- `^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$`
+       * &lt;/br&gt;- `^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32}$`
        * &lt;/br&gt;- `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`
        * </pre>
        *
@@ -4006,8 +4006,8 @@ public final class CustomerServiceOuterClass {
        * <pre>
        * ID of the reseller that customer will be associated with.&lt;/br&gt;
        * Value must match either one of the three regular expressions:
-       * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$`
-       * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32})$`
+       * &lt;/br&gt;- `^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$`
+       * &lt;/br&gt;- `^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32}$`
        * &lt;/br&gt;- `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`
        * </pre>
        *
@@ -4031,8 +4031,8 @@ public final class CustomerServiceOuterClass {
        * <pre>
        * ID of the reseller that customer will be associated with.&lt;/br&gt;
        * Value must match either one of the three regular expressions:
-       * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$`
-       * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32})$`
+       * &lt;/br&gt;- `^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$`
+       * &lt;/br&gt;- `^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32}$`
        * &lt;/br&gt;- `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`
        * </pre>
        *
@@ -4054,8 +4054,8 @@ public final class CustomerServiceOuterClass {
        * <pre>
        * ID of the reseller that customer will be associated with.&lt;/br&gt;
        * Value must match either one of the three regular expressions:
-       * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$`
-       * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32})$`
+       * &lt;/br&gt;- `^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$`
+       * &lt;/br&gt;- `^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32}$`
        * &lt;/br&gt;- `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`
        * </pre>
        *
@@ -4072,8 +4072,8 @@ public final class CustomerServiceOuterClass {
        * <pre>
        * ID of the reseller that customer will be associated with.&lt;/br&gt;
        * Value must match either one of the three regular expressions:
-       * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$`
-       * &lt;/br&gt;- `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32})$`
+       * &lt;/br&gt;- `^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$`
+       * &lt;/br&gt;- `^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{32}$`
        * &lt;/br&gt;- `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`
        * </pre>
        *

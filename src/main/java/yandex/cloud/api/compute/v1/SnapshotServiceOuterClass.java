@@ -3174,7 +3174,7 @@ public final class SnapshotServiceOuterClass {
      * Name of the snapshot.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -3183,7 +3183,7 @@ public final class SnapshotServiceOuterClass {
      * Name of the snapshot.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -3540,7 +3540,7 @@ public final class SnapshotServiceOuterClass {
      * Name of the snapshot.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -3561,7 +3561,7 @@ public final class SnapshotServiceOuterClass {
      * Name of the snapshot.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -4405,7 +4405,7 @@ public final class SnapshotServiceOuterClass {
        * Name of the snapshot.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -4425,7 +4425,7 @@ public final class SnapshotServiceOuterClass {
        * Name of the snapshot.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -4446,7 +4446,7 @@ public final class SnapshotServiceOuterClass {
        * Name of the snapshot.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -4465,7 +4465,7 @@ public final class SnapshotServiceOuterClass {
        * Name of the snapshot.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -4479,7 +4479,7 @@ public final class SnapshotServiceOuterClass {
        * Name of the snapshot.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -5814,7 +5814,7 @@ public final class SnapshotServiceOuterClass {
      * Name of the snapshot.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -5823,7 +5823,7 @@ public final class SnapshotServiceOuterClass {
      * Name of the snapshot.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -6138,7 +6138,7 @@ public final class SnapshotServiceOuterClass {
      * Name of the snapshot.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -6159,7 +6159,7 @@ public final class SnapshotServiceOuterClass {
      * Name of the snapshot.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -7003,7 +7003,7 @@ public final class SnapshotServiceOuterClass {
        * Name of the snapshot.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -7023,7 +7023,7 @@ public final class SnapshotServiceOuterClass {
        * Name of the snapshot.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -7044,7 +7044,7 @@ public final class SnapshotServiceOuterClass {
        * Name of the snapshot.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -7063,7 +7063,7 @@ public final class SnapshotServiceOuterClass {
        * Name of the snapshot.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -7077,7 +7077,7 @@ public final class SnapshotServiceOuterClass {
        * Name of the snapshot.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -11337,85 +11337,85 @@ public final class SnapshotServiceOuterClass {
       "B\n\212\3101\006<=1000\022\033\n\010order_by\030\005 \001(\tB\t\212\3101\005<=10" +
       "0\"f\n\025ListSnapshotsResponse\0224\n\tsnapshots\030" +
       "\001 \003(\0132!.yandex.cloud.compute.v1.Snapshot" +
-      "\022\027\n\017next_page_token\030\002 \001(\t\"\300\003\n\025CreateSnap" +
+      "\022\027\n\017next_page_token\030\002 \001(\t\"\301\003\n\025CreateSnap" +
       "shotRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022\035\n\007disk_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004n" +
-      "ame\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-" +
-      "z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022" +
-      "\223\001\n\006labels\030\006 \003(\0132:.yandex.cloud.compute." +
-      "v1.CreateSnapshotRequest.LabelsEntryBG\202\310" +
-      "1\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041" +
-      "-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022H\n\023hardwar" +
-      "e_generation\030\007 \001(\0132+.yandex.cloud.comput" +
-      "e.v1.HardwareGeneration\032-\n\013LabelsEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\005\020\006\">\n\026" +
-      "CreateSnapshotMetadata\022\023\n\013snapshot_id\030\001 " +
-      "\001(\t\022\017\n\007disk_id\030\002 \001(\t\"\204\003\n\025UpdateSnapshotR" +
-      "equest\022!\n\013snapshot_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\022/\n\013update_mask\030\002 \001(\0132\032.google.protobuf" +
-      ".FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a" +
-      "-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\004 " +
-      "\001(\tB\t\212\3101\005<=256\022\223\001\n\006labels\030\005 \003(\0132:.yandex" +
-      ".cloud.compute.v1.UpdateSnapshotRequest." +
-      "LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@" +
-      "0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a" +
-      "-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\t:\0028\001\"-\n\026UpdateSnapshotMetadata\022\023\n" +
-      "\013snapshot_id\030\001 \001(\t\":\n\025DeleteSnapshotRequ" +
-      "est\022!\n\013snapshot_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-" +
-      "\n\026DeleteSnapshotMetadata\022\023\n\013snapshot_id\030" +
-      "\001 \001(\t\"\200\001\n\035ListSnapshotOperationsRequest\022" +
-      "!\n\013snapshot_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpa" +
-      "ge_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030" +
-      "\003 \001(\tB\t\212\3101\005<=100\"p\n\036ListSnapshotOperatio" +
-      "nsResponse\0225\n\noperations\030\001 \003(\0132!.yandex." +
-      "cloud.operation.Operation\022\027\n\017next_page_t" +
-      "oken\030\002 \001(\t2\243\r\n\017SnapshotService\022\202\001\n\003Get\022+" +
-      ".yandex.cloud.compute.v1.GetSnapshotRequ" +
-      "est\032!.yandex.cloud.compute.v1.Snapshot\"+" +
-      "\202\323\344\223\002%\022#/compute/v1/snapshots/{snapshot_" +
-      "id}\022\204\001\n\004List\022-.yandex.cloud.compute.v1.L" +
-      "istSnapshotsRequest\032..yandex.cloud.compu" +
-      "te.v1.ListSnapshotsResponse\"\035\202\323\344\223\002\027\022\025/co" +
-      "mpute/v1/snapshots\022\243\001\n\006Create\022..yandex.c" +
-      "loud.compute.v1.CreateSnapshotRequest\032!." +
-      "yandex.cloud.operation.Operation\"F\202\323\344\223\002\032" +
-      "\"\025/compute/v1/snapshots:\001*\262\322*\"\n\026CreateSn" +
-      "apshotMetadata\022\010Snapshot\022\261\001\n\006Update\022..ya" +
-      "ndex.cloud.compute.v1.UpdateSnapshotRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"T" +
-      "\202\323\344\223\002(2#/compute/v1/snapshots/{snapshot_" +
-      "id}:\001*\262\322*\"\n\026UpdateSnapshotMetadata\022\010Snap" +
-      "shot\022\273\001\n\006Delete\022..yandex.cloud.compute.v" +
-      "1.DeleteSnapshotRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"^\202\323\344\223\002%*#/compute/v1/" +
-      "snapshots/{snapshot_id}\262\322*/\n\026DeleteSnaps" +
-      "hotMetadata\022\025google.protobuf.Empty\022\271\001\n\016L" +
-      "istOperations\0226.yandex.cloud.compute.v1." +
-      "ListSnapshotOperationsRequest\0327.yandex.c" +
-      "loud.compute.v1.ListSnapshotOperationsRe" +
-      "sponse\"6\202\323\344\223\0020\022./compute/v1/snapshots/{s" +
-      "napshot_id}/operations\022\265\001\n\022ListAccessBin" +
-      "dings\022..yandex.cloud.access.ListAccessBi" +
-      "ndingsRequest\032/.yandex.cloud.access.List" +
-      "AccessBindingsResponse\">\202\323\344\223\0028\0226/compute" +
-      "/v1/snapshots/{resource_id}:listAccessBi" +
-      "ndings\022\364\001\n\021SetAccessBindings\022-.yandex.cl" +
-      "oud.access.SetAccessBindingsRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"\214\001\202\323\344\223\002:\"" +
-      "5/compute/v1/snapshots/{resource_id}:set" +
-      "AccessBindings:\001*\262\322*H\n access.SetAccessB" +
-      "indingsMetadata\022$access.AccessBindingsOp" +
-      "erationResult\022\200\002\n\024UpdateAccessBindings\0220" +
-      ".yandex.cloud.access.UpdateAccessBinding" +
-      "sRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"\222\001\202\323\344\223\002=\"8/compute/v1/snapshots/{res" +
-      "ource_id}:updateAccessBindings:\001*\262\322*K\n#a" +
-      "ccess.UpdateAccessBindingsMetadata\022$acce" +
-      "ss.AccessBindingsOperationResultBb\n\033yand" +
-      "ex.cloud.api.compute.v1ZCgithub.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/comput" +
-      "e/v1;computeb\006proto3"
+      "<=50\022\035\n\007disk_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\0223\n\004n" +
+      "ame\030\003 \001(\tB%\362\3071!|[a-z]([-_a-z0-9]{0,61}[a" +
+      "-z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256" +
+      "\022\223\001\n\006labels\030\006 \003(\0132:.yandex.cloud.compute" +
+      ".v1.CreateSnapshotRequest.LabelsEntryBG\202" +
+      "\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\004" +
+      "1-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022H\n\023hardwa" +
+      "re_generation\030\007 \001(\0132+.yandex.cloud.compu" +
+      "te.v1.HardwareGeneration\032-\n\013LabelsEntry\022" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\005\020\006\">\n" +
+      "\026CreateSnapshotMetadata\022\023\n\013snapshot_id\030\001" +
+      " \001(\t\022\017\n\007disk_id\030\002 \001(\t\"\205\003\n\025UpdateSnapshot" +
+      "Request\022!\n\013snapshot_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022/\n\013update_mask\030\002 \001(\0132\032.google.protobu" +
+      "f.FieldMask\0223\n\004name\030\003 \001(\tB%\362\3071!|[a-z]([-" +
+      "_a-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030" +
+      "\004 \001(\tB\t\212\3101\005<=256\022\223\001\n\006labels\030\005 \003(\0132:.yand" +
+      "ex.cloud.compute.v1.UpdateSnapshotReques" +
+      "t.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./" +
+      "\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-" +
+      "9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001\"-\n\026UpdateSnapshotMetadata\022" +
+      "\023\n\013snapshot_id\030\001 \001(\t\":\n\025DeleteSnapshotRe" +
+      "quest\022!\n\013snapshot_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\"-\n\026DeleteSnapshotMetadata\022\023\n\013snapshot_i" +
+      "d\030\001 \001(\t\"\200\001\n\035ListSnapshotOperationsReques" +
+      "t\022!\n\013snapshot_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\t" +
+      "page_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_toke" +
+      "n\030\003 \001(\tB\t\212\3101\005<=100\"p\n\036ListSnapshotOperat" +
+      "ionsResponse\0225\n\noperations\030\001 \003(\0132!.yande" +
+      "x.cloud.operation.Operation\022\027\n\017next_page" +
+      "_token\030\002 \001(\t2\243\r\n\017SnapshotService\022\202\001\n\003Get" +
+      "\022+.yandex.cloud.compute.v1.GetSnapshotRe" +
+      "quest\032!.yandex.cloud.compute.v1.Snapshot" +
+      "\"+\202\323\344\223\002%\022#/compute/v1/snapshots/{snapsho" +
+      "t_id}\022\204\001\n\004List\022-.yandex.cloud.compute.v1" +
+      ".ListSnapshotsRequest\032..yandex.cloud.com" +
+      "pute.v1.ListSnapshotsResponse\"\035\202\323\344\223\002\027\022\025/" +
+      "compute/v1/snapshots\022\243\001\n\006Create\022..yandex" +
+      ".cloud.compute.v1.CreateSnapshotRequest\032" +
+      "!.yandex.cloud.operation.Operation\"F\202\323\344\223" +
+      "\002\032\"\025/compute/v1/snapshots:\001*\262\322*\"\n\026Create" +
+      "SnapshotMetadata\022\010Snapshot\022\261\001\n\006Update\022.." +
+      "yandex.cloud.compute.v1.UpdateSnapshotRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"T\202\323\344\223\002(2#/compute/v1/snapshots/{snapsho" +
+      "t_id}:\001*\262\322*\"\n\026UpdateSnapshotMetadata\022\010Sn" +
+      "apshot\022\273\001\n\006Delete\022..yandex.cloud.compute" +
+      ".v1.DeleteSnapshotRequest\032!.yandex.cloud" +
+      ".operation.Operation\"^\202\323\344\223\002%*#/compute/v" +
+      "1/snapshots/{snapshot_id}\262\322*/\n\026DeleteSna" +
+      "pshotMetadata\022\025google.protobuf.Empty\022\271\001\n" +
+      "\016ListOperations\0226.yandex.cloud.compute.v" +
+      "1.ListSnapshotOperationsRequest\0327.yandex" +
+      ".cloud.compute.v1.ListSnapshotOperations" +
+      "Response\"6\202\323\344\223\0020\022./compute/v1/snapshots/" +
+      "{snapshot_id}/operations\022\265\001\n\022ListAccessB" +
+      "indings\022..yandex.cloud.access.ListAccess" +
+      "BindingsRequest\032/.yandex.cloud.access.Li" +
+      "stAccessBindingsResponse\">\202\323\344\223\0028\0226/compu" +
+      "te/v1/snapshots/{resource_id}:listAccess" +
+      "Bindings\022\364\001\n\021SetAccessBindings\022-.yandex." +
+      "cloud.access.SetAccessBindingsRequest\032!." +
+      "yandex.cloud.operation.Operation\"\214\001\202\323\344\223\002" +
+      ":\"5/compute/v1/snapshots/{resource_id}:s" +
+      "etAccessBindings:\001*\262\322*H\n access.SetAcces" +
+      "sBindingsMetadata\022$access.AccessBindings" +
+      "OperationResult\022\200\002\n\024UpdateAccessBindings" +
+      "\0220.yandex.cloud.access.UpdateAccessBindi" +
+      "ngsRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"\222\001\202\323\344\223\002=\"8/compute/v1/snapshots/{r" +
+      "esource_id}:updateAccessBindings:\001*\262\322*K\n" +
+      "#access.UpdateAccessBindingsMetadata\022$ac" +
+      "cess.AccessBindingsOperationResultBb\n\033ya" +
+      "ndex.cloud.api.compute.v1ZCgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/comp" +
+      "ute/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -41,7 +41,7 @@ public final class Translation {
     /**
      * <pre>
      * The language code of the source text.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
      * </pre>
      *
      * <code>string detected_language_code = 2;</code>
@@ -51,7 +51,7 @@ public final class Translation {
     /**
      * <pre>
      * The language code of the source text.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
      * </pre>
      *
      * <code>string detected_language_code = 2;</code>
@@ -202,7 +202,7 @@ public final class Translation {
     /**
      * <pre>
      * The language code of the source text.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
      * </pre>
      *
      * <code>string detected_language_code = 2;</code>
@@ -224,7 +224,7 @@ public final class Translation {
     /**
      * <pre>
      * The language code of the source text.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
      * </pre>
      *
      * <code>string detected_language_code = 2;</code>
@@ -664,7 +664,7 @@ public final class Translation {
       /**
        * <pre>
        * The language code of the source text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * </pre>
        *
        * <code>string detected_language_code = 2;</code>
@@ -685,7 +685,7 @@ public final class Translation {
       /**
        * <pre>
        * The language code of the source text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * </pre>
        *
        * <code>string detected_language_code = 2;</code>
@@ -707,7 +707,7 @@ public final class Translation {
       /**
        * <pre>
        * The language code of the source text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * </pre>
        *
        * <code>string detected_language_code = 2;</code>
@@ -727,7 +727,7 @@ public final class Translation {
       /**
        * <pre>
        * The language code of the source text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * </pre>
        *
        * <code>string detected_language_code = 2;</code>
@@ -742,7 +742,7 @@ public final class Translation {
       /**
        * <pre>
        * The language code of the source text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * </pre>
        *
        * <code>string detected_language_code = 2;</code>
@@ -820,7 +820,7 @@ public final class Translation {
     /**
      * <pre>
      * The language code.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
      * </pre>
      *
      * <code>string code = 1;</code>
@@ -830,7 +830,7 @@ public final class Translation {
     /**
      * <pre>
      * The language code.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
      * </pre>
      *
      * <code>string code = 1;</code>
@@ -955,7 +955,7 @@ public final class Translation {
     /**
      * <pre>
      * The language code.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
      * </pre>
      *
      * <code>string code = 1;</code>
@@ -977,7 +977,7 @@ public final class Translation {
     /**
      * <pre>
      * The language code.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
      * </pre>
      *
      * <code>string code = 1;</code>
@@ -1367,7 +1367,7 @@ public final class Translation {
       /**
        * <pre>
        * The language code.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * </pre>
        *
        * <code>string code = 1;</code>
@@ -1388,7 +1388,7 @@ public final class Translation {
       /**
        * <pre>
        * The language code.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * </pre>
        *
        * <code>string code = 1;</code>
@@ -1410,7 +1410,7 @@ public final class Translation {
       /**
        * <pre>
        * The language code.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * </pre>
        *
        * <code>string code = 1;</code>
@@ -1430,7 +1430,7 @@ public final class Translation {
       /**
        * <pre>
        * The language code.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * </pre>
        *
        * <code>string code = 1;</code>
@@ -1445,7 +1445,7 @@ public final class Translation {
       /**
        * <pre>
        * The language code.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * </pre>
        *
        * <code>string code = 1;</code>

@@ -3152,7 +3152,7 @@ public final class DiskServiceOuterClass {
      * Name of the disk.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -3161,7 +3161,7 @@ public final class DiskServiceOuterClass {
      * Name of the disk.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -3787,7 +3787,7 @@ public final class DiskServiceOuterClass {
      * Name of the disk.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -3808,7 +3808,7 @@ public final class DiskServiceOuterClass {
      * Name of the disk.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -5154,7 +5154,7 @@ public final class DiskServiceOuterClass {
        * Name of the disk.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -5174,7 +5174,7 @@ public final class DiskServiceOuterClass {
        * Name of the disk.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -5195,7 +5195,7 @@ public final class DiskServiceOuterClass {
        * Name of the disk.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -5214,7 +5214,7 @@ public final class DiskServiceOuterClass {
        * Name of the disk.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -5228,7 +5228,7 @@ public final class DiskServiceOuterClass {
        * Name of the disk.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -7310,7 +7310,7 @@ public final class DiskServiceOuterClass {
      * Name of the disk.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -7319,7 +7319,7 @@ public final class DiskServiceOuterClass {
      * Name of the disk.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -7689,7 +7689,7 @@ public final class DiskServiceOuterClass {
      * Name of the disk.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -7710,7 +7710,7 @@ public final class DiskServiceOuterClass {
      * Name of the disk.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -8655,7 +8655,7 @@ public final class DiskServiceOuterClass {
        * Name of the disk.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -8675,7 +8675,7 @@ public final class DiskServiceOuterClass {
        * Name of the disk.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -8696,7 +8696,7 @@ public final class DiskServiceOuterClass {
        * Name of the disk.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -8715,7 +8715,7 @@ public final class DiskServiceOuterClass {
        * Name of the disk.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -8729,7 +8729,7 @@ public final class DiskServiceOuterClass {
        * Name of the disk.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -19072,119 +19072,119 @@ public final class DiskServiceOuterClass {
       "0\022\033\n\010order_by\030\005 \001(\tB\t\212\3101\005<=100\"Z\n\021ListDi" +
       "sksResponse\022,\n\005disks\030\001 \003(\0132\035.yandex.clou" +
       "d.compute.v1.Disk\022\027\n\017next_page_token\030\002 \001" +
-      "(\t\"\342\005\n\021CreateDiskRequest\022\037\n\tfolder_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a" +
-      "-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descrip" +
-      "tion\030\003 \001(\tB\t\212\3101\005<=256\022\217\001\n\006labels\030\004 \003(\01326" +
-      ".yandex.cloud.compute.v1.CreateDiskReque" +
-      "st.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_." +
-      "/\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0" +
-      "-9a-z]*\022\031\n\007type_id\030\005 \001(\tB\010\212\3101\004<=50\022\035\n\007zo" +
-      "ne_id\030\006 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004size\030\007 \001(\003B" +
-      "\036\350\3071\001\372\3071\0264194304-28587302322176\022\034\n\010image" +
-      "_id\030\010 \001(\tB\010\212\3101\004<=50H\000\022\037\n\013snapshot_id\030\t \001" +
-      "(\tB\010\212\3101\004<=50H\000\022\022\n\nblock_size\030\n \001(\003\022K\n\025di" +
-      "sk_placement_policy\030\013 \001(\0132,.yandex.cloud" +
-      ".compute.v1.DiskPlacementPolicy\022\035\n\025snaps" +
-      "hot_schedule_ids\030\014 \003(\t\022H\n\023hardware_gener" +
-      "ation\030\r \001(\0132+.yandex.cloud.compute.v1.Ha" +
-      "rdwareGeneration\022\034\n\nkms_key_id\030\016 \001(\tB\010\212\310" +
-      "1\004<=50\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t:\0028\001B\010\n\006source\"%\n\022CreateDiskMet" +
-      "adata\022\017\n\007disk_id\030\001 \001(\t\"\356\003\n\021UpdateDiskReq" +
-      "uest\022\035\n\007disk_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013u" +
-      "pdate_mask\030\002 \001(\0132\032.google.protobuf.Field" +
-      "Mask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]" +
-      "{0,61}[a-z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212" +
-      "\3101\005<=256\022\217\001\n\006labels\030\005 \003(\01326.yandex.cloud" +
-      ".compute.v1.UpdateDiskRequest.LabelsEntr" +
-      "yBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\310" +
-      "1\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\'\n\004si" +
-      "ze\030\006 \001(\003B\031\372\3071\0254194304-4398046511104\022K\n\025d" +
-      "isk_placement_policy\030\007 \001(\0132,.yandex.clou" +
-      "d.compute.v1.DiskPlacementPolicy\032-\n\013Labe" +
-      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
-      "%\n\022UpdateDiskMetadata\022\017\n\007disk_id\030\001 \001(\t\"2" +
-      "\n\021DeleteDiskRequest\022\035\n\007disk_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\"%\n\022DeleteDiskMetadata\022\017\n\007disk" +
-      "_id\030\001 \001(\t\"x\n\031ListDiskOperationsRequest\022\035" +
-      "\n\007disk_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_si" +
-      "ze\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\t" +
-      "B\t\212\3101\005<=100\"l\n\032ListDiskOperationsRespons" +
-      "e\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.ope" +
-      "ration.Operation\022\027\n\017next_page_token\030\002 \001(" +
-      "\t\"]\n\017MoveDiskRequest\022\035\n\007disk_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022+\n\025destination_folder_id\030\002 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\"\\\n\020MoveDiskMetadata\022\017\n\007" +
-      "disk_id\030\001 \001(\t\022\030\n\020source_folder_id\030\002 \001(\t\022" +
-      "\035\n\025destination_folder_id\030\003 \001(\t\"\254\001\n\023Reloc" +
-      "ateDiskRequest\022\035\n\007disk_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022)\n\023destination_zone_id\030\002 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022K\n\025disk_placement_policy\030\003 \001(\0132" +
-      ",.yandex.cloud.compute.v1.DiskPlacementP" +
-      "olicy\"\\\n\024RelocateDiskMetadata\022\017\n\007disk_id" +
-      "\030\001 \001(\t\022\026\n\016source_zone_id\030\002 \001(\t\022\033\n\023destin" +
-      "ation_zone_id\030\003 \001(\t\"Z\n ListDiskSnapshotS" +
-      "chedulesRequest\022\017\n\007disk_id\030\001 \001(\t\022\021\n\tpage" +
-      "_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\"\203\001\n!List" +
-      "DiskSnapshotSchedulesResponse\022E\n\022snapsho" +
-      "t_schedules\030\001 \003(\0132).yandex.cloud.compute" +
-      ".v1.SnapshotSchedule\022\027\n\017next_page_token\030" +
-      "\002 \001(\t2\220\020\n\013DiskService\022r\n\003Get\022\'.yandex.cl" +
-      "oud.compute.v1.GetDiskRequest\032\035.yandex.c" +
-      "loud.compute.v1.Disk\"#\202\323\344\223\002\035\022\033/compute/v" +
-      "1/disks/{disk_id}\022x\n\004List\022).yandex.cloud" +
-      ".compute.v1.ListDisksRequest\032*.yandex.cl" +
-      "oud.compute.v1.ListDisksResponse\"\031\202\323\344\223\002\023" +
-      "\022\021/compute/v1/disks\022\223\001\n\006Create\022*.yandex." +
-      "cloud.compute.v1.CreateDiskRequest\032!.yan" +
-      "dex.cloud.operation.Operation\":\202\323\344\223\002\026\"\021/" +
-      "compute/v1/disks:\001*\262\322*\032\n\022CreateDiskMetad" +
-      "ata\022\004Disk\022\235\001\n\006Update\022*.yandex.cloud.comp" +
-      "ute.v1.UpdateDiskRequest\032!.yandex.cloud." +
-      "operation.Operation\"D\202\323\344\223\002 2\033/compute/v1" +
-      "/disks/{disk_id}:\001*\262\322*\032\n\022UpdateDiskMetad" +
-      "ata\022\004Disk\022\253\001\n\006Delete\022*.yandex.cloud.comp" +
-      "ute.v1.DeleteDiskRequest\032!.yandex.cloud." +
-      "operation.Operation\"R\202\323\344\223\002\035*\033/compute/v1" +
-      "/disks/{disk_id}\262\322*+\n\022DeleteDiskMetadata" +
-      "\022\025google.protobuf.Empty\022\251\001\n\016ListOperatio" +
-      "ns\0222.yandex.cloud.compute.v1.ListDiskOpe" +
-      "rationsRequest\0323.yandex.cloud.compute.v1" +
-      ".ListDiskOperationsResponse\".\202\323\344\223\002(\022&/co" +
-      "mpute/v1/disks/{disk_id}/operations\022\234\001\n\004" +
-      "Move\022(.yandex.cloud.compute.v1.MoveDiskR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"G\202\323\344\223\002%\" /compute/v1/disks/{disk_id}:m" +
-      "ove:\001*\262\322*\030\n\020MoveDiskMetadata\022\004Disk\022\254\001\n\010R" +
-      "elocate\022,.yandex.cloud.compute.v1.Reloca" +
-      "teDiskRequest\032!.yandex.cloud.operation.O" +
-      "peration\"O\202\323\344\223\002)\"$/compute/v1/disks/{dis" +
-      "k_id}:relocate:\001*\262\322*\034\n\024RelocateDiskMetad" +
-      "ata\022\004Disk\022\216\001\n\025ListSnapshotSchedules\0229.ya" +
-      "ndex.cloud.compute.v1.ListDiskSnapshotSc" +
-      "hedulesRequest\032:.yandex.cloud.compute.v1" +
-      ".ListDiskSnapshotSchedulesResponse\022\261\001\n\022L" +
-      "istAccessBindings\022..yandex.cloud.access." +
-      "ListAccessBindingsRequest\032/.yandex.cloud" +
-      ".access.ListAccessBindingsResponse\":\202\323\344\223" +
-      "\0024\0222/compute/v1/disks/{resource_id}:list" +
-      "AccessBindings\022\360\001\n\021SetAccessBindings\022-.y" +
-      "andex.cloud.access.SetAccessBindingsRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"\210" +
-      "\001\202\323\344\223\0026\"1/compute/v1/disks/{resource_id}" +
-      ":setAccessBindings:\001*\262\322*H\n access.SetAcc" +
-      "essBindingsMetadata\022$access.AccessBindin" +
-      "gsOperationResult\022\374\001\n\024UpdateAccessBindin" +
-      "gs\0220.yandex.cloud.access.UpdateAccessBin" +
-      "dingsRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"\216\001\202\323\344\223\0029\"4/compute/v1/disks/{res" +
-      "ource_id}:updateAccessBindings:\001*\262\322*K\n#a" +
-      "ccess.UpdateAccessBindingsMetadata\022$acce" +
-      "ss.AccessBindingsOperationResultBb\n\033yand" +
-      "ex.cloud.api.compute.v1ZCgithub.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/comput" +
-      "e/v1;computeb\006proto3"
+      "(\t\"\343\005\n\021CreateDiskRequest\022\037\n\tfolder_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\0223\n\004name\030\002 \001(\tB%\362\3071!|[a" +
+      "-z]([-_a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descri" +
+      "ption\030\003 \001(\tB\t\212\3101\005<=256\022\217\001\n\006labels\030\004 \003(\0132" +
+      "6.yandex.cloud.compute.v1.CreateDiskRequ" +
+      "est.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_" +
+      "./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@" +
+      "0-9a-z]*\022\031\n\007type_id\030\005 \001(\tB\010\212\3101\004<=50\022\035\n\007z" +
+      "one_id\030\006 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004size\030\007 \001(\003" +
+      "B\036\350\3071\001\372\3071\0264194304-28587302322176\022\034\n\010imag" +
+      "e_id\030\010 \001(\tB\010\212\3101\004<=50H\000\022\037\n\013snapshot_id\030\t " +
+      "\001(\tB\010\212\3101\004<=50H\000\022\022\n\nblock_size\030\n \001(\003\022K\n\025d" +
+      "isk_placement_policy\030\013 \001(\0132,.yandex.clou" +
+      "d.compute.v1.DiskPlacementPolicy\022\035\n\025snap" +
+      "shot_schedule_ids\030\014 \003(\t\022H\n\023hardware_gene" +
+      "ration\030\r \001(\0132+.yandex.cloud.compute.v1.H" +
+      "ardwareGeneration\022\034\n\nkms_key_id\030\016 \001(\tB\010\212" +
+      "\3101\004<=50\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001B\010\n\006source\"%\n\022CreateDiskMe" +
+      "tadata\022\017\n\007disk_id\030\001 \001(\t\"\357\003\n\021UpdateDiskRe" +
+      "quest\022\035\n\007disk_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013" +
+      "update_mask\030\002 \001(\0132\032.google.protobuf.Fiel" +
+      "dMask\0223\n\004name\030\003 \001(\tB%\362\3071!|[a-z]([-_a-z0-" +
+      "9]{0,61}[a-z0-9])?\022\036\n\013description\030\004 \001(\tB" +
+      "\t\212\3101\005<=256\022\217\001\n\006labels\030\005 \003(\01326.yandex.clo" +
+      "ud.compute.v1.UpdateDiskRequest.LabelsEn" +
+      "tryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*" +
+      "\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\'\n\004" +
+      "size\030\006 \001(\003B\031\372\3071\0254194304-4398046511104\022K\n" +
+      "\025disk_placement_policy\030\007 \001(\0132,.yandex.cl" +
+      "oud.compute.v1.DiskPlacementPolicy\032-\n\013La" +
+      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\"%\n\022UpdateDiskMetadata\022\017\n\007disk_id\030\001 \001(\t" +
+      "\"2\n\021DeleteDiskRequest\022\035\n\007disk_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\"%\n\022DeleteDiskMetadata\022\017\n\007di" +
+      "sk_id\030\001 \001(\t\"x\n\031ListDiskOperationsRequest" +
+      "\022\035\n\007disk_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_" +
+      "size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001" +
+      "(\tB\t\212\3101\005<=100\"l\n\032ListDiskOperationsRespo" +
+      "nse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.o" +
+      "peration.Operation\022\027\n\017next_page_token\030\002 " +
+      "\001(\t\"]\n\017MoveDiskRequest\022\035\n\007disk_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\022+\n\025destination_folder_id\030\002" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\"\\\n\020MoveDiskMetadata\022\017" +
+      "\n\007disk_id\030\001 \001(\t\022\030\n\020source_folder_id\030\002 \001(" +
+      "\t\022\035\n\025destination_folder_id\030\003 \001(\t\"\254\001\n\023Rel" +
+      "ocateDiskRequest\022\035\n\007disk_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022)\n\023destination_zone_id\030\002 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\022K\n\025disk_placement_policy\030\003 \001(" +
+      "\0132,.yandex.cloud.compute.v1.DiskPlacemen" +
+      "tPolicy\"\\\n\024RelocateDiskMetadata\022\017\n\007disk_" +
+      "id\030\001 \001(\t\022\026\n\016source_zone_id\030\002 \001(\t\022\033\n\023dest" +
+      "ination_zone_id\030\003 \001(\t\"Z\n ListDiskSnapsho" +
+      "tSchedulesRequest\022\017\n\007disk_id\030\001 \001(\t\022\021\n\tpa" +
+      "ge_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\"\203\001\n!Li" +
+      "stDiskSnapshotSchedulesResponse\022E\n\022snaps" +
+      "hot_schedules\030\001 \003(\0132).yandex.cloud.compu" +
+      "te.v1.SnapshotSchedule\022\027\n\017next_page_toke" +
+      "n\030\002 \001(\t2\220\020\n\013DiskService\022r\n\003Get\022\'.yandex." +
+      "cloud.compute.v1.GetDiskRequest\032\035.yandex" +
+      ".cloud.compute.v1.Disk\"#\202\323\344\223\002\035\022\033/compute" +
+      "/v1/disks/{disk_id}\022x\n\004List\022).yandex.clo" +
+      "ud.compute.v1.ListDisksRequest\032*.yandex." +
+      "cloud.compute.v1.ListDisksResponse\"\031\202\323\344\223" +
+      "\002\023\022\021/compute/v1/disks\022\223\001\n\006Create\022*.yande" +
+      "x.cloud.compute.v1.CreateDiskRequest\032!.y" +
+      "andex.cloud.operation.Operation\":\202\323\344\223\002\026\"" +
+      "\021/compute/v1/disks:\001*\262\322*\032\n\022CreateDiskMet" +
+      "adata\022\004Disk\022\235\001\n\006Update\022*.yandex.cloud.co" +
+      "mpute.v1.UpdateDiskRequest\032!.yandex.clou" +
+      "d.operation.Operation\"D\202\323\344\223\002 2\033/compute/" +
+      "v1/disks/{disk_id}:\001*\262\322*\032\n\022UpdateDiskMet" +
+      "adata\022\004Disk\022\253\001\n\006Delete\022*.yandex.cloud.co" +
+      "mpute.v1.DeleteDiskRequest\032!.yandex.clou" +
+      "d.operation.Operation\"R\202\323\344\223\002\035*\033/compute/" +
+      "v1/disks/{disk_id}\262\322*+\n\022DeleteDiskMetada" +
+      "ta\022\025google.protobuf.Empty\022\251\001\n\016ListOperat" +
+      "ions\0222.yandex.cloud.compute.v1.ListDiskO" +
+      "perationsRequest\0323.yandex.cloud.compute." +
+      "v1.ListDiskOperationsResponse\".\202\323\344\223\002(\022&/" +
+      "compute/v1/disks/{disk_id}/operations\022\234\001" +
+      "\n\004Move\022(.yandex.cloud.compute.v1.MoveDis" +
+      "kRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"G\202\323\344\223\002%\" /compute/v1/disks/{disk_id}" +
+      ":move:\001*\262\322*\030\n\020MoveDiskMetadata\022\004Disk\022\254\001\n" +
+      "\010Relocate\022,.yandex.cloud.compute.v1.Relo" +
+      "cateDiskRequest\032!.yandex.cloud.operation" +
+      ".Operation\"O\202\323\344\223\002)\"$/compute/v1/disks/{d" +
+      "isk_id}:relocate:\001*\262\322*\034\n\024RelocateDiskMet" +
+      "adata\022\004Disk\022\216\001\n\025ListSnapshotSchedules\0229." +
+      "yandex.cloud.compute.v1.ListDiskSnapshot" +
+      "SchedulesRequest\032:.yandex.cloud.compute." +
+      "v1.ListDiskSnapshotSchedulesResponse\022\261\001\n" +
+      "\022ListAccessBindings\022..yandex.cloud.acces" +
+      "s.ListAccessBindingsRequest\032/.yandex.clo" +
+      "ud.access.ListAccessBindingsResponse\":\202\323" +
+      "\344\223\0024\0222/compute/v1/disks/{resource_id}:li" +
+      "stAccessBindings\022\360\001\n\021SetAccessBindings\022-" +
+      ".yandex.cloud.access.SetAccessBindingsRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"\210\001\202\323\344\223\0026\"1/compute/v1/disks/{resource_i" +
+      "d}:setAccessBindings:\001*\262\322*H\n access.SetA" +
+      "ccessBindingsMetadata\022$access.AccessBind" +
+      "ingsOperationResult\022\374\001\n\024UpdateAccessBind" +
+      "ings\0220.yandex.cloud.access.UpdateAccessB" +
+      "indingsRequest\032!.yandex.cloud.operation." +
+      "Operation\"\216\001\202\323\344\223\0029\"4/compute/v1/disks/{r" +
+      "esource_id}:updateAccessBindings:\001*\262\322*K\n" +
+      "#access.UpdateAccessBindingsMetadata\022$ac" +
+      "cess.AccessBindingsOperationResultBb\n\033ya" +
+      "ndex.cloud.api.compute.v1ZCgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/comp" +
+      "ute/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

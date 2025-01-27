@@ -3428,7 +3428,7 @@ public final class InstanceServiceOuterClass {
      * Name of the instance.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -3437,7 +3437,7 @@ public final class InstanceServiceOuterClass {
      * Name of the instance.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -3935,7 +3935,7 @@ public final class InstanceServiceOuterClass {
      * and FQDN will be `&lt;id&gt;.auto.internal`. Otherwise FQDN will be `&lt;hostname&gt;.&lt;region_id&gt;.internal`.
      * </pre>
      *
-     * <code>string hostname = 12 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string hostname = 12 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The hostname.
      */
     java.lang.String getHostname();
@@ -3948,7 +3948,7 @@ public final class InstanceServiceOuterClass {
      * and FQDN will be `&lt;id&gt;.auto.internal`. Otherwise FQDN will be `&lt;hostname&gt;.&lt;region_id&gt;.internal`.
      * </pre>
      *
-     * <code>string hostname = 12 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string hostname = 12 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString
@@ -4555,7 +4555,7 @@ public final class InstanceServiceOuterClass {
      * Name of the instance.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -4576,7 +4576,7 @@ public final class InstanceServiceOuterClass {
      * Name of the instance.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -5344,7 +5344,7 @@ public final class InstanceServiceOuterClass {
      * and FQDN will be `&lt;id&gt;.auto.internal`. Otherwise FQDN will be `&lt;hostname&gt;.&lt;region_id&gt;.internal`.
      * </pre>
      *
-     * <code>string hostname = 12 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string hostname = 12 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The hostname.
      */
     @java.lang.Override
@@ -5369,7 +5369,7 @@ public final class InstanceServiceOuterClass {
      * and FQDN will be `&lt;id&gt;.auto.internal`. Otherwise FQDN will be `&lt;hostname&gt;.&lt;region_id&gt;.internal`.
      * </pre>
      *
-     * <code>string hostname = 12 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string hostname = 12 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for hostname.
      */
     @java.lang.Override
@@ -6789,7 +6789,7 @@ public final class InstanceServiceOuterClass {
        * Name of the instance.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -6809,7 +6809,7 @@ public final class InstanceServiceOuterClass {
        * Name of the instance.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -6830,7 +6830,7 @@ public final class InstanceServiceOuterClass {
        * Name of the instance.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -6849,7 +6849,7 @@ public final class InstanceServiceOuterClass {
        * Name of the instance.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -6863,7 +6863,7 @@ public final class InstanceServiceOuterClass {
        * Name of the instance.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -9349,7 +9349,7 @@ public final class InstanceServiceOuterClass {
        * and FQDN will be `&lt;id&gt;.auto.internal`. Otherwise FQDN will be `&lt;hostname&gt;.&lt;region_id&gt;.internal`.
        * </pre>
        *
-       * <code>string hostname = 12 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string hostname = 12 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The hostname.
        */
       public java.lang.String getHostname() {
@@ -9373,7 +9373,7 @@ public final class InstanceServiceOuterClass {
        * and FQDN will be `&lt;id&gt;.auto.internal`. Otherwise FQDN will be `&lt;hostname&gt;.&lt;region_id&gt;.internal`.
        * </pre>
        *
-       * <code>string hostname = 12 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string hostname = 12 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The bytes for hostname.
        */
       public com.google.protobuf.ByteString
@@ -9398,7 +9398,7 @@ public final class InstanceServiceOuterClass {
        * and FQDN will be `&lt;id&gt;.auto.internal`. Otherwise FQDN will be `&lt;hostname&gt;.&lt;region_id&gt;.internal`.
        * </pre>
        *
-       * <code>string hostname = 12 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string hostname = 12 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The hostname to set.
        * @return This builder for chaining.
        */
@@ -9421,7 +9421,7 @@ public final class InstanceServiceOuterClass {
        * and FQDN will be `&lt;id&gt;.auto.internal`. Otherwise FQDN will be `&lt;hostname&gt;.&lt;region_id&gt;.internal`.
        * </pre>
        *
-       * <code>string hostname = 12 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string hostname = 12 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearHostname() {
@@ -9439,7 +9439,7 @@ public final class InstanceServiceOuterClass {
        * and FQDN will be `&lt;id&gt;.auto.internal`. Otherwise FQDN will be `&lt;hostname&gt;.&lt;region_id&gt;.internal`.
        * </pre>
        *
-       * <code>string hostname = 12 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string hostname = 12 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
        */
@@ -11274,7 +11274,7 @@ public final class InstanceServiceOuterClass {
      * Name of the instance.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -11283,7 +11283,7 @@ public final class InstanceServiceOuterClass {
      * Name of the instance.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -12070,7 +12070,7 @@ public final class InstanceServiceOuterClass {
      * Name of the instance.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -12091,7 +12091,7 @@ public final class InstanceServiceOuterClass {
      * Name of the instance.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -13745,7 +13745,7 @@ public final class InstanceServiceOuterClass {
        * Name of the instance.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -13765,7 +13765,7 @@ public final class InstanceServiceOuterClass {
        * Name of the instance.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -13786,7 +13786,7 @@ public final class InstanceServiceOuterClass {
        * Name of the instance.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -13805,7 +13805,7 @@ public final class InstanceServiceOuterClass {
        * Name of the instance.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -13819,7 +13819,7 @@ public final class InstanceServiceOuterClass {
        * Name of the instance.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -46143,7 +46143,7 @@ public final class InstanceServiceOuterClass {
        * Name of the disk.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The name.
        */
       java.lang.String getName();
@@ -46152,7 +46152,7 @@ public final class InstanceServiceOuterClass {
        * Name of the disk.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The bytes for name.
        */
       com.google.protobuf.ByteString
@@ -46515,7 +46515,7 @@ public final class InstanceServiceOuterClass {
        * Name of the disk.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The name.
        */
       @java.lang.Override
@@ -46536,7 +46536,7 @@ public final class InstanceServiceOuterClass {
        * Name of the disk.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The bytes for name.
        */
       @java.lang.Override
@@ -47393,7 +47393,7 @@ public final class InstanceServiceOuterClass {
          * Name of the disk.
          * </pre>
          *
-         * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+         * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
          * @return The name.
          */
         public java.lang.String getName() {
@@ -47413,7 +47413,7 @@ public final class InstanceServiceOuterClass {
          * Name of the disk.
          * </pre>
          *
-         * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+         * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
          * @return The bytes for name.
          */
         public com.google.protobuf.ByteString
@@ -47434,7 +47434,7 @@ public final class InstanceServiceOuterClass {
          * Name of the disk.
          * </pre>
          *
-         * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+         * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
          * @param value The name to set.
          * @return This builder for chaining.
          */
@@ -47453,7 +47453,7 @@ public final class InstanceServiceOuterClass {
          * Name of the disk.
          * </pre>
          *
-         * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+         * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
          * @return This builder for chaining.
          */
         public Builder clearName() {
@@ -47467,7 +47467,7 @@ public final class InstanceServiceOuterClass {
          * Name of the disk.
          * </pre>
          *
-         * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+         * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?"];</code>
          * @param value The bytes for name to set.
          * @return This builder for chaining.
          */
@@ -63347,375 +63347,375 @@ public final class InstanceServiceOuterClass {
       "=1000\022\033\n\010order_by\030\005 \001(\tB\t\212\3101\005<=100\"f\n\025Li" +
       "stInstancesResponse\0224\n\tinstances\030\001 \003(\0132!" +
       ".yandex.cloud.compute.v1.Instance\022\027\n\017nex" +
-      "t_page_token\030\002 \001(\t\"\326\014\n\025CreateInstanceReq" +
-      "uest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n" +
-      "\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[" +
-      "a-z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=25" +
-      "6\022\223\001\n\006labels\030\004 \003(\0132:.yandex.cloud.comput" +
-      "e.v1.CreateInstanceRequest.LabelsEntryBG" +
-      "\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032" +
-      "\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\035\n\007zone_" +
-      "id\030\005 \001(\tB\014\350\3071\001\212\3101\004<=50\022\031\n\013platform_id\030\006 " +
-      "\001(\tB\004\350\3071\001\022D\n\016resources_spec\030\007 \001(\0132&.yand" +
-      "ex.cloud.compute.v1.ResourcesSpecB\004\350\3071\001\022" +
-      "N\n\010metadata\030\010 \003(\0132<.yandex.cloud.compute" +
-      ".v1.CreateInstanceRequest.MetadataEntry\022" +
-      "B\n\020metadata_options\030\023 \001(\0132(.yandex.cloud" +
-      ".compute.v1.MetadataOptions\022G\n\016boot_disk" +
-      "_spec\030\t \001(\0132).yandex.cloud.compute.v1.At" +
-      "tachedDiskSpecB\004\350\3071\001\022P\n\024secondary_disk_s" +
-      "pecs\030\n \003(\0132).yandex.cloud.compute.v1.Att" +
-      "achedDiskSpecB\007\202\3101\003<=3\022H\n\020local_disk_spe" +
-      "cs\030\022 \003(\0132..yandex.cloud.compute.v1.Attac" +
-      "hedLocalDiskSpec\022I\n\020filesystem_specs\030\021 \003" +
-      "(\0132/.yandex.cloud.compute.v1.AttachedFil" +
-      "esystemSpec\022T\n\027network_interface_specs\030\013" +
-      " \003(\0132-.yandex.cloud.compute.v1.NetworkIn" +
-      "terfaceSpecB\004\350\3071\001\0226\n\010hostname\030\014 \001(\tB$\362\3071" +
-      " |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022D\n\021sch" +
-      "eduling_policy\030\r \001(\0132).yandex.cloud.comp" +
-      "ute.v1.SchedulingPolicy\022\032\n\022service_accou" +
-      "nt_id\030\016 \001(\t\022B\n\020network_settings\030\017 \001(\0132(." +
-      "yandex.cloud.compute.v1.NetworkSettings\022" +
-      "B\n\020placement_policy\030\020 \001(\0132(.yandex.cloud" +
-      ".compute.v1.PlacementPolicy\022:\n\014gpu_setti" +
-      "ngs\030\024 \001(\0132$.yandex.cloud.compute.v1.GpuS" +
-      "ettings\022F\n\022maintenance_policy\030\025 \001(\0162*.ya" +
-      "ndex.cloud.compute.v1.MaintenancePolicy\022" +
-      "G\n\030maintenance_grace_period\030\026 \001(\0132\031.goog" +
-      "le.protobuf.DurationB\n\372\3071\0061s-24h\022I\n\024seri" +
-      "al_port_settings\030\027 \001(\0132+.yandex.cloud.co" +
-      "mpute.v1.SerialPortSettings\032-\n\013LabelsEnt" +
-      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\rMe" +
-      "tadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001\"7\n\026CreateInstanceMetadata\022\035\n\013instanc" +
-      "e_id\030\001 \001(\tB\010\212\3101\004<=50\"\344\010\n\025UpdateInstanceR" +
-      "equest\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\022/\n\013update_mask\030\002 \001(\0132\032.google.protobuf" +
-      ".FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a" +
-      "-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\004 " +
-      "\001(\tB\t\212\3101\005<=256\022\223\001\n\006labels\030\005 \003(\0132:.yandex" +
-      ".cloud.compute.v1.UpdateInstanceRequest." +
-      "LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@" +
-      "0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a" +
-      "-z]*\022\023\n\013platform_id\030\006 \001(\t\022>\n\016resources_s" +
-      "pec\030\007 \001(\0132&.yandex.cloud.compute.v1.Reso" +
-      "urcesSpec\022N\n\010metadata\030\010 \003(\0132<.yandex.clo" +
-      "ud.compute.v1.UpdateInstanceRequest.Meta" +
-      "dataEntry\022B\n\020metadata_options\030\r \001(\0132(.ya" +
-      "ndex.cloud.compute.v1.MetadataOptions\022\032\n" +
-      "\022service_account_id\030\t \001(\t\022B\n\020network_set" +
-      "tings\030\n \001(\0132(.yandex.cloud.compute.v1.Ne" +
-      "tworkSettings\022B\n\020placement_policy\030\013 \001(\0132" +
-      "(.yandex.cloud.compute.v1.PlacementPolic" +
-      "y\022D\n\021scheduling_policy\030\014 \001(\0132).yandex.cl" +
-      "oud.compute.v1.SchedulingPolicy\022F\n\022maint" +
-      "enance_policy\030\016 \001(\0162*.yandex.cloud.compu" +
-      "te.v1.MaintenancePolicy\022G\n\030maintenance_g" +
-      "race_period\030\017 \001(\0132\031.google.protobuf.Dura" +
-      "tionB\n\372\3071\0061s-24h\022I\n\024serial_port_settings" +
-      "\030\020 \001(\0132+.yandex.cloud.compute.v1.SerialP" +
-      "ortSettings\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\032/\n\rMetadataEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\026UpdateIns" +
-      "tanceMetadata\022\023\n\013instance_id\030\001 \001(\t\":\n\025De" +
-      "leteInstanceRequest\022!\n\013instance_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\"-\n\026DeleteInstanceMetadata" +
-      "\022\023\n\013instance_id\030\001 \001(\t\"\307\001\n\035UpdateInstance" +
-      "MetadataRequest\022\023\n\013instance_id\030\001 \001(\t\022\016\n\006" +
-      "delete\030\002 \003(\t\022R\n\006upsert\030\003 \003(\0132B.yandex.cl" +
-      "oud.compute.v1.UpdateInstanceMetadataReq" +
-      "uest.UpsertEntry\032-\n\013UpsertEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"5\n\036UpdateInstanc" +
-      "eMetadataMetadata\022\023\n\013instance_id\030\001 \001(\t\"b" +
-      "\n\"GetInstanceSerialPortOutputRequest\022!\n\013" +
-      "instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\031\n\004port\030" +
-      "\002 \001(\003B\013\372\3071\0071,2,3,4\"7\n#GetInstanceSerialP" +
-      "ortOutputResponse\022\020\n\010contents\030\001 \001(\t\"8\n\023S" +
-      "topInstanceRequest\022!\n\013instance_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\"+\n\024StopInstanceMetadata\022\023\n" +
-      "\013instance_id\030\001 \001(\t\"9\n\024StartInstanceReque" +
-      "st\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\",\n" +
-      "\025StartInstanceMetadata\022\023\n\013instance_id\030\001 " +
-      "\001(\t\";\n\026RestartInstanceRequest\022!\n\013instanc" +
-      "e_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\".\n\027RestartInsta" +
-      "nceMetadata\022\023\n\013instance_id\030\001 \001(\t\"\213\001\n\031Att" +
-      "achInstanceDiskRequest\022!\n\013instance_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022K\n\022attached_disk_spec\030" +
-      "\002 \001(\0132).yandex.cloud.compute.v1.Attached" +
-      "DiskSpecB\004\350\3071\001\"B\n\032AttachInstanceDiskMeta" +
-      "data\022\023\n\013instance_id\030\001 \001(\t\022\017\n\007disk_id\030\002 \001" +
-      "(\t\"\232\001\n\031DetachInstanceDiskRequest\022!\n\013inst" +
-      "ance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\007disk_id\030\002" +
+      "t_page_token\030\002 \001(\t\"\330\014\n\025CreateInstanceReq" +
+      "uest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0223\n" +
+      "\004name\030\002 \001(\tB%\362\3071!|[a-z]([-_a-z0-9]{0,61}" +
+      "[a-z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=2" +
+      "56\022\223\001\n\006labels\030\004 \003(\0132:.yandex.cloud.compu" +
+      "te.v1.CreateInstanceRequest.LabelsEntryB" +
+      "G\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006" +
+      "\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\035\n\007zone" +
+      "_id\030\005 \001(\tB\014\350\3071\001\212\3101\004<=50\022\031\n\013platform_id\030\006" +
+      " \001(\tB\004\350\3071\001\022D\n\016resources_spec\030\007 \001(\0132&.yan" +
+      "dex.cloud.compute.v1.ResourcesSpecB\004\350\3071\001" +
+      "\022N\n\010metadata\030\010 \003(\0132<.yandex.cloud.comput" +
+      "e.v1.CreateInstanceRequest.MetadataEntry" +
+      "\022B\n\020metadata_options\030\023 \001(\0132(.yandex.clou" +
+      "d.compute.v1.MetadataOptions\022G\n\016boot_dis" +
+      "k_spec\030\t \001(\0132).yandex.cloud.compute.v1.A" +
+      "ttachedDiskSpecB\004\350\3071\001\022P\n\024secondary_disk_" +
+      "specs\030\n \003(\0132).yandex.cloud.compute.v1.At" +
+      "tachedDiskSpecB\007\202\3101\003<=3\022H\n\020local_disk_sp" +
+      "ecs\030\022 \003(\0132..yandex.cloud.compute.v1.Atta" +
+      "chedLocalDiskSpec\022I\n\020filesystem_specs\030\021 " +
+      "\003(\0132/.yandex.cloud.compute.v1.AttachedFi" +
+      "lesystemSpec\022T\n\027network_interface_specs\030" +
+      "\013 \003(\0132-.yandex.cloud.compute.v1.NetworkI" +
+      "nterfaceSpecB\004\350\3071\001\0227\n\010hostname\030\014 \001(\tB%\362\307" +
+      "1!|[a-z]([-_a-z0-9]{0,61}[a-z0-9])?\022D\n\021s" +
+      "cheduling_policy\030\r \001(\0132).yandex.cloud.co" +
+      "mpute.v1.SchedulingPolicy\022\032\n\022service_acc" +
+      "ount_id\030\016 \001(\t\022B\n\020network_settings\030\017 \001(\0132" +
+      "(.yandex.cloud.compute.v1.NetworkSetting" +
+      "s\022B\n\020placement_policy\030\020 \001(\0132(.yandex.clo" +
+      "ud.compute.v1.PlacementPolicy\022:\n\014gpu_set" +
+      "tings\030\024 \001(\0132$.yandex.cloud.compute.v1.Gp" +
+      "uSettings\022F\n\022maintenance_policy\030\025 \001(\0162*." +
+      "yandex.cloud.compute.v1.MaintenancePolic" +
+      "y\022G\n\030maintenance_grace_period\030\026 \001(\0132\031.go" +
+      "ogle.protobuf.DurationB\n\372\3071\0061s-24h\022I\n\024se" +
+      "rial_port_settings\030\027 \001(\0132+.yandex.cloud." +
+      "compute.v1.SerialPortSettings\032-\n\013LabelsE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\r" +
+      "MetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\t:\0028\001\"7\n\026CreateInstanceMetadata\022\035\n\013insta" +
+      "nce_id\030\001 \001(\tB\010\212\3101\004<=50\"\345\010\n\025UpdateInstanc" +
+      "eRequest\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022/\n\013update_mask\030\002 \001(\0132\032.google.protob" +
+      "uf.FieldMask\0223\n\004name\030\003 \001(\tB%\362\3071!|[a-z]([" +
+      "-_a-z0-9]{0,61}[a-z0-9])?\022\036\n\013description" +
+      "\030\004 \001(\tB\t\212\3101\005<=256\022\223\001\n\006labels\030\005 \003(\0132:.yan" +
+      "dex.cloud.compute.v1.UpdateInstanceReque" +
+      "st.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_." +
+      "/\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0" +
+      "-9a-z]*\022\023\n\013platform_id\030\006 \001(\t\022>\n\016resource" +
+      "s_spec\030\007 \001(\0132&.yandex.cloud.compute.v1.R" +
+      "esourcesSpec\022N\n\010metadata\030\010 \003(\0132<.yandex." +
+      "cloud.compute.v1.UpdateInstanceRequest.M" +
+      "etadataEntry\022B\n\020metadata_options\030\r \001(\0132(" +
+      ".yandex.cloud.compute.v1.MetadataOptions" +
+      "\022\032\n\022service_account_id\030\t \001(\t\022B\n\020network_" +
+      "settings\030\n \001(\0132(.yandex.cloud.compute.v1" +
+      ".NetworkSettings\022B\n\020placement_policy\030\013 \001" +
+      "(\0132(.yandex.cloud.compute.v1.PlacementPo" +
+      "licy\022D\n\021scheduling_policy\030\014 \001(\0132).yandex" +
+      ".cloud.compute.v1.SchedulingPolicy\022F\n\022ma" +
+      "intenance_policy\030\016 \001(\0162*.yandex.cloud.co" +
+      "mpute.v1.MaintenancePolicy\022G\n\030maintenanc" +
+      "e_grace_period\030\017 \001(\0132\031.google.protobuf.D" +
+      "urationB\n\372\3071\0061s-24h\022I\n\024serial_port_setti" +
+      "ngs\030\020 \001(\0132+.yandex.cloud.compute.v1.Seri" +
+      "alPortSettings\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\rMetadataEntry\022\013" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\026Update" +
+      "InstanceMetadata\022\023\n\013instance_id\030\001 \001(\t\":\n" +
+      "\025DeleteInstanceRequest\022!\n\013instance_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\026DeleteInstanceMetad" +
+      "ata\022\023\n\013instance_id\030\001 \001(\t\"\307\001\n\035UpdateInsta" +
+      "nceMetadataRequest\022\023\n\013instance_id\030\001 \001(\t\022" +
+      "\016\n\006delete\030\002 \003(\t\022R\n\006upsert\030\003 \003(\0132B.yandex" +
+      ".cloud.compute.v1.UpdateInstanceMetadata" +
+      "Request.UpsertEntry\032-\n\013UpsertEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"5\n\036UpdateInst" +
+      "anceMetadataMetadata\022\023\n\013instance_id\030\001 \001(" +
+      "\t\"b\n\"GetInstanceSerialPortOutputRequest\022" +
+      "!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\031\n\004po" +
+      "rt\030\002 \001(\003B\013\372\3071\0071,2,3,4\"7\n#GetInstanceSeri" +
+      "alPortOutputResponse\022\020\n\010contents\030\001 \001(\t\"8" +
+      "\n\023StopInstanceRequest\022!\n\013instance_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\"+\n\024StopInstanceMetadata" +
+      "\022\023\n\013instance_id\030\001 \001(\t\"9\n\024StartInstanceRe" +
+      "quest\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\",\n\025StartInstanceMetadata\022\023\n\013instance_id" +
+      "\030\001 \001(\t\";\n\026RestartInstanceRequest\022!\n\013inst" +
+      "ance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\".\n\027RestartIn" +
+      "stanceMetadata\022\023\n\013instance_id\030\001 \001(\t\"\213\001\n\031" +
+      "AttachInstanceDiskRequest\022!\n\013instance_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022K\n\022attached_disk_sp" +
+      "ec\030\002 \001(\0132).yandex.cloud.compute.v1.Attac" +
+      "hedDiskSpecB\004\350\3071\001\"B\n\032AttachInstanceDiskM" +
+      "etadata\022\023\n\013instance_id\030\001 \001(\t\022\017\n\007disk_id\030" +
+      "\002 \001(\t\"\232\001\n\031DetachInstanceDiskRequest\022!\n\013i" +
+      "nstance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\007disk_i" +
+      "d\030\002 \001(\tB\010\212\3101\004<=50H\000\022/\n\013device_name\030\003 \001(\t" +
+      "B\030\362\3071\024[a-z][a-z0-9-_]{,19}H\000B\014\n\004disk\022\004\300\301" +
+      "1\001\"B\n\032DetachInstanceDiskMetadata\022\023\n\013inst" +
+      "ance_id\030\001 \001(\t\022\017\n\007disk_id\030\002 \001(\t\"\235\001\n\037Attac" +
+      "hInstanceFilesystemRequest\022!\n\013instance_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022W\n\030attached_filesy" +
+      "stem_spec\030\002 \001(\0132/.yandex.cloud.compute.v" +
+      "1.AttachedFilesystemSpecB\004\350\3071\001\"N\n Attach" +
+      "InstanceFilesystemMetadata\022\023\n\013instance_i" +
+      "d\030\001 \001(\t\022\025\n\rfilesystem_id\030\002 \001(\t\"\254\001\n\037Detac" +
+      "hInstanceFilesystemRequest\022!\n\013instance_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\rfilesystem_id\030\002" +
       " \001(\tB\010\212\3101\004<=50H\000\022/\n\013device_name\030\003 \001(\tB\030\362" +
-      "\3071\024[a-z][a-z0-9-_]{,19}H\000B\014\n\004disk\022\004\300\3011\001\"" +
-      "B\n\032DetachInstanceDiskMetadata\022\023\n\013instanc" +
-      "e_id\030\001 \001(\t\022\017\n\007disk_id\030\002 \001(\t\"\235\001\n\037AttachIn" +
-      "stanceFilesystemRequest\022!\n\013instance_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022W\n\030attached_filesyste" +
-      "m_spec\030\002 \001(\0132/.yandex.cloud.compute.v1.A" +
-      "ttachedFilesystemSpecB\004\350\3071\001\"N\n AttachIns" +
-      "tanceFilesystemMetadata\022\023\n\013instance_id\030\001" +
-      " \001(\t\022\025\n\rfilesystem_id\030\002 \001(\t\"\254\001\n\037DetachIn" +
-      "stanceFilesystemRequest\022!\n\013instance_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\rfilesystem_id\030\002 \001(" +
-      "\tB\010\212\3101\004<=50H\000\022/\n\013device_name\030\003 \001(\tB\030\362\3071\024" +
-      "[a-z][a-z0-9-_]{,19}H\000B\022\n\nfilesystem\022\004\300\301" +
-      "1\001\"N\n DetachInstanceFilesystemMetadata\022\023" +
-      "\n\013instance_id\030\001 \001(\t\022\025\n\rfilesystem_id\030\002 \001" +
-      "(\t\"\370\001\n%AttachInstanceNetworkInterfaceReq" +
-      "uest\022\031\n\013instance_id\030\001 \001(\tB\004\350\3071\001\022%\n\027netwo" +
-      "rk_interface_index\030\002 \001(\tB\004\350\3071\001\022\027\n\tsubnet" +
-      "_id\030\003 \001(\tB\004\350\3071\001\022L\n\027primary_v4_address_sp" +
-      "ec\030\004 \001(\0132+.yandex.cloud.compute.v1.Prima" +
-      "ryAddressSpec\022 \n\022security_group_ids\030\006 \003(" +
-      "\tB\004\350\3071\001J\004\010\005\020\006\"^\n&AttachInstanceNetworkIn" +
-      "terfaceMetadata\022\023\n\013instance_id\030\001 \001(\t\022\037\n\027" +
-      "network_interface_index\030\002 \001(\t\"i\n%DetachI" +
-      "nstanceNetworkInterfaceRequest\022\031\n\013instan" +
-      "ce_id\030\001 \001(\tB\004\350\3071\001\022%\n\027network_interface_i" +
-      "ndex\030\002 \001(\tB\004\350\3071\001\"^\n&DetachInstanceNetwor" +
+      "\3071\024[a-z][a-z0-9-_]{,19}H\000B\022\n\nfilesystem\022" +
+      "\004\300\3011\001\"N\n DetachInstanceFilesystemMetadat" +
+      "a\022\023\n\013instance_id\030\001 \001(\t\022\025\n\rfilesystem_id\030" +
+      "\002 \001(\t\"\370\001\n%AttachInstanceNetworkInterface" +
+      "Request\022\031\n\013instance_id\030\001 \001(\tB\004\350\3071\001\022%\n\027ne" +
+      "twork_interface_index\030\002 \001(\tB\004\350\3071\001\022\027\n\tsub" +
+      "net_id\030\003 \001(\tB\004\350\3071\001\022L\n\027primary_v4_address" +
+      "_spec\030\004 \001(\0132+.yandex.cloud.compute.v1.Pr" +
+      "imaryAddressSpec\022 \n\022security_group_ids\030\006" +
+      " \003(\tB\004\350\3071\001J\004\010\005\020\006\"^\n&AttachInstanceNetwor" +
       "kInterfaceMetadata\022\023\n\013instance_id\030\001 \001(\t\022" +
-      "\037\n\027network_interface_index\030\002 \001(\t\"\266\001\n\035Add" +
-      "InstanceOneToOneNatRequest\022\023\n\013instance_i" +
-      "d\030\001 \001(\t\022\037\n\027network_interface_index\030\002 \001(\t" +
-      "\022\030\n\020internal_address\030\003 \001(\t\022E\n\023one_to_one" +
-      "_nat_spec\030\004 \001(\0132(.yandex.cloud.compute.v" +
-      "1.OneToOneNatSpec\"5\n\036AddInstanceOneToOne" +
-      "NatMetadata\022\023\n\013instance_id\030\001 \001(\t\"r\n Remo" +
-      "veInstanceOneToOneNatRequest\022\023\n\013instance" +
-      "_id\030\001 \001(\t\022\037\n\027network_interface_index\030\002 \001" +
-      "(\t\022\030\n\020internal_address\030\003 \001(\t\"8\n!RemoveIn" +
-      "stanceOneToOneNatMetadata\022\023\n\013instance_id" +
-      "\030\001 \001(\t\"\345\002\n%UpdateInstanceNetworkInterfac" +
-      "eRequest\022\031\n\013instance_id\030\001 \001(\tB\004\350\3071\001\022%\n\027n" +
-      "etwork_interface_index\030\002 \001(\tB\004\350\3071\001\022/\n\013up" +
-      "date_mask\030\003 \001(\0132\032.google.protobuf.FieldM" +
-      "ask\022\021\n\tsubnet_id\030\004 \001(\t\022L\n\027primary_v4_add" +
-      "ress_spec\030\005 \001(\0132+.yandex.cloud.compute.v" +
-      "1.PrimaryAddressSpec\022L\n\027primary_v6_addre" +
-      "ss_spec\030\006 \001(\0132+.yandex.cloud.compute.v1." +
-      "PrimaryAddressSpec\022\032\n\022security_group_ids" +
-      "\030\007 \003(\t\"^\n&UpdateInstanceNetworkInterface" +
-      "Metadata\022\023\n\013instance_id\030\001 \001(\t\022\037\n\027network" +
-      "_interface_index\030\002 \001(\t\"L\n\'SimulateInstan" +
-      "ceMaintenanceEventRequest\022!\n\013instance_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"?\n(SimulateInstance" +
-      "MaintenanceEventMetadata\022\023\n\013instance_id\030" +
-      "\001 \001(\t\"\200\001\n\035ListInstanceOperationsRequest\022" +
-      "!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpa" +
-      "ge_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030" +
-      "\003 \001(\tB\t\212\3101\005<=100\"p\n\036ListInstanceOperatio" +
-      "nsResponse\0225\n\noperations\030\001 \003(\0132!.yandex." +
-      "cloud.operation.Operation\022\027\n\017next_page_t" +
-      "oken\030\002 \001(\t\"\347\001\n\rResourcesSpec\022&\n\006memory\030\001" +
-      " \001(\003B\026\350\3071\001\372\3071\016<=274877906944\022i\n\005cores\030\002 " +
-      "\001(\003BZ\350\3071\001\372\3071R2,4,6,8,10,12,14,16,18,20,2" +
-      "2,24,26,28,30,32,34,36,40,44,48,52,56,60" +
-      ",64,68,72,76,80\022(\n\rcore_fraction\030\003 \001(\003B\021" +
-      "\372\3071\r0,5,20,50,100\022\031\n\004gpus\030\004 \001(\003B\013\372\3071\0070,1" +
-      ",2,4\"\266\005\n\020AttachedDiskSpec\022<\n\004mode\030\001 \001(\0162" +
-      "..yandex.cloud.compute.v1.AttachedDiskSp" +
-      "ec.Mode\022-\n\013device_name\030\002 \001(\tB\030\362\3071\024[a-z][" +
-      "a-z0-9-_]{,19}\022\023\n\013auto_delete\030\003 \001(\010\022G\n\td" +
-      "isk_spec\030\004 \001(\01322.yandex.cloud.compute.v1" +
-      ".AttachedDiskSpec.DiskSpecH\000\022\033\n\007disk_id\030" +
-      "\005 \001(\tB\010\212\3101\004<=50H\000\032\356\002\n\010DiskSpec\0222\n\004name\030\001" +
-      " \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9]" +
-      ")?\022\036\n\013description\030\002 \001(\tB\t\212\3101\005<=256\022\031\n\007ty" +
-      "pe_id\030\003 \001(\tB\010\212\3101\004<=50\022+\n\004size\030\004 \001(\003B\035\350\3071" +
-      "\001\372\3071\0254194304-4398046511104\022\034\n\010image_id\030\005" +
-      " \001(\tB\010\212\3101\004<=50H\000\022\037\n\013snapshot_id\030\006 \001(\tB\010\212" +
-      "\3101\004<=50H\000\022K\n\025disk_placement_policy\030\007 \001(\013" +
-      "2,.yandex.cloud.compute.v1.DiskPlacement" +
-      "Policy\022\022\n\nblock_size\030\010 \001(\003\022\034\n\nkms_key_id" +
-      "\030\t \001(\tB\010\212\3101\004<=50B\010\n\006source\";\n\004Mode\022\024\n\020MO" +
-      "DE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_" +
-      "WRITE\020\002B\014\n\004disk\022\004\300\3011\001\"+\n\025AttachedLocalDi" +
-      "skSpec\022\022\n\004size\030\001 \001(\003B\004\350\3071\001\"\351\001\n\026AttachedF" +
-      "ilesystemSpec\022B\n\004mode\030\001 \001(\01624.yandex.clo" +
-      "ud.compute.v1.AttachedFilesystemSpec.Mod" +
-      "e\022-\n\013device_name\030\002 \001(\tB\030\362\3071\024[a-z][a-z0-9" +
-      "-_]{,19}\022\037\n\rfilesystem_id\030\003 \001(\tB\010\212\3101\004<=5" +
-      "0\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_" +
-      "ONLY\020\001\022\016\n\nREAD_WRITE\020\002\"\204\002\n\024NetworkInterf" +
-      "aceSpec\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022L\n\027primary_v4_address_spec\030\002 \001(\0132+.yand" +
-      "ex.cloud.compute.v1.PrimaryAddressSpec\022L" +
-      "\n\027primary_v6_address_spec\030\003 \001(\0132+.yandex" +
-      ".cloud.compute.v1.PrimaryAddressSpec\022\032\n\022" +
-      "security_group_ids\030\006 \003(\t\022\r\n\005index\030\007 \001(\tJ" +
-      "\004\010\004\020\006\"\256\001\n\022PrimaryAddressSpec\022\017\n\007address\030" +
-      "\001 \001(\t\022E\n\023one_to_one_nat_spec\030\002 \001(\0132(.yan" +
-      "dex.cloud.compute.v1.OneToOneNatSpec\022@\n\020" +
-      "dns_record_specs\030\003 \003(\0132&.yandex.cloud.co" +
-      "mpute.v1.DnsRecordSpec\"\234\001\n\017OneToOneNatSp" +
-      "ec\0226\n\nip_version\030\001 \001(\0162\".yandex.cloud.co" +
-      "mpute.v1.IpVersion\022\017\n\007address\030\002 \001(\t\022@\n\020d" +
-      "ns_record_specs\030\003 \003(\0132&.yandex.cloud.com" +
-      "pute.v1.DnsRecordSpec\"_\n\rDnsRecordSpec\022\022" +
-      "\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030\002 \001(\t\022" +
-      "\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(\010\"e" +
-      "\n\023MoveInstanceRequest\022!\n\013instance_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_folder_i" +
-      "d\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"d\n\024MoveInstanceMet" +
-      "adata\022\023\n\013instance_id\030\001 \001(\t\022\030\n\020source_fol" +
-      "der_id\030\002 \001(\t\022\035\n\025destination_folder_id\030\003 " +
-      "\001(\t\"\344\002\n\027RelocateInstanceRequest\022!\n\013insta" +
-      "nce_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022)\n\023destinatio" +
-      "n_zone_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022Y\n\027network" +
-      "_interface_specs\030\003 \003(\0132-.yandex.cloud.co" +
-      "mpute.v1.NetworkInterfaceSpecB\t\202\3101\0011\350\3071\001" +
-      "\022I\n\023boot_disk_placement\030\004 \001(\0132,.yandex.c" +
-      "loud.compute.v1.DiskPlacementPolicy\022U\n\031s" +
-      "econdary_disk_placements\030\005 \003(\01322.yandex." +
-      "cloud.compute.v1.DiskPlacementPolicyChan" +
-      "ge\"d\n\030RelocateInstanceMetadata\022\023\n\013instan" +
-      "ce_id\030\001 \001(\t\022\026\n\016source_zone_id\030\002 \001(\t\022\033\n\023d" +
-      "estination_zone_id\030\003 \001(\t\"0\n\031GuestStopIns" +
-      "tanceMetadata\022\023\n\013instance_id\030\001 \001(\t\".\n\027Pr" +
-      "eemptInstanceMetadata\022\023\n\013instance_id\030\001 \001" +
-      "(\t\",\n\025CrashInstanceMetadata\022\023\n\013instance_" +
-      "id\030\001 \001(\t*#\n\014InstanceView\022\t\n\005BASIC\020\000\022\010\n\004F" +
-      "ULL\020\0012\237*\n\017InstanceService\022\202\001\n\003Get\022+.yand" +
-      "ex.cloud.compute.v1.GetInstanceRequest\032!" +
-      ".yandex.cloud.compute.v1.Instance\"+\202\323\344\223\002" +
-      "%\022#/compute/v1/instances/{instance_id}\022\204" +
-      "\001\n\004List\022-.yandex.cloud.compute.v1.ListIn" +
-      "stancesRequest\032..yandex.cloud.compute.v1" +
-      ".ListInstancesResponse\"\035\202\323\344\223\002\027\022\025/compute" +
-      "/v1/instances\022\243\001\n\006Create\022..yandex.cloud." +
-      "compute.v1.CreateInstanceRequest\032!.yande" +
-      "x.cloud.operation.Operation\"F\202\323\344\223\002\032\"\025/co" +
-      "mpute/v1/instances:\001*\262\322*\"\n\026CreateInstanc" +
-      "eMetadata\022\010Instance\022\261\001\n\006Update\022..yandex." +
-      "cloud.compute.v1.UpdateInstanceRequest\032!" +
-      ".yandex.cloud.operation.Operation\"T\202\323\344\223\002" +
-      "(2#/compute/v1/instances/{instance_id}:\001" +
-      "*\262\322*\"\n\026UpdateInstanceMetadata\022\010Instance\022" +
-      "\273\001\n\006Delete\022..yandex.cloud.compute.v1.Del" +
-      "eteInstanceRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"^\202\323\344\223\002%*#/compute/v1/insta" +
-      "nces/{instance_id}\262\322*/\n\026DeleteInstanceMe" +
-      "tadata\022\025google.protobuf.Empty\022\330\001\n\016Update" +
-      "Metadata\0226.yandex.cloud.compute.v1.Updat" +
-      "eInstanceMetadataRequest\032!.yandex.cloud." +
-      "operation.Operation\"k\202\323\344\223\0027\"2/compute/v1" +
-      "/instances/{instance_id}/updateMetadata:" +
-      "\001*\262\322**\n\036UpdateInstanceMetadataMetadata\022\010" +
-      "Instance\022\316\001\n\023GetSerialPortOutput\022;.yande" +
-      "x.cloud.compute.v1.GetInstanceSerialPort" +
-      "OutputRequest\032<.yandex.cloud.compute.v1." +
-      "GetInstanceSerialPortOutputResponse\"<\202\323\344" +
-      "\223\0026\0224/compute/v1/instances/{instance_id}" +
-      ":serialPortOutput\022\272\001\n\004Stop\022,.yandex.clou" +
-      "d.compute.v1.StopInstanceRequest\032!.yande" +
-      "x.cloud.operation.Operation\"a\202\323\344\223\002*\"(/co" +
-      "mpute/v1/instances/{instance_id}:stop\262\322*" +
-      "-\n\024StopInstanceMetadata\022\025google.protobuf" +
-      ".Empty\022\261\001\n\005Start\022-.yandex.cloud.compute." +
-      "v1.StartInstanceRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"V\202\323\344\223\002+\")/compute/v1/" +
-      "instances/{instance_id}:start\262\322*!\n\025Start" +
-      "InstanceMetadata\022\010Instance\022\306\001\n\007Restart\022/" +
-      ".yandex.cloud.compute.v1.RestartInstance" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"g\202\323\344\223\002-\"+/compute/v1/instances/{insta" +
-      "nce_id}:restart\262\322*0\n\027RestartInstanceMeta" +
-      "data\022\025google.protobuf.Empty\022\310\001\n\nAttachDi" +
-      "sk\0222.yandex.cloud.compute.v1.AttachInsta" +
-      "nceDiskRequest\032!.yandex.cloud.operation." +
-      "Operation\"c\202\323\344\223\0023\"./compute/v1/instances" +
-      "/{instance_id}:attachDisk:\001*\262\322*&\n\032Attach" +
-      "InstanceDiskMetadata\022\010Instance\022\310\001\n\nDetac" +
-      "hDisk\0222.yandex.cloud.compute.v1.DetachIn" +
-      "stanceDiskRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"c\202\323\344\223\0023\"./compute/v1/instan" +
-      "ces/{instance_id}:detachDisk:\001*\262\322*&\n\032Det" +
-      "achInstanceDiskMetadata\022\010Instance\022\340\001\n\020At" +
-      "tachFilesystem\0228.yandex.cloud.compute.v1" +
-      ".AttachInstanceFilesystemRequest\032!.yande" +
-      "x.cloud.operation.Operation\"o\202\323\344\223\0029\"4/co" +
-      "mpute/v1/instances/{instance_id}:attachF" +
-      "ilesystem:\001*\262\322*,\n AttachInstanceFilesyst" +
-      "emMetadata\022\010Instance\022\340\001\n\020DetachFilesyste" +
-      "m\0228.yandex.cloud.compute.v1.DetachInstan" +
-      "ceFilesystemRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"o\202\323\344\223\0029\"4/compute/v1/inst" +
-      "ances/{instance_id}:detachFilesystem:\001*\262" +
-      "\322*,\n DetachInstanceFilesystemMetadata\022\010I" +
-      "nstance\022\370\001\n\026AttachNetworkInterface\022>.yan" +
-      "dex.cloud.compute.v1.AttachInstanceNetwo" +
-      "rkInterfaceRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"{\202\323\344\223\002?\":/compute/v1/insta" +
-      "nces/{instance_id}:attachNetworkInterfac" +
-      "e:\001*\262\322*2\n&AttachInstanceNetworkInterface" +
-      "Metadata\022\010Instance\022\370\001\n\026DetachNetworkInte" +
-      "rface\022>.yandex.cloud.compute.v1.DetachIn" +
-      "stanceNetworkInterfaceRequest\032!.yandex.c" +
-      "loud.operation.Operation\"{\202\323\344\223\002?\":/compu" +
-      "te/v1/instances/{instance_id}:detachNetw" +
-      "orkInterface:\001*\262\322*2\n&DetachInstanceNetwo" +
-      "rkInterfaceMetadata\022\010Instance\022\330\001\n\016AddOne" +
-      "ToOneNat\0226.yandex.cloud.compute.v1.AddIn" +
-      "stanceOneToOneNatRequest\032!.yandex.cloud." +
-      "operation.Operation\"k\202\323\344\223\0027\"2/compute/v1" +
-      "/instances/{instance_id}/addOneToOneNat:" +
-      "\001*\262\322**\n\036AddInstanceOneToOneNatMetadata\022\010" +
-      "Instance\022\344\001\n\021RemoveOneToOneNat\0229.yandex." +
-      "cloud.compute.v1.RemoveInstanceOneToOneN" +
-      "atRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"q\202\323\344\223\002:\"5/compute/v1/instances/{ins" +
-      "tance_id}/removeOneToOneNat:\001*\262\322*-\n!Remo" +
-      "veInstanceOneToOneNatMetadata\022\010Instance\022" +
-      "\370\001\n\026UpdateNetworkInterface\022>.yandex.clou" +
-      "d.compute.v1.UpdateInstanceNetworkInterf" +
-      "aceRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"{\202\323\344\223\002?2:/compute/v1/instances/{in" +
-      "stance_id}/updateNetworkInterface:\001*\262\322*2" +
-      "\n&UpdateInstanceNetworkInterfaceMetadata" +
-      "\022\010Instance\022\271\001\n\016ListOperations\0226.yandex.c" +
-      "loud.compute.v1.ListInstanceOperationsRe" +
-      "quest\0327.yandex.cloud.compute.v1.ListInst" +
-      "anceOperationsResponse\"6\202\323\344\223\0020\022./compute" +
-      "/v1/instances/{instance_id}/operations\022\260" +
-      "\001\n\004Move\022,.yandex.cloud.compute.v1.MoveIn" +
-      "stanceRequest\032!.yandex.cloud.operation.O" +
-      "peration\"W\202\323\344\223\002-\"(/compute/v1/instances/" +
-      "{instance_id}:move:\001*\262\322* \n\024MoveInstanceM" +
-      "etadata\022\010Instance\022\300\001\n\010Relocate\0220.yandex." +
-      "cloud.compute.v1.RelocateInstanceRequest" +
-      "\032!.yandex.cloud.operation.Operation\"_\202\323\344" +
-      "\223\0021\",/compute/v1/instances/{instance_id}" +
-      ":relocate:\001*\262\322*$\n\030RelocateInstanceMetada" +
-      "ta\022\010Instance\022\216\002\n\030SimulateMaintenanceEven" +
-      "t\022@.yandex.cloud.compute.v1.SimulateInst" +
-      "anceMaintenanceEventRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"\214\001\202\323\344\223\002A\"</comput" +
-      "e/v1/instances/{instance_id}:simulateMai" +
-      "ntenanceEvent:\001*\262\322*A\n(SimulateInstanceMa" +
-      "intenanceEventMetadata\022\025google.protobuf." +
-      "Empty\022\265\001\n\022ListAccessBindings\022..yandex.cl" +
-      "oud.access.ListAccessBindingsRequest\032/.y" +
-      "andex.cloud.access.ListAccessBindingsRes" +
-      "ponse\">\202\323\344\223\0028\0226/compute/v1/instances/{re" +
-      "source_id}:listAccessBindings\022\364\001\n\021SetAcc" +
-      "essBindings\022-.yandex.cloud.access.SetAcc" +
-      "essBindingsRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"\214\001\202\323\344\223\002:\"5/compute/v1/inst" +
-      "ances/{resource_id}:setAccessBindings:\001*" +
-      "\262\322*H\n access.SetAccessBindingsMetadata\022$" +
-      "access.AccessBindingsOperationResult\022\200\002\n" +
-      "\024UpdateAccessBindings\0220.yandex.cloud.acc" +
-      "ess.UpdateAccessBindingsRequest\032!.yandex" +
-      ".cloud.operation.Operation\"\222\001\202\323\344\223\002=\"8/co" +
-      "mpute/v1/instances/{resource_id}:updateA" +
-      "ccessBindings:\001*\262\322*K\n#access.UpdateAcces" +
-      "sBindingsMetadata\022$access.AccessBindings" +
-      "OperationResultBb\n\033yandex.cloud.api.comp" +
-      "ute.v1ZCgithub.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/compute/v1;computeb\006pro" +
-      "to3"
+      "\037\n\027network_interface_index\030\002 \001(\t\"i\n%Deta" +
+      "chInstanceNetworkInterfaceRequest\022\031\n\013ins" +
+      "tance_id\030\001 \001(\tB\004\350\3071\001\022%\n\027network_interfac" +
+      "e_index\030\002 \001(\tB\004\350\3071\001\"^\n&DetachInstanceNet" +
+      "workInterfaceMetadata\022\023\n\013instance_id\030\001 \001" +
+      "(\t\022\037\n\027network_interface_index\030\002 \001(\t\"\266\001\n\035" +
+      "AddInstanceOneToOneNatRequest\022\023\n\013instanc" +
+      "e_id\030\001 \001(\t\022\037\n\027network_interface_index\030\002 " +
+      "\001(\t\022\030\n\020internal_address\030\003 \001(\t\022E\n\023one_to_" +
+      "one_nat_spec\030\004 \001(\0132(.yandex.cloud.comput" +
+      "e.v1.OneToOneNatSpec\"5\n\036AddInstanceOneTo" +
+      "OneNatMetadata\022\023\n\013instance_id\030\001 \001(\t\"r\n R" +
+      "emoveInstanceOneToOneNatRequest\022\023\n\013insta" +
+      "nce_id\030\001 \001(\t\022\037\n\027network_interface_index\030" +
+      "\002 \001(\t\022\030\n\020internal_address\030\003 \001(\t\"8\n!Remov" +
+      "eInstanceOneToOneNatMetadata\022\023\n\013instance" +
+      "_id\030\001 \001(\t\"\345\002\n%UpdateInstanceNetworkInter" +
+      "faceRequest\022\031\n\013instance_id\030\001 \001(\tB\004\350\3071\001\022%" +
+      "\n\027network_interface_index\030\002 \001(\tB\004\350\3071\001\022/\n" +
+      "\013update_mask\030\003 \001(\0132\032.google.protobuf.Fie" +
+      "ldMask\022\021\n\tsubnet_id\030\004 \001(\t\022L\n\027primary_v4_" +
+      "address_spec\030\005 \001(\0132+.yandex.cloud.comput" +
+      "e.v1.PrimaryAddressSpec\022L\n\027primary_v6_ad" +
+      "dress_spec\030\006 \001(\0132+.yandex.cloud.compute." +
+      "v1.PrimaryAddressSpec\022\032\n\022security_group_" +
+      "ids\030\007 \003(\t\"^\n&UpdateInstanceNetworkInterf" +
+      "aceMetadata\022\023\n\013instance_id\030\001 \001(\t\022\037\n\027netw" +
+      "ork_interface_index\030\002 \001(\t\"L\n\'SimulateIns" +
+      "tanceMaintenanceEventRequest\022!\n\013instance" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"?\n(SimulateInsta" +
+      "nceMaintenanceEventMetadata\022\023\n\013instance_" +
+      "id\030\001 \001(\t\"\200\001\n\035ListInstanceOperationsReque" +
+      "st\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n" +
+      "\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_tok" +
+      "en\030\003 \001(\tB\t\212\3101\005<=100\"p\n\036ListInstanceOpera" +
+      "tionsResponse\0225\n\noperations\030\001 \003(\0132!.yand" +
+      "ex.cloud.operation.Operation\022\027\n\017next_pag" +
+      "e_token\030\002 \001(\t\"\347\001\n\rResourcesSpec\022&\n\006memor" +
+      "y\030\001 \001(\003B\026\350\3071\001\372\3071\016<=274877906944\022i\n\005cores" +
+      "\030\002 \001(\003BZ\350\3071\001\372\3071R2,4,6,8,10,12,14,16,18,2" +
+      "0,22,24,26,28,30,32,34,36,40,44,48,52,56" +
+      ",60,64,68,72,76,80\022(\n\rcore_fraction\030\003 \001(" +
+      "\003B\021\372\3071\r0,5,20,50,100\022\031\n\004gpus\030\004 \001(\003B\013\372\3071\007" +
+      "0,1,2,4\"\267\005\n\020AttachedDiskSpec\022<\n\004mode\030\001 \001" +
+      "(\0162..yandex.cloud.compute.v1.AttachedDis" +
+      "kSpec.Mode\022-\n\013device_name\030\002 \001(\tB\030\362\3071\024[a-" +
+      "z][a-z0-9-_]{,19}\022\023\n\013auto_delete\030\003 \001(\010\022G" +
+      "\n\tdisk_spec\030\004 \001(\01322.yandex.cloud.compute" +
+      ".v1.AttachedDiskSpec.DiskSpecH\000\022\033\n\007disk_" +
+      "id\030\005 \001(\tB\010\212\3101\004<=50H\000\032\357\002\n\010DiskSpec\0223\n\004nam" +
+      "e\030\001 \001(\tB%\362\3071!|[a-z]([-_a-z0-9]{0,61}[a-z" +
+      "0-9])?\022\036\n\013description\030\002 \001(\tB\t\212\3101\005<=256\022\031" +
+      "\n\007type_id\030\003 \001(\tB\010\212\3101\004<=50\022+\n\004size\030\004 \001(\003B" +
+      "\035\350\3071\001\372\3071\0254194304-4398046511104\022\034\n\010image_" +
+      "id\030\005 \001(\tB\010\212\3101\004<=50H\000\022\037\n\013snapshot_id\030\006 \001(" +
+      "\tB\010\212\3101\004<=50H\000\022K\n\025disk_placement_policy\030\007" +
+      " \001(\0132,.yandex.cloud.compute.v1.DiskPlace" +
+      "mentPolicy\022\022\n\nblock_size\030\010 \001(\003\022\034\n\nkms_ke" +
+      "y_id\030\t \001(\tB\010\212\3101\004<=50B\010\n\006source\";\n\004Mode\022\024" +
+      "\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nR" +
+      "EAD_WRITE\020\002B\014\n\004disk\022\004\300\3011\001\"+\n\025AttachedLoc" +
+      "alDiskSpec\022\022\n\004size\030\001 \001(\003B\004\350\3071\001\"\351\001\n\026Attac" +
+      "hedFilesystemSpec\022B\n\004mode\030\001 \001(\01624.yandex" +
+      ".cloud.compute.v1.AttachedFilesystemSpec" +
+      ".Mode\022-\n\013device_name\030\002 \001(\tB\030\362\3071\024[a-z][a-" +
+      "z0-9-_]{,19}\022\037\n\rfilesystem_id\030\003 \001(\tB\010\212\3101" +
+      "\004<=50\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tR" +
+      "EAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002\"\204\002\n\024NetworkIn" +
+      "terfaceSpec\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022L\n\027primary_v4_address_spec\030\002 \001(\0132+." +
+      "yandex.cloud.compute.v1.PrimaryAddressSp" +
+      "ec\022L\n\027primary_v6_address_spec\030\003 \001(\0132+.ya" +
+      "ndex.cloud.compute.v1.PrimaryAddressSpec" +
+      "\022\032\n\022security_group_ids\030\006 \003(\t\022\r\n\005index\030\007 " +
+      "\001(\tJ\004\010\004\020\006\"\256\001\n\022PrimaryAddressSpec\022\017\n\007addr" +
+      "ess\030\001 \001(\t\022E\n\023one_to_one_nat_spec\030\002 \001(\0132(" +
+      ".yandex.cloud.compute.v1.OneToOneNatSpec" +
+      "\022@\n\020dns_record_specs\030\003 \003(\0132&.yandex.clou" +
+      "d.compute.v1.DnsRecordSpec\"\234\001\n\017OneToOneN" +
+      "atSpec\0226\n\nip_version\030\001 \001(\0162\".yandex.clou" +
+      "d.compute.v1.IpVersion\022\017\n\007address\030\002 \001(\t\022" +
+      "@\n\020dns_record_specs\030\003 \003(\0132&.yandex.cloud" +
+      ".compute.v1.DnsRecordSpec\"_\n\rDnsRecordSp" +
+      "ec\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030\002 " +
+      "\001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001" +
+      "(\010\"e\n\023MoveInstanceRequest\022!\n\013instance_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_fold" +
+      "er_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"d\n\024MoveInstanc" +
+      "eMetadata\022\023\n\013instance_id\030\001 \001(\t\022\030\n\020source" +
+      "_folder_id\030\002 \001(\t\022\035\n\025destination_folder_i" +
+      "d\030\003 \001(\t\"\344\002\n\027RelocateInstanceRequest\022!\n\013i" +
+      "nstance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022)\n\023destin" +
+      "ation_zone_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022Y\n\027net" +
+      "work_interface_specs\030\003 \003(\0132-.yandex.clou" +
+      "d.compute.v1.NetworkInterfaceSpecB\t\202\3101\0011" +
+      "\350\3071\001\022I\n\023boot_disk_placement\030\004 \001(\0132,.yand" +
+      "ex.cloud.compute.v1.DiskPlacementPolicy\022" +
+      "U\n\031secondary_disk_placements\030\005 \003(\01322.yan" +
+      "dex.cloud.compute.v1.DiskPlacementPolicy" +
+      "Change\"d\n\030RelocateInstanceMetadata\022\023\n\013in" +
+      "stance_id\030\001 \001(\t\022\026\n\016source_zone_id\030\002 \001(\t\022" +
+      "\033\n\023destination_zone_id\030\003 \001(\t\"0\n\031GuestSto" +
+      "pInstanceMetadata\022\023\n\013instance_id\030\001 \001(\t\"." +
+      "\n\027PreemptInstanceMetadata\022\023\n\013instance_id" +
+      "\030\001 \001(\t\",\n\025CrashInstanceMetadata\022\023\n\013insta" +
+      "nce_id\030\001 \001(\t*#\n\014InstanceView\022\t\n\005BASIC\020\000\022" +
+      "\010\n\004FULL\020\0012\237*\n\017InstanceService\022\202\001\n\003Get\022+." +
+      "yandex.cloud.compute.v1.GetInstanceReque" +
+      "st\032!.yandex.cloud.compute.v1.Instance\"+\202" +
+      "\323\344\223\002%\022#/compute/v1/instances/{instance_i" +
+      "d}\022\204\001\n\004List\022-.yandex.cloud.compute.v1.Li" +
+      "stInstancesRequest\032..yandex.cloud.comput" +
+      "e.v1.ListInstancesResponse\"\035\202\323\344\223\002\027\022\025/com" +
+      "pute/v1/instances\022\243\001\n\006Create\022..yandex.cl" +
+      "oud.compute.v1.CreateInstanceRequest\032!.y" +
+      "andex.cloud.operation.Operation\"F\202\323\344\223\002\032\"" +
+      "\025/compute/v1/instances:\001*\262\322*\"\n\026CreateIns" +
+      "tanceMetadata\022\010Instance\022\261\001\n\006Update\022..yan" +
+      "dex.cloud.compute.v1.UpdateInstanceReque" +
+      "st\032!.yandex.cloud.operation.Operation\"T\202" +
+      "\323\344\223\002(2#/compute/v1/instances/{instance_i" +
+      "d}:\001*\262\322*\"\n\026UpdateInstanceMetadata\022\010Insta" +
+      "nce\022\273\001\n\006Delete\022..yandex.cloud.compute.v1" +
+      ".DeleteInstanceRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"^\202\323\344\223\002%*#/compute/v1/i" +
+      "nstances/{instance_id}\262\322*/\n\026DeleteInstan" +
+      "ceMetadata\022\025google.protobuf.Empty\022\330\001\n\016Up" +
+      "dateMetadata\0226.yandex.cloud.compute.v1.U" +
+      "pdateInstanceMetadataRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"k\202\323\344\223\0027\"2/comput" +
+      "e/v1/instances/{instance_id}/updateMetad" +
+      "ata:\001*\262\322**\n\036UpdateInstanceMetadataMetada" +
+      "ta\022\010Instance\022\316\001\n\023GetSerialPortOutput\022;.y" +
+      "andex.cloud.compute.v1.GetInstanceSerial" +
+      "PortOutputRequest\032<.yandex.cloud.compute" +
+      ".v1.GetInstanceSerialPortOutputResponse\"" +
+      "<\202\323\344\223\0026\0224/compute/v1/instances/{instance" +
+      "_id}:serialPortOutput\022\272\001\n\004Stop\022,.yandex." +
+      "cloud.compute.v1.StopInstanceRequest\032!.y" +
+      "andex.cloud.operation.Operation\"a\202\323\344\223\002*\"" +
+      "(/compute/v1/instances/{instance_id}:sto" +
+      "p\262\322*-\n\024StopInstanceMetadata\022\025google.prot" +
+      "obuf.Empty\022\261\001\n\005Start\022-.yandex.cloud.comp" +
+      "ute.v1.StartInstanceRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"V\202\323\344\223\002+\")/compute" +
+      "/v1/instances/{instance_id}:start\262\322*!\n\025S" +
+      "tartInstanceMetadata\022\010Instance\022\306\001\n\007Resta" +
+      "rt\022/.yandex.cloud.compute.v1.RestartInst" +
+      "anceRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"g\202\323\344\223\002-\"+/compute/v1/instances/{i" +
+      "nstance_id}:restart\262\322*0\n\027RestartInstance" +
+      "Metadata\022\025google.protobuf.Empty\022\310\001\n\nAtta" +
+      "chDisk\0222.yandex.cloud.compute.v1.AttachI" +
+      "nstanceDiskRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"c\202\323\344\223\0023\"./compute/v1/insta" +
+      "nces/{instance_id}:attachDisk:\001*\262\322*&\n\032At" +
+      "tachInstanceDiskMetadata\022\010Instance\022\310\001\n\nD" +
+      "etachDisk\0222.yandex.cloud.compute.v1.Deta" +
+      "chInstanceDiskRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"c\202\323\344\223\0023\"./compute/v1/in" +
+      "stances/{instance_id}:detachDisk:\001*\262\322*&\n" +
+      "\032DetachInstanceDiskMetadata\022\010Instance\022\340\001" +
+      "\n\020AttachFilesystem\0228.yandex.cloud.comput" +
+      "e.v1.AttachInstanceFilesystemRequest\032!.y" +
+      "andex.cloud.operation.Operation\"o\202\323\344\223\0029\"" +
+      "4/compute/v1/instances/{instance_id}:att" +
+      "achFilesystem:\001*\262\322*,\n AttachInstanceFile" +
+      "systemMetadata\022\010Instance\022\340\001\n\020DetachFiles" +
+      "ystem\0228.yandex.cloud.compute.v1.DetachIn" +
+      "stanceFilesystemRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"o\202\323\344\223\0029\"4/compute/v1/" +
+      "instances/{instance_id}:detachFilesystem" +
+      ":\001*\262\322*,\n DetachInstanceFilesystemMetadat" +
+      "a\022\010Instance\022\370\001\n\026AttachNetworkInterface\022>" +
+      ".yandex.cloud.compute.v1.AttachInstanceN" +
+      "etworkInterfaceRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"{\202\323\344\223\002?\":/compute/v1/i" +
+      "nstances/{instance_id}:attachNetworkInte" +
+      "rface:\001*\262\322*2\n&AttachInstanceNetworkInter" +
+      "faceMetadata\022\010Instance\022\370\001\n\026DetachNetwork" +
+      "Interface\022>.yandex.cloud.compute.v1.Deta" +
+      "chInstanceNetworkInterfaceRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"{\202\323\344\223\002?\":/c" +
+      "ompute/v1/instances/{instance_id}:detach" +
+      "NetworkInterface:\001*\262\322*2\n&DetachInstanceN" +
+      "etworkInterfaceMetadata\022\010Instance\022\330\001\n\016Ad" +
+      "dOneToOneNat\0226.yandex.cloud.compute.v1.A" +
+      "ddInstanceOneToOneNatRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"k\202\323\344\223\0027\"2/comput" +
+      "e/v1/instances/{instance_id}/addOneToOne" +
+      "Nat:\001*\262\322**\n\036AddInstanceOneToOneNatMetada" +
+      "ta\022\010Instance\022\344\001\n\021RemoveOneToOneNat\0229.yan" +
+      "dex.cloud.compute.v1.RemoveInstanceOneTo" +
+      "OneNatRequest\032!.yandex.cloud.operation.O" +
+      "peration\"q\202\323\344\223\002:\"5/compute/v1/instances/" +
+      "{instance_id}/removeOneToOneNat:\001*\262\322*-\n!" +
+      "RemoveInstanceOneToOneNatMetadata\022\010Insta" +
+      "nce\022\370\001\n\026UpdateNetworkInterface\022>.yandex." +
+      "cloud.compute.v1.UpdateInstanceNetworkIn" +
+      "terfaceRequest\032!.yandex.cloud.operation." +
+      "Operation\"{\202\323\344\223\002?2:/compute/v1/instances" +
+      "/{instance_id}/updateNetworkInterface:\001*" +
+      "\262\322*2\n&UpdateInstanceNetworkInterfaceMeta" +
+      "data\022\010Instance\022\271\001\n\016ListOperations\0226.yand" +
+      "ex.cloud.compute.v1.ListInstanceOperatio" +
+      "nsRequest\0327.yandex.cloud.compute.v1.List" +
+      "InstanceOperationsResponse\"6\202\323\344\223\0020\022./com" +
+      "pute/v1/instances/{instance_id}/operatio" +
+      "ns\022\260\001\n\004Move\022,.yandex.cloud.compute.v1.Mo" +
+      "veInstanceRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"W\202\323\344\223\002-\"(/compute/v1/instan" +
+      "ces/{instance_id}:move:\001*\262\322* \n\024MoveInsta" +
+      "nceMetadata\022\010Instance\022\300\001\n\010Relocate\0220.yan" +
+      "dex.cloud.compute.v1.RelocateInstanceReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "_\202\323\344\223\0021\",/compute/v1/instances/{instance" +
+      "_id}:relocate:\001*\262\322*$\n\030RelocateInstanceMe" +
+      "tadata\022\010Instance\022\216\002\n\030SimulateMaintenance" +
+      "Event\022@.yandex.cloud.compute.v1.Simulate" +
+      "InstanceMaintenanceEventRequest\032!.yandex" +
+      ".cloud.operation.Operation\"\214\001\202\323\344\223\002A\"</co" +
+      "mpute/v1/instances/{instance_id}:simulat" +
+      "eMaintenanceEvent:\001*\262\322*A\n(SimulateInstan" +
+      "ceMaintenanceEventMetadata\022\025google.proto" +
+      "buf.Empty\022\265\001\n\022ListAccessBindings\022..yande" +
+      "x.cloud.access.ListAccessBindingsRequest" +
+      "\032/.yandex.cloud.access.ListAccessBinding" +
+      "sResponse\">\202\323\344\223\0028\0226/compute/v1/instances" +
+      "/{resource_id}:listAccessBindings\022\364\001\n\021Se" +
+      "tAccessBindings\022-.yandex.cloud.access.Se" +
+      "tAccessBindingsRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"\214\001\202\323\344\223\002:\"5/compute/v1/" +
+      "instances/{resource_id}:setAccessBinding" +
+      "s:\001*\262\322*H\n access.SetAccessBindingsMetada" +
+      "ta\022$access.AccessBindingsOperationResult" +
+      "\022\200\002\n\024UpdateAccessBindings\0220.yandex.cloud" +
+      ".access.UpdateAccessBindingsRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"\222\001\202\323\344\223\002=\"" +
+      "8/compute/v1/instances/{resource_id}:upd" +
+      "ateAccessBindings:\001*\262\322*K\n#access.UpdateA" +
+      "ccessBindingsMetadata\022$access.AccessBind" +
+      "ingsOperationResultBb\n\033yandex.cloud.api." +
+      "compute.v1ZCgithub.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/compute/v1;computeb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

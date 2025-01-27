@@ -23,7 +23,7 @@ public final class AgentServiceOuterClass {
      * ID of the folder to create an agent in.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
@@ -32,7 +32,7 @@ public final class AgentServiceOuterClass {
      * ID of the folder to create an agent in.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
@@ -376,7 +376,7 @@ public final class AgentServiceOuterClass {
      * ID of the folder to create an agent in.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The folderId.
      */
     @java.lang.Override
@@ -397,7 +397,7 @@ public final class AgentServiceOuterClass {
      * ID of the folder to create an agent in.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The bytes for folderId.
      */
     @java.lang.Override
@@ -1202,7 +1202,7 @@ public final class AgentServiceOuterClass {
        * ID of the folder to create an agent in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @return The folderId.
        */
       public java.lang.String getFolderId() {
@@ -1222,7 +1222,7 @@ public final class AgentServiceOuterClass {
        * ID of the folder to create an agent in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
@@ -1243,7 +1243,7 @@ public final class AgentServiceOuterClass {
        * ID of the folder to create an agent in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
        */
@@ -1262,7 +1262,7 @@ public final class AgentServiceOuterClass {
        * ID of the folder to create an agent in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFolderId() {
@@ -1276,7 +1276,7 @@ public final class AgentServiceOuterClass {
        * ID of the folder to create an agent in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
        */
@@ -4541,7 +4541,7 @@ public final class AgentServiceOuterClass {
      * ID of the folder to list agents in.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
@@ -4550,7 +4550,7 @@ public final class AgentServiceOuterClass {
      * ID of the folder to list agents in.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
@@ -4751,7 +4751,7 @@ public final class AgentServiceOuterClass {
      * ID of the folder to list agents in.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The folderId.
      */
     @java.lang.Override
@@ -4772,7 +4772,7 @@ public final class AgentServiceOuterClass {
      * ID of the folder to list agents in.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
      * @return The bytes for folderId.
      */
     @java.lang.Override
@@ -5292,7 +5292,7 @@ public final class AgentServiceOuterClass {
        * ID of the folder to list agents in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @return The folderId.
        */
       public java.lang.String getFolderId() {
@@ -5312,7 +5312,7 @@ public final class AgentServiceOuterClass {
        * ID of the folder to list agents in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
@@ -5333,7 +5333,7 @@ public final class AgentServiceOuterClass {
        * ID of the folder to list agents in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
        */
@@ -5352,7 +5352,7 @@ public final class AgentServiceOuterClass {
        * ID of the folder to list agents in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFolderId() {
@@ -5366,7 +5366,7 @@ public final class AgentServiceOuterClass {
        * ID of the folder to list agents in.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=54"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
        */
@@ -9445,7 +9445,7 @@ public final class AgentServiceOuterClass {
       "oadtesting/api/v1/agent/log_settings.pro" +
       "to\032\035yandex/cloud/validation.proto\"\210\004\n\022Cr" +
       "eateAgentRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\022/\n\004name\030\002 \001(\tB!\362\3071\035|[a-z][-a-z" +
+      "\001\212\3101\004<=54\022/\n\004name\030\002 \001(\tB!\362\3071\035|[a-z][-a-z" +
       "0-9]{1,61}[a-z0-9]\022\036\n\013description\030\003 \001(\tB" +
       "\t\212\3101\005<=256\022]\n\027compute_instance_params\030\004 " +
       "\001(\0132<.yandex.cloud.loadtesting.api.v1.ag" +
@@ -9462,7 +9462,7 @@ public final class AgentServiceOuterClass {
       "leteAgentRequest\022\020\n\010agent_id\030\001 \001(\t\"\'\n\023De" +
       "leteAgentMetadata\022\020\n\010agent_id\030\001 \001(\t\"\216\001\n\021" +
       "ListAgentsRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=100" +
+      "1\001\212\3101\004<=54\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=100" +
       "0\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filt" +
       "er\030\004 \001(\tB\n\212\3101\006<=1000\"v\n\022ListAgentsRespon" +
       "se\022<\n\006agents\030\001 \003(\0132,.yandex.cloud.loadte" +

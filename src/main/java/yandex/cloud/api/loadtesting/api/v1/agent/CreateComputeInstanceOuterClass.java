@@ -308,7 +308,7 @@ public final class CreateComputeInstanceOuterClass {
 
     /**
      * <pre>
-     * ID of the [Compute VM platform](docs/compute/concepts/vm-platforms) on which the agent will be created.
+     * ID of the [Compute VM platform](/docs/compute/concepts/vm-platforms) on which the agent will be created.
      * Default value: "standard-v2"
      * </pre>
      *
@@ -318,7 +318,7 @@ public final class CreateComputeInstanceOuterClass {
     java.lang.String getPlatformId();
     /**
      * <pre>
-     * ID of the [Compute VM platform](docs/compute/concepts/vm-platforms) on which the agent will be created.
+     * ID of the [Compute VM platform](/docs/compute/concepts/vm-platforms) on which the agent will be created.
      * Default value: "standard-v2"
      * </pre>
      *
@@ -969,7 +969,7 @@ public final class CreateComputeInstanceOuterClass {
     private volatile java.lang.Object platformId_;
     /**
      * <pre>
-     * ID of the [Compute VM platform](docs/compute/concepts/vm-platforms) on which the agent will be created.
+     * ID of the [Compute VM platform](/docs/compute/concepts/vm-platforms) on which the agent will be created.
      * Default value: "standard-v2"
      * </pre>
      *
@@ -991,7 +991,7 @@ public final class CreateComputeInstanceOuterClass {
     }
     /**
      * <pre>
-     * ID of the [Compute VM platform](docs/compute/concepts/vm-platforms) on which the agent will be created.
+     * ID of the [Compute VM platform](/docs/compute/concepts/vm-platforms) on which the agent will be created.
      * Default value: "standard-v2"
      * </pre>
      *
@@ -2771,7 +2771,7 @@ public final class CreateComputeInstanceOuterClass {
       private java.lang.Object platformId_ = "";
       /**
        * <pre>
-       * ID of the [Compute VM platform](docs/compute/concepts/vm-platforms) on which the agent will be created.
+       * ID of the [Compute VM platform](/docs/compute/concepts/vm-platforms) on which the agent will be created.
        * Default value: "standard-v2"
        * </pre>
        *
@@ -2792,7 +2792,7 @@ public final class CreateComputeInstanceOuterClass {
       }
       /**
        * <pre>
-       * ID of the [Compute VM platform](docs/compute/concepts/vm-platforms) on which the agent will be created.
+       * ID of the [Compute VM platform](/docs/compute/concepts/vm-platforms) on which the agent will be created.
        * Default value: "standard-v2"
        * </pre>
        *
@@ -2814,7 +2814,7 @@ public final class CreateComputeInstanceOuterClass {
       }
       /**
        * <pre>
-       * ID of the [Compute VM platform](docs/compute/concepts/vm-platforms) on which the agent will be created.
+       * ID of the [Compute VM platform](/docs/compute/concepts/vm-platforms) on which the agent will be created.
        * Default value: "standard-v2"
        * </pre>
        *
@@ -2834,7 +2834,7 @@ public final class CreateComputeInstanceOuterClass {
       }
       /**
        * <pre>
-       * ID of the [Compute VM platform](docs/compute/concepts/vm-platforms) on which the agent will be created.
+       * ID of the [Compute VM platform](/docs/compute/concepts/vm-platforms) on which the agent will be created.
        * Default value: "standard-v2"
        * </pre>
        *
@@ -2849,7 +2849,7 @@ public final class CreateComputeInstanceOuterClass {
       }
       /**
        * <pre>
-       * ID of the [Compute VM platform](docs/compute/concepts/vm-platforms) on which the agent will be created.
+       * ID of the [Compute VM platform](/docs/compute/concepts/vm-platforms) on which the agent will be created.
        * Default value: "standard-v2"
        * </pre>
        *

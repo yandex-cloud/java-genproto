@@ -978,7 +978,6 @@ public final class ClusterServiceGrpc {
     /**
      * <pre>
      * Retrieves logs for the specified OpenSearch cluster.
-     * For detailed description, see the [Logs](/yandex-mdb-guide/concepts/logs.html) section in the developer's guide.
      * </pre>
      */
     public void listLogs(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.ListClusterLogsRequest request,
@@ -1441,7 +1440,6 @@ public final class ClusterServiceGrpc {
     /**
      * <pre>
      * Retrieves logs for the specified OpenSearch cluster.
-     * For detailed description, see the [Logs](/yandex-mdb-guide/concepts/logs.html) section in the developer's guide.
      * </pre>
      */
     public void listLogs(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.ListClusterLogsRequest request,
@@ -1723,7 +1721,6 @@ public final class ClusterServiceGrpc {
     /**
      * <pre>
      * Retrieves logs for the specified OpenSearch cluster.
-     * For detailed description, see the [Logs](/yandex-mdb-guide/concepts/logs.html) section in the developer's guide.
      * </pre>
      */
     public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.ListClusterLogsResponse listLogs(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.ListClusterLogsRequest request) {
@@ -2007,7 +2004,6 @@ public final class ClusterServiceGrpc {
     /**
      * <pre>
      * Retrieves logs for the specified OpenSearch cluster.
-     * For detailed description, see the [Logs](/yandex-mdb-guide/concepts/logs.html) section in the developer's guide.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.ListClusterLogsResponse> listLogs(

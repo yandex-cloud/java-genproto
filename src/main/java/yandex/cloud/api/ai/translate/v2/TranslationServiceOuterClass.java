@@ -21,8 +21,8 @@ public final class TranslationServiceOuterClass {
     /**
      * <pre>
      * The text language to translate from.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
-     * Required for translating with glossary.
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
+     * Required for translating with [glossary](/docs/translate/concepts/glossary).
      * </pre>
      *
      * <code>string source_language_code = 1 [(.yandex.cloud.length) = "&lt;=3"];</code>
@@ -32,8 +32,8 @@ public final class TranslationServiceOuterClass {
     /**
      * <pre>
      * The text language to translate from.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
-     * Required for translating with glossary.
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
+     * Required for translating with [glossary](/docs/translate/concepts/glossary).
      * </pre>
      *
      * <code>string source_language_code = 1 [(.yandex.cloud.length) = "&lt;=3"];</code>
@@ -45,7 +45,7 @@ public final class TranslationServiceOuterClass {
     /**
      * <pre>
      * The target language to translate the text.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
      * </pre>
      *
      * <code>string target_language_code = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -55,7 +55,7 @@ public final class TranslationServiceOuterClass {
     /**
      * <pre>
      * The target language to translate the text.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
      * </pre>
      *
      * <code>string target_language_code = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -66,7 +66,7 @@ public final class TranslationServiceOuterClass {
 
     /**
      * <pre>
-     * Format of the text.
+     * Format of the text to be translated.
      * </pre>
      *
      * <code>.yandex.cloud.ai.translate.v2.TranslateRequest.Format format = 3;</code>
@@ -75,7 +75,7 @@ public final class TranslationServiceOuterClass {
     int getFormatValue();
     /**
      * <pre>
-     * Format of the text.
+     * Format of the text to be translated.
      * </pre>
      *
      * <code>.yandex.cloud.ai.translate.v2.TranslateRequest.Format format = 3;</code>
@@ -131,8 +131,8 @@ public final class TranslationServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to which you have access.
-     * Required for authorization with a user account (see [yandex.cloud.iam.v1.UserAccount] resource).
-     * Don't specify this field if you make the request on behalf of a service account.
+     * Required for authorization with a [user account](/docs/iam/concepts/users/accounts).
+     * Do not specify this field if you make the request on behalf of a [service account](/docs/iam/concepts/users/accounts#sa).
      * </pre>
      *
      * <code>string folder_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -142,8 +142,8 @@ public final class TranslationServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to which you have access.
-     * Required for authorization with a user account (see [yandex.cloud.iam.v1.UserAccount] resource).
-     * Don't specify this field if you make the request on behalf of a service account.
+     * Required for authorization with a [user account](/docs/iam/concepts/users/accounts).
+     * Do not specify this field if you make the request on behalf of a [service account](/docs/iam/concepts/users/accounts#sa).
      * </pre>
      *
      * <code>string folder_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -154,7 +154,7 @@ public final class TranslationServiceOuterClass {
 
     /**
      * <pre>
-     * Do not specify this field, custom models are not supported yet.
+     * Model ID if you use custom model.
      * </pre>
      *
      * <code>string model = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -163,7 +163,7 @@ public final class TranslationServiceOuterClass {
     java.lang.String getModel();
     /**
      * <pre>
-     * Do not specify this field, custom models are not supported yet.
+     * Model ID if you use custom model.
      * </pre>
      *
      * <code>string model = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -201,7 +201,7 @@ public final class TranslationServiceOuterClass {
 
     /**
      * <pre>
-     * use speller
+     * Enable spell checking.
      * </pre>
      *
      * <code>bool speller = 8;</code>
@@ -491,8 +491,8 @@ public final class TranslationServiceOuterClass {
     /**
      * <pre>
      * The text language to translate from.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
-     * Required for translating with glossary.
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
+     * Required for translating with [glossary](/docs/translate/concepts/glossary).
      * </pre>
      *
      * <code>string source_language_code = 1 [(.yandex.cloud.length) = "&lt;=3"];</code>
@@ -514,8 +514,8 @@ public final class TranslationServiceOuterClass {
     /**
      * <pre>
      * The text language to translate from.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
-     * Required for translating with glossary.
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
+     * Required for translating with [glossary](/docs/translate/concepts/glossary).
      * </pre>
      *
      * <code>string source_language_code = 1 [(.yandex.cloud.length) = "&lt;=3"];</code>
@@ -541,7 +541,7 @@ public final class TranslationServiceOuterClass {
     /**
      * <pre>
      * The target language to translate the text.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
      * </pre>
      *
      * <code>string target_language_code = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -563,7 +563,7 @@ public final class TranslationServiceOuterClass {
     /**
      * <pre>
      * The target language to translate the text.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
      * </pre>
      *
      * <code>string target_language_code = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -588,7 +588,7 @@ public final class TranslationServiceOuterClass {
     private int format_;
     /**
      * <pre>
-     * Format of the text.
+     * Format of the text to be translated.
      * </pre>
      *
      * <code>.yandex.cloud.ai.translate.v2.TranslateRequest.Format format = 3;</code>
@@ -599,7 +599,7 @@ public final class TranslationServiceOuterClass {
     }
     /**
      * <pre>
-     * Format of the text.
+     * Format of the text to be translated.
      * </pre>
      *
      * <code>.yandex.cloud.ai.translate.v2.TranslateRequest.Format format = 3;</code>
@@ -671,8 +671,8 @@ public final class TranslationServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to which you have access.
-     * Required for authorization with a user account (see [yandex.cloud.iam.v1.UserAccount] resource).
-     * Don't specify this field if you make the request on behalf of a service account.
+     * Required for authorization with a [user account](/docs/iam/concepts/users/accounts).
+     * Do not specify this field if you make the request on behalf of a [service account](/docs/iam/concepts/users/accounts#sa).
      * </pre>
      *
      * <code>string folder_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -694,8 +694,8 @@ public final class TranslationServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to which you have access.
-     * Required for authorization with a user account (see [yandex.cloud.iam.v1.UserAccount] resource).
-     * Don't specify this field if you make the request on behalf of a service account.
+     * Required for authorization with a [user account](/docs/iam/concepts/users/accounts).
+     * Do not specify this field if you make the request on behalf of a [service account](/docs/iam/concepts/users/accounts#sa).
      * </pre>
      *
      * <code>string folder_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -720,7 +720,7 @@ public final class TranslationServiceOuterClass {
     private volatile java.lang.Object model_;
     /**
      * <pre>
-     * Do not specify this field, custom models are not supported yet.
+     * Model ID if you use custom model.
      * </pre>
      *
      * <code>string model = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -741,7 +741,7 @@ public final class TranslationServiceOuterClass {
     }
     /**
      * <pre>
-     * Do not specify this field, custom models are not supported yet.
+     * Model ID if you use custom model.
      * </pre>
      *
      * <code>string model = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -804,7 +804,7 @@ public final class TranslationServiceOuterClass {
     private boolean speller_;
     /**
      * <pre>
-     * use speller
+     * Enable spell checking.
      * </pre>
      *
      * <code>bool speller = 8;</code>
@@ -1272,8 +1272,8 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * The text language to translate from.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
-       * Required for translating with glossary.
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
+       * Required for translating with [glossary](/docs/translate/concepts/glossary).
        * </pre>
        *
        * <code>string source_language_code = 1 [(.yandex.cloud.length) = "&lt;=3"];</code>
@@ -1294,8 +1294,8 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * The text language to translate from.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
-       * Required for translating with glossary.
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
+       * Required for translating with [glossary](/docs/translate/concepts/glossary).
        * </pre>
        *
        * <code>string source_language_code = 1 [(.yandex.cloud.length) = "&lt;=3"];</code>
@@ -1317,8 +1317,8 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * The text language to translate from.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
-       * Required for translating with glossary.
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
+       * Required for translating with [glossary](/docs/translate/concepts/glossary).
        * </pre>
        *
        * <code>string source_language_code = 1 [(.yandex.cloud.length) = "&lt;=3"];</code>
@@ -1338,8 +1338,8 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * The text language to translate from.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
-       * Required for translating with glossary.
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
+       * Required for translating with [glossary](/docs/translate/concepts/glossary).
        * </pre>
        *
        * <code>string source_language_code = 1 [(.yandex.cloud.length) = "&lt;=3"];</code>
@@ -1354,8 +1354,8 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * The text language to translate from.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
-       * Required for translating with glossary.
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
+       * Required for translating with [glossary](/docs/translate/concepts/glossary).
        * </pre>
        *
        * <code>string source_language_code = 1 [(.yandex.cloud.length) = "&lt;=3"];</code>
@@ -1378,7 +1378,7 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * The target language to translate the text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * </pre>
        *
        * <code>string target_language_code = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -1399,7 +1399,7 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * The target language to translate the text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * </pre>
        *
        * <code>string target_language_code = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -1421,7 +1421,7 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * The target language to translate the text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * </pre>
        *
        * <code>string target_language_code = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -1441,7 +1441,7 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * The target language to translate the text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * </pre>
        *
        * <code>string target_language_code = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -1456,7 +1456,7 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * The target language to translate the text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` en ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * </pre>
        *
        * <code>string target_language_code = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -1478,7 +1478,7 @@ public final class TranslationServiceOuterClass {
       private int format_ = 0;
       /**
        * <pre>
-       * Format of the text.
+       * Format of the text to be translated.
        * </pre>
        *
        * <code>.yandex.cloud.ai.translate.v2.TranslateRequest.Format format = 3;</code>
@@ -1489,7 +1489,7 @@ public final class TranslationServiceOuterClass {
       }
       /**
        * <pre>
-       * Format of the text.
+       * Format of the text to be translated.
        * </pre>
        *
        * <code>.yandex.cloud.ai.translate.v2.TranslateRequest.Format format = 3;</code>
@@ -1504,7 +1504,7 @@ public final class TranslationServiceOuterClass {
       }
       /**
        * <pre>
-       * Format of the text.
+       * Format of the text to be translated.
        * </pre>
        *
        * <code>.yandex.cloud.ai.translate.v2.TranslateRequest.Format format = 3;</code>
@@ -1518,7 +1518,7 @@ public final class TranslationServiceOuterClass {
       }
       /**
        * <pre>
-       * Format of the text.
+       * Format of the text to be translated.
        * </pre>
        *
        * <code>.yandex.cloud.ai.translate.v2.TranslateRequest.Format format = 3;</code>
@@ -1536,7 +1536,7 @@ public final class TranslationServiceOuterClass {
       }
       /**
        * <pre>
-       * Format of the text.
+       * Format of the text to be translated.
        * </pre>
        *
        * <code>.yandex.cloud.ai.translate.v2.TranslateRequest.Format format = 3;</code>
@@ -1708,8 +1708,8 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to which you have access.
-       * Required for authorization with a user account (see [yandex.cloud.iam.v1.UserAccount] resource).
-       * Don't specify this field if you make the request on behalf of a service account.
+       * Required for authorization with a [user account](/docs/iam/concepts/users/accounts).
+       * Do not specify this field if you make the request on behalf of a [service account](/docs/iam/concepts/users/accounts#sa).
        * </pre>
        *
        * <code>string folder_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1730,8 +1730,8 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to which you have access.
-       * Required for authorization with a user account (see [yandex.cloud.iam.v1.UserAccount] resource).
-       * Don't specify this field if you make the request on behalf of a service account.
+       * Required for authorization with a [user account](/docs/iam/concepts/users/accounts).
+       * Do not specify this field if you make the request on behalf of a [service account](/docs/iam/concepts/users/accounts#sa).
        * </pre>
        *
        * <code>string folder_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1753,8 +1753,8 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to which you have access.
-       * Required for authorization with a user account (see [yandex.cloud.iam.v1.UserAccount] resource).
-       * Don't specify this field if you make the request on behalf of a service account.
+       * Required for authorization with a [user account](/docs/iam/concepts/users/accounts).
+       * Do not specify this field if you make the request on behalf of a [service account](/docs/iam/concepts/users/accounts#sa).
        * </pre>
        *
        * <code>string folder_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1774,8 +1774,8 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to which you have access.
-       * Required for authorization with a user account (see [yandex.cloud.iam.v1.UserAccount] resource).
-       * Don't specify this field if you make the request on behalf of a service account.
+       * Required for authorization with a [user account](/docs/iam/concepts/users/accounts).
+       * Do not specify this field if you make the request on behalf of a [service account](/docs/iam/concepts/users/accounts#sa).
        * </pre>
        *
        * <code>string folder_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1790,8 +1790,8 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to which you have access.
-       * Required for authorization with a user account (see [yandex.cloud.iam.v1.UserAccount] resource).
-       * Don't specify this field if you make the request on behalf of a service account.
+       * Required for authorization with a [user account](/docs/iam/concepts/users/accounts).
+       * Do not specify this field if you make the request on behalf of a [service account](/docs/iam/concepts/users/accounts#sa).
        * </pre>
        *
        * <code>string folder_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1813,7 +1813,7 @@ public final class TranslationServiceOuterClass {
       private java.lang.Object model_ = "";
       /**
        * <pre>
-       * Do not specify this field, custom models are not supported yet.
+       * Model ID if you use custom model.
        * </pre>
        *
        * <code>string model = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1833,7 +1833,7 @@ public final class TranslationServiceOuterClass {
       }
       /**
        * <pre>
-       * Do not specify this field, custom models are not supported yet.
+       * Model ID if you use custom model.
        * </pre>
        *
        * <code>string model = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1854,7 +1854,7 @@ public final class TranslationServiceOuterClass {
       }
       /**
        * <pre>
-       * Do not specify this field, custom models are not supported yet.
+       * Model ID if you use custom model.
        * </pre>
        *
        * <code>string model = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1873,7 +1873,7 @@ public final class TranslationServiceOuterClass {
       }
       /**
        * <pre>
-       * Do not specify this field, custom models are not supported yet.
+       * Model ID if you use custom model.
        * </pre>
        *
        * <code>string model = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1887,7 +1887,7 @@ public final class TranslationServiceOuterClass {
       }
       /**
        * <pre>
-       * Do not specify this field, custom models are not supported yet.
+       * Model ID if you use custom model.
        * </pre>
        *
        * <code>string model = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2064,7 +2064,7 @@ public final class TranslationServiceOuterClass {
       private boolean speller_ ;
       /**
        * <pre>
-       * use speller
+       * Enable spell checking.
        * </pre>
        *
        * <code>bool speller = 8;</code>
@@ -2076,7 +2076,7 @@ public final class TranslationServiceOuterClass {
       }
       /**
        * <pre>
-       * use speller
+       * Enable spell checking.
        * </pre>
        *
        * <code>bool speller = 8;</code>
@@ -2091,7 +2091,7 @@ public final class TranslationServiceOuterClass {
       }
       /**
        * <pre>
-       * use speller
+       * Enable spell checking.
        * </pre>
        *
        * <code>bool speller = 8;</code>
@@ -2162,7 +2162,7 @@ public final class TranslationServiceOuterClass {
 
     /**
      * <pre>
-     * Pass glossary data in the request. Currently, only this way to pass glossary is supported.
+     * Pass glossary data in the request. Currently, the only way to pass glossary.
      * </pre>
      *
      * <code>.yandex.cloud.ai.translate.v2.GlossaryData glossary_data = 1;</code>
@@ -2171,7 +2171,7 @@ public final class TranslationServiceOuterClass {
     boolean hasGlossaryData();
     /**
      * <pre>
-     * Pass glossary data in the request. Currently, only this way to pass glossary is supported.
+     * Pass glossary data in the request. Currently, the only way to pass glossary.
      * </pre>
      *
      * <code>.yandex.cloud.ai.translate.v2.GlossaryData glossary_data = 1;</code>
@@ -2180,7 +2180,7 @@ public final class TranslationServiceOuterClass {
     yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryData getGlossaryData();
     /**
      * <pre>
-     * Pass glossary data in the request. Currently, only this way to pass glossary is supported.
+     * Pass glossary data in the request. Currently, the only way to pass glossary.
      * </pre>
      *
      * <code>.yandex.cloud.ai.translate.v2.GlossaryData glossary_data = 1;</code>
@@ -2322,7 +2322,7 @@ public final class TranslationServiceOuterClass {
     public static final int GLOSSARY_DATA_FIELD_NUMBER = 1;
     /**
      * <pre>
-     * Pass glossary data in the request. Currently, only this way to pass glossary is supported.
+     * Pass glossary data in the request. Currently, the only way to pass glossary.
      * </pre>
      *
      * <code>.yandex.cloud.ai.translate.v2.GlossaryData glossary_data = 1;</code>
@@ -2334,7 +2334,7 @@ public final class TranslationServiceOuterClass {
     }
     /**
      * <pre>
-     * Pass glossary data in the request. Currently, only this way to pass glossary is supported.
+     * Pass glossary data in the request. Currently, the only way to pass glossary.
      * </pre>
      *
      * <code>.yandex.cloud.ai.translate.v2.GlossaryData glossary_data = 1;</code>
@@ -2349,7 +2349,7 @@ public final class TranslationServiceOuterClass {
     }
     /**
      * <pre>
-     * Pass glossary data in the request. Currently, only this way to pass glossary is supported.
+     * Pass glossary data in the request. Currently, the only way to pass glossary.
      * </pre>
      *
      * <code>.yandex.cloud.ai.translate.v2.GlossaryData glossary_data = 1;</code>
@@ -2709,7 +2709,7 @@ public final class TranslationServiceOuterClass {
           yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryData, yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryData.Builder, yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryDataOrBuilder> glossaryDataBuilder_;
       /**
        * <pre>
-       * Pass glossary data in the request. Currently, only this way to pass glossary is supported.
+       * Pass glossary data in the request. Currently, the only way to pass glossary.
        * </pre>
        *
        * <code>.yandex.cloud.ai.translate.v2.GlossaryData glossary_data = 1;</code>
@@ -2721,7 +2721,7 @@ public final class TranslationServiceOuterClass {
       }
       /**
        * <pre>
-       * Pass glossary data in the request. Currently, only this way to pass glossary is supported.
+       * Pass glossary data in the request. Currently, the only way to pass glossary.
        * </pre>
        *
        * <code>.yandex.cloud.ai.translate.v2.GlossaryData glossary_data = 1;</code>
@@ -2743,7 +2743,7 @@ public final class TranslationServiceOuterClass {
       }
       /**
        * <pre>
-       * Pass glossary data in the request. Currently, only this way to pass glossary is supported.
+       * Pass glossary data in the request. Currently, the only way to pass glossary.
        * </pre>
        *
        * <code>.yandex.cloud.ai.translate.v2.GlossaryData glossary_data = 1;</code>
@@ -2763,7 +2763,7 @@ public final class TranslationServiceOuterClass {
       }
       /**
        * <pre>
-       * Pass glossary data in the request. Currently, only this way to pass glossary is supported.
+       * Pass glossary data in the request. Currently, the only way to pass glossary.
        * </pre>
        *
        * <code>.yandex.cloud.ai.translate.v2.GlossaryData glossary_data = 1;</code>
@@ -2781,7 +2781,7 @@ public final class TranslationServiceOuterClass {
       }
       /**
        * <pre>
-       * Pass glossary data in the request. Currently, only this way to pass glossary is supported.
+       * Pass glossary data in the request. Currently, the only way to pass glossary.
        * </pre>
        *
        * <code>.yandex.cloud.ai.translate.v2.GlossaryData glossary_data = 1;</code>
@@ -2807,7 +2807,7 @@ public final class TranslationServiceOuterClass {
       }
       /**
        * <pre>
-       * Pass glossary data in the request. Currently, only this way to pass glossary is supported.
+       * Pass glossary data in the request. Currently, the only way to pass glossary.
        * </pre>
        *
        * <code>.yandex.cloud.ai.translate.v2.GlossaryData glossary_data = 1;</code>
@@ -2830,7 +2830,7 @@ public final class TranslationServiceOuterClass {
       }
       /**
        * <pre>
-       * Pass glossary data in the request. Currently, only this way to pass glossary is supported.
+       * Pass glossary data in the request. Currently, the only way to pass glossary.
        * </pre>
        *
        * <code>.yandex.cloud.ai.translate.v2.GlossaryData glossary_data = 1;</code>
@@ -2840,7 +2840,7 @@ public final class TranslationServiceOuterClass {
       }
       /**
        * <pre>
-       * Pass glossary data in the request. Currently, only this way to pass glossary is supported.
+       * Pass glossary data in the request. Currently, the only way to pass glossary.
        * </pre>
        *
        * <code>.yandex.cloud.ai.translate.v2.GlossaryData glossary_data = 1;</code>
@@ -2858,7 +2858,7 @@ public final class TranslationServiceOuterClass {
       }
       /**
        * <pre>
-       * Pass glossary data in the request. Currently, only this way to pass glossary is supported.
+       * Pass glossary data in the request. Currently, the only way to pass glossary.
        * </pre>
        *
        * <code>.yandex.cloud.ai.translate.v2.GlossaryData glossary_data = 1;</code>
@@ -3940,6 +3940,10 @@ public final class TranslationServiceOuterClass {
         getTranslatedTextBytes();
 
     /**
+     * <pre>
+     * Allows to add translations for specific terms to [neuroglossaries](/docs/translate/concepts/glossary#word-forms).
+     * </pre>
+     *
      * <code>bool exact = 3;</code>
      * @return The exact.
      */
@@ -4136,6 +4140,10 @@ public final class TranslationServiceOuterClass {
     public static final int EXACT_FIELD_NUMBER = 3;
     private boolean exact_;
     /**
+     * <pre>
+     * Allows to add translations for specific terms to [neuroglossaries](/docs/translate/concepts/glossary#word-forms).
+     * </pre>
+     *
      * <code>bool exact = 3;</code>
      * @return The exact.
      */
@@ -4675,6 +4683,10 @@ public final class TranslationServiceOuterClass {
 
       private boolean exact_ ;
       /**
+       * <pre>
+       * Allows to add translations for specific terms to [neuroglossaries](/docs/translate/concepts/glossary#word-forms).
+       * </pre>
+       *
        * <code>bool exact = 3;</code>
        * @return The exact.
        */
@@ -4683,6 +4695,10 @@ public final class TranslationServiceOuterClass {
         return exact_;
       }
       /**
+       * <pre>
+       * Allows to add translations for specific terms to [neuroglossaries](/docs/translate/concepts/glossary#word-forms).
+       * </pre>
+       *
        * <code>bool exact = 3;</code>
        * @param value The exact to set.
        * @return This builder for chaining.
@@ -4694,6 +4710,10 @@ public final class TranslationServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Allows to add translations for specific terms to [neuroglossaries](/docs/translate/concepts/glossary#word-forms).
+       * </pre>
+       *
        * <code>bool exact = 3;</code>
        * @return This builder for chaining.
        */
@@ -5688,7 +5708,7 @@ public final class TranslationServiceOuterClass {
     /**
      * <pre>
      * List of the most likely languages. These languages will be given preference when detecting the text language.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
      * To get the list of supported languages, use a [TranslationService.ListLanguages] request.
      * </pre>
      *
@@ -5700,7 +5720,7 @@ public final class TranslationServiceOuterClass {
     /**
      * <pre>
      * List of the most likely languages. These languages will be given preference when detecting the text language.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
      * To get the list of supported languages, use a [TranslationService.ListLanguages] request.
      * </pre>
      *
@@ -5711,7 +5731,7 @@ public final class TranslationServiceOuterClass {
     /**
      * <pre>
      * List of the most likely languages. These languages will be given preference when detecting the text language.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
      * To get the list of supported languages, use a [TranslationService.ListLanguages] request.
      * </pre>
      *
@@ -5723,7 +5743,7 @@ public final class TranslationServiceOuterClass {
     /**
      * <pre>
      * List of the most likely languages. These languages will be given preference when detecting the text language.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
      * To get the list of supported languages, use a [TranslationService.ListLanguages] request.
      * </pre>
      *
@@ -5914,7 +5934,7 @@ public final class TranslationServiceOuterClass {
     /**
      * <pre>
      * List of the most likely languages. These languages will be given preference when detecting the text language.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
      * To get the list of supported languages, use a [TranslationService.ListLanguages] request.
      * </pre>
      *
@@ -5928,7 +5948,7 @@ public final class TranslationServiceOuterClass {
     /**
      * <pre>
      * List of the most likely languages. These languages will be given preference when detecting the text language.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
      * To get the list of supported languages, use a [TranslationService.ListLanguages] request.
      * </pre>
      *
@@ -5941,7 +5961,7 @@ public final class TranslationServiceOuterClass {
     /**
      * <pre>
      * List of the most likely languages. These languages will be given preference when detecting the text language.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
      * To get the list of supported languages, use a [TranslationService.ListLanguages] request.
      * </pre>
      *
@@ -5955,7 +5975,7 @@ public final class TranslationServiceOuterClass {
     /**
      * <pre>
      * List of the most likely languages. These languages will be given preference when detecting the text language.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
      * To get the list of supported languages, use a [TranslationService.ListLanguages] request.
      * </pre>
      *
@@ -6479,7 +6499,7 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * List of the most likely languages. These languages will be given preference when detecting the text language.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * To get the list of supported languages, use a [TranslationService.ListLanguages] request.
        * </pre>
        *
@@ -6493,7 +6513,7 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * List of the most likely languages. These languages will be given preference when detecting the text language.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * To get the list of supported languages, use a [TranslationService.ListLanguages] request.
        * </pre>
        *
@@ -6506,7 +6526,7 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * List of the most likely languages. These languages will be given preference when detecting the text language.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * To get the list of supported languages, use a [TranslationService.ListLanguages] request.
        * </pre>
        *
@@ -6520,7 +6540,7 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * List of the most likely languages. These languages will be given preference when detecting the text language.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * To get the list of supported languages, use a [TranslationService.ListLanguages] request.
        * </pre>
        *
@@ -6535,7 +6555,7 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * List of the most likely languages. These languages will be given preference when detecting the text language.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * To get the list of supported languages, use a [TranslationService.ListLanguages] request.
        * </pre>
        *
@@ -6557,7 +6577,7 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * List of the most likely languages. These languages will be given preference when detecting the text language.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * To get the list of supported languages, use a [TranslationService.ListLanguages] request.
        * </pre>
        *
@@ -6578,7 +6598,7 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * List of the most likely languages. These languages will be given preference when detecting the text language.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * To get the list of supported languages, use a [TranslationService.ListLanguages] request.
        * </pre>
        *
@@ -6597,7 +6617,7 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * List of the most likely languages. These languages will be given preference when detecting the text language.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * To get the list of supported languages, use a [TranslationService.ListLanguages] request.
        * </pre>
        *
@@ -6613,7 +6633,7 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * List of the most likely languages. These languages will be given preference when detecting the text language.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * To get the list of supported languages, use a [TranslationService.ListLanguages] request.
        * </pre>
        *
@@ -6797,7 +6817,7 @@ public final class TranslationServiceOuterClass {
 
     /**
      * <pre>
-     * The text language in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
      * To get the language name, use a [TranslationService.ListLanguages] request.
      * </pre>
      *
@@ -6807,7 +6827,7 @@ public final class TranslationServiceOuterClass {
     java.lang.String getLanguageCode();
     /**
      * <pre>
-     * The text language in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
      * To get the language name, use a [TranslationService.ListLanguages] request.
      * </pre>
      *
@@ -6905,7 +6925,7 @@ public final class TranslationServiceOuterClass {
     private volatile java.lang.Object languageCode_;
     /**
      * <pre>
-     * The text language in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
      * To get the language name, use a [TranslationService.ListLanguages] request.
      * </pre>
      *
@@ -6927,7 +6947,7 @@ public final class TranslationServiceOuterClass {
     }
     /**
      * <pre>
-     * The text language in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
      * To get the language name, use a [TranslationService.ListLanguages] request.
      * </pre>
      *
@@ -7254,7 +7274,7 @@ public final class TranslationServiceOuterClass {
       private java.lang.Object languageCode_ = "";
       /**
        * <pre>
-       * The text language in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * To get the language name, use a [TranslationService.ListLanguages] request.
        * </pre>
        *
@@ -7275,7 +7295,7 @@ public final class TranslationServiceOuterClass {
       }
       /**
        * <pre>
-       * The text language in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * To get the language name, use a [TranslationService.ListLanguages] request.
        * </pre>
        *
@@ -7297,7 +7317,7 @@ public final class TranslationServiceOuterClass {
       }
       /**
        * <pre>
-       * The text language in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * To get the language name, use a [TranslationService.ListLanguages] request.
        * </pre>
        *
@@ -7317,7 +7337,7 @@ public final class TranslationServiceOuterClass {
       }
       /**
        * <pre>
-       * The text language in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * To get the language name, use a [TranslationService.ListLanguages] request.
        * </pre>
        *
@@ -7332,7 +7352,7 @@ public final class TranslationServiceOuterClass {
       }
       /**
        * <pre>
-       * The text language in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Most languages are specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``), but the field are not limited to it.
        * To get the language name, use a [TranslationService.ListLanguages] request.
        * </pre>
        *
@@ -7411,8 +7431,8 @@ public final class TranslationServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to which you have access.
-     * Required for authorization with a user account (see [yandex.cloud.iam.v1.UserAccount] resource).
-     * Don't specify this field if you make the request on behalf of a service account.
+     * Required for authorization with a [user account](/docs/iam/concepts/users/accounts).
+     * Do not specify this field if you make the request on behalf of a [service account](/docs/iam/concepts/users/accounts#sa).
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7422,8 +7442,8 @@ public final class TranslationServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to which you have access.
-     * Required for authorization with a user account (see [yandex.cloud.iam.v1.UserAccount] resource).
-     * Don't specify this field if you make the request on behalf of a service account.
+     * Required for authorization with a [user account](/docs/iam/concepts/users/accounts).
+     * Do not specify this field if you make the request on behalf of a [service account](/docs/iam/concepts/users/accounts#sa).
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7521,8 +7541,8 @@ public final class TranslationServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to which you have access.
-     * Required for authorization with a user account (see [yandex.cloud.iam.v1.UserAccount] resource).
-     * Don't specify this field if you make the request on behalf of a service account.
+     * Required for authorization with a [user account](/docs/iam/concepts/users/accounts).
+     * Do not specify this field if you make the request on behalf of a [service account](/docs/iam/concepts/users/accounts#sa).
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7544,8 +7564,8 @@ public final class TranslationServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to which you have access.
-     * Required for authorization with a user account (see [yandex.cloud.iam.v1.UserAccount] resource).
-     * Don't specify this field if you make the request on behalf of a service account.
+     * Required for authorization with a [user account](/docs/iam/concepts/users/accounts).
+     * Do not specify this field if you make the request on behalf of a [service account](/docs/iam/concepts/users/accounts#sa).
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7872,8 +7892,8 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to which you have access.
-       * Required for authorization with a user account (see [yandex.cloud.iam.v1.UserAccount] resource).
-       * Don't specify this field if you make the request on behalf of a service account.
+       * Required for authorization with a [user account](/docs/iam/concepts/users/accounts).
+       * Do not specify this field if you make the request on behalf of a [service account](/docs/iam/concepts/users/accounts#sa).
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7894,8 +7914,8 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to which you have access.
-       * Required for authorization with a user account (see [yandex.cloud.iam.v1.UserAccount] resource).
-       * Don't specify this field if you make the request on behalf of a service account.
+       * Required for authorization with a [user account](/docs/iam/concepts/users/accounts).
+       * Do not specify this field if you make the request on behalf of a [service account](/docs/iam/concepts/users/accounts#sa).
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7917,8 +7937,8 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to which you have access.
-       * Required for authorization with a user account (see [yandex.cloud.iam.v1.UserAccount] resource).
-       * Don't specify this field if you make the request on behalf of a service account.
+       * Required for authorization with a [user account](/docs/iam/concepts/users/accounts).
+       * Do not specify this field if you make the request on behalf of a [service account](/docs/iam/concepts/users/accounts#sa).
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7938,8 +7958,8 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to which you have access.
-       * Required for authorization with a user account (see [yandex.cloud.iam.v1.UserAccount] resource).
-       * Don't specify this field if you make the request on behalf of a service account.
+       * Required for authorization with a [user account](/docs/iam/concepts/users/accounts).
+       * Do not specify this field if you make the request on behalf of a [service account](/docs/iam/concepts/users/accounts#sa).
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7954,8 +7974,8 @@ public final class TranslationServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to which you have access.
-       * Required for authorization with a user account (see [yandex.cloud.iam.v1.UserAccount] resource).
-       * Don't specify this field if you make the request on behalf of a service account.
+       * Required for authorization with a [user account](/docs/iam/concepts/users/accounts).
+       * Do not specify this field if you make the request on behalf of a [service account](/docs/iam/concepts/users/accounts#sa).
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
