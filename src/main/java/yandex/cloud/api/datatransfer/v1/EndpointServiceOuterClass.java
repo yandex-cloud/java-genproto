@@ -19,11 +19,23 @@ public final class EndpointServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Identifier of the endpoint to return.
+     * 
+     * To get the endpoint ID, make an [EndpointService.List] request.
+     * </pre>
+     *
      * <code>string endpoint_id = 1;</code>
      * @return The endpointId.
      */
     java.lang.String getEndpointId();
     /**
+     * <pre>
+     * Identifier of the endpoint to return.
+     * 
+     * To get the endpoint ID, make an [EndpointService.List] request.
+     * </pre>
+     *
      * <code>string endpoint_id = 1;</code>
      * @return The bytes for endpointId.
      */
@@ -117,6 +129,12 @@ public final class EndpointServiceOuterClass {
     public static final int ENDPOINT_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object endpointId_;
     /**
+     * <pre>
+     * Identifier of the endpoint to return.
+     * 
+     * To get the endpoint ID, make an [EndpointService.List] request.
+     * </pre>
+     *
      * <code>string endpoint_id = 1;</code>
      * @return The endpointId.
      */
@@ -134,6 +152,12 @@ public final class EndpointServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Identifier of the endpoint to return.
+     * 
+     * To get the endpoint ID, make an [EndpointService.List] request.
+     * </pre>
+     *
      * <code>string endpoint_id = 1;</code>
      * @return The bytes for endpointId.
      */
@@ -456,6 +480,12 @@ public final class EndpointServiceOuterClass {
 
       private java.lang.Object endpointId_ = "";
       /**
+       * <pre>
+       * Identifier of the endpoint to return.
+       * 
+       * To get the endpoint ID, make an [EndpointService.List] request.
+       * </pre>
+       *
        * <code>string endpoint_id = 1;</code>
        * @return The endpointId.
        */
@@ -472,6 +502,12 @@ public final class EndpointServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier of the endpoint to return.
+       * 
+       * To get the endpoint ID, make an [EndpointService.List] request.
+       * </pre>
+       *
        * <code>string endpoint_id = 1;</code>
        * @return The bytes for endpointId.
        */
@@ -489,6 +525,12 @@ public final class EndpointServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier of the endpoint to return.
+       * 
+       * To get the endpoint ID, make an [EndpointService.List] request.
+       * </pre>
+       *
        * <code>string endpoint_id = 1;</code>
        * @param value The endpointId to set.
        * @return This builder for chaining.
@@ -504,6 +546,12 @@ public final class EndpointServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the endpoint to return.
+       * 
+       * To get the endpoint ID, make an [EndpointService.List] request.
+       * </pre>
+       *
        * <code>string endpoint_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -514,6 +562,12 @@ public final class EndpointServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the endpoint to return.
+       * 
+       * To get the endpoint ID, make an [EndpointService.List] request.
+       * </pre>
+       *
        * <code>string endpoint_id = 1;</code>
        * @param value The bytes for endpointId to set.
        * @return This builder for chaining.
@@ -2699,11 +2753,25 @@ public final class EndpointServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to create the endpoint in.
+     * 
+     * To get the folder ID, make a
+     * [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to create the endpoint in.
+     * 
+     * To get the folder ID, make a
+     * [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return The bytes for folderId.
      */
@@ -2711,11 +2779,23 @@ public final class EndpointServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Name of the endpoint.
+     * 
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the endpoint.
+     * 
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
@@ -2723,11 +2803,19 @@ public final class EndpointServiceOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the endpoint.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the endpoint.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The bytes for description.
      */
@@ -2735,10 +2823,24 @@ public final class EndpointServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Endpoint labels as `key:value` pairs.
+     * 
+     * For details about the concept, see [documentation]({{ api-url-prefix
+     * }}/resource-manager/concepts/labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Endpoint labels as `key:value` pairs.
+     * 
+     * For details about the concept, see [documentation]({{ api-url-prefix
+     * }}/resource-manager/concepts/labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
     boolean containsLabels(
@@ -2750,11 +2852,25 @@ public final class EndpointServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Endpoint labels as `key:value` pairs.
+     * 
+     * For details about the concept, see [documentation]({{ api-url-prefix
+     * }}/resource-manager/concepts/labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Endpoint labels as `key:value` pairs.
+     * 
+     * For details about the concept, see [documentation]({{ api-url-prefix
+     * }}/resource-manager/concepts/labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
 
@@ -2762,6 +2878,13 @@ public final class EndpointServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Endpoint labels as `key:value` pairs.
+     * 
+     * For details about the concept, see [documentation]({{ api-url-prefix
+     * }}/resource-manager/concepts/labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
 
@@ -2923,6 +3046,13 @@ public final class EndpointServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to create the endpoint in.
+     * 
+     * To get the folder ID, make a
+     * [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return The folderId.
      */
@@ -2940,6 +3070,13 @@ public final class EndpointServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to create the endpoint in.
+     * 
+     * To get the folder ID, make a
+     * [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return The bytes for folderId.
      */
@@ -2961,6 +3098,12 @@ public final class EndpointServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the endpoint.
+     * 
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The name.
      */
@@ -2978,6 +3121,12 @@ public final class EndpointServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the endpoint.
+     * 
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
@@ -2999,6 +3148,10 @@ public final class EndpointServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the endpoint.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The description.
      */
@@ -3016,6 +3169,10 @@ public final class EndpointServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the endpoint.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The bytes for description.
      */
@@ -3061,6 +3218,13 @@ public final class EndpointServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Endpoint labels as `key:value` pairs.
+     * 
+     * For details about the concept, see [documentation]({{ api-url-prefix
+     * }}/resource-manager/concepts/labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
 
@@ -3079,6 +3243,13 @@ public final class EndpointServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Endpoint labels as `key:value` pairs.
+     * 
+     * For details about the concept, see [documentation]({{ api-url-prefix
+     * }}/resource-manager/concepts/labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
     @java.lang.Override
@@ -3087,6 +3258,13 @@ public final class EndpointServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Endpoint labels as `key:value` pairs.
+     * 
+     * For details about the concept, see [documentation]({{ api-url-prefix
+     * }}/resource-manager/concepts/labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
     @java.lang.Override
@@ -3100,6 +3278,13 @@ public final class EndpointServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Endpoint labels as `key:value` pairs.
+     * 
+     * For details about the concept, see [documentation]({{ api-url-prefix
+     * }}/resource-manager/concepts/labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
     @java.lang.Override
@@ -3560,6 +3745,13 @@ public final class EndpointServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to create the endpoint in.
+       * 
+       * To get the folder ID, make a
+       * [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @return The folderId.
        */
@@ -3576,6 +3768,13 @@ public final class EndpointServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create the endpoint in.
+       * 
+       * To get the folder ID, make a
+       * [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @return The bytes for folderId.
        */
@@ -3593,6 +3792,13 @@ public final class EndpointServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create the endpoint in.
+       * 
+       * To get the folder ID, make a
+       * [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -3608,6 +3814,13 @@ public final class EndpointServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create the endpoint in.
+       * 
+       * To get the folder ID, make a
+       * [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -3618,6 +3831,13 @@ public final class EndpointServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create the endpoint in.
+       * 
+       * To get the folder ID, make a
+       * [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -3636,6 +3856,12 @@ public final class EndpointServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the endpoint.
+       * 
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return The name.
        */
@@ -3652,6 +3878,12 @@ public final class EndpointServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the endpoint.
+       * 
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return The bytes for name.
        */
@@ -3669,6 +3901,12 @@ public final class EndpointServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the endpoint.
+       * 
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -3684,6 +3922,12 @@ public final class EndpointServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the endpoint.
+       * 
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return This builder for chaining.
        */
@@ -3694,6 +3938,12 @@ public final class EndpointServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the endpoint.
+       * 
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -3712,6 +3962,10 @@ public final class EndpointServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the endpoint.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return The description.
        */
@@ -3728,6 +3982,10 @@ public final class EndpointServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the endpoint.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return The bytes for description.
        */
@@ -3745,6 +4003,10 @@ public final class EndpointServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the endpoint.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -3760,6 +4022,10 @@ public final class EndpointServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the endpoint.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return This builder for chaining.
        */
@@ -3770,6 +4036,10 @@ public final class EndpointServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the endpoint.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -3813,6 +4083,13 @@ public final class EndpointServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Endpoint labels as `key:value` pairs.
+       * 
+       * For details about the concept, see [documentation]({{ api-url-prefix
+       * }}/resource-manager/concepts/labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
 
@@ -3831,6 +4108,13 @@ public final class EndpointServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Endpoint labels as `key:value` pairs.
+       * 
+       * For details about the concept, see [documentation]({{ api-url-prefix
+       * }}/resource-manager/concepts/labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
       @java.lang.Override
@@ -3839,6 +4123,13 @@ public final class EndpointServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Endpoint labels as `key:value` pairs.
+       * 
+       * For details about the concept, see [documentation]({{ api-url-prefix
+       * }}/resource-manager/concepts/labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
       @java.lang.Override
@@ -3852,6 +4143,13 @@ public final class EndpointServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Endpoint labels as `key:value` pairs.
+       * 
+       * For details about the concept, see [documentation]({{ api-url-prefix
+       * }}/resource-manager/concepts/labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
       @java.lang.Override
@@ -3873,6 +4171,13 @@ public final class EndpointServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Endpoint labels as `key:value` pairs.
+       * 
+       * For details about the concept, see [documentation]({{ api-url-prefix
+       * }}/resource-manager/concepts/labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
 
@@ -3892,6 +4197,13 @@ public final class EndpointServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Endpoint labels as `key:value` pairs.
+       * 
+       * For details about the concept, see [documentation]({{ api-url-prefix
+       * }}/resource-manager/concepts/labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
       public Builder putLabels(
@@ -3907,6 +4219,13 @@ public final class EndpointServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Endpoint labels as `key:value` pairs.
+       * 
+       * For details about the concept, see [documentation]({{ api-url-prefix
+       * }}/resource-manager/concepts/labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
 
@@ -4721,10 +5040,24 @@ public final class EndpointServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Endpoint labels as `key:value` pairs.
+     * 
+     * For details about the concept, see [documentation]({{ api-url-prefix
+     * }}/resource-manager/concepts/labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 13;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Endpoint labels as `key:value` pairs.
+     * 
+     * For details about the concept, see [documentation]({{ api-url-prefix
+     * }}/resource-manager/concepts/labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 13;</code>
      */
     boolean containsLabels(
@@ -4736,11 +5069,25 @@ public final class EndpointServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Endpoint labels as `key:value` pairs.
+     * 
+     * For details about the concept, see [documentation]({{ api-url-prefix
+     * }}/resource-manager/concepts/labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 13;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Endpoint labels as `key:value` pairs.
+     * 
+     * For details about the concept, see [documentation]({{ api-url-prefix
+     * }}/resource-manager/concepts/labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 13;</code>
      */
 
@@ -4748,6 +5095,13 @@ public final class EndpointServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Endpoint labels as `key:value` pairs.
+     * 
+     * For details about the concept, see [documentation]({{ api-url-prefix
+     * }}/resource-manager/concepts/labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 13;</code>
      */
 
@@ -4756,7 +5110,7 @@ public final class EndpointServiceOuterClass {
 
     /**
      * <pre>
-     * The new endpoint name. Must be unique within the folder.
+     * The new endpoint settings.
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
@@ -4765,7 +5119,7 @@ public final class EndpointServiceOuterClass {
     boolean hasSettings();
     /**
      * <pre>
-     * The new endpoint name. Must be unique within the folder.
+     * The new endpoint settings.
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
@@ -4774,7 +5128,7 @@ public final class EndpointServiceOuterClass {
     yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings getSettings();
     /**
      * <pre>
-     * The new endpoint name. Must be unique within the folder.
+     * The new endpoint settings.
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
@@ -5135,6 +5489,13 @@ public final class EndpointServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Endpoint labels as `key:value` pairs.
+     * 
+     * For details about the concept, see [documentation]({{ api-url-prefix
+     * }}/resource-manager/concepts/labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 13;</code>
      */
 
@@ -5153,6 +5514,13 @@ public final class EndpointServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Endpoint labels as `key:value` pairs.
+     * 
+     * For details about the concept, see [documentation]({{ api-url-prefix
+     * }}/resource-manager/concepts/labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 13;</code>
      */
     @java.lang.Override
@@ -5161,6 +5529,13 @@ public final class EndpointServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Endpoint labels as `key:value` pairs.
+     * 
+     * For details about the concept, see [documentation]({{ api-url-prefix
+     * }}/resource-manager/concepts/labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 13;</code>
      */
     @java.lang.Override
@@ -5174,6 +5549,13 @@ public final class EndpointServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Endpoint labels as `key:value` pairs.
+     * 
+     * For details about the concept, see [documentation]({{ api-url-prefix
+     * }}/resource-manager/concepts/labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 13;</code>
      */
     @java.lang.Override
@@ -5193,7 +5575,7 @@ public final class EndpointServiceOuterClass {
     private yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings settings_;
     /**
      * <pre>
-     * The new endpoint name. Must be unique within the folder.
+     * The new endpoint settings.
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
@@ -5205,7 +5587,7 @@ public final class EndpointServiceOuterClass {
     }
     /**
      * <pre>
-     * The new endpoint name. Must be unique within the folder.
+     * The new endpoint settings.
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
@@ -5217,7 +5599,7 @@ public final class EndpointServiceOuterClass {
     }
     /**
      * <pre>
-     * The new endpoint name. Must be unique within the folder.
+     * The new endpoint settings.
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
@@ -6039,6 +6421,13 @@ public final class EndpointServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Endpoint labels as `key:value` pairs.
+       * 
+       * For details about the concept, see [documentation]({{ api-url-prefix
+       * }}/resource-manager/concepts/labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 13;</code>
        */
 
@@ -6057,6 +6446,13 @@ public final class EndpointServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Endpoint labels as `key:value` pairs.
+       * 
+       * For details about the concept, see [documentation]({{ api-url-prefix
+       * }}/resource-manager/concepts/labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 13;</code>
        */
       @java.lang.Override
@@ -6065,6 +6461,13 @@ public final class EndpointServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Endpoint labels as `key:value` pairs.
+       * 
+       * For details about the concept, see [documentation]({{ api-url-prefix
+       * }}/resource-manager/concepts/labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 13;</code>
        */
       @java.lang.Override
@@ -6078,6 +6481,13 @@ public final class EndpointServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Endpoint labels as `key:value` pairs.
+       * 
+       * For details about the concept, see [documentation]({{ api-url-prefix
+       * }}/resource-manager/concepts/labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 13;</code>
        */
       @java.lang.Override
@@ -6099,6 +6509,13 @@ public final class EndpointServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Endpoint labels as `key:value` pairs.
+       * 
+       * For details about the concept, see [documentation]({{ api-url-prefix
+       * }}/resource-manager/concepts/labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 13;</code>
        */
 
@@ -6118,6 +6535,13 @@ public final class EndpointServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Endpoint labels as `key:value` pairs.
+       * 
+       * For details about the concept, see [documentation]({{ api-url-prefix
+       * }}/resource-manager/concepts/labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 13;</code>
        */
       public Builder putLabels(
@@ -6133,6 +6557,13 @@ public final class EndpointServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Endpoint labels as `key:value` pairs.
+       * 
+       * For details about the concept, see [documentation]({{ api-url-prefix
+       * }}/resource-manager/concepts/labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 13;</code>
        */
 
@@ -6148,7 +6579,7 @@ public final class EndpointServiceOuterClass {
           yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings, yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings.Builder, yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettingsOrBuilder> settingsBuilder_;
       /**
        * <pre>
-       * The new endpoint name. Must be unique within the folder.
+       * The new endpoint settings.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
@@ -6159,7 +6590,7 @@ public final class EndpointServiceOuterClass {
       }
       /**
        * <pre>
-       * The new endpoint name. Must be unique within the folder.
+       * The new endpoint settings.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
@@ -6174,7 +6605,7 @@ public final class EndpointServiceOuterClass {
       }
       /**
        * <pre>
-       * The new endpoint name. Must be unique within the folder.
+       * The new endpoint settings.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
@@ -6194,7 +6625,7 @@ public final class EndpointServiceOuterClass {
       }
       /**
        * <pre>
-       * The new endpoint name. Must be unique within the folder.
+       * The new endpoint settings.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
@@ -6212,7 +6643,7 @@ public final class EndpointServiceOuterClass {
       }
       /**
        * <pre>
-       * The new endpoint name. Must be unique within the folder.
+       * The new endpoint settings.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
@@ -6234,7 +6665,7 @@ public final class EndpointServiceOuterClass {
       }
       /**
        * <pre>
-       * The new endpoint name. Must be unique within the folder.
+       * The new endpoint settings.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
@@ -6252,7 +6683,7 @@ public final class EndpointServiceOuterClass {
       }
       /**
        * <pre>
-       * The new endpoint name. Must be unique within the folder.
+       * The new endpoint settings.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
@@ -6264,7 +6695,7 @@ public final class EndpointServiceOuterClass {
       }
       /**
        * <pre>
-       * The new endpoint name. Must be unique within the folder.
+       * The new endpoint settings.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
@@ -6279,7 +6710,7 @@ public final class EndpointServiceOuterClass {
       }
       /**
        * <pre>
-       * The new endpoint name. Must be unique within the folder.
+       * The new endpoint settings.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
@@ -7114,11 +7545,23 @@ public final class EndpointServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Identifier of the endpoint to delete.
+     * 
+     * To get the list of all available endpoints, make a [List] request.
+     * </pre>
+     *
      * <code>string endpoint_id = 1;</code>
      * @return The endpointId.
      */
     java.lang.String getEndpointId();
     /**
+     * <pre>
+     * Identifier of the endpoint to delete.
+     * 
+     * To get the list of all available endpoints, make a [List] request.
+     * </pre>
+     *
      * <code>string endpoint_id = 1;</code>
      * @return The bytes for endpointId.
      */
@@ -7212,6 +7655,12 @@ public final class EndpointServiceOuterClass {
     public static final int ENDPOINT_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object endpointId_;
     /**
+     * <pre>
+     * Identifier of the endpoint to delete.
+     * 
+     * To get the list of all available endpoints, make a [List] request.
+     * </pre>
+     *
      * <code>string endpoint_id = 1;</code>
      * @return The endpointId.
      */
@@ -7229,6 +7678,12 @@ public final class EndpointServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Identifier of the endpoint to delete.
+     * 
+     * To get the list of all available endpoints, make a [List] request.
+     * </pre>
+     *
      * <code>string endpoint_id = 1;</code>
      * @return The bytes for endpointId.
      */
@@ -7551,6 +8006,12 @@ public final class EndpointServiceOuterClass {
 
       private java.lang.Object endpointId_ = "";
       /**
+       * <pre>
+       * Identifier of the endpoint to delete.
+       * 
+       * To get the list of all available endpoints, make a [List] request.
+       * </pre>
+       *
        * <code>string endpoint_id = 1;</code>
        * @return The endpointId.
        */
@@ -7567,6 +8028,12 @@ public final class EndpointServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier of the endpoint to delete.
+       * 
+       * To get the list of all available endpoints, make a [List] request.
+       * </pre>
+       *
        * <code>string endpoint_id = 1;</code>
        * @return The bytes for endpointId.
        */
@@ -7584,6 +8051,12 @@ public final class EndpointServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier of the endpoint to delete.
+       * 
+       * To get the list of all available endpoints, make a [List] request.
+       * </pre>
+       *
        * <code>string endpoint_id = 1;</code>
        * @param value The endpointId to set.
        * @return This builder for chaining.
@@ -7599,6 +8072,12 @@ public final class EndpointServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the endpoint to delete.
+       * 
+       * To get the list of all available endpoints, make a [List] request.
+       * </pre>
+       *
        * <code>string endpoint_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -7609,6 +8088,12 @@ public final class EndpointServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the endpoint to delete.
+       * 
+       * To get the list of all available endpoints, make a [List] request.
+       * </pre>
+       *
        * <code>string endpoint_id = 1;</code>
        * @param value The bytes for endpointId to set.
        * @return This builder for chaining.

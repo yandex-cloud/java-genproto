@@ -411,7 +411,8 @@ public final class Postgres {
 
     /**
      * <pre>
-     * 
+     * Sequence sets
+     * CREATE SEQUENCE ...
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
@@ -420,7 +421,8 @@ public final class Postgres {
     int getSequenceSetValue();
     /**
      * <pre>
-     * 
+     * Sequence sets
+     * CREATE SEQUENCE ...
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
@@ -1162,7 +1164,8 @@ public final class Postgres {
     private int sequenceSet_;
     /**
      * <pre>
-     * 
+     * Sequence sets
+     * CREATE SEQUENCE ...
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
@@ -1173,7 +1176,8 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * 
+     * Sequence sets
+     * CREATE SEQUENCE ...
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
@@ -3189,7 +3193,8 @@ public final class Postgres {
       private int sequenceSet_ = 0;
       /**
        * <pre>
-       * 
+       * Sequence sets
+       * CREATE SEQUENCE ...
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
@@ -3200,7 +3205,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * 
+       * Sequence sets
+       * CREATE SEQUENCE ...
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
@@ -3215,7 +3221,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * 
+       * Sequence sets
+       * CREATE SEQUENCE ...
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
@@ -3229,7 +3236,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * 
+       * Sequence sets
+       * CREATE SEQUENCE ...
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
@@ -3247,7 +3255,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * 
+       * Sequence sets
+       * CREATE SEQUENCE ...
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
@@ -4550,6 +4559,21 @@ public final class Postgres {
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Postgres.OnPremisePostgresOrBuilder getOnPremiseOrBuilder();
 
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+     * @return Whether the connectionManagerConnection field is set.
+     */
+    boolean hasConnectionManagerConnection();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+     * @return The connectionManagerConnection.
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection getConnectionManagerConnection();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder getConnectionManagerConnectionOrBuilder();
+
     public yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresConnection.ConnectionCase getConnectionCase();
   }
   /**
@@ -4617,6 +4641,20 @@ public final class Postgres {
               connectionCase_ = 2;
               break;
             }
+            case 26: {
+              yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder subBuilder = null;
+              if (connectionCase_ == 3) {
+                subBuilder = ((yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_).toBuilder();
+              }
+              connection_ =
+                  input.readMessage(yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_);
+                connection_ = subBuilder.buildPartial();
+              }
+              connectionCase_ = 3;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4656,6 +4694,7 @@ public final class Postgres {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       MDB_CLUSTER_ID(1),
       ON_PREMISE(2),
+      CONNECTION_MANAGER_CONNECTION(3),
       CONNECTION_NOT_SET(0);
       private final int value;
       private ConnectionCase(int value) {
@@ -4675,6 +4714,7 @@ public final class Postgres {
         switch (value) {
           case 1: return MDB_CLUSTER_ID;
           case 2: return ON_PREMISE;
+          case 3: return CONNECTION_MANAGER_CONNECTION;
           case 0: return CONNECTION_NOT_SET;
           default: return null;
         }
@@ -4797,6 +4837,37 @@ public final class Postgres {
       return yandex.cloud.api.datatransfer.v1.endpoint.Postgres.OnPremisePostgres.getDefaultInstance();
     }
 
+    public static final int CONNECTION_MANAGER_CONNECTION_FIELD_NUMBER = 3;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+     * @return Whether the connectionManagerConnection field is set.
+     */
+    @java.lang.Override
+    public boolean hasConnectionManagerConnection() {
+      return connectionCase_ == 3;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+     * @return The connectionManagerConnection.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection getConnectionManagerConnection() {
+      if (connectionCase_ == 3) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder getConnectionManagerConnectionOrBuilder() {
+      if (connectionCase_ == 3) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4817,6 +4888,9 @@ public final class Postgres {
       if (connectionCase_ == 2) {
         output.writeMessage(2, (yandex.cloud.api.datatransfer.v1.endpoint.Postgres.OnPremisePostgres) connection_);
       }
+      if (connectionCase_ == 3) {
+        output.writeMessage(3, (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4832,6 +4906,10 @@ public final class Postgres {
       if (connectionCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, (yandex.cloud.api.datatransfer.v1.endpoint.Postgres.OnPremisePostgres) connection_);
+      }
+      if (connectionCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4858,6 +4936,10 @@ public final class Postgres {
           if (!getOnPremise()
               .equals(other.getOnPremise())) return false;
           break;
+        case 3:
+          if (!getConnectionManagerConnection()
+              .equals(other.getConnectionManagerConnection())) return false;
+          break;
         case 0:
         default:
       }
@@ -4880,6 +4962,10 @@ public final class Postgres {
         case 2:
           hash = (37 * hash) + ON_PREMISE_FIELD_NUMBER;
           hash = (53 * hash) + getOnPremise().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + CONNECTION_MANAGER_CONNECTION_FIELD_NUMBER;
+          hash = (53 * hash) + getConnectionManagerConnection().hashCode();
           break;
         case 0:
         default:
@@ -5055,6 +5141,13 @@ public final class Postgres {
             result.connection_ = onPremiseBuilder_.build();
           }
         }
+        if (connectionCase_ == 3) {
+          if (connectionManagerConnectionBuilder_ == null) {
+            result.connection_ = connection_;
+          } else {
+            result.connection_ = connectionManagerConnectionBuilder_.build();
+          }
+        }
         result.connectionCase_ = connectionCase_;
         onBuilt();
         return result;
@@ -5113,6 +5206,10 @@ public final class Postgres {
           }
           case ON_PREMISE: {
             mergeOnPremise(other.getOnPremise());
+            break;
+          }
+          case CONNECTION_MANAGER_CONNECTION: {
+            mergeConnectionManagerConnection(other.getConnectionManagerConnection());
             break;
           }
           case CONNECTION_NOT_SET: {
@@ -5459,6 +5556,147 @@ public final class Postgres {
         connectionCase_ = 2;
         onChanged();;
         return onPremiseBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder> connectionManagerConnectionBuilder_;
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       * @return Whether the connectionManagerConnection field is set.
+       */
+      @java.lang.Override
+      public boolean hasConnectionManagerConnection() {
+        return connectionCase_ == 3;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       * @return The connectionManagerConnection.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection getConnectionManagerConnection() {
+        if (connectionManagerConnectionBuilder_ == null) {
+          if (connectionCase_ == 3) {
+            return (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_;
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
+        } else {
+          if (connectionCase_ == 3) {
+            return connectionManagerConnectionBuilder_.getMessage();
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      public Builder setConnectionManagerConnection(yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection value) {
+        if (connectionManagerConnectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          connection_ = value;
+          onChanged();
+        } else {
+          connectionManagerConnectionBuilder_.setMessage(value);
+        }
+        connectionCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      public Builder setConnectionManagerConnection(
+          yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder builderForValue) {
+        if (connectionManagerConnectionBuilder_ == null) {
+          connection_ = builderForValue.build();
+          onChanged();
+        } else {
+          connectionManagerConnectionBuilder_.setMessage(builderForValue.build());
+        }
+        connectionCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      public Builder mergeConnectionManagerConnection(yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection value) {
+        if (connectionManagerConnectionBuilder_ == null) {
+          if (connectionCase_ == 3 &&
+              connection_ != yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance()) {
+            connection_ = yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.newBuilder((yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            connection_ = value;
+          }
+          onChanged();
+        } else {
+          if (connectionCase_ == 3) {
+            connectionManagerConnectionBuilder_.mergeFrom(value);
+          }
+          connectionManagerConnectionBuilder_.setMessage(value);
+        }
+        connectionCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      public Builder clearConnectionManagerConnection() {
+        if (connectionManagerConnectionBuilder_ == null) {
+          if (connectionCase_ == 3) {
+            connectionCase_ = 0;
+            connection_ = null;
+            onChanged();
+          }
+        } else {
+          if (connectionCase_ == 3) {
+            connectionCase_ = 0;
+            connection_ = null;
+          }
+          connectionManagerConnectionBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder getConnectionManagerConnectionBuilder() {
+        return getConnectionManagerConnectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder getConnectionManagerConnectionOrBuilder() {
+        if ((connectionCase_ == 3) && (connectionManagerConnectionBuilder_ != null)) {
+          return connectionManagerConnectionBuilder_.getMessageOrBuilder();
+        } else {
+          if (connectionCase_ == 3) {
+            return (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_;
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder> 
+          getConnectionManagerConnectionFieldBuilder() {
+        if (connectionManagerConnectionBuilder_ == null) {
+          if (!(connectionCase_ == 3)) {
+            connection_ = yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
+          }
+          connectionManagerConnectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder>(
+                  (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_,
+                  getParentForChildren(),
+                  isClean());
+          connection_ = null;
+        }
+        connectionCase_ = 3;
+        onChanged();;
+        return connectionManagerConnectionBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10176,34 +10414,36 @@ public final class Postgres {
       "\001\n\021OnPremisePostgres\022\014\n\004port\030\002 \001(\003\022\021\n\tsu" +
       "bnet_id\030\004 \001(\t\022\r\n\005hosts\030\005 \003(\t\022@\n\010tls_mode" +
       "\030\006 \001(\0132..yandex.cloud.datatransfer.v1.en" +
-      "dpoint.TLSModeJ\004\010\001\020\002J\004\010\003\020\004\"\214\001\n\022PostgresC" +
+      "dpoint.TLSModeJ\004\010\001\020\002J\004\010\003\020\004\"\371\001\n\022PostgresC" +
       "onnection\022\030\n\016mdb_cluster_id\030\001 \001(\tH\000\022N\n\no" +
       "n_premise\030\002 \001(\01328.yandex.cloud.datatrans" +
-      "fer.v1.endpoint.OnPremisePostgresH\000B\014\n\nc" +
-      "onnection\"\263\003\n\016PostgresSource\022M\n\nconnecti" +
-      "on\030\001 \001(\01329.yandex.cloud.datatransfer.v1." +
-      "endpoint.PostgresConnection\022\020\n\010database\030" +
-      "\002 \001(\t\022\014\n\004user\030\003 \001(\t\022?\n\010password\030\004 \001(\0132-." +
-      "yandex.cloud.datatransfer.v1.endpoint.Se" +
-      "cret\022\026\n\016include_tables\030\005 \003(\t\022\026\n\016exclude_" +
-      "tables\030\006 \003(\t\022\033\n\023slot_byte_lag_limit\030\010 \001(" +
-      "\003\022\026\n\016service_schema\030\t \001(\t\022g\n\030object_tran" +
-      "sfer_settings\030\r \001(\0132E.yandex.cloud.datat" +
-      "ransfer.v1.endpoint.PostgresObjectTransf" +
-      "erSettings\022\027\n\017security_groups\030\016 \003(\tJ\004\010\007\020" +
-      "\010J\004\010\n\020\r\"\255\002\n\016PostgresTarget\022M\n\nconnection" +
-      "\030\001 \001(\01329.yandex.cloud.datatransfer.v1.en" +
-      "dpoint.PostgresConnection\022\020\n\010database\030\002 " +
-      "\001(\t\022\014\n\004user\030\003 \001(\t\022?\n\010password\030\004 \001(\0132-.ya" +
-      "ndex.cloud.datatransfer.v1.endpoint.Secr" +
-      "et\022L\n\016cleanup_policy\030\005 \001(\01624.yandex.clou" +
-      "d.datatransfer.v1.endpoint.CleanupPolicy" +
-      "\022\027\n\017security_groups\030\007 \003(\tJ\004\010\006\020\007B\247\001\n)yand" +
-      "ex.cloud.api.datatransfer.v1.endpointZRg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/datatransfer/v1/endpoint;endpoin" +
-      "t\252\002%Yandex.Cloud.Datatransfer.V1.EndPoin" +
-      "tb\006proto3"
+      "fer.v1.endpoint.OnPremisePostgresH\000\022k\n\035c" +
+      "onnection_manager_connection\030\003 \001(\0132B.yan" +
+      "dex.cloud.datatransfer.v1.endpoint.Conne" +
+      "ctionManagerConnectionH\000B\014\n\nconnection\"\263" +
+      "\003\n\016PostgresSource\022M\n\nconnection\030\001 \001(\01329." +
+      "yandex.cloud.datatransfer.v1.endpoint.Po" +
+      "stgresConnection\022\020\n\010database\030\002 \001(\t\022\014\n\004us" +
+      "er\030\003 \001(\t\022?\n\010password\030\004 \001(\0132-.yandex.clou" +
+      "d.datatransfer.v1.endpoint.Secret\022\026\n\016inc" +
+      "lude_tables\030\005 \003(\t\022\026\n\016exclude_tables\030\006 \003(" +
+      "\t\022\033\n\023slot_byte_lag_limit\030\010 \001(\003\022\026\n\016servic" +
+      "e_schema\030\t \001(\t\022g\n\030object_transfer_settin" +
+      "gs\030\r \001(\0132E.yandex.cloud.datatransfer.v1." +
+      "endpoint.PostgresObjectTransferSettings\022" +
+      "\027\n\017security_groups\030\016 \003(\tJ\004\010\007\020\010J\004\010\n\020\r\"\255\002\n" +
+      "\016PostgresTarget\022M\n\nconnection\030\001 \001(\01329.ya" +
+      "ndex.cloud.datatransfer.v1.endpoint.Post" +
+      "gresConnection\022\020\n\010database\030\002 \001(\t\022\014\n\004user" +
+      "\030\003 \001(\t\022?\n\010password\030\004 \001(\0132-.yandex.cloud." +
+      "datatransfer.v1.endpoint.Secret\022L\n\016clean" +
+      "up_policy\030\005 \001(\01624.yandex.cloud.datatrans" +
+      "fer.v1.endpoint.CleanupPolicy\022\027\n\017securit" +
+      "y_groups\030\007 \003(\tJ\004\010\006\020\007B\247\001\n)yandex.cloud.ap" +
+      "i.datatransfer.v1.endpointZRgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/dat" +
+      "atransfer/v1/endpoint;endpoint\252\002%Yandex." +
+      "Cloud.Datatransfer.V1.EndPointb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10227,7 +10467,7 @@ public final class Postgres {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresConnection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresConnection_descriptor,
-        new java.lang.String[] { "MdbClusterId", "OnPremise", "Connection", });
+        new java.lang.String[] { "MdbClusterId", "OnPremise", "ConnectionManagerConnection", "Connection", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresSource_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresSource_fieldAccessorTable = new

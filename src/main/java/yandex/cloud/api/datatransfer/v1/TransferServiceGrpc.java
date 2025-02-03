@@ -281,6 +281,9 @@ public final class TransferServiceGrpc {
   public static abstract class TransferServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Creates a transfer in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.CreateTransferRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -288,6 +291,9 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified transfer.
+     * </pre>
      */
     public void update(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.UpdateTransferRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -295,6 +301,9 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified transfer.
+     * </pre>
      */
     public void delete(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.DeleteTransferRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -302,6 +311,9 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists transfers in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse> responseObserver) {
@@ -309,6 +321,11 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified transfer.
+     * 
+     * To get the list of all available transfers, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.GetTransferRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer> responseObserver) {
@@ -316,6 +333,11 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deactivates the specified transfer.
+     * 
+     * To get the list of all available transfers, make a [List] request.
+     * </pre>
      */
     public void deactivate(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.DeactivateTransferRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -323,6 +345,11 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Activates the specified transfer.
+     * 
+     * To get the list of all available transfers, make a [List] request.
+     * </pre>
      */
     public void activate(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ActivateTransferRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -399,6 +426,9 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a transfer in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.CreateTransferRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -407,6 +437,9 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified transfer.
+     * </pre>
      */
     public void update(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.UpdateTransferRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -415,6 +448,9 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified transfer.
+     * </pre>
      */
     public void delete(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.DeleteTransferRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -423,6 +459,9 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists transfers in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse> responseObserver) {
@@ -431,6 +470,11 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified transfer.
+     * 
+     * To get the list of all available transfers, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.GetTransferRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer> responseObserver) {
@@ -439,6 +483,11 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deactivates the specified transfer.
+     * 
+     * To get the list of all available transfers, make a [List] request.
+     * </pre>
      */
     public void deactivate(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.DeactivateTransferRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -447,6 +496,11 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Activates the specified transfer.
+     * 
+     * To get the list of all available transfers, make a [List] request.
+     * </pre>
      */
     public void activate(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ActivateTransferRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -470,6 +524,9 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a transfer in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.CreateTransferRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -477,6 +534,9 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified transfer.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.UpdateTransferRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -484,6 +544,9 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified transfer.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.DeleteTransferRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -491,6 +554,9 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists transfers in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse list(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -498,6 +564,11 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified transfer.
+     * 
+     * To get the list of all available transfers, make a [List] request.
+     * </pre>
      */
     public yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer get(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.GetTransferRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -505,6 +576,11 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deactivates the specified transfer.
+     * 
+     * To get the list of all available transfers, make a [List] request.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation deactivate(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.DeactivateTransferRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -512,6 +588,11 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Activates the specified transfer.
+     * 
+     * To get the list of all available transfers, make a [List] request.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation activate(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ActivateTransferRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -534,6 +615,9 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a transfer in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.CreateTransferRequest request) {
@@ -542,6 +626,9 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified transfer.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.UpdateTransferRequest request) {
@@ -550,6 +637,9 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified transfer.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.DeleteTransferRequest request) {
@@ -558,6 +648,9 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists transfers in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse> list(
         yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest request) {
@@ -566,6 +659,11 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified transfer.
+     * 
+     * To get the list of all available transfers, make a [List] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer> get(
         yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.GetTransferRequest request) {
@@ -574,6 +672,11 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deactivates the specified transfer.
+     * 
+     * To get the list of all available transfers, make a [List] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deactivate(
         yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.DeactivateTransferRequest request) {
@@ -582,6 +685,11 @@ public final class TransferServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Activates the specified transfer.
+     * 
+     * To get the list of all available transfers, make a [List] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> activate(
         yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ActivateTransferRequest request) {

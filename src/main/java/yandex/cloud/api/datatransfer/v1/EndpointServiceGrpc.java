@@ -3,6 +3,10 @@ package yandex.cloud.api.datatransfer.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * A set of methods for managing [endpoints]({{ api-url-prefix
+ * }}/data-transfer/concepts/#endpoint).
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -215,10 +219,19 @@ public final class EndpointServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing [endpoints]({{ api-url-prefix
+   * }}/data-transfer/concepts/#endpoint).
+   * </pre>
    */
   public static abstract class EndpointServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns the specified endpoint.
+     * 
+     * To get the list of all available endpoints, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.GetEndpointRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint> responseObserver) {
@@ -226,6 +239,9 @@ public final class EndpointServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists endpoints in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse> responseObserver) {
@@ -233,6 +249,9 @@ public final class EndpointServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates an endpoint in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.CreateEndpointRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -240,6 +259,9 @@ public final class EndpointServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified endpoint.
+     * </pre>
      */
     public void update(yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.UpdateEndpointRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -247,6 +269,9 @@ public final class EndpointServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified endpoint.
+     * </pre>
      */
     public void delete(yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.DeleteEndpointRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -295,6 +320,10 @@ public final class EndpointServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing [endpoints]({{ api-url-prefix
+   * }}/data-transfer/concepts/#endpoint).
+   * </pre>
    */
   public static final class EndpointServiceStub extends io.grpc.stub.AbstractAsyncStub<EndpointServiceStub> {
     private EndpointServiceStub(
@@ -309,6 +338,11 @@ public final class EndpointServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified endpoint.
+     * 
+     * To get the list of all available endpoints, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.GetEndpointRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint> responseObserver) {
@@ -317,6 +351,9 @@ public final class EndpointServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists endpoints in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse> responseObserver) {
@@ -325,6 +362,9 @@ public final class EndpointServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates an endpoint in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.CreateEndpointRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -333,6 +373,9 @@ public final class EndpointServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified endpoint.
+     * </pre>
      */
     public void update(yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.UpdateEndpointRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -341,6 +384,9 @@ public final class EndpointServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified endpoint.
+     * </pre>
      */
     public void delete(yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.DeleteEndpointRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -350,6 +396,10 @@ public final class EndpointServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing [endpoints]({{ api-url-prefix
+   * }}/data-transfer/concepts/#endpoint).
+   * </pre>
    */
   public static final class EndpointServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<EndpointServiceBlockingStub> {
     private EndpointServiceBlockingStub(
@@ -364,6 +414,11 @@ public final class EndpointServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified endpoint.
+     * 
+     * To get the list of all available endpoints, make a [List] request.
+     * </pre>
      */
     public yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint get(yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.GetEndpointRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -371,6 +426,9 @@ public final class EndpointServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists endpoints in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse list(yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -378,6 +436,9 @@ public final class EndpointServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates an endpoint in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.CreateEndpointRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -385,6 +446,9 @@ public final class EndpointServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified endpoint.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.UpdateEndpointRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -392,6 +456,9 @@ public final class EndpointServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified endpoint.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.DeleteEndpointRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -400,6 +467,10 @@ public final class EndpointServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing [endpoints]({{ api-url-prefix
+   * }}/data-transfer/concepts/#endpoint).
+   * </pre>
    */
   public static final class EndpointServiceFutureStub extends io.grpc.stub.AbstractFutureStub<EndpointServiceFutureStub> {
     private EndpointServiceFutureStub(
@@ -414,6 +485,11 @@ public final class EndpointServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified endpoint.
+     * 
+     * To get the list of all available endpoints, make a [List] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint> get(
         yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.GetEndpointRequest request) {
@@ -422,6 +498,9 @@ public final class EndpointServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists endpoints in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse> list(
         yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest request) {
@@ -430,6 +509,9 @@ public final class EndpointServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates an endpoint in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.CreateEndpointRequest request) {
@@ -438,6 +520,9 @@ public final class EndpointServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified endpoint.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.UpdateEndpointRequest request) {
@@ -446,6 +531,9 @@ public final class EndpointServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified endpoint.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.DeleteEndpointRequest request) {

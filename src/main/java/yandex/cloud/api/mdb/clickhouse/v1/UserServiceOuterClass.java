@@ -4692,6 +4692,33 @@ public final class UserServiceOuterClass {
      */
     yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder getQuotasOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Generate password using Connection Manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue generate_password = 8;</code>
+     * @return Whether the generatePassword field is set.
+     */
+    boolean hasGeneratePassword();
+    /**
+     * <pre>
+     * Generate password using Connection Manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue generate_password = 8;</code>
+     * @return The generatePassword.
+     */
+    com.google.protobuf.BoolValue getGeneratePassword();
+    /**
+     * <pre>
+     * Generate password using Connection Manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue generate_password = 8;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getGeneratePasswordOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.UpdateUserRequest}
@@ -4804,6 +4831,19 @@ public final class UserServiceOuterClass {
               }
               quotas_.add(
                   input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.parser(), extensionRegistry));
+              break;
+            }
+            case 66: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (generatePassword_ != null) {
+                subBuilder = generatePassword_.toBuilder();
+              }
+              generatePassword_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(generatePassword_);
+                generatePassword_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -5150,6 +5190,44 @@ public final class UserServiceOuterClass {
       return quotas_.get(index);
     }
 
+    public static final int GENERATE_PASSWORD_FIELD_NUMBER = 8;
+    private com.google.protobuf.BoolValue generatePassword_;
+    /**
+     * <pre>
+     * Generate password using Connection Manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue generate_password = 8;</code>
+     * @return Whether the generatePassword field is set.
+     */
+    @java.lang.Override
+    public boolean hasGeneratePassword() {
+      return generatePassword_ != null;
+    }
+    /**
+     * <pre>
+     * Generate password using Connection Manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue generate_password = 8;</code>
+     * @return The generatePassword.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getGeneratePassword() {
+      return generatePassword_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : generatePassword_;
+    }
+    /**
+     * <pre>
+     * Generate password using Connection Manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue generate_password = 8;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getGeneratePasswordOrBuilder() {
+      return getGeneratePassword();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5185,6 +5263,9 @@ public final class UserServiceOuterClass {
       for (int i = 0; i < quotas_.size(); i++) {
         output.writeMessage(7, quotas_.get(i));
       }
+      if (generatePassword_ != null) {
+        output.writeMessage(8, getGeneratePassword());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5218,6 +5299,10 @@ public final class UserServiceOuterClass {
       for (int i = 0; i < quotas_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, quotas_.get(i));
+      }
+      if (generatePassword_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getGeneratePassword());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5254,6 +5339,11 @@ public final class UserServiceOuterClass {
       }
       if (!getQuotasList()
           .equals(other.getQuotasList())) return false;
+      if (hasGeneratePassword() != other.hasGeneratePassword()) return false;
+      if (hasGeneratePassword()) {
+        if (!getGeneratePassword()
+            .equals(other.getGeneratePassword())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5286,6 +5376,10 @@ public final class UserServiceOuterClass {
       if (getQuotasCount() > 0) {
         hash = (37 * hash) + QUOTAS_FIELD_NUMBER;
         hash = (53 * hash) + getQuotasList().hashCode();
+      }
+      if (hasGeneratePassword()) {
+        hash = (37 * hash) + GENERATE_PASSWORD_FIELD_NUMBER;
+        hash = (53 * hash) + getGeneratePassword().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -5452,6 +5546,12 @@ public final class UserServiceOuterClass {
         } else {
           quotasBuilder_.clear();
         }
+        if (generatePasswordBuilder_ == null) {
+          generatePassword_ = null;
+        } else {
+          generatePassword_ = null;
+          generatePasswordBuilder_ = null;
+        }
         return this;
       }
 
@@ -5509,6 +5609,11 @@ public final class UserServiceOuterClass {
           result.quotas_ = quotas_;
         } else {
           result.quotas_ = quotasBuilder_.build();
+        }
+        if (generatePasswordBuilder_ == null) {
+          result.generatePassword_ = generatePassword_;
+        } else {
+          result.generatePassword_ = generatePasswordBuilder_.build();
         }
         onBuilt();
         return result;
@@ -5627,6 +5732,9 @@ public final class UserServiceOuterClass {
               quotasBuilder_.addAllMessages(other.quotas_);
             }
           }
+        }
+        if (other.hasGeneratePassword()) {
+          mergeGeneratePassword(other.getGeneratePassword());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6780,6 +6888,161 @@ public final class UserServiceOuterClass {
           quotas_ = null;
         }
         return quotasBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue generatePassword_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> generatePasswordBuilder_;
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 8;</code>
+       * @return Whether the generatePassword field is set.
+       */
+      public boolean hasGeneratePassword() {
+        return generatePasswordBuilder_ != null || generatePassword_ != null;
+      }
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 8;</code>
+       * @return The generatePassword.
+       */
+      public com.google.protobuf.BoolValue getGeneratePassword() {
+        if (generatePasswordBuilder_ == null) {
+          return generatePassword_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : generatePassword_;
+        } else {
+          return generatePasswordBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 8;</code>
+       */
+      public Builder setGeneratePassword(com.google.protobuf.BoolValue value) {
+        if (generatePasswordBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          generatePassword_ = value;
+          onChanged();
+        } else {
+          generatePasswordBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 8;</code>
+       */
+      public Builder setGeneratePassword(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (generatePasswordBuilder_ == null) {
+          generatePassword_ = builderForValue.build();
+          onChanged();
+        } else {
+          generatePasswordBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 8;</code>
+       */
+      public Builder mergeGeneratePassword(com.google.protobuf.BoolValue value) {
+        if (generatePasswordBuilder_ == null) {
+          if (generatePassword_ != null) {
+            generatePassword_ =
+              com.google.protobuf.BoolValue.newBuilder(generatePassword_).mergeFrom(value).buildPartial();
+          } else {
+            generatePassword_ = value;
+          }
+          onChanged();
+        } else {
+          generatePasswordBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 8;</code>
+       */
+      public Builder clearGeneratePassword() {
+        if (generatePasswordBuilder_ == null) {
+          generatePassword_ = null;
+          onChanged();
+        } else {
+          generatePassword_ = null;
+          generatePasswordBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 8;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getGeneratePasswordBuilder() {
+        
+        onChanged();
+        return getGeneratePasswordFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 8;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getGeneratePasswordOrBuilder() {
+        if (generatePasswordBuilder_ != null) {
+          return generatePasswordBuilder_.getMessageOrBuilder();
+        } else {
+          return generatePassword_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : generatePassword_;
+        }
+      }
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getGeneratePasswordFieldBuilder() {
+        if (generatePasswordBuilder_ == null) {
+          generatePasswordBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getGeneratePassword(),
+                  getParentForChildren(),
+                  isClean());
+          generatePassword_ = null;
+        }
+        return generatePasswordBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12944,96 +13207,99 @@ public final class UserServiceOuterClass {
       "\n1yandex/cloud/mdb/clickhouse/v1/user_se" +
       "rvice.proto\022\036yandex.cloud.mdb.clickhouse" +
       ".v1\032\034google/api/annotations.proto\032 googl" +
-      "e/protobuf/field_mask.proto\032&yandex/clou" +
-      "d/operation/operation.proto\032)yandex/clou" +
-      "d/mdb/clickhouse/v1/user.proto\032 yandex/c" +
-      "loud/api/operation.proto\032\035yandex/cloud/v" +
-      "alidation.proto\"d\n\016GetUserRequest\022 \n\nclu" +
-      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0220\n\tuser_name" +
-      "\030\002 \001(\tB\035\350\3071\001\212\3101\004<=63\362\3071\r[a-zA-Z0-9_]*\"r\n" +
-      "\020ListUsersRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=10" +
-      "00\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"a\n\021Lis" +
-      "tUsersResponse\0223\n\005users\030\001 \003(\0132$.yandex.c" +
-      "loud.mdb.clickhouse.v1.User\022\027\n\017next_page" +
-      "_token\030\002 \001(\t\"x\n\021CreateUserRequest\022 \n\nclu" +
-      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022A\n\tuser_spec" +
-      "\030\002 \001(\0132(.yandex.cloud.mdb.clickhouse.v1." +
-      "UserSpecB\004\350\3071\001\";\n\022CreateUserMetadata\022\022\n\n" +
-      "cluster_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"\361\002\n\021" +
-      "UpdateUserRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\0220\n\tuser_name\030\002 \001(\tB\035\350\3071\001\212\3101\004" +
-      "<=63\362\3071\r[a-zA-Z0-9_]*\022/\n\013update_mask\030\003 \001" +
-      "(\0132\032.google.protobuf.FieldMask\022\033\n\010passwo" +
-      "rd\030\004 \001(\tB\t\212\3101\0058-128\022?\n\013permissions\030\005 \003(\013" +
-      "2*.yandex.cloud.mdb.clickhouse.v1.Permis" +
-      "sion\022>\n\010settings\030\006 \001(\0132,.yandex.cloud.md" +
-      "b.clickhouse.v1.UserSettings\0229\n\006quotas\030\007" +
-      " \003(\0132).yandex.cloud.mdb.clickhouse.v1.Us" +
-      "erQuota\";\n\022UpdateUserMetadata\022\022\n\ncluster" +
-      "_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"g\n\021DeleteUs" +
+      "e/protobuf/field_mask.proto\032\036google/prot" +
+      "obuf/wrappers.proto\032&yandex/cloud/operat" +
+      "ion/operation.proto\032)yandex/cloud/mdb/cl" +
+      "ickhouse/v1/user.proto\032 yandex/cloud/api" +
+      "/operation.proto\032\035yandex/cloud/validatio" +
+      "n.proto\"d\n\016GetUserRequest\022 \n\ncluster_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0220\n\tuser_name\030\002 \001(\tB\035" +
+      "\350\3071\001\212\3101\004<=63\362\3071\r[a-zA-Z0-9_]*\"r\n\020ListUse" +
+      "rsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npa" +
+      "ge_token\030\003 \001(\tB\t\212\3101\005<=100\"a\n\021ListUsersRe" +
+      "sponse\0223\n\005users\030\001 \003(\0132$.yandex.cloud.mdb" +
+      ".clickhouse.v1.User\022\027\n\017next_page_token\030\002" +
+      " \001(\t\"x\n\021CreateUserRequest\022 \n\ncluster_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022A\n\tuser_spec\030\002 \001(\0132(" +
+      ".yandex.cloud.mdb.clickhouse.v1.UserSpec" +
+      "B\004\350\3071\001\";\n\022CreateUserMetadata\022\022\n\ncluster_" +
+      "id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"\250\003\n\021UpdateUs" +
       "erRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
       "=50\0220\n\tuser_name\030\002 \001(\tB\035\350\3071\001\212\3101\004<=63\362\3071\r" +
-      "[a-zA-Z0-9_]*\";\n\022DeleteUserMetadata\022\022\n\nc" +
-      "luster_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"\260\001\n\032G" +
-      "rantUserPermissionRequest\022 \n\ncluster_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0220\n\tuser_name\030\002 \001(\tB\035" +
-      "\350\3071\001\212\3101\004<=63\362\3071\r[a-zA-Z0-9_]*\022>\n\npermiss" +
-      "ion\030\003 \001(\0132*.yandex.cloud.mdb.clickhouse." +
-      "v1.Permission\"D\n\033GrantUserPermissionMeta" +
-      "data\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tuser_name\030\002 " +
-      "\001(\t\"\244\001\n\033RevokeUserPermissionRequest\022 \n\nc" +
-      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0220\n\tuser_na" +
-      "me\030\002 \001(\tB\035\350\3071\001\212\3101\004<=63\362\3071\r[a-zA-Z0-9_]*\022" +
-      "1\n\rdatabase_name\030\003 \001(\tB\032\212\3101\004<=63\362\3071\016[a-z" +
-      "A-Z0-9_-]*\"E\n\034RevokeUserPermissionMetada" +
+      "[a-zA-Z0-9_]*\022/\n\013update_mask\030\003 \001(\0132\032.goo" +
+      "gle.protobuf.FieldMask\022\033\n\010password\030\004 \001(\t" +
+      "B\t\212\3101\0058-128\022?\n\013permissions\030\005 \003(\0132*.yande" +
+      "x.cloud.mdb.clickhouse.v1.Permission\022>\n\010" +
+      "settings\030\006 \001(\0132,.yandex.cloud.mdb.clickh" +
+      "ouse.v1.UserSettings\0229\n\006quotas\030\007 \003(\0132).y" +
+      "andex.cloud.mdb.clickhouse.v1.UserQuota\022" +
+      "5\n\021generate_password\030\010 \001(\0132\032.google.prot" +
+      "obuf.BoolValue\";\n\022UpdateUserMetadata\022\022\n\n" +
+      "cluster_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"g\n\021D" +
+      "eleteUserRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\0220\n\tuser_name\030\002 \001(\tB\035\350\3071\001\212\3101\004<" +
+      "=63\362\3071\r[a-zA-Z0-9_]*\";\n\022DeleteUserMetada" +
       "ta\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(" +
-      "\t2\255\013\n\013UserService\022\243\001\n\003Get\022..yandex.cloud" +
-      ".mdb.clickhouse.v1.GetUserRequest\032$.yand" +
-      "ex.cloud.mdb.clickhouse.v1.User\"F\202\323\344\223\002@\022" +
-      ">/managed-clickhouse/v1/clusters/{cluste" +
-      "r_id}/users/{user_name}\022\247\001\n\004List\0220.yande" +
-      "x.cloud.mdb.clickhouse.v1.ListUsersReque" +
-      "st\0321.yandex.cloud.mdb.clickhouse.v1.List" +
-      "UsersResponse\":\202\323\344\223\0024\0222/managed-clickhou" +
-      "se/v1/clusters/{cluster_id}/users\022\273\001\n\006Cr" +
-      "eate\0221.yandex.cloud.mdb.clickhouse.v1.Cr" +
-      "eateUserRequest\032!.yandex.cloud.operation" +
-      ".Operation\"[\202\323\344\223\0027\"2/managed-clickhouse/" +
-      "v1/clusters/{cluster_id}/users:\001*\262\322*\032\n\022C" +
-      "reateUserMetadata\022\004User\022\307\001\n\006Update\0221.yan" +
-      "dex.cloud.mdb.clickhouse.v1.UpdateUserRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"g\202\323\344\223\002C2>/managed-clickhouse/v1/cluster" +
-      "s/{cluster_id}/users/{user_name}:\001*\262\322*\032\n" +
-      "\022UpdateUserMetadata\022\004User\022\325\001\n\006Delete\0221.y" +
-      "andex.cloud.mdb.clickhouse.v1.DeleteUser" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"u\202\323\344\223\002@*>/managed-clickhouse/v1/clust" +
-      "ers/{cluster_id}/users/{user_name}\262\322*+\n\022" +
-      "DeleteUserMetadata\022\025google.protobuf.Empt" +
-      "y\022\363\001\n\017GrantPermission\022:.yandex.cloud.mdb" +
-      ".clickhouse.v1.GrantUserPermissionReques" +
-      "t\032!.yandex.cloud.operation.Operation\"\200\001\202" +
-      "\323\344\223\002S\"N/managed-clickhouse/v1/clusters/{" +
-      "cluster_id}/users/{user_name}:grantPermi" +
-      "ssion:\001*\262\322*#\n\033GrantUserPermissionMetadat" +
-      "a\022\004User\022\367\001\n\020RevokePermission\022;.yandex.cl" +
-      "oud.mdb.clickhouse.v1.RevokeUserPermissi" +
-      "onRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"\202\001\202\323\344\223\002T\"O/managed-clickhouse/v1/cl" +
-      "usters/{cluster_id}/users/{user_name}:re" +
-      "vokePermission:\001*\262\322*$\n\034RevokeUserPermiss" +
-      "ionMetadata\022\004UserBs\n\"yandex.cloud.api.md" +
-      "b.clickhouse.v1ZMgithub.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/mdb/clickhouse" +
-      "/v1;clickhouseb\006proto3"
+      "\t\"\260\001\n\032GrantUserPermissionRequest\022 \n\nclus" +
+      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0220\n\tuser_name\030" +
+      "\002 \001(\tB\035\350\3071\001\212\3101\004<=63\362\3071\r[a-zA-Z0-9_]*\022>\n\n" +
+      "permission\030\003 \001(\0132*.yandex.cloud.mdb.clic" +
+      "khouse.v1.Permission\"D\n\033GrantUserPermiss" +
+      "ionMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tuser_" +
+      "name\030\002 \001(\t\"\244\001\n\033RevokeUserPermissionReque" +
+      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0220\n\t" +
+      "user_name\030\002 \001(\tB\035\350\3071\001\212\3101\004<=63\362\3071\r[a-zA-Z" +
+      "0-9_]*\0221\n\rdatabase_name\030\003 \001(\tB\032\212\3101\004<=63\362" +
+      "\3071\016[a-zA-Z0-9_-]*\"E\n\034RevokeUserPermissio" +
+      "nMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tuser_na" +
+      "me\030\002 \001(\t2\255\013\n\013UserService\022\243\001\n\003Get\022..yande" +
+      "x.cloud.mdb.clickhouse.v1.GetUserRequest" +
+      "\032$.yandex.cloud.mdb.clickhouse.v1.User\"F" +
+      "\202\323\344\223\002@\022>/managed-clickhouse/v1/clusters/" +
+      "{cluster_id}/users/{user_name}\022\247\001\n\004List\022" +
+      "0.yandex.cloud.mdb.clickhouse.v1.ListUse" +
+      "rsRequest\0321.yandex.cloud.mdb.clickhouse." +
+      "v1.ListUsersResponse\":\202\323\344\223\0024\0222/managed-c" +
+      "lickhouse/v1/clusters/{cluster_id}/users" +
+      "\022\273\001\n\006Create\0221.yandex.cloud.mdb.clickhous" +
+      "e.v1.CreateUserRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"[\202\323\344\223\0027\"2/managed-clic" +
+      "khouse/v1/clusters/{cluster_id}/users:\001*" +
+      "\262\322*\032\n\022CreateUserMetadata\022\004User\022\307\001\n\006Updat" +
+      "e\0221.yandex.cloud.mdb.clickhouse.v1.Updat" +
+      "eUserRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"g\202\323\344\223\002C2>/managed-clickhouse/v1/" +
+      "clusters/{cluster_id}/users/{user_name}:" +
+      "\001*\262\322*\032\n\022UpdateUserMetadata\022\004User\022\325\001\n\006Del" +
+      "ete\0221.yandex.cloud.mdb.clickhouse.v1.Del" +
+      "eteUserRequest\032!.yandex.cloud.operation." +
+      "Operation\"u\202\323\344\223\002@*>/managed-clickhouse/v" +
+      "1/clusters/{cluster_id}/users/{user_name" +
+      "}\262\322*+\n\022DeleteUserMetadata\022\025google.protob" +
+      "uf.Empty\022\363\001\n\017GrantPermission\022:.yandex.cl" +
+      "oud.mdb.clickhouse.v1.GrantUserPermissio" +
+      "nRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"\200\001\202\323\344\223\002S\"N/managed-clickhouse/v1/clu" +
+      "sters/{cluster_id}/users/{user_name}:gra" +
+      "ntPermission:\001*\262\322*#\n\033GrantUserPermission" +
+      "Metadata\022\004User\022\367\001\n\020RevokePermission\022;.ya" +
+      "ndex.cloud.mdb.clickhouse.v1.RevokeUserP" +
+      "ermissionRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"\202\001\202\323\344\223\002T\"O/managed-clickhous" +
+      "e/v1/clusters/{cluster_id}/users/{user_n" +
+      "ame}:revokePermission:\001*\262\322*$\n\034RevokeUser" +
+      "PermissionMetadata\022\004UserBs\n\"yandex.cloud" +
+      ".api.mdb.clickhouse.v1ZMgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/mdb/cli" +
+      "ckhouse/v1;clickhouseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
@@ -13074,7 +13340,7 @@ public final class UserServiceOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateUserRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateUserRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "UserName", "UpdateMask", "Password", "Permissions", "Settings", "Quotas", });
+        new java.lang.String[] { "ClusterId", "UserName", "UpdateMask", "Password", "Permissions", "Settings", "Quotas", "GeneratePassword", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateUserMetadata_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateUserMetadata_fieldAccessorTable = new
@@ -13129,6 +13395,7 @@ public final class UserServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();

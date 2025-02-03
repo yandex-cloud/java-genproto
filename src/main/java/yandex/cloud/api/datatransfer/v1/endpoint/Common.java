@@ -8988,6 +8988,760 @@ public final class Common {
 
   }
 
+  public interface ConnectionManagerConnectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string connection_id = 1;</code>
+     * @return The connectionId.
+     */
+    java.lang.String getConnectionId();
+    /**
+     * <code>string connection_id = 1;</code>
+     * @return The bytes for connectionId.
+     */
+    com.google.protobuf.ByteString
+        getConnectionIdBytes();
+
+    /**
+     * <pre>
+     * Network interface for endpoint. If none will assume public ipv4
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     * @return The subnetId.
+     */
+    java.lang.String getSubnetId();
+    /**
+     * <pre>
+     * Network interface for endpoint. If none will assume public ipv4
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     * @return The bytes for subnetId.
+     */
+    com.google.protobuf.ByteString
+        getSubnetIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection}
+   */
+  public static final class ConnectionManagerConnection extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection)
+      ConnectionManagerConnectionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ConnectionManagerConnection.newBuilder() to construct.
+    private ConnectionManagerConnection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ConnectionManagerConnection() {
+      connectionId_ = "";
+      subnetId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ConnectionManagerConnection();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ConnectionManagerConnection(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              connectionId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subnetId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_ConnectionManagerConnection_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_ConnectionManagerConnection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.class, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder.class);
+    }
+
+    public static final int CONNECTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object connectionId_;
+    /**
+     * <code>string connection_id = 1;</code>
+     * @return The connectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getConnectionId() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        connectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string connection_id = 1;</code>
+     * @return The bytes for connectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConnectionIdBytes() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        connectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBNET_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object subnetId_;
+    /**
+     * <pre>
+     * Network interface for endpoint. If none will assume public ipv4
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     * @return The subnetId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubnetId() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subnetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Network interface for endpoint. If none will assume public ipv4
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     * @return The bytes for subnetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubnetIdBytes() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subnetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, connectionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subnetId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, connectionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, subnetId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection other = (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) obj;
+
+      if (!getConnectionId()
+          .equals(other.getConnectionId())) return false;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConnectionId().hashCode();
+      hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubnetId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection)
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_ConnectionManagerConnection_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_ConnectionManagerConnection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.class, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        connectionId_ = "";
+
+        subnetId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_ConnectionManagerConnection_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection getDefaultInstanceForType() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection build() {
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection buildPartial() {
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection result = new yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection(this);
+        result.connectionId_ = connectionId_;
+        result.subnetId_ = subnetId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) {
+          return mergeFrom((yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection other) {
+        if (other == yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance()) return this;
+        if (!other.getConnectionId().isEmpty()) {
+          connectionId_ = other.connectionId_;
+          onChanged();
+        }
+        if (!other.getSubnetId().isEmpty()) {
+          subnetId_ = other.subnetId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object connectionId_ = "";
+      /**
+       * <code>string connection_id = 1;</code>
+       * @return The connectionId.
+       */
+      public java.lang.String getConnectionId() {
+        java.lang.Object ref = connectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          connectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string connection_id = 1;</code>
+       * @return The bytes for connectionId.
+       */
+      public com.google.protobuf.ByteString
+          getConnectionIdBytes() {
+        java.lang.Object ref = connectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          connectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string connection_id = 1;</code>
+       * @param value The connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        connectionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string connection_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConnectionId() {
+        
+        connectionId_ = getDefaultInstance().getConnectionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string connection_id = 1;</code>
+       * @param value The bytes for connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        connectionId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subnetId_ = "";
+      /**
+       * <pre>
+       * Network interface for endpoint. If none will assume public ipv4
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @return The subnetId.
+       */
+      public java.lang.String getSubnetId() {
+        java.lang.Object ref = subnetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subnetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Network interface for endpoint. If none will assume public ipv4
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @return The bytes for subnetId.
+       */
+      public com.google.protobuf.ByteString
+          getSubnetIdBytes() {
+        java.lang.Object ref = subnetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subnetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Network interface for endpoint. If none will assume public ipv4
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Network interface for endpoint. If none will assume public ipv4
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubnetId() {
+        
+        subnetId_ = getDefaultInstance().getSubnetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Network interface for endpoint. If none will assume public ipv4
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection)
+    private static final yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection();
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ConnectionManagerConnection>
+        PARSER = new com.google.protobuf.AbstractParser<ConnectionManagerConnection>() {
+      @java.lang.Override
+      public ConnectionManagerConnection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ConnectionManagerConnection(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ConnectionManagerConnection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ConnectionManagerConnection> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_datatransfer_v1_endpoint_AltName_descriptor;
   private static final 
@@ -9038,6 +9792,11 @@ public final class Common {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datatransfer_v1_endpoint_NoAuth_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datatransfer_v1_endpoint_ConnectionManagerConnection_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datatransfer_v1_endpoint_ConnectionManagerConnection_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -9071,21 +9830,23 @@ public final class Common {
       "\002\"q\n\nDataSchema\022\025\n\013json_fields\030\001 \001(\tH\000\022B" +
       "\n\006fields\030\002 \001(\01320.yandex.cloud.datatransf" +
       "er.v1.endpoint.FieldListH\000B\010\n\006schema\"\010\n\006" +
-      "NoAuth*h\n\023ObjectTransferStage\022%\n!OBJECT_" +
-      "TRANSFER_STAGE_UNSPECIFIED\020\000\022\017\n\013BEFORE_D" +
-      "ATA\020\001\022\016\n\nAFTER_DATA\020\002\022\t\n\005NEVER\020\003*U\n\rClea" +
-      "nupPolicy\022\036\n\032CLEANUP_POLICY_UNSPECIFIED\020" +
-      "\000\022\014\n\010DISABLED\020\001\022\010\n\004DROP\020\002\022\014\n\010TRUNCATE\020\003*" +
-      "\311\001\n\nColumnType\022\033\n\027COLUMN_TYPE_UNSPECIFIE" +
-      "D\020\000\022\t\n\005INT32\020\001\022\t\n\005INT16\020\002\022\010\n\004INT8\020\003\022\n\n\006U" +
-      "INT64\020\004\022\n\n\006UINT32\020\005\022\n\n\006UINT16\020\006\022\t\n\005UINT8" +
-      "\020\007\022\n\n\006DOUBLE\020\010\022\013\n\007BOOLEAN\020\t\022\n\n\006STRING\020\n\022" +
-      "\010\n\004UTF8\020\013\022\007\n\003ANY\020\014\022\014\n\010DATETIME\020\r\022\t\n\005INT6" +
-      "4\020\016B\247\001\n)yandex.cloud.api.datatransfer.v1" +
-      ".endpointZRgithub.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/datatransfer/v1/endp" +
-      "oint;endpoint\252\002%Yandex.Cloud.Datatransfe" +
-      "r.V1.EndPointb\006proto3"
+      "NoAuth\"G\n\033ConnectionManagerConnection\022\025\n" +
+      "\rconnection_id\030\001 \001(\t\022\021\n\tsubnet_id\030\002 \001(\t*" +
+      "h\n\023ObjectTransferStage\022%\n!OBJECT_TRANSFE" +
+      "R_STAGE_UNSPECIFIED\020\000\022\017\n\013BEFORE_DATA\020\001\022\016" +
+      "\n\nAFTER_DATA\020\002\022\t\n\005NEVER\020\003*U\n\rCleanupPoli" +
+      "cy\022\036\n\032CLEANUP_POLICY_UNSPECIFIED\020\000\022\014\n\010DI" +
+      "SABLED\020\001\022\010\n\004DROP\020\002\022\014\n\010TRUNCATE\020\003*\311\001\n\nCol" +
+      "umnType\022\033\n\027COLUMN_TYPE_UNSPECIFIED\020\000\022\t\n\005" +
+      "INT32\020\001\022\t\n\005INT16\020\002\022\010\n\004INT8\020\003\022\n\n\006UINT64\020\004" +
+      "\022\n\n\006UINT32\020\005\022\n\n\006UINT16\020\006\022\t\n\005UINT8\020\007\022\n\n\006D" +
+      "OUBLE\020\010\022\013\n\007BOOLEAN\020\t\022\n\n\006STRING\020\n\022\010\n\004UTF8" +
+      "\020\013\022\007\n\003ANY\020\014\022\014\n\010DATETIME\020\r\022\t\n\005INT64\020\016B\247\001\n" +
+      ")yandex.cloud.api.datatransfer.v1.endpoi" +
+      "ntZRgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/datatransfer/v1/endpoint;en" +
+      "dpoint\252\002%Yandex.Cloud.Datatransfer.V1.En" +
+      "dPointb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9152,6 +9913,12 @@ public final class Common {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_NoAuth_descriptor,
         new java.lang.String[] { });
+    internal_static_yandex_cloud_datatransfer_v1_endpoint_ConnectionManagerConnection_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_datatransfer_v1_endpoint_ConnectionManagerConnection_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datatransfer_v1_endpoint_ConnectionManagerConnection_descriptor,
+        new java.lang.String[] { "ConnectionId", "SubnetId", });
     com.google.protobuf.EmptyProto.getDescriptor();
   }
 

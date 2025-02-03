@@ -316,30 +316,32 @@ public final class WafProfileOuterClass {
 
     /**
      * <pre>
-     * Parameters for request body analyzer.
+     * The parameter is deprecated. Parameters for request body analyzer.
      * </pre>
      *
-     * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12;</code>
+     * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the analyzeRequestBody field is set.
      */
-    boolean hasAnalyzeRequestBody();
+    @java.lang.Deprecated boolean hasAnalyzeRequestBody();
     /**
      * <pre>
-     * Parameters for request body analyzer.
+     * The parameter is deprecated. Parameters for request body analyzer.
      * </pre>
      *
-     * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12;</code>
+     * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12 [deprecated = true];</code>
+     * @deprecated
      * @return The analyzeRequestBody.
      */
-    yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBody getAnalyzeRequestBody();
+    @java.lang.Deprecated yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBody getAnalyzeRequestBody();
     /**
      * <pre>
-     * Parameters for request body analyzer.
+     * The parameter is deprecated. Parameters for request body analyzer.
      * </pre>
      *
-     * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12;</code>
+     * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12 [deprecated = true];</code>
      */
-    yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBodyOrBuilder getAnalyzeRequestBodyOrBuilder();
+    @java.lang.Deprecated yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBodyOrBuilder getAnalyzeRequestBodyOrBuilder();
 
     public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.RuleSetCase getRuleSetCase();
   }
@@ -2906,37 +2908,39 @@ public final class WafProfileOuterClass {
     private yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBody analyzeRequestBody_;
     /**
      * <pre>
-     * Parameters for request body analyzer.
+     * The parameter is deprecated. Parameters for request body analyzer.
      * </pre>
      *
-     * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12;</code>
+     * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the analyzeRequestBody field is set.
      */
     @java.lang.Override
-    public boolean hasAnalyzeRequestBody() {
+    @java.lang.Deprecated public boolean hasAnalyzeRequestBody() {
       return analyzeRequestBody_ != null;
     }
     /**
      * <pre>
-     * Parameters for request body analyzer.
+     * The parameter is deprecated. Parameters for request body analyzer.
      * </pre>
      *
-     * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12;</code>
+     * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12 [deprecated = true];</code>
+     * @deprecated
      * @return The analyzeRequestBody.
      */
     @java.lang.Override
-    public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBody getAnalyzeRequestBody() {
+    @java.lang.Deprecated public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBody getAnalyzeRequestBody() {
       return analyzeRequestBody_ == null ? yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBody.getDefaultInstance() : analyzeRequestBody_;
     }
     /**
      * <pre>
-     * Parameters for request body analyzer.
+     * The parameter is deprecated. Parameters for request body analyzer.
      * </pre>
      *
-     * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12;</code>
+     * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12 [deprecated = true];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBodyOrBuilder getAnalyzeRequestBodyOrBuilder() {
+    @java.lang.Deprecated public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBodyOrBuilder getAnalyzeRequestBodyOrBuilder() {
       return getAnalyzeRequestBody();
     }
 
@@ -5189,24 +5193,26 @@ public final class WafProfileOuterClass {
           yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBody, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBody.Builder, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBodyOrBuilder> analyzeRequestBodyBuilder_;
       /**
        * <pre>
-       * Parameters for request body analyzer.
+       * The parameter is deprecated. Parameters for request body analyzer.
        * </pre>
        *
-       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12;</code>
+       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the analyzeRequestBody field is set.
        */
-      public boolean hasAnalyzeRequestBody() {
+      @java.lang.Deprecated public boolean hasAnalyzeRequestBody() {
         return analyzeRequestBodyBuilder_ != null || analyzeRequestBody_ != null;
       }
       /**
        * <pre>
-       * Parameters for request body analyzer.
+       * The parameter is deprecated. Parameters for request body analyzer.
        * </pre>
        *
-       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12;</code>
+       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12 [deprecated = true];</code>
+       * @deprecated
        * @return The analyzeRequestBody.
        */
-      public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBody getAnalyzeRequestBody() {
+      @java.lang.Deprecated public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBody getAnalyzeRequestBody() {
         if (analyzeRequestBodyBuilder_ == null) {
           return analyzeRequestBody_ == null ? yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBody.getDefaultInstance() : analyzeRequestBody_;
         } else {
@@ -5215,12 +5221,12 @@ public final class WafProfileOuterClass {
       }
       /**
        * <pre>
-       * Parameters for request body analyzer.
+       * The parameter is deprecated. Parameters for request body analyzer.
        * </pre>
        *
-       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12;</code>
+       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12 [deprecated = true];</code>
        */
-      public Builder setAnalyzeRequestBody(yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBody value) {
+      @java.lang.Deprecated public Builder setAnalyzeRequestBody(yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBody value) {
         if (analyzeRequestBodyBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5235,12 +5241,12 @@ public final class WafProfileOuterClass {
       }
       /**
        * <pre>
-       * Parameters for request body analyzer.
+       * The parameter is deprecated. Parameters for request body analyzer.
        * </pre>
        *
-       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12;</code>
+       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12 [deprecated = true];</code>
        */
-      public Builder setAnalyzeRequestBody(
+      @java.lang.Deprecated public Builder setAnalyzeRequestBody(
           yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBody.Builder builderForValue) {
         if (analyzeRequestBodyBuilder_ == null) {
           analyzeRequestBody_ = builderForValue.build();
@@ -5253,12 +5259,12 @@ public final class WafProfileOuterClass {
       }
       /**
        * <pre>
-       * Parameters for request body analyzer.
+       * The parameter is deprecated. Parameters for request body analyzer.
        * </pre>
        *
-       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12;</code>
+       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12 [deprecated = true];</code>
        */
-      public Builder mergeAnalyzeRequestBody(yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBody value) {
+      @java.lang.Deprecated public Builder mergeAnalyzeRequestBody(yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBody value) {
         if (analyzeRequestBodyBuilder_ == null) {
           if (analyzeRequestBody_ != null) {
             analyzeRequestBody_ =
@@ -5275,12 +5281,12 @@ public final class WafProfileOuterClass {
       }
       /**
        * <pre>
-       * Parameters for request body analyzer.
+       * The parameter is deprecated. Parameters for request body analyzer.
        * </pre>
        *
-       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12;</code>
+       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12 [deprecated = true];</code>
        */
-      public Builder clearAnalyzeRequestBody() {
+      @java.lang.Deprecated public Builder clearAnalyzeRequestBody() {
         if (analyzeRequestBodyBuilder_ == null) {
           analyzeRequestBody_ = null;
           onChanged();
@@ -5293,24 +5299,24 @@ public final class WafProfileOuterClass {
       }
       /**
        * <pre>
-       * Parameters for request body analyzer.
+       * The parameter is deprecated. Parameters for request body analyzer.
        * </pre>
        *
-       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12;</code>
+       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12 [deprecated = true];</code>
        */
-      public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBody.Builder getAnalyzeRequestBodyBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBody.Builder getAnalyzeRequestBodyBuilder() {
         
         onChanged();
         return getAnalyzeRequestBodyFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * Parameters for request body analyzer.
+       * The parameter is deprecated. Parameters for request body analyzer.
        * </pre>
        *
-       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12;</code>
+       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12 [deprecated = true];</code>
        */
-      public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBodyOrBuilder getAnalyzeRequestBodyOrBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBodyOrBuilder getAnalyzeRequestBodyOrBuilder() {
         if (analyzeRequestBodyBuilder_ != null) {
           return analyzeRequestBodyBuilder_.getMessageOrBuilder();
         } else {
@@ -5320,10 +5326,10 @@ public final class WafProfileOuterClass {
       }
       /**
        * <pre>
-       * Parameters for request body analyzer.
+       * The parameter is deprecated. Parameters for request body analyzer.
        * </pre>
        *
-       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12;</code>
+       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.AnalyzeRequestBody analyze_request_body = 12 [deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBody, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBody.Builder, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBodyOrBuilder> 
@@ -9257,7 +9263,7 @@ public final class WafProfileOuterClass {
       "ecurity.v1.waf\032\037google/protobuf/timestam" +
       "p.proto\032\035yandex/cloud/validation.proto\0327" +
       "yandex/cloud/smartwebsecurity/v1/securit" +
-      "y_profile.proto\"\253\t\n\nWafProfile\022\020\n\002id\030\001 \001" +
+      "y_profile.proto\"\257\t\n\nWafProfile\022\020\n\002id\030\001 \001" +
       "(\tB\004\350\3071\001\022\027\n\tfolder_id\030\002 \001(\tB\004\350\3071\001\022\026\n\010clo" +
       "ud_id\030\003 \001(\tB\004\350\3071\001\0228\n\004name\030\004 \001(\tB*\350\3071\001\212\3101" +
       "\0041-50\362\3071\032[a-zA-Z0-9][a-zA-Z0-9-_.]*\022\036\n\013d" +
@@ -9272,37 +9278,37 @@ public final class WafProfileOuterClass {
       "ex.cloud.smartwebsecurity.v1.waf.WafProf" +
       "ileExclusionRule\022U\n\rcore_rule_set\030\013 \001(\0132" +
       "<.yandex.cloud.smartwebsecurity.v1.waf.W" +
-      "afProfile.CoreRuleSetH\000\022a\n\024analyze_reque" +
+      "afProfile.CoreRuleSetH\000\022e\n\024analyze_reque" +
       "st_body\030\014 \001(\0132C.yandex.cloud.smartwebsec" +
       "urity.v1.waf.WafProfile.AnalyzeRequestBo" +
-      "dy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001\032\245\001\n\013CoreRuleSet\022*\n\025inbound_ano" +
-      "maly_score\030\001 \001(\003B\013\372\3071\0072-10000\022#\n\016paranoi" +
-      "a_level\030\002 \001(\003B\013\372\3071\0071,2,3,4\022E\n\010rule_set\030\003" +
-      " \001(\0132-.yandex.cloud.smartwebsecurity.v1." +
-      "waf.RuleSetB\004\350\3071\001\032\371\001\n\022AnalyzeRequestBody" +
-      "\022\022\n\nis_enabled\030\001 \001(\010\0220\n\nsize_limit\030\002 \001(\003" +
-      "B\034\372\3071\0300,8,16,32,64,128,256,512\022e\n\021size_l" +
-      "imit_action\030\003 \001(\0162J.yandex.cloud.smartwe" +
-      "bsecurity.v1.waf.WafProfile.AnalyzeReque" +
-      "stBody.Action\"6\n\006Action\022\026\n\022ACTION_UNSPEC" +
-      "IFIED\020\000\022\n\n\006IGNORE\020\001\022\010\n\004DENY\020\002B\020\n\010rule_se" +
-      "t\022\004\300\3011\001J\004\010\010\020\t\"P\n\016WafProfileRule\022\025\n\007rule_" +
-      "id\030\001 \001(\tB\004\350\3071\001\022\022\n\nis_enabled\030\002 \001(\010\022\023\n\013is" +
-      "_blocking\030\003 \001(\010\"\303\002\n\027WafProfileExclusionR" +
-      "ule\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\036\n\013description\030\002" +
-      " \001(\tB\t\212\3101\005<=512\022>\n\tcondition\030\003 \001(\0132+.yan" +
-      "dex.cloud.smartwebsecurity.v1.Condition\022" +
-      "g\n\rexclude_rules\030\004 \001(\0132J.yandex.cloud.sm" +
-      "artwebsecurity.v1.waf.WafProfileExclusio" +
-      "nRule.ExcludeRulesB\004\350\3071\001\022\024\n\014log_excluded" +
-      "\030\005 \001(\010\0325\n\014ExcludeRules\022\023\n\013exclude_all\030\001 " +
-      "\001(\010\022\020\n\010rule_ids\030\002 \003(\t\"4\n\007RuleSet\022\022\n\004name" +
-      "\030\001 \001(\tB\004\350\3071\001\022\025\n\007version\030\002 \001(\tB\004\350\3071\001B\205\001\n(" +
-      "yandex.cloud.api.smartwebsecurity.v1.waf" +
-      "ZYgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/smartwebsecurity/v1/waf;smart" +
-      "websecurityb\006proto3"
+      "dyB\002\030\001\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001\032\245\001\n\013CoreRuleSet\022*\n\025inbound" +
+      "_anomaly_score\030\001 \001(\003B\013\372\3071\0072-10000\022#\n\016par" +
+      "anoia_level\030\002 \001(\003B\013\372\3071\0071,2,3,4\022E\n\010rule_s" +
+      "et\030\003 \001(\0132-.yandex.cloud.smartwebsecurity" +
+      ".v1.waf.RuleSetB\004\350\3071\001\032\371\001\n\022AnalyzeRequest" +
+      "Body\022\022\n\nis_enabled\030\001 \001(\010\0220\n\nsize_limit\030\002" +
+      " \001(\003B\034\372\3071\0300,8,16,32,64,128,256,512\022e\n\021si" +
+      "ze_limit_action\030\003 \001(\0162J.yandex.cloud.sma" +
+      "rtwebsecurity.v1.waf.WafProfile.AnalyzeR" +
+      "equestBody.Action\"6\n\006Action\022\026\n\022ACTION_UN" +
+      "SPECIFIED\020\000\022\n\n\006IGNORE\020\001\022\010\n\004DENY\020\002B\020\n\010rul" +
+      "e_set\022\004\300\3011\001J\004\010\010\020\t\"P\n\016WafProfileRule\022\025\n\007r" +
+      "ule_id\030\001 \001(\tB\004\350\3071\001\022\022\n\nis_enabled\030\002 \001(\010\022\023" +
+      "\n\013is_blocking\030\003 \001(\010\"\303\002\n\027WafProfileExclus" +
+      "ionRule\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\036\n\013descripti" +
+      "on\030\002 \001(\tB\t\212\3101\005<=512\022>\n\tcondition\030\003 \001(\0132+" +
+      ".yandex.cloud.smartwebsecurity.v1.Condit" +
+      "ion\022g\n\rexclude_rules\030\004 \001(\0132J.yandex.clou" +
+      "d.smartwebsecurity.v1.waf.WafProfileExcl" +
+      "usionRule.ExcludeRulesB\004\350\3071\001\022\024\n\014log_excl" +
+      "uded\030\005 \001(\010\0325\n\014ExcludeRules\022\023\n\013exclude_al" +
+      "l\030\001 \001(\010\022\020\n\010rule_ids\030\002 \003(\t\"4\n\007RuleSet\022\022\n\004" +
+      "name\030\001 \001(\tB\004\350\3071\001\022\025\n\007version\030\002 \001(\tB\004\350\3071\001B" +
+      "\205\001\n(yandex.cloud.api.smartwebsecurity.v1" +
+      ".wafZYgithub.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/smartwebsecurity/v1/waf;s" +
+      "martwebsecurityb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

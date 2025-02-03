@@ -546,6 +546,33 @@ public final class UserOuterClass {
      * @return The authenticationPlugin.
      */
     yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin getAuthenticationPlugin();
+
+    /**
+     * <pre>
+     * Connection Manager Connection and settings associated with user. Read only field.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.ConnectionManager connection_manager = 7;</code>
+     * @return Whether the connectionManager field is set.
+     */
+    boolean hasConnectionManager();
+    /**
+     * <pre>
+     * Connection Manager Connection and settings associated with user. Read only field.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.ConnectionManager connection_manager = 7;</code>
+     * @return The connectionManager.
+     */
+    yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager getConnectionManager();
+    /**
+     * <pre>
+     * Connection Manager Connection and settings associated with user. Read only field.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.ConnectionManager connection_manager = 7;</code>
+     */
+    yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManagerOrBuilder getConnectionManagerOrBuilder();
   }
   /**
    * <pre>
@@ -664,6 +691,19 @@ public final class UserOuterClass {
               int rawValue = input.readEnum();
 
               authenticationPlugin_ = rawValue;
+              break;
+            }
+            case 58: {
+              yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager.Builder subBuilder = null;
+              if (connectionManager_ != null) {
+                subBuilder = connectionManager_.toBuilder();
+              }
+              connectionManager_ = input.readMessage(yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(connectionManager_);
+                connectionManager_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -999,6 +1039,44 @@ public final class UserOuterClass {
       return result == null ? yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin.UNRECOGNIZED : result;
     }
 
+    public static final int CONNECTION_MANAGER_FIELD_NUMBER = 7;
+    private yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager connectionManager_;
+    /**
+     * <pre>
+     * Connection Manager Connection and settings associated with user. Read only field.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.ConnectionManager connection_manager = 7;</code>
+     * @return Whether the connectionManager field is set.
+     */
+    @java.lang.Override
+    public boolean hasConnectionManager() {
+      return connectionManager_ != null;
+    }
+    /**
+     * <pre>
+     * Connection Manager Connection and settings associated with user. Read only field.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.ConnectionManager connection_manager = 7;</code>
+     * @return The connectionManager.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager getConnectionManager() {
+      return connectionManager_ == null ? yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager.getDefaultInstance() : connectionManager_;
+    }
+    /**
+     * <pre>
+     * Connection Manager Connection and settings associated with user. Read only field.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.ConnectionManager connection_manager = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManagerOrBuilder getConnectionManagerOrBuilder() {
+      return getConnectionManager();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1035,6 +1113,9 @@ public final class UserOuterClass {
       }
       if (authenticationPlugin_ != yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin.AUTH_PLUGIN_UNSPECIFIED.getNumber()) {
         output.writeEnum(6, authenticationPlugin_);
+      }
+      if (connectionManager_ != null) {
+        output.writeMessage(7, getConnectionManager());
       }
       unknownFields.writeTo(output);
     }
@@ -1075,6 +1156,10 @@ public final class UserOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(6, authenticationPlugin_);
       }
+      if (connectionManager_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getConnectionManager());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1103,6 +1188,11 @@ public final class UserOuterClass {
             .equals(other.getConnectionLimits())) return false;
       }
       if (authenticationPlugin_ != other.authenticationPlugin_) return false;
+      if (hasConnectionManager() != other.hasConnectionManager()) return false;
+      if (hasConnectionManager()) {
+        if (!getConnectionManager()
+            .equals(other.getConnectionManager())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1132,6 +1222,10 @@ public final class UserOuterClass {
       }
       hash = (37 * hash) + AUTHENTICATION_PLUGIN_FIELD_NUMBER;
       hash = (53 * hash) + authenticationPlugin_;
+      if (hasConnectionManager()) {
+        hash = (37 * hash) + CONNECTION_MANAGER_FIELD_NUMBER;
+        hash = (53 * hash) + getConnectionManager().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1291,6 +1385,12 @@ public final class UserOuterClass {
         }
         authenticationPlugin_ = 0;
 
+        if (connectionManagerBuilder_ == null) {
+          connectionManager_ = null;
+        } else {
+          connectionManager_ = null;
+          connectionManagerBuilder_ = null;
+        }
         return this;
       }
 
@@ -1340,6 +1440,11 @@ public final class UserOuterClass {
           result.connectionLimits_ = connectionLimitsBuilder_.build();
         }
         result.authenticationPlugin_ = authenticationPlugin_;
+        if (connectionManagerBuilder_ == null) {
+          result.connectionManager_ = connectionManager_;
+        } else {
+          result.connectionManager_ = connectionManagerBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1437,6 +1542,9 @@ public final class UserOuterClass {
         }
         if (other.authenticationPlugin_ != 0) {
           setAuthenticationPluginValue(other.getAuthenticationPluginValue());
+        }
+        if (other.hasConnectionManager()) {
+          mergeConnectionManager(other.getConnectionManager());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2387,6 +2495,161 @@ public final class UserOuterClass {
         authenticationPlugin_ = 0;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager connectionManager_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager.Builder, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManagerOrBuilder> connectionManagerBuilder_;
+      /**
+       * <pre>
+       * Connection Manager Connection and settings associated with user. Read only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionManager connection_manager = 7;</code>
+       * @return Whether the connectionManager field is set.
+       */
+      public boolean hasConnectionManager() {
+        return connectionManagerBuilder_ != null || connectionManager_ != null;
+      }
+      /**
+       * <pre>
+       * Connection Manager Connection and settings associated with user. Read only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionManager connection_manager = 7;</code>
+       * @return The connectionManager.
+       */
+      public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager getConnectionManager() {
+        if (connectionManagerBuilder_ == null) {
+          return connectionManager_ == null ? yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager.getDefaultInstance() : connectionManager_;
+        } else {
+          return connectionManagerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Connection Manager Connection and settings associated with user. Read only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionManager connection_manager = 7;</code>
+       */
+      public Builder setConnectionManager(yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager value) {
+        if (connectionManagerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          connectionManager_ = value;
+          onChanged();
+        } else {
+          connectionManagerBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection Manager Connection and settings associated with user. Read only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionManager connection_manager = 7;</code>
+       */
+      public Builder setConnectionManager(
+          yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager.Builder builderForValue) {
+        if (connectionManagerBuilder_ == null) {
+          connectionManager_ = builderForValue.build();
+          onChanged();
+        } else {
+          connectionManagerBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection Manager Connection and settings associated with user. Read only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionManager connection_manager = 7;</code>
+       */
+      public Builder mergeConnectionManager(yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager value) {
+        if (connectionManagerBuilder_ == null) {
+          if (connectionManager_ != null) {
+            connectionManager_ =
+              yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager.newBuilder(connectionManager_).mergeFrom(value).buildPartial();
+          } else {
+            connectionManager_ = value;
+          }
+          onChanged();
+        } else {
+          connectionManagerBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection Manager Connection and settings associated with user. Read only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionManager connection_manager = 7;</code>
+       */
+      public Builder clearConnectionManager() {
+        if (connectionManagerBuilder_ == null) {
+          connectionManager_ = null;
+          onChanged();
+        } else {
+          connectionManager_ = null;
+          connectionManagerBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection Manager Connection and settings associated with user. Read only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionManager connection_manager = 7;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager.Builder getConnectionManagerBuilder() {
+        
+        onChanged();
+        return getConnectionManagerFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Connection Manager Connection and settings associated with user. Read only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionManager connection_manager = 7;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManagerOrBuilder getConnectionManagerOrBuilder() {
+        if (connectionManagerBuilder_ != null) {
+          return connectionManagerBuilder_.getMessageOrBuilder();
+        } else {
+          return connectionManager_ == null ?
+              yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager.getDefaultInstance() : connectionManager_;
+        }
+      }
+      /**
+       * <pre>
+       * Connection Manager Connection and settings associated with user. Read only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionManager connection_manager = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager.Builder, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManagerOrBuilder> 
+          getConnectionManagerFieldBuilder() {
+        if (connectionManagerBuilder_ == null) {
+          connectionManagerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager.Builder, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManagerOrBuilder>(
+                  getConnectionManager(),
+                  getParentForChildren(),
+                  isClean());
+          connectionManager_ = null;
+        }
+        return connectionManagerBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -5350,6 +5613,610 @@ public final class UserOuterClass {
 
   }
 
+  public interface ConnectionManagerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mysql.v1.ConnectionManager)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of Connection Manager Connection
+     * </pre>
+     *
+     * <code>string connection_id = 1;</code>
+     * @return The connectionId.
+     */
+    java.lang.String getConnectionId();
+    /**
+     * <pre>
+     * ID of Connection Manager Connection
+     * </pre>
+     *
+     * <code>string connection_id = 1;</code>
+     * @return The bytes for connectionId.
+     */
+    com.google.protobuf.ByteString
+        getConnectionIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.mysql.v1.ConnectionManager}
+   */
+  public static final class ConnectionManager extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mysql.v1.ConnectionManager)
+      ConnectionManagerOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ConnectionManager.newBuilder() to construct.
+    private ConnectionManager(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ConnectionManager() {
+      connectionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ConnectionManager();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ConnectionManager(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              connectionId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.mysql.v1.UserOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_ConnectionManager_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.mysql.v1.UserOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_ConnectionManager_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager.class, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager.Builder.class);
+    }
+
+    public static final int CONNECTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object connectionId_;
+    /**
+     * <pre>
+     * ID of Connection Manager Connection
+     * </pre>
+     *
+     * <code>string connection_id = 1;</code>
+     * @return The connectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getConnectionId() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        connectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of Connection Manager Connection
+     * </pre>
+     *
+     * <code>string connection_id = 1;</code>
+     * @return The bytes for connectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConnectionIdBytes() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        connectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, connectionId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, connectionId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager other = (yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager) obj;
+
+      if (!getConnectionId()
+          .equals(other.getConnectionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConnectionId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mysql.v1.ConnectionManager}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mysql.v1.ConnectionManager)
+        yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManagerOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mysql.v1.UserOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_ConnectionManager_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mysql.v1.UserOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_ConnectionManager_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager.class, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        connectionId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.mysql.v1.UserOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_ConnectionManager_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager build() {
+        yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager buildPartial() {
+        yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager result = new yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager(this);
+        result.connectionId_ = connectionId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager) {
+          return mergeFrom((yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager other) {
+        if (other == yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager.getDefaultInstance()) return this;
+        if (!other.getConnectionId().isEmpty()) {
+          connectionId_ = other.connectionId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object connectionId_ = "";
+      /**
+       * <pre>
+       * ID of Connection Manager Connection
+       * </pre>
+       *
+       * <code>string connection_id = 1;</code>
+       * @return The connectionId.
+       */
+      public java.lang.String getConnectionId() {
+        java.lang.Object ref = connectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          connectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of Connection Manager Connection
+       * </pre>
+       *
+       * <code>string connection_id = 1;</code>
+       * @return The bytes for connectionId.
+       */
+      public com.google.protobuf.ByteString
+          getConnectionIdBytes() {
+        java.lang.Object ref = connectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          connectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of Connection Manager Connection
+       * </pre>
+       *
+       * <code>string connection_id = 1;</code>
+       * @param value The connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        connectionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of Connection Manager Connection
+       * </pre>
+       *
+       * <code>string connection_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConnectionId() {
+        
+        connectionId_ = getDefaultInstance().getConnectionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of Connection Manager Connection
+       * </pre>
+       *
+       * <code>string connection_id = 1;</code>
+       * @param value The bytes for connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        connectionId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mysql.v1.ConnectionManager)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mysql.v1.ConnectionManager)
+    private static final yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager();
+    }
+
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ConnectionManager>
+        PARSER = new com.google.protobuf.AbstractParser<ConnectionManager>() {
+      @java.lang.Override
+      public ConnectionManager parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ConnectionManager(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ConnectionManager> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ConnectionManager> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManager getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface UserSpecOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mysql.v1.UserSpec)
       com.google.protobuf.MessageOrBuilder {
@@ -5542,6 +6409,33 @@ public final class UserOuterClass {
      * @return The authenticationPlugin.
      */
     yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin getAuthenticationPlugin();
+
+    /**
+     * <pre>
+     * Generate password using Connection Manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue generate_password = 7;</code>
+     * @return Whether the generatePassword field is set.
+     */
+    boolean hasGeneratePassword();
+    /**
+     * <pre>
+     * Generate password using Connection Manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue generate_password = 7;</code>
+     * @return The generatePassword.
+     */
+    com.google.protobuf.BoolValue getGeneratePassword();
+    /**
+     * <pre>
+     * Generate password using Connection Manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue generate_password = 7;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getGeneratePasswordOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.UserSpec}
@@ -5655,6 +6549,19 @@ public final class UserOuterClass {
               int rawValue = input.readEnum();
 
               authenticationPlugin_ = rawValue;
+              break;
+            }
+            case 58: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (generatePassword_ != null) {
+                subBuilder = generatePassword_.toBuilder();
+              }
+              generatePassword_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(generatePassword_);
+                generatePassword_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -6000,6 +6907,44 @@ public final class UserOuterClass {
       return result == null ? yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin.UNRECOGNIZED : result;
     }
 
+    public static final int GENERATE_PASSWORD_FIELD_NUMBER = 7;
+    private com.google.protobuf.BoolValue generatePassword_;
+    /**
+     * <pre>
+     * Generate password using Connection Manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue generate_password = 7;</code>
+     * @return Whether the generatePassword field is set.
+     */
+    @java.lang.Override
+    public boolean hasGeneratePassword() {
+      return generatePassword_ != null;
+    }
+    /**
+     * <pre>
+     * Generate password using Connection Manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue generate_password = 7;</code>
+     * @return The generatePassword.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getGeneratePassword() {
+      return generatePassword_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : generatePassword_;
+    }
+    /**
+     * <pre>
+     * Generate password using Connection Manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue generate_password = 7;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getGeneratePasswordOrBuilder() {
+      return getGeneratePassword();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6036,6 +6981,9 @@ public final class UserOuterClass {
       }
       if (authenticationPlugin_ != yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin.AUTH_PLUGIN_UNSPECIFIED.getNumber()) {
         output.writeEnum(6, authenticationPlugin_);
+      }
+      if (generatePassword_ != null) {
+        output.writeMessage(7, getGeneratePassword());
       }
       unknownFields.writeTo(output);
     }
@@ -6076,6 +7024,10 @@ public final class UserOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(6, authenticationPlugin_);
       }
+      if (generatePassword_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getGeneratePassword());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6104,6 +7056,11 @@ public final class UserOuterClass {
             .equals(other.getConnectionLimits())) return false;
       }
       if (authenticationPlugin_ != other.authenticationPlugin_) return false;
+      if (hasGeneratePassword() != other.hasGeneratePassword()) return false;
+      if (hasGeneratePassword()) {
+        if (!getGeneratePassword()
+            .equals(other.getGeneratePassword())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6133,6 +7090,10 @@ public final class UserOuterClass {
       }
       hash = (37 * hash) + AUTHENTICATION_PLUGIN_FIELD_NUMBER;
       hash = (53 * hash) + authenticationPlugin_;
+      if (hasGeneratePassword()) {
+        hash = (37 * hash) + GENERATE_PASSWORD_FIELD_NUMBER;
+        hash = (53 * hash) + getGeneratePassword().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6287,6 +7248,12 @@ public final class UserOuterClass {
         }
         authenticationPlugin_ = 0;
 
+        if (generatePasswordBuilder_ == null) {
+          generatePassword_ = null;
+        } else {
+          generatePassword_ = null;
+          generatePasswordBuilder_ = null;
+        }
         return this;
       }
 
@@ -6336,6 +7303,11 @@ public final class UserOuterClass {
           result.connectionLimits_ = connectionLimitsBuilder_.build();
         }
         result.authenticationPlugin_ = authenticationPlugin_;
+        if (generatePasswordBuilder_ == null) {
+          result.generatePassword_ = generatePassword_;
+        } else {
+          result.generatePassword_ = generatePasswordBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -6433,6 +7405,9 @@ public final class UserOuterClass {
         }
         if (other.authenticationPlugin_ != 0) {
           setAuthenticationPluginValue(other.getAuthenticationPluginValue());
+        }
+        if (other.hasGeneratePassword()) {
+          mergeGeneratePassword(other.getGeneratePassword());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7420,6 +8395,161 @@ public final class UserOuterClass {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.BoolValue generatePassword_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> generatePasswordBuilder_;
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 7;</code>
+       * @return Whether the generatePassword field is set.
+       */
+      public boolean hasGeneratePassword() {
+        return generatePasswordBuilder_ != null || generatePassword_ != null;
+      }
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 7;</code>
+       * @return The generatePassword.
+       */
+      public com.google.protobuf.BoolValue getGeneratePassword() {
+        if (generatePasswordBuilder_ == null) {
+          return generatePassword_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : generatePassword_;
+        } else {
+          return generatePasswordBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 7;</code>
+       */
+      public Builder setGeneratePassword(com.google.protobuf.BoolValue value) {
+        if (generatePasswordBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          generatePassword_ = value;
+          onChanged();
+        } else {
+          generatePasswordBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 7;</code>
+       */
+      public Builder setGeneratePassword(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (generatePasswordBuilder_ == null) {
+          generatePassword_ = builderForValue.build();
+          onChanged();
+        } else {
+          generatePasswordBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 7;</code>
+       */
+      public Builder mergeGeneratePassword(com.google.protobuf.BoolValue value) {
+        if (generatePasswordBuilder_ == null) {
+          if (generatePassword_ != null) {
+            generatePassword_ =
+              com.google.protobuf.BoolValue.newBuilder(generatePassword_).mergeFrom(value).buildPartial();
+          } else {
+            generatePassword_ = value;
+          }
+          onChanged();
+        } else {
+          generatePasswordBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 7;</code>
+       */
+      public Builder clearGeneratePassword() {
+        if (generatePasswordBuilder_ == null) {
+          generatePassword_ = null;
+          onChanged();
+        } else {
+          generatePassword_ = null;
+          generatePasswordBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 7;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getGeneratePasswordBuilder() {
+        
+        onChanged();
+        return getGeneratePasswordFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 7;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getGeneratePasswordOrBuilder() {
+        if (generatePasswordBuilder_ != null) {
+          return generatePasswordBuilder_.getMessageOrBuilder();
+        } else {
+          return generatePassword_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : generatePassword_;
+        }
+      }
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getGeneratePasswordFieldBuilder() {
+        if (generatePasswordBuilder_ == null) {
+          generatePasswordBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getGeneratePassword(),
+                  getParentForChildren(),
+                  isClean());
+          generatePassword_ = null;
+        }
+        return generatePasswordBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7489,6 +8619,11 @@ public final class UserOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_mysql_v1_ConnectionLimits_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mysql_v1_ConnectionManager_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mysql_v1_ConnectionManager_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_mysql_v1_UserSpec_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -7505,7 +8640,7 @@ public final class UserOuterClass {
       "\n$yandex/cloud/mdb/mysql/v1/user.proto\022\031" +
       "yandex.cloud.mdb.mysql.v1\032\036google/protob" +
       "uf/wrappers.proto\032\035yandex/cloud/validati" +
-      "on.proto\"\273\002\n\004User\022\014\n\004name\030\001 \001(\t\022\022\n\nclust" +
+      "on.proto\"\205\003\n\004User\022\014\n\004name\030\001 \001(\t\022\022\n\nclust" +
       "er_id\030\002 \001(\t\022:\n\013permissions\030\003 \003(\0132%.yande" +
       "x.cloud.mdb.mysql.v1.Permission\022G\n\022globa" +
       "l_permissions\030\004 \003(\0162+.yandex.cloud.mdb.m" +
@@ -7513,44 +8648,48 @@ public final class UserOuterClass {
       "imits\030\005 \001(\0132+.yandex.cloud.mdb.mysql.v1." +
       "ConnectionLimits\022D\n\025authentication_plugi" +
       "n\030\006 \001(\0162%.yandex.cloud.mdb.mysql.v1.Auth" +
-      "Plugin\"\257\003\n\nPermission\022\025\n\rdatabase_name\030\001" +
-      " \001(\t\022G\n\005roles\030\002 \003(\0162/.yandex.cloud.mdb.m" +
-      "ysql.v1.Permission.PrivilegeB\007\202\3101\003>=1\"\300\002" +
-      "\n\tPrivilege\022\031\n\025PRIVILEGE_UNSPECIFIED\020\000\022\022" +
-      "\n\016ALL_PRIVILEGES\020\001\022\t\n\005ALTER\020\002\022\021\n\rALTER_R" +
-      "OUTINE\020\003\022\n\n\006CREATE\020\004\022\022\n\016CREATE_ROUTINE\020\005" +
-      "\022\033\n\027CREATE_TEMPORARY_TABLES\020\006\022\017\n\013CREATE_" +
-      "VIEW\020\007\022\n\n\006DELETE\020\010\022\010\n\004DROP\020\t\022\t\n\005EVENT\020\n\022" +
-      "\013\n\007EXECUTE\020\013\022\t\n\005INDEX\020\014\022\n\n\006INSERT\020\r\022\017\n\013L" +
-      "OCK_TABLES\020\016\022\n\n\006SELECT\020\017\022\r\n\tSHOW_VIEW\020\020\022" +
-      "\013\n\007TRIGGER\020\021\022\n\n\006UPDATE\020\022\022\016\n\nREFERENCES\020\023" +
-      "\"\250\002\n\020ConnectionLimits\022D\n\026max_questions_p" +
-      "er_hour\030\001 \001(\0132\033.google.protobuf.Int64Val" +
-      "ueB\007\372\3071\003>=0\022B\n\024max_updates_per_hour\030\002 \001(" +
-      "\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022" +
-      "F\n\030max_connections_per_hour\030\003 \001(\0132\033.goog" +
-      "le.protobuf.Int64ValueB\007\372\3071\003>=0\022B\n\024max_u" +
-      "ser_connections\030\004 \001(\0132\033.google.protobuf." +
-      "Int64ValueB\007\372\3071\003>=0\"\354\002\n\010UserSpec\022,\n\004name" +
-      "\030\001 \001(\tB\036\350\3071\001\212\3101\004<=32\362\3071\016[a-zA-Z0-9_-]*\022\037" +
-      "\n\010password\030\002 \001(\tB\r\350\3071\001\212\3101\0058-128\022:\n\013permi" +
-      "ssions\030\003 \003(\0132%.yandex.cloud.mdb.mysql.v1" +
-      ".Permission\022G\n\022global_permissions\030\004 \003(\0162" +
-      "+.yandex.cloud.mdb.mysql.v1.GlobalPermis" +
-      "sion\022F\n\021connection_limits\030\005 \001(\0132+.yandex" +
-      ".cloud.mdb.mysql.v1.ConnectionLimits\022D\n\025" +
-      "authentication_plugin\030\006 \001(\0162%.yandex.clo" +
-      "ud.mdb.mysql.v1.AuthPlugin*\236\001\n\020GlobalPer" +
-      "mission\022!\n\035GLOBAL_PERMISSION_UNSPECIFIED" +
-      "\020\000\022\026\n\022REPLICATION_CLIENT\020\001\022\025\n\021REPLICATIO" +
-      "N_SLAVE\020\002\022\013\n\007PROCESS\020\003\022\031\n\025FLUSH_OPTIMIZE" +
-      "R_COSTS\020\004\022\020\n\014SHOW_ROUTINE\020\005*t\n\nAuthPlugi" +
-      "n\022\033\n\027AUTH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_" +
-      "NATIVE_PASSWORD\020\001\022\031\n\025CACHING_SHA2_PASSWO" +
-      "RD\020\002\022\023\n\017SHA256_PASSWORD\020\003Bd\n\035yandex.clou" +
-      "d.api.mdb.mysql.v1ZCgithub.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/mdb/mysql/v" +
-      "1;mysqlb\006proto3"
+      "Plugin\022H\n\022connection_manager\030\007 \001(\0132,.yan" +
+      "dex.cloud.mdb.mysql.v1.ConnectionManager" +
+      "\"\257\003\n\nPermission\022\025\n\rdatabase_name\030\001 \001(\t\022G" +
+      "\n\005roles\030\002 \003(\0162/.yandex.cloud.mdb.mysql.v" +
+      "1.Permission.PrivilegeB\007\202\3101\003>=1\"\300\002\n\tPriv" +
+      "ilege\022\031\n\025PRIVILEGE_UNSPECIFIED\020\000\022\022\n\016ALL_" +
+      "PRIVILEGES\020\001\022\t\n\005ALTER\020\002\022\021\n\rALTER_ROUTINE" +
+      "\020\003\022\n\n\006CREATE\020\004\022\022\n\016CREATE_ROUTINE\020\005\022\033\n\027CR" +
+      "EATE_TEMPORARY_TABLES\020\006\022\017\n\013CREATE_VIEW\020\007" +
+      "\022\n\n\006DELETE\020\010\022\010\n\004DROP\020\t\022\t\n\005EVENT\020\n\022\013\n\007EXE" +
+      "CUTE\020\013\022\t\n\005INDEX\020\014\022\n\n\006INSERT\020\r\022\017\n\013LOCK_TA" +
+      "BLES\020\016\022\n\n\006SELECT\020\017\022\r\n\tSHOW_VIEW\020\020\022\013\n\007TRI" +
+      "GGER\020\021\022\n\n\006UPDATE\020\022\022\016\n\nREFERENCES\020\023\"\250\002\n\020C" +
+      "onnectionLimits\022D\n\026max_questions_per_hou" +
+      "r\030\001 \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
+      "1\003>=0\022B\n\024max_updates_per_hour\030\002 \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\007\372\3071\003>=0\022F\n\030max" +
+      "_connections_per_hour\030\003 \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\007\372\3071\003>=0\022B\n\024max_user_co" +
+      "nnections\030\004 \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\007\372\3071\003>=0\"*\n\021ConnectionManager\022\025\n\rco" +
+      "nnection_id\030\001 \001(\t\"\243\003\n\010UserSpec\022,\n\004name\030\001" +
+      " \001(\tB\036\350\3071\001\212\3101\004<=32\362\3071\016[a-zA-Z0-9_-]*\022\037\n\010" +
+      "password\030\002 \001(\tB\r\350\3071\001\212\3101\0058-128\022:\n\013permiss" +
+      "ions\030\003 \003(\0132%.yandex.cloud.mdb.mysql.v1.P" +
+      "ermission\022G\n\022global_permissions\030\004 \003(\0162+." +
+      "yandex.cloud.mdb.mysql.v1.GlobalPermissi" +
+      "on\022F\n\021connection_limits\030\005 \001(\0132+.yandex.c" +
+      "loud.mdb.mysql.v1.ConnectionLimits\022D\n\025au" +
+      "thentication_plugin\030\006 \001(\0162%.yandex.cloud" +
+      ".mdb.mysql.v1.AuthPlugin\0225\n\021generate_pas" +
+      "sword\030\007 \001(\0132\032.google.protobuf.BoolValue*" +
+      "\236\001\n\020GlobalPermission\022!\n\035GLOBAL_PERMISSIO" +
+      "N_UNSPECIFIED\020\000\022\026\n\022REPLICATION_CLIENT\020\001\022" +
+      "\025\n\021REPLICATION_SLAVE\020\002\022\013\n\007PROCESS\020\003\022\031\n\025F" +
+      "LUSH_OPTIMIZER_COSTS\020\004\022\020\n\014SHOW_ROUTINE\020\005" +
+      "*t\n\nAuthPlugin\022\033\n\027AUTH_PLUGIN_UNSPECIFIE" +
+      "D\020\000\022\031\n\025MYSQL_NATIVE_PASSWORD\020\001\022\031\n\025CACHIN" +
+      "G_SHA2_PASSWORD\020\002\022\023\n\017SHA256_PASSWORD\020\003Bd" +
+      "\n\035yandex.cloud.api.mdb.mysql.v1ZCgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/mdb/mysql/v1;mysqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7563,7 +8702,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_mysql_v1_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_User_descriptor,
-        new java.lang.String[] { "Name", "ClusterId", "Permissions", "GlobalPermissions", "ConnectionLimits", "AuthenticationPlugin", });
+        new java.lang.String[] { "Name", "ClusterId", "Permissions", "GlobalPermissions", "ConnectionLimits", "AuthenticationPlugin", "ConnectionManager", });
     internal_static_yandex_cloud_mdb_mysql_v1_Permission_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_mysql_v1_Permission_fieldAccessorTable = new
@@ -7576,12 +8715,18 @@ public final class UserOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_ConnectionLimits_descriptor,
         new java.lang.String[] { "MaxQuestionsPerHour", "MaxUpdatesPerHour", "MaxConnectionsPerHour", "MaxUserConnections", });
-    internal_static_yandex_cloud_mdb_mysql_v1_UserSpec_descriptor =
+    internal_static_yandex_cloud_mdb_mysql_v1_ConnectionManager_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_mdb_mysql_v1_ConnectionManager_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mysql_v1_ConnectionManager_descriptor,
+        new java.lang.String[] { "ConnectionId", });
+    internal_static_yandex_cloud_mdb_mysql_v1_UserSpec_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_mdb_mysql_v1_UserSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_UserSpec_descriptor,
-        new java.lang.String[] { "Name", "Password", "Permissions", "GlobalPermissions", "ConnectionLimits", "AuthenticationPlugin", });
+        new java.lang.String[] { "Name", "Password", "Permissions", "GlobalPermissions", "ConnectionLimits", "AuthenticationPlugin", "GeneratePassword", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);

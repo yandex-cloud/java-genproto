@@ -1252,6 +1252,21 @@ public final class Mysql {
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysqlOrBuilder getOnPremiseOrBuilder();
 
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+     * @return Whether the connectionManagerConnection field is set.
+     */
+    boolean hasConnectionManagerConnection();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+     * @return The connectionManagerConnection.
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection getConnectionManagerConnection();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder getConnectionManagerConnectionOrBuilder();
+
     public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection.ConnectionCase getConnectionCase();
   }
   /**
@@ -1319,6 +1334,20 @@ public final class Mysql {
               connectionCase_ = 2;
               break;
             }
+            case 26: {
+              yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder subBuilder = null;
+              if (connectionCase_ == 3) {
+                subBuilder = ((yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_).toBuilder();
+              }
+              connection_ =
+                  input.readMessage(yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_);
+                connection_ = subBuilder.buildPartial();
+              }
+              connectionCase_ = 3;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -1358,6 +1387,7 @@ public final class Mysql {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       MDB_CLUSTER_ID(1),
       ON_PREMISE(2),
+      CONNECTION_MANAGER_CONNECTION(3),
       CONNECTION_NOT_SET(0);
       private final int value;
       private ConnectionCase(int value) {
@@ -1377,6 +1407,7 @@ public final class Mysql {
         switch (value) {
           case 1: return MDB_CLUSTER_ID;
           case 2: return ON_PREMISE;
+          case 3: return CONNECTION_MANAGER_CONNECTION;
           case 0: return CONNECTION_NOT_SET;
           default: return null;
         }
@@ -1499,6 +1530,37 @@ public final class Mysql {
       return yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql.getDefaultInstance();
     }
 
+    public static final int CONNECTION_MANAGER_CONNECTION_FIELD_NUMBER = 3;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+     * @return Whether the connectionManagerConnection field is set.
+     */
+    @java.lang.Override
+    public boolean hasConnectionManagerConnection() {
+      return connectionCase_ == 3;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+     * @return The connectionManagerConnection.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection getConnectionManagerConnection() {
+      if (connectionCase_ == 3) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder getConnectionManagerConnectionOrBuilder() {
+      if (connectionCase_ == 3) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1519,6 +1581,9 @@ public final class Mysql {
       if (connectionCase_ == 2) {
         output.writeMessage(2, (yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql) connection_);
       }
+      if (connectionCase_ == 3) {
+        output.writeMessage(3, (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1534,6 +1599,10 @@ public final class Mysql {
       if (connectionCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, (yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql) connection_);
+      }
+      if (connectionCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1560,6 +1629,10 @@ public final class Mysql {
           if (!getOnPremise()
               .equals(other.getOnPremise())) return false;
           break;
+        case 3:
+          if (!getConnectionManagerConnection()
+              .equals(other.getConnectionManagerConnection())) return false;
+          break;
         case 0:
         default:
       }
@@ -1582,6 +1655,10 @@ public final class Mysql {
         case 2:
           hash = (37 * hash) + ON_PREMISE_FIELD_NUMBER;
           hash = (53 * hash) + getOnPremise().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + CONNECTION_MANAGER_CONNECTION_FIELD_NUMBER;
+          hash = (53 * hash) + getConnectionManagerConnection().hashCode();
           break;
         case 0:
         default:
@@ -1757,6 +1834,13 @@ public final class Mysql {
             result.connection_ = onPremiseBuilder_.build();
           }
         }
+        if (connectionCase_ == 3) {
+          if (connectionManagerConnectionBuilder_ == null) {
+            result.connection_ = connection_;
+          } else {
+            result.connection_ = connectionManagerConnectionBuilder_.build();
+          }
+        }
         result.connectionCase_ = connectionCase_;
         onBuilt();
         return result;
@@ -1815,6 +1899,10 @@ public final class Mysql {
           }
           case ON_PREMISE: {
             mergeOnPremise(other.getOnPremise());
+            break;
+          }
+          case CONNECTION_MANAGER_CONNECTION: {
+            mergeConnectionManagerConnection(other.getConnectionManagerConnection());
             break;
           }
           case CONNECTION_NOT_SET: {
@@ -2161,6 +2249,147 @@ public final class Mysql {
         connectionCase_ = 2;
         onChanged();;
         return onPremiseBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder> connectionManagerConnectionBuilder_;
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       * @return Whether the connectionManagerConnection field is set.
+       */
+      @java.lang.Override
+      public boolean hasConnectionManagerConnection() {
+        return connectionCase_ == 3;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       * @return The connectionManagerConnection.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection getConnectionManagerConnection() {
+        if (connectionManagerConnectionBuilder_ == null) {
+          if (connectionCase_ == 3) {
+            return (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_;
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
+        } else {
+          if (connectionCase_ == 3) {
+            return connectionManagerConnectionBuilder_.getMessage();
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      public Builder setConnectionManagerConnection(yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection value) {
+        if (connectionManagerConnectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          connection_ = value;
+          onChanged();
+        } else {
+          connectionManagerConnectionBuilder_.setMessage(value);
+        }
+        connectionCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      public Builder setConnectionManagerConnection(
+          yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder builderForValue) {
+        if (connectionManagerConnectionBuilder_ == null) {
+          connection_ = builderForValue.build();
+          onChanged();
+        } else {
+          connectionManagerConnectionBuilder_.setMessage(builderForValue.build());
+        }
+        connectionCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      public Builder mergeConnectionManagerConnection(yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection value) {
+        if (connectionManagerConnectionBuilder_ == null) {
+          if (connectionCase_ == 3 &&
+              connection_ != yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance()) {
+            connection_ = yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.newBuilder((yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            connection_ = value;
+          }
+          onChanged();
+        } else {
+          if (connectionCase_ == 3) {
+            connectionManagerConnectionBuilder_.mergeFrom(value);
+          }
+          connectionManagerConnectionBuilder_.setMessage(value);
+        }
+        connectionCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      public Builder clearConnectionManagerConnection() {
+        if (connectionManagerConnectionBuilder_ == null) {
+          if (connectionCase_ == 3) {
+            connectionCase_ = 0;
+            connection_ = null;
+            onChanged();
+          }
+        } else {
+          if (connectionCase_ == 3) {
+            connectionCase_ = 0;
+            connection_ = null;
+          }
+          connectionManagerConnectionBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder getConnectionManagerConnectionBuilder() {
+        return getConnectionManagerConnectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder getConnectionManagerConnectionOrBuilder() {
+        if ((connectionCase_ == 3) && (connectionManagerConnectionBuilder_ != null)) {
+          return connectionManagerConnectionBuilder_.getMessageOrBuilder();
+        } else {
+          if (connectionCase_ == 3) {
+            return (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_;
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder> 
+          getConnectionManagerConnectionFieldBuilder() {
+        if (connectionManagerConnectionBuilder_ == null) {
+          if (!(connectionCase_ == 3)) {
+            connection_ = yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
+          }
+          connectionManagerConnectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder>(
+                  (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_,
+                  getParentForChildren(),
+                  isClean());
+          connection_ = null;
+        }
+        connectionCase_ = 3;
+        onChanged();;
+        return connectionManagerConnectionBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -8572,44 +8801,46 @@ public final class Mysql {
       "l\022\014\n\004port\030\002 \001(\003\022\021\n\tsubnet_id\030\004 \001(\t\022\r\n\005ho" +
       "sts\030\005 \003(\t\022@\n\010tls_mode\030\006 \001(\0132..yandex.clo" +
       "ud.datatransfer.v1.endpoint.TLSModeJ\004\010\001\020" +
-      "\002J\004\010\003\020\004\"\206\001\n\017MysqlConnection\022\030\n\016mdb_clust" +
+      "\002J\004\010\003\020\004\"\363\001\n\017MysqlConnection\022\030\n\016mdb_clust" +
       "er_id\030\001 \001(\tH\000\022K\n\non_premise\030\002 \001(\01325.yand" +
       "ex.cloud.datatransfer.v1.endpoint.OnPrem" +
-      "iseMysqlH\000B\014\n\nconnection\"\315\002\n\033MysqlObject" +
-      "TransferSettings\022H\n\004view\030\001 \001(\0162:.yandex." +
-      "cloud.datatransfer.v1.endpoint.ObjectTra" +
-      "nsferStage\022K\n\007routine\030\002 \001(\0162:.yandex.clo" +
-      "ud.datatransfer.v1.endpoint.ObjectTransf" +
-      "erStage\022K\n\007trigger\030\003 \001(\0162:.yandex.cloud." +
-      "datatransfer.v1.endpoint.ObjectTransferS" +
-      "tage\022J\n\006tables\030\004 \001(\0162:.yandex.cloud.data" +
-      "transfer.v1.endpoint.ObjectTransferStage" +
-      "\"\255\003\n\013MysqlSource\022J\n\nconnection\030\001 \001(\01326.y" +
-      "andex.cloud.datatransfer.v1.endpoint.Mys" +
-      "qlConnection\022\020\n\010database\030\002 \001(\t\022\014\n\004user\030\003" +
-      " \001(\t\022?\n\010password\030\004 \001(\0132-.yandex.cloud.da" +
-      "tatransfer.v1.endpoint.Secret\022\020\n\010timezon" +
-      "e\030\010 \001(\t\022d\n\030object_transfer_settings\030\013 \001(" +
-      "\0132B.yandex.cloud.datatransfer.v1.endpoin" +
-      "t.MysqlObjectTransferSettings\022\034\n\024include" +
-      "_tables_regex\030\014 \003(\t\022\034\n\024exclude_tables_re" +
-      "gex\030\r \003(\t\022\027\n\017security_groups\030\016 \003(\t\022\030\n\020se" +
-      "rvice_database\030\017 \001(\tJ\004\010\005\020\010J\004\010\t\020\013\"\205\003\n\013Mys" +
-      "qlTarget\022J\n\nconnection\030\001 \001(\01326.yandex.cl" +
-      "oud.datatransfer.v1.endpoint.MysqlConnec" +
-      "tion\022\020\n\010database\030\002 \001(\t\022\014\n\004user\030\003 \001(\t\022?\n\010" +
-      "password\030\004 \001(\0132-.yandex.cloud.datatransf" +
-      "er.v1.endpoint.Secret\022\020\n\010sql_mode\030\005 \001(\t\022" +
-      "\036\n\026skip_constraint_checks\030\006 \001(\010\022\020\n\010timez" +
-      "one\030\007 \001(\t\022L\n\016cleanup_policy\030\010 \001(\01624.yand" +
-      "ex.cloud.datatransfer.v1.endpoint.Cleanu" +
-      "pPolicy\022\030\n\020service_database\030\017 \001(\t\022\027\n\017sec" +
-      "urity_groups\030\020 \003(\tJ\004\010\t\020\017B\247\001\n)yandex.clou" +
-      "d.api.datatransfer.v1.endpointZRgithub.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/datatransfer/v1/endpoint;endpoint\252\002%Yan" +
-      "dex.Cloud.Datatransfer.V1.EndPointb\006prot" +
-      "o3"
+      "iseMysqlH\000\022k\n\035connection_manager_connect" +
+      "ion\030\003 \001(\0132B.yandex.cloud.datatransfer.v1" +
+      ".endpoint.ConnectionManagerConnectionH\000B" +
+      "\014\n\nconnection\"\315\002\n\033MysqlObjectTransferSet" +
+      "tings\022H\n\004view\030\001 \001(\0162:.yandex.cloud.datat" +
+      "ransfer.v1.endpoint.ObjectTransferStage\022" +
+      "K\n\007routine\030\002 \001(\0162:.yandex.cloud.datatran" +
+      "sfer.v1.endpoint.ObjectTransferStage\022K\n\007" +
+      "trigger\030\003 \001(\0162:.yandex.cloud.datatransfe" +
+      "r.v1.endpoint.ObjectTransferStage\022J\n\006tab" +
+      "les\030\004 \001(\0162:.yandex.cloud.datatransfer.v1" +
+      ".endpoint.ObjectTransferStage\"\255\003\n\013MysqlS" +
+      "ource\022J\n\nconnection\030\001 \001(\01326.yandex.cloud" +
+      ".datatransfer.v1.endpoint.MysqlConnectio" +
+      "n\022\020\n\010database\030\002 \001(\t\022\014\n\004user\030\003 \001(\t\022?\n\010pas" +
+      "sword\030\004 \001(\0132-.yandex.cloud.datatransfer." +
+      "v1.endpoint.Secret\022\020\n\010timezone\030\010 \001(\t\022d\n\030" +
+      "object_transfer_settings\030\013 \001(\0132B.yandex." +
+      "cloud.datatransfer.v1.endpoint.MysqlObje" +
+      "ctTransferSettings\022\034\n\024include_tables_reg" +
+      "ex\030\014 \003(\t\022\034\n\024exclude_tables_regex\030\r \003(\t\022\027" +
+      "\n\017security_groups\030\016 \003(\t\022\030\n\020service_datab" +
+      "ase\030\017 \001(\tJ\004\010\005\020\010J\004\010\t\020\013\"\205\003\n\013MysqlTarget\022J\n" +
+      "\nconnection\030\001 \001(\01326.yandex.cloud.datatra" +
+      "nsfer.v1.endpoint.MysqlConnection\022\020\n\010dat" +
+      "abase\030\002 \001(\t\022\014\n\004user\030\003 \001(\t\022?\n\010password\030\004 " +
+      "\001(\0132-.yandex.cloud.datatransfer.v1.endpo" +
+      "int.Secret\022\020\n\010sql_mode\030\005 \001(\t\022\036\n\026skip_con" +
+      "straint_checks\030\006 \001(\010\022\020\n\010timezone\030\007 \001(\t\022L" +
+      "\n\016cleanup_policy\030\010 \001(\01624.yandex.cloud.da" +
+      "tatransfer.v1.endpoint.CleanupPolicy\022\030\n\020" +
+      "service_database\030\017 \001(\t\022\027\n\017security_group" +
+      "s\030\020 \003(\tJ\004\010\t\020\017B\247\001\n)yandex.cloud.api.datat" +
+      "ransfer.v1.endpointZRgithub.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/datatransf" +
+      "er/v1/endpoint;endpoint\252\002%Yandex.Cloud.D" +
+      "atatransfer.V1.EndPointb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8627,7 +8858,7 @@ public final class Mysql {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_MysqlConnection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_MysqlConnection_descriptor,
-        new java.lang.String[] { "MdbClusterId", "OnPremise", "Connection", });
+        new java.lang.String[] { "MdbClusterId", "OnPremise", "ConnectionManagerConnection", "Connection", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_MysqlObjectTransferSettings_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_MysqlObjectTransferSettings_fieldAccessorTable = new

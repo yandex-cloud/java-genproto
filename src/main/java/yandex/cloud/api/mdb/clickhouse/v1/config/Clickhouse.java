@@ -1945,6 +1945,36 @@ public final class Clickhouse {
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.QueryCache query_cache = 69;</code>
      */
     yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.QueryCacheOrBuilder getQueryCacheOrBuilder();
+
+    /**
+     * <pre>
+     * JDBC bridge for queries to external databases.
+     * https://clickhouse.com/docs/en/integrations/jdbc/jdbc-with-clickhouse
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.JdbcBridge jdbc_bridge = 70;</code>
+     * @return Whether the jdbcBridge field is set.
+     */
+    boolean hasJdbcBridge();
+    /**
+     * <pre>
+     * JDBC bridge for queries to external databases.
+     * https://clickhouse.com/docs/en/integrations/jdbc/jdbc-with-clickhouse
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.JdbcBridge jdbc_bridge = 70;</code>
+     * @return The jdbcBridge.
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge getJdbcBridge();
+    /**
+     * <pre>
+     * JDBC bridge for queries to external databases.
+     * https://clickhouse.com/docs/en/integrations/jdbc/jdbc-with-clickhouse
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.JdbcBridge jdbc_bridge = 70;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridgeOrBuilder getJdbcBridgeOrBuilder();
   }
   /**
    * <pre>
@@ -2852,6 +2882,19 @@ public final class Clickhouse {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(queryCache_);
                 queryCache_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 562: {
+              yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge.Builder subBuilder = null;
+              if (jdbcBridge_ != null) {
+                subBuilder = jdbcBridge_.toBuilder();
+              }
+              jdbcBridge_ = input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(jdbcBridge_);
+                jdbcBridge_ = subBuilder.buildPartial();
               }
 
               break;
@@ -43277,6 +43320,881 @@ public final class Clickhouse {
 
     }
 
+    public interface JdbcBridgeOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.JdbcBridge)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Host of jdbc bridge.
+       * </pre>
+       *
+       * <code>string host = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The host.
+       */
+      java.lang.String getHost();
+      /**
+       * <pre>
+       * Host of jdbc bridge.
+       * </pre>
+       *
+       * <code>string host = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for host.
+       */
+      com.google.protobuf.ByteString
+          getHostBytes();
+
+      /**
+       * <pre>
+       * Port of jdbc bridge.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value port = 2;</code>
+       * @return Whether the port field is set.
+       */
+      boolean hasPort();
+      /**
+       * <pre>
+       * Port of jdbc bridge.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value port = 2;</code>
+       * @return The port.
+       */
+      com.google.protobuf.Int64Value getPort();
+      /**
+       * <pre>
+       * Port of jdbc bridge.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value port = 2;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getPortOrBuilder();
+    }
+    /**
+     * <pre>
+     * JDBC bridge for queries to external databases.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.JdbcBridge}
+     */
+    public static final class JdbcBridge extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.JdbcBridge)
+        JdbcBridgeOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use JdbcBridge.newBuilder() to construct.
+      private JdbcBridge(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private JdbcBridge() {
+        host_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new JdbcBridge();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private JdbcBridge(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                host_ = s;
+                break;
+              }
+              case 18: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (port_ != null) {
+                  subBuilder = port_.toBuilder();
+                }
+                port_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(port_);
+                  port_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_JdbcBridge_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_JdbcBridge_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge.class, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge.Builder.class);
+      }
+
+      public static final int HOST_FIELD_NUMBER = 1;
+      private volatile java.lang.Object host_;
+      /**
+       * <pre>
+       * Host of jdbc bridge.
+       * </pre>
+       *
+       * <code>string host = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The host.
+       */
+      @java.lang.Override
+      public java.lang.String getHost() {
+        java.lang.Object ref = host_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          host_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Host of jdbc bridge.
+       * </pre>
+       *
+       * <code>string host = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for host.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getHostBytes() {
+        java.lang.Object ref = host_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          host_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int PORT_FIELD_NUMBER = 2;
+      private com.google.protobuf.Int64Value port_;
+      /**
+       * <pre>
+       * Port of jdbc bridge.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value port = 2;</code>
+       * @return Whether the port field is set.
+       */
+      @java.lang.Override
+      public boolean hasPort() {
+        return port_ != null;
+      }
+      /**
+       * <pre>
+       * Port of jdbc bridge.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value port = 2;</code>
+       * @return The port.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getPort() {
+        return port_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : port_;
+      }
+      /**
+       * <pre>
+       * Port of jdbc bridge.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value port = 2;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getPortOrBuilder() {
+        return getPort();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(host_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, host_);
+        }
+        if (port_ != null) {
+          output.writeMessage(2, getPort());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(host_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, host_);
+        }
+        if (port_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getPort());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge) obj;
+
+        if (!getHost()
+            .equals(other.getHost())) return false;
+        if (hasPort() != other.hasPort()) return false;
+        if (hasPort()) {
+          if (!getPort()
+              .equals(other.getPort())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + HOST_FIELD_NUMBER;
+        hash = (53 * hash) + getHost().hashCode();
+        if (hasPort()) {
+          hash = (37 * hash) + PORT_FIELD_NUMBER;
+          hash = (53 * hash) + getPort().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * JDBC bridge for queries to external databases.
+       * </pre>
+       *
+       * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.JdbcBridge}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.JdbcBridge)
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridgeOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_JdbcBridge_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_JdbcBridge_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge.class, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          host_ = "";
+
+          if (portBuilder_ == null) {
+            port_ = null;
+          } else {
+            port_ = null;
+            portBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_JdbcBridge_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge build() {
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge buildPartial() {
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge result = new yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge(this);
+          result.host_ = host_;
+          if (portBuilder_ == null) {
+            result.port_ = port_;
+          } else {
+            result.port_ = portBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge) {
+            return mergeFrom((yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge other) {
+          if (other == yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge.getDefaultInstance()) return this;
+          if (!other.getHost().isEmpty()) {
+            host_ = other.host_;
+            onChanged();
+          }
+          if (other.hasPort()) {
+            mergePort(other.getPort());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object host_ = "";
+        /**
+         * <pre>
+         * Host of jdbc bridge.
+         * </pre>
+         *
+         * <code>string host = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The host.
+         */
+        public java.lang.String getHost() {
+          java.lang.Object ref = host_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            host_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Host of jdbc bridge.
+         * </pre>
+         *
+         * <code>string host = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for host.
+         */
+        public com.google.protobuf.ByteString
+            getHostBytes() {
+          java.lang.Object ref = host_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            host_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Host of jdbc bridge.
+         * </pre>
+         *
+         * <code>string host = 1 [(.yandex.cloud.required) = true];</code>
+         * @param value The host to set.
+         * @return This builder for chaining.
+         */
+        public Builder setHost(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          host_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Host of jdbc bridge.
+         * </pre>
+         *
+         * <code>string host = 1 [(.yandex.cloud.required) = true];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearHost() {
+          
+          host_ = getDefaultInstance().getHost();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Host of jdbc bridge.
+         * </pre>
+         *
+         * <code>string host = 1 [(.yandex.cloud.required) = true];</code>
+         * @param value The bytes for host to set.
+         * @return This builder for chaining.
+         */
+        public Builder setHostBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          host_ = value;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.Int64Value port_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> portBuilder_;
+        /**
+         * <pre>
+         * Port of jdbc bridge.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value port = 2;</code>
+         * @return Whether the port field is set.
+         */
+        public boolean hasPort() {
+          return portBuilder_ != null || port_ != null;
+        }
+        /**
+         * <pre>
+         * Port of jdbc bridge.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value port = 2;</code>
+         * @return The port.
+         */
+        public com.google.protobuf.Int64Value getPort() {
+          if (portBuilder_ == null) {
+            return port_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : port_;
+          } else {
+            return portBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Port of jdbc bridge.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value port = 2;</code>
+         */
+        public Builder setPort(com.google.protobuf.Int64Value value) {
+          if (portBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            port_ = value;
+            onChanged();
+          } else {
+            portBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Port of jdbc bridge.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value port = 2;</code>
+         */
+        public Builder setPort(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (portBuilder_ == null) {
+            port_ = builderForValue.build();
+            onChanged();
+          } else {
+            portBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Port of jdbc bridge.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value port = 2;</code>
+         */
+        public Builder mergePort(com.google.protobuf.Int64Value value) {
+          if (portBuilder_ == null) {
+            if (port_ != null) {
+              port_ =
+                com.google.protobuf.Int64Value.newBuilder(port_).mergeFrom(value).buildPartial();
+            } else {
+              port_ = value;
+            }
+            onChanged();
+          } else {
+            portBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Port of jdbc bridge.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value port = 2;</code>
+         */
+        public Builder clearPort() {
+          if (portBuilder_ == null) {
+            port_ = null;
+            onChanged();
+          } else {
+            port_ = null;
+            portBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Port of jdbc bridge.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value port = 2;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getPortBuilder() {
+          
+          onChanged();
+          return getPortFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Port of jdbc bridge.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value port = 2;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getPortOrBuilder() {
+          if (portBuilder_ != null) {
+            return portBuilder_.getMessageOrBuilder();
+          } else {
+            return port_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : port_;
+          }
+        }
+        /**
+         * <pre>
+         * Port of jdbc bridge.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value port = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getPortFieldBuilder() {
+          if (portBuilder_ == null) {
+            portBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getPort(),
+                    getParentForChildren(),
+                    isClean());
+            port_ = null;
+          }
+          return portBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.JdbcBridge)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.JdbcBridge)
+      private static final yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge();
+      }
+
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<JdbcBridge>
+          PARSER = new com.google.protobuf.AbstractParser<JdbcBridge>() {
+        @java.lang.Override
+        public JdbcBridge parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new JdbcBridge(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<JdbcBridge> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<JdbcBridge> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public static final int LOG_LEVEL_FIELD_NUMBER = 1;
     private int logLevel_;
     /**
@@ -46013,6 +46931,47 @@ public final class Clickhouse {
       return getQueryCache();
     }
 
+    public static final int JDBC_BRIDGE_FIELD_NUMBER = 70;
+    private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge jdbcBridge_;
+    /**
+     * <pre>
+     * JDBC bridge for queries to external databases.
+     * https://clickhouse.com/docs/en/integrations/jdbc/jdbc-with-clickhouse
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.JdbcBridge jdbc_bridge = 70;</code>
+     * @return Whether the jdbcBridge field is set.
+     */
+    @java.lang.Override
+    public boolean hasJdbcBridge() {
+      return jdbcBridge_ != null;
+    }
+    /**
+     * <pre>
+     * JDBC bridge for queries to external databases.
+     * https://clickhouse.com/docs/en/integrations/jdbc/jdbc-with-clickhouse
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.JdbcBridge jdbc_bridge = 70;</code>
+     * @return The jdbcBridge.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge getJdbcBridge() {
+      return jdbcBridge_ == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge.getDefaultInstance() : jdbcBridge_;
+    }
+    /**
+     * <pre>
+     * JDBC bridge for queries to external databases.
+     * https://clickhouse.com/docs/en/integrations/jdbc/jdbc-with-clickhouse
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.JdbcBridge jdbc_bridge = 70;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridgeOrBuilder getJdbcBridgeOrBuilder() {
+      return getJdbcBridge();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -46233,6 +47192,9 @@ public final class Clickhouse {
       }
       if (queryCache_ != null) {
         output.writeMessage(69, getQueryCache());
+      }
+      if (jdbcBridge_ != null) {
+        output.writeMessage(70, getJdbcBridge());
       }
       unknownFields.writeTo(output);
     }
@@ -46516,6 +47478,10 @@ public final class Clickhouse {
       if (queryCache_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(69, getQueryCache());
+      }
+      if (jdbcBridge_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(70, getJdbcBridge());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -46848,6 +47814,11 @@ public final class Clickhouse {
         if (!getQueryCache()
             .equals(other.getQueryCache())) return false;
       }
+      if (hasJdbcBridge() != other.hasJdbcBridge()) return false;
+      if (hasJdbcBridge()) {
+        if (!getJdbcBridge()
+            .equals(other.getJdbcBridge())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -47126,6 +48097,10 @@ public final class Clickhouse {
       if (hasQueryCache()) {
         hash = (37 * hash) + QUERY_CACHE_FIELD_NUMBER;
         hash = (53 * hash) + getQueryCache().hashCode();
+      }
+      if (hasJdbcBridge()) {
+        hash = (37 * hash) + JDBC_BRIDGE_FIELD_NUMBER;
+        hash = (53 * hash) + getJdbcBridge().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -47669,6 +48644,12 @@ public final class Clickhouse {
           queryCache_ = null;
           queryCacheBuilder_ = null;
         }
+        if (jdbcBridgeBuilder_ == null) {
+          jdbcBridge_ = null;
+        } else {
+          jdbcBridge_ = null;
+          jdbcBridgeBuilder_ = null;
+        }
         return this;
       }
 
@@ -48045,6 +49026,11 @@ public final class Clickhouse {
         } else {
           result.queryCache_ = queryCacheBuilder_.build();
         }
+        if (jdbcBridgeBuilder_ == null) {
+          result.jdbcBridge_ = jdbcBridge_;
+        } else {
+          result.jdbcBridge_ = jdbcBridgeBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -48416,6 +49402,9 @@ public final class Clickhouse {
         }
         if (other.hasQueryCache()) {
           mergeQueryCache(other.getQueryCache());
+        }
+        if (other.hasJdbcBridge()) {
+          mergeJdbcBridge(other.getJdbcBridge());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -59675,6 +60664,170 @@ public final class Clickhouse {
         }
         return queryCacheBuilder_;
       }
+
+      private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge jdbcBridge_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridgeOrBuilder> jdbcBridgeBuilder_;
+      /**
+       * <pre>
+       * JDBC bridge for queries to external databases.
+       * https://clickhouse.com/docs/en/integrations/jdbc/jdbc-with-clickhouse
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.JdbcBridge jdbc_bridge = 70;</code>
+       * @return Whether the jdbcBridge field is set.
+       */
+      public boolean hasJdbcBridge() {
+        return jdbcBridgeBuilder_ != null || jdbcBridge_ != null;
+      }
+      /**
+       * <pre>
+       * JDBC bridge for queries to external databases.
+       * https://clickhouse.com/docs/en/integrations/jdbc/jdbc-with-clickhouse
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.JdbcBridge jdbc_bridge = 70;</code>
+       * @return The jdbcBridge.
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge getJdbcBridge() {
+        if (jdbcBridgeBuilder_ == null) {
+          return jdbcBridge_ == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge.getDefaultInstance() : jdbcBridge_;
+        } else {
+          return jdbcBridgeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * JDBC bridge for queries to external databases.
+       * https://clickhouse.com/docs/en/integrations/jdbc/jdbc-with-clickhouse
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.JdbcBridge jdbc_bridge = 70;</code>
+       */
+      public Builder setJdbcBridge(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge value) {
+        if (jdbcBridgeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          jdbcBridge_ = value;
+          onChanged();
+        } else {
+          jdbcBridgeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * JDBC bridge for queries to external databases.
+       * https://clickhouse.com/docs/en/integrations/jdbc/jdbc-with-clickhouse
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.JdbcBridge jdbc_bridge = 70;</code>
+       */
+      public Builder setJdbcBridge(
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge.Builder builderForValue) {
+        if (jdbcBridgeBuilder_ == null) {
+          jdbcBridge_ = builderForValue.build();
+          onChanged();
+        } else {
+          jdbcBridgeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * JDBC bridge for queries to external databases.
+       * https://clickhouse.com/docs/en/integrations/jdbc/jdbc-with-clickhouse
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.JdbcBridge jdbc_bridge = 70;</code>
+       */
+      public Builder mergeJdbcBridge(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge value) {
+        if (jdbcBridgeBuilder_ == null) {
+          if (jdbcBridge_ != null) {
+            jdbcBridge_ =
+              yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge.newBuilder(jdbcBridge_).mergeFrom(value).buildPartial();
+          } else {
+            jdbcBridge_ = value;
+          }
+          onChanged();
+        } else {
+          jdbcBridgeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * JDBC bridge for queries to external databases.
+       * https://clickhouse.com/docs/en/integrations/jdbc/jdbc-with-clickhouse
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.JdbcBridge jdbc_bridge = 70;</code>
+       */
+      public Builder clearJdbcBridge() {
+        if (jdbcBridgeBuilder_ == null) {
+          jdbcBridge_ = null;
+          onChanged();
+        } else {
+          jdbcBridge_ = null;
+          jdbcBridgeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * JDBC bridge for queries to external databases.
+       * https://clickhouse.com/docs/en/integrations/jdbc/jdbc-with-clickhouse
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.JdbcBridge jdbc_bridge = 70;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge.Builder getJdbcBridgeBuilder() {
+        
+        onChanged();
+        return getJdbcBridgeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * JDBC bridge for queries to external databases.
+       * https://clickhouse.com/docs/en/integrations/jdbc/jdbc-with-clickhouse
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.JdbcBridge jdbc_bridge = 70;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridgeOrBuilder getJdbcBridgeOrBuilder() {
+        if (jdbcBridgeBuilder_ != null) {
+          return jdbcBridgeBuilder_.getMessageOrBuilder();
+        } else {
+          return jdbcBridge_ == null ?
+              yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge.getDefaultInstance() : jdbcBridge_;
+        }
+      }
+      /**
+       * <pre>
+       * JDBC bridge for queries to external databases.
+       * https://clickhouse.com/docs/en/integrations/jdbc/jdbc-with-clickhouse
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.JdbcBridge jdbc_bridge = 70;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridgeOrBuilder> 
+          getJdbcBridgeFieldBuilder() {
+        if (jdbcBridgeBuilder_ == null) {
+          jdbcBridgeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridge.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.JdbcBridgeOrBuilder>(
+                  getJdbcBridge(),
+                  getParentForChildren(),
+                  isClean());
+          jdbcBridge_ = null;
+        }
+        return jdbcBridgeBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -61076,6 +62229,11 @@ public final class Clickhouse {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_QueryCache_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_JdbcBridge_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_JdbcBridge_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfigSet_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -61092,8 +62250,8 @@ public final class Clickhouse {
       "\n6yandex/cloud/mdb/clickhouse/v1/config/" +
       "clickhouse.proto\022%yandex.cloud.mdb.click" +
       "house.v1.config\032\036google/protobuf/wrapper" +
-      "s.proto\032\035yandex/cloud/validation.proto\"\321" +
-      "k\n\020ClickhouseConfig\022S\n\tlog_level\030\001 \001(\0162@" +
+      "s.proto\032\035yandex/cloud/validation.proto\"\367" +
+      "l\n\020ClickhouseConfig\022S\n\tlog_level\030\001 \001(\0162@" +
       ".yandex.cloud.mdb.clickhouse.v1.config.C" +
       "lickhouseConfig.LogLevel\022U\n\nmerge_tree\030\002" +
       " \001(\0132A.yandex.cloud.mdb.clickhouse.v1.co" +
@@ -61217,237 +62375,241 @@ public final class Clickhouse {
       "\030D \001(\0132\032.google.protobuf.BoolValue\022W\n\013qu" +
       "ery_cache\030E \001(\0132B.yandex.cloud.mdb.click" +
       "house.v1.config.ClickhouseConfig.QueryCa" +
-      "che\032\324\017\n\tMergeTree\022D\n\037replicated_deduplic" +
-      "ation_window\030\001 \001(\0132\033.google.protobuf.Int" +
-      "64Value\022L\n\'replicated_deduplication_wind" +
-      "ow_seconds\030\002 \001(\0132\033.google.protobuf.Int64" +
-      "Value\022:\n\025parts_to_delay_insert\030\003 \001(\0132\033.g" +
-      "oogle.protobuf.Int64Value\022:\n\025parts_to_th" +
-      "row_insert\030\004 \001(\0132\033.google.protobuf.Int64" +
-      "Value\022C\n\036inactive_parts_to_delay_insert\030" +
-      "\t \001(\0132\033.google.protobuf.Int64Value\022C\n\036in" +
-      "active_parts_to_throw_insert\030\n \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\022C\n\036max_replicate" +
-      "d_merges_in_queue\030\005 \001(\0132\033.google.protobu" +
-      "f.Int64Value\022^\n9number_of_free_entries_i" +
-      "n_pool_to_lower_max_size_of_merge\030\006 \001(\0132" +
-      "\033.google.protobuf.Int64Value\022L\n\'max_byte" +
-      "s_to_merge_at_min_space_in_pool\030\007 \001(\0132\033." +
-      "google.protobuf.Int64Value\022L\n\'max_bytes_" +
-      "to_merge_at_max_space_in_pool\030\010 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\022<\n\027min_bytes_fo" +
-      "r_wide_part\030\013 \001(\0132\033.google.protobuf.Int6" +
-      "4Value\022;\n\026min_rows_for_wide_part\030\014 \001(\0132\033" +
-      ".google.protobuf.Int64Value\0227\n\023ttl_only_" +
-      "drop_parts\030\r \001(\0132\032.google.protobuf.BoolV" +
-      "alue\022I\n%allow_remote_fs_zero_copy_replic" +
-      "ation\030\016 \001(\0132\032.google.protobuf.BoolValue\022" +
-      ";\n\026merge_with_ttl_timeout\030\017 \001(\0132\033.google" +
-      ".protobuf.Int64Value\022I\n$merge_with_recom" +
-      "pression_ttl_timeout\030\020 \001(\0132\033.google.prot" +
-      "obuf.Int64Value\0227\n\022max_parts_in_total\030\021 " +
-      "\001(\0132\033.google.protobuf.Int64Value\022J\n%max_" +
-      "number_of_merges_with_ttl_in_pool\030\022 \001(\0132" +
-      "\033.google.protobuf.Int64Value\0229\n\024cleanup_" +
-      "delay_period\030\023 \001(\0132\033.google.protobuf.Int" +
-      "64Value\022W\n2number_of_free_entries_in_poo" +
-      "l_to_execute_mutation\030\024 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\022R\n$max_avg_part_size_fo" +
-      "r_too_many_parts\030\025 \001(\0132\033.google.protobuf" +
-      ".Int64ValueB\007\372\3071\003>=0\022L\n\036min_age_to_force" +
-      "_merge_seconds\030\026 \001(\0132\033.google.protobuf.I" +
-      "nt64ValueB\007\372\3071\003>=0\022L\n(min_age_to_force_m" +
-      "erge_on_partition_only\030\027 \001(\0132\032.google.pr" +
-      "otobuf.BoolValue\022E\n\030merge_selecting_slee" +
-      "p_ms\030\030 \001(\0132\033.google.protobuf.Int64ValueB" +
-      "\006\372\3071\002>0\022A\n\024merge_max_block_size\030\031 \001(\0132\033." +
-      "google.protobuf.Int64ValueB\006\372\3071\002>0\022B\n\036ch" +
-      "eck_sample_column_is_correct\030\032 \001(\0132\032.goo" +
-      "gle.protobuf.BoolValue\022J\n\034max_merge_sele" +
-      "cting_sleep_ms\030\033 \001(\0132\033.google.protobuf.I" +
-      "nt64ValueB\007\372\3071\003>=0\022F\n\030max_cleanup_delay_" +
-      "period\030\034 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\007\372\3071\003>=0\032\240\r\n\005Kafka\022i\n\021security_protoco" +
-      "l\030\001 \001(\0162N.yandex.cloud.mdb.clickhouse.v1" +
-      ".config.ClickhouseConfig.Kafka.SecurityP" +
-      "rotocol\022c\n\016sasl_mechanism\030\002 \001(\0162K.yandex" +
-      ".cloud.mdb.clickhouse.v1.config.Clickhou" +
-      "seConfig.Kafka.SaslMechanism\022\025\n\rsasl_use" +
-      "rname\030\003 \001(\t\022\025\n\rsasl_password\030\004 \001(\t\022G\n#en" +
-      "able_ssl_certificate_verification\030\005 \001(\0132" +
-      "\032.google.protobuf.BoolValue\022B\n\024max_poll_" +
-      "interval_ms\030\006 \001(\0132\033.google.protobuf.Int6" +
-      "4ValueB\007\372\3071\003>=0\022@\n\022session_timeout_ms\030\007 " +
-      "\001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=" +
-      "0\022R\n\005debug\030\010 \001(\0162C.yandex.cloud.mdb.clic" +
+      "che\022W\n\013jdbc_bridge\030F \001(\0132B.yandex.cloud." +
+      "mdb.clickhouse.v1.config.ClickhouseConfi" +
+      "g.JdbcBridge\032\324\017\n\tMergeTree\022D\n\037replicated" +
+      "_deduplication_window\030\001 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022L\n\'replicated_deduplica" +
+      "tion_window_seconds\030\002 \001(\0132\033.google.proto" +
+      "buf.Int64Value\022:\n\025parts_to_delay_insert\030" +
+      "\003 \001(\0132\033.google.protobuf.Int64Value\022:\n\025pa" +
+      "rts_to_throw_insert\030\004 \001(\0132\033.google.proto" +
+      "buf.Int64Value\022C\n\036inactive_parts_to_dela" +
+      "y_insert\030\t \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\022C\n\036inactive_parts_to_throw_insert\030\n " +
+      "\001(\0132\033.google.protobuf.Int64Value\022C\n\036max_" +
+      "replicated_merges_in_queue\030\005 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\022^\n9number_of_free_" +
+      "entries_in_pool_to_lower_max_size_of_mer" +
+      "ge\030\006 \001(\0132\033.google.protobuf.Int64Value\022L\n" +
+      "\'max_bytes_to_merge_at_min_space_in_pool" +
+      "\030\007 \001(\0132\033.google.protobuf.Int64Value\022L\n\'m" +
+      "ax_bytes_to_merge_at_max_space_in_pool\030\010" +
+      " \001(\0132\033.google.protobuf.Int64Value\022<\n\027min" +
+      "_bytes_for_wide_part\030\013 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022;\n\026min_rows_for_wide_par" +
+      "t\030\014 \001(\0132\033.google.protobuf.Int64Value\0227\n\023" +
+      "ttl_only_drop_parts\030\r \001(\0132\032.google.proto" +
+      "buf.BoolValue\022I\n%allow_remote_fs_zero_co" +
+      "py_replication\030\016 \001(\0132\032.google.protobuf.B" +
+      "oolValue\022;\n\026merge_with_ttl_timeout\030\017 \001(\013" +
+      "2\033.google.protobuf.Int64Value\022I\n$merge_w" +
+      "ith_recompression_ttl_timeout\030\020 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\0227\n\022max_parts_in" +
+      "_total\030\021 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\022J\n%max_number_of_merges_with_ttl_in_po" +
+      "ol\030\022 \001(\0132\033.google.protobuf.Int64Value\0229\n" +
+      "\024cleanup_delay_period\030\023 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022W\n2number_of_free_entri" +
+      "es_in_pool_to_execute_mutation\030\024 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\022R\n$max_avg_par" +
+      "t_size_for_too_many_parts\030\025 \001(\0132\033.google" +
+      ".protobuf.Int64ValueB\007\372\3071\003>=0\022L\n\036min_age" +
+      "_to_force_merge_seconds\030\026 \001(\0132\033.google.p" +
+      "rotobuf.Int64ValueB\007\372\3071\003>=0\022L\n(min_age_t" +
+      "o_force_merge_on_partition_only\030\027 \001(\0132\032." +
+      "google.protobuf.BoolValue\022E\n\030merge_selec" +
+      "ting_sleep_ms\030\030 \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\006\372\3071\002>0\022A\n\024merge_max_block_size" +
+      "\030\031 \001(\0132\033.google.protobuf.Int64ValueB\006\372\3071" +
+      "\002>0\022B\n\036check_sample_column_is_correct\030\032 " +
+      "\001(\0132\032.google.protobuf.BoolValue\022J\n\034max_m" +
+      "erge_selecting_sleep_ms\030\033 \001(\0132\033.google.p" +
+      "rotobuf.Int64ValueB\007\372\3071\003>=0\022F\n\030max_clean" +
+      "up_delay_period\030\034 \001(\0132\033.google.protobuf." +
+      "Int64ValueB\007\372\3071\003>=0\032\240\r\n\005Kafka\022i\n\021securit" +
+      "y_protocol\030\001 \001(\0162N.yandex.cloud.mdb.clic" +
       "khouse.v1.config.ClickhouseConfig.Kafka." +
-      "Debug\022h\n\021auto_offset_reset\030\t \001(\0162M.yande" +
-      "x.cloud.mdb.clickhouse.v1.config.Clickho" +
-      "useConfig.Kafka.AutoOffsetReset\"\267\001\n\020Secu" +
-      "rityProtocol\022!\n\035SECURITY_PROTOCOL_UNSPEC" +
-      "IFIED\020\000\022\037\n\033SECURITY_PROTOCOL_PLAINTEXT\020\001" +
-      "\022\031\n\025SECURITY_PROTOCOL_SSL\020\002\022$\n SECURITY_" +
-      "PROTOCOL_SASL_PLAINTEXT\020\003\022\036\n\032SECURITY_PR" +
-      "OTOCOL_SASL_SSL\020\004\"\250\001\n\rSaslMechanism\022\036\n\032S" +
-      "ASL_MECHANISM_UNSPECIFIED\020\000\022\031\n\025SASL_MECH" +
-      "ANISM_GSSAPI\020\001\022\030\n\024SASL_MECHANISM_PLAIN\020\002" +
-      "\022 \n\034SASL_MECHANISM_SCRAM_SHA_256\020\003\022 \n\034SA" +
-      "SL_MECHANISM_SCRAM_SHA_512\020\004\"\231\003\n\005Debug\022\025" +
-      "\n\021DEBUG_UNSPECIFIED\020\000\022\021\n\rDEBUG_GENERIC\020\001" +
-      "\022\020\n\014DEBUG_BROKER\020\002\022\017\n\013DEBUG_TOPIC\020\003\022\022\n\016D" +
-      "EBUG_METADATA\020\004\022\021\n\rDEBUG_FEATURE\020\005\022\017\n\013DE" +
-      "BUG_QUEUE\020\006\022\r\n\tDEBUG_MSG\020\007\022\022\n\016DEBUG_PROT" +
-      "OCOL\020\010\022\016\n\nDEBUG_CGRP\020\t\022\022\n\016DEBUG_SECURITY" +
-      "\020\n\022\017\n\013DEBUG_FETCH\020\013\022\025\n\021DEBUG_INTERCEPTOR" +
-      "\020\014\022\020\n\014DEBUG_PLUGIN\020\r\022\022\n\016DEBUG_CONSUMER\020\016" +
-      "\022\017\n\013DEBUG_ADMIN\020\017\022\r\n\tDEBUG_EOS\020\020\022\016\n\nDEBU" +
-      "G_MOCK\020\021\022\022\n\016DEBUG_ASSIGNOR\020\022\022\016\n\nDEBUG_CO" +
-      "NF\020\023\022\023\n\017DEBUG_TELEMETRY\020\024\022\r\n\tDEBUG_ALL\020\025" +
-      "\"\212\002\n\017AutoOffsetReset\022!\n\035AUTO_OFFSET_RESE" +
-      "T_UNSPECIFIED\020\000\022\036\n\032AUTO_OFFSET_RESET_SMA" +
-      "LLEST\020\001\022\036\n\032AUTO_OFFSET_RESET_EARLIEST\020\002\022" +
-      "\037\n\033AUTO_OFFSET_RESET_BEGINNING\020\003\022\035\n\031AUTO" +
-      "_OFFSET_RESET_LARGEST\020\004\022\034\n\030AUTO_OFFSET_R" +
-      "ESET_LATEST\020\005\022\031\n\025AUTO_OFFSET_RESET_END\020\006" +
-      "\022\033\n\027AUTO_OFFSET_RESET_ERROR\020\007\032w\n\nKafkaTo" +
-      "pic\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022U\n\010settings\030\002 \001(" +
-      "\0132=.yandex.cloud.mdb.clickhouse.v1.confi" +
-      "g.ClickhouseConfig.KafkaB\004\350\3071\001\032=\n\010Rabbit" +
-      "mq\022\020\n\010username\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\022\r" +
-      "\n\005vhost\030\003 \001(\t\032\220\002\n\013Compression\022Z\n\006method\030" +
-      "\001 \001(\0162J.yandex.cloud.mdb.clickhouse.v1.c" +
-      "onfig.ClickhouseConfig.Compression.Metho" +
-      "d\022\036\n\rmin_part_size\030\002 \001(\003B\007\372\3071\003>=1\022\033\n\023min" +
-      "_part_size_ratio\030\003 \001(\001\0223\n\005level\030\004 \001(\0132\033." +
-      "google.protobuf.Int64ValueB\007\372\3071\003>=0\"3\n\006M" +
-      "ethod\022\026\n\022METHOD_UNSPECIFIED\020\000\022\007\n\003LZ4\020\001\022\010" +
-      "\n\004ZSTD\020\002\032\374\034\n\022ExternalDictionary\022\022\n\004name\030" +
-      "\001 \001(\tB\004\350\3071\001\022m\n\tstructure\030\002 \001(\0132T.yandex." +
-      "cloud.mdb.clickhouse.v1.config.Clickhous" +
-      "eConfig.ExternalDictionary.StructureB\004\350\307" +
-      "1\001\022g\n\006layout\030\003 \001(\0132Q.yandex.cloud.mdb.cl" +
-      "ickhouse.v1.config.ClickhouseConfig.Exte" +
-      "rnalDictionary.LayoutB\004\350\3071\001\022\030\n\016fixed_lif" +
-      "etime\030\004 \001(\003H\000\022j\n\016lifetime_range\030\005 \001(\0132P." +
-      "yandex.cloud.mdb.clickhouse.v1.config.Cl" +
-      "ickhouseConfig.ExternalDictionary.RangeH" +
-      "\000\022l\n\013http_source\030\006 \001(\0132U.yandex.cloud.md" +
-      "b.clickhouse.v1.config.ClickhouseConfig." +
-      "ExternalDictionary.HttpSourceH\001\022n\n\014mysql" +
-      "_source\030\007 \001(\0132V.yandex.cloud.mdb.clickho" +
-      "use.v1.config.ClickhouseConfig.ExternalD" +
-      "ictionary.MysqlSourceH\001\022x\n\021clickhouse_so" +
-      "urce\030\010 \001(\0132[.yandex.cloud.mdb.clickhouse" +
-      ".v1.config.ClickhouseConfig.ExternalDict" +
-      "ionary.ClickhouseSourceH\001\022r\n\016mongodb_sou" +
-      "rce\030\t \001(\0132X.yandex.cloud.mdb.clickhouse." +
-      "v1.config.ClickhouseConfig.ExternalDicti" +
-      "onary.MongodbSourceH\001\022x\n\021postgresql_sour" +
-      "ce\030\n \001(\0132[.yandex.cloud.mdb.clickhouse.v" +
-      "1.config.ClickhouseConfig.ExternalDictio" +
-      "nary.PostgresqlSourceH\001\032\327\001\n\nHttpSource\022\021" +
-      "\n\003url\030\001 \001(\tB\004\350\3071\001\022\024\n\006format\030\002 \001(\tB\004\350\3071\001\022" +
-      "m\n\007headers\030\003 \003(\0132\\.yandex.cloud.mdb.clic" +
-      "khouse.v1.config.ClickhouseConfig.Extern" +
-      "alDictionary.HttpSource.Header\0321\n\006Header" +
-      "\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\023\n\005value\030\002 \001(\tB\004\350\3071" +
-      "\001\032\377\003\n\013MysqlSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005t" +
-      "able\030\002 \001(\tB\004\350\3071\001\022\031\n\004port\030\003 \001(\003B\013\372\3071\0070-65" +
-      "535\022\014\n\004user\030\004 \001(\t\022\020\n\010password\030\005 \001(\t\022x\n\010r" +
-      "eplicas\030\006 \003(\0132^.yandex.cloud.mdb.clickho" +
-      "use.v1.config.ClickhouseConfig.ExternalD" +
-      "ictionary.MysqlSource.ReplicaB\006\202\3101\002>0\022\r\n" +
-      "\005where\030\007 \001(\t\022\030\n\020invalidate_query\030\010 \001(\t\0224" +
-      "\n\020close_connection\030\t \001(\0132\032.google.protob" +
-      "uf.BoolValue\0224\n\020share_connection\030\n \001(\0132\032" +
-      ".google.protobuf.BoolValue\032\177\n\007Replica\022\033\n" +
-      "\004host\030\001 \001(\tB\r\350\3071\001\212\3101\005<=253\022\034\n\010priority\030\002" +
-      " \001(\003B\n\350\3071\001\372\3071\002>0\022\031\n\004port\030\003 \001(\003B\013\372\3071\0070-65" +
-      "535\022\014\n\004user\030\004 \001(\t\022\020\n\010password\030\005 \001(\t\032\316\001\n\020" +
-      "ClickhouseSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005ta" +
-      "ble\030\002 \001(\tB\004\350\3071\001\022\027\n\004host\030\003 \001(\tB\t\212\3101\005<=253" +
-      "\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022\022\n\004user\030\005 \001(" +
-      "\tB\004\350\3071\001\022\020\n\010password\030\006 \001(\t\022\r\n\005where\030\007 \001(\t" +
-      "\022*\n\006secure\030\010 \001(\0132\032.google.protobuf.BoolV" +
-      "alue\032\246\001\n\rMongodbSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001" +
-      "\022\030\n\ncollection\030\002 \001(\tB\004\350\3071\001\022\027\n\004host\030\003 \001(\t" +
-      "B\t\212\3101\005<=253\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022\022" +
-      "\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(\t\022\017\n\007" +
-      "options\030\007 \001(\t\032\213\003\n\020PostgresqlSource\022\020\n\002db" +
-      "\030\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\025\n\005hos" +
-      "ts\030\003 \003(\tB\006\202\3101\002>0\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65" +
-      "535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(" +
-      "\t\022\030\n\020invalidate_query\030\007 \001(\t\022u\n\010ssl_mode\030" +
-      "\010 \001(\0162c.yandex.cloud.mdb.clickhouse.v1.c" +
-      "onfig.ClickhouseConfig.ExternalDictionar" +
-      "y.PostgresqlSource.SslMode\"g\n\007SslMode\022\030\n" +
-      "\024SSL_MODE_UNSPECIFIED\020\000\022\013\n\007DISABLE\020\001\022\t\n\005" +
-      "ALLOW\020\002\022\n\n\006PREFER\020\003\022\r\n\tVERIFY_CA\020\004\022\017\n\013VE" +
-      "RIFY_FULL\020\005\032\336\006\n\tStructure\022c\n\002id\030\001 \001(\0132W." +
-      "yandex.cloud.mdb.clickhouse.v1.config.Cl" +
-      "ickhouseConfig.ExternalDictionary.Struct" +
-      "ure.Id\022e\n\003key\030\003 \001(\0132X.yandex.cloud.mdb.c" +
-      "lickhouse.v1.config.ClickhouseConfig.Ext" +
-      "ernalDictionary.Structure.Key\022q\n\trange_m" +
-      "in\030\004 \001(\0132^.yandex.cloud.mdb.clickhouse.v" +
-      "1.config.ClickhouseConfig.ExternalDictio" +
-      "nary.Structure.Attribute\022q\n\trange_max\030\005 " +
-      "\001(\0132^.yandex.cloud.mdb.clickhouse.v1.con" +
-      "fig.ClickhouseConfig.ExternalDictionary." +
-      "Structure.Attribute\022z\n\nattributes\030\002 \003(\0132" +
-      "^.yandex.cloud.mdb.clickhouse.v1.config." +
+      "SecurityProtocol\022c\n\016sasl_mechanism\030\002 \001(\016" +
+      "2K.yandex.cloud.mdb.clickhouse.v1.config" +
+      ".ClickhouseConfig.Kafka.SaslMechanism\022\025\n" +
+      "\rsasl_username\030\003 \001(\t\022\025\n\rsasl_password\030\004 " +
+      "\001(\t\022G\n#enable_ssl_certificate_verificati" +
+      "on\030\005 \001(\0132\032.google.protobuf.BoolValue\022B\n\024" +
+      "max_poll_interval_ms\030\006 \001(\0132\033.google.prot" +
+      "obuf.Int64ValueB\007\372\3071\003>=0\022@\n\022session_time" +
+      "out_ms\030\007 \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\007\372\3071\003>=0\022R\n\005debug\030\010 \001(\0162C.yandex.cloud" +
+      ".mdb.clickhouse.v1.config.ClickhouseConf" +
+      "ig.Kafka.Debug\022h\n\021auto_offset_reset\030\t \001(" +
+      "\0162M.yandex.cloud.mdb.clickhouse.v1.confi" +
+      "g.ClickhouseConfig.Kafka.AutoOffsetReset" +
+      "\"\267\001\n\020SecurityProtocol\022!\n\035SECURITY_PROTOC" +
+      "OL_UNSPECIFIED\020\000\022\037\n\033SECURITY_PROTOCOL_PL" +
+      "AINTEXT\020\001\022\031\n\025SECURITY_PROTOCOL_SSL\020\002\022$\n " +
+      "SECURITY_PROTOCOL_SASL_PLAINTEXT\020\003\022\036\n\032SE" +
+      "CURITY_PROTOCOL_SASL_SSL\020\004\"\250\001\n\rSaslMecha" +
+      "nism\022\036\n\032SASL_MECHANISM_UNSPECIFIED\020\000\022\031\n\025" +
+      "SASL_MECHANISM_GSSAPI\020\001\022\030\n\024SASL_MECHANIS" +
+      "M_PLAIN\020\002\022 \n\034SASL_MECHANISM_SCRAM_SHA_25" +
+      "6\020\003\022 \n\034SASL_MECHANISM_SCRAM_SHA_512\020\004\"\231\003" +
+      "\n\005Debug\022\025\n\021DEBUG_UNSPECIFIED\020\000\022\021\n\rDEBUG_" +
+      "GENERIC\020\001\022\020\n\014DEBUG_BROKER\020\002\022\017\n\013DEBUG_TOP" +
+      "IC\020\003\022\022\n\016DEBUG_METADATA\020\004\022\021\n\rDEBUG_FEATUR" +
+      "E\020\005\022\017\n\013DEBUG_QUEUE\020\006\022\r\n\tDEBUG_MSG\020\007\022\022\n\016D" +
+      "EBUG_PROTOCOL\020\010\022\016\n\nDEBUG_CGRP\020\t\022\022\n\016DEBUG" +
+      "_SECURITY\020\n\022\017\n\013DEBUG_FETCH\020\013\022\025\n\021DEBUG_IN" +
+      "TERCEPTOR\020\014\022\020\n\014DEBUG_PLUGIN\020\r\022\022\n\016DEBUG_C" +
+      "ONSUMER\020\016\022\017\n\013DEBUG_ADMIN\020\017\022\r\n\tDEBUG_EOS\020" +
+      "\020\022\016\n\nDEBUG_MOCK\020\021\022\022\n\016DEBUG_ASSIGNOR\020\022\022\016\n" +
+      "\nDEBUG_CONF\020\023\022\023\n\017DEBUG_TELEMETRY\020\024\022\r\n\tDE" +
+      "BUG_ALL\020\025\"\212\002\n\017AutoOffsetReset\022!\n\035AUTO_OF" +
+      "FSET_RESET_UNSPECIFIED\020\000\022\036\n\032AUTO_OFFSET_" +
+      "RESET_SMALLEST\020\001\022\036\n\032AUTO_OFFSET_RESET_EA" +
+      "RLIEST\020\002\022\037\n\033AUTO_OFFSET_RESET_BEGINNING\020" +
+      "\003\022\035\n\031AUTO_OFFSET_RESET_LARGEST\020\004\022\034\n\030AUTO" +
+      "_OFFSET_RESET_LATEST\020\005\022\031\n\025AUTO_OFFSET_RE" +
+      "SET_END\020\006\022\033\n\027AUTO_OFFSET_RESET_ERROR\020\007\032w" +
+      "\n\nKafkaTopic\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022U\n\010sett" +
+      "ings\030\002 \001(\0132=.yandex.cloud.mdb.clickhouse" +
+      ".v1.config.ClickhouseConfig.KafkaB\004\350\3071\001\032" +
+      "=\n\010Rabbitmq\022\020\n\010username\030\001 \001(\t\022\020\n\010passwor" +
+      "d\030\002 \001(\t\022\r\n\005vhost\030\003 \001(\t\032\220\002\n\013Compression\022Z" +
+      "\n\006method\030\001 \001(\0162J.yandex.cloud.mdb.clickh" +
+      "ouse.v1.config.ClickhouseConfig.Compress" +
+      "ion.Method\022\036\n\rmin_part_size\030\002 \001(\003B\007\372\3071\003>" +
+      "=1\022\033\n\023min_part_size_ratio\030\003 \001(\001\0223\n\005level" +
+      "\030\004 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
+      "\003>=0\"3\n\006Method\022\026\n\022METHOD_UNSPECIFIED\020\000\022\007" +
+      "\n\003LZ4\020\001\022\010\n\004ZSTD\020\002\032\374\034\n\022ExternalDictionary" +
+      "\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022m\n\tstructure\030\002 \001(\0132" +
+      "T.yandex.cloud.mdb.clickhouse.v1.config." +
       "ClickhouseConfig.ExternalDictionary.Stru" +
-      "cture.AttributeB\006\202\3101\002>0\032\204\001\n\tAttribute\022\022\n" +
-      "\004name\030\001 \001(\tB\004\350\3071\001\022\022\n\004type\030\002 \001(\tB\004\350\3071\001\022\022\n" +
-      "\nnull_value\030\003 \001(\t\022\022\n\nexpression\030\004 \001(\t\022\024\n" +
-      "\014hierarchical\030\005 \001(\010\022\021\n\tinjective\030\006 \001(\010\032\030" +
-      "\n\002Id\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\032\201\001\n\003Key\022z\n\nattr" +
-      "ibutes\030\001 \003(\0132^.yandex.cloud.mdb.clickhou" +
-      "se.v1.config.ClickhouseConfig.ExternalDi" +
-      "ctionary.Structure.AttributeB\006\202\3101\002>0\032\243\002\n" +
-      "\006Layout\022j\n\004type\030\001 \001(\0162V.yandex.cloud.mdb" +
-      ".clickhouse.v1.config.ClickhouseConfig.E" +
-      "xternalDictionary.Layout.TypeB\004\350\3071\001\022\025\n\rs" +
-      "ize_in_cells\030\002 \001(\003\022\026\n\016max_array_size\030\003 \001" +
-      "(\003\"~\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\010\n\004FLAT" +
-      "\020\001\022\n\n\006HASHED\020\002\022\026\n\022COMPLEX_KEY_HASHED\020\003\022\020" +
-      "\n\014RANGE_HASHED\020\004\022\t\n\005CACHE\020\005\022\025\n\021COMPLEX_K" +
-      "EY_CACHE\020\006\032!\n\005Range\022\013\n\003min\030\001 \001(\003\022\013\n\003max\030" +
-      "\002 \001(\003B\020\n\010lifetime\022\004\300\3011\001B\016\n\006source\022\004\300\3011\001\032" +
-      "\341\003\n\016GraphiteRollup\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022h" +
-      "\n\010patterns\030\002 \003(\0132N.yandex.cloud.mdb.clic" +
-      "khouse.v1.config.ClickhouseConfig.Graphi" +
-      "teRollup.PatternB\006\202\3101\002>0\022\030\n\020path_column_" +
-      "name\030\003 \001(\t\022\030\n\020time_column_name\030\004 \001(\t\022\031\n\021" +
-      "value_column_name\030\005 \001(\t\022\033\n\023version_colum" +
-      "n_name\030\006 \001(\t\032\344\001\n\007Pattern\022\016\n\006regexp\030\001 \001(\t" +
-      "\022\026\n\010function\030\002 \001(\tB\004\350\3071\001\022s\n\tretention\030\003 " +
-      "\003(\0132X.yandex.cloud.mdb.clickhouse.v1.con" +
-      "fig.ClickhouseConfig.GraphiteRollup.Patt" +
-      "ern.RetentionB\006\202\3101\002>0\032<\n\tRetention\022\024\n\003ag" +
-      "e\030\001 \001(\003B\007\372\3071\003>=0\022\031\n\tprecision\030\002 \001(\003B\006\372\3071" +
-      "\002>0\032G\n\020QueryMaskingRule\022\014\n\004name\030\001 \001(\t\022\024\n" +
-      "\006regexp\030\002 \001(\tB\004\350\3071\001\022\017\n\007replace\030\003 \001(\t\032\225\002\n" +
-      "\nQueryCache\022?\n\021max_size_in_bytes\030\001 \001(\0132\033" +
-      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\0229\n\013" +
-      "max_entries\030\002 \001(\0132\033.google.protobuf.Int6" +
-      "4ValueB\007\372\3071\003>=0\022E\n\027max_entry_size_in_byt" +
-      "es\030\003 \001(\0132\033.google.protobuf.Int64ValueB\007\372" +
-      "\3071\003>=0\022D\n\026max_entry_size_in_rows\030\004 \001(\0132\033" +
-      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\"d\n\010" +
-      "LogLevel\022\031\n\025LOG_LEVEL_UNSPECIFIED\020\000\022\t\n\005T" +
-      "RACE\020\001\022\t\n\005DEBUG\020\002\022\017\n\013INFORMATION\020\003\022\013\n\007WA" +
-      "RNING\020\004\022\t\n\005ERROR\020\005\"\215\002\n\023ClickhouseConfigS" +
-      "et\022W\n\020effective_config\030\001 \001(\01327.yandex.cl" +
+      "ctureB\004\350\3071\001\022g\n\006layout\030\003 \001(\0132Q.yandex.clo" +
+      "ud.mdb.clickhouse.v1.config.ClickhouseCo" +
+      "nfig.ExternalDictionary.LayoutB\004\350\3071\001\022\030\n\016" +
+      "fixed_lifetime\030\004 \001(\003H\000\022j\n\016lifetime_range" +
+      "\030\005 \001(\0132P.yandex.cloud.mdb.clickhouse.v1." +
+      "config.ClickhouseConfig.ExternalDictiona" +
+      "ry.RangeH\000\022l\n\013http_source\030\006 \001(\0132U.yandex" +
+      ".cloud.mdb.clickhouse.v1.config.Clickhou" +
+      "seConfig.ExternalDictionary.HttpSourceH\001" +
+      "\022n\n\014mysql_source\030\007 \001(\0132V.yandex.cloud.md" +
+      "b.clickhouse.v1.config.ClickhouseConfig." +
+      "ExternalDictionary.MysqlSourceH\001\022x\n\021clic" +
+      "khouse_source\030\010 \001(\0132[.yandex.cloud.mdb.c" +
+      "lickhouse.v1.config.ClickhouseConfig.Ext" +
+      "ernalDictionary.ClickhouseSourceH\001\022r\n\016mo" +
+      "ngodb_source\030\t \001(\0132X.yandex.cloud.mdb.cl" +
+      "ickhouse.v1.config.ClickhouseConfig.Exte" +
+      "rnalDictionary.MongodbSourceH\001\022x\n\021postgr" +
+      "esql_source\030\n \001(\0132[.yandex.cloud.mdb.cli" +
+      "ckhouse.v1.config.ClickhouseConfig.Exter" +
+      "nalDictionary.PostgresqlSourceH\001\032\327\001\n\nHtt" +
+      "pSource\022\021\n\003url\030\001 \001(\tB\004\350\3071\001\022\024\n\006format\030\002 \001" +
+      "(\tB\004\350\3071\001\022m\n\007headers\030\003 \003(\0132\\.yandex.cloud" +
+      ".mdb.clickhouse.v1.config.ClickhouseConf" +
+      "ig.ExternalDictionary.HttpSource.Header\032" +
+      "1\n\006Header\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\023\n\005value\030\002" +
+      " \001(\tB\004\350\3071\001\032\377\003\n\013MysqlSource\022\020\n\002db\030\001 \001(\tB\004" +
+      "\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\031\n\004port\030\003 \001(\003B" +
+      "\013\372\3071\0070-65535\022\014\n\004user\030\004 \001(\t\022\020\n\010password\030\005" +
+      " \001(\t\022x\n\010replicas\030\006 \003(\0132^.yandex.cloud.md" +
+      "b.clickhouse.v1.config.ClickhouseConfig." +
+      "ExternalDictionary.MysqlSource.ReplicaB\006" +
+      "\202\3101\002>0\022\r\n\005where\030\007 \001(\t\022\030\n\020invalidate_quer" +
+      "y\030\010 \001(\t\0224\n\020close_connection\030\t \001(\0132\032.goog" +
+      "le.protobuf.BoolValue\0224\n\020share_connectio" +
+      "n\030\n \001(\0132\032.google.protobuf.BoolValue\032\177\n\007R" +
+      "eplica\022\033\n\004host\030\001 \001(\tB\r\350\3071\001\212\3101\005<=253\022\034\n\010p" +
+      "riority\030\002 \001(\003B\n\350\3071\001\372\3071\002>0\022\031\n\004port\030\003 \001(\003B" +
+      "\013\372\3071\0070-65535\022\014\n\004user\030\004 \001(\t\022\020\n\010password\030\005" +
+      " \001(\t\032\316\001\n\020ClickhouseSource\022\020\n\002db\030\001 \001(\tB\004\350" +
+      "\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\027\n\004host\030\003 \001(\tB\t" +
+      "\212\3101\005<=253\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022\022\n\004" +
+      "user\030\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(\t\022\r\n\005wh" +
+      "ere\030\007 \001(\t\022*\n\006secure\030\010 \001(\0132\032.google.proto" +
+      "buf.BoolValue\032\246\001\n\rMongodbSource\022\020\n\002db\030\001 " +
+      "\001(\tB\004\350\3071\001\022\030\n\ncollection\030\002 \001(\tB\004\350\3071\001\022\027\n\004h" +
+      "ost\030\003 \001(\tB\t\212\3101\005<=253\022\031\n\004port\030\004 \001(\003B\013\372\3071\007" +
+      "0-65535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010password\030" +
+      "\006 \001(\t\022\017\n\007options\030\007 \001(\t\032\213\003\n\020PostgresqlSou" +
+      "rce\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\307" +
+      "1\001\022\025\n\005hosts\030\003 \003(\tB\006\202\3101\002>0\022\031\n\004port\030\004 \001(\003B" +
+      "\013\372\3071\0070-65535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010pass" +
+      "word\030\006 \001(\t\022\030\n\020invalidate_query\030\007 \001(\t\022u\n\010" +
+      "ssl_mode\030\010 \001(\0162c.yandex.cloud.mdb.clickh" +
+      "ouse.v1.config.ClickhouseConfig.External" +
+      "Dictionary.PostgresqlSource.SslMode\"g\n\007S" +
+      "slMode\022\030\n\024SSL_MODE_UNSPECIFIED\020\000\022\013\n\007DISA" +
+      "BLE\020\001\022\t\n\005ALLOW\020\002\022\n\n\006PREFER\020\003\022\r\n\tVERIFY_C" +
+      "A\020\004\022\017\n\013VERIFY_FULL\020\005\032\336\006\n\tStructure\022c\n\002id" +
+      "\030\001 \001(\0132W.yandex.cloud.mdb.clickhouse.v1." +
+      "config.ClickhouseConfig.ExternalDictiona" +
+      "ry.Structure.Id\022e\n\003key\030\003 \001(\0132X.yandex.cl" +
       "oud.mdb.clickhouse.v1.config.ClickhouseC" +
-      "onfigB\004\350\3071\001\022L\n\013user_config\030\002 \001(\01327.yande" +
-      "x.cloud.mdb.clickhouse.v1.config.Clickho" +
-      "useConfig\022O\n\016default_config\030\003 \001(\01327.yand" +
-      "ex.cloud.mdb.clickhouse.v1.config.Clickh" +
-      "ouseConfigB\201\001\n)yandex.cloud.api.mdb.clic" +
-      "khouse.v1.configZTgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/mdb/clickhous" +
-      "e/v1/config;clickhouseb\006proto3"
+      "onfig.ExternalDictionary.Structure.Key\022q" +
+      "\n\trange_min\030\004 \001(\0132^.yandex.cloud.mdb.cli" +
+      "ckhouse.v1.config.ClickhouseConfig.Exter" +
+      "nalDictionary.Structure.Attribute\022q\n\tran" +
+      "ge_max\030\005 \001(\0132^.yandex.cloud.mdb.clickhou" +
+      "se.v1.config.ClickhouseConfig.ExternalDi" +
+      "ctionary.Structure.Attribute\022z\n\nattribut" +
+      "es\030\002 \003(\0132^.yandex.cloud.mdb.clickhouse.v" +
+      "1.config.ClickhouseConfig.ExternalDictio" +
+      "nary.Structure.AttributeB\006\202\3101\002>0\032\204\001\n\tAtt" +
+      "ribute\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\022\n\004type\030\002 \001(\t" +
+      "B\004\350\3071\001\022\022\n\nnull_value\030\003 \001(\t\022\022\n\nexpression" +
+      "\030\004 \001(\t\022\024\n\014hierarchical\030\005 \001(\010\022\021\n\tinjectiv" +
+      "e\030\006 \001(\010\032\030\n\002Id\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\032\201\001\n\003Ke" +
+      "y\022z\n\nattributes\030\001 \003(\0132^.yandex.cloud.mdb" +
+      ".clickhouse.v1.config.ClickhouseConfig.E" +
+      "xternalDictionary.Structure.AttributeB\006\202" +
+      "\3101\002>0\032\243\002\n\006Layout\022j\n\004type\030\001 \001(\0162V.yandex." +
+      "cloud.mdb.clickhouse.v1.config.Clickhous" +
+      "eConfig.ExternalDictionary.Layout.TypeB\004" +
+      "\350\3071\001\022\025\n\rsize_in_cells\030\002 \001(\003\022\026\n\016max_array" +
+      "_size\030\003 \001(\003\"~\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020" +
+      "\000\022\010\n\004FLAT\020\001\022\n\n\006HASHED\020\002\022\026\n\022COMPLEX_KEY_H" +
+      "ASHED\020\003\022\020\n\014RANGE_HASHED\020\004\022\t\n\005CACHE\020\005\022\025\n\021" +
+      "COMPLEX_KEY_CACHE\020\006\032!\n\005Range\022\013\n\003min\030\001 \001(" +
+      "\003\022\013\n\003max\030\002 \001(\003B\020\n\010lifetime\022\004\300\3011\001B\016\n\006sour" +
+      "ce\022\004\300\3011\001\032\341\003\n\016GraphiteRollup\022\022\n\004name\030\001 \001(" +
+      "\tB\004\350\3071\001\022h\n\010patterns\030\002 \003(\0132N.yandex.cloud" +
+      ".mdb.clickhouse.v1.config.ClickhouseConf" +
+      "ig.GraphiteRollup.PatternB\006\202\3101\002>0\022\030\n\020pat" +
+      "h_column_name\030\003 \001(\t\022\030\n\020time_column_name\030" +
+      "\004 \001(\t\022\031\n\021value_column_name\030\005 \001(\t\022\033\n\023vers" +
+      "ion_column_name\030\006 \001(\t\032\344\001\n\007Pattern\022\016\n\006reg" +
+      "exp\030\001 \001(\t\022\026\n\010function\030\002 \001(\tB\004\350\3071\001\022s\n\tret" +
+      "ention\030\003 \003(\0132X.yandex.cloud.mdb.clickhou" +
+      "se.v1.config.ClickhouseConfig.GraphiteRo" +
+      "llup.Pattern.RetentionB\006\202\3101\002>0\032<\n\tRetent" +
+      "ion\022\024\n\003age\030\001 \001(\003B\007\372\3071\003>=0\022\031\n\tprecision\030\002" +
+      " \001(\003B\006\372\3071\002>0\032G\n\020QueryMaskingRule\022\014\n\004name" +
+      "\030\001 \001(\t\022\024\n\006regexp\030\002 \001(\tB\004\350\3071\001\022\017\n\007replace\030" +
+      "\003 \001(\t\032\225\002\n\nQueryCache\022?\n\021max_size_in_byte" +
+      "s\030\001 \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
+      "1\003>=0\0229\n\013max_entries\030\002 \001(\0132\033.google.prot" +
+      "obuf.Int64ValueB\007\372\3071\003>=0\022E\n\027max_entry_si" +
+      "ze_in_bytes\030\003 \001(\0132\033.google.protobuf.Int6" +
+      "4ValueB\007\372\3071\003>=0\022D\n\026max_entry_size_in_row" +
+      "s\030\004 \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
+      "1\003>=0\032K\n\nJdbcBridge\022\022\n\004host\030\001 \001(\tB\004\350\3071\001\022" +
+      ")\n\004port\030\002 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\"d\n\010LogLevel\022\031\n\025LOG_LEVEL_UNSPECIFIED\020" +
+      "\000\022\t\n\005TRACE\020\001\022\t\n\005DEBUG\020\002\022\017\n\013INFORMATION\020\003" +
+      "\022\013\n\007WARNING\020\004\022\t\n\005ERROR\020\005\"\215\002\n\023ClickhouseC" +
+      "onfigSet\022W\n\020effective_config\030\001 \001(\01327.yan" +
+      "dex.cloud.mdb.clickhouse.v1.config.Click" +
+      "houseConfigB\004\350\3071\001\022L\n\013user_config\030\002 \001(\01327" +
+      ".yandex.cloud.mdb.clickhouse.v1.config.C" +
+      "lickhouseConfig\022O\n\016default_config\030\003 \001(\0132" +
+      "7.yandex.cloud.mdb.clickhouse.v1.config." +
+      "ClickhouseConfigB\201\001\n)yandex.cloud.api.md" +
+      "b.clickhouse.v1.configZTgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/mdb/cli" +
+      "ckhouse/v1/config;clickhouseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -61460,7 +62622,7 @@ public final class Clickhouse {
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor,
-        new java.lang.String[] { "LogLevel", "MergeTree", "Compression", "Dictionaries", "GraphiteRollup", "Kafka", "KafkaTopics", "Rabbitmq", "MaxConnections", "MaxConcurrentQueries", "KeepAliveTimeout", "UncompressedCacheSize", "MarkCacheSize", "MaxTableSizeToDrop", "MaxPartitionSizeToDrop", "BuiltinDictionariesReloadInterval", "Timezone", "GeobaseEnabled", "GeobaseUri", "QueryLogRetentionSize", "QueryLogRetentionTime", "QueryThreadLogEnabled", "QueryThreadLogRetentionSize", "QueryThreadLogRetentionTime", "PartLogRetentionSize", "PartLogRetentionTime", "MetricLogEnabled", "MetricLogRetentionSize", "MetricLogRetentionTime", "TraceLogEnabled", "TraceLogRetentionSize", "TraceLogRetentionTime", "TextLogEnabled", "TextLogRetentionSize", "TextLogRetentionTime", "TextLogLevel", "OpentelemetrySpanLogEnabled", "OpentelemetrySpanLogRetentionSize", "OpentelemetrySpanLogRetentionTime", "QueryViewsLogEnabled", "QueryViewsLogRetentionSize", "QueryViewsLogRetentionTime", "AsynchronousMetricLogEnabled", "AsynchronousMetricLogRetentionSize", "AsynchronousMetricLogRetentionTime", "SessionLogEnabled", "SessionLogRetentionSize", "SessionLogRetentionTime", "ZookeeperLogEnabled", "ZookeeperLogRetentionSize", "ZookeeperLogRetentionTime", "AsynchronousInsertLogEnabled", "AsynchronousInsertLogRetentionSize", "AsynchronousInsertLogRetentionTime", "BackgroundPoolSize", "BackgroundMergesMutationsConcurrencyRatio", "BackgroundSchedulePoolSize", "BackgroundFetchesPoolSize", "BackgroundMovePoolSize", "BackgroundDistributedSchedulePoolSize", "BackgroundBufferFlushSchedulePoolSize", "BackgroundMessageBrokerSchedulePoolSize", "BackgroundCommonPoolSize", "DefaultDatabase", "TotalMemoryProfilerStep", "TotalMemoryTrackerSampleProbability", "QueryMaskingRules", "DictionariesLazyLoad", "QueryCache", });
+        new java.lang.String[] { "LogLevel", "MergeTree", "Compression", "Dictionaries", "GraphiteRollup", "Kafka", "KafkaTopics", "Rabbitmq", "MaxConnections", "MaxConcurrentQueries", "KeepAliveTimeout", "UncompressedCacheSize", "MarkCacheSize", "MaxTableSizeToDrop", "MaxPartitionSizeToDrop", "BuiltinDictionariesReloadInterval", "Timezone", "GeobaseEnabled", "GeobaseUri", "QueryLogRetentionSize", "QueryLogRetentionTime", "QueryThreadLogEnabled", "QueryThreadLogRetentionSize", "QueryThreadLogRetentionTime", "PartLogRetentionSize", "PartLogRetentionTime", "MetricLogEnabled", "MetricLogRetentionSize", "MetricLogRetentionTime", "TraceLogEnabled", "TraceLogRetentionSize", "TraceLogRetentionTime", "TextLogEnabled", "TextLogRetentionSize", "TextLogRetentionTime", "TextLogLevel", "OpentelemetrySpanLogEnabled", "OpentelemetrySpanLogRetentionSize", "OpentelemetrySpanLogRetentionTime", "QueryViewsLogEnabled", "QueryViewsLogRetentionSize", "QueryViewsLogRetentionTime", "AsynchronousMetricLogEnabled", "AsynchronousMetricLogRetentionSize", "AsynchronousMetricLogRetentionTime", "SessionLogEnabled", "SessionLogRetentionSize", "SessionLogRetentionTime", "ZookeeperLogEnabled", "ZookeeperLogRetentionSize", "ZookeeperLogRetentionTime", "AsynchronousInsertLogEnabled", "AsynchronousInsertLogRetentionSize", "AsynchronousInsertLogRetentionTime", "BackgroundPoolSize", "BackgroundMergesMutationsConcurrencyRatio", "BackgroundSchedulePoolSize", "BackgroundFetchesPoolSize", "BackgroundMovePoolSize", "BackgroundDistributedSchedulePoolSize", "BackgroundBufferFlushSchedulePoolSize", "BackgroundMessageBrokerSchedulePoolSize", "BackgroundCommonPoolSize", "DefaultDatabase", "TotalMemoryProfilerStep", "TotalMemoryTrackerSampleProbability", "QueryMaskingRules", "DictionariesLazyLoad", "QueryCache", "JdbcBridge", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_MergeTree_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_MergeTree_fieldAccessorTable = new
@@ -61605,6 +62767,12 @@ public final class Clickhouse {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_QueryCache_descriptor,
         new java.lang.String[] { "MaxSizeInBytes", "MaxEntries", "MaxEntrySizeInBytes", "MaxEntrySizeInRows", });
+    internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_JdbcBridge_descriptor =
+      internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(9);
+    internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_JdbcBridge_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_JdbcBridge_descriptor,
+        new java.lang.String[] { "Host", "Port", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfigSet_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfigSet_fieldAccessorTable = new

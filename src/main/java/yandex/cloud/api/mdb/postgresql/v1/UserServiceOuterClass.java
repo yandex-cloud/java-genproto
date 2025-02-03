@@ -4807,6 +4807,33 @@ public final class UserServiceOuterClass {
      * @return The userPasswordEncryption.
      */
     yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption getUserPasswordEncryption();
+
+    /**
+     * <pre>
+     * Generate password using Connection Manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue generate_password = 12;</code>
+     * @return Whether the generatePassword field is set.
+     */
+    boolean hasGeneratePassword();
+    /**
+     * <pre>
+     * Generate password using Connection Manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue generate_password = 12;</code>
+     * @return The generatePassword.
+     */
+    com.google.protobuf.BoolValue getGeneratePassword();
+    /**
+     * <pre>
+     * Generate password using Connection Manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue generate_password = 12;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getGeneratePasswordOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.UpdateUserRequest}
@@ -4957,6 +4984,19 @@ public final class UserServiceOuterClass {
               int rawValue = input.readEnum();
 
               userPasswordEncryption_ = rawValue;
+              break;
+            }
+            case 98: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (generatePassword_ != null) {
+                subBuilder = generatePassword_.toBuilder();
+              }
+              generatePassword_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(generatePassword_);
+                generatePassword_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -5447,6 +5487,44 @@ public final class UserServiceOuterClass {
       return result == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption.UNRECOGNIZED : result;
     }
 
+    public static final int GENERATE_PASSWORD_FIELD_NUMBER = 12;
+    private com.google.protobuf.BoolValue generatePassword_;
+    /**
+     * <pre>
+     * Generate password using Connection Manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue generate_password = 12;</code>
+     * @return Whether the generatePassword field is set.
+     */
+    @java.lang.Override
+    public boolean hasGeneratePassword() {
+      return generatePassword_ != null;
+    }
+    /**
+     * <pre>
+     * Generate password using Connection Manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue generate_password = 12;</code>
+     * @return The generatePassword.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getGeneratePassword() {
+      return generatePassword_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : generatePassword_;
+    }
+    /**
+     * <pre>
+     * Generate password using Connection Manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue generate_password = 12;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getGeneratePasswordOrBuilder() {
+      return getGeneratePassword();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5493,6 +5571,9 @@ public final class UserServiceOuterClass {
       }
       if (userPasswordEncryption_ != yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption.USER_PASSWORD_ENCRYPTION_UNSPECIFIED.getNumber()) {
         output.writeEnum(11, userPasswordEncryption_);
+      }
+      if (generatePassword_ != null) {
+        output.writeMessage(12, getGeneratePassword());
       }
       unknownFields.writeTo(output);
     }
@@ -5548,6 +5629,10 @@ public final class UserServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(11, userPasswordEncryption_);
       }
+      if (generatePassword_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getGeneratePassword());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5596,6 +5681,11 @@ public final class UserServiceOuterClass {
             .equals(other.getDeletionProtection())) return false;
       }
       if (userPasswordEncryption_ != other.userPasswordEncryption_) return false;
+      if (hasGeneratePassword() != other.hasGeneratePassword()) return false;
+      if (hasGeneratePassword()) {
+        if (!getGeneratePassword()
+            .equals(other.getGeneratePassword())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5642,6 +5732,10 @@ public final class UserServiceOuterClass {
       }
       hash = (37 * hash) + USER_PASSWORD_ENCRYPTION_FIELD_NUMBER;
       hash = (53 * hash) + userPasswordEncryption_;
+      if (hasGeneratePassword()) {
+        hash = (37 * hash) + GENERATE_PASSWORD_FIELD_NUMBER;
+        hash = (53 * hash) + getGeneratePassword().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5818,6 +5912,12 @@ public final class UserServiceOuterClass {
         }
         userPasswordEncryption_ = 0;
 
+        if (generatePasswordBuilder_ == null) {
+          generatePassword_ = null;
+        } else {
+          generatePassword_ = null;
+          generatePasswordBuilder_ = null;
+        }
         return this;
       }
 
@@ -5884,6 +5984,11 @@ public final class UserServiceOuterClass {
           result.deletionProtection_ = deletionProtectionBuilder_.build();
         }
         result.userPasswordEncryption_ = userPasswordEncryption_;
+        if (generatePasswordBuilder_ == null) {
+          result.generatePassword_ = generatePassword_;
+        } else {
+          result.generatePassword_ = generatePasswordBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -5997,6 +6102,9 @@ public final class UserServiceOuterClass {
         }
         if (other.userPasswordEncryption_ != 0) {
           setUserPasswordEncryptionValue(other.getUserPasswordEncryptionValue());
+        }
+        if (other.hasGeneratePassword()) {
+          mergeGeneratePassword(other.getGeneratePassword());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7524,6 +7632,161 @@ public final class UserServiceOuterClass {
         userPasswordEncryption_ = 0;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.BoolValue generatePassword_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> generatePasswordBuilder_;
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 12;</code>
+       * @return Whether the generatePassword field is set.
+       */
+      public boolean hasGeneratePassword() {
+        return generatePasswordBuilder_ != null || generatePassword_ != null;
+      }
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 12;</code>
+       * @return The generatePassword.
+       */
+      public com.google.protobuf.BoolValue getGeneratePassword() {
+        if (generatePasswordBuilder_ == null) {
+          return generatePassword_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : generatePassword_;
+        } else {
+          return generatePasswordBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 12;</code>
+       */
+      public Builder setGeneratePassword(com.google.protobuf.BoolValue value) {
+        if (generatePasswordBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          generatePassword_ = value;
+          onChanged();
+        } else {
+          generatePasswordBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 12;</code>
+       */
+      public Builder setGeneratePassword(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (generatePasswordBuilder_ == null) {
+          generatePassword_ = builderForValue.build();
+          onChanged();
+        } else {
+          generatePasswordBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 12;</code>
+       */
+      public Builder mergeGeneratePassword(com.google.protobuf.BoolValue value) {
+        if (generatePasswordBuilder_ == null) {
+          if (generatePassword_ != null) {
+            generatePassword_ =
+              com.google.protobuf.BoolValue.newBuilder(generatePassword_).mergeFrom(value).buildPartial();
+          } else {
+            generatePassword_ = value;
+          }
+          onChanged();
+        } else {
+          generatePasswordBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 12;</code>
+       */
+      public Builder clearGeneratePassword() {
+        if (generatePasswordBuilder_ == null) {
+          generatePassword_ = null;
+          onChanged();
+        } else {
+          generatePassword_ = null;
+          generatePasswordBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 12;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getGeneratePasswordBuilder() {
+        
+        onChanged();
+        return getGeneratePasswordFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 12;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getGeneratePasswordOrBuilder() {
+        if (generatePasswordBuilder_ != null) {
+          return generatePasswordBuilder_.getMessageOrBuilder();
+        } else {
+          return generatePassword_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : generatePassword_;
+        }
+      }
+      /**
+       * <pre>
+       * Generate password using Connection Manager.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue generate_password = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getGeneratePasswordFieldBuilder() {
+        if (generatePasswordBuilder_ == null) {
+          generatePasswordBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getGeneratePassword(),
+                  getParentForChildren(),
+                  isClean());
+          generatePassword_ = null;
+        }
+        return generatePasswordBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -13714,7 +13977,7 @@ public final class UserServiceOuterClass {
       "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022A\n\tuser_spec\030\002 \001(\0132" +
       "(.yandex.cloud.mdb.postgresql.v1.UserSpe" +
       "cB\004\350\3071\001\";\n\022CreateUserMetadata\022\022\n\ncluster" +
-      "_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"\276\004\n\021UpdateU" +
+      "_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"\365\004\n\021UpdateU" +
       "serRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
       "<=50\0221\n\tuser_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071" +
       "\016[a-zA-Z0-9_-]*\022/\n\013update_mask\030\003 \001(\0132\032.g" +
@@ -13729,64 +13992,66 @@ public final class UserServiceOuterClass {
       "n\030\n \001(\0132\032.google.protobuf.BoolValue\022X\n\030u" +
       "ser_password_encryption\030\013 \001(\01626.yandex.c" +
       "loud.mdb.postgresql.v1.UserPasswordEncry" +
-      "ption\";\n\022UpdateUserMetadata\022\022\n\ncluster_i" +
-      "d\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"h\n\021DeleteUser" +
-      "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\0221\n\tuser_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a" +
-      "-zA-Z0-9_-]*\";\n\022DeleteUserMetadata\022\022\n\ncl" +
-      "uster_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"\267\001\n\032Gr" +
-      "antUserPermissionRequest\022 \n\ncluster_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\0221\n\tuser_name\030\002 \001(\tB\036\350" +
-      "\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022D\n\npermiss" +
-      "ion\030\003 \001(\0132*.yandex.cloud.mdb.postgresql." +
-      "v1.PermissionB\004\350\3071\001\"D\n\033GrantUserPermissi" +
-      "onMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tuser_n" +
-      "ame\030\002 \001(\t\"\251\001\n\033RevokeUserPermissionReques" +
-      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0221\n\tu" +
-      "ser_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0" +
-      "-9_-]*\0225\n\rdatabase_name\030\003 \001(\tB\036\350\3071\001\212\3101\004<" +
-      "=63\362\3071\016[a-zA-Z0-9_-]*\"E\n\034RevokeUserPermi" +
-      "ssionMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tuse" +
-      "r_name\030\002 \001(\t2\255\013\n\013UserService\022\243\001\n\003Get\022..y" +
-      "andex.cloud.mdb.postgresql.v1.GetUserReq" +
-      "uest\032$.yandex.cloud.mdb.postgresql.v1.Us" +
-      "er\"F\202\323\344\223\002@\022>/managed-postgresql/v1/clust" +
-      "ers/{cluster_id}/users/{user_name}\022\247\001\n\004L" +
-      "ist\0220.yandex.cloud.mdb.postgresql.v1.Lis" +
-      "tUsersRequest\0321.yandex.cloud.mdb.postgre" +
-      "sql.v1.ListUsersResponse\":\202\323\344\223\0024\0222/manag" +
-      "ed-postgresql/v1/clusters/{cluster_id}/u" +
-      "sers\022\273\001\n\006Create\0221.yandex.cloud.mdb.postg" +
-      "resql.v1.CreateUserRequest\032!.yandex.clou" +
-      "d.operation.Operation\"[\202\323\344\223\0027\"2/managed-" +
-      "postgresql/v1/clusters/{cluster_id}/user" +
-      "s:\001*\262\322*\032\n\022CreateUserMetadata\022\004User\022\307\001\n\006U" +
-      "pdate\0221.yandex.cloud.mdb.postgresql.v1.U" +
-      "pdateUserRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"g\202\323\344\223\002C2>/managed-postgresql" +
-      "/v1/clusters/{cluster_id}/users/{user_na" +
-      "me}:\001*\262\322*\032\n\022UpdateUserMetadata\022\004User\022\325\001\n" +
-      "\006Delete\0221.yandex.cloud.mdb.postgresql.v1" +
-      ".DeleteUserRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"u\202\323\344\223\002@*>/managed-postgres" +
-      "ql/v1/clusters/{cluster_id}/users/{user_" +
-      "name}\262\322*+\n\022DeleteUserMetadata\022\025google.pr" +
-      "otobuf.Empty\022\363\001\n\017GrantPermission\022:.yande" +
-      "x.cloud.mdb.postgresql.v1.GrantUserPermi" +
-      "ssionRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"\200\001\202\323\344\223\002S\"N/managed-postgresql/v1" +
-      "/clusters/{cluster_id}/users/{user_name}" +
-      ":grantPermission:\001*\262\322*#\n\033GrantUserPermis" +
-      "sionMetadata\022\004User\022\367\001\n\020RevokePermission\022" +
-      ";.yandex.cloud.mdb.postgresql.v1.RevokeU" +
-      "serPermissionRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"\202\001\202\323\344\223\002T\"O/managed-postg" +
-      "resql/v1/clusters/{cluster_id}/users/{us" +
-      "er_name}:revokePermission:\001*\262\322*$\n\034Revoke" +
-      "UserPermissionMetadata\022\004UserBs\n\"yandex.c" +
-      "loud.api.mdb.postgresql.v1ZMgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/mdb" +
-      "/postgresql/v1;postgresqlb\006proto3"
+      "ption\0225\n\021generate_password\030\014 \001(\0132\032.googl" +
+      "e.protobuf.BoolValue\";\n\022UpdateUserMetada" +
+      "ta\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(" +
+      "\t\"h\n\021DeleteUserRequest\022 \n\ncluster_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\0221\n\tuser_name\030\002 \001(\tB\036\350\3071" +
+      "\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\";\n\022DeleteUse" +
+      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tuser_na" +
+      "me\030\002 \001(\t\"\267\001\n\032GrantUserPermissionRequest\022" +
+      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0221\n\tuse" +
+      "r_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9" +
+      "_-]*\022D\n\npermission\030\003 \001(\0132*.yandex.cloud." +
+      "mdb.postgresql.v1.PermissionB\004\350\3071\001\"D\n\033Gr" +
+      "antUserPermissionMetadata\022\022\n\ncluster_id\030" +
+      "\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"\251\001\n\033RevokeUserP" +
+      "ermissionRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\0221\n\tuser_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<" +
+      "=63\362\3071\016[a-zA-Z0-9_-]*\0225\n\rdatabase_name\030\003" +
+      " \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"E\n\034" +
+      "RevokeUserPermissionMetadata\022\022\n\ncluster_" +
+      "id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t2\255\013\n\013UserServ" +
+      "ice\022\243\001\n\003Get\022..yandex.cloud.mdb.postgresq" +
+      "l.v1.GetUserRequest\032$.yandex.cloud.mdb.p" +
+      "ostgresql.v1.User\"F\202\323\344\223\002@\022>/managed-post" +
+      "gresql/v1/clusters/{cluster_id}/users/{u" +
+      "ser_name}\022\247\001\n\004List\0220.yandex.cloud.mdb.po" +
+      "stgresql.v1.ListUsersRequest\0321.yandex.cl" +
+      "oud.mdb.postgresql.v1.ListUsersResponse\"" +
+      ":\202\323\344\223\0024\0222/managed-postgresql/v1/clusters" +
+      "/{cluster_id}/users\022\273\001\n\006Create\0221.yandex." +
+      "cloud.mdb.postgresql.v1.CreateUserReques" +
+      "t\032!.yandex.cloud.operation.Operation\"[\202\323" +
+      "\344\223\0027\"2/managed-postgresql/v1/clusters/{c" +
+      "luster_id}/users:\001*\262\322*\032\n\022CreateUserMetad" +
+      "ata\022\004User\022\307\001\n\006Update\0221.yandex.cloud.mdb." +
+      "postgresql.v1.UpdateUserRequest\032!.yandex" +
+      ".cloud.operation.Operation\"g\202\323\344\223\002C2>/man" +
+      "aged-postgresql/v1/clusters/{cluster_id}" +
+      "/users/{user_name}:\001*\262\322*\032\n\022UpdateUserMet" +
+      "adata\022\004User\022\325\001\n\006Delete\0221.yandex.cloud.md" +
+      "b.postgresql.v1.DeleteUserRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"u\202\323\344\223\002@*>/m" +
+      "anaged-postgresql/v1/clusters/{cluster_i" +
+      "d}/users/{user_name}\262\322*+\n\022DeleteUserMeta" +
+      "data\022\025google.protobuf.Empty\022\363\001\n\017GrantPer" +
+      "mission\022:.yandex.cloud.mdb.postgresql.v1" +
+      ".GrantUserPermissionRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"\200\001\202\323\344\223\002S\"N/manage" +
+      "d-postgresql/v1/clusters/{cluster_id}/us" +
+      "ers/{user_name}:grantPermission:\001*\262\322*#\n\033" +
+      "GrantUserPermissionMetadata\022\004User\022\367\001\n\020Re" +
+      "vokePermission\022;.yandex.cloud.mdb.postgr" +
+      "esql.v1.RevokeUserPermissionRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"\202\001\202\323\344\223\002T\"" +
+      "O/managed-postgresql/v1/clusters/{cluste" +
+      "r_id}/users/{user_name}:revokePermission" +
+      ":\001*\262\322*$\n\034RevokeUserPermissionMetadata\022\004U" +
+      "serBs\n\"yandex.cloud.api.mdb.postgresql.v" +
+      "1ZMgithub.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/mdb/postgresql/v1;postgresql" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13834,7 +14099,7 @@ public final class UserServiceOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_UpdateUserRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_UpdateUserRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "UserName", "UpdateMask", "Password", "Permissions", "ConnLimit", "Settings", "Login", "Grants", "DeletionProtection", "UserPasswordEncryption", });
+        new java.lang.String[] { "ClusterId", "UserName", "UpdateMask", "Password", "Permissions", "ConnLimit", "Settings", "Login", "Grants", "DeletionProtection", "UserPasswordEncryption", "GeneratePassword", });
     internal_static_yandex_cloud_mdb_postgresql_v1_UpdateUserMetadata_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_mdb_postgresql_v1_UpdateUserMetadata_fieldAccessorTable = new

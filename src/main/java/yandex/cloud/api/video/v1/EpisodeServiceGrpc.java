@@ -204,6 +204,37 @@ public final class EpisodeServiceGrpc {
     return getDeleteMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchDeleteEpisodesRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getBatchDeleteMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "BatchDelete",
+      requestType = yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchDeleteEpisodesRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchDeleteEpisodesRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getBatchDeleteMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchDeleteEpisodesRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getBatchDeleteMethod;
+    if ((getBatchDeleteMethod = EpisodeServiceGrpc.getBatchDeleteMethod) == null) {
+      synchronized (EpisodeServiceGrpc.class) {
+        if ((getBatchDeleteMethod = EpisodeServiceGrpc.getBatchDeleteMethod) == null) {
+          EpisodeServiceGrpc.getBatchDeleteMethod = getBatchDeleteMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchDeleteEpisodesRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BatchDelete"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchDeleteEpisodesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new EpisodeServiceMethodDescriptorSupplier("BatchDelete"))
+              .build();
+        }
+      }
+    }
+    return getBatchDeleteMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PerformEpisodeActionRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getPerformActionMethod;
 
@@ -410,6 +441,16 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
+     * Batch delete episode.
+     * </pre>
+     */
+    public void batchDelete(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchDeleteEpisodesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBatchDeleteMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Perform an action on the episode.
      * </pre>
      */
@@ -482,6 +523,13 @@ public final class EpisodeServiceGrpc {
                 yandex.cloud.api.video.v1.EpisodeServiceOuterClass.DeleteEpisodeRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
+          .addMethod(
+            getBatchDeleteMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchDeleteEpisodesRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_BATCH_DELETE)))
           .addMethod(
             getPerformActionMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -588,6 +636,17 @@ public final class EpisodeServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Batch delete episode.
+     * </pre>
+     */
+    public void batchDelete(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchDeleteEpisodesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getBatchDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -699,6 +758,16 @@ public final class EpisodeServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.DeleteEpisodeRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Batch delete episode.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation batchDelete(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchDeleteEpisodesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBatchDeleteMethod(), getCallOptions(), request);
     }
 
     /**
@@ -817,6 +886,17 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
+     * Batch delete episode.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> batchDelete(
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchDeleteEpisodesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getBatchDeleteMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Perform an action on the episode.
      * </pre>
      */
@@ -855,9 +935,10 @@ public final class EpisodeServiceGrpc {
   private static final int METHODID_CREATE = 3;
   private static final int METHODID_UPDATE = 4;
   private static final int METHODID_DELETE = 5;
-  private static final int METHODID_PERFORM_ACTION = 6;
-  private static final int METHODID_GET_PLAYER_URL = 7;
-  private static final int METHODID_GET_MANIFESTS = 8;
+  private static final int METHODID_BATCH_DELETE = 6;
+  private static final int METHODID_PERFORM_ACTION = 7;
+  private static final int METHODID_GET_PLAYER_URL = 8;
+  private static final int METHODID_GET_MANIFESTS = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -898,6 +979,10 @@ public final class EpisodeServiceGrpc {
           break;
         case METHODID_DELETE:
           serviceImpl.delete((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.DeleteEpisodeRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_BATCH_DELETE:
+          serviceImpl.batchDelete((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchDeleteEpisodesRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_PERFORM_ACTION:
@@ -979,6 +1064,7 @@ public final class EpisodeServiceGrpc {
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
+              .addMethod(getBatchDeleteMethod())
               .addMethod(getPerformActionMethod())
               .addMethod(getGetPlayerURLMethod())
               .addMethod(getGetManifestsMethod())
