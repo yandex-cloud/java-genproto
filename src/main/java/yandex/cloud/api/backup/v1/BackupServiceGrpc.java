@@ -235,6 +235,37 @@ public final class BackupServiceGrpc {
     return getDeleteMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteArchiveMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteArchive",
+      requestType = yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteArchiveMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteArchiveMethod;
+    if ((getDeleteArchiveMethod = BackupServiceGrpc.getDeleteArchiveMethod) == null) {
+      synchronized (BackupServiceGrpc.class) {
+        if ((getDeleteArchiveMethod = BackupServiceGrpc.getDeleteArchiveMethod) == null) {
+          BackupServiceGrpc.getDeleteArchiveMethod = getDeleteArchiveMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteArchive"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new BackupServiceMethodDescriptorSupplier("DeleteArchive"))
+              .build();
+        }
+      }
+    }
+    return getDeleteArchiveMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -358,6 +389,16 @@ public final class BackupServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Delete specific archive.
+     * </pre>
+     */
+    public void deleteArchive(yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteArchiveMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -409,6 +450,13 @@ public final class BackupServiceGrpc {
                 yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteBackupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
+          .addMethod(
+            getDeleteArchiveMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_DELETE_ARCHIVE)))
           .build();
     }
   }
@@ -508,6 +556,17 @@ public final class BackupServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Delete specific archive.
+     * </pre>
+     */
+    public void deleteArchive(yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteArchiveMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -597,6 +656,16 @@ public final class BackupServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteBackupRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Delete specific archive.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation deleteArchive(yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteArchiveMethod(), getCallOptions(), request);
     }
   }
 
@@ -695,6 +764,17 @@ public final class BackupServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Delete specific archive.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deleteArchive(
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteArchiveMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_LIST = 0;
@@ -704,6 +784,7 @@ public final class BackupServiceGrpc {
   private static final int METHODID_START_RECOVERY = 4;
   private static final int METHODID_START_FILES_RECOVERY = 5;
   private static final int METHODID_DELETE = 6;
+  private static final int METHODID_DELETE_ARCHIVE = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -748,6 +829,10 @@ public final class BackupServiceGrpc {
           break;
         case METHODID_DELETE:
           serviceImpl.delete((yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteBackupRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_DELETE_ARCHIVE:
+          serviceImpl.deleteArchive((yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         default:
@@ -818,6 +903,7 @@ public final class BackupServiceGrpc {
               .addMethod(getStartRecoveryMethod())
               .addMethod(getStartFilesRecoveryMethod())
               .addMethod(getDeleteMethod())
+              .addMethod(getDeleteArchiveMethod())
               .build();
         }
       }

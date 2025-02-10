@@ -32769,6 +32769,1441 @@ public final class ClusterServiceOuterClass {
 
   }
 
+  public interface RescheduleMaintenanceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.k8s.v1.RescheduleMaintenanceRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the Kubernetes cluster to reschedule maintenance.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The clusterId.
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of the Kubernetes cluster to reschedule maintenance.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for clusterId.
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Time until which the update should be postponed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the delayedUntil field is set.
+     */
+    boolean hasDelayedUntil();
+    /**
+     * <pre>
+     * Time until which the update should be postponed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The delayedUntil.
+     */
+    com.google.protobuf.Timestamp getDelayedUntil();
+    /**
+     * <pre>
+     * Time until which the update should be postponed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.k8s.v1.RescheduleMaintenanceRequest}
+   */
+  public static final class RescheduleMaintenanceRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.RescheduleMaintenanceRequest)
+      RescheduleMaintenanceRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RescheduleMaintenanceRequest.newBuilder() to construct.
+    private RescheduleMaintenanceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RescheduleMaintenanceRequest() {
+      clusterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RescheduleMaintenanceRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RescheduleMaintenanceRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (delayedUntil_ != null) {
+                subBuilder = delayedUntil_.toBuilder();
+              }
+              delayedUntil_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(delayedUntil_);
+                delayedUntil_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_RescheduleMaintenanceRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_RescheduleMaintenanceRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.class, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of the Kubernetes cluster to reschedule maintenance.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The clusterId.
+     */
+    @java.lang.Override
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the Kubernetes cluster to reschedule maintenance.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for clusterId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DELAYED_UNTIL_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp delayedUntil_;
+    /**
+     * <pre>
+     * Time until which the update should be postponed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the delayedUntil field is set.
+     */
+    @java.lang.Override
+    public boolean hasDelayedUntil() {
+      return delayedUntil_ != null;
+    }
+    /**
+     * <pre>
+     * Time until which the update should be postponed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The delayedUntil.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getDelayedUntil() {
+      return delayedUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
+    }
+    /**
+     * <pre>
+     * Time until which the update should be postponed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder() {
+      return getDelayedUntil();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (delayedUntil_ != null) {
+        output.writeMessage(2, getDelayedUntil());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (delayedUntil_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getDelayedUntil());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest) obj;
+
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (hasDelayedUntil() != other.hasDelayedUntil()) return false;
+      if (hasDelayedUntil()) {
+        if (!getDelayedUntil()
+            .equals(other.getDelayedUntil())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      if (hasDelayedUntil()) {
+        hash = (37 * hash) + DELAYED_UNTIL_FIELD_NUMBER;
+        hash = (53 * hash) + getDelayedUntil().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.k8s.v1.RescheduleMaintenanceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.k8s.v1.RescheduleMaintenanceRequest)
+        yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_RescheduleMaintenanceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_RescheduleMaintenanceRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.class, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        if (delayedUntilBuilder_ == null) {
+          delayedUntil_ = null;
+        } else {
+          delayedUntil_ = null;
+          delayedUntilBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_RescheduleMaintenanceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest build() {
+        yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest buildPartial() {
+        yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest result = new yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest(this);
+        result.clusterId_ = clusterId_;
+        if (delayedUntilBuilder_ == null) {
+          result.delayedUntil_ = delayedUntil_;
+        } else {
+          result.delayedUntil_ = delayedUntilBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest) {
+          return mergeFrom((yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest other) {
+        if (other == yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (other.hasDelayedUntil()) {
+          mergeDelayedUntil(other.getDelayedUntil());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of the Kubernetes cluster to reschedule maintenance.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The clusterId.
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Kubernetes cluster to reschedule maintenance.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for clusterId.
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Kubernetes cluster to reschedule maintenance.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Kubernetes cluster to reschedule maintenance.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Kubernetes cluster to reschedule maintenance.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp delayedUntil_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> delayedUntilBuilder_;
+      /**
+       * <pre>
+       * Time until which the update should be postponed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 2 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the delayedUntil field is set.
+       */
+      public boolean hasDelayedUntil() {
+        return delayedUntilBuilder_ != null || delayedUntil_ != null;
+      }
+      /**
+       * <pre>
+       * Time until which the update should be postponed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The delayedUntil.
+       */
+      public com.google.protobuf.Timestamp getDelayedUntil() {
+        if (delayedUntilBuilder_ == null) {
+          return delayedUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
+        } else {
+          return delayedUntilBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Time until which the update should be postponed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setDelayedUntil(com.google.protobuf.Timestamp value) {
+        if (delayedUntilBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          delayedUntil_ = value;
+          onChanged();
+        } else {
+          delayedUntilBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Time until which the update should be postponed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setDelayedUntil(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (delayedUntilBuilder_ == null) {
+          delayedUntil_ = builderForValue.build();
+          onChanged();
+        } else {
+          delayedUntilBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Time until which the update should be postponed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder mergeDelayedUntil(com.google.protobuf.Timestamp value) {
+        if (delayedUntilBuilder_ == null) {
+          if (delayedUntil_ != null) {
+            delayedUntil_ =
+              com.google.protobuf.Timestamp.newBuilder(delayedUntil_).mergeFrom(value).buildPartial();
+          } else {
+            delayedUntil_ = value;
+          }
+          onChanged();
+        } else {
+          delayedUntilBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Time until which the update should be postponed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearDelayedUntil() {
+        if (delayedUntilBuilder_ == null) {
+          delayedUntil_ = null;
+          onChanged();
+        } else {
+          delayedUntil_ = null;
+          delayedUntilBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Time until which the update should be postponed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getDelayedUntilBuilder() {
+        
+        onChanged();
+        return getDelayedUntilFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Time until which the update should be postponed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder() {
+        if (delayedUntilBuilder_ != null) {
+          return delayedUntilBuilder_.getMessageOrBuilder();
+        } else {
+          return delayedUntil_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
+        }
+      }
+      /**
+       * <pre>
+       * Time until which the update should be postponed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getDelayedUntilFieldBuilder() {
+        if (delayedUntilBuilder_ == null) {
+          delayedUntilBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getDelayedUntil(),
+                  getParentForChildren(),
+                  isClean());
+          delayedUntil_ = null;
+        }
+        return delayedUntilBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.k8s.v1.RescheduleMaintenanceRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.k8s.v1.RescheduleMaintenanceRequest)
+    private static final yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest();
+    }
+
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RescheduleMaintenanceRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RescheduleMaintenanceRequest>() {
+      @java.lang.Override
+      public RescheduleMaintenanceRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RescheduleMaintenanceRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RescheduleMaintenanceRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RescheduleMaintenanceRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RescheduleMaintenanceMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.k8s.v1.RescheduleMaintenanceMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
+     */
+    java.lang.String getClusterId();
+    /**
+     * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.k8s.v1.RescheduleMaintenanceMetadata}
+   */
+  public static final class RescheduleMaintenanceMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.RescheduleMaintenanceMetadata)
+      RescheduleMaintenanceMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RescheduleMaintenanceMetadata.newBuilder() to construct.
+    private RescheduleMaintenanceMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RescheduleMaintenanceMetadata() {
+      clusterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RescheduleMaintenanceMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RescheduleMaintenanceMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_RescheduleMaintenanceMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_RescheduleMaintenanceMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.class, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
+     */
+    @java.lang.Override
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata) obj;
+
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.k8s.v1.RescheduleMaintenanceMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.k8s.v1.RescheduleMaintenanceMetadata)
+        yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_RescheduleMaintenanceMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_RescheduleMaintenanceMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.class, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_RescheduleMaintenanceMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata build() {
+        yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata buildPartial() {
+        yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata result = new yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata(this);
+        result.clusterId_ = clusterId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata) {
+          return mergeFrom((yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata other) {
+        if (other == yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.k8s.v1.RescheduleMaintenanceMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.k8s.v1.RescheduleMaintenanceMetadata)
+    private static final yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata();
+    }
+
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RescheduleMaintenanceMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<RescheduleMaintenanceMetadata>() {
+      @java.lang.Override
+      public RescheduleMaintenanceMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RescheduleMaintenanceMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RescheduleMaintenanceMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RescheduleMaintenanceMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_k8s_v1_GetClusterRequest_descriptor;
   private static final 
@@ -32919,6 +34354,16 @@ public final class ClusterServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_k8s_v1_LocationSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_k8s_v1_RescheduleMaintenanceRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_k8s_v1_RescheduleMaintenanceRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_k8s_v1_RescheduleMaintenanceMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_k8s_v1_RescheduleMaintenanceMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -32929,181 +34374,193 @@ public final class ClusterServiceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n)yandex/cloud/k8s/v1/cluster_service.pr" +
-      "oto\022\023yandex.cloud.k8s.v1\032\034google/api/ann" +
-      "otations.proto\032 google/protobuf/field_ma" +
-      "sk.proto\032 yandex/cloud/api/operation.pro" +
-      "to\032!yandex/cloud/k8s/v1/cluster.proto\032\036y" +
-      "andex/cloud/k8s/v1/node.proto\032$yandex/cl" +
-      "oud/k8s/v1/node_group.proto\032!yandex/clou" +
-      "d/k8s/v1/version.proto\032&yandex/cloud/ope" +
-      "ration/operation.proto\032\035yandex/cloud/val" +
-      "idation.proto\"-\n\021GetClusterRequest\022\030\n\ncl" +
-      "uster_id\030\001 \001(\tB\004\350\3071\001\"\210\001\n\023ListClustersReq" +
-      "uest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_si" +
-      "ze\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\t" +
-      "B\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"" +
-      "_\n\024ListClustersResponse\022.\n\010clusters\030\001 \003(" +
-      "\0132\034.yandex.cloud.k8s.v1.Cluster\022\027\n\017next_" +
-      "page_token\030\002 \001(\t\"0\n\024DeleteClusterRequest" +
-      "\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\"+\n\025DeleteClus" +
-      "terMetadata\022\022\n\ncluster_id\030\001 \001(\t\".\n\022StopC" +
-      "lusterRequest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\"" +
-      ")\n\023StopClusterMetadata\022\022\n\ncluster_id\030\001 \001" +
-      "(\t\"/\n\023StartClusterRequest\022\030\n\ncluster_id\030" +
-      "\001 \001(\tB\004\350\3071\001\"*\n\024StartClusterMetadata\022\022\n\nc" +
-      "luster_id\030\001 \001(\t\"\257\005\n\024UpdateClusterRequest" +
-      "\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mas" +
-      "k\030\002 \001(\0132\032.google.protobuf.FieldMask\0222\n\004n" +
-      "ame\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-" +
-      "z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022" +
-      "\216\001\n\006labels\030\005 \003(\01325.yandex.cloud.k8s.v1.U" +
-      "pdateClusterRequest.LabelsEntryBG\202\3101\004<=6" +
-      "4\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\310" +
-      "1\026\022\024[a-z][-_./\\@0-9a-z]*\022(\n\024gateway_ipv4" +
-      "_address\030\006 \001(\tB\010\212\3101\004<=15H\000\022:\n\013master_spe" +
-      "c\030\007 \001(\0132%.yandex.cloud.k8s.v1.MasterUpda" +
-      "teSpec\022\032\n\022service_account_id\030\t \001(\t\022\037\n\027no" +
-      "de_service_account_id\030\010 \001(\t\022:\n\016network_p" +
-      "olicy\030\n \001(\0132\".yandex.cloud.k8s.v1.Networ" +
-      "kPolicy\022E\n\024ip_allocation_policy\030\013 \001(\0132\'." +
-      "yandex.cloud.k8s.v1.IPAllocationPolicy\032-" +
-      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001B\022\n\020internet_gateway\"\357\002\n\020MasterUpda" +
-      "teSpec\0227\n\007version\030\001 \001(\0132&.yandex.cloud.k" +
-      "8s.v1.UpdateVersionSpec\022H\n\022maintenance_p" +
-      "olicy\030\002 \001(\0132,.yandex.cloud.k8s.v1.Master" +
-      "MaintenancePolicy\022\032\n\022security_group_ids\030" +
-      "\003 \003(\t\022:\n\016master_logging\030\004 \001(\0132\".yandex.c" +
-      "loud.k8s.v1.MasterLogging\0224\n\tlocations\030\005" +
-      " \003(\0132!.yandex.cloud.k8s.v1.LocationSpec\022" +
-      "J\n\030external_v6_address_spec\030\006 \001(\0132(.yand" +
-      "ex.cloud.k8s.v1.ExternalAddressSpec\"+\n\025U" +
-      "pdateClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t" +
-      "\"\330\006\n\024CreateClusterRequest\022\027\n\tfolder_id\030\001" +
-      " \001(\tB\004\350\3071\001\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a" +
-      "-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\003 " +
-      "\001(\tB\t\212\3101\005<=256\022\216\001\n\006labels\030\004 \003(\01325.yandex" +
-      ".cloud.k8s.v1.CreateClusterRequest.Label" +
-      "sEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-" +
-      "z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022" +
-      "\030\n\nnetwork_id\030\005 \001(\tB\004\350\3071\001\022:\n\013master_spec" +
-      "\030\006 \001(\0132\037.yandex.cloud.k8s.v1.MasterSpecB" +
-      "\004\350\3071\001\022E\n\024ip_allocation_policy\030\007 \001(\0132\'.ya" +
-      "ndex.cloud.k8s.v1.IPAllocationPolicy\022\036\n\024" +
-      "gateway_ipv4_address\030\010 \001(\tH\000\022 \n\022service_" +
-      "account_id\030\t \001(\tB\004\350\3071\001\022%\n\027node_service_a" +
-      "ccount_id\030\n \001(\tB\004\350\3071\001\022<\n\017release_channel" +
-      "\030\013 \001(\0162#.yandex.cloud.k8s.v1.ReleaseChan" +
-      "nel\022:\n\016network_policy\030\014 \001(\0132\".yandex.clo" +
-      "ud.k8s.v1.NetworkPolicy\0226\n\014kms_provider\030" +
-      "\r \001(\0132 .yandex.cloud.k8s.v1.KMSProvider\022" +
-      "-\n\006cilium\030\016 \001(\0132\033.yandex.cloud.k8s.v1.Ci" +
-      "liumH\001\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t:\0028\001B\022\n\020internet_gatewayB\030\n\026net" +
-      "work_implementation\"+\n\025CreateClusterMeta" +
-      "data\022\022\n\ncluster_id\030\001 \001(\t\"/\n\031AutoUpgradeM" +
-      "asterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\222\001\n\034Li" +
-      "stClusterOperationsRequest\022\030\n\ncluster_id" +
-      "\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1" +
-      "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006fi" +
-      "lter\030\004 \001(\tB\n\212\3101\006<=1000\"o\n\035ListClusterOpe" +
-      "rationsResponse\0225\n\noperations\030\001 \003(\0132!.ya" +
-      "ndex.cloud.operation.Operation\022\027\n\017next_p" +
-      "age_token\030\002 \001(\t\"\222\001\n\034ListClusterNodeGroup" +
-      "sRequest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpa" +
-      "ge_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030" +
-      "\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=" +
-      "1000\"m\n\035ListClusterNodeGroupsResponse\0223\n" +
-      "\013node_groups\030\001 \003(\0132\036.yandex.cloud.k8s.v1" +
-      ".NodeGroup\022\027\n\017next_page_token\030\002 \001(\t\"q\n\027L" +
-      "istClusterNodesRequest\022\030\n\ncluster_id\030\001 \001" +
-      "(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022" +
-      "\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"]\n\030ListCl" +
-      "usterNodesResponse\022(\n\005nodes\030\001 \003(\0132\031.yand" +
-      "ex.cloud.k8s.v1.Node\022\027\n\017next_page_token\030" +
-      "\002 \001(\t\"\324\004\n\nMasterSpec\022A\n\021zonal_master_spe" +
-      "c\030\001 \001(\0132$.yandex.cloud.k8s.v1.ZonalMaste" +
-      "rSpecH\000\022G\n\024regional_master_spec\030\002 \001(\0132\'." +
-      "yandex.cloud.k8s.v1.RegionalMasterSpecH\000" +
-      "\0224\n\tlocations\030\010 \003(\0132!.yandex.cloud.k8s.v" +
-      "1.LocationSpec\022$\n\021etcd_cluster_size\030\t \001(" +
-      "\003B\t\372\3071\0050,1,3\022J\n\030external_v4_address_spec" +
-      "\030\n \001(\0132(.yandex.cloud.k8s.v1.ExternalAdd" +
-      "ressSpec\022J\n\030external_v6_address_spec\030\013 \001" +
-      "(\0132(.yandex.cloud.k8s.v1.ExternalAddress" +
-      "Spec\022\017\n\007version\030\003 \001(\t\022H\n\022maintenance_pol" +
-      "icy\030\004 \001(\0132,.yandex.cloud.k8s.v1.MasterMa" +
-      "intenancePolicy\022\032\n\022security_group_ids\030\006 " +
-      "\003(\t\022:\n\016master_logging\030\007 \001(\0132\".yandex.clo" +
-      "ud.k8s.v1.MasterLoggingB\r\n\013master_typeJ\004" +
-      "\010\005\020\006\"\300\001\n\017ZonalMasterSpec\022\025\n\007zone_id\030\001 \001(" +
-      "\tB\004\350\3071\001\022J\n\030internal_v4_address_spec\030\002 \001(" +
-      "\0132(.yandex.cloud.k8s.v1.InternalAddressS" +
-      "pec\022J\n\030external_v4_address_spec\030\003 \001(\0132(." +
-      "yandex.cloud.k8s.v1.ExternalAddressSpec\"" +
-      "\375\001\n\022RegionalMasterSpec\022\027\n\tregion_id\030\001 \001(" +
-      "\tB\004\350\3071\001\0226\n\tlocations\030\002 \003(\0132#.yandex.clou" +
-      "d.k8s.v1.MasterLocation\022J\n\030external_v4_a" +
-      "ddress_spec\030\003 \001(\0132(.yandex.cloud.k8s.v1." +
-      "ExternalAddressSpec\022J\n\030external_v6_addre" +
-      "ss_spec\030\004 \001(\0132(.yandex.cloud.k8s.v1.Exte" +
-      "rnalAddressSpec\"(\n\023InternalAddressSpec\022\021" +
-      "\n\tsubnet_id\030\002 \001(\t\"&\n\023ExternalAddressSpec" +
-      "\022\017\n\007address\030\001 \001(\t\"s\n\016MasterLocation\022\025\n\007z" +
-      "one_id\030\001 \001(\tB\004\350\3071\001\022J\n\030internal_v4_addres" +
-      "s_spec\030\002 \001(\0132(.yandex.cloud.k8s.v1.Inter" +
-      "nalAddressSpec\"8\n\014LocationSpec\022\025\n\007zone_i" +
-      "d\030\001 \001(\tB\004\350\3071\001\022\021\n\tsubnet_id\030\002 \001(\t2\306\r\n\016Clu" +
-      "sterService\022\201\001\n\003Get\022&.yandex.cloud.k8s.v" +
-      "1.GetClusterRequest\032\034.yandex.cloud.k8s.v" +
-      "1.Cluster\"4\202\323\344\223\002.\022,/managed-kubernetes/v" +
-      "1/clusters/{cluster_id}\022\204\001\n\004List\022(.yande" +
-      "x.cloud.k8s.v1.ListClustersRequest\032).yan" +
-      "dex.cloud.k8s.v1.ListClustersResponse\"\'\202" +
-      "\323\344\223\002!\022\037/managed-kubernetes/v1/clusters\022\246" +
-      "\001\n\006Create\022).yandex.cloud.k8s.v1.CreateCl" +
-      "usterRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"N\202\323\344\223\002$\"\037/managed-kubernetes/v1/" +
-      "clusters:\001*\262\322* \n\025CreateClusterMetadata\022\007" +
-      "Cluster\022\263\001\n\006Update\022).yandex.cloud.k8s.v1" +
-      ".UpdateClusterRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"[\202\323\344\223\00212,/managed-kuber" +
-      "netes/v1/clusters/{cluster_id}:\001*\262\322* \n\025U" +
-      "pdateClusterMetadata\022\007Cluster\022\276\001\n\006Delete" +
-      "\022).yandex.cloud.k8s.v1.DeleteClusterRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"f" +
-      "\202\323\344\223\002.*,/managed-kubernetes/v1/clusters/" +
-      "{cluster_id}\262\322*.\n\025DeleteClusterMetadata\022" +
-      "\025google.protobuf.Empty\022\262\001\n\004Stop\022\'.yandex" +
-      ".cloud.k8s.v1.StopClusterRequest\032!.yande" +
-      "x.cloud.operation.Operation\"^\202\323\344\223\0026\"1/ma" +
-      "naged-kubernetes/v1/clusters/{cluster_id" +
-      "}:stop:\001*\262\322*\036\n\023StopClusterMetadata\022\007Clus" +
-      "ter\022\266\001\n\005Start\022(.yandex.cloud.k8s.v1.Star" +
-      "tClusterRequest\032!.yandex.cloud.operation" +
-      ".Operation\"`\202\323\344\223\0027\"2/managed-kubernetes/" +
-      "v1/clusters/{cluster_id}:start:\001*\262\322*\037\n\024S" +
-      "tartClusterMetadata\022\007Cluster\022\270\001\n\016ListNod" +
-      "eGroups\0221.yandex.cloud.k8s.v1.ListCluste" +
-      "rNodeGroupsRequest\0322.yandex.cloud.k8s.v1" +
-      ".ListClusterNodeGroupsResponse\"?\202\323\344\223\0029\0227" +
-      "/managed-kubernetes/v1/clusters/{cluster" +
-      "_id}/nodeGroups\022\270\001\n\016ListOperations\0221.yan" +
-      "dex.cloud.k8s.v1.ListClusterOperationsRe" +
-      "quest\0322.yandex.cloud.k8s.v1.ListClusterO" +
-      "perationsResponse\"?\202\323\344\223\0029\0227/managed-kube" +
-      "rnetes/v1/clusters/{cluster_id}/operatio" +
-      "ns\022\244\001\n\tListNodes\022,.yandex.cloud.k8s.v1.L" +
-      "istClusterNodesRequest\032-.yandex.cloud.k8" +
-      "s.v1.ListClusterNodesResponse\":\202\323\344\223\0024\0222/" +
+      "oto\022\023yandex.cloud.k8s.v1\032\037google/protobu" +
+      "f/timestamp.proto\032\034google/api/annotation" +
+      "s.proto\032 google/protobuf/field_mask.prot" +
+      "o\032 yandex/cloud/api/operation.proto\032!yan" +
+      "dex/cloud/k8s/v1/cluster.proto\032\036yandex/c" +
+      "loud/k8s/v1/node.proto\032$yandex/cloud/k8s" +
+      "/v1/node_group.proto\032!yandex/cloud/k8s/v" +
+      "1/version.proto\032&yandex/cloud/operation/" +
+      "operation.proto\032\035yandex/cloud/validation" +
+      ".proto\"-\n\021GetClusterRequest\022\030\n\ncluster_i" +
+      "d\030\001 \001(\tB\004\350\3071\001\"\210\001\n\023ListClustersRequest\022\027\n" +
+      "\tfolder_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(" +
+      "\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<" +
+      "=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"_\n\024List" +
+      "ClustersResponse\022.\n\010clusters\030\001 \003(\0132\034.yan" +
+      "dex.cloud.k8s.v1.Cluster\022\027\n\017next_page_to" +
+      "ken\030\002 \001(\t\"0\n\024DeleteClusterRequest\022\030\n\nclu" +
+      "ster_id\030\001 \001(\tB\004\350\3071\001\"+\n\025DeleteClusterMeta" +
+      "data\022\022\n\ncluster_id\030\001 \001(\t\".\n\022StopClusterR" +
+      "equest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\")\n\023Stop" +
+      "ClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"/\n\023S" +
+      "tartClusterRequest\022\030\n\ncluster_id\030\001 \001(\tB\004" +
+      "\350\3071\001\"*\n\024StartClusterMetadata\022\022\n\ncluster_" +
+      "id\030\001 \001(\t\"\257\005\n\024UpdateClusterRequest\022\030\n\nclu" +
+      "ster_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\013" +
+      "2\032.google.protobuf.FieldMask\0222\n\004name\030\003 \001" +
+      "(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?" +
+      "\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\216\001\n\006lab" +
+      "els\030\005 \003(\01325.yandex.cloud.k8s.v1.UpdateCl" +
+      "usterRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004<=" +
+      "63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-" +
+      "z][-_./\\@0-9a-z]*\022(\n\024gateway_ipv4_addres" +
+      "s\030\006 \001(\tB\010\212\3101\004<=15H\000\022:\n\013master_spec\030\007 \001(\013" +
+      "2%.yandex.cloud.k8s.v1.MasterUpdateSpec\022" +
+      "\032\n\022service_account_id\030\t \001(\t\022\037\n\027node_serv" +
+      "ice_account_id\030\010 \001(\t\022:\n\016network_policy\030\n" +
+      " \001(\0132\".yandex.cloud.k8s.v1.NetworkPolicy" +
+      "\022E\n\024ip_allocation_policy\030\013 \001(\0132\'.yandex." +
+      "cloud.k8s.v1.IPAllocationPolicy\032-\n\013Label" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\022" +
+      "\n\020internet_gateway\"\357\002\n\020MasterUpdateSpec\022" +
+      "7\n\007version\030\001 \001(\0132&.yandex.cloud.k8s.v1.U" +
+      "pdateVersionSpec\022H\n\022maintenance_policy\030\002" +
+      " \001(\0132,.yandex.cloud.k8s.v1.MasterMainten" +
+      "ancePolicy\022\032\n\022security_group_ids\030\003 \003(\t\022:" +
+      "\n\016master_logging\030\004 \001(\0132\".yandex.cloud.k8" +
+      "s.v1.MasterLogging\0224\n\tlocations\030\005 \003(\0132!." +
+      "yandex.cloud.k8s.v1.LocationSpec\022J\n\030exte" +
+      "rnal_v6_address_spec\030\006 \001(\0132(.yandex.clou" +
+      "d.k8s.v1.ExternalAddressSpec\"+\n\025UpdateCl" +
+      "usterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\330\006\n\024Cr" +
+      "eateClusterRequest\022\027\n\tfolder_id\030\001 \001(\tB\004\350" +
+      "\3071\001\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{" +
+      "0,61}[a-z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\310" +
+      "1\005<=256\022\216\001\n\006labels\030\004 \003(\01325.yandex.cloud." +
+      "k8s.v1.CreateClusterRequest.LabelsEntryB" +
+      "G\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006" +
+      "\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\030\n\nnetw" +
+      "ork_id\030\005 \001(\tB\004\350\3071\001\022:\n\013master_spec\030\006 \001(\0132" +
+      "\037.yandex.cloud.k8s.v1.MasterSpecB\004\350\3071\001\022E" +
+      "\n\024ip_allocation_policy\030\007 \001(\0132\'.yandex.cl" +
+      "oud.k8s.v1.IPAllocationPolicy\022\036\n\024gateway" +
+      "_ipv4_address\030\010 \001(\tH\000\022 \n\022service_account" +
+      "_id\030\t \001(\tB\004\350\3071\001\022%\n\027node_service_account_" +
+      "id\030\n \001(\tB\004\350\3071\001\022<\n\017release_channel\030\013 \001(\0162" +
+      "#.yandex.cloud.k8s.v1.ReleaseChannel\022:\n\016" +
+      "network_policy\030\014 \001(\0132\".yandex.cloud.k8s." +
+      "v1.NetworkPolicy\0226\n\014kms_provider\030\r \001(\0132 " +
+      ".yandex.cloud.k8s.v1.KMSProvider\022-\n\006cili" +
+      "um\030\016 \001(\0132\033.yandex.cloud.k8s.v1.CiliumH\001\032" +
+      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
+      "(\t:\0028\001B\022\n\020internet_gatewayB\030\n\026network_im" +
+      "plementation\"+\n\025CreateClusterMetadata\022\022\n" +
+      "\ncluster_id\030\001 \001(\t\"/\n\031AutoUpgradeMasterMe" +
+      "tadata\022\022\n\ncluster_id\030\001 \001(\t\"\222\001\n\034ListClust" +
+      "erOperationsRequest\022\030\n\ncluster_id\030\001 \001(\tB" +
+      "\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\n" +
+      "page_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 " +
+      "\001(\tB\n\212\3101\006<=1000\"o\n\035ListClusterOperations" +
+      "Response\0225\n\noperations\030\001 \003(\0132!.yandex.cl" +
+      "oud.operation.Operation\022\027\n\017next_page_tok" +
+      "en\030\002 \001(\t\"\222\001\n\034ListClusterNodeGroupsReques" +
+      "t\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size" +
+      "\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t" +
+      "\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"m\n" +
+      "\035ListClusterNodeGroupsResponse\0223\n\013node_g" +
+      "roups\030\001 \003(\0132\036.yandex.cloud.k8s.v1.NodeGr" +
+      "oup\022\027\n\017next_page_token\030\002 \001(\t\"q\n\027ListClus" +
+      "terNodesRequest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071" +
+      "\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage" +
+      "_token\030\003 \001(\tB\t\212\3101\005<=100\"]\n\030ListClusterNo" +
+      "desResponse\022(\n\005nodes\030\001 \003(\0132\031.yandex.clou" +
+      "d.k8s.v1.Node\022\027\n\017next_page_token\030\002 \001(\t\"\324" +
+      "\004\n\nMasterSpec\022A\n\021zonal_master_spec\030\001 \001(\013" +
+      "2$.yandex.cloud.k8s.v1.ZonalMasterSpecH\000" +
+      "\022G\n\024regional_master_spec\030\002 \001(\0132\'.yandex." +
+      "cloud.k8s.v1.RegionalMasterSpecH\000\0224\n\tloc" +
+      "ations\030\010 \003(\0132!.yandex.cloud.k8s.v1.Locat" +
+      "ionSpec\022$\n\021etcd_cluster_size\030\t \001(\003B\t\372\3071\005" +
+      "0,1,3\022J\n\030external_v4_address_spec\030\n \001(\0132" +
+      "(.yandex.cloud.k8s.v1.ExternalAddressSpe" +
+      "c\022J\n\030external_v6_address_spec\030\013 \001(\0132(.ya" +
+      "ndex.cloud.k8s.v1.ExternalAddressSpec\022\017\n" +
+      "\007version\030\003 \001(\t\022H\n\022maintenance_policy\030\004 \001" +
+      "(\0132,.yandex.cloud.k8s.v1.MasterMaintenan" +
+      "cePolicy\022\032\n\022security_group_ids\030\006 \003(\t\022:\n\016" +
+      "master_logging\030\007 \001(\0132\".yandex.cloud.k8s." +
+      "v1.MasterLoggingB\r\n\013master_typeJ\004\010\005\020\006\"\300\001" +
+      "\n\017ZonalMasterSpec\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001" +
+      "\022J\n\030internal_v4_address_spec\030\002 \001(\0132(.yan" +
+      "dex.cloud.k8s.v1.InternalAddressSpec\022J\n\030" +
+      "external_v4_address_spec\030\003 \001(\0132(.yandex." +
+      "cloud.k8s.v1.ExternalAddressSpec\"\375\001\n\022Reg" +
+      "ionalMasterSpec\022\027\n\tregion_id\030\001 \001(\tB\004\350\3071\001" +
+      "\0226\n\tlocations\030\002 \003(\0132#.yandex.cloud.k8s.v" +
+      "1.MasterLocation\022J\n\030external_v4_address_" +
+      "spec\030\003 \001(\0132(.yandex.cloud.k8s.v1.Externa" +
+      "lAddressSpec\022J\n\030external_v6_address_spec" +
+      "\030\004 \001(\0132(.yandex.cloud.k8s.v1.ExternalAdd" +
+      "ressSpec\"(\n\023InternalAddressSpec\022\021\n\tsubne" +
+      "t_id\030\002 \001(\t\"&\n\023ExternalAddressSpec\022\017\n\007add" +
+      "ress\030\001 \001(\t\"s\n\016MasterLocation\022\025\n\007zone_id\030" +
+      "\001 \001(\tB\004\350\3071\001\022J\n\030internal_v4_address_spec\030" +
+      "\002 \001(\0132(.yandex.cloud.k8s.v1.InternalAddr" +
+      "essSpec\"8\n\014LocationSpec\022\025\n\007zone_id\030\001 \001(\t" +
+      "B\004\350\3071\001\022\021\n\tsubnet_id\030\002 \001(\t\"q\n\034RescheduleM" +
+      "aintenanceRequest\022\030\n\ncluster_id\030\001 \001(\tB\004\350" +
+      "\3071\001\0227\n\rdelayed_until\030\002 \001(\0132\032.google.prot" +
+      "obuf.TimestampB\004\350\3071\001\"3\n\035RescheduleMainte" +
+      "nanceMetadata\022\022\n\ncluster_id\030\001 \001(\t2\301\017\n\016Cl" +
+      "usterService\022\201\001\n\003Get\022&.yandex.cloud.k8s." +
+      "v1.GetClusterRequest\032\034.yandex.cloud.k8s." +
+      "v1.Cluster\"4\202\323\344\223\002.\022,/managed-kubernetes/" +
+      "v1/clusters/{cluster_id}\022\204\001\n\004List\022(.yand" +
+      "ex.cloud.k8s.v1.ListClustersRequest\032).ya" +
+      "ndex.cloud.k8s.v1.ListClustersResponse\"\'" +
+      "\202\323\344\223\002!\022\037/managed-kubernetes/v1/clusters\022" +
+      "\246\001\n\006Create\022).yandex.cloud.k8s.v1.CreateC" +
+      "lusterRequest\032!.yandex.cloud.operation.O" +
+      "peration\"N\202\323\344\223\002$\"\037/managed-kubernetes/v1" +
+      "/clusters:\001*\262\322* \n\025CreateClusterMetadata\022" +
+      "\007Cluster\022\263\001\n\006Update\022).yandex.cloud.k8s.v" +
+      "1.UpdateClusterRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"[\202\323\344\223\00212,/managed-kube" +
+      "rnetes/v1/clusters/{cluster_id}:\001*\262\322* \n\025" +
+      "UpdateClusterMetadata\022\007Cluster\022\276\001\n\006Delet" +
+      "e\022).yandex.cloud.k8s.v1.DeleteClusterReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "f\202\323\344\223\002.*,/managed-kubernetes/v1/clusters" +
+      "/{cluster_id}\262\322*.\n\025DeleteClusterMetadata" +
+      "\022\025google.protobuf.Empty\022\262\001\n\004Stop\022\'.yande" +
+      "x.cloud.k8s.v1.StopClusterRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"^\202\323\344\223\0026\"1/m" +
+      "anaged-kubernetes/v1/clusters/{cluster_i" +
+      "d}:stop:\001*\262\322*\036\n\023StopClusterMetadata\022\007Clu" +
+      "ster\022\266\001\n\005Start\022(.yandex.cloud.k8s.v1.Sta" +
+      "rtClusterRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"`\202\323\344\223\0027\"2/managed-kubernetes" +
+      "/v1/clusters/{cluster_id}:start:\001*\262\322*\037\n\024" +
+      "StartClusterMetadata\022\007Cluster\022\370\001\n\025Resche" +
+      "duleMaintenance\0221.yandex.cloud.k8s.v1.Re" +
+      "scheduleMaintenanceRequest\032!.yandex.clou" +
+      "d.operation.Operation\"\210\001\202\323\344\223\002H\"C/managed" +
+      "-kubernetes/v1/clusters/{cluster_id}:res" +
+      "chedule-maintenance:\001*\262\322*6\n\035RescheduleMa" +
+      "intenanceMetadata\022\025google.protobuf.Empty" +
+      "\022\270\001\n\016ListNodeGroups\0221.yandex.cloud.k8s.v" +
+      "1.ListClusterNodeGroupsRequest\0322.yandex." +
+      "cloud.k8s.v1.ListClusterNodeGroupsRespon" +
+      "se\"?\202\323\344\223\0029\0227/managed-kubernetes/v1/clust" +
+      "ers/{cluster_id}/nodeGroups\022\270\001\n\016ListOper" +
+      "ations\0221.yandex.cloud.k8s.v1.ListCluster" +
+      "OperationsRequest\0322.yandex.cloud.k8s.v1." +
+      "ListClusterOperationsResponse\"?\202\323\344\223\0029\0227/" +
       "managed-kubernetes/v1/clusters/{cluster_" +
-      "id}/nodesBV\n\027yandex.cloud.api.k8s.v1Z;gi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/k8s/v1;k8sb\006proto3"
+      "id}/operations\022\244\001\n\tListNodes\022,.yandex.cl" +
+      "oud.k8s.v1.ListClusterNodesRequest\032-.yan" +
+      "dex.cloud.k8s.v1.ListClusterNodesRespons" +
+      "e\":\202\323\344\223\0024\0222/managed-kubernetes/v1/cluste" +
+      "rs/{cluster_id}/nodesBV\n\027yandex.cloud.ap" +
+      "i.k8s.v1Z;github.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/k8s/v1;k8sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
@@ -33294,6 +34751,18 @@ public final class ClusterServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_LocationSpec_descriptor,
         new java.lang.String[] { "ZoneId", "SubnetId", });
+    internal_static_yandex_cloud_k8s_v1_RescheduleMaintenanceRequest_descriptor =
+      getDescriptor().getMessageTypes().get(28);
+    internal_static_yandex_cloud_k8s_v1_RescheduleMaintenanceRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_k8s_v1_RescheduleMaintenanceRequest_descriptor,
+        new java.lang.String[] { "ClusterId", "DelayedUntil", });
+    internal_static_yandex_cloud_k8s_v1_RescheduleMaintenanceMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(29);
+    internal_static_yandex_cloud_k8s_v1_RescheduleMaintenanceMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_k8s_v1_RescheduleMaintenanceMetadata_descriptor,
+        new java.lang.String[] { "ClusterId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -33306,6 +34775,7 @@ public final class ClusterServiceOuterClass {
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.protobuf.TimestampProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();

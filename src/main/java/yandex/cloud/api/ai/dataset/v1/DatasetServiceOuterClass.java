@@ -1946,6 +1946,16 @@ public final class DatasetServiceOuterClass {
      * @return The processedRows.
      */
     long getProcessedRows();
+
+    /**
+     * <pre>
+     * Total count of rows in the dataset
+     * </pre>
+     *
+     * <code>int64 total_rows = 4;</code>
+     * @return The totalRows.
+     */
+    long getTotalRows();
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.dataset.v1.ValidateDatasetMetadata}
@@ -2007,6 +2017,11 @@ public final class DatasetServiceOuterClass {
             case 24: {
 
               processedRows_ = input.readInt64();
+              break;
+            }
+            case 32: {
+
+              totalRows_ = input.readInt64();
               break;
             }
             default: {
@@ -2117,6 +2132,21 @@ public final class DatasetServiceOuterClass {
       return processedRows_;
     }
 
+    public static final int TOTAL_ROWS_FIELD_NUMBER = 4;
+    private long totalRows_;
+    /**
+     * <pre>
+     * Total count of rows in the dataset
+     * </pre>
+     *
+     * <code>int64 total_rows = 4;</code>
+     * @return The totalRows.
+     */
+    @java.lang.Override
+    public long getTotalRows() {
+      return totalRows_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2140,6 +2170,9 @@ public final class DatasetServiceOuterClass {
       if (processedRows_ != 0L) {
         output.writeInt64(3, processedRows_);
       }
+      if (totalRows_ != 0L) {
+        output.writeInt64(4, totalRows_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2159,6 +2192,10 @@ public final class DatasetServiceOuterClass {
       if (processedRows_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, processedRows_);
+      }
+      if (totalRows_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, totalRows_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2181,6 +2218,8 @@ public final class DatasetServiceOuterClass {
           != other.getValidRows()) return false;
       if (getProcessedRows()
           != other.getProcessedRows()) return false;
+      if (getTotalRows()
+          != other.getTotalRows()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2200,6 +2239,9 @@ public final class DatasetServiceOuterClass {
       hash = (37 * hash) + PROCESSED_ROWS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getProcessedRows());
+      hash = (37 * hash) + TOTAL_ROWS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotalRows());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2339,6 +2381,8 @@ public final class DatasetServiceOuterClass {
 
         processedRows_ = 0L;
 
+        totalRows_ = 0L;
+
         return this;
       }
 
@@ -2368,6 +2412,7 @@ public final class DatasetServiceOuterClass {
         result.datasetId_ = datasetId_;
         result.validRows_ = validRows_;
         result.processedRows_ = processedRows_;
+        result.totalRows_ = totalRows_;
         onBuilt();
         return result;
       }
@@ -2425,6 +2470,9 @@ public final class DatasetServiceOuterClass {
         }
         if (other.getProcessedRows() != 0L) {
           setProcessedRows(other.getProcessedRows());
+        }
+        if (other.getTotalRows() != 0L) {
+          setTotalRows(other.getTotalRows());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2633,6 +2681,49 @@ public final class DatasetServiceOuterClass {
       public Builder clearProcessedRows() {
         
         processedRows_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long totalRows_ ;
+      /**
+       * <pre>
+       * Total count of rows in the dataset
+       * </pre>
+       *
+       * <code>int64 total_rows = 4;</code>
+       * @return The totalRows.
+       */
+      @java.lang.Override
+      public long getTotalRows() {
+        return totalRows_;
+      }
+      /**
+       * <pre>
+       * Total count of rows in the dataset
+       * </pre>
+       *
+       * <code>int64 total_rows = 4;</code>
+       * @param value The totalRows to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalRows(long value) {
+        
+        totalRows_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Total count of rows in the dataset
+       * </pre>
+       *
+       * <code>int64 total_rows = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalRows() {
+        
+        totalRows_ = 0L;
         onChanged();
         return this;
       }
@@ -26794,129 +26885,130 @@ public final class DatasetServiceOuterClass {
       "ibeDatasetResponse\0228\n\007dataset\030\001 \001(\0132\'.ya" +
       "ndex.cloud.ai.dataset.v1.DatasetInfo\"2\n\026" +
       "ValidateDatasetRequest\022\030\n\ndataset_id\030\001 \001" +
-      "(\tB\004\350\3071\001\"Y\n\027ValidateDatasetMetadata\022\022\n\nd" +
+      "(\tB\004\350\3071\001\"m\n\027ValidateDatasetMetadata\022\022\n\nd" +
       "ataset_id\030\001 \001(\t\022\022\n\nvalid_rows\030\002 \001(\003\022\026\n\016p" +
-      "rocessed_rows\030\003 \001(\003\"|\n\027ValidateDatasetRe" +
-      "sponse\022\022\n\ndataset_id\030\001 \001(\t\022\020\n\010is_valid\030\002" +
-      " \001(\010\022;\n\006errors\030\003 \003(\0132+.yandex.cloud.ai.d" +
-      "ataset.v1.ValidationError\"0\n\024DeleteDatas" +
-      "etRequest\022\030\n\ndataset_id\030\001 \001(\tB\004\350\3071\001\"\027\n\025D" +
-      "eleteDatasetResponse\"\325\002\n\024CreateDatasetRe" +
-      "quest\022\032\n\004name\030\001 \001(\tB\014\350\3071\001\212\3101\004<=63\022\037\n\tfol" +
-      "der_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022\023\n\013descriptio" +
-      "n\030\003 \001(\t\022\020\n\010metadata\030\004 \001(\t\022\037\n\ttask_type\030\005" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022L\n\006labels\030\006 \003(\0132<.yan" +
-      "dex.cloud.ai.dataset.v1.CreateDatasetReq" +
-      "uest.LabelsEntry\022#\n\rupload_format\030\007 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022\026\n\016allow_data_log\030\010 \001(\010\032-\n" +
-      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\"e\n\025CreateDatasetResponse\022\022\n\ndataset" +
-      "_id\030\001 \001(\t\0228\n\007dataset\030\002 \001(\0132\'.yandex.clou" +
-      "d.ai.dataset.v1.DatasetInfo\"\201\002\n\024UpdateDa" +
-      "tasetRequest\022\030\n\ndataset_id\030\001 \001(\tB\004\350\3071\001\022/" +
-      "\n\013update_mask\030\002 \001(\0132\032.google.protobuf.Fi" +
-      "eldMask\022\014\n\004name\030\003 \001(\t\022\023\n\013description\030\004 \001" +
-      "(\t\022L\n\006labels\030\005 \003(\0132<.yandex.cloud.ai.dat" +
-      "aset.v1.UpdateDatasetRequest.LabelsEntry" +
-      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001\"Q\n\025UpdateDatasetResponse\0228\n\007data" +
-      "set\030\001 \001(\0132\'.yandex.cloud.ai.dataset.v1.D" +
-      "atasetInfo\"P\n\030GetUploadDraftUrlRequest\022\030" +
-      "\n\ndataset_id\030\001 \001(\tB\004\350\3071\001\022\032\n\nsize_bytes\030\002" +
-      " \001(\003B\006\372\3071\002>0\"C\n\031GetUploadDraftUrlRespons" +
-      "e\022\022\n\ndataset_id\030\001 \001(\t\022\022\n\nupload_url\030\002 \001(" +
-      "\t\"g\n StartMultipartUploadDraftRequest\022\030\n" +
-      "\ndataset_id\030\001 \001(\tB\004\350\3071\001\022\032\n\nsize_bytes\030\002 " +
-      "\001(\003B\006\372\3071\002>0\022\r\n\005parts\030\003 \001(\003\"V\n!StartMulti" +
-      "partUploadDraftResponse\022\022\n\ndataset_id\030\001 " +
-      "\001(\t\022\035\n\025multipart_upload_urls\030\002 \003(\t\"E\n\020Up" +
-      "loadedPartInfo\022\035\n\010part_num\030\001 \001(\003B\013\372\3071\0071-" +
-      "10000\022\022\n\004etag\030\002 \001(\tB\004\350\3071\001\"\203\001\n!FinishMult" +
-      "ipartUploadDraftRequest\022\030\n\ndataset_id\030\001 " +
-      "\001(\tB\004\350\3071\001\022D\n\016uploaded_parts\030\002 \003(\0132,.yand" +
-      "ex.cloud.ai.dataset.v1.UploadedPartInfo\"" +
-      "8\n\"FinishMultipartUploadDraftResponse\022\022\n" +
-      "\ndataset_id\030\001 \001(\t\"\315\001\n\023ListDatasetsReques" +
-      "t\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\022>\n\006status\030\002 \001" +
-      "(\0162..yandex.cloud.ai.dataset.v1.DatasetI" +
-      "nfo.Status\022\034\n\024dataset_name_pattern\030\003 \001(\t" +
-      "\022\030\n\020task_type_filter\030\004 \001(\t\022\021\n\tpage_size\030" +
-      "\005 \001(\003\022\022\n\npage_token\030\006 \001(\t\"j\n\024ListDataset" +
-      "sResponse\0229\n\010datasets\030\001 \003(\0132\'.yandex.clo" +
-      "ud.ai.dataset.v1.DatasetInfo\022\027\n\017next_pag" +
-      "e_token\030\002 \001(\t\"3\n\030ListUploadFormatsReques" +
-      "t\022\027\n\ttask_type\030\001 \001(\tB\004\350\3071\001\",\n\031ListUpload" +
-      "FormatsResponse\022\017\n\007formats\030\001 \003(\t\"3\n\030List" +
-      "UploadSchemasRequest\022\027\n\ttask_type\030\001 \001(\tB" +
-      "\004\350\3071\001\"]\n\031ListUploadSchemasResponse\022@\n\007sc" +
-      "hemas\030\001 \003(\0132/.yandex.cloud.ai.dataset.v1" +
-      ".DatasetUploadSchema\"\022\n\020ListTypesRequest" +
-      "\"\"\n\021ListTypesResponse\022\r\n\005types\030\001 \003(\t\"4\n\030" +
-      "GetDatasetPreviewRequest\022\030\n\ndataset_id\030\001" +
-      " \001(\tB\004\350\3071\001\"F\n\031GetDatasetPreviewResponse\022" +
-      "\022\n\ndataset_id\030\001 \001(\t\022\025\n\rpreview_lines\030\002 \003" +
-      "(\t\"2\n\026GetDownloadUrlsRequest\022\030\n\ndataset_" +
-      "id\030\001 \001(\tB\004\350\3071\001\"x\n\027GetDownloadUrlsRespons" +
-      "e\022\022\n\ndataset_id\030\001 \001(\t\022I\n\rdownload_urls\030\002" +
-      " \003(\01322.yandex.cloud.ai.dataset.v1.Datase" +
-      "tFileDownloadUrl\".\n\030ListOperationsIdsReq" +
-      "uest\022\022\n\ndataset_id\030\001 \003(\t\"\321\001\n\031ListOperati" +
-      "onsIdsResponse\022u\n\032dataset_id_to_operatio" +
-      "n_id\030\001 \003(\0132Q.yandex.cloud.ai.dataset.v1." +
-      "ListOperationsIdsResponse.DatasetIdToOpe" +
-      "rationIdEntry\032=\n\033DatasetIdToOperationIdE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\0012\204\017\n" +
-      "\016DatasetService\022s\n\010Describe\0222.yandex.clo" +
-      "ud.ai.dataset.v1.DescribeDatasetRequest\032" +
-      "3.yandex.cloud.ai.dataset.v1.DescribeDat" +
-      "asetResponse\022\231\001\n\010Validate\0222.yandex.cloud" +
-      ".ai.dataset.v1.ValidateDatasetRequest\032!." +
-      "yandex.cloud.operation.Operation\"6\262\322*2\n\027" +
-      "ValidateDatasetMetadata\022\027ValidateDataset" +
-      "Response\022m\n\006Create\0220.yandex.cloud.ai.dat" +
-      "aset.v1.CreateDatasetRequest\0321.yandex.cl" +
-      "oud.ai.dataset.v1.CreateDatasetResponse\022" +
-      "m\n\006Update\0220.yandex.cloud.ai.dataset.v1.U" +
-      "pdateDatasetRequest\0321.yandex.cloud.ai.da" +
-      "taset.v1.UpdateDatasetResponse\022m\n\006Delete" +
-      "\0220.yandex.cloud.ai.dataset.v1.DeleteData" +
-      "setRequest\0321.yandex.cloud.ai.dataset.v1." +
-      "DeleteDatasetResponse\022i\n\004List\022/.yandex.c" +
-      "loud.ai.dataset.v1.ListDatasetsRequest\0320" +
-      ".yandex.cloud.ai.dataset.v1.ListDatasets" +
-      "Response\022\205\001\n\021ListUploadFormats\0224.yandex." +
-      "cloud.ai.dataset.v1.ListUploadFormatsReq" +
-      "uest\0325.yandex.cloud.ai.dataset.v1.ListUp" +
-      "loadFormatsResponse\"\003\210\002\001\022\200\001\n\021ListUploadS" +
-      "chemas\0224.yandex.cloud.ai.dataset.v1.List" +
-      "UploadSchemasRequest\0325.yandex.cloud.ai.d" +
-      "ataset.v1.ListUploadSchemasResponse\022\200\001\n\021" +
-      "GetUploadDraftUrl\0224.yandex.cloud.ai.data" +
-      "set.v1.GetUploadDraftUrlRequest\0325.yandex" +
-      ".cloud.ai.dataset.v1.GetUploadDraftUrlRe" +
-      "sponse\022z\n\017GetDownloadUrls\0222.yandex.cloud" +
-      ".ai.dataset.v1.GetDownloadUrlsRequest\0323." +
-      "yandex.cloud.ai.dataset.v1.GetDownloadUr" +
-      "lsResponse\022\230\001\n\031StartMultipartUploadDraft" +
-      "\022<.yandex.cloud.ai.dataset.v1.StartMulti" +
-      "partUploadDraftRequest\032=.yandex.cloud.ai" +
-      ".dataset.v1.StartMultipartUploadDraftRes" +
-      "ponse\022\233\001\n\032FinishMultipartUploadDraft\022=.y" +
-      "andex.cloud.ai.dataset.v1.FinishMultipar" +
-      "tUploadDraftRequest\032>.yandex.cloud.ai.da" +
-      "taset.v1.FinishMultipartUploadDraftRespo" +
-      "nse\022h\n\tListTypes\022,.yandex.cloud.ai.datas" +
-      "et.v1.ListTypesRequest\032-.yandex.cloud.ai" +
-      ".dataset.v1.ListTypesResponse\022y\n\nGetPrev" +
-      "iew\0224.yandex.cloud.ai.dataset.v1.GetData" +
-      "setPreviewRequest\0325.yandex.cloud.ai.data" +
-      "set.v1.GetDatasetPreviewResponse\022\200\001\n\021Lis" +
-      "tOperationsIds\0224.yandex.cloud.ai.dataset" +
-      ".v1.ListOperationsIdsRequest\0325.yandex.cl" +
-      "oud.ai.dataset.v1.ListOperationsIdsRespo" +
-      "nseBe\n\036yandex.cloud.api.ai.dataset.v1ZCg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/ai/dataset/v1;fomob\006proto3"
+      "rocessed_rows\030\003 \001(\003\022\022\n\ntotal_rows\030\004 \001(\003\"" +
+      "|\n\027ValidateDatasetResponse\022\022\n\ndataset_id" +
+      "\030\001 \001(\t\022\020\n\010is_valid\030\002 \001(\010\022;\n\006errors\030\003 \003(\013" +
+      "2+.yandex.cloud.ai.dataset.v1.Validation" +
+      "Error\"0\n\024DeleteDatasetRequest\022\030\n\ndataset" +
+      "_id\030\001 \001(\tB\004\350\3071\001\"\027\n\025DeleteDatasetResponse" +
+      "\"\325\002\n\024CreateDatasetRequest\022\032\n\004name\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=63\022\037\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022\023\n\013description\030\003 \001(\t\022\020\n\010metadata\030" +
+      "\004 \001(\t\022\037\n\ttask_type\030\005 \001(\tB\014\350\3071\001\212\3101\004<=50\022L" +
+      "\n\006labels\030\006 \003(\0132<.yandex.cloud.ai.dataset" +
+      ".v1.CreateDatasetRequest.LabelsEntry\022#\n\r" +
+      "upload_format\030\007 \001(\tB\014\350\3071\001\212\3101\004<=50\022\026\n\016all" +
+      "ow_data_log\030\010 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"e\n\025CreateDatase" +
+      "tResponse\022\022\n\ndataset_id\030\001 \001(\t\0228\n\007dataset" +
+      "\030\002 \001(\0132\'.yandex.cloud.ai.dataset.v1.Data" +
+      "setInfo\"\201\002\n\024UpdateDatasetRequest\022\030\n\ndata" +
+      "set_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132" +
+      "\032.google.protobuf.FieldMask\022\014\n\004name\030\003 \001(" +
+      "\t\022\023\n\013description\030\004 \001(\t\022L\n\006labels\030\005 \003(\0132<" +
+      ".yandex.cloud.ai.dataset.v1.UpdateDatase" +
+      "tRequest.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"Q\n\025UpdateDat" +
+      "asetResponse\0228\n\007dataset\030\001 \001(\0132\'.yandex.c" +
+      "loud.ai.dataset.v1.DatasetInfo\"P\n\030GetUpl" +
+      "oadDraftUrlRequest\022\030\n\ndataset_id\030\001 \001(\tB\004" +
+      "\350\3071\001\022\032\n\nsize_bytes\030\002 \001(\003B\006\372\3071\002>0\"C\n\031GetU" +
+      "ploadDraftUrlResponse\022\022\n\ndataset_id\030\001 \001(" +
+      "\t\022\022\n\nupload_url\030\002 \001(\t\"g\n StartMultipartU" +
+      "ploadDraftRequest\022\030\n\ndataset_id\030\001 \001(\tB\004\350" +
+      "\3071\001\022\032\n\nsize_bytes\030\002 \001(\003B\006\372\3071\002>0\022\r\n\005parts" +
+      "\030\003 \001(\003\"V\n!StartMultipartUploadDraftRespo" +
+      "nse\022\022\n\ndataset_id\030\001 \001(\t\022\035\n\025multipart_upl" +
+      "oad_urls\030\002 \003(\t\"E\n\020UploadedPartInfo\022\035\n\010pa" +
+      "rt_num\030\001 \001(\003B\013\372\3071\0071-10000\022\022\n\004etag\030\002 \001(\tB" +
+      "\004\350\3071\001\"\203\001\n!FinishMultipartUploadDraftRequ" +
+      "est\022\030\n\ndataset_id\030\001 \001(\tB\004\350\3071\001\022D\n\016uploade" +
+      "d_parts\030\002 \003(\0132,.yandex.cloud.ai.dataset." +
+      "v1.UploadedPartInfo\"8\n\"FinishMultipartUp" +
+      "loadDraftResponse\022\022\n\ndataset_id\030\001 \001(\t\"\315\001" +
+      "\n\023ListDatasetsRequest\022\027\n\tfolder_id\030\001 \001(\t" +
+      "B\004\350\3071\001\022>\n\006status\030\002 \001(\0162..yandex.cloud.ai" +
+      ".dataset.v1.DatasetInfo.Status\022\034\n\024datase" +
+      "t_name_pattern\030\003 \001(\t\022\030\n\020task_type_filter" +
+      "\030\004 \001(\t\022\021\n\tpage_size\030\005 \001(\003\022\022\n\npage_token\030" +
+      "\006 \001(\t\"j\n\024ListDatasetsResponse\0229\n\010dataset" +
+      "s\030\001 \003(\0132\'.yandex.cloud.ai.dataset.v1.Dat" +
+      "asetInfo\022\027\n\017next_page_token\030\002 \001(\t\"3\n\030Lis" +
+      "tUploadFormatsRequest\022\027\n\ttask_type\030\001 \001(\t" +
+      "B\004\350\3071\001\",\n\031ListUploadFormatsResponse\022\017\n\007f" +
+      "ormats\030\001 \003(\t\"3\n\030ListUploadSchemasRequest" +
+      "\022\027\n\ttask_type\030\001 \001(\tB\004\350\3071\001\"]\n\031ListUploadS" +
+      "chemasResponse\022@\n\007schemas\030\001 \003(\0132/.yandex" +
+      ".cloud.ai.dataset.v1.DatasetUploadSchema" +
+      "\"\022\n\020ListTypesRequest\"\"\n\021ListTypesRespons" +
+      "e\022\r\n\005types\030\001 \003(\t\"4\n\030GetDatasetPreviewReq" +
+      "uest\022\030\n\ndataset_id\030\001 \001(\tB\004\350\3071\001\"F\n\031GetDat" +
+      "asetPreviewResponse\022\022\n\ndataset_id\030\001 \001(\t\022" +
+      "\025\n\rpreview_lines\030\002 \003(\t\"2\n\026GetDownloadUrl" +
+      "sRequest\022\030\n\ndataset_id\030\001 \001(\tB\004\350\3071\001\"x\n\027Ge" +
+      "tDownloadUrlsResponse\022\022\n\ndataset_id\030\001 \001(" +
+      "\t\022I\n\rdownload_urls\030\002 \003(\01322.yandex.cloud." +
+      "ai.dataset.v1.DatasetFileDownloadUrl\".\n\030" +
+      "ListOperationsIdsRequest\022\022\n\ndataset_id\030\001" +
+      " \003(\t\"\321\001\n\031ListOperationsIdsResponse\022u\n\032da" +
+      "taset_id_to_operation_id\030\001 \003(\0132Q.yandex." +
+      "cloud.ai.dataset.v1.ListOperationsIdsRes" +
+      "ponse.DatasetIdToOperationIdEntry\032=\n\033Dat" +
+      "asetIdToOperationIdEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\0012\204\017\n\016DatasetService\022s\n\010D" +
+      "escribe\0222.yandex.cloud.ai.dataset.v1.Des" +
+      "cribeDatasetRequest\0323.yandex.cloud.ai.da" +
+      "taset.v1.DescribeDatasetResponse\022\231\001\n\010Val" +
+      "idate\0222.yandex.cloud.ai.dataset.v1.Valid" +
+      "ateDatasetRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"6\262\322*2\n\027ValidateDatasetMetad" +
+      "ata\022\027ValidateDatasetResponse\022m\n\006Create\0220" +
+      ".yandex.cloud.ai.dataset.v1.CreateDatase" +
+      "tRequest\0321.yandex.cloud.ai.dataset.v1.Cr" +
+      "eateDatasetResponse\022m\n\006Update\0220.yandex.c" +
+      "loud.ai.dataset.v1.UpdateDatasetRequest\032" +
+      "1.yandex.cloud.ai.dataset.v1.UpdateDatas" +
+      "etResponse\022m\n\006Delete\0220.yandex.cloud.ai.d" +
+      "ataset.v1.DeleteDatasetRequest\0321.yandex." +
+      "cloud.ai.dataset.v1.DeleteDatasetRespons" +
+      "e\022i\n\004List\022/.yandex.cloud.ai.dataset.v1.L" +
+      "istDatasetsRequest\0320.yandex.cloud.ai.dat" +
+      "aset.v1.ListDatasetsResponse\022\205\001\n\021ListUpl" +
+      "oadFormats\0224.yandex.cloud.ai.dataset.v1." +
+      "ListUploadFormatsRequest\0325.yandex.cloud." +
+      "ai.dataset.v1.ListUploadFormatsResponse\"" +
+      "\003\210\002\001\022\200\001\n\021ListUploadSchemas\0224.yandex.clou" +
+      "d.ai.dataset.v1.ListUploadSchemasRequest" +
+      "\0325.yandex.cloud.ai.dataset.v1.ListUpload" +
+      "SchemasResponse\022\200\001\n\021GetUploadDraftUrl\0224." +
+      "yandex.cloud.ai.dataset.v1.GetUploadDraf" +
+      "tUrlRequest\0325.yandex.cloud.ai.dataset.v1" +
+      ".GetUploadDraftUrlResponse\022z\n\017GetDownloa" +
+      "dUrls\0222.yandex.cloud.ai.dataset.v1.GetDo" +
+      "wnloadUrlsRequest\0323.yandex.cloud.ai.data" +
+      "set.v1.GetDownloadUrlsResponse\022\230\001\n\031Start" +
+      "MultipartUploadDraft\022<.yandex.cloud.ai.d" +
+      "ataset.v1.StartMultipartUploadDraftReque" +
+      "st\032=.yandex.cloud.ai.dataset.v1.StartMul" +
+      "tipartUploadDraftResponse\022\233\001\n\032FinishMult" +
+      "ipartUploadDraft\022=.yandex.cloud.ai.datas" +
+      "et.v1.FinishMultipartUploadDraftRequest\032" +
+      ">.yandex.cloud.ai.dataset.v1.FinishMulti" +
+      "partUploadDraftResponse\022h\n\tListTypes\022,.y" +
+      "andex.cloud.ai.dataset.v1.ListTypesReque" +
+      "st\032-.yandex.cloud.ai.dataset.v1.ListType" +
+      "sResponse\022y\n\nGetPreview\0224.yandex.cloud.a" +
+      "i.dataset.v1.GetDatasetPreviewRequest\0325." +
+      "yandex.cloud.ai.dataset.v1.GetDatasetPre" +
+      "viewResponse\022\200\001\n\021ListOperationsIds\0224.yan" +
+      "dex.cloud.ai.dataset.v1.ListOperationsId" +
+      "sRequest\0325.yandex.cloud.ai.dataset.v1.Li" +
+      "stOperationsIdsResponseBe\n\036yandex.cloud." +
+      "api.ai.dataset.v1ZCgithub.com/yandex-clo" +
+      "ud/go-genproto/yandex/cloud/ai/dataset/v" +
+      "1;fomob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -26950,7 +27042,7 @@ public final class DatasetServiceOuterClass {
     internal_static_yandex_cloud_ai_dataset_v1_ValidateDatasetMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_dataset_v1_ValidateDatasetMetadata_descriptor,
-        new java.lang.String[] { "DatasetId", "ValidRows", "ProcessedRows", });
+        new java.lang.String[] { "DatasetId", "ValidRows", "ProcessedRows", "TotalRows", });
     internal_static_yandex_cloud_ai_dataset_v1_ValidateDatasetResponse_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_ai_dataset_v1_ValidateDatasetResponse_fieldAccessorTable = new

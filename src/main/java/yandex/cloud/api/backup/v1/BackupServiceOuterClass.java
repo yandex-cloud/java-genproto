@@ -17353,6 +17353,1968 @@ public final class BackupServiceOuterClass {
 
   }
 
+  public interface DeleteArchiveRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.backup.v1.DeleteArchiveRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Archive ID that should be deleted.
+     * </pre>
+     *
+     * <code>string archive_id = 1 [(.yandex.cloud.required) = false];</code>
+     * @return The archiveId.
+     */
+    java.lang.String getArchiveId();
+    /**
+     * <pre>
+     * Archive ID that should be deleted.
+     * </pre>
+     *
+     * <code>string archive_id = 1 [(.yandex.cloud.required) = false];</code>
+     * @return The bytes for archiveId.
+     */
+    com.google.protobuf.ByteString
+        getArchiveIdBytes();
+
+    /**
+     * <pre>
+     * Folder ID of the archive to delete.
+     * </pre>
+     *
+     * <code>string folder_id = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * Folder ID of the archive to delete.
+     * </pre>
+     *
+     * <code>string folder_id = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
+
+    /**
+     * <pre>
+     * Instance ID of the Archive.
+     * </pre>
+     *
+     * <code>string instance_id = 3 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The instanceId.
+     */
+    java.lang.String getInstanceId();
+    /**
+     * <pre>
+     * Instance ID of the Archive.
+     * </pre>
+     *
+     * <code>string instance_id = 3 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for instanceId.
+     */
+    com.google.protobuf.ByteString
+        getInstanceIdBytes();
+
+    /**
+     * <pre>
+     * Policy ID of the Archive.
+     * </pre>
+     *
+     * <code>string policy_id = 4 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The policyId.
+     */
+    java.lang.String getPolicyId();
+    /**
+     * <pre>
+     * Policy ID of the Archive.
+     * </pre>
+     *
+     * <code>string policy_id = 4 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for policyId.
+     */
+    com.google.protobuf.ByteString
+        getPolicyIdBytes();
+  }
+  /**
+   * <pre>
+   * must be specified archive_id and folder/instance_id 
+   * or pair of policy id and instance_id
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.backup.v1.DeleteArchiveRequest}
+   */
+  public static final class DeleteArchiveRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.backup.v1.DeleteArchiveRequest)
+      DeleteArchiveRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteArchiveRequest.newBuilder() to construct.
+    private DeleteArchiveRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteArchiveRequest() {
+      archiveId_ = "";
+      folderId_ = "";
+      instanceId_ = "";
+      policyId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteArchiveRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteArchiveRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              archiveId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              folderId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceId_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              policyId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_DeleteArchiveRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_DeleteArchiveRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest.Builder.class);
+    }
+
+    public static final int ARCHIVE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object archiveId_;
+    /**
+     * <pre>
+     * Archive ID that should be deleted.
+     * </pre>
+     *
+     * <code>string archive_id = 1 [(.yandex.cloud.required) = false];</code>
+     * @return The archiveId.
+     */
+    @java.lang.Override
+    public java.lang.String getArchiveId() {
+      java.lang.Object ref = archiveId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        archiveId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Archive ID that should be deleted.
+     * </pre>
+     *
+     * <code>string archive_id = 1 [(.yandex.cloud.required) = false];</code>
+     * @return The bytes for archiveId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getArchiveIdBytes() {
+      java.lang.Object ref = archiveId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        archiveId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FOLDER_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object folderId_;
+    /**
+     * <pre>
+     * Folder ID of the archive to delete.
+     * </pre>
+     *
+     * <code>string folder_id = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
+     */
+    @java.lang.Override
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        folderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Folder ID of the archive to delete.
+     * </pre>
+     *
+     * <code>string folder_id = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        folderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INSTANCE_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object instanceId_;
+    /**
+     * <pre>
+     * Instance ID of the Archive.
+     * </pre>
+     *
+     * <code>string instance_id = 3 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The instanceId.
+     */
+    @java.lang.Override
+    public java.lang.String getInstanceId() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Instance ID of the Archive.
+     * </pre>
+     *
+     * <code>string instance_id = 3 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for instanceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInstanceIdBytes() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POLICY_ID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object policyId_;
+    /**
+     * <pre>
+     * Policy ID of the Archive.
+     * </pre>
+     *
+     * <code>string policy_id = 4 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The policyId.
+     */
+    @java.lang.Override
+    public java.lang.String getPolicyId() {
+      java.lang.Object ref = policyId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        policyId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Policy ID of the Archive.
+     * </pre>
+     *
+     * <code>string policy_id = 4 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for policyId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPolicyIdBytes() {
+      java.lang.Object ref = policyId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        policyId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(archiveId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, archiveId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, instanceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(policyId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, policyId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(archiveId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, archiveId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, instanceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(policyId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, policyId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest other = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest) obj;
+
+      if (!getArchiveId()
+          .equals(other.getArchiveId())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getInstanceId()
+          .equals(other.getInstanceId())) return false;
+      if (!getPolicyId()
+          .equals(other.getPolicyId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ARCHIVE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getArchiveId().hashCode();
+      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFolderId().hashCode();
+      hash = (37 * hash) + INSTANCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceId().hashCode();
+      hash = (37 * hash) + POLICY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPolicyId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * must be specified archive_id and folder/instance_id 
+     * or pair of policy id and instance_id
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.backup.v1.DeleteArchiveRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.backup.v1.DeleteArchiveRequest)
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_DeleteArchiveRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_DeleteArchiveRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        archiveId_ = "";
+
+        folderId_ = "";
+
+        instanceId_ = "";
+
+        policyId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_DeleteArchiveRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest build() {
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest buildPartial() {
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest result = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest(this);
+        result.archiveId_ = archiveId_;
+        result.folderId_ = folderId_;
+        result.instanceId_ = instanceId_;
+        result.policyId_ = policyId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest) {
+          return mergeFrom((yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest other) {
+        if (other == yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest.getDefaultInstance()) return this;
+        if (!other.getArchiveId().isEmpty()) {
+          archiveId_ = other.archiveId_;
+          onChanged();
+        }
+        if (!other.getFolderId().isEmpty()) {
+          folderId_ = other.folderId_;
+          onChanged();
+        }
+        if (!other.getInstanceId().isEmpty()) {
+          instanceId_ = other.instanceId_;
+          onChanged();
+        }
+        if (!other.getPolicyId().isEmpty()) {
+          policyId_ = other.policyId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object archiveId_ = "";
+      /**
+       * <pre>
+       * Archive ID that should be deleted.
+       * </pre>
+       *
+       * <code>string archive_id = 1 [(.yandex.cloud.required) = false];</code>
+       * @return The archiveId.
+       */
+      public java.lang.String getArchiveId() {
+        java.lang.Object ref = archiveId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          archiveId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Archive ID that should be deleted.
+       * </pre>
+       *
+       * <code>string archive_id = 1 [(.yandex.cloud.required) = false];</code>
+       * @return The bytes for archiveId.
+       */
+      public com.google.protobuf.ByteString
+          getArchiveIdBytes() {
+        java.lang.Object ref = archiveId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          archiveId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Archive ID that should be deleted.
+       * </pre>
+       *
+       * <code>string archive_id = 1 [(.yandex.cloud.required) = false];</code>
+       * @param value The archiveId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setArchiveId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        archiveId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Archive ID that should be deleted.
+       * </pre>
+       *
+       * <code>string archive_id = 1 [(.yandex.cloud.required) = false];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearArchiveId() {
+        
+        archiveId_ = getDefaultInstance().getArchiveId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Archive ID that should be deleted.
+       * </pre>
+       *
+       * <code>string archive_id = 1 [(.yandex.cloud.required) = false];</code>
+       * @param value The bytes for archiveId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setArchiveIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        archiveId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object folderId_ = "";
+      /**
+       * <pre>
+       * Folder ID of the archive to delete.
+       * </pre>
+       *
+       * <code>string folder_id = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
+       */
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Folder ID of the archive to delete.
+       * </pre>
+       *
+       * <code>string folder_id = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
+       */
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Folder ID of the archive to delete.
+       * </pre>
+       *
+       * <code>string folder_id = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Folder ID of the archive to delete.
+       * </pre>
+       *
+       * <code>string folder_id = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFolderId() {
+        
+        folderId_ = getDefaultInstance().getFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Folder ID of the archive to delete.
+       * </pre>
+       *
+       * <code>string folder_id = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object instanceId_ = "";
+      /**
+       * <pre>
+       * Instance ID of the Archive.
+       * </pre>
+       *
+       * <code>string instance_id = 3 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The instanceId.
+       */
+      public java.lang.String getInstanceId() {
+        java.lang.Object ref = instanceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Instance ID of the Archive.
+       * </pre>
+       *
+       * <code>string instance_id = 3 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for instanceId.
+       */
+      public com.google.protobuf.ByteString
+          getInstanceIdBytes() {
+        java.lang.Object ref = instanceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Instance ID of the Archive.
+       * </pre>
+       *
+       * <code>string instance_id = 3 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The instanceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Instance ID of the Archive.
+       * </pre>
+       *
+       * <code>string instance_id = 3 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInstanceId() {
+        
+        instanceId_ = getDefaultInstance().getInstanceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Instance ID of the Archive.
+       * </pre>
+       *
+       * <code>string instance_id = 3 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for instanceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object policyId_ = "";
+      /**
+       * <pre>
+       * Policy ID of the Archive.
+       * </pre>
+       *
+       * <code>string policy_id = 4 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The policyId.
+       */
+      public java.lang.String getPolicyId() {
+        java.lang.Object ref = policyId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          policyId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Policy ID of the Archive.
+       * </pre>
+       *
+       * <code>string policy_id = 4 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for policyId.
+       */
+      public com.google.protobuf.ByteString
+          getPolicyIdBytes() {
+        java.lang.Object ref = policyId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          policyId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Policy ID of the Archive.
+       * </pre>
+       *
+       * <code>string policy_id = 4 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The policyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPolicyId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        policyId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Policy ID of the Archive.
+       * </pre>
+       *
+       * <code>string policy_id = 4 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPolicyId() {
+        
+        policyId_ = getDefaultInstance().getPolicyId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Policy ID of the Archive.
+       * </pre>
+       *
+       * <code>string policy_id = 4 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for policyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPolicyIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        policyId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.backup.v1.DeleteArchiveRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.backup.v1.DeleteArchiveRequest)
+    private static final yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest();
+    }
+
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteArchiveRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteArchiveRequest>() {
+      @java.lang.Override
+      public DeleteArchiveRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteArchiveRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteArchiveRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteArchiveRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteArchiveMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.backup.v1.DeleteArchiveMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Archive ID that should be deleted.
+     * </pre>
+     *
+     * <code>string archive_id = 1;</code>
+     * @return The archiveId.
+     */
+    java.lang.String getArchiveId();
+    /**
+     * <pre>
+     * Archive ID that should be deleted.
+     * </pre>
+     *
+     * <code>string archive_id = 1;</code>
+     * @return The bytes for archiveId.
+     */
+    com.google.protobuf.ByteString
+        getArchiveIdBytes();
+
+    /**
+     * <pre>
+     * Folder ID of the archive.
+     * </pre>
+     *
+     * <code>string folder_id = 2;</code>
+     * @return The folderId.
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * Folder ID of the archive.
+     * </pre>
+     *
+     * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.backup.v1.DeleteArchiveMetadata}
+   */
+  public static final class DeleteArchiveMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.backup.v1.DeleteArchiveMetadata)
+      DeleteArchiveMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteArchiveMetadata.newBuilder() to construct.
+    private DeleteArchiveMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteArchiveMetadata() {
+      archiveId_ = "";
+      folderId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteArchiveMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteArchiveMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              archiveId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              folderId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_DeleteArchiveMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_DeleteArchiveMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata.Builder.class);
+    }
+
+    public static final int ARCHIVE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object archiveId_;
+    /**
+     * <pre>
+     * Archive ID that should be deleted.
+     * </pre>
+     *
+     * <code>string archive_id = 1;</code>
+     * @return The archiveId.
+     */
+    @java.lang.Override
+    public java.lang.String getArchiveId() {
+      java.lang.Object ref = archiveId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        archiveId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Archive ID that should be deleted.
+     * </pre>
+     *
+     * <code>string archive_id = 1;</code>
+     * @return The bytes for archiveId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getArchiveIdBytes() {
+      java.lang.Object ref = archiveId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        archiveId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FOLDER_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object folderId_;
+    /**
+     * <pre>
+     * Folder ID of the archive.
+     * </pre>
+     *
+     * <code>string folder_id = 2;</code>
+     * @return The folderId.
+     */
+    @java.lang.Override
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        folderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Folder ID of the archive.
+     * </pre>
+     *
+     * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        folderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(archiveId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, archiveId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(archiveId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, archiveId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata other = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata) obj;
+
+      if (!getArchiveId()
+          .equals(other.getArchiveId())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ARCHIVE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getArchiveId().hashCode();
+      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFolderId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.backup.v1.DeleteArchiveMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.backup.v1.DeleteArchiveMetadata)
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_DeleteArchiveMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_DeleteArchiveMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        archiveId_ = "";
+
+        folderId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_DeleteArchiveMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata build() {
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata buildPartial() {
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata result = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata(this);
+        result.archiveId_ = archiveId_;
+        result.folderId_ = folderId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata) {
+          return mergeFrom((yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata other) {
+        if (other == yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata.getDefaultInstance()) return this;
+        if (!other.getArchiveId().isEmpty()) {
+          archiveId_ = other.archiveId_;
+          onChanged();
+        }
+        if (!other.getFolderId().isEmpty()) {
+          folderId_ = other.folderId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object archiveId_ = "";
+      /**
+       * <pre>
+       * Archive ID that should be deleted.
+       * </pre>
+       *
+       * <code>string archive_id = 1;</code>
+       * @return The archiveId.
+       */
+      public java.lang.String getArchiveId() {
+        java.lang.Object ref = archiveId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          archiveId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Archive ID that should be deleted.
+       * </pre>
+       *
+       * <code>string archive_id = 1;</code>
+       * @return The bytes for archiveId.
+       */
+      public com.google.protobuf.ByteString
+          getArchiveIdBytes() {
+        java.lang.Object ref = archiveId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          archiveId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Archive ID that should be deleted.
+       * </pre>
+       *
+       * <code>string archive_id = 1;</code>
+       * @param value The archiveId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setArchiveId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        archiveId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Archive ID that should be deleted.
+       * </pre>
+       *
+       * <code>string archive_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearArchiveId() {
+        
+        archiveId_ = getDefaultInstance().getArchiveId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Archive ID that should be deleted.
+       * </pre>
+       *
+       * <code>string archive_id = 1;</code>
+       * @param value The bytes for archiveId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setArchiveIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        archiveId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object folderId_ = "";
+      /**
+       * <pre>
+       * Folder ID of the archive.
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       * @return The folderId.
+       */
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Folder ID of the archive.
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       * @return The bytes for folderId.
+       */
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Folder ID of the archive.
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Folder ID of the archive.
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFolderId() {
+        
+        folderId_ = getDefaultInstance().getFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Folder ID of the archive.
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.backup.v1.DeleteArchiveMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.backup.v1.DeleteArchiveMetadata)
+    private static final yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata();
+    }
+
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteArchiveMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteArchiveMetadata>() {
+      @java.lang.Override
+      public DeleteArchiveMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteArchiveMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteArchiveMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteArchiveMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.DeleteArchiveMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_backup_v1_ListArchivesRequest_descriptor;
   private static final 
@@ -17443,6 +19405,16 @@ public final class BackupServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_backup_v1_DeleteBackupMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_backup_v1_DeleteArchiveRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_backup_v1_DeleteArchiveRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_backup_v1_DeleteArchiveMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_backup_v1_DeleteArchiveMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -17512,38 +19484,47 @@ public final class BackupServiceOuterClass {
       "instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\027\n\tbacku" +
       "p_id\030\002 \001(\tB\004\350\3071\001\"F\n\024DeleteBackupMetadata" +
       "\022\033\n\023compute_instance_id\030\001 \001(\t\022\021\n\tbackup_" +
-      "id\030\002 \001(\t2\373\010\n\rBackupService\022{\n\004List\022*.yan" +
-      "dex.cloud.backup.v1.ListBackupsRequest\032+" +
-      ".yandex.cloud.backup.v1.ListBackupsRespo" +
-      "nse\"\032\202\323\344\223\002\024\022\022/backup/v1/backups\022\244\001\n\014List" +
-      "Archives\022+.yandex.cloud.backup.v1.ListAr" +
-      "chivesRequest\032,.yandex.cloud.backup.v1.L" +
-      "istArchivesResponse\"9\202\323\344\223\0023\0221/backup/v1/" +
-      "backups/{compute_instance_id}/archives\022\216" +
-      "\001\n\tListFiles\022(.yandex.cloud.backup.v1.Li" +
-      "stFilesRequest\032).yandex.cloud.backup.v1." +
-      "ListFilesResponse\",\202\323\344\223\002&\022$/backup/v1/ba" +
-      "ckups/{backup_id}/files\022w\n\003Get\022(.yandex." +
-      "cloud.backup.v1.GetBackupRequest\032\036.yande" +
-      "x.cloud.backup.v1.Backup\"&\202\323\344\223\002 \022\036/backu" +
-      "p/v1/backups/{backup_id}\022\313\001\n\rStartRecove" +
-      "ry\022,.yandex.cloud.backup.v1.StartRecover" +
-      "yRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"i\202\323\344\223\0021\",/backup/v1/backups/{backup_" +
-      "id}:startRecovery:\001*\262\322*.\n\025StartRecoveryM" +
-      "etadata\022\025google.protobuf.Empty\022\243\001\n\022Start" +
-      "FilesRecovery\0221.yandex.cloud.backup.v1.S" +
-      "tartFilesRecoveryRequest\032!.yandex.cloud." +
-      "operation.Operation\"7\262\322*3\n\032StartFilesRec" +
-      "overyMetadata\022\025google.protobuf.Empty\022\307\001\n" +
-      "\006Delete\022+.yandex.cloud.backup.v1.DeleteB" +
-      "ackupRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"m\202\323\344\223\0026*4/backup/v1/backups/{com" +
-      "pute_instance_id}/{backup_id}\262\322*-\n\024Delet" +
-      "eBackupMetadata\022\025google.protobuf.EmptyB_" +
-      "\n\032yandex.cloud.api.backup.v1ZAgithub.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/b" +
-      "ackup/v1;backupb\006proto3"
+      "id\030\002 \001(\t\"\225\001\n\024DeleteArchiveRequest\022\030\n\narc" +
+      "hive_id\030\001 \001(\tB\004\350\3071\000\022\037\n\tfolder_id\030\002 \001(\tB\014" +
+      "\350\3071\000\212\3101\004<=50\022!\n\013instance_id\030\003 \001(\tB\014\350\3071\000\212" +
+      "\3101\004<=50\022\037\n\tpolicy_id\030\004 \001(\tB\014\350\3071\000\212\3101\004<=50" +
+      "\">\n\025DeleteArchiveMetadata\022\022\n\narchive_id\030" +
+      "\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t2\222\n\n\rBackupServi" +
+      "ce\022{\n\004List\022*.yandex.cloud.backup.v1.List" +
+      "BackupsRequest\032+.yandex.cloud.backup.v1." +
+      "ListBackupsResponse\"\032\202\323\344\223\002\024\022\022/backup/v1/" +
+      "backups\022\244\001\n\014ListArchives\022+.yandex.cloud." +
+      "backup.v1.ListArchivesRequest\032,.yandex.c" +
+      "loud.backup.v1.ListArchivesResponse\"9\202\323\344" +
+      "\223\0023\0221/backup/v1/backups/{compute_instanc" +
+      "e_id}/archives\022\216\001\n\tListFiles\022(.yandex.cl" +
+      "oud.backup.v1.ListFilesRequest\032).yandex." +
+      "cloud.backup.v1.ListFilesResponse\",\202\323\344\223\002" +
+      "&\022$/backup/v1/backups/{backup_id}/files\022" +
+      "w\n\003Get\022(.yandex.cloud.backup.v1.GetBacku" +
+      "pRequest\032\036.yandex.cloud.backup.v1.Backup" +
+      "\"&\202\323\344\223\002 \022\036/backup/v1/backups/{backup_id}" +
+      "\022\313\001\n\rStartRecovery\022,.yandex.cloud.backup" +
+      ".v1.StartRecoveryRequest\032!.yandex.cloud." +
+      "operation.Operation\"i\202\323\344\223\0021\",/backup/v1/" +
+      "backups/{backup_id}:startRecovery:\001*\262\322*." +
+      "\n\025StartRecoveryMetadata\022\025google.protobuf" +
+      ".Empty\022\243\001\n\022StartFilesRecovery\0221.yandex.c" +
+      "loud.backup.v1.StartFilesRecoveryRequest" +
+      "\032!.yandex.cloud.operation.Operation\"7\262\322*" +
+      "3\n\032StartFilesRecoveryMetadata\022\025google.pr" +
+      "otobuf.Empty\022\307\001\n\006Delete\022+.yandex.cloud.b" +
+      "ackup.v1.DeleteBackupRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"m\202\323\344\223\0026*4/backup" +
+      "/v1/backups/{compute_instance_id}/{backu" +
+      "p_id}\262\322*-\n\024DeleteBackupMetadata\022\025google." +
+      "protobuf.Empty\022\224\001\n\rDeleteArchive\022,.yande" +
+      "x.cloud.backup.v1.DeleteArchiveRequest\032!" +
+      ".yandex.cloud.operation.Operation\"2\262\322*.\n" +
+      "\025DeleteArchiveMetadata\022\025google.protobuf." +
+      "EmptyB_\n\032yandex.cloud.api.backup.v1ZAgit" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/backup/v1;backupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17663,6 +19644,18 @@ public final class BackupServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_DeleteBackupMetadata_descriptor,
         new java.lang.String[] { "ComputeInstanceId", "BackupId", });
+    internal_static_yandex_cloud_backup_v1_DeleteArchiveRequest_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_yandex_cloud_backup_v1_DeleteArchiveRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_backup_v1_DeleteArchiveRequest_descriptor,
+        new java.lang.String[] { "ArchiveId", "FolderId", "InstanceId", "PolicyId", });
+    internal_static_yandex_cloud_backup_v1_DeleteArchiveMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_yandex_cloud_backup_v1_DeleteArchiveMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_backup_v1_DeleteArchiveMetadata_descriptor,
+        new java.lang.String[] { "ArchiveId", "FolderId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

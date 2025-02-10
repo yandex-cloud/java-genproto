@@ -614,6 +614,21 @@ public final class ClusterOuterClass {
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.CiliumOrBuilder getCiliumOrBuilder();
 
+    /**
+     * <code>.yandex.cloud.k8s.v1.ScheduledMaintenance scheduled_maintenance = 20;</code>
+     * @return Whether the scheduledMaintenance field is set.
+     */
+    boolean hasScheduledMaintenance();
+    /**
+     * <code>.yandex.cloud.k8s.v1.ScheduledMaintenance scheduled_maintenance = 20;</code>
+     * @return The scheduledMaintenance.
+     */
+    yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance getScheduledMaintenance();
+    /**
+     * <code>.yandex.cloud.k8s.v1.ScheduledMaintenance scheduled_maintenance = 20;</code>
+     */
+    yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenanceOrBuilder getScheduledMaintenanceOrBuilder();
+
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.Cluster.InternetGatewayCase getInternetGatewayCase();
 
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.Cluster.NetworkImplementationCase getNetworkImplementationCase();
@@ -841,6 +856,19 @@ public final class ClusterOuterClass {
                 networkImplementation_ = subBuilder.buildPartial();
               }
               networkImplementationCase_ = 19;
+              break;
+            }
+            case 162: {
+              yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance.Builder subBuilder = null;
+              if (scheduledMaintenance_ != null) {
+                subBuilder = scheduledMaintenance_.toBuilder();
+              }
+              scheduledMaintenance_ = input.readMessage(yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(scheduledMaintenance_);
+                scheduledMaintenance_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -2141,6 +2169,32 @@ public final class ClusterOuterClass {
       return yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.getDefaultInstance();
     }
 
+    public static final int SCHEDULED_MAINTENANCE_FIELD_NUMBER = 20;
+    private yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance scheduledMaintenance_;
+    /**
+     * <code>.yandex.cloud.k8s.v1.ScheduledMaintenance scheduled_maintenance = 20;</code>
+     * @return Whether the scheduledMaintenance field is set.
+     */
+    @java.lang.Override
+    public boolean hasScheduledMaintenance() {
+      return scheduledMaintenance_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.k8s.v1.ScheduledMaintenance scheduled_maintenance = 20;</code>
+     * @return The scheduledMaintenance.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance getScheduledMaintenance() {
+      return scheduledMaintenance_ == null ? yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance.getDefaultInstance() : scheduledMaintenance_;
+    }
+    /**
+     * <code>.yandex.cloud.k8s.v1.ScheduledMaintenance scheduled_maintenance = 20;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenanceOrBuilder getScheduledMaintenanceOrBuilder() {
+      return getScheduledMaintenance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2214,6 +2268,9 @@ public final class ClusterOuterClass {
       }
       if (networkImplementationCase_ == 19) {
         output.writeMessage(19, (yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium) networkImplementation_);
+      }
+      if (scheduledMaintenance_ != null) {
+        output.writeMessage(20, getScheduledMaintenance());
       }
       unknownFields.writeTo(output);
     }
@@ -2297,6 +2354,10 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(19, (yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium) networkImplementation_);
       }
+      if (scheduledMaintenance_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(20, getScheduledMaintenance());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2358,6 +2419,11 @@ public final class ClusterOuterClass {
       }
       if (!getLogGroupId()
           .equals(other.getLogGroupId())) return false;
+      if (hasScheduledMaintenance() != other.hasScheduledMaintenance()) return false;
+      if (hasScheduledMaintenance()) {
+        if (!getScheduledMaintenance()
+            .equals(other.getScheduledMaintenance())) return false;
+      }
       if (!getInternetGatewayCase().equals(other.getInternetGatewayCase())) return false;
       switch (internetGatewayCase_) {
         case 12:
@@ -2433,6 +2499,10 @@ public final class ClusterOuterClass {
       }
       hash = (37 * hash) + LOG_GROUP_ID_FIELD_NUMBER;
       hash = (53 * hash) + getLogGroupId().hashCode();
+      if (hasScheduledMaintenance()) {
+        hash = (37 * hash) + SCHEDULED_MAINTENANCE_FIELD_NUMBER;
+        hash = (53 * hash) + getScheduledMaintenance().hashCode();
+      }
       switch (internetGatewayCase_) {
         case 12:
           hash = (37 * hash) + GATEWAY_IPV4_ADDRESS_FIELD_NUMBER;
@@ -2661,6 +2731,12 @@ public final class ClusterOuterClass {
         }
         logGroupId_ = "";
 
+        if (scheduledMaintenanceBuilder_ == null) {
+          scheduledMaintenance_ = null;
+        } else {
+          scheduledMaintenance_ = null;
+          scheduledMaintenanceBuilder_ = null;
+        }
         internetGatewayCase_ = 0;
         internetGateway_ = null;
         networkImplementationCase_ = 0;
@@ -2739,6 +2815,11 @@ public final class ClusterOuterClass {
           } else {
             result.networkImplementation_ = ciliumBuilder_.build();
           }
+        }
+        if (scheduledMaintenanceBuilder_ == null) {
+          result.scheduledMaintenance_ = scheduledMaintenance_;
+        } else {
+          result.scheduledMaintenance_ = scheduledMaintenanceBuilder_.build();
         }
         result.internetGatewayCase_ = internetGatewayCase_;
         result.networkImplementationCase_ = networkImplementationCase_;
@@ -2847,6 +2928,9 @@ public final class ClusterOuterClass {
         if (!other.getLogGroupId().isEmpty()) {
           logGroupId_ = other.logGroupId_;
           onChanged();
+        }
+        if (other.hasScheduledMaintenance()) {
+          mergeScheduledMaintenance(other.getScheduledMaintenance());
         }
         switch (other.getInternetGatewayCase()) {
           case GATEWAY_IPV4_ADDRESS: {
@@ -5091,6 +5175,125 @@ public final class ClusterOuterClass {
         networkImplementationCase_ = 19;
         onChanged();;
         return ciliumBuilder_;
+      }
+
+      private yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance scheduledMaintenance_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance, yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance.Builder, yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenanceOrBuilder> scheduledMaintenanceBuilder_;
+      /**
+       * <code>.yandex.cloud.k8s.v1.ScheduledMaintenance scheduled_maintenance = 20;</code>
+       * @return Whether the scheduledMaintenance field is set.
+       */
+      public boolean hasScheduledMaintenance() {
+        return scheduledMaintenanceBuilder_ != null || scheduledMaintenance_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.ScheduledMaintenance scheduled_maintenance = 20;</code>
+       * @return The scheduledMaintenance.
+       */
+      public yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance getScheduledMaintenance() {
+        if (scheduledMaintenanceBuilder_ == null) {
+          return scheduledMaintenance_ == null ? yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance.getDefaultInstance() : scheduledMaintenance_;
+        } else {
+          return scheduledMaintenanceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.ScheduledMaintenance scheduled_maintenance = 20;</code>
+       */
+      public Builder setScheduledMaintenance(yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance value) {
+        if (scheduledMaintenanceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          scheduledMaintenance_ = value;
+          onChanged();
+        } else {
+          scheduledMaintenanceBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.ScheduledMaintenance scheduled_maintenance = 20;</code>
+       */
+      public Builder setScheduledMaintenance(
+          yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance.Builder builderForValue) {
+        if (scheduledMaintenanceBuilder_ == null) {
+          scheduledMaintenance_ = builderForValue.build();
+          onChanged();
+        } else {
+          scheduledMaintenanceBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.ScheduledMaintenance scheduled_maintenance = 20;</code>
+       */
+      public Builder mergeScheduledMaintenance(yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance value) {
+        if (scheduledMaintenanceBuilder_ == null) {
+          if (scheduledMaintenance_ != null) {
+            scheduledMaintenance_ =
+              yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance.newBuilder(scheduledMaintenance_).mergeFrom(value).buildPartial();
+          } else {
+            scheduledMaintenance_ = value;
+          }
+          onChanged();
+        } else {
+          scheduledMaintenanceBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.ScheduledMaintenance scheduled_maintenance = 20;</code>
+       */
+      public Builder clearScheduledMaintenance() {
+        if (scheduledMaintenanceBuilder_ == null) {
+          scheduledMaintenance_ = null;
+          onChanged();
+        } else {
+          scheduledMaintenance_ = null;
+          scheduledMaintenanceBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.ScheduledMaintenance scheduled_maintenance = 20;</code>
+       */
+      public yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance.Builder getScheduledMaintenanceBuilder() {
+        
+        onChanged();
+        return getScheduledMaintenanceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.ScheduledMaintenance scheduled_maintenance = 20;</code>
+       */
+      public yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenanceOrBuilder getScheduledMaintenanceOrBuilder() {
+        if (scheduledMaintenanceBuilder_ != null) {
+          return scheduledMaintenanceBuilder_.getMessageOrBuilder();
+        } else {
+          return scheduledMaintenance_ == null ?
+              yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance.getDefaultInstance() : scheduledMaintenance_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.ScheduledMaintenance scheduled_maintenance = 20;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance, yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance.Builder, yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenanceOrBuilder> 
+          getScheduledMaintenanceFieldBuilder() {
+        if (scheduledMaintenanceBuilder_ == null) {
+          scheduledMaintenanceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance, yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance.Builder, yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenanceOrBuilder>(
+                  getScheduledMaintenance(),
+                  getParentForChildren(),
+                  isClean());
+          scheduledMaintenance_ = null;
+        }
+        return scheduledMaintenanceBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -18572,7 +18775,7 @@ public final class ClusterOuterClass {
       "dex.cloud.k8s.v1\032\037google/protobuf/timest" +
       "amp.proto\032%yandex/cloud/k8s/v1/maintenan" +
       "ce.proto\032!yandex/cloud/k8s/v1/version.pr" +
-      "oto\032\035yandex/cloud/validation.proto\"\252\010\n\007C" +
+      "oto\032\035yandex/cloud/validation.proto\"\364\010\n\007C" +
       "luster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n" +
       "\ncreated_at\030\003 \001(\0132\032.google.protobuf.Time" +
       "stamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t" +
@@ -18592,66 +18795,68 @@ public final class ClusterOuterClass {
       "olicy\0226\n\014kms_provider\030\021 \001(\0132 .yandex.clo" +
       "ud.k8s.v1.KMSProvider\022\024\n\014log_group_id\030\022 " +
       "\001(\t\022-\n\006cilium\030\023 \001(\0132\033.yandex.cloud.k8s.v" +
-      "1.CiliumH\001\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001\"\207\001\n\006Status\022\026\n\022STATUS_U" +
-      "NSPECIFIED\020\000\022\020\n\014PROVISIONING\020\001\022\013\n\007RUNNIN" +
-      "G\020\002\022\017\n\013RECONCILING\020\003\022\014\n\010STOPPING\020\004\022\013\n\007ST" +
-      "OPPED\020\005\022\014\n\010DELETING\020\006\022\014\n\010STARTING\020\007\"<\n\006H" +
-      "ealth\022\026\n\022HEALTH_UNSPECIFIED\020\000\022\013\n\007HEALTHY" +
-      "\020\001\022\r\n\tUNHEALTHY\020\002B\022\n\020internet_gatewayB\030\n" +
-      "\026network_implementation\"\270\004\n\006Master\0228\n\014zo" +
-      "nal_master\030\001 \001(\0132 .yandex.cloud.k8s.v1.Z" +
-      "onalMasterH\000\022>\n\017regional_master\030\007 \001(\0132#." +
-      "yandex.cloud.k8s.v1.RegionalMasterH\000\0220\n\t" +
-      "locations\030\n \003(\0132\035.yandex.cloud.k8s.v1.Lo" +
-      "cation\022\031\n\021etcd_cluster_size\030\013 \001(\003\022\017\n\007ver" +
-      "sion\030\002 \001(\t\0227\n\tendpoints\030\003 \001(\0132$.yandex.c" +
-      "loud.k8s.v1.MasterEndpoints\0224\n\013master_au" +
-      "th\030\004 \001(\0132\037.yandex.cloud.k8s.v1.MasterAut" +
-      "h\0226\n\014version_info\030\005 \001(\0132 .yandex.cloud.k" +
-      "8s.v1.VersionInfo\022H\n\022maintenance_policy\030" +
-      "\006 \001(\0132,.yandex.cloud.k8s.v1.MasterMainte" +
-      "nancePolicy\022\032\n\022security_group_ids\030\010 \003(\t\022" +
-      ":\n\016master_logging\030\t \001(\0132\".yandex.cloud.k" +
-      "8s.v1.MasterLoggingB\r\n\013master_type\",\n\nMa" +
-      "sterAuth\022\036\n\026cluster_ca_certificate\030\001 \001(\t" +
-      "\"X\n\013ZonalMaster\022\017\n\007zone_id\030\001 \001(\t\022\033\n\023inte" +
-      "rnal_v4_address\030\002 \001(\t\022\033\n\023external_v4_add" +
-      "ress\030\003 \001(\t\"z\n\016RegionalMaster\022\021\n\tregion_i" +
-      "d\030\001 \001(\t\022\033\n\023internal_v4_address\030\002 \001(\t\022\033\n\023" +
-      "external_v4_address\030\003 \001(\t\022\033\n\023external_v6" +
-      "_address\030\004 \001(\t\".\n\010Location\022\017\n\007zone_id\030\001 " +
-      "\001(\t\022\021\n\tsubnet_id\030\002 \001(\t\"k\n\017MasterEndpoint" +
-      "s\022\034\n\024internal_v4_endpoint\030\001 \001(\t\022\034\n\024exter" +
-      "nal_v4_endpoint\030\002 \001(\t\022\034\n\024external_v6_end" +
-      "point\030\003 \001(\t\"\326\001\n\022IPAllocationPolicy\022\037\n\027cl" +
-      "uster_ipv4_cidr_block\030\001 \001(\t\0226\n\030node_ipv4" +
-      "_cidr_mask_size\030\005 \001(\003B\024\372\3071\0200,24,25,26,27" +
-      ",28\022\037\n\027service_ipv4_cidr_block\030\002 \001(\t\022\037\n\027" +
-      "cluster_ipv6_cidr_block\030\006 \001(\t\022\037\n\027service" +
-      "_ipv6_cidr_block\030\007 \001(\tJ\004\010\003\020\005\"s\n\027MasterMa" +
-      "intenancePolicy\022\024\n\014auto_upgrade\030\001 \001(\010\022B\n" +
-      "\022maintenance_window\030\002 \001(\0132&.yandex.cloud" +
-      ".k8s.v1.MaintenanceWindow\"\231\002\n\rMasterLogg" +
-      "ing\022\017\n\007enabled\030\001 \001(\010\022;\n\014log_group_id\030\002 \001" +
-      "(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?H" +
-      "\000\0228\n\tfolder_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-z" +
-      "A-Z0-9_.]{0,63})?H\000\022\025\n\raudit_enabled\030\004 \001" +
-      "(\010\022\"\n\032cluster_autoscaler_enabled\030\005 \001(\010\022\036" +
-      "\n\026kube_apiserver_enabled\030\006 \001(\010\022\026\n\016events" +
-      "_enabled\030\007 \001(\010B\r\n\013destination\"\200\001\n\rNetwor" +
-      "kPolicy\022=\n\010provider\030\001 \001(\0162+.yandex.cloud" +
-      ".k8s.v1.NetworkPolicy.Provider\"0\n\010Provid" +
-      "er\022\030\n\024PROVIDER_UNSPECIFIED\020\000\022\n\n\006CALICO\020\001" +
-      "\"\035\n\013KMSProvider\022\016\n\006key_id\030\001 \001(\t\"\200\001\n\006Cili" +
-      "um\022=\n\014routing_mode\030\001 \001(\0162\'.yandex.cloud." +
-      "k8s.v1.Cilium.RoutingMode\"7\n\013RoutingMode" +
-      "\022\034\n\030ROUTING_MODE_UNSPECIFIED\020\000\022\n\n\006TUNNEL" +
-      "\020\001*U\n\016ReleaseChannel\022\037\n\033RELEASE_CHANNEL_" +
-      "UNSPECIFIED\020\000\022\t\n\005RAPID\020\001\022\013\n\007REGULAR\020\002\022\n\n" +
-      "\006STABLE\020\003BV\n\027yandex.cloud.api.k8s.v1Z;gi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/k8s/v1;k8sb\006proto3"
+      "1.CiliumH\001\022H\n\025scheduled_maintenance\030\024 \001(" +
+      "\0132).yandex.cloud.k8s.v1.ScheduledMainten" +
+      "ance\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001\"\207\001\n\006Status\022\026\n\022STATUS_UNSPECI" +
+      "FIED\020\000\022\020\n\014PROVISIONING\020\001\022\013\n\007RUNNING\020\002\022\017\n" +
+      "\013RECONCILING\020\003\022\014\n\010STOPPING\020\004\022\013\n\007STOPPED\020" +
+      "\005\022\014\n\010DELETING\020\006\022\014\n\010STARTING\020\007\"<\n\006Health\022" +
+      "\026\n\022HEALTH_UNSPECIFIED\020\000\022\013\n\007HEALTHY\020\001\022\r\n\t" +
+      "UNHEALTHY\020\002B\022\n\020internet_gatewayB\030\n\026netwo" +
+      "rk_implementation\"\270\004\n\006Master\0228\n\014zonal_ma" +
+      "ster\030\001 \001(\0132 .yandex.cloud.k8s.v1.ZonalMa" +
+      "sterH\000\022>\n\017regional_master\030\007 \001(\0132#.yandex" +
+      ".cloud.k8s.v1.RegionalMasterH\000\0220\n\tlocati" +
+      "ons\030\n \003(\0132\035.yandex.cloud.k8s.v1.Location" +
+      "\022\031\n\021etcd_cluster_size\030\013 \001(\003\022\017\n\007version\030\002" +
+      " \001(\t\0227\n\tendpoints\030\003 \001(\0132$.yandex.cloud.k" +
+      "8s.v1.MasterEndpoints\0224\n\013master_auth\030\004 \001" +
+      "(\0132\037.yandex.cloud.k8s.v1.MasterAuth\0226\n\014v" +
+      "ersion_info\030\005 \001(\0132 .yandex.cloud.k8s.v1." +
+      "VersionInfo\022H\n\022maintenance_policy\030\006 \001(\0132" +
+      ",.yandex.cloud.k8s.v1.MasterMaintenanceP" +
+      "olicy\022\032\n\022security_group_ids\030\010 \003(\t\022:\n\016mas" +
+      "ter_logging\030\t \001(\0132\".yandex.cloud.k8s.v1." +
+      "MasterLoggingB\r\n\013master_type\",\n\nMasterAu" +
+      "th\022\036\n\026cluster_ca_certificate\030\001 \001(\t\"X\n\013Zo" +
+      "nalMaster\022\017\n\007zone_id\030\001 \001(\t\022\033\n\023internal_v" +
+      "4_address\030\002 \001(\t\022\033\n\023external_v4_address\030\003" +
+      " \001(\t\"z\n\016RegionalMaster\022\021\n\tregion_id\030\001 \001(" +
+      "\t\022\033\n\023internal_v4_address\030\002 \001(\t\022\033\n\023extern" +
+      "al_v4_address\030\003 \001(\t\022\033\n\023external_v6_addre" +
+      "ss\030\004 \001(\t\".\n\010Location\022\017\n\007zone_id\030\001 \001(\t\022\021\n" +
+      "\tsubnet_id\030\002 \001(\t\"k\n\017MasterEndpoints\022\034\n\024i" +
+      "nternal_v4_endpoint\030\001 \001(\t\022\034\n\024external_v4" +
+      "_endpoint\030\002 \001(\t\022\034\n\024external_v6_endpoint\030" +
+      "\003 \001(\t\"\326\001\n\022IPAllocationPolicy\022\037\n\027cluster_" +
+      "ipv4_cidr_block\030\001 \001(\t\0226\n\030node_ipv4_cidr_" +
+      "mask_size\030\005 \001(\003B\024\372\3071\0200,24,25,26,27,28\022\037\n" +
+      "\027service_ipv4_cidr_block\030\002 \001(\t\022\037\n\027cluste" +
+      "r_ipv6_cidr_block\030\006 \001(\t\022\037\n\027service_ipv6_" +
+      "cidr_block\030\007 \001(\tJ\004\010\003\020\005\"s\n\027MasterMaintena" +
+      "ncePolicy\022\024\n\014auto_upgrade\030\001 \001(\010\022B\n\022maint" +
+      "enance_window\030\002 \001(\0132&.yandex.cloud.k8s.v" +
+      "1.MaintenanceWindow\"\231\002\n\rMasterLogging\022\017\n" +
+      "\007enabled\030\001 \001(\010\022;\n\014log_group_id\030\002 \001(\tB#\362\307" +
+      "1\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\0228\n\tf" +
+      "older_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9" +
+      "_.]{0,63})?H\000\022\025\n\raudit_enabled\030\004 \001(\010\022\"\n\032" +
+      "cluster_autoscaler_enabled\030\005 \001(\010\022\036\n\026kube" +
+      "_apiserver_enabled\030\006 \001(\010\022\026\n\016events_enabl" +
+      "ed\030\007 \001(\010B\r\n\013destination\"\200\001\n\rNetworkPolic" +
+      "y\022=\n\010provider\030\001 \001(\0162+.yandex.cloud.k8s.v" +
+      "1.NetworkPolicy.Provider\"0\n\010Provider\022\030\n\024" +
+      "PROVIDER_UNSPECIFIED\020\000\022\n\n\006CALICO\020\001\"\035\n\013KM" +
+      "SProvider\022\016\n\006key_id\030\001 \001(\t\"\200\001\n\006Cilium\022=\n\014" +
+      "routing_mode\030\001 \001(\0162\'.yandex.cloud.k8s.v1" +
+      ".Cilium.RoutingMode\"7\n\013RoutingMode\022\034\n\030RO" +
+      "UTING_MODE_UNSPECIFIED\020\000\022\n\n\006TUNNEL\020\001*U\n\016" +
+      "ReleaseChannel\022\037\n\033RELEASE_CHANNEL_UNSPEC" +
+      "IFIED\020\000\022\t\n\005RAPID\020\001\022\013\n\007REGULAR\020\002\022\n\n\006STABL" +
+      "E\020\003BV\n\027yandex.cloud.api.k8s.v1Z;github.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/k8s/v1;k8sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18666,7 +18871,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_k8s_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Status", "Health", "NetworkId", "Master", "IpAllocationPolicy", "GatewayIpv4Address", "ServiceAccountId", "NodeServiceAccountId", "ReleaseChannel", "NetworkPolicy", "KmsProvider", "LogGroupId", "Cilium", "InternetGateway", "NetworkImplementation", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Status", "Health", "NetworkId", "Master", "IpAllocationPolicy", "GatewayIpv4Address", "ServiceAccountId", "NodeServiceAccountId", "ReleaseChannel", "NetworkPolicy", "KmsProvider", "LogGroupId", "Cilium", "ScheduledMaintenance", "InternetGateway", "NetworkImplementation", });
     internal_static_yandex_cloud_k8s_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_k8s_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_k8s_v1_Cluster_LabelsEntry_fieldAccessorTable = new

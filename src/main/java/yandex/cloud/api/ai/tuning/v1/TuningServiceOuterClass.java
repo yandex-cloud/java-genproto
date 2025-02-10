@@ -6178,6 +6178,60 @@ public final class TuningServiceOuterClass {
     yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParamsOrBuilder getTextClassificationMulticlassOrBuilder();
 
     /**
+     * <pre>
+     * TextEmbeddingPairParams  is unimplemented
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+     * @return Whether the textEmbeddingPairParams field is set.
+     */
+    boolean hasTextEmbeddingPairParams();
+    /**
+     * <pre>
+     * TextEmbeddingPairParams  is unimplemented
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+     * @return The textEmbeddingPairParams.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams getTextEmbeddingPairParams();
+    /**
+     * <pre>
+     * TextEmbeddingPairParams  is unimplemented
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParamsOrBuilder getTextEmbeddingPairParamsOrBuilder();
+
+    /**
+     * <pre>
+     * TextEmbeddingTripletParams  is unimplemented
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+     * @return Whether the textEmbeddingTripletParams field is set.
+     */
+    boolean hasTextEmbeddingTripletParams();
+    /**
+     * <pre>
+     * TextEmbeddingTripletParams  is unimplemented
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+     * @return The textEmbeddingTripletParams.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams getTextEmbeddingTripletParams();
+    /**
+     * <pre>
+     * TextEmbeddingTripletParams  is unimplemented
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParamsOrBuilder getTextEmbeddingTripletParamsOrBuilder();
+
+    /**
      * <code>string name = 200;</code>
      * @return The name.
      */
@@ -6352,6 +6406,34 @@ public final class TuningServiceOuterClass {
                 tuningParams_ = subBuilder.buildPartial();
               }
               tuningParamsCase_ = 102;
+              break;
+            }
+            case 826: {
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder subBuilder = null;
+              if (tuningParamsCase_ == 103) {
+                subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_).toBuilder();
+              }
+              tuningParams_ =
+                  input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_);
+                tuningParams_ = subBuilder.buildPartial();
+              }
+              tuningParamsCase_ = 103;
+              break;
+            }
+            case 834: {
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder subBuilder = null;
+              if (tuningParamsCase_ == 104) {
+                subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_).toBuilder();
+              }
+              tuningParams_ =
+                  input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_);
+                tuningParams_ = subBuilder.buildPartial();
+              }
+              tuningParamsCase_ = 104;
               break;
             }
             case 1602: {
@@ -7077,6 +7159,8 @@ public final class TuningServiceOuterClass {
       TEXT_TO_TEXT_COMPLETION(100),
       TEXT_CLASSIFICATION_MULTILABEL(101),
       TEXT_CLASSIFICATION_MULTICLASS(102),
+      TEXT_EMBEDDING_PAIR_PARAMS(103),
+      TEXT_EMBEDDING_TRIPLET_PARAMS(104),
       TUNINGPARAMS_NOT_SET(0);
       private final int value;
       private TuningParamsCase(int value) {
@@ -7097,6 +7181,8 @@ public final class TuningServiceOuterClass {
           case 100: return TEXT_TO_TEXT_COMPLETION;
           case 101: return TEXT_CLASSIFICATION_MULTILABEL;
           case 102: return TEXT_CLASSIFICATION_MULTICLASS;
+          case 103: return TEXT_EMBEDDING_PAIR_PARAMS;
+          case 104: return TEXT_EMBEDDING_TRIPLET_PARAMS;
           case 0: return TUNINGPARAMS_NOT_SET;
           default: return null;
         }
@@ -7331,6 +7417,92 @@ public final class TuningServiceOuterClass {
       return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.getDefaultInstance();
     }
 
+    public static final int TEXT_EMBEDDING_PAIR_PARAMS_FIELD_NUMBER = 103;
+    /**
+     * <pre>
+     * TextEmbeddingPairParams  is unimplemented
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+     * @return Whether the textEmbeddingPairParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasTextEmbeddingPairParams() {
+      return tuningParamsCase_ == 103;
+    }
+    /**
+     * <pre>
+     * TextEmbeddingPairParams  is unimplemented
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+     * @return The textEmbeddingPairParams.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams getTextEmbeddingPairParams() {
+      if (tuningParamsCase_ == 103) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * TextEmbeddingPairParams  is unimplemented
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParamsOrBuilder getTextEmbeddingPairParamsOrBuilder() {
+      if (tuningParamsCase_ == 103) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance();
+    }
+
+    public static final int TEXT_EMBEDDING_TRIPLET_PARAMS_FIELD_NUMBER = 104;
+    /**
+     * <pre>
+     * TextEmbeddingTripletParams  is unimplemented
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+     * @return Whether the textEmbeddingTripletParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasTextEmbeddingTripletParams() {
+      return tuningParamsCase_ == 104;
+    }
+    /**
+     * <pre>
+     * TextEmbeddingTripletParams  is unimplemented
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+     * @return The textEmbeddingTripletParams.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams getTextEmbeddingTripletParams() {
+      if (tuningParamsCase_ == 104) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * TextEmbeddingTripletParams  is unimplemented
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParamsOrBuilder getTextEmbeddingTripletParamsOrBuilder() {
+      if (tuningParamsCase_ == 104) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance();
+    }
+
     public static final int NAME_FIELD_NUMBER = 200;
     private volatile java.lang.Object name_;
     /**
@@ -7520,6 +7692,12 @@ public final class TuningServiceOuterClass {
       if (tuningParamsCase_ == 102) {
         output.writeMessage(102, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_);
       }
+      if (tuningParamsCase_ == 103) {
+        output.writeMessage(103, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_);
+      }
+      if (tuningParamsCase_ == 104) {
+        output.writeMessage(104, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 200, name_);
       }
@@ -7563,6 +7741,14 @@ public final class TuningServiceOuterClass {
       if (tuningParamsCase_ == 102) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(102, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_);
+      }
+      if (tuningParamsCase_ == 103) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(103, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_);
+      }
+      if (tuningParamsCase_ == 104) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(104, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(200, name_);
@@ -7621,6 +7807,14 @@ public final class TuningServiceOuterClass {
           if (!getTextClassificationMulticlass()
               .equals(other.getTextClassificationMulticlass())) return false;
           break;
+        case 103:
+          if (!getTextEmbeddingPairParams()
+              .equals(other.getTextEmbeddingPairParams())) return false;
+          break;
+        case 104:
+          if (!getTextEmbeddingTripletParams()
+              .equals(other.getTextEmbeddingTripletParams())) return false;
+          break;
         case 0:
         default:
       }
@@ -7665,6 +7859,14 @@ public final class TuningServiceOuterClass {
         case 102:
           hash = (37 * hash) + TEXT_CLASSIFICATION_MULTICLASS_FIELD_NUMBER;
           hash = (53 * hash) + getTextClassificationMulticlass().hashCode();
+          break;
+        case 103:
+          hash = (37 * hash) + TEXT_EMBEDDING_PAIR_PARAMS_FIELD_NUMBER;
+          hash = (53 * hash) + getTextEmbeddingPairParams().hashCode();
+          break;
+        case 104:
+          hash = (37 * hash) + TEXT_EMBEDDING_TRIPLET_PARAMS_FIELD_NUMBER;
+          hash = (53 * hash) + getTextEmbeddingTripletParams().hashCode();
           break;
         case 0:
         default:
@@ -7914,6 +8116,20 @@ public final class TuningServiceOuterClass {
             result.tuningParams_ = textClassificationMulticlassBuilder_.build();
           }
         }
+        if (tuningParamsCase_ == 103) {
+          if (textEmbeddingPairParamsBuilder_ == null) {
+            result.tuningParams_ = tuningParams_;
+          } else {
+            result.tuningParams_ = textEmbeddingPairParamsBuilder_.build();
+          }
+        }
+        if (tuningParamsCase_ == 104) {
+          if (textEmbeddingTripletParamsBuilder_ == null) {
+            result.tuningParams_ = tuningParams_;
+          } else {
+            result.tuningParams_ = textEmbeddingTripletParamsBuilder_.build();
+          }
+        }
         result.name_ = name_;
         result.description_ = description_;
         result.labels_ = internalGetLabels();
@@ -8044,6 +8260,14 @@ public final class TuningServiceOuterClass {
           }
           case TEXT_CLASSIFICATION_MULTICLASS: {
             mergeTextClassificationMulticlass(other.getTextClassificationMulticlass());
+            break;
+          }
+          case TEXT_EMBEDDING_PAIR_PARAMS: {
+            mergeTextEmbeddingPairParams(other.getTextEmbeddingPairParams());
+            break;
+          }
+          case TEXT_EMBEDDING_TRIPLET_PARAMS: {
+            mergeTextEmbeddingTripletParams(other.getTextEmbeddingTripletParams());
             break;
           }
           case TUNINGPARAMS_NOT_SET: {
@@ -9092,6 +9316,360 @@ public final class TuningServiceOuterClass {
         tuningParamsCase_ = 102;
         onChanged();;
         return textClassificationMulticlassBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParamsOrBuilder> textEmbeddingPairParamsBuilder_;
+      /**
+       * <pre>
+       * TextEmbeddingPairParams  is unimplemented
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       * @return Whether the textEmbeddingPairParams field is set.
+       */
+      @java.lang.Override
+      public boolean hasTextEmbeddingPairParams() {
+        return tuningParamsCase_ == 103;
+      }
+      /**
+       * <pre>
+       * TextEmbeddingPairParams  is unimplemented
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       * @return The textEmbeddingPairParams.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams getTextEmbeddingPairParams() {
+        if (textEmbeddingPairParamsBuilder_ == null) {
+          if (tuningParamsCase_ == 103) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance();
+        } else {
+          if (tuningParamsCase_ == 103) {
+            return textEmbeddingPairParamsBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * TextEmbeddingPairParams  is unimplemented
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      public Builder setTextEmbeddingPairParams(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams value) {
+        if (textEmbeddingPairParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tuningParams_ = value;
+          onChanged();
+        } else {
+          textEmbeddingPairParamsBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 103;
+        return this;
+      }
+      /**
+       * <pre>
+       * TextEmbeddingPairParams  is unimplemented
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      public Builder setTextEmbeddingPairParams(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder builderForValue) {
+        if (textEmbeddingPairParamsBuilder_ == null) {
+          tuningParams_ = builderForValue.build();
+          onChanged();
+        } else {
+          textEmbeddingPairParamsBuilder_.setMessage(builderForValue.build());
+        }
+        tuningParamsCase_ = 103;
+        return this;
+      }
+      /**
+       * <pre>
+       * TextEmbeddingPairParams  is unimplemented
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      public Builder mergeTextEmbeddingPairParams(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams value) {
+        if (textEmbeddingPairParamsBuilder_ == null) {
+          if (tuningParamsCase_ == 103 &&
+              tuningParams_ != yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance()) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            tuningParams_ = value;
+          }
+          onChanged();
+        } else {
+          if (tuningParamsCase_ == 103) {
+            textEmbeddingPairParamsBuilder_.mergeFrom(value);
+          }
+          textEmbeddingPairParamsBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 103;
+        return this;
+      }
+      /**
+       * <pre>
+       * TextEmbeddingPairParams  is unimplemented
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      public Builder clearTextEmbeddingPairParams() {
+        if (textEmbeddingPairParamsBuilder_ == null) {
+          if (tuningParamsCase_ == 103) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+            onChanged();
+          }
+        } else {
+          if (tuningParamsCase_ == 103) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+          }
+          textEmbeddingPairParamsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * TextEmbeddingPairParams  is unimplemented
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder getTextEmbeddingPairParamsBuilder() {
+        return getTextEmbeddingPairParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * TextEmbeddingPairParams  is unimplemented
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParamsOrBuilder getTextEmbeddingPairParamsOrBuilder() {
+        if ((tuningParamsCase_ == 103) && (textEmbeddingPairParamsBuilder_ != null)) {
+          return textEmbeddingPairParamsBuilder_.getMessageOrBuilder();
+        } else {
+          if (tuningParamsCase_ == 103) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * TextEmbeddingPairParams  is unimplemented
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParamsOrBuilder> 
+          getTextEmbeddingPairParamsFieldBuilder() {
+        if (textEmbeddingPairParamsBuilder_ == null) {
+          if (!(tuningParamsCase_ == 103)) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance();
+          }
+          textEmbeddingPairParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParamsOrBuilder>(
+                  (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_,
+                  getParentForChildren(),
+                  isClean());
+          tuningParams_ = null;
+        }
+        tuningParamsCase_ = 103;
+        onChanged();;
+        return textEmbeddingPairParamsBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParamsOrBuilder> textEmbeddingTripletParamsBuilder_;
+      /**
+       * <pre>
+       * TextEmbeddingTripletParams  is unimplemented
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       * @return Whether the textEmbeddingTripletParams field is set.
+       */
+      @java.lang.Override
+      public boolean hasTextEmbeddingTripletParams() {
+        return tuningParamsCase_ == 104;
+      }
+      /**
+       * <pre>
+       * TextEmbeddingTripletParams  is unimplemented
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       * @return The textEmbeddingTripletParams.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams getTextEmbeddingTripletParams() {
+        if (textEmbeddingTripletParamsBuilder_ == null) {
+          if (tuningParamsCase_ == 104) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance();
+        } else {
+          if (tuningParamsCase_ == 104) {
+            return textEmbeddingTripletParamsBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * TextEmbeddingTripletParams  is unimplemented
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      public Builder setTextEmbeddingTripletParams(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams value) {
+        if (textEmbeddingTripletParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tuningParams_ = value;
+          onChanged();
+        } else {
+          textEmbeddingTripletParamsBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 104;
+        return this;
+      }
+      /**
+       * <pre>
+       * TextEmbeddingTripletParams  is unimplemented
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      public Builder setTextEmbeddingTripletParams(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder builderForValue) {
+        if (textEmbeddingTripletParamsBuilder_ == null) {
+          tuningParams_ = builderForValue.build();
+          onChanged();
+        } else {
+          textEmbeddingTripletParamsBuilder_.setMessage(builderForValue.build());
+        }
+        tuningParamsCase_ = 104;
+        return this;
+      }
+      /**
+       * <pre>
+       * TextEmbeddingTripletParams  is unimplemented
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      public Builder mergeTextEmbeddingTripletParams(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams value) {
+        if (textEmbeddingTripletParamsBuilder_ == null) {
+          if (tuningParamsCase_ == 104 &&
+              tuningParams_ != yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance()) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            tuningParams_ = value;
+          }
+          onChanged();
+        } else {
+          if (tuningParamsCase_ == 104) {
+            textEmbeddingTripletParamsBuilder_.mergeFrom(value);
+          }
+          textEmbeddingTripletParamsBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 104;
+        return this;
+      }
+      /**
+       * <pre>
+       * TextEmbeddingTripletParams  is unimplemented
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      public Builder clearTextEmbeddingTripletParams() {
+        if (textEmbeddingTripletParamsBuilder_ == null) {
+          if (tuningParamsCase_ == 104) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+            onChanged();
+          }
+        } else {
+          if (tuningParamsCase_ == 104) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+          }
+          textEmbeddingTripletParamsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * TextEmbeddingTripletParams  is unimplemented
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder getTextEmbeddingTripletParamsBuilder() {
+        return getTextEmbeddingTripletParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * TextEmbeddingTripletParams  is unimplemented
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParamsOrBuilder getTextEmbeddingTripletParamsOrBuilder() {
+        if ((tuningParamsCase_ == 104) && (textEmbeddingTripletParamsBuilder_ != null)) {
+          return textEmbeddingTripletParamsBuilder_.getMessageOrBuilder();
+        } else {
+          if (tuningParamsCase_ == 104) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * TextEmbeddingTripletParams  is unimplemented
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParamsOrBuilder> 
+          getTextEmbeddingTripletParamsFieldBuilder() {
+        if (textEmbeddingTripletParamsBuilder_ == null) {
+          if (!(tuningParamsCase_ == 104)) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance();
+          }
+          textEmbeddingTripletParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParamsOrBuilder>(
+                  (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_,
+                  getParentForChildren(),
+                  isClean());
+          tuningParams_ = null;
+        }
+        tuningParamsCase_ = 104;
+        onChanged();;
+        return textEmbeddingTripletParamsBuilder_;
       }
 
       private java.lang.Object name_ = "";
@@ -20478,6 +21056,7976 @@ public final class TuningServiceOuterClass {
 
   }
 
+  public interface TextEmbeddingPairParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 seed = 1;</code>
+     * @return The seed.
+     */
+    long getSeed();
+
+    /**
+     * <code>double lr = 2;</code>
+     * @return The lr.
+     */
+    double getLr();
+
+    /**
+     * <code>int64 n_samples = 3;</code>
+     * @return The nSamples.
+     */
+    long getNSamples();
+
+    /**
+     * <code>string additional_arguments = 7;</code>
+     * @return The additionalArguments.
+     */
+    java.lang.String getAdditionalArguments();
+    /**
+     * <code>string additional_arguments = 7;</code>
+     * @return The bytes for additionalArguments.
+     */
+    com.google.protobuf.ByteString
+        getAdditionalArgumentsBytes();
+
+    /**
+     * <code>repeated int64 embedding_dims = 8;</code>
+     * @return A list containing the embeddingDims.
+     */
+    java.util.List<java.lang.Long> getEmbeddingDimsList();
+    /**
+     * <code>repeated int64 embedding_dims = 8;</code>
+     * @return The count of embeddingDims.
+     */
+    int getEmbeddingDimsCount();
+    /**
+     * <code>repeated int64 embedding_dims = 8;</code>
+     * @param index The index of the element to return.
+     * @return The embeddingDims at the given index.
+     */
+    long getEmbeddingDims(int index);
+
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+     * @return Whether the lora field is set.
+     */
+    boolean hasLora();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+     * @return The lora.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora getLora();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLoraOrBuilder getLoraOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+     * @return Whether the promptTune field is set.
+     */
+    boolean hasPromptTune();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+     * @return The promptTune.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune getPromptTune();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTuneOrBuilder getPromptTuneOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Scheduler scheduler = 200;</code>
+     * @return Whether the scheduler field is set.
+     */
+    boolean hasScheduler();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Scheduler scheduler = 200;</code>
+     * @return The scheduler.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler getScheduler();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Scheduler scheduler = 200;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.SchedulerOrBuilder getSchedulerOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Optimizer optimizer = 201;</code>
+     * @return Whether the optimizer field is set.
+     */
+    boolean hasOptimizer();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Optimizer optimizer = 201;</code>
+     * @return The optimizer.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer getOptimizer();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Optimizer optimizer = 201;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.OptimizerOrBuilder getOptimizerOrBuilder();
+
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.TuningTypeCase getTuningTypeCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams}
+   */
+  public static final class TextEmbeddingPairParams extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams)
+      TextEmbeddingPairParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TextEmbeddingPairParams.newBuilder() to construct.
+    private TextEmbeddingPairParams(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TextEmbeddingPairParams() {
+      additionalArguments_ = "";
+      embeddingDims_ = emptyLongList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TextEmbeddingPairParams();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TextEmbeddingPairParams(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              seed_ = input.readInt64();
+              break;
+            }
+            case 17: {
+
+              lr_ = input.readDouble();
+              break;
+            }
+            case 24: {
+
+              nSamples_ = input.readInt64();
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              additionalArguments_ = s;
+              break;
+            }
+            case 64: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                embeddingDims_ = newLongList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              embeddingDims_.addLong(input.readInt64());
+              break;
+            }
+            case 66: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                embeddingDims_ = newLongList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                embeddingDims_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 802: {
+              yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.Builder subBuilder = null;
+              if (tuningTypeCase_ == 100) {
+                subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora) tuningType_).toBuilder();
+              }
+              tuningType_ =
+                  input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora) tuningType_);
+                tuningType_ = subBuilder.buildPartial();
+              }
+              tuningTypeCase_ = 100;
+              break;
+            }
+            case 810: {
+              yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.Builder subBuilder = null;
+              if (tuningTypeCase_ == 101) {
+                subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune) tuningType_).toBuilder();
+              }
+              tuningType_ =
+                  input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune) tuningType_);
+                tuningType_ = subBuilder.buildPartial();
+              }
+              tuningTypeCase_ = 101;
+              break;
+            }
+            case 1602: {
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler.Builder subBuilder = null;
+              if (scheduler_ != null) {
+                subBuilder = scheduler_.toBuilder();
+              }
+              scheduler_ = input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(scheduler_);
+                scheduler_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1610: {
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer.Builder subBuilder = null;
+              if (optimizer_ != null) {
+                subBuilder = optimizer_.toBuilder();
+              }
+              optimizer_ = input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(optimizer_);
+                optimizer_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          embeddingDims_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder.class);
+    }
+
+    public interface SchedulerOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Scheduler)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+       * @return Whether the linear field is set.
+       */
+      boolean hasLinear();
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+       * @return The linear.
+       */
+      yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear getLinear();
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+       */
+      yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinearOrBuilder getLinearOrBuilder();
+
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+       * @return Whether the constant field is set.
+       */
+      boolean hasConstant();
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+       * @return The constant.
+       */
+      yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant getConstant();
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+       */
+      yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstantOrBuilder getConstantOrBuilder();
+
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+       * @return Whether the cosine field is set.
+       */
+      boolean hasCosine();
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+       * @return The cosine.
+       */
+      yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine getCosine();
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+       */
+      yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosineOrBuilder getCosineOrBuilder();
+
+      /**
+       * <code>double warmup_ratio = 101;</code>
+       * @return Whether the warmupRatio field is set.
+       */
+      boolean hasWarmupRatio();
+      /**
+       * <code>double warmup_ratio = 101;</code>
+       * @return The warmupRatio.
+       */
+      double getWarmupRatio();
+
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler.TypeCase getTypeCase();
+
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler.OptionalWarmupRatioCase getOptionalWarmupRatioCase();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Scheduler}
+     */
+    public static final class Scheduler extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Scheduler)
+        SchedulerOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Scheduler.newBuilder() to construct.
+      private Scheduler(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Scheduler() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Scheduler();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Scheduler(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.Builder subBuilder = null;
+                if (typeCase_ == 1) {
+                  subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 1;
+                break;
+              }
+              case 18: {
+                yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.Builder subBuilder = null;
+                if (typeCase_ == 2) {
+                  subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 2;
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.Builder subBuilder = null;
+                if (typeCase_ == 3) {
+                  subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 3;
+                break;
+              }
+              case 809: {
+                optionalWarmupRatio_ = input.readDouble();
+                optionalWarmupRatioCase_ = 101;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_Scheduler_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_Scheduler_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler.Builder.class);
+      }
+
+      private int typeCase_ = 0;
+      private java.lang.Object type_;
+      public enum TypeCase
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+        LINEAR(1),
+        CONSTANT(2),
+        COSINE(3),
+        TYPE_NOT_SET(0);
+        private final int value;
+        private TypeCase(int value) {
+          this.value = value;
+        }
+        /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static TypeCase valueOf(int value) {
+          return forNumber(value);
+        }
+
+        public static TypeCase forNumber(int value) {
+          switch (value) {
+            case 1: return LINEAR;
+            case 2: return CONSTANT;
+            case 3: return COSINE;
+            case 0: return TYPE_NOT_SET;
+            default: return null;
+          }
+        }
+        public int getNumber() {
+          return this.value;
+        }
+      };
+
+      public TypeCase
+      getTypeCase() {
+        return TypeCase.forNumber(
+            typeCase_);
+      }
+
+      private int optionalWarmupRatioCase_ = 0;
+      private java.lang.Object optionalWarmupRatio_;
+      public enum OptionalWarmupRatioCase
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+        WARMUP_RATIO(101),
+        OPTIONALWARMUPRATIO_NOT_SET(0);
+        private final int value;
+        private OptionalWarmupRatioCase(int value) {
+          this.value = value;
+        }
+        /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static OptionalWarmupRatioCase valueOf(int value) {
+          return forNumber(value);
+        }
+
+        public static OptionalWarmupRatioCase forNumber(int value) {
+          switch (value) {
+            case 101: return WARMUP_RATIO;
+            case 0: return OPTIONALWARMUPRATIO_NOT_SET;
+            default: return null;
+          }
+        }
+        public int getNumber() {
+          return this.value;
+        }
+      };
+
+      public OptionalWarmupRatioCase
+      getOptionalWarmupRatioCase() {
+        return OptionalWarmupRatioCase.forNumber(
+            optionalWarmupRatioCase_);
+      }
+
+      public static final int LINEAR_FIELD_NUMBER = 1;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+       * @return Whether the linear field is set.
+       */
+      @java.lang.Override
+      public boolean hasLinear() {
+        return typeCase_ == 1;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+       * @return The linear.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear getLinear() {
+        if (typeCase_ == 1) {
+           return (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear) type_;
+        }
+        return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.getDefaultInstance();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinearOrBuilder getLinearOrBuilder() {
+        if (typeCase_ == 1) {
+           return (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear) type_;
+        }
+        return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.getDefaultInstance();
+      }
+
+      public static final int CONSTANT_FIELD_NUMBER = 2;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+       * @return Whether the constant field is set.
+       */
+      @java.lang.Override
+      public boolean hasConstant() {
+        return typeCase_ == 2;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+       * @return The constant.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant getConstant() {
+        if (typeCase_ == 2) {
+           return (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant) type_;
+        }
+        return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.getDefaultInstance();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstantOrBuilder getConstantOrBuilder() {
+        if (typeCase_ == 2) {
+           return (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant) type_;
+        }
+        return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.getDefaultInstance();
+      }
+
+      public static final int COSINE_FIELD_NUMBER = 3;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+       * @return Whether the cosine field is set.
+       */
+      @java.lang.Override
+      public boolean hasCosine() {
+        return typeCase_ == 3;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+       * @return The cosine.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine getCosine() {
+        if (typeCase_ == 3) {
+           return (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine) type_;
+        }
+        return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.getDefaultInstance();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosineOrBuilder getCosineOrBuilder() {
+        if (typeCase_ == 3) {
+           return (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine) type_;
+        }
+        return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.getDefaultInstance();
+      }
+
+      public static final int WARMUP_RATIO_FIELD_NUMBER = 101;
+      /**
+       * <code>double warmup_ratio = 101;</code>
+       * @return Whether the warmupRatio field is set.
+       */
+      @java.lang.Override
+      public boolean hasWarmupRatio() {
+        return optionalWarmupRatioCase_ == 101;
+      }
+      /**
+       * <code>double warmup_ratio = 101;</code>
+       * @return The warmupRatio.
+       */
+      @java.lang.Override
+      public double getWarmupRatio() {
+        if (optionalWarmupRatioCase_ == 101) {
+          return (java.lang.Double) optionalWarmupRatio_;
+        }
+        return 0D;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (typeCase_ == 1) {
+          output.writeMessage(1, (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear) type_);
+        }
+        if (typeCase_ == 2) {
+          output.writeMessage(2, (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant) type_);
+        }
+        if (typeCase_ == 3) {
+          output.writeMessage(3, (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine) type_);
+        }
+        if (optionalWarmupRatioCase_ == 101) {
+          output.writeDouble(
+              101, (double)((java.lang.Double) optionalWarmupRatio_));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (typeCase_ == 1) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear) type_);
+        }
+        if (typeCase_ == 2) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant) type_);
+        }
+        if (typeCase_ == 3) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine) type_);
+        }
+        if (optionalWarmupRatioCase_ == 101) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(
+                101, (double)((java.lang.Double) optionalWarmupRatio_));
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler other = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler) obj;
+
+        if (!getTypeCase().equals(other.getTypeCase())) return false;
+        switch (typeCase_) {
+          case 1:
+            if (!getLinear()
+                .equals(other.getLinear())) return false;
+            break;
+          case 2:
+            if (!getConstant()
+                .equals(other.getConstant())) return false;
+            break;
+          case 3:
+            if (!getCosine()
+                .equals(other.getCosine())) return false;
+            break;
+          case 0:
+          default:
+        }
+        if (!getOptionalWarmupRatioCase().equals(other.getOptionalWarmupRatioCase())) return false;
+        switch (optionalWarmupRatioCase_) {
+          case 101:
+            if (java.lang.Double.doubleToLongBits(getWarmupRatio())
+                != java.lang.Double.doubleToLongBits(
+                    other.getWarmupRatio())) return false;
+            break;
+          case 0:
+          default:
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        switch (typeCase_) {
+          case 1:
+            hash = (37 * hash) + LINEAR_FIELD_NUMBER;
+            hash = (53 * hash) + getLinear().hashCode();
+            break;
+          case 2:
+            hash = (37 * hash) + CONSTANT_FIELD_NUMBER;
+            hash = (53 * hash) + getConstant().hashCode();
+            break;
+          case 3:
+            hash = (37 * hash) + COSINE_FIELD_NUMBER;
+            hash = (53 * hash) + getCosine().hashCode();
+            break;
+          case 0:
+          default:
+        }
+        switch (optionalWarmupRatioCase_) {
+          case 101:
+            hash = (37 * hash) + WARMUP_RATIO_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+                java.lang.Double.doubleToLongBits(getWarmupRatio()));
+            break;
+          case 0:
+          default:
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Scheduler}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Scheduler)
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.SchedulerOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_Scheduler_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_Scheduler_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          typeCase_ = 0;
+          type_ = null;
+          optionalWarmupRatioCase_ = 0;
+          optionalWarmupRatio_ = null;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_Scheduler_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler getDefaultInstanceForType() {
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler build() {
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler buildPartial() {
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler result = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler(this);
+          if (typeCase_ == 1) {
+            if (linearBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = linearBuilder_.build();
+            }
+          }
+          if (typeCase_ == 2) {
+            if (constantBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = constantBuilder_.build();
+            }
+          }
+          if (typeCase_ == 3) {
+            if (cosineBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = cosineBuilder_.build();
+            }
+          }
+          if (optionalWarmupRatioCase_ == 101) {
+            result.optionalWarmupRatio_ = optionalWarmupRatio_;
+          }
+          result.typeCase_ = typeCase_;
+          result.optionalWarmupRatioCase_ = optionalWarmupRatioCase_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler) {
+            return mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler other) {
+          if (other == yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler.getDefaultInstance()) return this;
+          switch (other.getTypeCase()) {
+            case LINEAR: {
+              mergeLinear(other.getLinear());
+              break;
+            }
+            case CONSTANT: {
+              mergeConstant(other.getConstant());
+              break;
+            }
+            case COSINE: {
+              mergeCosine(other.getCosine());
+              break;
+            }
+            case TYPE_NOT_SET: {
+              break;
+            }
+          }
+          switch (other.getOptionalWarmupRatioCase()) {
+            case WARMUP_RATIO: {
+              setWarmupRatio(other.getWarmupRatio());
+              break;
+            }
+            case OPTIONALWARMUPRATIO_NOT_SET: {
+              break;
+            }
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int typeCase_ = 0;
+        private java.lang.Object type_;
+        public TypeCase
+            getTypeCase() {
+          return TypeCase.forNumber(
+              typeCase_);
+        }
+
+        public Builder clearType() {
+          typeCase_ = 0;
+          type_ = null;
+          onChanged();
+          return this;
+        }
+
+        private int optionalWarmupRatioCase_ = 0;
+        private java.lang.Object optionalWarmupRatio_;
+        public OptionalWarmupRatioCase
+            getOptionalWarmupRatioCase() {
+          return OptionalWarmupRatioCase.forNumber(
+              optionalWarmupRatioCase_);
+        }
+
+        public Builder clearOptionalWarmupRatio() {
+          optionalWarmupRatioCase_ = 0;
+          optionalWarmupRatio_ = null;
+          onChanged();
+          return this;
+        }
+
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.Builder, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinearOrBuilder> linearBuilder_;
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+         * @return Whether the linear field is set.
+         */
+        @java.lang.Override
+        public boolean hasLinear() {
+          return typeCase_ == 1;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+         * @return The linear.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear getLinear() {
+          if (linearBuilder_ == null) {
+            if (typeCase_ == 1) {
+              return (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear) type_;
+            }
+            return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.getDefaultInstance();
+          } else {
+            if (typeCase_ == 1) {
+              return linearBuilder_.getMessage();
+            }
+            return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+         */
+        public Builder setLinear(yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear value) {
+          if (linearBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            linearBuilder_.setMessage(value);
+          }
+          typeCase_ = 1;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+         */
+        public Builder setLinear(
+            yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.Builder builderForValue) {
+          if (linearBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            linearBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 1;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+         */
+        public Builder mergeLinear(yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear value) {
+          if (linearBuilder_ == null) {
+            if (typeCase_ == 1 &&
+                type_ != yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.getDefaultInstance()) {
+              type_ = yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 1) {
+              linearBuilder_.mergeFrom(value);
+            }
+            linearBuilder_.setMessage(value);
+          }
+          typeCase_ = 1;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+         */
+        public Builder clearLinear() {
+          if (linearBuilder_ == null) {
+            if (typeCase_ == 1) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 1) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            linearBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+         */
+        public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.Builder getLinearBuilder() {
+          return getLinearFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinearOrBuilder getLinearOrBuilder() {
+          if ((typeCase_ == 1) && (linearBuilder_ != null)) {
+            return linearBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 1) {
+              return (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear) type_;
+            }
+            return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.Builder, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinearOrBuilder> 
+            getLinearFieldBuilder() {
+          if (linearBuilder_ == null) {
+            if (!(typeCase_ == 1)) {
+              type_ = yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.getDefaultInstance();
+            }
+            linearBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.Builder, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinearOrBuilder>(
+                    (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 1;
+          onChanged();;
+          return linearBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.Builder, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstantOrBuilder> constantBuilder_;
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+         * @return Whether the constant field is set.
+         */
+        @java.lang.Override
+        public boolean hasConstant() {
+          return typeCase_ == 2;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+         * @return The constant.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant getConstant() {
+          if (constantBuilder_ == null) {
+            if (typeCase_ == 2) {
+              return (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant) type_;
+            }
+            return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.getDefaultInstance();
+          } else {
+            if (typeCase_ == 2) {
+              return constantBuilder_.getMessage();
+            }
+            return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+         */
+        public Builder setConstant(yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant value) {
+          if (constantBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            constantBuilder_.setMessage(value);
+          }
+          typeCase_ = 2;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+         */
+        public Builder setConstant(
+            yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.Builder builderForValue) {
+          if (constantBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            constantBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 2;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+         */
+        public Builder mergeConstant(yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant value) {
+          if (constantBuilder_ == null) {
+            if (typeCase_ == 2 &&
+                type_ != yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.getDefaultInstance()) {
+              type_ = yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 2) {
+              constantBuilder_.mergeFrom(value);
+            }
+            constantBuilder_.setMessage(value);
+          }
+          typeCase_ = 2;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+         */
+        public Builder clearConstant() {
+          if (constantBuilder_ == null) {
+            if (typeCase_ == 2) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 2) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            constantBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+         */
+        public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.Builder getConstantBuilder() {
+          return getConstantFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstantOrBuilder getConstantOrBuilder() {
+          if ((typeCase_ == 2) && (constantBuilder_ != null)) {
+            return constantBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 2) {
+              return (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant) type_;
+            }
+            return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.Builder, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstantOrBuilder> 
+            getConstantFieldBuilder() {
+          if (constantBuilder_ == null) {
+            if (!(typeCase_ == 2)) {
+              type_ = yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.getDefaultInstance();
+            }
+            constantBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.Builder, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstantOrBuilder>(
+                    (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 2;
+          onChanged();;
+          return constantBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.Builder, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosineOrBuilder> cosineBuilder_;
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+         * @return Whether the cosine field is set.
+         */
+        @java.lang.Override
+        public boolean hasCosine() {
+          return typeCase_ == 3;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+         * @return The cosine.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine getCosine() {
+          if (cosineBuilder_ == null) {
+            if (typeCase_ == 3) {
+              return (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine) type_;
+            }
+            return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.getDefaultInstance();
+          } else {
+            if (typeCase_ == 3) {
+              return cosineBuilder_.getMessage();
+            }
+            return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+         */
+        public Builder setCosine(yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine value) {
+          if (cosineBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            cosineBuilder_.setMessage(value);
+          }
+          typeCase_ = 3;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+         */
+        public Builder setCosine(
+            yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.Builder builderForValue) {
+          if (cosineBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            cosineBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 3;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+         */
+        public Builder mergeCosine(yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine value) {
+          if (cosineBuilder_ == null) {
+            if (typeCase_ == 3 &&
+                type_ != yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.getDefaultInstance()) {
+              type_ = yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 3) {
+              cosineBuilder_.mergeFrom(value);
+            }
+            cosineBuilder_.setMessage(value);
+          }
+          typeCase_ = 3;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+         */
+        public Builder clearCosine() {
+          if (cosineBuilder_ == null) {
+            if (typeCase_ == 3) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 3) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            cosineBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+         */
+        public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.Builder getCosineBuilder() {
+          return getCosineFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosineOrBuilder getCosineOrBuilder() {
+          if ((typeCase_ == 3) && (cosineBuilder_ != null)) {
+            return cosineBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 3) {
+              return (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine) type_;
+            }
+            return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.Builder, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosineOrBuilder> 
+            getCosineFieldBuilder() {
+          if (cosineBuilder_ == null) {
+            if (!(typeCase_ == 3)) {
+              type_ = yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.getDefaultInstance();
+            }
+            cosineBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.Builder, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosineOrBuilder>(
+                    (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 3;
+          onChanged();;
+          return cosineBuilder_;
+        }
+
+        /**
+         * <code>double warmup_ratio = 101;</code>
+         * @return Whether the warmupRatio field is set.
+         */
+        public boolean hasWarmupRatio() {
+          return optionalWarmupRatioCase_ == 101;
+        }
+        /**
+         * <code>double warmup_ratio = 101;</code>
+         * @return The warmupRatio.
+         */
+        public double getWarmupRatio() {
+          if (optionalWarmupRatioCase_ == 101) {
+            return (java.lang.Double) optionalWarmupRatio_;
+          }
+          return 0D;
+        }
+        /**
+         * <code>double warmup_ratio = 101;</code>
+         * @param value The warmupRatio to set.
+         * @return This builder for chaining.
+         */
+        public Builder setWarmupRatio(double value) {
+          optionalWarmupRatioCase_ = 101;
+          optionalWarmupRatio_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double warmup_ratio = 101;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearWarmupRatio() {
+          if (optionalWarmupRatioCase_ == 101) {
+            optionalWarmupRatioCase_ = 0;
+            optionalWarmupRatio_ = null;
+            onChanged();
+          }
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Scheduler)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Scheduler)
+      private static final yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler();
+      }
+
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Scheduler>
+          PARSER = new com.google.protobuf.AbstractParser<Scheduler>() {
+        @java.lang.Override
+        public Scheduler parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Scheduler(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Scheduler> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Scheduler> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface OptimizerOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Optimizer)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+       * @return Whether the adamw field is set.
+       */
+      boolean hasAdamw();
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+       * @return The adamw.
+       */
+      yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw getAdamw();
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+       */
+      yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamwOrBuilder getAdamwOrBuilder();
+
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer.TypeCase getTypeCase();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Optimizer}
+     */
+    public static final class Optimizer extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Optimizer)
+        OptimizerOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Optimizer.newBuilder() to construct.
+      private Optimizer(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Optimizer() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Optimizer();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Optimizer(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.Builder subBuilder = null;
+                if (typeCase_ == 1) {
+                  subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 1;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_Optimizer_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_Optimizer_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer.Builder.class);
+      }
+
+      private int typeCase_ = 0;
+      private java.lang.Object type_;
+      public enum TypeCase
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+        ADAMW(1),
+        TYPE_NOT_SET(0);
+        private final int value;
+        private TypeCase(int value) {
+          this.value = value;
+        }
+        /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static TypeCase valueOf(int value) {
+          return forNumber(value);
+        }
+
+        public static TypeCase forNumber(int value) {
+          switch (value) {
+            case 1: return ADAMW;
+            case 0: return TYPE_NOT_SET;
+            default: return null;
+          }
+        }
+        public int getNumber() {
+          return this.value;
+        }
+      };
+
+      public TypeCase
+      getTypeCase() {
+        return TypeCase.forNumber(
+            typeCase_);
+      }
+
+      public static final int ADAMW_FIELD_NUMBER = 1;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+       * @return Whether the adamw field is set.
+       */
+      @java.lang.Override
+      public boolean hasAdamw() {
+        return typeCase_ == 1;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+       * @return The adamw.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw getAdamw() {
+        if (typeCase_ == 1) {
+           return (yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw) type_;
+        }
+        return yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.getDefaultInstance();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamwOrBuilder getAdamwOrBuilder() {
+        if (typeCase_ == 1) {
+           return (yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw) type_;
+        }
+        return yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.getDefaultInstance();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (typeCase_ == 1) {
+          output.writeMessage(1, (yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw) type_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (typeCase_ == 1) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, (yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw) type_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer other = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer) obj;
+
+        if (!getTypeCase().equals(other.getTypeCase())) return false;
+        switch (typeCase_) {
+          case 1:
+            if (!getAdamw()
+                .equals(other.getAdamw())) return false;
+            break;
+          case 0:
+          default:
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        switch (typeCase_) {
+          case 1:
+            hash = (37 * hash) + ADAMW_FIELD_NUMBER;
+            hash = (53 * hash) + getAdamw().hashCode();
+            break;
+          case 0:
+          default:
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Optimizer}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Optimizer)
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.OptimizerOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_Optimizer_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_Optimizer_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          typeCase_ = 0;
+          type_ = null;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_Optimizer_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer getDefaultInstanceForType() {
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer build() {
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer buildPartial() {
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer result = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer(this);
+          if (typeCase_ == 1) {
+            if (adamwBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = adamwBuilder_.build();
+            }
+          }
+          result.typeCase_ = typeCase_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer) {
+            return mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer other) {
+          if (other == yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer.getDefaultInstance()) return this;
+          switch (other.getTypeCase()) {
+            case ADAMW: {
+              mergeAdamw(other.getAdamw());
+              break;
+            }
+            case TYPE_NOT_SET: {
+              break;
+            }
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int typeCase_ = 0;
+        private java.lang.Object type_;
+        public TypeCase
+            getTypeCase() {
+          return TypeCase.forNumber(
+              typeCase_);
+        }
+
+        public Builder clearType() {
+          typeCase_ = 0;
+          type_ = null;
+          onChanged();
+          return this;
+        }
+
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw, yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.Builder, yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamwOrBuilder> adamwBuilder_;
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+         * @return Whether the adamw field is set.
+         */
+        @java.lang.Override
+        public boolean hasAdamw() {
+          return typeCase_ == 1;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+         * @return The adamw.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw getAdamw() {
+          if (adamwBuilder_ == null) {
+            if (typeCase_ == 1) {
+              return (yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw) type_;
+            }
+            return yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.getDefaultInstance();
+          } else {
+            if (typeCase_ == 1) {
+              return adamwBuilder_.getMessage();
+            }
+            return yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+         */
+        public Builder setAdamw(yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw value) {
+          if (adamwBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            adamwBuilder_.setMessage(value);
+          }
+          typeCase_ = 1;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+         */
+        public Builder setAdamw(
+            yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.Builder builderForValue) {
+          if (adamwBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            adamwBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 1;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+         */
+        public Builder mergeAdamw(yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw value) {
+          if (adamwBuilder_ == null) {
+            if (typeCase_ == 1 &&
+                type_ != yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.getDefaultInstance()) {
+              type_ = yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 1) {
+              adamwBuilder_.mergeFrom(value);
+            }
+            adamwBuilder_.setMessage(value);
+          }
+          typeCase_ = 1;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+         */
+        public Builder clearAdamw() {
+          if (adamwBuilder_ == null) {
+            if (typeCase_ == 1) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 1) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            adamwBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+         */
+        public yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.Builder getAdamwBuilder() {
+          return getAdamwFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamwOrBuilder getAdamwOrBuilder() {
+          if ((typeCase_ == 1) && (adamwBuilder_ != null)) {
+            return adamwBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 1) {
+              return (yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw) type_;
+            }
+            return yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw, yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.Builder, yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamwOrBuilder> 
+            getAdamwFieldBuilder() {
+          if (adamwBuilder_ == null) {
+            if (!(typeCase_ == 1)) {
+              type_ = yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.getDefaultInstance();
+            }
+            adamwBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw, yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.Builder, yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamwOrBuilder>(
+                    (yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 1;
+          onChanged();;
+          return adamwBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Optimizer)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Optimizer)
+      private static final yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer();
+      }
+
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Optimizer>
+          PARSER = new com.google.protobuf.AbstractParser<Optimizer>() {
+        @java.lang.Override
+        public Optimizer parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Optimizer(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Optimizer> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Optimizer> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int tuningTypeCase_ = 0;
+    private java.lang.Object tuningType_;
+    public enum TuningTypeCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      LORA(100),
+      PROMPT_TUNE(101),
+      TUNINGTYPE_NOT_SET(0);
+      private final int value;
+      private TuningTypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TuningTypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TuningTypeCase forNumber(int value) {
+        switch (value) {
+          case 100: return LORA;
+          case 101: return PROMPT_TUNE;
+          case 0: return TUNINGTYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TuningTypeCase
+    getTuningTypeCase() {
+      return TuningTypeCase.forNumber(
+          tuningTypeCase_);
+    }
+
+    public static final int SEED_FIELD_NUMBER = 1;
+    private long seed_;
+    /**
+     * <code>int64 seed = 1;</code>
+     * @return The seed.
+     */
+    @java.lang.Override
+    public long getSeed() {
+      return seed_;
+    }
+
+    public static final int LR_FIELD_NUMBER = 2;
+    private double lr_;
+    /**
+     * <code>double lr = 2;</code>
+     * @return The lr.
+     */
+    @java.lang.Override
+    public double getLr() {
+      return lr_;
+    }
+
+    public static final int N_SAMPLES_FIELD_NUMBER = 3;
+    private long nSamples_;
+    /**
+     * <code>int64 n_samples = 3;</code>
+     * @return The nSamples.
+     */
+    @java.lang.Override
+    public long getNSamples() {
+      return nSamples_;
+    }
+
+    public static final int ADDITIONAL_ARGUMENTS_FIELD_NUMBER = 7;
+    private volatile java.lang.Object additionalArguments_;
+    /**
+     * <code>string additional_arguments = 7;</code>
+     * @return The additionalArguments.
+     */
+    @java.lang.Override
+    public java.lang.String getAdditionalArguments() {
+      java.lang.Object ref = additionalArguments_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        additionalArguments_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string additional_arguments = 7;</code>
+     * @return The bytes for additionalArguments.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAdditionalArgumentsBytes() {
+      java.lang.Object ref = additionalArguments_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        additionalArguments_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EMBEDDING_DIMS_FIELD_NUMBER = 8;
+    private com.google.protobuf.Internal.LongList embeddingDims_;
+    /**
+     * <code>repeated int64 embedding_dims = 8;</code>
+     * @return A list containing the embeddingDims.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getEmbeddingDimsList() {
+      return embeddingDims_;
+    }
+    /**
+     * <code>repeated int64 embedding_dims = 8;</code>
+     * @return The count of embeddingDims.
+     */
+    public int getEmbeddingDimsCount() {
+      return embeddingDims_.size();
+    }
+    /**
+     * <code>repeated int64 embedding_dims = 8;</code>
+     * @param index The index of the element to return.
+     * @return The embeddingDims at the given index.
+     */
+    public long getEmbeddingDims(int index) {
+      return embeddingDims_.getLong(index);
+    }
+    private int embeddingDimsMemoizedSerializedSize = -1;
+
+    public static final int LORA_FIELD_NUMBER = 100;
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+     * @return Whether the lora field is set.
+     */
+    @java.lang.Override
+    public boolean hasLora() {
+      return tuningTypeCase_ == 100;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+     * @return The lora.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora getLora() {
+      if (tuningTypeCase_ == 100) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora) tuningType_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLoraOrBuilder getLoraOrBuilder() {
+      if (tuningTypeCase_ == 100) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora) tuningType_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.getDefaultInstance();
+    }
+
+    public static final int PROMPT_TUNE_FIELD_NUMBER = 101;
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+     * @return Whether the promptTune field is set.
+     */
+    @java.lang.Override
+    public boolean hasPromptTune() {
+      return tuningTypeCase_ == 101;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+     * @return The promptTune.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune getPromptTune() {
+      if (tuningTypeCase_ == 101) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune) tuningType_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTuneOrBuilder getPromptTuneOrBuilder() {
+      if (tuningTypeCase_ == 101) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune) tuningType_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.getDefaultInstance();
+    }
+
+    public static final int SCHEDULER_FIELD_NUMBER = 200;
+    private yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler scheduler_;
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Scheduler scheduler = 200;</code>
+     * @return Whether the scheduler field is set.
+     */
+    @java.lang.Override
+    public boolean hasScheduler() {
+      return scheduler_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Scheduler scheduler = 200;</code>
+     * @return The scheduler.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler getScheduler() {
+      return scheduler_ == null ? yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler.getDefaultInstance() : scheduler_;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Scheduler scheduler = 200;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.SchedulerOrBuilder getSchedulerOrBuilder() {
+      return getScheduler();
+    }
+
+    public static final int OPTIMIZER_FIELD_NUMBER = 201;
+    private yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer optimizer_;
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Optimizer optimizer = 201;</code>
+     * @return Whether the optimizer field is set.
+     */
+    @java.lang.Override
+    public boolean hasOptimizer() {
+      return optimizer_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Optimizer optimizer = 201;</code>
+     * @return The optimizer.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer getOptimizer() {
+      return optimizer_ == null ? yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer.getDefaultInstance() : optimizer_;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Optimizer optimizer = 201;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.OptimizerOrBuilder getOptimizerOrBuilder() {
+      return getOptimizer();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (seed_ != 0L) {
+        output.writeInt64(1, seed_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(lr_) != 0) {
+        output.writeDouble(2, lr_);
+      }
+      if (nSamples_ != 0L) {
+        output.writeInt64(3, nSamples_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(additionalArguments_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, additionalArguments_);
+      }
+      if (getEmbeddingDimsList().size() > 0) {
+        output.writeUInt32NoTag(66);
+        output.writeUInt32NoTag(embeddingDimsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < embeddingDims_.size(); i++) {
+        output.writeInt64NoTag(embeddingDims_.getLong(i));
+      }
+      if (tuningTypeCase_ == 100) {
+        output.writeMessage(100, (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora) tuningType_);
+      }
+      if (tuningTypeCase_ == 101) {
+        output.writeMessage(101, (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune) tuningType_);
+      }
+      if (scheduler_ != null) {
+        output.writeMessage(200, getScheduler());
+      }
+      if (optimizer_ != null) {
+        output.writeMessage(201, getOptimizer());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (seed_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, seed_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(lr_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, lr_);
+      }
+      if (nSamples_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, nSamples_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(additionalArguments_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, additionalArguments_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < embeddingDims_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt64SizeNoTag(embeddingDims_.getLong(i));
+        }
+        size += dataSize;
+        if (!getEmbeddingDimsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        embeddingDimsMemoizedSerializedSize = dataSize;
+      }
+      if (tuningTypeCase_ == 100) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(100, (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora) tuningType_);
+      }
+      if (tuningTypeCase_ == 101) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(101, (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune) tuningType_);
+      }
+      if (scheduler_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(200, getScheduler());
+      }
+      if (optimizer_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(201, getOptimizer());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams other = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) obj;
+
+      if (getSeed()
+          != other.getSeed()) return false;
+      if (java.lang.Double.doubleToLongBits(getLr())
+          != java.lang.Double.doubleToLongBits(
+              other.getLr())) return false;
+      if (getNSamples()
+          != other.getNSamples()) return false;
+      if (!getAdditionalArguments()
+          .equals(other.getAdditionalArguments())) return false;
+      if (!getEmbeddingDimsList()
+          .equals(other.getEmbeddingDimsList())) return false;
+      if (hasScheduler() != other.hasScheduler()) return false;
+      if (hasScheduler()) {
+        if (!getScheduler()
+            .equals(other.getScheduler())) return false;
+      }
+      if (hasOptimizer() != other.hasOptimizer()) return false;
+      if (hasOptimizer()) {
+        if (!getOptimizer()
+            .equals(other.getOptimizer())) return false;
+      }
+      if (!getTuningTypeCase().equals(other.getTuningTypeCase())) return false;
+      switch (tuningTypeCase_) {
+        case 100:
+          if (!getLora()
+              .equals(other.getLora())) return false;
+          break;
+        case 101:
+          if (!getPromptTune()
+              .equals(other.getPromptTune())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SEED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSeed());
+      hash = (37 * hash) + LR_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getLr()));
+      hash = (37 * hash) + N_SAMPLES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getNSamples());
+      hash = (37 * hash) + ADDITIONAL_ARGUMENTS_FIELD_NUMBER;
+      hash = (53 * hash) + getAdditionalArguments().hashCode();
+      if (getEmbeddingDimsCount() > 0) {
+        hash = (37 * hash) + EMBEDDING_DIMS_FIELD_NUMBER;
+        hash = (53 * hash) + getEmbeddingDimsList().hashCode();
+      }
+      if (hasScheduler()) {
+        hash = (37 * hash) + SCHEDULER_FIELD_NUMBER;
+        hash = (53 * hash) + getScheduler().hashCode();
+      }
+      if (hasOptimizer()) {
+        hash = (37 * hash) + OPTIMIZER_FIELD_NUMBER;
+        hash = (53 * hash) + getOptimizer().hashCode();
+      }
+      switch (tuningTypeCase_) {
+        case 100:
+          hash = (37 * hash) + LORA_FIELD_NUMBER;
+          hash = (53 * hash) + getLora().hashCode();
+          break;
+        case 101:
+          hash = (37 * hash) + PROMPT_TUNE_FIELD_NUMBER;
+          hash = (53 * hash) + getPromptTune().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams)
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        seed_ = 0L;
+
+        lr_ = 0D;
+
+        nSamples_ = 0L;
+
+        additionalArguments_ = "";
+
+        embeddingDims_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (schedulerBuilder_ == null) {
+          scheduler_ = null;
+        } else {
+          scheduler_ = null;
+          schedulerBuilder_ = null;
+        }
+        if (optimizerBuilder_ == null) {
+          optimizer_ = null;
+        } else {
+          optimizer_ = null;
+          optimizerBuilder_ = null;
+        }
+        tuningTypeCase_ = 0;
+        tuningType_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams build() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams buildPartial() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams result = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams(this);
+        int from_bitField0_ = bitField0_;
+        result.seed_ = seed_;
+        result.lr_ = lr_;
+        result.nSamples_ = nSamples_;
+        result.additionalArguments_ = additionalArguments_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          embeddingDims_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.embeddingDims_ = embeddingDims_;
+        if (tuningTypeCase_ == 100) {
+          if (loraBuilder_ == null) {
+            result.tuningType_ = tuningType_;
+          } else {
+            result.tuningType_ = loraBuilder_.build();
+          }
+        }
+        if (tuningTypeCase_ == 101) {
+          if (promptTuneBuilder_ == null) {
+            result.tuningType_ = tuningType_;
+          } else {
+            result.tuningType_ = promptTuneBuilder_.build();
+          }
+        }
+        if (schedulerBuilder_ == null) {
+          result.scheduler_ = scheduler_;
+        } else {
+          result.scheduler_ = schedulerBuilder_.build();
+        }
+        if (optimizerBuilder_ == null) {
+          result.optimizer_ = optimizer_;
+        } else {
+          result.optimizer_ = optimizerBuilder_.build();
+        }
+        result.tuningTypeCase_ = tuningTypeCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) {
+          return mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams other) {
+        if (other == yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance()) return this;
+        if (other.getSeed() != 0L) {
+          setSeed(other.getSeed());
+        }
+        if (other.getLr() != 0D) {
+          setLr(other.getLr());
+        }
+        if (other.getNSamples() != 0L) {
+          setNSamples(other.getNSamples());
+        }
+        if (!other.getAdditionalArguments().isEmpty()) {
+          additionalArguments_ = other.additionalArguments_;
+          onChanged();
+        }
+        if (!other.embeddingDims_.isEmpty()) {
+          if (embeddingDims_.isEmpty()) {
+            embeddingDims_ = other.embeddingDims_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureEmbeddingDimsIsMutable();
+            embeddingDims_.addAll(other.embeddingDims_);
+          }
+          onChanged();
+        }
+        if (other.hasScheduler()) {
+          mergeScheduler(other.getScheduler());
+        }
+        if (other.hasOptimizer()) {
+          mergeOptimizer(other.getOptimizer());
+        }
+        switch (other.getTuningTypeCase()) {
+          case LORA: {
+            mergeLora(other.getLora());
+            break;
+          }
+          case PROMPT_TUNE: {
+            mergePromptTune(other.getPromptTune());
+            break;
+          }
+          case TUNINGTYPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int tuningTypeCase_ = 0;
+      private java.lang.Object tuningType_;
+      public TuningTypeCase
+          getTuningTypeCase() {
+        return TuningTypeCase.forNumber(
+            tuningTypeCase_);
+      }
+
+      public Builder clearTuningType() {
+        tuningTypeCase_ = 0;
+        tuningType_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private long seed_ ;
+      /**
+       * <code>int64 seed = 1;</code>
+       * @return The seed.
+       */
+      @java.lang.Override
+      public long getSeed() {
+        return seed_;
+      }
+      /**
+       * <code>int64 seed = 1;</code>
+       * @param value The seed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSeed(long value) {
+        
+        seed_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 seed = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSeed() {
+        
+        seed_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private double lr_ ;
+      /**
+       * <code>double lr = 2;</code>
+       * @return The lr.
+       */
+      @java.lang.Override
+      public double getLr() {
+        return lr_;
+      }
+      /**
+       * <code>double lr = 2;</code>
+       * @param value The lr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLr(double value) {
+        
+        lr_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>double lr = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLr() {
+        
+        lr_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private long nSamples_ ;
+      /**
+       * <code>int64 n_samples = 3;</code>
+       * @return The nSamples.
+       */
+      @java.lang.Override
+      public long getNSamples() {
+        return nSamples_;
+      }
+      /**
+       * <code>int64 n_samples = 3;</code>
+       * @param value The nSamples to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNSamples(long value) {
+        
+        nSamples_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 n_samples = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNSamples() {
+        
+        nSamples_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object additionalArguments_ = "";
+      /**
+       * <code>string additional_arguments = 7;</code>
+       * @return The additionalArguments.
+       */
+      public java.lang.String getAdditionalArguments() {
+        java.lang.Object ref = additionalArguments_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          additionalArguments_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string additional_arguments = 7;</code>
+       * @return The bytes for additionalArguments.
+       */
+      public com.google.protobuf.ByteString
+          getAdditionalArgumentsBytes() {
+        java.lang.Object ref = additionalArguments_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          additionalArguments_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string additional_arguments = 7;</code>
+       * @param value The additionalArguments to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdditionalArguments(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        additionalArguments_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string additional_arguments = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAdditionalArguments() {
+        
+        additionalArguments_ = getDefaultInstance().getAdditionalArguments();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string additional_arguments = 7;</code>
+       * @param value The bytes for additionalArguments to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdditionalArgumentsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        additionalArguments_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.LongList embeddingDims_ = emptyLongList();
+      private void ensureEmbeddingDimsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          embeddingDims_ = mutableCopy(embeddingDims_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated int64 embedding_dims = 8;</code>
+       * @return A list containing the embeddingDims.
+       */
+      public java.util.List<java.lang.Long>
+          getEmbeddingDimsList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(embeddingDims_) : embeddingDims_;
+      }
+      /**
+       * <code>repeated int64 embedding_dims = 8;</code>
+       * @return The count of embeddingDims.
+       */
+      public int getEmbeddingDimsCount() {
+        return embeddingDims_.size();
+      }
+      /**
+       * <code>repeated int64 embedding_dims = 8;</code>
+       * @param index The index of the element to return.
+       * @return The embeddingDims at the given index.
+       */
+      public long getEmbeddingDims(int index) {
+        return embeddingDims_.getLong(index);
+      }
+      /**
+       * <code>repeated int64 embedding_dims = 8;</code>
+       * @param index The index to set the value at.
+       * @param value The embeddingDims to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmbeddingDims(
+          int index, long value) {
+        ensureEmbeddingDimsIsMutable();
+        embeddingDims_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 embedding_dims = 8;</code>
+       * @param value The embeddingDims to add.
+       * @return This builder for chaining.
+       */
+      public Builder addEmbeddingDims(long value) {
+        ensureEmbeddingDimsIsMutable();
+        embeddingDims_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 embedding_dims = 8;</code>
+       * @param values The embeddingDims to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllEmbeddingDims(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureEmbeddingDimsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, embeddingDims_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 embedding_dims = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmbeddingDims() {
+        embeddingDims_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora, yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.Builder, yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLoraOrBuilder> loraBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+       * @return Whether the lora field is set.
+       */
+      @java.lang.Override
+      public boolean hasLora() {
+        return tuningTypeCase_ == 100;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+       * @return The lora.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora getLora() {
+        if (loraBuilder_ == null) {
+          if (tuningTypeCase_ == 100) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora) tuningType_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.getDefaultInstance();
+        } else {
+          if (tuningTypeCase_ == 100) {
+            return loraBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+       */
+      public Builder setLora(yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora value) {
+        if (loraBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tuningType_ = value;
+          onChanged();
+        } else {
+          loraBuilder_.setMessage(value);
+        }
+        tuningTypeCase_ = 100;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+       */
+      public Builder setLora(
+          yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.Builder builderForValue) {
+        if (loraBuilder_ == null) {
+          tuningType_ = builderForValue.build();
+          onChanged();
+        } else {
+          loraBuilder_.setMessage(builderForValue.build());
+        }
+        tuningTypeCase_ = 100;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+       */
+      public Builder mergeLora(yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora value) {
+        if (loraBuilder_ == null) {
+          if (tuningTypeCase_ == 100 &&
+              tuningType_ != yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.getDefaultInstance()) {
+            tuningType_ = yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora) tuningType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            tuningType_ = value;
+          }
+          onChanged();
+        } else {
+          if (tuningTypeCase_ == 100) {
+            loraBuilder_.mergeFrom(value);
+          }
+          loraBuilder_.setMessage(value);
+        }
+        tuningTypeCase_ = 100;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+       */
+      public Builder clearLora() {
+        if (loraBuilder_ == null) {
+          if (tuningTypeCase_ == 100) {
+            tuningTypeCase_ = 0;
+            tuningType_ = null;
+            onChanged();
+          }
+        } else {
+          if (tuningTypeCase_ == 100) {
+            tuningTypeCase_ = 0;
+            tuningType_ = null;
+          }
+          loraBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.Builder getLoraBuilder() {
+        return getLoraFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLoraOrBuilder getLoraOrBuilder() {
+        if ((tuningTypeCase_ == 100) && (loraBuilder_ != null)) {
+          return loraBuilder_.getMessageOrBuilder();
+        } else {
+          if (tuningTypeCase_ == 100) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora) tuningType_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora, yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.Builder, yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLoraOrBuilder> 
+          getLoraFieldBuilder() {
+        if (loraBuilder_ == null) {
+          if (!(tuningTypeCase_ == 100)) {
+            tuningType_ = yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.getDefaultInstance();
+          }
+          loraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora, yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.Builder, yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLoraOrBuilder>(
+                  (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora) tuningType_,
+                  getParentForChildren(),
+                  isClean());
+          tuningType_ = null;
+        }
+        tuningTypeCase_ = 100;
+        onChanged();;
+        return loraBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune, yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.Builder, yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTuneOrBuilder> promptTuneBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+       * @return Whether the promptTune field is set.
+       */
+      @java.lang.Override
+      public boolean hasPromptTune() {
+        return tuningTypeCase_ == 101;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+       * @return The promptTune.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune getPromptTune() {
+        if (promptTuneBuilder_ == null) {
+          if (tuningTypeCase_ == 101) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune) tuningType_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.getDefaultInstance();
+        } else {
+          if (tuningTypeCase_ == 101) {
+            return promptTuneBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+       */
+      public Builder setPromptTune(yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune value) {
+        if (promptTuneBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tuningType_ = value;
+          onChanged();
+        } else {
+          promptTuneBuilder_.setMessage(value);
+        }
+        tuningTypeCase_ = 101;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+       */
+      public Builder setPromptTune(
+          yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.Builder builderForValue) {
+        if (promptTuneBuilder_ == null) {
+          tuningType_ = builderForValue.build();
+          onChanged();
+        } else {
+          promptTuneBuilder_.setMessage(builderForValue.build());
+        }
+        tuningTypeCase_ = 101;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+       */
+      public Builder mergePromptTune(yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune value) {
+        if (promptTuneBuilder_ == null) {
+          if (tuningTypeCase_ == 101 &&
+              tuningType_ != yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.getDefaultInstance()) {
+            tuningType_ = yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune) tuningType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            tuningType_ = value;
+          }
+          onChanged();
+        } else {
+          if (tuningTypeCase_ == 101) {
+            promptTuneBuilder_.mergeFrom(value);
+          }
+          promptTuneBuilder_.setMessage(value);
+        }
+        tuningTypeCase_ = 101;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+       */
+      public Builder clearPromptTune() {
+        if (promptTuneBuilder_ == null) {
+          if (tuningTypeCase_ == 101) {
+            tuningTypeCase_ = 0;
+            tuningType_ = null;
+            onChanged();
+          }
+        } else {
+          if (tuningTypeCase_ == 101) {
+            tuningTypeCase_ = 0;
+            tuningType_ = null;
+          }
+          promptTuneBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.Builder getPromptTuneBuilder() {
+        return getPromptTuneFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTuneOrBuilder getPromptTuneOrBuilder() {
+        if ((tuningTypeCase_ == 101) && (promptTuneBuilder_ != null)) {
+          return promptTuneBuilder_.getMessageOrBuilder();
+        } else {
+          if (tuningTypeCase_ == 101) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune) tuningType_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune, yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.Builder, yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTuneOrBuilder> 
+          getPromptTuneFieldBuilder() {
+        if (promptTuneBuilder_ == null) {
+          if (!(tuningTypeCase_ == 101)) {
+            tuningType_ = yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.getDefaultInstance();
+          }
+          promptTuneBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune, yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.Builder, yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTuneOrBuilder>(
+                  (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune) tuningType_,
+                  getParentForChildren(),
+                  isClean());
+          tuningType_ = null;
+        }
+        tuningTypeCase_ = 101;
+        onChanged();;
+        return promptTuneBuilder_;
+      }
+
+      private yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler scheduler_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.SchedulerOrBuilder> schedulerBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Scheduler scheduler = 200;</code>
+       * @return Whether the scheduler field is set.
+       */
+      public boolean hasScheduler() {
+        return schedulerBuilder_ != null || scheduler_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Scheduler scheduler = 200;</code>
+       * @return The scheduler.
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler getScheduler() {
+        if (schedulerBuilder_ == null) {
+          return scheduler_ == null ? yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler.getDefaultInstance() : scheduler_;
+        } else {
+          return schedulerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Scheduler scheduler = 200;</code>
+       */
+      public Builder setScheduler(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler value) {
+        if (schedulerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          scheduler_ = value;
+          onChanged();
+        } else {
+          schedulerBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Scheduler scheduler = 200;</code>
+       */
+      public Builder setScheduler(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler.Builder builderForValue) {
+        if (schedulerBuilder_ == null) {
+          scheduler_ = builderForValue.build();
+          onChanged();
+        } else {
+          schedulerBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Scheduler scheduler = 200;</code>
+       */
+      public Builder mergeScheduler(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler value) {
+        if (schedulerBuilder_ == null) {
+          if (scheduler_ != null) {
+            scheduler_ =
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler.newBuilder(scheduler_).mergeFrom(value).buildPartial();
+          } else {
+            scheduler_ = value;
+          }
+          onChanged();
+        } else {
+          schedulerBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Scheduler scheduler = 200;</code>
+       */
+      public Builder clearScheduler() {
+        if (schedulerBuilder_ == null) {
+          scheduler_ = null;
+          onChanged();
+        } else {
+          scheduler_ = null;
+          schedulerBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Scheduler scheduler = 200;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler.Builder getSchedulerBuilder() {
+        
+        onChanged();
+        return getSchedulerFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Scheduler scheduler = 200;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.SchedulerOrBuilder getSchedulerOrBuilder() {
+        if (schedulerBuilder_ != null) {
+          return schedulerBuilder_.getMessageOrBuilder();
+        } else {
+          return scheduler_ == null ?
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler.getDefaultInstance() : scheduler_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Scheduler scheduler = 200;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.SchedulerOrBuilder> 
+          getSchedulerFieldBuilder() {
+        if (schedulerBuilder_ == null) {
+          schedulerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Scheduler.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.SchedulerOrBuilder>(
+                  getScheduler(),
+                  getParentForChildren(),
+                  isClean());
+          scheduler_ = null;
+        }
+        return schedulerBuilder_;
+      }
+
+      private yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer optimizer_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.OptimizerOrBuilder> optimizerBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Optimizer optimizer = 201;</code>
+       * @return Whether the optimizer field is set.
+       */
+      public boolean hasOptimizer() {
+        return optimizerBuilder_ != null || optimizer_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Optimizer optimizer = 201;</code>
+       * @return The optimizer.
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer getOptimizer() {
+        if (optimizerBuilder_ == null) {
+          return optimizer_ == null ? yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer.getDefaultInstance() : optimizer_;
+        } else {
+          return optimizerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Optimizer optimizer = 201;</code>
+       */
+      public Builder setOptimizer(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer value) {
+        if (optimizerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          optimizer_ = value;
+          onChanged();
+        } else {
+          optimizerBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Optimizer optimizer = 201;</code>
+       */
+      public Builder setOptimizer(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer.Builder builderForValue) {
+        if (optimizerBuilder_ == null) {
+          optimizer_ = builderForValue.build();
+          onChanged();
+        } else {
+          optimizerBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Optimizer optimizer = 201;</code>
+       */
+      public Builder mergeOptimizer(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer value) {
+        if (optimizerBuilder_ == null) {
+          if (optimizer_ != null) {
+            optimizer_ =
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer.newBuilder(optimizer_).mergeFrom(value).buildPartial();
+          } else {
+            optimizer_ = value;
+          }
+          onChanged();
+        } else {
+          optimizerBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Optimizer optimizer = 201;</code>
+       */
+      public Builder clearOptimizer() {
+        if (optimizerBuilder_ == null) {
+          optimizer_ = null;
+          onChanged();
+        } else {
+          optimizer_ = null;
+          optimizerBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Optimizer optimizer = 201;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer.Builder getOptimizerBuilder() {
+        
+        onChanged();
+        return getOptimizerFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Optimizer optimizer = 201;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.OptimizerOrBuilder getOptimizerOrBuilder() {
+        if (optimizerBuilder_ != null) {
+          return optimizerBuilder_.getMessageOrBuilder();
+        } else {
+          return optimizer_ == null ?
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer.getDefaultInstance() : optimizer_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams.Optimizer optimizer = 201;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.OptimizerOrBuilder> 
+          getOptimizerFieldBuilder() {
+        if (optimizerBuilder_ == null) {
+          optimizerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Optimizer.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.OptimizerOrBuilder>(
+                  getOptimizer(),
+                  getParentForChildren(),
+                  isClean());
+          optimizer_ = null;
+        }
+        return optimizerBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams)
+    private static final yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams();
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TextEmbeddingPairParams>
+        PARSER = new com.google.protobuf.AbstractParser<TextEmbeddingPairParams>() {
+      @java.lang.Override
+      public TextEmbeddingPairParams parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TextEmbeddingPairParams(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TextEmbeddingPairParams> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TextEmbeddingPairParams> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TextEmbeddingTripletParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 seed = 1;</code>
+     * @return The seed.
+     */
+    long getSeed();
+
+    /**
+     * <code>double lr = 2;</code>
+     * @return The lr.
+     */
+    double getLr();
+
+    /**
+     * <code>int64 n_samples = 3;</code>
+     * @return The nSamples.
+     */
+    long getNSamples();
+
+    /**
+     * <code>string additional_arguments = 7;</code>
+     * @return The additionalArguments.
+     */
+    java.lang.String getAdditionalArguments();
+    /**
+     * <code>string additional_arguments = 7;</code>
+     * @return The bytes for additionalArguments.
+     */
+    com.google.protobuf.ByteString
+        getAdditionalArgumentsBytes();
+
+    /**
+     * <code>repeated int64 embedding_dims = 8;</code>
+     * @return A list containing the embeddingDims.
+     */
+    java.util.List<java.lang.Long> getEmbeddingDimsList();
+    /**
+     * <code>repeated int64 embedding_dims = 8;</code>
+     * @return The count of embeddingDims.
+     */
+    int getEmbeddingDimsCount();
+    /**
+     * <code>repeated int64 embedding_dims = 8;</code>
+     * @param index The index of the element to return.
+     * @return The embeddingDims at the given index.
+     */
+    long getEmbeddingDims(int index);
+
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+     * @return Whether the lora field is set.
+     */
+    boolean hasLora();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+     * @return The lora.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora getLora();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLoraOrBuilder getLoraOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+     * @return Whether the promptTune field is set.
+     */
+    boolean hasPromptTune();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+     * @return The promptTune.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune getPromptTune();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTuneOrBuilder getPromptTuneOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Scheduler scheduler = 200;</code>
+     * @return Whether the scheduler field is set.
+     */
+    boolean hasScheduler();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Scheduler scheduler = 200;</code>
+     * @return The scheduler.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler getScheduler();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Scheduler scheduler = 200;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.SchedulerOrBuilder getSchedulerOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Optimizer optimizer = 201;</code>
+     * @return Whether the optimizer field is set.
+     */
+    boolean hasOptimizer();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Optimizer optimizer = 201;</code>
+     * @return The optimizer.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer getOptimizer();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Optimizer optimizer = 201;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.OptimizerOrBuilder getOptimizerOrBuilder();
+
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.TuningTypeCase getTuningTypeCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams}
+   */
+  public static final class TextEmbeddingTripletParams extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams)
+      TextEmbeddingTripletParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TextEmbeddingTripletParams.newBuilder() to construct.
+    private TextEmbeddingTripletParams(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TextEmbeddingTripletParams() {
+      additionalArguments_ = "";
+      embeddingDims_ = emptyLongList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TextEmbeddingTripletParams();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TextEmbeddingTripletParams(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              seed_ = input.readInt64();
+              break;
+            }
+            case 17: {
+
+              lr_ = input.readDouble();
+              break;
+            }
+            case 24: {
+
+              nSamples_ = input.readInt64();
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              additionalArguments_ = s;
+              break;
+            }
+            case 64: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                embeddingDims_ = newLongList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              embeddingDims_.addLong(input.readInt64());
+              break;
+            }
+            case 66: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                embeddingDims_ = newLongList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                embeddingDims_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 802: {
+              yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.Builder subBuilder = null;
+              if (tuningTypeCase_ == 100) {
+                subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora) tuningType_).toBuilder();
+              }
+              tuningType_ =
+                  input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora) tuningType_);
+                tuningType_ = subBuilder.buildPartial();
+              }
+              tuningTypeCase_ = 100;
+              break;
+            }
+            case 810: {
+              yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.Builder subBuilder = null;
+              if (tuningTypeCase_ == 101) {
+                subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune) tuningType_).toBuilder();
+              }
+              tuningType_ =
+                  input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune) tuningType_);
+                tuningType_ = subBuilder.buildPartial();
+              }
+              tuningTypeCase_ = 101;
+              break;
+            }
+            case 1602: {
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler.Builder subBuilder = null;
+              if (scheduler_ != null) {
+                subBuilder = scheduler_.toBuilder();
+              }
+              scheduler_ = input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(scheduler_);
+                scheduler_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1610: {
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer.Builder subBuilder = null;
+              if (optimizer_ != null) {
+                subBuilder = optimizer_.toBuilder();
+              }
+              optimizer_ = input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(optimizer_);
+                optimizer_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          embeddingDims_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder.class);
+    }
+
+    public interface SchedulerOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Scheduler)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+       * @return Whether the linear field is set.
+       */
+      boolean hasLinear();
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+       * @return The linear.
+       */
+      yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear getLinear();
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+       */
+      yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinearOrBuilder getLinearOrBuilder();
+
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+       * @return Whether the constant field is set.
+       */
+      boolean hasConstant();
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+       * @return The constant.
+       */
+      yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant getConstant();
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+       */
+      yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstantOrBuilder getConstantOrBuilder();
+
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+       * @return Whether the cosine field is set.
+       */
+      boolean hasCosine();
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+       * @return The cosine.
+       */
+      yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine getCosine();
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+       */
+      yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosineOrBuilder getCosineOrBuilder();
+
+      /**
+       * <code>double warmup_ratio = 101;</code>
+       * @return Whether the warmupRatio field is set.
+       */
+      boolean hasWarmupRatio();
+      /**
+       * <code>double warmup_ratio = 101;</code>
+       * @return The warmupRatio.
+       */
+      double getWarmupRatio();
+
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler.TypeCase getTypeCase();
+
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler.OptionalWarmupRatioCase getOptionalWarmupRatioCase();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Scheduler}
+     */
+    public static final class Scheduler extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Scheduler)
+        SchedulerOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Scheduler.newBuilder() to construct.
+      private Scheduler(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Scheduler() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Scheduler();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Scheduler(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.Builder subBuilder = null;
+                if (typeCase_ == 1) {
+                  subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 1;
+                break;
+              }
+              case 18: {
+                yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.Builder subBuilder = null;
+                if (typeCase_ == 2) {
+                  subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 2;
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.Builder subBuilder = null;
+                if (typeCase_ == 3) {
+                  subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 3;
+                break;
+              }
+              case 809: {
+                optionalWarmupRatio_ = input.readDouble();
+                optionalWarmupRatioCase_ = 101;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_Scheduler_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_Scheduler_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler.Builder.class);
+      }
+
+      private int typeCase_ = 0;
+      private java.lang.Object type_;
+      public enum TypeCase
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+        LINEAR(1),
+        CONSTANT(2),
+        COSINE(3),
+        TYPE_NOT_SET(0);
+        private final int value;
+        private TypeCase(int value) {
+          this.value = value;
+        }
+        /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static TypeCase valueOf(int value) {
+          return forNumber(value);
+        }
+
+        public static TypeCase forNumber(int value) {
+          switch (value) {
+            case 1: return LINEAR;
+            case 2: return CONSTANT;
+            case 3: return COSINE;
+            case 0: return TYPE_NOT_SET;
+            default: return null;
+          }
+        }
+        public int getNumber() {
+          return this.value;
+        }
+      };
+
+      public TypeCase
+      getTypeCase() {
+        return TypeCase.forNumber(
+            typeCase_);
+      }
+
+      private int optionalWarmupRatioCase_ = 0;
+      private java.lang.Object optionalWarmupRatio_;
+      public enum OptionalWarmupRatioCase
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+        WARMUP_RATIO(101),
+        OPTIONALWARMUPRATIO_NOT_SET(0);
+        private final int value;
+        private OptionalWarmupRatioCase(int value) {
+          this.value = value;
+        }
+        /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static OptionalWarmupRatioCase valueOf(int value) {
+          return forNumber(value);
+        }
+
+        public static OptionalWarmupRatioCase forNumber(int value) {
+          switch (value) {
+            case 101: return WARMUP_RATIO;
+            case 0: return OPTIONALWARMUPRATIO_NOT_SET;
+            default: return null;
+          }
+        }
+        public int getNumber() {
+          return this.value;
+        }
+      };
+
+      public OptionalWarmupRatioCase
+      getOptionalWarmupRatioCase() {
+        return OptionalWarmupRatioCase.forNumber(
+            optionalWarmupRatioCase_);
+      }
+
+      public static final int LINEAR_FIELD_NUMBER = 1;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+       * @return Whether the linear field is set.
+       */
+      @java.lang.Override
+      public boolean hasLinear() {
+        return typeCase_ == 1;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+       * @return The linear.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear getLinear() {
+        if (typeCase_ == 1) {
+           return (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear) type_;
+        }
+        return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.getDefaultInstance();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinearOrBuilder getLinearOrBuilder() {
+        if (typeCase_ == 1) {
+           return (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear) type_;
+        }
+        return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.getDefaultInstance();
+      }
+
+      public static final int CONSTANT_FIELD_NUMBER = 2;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+       * @return Whether the constant field is set.
+       */
+      @java.lang.Override
+      public boolean hasConstant() {
+        return typeCase_ == 2;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+       * @return The constant.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant getConstant() {
+        if (typeCase_ == 2) {
+           return (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant) type_;
+        }
+        return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.getDefaultInstance();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstantOrBuilder getConstantOrBuilder() {
+        if (typeCase_ == 2) {
+           return (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant) type_;
+        }
+        return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.getDefaultInstance();
+      }
+
+      public static final int COSINE_FIELD_NUMBER = 3;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+       * @return Whether the cosine field is set.
+       */
+      @java.lang.Override
+      public boolean hasCosine() {
+        return typeCase_ == 3;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+       * @return The cosine.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine getCosine() {
+        if (typeCase_ == 3) {
+           return (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine) type_;
+        }
+        return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.getDefaultInstance();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosineOrBuilder getCosineOrBuilder() {
+        if (typeCase_ == 3) {
+           return (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine) type_;
+        }
+        return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.getDefaultInstance();
+      }
+
+      public static final int WARMUP_RATIO_FIELD_NUMBER = 101;
+      /**
+       * <code>double warmup_ratio = 101;</code>
+       * @return Whether the warmupRatio field is set.
+       */
+      @java.lang.Override
+      public boolean hasWarmupRatio() {
+        return optionalWarmupRatioCase_ == 101;
+      }
+      /**
+       * <code>double warmup_ratio = 101;</code>
+       * @return The warmupRatio.
+       */
+      @java.lang.Override
+      public double getWarmupRatio() {
+        if (optionalWarmupRatioCase_ == 101) {
+          return (java.lang.Double) optionalWarmupRatio_;
+        }
+        return 0D;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (typeCase_ == 1) {
+          output.writeMessage(1, (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear) type_);
+        }
+        if (typeCase_ == 2) {
+          output.writeMessage(2, (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant) type_);
+        }
+        if (typeCase_ == 3) {
+          output.writeMessage(3, (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine) type_);
+        }
+        if (optionalWarmupRatioCase_ == 101) {
+          output.writeDouble(
+              101, (double)((java.lang.Double) optionalWarmupRatio_));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (typeCase_ == 1) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear) type_);
+        }
+        if (typeCase_ == 2) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant) type_);
+        }
+        if (typeCase_ == 3) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine) type_);
+        }
+        if (optionalWarmupRatioCase_ == 101) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(
+                101, (double)((java.lang.Double) optionalWarmupRatio_));
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler other = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler) obj;
+
+        if (!getTypeCase().equals(other.getTypeCase())) return false;
+        switch (typeCase_) {
+          case 1:
+            if (!getLinear()
+                .equals(other.getLinear())) return false;
+            break;
+          case 2:
+            if (!getConstant()
+                .equals(other.getConstant())) return false;
+            break;
+          case 3:
+            if (!getCosine()
+                .equals(other.getCosine())) return false;
+            break;
+          case 0:
+          default:
+        }
+        if (!getOptionalWarmupRatioCase().equals(other.getOptionalWarmupRatioCase())) return false;
+        switch (optionalWarmupRatioCase_) {
+          case 101:
+            if (java.lang.Double.doubleToLongBits(getWarmupRatio())
+                != java.lang.Double.doubleToLongBits(
+                    other.getWarmupRatio())) return false;
+            break;
+          case 0:
+          default:
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        switch (typeCase_) {
+          case 1:
+            hash = (37 * hash) + LINEAR_FIELD_NUMBER;
+            hash = (53 * hash) + getLinear().hashCode();
+            break;
+          case 2:
+            hash = (37 * hash) + CONSTANT_FIELD_NUMBER;
+            hash = (53 * hash) + getConstant().hashCode();
+            break;
+          case 3:
+            hash = (37 * hash) + COSINE_FIELD_NUMBER;
+            hash = (53 * hash) + getCosine().hashCode();
+            break;
+          case 0:
+          default:
+        }
+        switch (optionalWarmupRatioCase_) {
+          case 101:
+            hash = (37 * hash) + WARMUP_RATIO_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+                java.lang.Double.doubleToLongBits(getWarmupRatio()));
+            break;
+          case 0:
+          default:
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Scheduler}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Scheduler)
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.SchedulerOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_Scheduler_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_Scheduler_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          typeCase_ = 0;
+          type_ = null;
+          optionalWarmupRatioCase_ = 0;
+          optionalWarmupRatio_ = null;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_Scheduler_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler getDefaultInstanceForType() {
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler build() {
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler buildPartial() {
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler result = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler(this);
+          if (typeCase_ == 1) {
+            if (linearBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = linearBuilder_.build();
+            }
+          }
+          if (typeCase_ == 2) {
+            if (constantBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = constantBuilder_.build();
+            }
+          }
+          if (typeCase_ == 3) {
+            if (cosineBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = cosineBuilder_.build();
+            }
+          }
+          if (optionalWarmupRatioCase_ == 101) {
+            result.optionalWarmupRatio_ = optionalWarmupRatio_;
+          }
+          result.typeCase_ = typeCase_;
+          result.optionalWarmupRatioCase_ = optionalWarmupRatioCase_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler) {
+            return mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler other) {
+          if (other == yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler.getDefaultInstance()) return this;
+          switch (other.getTypeCase()) {
+            case LINEAR: {
+              mergeLinear(other.getLinear());
+              break;
+            }
+            case CONSTANT: {
+              mergeConstant(other.getConstant());
+              break;
+            }
+            case COSINE: {
+              mergeCosine(other.getCosine());
+              break;
+            }
+            case TYPE_NOT_SET: {
+              break;
+            }
+          }
+          switch (other.getOptionalWarmupRatioCase()) {
+            case WARMUP_RATIO: {
+              setWarmupRatio(other.getWarmupRatio());
+              break;
+            }
+            case OPTIONALWARMUPRATIO_NOT_SET: {
+              break;
+            }
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int typeCase_ = 0;
+        private java.lang.Object type_;
+        public TypeCase
+            getTypeCase() {
+          return TypeCase.forNumber(
+              typeCase_);
+        }
+
+        public Builder clearType() {
+          typeCase_ = 0;
+          type_ = null;
+          onChanged();
+          return this;
+        }
+
+        private int optionalWarmupRatioCase_ = 0;
+        private java.lang.Object optionalWarmupRatio_;
+        public OptionalWarmupRatioCase
+            getOptionalWarmupRatioCase() {
+          return OptionalWarmupRatioCase.forNumber(
+              optionalWarmupRatioCase_);
+        }
+
+        public Builder clearOptionalWarmupRatio() {
+          optionalWarmupRatioCase_ = 0;
+          optionalWarmupRatio_ = null;
+          onChanged();
+          return this;
+        }
+
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.Builder, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinearOrBuilder> linearBuilder_;
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+         * @return Whether the linear field is set.
+         */
+        @java.lang.Override
+        public boolean hasLinear() {
+          return typeCase_ == 1;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+         * @return The linear.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear getLinear() {
+          if (linearBuilder_ == null) {
+            if (typeCase_ == 1) {
+              return (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear) type_;
+            }
+            return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.getDefaultInstance();
+          } else {
+            if (typeCase_ == 1) {
+              return linearBuilder_.getMessage();
+            }
+            return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+         */
+        public Builder setLinear(yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear value) {
+          if (linearBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            linearBuilder_.setMessage(value);
+          }
+          typeCase_ = 1;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+         */
+        public Builder setLinear(
+            yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.Builder builderForValue) {
+          if (linearBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            linearBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 1;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+         */
+        public Builder mergeLinear(yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear value) {
+          if (linearBuilder_ == null) {
+            if (typeCase_ == 1 &&
+                type_ != yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.getDefaultInstance()) {
+              type_ = yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 1) {
+              linearBuilder_.mergeFrom(value);
+            }
+            linearBuilder_.setMessage(value);
+          }
+          typeCase_ = 1;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+         */
+        public Builder clearLinear() {
+          if (linearBuilder_ == null) {
+            if (typeCase_ == 1) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 1) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            linearBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+         */
+        public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.Builder getLinearBuilder() {
+          return getLinearFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinearOrBuilder getLinearOrBuilder() {
+          if ((typeCase_ == 1) && (linearBuilder_ != null)) {
+            return linearBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 1) {
+              return (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear) type_;
+            }
+            return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerLinear linear = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.Builder, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinearOrBuilder> 
+            getLinearFieldBuilder() {
+          if (linearBuilder_ == null) {
+            if (!(typeCase_ == 1)) {
+              type_ = yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.getDefaultInstance();
+            }
+            linearBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear.Builder, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinearOrBuilder>(
+                    (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerLinear) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 1;
+          onChanged();;
+          return linearBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.Builder, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstantOrBuilder> constantBuilder_;
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+         * @return Whether the constant field is set.
+         */
+        @java.lang.Override
+        public boolean hasConstant() {
+          return typeCase_ == 2;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+         * @return The constant.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant getConstant() {
+          if (constantBuilder_ == null) {
+            if (typeCase_ == 2) {
+              return (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant) type_;
+            }
+            return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.getDefaultInstance();
+          } else {
+            if (typeCase_ == 2) {
+              return constantBuilder_.getMessage();
+            }
+            return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+         */
+        public Builder setConstant(yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant value) {
+          if (constantBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            constantBuilder_.setMessage(value);
+          }
+          typeCase_ = 2;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+         */
+        public Builder setConstant(
+            yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.Builder builderForValue) {
+          if (constantBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            constantBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 2;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+         */
+        public Builder mergeConstant(yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant value) {
+          if (constantBuilder_ == null) {
+            if (typeCase_ == 2 &&
+                type_ != yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.getDefaultInstance()) {
+              type_ = yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 2) {
+              constantBuilder_.mergeFrom(value);
+            }
+            constantBuilder_.setMessage(value);
+          }
+          typeCase_ = 2;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+         */
+        public Builder clearConstant() {
+          if (constantBuilder_ == null) {
+            if (typeCase_ == 2) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 2) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            constantBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+         */
+        public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.Builder getConstantBuilder() {
+          return getConstantFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstantOrBuilder getConstantOrBuilder() {
+          if ((typeCase_ == 2) && (constantBuilder_ != null)) {
+            return constantBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 2) {
+              return (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant) type_;
+            }
+            return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerConstant constant = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.Builder, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstantOrBuilder> 
+            getConstantFieldBuilder() {
+          if (constantBuilder_ == null) {
+            if (!(typeCase_ == 2)) {
+              type_ = yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.getDefaultInstance();
+            }
+            constantBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant.Builder, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstantOrBuilder>(
+                    (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerConstant) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 2;
+          onChanged();;
+          return constantBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.Builder, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosineOrBuilder> cosineBuilder_;
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+         * @return Whether the cosine field is set.
+         */
+        @java.lang.Override
+        public boolean hasCosine() {
+          return typeCase_ == 3;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+         * @return The cosine.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine getCosine() {
+          if (cosineBuilder_ == null) {
+            if (typeCase_ == 3) {
+              return (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine) type_;
+            }
+            return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.getDefaultInstance();
+          } else {
+            if (typeCase_ == 3) {
+              return cosineBuilder_.getMessage();
+            }
+            return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+         */
+        public Builder setCosine(yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine value) {
+          if (cosineBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            cosineBuilder_.setMessage(value);
+          }
+          typeCase_ = 3;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+         */
+        public Builder setCosine(
+            yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.Builder builderForValue) {
+          if (cosineBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            cosineBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 3;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+         */
+        public Builder mergeCosine(yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine value) {
+          if (cosineBuilder_ == null) {
+            if (typeCase_ == 3 &&
+                type_ != yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.getDefaultInstance()) {
+              type_ = yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 3) {
+              cosineBuilder_.mergeFrom(value);
+            }
+            cosineBuilder_.setMessage(value);
+          }
+          typeCase_ = 3;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+         */
+        public Builder clearCosine() {
+          if (cosineBuilder_ == null) {
+            if (typeCase_ == 3) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 3) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            cosineBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+         */
+        public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.Builder getCosineBuilder() {
+          return getCosineFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosineOrBuilder getCosineOrBuilder() {
+          if ((typeCase_ == 3) && (cosineBuilder_ != null)) {
+            return cosineBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 3) {
+              return (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine) type_;
+            }
+            return yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.SchedulerCosine cosine = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.Builder, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosineOrBuilder> 
+            getCosineFieldBuilder() {
+          if (cosineBuilder_ == null) {
+            if (!(typeCase_ == 3)) {
+              type_ = yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.getDefaultInstance();
+            }
+            cosineBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine.Builder, yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosineOrBuilder>(
+                    (yandex.cloud.api.ai.tuning.v1.TuningSchedulers.SchedulerCosine) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 3;
+          onChanged();;
+          return cosineBuilder_;
+        }
+
+        /**
+         * <code>double warmup_ratio = 101;</code>
+         * @return Whether the warmupRatio field is set.
+         */
+        public boolean hasWarmupRatio() {
+          return optionalWarmupRatioCase_ == 101;
+        }
+        /**
+         * <code>double warmup_ratio = 101;</code>
+         * @return The warmupRatio.
+         */
+        public double getWarmupRatio() {
+          if (optionalWarmupRatioCase_ == 101) {
+            return (java.lang.Double) optionalWarmupRatio_;
+          }
+          return 0D;
+        }
+        /**
+         * <code>double warmup_ratio = 101;</code>
+         * @param value The warmupRatio to set.
+         * @return This builder for chaining.
+         */
+        public Builder setWarmupRatio(double value) {
+          optionalWarmupRatioCase_ = 101;
+          optionalWarmupRatio_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double warmup_ratio = 101;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearWarmupRatio() {
+          if (optionalWarmupRatioCase_ == 101) {
+            optionalWarmupRatioCase_ = 0;
+            optionalWarmupRatio_ = null;
+            onChanged();
+          }
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Scheduler)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Scheduler)
+      private static final yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler();
+      }
+
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Scheduler>
+          PARSER = new com.google.protobuf.AbstractParser<Scheduler>() {
+        @java.lang.Override
+        public Scheduler parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Scheduler(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Scheduler> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Scheduler> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface OptimizerOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Optimizer)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+       * @return Whether the adamw field is set.
+       */
+      boolean hasAdamw();
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+       * @return The adamw.
+       */
+      yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw getAdamw();
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+       */
+      yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamwOrBuilder getAdamwOrBuilder();
+
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer.TypeCase getTypeCase();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Optimizer}
+     */
+    public static final class Optimizer extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Optimizer)
+        OptimizerOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Optimizer.newBuilder() to construct.
+      private Optimizer(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Optimizer() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Optimizer();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Optimizer(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.Builder subBuilder = null;
+                if (typeCase_ == 1) {
+                  subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 1;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_Optimizer_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_Optimizer_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer.Builder.class);
+      }
+
+      private int typeCase_ = 0;
+      private java.lang.Object type_;
+      public enum TypeCase
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+        ADAMW(1),
+        TYPE_NOT_SET(0);
+        private final int value;
+        private TypeCase(int value) {
+          this.value = value;
+        }
+        /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static TypeCase valueOf(int value) {
+          return forNumber(value);
+        }
+
+        public static TypeCase forNumber(int value) {
+          switch (value) {
+            case 1: return ADAMW;
+            case 0: return TYPE_NOT_SET;
+            default: return null;
+          }
+        }
+        public int getNumber() {
+          return this.value;
+        }
+      };
+
+      public TypeCase
+      getTypeCase() {
+        return TypeCase.forNumber(
+            typeCase_);
+      }
+
+      public static final int ADAMW_FIELD_NUMBER = 1;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+       * @return Whether the adamw field is set.
+       */
+      @java.lang.Override
+      public boolean hasAdamw() {
+        return typeCase_ == 1;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+       * @return The adamw.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw getAdamw() {
+        if (typeCase_ == 1) {
+           return (yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw) type_;
+        }
+        return yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.getDefaultInstance();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamwOrBuilder getAdamwOrBuilder() {
+        if (typeCase_ == 1) {
+           return (yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw) type_;
+        }
+        return yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.getDefaultInstance();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (typeCase_ == 1) {
+          output.writeMessage(1, (yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw) type_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (typeCase_ == 1) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, (yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw) type_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer other = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer) obj;
+
+        if (!getTypeCase().equals(other.getTypeCase())) return false;
+        switch (typeCase_) {
+          case 1:
+            if (!getAdamw()
+                .equals(other.getAdamw())) return false;
+            break;
+          case 0:
+          default:
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        switch (typeCase_) {
+          case 1:
+            hash = (37 * hash) + ADAMW_FIELD_NUMBER;
+            hash = (53 * hash) + getAdamw().hashCode();
+            break;
+          case 0:
+          default:
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Optimizer}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Optimizer)
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.OptimizerOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_Optimizer_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_Optimizer_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          typeCase_ = 0;
+          type_ = null;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_Optimizer_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer getDefaultInstanceForType() {
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer build() {
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer buildPartial() {
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer result = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer(this);
+          if (typeCase_ == 1) {
+            if (adamwBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = adamwBuilder_.build();
+            }
+          }
+          result.typeCase_ = typeCase_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer) {
+            return mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer other) {
+          if (other == yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer.getDefaultInstance()) return this;
+          switch (other.getTypeCase()) {
+            case ADAMW: {
+              mergeAdamw(other.getAdamw());
+              break;
+            }
+            case TYPE_NOT_SET: {
+              break;
+            }
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int typeCase_ = 0;
+        private java.lang.Object type_;
+        public TypeCase
+            getTypeCase() {
+          return TypeCase.forNumber(
+              typeCase_);
+        }
+
+        public Builder clearType() {
+          typeCase_ = 0;
+          type_ = null;
+          onChanged();
+          return this;
+        }
+
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw, yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.Builder, yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamwOrBuilder> adamwBuilder_;
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+         * @return Whether the adamw field is set.
+         */
+        @java.lang.Override
+        public boolean hasAdamw() {
+          return typeCase_ == 1;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+         * @return The adamw.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw getAdamw() {
+          if (adamwBuilder_ == null) {
+            if (typeCase_ == 1) {
+              return (yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw) type_;
+            }
+            return yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.getDefaultInstance();
+          } else {
+            if (typeCase_ == 1) {
+              return adamwBuilder_.getMessage();
+            }
+            return yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+         */
+        public Builder setAdamw(yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw value) {
+          if (adamwBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            adamwBuilder_.setMessage(value);
+          }
+          typeCase_ = 1;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+         */
+        public Builder setAdamw(
+            yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.Builder builderForValue) {
+          if (adamwBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            adamwBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 1;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+         */
+        public Builder mergeAdamw(yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw value) {
+          if (adamwBuilder_ == null) {
+            if (typeCase_ == 1 &&
+                type_ != yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.getDefaultInstance()) {
+              type_ = yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 1) {
+              adamwBuilder_.mergeFrom(value);
+            }
+            adamwBuilder_.setMessage(value);
+          }
+          typeCase_ = 1;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+         */
+        public Builder clearAdamw() {
+          if (adamwBuilder_ == null) {
+            if (typeCase_ == 1) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 1) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            adamwBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+         */
+        public yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.Builder getAdamwBuilder() {
+          return getAdamwFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamwOrBuilder getAdamwOrBuilder() {
+          if ((typeCase_ == 1) && (adamwBuilder_ != null)) {
+            return adamwBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 1) {
+              return (yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw) type_;
+            }
+            return yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.ai.tuning.v1.OptimizerAdamw adamw = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw, yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.Builder, yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamwOrBuilder> 
+            getAdamwFieldBuilder() {
+          if (adamwBuilder_ == null) {
+            if (!(typeCase_ == 1)) {
+              type_ = yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.getDefaultInstance();
+            }
+            adamwBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw, yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw.Builder, yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamwOrBuilder>(
+                    (yandex.cloud.api.ai.tuning.v1.TuningOptimizers.OptimizerAdamw) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 1;
+          onChanged();;
+          return adamwBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Optimizer)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Optimizer)
+      private static final yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer();
+      }
+
+      public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Optimizer>
+          PARSER = new com.google.protobuf.AbstractParser<Optimizer>() {
+        @java.lang.Override
+        public Optimizer parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Optimizer(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Optimizer> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Optimizer> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int tuningTypeCase_ = 0;
+    private java.lang.Object tuningType_;
+    public enum TuningTypeCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      LORA(100),
+      PROMPT_TUNE(101),
+      TUNINGTYPE_NOT_SET(0);
+      private final int value;
+      private TuningTypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TuningTypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TuningTypeCase forNumber(int value) {
+        switch (value) {
+          case 100: return LORA;
+          case 101: return PROMPT_TUNE;
+          case 0: return TUNINGTYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TuningTypeCase
+    getTuningTypeCase() {
+      return TuningTypeCase.forNumber(
+          tuningTypeCase_);
+    }
+
+    public static final int SEED_FIELD_NUMBER = 1;
+    private long seed_;
+    /**
+     * <code>int64 seed = 1;</code>
+     * @return The seed.
+     */
+    @java.lang.Override
+    public long getSeed() {
+      return seed_;
+    }
+
+    public static final int LR_FIELD_NUMBER = 2;
+    private double lr_;
+    /**
+     * <code>double lr = 2;</code>
+     * @return The lr.
+     */
+    @java.lang.Override
+    public double getLr() {
+      return lr_;
+    }
+
+    public static final int N_SAMPLES_FIELD_NUMBER = 3;
+    private long nSamples_;
+    /**
+     * <code>int64 n_samples = 3;</code>
+     * @return The nSamples.
+     */
+    @java.lang.Override
+    public long getNSamples() {
+      return nSamples_;
+    }
+
+    public static final int ADDITIONAL_ARGUMENTS_FIELD_NUMBER = 7;
+    private volatile java.lang.Object additionalArguments_;
+    /**
+     * <code>string additional_arguments = 7;</code>
+     * @return The additionalArguments.
+     */
+    @java.lang.Override
+    public java.lang.String getAdditionalArguments() {
+      java.lang.Object ref = additionalArguments_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        additionalArguments_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string additional_arguments = 7;</code>
+     * @return The bytes for additionalArguments.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAdditionalArgumentsBytes() {
+      java.lang.Object ref = additionalArguments_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        additionalArguments_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EMBEDDING_DIMS_FIELD_NUMBER = 8;
+    private com.google.protobuf.Internal.LongList embeddingDims_;
+    /**
+     * <code>repeated int64 embedding_dims = 8;</code>
+     * @return A list containing the embeddingDims.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getEmbeddingDimsList() {
+      return embeddingDims_;
+    }
+    /**
+     * <code>repeated int64 embedding_dims = 8;</code>
+     * @return The count of embeddingDims.
+     */
+    public int getEmbeddingDimsCount() {
+      return embeddingDims_.size();
+    }
+    /**
+     * <code>repeated int64 embedding_dims = 8;</code>
+     * @param index The index of the element to return.
+     * @return The embeddingDims at the given index.
+     */
+    public long getEmbeddingDims(int index) {
+      return embeddingDims_.getLong(index);
+    }
+    private int embeddingDimsMemoizedSerializedSize = -1;
+
+    public static final int LORA_FIELD_NUMBER = 100;
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+     * @return Whether the lora field is set.
+     */
+    @java.lang.Override
+    public boolean hasLora() {
+      return tuningTypeCase_ == 100;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+     * @return The lora.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora getLora() {
+      if (tuningTypeCase_ == 100) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora) tuningType_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLoraOrBuilder getLoraOrBuilder() {
+      if (tuningTypeCase_ == 100) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora) tuningType_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.getDefaultInstance();
+    }
+
+    public static final int PROMPT_TUNE_FIELD_NUMBER = 101;
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+     * @return Whether the promptTune field is set.
+     */
+    @java.lang.Override
+    public boolean hasPromptTune() {
+      return tuningTypeCase_ == 101;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+     * @return The promptTune.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune getPromptTune() {
+      if (tuningTypeCase_ == 101) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune) tuningType_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTuneOrBuilder getPromptTuneOrBuilder() {
+      if (tuningTypeCase_ == 101) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune) tuningType_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.getDefaultInstance();
+    }
+
+    public static final int SCHEDULER_FIELD_NUMBER = 200;
+    private yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler scheduler_;
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Scheduler scheduler = 200;</code>
+     * @return Whether the scheduler field is set.
+     */
+    @java.lang.Override
+    public boolean hasScheduler() {
+      return scheduler_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Scheduler scheduler = 200;</code>
+     * @return The scheduler.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler getScheduler() {
+      return scheduler_ == null ? yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler.getDefaultInstance() : scheduler_;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Scheduler scheduler = 200;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.SchedulerOrBuilder getSchedulerOrBuilder() {
+      return getScheduler();
+    }
+
+    public static final int OPTIMIZER_FIELD_NUMBER = 201;
+    private yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer optimizer_;
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Optimizer optimizer = 201;</code>
+     * @return Whether the optimizer field is set.
+     */
+    @java.lang.Override
+    public boolean hasOptimizer() {
+      return optimizer_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Optimizer optimizer = 201;</code>
+     * @return The optimizer.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer getOptimizer() {
+      return optimizer_ == null ? yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer.getDefaultInstance() : optimizer_;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Optimizer optimizer = 201;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.OptimizerOrBuilder getOptimizerOrBuilder() {
+      return getOptimizer();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (seed_ != 0L) {
+        output.writeInt64(1, seed_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(lr_) != 0) {
+        output.writeDouble(2, lr_);
+      }
+      if (nSamples_ != 0L) {
+        output.writeInt64(3, nSamples_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(additionalArguments_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, additionalArguments_);
+      }
+      if (getEmbeddingDimsList().size() > 0) {
+        output.writeUInt32NoTag(66);
+        output.writeUInt32NoTag(embeddingDimsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < embeddingDims_.size(); i++) {
+        output.writeInt64NoTag(embeddingDims_.getLong(i));
+      }
+      if (tuningTypeCase_ == 100) {
+        output.writeMessage(100, (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora) tuningType_);
+      }
+      if (tuningTypeCase_ == 101) {
+        output.writeMessage(101, (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune) tuningType_);
+      }
+      if (scheduler_ != null) {
+        output.writeMessage(200, getScheduler());
+      }
+      if (optimizer_ != null) {
+        output.writeMessage(201, getOptimizer());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (seed_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, seed_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(lr_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, lr_);
+      }
+      if (nSamples_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, nSamples_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(additionalArguments_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, additionalArguments_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < embeddingDims_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt64SizeNoTag(embeddingDims_.getLong(i));
+        }
+        size += dataSize;
+        if (!getEmbeddingDimsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        embeddingDimsMemoizedSerializedSize = dataSize;
+      }
+      if (tuningTypeCase_ == 100) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(100, (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora) tuningType_);
+      }
+      if (tuningTypeCase_ == 101) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(101, (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune) tuningType_);
+      }
+      if (scheduler_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(200, getScheduler());
+      }
+      if (optimizer_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(201, getOptimizer());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams other = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) obj;
+
+      if (getSeed()
+          != other.getSeed()) return false;
+      if (java.lang.Double.doubleToLongBits(getLr())
+          != java.lang.Double.doubleToLongBits(
+              other.getLr())) return false;
+      if (getNSamples()
+          != other.getNSamples()) return false;
+      if (!getAdditionalArguments()
+          .equals(other.getAdditionalArguments())) return false;
+      if (!getEmbeddingDimsList()
+          .equals(other.getEmbeddingDimsList())) return false;
+      if (hasScheduler() != other.hasScheduler()) return false;
+      if (hasScheduler()) {
+        if (!getScheduler()
+            .equals(other.getScheduler())) return false;
+      }
+      if (hasOptimizer() != other.hasOptimizer()) return false;
+      if (hasOptimizer()) {
+        if (!getOptimizer()
+            .equals(other.getOptimizer())) return false;
+      }
+      if (!getTuningTypeCase().equals(other.getTuningTypeCase())) return false;
+      switch (tuningTypeCase_) {
+        case 100:
+          if (!getLora()
+              .equals(other.getLora())) return false;
+          break;
+        case 101:
+          if (!getPromptTune()
+              .equals(other.getPromptTune())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SEED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSeed());
+      hash = (37 * hash) + LR_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getLr()));
+      hash = (37 * hash) + N_SAMPLES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getNSamples());
+      hash = (37 * hash) + ADDITIONAL_ARGUMENTS_FIELD_NUMBER;
+      hash = (53 * hash) + getAdditionalArguments().hashCode();
+      if (getEmbeddingDimsCount() > 0) {
+        hash = (37 * hash) + EMBEDDING_DIMS_FIELD_NUMBER;
+        hash = (53 * hash) + getEmbeddingDimsList().hashCode();
+      }
+      if (hasScheduler()) {
+        hash = (37 * hash) + SCHEDULER_FIELD_NUMBER;
+        hash = (53 * hash) + getScheduler().hashCode();
+      }
+      if (hasOptimizer()) {
+        hash = (37 * hash) + OPTIMIZER_FIELD_NUMBER;
+        hash = (53 * hash) + getOptimizer().hashCode();
+      }
+      switch (tuningTypeCase_) {
+        case 100:
+          hash = (37 * hash) + LORA_FIELD_NUMBER;
+          hash = (53 * hash) + getLora().hashCode();
+          break;
+        case 101:
+          hash = (37 * hash) + PROMPT_TUNE_FIELD_NUMBER;
+          hash = (53 * hash) + getPromptTune().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams)
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        seed_ = 0L;
+
+        lr_ = 0D;
+
+        nSamples_ = 0L;
+
+        additionalArguments_ = "";
+
+        embeddingDims_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (schedulerBuilder_ == null) {
+          scheduler_ = null;
+        } else {
+          scheduler_ = null;
+          schedulerBuilder_ = null;
+        }
+        if (optimizerBuilder_ == null) {
+          optimizer_ = null;
+        } else {
+          optimizer_ = null;
+          optimizerBuilder_ = null;
+        }
+        tuningTypeCase_ = 0;
+        tuningType_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams build() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams buildPartial() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams result = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams(this);
+        int from_bitField0_ = bitField0_;
+        result.seed_ = seed_;
+        result.lr_ = lr_;
+        result.nSamples_ = nSamples_;
+        result.additionalArguments_ = additionalArguments_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          embeddingDims_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.embeddingDims_ = embeddingDims_;
+        if (tuningTypeCase_ == 100) {
+          if (loraBuilder_ == null) {
+            result.tuningType_ = tuningType_;
+          } else {
+            result.tuningType_ = loraBuilder_.build();
+          }
+        }
+        if (tuningTypeCase_ == 101) {
+          if (promptTuneBuilder_ == null) {
+            result.tuningType_ = tuningType_;
+          } else {
+            result.tuningType_ = promptTuneBuilder_.build();
+          }
+        }
+        if (schedulerBuilder_ == null) {
+          result.scheduler_ = scheduler_;
+        } else {
+          result.scheduler_ = schedulerBuilder_.build();
+        }
+        if (optimizerBuilder_ == null) {
+          result.optimizer_ = optimizer_;
+        } else {
+          result.optimizer_ = optimizerBuilder_.build();
+        }
+        result.tuningTypeCase_ = tuningTypeCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) {
+          return mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams other) {
+        if (other == yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance()) return this;
+        if (other.getSeed() != 0L) {
+          setSeed(other.getSeed());
+        }
+        if (other.getLr() != 0D) {
+          setLr(other.getLr());
+        }
+        if (other.getNSamples() != 0L) {
+          setNSamples(other.getNSamples());
+        }
+        if (!other.getAdditionalArguments().isEmpty()) {
+          additionalArguments_ = other.additionalArguments_;
+          onChanged();
+        }
+        if (!other.embeddingDims_.isEmpty()) {
+          if (embeddingDims_.isEmpty()) {
+            embeddingDims_ = other.embeddingDims_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureEmbeddingDimsIsMutable();
+            embeddingDims_.addAll(other.embeddingDims_);
+          }
+          onChanged();
+        }
+        if (other.hasScheduler()) {
+          mergeScheduler(other.getScheduler());
+        }
+        if (other.hasOptimizer()) {
+          mergeOptimizer(other.getOptimizer());
+        }
+        switch (other.getTuningTypeCase()) {
+          case LORA: {
+            mergeLora(other.getLora());
+            break;
+          }
+          case PROMPT_TUNE: {
+            mergePromptTune(other.getPromptTune());
+            break;
+          }
+          case TUNINGTYPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int tuningTypeCase_ = 0;
+      private java.lang.Object tuningType_;
+      public TuningTypeCase
+          getTuningTypeCase() {
+        return TuningTypeCase.forNumber(
+            tuningTypeCase_);
+      }
+
+      public Builder clearTuningType() {
+        tuningTypeCase_ = 0;
+        tuningType_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private long seed_ ;
+      /**
+       * <code>int64 seed = 1;</code>
+       * @return The seed.
+       */
+      @java.lang.Override
+      public long getSeed() {
+        return seed_;
+      }
+      /**
+       * <code>int64 seed = 1;</code>
+       * @param value The seed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSeed(long value) {
+        
+        seed_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 seed = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSeed() {
+        
+        seed_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private double lr_ ;
+      /**
+       * <code>double lr = 2;</code>
+       * @return The lr.
+       */
+      @java.lang.Override
+      public double getLr() {
+        return lr_;
+      }
+      /**
+       * <code>double lr = 2;</code>
+       * @param value The lr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLr(double value) {
+        
+        lr_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>double lr = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLr() {
+        
+        lr_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private long nSamples_ ;
+      /**
+       * <code>int64 n_samples = 3;</code>
+       * @return The nSamples.
+       */
+      @java.lang.Override
+      public long getNSamples() {
+        return nSamples_;
+      }
+      /**
+       * <code>int64 n_samples = 3;</code>
+       * @param value The nSamples to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNSamples(long value) {
+        
+        nSamples_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 n_samples = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNSamples() {
+        
+        nSamples_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object additionalArguments_ = "";
+      /**
+       * <code>string additional_arguments = 7;</code>
+       * @return The additionalArguments.
+       */
+      public java.lang.String getAdditionalArguments() {
+        java.lang.Object ref = additionalArguments_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          additionalArguments_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string additional_arguments = 7;</code>
+       * @return The bytes for additionalArguments.
+       */
+      public com.google.protobuf.ByteString
+          getAdditionalArgumentsBytes() {
+        java.lang.Object ref = additionalArguments_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          additionalArguments_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string additional_arguments = 7;</code>
+       * @param value The additionalArguments to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdditionalArguments(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        additionalArguments_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string additional_arguments = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAdditionalArguments() {
+        
+        additionalArguments_ = getDefaultInstance().getAdditionalArguments();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string additional_arguments = 7;</code>
+       * @param value The bytes for additionalArguments to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdditionalArgumentsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        additionalArguments_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.LongList embeddingDims_ = emptyLongList();
+      private void ensureEmbeddingDimsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          embeddingDims_ = mutableCopy(embeddingDims_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated int64 embedding_dims = 8;</code>
+       * @return A list containing the embeddingDims.
+       */
+      public java.util.List<java.lang.Long>
+          getEmbeddingDimsList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(embeddingDims_) : embeddingDims_;
+      }
+      /**
+       * <code>repeated int64 embedding_dims = 8;</code>
+       * @return The count of embeddingDims.
+       */
+      public int getEmbeddingDimsCount() {
+        return embeddingDims_.size();
+      }
+      /**
+       * <code>repeated int64 embedding_dims = 8;</code>
+       * @param index The index of the element to return.
+       * @return The embeddingDims at the given index.
+       */
+      public long getEmbeddingDims(int index) {
+        return embeddingDims_.getLong(index);
+      }
+      /**
+       * <code>repeated int64 embedding_dims = 8;</code>
+       * @param index The index to set the value at.
+       * @param value The embeddingDims to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmbeddingDims(
+          int index, long value) {
+        ensureEmbeddingDimsIsMutable();
+        embeddingDims_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 embedding_dims = 8;</code>
+       * @param value The embeddingDims to add.
+       * @return This builder for chaining.
+       */
+      public Builder addEmbeddingDims(long value) {
+        ensureEmbeddingDimsIsMutable();
+        embeddingDims_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 embedding_dims = 8;</code>
+       * @param values The embeddingDims to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllEmbeddingDims(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureEmbeddingDimsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, embeddingDims_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 embedding_dims = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmbeddingDims() {
+        embeddingDims_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora, yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.Builder, yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLoraOrBuilder> loraBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+       * @return Whether the lora field is set.
+       */
+      @java.lang.Override
+      public boolean hasLora() {
+        return tuningTypeCase_ == 100;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+       * @return The lora.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora getLora() {
+        if (loraBuilder_ == null) {
+          if (tuningTypeCase_ == 100) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora) tuningType_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.getDefaultInstance();
+        } else {
+          if (tuningTypeCase_ == 100) {
+            return loraBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+       */
+      public Builder setLora(yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora value) {
+        if (loraBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tuningType_ = value;
+          onChanged();
+        } else {
+          loraBuilder_.setMessage(value);
+        }
+        tuningTypeCase_ = 100;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+       */
+      public Builder setLora(
+          yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.Builder builderForValue) {
+        if (loraBuilder_ == null) {
+          tuningType_ = builderForValue.build();
+          onChanged();
+        } else {
+          loraBuilder_.setMessage(builderForValue.build());
+        }
+        tuningTypeCase_ = 100;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+       */
+      public Builder mergeLora(yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora value) {
+        if (loraBuilder_ == null) {
+          if (tuningTypeCase_ == 100 &&
+              tuningType_ != yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.getDefaultInstance()) {
+            tuningType_ = yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora) tuningType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            tuningType_ = value;
+          }
+          onChanged();
+        } else {
+          if (tuningTypeCase_ == 100) {
+            loraBuilder_.mergeFrom(value);
+          }
+          loraBuilder_.setMessage(value);
+        }
+        tuningTypeCase_ = 100;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+       */
+      public Builder clearLora() {
+        if (loraBuilder_ == null) {
+          if (tuningTypeCase_ == 100) {
+            tuningTypeCase_ = 0;
+            tuningType_ = null;
+            onChanged();
+          }
+        } else {
+          if (tuningTypeCase_ == 100) {
+            tuningTypeCase_ = 0;
+            tuningType_ = null;
+          }
+          loraBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.Builder getLoraBuilder() {
+        return getLoraFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLoraOrBuilder getLoraOrBuilder() {
+        if ((tuningTypeCase_ == 100) && (loraBuilder_ != null)) {
+          return loraBuilder_.getMessageOrBuilder();
+        } else {
+          if (tuningTypeCase_ == 100) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora) tuningType_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypeLora lora = 100;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora, yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.Builder, yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLoraOrBuilder> 
+          getLoraFieldBuilder() {
+        if (loraBuilder_ == null) {
+          if (!(tuningTypeCase_ == 100)) {
+            tuningType_ = yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.getDefaultInstance();
+          }
+          loraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora, yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora.Builder, yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLoraOrBuilder>(
+                  (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypeLora) tuningType_,
+                  getParentForChildren(),
+                  isClean());
+          tuningType_ = null;
+        }
+        tuningTypeCase_ = 100;
+        onChanged();;
+        return loraBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune, yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.Builder, yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTuneOrBuilder> promptTuneBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+       * @return Whether the promptTune field is set.
+       */
+      @java.lang.Override
+      public boolean hasPromptTune() {
+        return tuningTypeCase_ == 101;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+       * @return The promptTune.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune getPromptTune() {
+        if (promptTuneBuilder_ == null) {
+          if (tuningTypeCase_ == 101) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune) tuningType_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.getDefaultInstance();
+        } else {
+          if (tuningTypeCase_ == 101) {
+            return promptTuneBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+       */
+      public Builder setPromptTune(yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune value) {
+        if (promptTuneBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tuningType_ = value;
+          onChanged();
+        } else {
+          promptTuneBuilder_.setMessage(value);
+        }
+        tuningTypeCase_ = 101;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+       */
+      public Builder setPromptTune(
+          yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.Builder builderForValue) {
+        if (promptTuneBuilder_ == null) {
+          tuningType_ = builderForValue.build();
+          onChanged();
+        } else {
+          promptTuneBuilder_.setMessage(builderForValue.build());
+        }
+        tuningTypeCase_ = 101;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+       */
+      public Builder mergePromptTune(yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune value) {
+        if (promptTuneBuilder_ == null) {
+          if (tuningTypeCase_ == 101 &&
+              tuningType_ != yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.getDefaultInstance()) {
+            tuningType_ = yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune) tuningType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            tuningType_ = value;
+          }
+          onChanged();
+        } else {
+          if (tuningTypeCase_ == 101) {
+            promptTuneBuilder_.mergeFrom(value);
+          }
+          promptTuneBuilder_.setMessage(value);
+        }
+        tuningTypeCase_ = 101;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+       */
+      public Builder clearPromptTune() {
+        if (promptTuneBuilder_ == null) {
+          if (tuningTypeCase_ == 101) {
+            tuningTypeCase_ = 0;
+            tuningType_ = null;
+            onChanged();
+          }
+        } else {
+          if (tuningTypeCase_ == 101) {
+            tuningTypeCase_ = 0;
+            tuningType_ = null;
+          }
+          promptTuneBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.Builder getPromptTuneBuilder() {
+        return getPromptTuneFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTuneOrBuilder getPromptTuneOrBuilder() {
+        if ((tuningTypeCase_ == 101) && (promptTuneBuilder_ != null)) {
+          return promptTuneBuilder_.getMessageOrBuilder();
+        } else {
+          if (tuningTypeCase_ == 101) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune) tuningType_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningTypePromptTune prompt_tune = 101;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune, yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.Builder, yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTuneOrBuilder> 
+          getPromptTuneFieldBuilder() {
+        if (promptTuneBuilder_ == null) {
+          if (!(tuningTypeCase_ == 101)) {
+            tuningType_ = yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.getDefaultInstance();
+          }
+          promptTuneBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune, yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune.Builder, yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTuneOrBuilder>(
+                  (yandex.cloud.api.ai.tuning.v1.TuningTypes.TuningTypePromptTune) tuningType_,
+                  getParentForChildren(),
+                  isClean());
+          tuningType_ = null;
+        }
+        tuningTypeCase_ = 101;
+        onChanged();;
+        return promptTuneBuilder_;
+      }
+
+      private yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler scheduler_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.SchedulerOrBuilder> schedulerBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Scheduler scheduler = 200;</code>
+       * @return Whether the scheduler field is set.
+       */
+      public boolean hasScheduler() {
+        return schedulerBuilder_ != null || scheduler_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Scheduler scheduler = 200;</code>
+       * @return The scheduler.
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler getScheduler() {
+        if (schedulerBuilder_ == null) {
+          return scheduler_ == null ? yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler.getDefaultInstance() : scheduler_;
+        } else {
+          return schedulerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Scheduler scheduler = 200;</code>
+       */
+      public Builder setScheduler(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler value) {
+        if (schedulerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          scheduler_ = value;
+          onChanged();
+        } else {
+          schedulerBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Scheduler scheduler = 200;</code>
+       */
+      public Builder setScheduler(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler.Builder builderForValue) {
+        if (schedulerBuilder_ == null) {
+          scheduler_ = builderForValue.build();
+          onChanged();
+        } else {
+          schedulerBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Scheduler scheduler = 200;</code>
+       */
+      public Builder mergeScheduler(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler value) {
+        if (schedulerBuilder_ == null) {
+          if (scheduler_ != null) {
+            scheduler_ =
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler.newBuilder(scheduler_).mergeFrom(value).buildPartial();
+          } else {
+            scheduler_ = value;
+          }
+          onChanged();
+        } else {
+          schedulerBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Scheduler scheduler = 200;</code>
+       */
+      public Builder clearScheduler() {
+        if (schedulerBuilder_ == null) {
+          scheduler_ = null;
+          onChanged();
+        } else {
+          scheduler_ = null;
+          schedulerBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Scheduler scheduler = 200;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler.Builder getSchedulerBuilder() {
+        
+        onChanged();
+        return getSchedulerFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Scheduler scheduler = 200;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.SchedulerOrBuilder getSchedulerOrBuilder() {
+        if (schedulerBuilder_ != null) {
+          return schedulerBuilder_.getMessageOrBuilder();
+        } else {
+          return scheduler_ == null ?
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler.getDefaultInstance() : scheduler_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Scheduler scheduler = 200;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.SchedulerOrBuilder> 
+          getSchedulerFieldBuilder() {
+        if (schedulerBuilder_ == null) {
+          schedulerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Scheduler.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.SchedulerOrBuilder>(
+                  getScheduler(),
+                  getParentForChildren(),
+                  isClean());
+          scheduler_ = null;
+        }
+        return schedulerBuilder_;
+      }
+
+      private yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer optimizer_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.OptimizerOrBuilder> optimizerBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Optimizer optimizer = 201;</code>
+       * @return Whether the optimizer field is set.
+       */
+      public boolean hasOptimizer() {
+        return optimizerBuilder_ != null || optimizer_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Optimizer optimizer = 201;</code>
+       * @return The optimizer.
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer getOptimizer() {
+        if (optimizerBuilder_ == null) {
+          return optimizer_ == null ? yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer.getDefaultInstance() : optimizer_;
+        } else {
+          return optimizerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Optimizer optimizer = 201;</code>
+       */
+      public Builder setOptimizer(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer value) {
+        if (optimizerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          optimizer_ = value;
+          onChanged();
+        } else {
+          optimizerBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Optimizer optimizer = 201;</code>
+       */
+      public Builder setOptimizer(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer.Builder builderForValue) {
+        if (optimizerBuilder_ == null) {
+          optimizer_ = builderForValue.build();
+          onChanged();
+        } else {
+          optimizerBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Optimizer optimizer = 201;</code>
+       */
+      public Builder mergeOptimizer(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer value) {
+        if (optimizerBuilder_ == null) {
+          if (optimizer_ != null) {
+            optimizer_ =
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer.newBuilder(optimizer_).mergeFrom(value).buildPartial();
+          } else {
+            optimizer_ = value;
+          }
+          onChanged();
+        } else {
+          optimizerBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Optimizer optimizer = 201;</code>
+       */
+      public Builder clearOptimizer() {
+        if (optimizerBuilder_ == null) {
+          optimizer_ = null;
+          onChanged();
+        } else {
+          optimizer_ = null;
+          optimizerBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Optimizer optimizer = 201;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer.Builder getOptimizerBuilder() {
+        
+        onChanged();
+        return getOptimizerFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Optimizer optimizer = 201;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.OptimizerOrBuilder getOptimizerOrBuilder() {
+        if (optimizerBuilder_ != null) {
+          return optimizerBuilder_.getMessageOrBuilder();
+        } else {
+          return optimizer_ == null ?
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer.getDefaultInstance() : optimizer_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams.Optimizer optimizer = 201;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.OptimizerOrBuilder> 
+          getOptimizerFieldBuilder() {
+        if (optimizerBuilder_ == null) {
+          optimizerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Optimizer.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.OptimizerOrBuilder>(
+                  getOptimizer(),
+                  getParentForChildren(),
+                  isClean());
+          optimizer_ = null;
+        }
+        return optimizerBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams)
+    private static final yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams();
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TextEmbeddingTripletParams>
+        PARSER = new com.google.protobuf.AbstractParser<TextEmbeddingTripletParams>() {
+      @java.lang.Override
+      public TextEmbeddingTripletParams parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TextEmbeddingTripletParams(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TextEmbeddingTripletParams> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TextEmbeddingTripletParams> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface GetMetricsUrlRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.tuning.v1.GetMetricsUrlRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -25867,6 +34415,36 @@ public final class TuningServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_tuning_v1_TextClassificationMulticlassParams_Optimizer_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_Scheduler_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_Scheduler_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_Optimizer_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_Optimizer_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_Scheduler_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_Scheduler_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_Optimizer_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_Optimizer_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_tuning_v1_GetMetricsUrlRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -25935,7 +34513,7 @@ public final class TuningServiceOuterClass {
       "a\022\026\n\016tuning_task_id\030\001 \001(\t\022<\n\006status\030\002 \001(" +
       "\0162,.yandex.cloud.ai.tuning.v1.TuningTask" +
       ".Status\022\023\n\013total_steps\030\003 \001(\003\022\024\n\014current_" +
-      "step\030\004 \001(\003\"\206\006\n\rTuningRequest\022\034\n\016base_mod" +
+      "step\030\004 \001(\003\"\300\007\n\rTuningRequest\022\034\n\016base_mod" +
       "el_uri\030\001 \001(\tB\004\350\3071\001\022X\n\016train_datasets\030\002 \003" +
       "(\01328.yandex.cloud.ai.tuning.v1.TuningReq" +
       "uest.WeightedDatasetB\006\202\3101\002>0\022U\n\023validati" +
@@ -25948,43 +34526,28 @@ public final class TuningServiceOuterClass {
       "TextClassificationMultilabelParamsH\000\022g\n\036" +
       "text_classification_multiclass\030f \001(\0132=.y" +
       "andex.cloud.ai.tuning.v1.TextClassificat" +
-      "ionMulticlassParamsH\000\022\r\n\004name\030\310\001 \001(\t\022\024\n\013" +
-      "description\030\311\001 \001(\t\022E\n\006labels\030\312\001 \003(\01324.ya" +
-      "ndex.cloud.ai.tuning.v1.TuningRequest.La" +
-      "belsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001\032;\n\017WeightedDataset\022\030\n\nd" +
-      "ataset_id\030\001 \001(\tB\004\350\3071\001\022\016\n\006weight\030\002 \001(\001B\017\n" +
-      "\rtuning_paramsJ\004\010\004\020dJ\005\010g\020\310\001\"\211\006\n TextToTe" +
-      "xtCompletionTuningParams\022\014\n\004seed\030\001 \001(\003\022\n" +
-      "\n\002lr\030\002 \001(\001\022\021\n\tn_samples\030\003 \001(\003\022\034\n\024additio" +
-      "nal_arguments\030\007 \001(\t\0229\n\004lora\030d \001(\0132).yand" +
-      "ex.cloud.ai.tuning.v1.TuningTypeLoraH\000\022F" +
-      "\n\013prompt_tune\030e \001(\0132/.yandex.cloud.ai.tu" +
-      "ning.v1.TuningTypePromptTuneH\000\022Y\n\tschedu" +
-      "ler\030\310\001 \001(\0132E.yandex.cloud.ai.tuning.v1.T" +
-      "extToTextCompletionTuningParams.Schedule" +
-      "r\022Y\n\toptimizer\030\311\001 \001(\0132E.yandex.cloud.ai." +
-      "tuning.v1.TextToTextCompletionTuningPara" +
-      "ms.Optimizer\032\355\001\n\tScheduler\022<\n\006linear\030\001 \001" +
-      "(\0132*.yandex.cloud.ai.tuning.v1.Scheduler" +
-      "LinearH\000\022@\n\010constant\030\002 \001(\0132,.yandex.clou" +
-      "d.ai.tuning.v1.SchedulerConstantH\000\022<\n\006co" +
-      "sine\030\003 \001(\0132*.yandex.cloud.ai.tuning.v1.S" +
-      "chedulerCosineH\000\022\024\n\014warmup_ratio\030e \001(\001B\006" +
-      "\n\004typeJ\004\010\004\020e\032O\n\tOptimizer\022:\n\005adamw\030\001 \001(\013" +
-      "2).yandex.cloud.ai.tuning.v1.OptimizerAd" +
-      "amwH\000B\006\n\004typeB\r\n\013tuning_typeJ\004\010\004\020\007J\004\010\010\020d" +
-      "J\005\010f\020\310\001\"\217\006\n\"TextClassificationMultilabel" +
-      "Params\022\014\n\004seed\030\001 \001(\003\022\n\n\002lr\030\002 \001(\001\022\021\n\tn_sa" +
-      "mples\030\003 \001(\003\022\034\n\024additional_arguments\030\007 \001(" +
-      "\t\0229\n\004lora\030d \001(\0132).yandex.cloud.ai.tuning" +
-      ".v1.TuningTypeLoraH\000\022F\n\013prompt_tune\030e \001(" +
-      "\0132/.yandex.cloud.ai.tuning.v1.TuningType" +
-      "PromptTuneH\000\022[\n\tscheduler\030\310\001 \001(\0132G.yande" +
-      "x.cloud.ai.tuning.v1.TextClassificationM" +
-      "ultilabelParams.Scheduler\022[\n\toptimizer\030\311" +
-      "\001 \001(\0132G.yandex.cloud.ai.tuning.v1.TextCl" +
-      "assificationMultilabelParams.Optimizer\032\355" +
+      "ionMulticlassParamsH\000\022X\n\032text_embedding_" +
+      "pair_params\030g \001(\01322.yandex.cloud.ai.tuni" +
+      "ng.v1.TextEmbeddingPairParamsH\000\022^\n\035text_" +
+      "embedding_triplet_params\030h \001(\01325.yandex." +
+      "cloud.ai.tuning.v1.TextEmbeddingTripletP" +
+      "aramsH\000\022\r\n\004name\030\310\001 \001(\t\022\024\n\013description\030\311\001" +
+      " \001(\t\022E\n\006labels\030\312\001 \003(\01324.yandex.cloud.ai." +
+      "tuning.v1.TuningRequest.LabelsEntry\032-\n\013L" +
+      "abelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
+      "8\001\032;\n\017WeightedDataset\022\030\n\ndataset_id\030\001 \001(" +
+      "\tB\004\350\3071\001\022\016\n\006weight\030\002 \001(\001B\017\n\rtuning_params" +
+      "J\004\010\004\020dJ\005\010i\020\310\001\"\211\006\n TextToTextCompletionTu" +
+      "ningParams\022\014\n\004seed\030\001 \001(\003\022\n\n\002lr\030\002 \001(\001\022\021\n\t" +
+      "n_samples\030\003 \001(\003\022\034\n\024additional_arguments\030" +
+      "\007 \001(\t\0229\n\004lora\030d \001(\0132).yandex.cloud.ai.tu" +
+      "ning.v1.TuningTypeLoraH\000\022F\n\013prompt_tune\030" +
+      "e \001(\0132/.yandex.cloud.ai.tuning.v1.Tuning" +
+      "TypePromptTuneH\000\022Y\n\tscheduler\030\310\001 \001(\0132E.y" +
+      "andex.cloud.ai.tuning.v1.TextToTextCompl" +
+      "etionTuningParams.Scheduler\022Y\n\toptimizer" +
+      "\030\311\001 \001(\0132E.yandex.cloud.ai.tuning.v1.Text" +
+      "ToTextCompletionTuningParams.Optimizer\032\355" +
       "\001\n\tScheduler\022<\n\006linear\030\001 \001(\0132*.yandex.cl" +
       "oud.ai.tuning.v1.SchedulerLinearH\000\022@\n\010co" +
       "nstant\030\002 \001(\0132,.yandex.cloud.ai.tuning.v1" +
@@ -25994,17 +34557,17 @@ public final class TuningServiceOuterClass {
       "\n\tOptimizer\022:\n\005adamw\030\001 \001(\0132).yandex.clou" +
       "d.ai.tuning.v1.OptimizerAdamwH\000B\006\n\004typeB" +
       "\r\n\013tuning_typeJ\004\010\004\020\007J\004\010\010\020dJ\005\010f\020\310\001\"\217\006\n\"Te" +
-      "xtClassificationMulticlassParams\022\014\n\004seed" +
+      "xtClassificationMultilabelParams\022\014\n\004seed" +
       "\030\001 \001(\003\022\n\n\002lr\030\002 \001(\001\022\021\n\tn_samples\030\003 \001(\003\022\034\n" +
       "\024additional_arguments\030\007 \001(\t\0229\n\004lora\030d \001(" +
       "\0132).yandex.cloud.ai.tuning.v1.TuningType" +
       "LoraH\000\022F\n\013prompt_tune\030e \001(\0132/.yandex.clo" +
       "ud.ai.tuning.v1.TuningTypePromptTuneH\000\022[" +
       "\n\tscheduler\030\310\001 \001(\0132G.yandex.cloud.ai.tun" +
-      "ing.v1.TextClassificationMulticlassParam" +
+      "ing.v1.TextClassificationMultilabelParam" +
       "s.Scheduler\022[\n\toptimizer\030\311\001 \001(\0132G.yandex" +
       ".cloud.ai.tuning.v1.TextClassificationMu" +
-      "lticlassParams.Optimizer\032\355\001\n\tScheduler\022<" +
+      "ltilabelParams.Optimizer\032\355\001\n\tScheduler\022<" +
       "\n\006linear\030\001 \001(\0132*.yandex.cloud.ai.tuning." +
       "v1.SchedulerLinearH\000\022@\n\010constant\030\002 \001(\0132," +
       ".yandex.cloud.ai.tuning.v1.SchedulerCons" +
@@ -26013,50 +34576,110 @@ public final class TuningServiceOuterClass {
       "atio\030e \001(\001B\006\n\004typeJ\004\010\004\020e\032O\n\tOptimizer\022:\n" +
       "\005adamw\030\001 \001(\0132).yandex.cloud.ai.tuning.v1" +
       ".OptimizerAdamwH\000B\006\n\004typeB\r\n\013tuning_type" +
-      "J\004\010\004\020\007J\004\010\010\020dJ\005\010f\020\310\001\"-\n\024GetMetricsUrlRequ" +
-      "est\022\025\n\007task_id\030\001 \001(\tB\004\350\3071\001\")\n\025GetMetrics" +
-      "UrlResponse\022\020\n\010load_url\030\001 \001(\t\"*\n\021GetOpti" +
-      "onsRequest\022\025\n\007task_id\030\001 \001(\tB\004\350\3071\001\"\257\004\n\022Ge" +
-      "tOptionsResponse\022\017\n\007task_id\030\001 \001(\t\022\026\n\016bas" +
-      "e_model_uri\030\002 \001(\t\022P\n\016train_datasets\030\003 \003(" +
-      "\01328.yandex.cloud.ai.tuning.v1.TuningRequ" +
-      "est.WeightedDataset\022U\n\023validation_datase" +
-      "ts\030\004 \003(\01328.yandex.cloud.ai.tuning.v1.Tun" +
-      "ingRequest.WeightedDataset\022^\n\027text_to_te" +
-      "xt_completion\030d \001(\0132;.yandex.cloud.ai.tu" +
-      "ning.v1.TextToTextCompletionTuningParams" +
-      "H\000\022g\n\036text_classification_multilabel\030e \001" +
-      "(\0132=.yandex.cloud.ai.tuning.v1.TextClass" +
-      "ificationMultilabelParamsH\000\022g\n\036text_clas" +
-      "sification_multiclass\030f \001(\0132=.yandex.clo" +
-      "ud.ai.tuning.v1.TextClassificationMultic" +
-      "lassParamsH\000B\017\n\rtuning_paramsJ\004\010\005\020d\"+\n\021L" +
-      "istErrorsRequest\022\026\n\016tuning_task_id\030\001 \001(\t" +
-      "\"R\n\022ListErrorsResponse\022<\n\014tuning_error\030\001" +
-      " \003(\0132&.yandex.cloud.ai.tuning.v1.TuningE" +
-      "rror2\227\006\n\rTuningService\022y\n\004Tune\022(.yandex." +
-      "cloud.ai.tuning.v1.TuningRequest\032!.yande" +
-      "x.cloud.operation.Operation\"$\262\322* \n\016Tunin" +
-      "gMetadata\022\016TuningResponse\022e\n\004List\022-.yand" +
-      "ex.cloud.ai.tuning.v1.ListTuningsRequest" +
-      "\032..yandex.cloud.ai.tuning.v1.ListTunings" +
-      "Response\022o\n\010Describe\0220.yandex.cloud.ai.t" +
-      "uning.v1.DescribeTuningRequest\0321.yandex." +
-      "cloud.ai.tuning.v1.DescribeTuningRespons" +
-      "e\022i\n\006Cancel\022..yandex.cloud.ai.tuning.v1." +
-      "CancelTuningRequest\032/.yandex.cloud.ai.tu" +
-      "ning.v1.CancelTuningResponse\022r\n\rGetMetri" +
-      "csUrl\022/.yandex.cloud.ai.tuning.v1.GetMet" +
-      "ricsUrlRequest\0320.yandex.cloud.ai.tuning." +
-      "v1.GetMetricsUrlResponse\022i\n\nGetOptions\022," +
-      ".yandex.cloud.ai.tuning.v1.GetOptionsReq" +
-      "uest\032-.yandex.cloud.ai.tuning.v1.GetOpti" +
-      "onsResponse\022i\n\nListErrors\022,.yandex.cloud" +
-      ".ai.tuning.v1.ListErrorsRequest\032-.yandex" +
-      ".cloud.ai.tuning.v1.ListErrorsResponseBc" +
-      "\n\035yandex.cloud.api.ai.tuning.v1ZBgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/ai/tuning/v1;fomob\006proto3"
+      "J\004\010\004\020\007J\004\010\010\020dJ\005\010f\020\310\001\"\217\006\n\"TextClassificati" +
+      "onMulticlassParams\022\014\n\004seed\030\001 \001(\003\022\n\n\002lr\030\002" +
+      " \001(\001\022\021\n\tn_samples\030\003 \001(\003\022\034\n\024additional_ar" +
+      "guments\030\007 \001(\t\0229\n\004lora\030d \001(\0132).yandex.clo" +
+      "ud.ai.tuning.v1.TuningTypeLoraH\000\022F\n\013prom" +
+      "pt_tune\030e \001(\0132/.yandex.cloud.ai.tuning.v" +
+      "1.TuningTypePromptTuneH\000\022[\n\tscheduler\030\310\001" +
+      " \001(\0132G.yandex.cloud.ai.tuning.v1.TextCla" +
+      "ssificationMulticlassParams.Scheduler\022[\n" +
+      "\toptimizer\030\311\001 \001(\0132G.yandex.cloud.ai.tuni" +
+      "ng.v1.TextClassificationMulticlassParams" +
+      ".Optimizer\032\355\001\n\tScheduler\022<\n\006linear\030\001 \001(\013" +
+      "2*.yandex.cloud.ai.tuning.v1.SchedulerLi" +
+      "nearH\000\022@\n\010constant\030\002 \001(\0132,.yandex.cloud." +
+      "ai.tuning.v1.SchedulerConstantH\000\022<\n\006cosi" +
+      "ne\030\003 \001(\0132*.yandex.cloud.ai.tuning.v1.Sch" +
+      "edulerCosineH\000\022\024\n\014warmup_ratio\030e \001(\001B\006\n\004" +
+      "typeJ\004\010\004\020e\032O\n\tOptimizer\022:\n\005adamw\030\001 \001(\0132)" +
+      ".yandex.cloud.ai.tuning.v1.OptimizerAdam" +
+      "wH\000B\006\n\004typeB\r\n\013tuning_typeJ\004\010\004\020\007J\004\010\010\020dJ\005" +
+      "\010f\020\310\001\"\241\006\n\027TextEmbeddingPairParams\022\014\n\004see" +
+      "d\030\001 \001(\003\022\n\n\002lr\030\002 \001(\001\022\021\n\tn_samples\030\003 \001(\003\022\034" +
+      "\n\024additional_arguments\030\007 \001(\t\022\026\n\016embeddin" +
+      "g_dims\030\010 \003(\003\0229\n\004lora\030d \001(\0132).yandex.clou" +
+      "d.ai.tuning.v1.TuningTypeLoraH\000\022F\n\013promp" +
+      "t_tune\030e \001(\0132/.yandex.cloud.ai.tuning.v1" +
+      ".TuningTypePromptTuneH\000\022P\n\tscheduler\030\310\001 " +
+      "\001(\0132<.yandex.cloud.ai.tuning.v1.TextEmbe" +
+      "ddingPairParams.Scheduler\022P\n\toptimizer\030\311" +
+      "\001 \001(\0132<.yandex.cloud.ai.tuning.v1.TextEm" +
+      "beddingPairParams.Optimizer\032\210\002\n\tSchedule" +
+      "r\022<\n\006linear\030\001 \001(\0132*.yandex.cloud.ai.tuni" +
+      "ng.v1.SchedulerLinearH\000\022@\n\010constant\030\002 \001(" +
+      "\0132,.yandex.cloud.ai.tuning.v1.SchedulerC" +
+      "onstantH\000\022<\n\006cosine\030\003 \001(\0132*.yandex.cloud" +
+      ".ai.tuning.v1.SchedulerCosineH\000\022\026\n\014warmu" +
+      "p_ratio\030e \001(\001H\001B\006\n\004typeB\027\n\025optional_warm" +
+      "up_ratioJ\004\010\004\020e\032O\n\tOptimizer\022:\n\005adamw\030\001 \001" +
+      "(\0132).yandex.cloud.ai.tuning.v1.Optimizer" +
+      "AdamwH\000B\006\n\004typeB\r\n\013tuning_typeJ\004\010\004\020\007J\004\010\t" +
+      "\020dJ\005\010f\020\310\001\"\252\006\n\032TextEmbeddingTripletParams" +
+      "\022\014\n\004seed\030\001 \001(\003\022\n\n\002lr\030\002 \001(\001\022\021\n\tn_samples\030" +
+      "\003 \001(\003\022\034\n\024additional_arguments\030\007 \001(\t\022\026\n\016e" +
+      "mbedding_dims\030\010 \003(\003\0229\n\004lora\030d \001(\0132).yand" +
+      "ex.cloud.ai.tuning.v1.TuningTypeLoraH\000\022F" +
+      "\n\013prompt_tune\030e \001(\0132/.yandex.cloud.ai.tu" +
+      "ning.v1.TuningTypePromptTuneH\000\022S\n\tschedu" +
+      "ler\030\310\001 \001(\0132?.yandex.cloud.ai.tuning.v1.T" +
+      "extEmbeddingTripletParams.Scheduler\022S\n\to" +
+      "ptimizer\030\311\001 \001(\0132?.yandex.cloud.ai.tuning" +
+      ".v1.TextEmbeddingTripletParams.Optimizer" +
+      "\032\210\002\n\tScheduler\022<\n\006linear\030\001 \001(\0132*.yandex." +
+      "cloud.ai.tuning.v1.SchedulerLinearH\000\022@\n\010" +
+      "constant\030\002 \001(\0132,.yandex.cloud.ai.tuning." +
+      "v1.SchedulerConstantH\000\022<\n\006cosine\030\003 \001(\0132*" +
+      ".yandex.cloud.ai.tuning.v1.SchedulerCosi" +
+      "neH\000\022\026\n\014warmup_ratio\030e \001(\001H\001B\006\n\004typeB\027\n\025" +
+      "optional_warmup_ratioJ\004\010\004\020e\032O\n\tOptimizer" +
+      "\022:\n\005adamw\030\001 \001(\0132).yandex.cloud.ai.tuning" +
+      ".v1.OptimizerAdamwH\000B\006\n\004typeB\r\n\013tuning_t" +
+      "ypeJ\004\010\004\020\007J\004\010\t\020dJ\005\010f\020\310\001\"-\n\024GetMetricsUrlR" +
+      "equest\022\025\n\007task_id\030\001 \001(\tB\004\350\3071\001\")\n\025GetMetr" +
+      "icsUrlResponse\022\020\n\010load_url\030\001 \001(\t\"*\n\021GetO" +
+      "ptionsRequest\022\025\n\007task_id\030\001 \001(\tB\004\350\3071\001\"\257\004\n" +
+      "\022GetOptionsResponse\022\017\n\007task_id\030\001 \001(\t\022\026\n\016" +
+      "base_model_uri\030\002 \001(\t\022P\n\016train_datasets\030\003" +
+      " \003(\01328.yandex.cloud.ai.tuning.v1.TuningR" +
+      "equest.WeightedDataset\022U\n\023validation_dat" +
+      "asets\030\004 \003(\01328.yandex.cloud.ai.tuning.v1." +
+      "TuningRequest.WeightedDataset\022^\n\027text_to" +
+      "_text_completion\030d \001(\0132;.yandex.cloud.ai" +
+      ".tuning.v1.TextToTextCompletionTuningPar" +
+      "amsH\000\022g\n\036text_classification_multilabel\030" +
+      "e \001(\0132=.yandex.cloud.ai.tuning.v1.TextCl" +
+      "assificationMultilabelParamsH\000\022g\n\036text_c" +
+      "lassification_multiclass\030f \001(\0132=.yandex." +
+      "cloud.ai.tuning.v1.TextClassificationMul" +
+      "ticlassParamsH\000B\017\n\rtuning_paramsJ\004\010\005\020d\"+" +
+      "\n\021ListErrorsRequest\022\026\n\016tuning_task_id\030\001 " +
+      "\001(\t\"R\n\022ListErrorsResponse\022<\n\014tuning_erro" +
+      "r\030\001 \003(\0132&.yandex.cloud.ai.tuning.v1.Tuni" +
+      "ngError2\227\006\n\rTuningService\022y\n\004Tune\022(.yand" +
+      "ex.cloud.ai.tuning.v1.TuningRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"$\262\322* \n\016Tu" +
+      "ningMetadata\022\016TuningResponse\022e\n\004List\022-.y" +
+      "andex.cloud.ai.tuning.v1.ListTuningsRequ" +
+      "est\032..yandex.cloud.ai.tuning.v1.ListTuni" +
+      "ngsResponse\022o\n\010Describe\0220.yandex.cloud.a" +
+      "i.tuning.v1.DescribeTuningRequest\0321.yand" +
+      "ex.cloud.ai.tuning.v1.DescribeTuningResp" +
+      "onse\022i\n\006Cancel\022..yandex.cloud.ai.tuning." +
+      "v1.CancelTuningRequest\032/.yandex.cloud.ai" +
+      ".tuning.v1.CancelTuningResponse\022r\n\rGetMe" +
+      "tricsUrl\022/.yandex.cloud.ai.tuning.v1.Get" +
+      "MetricsUrlRequest\0320.yandex.cloud.ai.tuni" +
+      "ng.v1.GetMetricsUrlResponse\022i\n\nGetOption" +
+      "s\022,.yandex.cloud.ai.tuning.v1.GetOptions" +
+      "Request\032-.yandex.cloud.ai.tuning.v1.GetO" +
+      "ptionsResponse\022i\n\nListErrors\022,.yandex.cl" +
+      "oud.ai.tuning.v1.ListErrorsRequest\032-.yan" +
+      "dex.cloud.ai.tuning.v1.ListErrorsRespons" +
+      "eBc\n\035yandex.cloud.api.ai.tuning.v1ZBgith" +
+      "ub.com/yandex-cloud/go-genproto/yandex/c" +
+      "loud/ai/tuning/v1;fomob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -26123,7 +34746,7 @@ public final class TuningServiceOuterClass {
     internal_static_yandex_cloud_ai_tuning_v1_TuningRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_tuning_v1_TuningRequest_descriptor,
-        new java.lang.String[] { "BaseModelUri", "TrainDatasets", "ValidationDatasets", "TextToTextCompletion", "TextClassificationMultilabel", "TextClassificationMulticlass", "Name", "Description", "Labels", "TuningParams", });
+        new java.lang.String[] { "BaseModelUri", "TrainDatasets", "ValidationDatasets", "TextToTextCompletion", "TextClassificationMultilabel", "TextClassificationMulticlass", "TextEmbeddingPairParams", "TextEmbeddingTripletParams", "Name", "Description", "Labels", "TuningParams", });
     internal_static_yandex_cloud_ai_tuning_v1_TuningRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_ai_tuning_v1_TuningRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_ai_tuning_v1_TuningRequest_LabelsEntry_fieldAccessorTable = new
@@ -26190,38 +34813,74 @@ public final class TuningServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_tuning_v1_TextClassificationMulticlassParams_Optimizer_descriptor,
         new java.lang.String[] { "Adamw", "Type", });
-    internal_static_yandex_cloud_ai_tuning_v1_GetMetricsUrlRequest_descriptor =
+    internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_descriptor =
       getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_descriptor,
+        new java.lang.String[] { "Seed", "Lr", "NSamples", "AdditionalArguments", "EmbeddingDims", "Lora", "PromptTune", "Scheduler", "Optimizer", "TuningType", });
+    internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_Scheduler_descriptor =
+      internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_Scheduler_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_Scheduler_descriptor,
+        new java.lang.String[] { "Linear", "Constant", "Cosine", "WarmupRatio", "Type", "OptionalWarmupRatio", });
+    internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_Optimizer_descriptor =
+      internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_Optimizer_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingPairParams_Optimizer_descriptor,
+        new java.lang.String[] { "Adamw", "Type", });
+    internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_descriptor,
+        new java.lang.String[] { "Seed", "Lr", "NSamples", "AdditionalArguments", "EmbeddingDims", "Lora", "PromptTune", "Scheduler", "Optimizer", "TuningType", });
+    internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_Scheduler_descriptor =
+      internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_Scheduler_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_Scheduler_descriptor,
+        new java.lang.String[] { "Linear", "Constant", "Cosine", "WarmupRatio", "Type", "OptionalWarmupRatio", });
+    internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_Optimizer_descriptor =
+      internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_Optimizer_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_tuning_v1_TextEmbeddingTripletParams_Optimizer_descriptor,
+        new java.lang.String[] { "Adamw", "Type", });
+    internal_static_yandex_cloud_ai_tuning_v1_GetMetricsUrlRequest_descriptor =
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_ai_tuning_v1_GetMetricsUrlRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_tuning_v1_GetMetricsUrlRequest_descriptor,
         new java.lang.String[] { "TaskId", });
     internal_static_yandex_cloud_ai_tuning_v1_GetMetricsUrlResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_ai_tuning_v1_GetMetricsUrlResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_tuning_v1_GetMetricsUrlResponse_descriptor,
         new java.lang.String[] { "LoadUrl", });
     internal_static_yandex_cloud_ai_tuning_v1_GetOptionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_ai_tuning_v1_GetOptionsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_tuning_v1_GetOptionsRequest_descriptor,
         new java.lang.String[] { "TaskId", });
     internal_static_yandex_cloud_ai_tuning_v1_GetOptionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_ai_tuning_v1_GetOptionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_tuning_v1_GetOptionsResponse_descriptor,
         new java.lang.String[] { "TaskId", "BaseModelUri", "TrainDatasets", "ValidationDatasets", "TextToTextCompletion", "TextClassificationMultilabel", "TextClassificationMulticlass", "TuningParams", });
     internal_static_yandex_cloud_ai_tuning_v1_ListErrorsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_ai_tuning_v1_ListErrorsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_tuning_v1_ListErrorsRequest_descriptor,
         new java.lang.String[] { "TuningTaskId", });
     internal_static_yandex_cloud_ai_tuning_v1_ListErrorsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_yandex_cloud_ai_tuning_v1_ListErrorsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_tuning_v1_ListErrorsResponse_descriptor,

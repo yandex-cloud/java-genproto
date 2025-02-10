@@ -4968,6 +4968,1399 @@ public final class Maintenance {
 
   }
 
+  public interface ScheduledMaintenanceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.k8s.v1.ScheduledMaintenance)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Time until which the update should be postponed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 1;</code>
+     * @return Whether the delayedUntil field is set.
+     */
+    boolean hasDelayedUntil();
+    /**
+     * <pre>
+     * Time until which the update should be postponed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 1;</code>
+     * @return The delayedUntil.
+     */
+    com.google.protobuf.Timestamp getDelayedUntil();
+    /**
+     * <pre>
+     * Time until which the update should be postponed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 1;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder();
+
+    /**
+     * <pre>
+     * Time when the update became available.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp available_from = 2;</code>
+     * @return Whether the availableFrom field is set.
+     */
+    boolean hasAvailableFrom();
+    /**
+     * <pre>
+     * Time when the update became available.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp available_from = 2;</code>
+     * @return The availableFrom.
+     */
+    com.google.protobuf.Timestamp getAvailableFrom();
+    /**
+     * <pre>
+     * Time when the update became available.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp available_from = 2;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getAvailableFromOrBuilder();
+
+    /**
+     * <pre>
+     * The latest possible date by which a mandatory update must be applied.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp no_later_than = 3;</code>
+     * @return Whether the noLaterThan field is set.
+     */
+    boolean hasNoLaterThan();
+    /**
+     * <pre>
+     * The latest possible date by which a mandatory update must be applied.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp no_later_than = 3;</code>
+     * @return The noLaterThan.
+     */
+    com.google.protobuf.Timestamp getNoLaterThan();
+    /**
+     * <pre>
+     * The latest possible date by which a mandatory update must be applied.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp no_later_than = 3;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getNoLaterThanOrBuilder();
+
+    /**
+     * <pre>
+     * Description of the planned operation, for example, "Infrastructure planned update".
+     * </pre>
+     *
+     * <code>string description = 4;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Description of the planned operation, for example, "Infrastructure planned update".
+     * </pre>
+     *
+     * <code>string description = 4;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.k8s.v1.ScheduledMaintenance}
+   */
+  public static final class ScheduledMaintenance extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.ScheduledMaintenance)
+      ScheduledMaintenanceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ScheduledMaintenance.newBuilder() to construct.
+    private ScheduledMaintenance(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ScheduledMaintenance() {
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ScheduledMaintenance();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ScheduledMaintenance(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (delayedUntil_ != null) {
+                subBuilder = delayedUntil_.toBuilder();
+              }
+              delayedUntil_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(delayedUntil_);
+                delayedUntil_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (availableFrom_ != null) {
+                subBuilder = availableFrom_.toBuilder();
+              }
+              availableFrom_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(availableFrom_);
+                availableFrom_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (noLaterThan_ != null) {
+                subBuilder = noLaterThan_.toBuilder();
+              }
+              noLaterThan_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(noLaterThan_);
+                noLaterThan_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.k8s.v1.Maintenance.internal_static_yandex_cloud_k8s_v1_ScheduledMaintenance_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.k8s.v1.Maintenance.internal_static_yandex_cloud_k8s_v1_ScheduledMaintenance_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance.class, yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance.Builder.class);
+    }
+
+    public static final int DELAYED_UNTIL_FIELD_NUMBER = 1;
+    private com.google.protobuf.Timestamp delayedUntil_;
+    /**
+     * <pre>
+     * Time until which the update should be postponed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 1;</code>
+     * @return Whether the delayedUntil field is set.
+     */
+    @java.lang.Override
+    public boolean hasDelayedUntil() {
+      return delayedUntil_ != null;
+    }
+    /**
+     * <pre>
+     * Time until which the update should be postponed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 1;</code>
+     * @return The delayedUntil.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getDelayedUntil() {
+      return delayedUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
+    }
+    /**
+     * <pre>
+     * Time until which the update should be postponed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder() {
+      return getDelayedUntil();
+    }
+
+    public static final int AVAILABLE_FROM_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp availableFrom_;
+    /**
+     * <pre>
+     * Time when the update became available.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp available_from = 2;</code>
+     * @return Whether the availableFrom field is set.
+     */
+    @java.lang.Override
+    public boolean hasAvailableFrom() {
+      return availableFrom_ != null;
+    }
+    /**
+     * <pre>
+     * Time when the update became available.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp available_from = 2;</code>
+     * @return The availableFrom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getAvailableFrom() {
+      return availableFrom_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : availableFrom_;
+    }
+    /**
+     * <pre>
+     * Time when the update became available.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp available_from = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getAvailableFromOrBuilder() {
+      return getAvailableFrom();
+    }
+
+    public static final int NO_LATER_THAN_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp noLaterThan_;
+    /**
+     * <pre>
+     * The latest possible date by which a mandatory update must be applied.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp no_later_than = 3;</code>
+     * @return Whether the noLaterThan field is set.
+     */
+    @java.lang.Override
+    public boolean hasNoLaterThan() {
+      return noLaterThan_ != null;
+    }
+    /**
+     * <pre>
+     * The latest possible date by which a mandatory update must be applied.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp no_later_than = 3;</code>
+     * @return The noLaterThan.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getNoLaterThan() {
+      return noLaterThan_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : noLaterThan_;
+    }
+    /**
+     * <pre>
+     * The latest possible date by which a mandatory update must be applied.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp no_later_than = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getNoLaterThanOrBuilder() {
+      return getNoLaterThan();
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 4;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Description of the planned operation, for example, "Infrastructure planned update".
+     * </pre>
+     *
+     * <code>string description = 4;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Description of the planned operation, for example, "Infrastructure planned update".
+     * </pre>
+     *
+     * <code>string description = 4;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (delayedUntil_ != null) {
+        output.writeMessage(1, getDelayedUntil());
+      }
+      if (availableFrom_ != null) {
+        output.writeMessage(2, getAvailableFrom());
+      }
+      if (noLaterThan_ != null) {
+        output.writeMessage(3, getNoLaterThan());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (delayedUntil_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDelayedUntil());
+      }
+      if (availableFrom_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getAvailableFrom());
+      }
+      if (noLaterThan_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getNoLaterThan());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance other = (yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance) obj;
+
+      if (hasDelayedUntil() != other.hasDelayedUntil()) return false;
+      if (hasDelayedUntil()) {
+        if (!getDelayedUntil()
+            .equals(other.getDelayedUntil())) return false;
+      }
+      if (hasAvailableFrom() != other.hasAvailableFrom()) return false;
+      if (hasAvailableFrom()) {
+        if (!getAvailableFrom()
+            .equals(other.getAvailableFrom())) return false;
+      }
+      if (hasNoLaterThan() != other.hasNoLaterThan()) return false;
+      if (hasNoLaterThan()) {
+        if (!getNoLaterThan()
+            .equals(other.getNoLaterThan())) return false;
+      }
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDelayedUntil()) {
+        hash = (37 * hash) + DELAYED_UNTIL_FIELD_NUMBER;
+        hash = (53 * hash) + getDelayedUntil().hashCode();
+      }
+      if (hasAvailableFrom()) {
+        hash = (37 * hash) + AVAILABLE_FROM_FIELD_NUMBER;
+        hash = (53 * hash) + getAvailableFrom().hashCode();
+      }
+      if (hasNoLaterThan()) {
+        hash = (37 * hash) + NO_LATER_THAN_FIELD_NUMBER;
+        hash = (53 * hash) + getNoLaterThan().hashCode();
+      }
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.k8s.v1.ScheduledMaintenance}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.k8s.v1.ScheduledMaintenance)
+        yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenanceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.k8s.v1.Maintenance.internal_static_yandex_cloud_k8s_v1_ScheduledMaintenance_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.k8s.v1.Maintenance.internal_static_yandex_cloud_k8s_v1_ScheduledMaintenance_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance.class, yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (delayedUntilBuilder_ == null) {
+          delayedUntil_ = null;
+        } else {
+          delayedUntil_ = null;
+          delayedUntilBuilder_ = null;
+        }
+        if (availableFromBuilder_ == null) {
+          availableFrom_ = null;
+        } else {
+          availableFrom_ = null;
+          availableFromBuilder_ = null;
+        }
+        if (noLaterThanBuilder_ == null) {
+          noLaterThan_ = null;
+        } else {
+          noLaterThan_ = null;
+          noLaterThanBuilder_ = null;
+        }
+        description_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.k8s.v1.Maintenance.internal_static_yandex_cloud_k8s_v1_ScheduledMaintenance_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance getDefaultInstanceForType() {
+        return yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance build() {
+        yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance buildPartial() {
+        yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance result = new yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance(this);
+        if (delayedUntilBuilder_ == null) {
+          result.delayedUntil_ = delayedUntil_;
+        } else {
+          result.delayedUntil_ = delayedUntilBuilder_.build();
+        }
+        if (availableFromBuilder_ == null) {
+          result.availableFrom_ = availableFrom_;
+        } else {
+          result.availableFrom_ = availableFromBuilder_.build();
+        }
+        if (noLaterThanBuilder_ == null) {
+          result.noLaterThan_ = noLaterThan_;
+        } else {
+          result.noLaterThan_ = noLaterThanBuilder_.build();
+        }
+        result.description_ = description_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance) {
+          return mergeFrom((yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance other) {
+        if (other == yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance.getDefaultInstance()) return this;
+        if (other.hasDelayedUntil()) {
+          mergeDelayedUntil(other.getDelayedUntil());
+        }
+        if (other.hasAvailableFrom()) {
+          mergeAvailableFrom(other.getAvailableFrom());
+        }
+        if (other.hasNoLaterThan()) {
+          mergeNoLaterThan(other.getNoLaterThan());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp delayedUntil_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> delayedUntilBuilder_;
+      /**
+       * <pre>
+       * Time until which the update should be postponed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 1;</code>
+       * @return Whether the delayedUntil field is set.
+       */
+      public boolean hasDelayedUntil() {
+        return delayedUntilBuilder_ != null || delayedUntil_ != null;
+      }
+      /**
+       * <pre>
+       * Time until which the update should be postponed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 1;</code>
+       * @return The delayedUntil.
+       */
+      public com.google.protobuf.Timestamp getDelayedUntil() {
+        if (delayedUntilBuilder_ == null) {
+          return delayedUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
+        } else {
+          return delayedUntilBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Time until which the update should be postponed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 1;</code>
+       */
+      public Builder setDelayedUntil(com.google.protobuf.Timestamp value) {
+        if (delayedUntilBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          delayedUntil_ = value;
+          onChanged();
+        } else {
+          delayedUntilBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Time until which the update should be postponed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 1;</code>
+       */
+      public Builder setDelayedUntil(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (delayedUntilBuilder_ == null) {
+          delayedUntil_ = builderForValue.build();
+          onChanged();
+        } else {
+          delayedUntilBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Time until which the update should be postponed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 1;</code>
+       */
+      public Builder mergeDelayedUntil(com.google.protobuf.Timestamp value) {
+        if (delayedUntilBuilder_ == null) {
+          if (delayedUntil_ != null) {
+            delayedUntil_ =
+              com.google.protobuf.Timestamp.newBuilder(delayedUntil_).mergeFrom(value).buildPartial();
+          } else {
+            delayedUntil_ = value;
+          }
+          onChanged();
+        } else {
+          delayedUntilBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Time until which the update should be postponed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 1;</code>
+       */
+      public Builder clearDelayedUntil() {
+        if (delayedUntilBuilder_ == null) {
+          delayedUntil_ = null;
+          onChanged();
+        } else {
+          delayedUntil_ = null;
+          delayedUntilBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Time until which the update should be postponed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 1;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getDelayedUntilBuilder() {
+        
+        onChanged();
+        return getDelayedUntilFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Time until which the update should be postponed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 1;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder() {
+        if (delayedUntilBuilder_ != null) {
+          return delayedUntilBuilder_.getMessageOrBuilder();
+        } else {
+          return delayedUntil_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
+        }
+      }
+      /**
+       * <pre>
+       * Time until which the update should be postponed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getDelayedUntilFieldBuilder() {
+        if (delayedUntilBuilder_ == null) {
+          delayedUntilBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getDelayedUntil(),
+                  getParentForChildren(),
+                  isClean());
+          delayedUntil_ = null;
+        }
+        return delayedUntilBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp availableFrom_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> availableFromBuilder_;
+      /**
+       * <pre>
+       * Time when the update became available.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp available_from = 2;</code>
+       * @return Whether the availableFrom field is set.
+       */
+      public boolean hasAvailableFrom() {
+        return availableFromBuilder_ != null || availableFrom_ != null;
+      }
+      /**
+       * <pre>
+       * Time when the update became available.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp available_from = 2;</code>
+       * @return The availableFrom.
+       */
+      public com.google.protobuf.Timestamp getAvailableFrom() {
+        if (availableFromBuilder_ == null) {
+          return availableFrom_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : availableFrom_;
+        } else {
+          return availableFromBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Time when the update became available.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp available_from = 2;</code>
+       */
+      public Builder setAvailableFrom(com.google.protobuf.Timestamp value) {
+        if (availableFromBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          availableFrom_ = value;
+          onChanged();
+        } else {
+          availableFromBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Time when the update became available.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp available_from = 2;</code>
+       */
+      public Builder setAvailableFrom(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (availableFromBuilder_ == null) {
+          availableFrom_ = builderForValue.build();
+          onChanged();
+        } else {
+          availableFromBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Time when the update became available.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp available_from = 2;</code>
+       */
+      public Builder mergeAvailableFrom(com.google.protobuf.Timestamp value) {
+        if (availableFromBuilder_ == null) {
+          if (availableFrom_ != null) {
+            availableFrom_ =
+              com.google.protobuf.Timestamp.newBuilder(availableFrom_).mergeFrom(value).buildPartial();
+          } else {
+            availableFrom_ = value;
+          }
+          onChanged();
+        } else {
+          availableFromBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Time when the update became available.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp available_from = 2;</code>
+       */
+      public Builder clearAvailableFrom() {
+        if (availableFromBuilder_ == null) {
+          availableFrom_ = null;
+          onChanged();
+        } else {
+          availableFrom_ = null;
+          availableFromBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Time when the update became available.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp available_from = 2;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getAvailableFromBuilder() {
+        
+        onChanged();
+        return getAvailableFromFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Time when the update became available.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp available_from = 2;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getAvailableFromOrBuilder() {
+        if (availableFromBuilder_ != null) {
+          return availableFromBuilder_.getMessageOrBuilder();
+        } else {
+          return availableFrom_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : availableFrom_;
+        }
+      }
+      /**
+       * <pre>
+       * Time when the update became available.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp available_from = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getAvailableFromFieldBuilder() {
+        if (availableFromBuilder_ == null) {
+          availableFromBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getAvailableFrom(),
+                  getParentForChildren(),
+                  isClean());
+          availableFrom_ = null;
+        }
+        return availableFromBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp noLaterThan_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> noLaterThanBuilder_;
+      /**
+       * <pre>
+       * The latest possible date by which a mandatory update must be applied.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp no_later_than = 3;</code>
+       * @return Whether the noLaterThan field is set.
+       */
+      public boolean hasNoLaterThan() {
+        return noLaterThanBuilder_ != null || noLaterThan_ != null;
+      }
+      /**
+       * <pre>
+       * The latest possible date by which a mandatory update must be applied.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp no_later_than = 3;</code>
+       * @return The noLaterThan.
+       */
+      public com.google.protobuf.Timestamp getNoLaterThan() {
+        if (noLaterThanBuilder_ == null) {
+          return noLaterThan_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : noLaterThan_;
+        } else {
+          return noLaterThanBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The latest possible date by which a mandatory update must be applied.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp no_later_than = 3;</code>
+       */
+      public Builder setNoLaterThan(com.google.protobuf.Timestamp value) {
+        if (noLaterThanBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          noLaterThan_ = value;
+          onChanged();
+        } else {
+          noLaterThanBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The latest possible date by which a mandatory update must be applied.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp no_later_than = 3;</code>
+       */
+      public Builder setNoLaterThan(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (noLaterThanBuilder_ == null) {
+          noLaterThan_ = builderForValue.build();
+          onChanged();
+        } else {
+          noLaterThanBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The latest possible date by which a mandatory update must be applied.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp no_later_than = 3;</code>
+       */
+      public Builder mergeNoLaterThan(com.google.protobuf.Timestamp value) {
+        if (noLaterThanBuilder_ == null) {
+          if (noLaterThan_ != null) {
+            noLaterThan_ =
+              com.google.protobuf.Timestamp.newBuilder(noLaterThan_).mergeFrom(value).buildPartial();
+          } else {
+            noLaterThan_ = value;
+          }
+          onChanged();
+        } else {
+          noLaterThanBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The latest possible date by which a mandatory update must be applied.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp no_later_than = 3;</code>
+       */
+      public Builder clearNoLaterThan() {
+        if (noLaterThanBuilder_ == null) {
+          noLaterThan_ = null;
+          onChanged();
+        } else {
+          noLaterThan_ = null;
+          noLaterThanBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The latest possible date by which a mandatory update must be applied.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp no_later_than = 3;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getNoLaterThanBuilder() {
+        
+        onChanged();
+        return getNoLaterThanFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The latest possible date by which a mandatory update must be applied.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp no_later_than = 3;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getNoLaterThanOrBuilder() {
+        if (noLaterThanBuilder_ != null) {
+          return noLaterThanBuilder_.getMessageOrBuilder();
+        } else {
+          return noLaterThan_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : noLaterThan_;
+        }
+      }
+      /**
+       * <pre>
+       * The latest possible date by which a mandatory update must be applied.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp no_later_than = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getNoLaterThanFieldBuilder() {
+        if (noLaterThanBuilder_ == null) {
+          noLaterThanBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getNoLaterThan(),
+                  getParentForChildren(),
+                  isClean());
+          noLaterThan_ = null;
+        }
+        return noLaterThanBuilder_;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Description of the planned operation, for example, "Infrastructure planned update".
+       * </pre>
+       *
+       * <code>string description = 4;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the planned operation, for example, "Infrastructure planned update".
+       * </pre>
+       *
+       * <code>string description = 4;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the planned operation, for example, "Infrastructure planned update".
+       * </pre>
+       *
+       * <code>string description = 4;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the planned operation, for example, "Infrastructure planned update".
+       * </pre>
+       *
+       * <code>string description = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the planned operation, for example, "Infrastructure planned update".
+       * </pre>
+       *
+       * <code>string description = 4;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.k8s.v1.ScheduledMaintenance)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.k8s.v1.ScheduledMaintenance)
+    private static final yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance();
+    }
+
+    public static yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ScheduledMaintenance>
+        PARSER = new com.google.protobuf.AbstractParser<ScheduledMaintenance>() {
+      @java.lang.Override
+      public ScheduledMaintenance parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ScheduledMaintenance(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ScheduledMaintenance> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ScheduledMaintenance> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.Maintenance.ScheduledMaintenance getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_k8s_v1_MaintenanceWindow_descriptor;
   private static final 
@@ -4993,6 +6386,11 @@ public final class Maintenance {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_k8s_v1_WeeklyMaintenanceWindow_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_k8s_v1_ScheduledMaintenance_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_k8s_v1_ScheduledMaintenance_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5005,29 +6403,34 @@ public final class Maintenance {
       "\n%yandex/cloud/k8s/v1/maintenance.proto\022" +
       "\023yandex.cloud.k8s.v1\032\033google/type/dayofw" +
       "eek.proto\032\033google/type/timeofday.proto\032\036" +
-      "google/protobuf/duration.proto\032\035yandex/c" +
-      "loud/validation.proto\"\211\002\n\021MaintenanceWin" +
-      "dow\022@\n\007anytime\030\001 \001(\0132-.yandex.cloud.k8s." +
-      "v1.AnytimeMaintenanceWindowH\000\022O\n\030daily_m" +
-      "aintenance_window\030\002 \001(\0132+.yandex.cloud.k" +
-      "8s.v1.DailyMaintenanceWindowH\000\022Q\n\031weekly" +
-      "_maintenance_window\030\003 \001(\0132,.yandex.cloud" +
-      ".k8s.v1.WeeklyMaintenanceWindowH\000B\016\n\006pol" +
-      "icy\022\004\300\3011\001\"\032\n\030AnytimeMaintenanceWindow\"\203\001" +
-      "\n\026DailyMaintenanceWindow\0220\n\nstart_time\030\001" +
-      " \001(\0132\026.google.type.TimeOfDayB\004\350\3071\001\0227\n\010du" +
-      "ration\030\002 \001(\0132\031.google.protobuf.DurationB" +
-      "\n\372\3071\0061h-24h\"\267\001\n\033DaysOfWeekMaintenanceWin" +
-      "dow\022-\n\004days\030\001 \003(\0162\026.google.type.DayOfWee" +
-      "kB\007\202\3101\0031-7\0220\n\nstart_time\030\002 \001(\0132\026.google." +
-      "type.TimeOfDayB\004\350\3071\001\0227\n\010duration\030\003 \001(\0132\031" +
-      ".google.protobuf.DurationB\n\372\3071\0061h-24h\"j\n" +
-      "\027WeeklyMaintenanceWindow\022O\n\014days_of_week" +
-      "\030\001 \003(\01320.yandex.cloud.k8s.v1.DaysOfWeekM" +
-      "aintenanceWindowB\007\202\3101\0031-7BV\n\027yandex.clou" +
-      "d.api.k8s.v1Z;github.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/k8s/v1;k8sb\006proto" +
-      "3"
+      "google/protobuf/duration.proto\032\037google/p" +
+      "rotobuf/timestamp.proto\032\035yandex/cloud/va" +
+      "lidation.proto\"\211\002\n\021MaintenanceWindow\022@\n\007" +
+      "anytime\030\001 \001(\0132-.yandex.cloud.k8s.v1.Anyt" +
+      "imeMaintenanceWindowH\000\022O\n\030daily_maintena" +
+      "nce_window\030\002 \001(\0132+.yandex.cloud.k8s.v1.D" +
+      "ailyMaintenanceWindowH\000\022Q\n\031weekly_mainte" +
+      "nance_window\030\003 \001(\0132,.yandex.cloud.k8s.v1" +
+      ".WeeklyMaintenanceWindowH\000B\016\n\006policy\022\004\300\301" +
+      "1\001\"\032\n\030AnytimeMaintenanceWindow\"\203\001\n\026Daily" +
+      "MaintenanceWindow\0220\n\nstart_time\030\001 \001(\0132\026." +
+      "google.type.TimeOfDayB\004\350\3071\001\0227\n\010duration\030" +
+      "\002 \001(\0132\031.google.protobuf.DurationB\n\372\3071\0061h" +
+      "-24h\"\267\001\n\033DaysOfWeekMaintenanceWindow\022-\n\004" +
+      "days\030\001 \003(\0162\026.google.type.DayOfWeekB\007\202\3101\003" +
+      "1-7\0220\n\nstart_time\030\002 \001(\0132\026.google.type.Ti" +
+      "meOfDayB\004\350\3071\001\0227\n\010duration\030\003 \001(\0132\031.google" +
+      ".protobuf.DurationB\n\372\3071\0061h-24h\"j\n\027Weekly" +
+      "MaintenanceWindow\022O\n\014days_of_week\030\001 \003(\0132" +
+      "0.yandex.cloud.k8s.v1.DaysOfWeekMaintena" +
+      "nceWindowB\007\202\3101\0031-7\"\305\001\n\024ScheduledMaintena" +
+      "nce\0221\n\rdelayed_until\030\001 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\0222\n\016available_from\030\002 \001(\0132\032" +
+      ".google.protobuf.Timestamp\0221\n\rno_later_t" +
+      "han\030\003 \001(\0132\032.google.protobuf.Timestamp\022\023\n" +
+      "\013description\030\004 \001(\tBV\n\027yandex.cloud.api.k" +
+      "8s.v1Z;github.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/k8s/v1;k8sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5035,6 +6438,7 @@ public final class Maintenance {
           com.google.type.DayOfWeekProto.getDescriptor(),
           com.google.type.TimeOfDayProto.getDescriptor(),
           com.google.protobuf.DurationProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_k8s_v1_MaintenanceWindow_descriptor =
@@ -5067,6 +6471,12 @@ public final class Maintenance {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_WeeklyMaintenanceWindow_descriptor,
         new java.lang.String[] { "DaysOfWeek", });
+    internal_static_yandex_cloud_k8s_v1_ScheduledMaintenance_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_k8s_v1_ScheduledMaintenance_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_k8s_v1_ScheduledMaintenance_descriptor,
+        new java.lang.String[] { "DelayedUntil", "AvailableFrom", "NoLaterThan", "Description", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);
@@ -5078,6 +6488,7 @@ public final class Maintenance {
     com.google.type.DayOfWeekProto.getDescriptor();
     com.google.type.TimeOfDayProto.getDescriptor();
     com.google.protobuf.DurationProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

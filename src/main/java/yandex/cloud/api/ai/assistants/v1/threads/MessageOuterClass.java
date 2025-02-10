@@ -231,6 +231,50 @@ public final class MessageOuterClass {
      * @return The status.
      */
     yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message.MessageStatus getStatus();
+
+    /**
+     * <pre>
+     * List of citations used to generate the message.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation> 
+        getCitationsList();
+    /**
+     * <pre>
+     * List of citations used to generate the message.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation getCitations(int index);
+    /**
+     * <pre>
+     * List of citations used to generate the message.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+     */
+    int getCitationsCount();
+    /**
+     * <pre>
+     * List of citations used to generate the message.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.CitationOrBuilder> 
+        getCitationsOrBuilderList();
+    /**
+     * <pre>
+     * List of citations used to generate the message.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.CitationOrBuilder getCitationsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.Message}
@@ -249,6 +293,7 @@ public final class MessageOuterClass {
       threadId_ = "";
       createdBy_ = "";
       status_ = 0;
+      citations_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -358,6 +403,15 @@ public final class MessageOuterClass {
               status_ = rawValue;
               break;
             }
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                citations_ = new java.util.ArrayList<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              citations_.add(
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -373,6 +427,9 @@ public final class MessageOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          citations_ = java.util.Collections.unmodifiableList(citations_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -940,6 +997,66 @@ public final class MessageOuterClass {
       return result == null ? yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message.MessageStatus.UNRECOGNIZED : result;
     }
 
+    public static final int CITATIONS_FIELD_NUMBER = 9;
+    private java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation> citations_;
+    /**
+     * <pre>
+     * List of citations used to generate the message.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation> getCitationsList() {
+      return citations_;
+    }
+    /**
+     * <pre>
+     * List of citations used to generate the message.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.CitationOrBuilder> 
+        getCitationsOrBuilderList() {
+      return citations_;
+    }
+    /**
+     * <pre>
+     * List of citations used to generate the message.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+     */
+    @java.lang.Override
+    public int getCitationsCount() {
+      return citations_.size();
+    }
+    /**
+     * <pre>
+     * List of citations used to generate the message.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation getCitations(int index) {
+      return citations_.get(index);
+    }
+    /**
+     * <pre>
+     * List of citations used to generate the message.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.CitationOrBuilder getCitationsOrBuilder(
+        int index) {
+      return citations_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -980,6 +1097,9 @@ public final class MessageOuterClass {
       }
       if (status_ != yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Message.MessageStatus.MESSAGE_STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(8, status_);
+      }
+      for (int i = 0; i < citations_.size(); i++) {
+        output.writeMessage(9, citations_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -1025,6 +1145,10 @@ public final class MessageOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(8, status_);
       }
+      for (int i = 0; i < citations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, citations_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1064,6 +1188,8 @@ public final class MessageOuterClass {
             .equals(other.getContent())) return false;
       }
       if (status_ != other.status_) return false;
+      if (!getCitationsList()
+          .equals(other.getCitationsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1099,6 +1225,10 @@ public final class MessageOuterClass {
       }
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      if (getCitationsCount() > 0) {
+        hash = (37 * hash) + CITATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getCitationsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1249,6 +1379,7 @@ public final class MessageOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getCitationsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -1281,6 +1412,12 @@ public final class MessageOuterClass {
         }
         status_ = 0;
 
+        if (citationsBuilder_ == null) {
+          citations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          citationsBuilder_.clear();
+        }
         return this;
       }
 
@@ -1329,6 +1466,15 @@ public final class MessageOuterClass {
           result.content_ = contentBuilder_.build();
         }
         result.status_ = status_;
+        if (citationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            citations_ = java.util.Collections.unmodifiableList(citations_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.citations_ = citations_;
+        } else {
+          result.citations_ = citationsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1402,6 +1548,32 @@ public final class MessageOuterClass {
         }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
+        }
+        if (citationsBuilder_ == null) {
+          if (!other.citations_.isEmpty()) {
+            if (citations_.isEmpty()) {
+              citations_ = other.citations_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureCitationsIsMutable();
+              citations_.addAll(other.citations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.citations_.isEmpty()) {
+            if (citationsBuilder_.isEmpty()) {
+              citationsBuilder_.dispose();
+              citationsBuilder_ = null;
+              citations_ = other.citations_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              citationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCitationsFieldBuilder() : null;
+            } else {
+              citationsBuilder_.addAllMessages(other.citations_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2417,6 +2589,318 @@ public final class MessageOuterClass {
         status_ = 0;
         onChanged();
         return this;
+      }
+
+      private java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation> citations_ =
+        java.util.Collections.emptyList();
+      private void ensureCitationsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          citations_ = new java.util.ArrayList<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation>(citations_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.CitationOrBuilder> citationsBuilder_;
+
+      /**
+       * <pre>
+       * List of citations used to generate the message.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation> getCitationsList() {
+        if (citationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(citations_);
+        } else {
+          return citationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of citations used to generate the message.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+       */
+      public int getCitationsCount() {
+        if (citationsBuilder_ == null) {
+          return citations_.size();
+        } else {
+          return citationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of citations used to generate the message.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation getCitations(int index) {
+        if (citationsBuilder_ == null) {
+          return citations_.get(index);
+        } else {
+          return citationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of citations used to generate the message.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+       */
+      public Builder setCitations(
+          int index, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation value) {
+        if (citationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCitationsIsMutable();
+          citations_.set(index, value);
+          onChanged();
+        } else {
+          citationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of citations used to generate the message.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+       */
+      public Builder setCitations(
+          int index, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation.Builder builderForValue) {
+        if (citationsBuilder_ == null) {
+          ensureCitationsIsMutable();
+          citations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          citationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of citations used to generate the message.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+       */
+      public Builder addCitations(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation value) {
+        if (citationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCitationsIsMutable();
+          citations_.add(value);
+          onChanged();
+        } else {
+          citationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of citations used to generate the message.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+       */
+      public Builder addCitations(
+          int index, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation value) {
+        if (citationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCitationsIsMutable();
+          citations_.add(index, value);
+          onChanged();
+        } else {
+          citationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of citations used to generate the message.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+       */
+      public Builder addCitations(
+          yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation.Builder builderForValue) {
+        if (citationsBuilder_ == null) {
+          ensureCitationsIsMutable();
+          citations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          citationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of citations used to generate the message.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+       */
+      public Builder addCitations(
+          int index, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation.Builder builderForValue) {
+        if (citationsBuilder_ == null) {
+          ensureCitationsIsMutable();
+          citations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          citationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of citations used to generate the message.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+       */
+      public Builder addAllCitations(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation> values) {
+        if (citationsBuilder_ == null) {
+          ensureCitationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, citations_);
+          onChanged();
+        } else {
+          citationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of citations used to generate the message.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+       */
+      public Builder clearCitations() {
+        if (citationsBuilder_ == null) {
+          citations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          citationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of citations used to generate the message.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+       */
+      public Builder removeCitations(int index) {
+        if (citationsBuilder_ == null) {
+          ensureCitationsIsMutable();
+          citations_.remove(index);
+          onChanged();
+        } else {
+          citationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of citations used to generate the message.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation.Builder getCitationsBuilder(
+          int index) {
+        return getCitationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of citations used to generate the message.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.CitationOrBuilder getCitationsOrBuilder(
+          int index) {
+        if (citationsBuilder_ == null) {
+          return citations_.get(index);  } else {
+          return citationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of citations used to generate the message.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.CitationOrBuilder> 
+           getCitationsOrBuilderList() {
+        if (citationsBuilder_ != null) {
+          return citationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(citations_);
+        }
+      }
+      /**
+       * <pre>
+       * List of citations used to generate the message.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation.Builder addCitationsBuilder() {
+        return getCitationsFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of citations used to generate the message.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation.Builder addCitationsBuilder(
+          int index) {
+        return getCitationsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of citations used to generate the message.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Citation citations = 9;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation.Builder> 
+           getCitationsBuilderList() {
+        return getCitationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.CitationOrBuilder> 
+          getCitationsFieldBuilder() {
+        if (citationsBuilder_ == null) {
+          citationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.CitationOrBuilder>(
+                  citations_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          citations_ = null;
+        }
+        return citationsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6921,6 +7405,3833 @@ public final class MessageOuterClass {
 
   }
 
+  public interface CitationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.threads.Citation)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of sources for citation.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source> 
+        getSourcesList();
+    /**
+     * <pre>
+     * List of sources for citation.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source getSources(int index);
+    /**
+     * <pre>
+     * List of sources for citation.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+     */
+    int getSourcesCount();
+    /**
+     * <pre>
+     * List of sources for citation.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.SourceOrBuilder> 
+        getSourcesOrBuilderList();
+    /**
+     * <pre>
+     * List of sources for citation.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.SourceOrBuilder getSourcesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Represents a citation used for generating a message.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.Citation}
+   */
+  public static final class Citation extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.threads.Citation)
+      CitationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Citation.newBuilder() to construct.
+    private Citation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Citation() {
+      sources_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Citation();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Citation(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                sources_ = new java.util.ArrayList<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              sources_.add(
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          sources_ = java.util.Collections.unmodifiableList(sources_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.internal_static_yandex_cloud_ai_assistants_v1_threads_Citation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.internal_static_yandex_cloud_ai_assistants_v1_threads_Citation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation.class, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation.Builder.class);
+    }
+
+    public static final int SOURCES_FIELD_NUMBER = 4;
+    private java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source> sources_;
+    /**
+     * <pre>
+     * List of sources for citation.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source> getSourcesList() {
+      return sources_;
+    }
+    /**
+     * <pre>
+     * List of sources for citation.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.SourceOrBuilder> 
+        getSourcesOrBuilderList() {
+      return sources_;
+    }
+    /**
+     * <pre>
+     * List of sources for citation.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+     */
+    @java.lang.Override
+    public int getSourcesCount() {
+      return sources_.size();
+    }
+    /**
+     * <pre>
+     * List of sources for citation.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source getSources(int index) {
+      return sources_.get(index);
+    }
+    /**
+     * <pre>
+     * List of sources for citation.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.SourceOrBuilder getSourcesOrBuilder(
+        int index) {
+      return sources_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < sources_.size(); i++) {
+        output.writeMessage(4, sources_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < sources_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, sources_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation other = (yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation) obj;
+
+      if (!getSourcesList()
+          .equals(other.getSourcesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSourcesCount() > 0) {
+        hash = (37 * hash) + SOURCES_FIELD_NUMBER;
+        hash = (53 * hash) + getSourcesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents a citation used for generating a message.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.Citation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.threads.Citation)
+        yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.CitationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.internal_static_yandex_cloud_ai_assistants_v1_threads_Citation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.internal_static_yandex_cloud_ai_assistants_v1_threads_Citation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation.class, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSourcesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (sourcesBuilder_ == null) {
+          sources_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          sourcesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.internal_static_yandex_cloud_ai_assistants_v1_threads_Citation_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation build() {
+        yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation result = new yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation(this);
+        int from_bitField0_ = bitField0_;
+        if (sourcesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            sources_ = java.util.Collections.unmodifiableList(sources_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.sources_ = sources_;
+        } else {
+          result.sources_ = sourcesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation.getDefaultInstance()) return this;
+        if (sourcesBuilder_ == null) {
+          if (!other.sources_.isEmpty()) {
+            if (sources_.isEmpty()) {
+              sources_ = other.sources_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSourcesIsMutable();
+              sources_.addAll(other.sources_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.sources_.isEmpty()) {
+            if (sourcesBuilder_.isEmpty()) {
+              sourcesBuilder_.dispose();
+              sourcesBuilder_ = null;
+              sources_ = other.sources_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              sourcesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSourcesFieldBuilder() : null;
+            } else {
+              sourcesBuilder_.addAllMessages(other.sources_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source> sources_ =
+        java.util.Collections.emptyList();
+      private void ensureSourcesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          sources_ = new java.util.ArrayList<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source>(sources_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.SourceOrBuilder> sourcesBuilder_;
+
+      /**
+       * <pre>
+       * List of sources for citation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source> getSourcesList() {
+        if (sourcesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(sources_);
+        } else {
+          return sourcesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of sources for citation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+       */
+      public int getSourcesCount() {
+        if (sourcesBuilder_ == null) {
+          return sources_.size();
+        } else {
+          return sourcesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of sources for citation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source getSources(int index) {
+        if (sourcesBuilder_ == null) {
+          return sources_.get(index);
+        } else {
+          return sourcesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of sources for citation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+       */
+      public Builder setSources(
+          int index, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source value) {
+        if (sourcesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSourcesIsMutable();
+          sources_.set(index, value);
+          onChanged();
+        } else {
+          sourcesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of sources for citation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+       */
+      public Builder setSources(
+          int index, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source.Builder builderForValue) {
+        if (sourcesBuilder_ == null) {
+          ensureSourcesIsMutable();
+          sources_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          sourcesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of sources for citation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+       */
+      public Builder addSources(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source value) {
+        if (sourcesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSourcesIsMutable();
+          sources_.add(value);
+          onChanged();
+        } else {
+          sourcesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of sources for citation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+       */
+      public Builder addSources(
+          int index, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source value) {
+        if (sourcesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSourcesIsMutable();
+          sources_.add(index, value);
+          onChanged();
+        } else {
+          sourcesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of sources for citation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+       */
+      public Builder addSources(
+          yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source.Builder builderForValue) {
+        if (sourcesBuilder_ == null) {
+          ensureSourcesIsMutable();
+          sources_.add(builderForValue.build());
+          onChanged();
+        } else {
+          sourcesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of sources for citation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+       */
+      public Builder addSources(
+          int index, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source.Builder builderForValue) {
+        if (sourcesBuilder_ == null) {
+          ensureSourcesIsMutable();
+          sources_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          sourcesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of sources for citation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+       */
+      public Builder addAllSources(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source> values) {
+        if (sourcesBuilder_ == null) {
+          ensureSourcesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, sources_);
+          onChanged();
+        } else {
+          sourcesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of sources for citation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+       */
+      public Builder clearSources() {
+        if (sourcesBuilder_ == null) {
+          sources_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          sourcesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of sources for citation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+       */
+      public Builder removeSources(int index) {
+        if (sourcesBuilder_ == null) {
+          ensureSourcesIsMutable();
+          sources_.remove(index);
+          onChanged();
+        } else {
+          sourcesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of sources for citation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source.Builder getSourcesBuilder(
+          int index) {
+        return getSourcesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of sources for citation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.SourceOrBuilder getSourcesOrBuilder(
+          int index) {
+        if (sourcesBuilder_ == null) {
+          return sources_.get(index);  } else {
+          return sourcesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of sources for citation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.SourceOrBuilder> 
+           getSourcesOrBuilderList() {
+        if (sourcesBuilder_ != null) {
+          return sourcesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(sources_);
+        }
+      }
+      /**
+       * <pre>
+       * List of sources for citation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source.Builder addSourcesBuilder() {
+        return getSourcesFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of sources for citation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source.Builder addSourcesBuilder(
+          int index) {
+        return getSourcesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of sources for citation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.Source sources = 4;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source.Builder> 
+           getSourcesBuilderList() {
+        return getSourcesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.SourceOrBuilder> 
+          getSourcesFieldBuilder() {
+        if (sourcesBuilder_ == null) {
+          sourcesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.SourceOrBuilder>(
+                  sources_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          sources_ = null;
+        }
+        return sourcesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.threads.Citation)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.threads.Citation)
+    private static final yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation();
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Citation>
+        PARSER = new com.google.protobuf.AbstractParser<Citation>() {
+      @java.lang.Override
+      public Citation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Citation(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Citation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Citation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Citation getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SourceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.threads.Source)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * File chunk source.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.threads.FileChunk chunk = 1;</code>
+     * @return Whether the chunk field is set.
+     */
+    boolean hasChunk();
+    /**
+     * <pre>
+     * File chunk source.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.threads.FileChunk chunk = 1;</code>
+     * @return The chunk.
+     */
+    yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk getChunk();
+    /**
+     * <pre>
+     * File chunk source.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.threads.FileChunk chunk = 1;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunkOrBuilder getChunkOrBuilder();
+
+    public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source.SourceTypeCase getSourceTypeCase();
+  }
+  /**
+   * <pre>
+   * Represents a source used for generating a message citation.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.Source}
+   */
+  public static final class Source extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.threads.Source)
+      SourceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Source.newBuilder() to construct.
+    private Source(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Source() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Source();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Source(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk.Builder subBuilder = null;
+              if (sourceTypeCase_ == 1) {
+                subBuilder = ((yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk) sourceType_).toBuilder();
+              }
+              sourceType_ =
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk) sourceType_);
+                sourceType_ = subBuilder.buildPartial();
+              }
+              sourceTypeCase_ = 1;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.internal_static_yandex_cloud_ai_assistants_v1_threads_Source_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.internal_static_yandex_cloud_ai_assistants_v1_threads_Source_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source.class, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source.Builder.class);
+    }
+
+    private int sourceTypeCase_ = 0;
+    private java.lang.Object sourceType_;
+    public enum SourceTypeCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      CHUNK(1),
+      SOURCETYPE_NOT_SET(0);
+      private final int value;
+      private SourceTypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static SourceTypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static SourceTypeCase forNumber(int value) {
+        switch (value) {
+          case 1: return CHUNK;
+          case 0: return SOURCETYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public SourceTypeCase
+    getSourceTypeCase() {
+      return SourceTypeCase.forNumber(
+          sourceTypeCase_);
+    }
+
+    public static final int CHUNK_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * File chunk source.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.threads.FileChunk chunk = 1;</code>
+     * @return Whether the chunk field is set.
+     */
+    @java.lang.Override
+    public boolean hasChunk() {
+      return sourceTypeCase_ == 1;
+    }
+    /**
+     * <pre>
+     * File chunk source.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.threads.FileChunk chunk = 1;</code>
+     * @return The chunk.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk getChunk() {
+      if (sourceTypeCase_ == 1) {
+         return (yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk) sourceType_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * File chunk source.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.threads.FileChunk chunk = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunkOrBuilder getChunkOrBuilder() {
+      if (sourceTypeCase_ == 1) {
+         return (yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk) sourceType_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (sourceTypeCase_ == 1) {
+        output.writeMessage(1, (yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk) sourceType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (sourceTypeCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk) sourceType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source other = (yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source) obj;
+
+      if (!getSourceTypeCase().equals(other.getSourceTypeCase())) return false;
+      switch (sourceTypeCase_) {
+        case 1:
+          if (!getChunk()
+              .equals(other.getChunk())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (sourceTypeCase_) {
+        case 1:
+          hash = (37 * hash) + CHUNK_FIELD_NUMBER;
+          hash = (53 * hash) + getChunk().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents a source used for generating a message citation.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.Source}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.threads.Source)
+        yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.SourceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.internal_static_yandex_cloud_ai_assistants_v1_threads_Source_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.internal_static_yandex_cloud_ai_assistants_v1_threads_Source_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source.class, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        sourceTypeCase_ = 0;
+        sourceType_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.internal_static_yandex_cloud_ai_assistants_v1_threads_Source_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source build() {
+        yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source result = new yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source(this);
+        if (sourceTypeCase_ == 1) {
+          if (chunkBuilder_ == null) {
+            result.sourceType_ = sourceType_;
+          } else {
+            result.sourceType_ = chunkBuilder_.build();
+          }
+        }
+        result.sourceTypeCase_ = sourceTypeCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source.getDefaultInstance()) return this;
+        switch (other.getSourceTypeCase()) {
+          case CHUNK: {
+            mergeChunk(other.getChunk());
+            break;
+          }
+          case SOURCETYPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int sourceTypeCase_ = 0;
+      private java.lang.Object sourceType_;
+      public SourceTypeCase
+          getSourceTypeCase() {
+        return SourceTypeCase.forNumber(
+            sourceTypeCase_);
+      }
+
+      public Builder clearSourceType() {
+        sourceTypeCase_ = 0;
+        sourceType_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunkOrBuilder> chunkBuilder_;
+      /**
+       * <pre>
+       * File chunk source.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.threads.FileChunk chunk = 1;</code>
+       * @return Whether the chunk field is set.
+       */
+      @java.lang.Override
+      public boolean hasChunk() {
+        return sourceTypeCase_ == 1;
+      }
+      /**
+       * <pre>
+       * File chunk source.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.threads.FileChunk chunk = 1;</code>
+       * @return The chunk.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk getChunk() {
+        if (chunkBuilder_ == null) {
+          if (sourceTypeCase_ == 1) {
+            return (yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk) sourceType_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk.getDefaultInstance();
+        } else {
+          if (sourceTypeCase_ == 1) {
+            return chunkBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * File chunk source.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.threads.FileChunk chunk = 1;</code>
+       */
+      public Builder setChunk(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk value) {
+        if (chunkBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sourceType_ = value;
+          onChanged();
+        } else {
+          chunkBuilder_.setMessage(value);
+        }
+        sourceTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * File chunk source.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.threads.FileChunk chunk = 1;</code>
+       */
+      public Builder setChunk(
+          yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk.Builder builderForValue) {
+        if (chunkBuilder_ == null) {
+          sourceType_ = builderForValue.build();
+          onChanged();
+        } else {
+          chunkBuilder_.setMessage(builderForValue.build());
+        }
+        sourceTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * File chunk source.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.threads.FileChunk chunk = 1;</code>
+       */
+      public Builder mergeChunk(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk value) {
+        if (chunkBuilder_ == null) {
+          if (sourceTypeCase_ == 1 &&
+              sourceType_ != yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk.getDefaultInstance()) {
+            sourceType_ = yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk.newBuilder((yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk) sourceType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            sourceType_ = value;
+          }
+          onChanged();
+        } else {
+          if (sourceTypeCase_ == 1) {
+            chunkBuilder_.mergeFrom(value);
+          }
+          chunkBuilder_.setMessage(value);
+        }
+        sourceTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * File chunk source.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.threads.FileChunk chunk = 1;</code>
+       */
+      public Builder clearChunk() {
+        if (chunkBuilder_ == null) {
+          if (sourceTypeCase_ == 1) {
+            sourceTypeCase_ = 0;
+            sourceType_ = null;
+            onChanged();
+          }
+        } else {
+          if (sourceTypeCase_ == 1) {
+            sourceTypeCase_ = 0;
+            sourceType_ = null;
+          }
+          chunkBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * File chunk source.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.threads.FileChunk chunk = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk.Builder getChunkBuilder() {
+        return getChunkFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * File chunk source.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.threads.FileChunk chunk = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunkOrBuilder getChunkOrBuilder() {
+        if ((sourceTypeCase_ == 1) && (chunkBuilder_ != null)) {
+          return chunkBuilder_.getMessageOrBuilder();
+        } else {
+          if (sourceTypeCase_ == 1) {
+            return (yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk) sourceType_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * File chunk source.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.threads.FileChunk chunk = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunkOrBuilder> 
+          getChunkFieldBuilder() {
+        if (chunkBuilder_ == null) {
+          if (!(sourceTypeCase_ == 1)) {
+            sourceType_ = yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk.getDefaultInstance();
+          }
+          chunkBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunkOrBuilder>(
+                  (yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk) sourceType_,
+                  getParentForChildren(),
+                  isClean());
+          sourceType_ = null;
+        }
+        sourceTypeCase_ = 1;
+        onChanged();;
+        return chunkBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.threads.Source)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.threads.Source)
+    private static final yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source();
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Source>
+        PARSER = new com.google.protobuf.AbstractParser<Source>() {
+      @java.lang.Override
+      public Source parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Source(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Source> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Source> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.Source getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FileChunkOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.threads.FileChunk)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Search index associated with the file chunk.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.SearchIndex search_index = 1;</code>
+     * @return Whether the searchIndex field is set.
+     */
+    boolean hasSearchIndex();
+    /**
+     * <pre>
+     * Search index associated with the file chunk.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.SearchIndex search_index = 1;</code>
+     * @return The searchIndex.
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex getSearchIndex();
+    /**
+     * <pre>
+     * Search index associated with the file chunk.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.SearchIndex search_index = 1;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndexOrBuilder getSearchIndexOrBuilder();
+
+    /**
+     * <pre>
+     * The original file from which the chunk is derived.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.files.v1.File source_file = 2;</code>
+     * @return Whether the sourceFile field is set.
+     */
+    boolean hasSourceFile();
+    /**
+     * <pre>
+     * The original file from which the chunk is derived.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.files.v1.File source_file = 2;</code>
+     * @return The sourceFile.
+     */
+    yandex.cloud.api.ai.files.v1.FileOuterClass.File getSourceFile();
+    /**
+     * <pre>
+     * The original file from which the chunk is derived.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.files.v1.File source_file = 2;</code>
+     */
+    yandex.cloud.api.ai.files.v1.FileOuterClass.FileOrBuilder getSourceFileOrBuilder();
+
+    /**
+     * <pre>
+     * Content of the file chunk.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.threads.ChunkContent content = 3;</code>
+     * @return Whether the content field is set.
+     */
+    boolean hasContent();
+    /**
+     * <pre>
+     * Content of the file chunk.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.threads.ChunkContent content = 3;</code>
+     * @return The content.
+     */
+    yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent getContent();
+    /**
+     * <pre>
+     * Content of the file chunk.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.threads.ChunkContent content = 3;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContentOrBuilder getContentOrBuilder();
+  }
+  /**
+   * <pre>
+   * FileChunk represents a chunk of a file used as a source.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.FileChunk}
+   */
+  public static final class FileChunk extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.threads.FileChunk)
+      FileChunkOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FileChunk.newBuilder() to construct.
+    private FileChunk(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FileChunk() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FileChunk();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FileChunk(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex.Builder subBuilder = null;
+              if (searchIndex_ != null) {
+                subBuilder = searchIndex_.toBuilder();
+              }
+              searchIndex_ = input.readMessage(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(searchIndex_);
+                searchIndex_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.ai.files.v1.FileOuterClass.File.Builder subBuilder = null;
+              if (sourceFile_ != null) {
+                subBuilder = sourceFile_.toBuilder();
+              }
+              sourceFile_ = input.readMessage(yandex.cloud.api.ai.files.v1.FileOuterClass.File.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(sourceFile_);
+                sourceFile_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent.Builder subBuilder = null;
+              if (content_ != null) {
+                subBuilder = content_.toBuilder();
+              }
+              content_ = input.readMessage(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(content_);
+                content_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.internal_static_yandex_cloud_ai_assistants_v1_threads_FileChunk_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.internal_static_yandex_cloud_ai_assistants_v1_threads_FileChunk_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk.class, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk.Builder.class);
+    }
+
+    public static final int SEARCH_INDEX_FIELD_NUMBER = 1;
+    private yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex searchIndex_;
+    /**
+     * <pre>
+     * Search index associated with the file chunk.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.SearchIndex search_index = 1;</code>
+     * @return Whether the searchIndex field is set.
+     */
+    @java.lang.Override
+    public boolean hasSearchIndex() {
+      return searchIndex_ != null;
+    }
+    /**
+     * <pre>
+     * Search index associated with the file chunk.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.SearchIndex search_index = 1;</code>
+     * @return The searchIndex.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex getSearchIndex() {
+      return searchIndex_ == null ? yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex.getDefaultInstance() : searchIndex_;
+    }
+    /**
+     * <pre>
+     * Search index associated with the file chunk.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.SearchIndex search_index = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndexOrBuilder getSearchIndexOrBuilder() {
+      return getSearchIndex();
+    }
+
+    public static final int SOURCE_FILE_FIELD_NUMBER = 2;
+    private yandex.cloud.api.ai.files.v1.FileOuterClass.File sourceFile_;
+    /**
+     * <pre>
+     * The original file from which the chunk is derived.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.files.v1.File source_file = 2;</code>
+     * @return Whether the sourceFile field is set.
+     */
+    @java.lang.Override
+    public boolean hasSourceFile() {
+      return sourceFile_ != null;
+    }
+    /**
+     * <pre>
+     * The original file from which the chunk is derived.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.files.v1.File source_file = 2;</code>
+     * @return The sourceFile.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.files.v1.FileOuterClass.File getSourceFile() {
+      return sourceFile_ == null ? yandex.cloud.api.ai.files.v1.FileOuterClass.File.getDefaultInstance() : sourceFile_;
+    }
+    /**
+     * <pre>
+     * The original file from which the chunk is derived.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.files.v1.File source_file = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.files.v1.FileOuterClass.FileOrBuilder getSourceFileOrBuilder() {
+      return getSourceFile();
+    }
+
+    public static final int CONTENT_FIELD_NUMBER = 3;
+    private yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent content_;
+    /**
+     * <pre>
+     * Content of the file chunk.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.threads.ChunkContent content = 3;</code>
+     * @return Whether the content field is set.
+     */
+    @java.lang.Override
+    public boolean hasContent() {
+      return content_ != null;
+    }
+    /**
+     * <pre>
+     * Content of the file chunk.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.threads.ChunkContent content = 3;</code>
+     * @return The content.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent getContent() {
+      return content_ == null ? yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent.getDefaultInstance() : content_;
+    }
+    /**
+     * <pre>
+     * Content of the file chunk.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.threads.ChunkContent content = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContentOrBuilder getContentOrBuilder() {
+      return getContent();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (searchIndex_ != null) {
+        output.writeMessage(1, getSearchIndex());
+      }
+      if (sourceFile_ != null) {
+        output.writeMessage(2, getSourceFile());
+      }
+      if (content_ != null) {
+        output.writeMessage(3, getContent());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (searchIndex_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getSearchIndex());
+      }
+      if (sourceFile_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getSourceFile());
+      }
+      if (content_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getContent());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk other = (yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk) obj;
+
+      if (hasSearchIndex() != other.hasSearchIndex()) return false;
+      if (hasSearchIndex()) {
+        if (!getSearchIndex()
+            .equals(other.getSearchIndex())) return false;
+      }
+      if (hasSourceFile() != other.hasSourceFile()) return false;
+      if (hasSourceFile()) {
+        if (!getSourceFile()
+            .equals(other.getSourceFile())) return false;
+      }
+      if (hasContent() != other.hasContent()) return false;
+      if (hasContent()) {
+        if (!getContent()
+            .equals(other.getContent())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSearchIndex()) {
+        hash = (37 * hash) + SEARCH_INDEX_FIELD_NUMBER;
+        hash = (53 * hash) + getSearchIndex().hashCode();
+      }
+      if (hasSourceFile()) {
+        hash = (37 * hash) + SOURCE_FILE_FIELD_NUMBER;
+        hash = (53 * hash) + getSourceFile().hashCode();
+      }
+      if (hasContent()) {
+        hash = (37 * hash) + CONTENT_FIELD_NUMBER;
+        hash = (53 * hash) + getContent().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * FileChunk represents a chunk of a file used as a source.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.FileChunk}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.threads.FileChunk)
+        yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunkOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.internal_static_yandex_cloud_ai_assistants_v1_threads_FileChunk_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.internal_static_yandex_cloud_ai_assistants_v1_threads_FileChunk_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk.class, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (searchIndexBuilder_ == null) {
+          searchIndex_ = null;
+        } else {
+          searchIndex_ = null;
+          searchIndexBuilder_ = null;
+        }
+        if (sourceFileBuilder_ == null) {
+          sourceFile_ = null;
+        } else {
+          sourceFile_ = null;
+          sourceFileBuilder_ = null;
+        }
+        if (contentBuilder_ == null) {
+          content_ = null;
+        } else {
+          content_ = null;
+          contentBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.internal_static_yandex_cloud_ai_assistants_v1_threads_FileChunk_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk build() {
+        yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk result = new yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk(this);
+        if (searchIndexBuilder_ == null) {
+          result.searchIndex_ = searchIndex_;
+        } else {
+          result.searchIndex_ = searchIndexBuilder_.build();
+        }
+        if (sourceFileBuilder_ == null) {
+          result.sourceFile_ = sourceFile_;
+        } else {
+          result.sourceFile_ = sourceFileBuilder_.build();
+        }
+        if (contentBuilder_ == null) {
+          result.content_ = content_;
+        } else {
+          result.content_ = contentBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk.getDefaultInstance()) return this;
+        if (other.hasSearchIndex()) {
+          mergeSearchIndex(other.getSearchIndex());
+        }
+        if (other.hasSourceFile()) {
+          mergeSourceFile(other.getSourceFile());
+        }
+        if (other.hasContent()) {
+          mergeContent(other.getContent());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex searchIndex_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndexOrBuilder> searchIndexBuilder_;
+      /**
+       * <pre>
+       * Search index associated with the file chunk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.SearchIndex search_index = 1;</code>
+       * @return Whether the searchIndex field is set.
+       */
+      public boolean hasSearchIndex() {
+        return searchIndexBuilder_ != null || searchIndex_ != null;
+      }
+      /**
+       * <pre>
+       * Search index associated with the file chunk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.SearchIndex search_index = 1;</code>
+       * @return The searchIndex.
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex getSearchIndex() {
+        if (searchIndexBuilder_ == null) {
+          return searchIndex_ == null ? yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex.getDefaultInstance() : searchIndex_;
+        } else {
+          return searchIndexBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Search index associated with the file chunk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.SearchIndex search_index = 1;</code>
+       */
+      public Builder setSearchIndex(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex value) {
+        if (searchIndexBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          searchIndex_ = value;
+          onChanged();
+        } else {
+          searchIndexBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Search index associated with the file chunk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.SearchIndex search_index = 1;</code>
+       */
+      public Builder setSearchIndex(
+          yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex.Builder builderForValue) {
+        if (searchIndexBuilder_ == null) {
+          searchIndex_ = builderForValue.build();
+          onChanged();
+        } else {
+          searchIndexBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Search index associated with the file chunk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.SearchIndex search_index = 1;</code>
+       */
+      public Builder mergeSearchIndex(yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex value) {
+        if (searchIndexBuilder_ == null) {
+          if (searchIndex_ != null) {
+            searchIndex_ =
+              yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex.newBuilder(searchIndex_).mergeFrom(value).buildPartial();
+          } else {
+            searchIndex_ = value;
+          }
+          onChanged();
+        } else {
+          searchIndexBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Search index associated with the file chunk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.SearchIndex search_index = 1;</code>
+       */
+      public Builder clearSearchIndex() {
+        if (searchIndexBuilder_ == null) {
+          searchIndex_ = null;
+          onChanged();
+        } else {
+          searchIndex_ = null;
+          searchIndexBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Search index associated with the file chunk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.SearchIndex search_index = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex.Builder getSearchIndexBuilder() {
+        
+        onChanged();
+        return getSearchIndexFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Search index associated with the file chunk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.SearchIndex search_index = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndexOrBuilder getSearchIndexOrBuilder() {
+        if (searchIndexBuilder_ != null) {
+          return searchIndexBuilder_.getMessageOrBuilder();
+        } else {
+          return searchIndex_ == null ?
+              yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex.getDefaultInstance() : searchIndex_;
+        }
+      }
+      /**
+       * <pre>
+       * Search index associated with the file chunk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.SearchIndex search_index = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndexOrBuilder> 
+          getSearchIndexFieldBuilder() {
+        if (searchIndexBuilder_ == null) {
+          searchIndexBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndex.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.SearchIndexOrBuilder>(
+                  getSearchIndex(),
+                  getParentForChildren(),
+                  isClean());
+          searchIndex_ = null;
+        }
+        return searchIndexBuilder_;
+      }
+
+      private yandex.cloud.api.ai.files.v1.FileOuterClass.File sourceFile_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.files.v1.FileOuterClass.File, yandex.cloud.api.ai.files.v1.FileOuterClass.File.Builder, yandex.cloud.api.ai.files.v1.FileOuterClass.FileOrBuilder> sourceFileBuilder_;
+      /**
+       * <pre>
+       * The original file from which the chunk is derived.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.files.v1.File source_file = 2;</code>
+       * @return Whether the sourceFile field is set.
+       */
+      public boolean hasSourceFile() {
+        return sourceFileBuilder_ != null || sourceFile_ != null;
+      }
+      /**
+       * <pre>
+       * The original file from which the chunk is derived.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.files.v1.File source_file = 2;</code>
+       * @return The sourceFile.
+       */
+      public yandex.cloud.api.ai.files.v1.FileOuterClass.File getSourceFile() {
+        if (sourceFileBuilder_ == null) {
+          return sourceFile_ == null ? yandex.cloud.api.ai.files.v1.FileOuterClass.File.getDefaultInstance() : sourceFile_;
+        } else {
+          return sourceFileBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The original file from which the chunk is derived.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.files.v1.File source_file = 2;</code>
+       */
+      public Builder setSourceFile(yandex.cloud.api.ai.files.v1.FileOuterClass.File value) {
+        if (sourceFileBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sourceFile_ = value;
+          onChanged();
+        } else {
+          sourceFileBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The original file from which the chunk is derived.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.files.v1.File source_file = 2;</code>
+       */
+      public Builder setSourceFile(
+          yandex.cloud.api.ai.files.v1.FileOuterClass.File.Builder builderForValue) {
+        if (sourceFileBuilder_ == null) {
+          sourceFile_ = builderForValue.build();
+          onChanged();
+        } else {
+          sourceFileBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The original file from which the chunk is derived.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.files.v1.File source_file = 2;</code>
+       */
+      public Builder mergeSourceFile(yandex.cloud.api.ai.files.v1.FileOuterClass.File value) {
+        if (sourceFileBuilder_ == null) {
+          if (sourceFile_ != null) {
+            sourceFile_ =
+              yandex.cloud.api.ai.files.v1.FileOuterClass.File.newBuilder(sourceFile_).mergeFrom(value).buildPartial();
+          } else {
+            sourceFile_ = value;
+          }
+          onChanged();
+        } else {
+          sourceFileBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The original file from which the chunk is derived.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.files.v1.File source_file = 2;</code>
+       */
+      public Builder clearSourceFile() {
+        if (sourceFileBuilder_ == null) {
+          sourceFile_ = null;
+          onChanged();
+        } else {
+          sourceFile_ = null;
+          sourceFileBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The original file from which the chunk is derived.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.files.v1.File source_file = 2;</code>
+       */
+      public yandex.cloud.api.ai.files.v1.FileOuterClass.File.Builder getSourceFileBuilder() {
+        
+        onChanged();
+        return getSourceFileFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The original file from which the chunk is derived.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.files.v1.File source_file = 2;</code>
+       */
+      public yandex.cloud.api.ai.files.v1.FileOuterClass.FileOrBuilder getSourceFileOrBuilder() {
+        if (sourceFileBuilder_ != null) {
+          return sourceFileBuilder_.getMessageOrBuilder();
+        } else {
+          return sourceFile_ == null ?
+              yandex.cloud.api.ai.files.v1.FileOuterClass.File.getDefaultInstance() : sourceFile_;
+        }
+      }
+      /**
+       * <pre>
+       * The original file from which the chunk is derived.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.files.v1.File source_file = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.files.v1.FileOuterClass.File, yandex.cloud.api.ai.files.v1.FileOuterClass.File.Builder, yandex.cloud.api.ai.files.v1.FileOuterClass.FileOrBuilder> 
+          getSourceFileFieldBuilder() {
+        if (sourceFileBuilder_ == null) {
+          sourceFileBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.files.v1.FileOuterClass.File, yandex.cloud.api.ai.files.v1.FileOuterClass.File.Builder, yandex.cloud.api.ai.files.v1.FileOuterClass.FileOrBuilder>(
+                  getSourceFile(),
+                  getParentForChildren(),
+                  isClean());
+          sourceFile_ = null;
+        }
+        return sourceFileBuilder_;
+      }
+
+      private yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent content_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContentOrBuilder> contentBuilder_;
+      /**
+       * <pre>
+       * Content of the file chunk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.threads.ChunkContent content = 3;</code>
+       * @return Whether the content field is set.
+       */
+      public boolean hasContent() {
+        return contentBuilder_ != null || content_ != null;
+      }
+      /**
+       * <pre>
+       * Content of the file chunk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.threads.ChunkContent content = 3;</code>
+       * @return The content.
+       */
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent getContent() {
+        if (contentBuilder_ == null) {
+          return content_ == null ? yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent.getDefaultInstance() : content_;
+        } else {
+          return contentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Content of the file chunk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.threads.ChunkContent content = 3;</code>
+       */
+      public Builder setContent(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent value) {
+        if (contentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          content_ = value;
+          onChanged();
+        } else {
+          contentBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Content of the file chunk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.threads.ChunkContent content = 3;</code>
+       */
+      public Builder setContent(
+          yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent.Builder builderForValue) {
+        if (contentBuilder_ == null) {
+          content_ = builderForValue.build();
+          onChanged();
+        } else {
+          contentBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Content of the file chunk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.threads.ChunkContent content = 3;</code>
+       */
+      public Builder mergeContent(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent value) {
+        if (contentBuilder_ == null) {
+          if (content_ != null) {
+            content_ =
+              yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent.newBuilder(content_).mergeFrom(value).buildPartial();
+          } else {
+            content_ = value;
+          }
+          onChanged();
+        } else {
+          contentBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Content of the file chunk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.threads.ChunkContent content = 3;</code>
+       */
+      public Builder clearContent() {
+        if (contentBuilder_ == null) {
+          content_ = null;
+          onChanged();
+        } else {
+          content_ = null;
+          contentBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Content of the file chunk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.threads.ChunkContent content = 3;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent.Builder getContentBuilder() {
+        
+        onChanged();
+        return getContentFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Content of the file chunk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.threads.ChunkContent content = 3;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContentOrBuilder getContentOrBuilder() {
+        if (contentBuilder_ != null) {
+          return contentBuilder_.getMessageOrBuilder();
+        } else {
+          return content_ == null ?
+              yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent.getDefaultInstance() : content_;
+        }
+      }
+      /**
+       * <pre>
+       * Content of the file chunk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.threads.ChunkContent content = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContentOrBuilder> 
+          getContentFieldBuilder() {
+        if (contentBuilder_ == null) {
+          contentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContentOrBuilder>(
+                  getContent(),
+                  getParentForChildren(),
+                  isClean());
+          content_ = null;
+        }
+        return contentBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.threads.FileChunk)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.threads.FileChunk)
+    private static final yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk();
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FileChunk>
+        PARSER = new com.google.protobuf.AbstractParser<FileChunk>() {
+      @java.lang.Override
+      public FileChunk parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FileChunk(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FileChunk> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FileChunk> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.FileChunk getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ChunkContentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.threads.ChunkContent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * A list of content parts that make up the chunk.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart> 
+        getContentList();
+    /**
+     * <pre>
+     * A list of content parts that make up the chunk.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart getContent(int index);
+    /**
+     * <pre>
+     * A list of content parts that make up the chunk.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+     */
+    int getContentCount();
+    /**
+     * <pre>
+     * A list of content parts that make up the chunk.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPartOrBuilder> 
+        getContentOrBuilderList();
+    /**
+     * <pre>
+     * A list of content parts that make up the chunk.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPartOrBuilder getContentOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Represents the content of a file chunk.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.ChunkContent}
+   */
+  public static final class ChunkContent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.threads.ChunkContent)
+      ChunkContentOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ChunkContent.newBuilder() to construct.
+    private ChunkContent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ChunkContent() {
+      content_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ChunkContent();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ChunkContent(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                content_ = new java.util.ArrayList<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              content_.add(
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          content_ = java.util.Collections.unmodifiableList(content_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.internal_static_yandex_cloud_ai_assistants_v1_threads_ChunkContent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.internal_static_yandex_cloud_ai_assistants_v1_threads_ChunkContent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent.class, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent.Builder.class);
+    }
+
+    public static final int CONTENT_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart> content_;
+    /**
+     * <pre>
+     * A list of content parts that make up the chunk.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart> getContentList() {
+      return content_;
+    }
+    /**
+     * <pre>
+     * A list of content parts that make up the chunk.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPartOrBuilder> 
+        getContentOrBuilderList() {
+      return content_;
+    }
+    /**
+     * <pre>
+     * A list of content parts that make up the chunk.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+     */
+    @java.lang.Override
+    public int getContentCount() {
+      return content_.size();
+    }
+    /**
+     * <pre>
+     * A list of content parts that make up the chunk.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart getContent(int index) {
+      return content_.get(index);
+    }
+    /**
+     * <pre>
+     * A list of content parts that make up the chunk.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPartOrBuilder getContentOrBuilder(
+        int index) {
+      return content_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < content_.size(); i++) {
+        output.writeMessage(1, content_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < content_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, content_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent other = (yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent) obj;
+
+      if (!getContentList()
+          .equals(other.getContentList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getContentCount() > 0) {
+        hash = (37 * hash) + CONTENT_FIELD_NUMBER;
+        hash = (53 * hash) + getContentList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents the content of a file chunk.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.threads.ChunkContent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.threads.ChunkContent)
+        yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.internal_static_yandex_cloud_ai_assistants_v1_threads_ChunkContent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.internal_static_yandex_cloud_ai_assistants_v1_threads_ChunkContent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent.class, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getContentFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (contentBuilder_ == null) {
+          content_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          contentBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.internal_static_yandex_cloud_ai_assistants_v1_threads_ChunkContent_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent build() {
+        yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent result = new yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent(this);
+        int from_bitField0_ = bitField0_;
+        if (contentBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            content_ = java.util.Collections.unmodifiableList(content_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.content_ = content_;
+        } else {
+          result.content_ = contentBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent.getDefaultInstance()) return this;
+        if (contentBuilder_ == null) {
+          if (!other.content_.isEmpty()) {
+            if (content_.isEmpty()) {
+              content_ = other.content_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureContentIsMutable();
+              content_.addAll(other.content_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.content_.isEmpty()) {
+            if (contentBuilder_.isEmpty()) {
+              contentBuilder_.dispose();
+              contentBuilder_ = null;
+              content_ = other.content_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              contentBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getContentFieldBuilder() : null;
+            } else {
+              contentBuilder_.addAllMessages(other.content_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart> content_ =
+        java.util.Collections.emptyList();
+      private void ensureContentIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          content_ = new java.util.ArrayList<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart>(content_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPartOrBuilder> contentBuilder_;
+
+      /**
+       * <pre>
+       * A list of content parts that make up the chunk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart> getContentList() {
+        if (contentBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(content_);
+        } else {
+          return contentBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * A list of content parts that make up the chunk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+       */
+      public int getContentCount() {
+        if (contentBuilder_ == null) {
+          return content_.size();
+        } else {
+          return contentBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * A list of content parts that make up the chunk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart getContent(int index) {
+        if (contentBuilder_ == null) {
+          return content_.get(index);
+        } else {
+          return contentBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * A list of content parts that make up the chunk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+       */
+      public Builder setContent(
+          int index, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart value) {
+        if (contentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContentIsMutable();
+          content_.set(index, value);
+          onChanged();
+        } else {
+          contentBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of content parts that make up the chunk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+       */
+      public Builder setContent(
+          int index, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart.Builder builderForValue) {
+        if (contentBuilder_ == null) {
+          ensureContentIsMutable();
+          content_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          contentBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of content parts that make up the chunk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+       */
+      public Builder addContent(yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart value) {
+        if (contentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContentIsMutable();
+          content_.add(value);
+          onChanged();
+        } else {
+          contentBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of content parts that make up the chunk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+       */
+      public Builder addContent(
+          int index, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart value) {
+        if (contentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContentIsMutable();
+          content_.add(index, value);
+          onChanged();
+        } else {
+          contentBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of content parts that make up the chunk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+       */
+      public Builder addContent(
+          yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart.Builder builderForValue) {
+        if (contentBuilder_ == null) {
+          ensureContentIsMutable();
+          content_.add(builderForValue.build());
+          onChanged();
+        } else {
+          contentBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of content parts that make up the chunk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+       */
+      public Builder addContent(
+          int index, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart.Builder builderForValue) {
+        if (contentBuilder_ == null) {
+          ensureContentIsMutable();
+          content_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          contentBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of content parts that make up the chunk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+       */
+      public Builder addAllContent(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart> values) {
+        if (contentBuilder_ == null) {
+          ensureContentIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, content_);
+          onChanged();
+        } else {
+          contentBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of content parts that make up the chunk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+       */
+      public Builder clearContent() {
+        if (contentBuilder_ == null) {
+          content_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          contentBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of content parts that make up the chunk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+       */
+      public Builder removeContent(int index) {
+        if (contentBuilder_ == null) {
+          ensureContentIsMutable();
+          content_.remove(index);
+          onChanged();
+        } else {
+          contentBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of content parts that make up the chunk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart.Builder getContentBuilder(
+          int index) {
+        return getContentFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * A list of content parts that make up the chunk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPartOrBuilder getContentOrBuilder(
+          int index) {
+        if (contentBuilder_ == null) {
+          return content_.get(index);  } else {
+          return contentBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * A list of content parts that make up the chunk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPartOrBuilder> 
+           getContentOrBuilderList() {
+        if (contentBuilder_ != null) {
+          return contentBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(content_);
+        }
+      }
+      /**
+       * <pre>
+       * A list of content parts that make up the chunk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart.Builder addContentBuilder() {
+        return getContentFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * A list of content parts that make up the chunk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart.Builder addContentBuilder(
+          int index) {
+        return getContentFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * A list of content parts that make up the chunk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.threads.ContentPart content = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart.Builder> 
+           getContentBuilderList() {
+        return getContentFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPartOrBuilder> 
+          getContentFieldBuilder() {
+        if (contentBuilder_ == null) {
+          contentBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPart.Builder, yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ContentPartOrBuilder>(
+                  content_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          content_ = null;
+        }
+        return contentBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.threads.ChunkContent)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.threads.ChunkContent)
+    private static final yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent();
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ChunkContent>
+        PARSER = new com.google.protobuf.AbstractParser<ChunkContent>() {
+      @java.lang.Override
+      public ChunkContent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ChunkContent(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ChunkContent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ChunkContent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.threads.MessageOuterClass.ChunkContent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_assistants_v1_threads_Message_descriptor;
   private static final 
@@ -6961,6 +11272,26 @@ public final class MessageOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_assistants_v1_threads_Author_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_threads_Citation_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_threads_Citation_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_threads_Source_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_threads_Source_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_threads_FileChunk_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_threads_FileChunk_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_threads_ChunkContent_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_threads_ChunkContent_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -6973,49 +11304,66 @@ public final class MessageOuterClass {
       "\n3yandex/cloud/ai/assistants/v1/threads/" +
       "message.proto\022%yandex.cloud.ai.assistant" +
       "s.v1.threads\032\037google/protobuf/timestamp." +
-      "proto\"\241\004\n\007Message\022\n\n\002id\030\001 \001(\t\022\021\n\tthread_" +
-      "id\030\002 \001(\t\022\022\n\ncreated_by\030\003 \001(\t\022.\n\ncreated_" +
-      "at\030\004 \001(\0132\032.google.protobuf.Timestamp\022=\n\006" +
-      "author\030\005 \001(\0132-.yandex.cloud.ai.assistant" +
-      "s.v1.threads.Author\022J\n\006labels\030\006 \003(\0132:.ya" +
-      "ndex.cloud.ai.assistants.v1.threads.Mess" +
-      "age.LabelsEntry\022F\n\007content\030\007 \001(\01325.yande" +
-      "x.cloud.ai.assistants.v1.threads.Message" +
-      "Content\022L\n\006status\030\010 \001(\0162<.yandex.cloud.a" +
-      "i.assistants.v1.threads.Message.MessageS" +
-      "tatus\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\"c\n\rMessageStatus\022\036\n\032MESSAGE" +
-      "_STATUS_UNSPECIFIED\020\000\022\r\n\tCOMPLETED\020\001\022\r\n\t" +
-      "TRUNCATED\020\002\022\024\n\020FILTERED_CONTENT\020\003\"U\n\016Mes" +
-      "sageContent\022C\n\007content\030\001 \003(\01322.yandex.cl" +
-      "oud.ai.assistants.v1.threads.ContentPart" +
-      "\"\223\002\n\013MessageData\022=\n\006author\030\001 \001(\0132-.yande" +
-      "x.cloud.ai.assistants.v1.threads.Author\022" +
-      "N\n\006labels\030\002 \003(\0132>.yandex.cloud.ai.assist" +
-      "ants.v1.threads.MessageData.LabelsEntry\022" +
-      "F\n\007content\030\003 \001(\01325.yandex.cloud.ai.assis" +
-      "tants.v1.threads.MessageContent\032-\n\013Label" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\027" +
-      "\n\004Text\022\017\n\007content\030\001 \001(\t\"V\n\013ContentPart\022;" +
-      "\n\004text\030\001 \001(\0132+.yandex.cloud.ai.assistant" +
-      "s.v1.threads.TextH\000B\n\n\010PartType\"\"\n\006Autho" +
-      "r\022\n\n\002id\030\001 \001(\t\022\014\n\004role\030\002 \001(\tB~\n)yandex.cl" +
-      "oud.api.ai.assistants.v1.threadsZQgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/ai/assistants/v1/threads;threadsb\006pro" +
-      "to3"
+      "proto\032<yandex/cloud/ai/assistants/v1/sea" +
+      "rchindex/search_index.proto\032#yandex/clou" +
+      "d/ai/files/v1/file.proto\"\345\004\n\007Message\022\n\n\002" +
+      "id\030\001 \001(\t\022\021\n\tthread_id\030\002 \001(\t\022\022\n\ncreated_b" +
+      "y\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\022=\n\006author\030\005 \001(\0132-.yandex" +
+      ".cloud.ai.assistants.v1.threads.Author\022J" +
+      "\n\006labels\030\006 \003(\0132:.yandex.cloud.ai.assista" +
+      "nts.v1.threads.Message.LabelsEntry\022F\n\007co" +
+      "ntent\030\007 \001(\01325.yandex.cloud.ai.assistants" +
+      ".v1.threads.MessageContent\022L\n\006status\030\010 \001" +
+      "(\0162<.yandex.cloud.ai.assistants.v1.threa" +
+      "ds.Message.MessageStatus\022B\n\tcitations\030\t " +
+      "\003(\0132/.yandex.cloud.ai.assistants.v1.thre" +
+      "ads.Citation\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001\"c\n\rMessageStatus\022\036\n\032" +
+      "MESSAGE_STATUS_UNSPECIFIED\020\000\022\r\n\tCOMPLETE" +
+      "D\020\001\022\r\n\tTRUNCATED\020\002\022\024\n\020FILTERED_CONTENT\020\003" +
+      "\"U\n\016MessageContent\022C\n\007content\030\001 \003(\01322.ya" +
+      "ndex.cloud.ai.assistants.v1.threads.Cont" +
+      "entPart\"\223\002\n\013MessageData\022=\n\006author\030\001 \001(\0132" +
+      "-.yandex.cloud.ai.assistants.v1.threads." +
+      "Author\022N\n\006labels\030\002 \003(\0132>.yandex.cloud.ai" +
+      ".assistants.v1.threads.MessageData.Label" +
+      "sEntry\022F\n\007content\030\003 \001(\01325.yandex.cloud.a" +
+      "i.assistants.v1.threads.MessageContent\032-" +
+      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\t:\0028\001\"\027\n\004Text\022\017\n\007content\030\001 \001(\t\"V\n\013Conten" +
+      "tPart\022;\n\004text\030\001 \001(\0132+.yandex.cloud.ai.as" +
+      "sistants.v1.threads.TextH\000B\n\n\010PartType\"\"" +
+      "\n\006Author\022\n\n\002id\030\001 \001(\t\022\014\n\004role\030\002 \001(\t\"J\n\010Ci" +
+      "tation\022>\n\007sources\030\004 \003(\0132-.yandex.cloud.a" +
+      "i.assistants.v1.threads.Source\"Y\n\006Source" +
+      "\022A\n\005chunk\030\001 \001(\01320.yandex.cloud.ai.assist" +
+      "ants.v1.threads.FileChunkH\000B\014\n\nSourceTyp" +
+      "e\"\324\001\n\tFileChunk\022L\n\014search_index\030\001 \001(\01326." +
+      "yandex.cloud.ai.assistants.v1.searchinde" +
+      "x.SearchIndex\0223\n\013source_file\030\002 \001(\0132\036.yan" +
+      "dex.cloud.ai.files.v1.File\022D\n\007content\030\003 " +
+      "\001(\01323.yandex.cloud.ai.assistants.v1.thre" +
+      "ads.ChunkContent\"S\n\014ChunkContent\022C\n\007cont" +
+      "ent\030\001 \003(\01322.yandex.cloud.ai.assistants.v" +
+      "1.threads.ContentPartB~\n)yandex.cloud.ap" +
+      "i.ai.assistants.v1.threadsZQgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/ai/" +
+      "assistants/v1/threads;threadsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.getDescriptor(),
+          yandex.cloud.api.ai.files.v1.FileOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_ai_assistants_v1_threads_Message_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_ai_assistants_v1_threads_Message_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_threads_Message_descriptor,
-        new java.lang.String[] { "Id", "ThreadId", "CreatedBy", "CreatedAt", "Author", "Labels", "Content", "Status", });
+        new java.lang.String[] { "Id", "ThreadId", "CreatedBy", "CreatedAt", "Author", "Labels", "Content", "Status", "Citations", });
     internal_static_yandex_cloud_ai_assistants_v1_threads_Message_LabelsEntry_descriptor =
       internal_static_yandex_cloud_ai_assistants_v1_threads_Message_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_ai_assistants_v1_threads_Message_LabelsEntry_fieldAccessorTable = new
@@ -7058,7 +11406,33 @@ public final class MessageOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_threads_Author_descriptor,
         new java.lang.String[] { "Id", "Role", });
+    internal_static_yandex_cloud_ai_assistants_v1_threads_Citation_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_ai_assistants_v1_threads_Citation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_threads_Citation_descriptor,
+        new java.lang.String[] { "Sources", });
+    internal_static_yandex_cloud_ai_assistants_v1_threads_Source_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_yandex_cloud_ai_assistants_v1_threads_Source_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_threads_Source_descriptor,
+        new java.lang.String[] { "Chunk", "SourceType", });
+    internal_static_yandex_cloud_ai_assistants_v1_threads_FileChunk_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_yandex_cloud_ai_assistants_v1_threads_FileChunk_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_threads_FileChunk_descriptor,
+        new java.lang.String[] { "SearchIndex", "SourceFile", "Content", });
+    internal_static_yandex_cloud_ai_assistants_v1_threads_ChunkContent_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_ai_assistants_v1_threads_ChunkContent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_threads_ChunkContent_descriptor,
+        new java.lang.String[] { "Content", });
     com.google.protobuf.TimestampProto.getDescriptor();
+    yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.getDescriptor();
+    yandex.cloud.api.ai.files.v1.FileOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

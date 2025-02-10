@@ -235,6 +235,37 @@ public final class ClusterServiceGrpc {
     return getStartMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRescheduleMaintenanceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RescheduleMaintenance",
+      requestType = yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRescheduleMaintenanceMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getRescheduleMaintenanceMethod;
+    if ((getRescheduleMaintenanceMethod = ClusterServiceGrpc.getRescheduleMaintenanceMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getRescheduleMaintenanceMethod = ClusterServiceGrpc.getRescheduleMaintenanceMethod) == null) {
+          ClusterServiceGrpc.getRescheduleMaintenanceMethod = getRescheduleMaintenanceMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RescheduleMaintenance"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("RescheduleMaintenance"))
+              .build();
+        }
+      }
+    }
+    return getRescheduleMaintenanceMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodeGroupsRequest,
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodeGroupsResponse> getListNodeGroupsMethod;
 
@@ -452,6 +483,16 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Reschedules mandatory maintenance for the specified cluster.
+     * </pre>
+     */
+    public void rescheduleMaintenance(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRescheduleMaintenanceMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists nodegroup for the specified Kubernetes cluster.
      * </pre>
      */
@@ -531,6 +572,13 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.StartClusterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_START)))
+          .addMethod(
+            getRescheduleMaintenanceMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_RESCHEDULE_MAINTENANCE)))
           .addMethod(
             getListNodeGroupsMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -653,6 +701,17 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Reschedules mandatory maintenance for the specified cluster.
+     * </pre>
+     */
+    public void rescheduleMaintenance(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRescheduleMaintenanceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists nodegroup for the specified Kubernetes cluster.
      * </pre>
      */
@@ -771,6 +830,16 @@ public final class ClusterServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation start(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.StartClusterRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getStartMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Reschedules mandatory maintenance for the specified cluster.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation rescheduleMaintenance(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRescheduleMaintenanceMethod(), getCallOptions(), request);
     }
 
     /**
@@ -901,6 +970,17 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Reschedules mandatory maintenance for the specified cluster.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> rescheduleMaintenance(
+        yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRescheduleMaintenanceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Lists nodegroup for the specified Kubernetes cluster.
      * </pre>
      */
@@ -940,9 +1020,10 @@ public final class ClusterServiceGrpc {
   private static final int METHODID_DELETE = 4;
   private static final int METHODID_STOP = 5;
   private static final int METHODID_START = 6;
-  private static final int METHODID_LIST_NODE_GROUPS = 7;
-  private static final int METHODID_LIST_OPERATIONS = 8;
-  private static final int METHODID_LIST_NODES = 9;
+  private static final int METHODID_RESCHEDULE_MAINTENANCE = 7;
+  private static final int METHODID_LIST_NODE_GROUPS = 8;
+  private static final int METHODID_LIST_OPERATIONS = 9;
+  private static final int METHODID_LIST_NODES = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -987,6 +1068,10 @@ public final class ClusterServiceGrpc {
           break;
         case METHODID_START:
           serviceImpl.start((yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.StartClusterRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_RESCHEDULE_MAINTENANCE:
+          serviceImpl.rescheduleMaintenance((yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_LIST_NODE_GROUPS:
@@ -1069,6 +1154,7 @@ public final class ClusterServiceGrpc {
               .addMethod(getDeleteMethod())
               .addMethod(getStopMethod())
               .addMethod(getStartMethod())
+              .addMethod(getRescheduleMaintenanceMethod())
               .addMethod(getListNodeGroupsMethod())
               .addMethod(getListOperationsMethod())
               .addMethod(getListNodesMethod())
