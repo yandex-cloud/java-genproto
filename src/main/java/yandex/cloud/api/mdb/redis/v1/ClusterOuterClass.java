@@ -481,6 +481,16 @@ public final class ClusterOuterClass {
      * @return The announceHostnames.
      */
     boolean getAnnounceHostnames();
+
+    /**
+     * <pre>
+     * Allows to use ACL users to auth in sentinel
+     * </pre>
+     *
+     * <code>bool auth_sentinel = 21;</code>
+     * @return The authSentinel.
+     */
+    boolean getAuthSentinel();
   }
   /**
    * <pre>
@@ -699,6 +709,11 @@ public final class ClusterOuterClass {
             case 160: {
 
               announceHostnames_ = input.readBool();
+              break;
+            }
+            case 168: {
+
+              authSentinel_ = input.readBool();
               break;
             }
             default: {
@@ -2154,6 +2169,21 @@ public final class ClusterOuterClass {
       return announceHostnames_;
     }
 
+    public static final int AUTH_SENTINEL_FIELD_NUMBER = 21;
+    private boolean authSentinel_;
+    /**
+     * <pre>
+     * Allows to use ACL users to auth in sentinel
+     * </pre>
+     *
+     * <code>bool auth_sentinel = 21;</code>
+     * @return The authSentinel.
+     */
+    @java.lang.Override
+    public boolean getAuthSentinel() {
+      return authSentinel_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2230,6 +2260,9 @@ public final class ClusterOuterClass {
       }
       if (announceHostnames_ != false) {
         output.writeBool(20, announceHostnames_);
+      }
+      if (authSentinel_ != false) {
+        output.writeBool(21, authSentinel_);
       }
       unknownFields.writeTo(output);
     }
@@ -2325,6 +2358,10 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(20, announceHostnames_);
       }
+      if (authSentinel_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(21, authSentinel_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2388,6 +2425,8 @@ public final class ClusterOuterClass {
       if (persistenceMode_ != other.persistenceMode_) return false;
       if (getAnnounceHostnames()
           != other.getAnnounceHostnames()) return false;
+      if (getAuthSentinel()
+          != other.getAuthSentinel()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2457,6 +2496,9 @@ public final class ClusterOuterClass {
       hash = (37 * hash) + ANNOUNCE_HOSTNAMES_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getAnnounceHostnames());
+      hash = (37 * hash) + AUTH_SENTINEL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAuthSentinel());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2677,6 +2719,8 @@ public final class ClusterOuterClass {
 
         announceHostnames_ = false;
 
+        authSentinel_ = false;
+
         return this;
       }
 
@@ -2753,6 +2797,7 @@ public final class ClusterOuterClass {
         result.deletionProtection_ = deletionProtection_;
         result.persistenceMode_ = persistenceMode_;
         result.announceHostnames_ = announceHostnames_;
+        result.authSentinel_ = authSentinel_;
         onBuilt();
         return result;
       }
@@ -2894,6 +2939,9 @@ public final class ClusterOuterClass {
         }
         if (other.getAnnounceHostnames() != false) {
           setAnnounceHostnames(other.getAnnounceHostnames());
+        }
+        if (other.getAuthSentinel() != false) {
+          setAuthSentinel(other.getAuthSentinel());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5103,6 +5151,49 @@ public final class ClusterOuterClass {
       public Builder clearAnnounceHostnames() {
         
         announceHostnames_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean authSentinel_ ;
+      /**
+       * <pre>
+       * Allows to use ACL users to auth in sentinel
+       * </pre>
+       *
+       * <code>bool auth_sentinel = 21;</code>
+       * @return The authSentinel.
+       */
+      @java.lang.Override
+      public boolean getAuthSentinel() {
+        return authSentinel_;
+      }
+      /**
+       * <pre>
+       * Allows to use ACL users to auth in sentinel
+       * </pre>
+       *
+       * <code>bool auth_sentinel = 21;</code>
+       * @param value The authSentinel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthSentinel(boolean value) {
+        
+        authSentinel_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Allows to use ACL users to auth in sentinel
+       * </pre>
+       *
+       * <code>bool auth_sentinel = 21;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthSentinel() {
+        
+        authSentinel_ = false;
         onChanged();
         return this;
       }
@@ -17190,7 +17281,7 @@ public final class ClusterOuterClass {
       "s/v1/config/redis6_2.proto\032/yandex/cloud" +
       "/mdb/redis/v1/config/redis7_0.proto\032+yan" +
       "dex/cloud/mdb/redis/v1/maintenance.proto" +
-      "\"\270\t\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 " +
+      "\"\317\t\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 " +
       "\001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobu" +
       "f.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description" +
       "\030\005 \001(\t\022>\n\006labels\030\006 \003(\0132..yandex.cloud.md" +
@@ -17211,70 +17302,71 @@ public final class ClusterOuterClass {
       "bled\030\021 \001(\010\022\033\n\023deletion_protection\030\022 \001(\010\022" +
       "L\n\020persistence_mode\030\023 \001(\01622.yandex.cloud" +
       ".mdb.redis.v1.Cluster.PersistenceMode\022\032\n" +
-      "\022announce_hostnames\030\024 \001(\010\032-\n\013LabelsEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\013Envi" +
-      "ronment\022\033\n\027ENVIRONMENT_UNSPECIFIED\020\000\022\016\n\n" +
-      "PRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006Health\022\022\n" +
-      "\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014" +
-      "\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STATUS_UNKNOWN" +
-      "\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003" +
-      "\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020" +
-      "\006\022\014\n\010STARTING\020\007\"\"\n\017PersistenceMode\022\006\n\002ON" +
-      "\020\000\022\007\n\003OFF\020\001\"=\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022" +
-      "\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\265\006\n\rC" +
-      "lusterConfig\022\017\n\007version\030\001 \001(\t\022`\n\020redis_c" +
-      "onfig_5_0\030\002 \001(\01323.yandex.cloud.mdb.redis" +
-      ".v1.config.RedisConfigSet5_0H\000R\017redisCon" +
-      "fig_5_0\022`\n\020redis_config_6_0\030\006 \001(\01323.yand" +
-      "ex.cloud.mdb.redis.v1.config.RedisConfig" +
-      "Set6_0H\000R\017redisConfig_6_0\022`\n\020redis_confi" +
-      "g_6_2\030\007 \001(\01323.yandex.cloud.mdb.redis.v1." +
-      "config.RedisConfigSet6_2H\000R\017redisConfig_" +
-      "6_2\022`\n\020redis_config_7_0\030\010 \001(\01323.yandex.c" +
-      "loud.mdb.redis.v1.config.RedisConfigSet7" +
-      "_0H\000R\017redisConfig_7_0\0227\n\tresources\030\003 \001(\013" +
-      "2$.yandex.cloud.mdb.redis.v1.Resources\0223" +
-      "\n\023backup_window_start\030\004 \001(\0132\026.google.typ" +
-      "e.TimeOfDay\0221\n\006access\030\005 \001(\0132!.yandex.clo" +
-      "ud.mdb.redis.v1.Access\022?\n\005redis\030\t \001(\01320." +
-      "yandex.cloud.mdb.redis.v1.config.RedisCo" +
-      "nfigSet\022M\n\025disk_size_autoscaling\030\n \001(\0132." +
-      ".yandex.cloud.mdb.redis.v1.DiskSizeAutos" +
-      "caling\022>\n\031backup_retain_period_days\030\r \001(" +
-      "\0132\033.google.protobuf.Int64ValueB\016\n\014redis_" +
-      "configJ\004\010\013\020\014J\004\010\014\020\r\")\n\005Shard\022\014\n\004name\030\001 \001(" +
-      "\t\022\022\n\ncluster_id\030\002 \001(\t\"\200\004\n\004Host\022\014\n\004name\030\001" +
-      " \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(" +
-      "\t\022\021\n\tsubnet_id\030\004 \001(\t\0227\n\tresources\030\005 \001(\0132" +
-      "$.yandex.cloud.mdb.redis.v1.Resources\0222\n" +
-      "\004role\030\006 \001(\0162$.yandex.cloud.mdb.redis.v1." +
-      "Host.Role\0226\n\006health\030\007 \001(\0162&.yandex.cloud" +
-      ".mdb.redis.v1.Host.Health\0224\n\010services\030\010 " +
-      "\003(\0132\".yandex.cloud.mdb.redis.v1.Service\022" +
-      "\022\n\nshard_name\030\t \001(\t\0225\n\020replica_priority\030" +
-      "\n \001(\0132\033.google.protobuf.Int64Value\022\030\n\020as" +
-      "sign_public_ip\030\013 \001(\010\"1\n\004Role\022\020\n\014ROLE_UNK" +
-      "NOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007REPLICA\020\002\"?\n\006Healt" +
-      "h\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD" +
-      "\020\002\022\014\n\010DEGRADED\020\003\"\367\001\n\007Service\0225\n\004type\030\001 \001" +
-      "(\0162\'.yandex.cloud.mdb.redis.v1.Service.T" +
-      "ype\0229\n\006health\030\002 \001(\0162).yandex.cloud.mdb.r" +
-      "edis.v1.Service.Health\"G\n\004Type\022\024\n\020TYPE_U" +
-      "NSPECIFIED\020\000\022\t\n\005REDIS\020\001\022\013\n\007ARBITER\020\002\022\021\n\r" +
-      "REDIS_CLUSTER\020\003\"1\n\006Health\022\022\n\016HEALTH_UNKN" +
-      "OWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022" +
-      "\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_size" +
-      "\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\",\n\006Access\022\021" +
-      "\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\"\347\001\n\023D" +
-      "iskSizeAutoscaling\022K\n\027planned_usage_thre" +
-      "shold\030\001 \001(\0132\033.google.protobuf.Int64Value" +
-      "B\r\350\3071\000\372\3071\0050-100\022M\n\031emergency_usage_thres" +
-      "hold\030\002 \001(\0132\033.google.protobuf.Int64ValueB" +
-      "\r\350\3071\000\372\3071\0050-100\0224\n\017disk_size_limit\030\003 \001(\0132" +
-      "\033.google.protobuf.Int64ValueBd\n\035yandex.c" +
-      "loud.api.mdb.redis.v1ZCgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/mdb/redi" +
-      "s/v1;redisb\006proto3"
+      "\022announce_hostnames\030\024 \001(\010\022\025\n\rauth_sentin" +
+      "el\030\025 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIRO" +
+      "NMENT_UNSPECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tP" +
+      "RESTABLE\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000" +
+      "\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006S" +
+      "tatus\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022" +
+      "\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n" +
+      "\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"\"" +
+      "\n\017PersistenceMode\022\006\n\002ON\020\000\022\007\n\003OFF\020\001\"=\n\nMo" +
+      "nitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 " +
+      "\001(\t\022\014\n\004link\030\003 \001(\t\"\265\006\n\rClusterConfig\022\017\n\007v" +
+      "ersion\030\001 \001(\t\022`\n\020redis_config_5_0\030\002 \001(\01323" +
+      ".yandex.cloud.mdb.redis.v1.config.RedisC" +
+      "onfigSet5_0H\000R\017redisConfig_5_0\022`\n\020redis_" +
+      "config_6_0\030\006 \001(\01323.yandex.cloud.mdb.redi" +
+      "s.v1.config.RedisConfigSet6_0H\000R\017redisCo" +
+      "nfig_6_0\022`\n\020redis_config_6_2\030\007 \001(\01323.yan" +
+      "dex.cloud.mdb.redis.v1.config.RedisConfi" +
+      "gSet6_2H\000R\017redisConfig_6_2\022`\n\020redis_conf" +
+      "ig_7_0\030\010 \001(\01323.yandex.cloud.mdb.redis.v1" +
+      ".config.RedisConfigSet7_0H\000R\017redisConfig" +
+      "_7_0\0227\n\tresources\030\003 \001(\0132$.yandex.cloud.m" +
+      "db.redis.v1.Resources\0223\n\023backup_window_s" +
+      "tart\030\004 \001(\0132\026.google.type.TimeOfDay\0221\n\006ac" +
+      "cess\030\005 \001(\0132!.yandex.cloud.mdb.redis.v1.A" +
+      "ccess\022?\n\005redis\030\t \001(\01320.yandex.cloud.mdb." +
+      "redis.v1.config.RedisConfigSet\022M\n\025disk_s" +
+      "ize_autoscaling\030\n \001(\0132..yandex.cloud.mdb" +
+      ".redis.v1.DiskSizeAutoscaling\022>\n\031backup_" +
+      "retain_period_days\030\r \001(\0132\033.google.protob" +
+      "uf.Int64ValueB\016\n\014redis_configJ\004\010\013\020\014J\004\010\014\020" +
+      "\r\")\n\005Shard\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002" +
+      " \001(\t\"\200\004\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_i" +
+      "d\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022\021\n\tsubnet_id\030\004 " +
+      "\001(\t\0227\n\tresources\030\005 \001(\0132$.yandex.cloud.md" +
+      "b.redis.v1.Resources\0222\n\004role\030\006 \001(\0162$.yan" +
+      "dex.cloud.mdb.redis.v1.Host.Role\0226\n\006heal" +
+      "th\030\007 \001(\0162&.yandex.cloud.mdb.redis.v1.Hos" +
+      "t.Health\0224\n\010services\030\010 \003(\0132\".yandex.clou" +
+      "d.mdb.redis.v1.Service\022\022\n\nshard_name\030\t \001" +
+      "(\t\0225\n\020replica_priority\030\n \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\022\030\n\020assign_public_ip\030\013 " +
+      "\001(\010\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020" +
+      "\001\022\013\n\007REPLICA\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNO" +
+      "WN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"" +
+      "\367\001\n\007Service\0225\n\004type\030\001 \001(\0162\'.yandex.cloud" +
+      ".mdb.redis.v1.Service.Type\0229\n\006health\030\002 \001" +
+      "(\0162).yandex.cloud.mdb.redis.v1.Service.H" +
+      "ealth\"G\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\t\n\005R" +
+      "EDIS\020\001\022\013\n\007ARBITER\020\002\022\021\n\rREDIS_CLUSTER\020\003\"1" +
+      "\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022" +
+      "\010\n\004DEAD\020\002\"P\n\tResources\022\032\n\022resource_prese" +
+      "t_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_ty" +
+      "pe_id\030\003 \001(\t\",\n\006Access\022\021\n\tdata_lens\030\001 \001(\010" +
+      "\022\017\n\007web_sql\030\002 \001(\010\"\347\001\n\023DiskSizeAutoscalin" +
+      "g\022K\n\027planned_usage_threshold\030\001 \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueB\r\350\3071\000\372\3071\0050-100\022M" +
+      "\n\031emergency_usage_threshold\030\002 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\r\350\3071\000\372\3071\0050-100\0224\n" +
+      "\017disk_size_limit\030\003 \001(\0132\033.google.protobuf" +
+      ".Int64ValueBd\n\035yandex.cloud.api.mdb.redi" +
+      "s.v1ZCgithub.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/mdb/redis/v1;redisb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17295,7 +17387,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_redis_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "Sharded", "MaintenanceWindow", "PlannedOperation", "SecurityGroupIds", "TlsEnabled", "DeletionProtection", "PersistenceMode", "AnnounceHostnames", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "Sharded", "MaintenanceWindow", "PlannedOperation", "SecurityGroupIds", "TlsEnabled", "DeletionProtection", "PersistenceMode", "AnnounceHostnames", "AuthSentinel", });
     internal_static_yandex_cloud_mdb_redis_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_redis_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_redis_v1_Cluster_LabelsEntry_fieldAccessorTable = new

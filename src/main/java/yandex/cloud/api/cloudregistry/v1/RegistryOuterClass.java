@@ -848,6 +848,14 @@ public final class RegistryOuterClass {
        * <code>LOCAL = 1;</code>
        */
       LOCAL(1),
+      /**
+       * <code>REMOTE = 2;</code>
+       */
+      REMOTE(2),
+      /**
+       * <code>VIRTUAL = 3;</code>
+       */
+      VIRTUAL(3),
       UNRECOGNIZED(-1),
       ;
 
@@ -863,6 +871,14 @@ public final class RegistryOuterClass {
        * <code>LOCAL = 1;</code>
        */
       public static final int LOCAL_VALUE = 1;
+      /**
+       * <code>REMOTE = 2;</code>
+       */
+      public static final int REMOTE_VALUE = 2;
+      /**
+       * <code>VIRTUAL = 3;</code>
+       */
+      public static final int VIRTUAL_VALUE = 3;
 
 
       public final int getNumber() {
@@ -891,6 +907,8 @@ public final class RegistryOuterClass {
         switch (value) {
           case 0: return TYPE_UNSPECIFIED;
           case 1: return LOCAL;
+          case 2: return REMOTE;
+          case 3: return VIRTUAL;
           default: return null;
         }
       }
@@ -3341,7 +3359,7 @@ public final class RegistryOuterClass {
     java.lang.String[] descriptorData = {
       "\n,yandex/cloud/cloudregistry/v1/registry" +
       ".proto\022\035yandex.cloud.cloudregistry.v1\032\037g" +
-      "oogle/protobuf/timestamp.proto\"\225\006\n\010Regis" +
+      "oogle/protobuf/timestamp.proto\"\256\006\n\010Regis" +
       "try\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022\014\n\004na" +
       "me\030\003 \001(\t\022:\n\004kind\030\004 \001(\0162,.yandex.cloud.cl" +
       "oudregistry.v1.Registry.Kind\022:\n\004type\030\005 \001" +
@@ -3360,11 +3378,12 @@ public final class RegistryOuterClass {
       "atus\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING" +
       "\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETING\020\003\"G\n\004Kind\022\024\n\020" +
       "KIND_UNSPECIFIED\020\000\022\t\n\005MAVEN\020\001\022\007\n\003NPM\020\002\022\n" +
-      "\n\006DOCKER\020\003\022\t\n\005NUGET\020\004\"\'\n\004Type\022\024\n\020TYPE_UN" +
-      "SPECIFIED\020\000\022\t\n\005LOCAL\020\001Bt\n!yandex.cloud.a" +
-      "pi.cloudregistry.v1ZOgithub.com/yandex-c" +
-      "loud/go-genproto/yandex/cloud/cloudregis" +
-      "try/v1;cloudregistryb\006proto3"
+      "\n\006DOCKER\020\003\022\t\n\005NUGET\020\004\"@\n\004Type\022\024\n\020TYPE_UN" +
+      "SPECIFIED\020\000\022\t\n\005LOCAL\020\001\022\n\n\006REMOTE\020\002\022\013\n\007VI" +
+      "RTUAL\020\003Bt\n!yandex.cloud.api.cloudregistr" +
+      "y.v1ZOgithub.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/cloudregistry/v1;cloudreg" +
+      "istryb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

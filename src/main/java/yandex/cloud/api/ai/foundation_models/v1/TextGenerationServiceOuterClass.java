@@ -157,6 +157,58 @@ public final class TextGenerationServiceOuterClass {
      */
     yandex.cloud.api.ai.foundation_models.v1.TextCommon.ToolOrBuilder getToolsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * When set to true, the model will respond with a valid JSON object.
+     * Be sure to explicitly ask the model for JSON.
+     * Otherwise, it may generate excessive whitespace and run indefinitely until it reaches the token limit.
+     * </pre>
+     *
+     * <code>bool json_object = 5;</code>
+     * @return Whether the jsonObject field is set.
+     */
+    boolean hasJsonObject();
+    /**
+     * <pre>
+     * When set to true, the model will respond with a valid JSON object.
+     * Be sure to explicitly ask the model for JSON.
+     * Otherwise, it may generate excessive whitespace and run indefinitely until it reaches the token limit.
+     * </pre>
+     *
+     * <code>bool json_object = 5;</code>
+     * @return The jsonObject.
+     */
+    boolean getJsonObject();
+
+    /**
+     * <pre>
+     * Enforces a specific JSON structure for the model's response based on a provided schema.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.JsonSchema json_schema = 6;</code>
+     * @return Whether the jsonSchema field is set.
+     */
+    boolean hasJsonSchema();
+    /**
+     * <pre>
+     * Enforces a specific JSON structure for the model's response based on a provided schema.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.JsonSchema json_schema = 6;</code>
+     * @return The jsonSchema.
+     */
+    yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema getJsonSchema();
+    /**
+     * <pre>
+     * Enforces a specific JSON structure for the model's response based on a provided schema.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.JsonSchema json_schema = 6;</code>
+     */
+    yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchemaOrBuilder getJsonSchemaOrBuilder();
+
+    public yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.CompletionRequest.ResponseFormatCase getResponseFormatCase();
   }
   /**
    * <pre>
@@ -248,6 +300,25 @@ public final class TextGenerationServiceOuterClass {
                   input.readMessage(yandex.cloud.api.ai.foundation_models.v1.TextCommon.Tool.parser(), extensionRegistry));
               break;
             }
+            case 40: {
+              responseFormat_ = input.readBool();
+              responseFormatCase_ = 5;
+              break;
+            }
+            case 50: {
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema.Builder subBuilder = null;
+              if (responseFormatCase_ == 6) {
+                subBuilder = ((yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema) responseFormat_).toBuilder();
+              }
+              responseFormat_ =
+                  input.readMessage(yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema) responseFormat_);
+                responseFormat_ = subBuilder.buildPartial();
+              }
+              responseFormatCase_ = 6;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -284,6 +355,47 @@ public final class TextGenerationServiceOuterClass {
       return yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_CompletionRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.CompletionRequest.class, yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.CompletionRequest.Builder.class);
+    }
+
+    private int responseFormatCase_ = 0;
+    private java.lang.Object responseFormat_;
+    public enum ResponseFormatCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      JSON_OBJECT(5),
+      JSON_SCHEMA(6),
+      RESPONSEFORMAT_NOT_SET(0);
+      private final int value;
+      private ResponseFormatCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ResponseFormatCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ResponseFormatCase forNumber(int value) {
+        switch (value) {
+          case 5: return JSON_OBJECT;
+          case 6: return JSON_SCHEMA;
+          case 0: return RESPONSEFORMAT_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ResponseFormatCase
+    getResponseFormatCase() {
+      return ResponseFormatCase.forNumber(
+          responseFormatCase_);
     }
 
     public static final int MODEL_URI_FIELD_NUMBER = 1;
@@ -495,6 +607,82 @@ public final class TextGenerationServiceOuterClass {
       return tools_.get(index);
     }
 
+    public static final int JSON_OBJECT_FIELD_NUMBER = 5;
+    /**
+     * <pre>
+     * When set to true, the model will respond with a valid JSON object.
+     * Be sure to explicitly ask the model for JSON.
+     * Otherwise, it may generate excessive whitespace and run indefinitely until it reaches the token limit.
+     * </pre>
+     *
+     * <code>bool json_object = 5;</code>
+     * @return Whether the jsonObject field is set.
+     */
+    @java.lang.Override
+    public boolean hasJsonObject() {
+      return responseFormatCase_ == 5;
+    }
+    /**
+     * <pre>
+     * When set to true, the model will respond with a valid JSON object.
+     * Be sure to explicitly ask the model for JSON.
+     * Otherwise, it may generate excessive whitespace and run indefinitely until it reaches the token limit.
+     * </pre>
+     *
+     * <code>bool json_object = 5;</code>
+     * @return The jsonObject.
+     */
+    @java.lang.Override
+    public boolean getJsonObject() {
+      if (responseFormatCase_ == 5) {
+        return (java.lang.Boolean) responseFormat_;
+      }
+      return false;
+    }
+
+    public static final int JSON_SCHEMA_FIELD_NUMBER = 6;
+    /**
+     * <pre>
+     * Enforces a specific JSON structure for the model's response based on a provided schema.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.JsonSchema json_schema = 6;</code>
+     * @return Whether the jsonSchema field is set.
+     */
+    @java.lang.Override
+    public boolean hasJsonSchema() {
+      return responseFormatCase_ == 6;
+    }
+    /**
+     * <pre>
+     * Enforces a specific JSON structure for the model's response based on a provided schema.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.JsonSchema json_schema = 6;</code>
+     * @return The jsonSchema.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema getJsonSchema() {
+      if (responseFormatCase_ == 6) {
+         return (yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema) responseFormat_;
+      }
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Enforces a specific JSON structure for the model's response based on a provided schema.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.JsonSchema json_schema = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchemaOrBuilder getJsonSchemaOrBuilder() {
+      if (responseFormatCase_ == 6) {
+         return (yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema) responseFormat_;
+      }
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -521,6 +709,13 @@ public final class TextGenerationServiceOuterClass {
       for (int i = 0; i < tools_.size(); i++) {
         output.writeMessage(4, tools_.get(i));
       }
+      if (responseFormatCase_ == 5) {
+        output.writeBool(
+            5, (boolean)((java.lang.Boolean) responseFormat_));
+      }
+      if (responseFormatCase_ == 6) {
+        output.writeMessage(6, (yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema) responseFormat_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -544,6 +739,15 @@ public final class TextGenerationServiceOuterClass {
       for (int i = 0; i < tools_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, tools_.get(i));
+      }
+      if (responseFormatCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(
+              5, (boolean)((java.lang.Boolean) responseFormat_));
+      }
+      if (responseFormatCase_ == 6) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, (yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema) responseFormat_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -571,6 +775,19 @@ public final class TextGenerationServiceOuterClass {
           .equals(other.getMessagesList())) return false;
       if (!getToolsList()
           .equals(other.getToolsList())) return false;
+      if (!getResponseFormatCase().equals(other.getResponseFormatCase())) return false;
+      switch (responseFormatCase_) {
+        case 5:
+          if (getJsonObject()
+              != other.getJsonObject()) return false;
+          break;
+        case 6:
+          if (!getJsonSchema()
+              .equals(other.getJsonSchema())) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -595,6 +812,19 @@ public final class TextGenerationServiceOuterClass {
       if (getToolsCount() > 0) {
         hash = (37 * hash) + TOOLS_FIELD_NUMBER;
         hash = (53 * hash) + getToolsList().hashCode();
+      }
+      switch (responseFormatCase_) {
+        case 5:
+          hash = (37 * hash) + JSON_OBJECT_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getJsonObject());
+          break;
+        case 6:
+          hash = (37 * hash) + JSON_SCHEMA_FIELD_NUMBER;
+          hash = (53 * hash) + getJsonSchema().hashCode();
+          break;
+        case 0:
+        default:
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -755,6 +985,8 @@ public final class TextGenerationServiceOuterClass {
         } else {
           toolsBuilder_.clear();
         }
+        responseFormatCase_ = 0;
+        responseFormat_ = null;
         return this;
       }
 
@@ -806,6 +1038,17 @@ public final class TextGenerationServiceOuterClass {
         } else {
           result.tools_ = toolsBuilder_.build();
         }
+        if (responseFormatCase_ == 5) {
+          result.responseFormat_ = responseFormat_;
+        }
+        if (responseFormatCase_ == 6) {
+          if (jsonSchemaBuilder_ == null) {
+            result.responseFormat_ = responseFormat_;
+          } else {
+            result.responseFormat_ = jsonSchemaBuilder_.build();
+          }
+        }
+        result.responseFormatCase_ = responseFormatCase_;
         onBuilt();
         return result;
       }
@@ -913,6 +1156,19 @@ public final class TextGenerationServiceOuterClass {
             }
           }
         }
+        switch (other.getResponseFormatCase()) {
+          case JSON_OBJECT: {
+            setJsonObject(other.getJsonObject());
+            break;
+          }
+          case JSON_SCHEMA: {
+            mergeJsonSchema(other.getJsonSchema());
+            break;
+          }
+          case RESPONSEFORMAT_NOT_SET: {
+            break;
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -941,6 +1197,21 @@ public final class TextGenerationServiceOuterClass {
         }
         return this;
       }
+      private int responseFormatCase_ = 0;
+      private java.lang.Object responseFormat_;
+      public ResponseFormatCase
+          getResponseFormatCase() {
+        return ResponseFormatCase.forNumber(
+            responseFormatCase_);
+      }
+
+      public Builder clearResponseFormat() {
+        responseFormatCase_ = 0;
+        responseFormat_ = null;
+        onChanged();
+        return this;
+      }
+
       private int bitField0_;
 
       private java.lang.Object modelUri_ = "";
@@ -1834,6 +2105,248 @@ public final class TextGenerationServiceOuterClass {
           tools_ = null;
         }
         return toolsBuilder_;
+      }
+
+      /**
+       * <pre>
+       * When set to true, the model will respond with a valid JSON object.
+       * Be sure to explicitly ask the model for JSON.
+       * Otherwise, it may generate excessive whitespace and run indefinitely until it reaches the token limit.
+       * </pre>
+       *
+       * <code>bool json_object = 5;</code>
+       * @return Whether the jsonObject field is set.
+       */
+      public boolean hasJsonObject() {
+        return responseFormatCase_ == 5;
+      }
+      /**
+       * <pre>
+       * When set to true, the model will respond with a valid JSON object.
+       * Be sure to explicitly ask the model for JSON.
+       * Otherwise, it may generate excessive whitespace and run indefinitely until it reaches the token limit.
+       * </pre>
+       *
+       * <code>bool json_object = 5;</code>
+       * @return The jsonObject.
+       */
+      public boolean getJsonObject() {
+        if (responseFormatCase_ == 5) {
+          return (java.lang.Boolean) responseFormat_;
+        }
+        return false;
+      }
+      /**
+       * <pre>
+       * When set to true, the model will respond with a valid JSON object.
+       * Be sure to explicitly ask the model for JSON.
+       * Otherwise, it may generate excessive whitespace and run indefinitely until it reaches the token limit.
+       * </pre>
+       *
+       * <code>bool json_object = 5;</code>
+       * @param value The jsonObject to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJsonObject(boolean value) {
+        responseFormatCase_ = 5;
+        responseFormat_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * When set to true, the model will respond with a valid JSON object.
+       * Be sure to explicitly ask the model for JSON.
+       * Otherwise, it may generate excessive whitespace and run indefinitely until it reaches the token limit.
+       * </pre>
+       *
+       * <code>bool json_object = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJsonObject() {
+        if (responseFormatCase_ == 5) {
+          responseFormatCase_ = 0;
+          responseFormat_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema, yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchemaOrBuilder> jsonSchemaBuilder_;
+      /**
+       * <pre>
+       * Enforces a specific JSON structure for the model's response based on a provided schema.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.JsonSchema json_schema = 6;</code>
+       * @return Whether the jsonSchema field is set.
+       */
+      @java.lang.Override
+      public boolean hasJsonSchema() {
+        return responseFormatCase_ == 6;
+      }
+      /**
+       * <pre>
+       * Enforces a specific JSON structure for the model's response based on a provided schema.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.JsonSchema json_schema = 6;</code>
+       * @return The jsonSchema.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema getJsonSchema() {
+        if (jsonSchemaBuilder_ == null) {
+          if (responseFormatCase_ == 6) {
+            return (yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema) responseFormat_;
+          }
+          return yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema.getDefaultInstance();
+        } else {
+          if (responseFormatCase_ == 6) {
+            return jsonSchemaBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Enforces a specific JSON structure for the model's response based on a provided schema.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.JsonSchema json_schema = 6;</code>
+       */
+      public Builder setJsonSchema(yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema value) {
+        if (jsonSchemaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          responseFormat_ = value;
+          onChanged();
+        } else {
+          jsonSchemaBuilder_.setMessage(value);
+        }
+        responseFormatCase_ = 6;
+        return this;
+      }
+      /**
+       * <pre>
+       * Enforces a specific JSON structure for the model's response based on a provided schema.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.JsonSchema json_schema = 6;</code>
+       */
+      public Builder setJsonSchema(
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema.Builder builderForValue) {
+        if (jsonSchemaBuilder_ == null) {
+          responseFormat_ = builderForValue.build();
+          onChanged();
+        } else {
+          jsonSchemaBuilder_.setMessage(builderForValue.build());
+        }
+        responseFormatCase_ = 6;
+        return this;
+      }
+      /**
+       * <pre>
+       * Enforces a specific JSON structure for the model's response based on a provided schema.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.JsonSchema json_schema = 6;</code>
+       */
+      public Builder mergeJsonSchema(yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema value) {
+        if (jsonSchemaBuilder_ == null) {
+          if (responseFormatCase_ == 6 &&
+              responseFormat_ != yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema.getDefaultInstance()) {
+            responseFormat_ = yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema.newBuilder((yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema) responseFormat_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            responseFormat_ = value;
+          }
+          onChanged();
+        } else {
+          if (responseFormatCase_ == 6) {
+            jsonSchemaBuilder_.mergeFrom(value);
+          }
+          jsonSchemaBuilder_.setMessage(value);
+        }
+        responseFormatCase_ = 6;
+        return this;
+      }
+      /**
+       * <pre>
+       * Enforces a specific JSON structure for the model's response based on a provided schema.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.JsonSchema json_schema = 6;</code>
+       */
+      public Builder clearJsonSchema() {
+        if (jsonSchemaBuilder_ == null) {
+          if (responseFormatCase_ == 6) {
+            responseFormatCase_ = 0;
+            responseFormat_ = null;
+            onChanged();
+          }
+        } else {
+          if (responseFormatCase_ == 6) {
+            responseFormatCase_ = 0;
+            responseFormat_ = null;
+          }
+          jsonSchemaBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Enforces a specific JSON structure for the model's response based on a provided schema.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.JsonSchema json_schema = 6;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema.Builder getJsonSchemaBuilder() {
+        return getJsonSchemaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enforces a specific JSON structure for the model's response based on a provided schema.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.JsonSchema json_schema = 6;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchemaOrBuilder getJsonSchemaOrBuilder() {
+        if ((responseFormatCase_ == 6) && (jsonSchemaBuilder_ != null)) {
+          return jsonSchemaBuilder_.getMessageOrBuilder();
+        } else {
+          if (responseFormatCase_ == 6) {
+            return (yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema) responseFormat_;
+          }
+          return yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Enforces a specific JSON structure for the model's response based on a provided schema.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.JsonSchema json_schema = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema, yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchemaOrBuilder> 
+          getJsonSchemaFieldBuilder() {
+        if (jsonSchemaBuilder_ == null) {
+          if (!(responseFormatCase_ == 6)) {
+            responseFormat_ = yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema.getDefaultInstance();
+          }
+          jsonSchemaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema, yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchemaOrBuilder>(
+                  (yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema) responseFormat_,
+                  getParentForChildren(),
+                  isClean());
+          responseFormat_ = null;
+        }
+        responseFormatCase_ = 6;
+        onChanged();;
+        return jsonSchemaBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -5183,45 +5696,48 @@ public final class TextGenerationServiceOuterClass {
       "/cloud/ai/foundation_models/v1/text_comm" +
       "on.proto\032 yandex/cloud/api/operation.pro" +
       "to\032&yandex/cloud/operation/operation.pro" +
-      "to\"\367\001\n\021CompletionRequest\022\021\n\tmodel_uri\030\001 " +
+      "to\"\351\002\n\021CompletionRequest\022\021\n\tmodel_uri\030\001 " +
       "\001(\t\022S\n\022completion_options\030\002 \001(\01327.yandex" +
       ".cloud.ai.foundation_models.v1.Completio" +
       "nOptions\022?\n\010messages\030\003 \003(\0132-.yandex.clou" +
       "d.ai.foundation_models.v1.Message\0229\n\005too" +
       "ls\030\004 \003(\0132*.yandex.cloud.ai.foundation_mo" +
-      "dels.v1.Tool\"\267\001\n\022CompletionResponse\022G\n\014a" +
-      "lternatives\030\001 \003(\01321.yandex.cloud.ai.foun" +
-      "dation_models.v1.Alternative\022A\n\005usage\030\002 " +
-      "\001(\01322.yandex.cloud.ai.foundation_models." +
-      "v1.ContentUsage\022\025\n\rmodel_version\030\003 \001(\t\"2" +
-      "\n\017TokenizeRequest\022\021\n\tmodel_uri\030\001 \001(\t\022\014\n\004" +
-      "text\030\002 \001(\t\"f\n\020TokenizeResponse\022;\n\006tokens" +
-      "\030\001 \003(\0132+.yandex.cloud.ai.foundation_mode" +
-      "ls.v1.Token\022\025\n\rmodel_version\030\002 \001(\t2\307\001\n\025T" +
-      "extGenerationService\022\255\001\n\nCompletion\0227.ya" +
-      "ndex.cloud.ai.foundation_models.v1.Compl" +
-      "etionRequest\0328.yandex.cloud.ai.foundatio" +
-      "n_models.v1.CompletionResponse\"*\202\323\344\223\002$\"\037" +
-      "/foundationModels/v1/completion:\001*0\0012\320\001\n" +
-      "\032TextGenerationAsyncService\022\261\001\n\nCompleti" +
-      "on\0227.yandex.cloud.ai.foundation_models.v" +
-      "1.CompletionRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"G\262\322*\024\022\022CompletionResponse" +
-      "\202\323\344\223\002)\"$/foundationModels/v1/completionA" +
-      "sync:\001*2\364\002\n\020TokenizerService\022\243\001\n\010Tokeniz" +
-      "e\0225.yandex.cloud.ai.foundation_models.v1" +
-      ".TokenizeRequest\0326.yandex.cloud.ai.found" +
-      "ation_models.v1.TokenizeResponse\"(\202\323\344\223\002\"" +
-      "\"\035/foundationModels/v1/tokenize:\001*\022\271\001\n\022T" +
-      "okenizeCompletion\0227.yandex.cloud.ai.foun" +
-      "dation_models.v1.CompletionRequest\0326.yan" +
-      "dex.cloud.ai.foundation_models.v1.Tokeni" +
-      "zeResponse\"2\202\323\344\223\002,\"\'/foundationModels/v1" +
-      "/tokenizeCompletion:\001*B\226\001\n(yandex.cloud." +
-      "api.ai.foundation_models.v1Zjgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/ai" +
-      "/foundation_models/v1/text_generation;fo" +
-      "undation_modelsb\006proto3"
+      "dels.v1.Tool\022\025\n\013json_object\030\005 \001(\010H\000\022G\n\013j" +
+      "son_schema\030\006 \001(\01320.yandex.cloud.ai.found" +
+      "ation_models.v1.JsonSchemaH\000B\020\n\016Response" +
+      "Format\"\267\001\n\022CompletionResponse\022G\n\014alterna" +
+      "tives\030\001 \003(\01321.yandex.cloud.ai.foundation" +
+      "_models.v1.Alternative\022A\n\005usage\030\002 \001(\01322." +
+      "yandex.cloud.ai.foundation_models.v1.Con" +
+      "tentUsage\022\025\n\rmodel_version\030\003 \001(\t\"2\n\017Toke" +
+      "nizeRequest\022\021\n\tmodel_uri\030\001 \001(\t\022\014\n\004text\030\002" +
+      " \001(\t\"f\n\020TokenizeResponse\022;\n\006tokens\030\001 \003(\013" +
+      "2+.yandex.cloud.ai.foundation_models.v1." +
+      "Token\022\025\n\rmodel_version\030\002 \001(\t2\307\001\n\025TextGen" +
+      "erationService\022\255\001\n\nCompletion\0227.yandex.c" +
+      "loud.ai.foundation_models.v1.CompletionR" +
+      "equest\0328.yandex.cloud.ai.foundation_mode" +
+      "ls.v1.CompletionResponse\"*\202\323\344\223\002$\"\037/found" +
+      "ationModels/v1/completion:\001*0\0012\320\001\n\032TextG" +
+      "enerationAsyncService\022\261\001\n\nCompletion\0227.y" +
+      "andex.cloud.ai.foundation_models.v1.Comp" +
+      "letionRequest\032!.yandex.cloud.operation.O" +
+      "peration\"G\262\322*\024\022\022CompletionResponse\202\323\344\223\002)" +
+      "\"$/foundationModels/v1/completionAsync:\001" +
+      "*2\364\002\n\020TokenizerService\022\243\001\n\010Tokenize\0225.ya" +
+      "ndex.cloud.ai.foundation_models.v1.Token" +
+      "izeRequest\0326.yandex.cloud.ai.foundation_" +
+      "models.v1.TokenizeResponse\"(\202\323\344\223\002\"\"\035/fou" +
+      "ndationModels/v1/tokenize:\001*\022\271\001\n\022Tokeniz" +
+      "eCompletion\0227.yandex.cloud.ai.foundation" +
+      "_models.v1.CompletionRequest\0326.yandex.cl" +
+      "oud.ai.foundation_models.v1.TokenizeResp" +
+      "onse\"2\202\323\344\223\002,\"\'/foundationModels/v1/token" +
+      "izeCompletion:\001*B\226\001\n(yandex.cloud.api.ai" +
+      ".foundation_models.v1Zjgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/ai/found" +
+      "ation_models/v1/text_generation;foundati" +
+      "on_modelsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5236,7 +5752,7 @@ public final class TextGenerationServiceOuterClass {
     internal_static_yandex_cloud_ai_foundation_models_v1_CompletionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_CompletionRequest_descriptor,
-        new java.lang.String[] { "ModelUri", "CompletionOptions", "Messages", "Tools", });
+        new java.lang.String[] { "ModelUri", "CompletionOptions", "Messages", "Tools", "JsonObject", "JsonSchema", "ResponseFormat", });
     internal_static_yandex_cloud_ai_foundation_models_v1_CompletionResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_ai_foundation_models_v1_CompletionResponse_fieldAccessorTable = new

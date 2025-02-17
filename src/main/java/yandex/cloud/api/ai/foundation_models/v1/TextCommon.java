@@ -14005,6 +14005,695 @@ public final class TextCommon {
 
   }
 
+  public interface JsonSchemaOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.foundation_models.v1.JsonSchema)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The JSON Schema that the model's output must conform to.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct schema = 1;</code>
+     * @return Whether the schema field is set.
+     */
+    boolean hasSchema();
+    /**
+     * <pre>
+     * The JSON Schema that the model's output must conform to.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct schema = 1;</code>
+     * @return The schema.
+     */
+    com.google.protobuf.Struct getSchema();
+    /**
+     * <pre>
+     * The JSON Schema that the model's output must conform to.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct schema = 1;</code>
+     */
+    com.google.protobuf.StructOrBuilder getSchemaOrBuilder();
+  }
+  /**
+   * <pre>
+   * Represents the expected structure of the model's response using a JSON Schema.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.JsonSchema}
+   */
+  public static final class JsonSchema extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.foundation_models.v1.JsonSchema)
+      JsonSchemaOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use JsonSchema.newBuilder() to construct.
+    private JsonSchema(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private JsonSchema() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new JsonSchema();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private JsonSchema(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.Struct.Builder subBuilder = null;
+              if (schema_ != null) {
+                subBuilder = schema_.toBuilder();
+              }
+              schema_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(schema_);
+                schema_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_JsonSchema_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_JsonSchema_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema.class, yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema.Builder.class);
+    }
+
+    public static final int SCHEMA_FIELD_NUMBER = 1;
+    private com.google.protobuf.Struct schema_;
+    /**
+     * <pre>
+     * The JSON Schema that the model's output must conform to.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct schema = 1;</code>
+     * @return Whether the schema field is set.
+     */
+    @java.lang.Override
+    public boolean hasSchema() {
+      return schema_ != null;
+    }
+    /**
+     * <pre>
+     * The JSON Schema that the model's output must conform to.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct schema = 1;</code>
+     * @return The schema.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getSchema() {
+      return schema_ == null ? com.google.protobuf.Struct.getDefaultInstance() : schema_;
+    }
+    /**
+     * <pre>
+     * The JSON Schema that the model's output must conform to.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct schema = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StructOrBuilder getSchemaOrBuilder() {
+      return getSchema();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (schema_ != null) {
+        output.writeMessage(1, getSchema());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (schema_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getSchema());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema other = (yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema) obj;
+
+      if (hasSchema() != other.hasSchema()) return false;
+      if (hasSchema()) {
+        if (!getSchema()
+            .equals(other.getSchema())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSchema()) {
+        hash = (37 * hash) + SCHEMA_FIELD_NUMBER;
+        hash = (53 * hash) + getSchema().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents the expected structure of the model's response using a JSON Schema.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.JsonSchema}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.foundation_models.v1.JsonSchema)
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchemaOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_JsonSchema_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_JsonSchema_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema.class, yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (schemaBuilder_ == null) {
+          schema_ = null;
+        } else {
+          schema_ = null;
+          schemaBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.internal_static_yandex_cloud_ai_foundation_models_v1_JsonSchema_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema build() {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema buildPartial() {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema result = new yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema(this);
+        if (schemaBuilder_ == null) {
+          result.schema_ = schema_;
+        } else {
+          result.schema_ = schemaBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema) {
+          return mergeFrom((yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema other) {
+        if (other == yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema.getDefaultInstance()) return this;
+        if (other.hasSchema()) {
+          mergeSchema(other.getSchema());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.Struct schema_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> schemaBuilder_;
+      /**
+       * <pre>
+       * The JSON Schema that the model's output must conform to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct schema = 1;</code>
+       * @return Whether the schema field is set.
+       */
+      public boolean hasSchema() {
+        return schemaBuilder_ != null || schema_ != null;
+      }
+      /**
+       * <pre>
+       * The JSON Schema that the model's output must conform to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct schema = 1;</code>
+       * @return The schema.
+       */
+      public com.google.protobuf.Struct getSchema() {
+        if (schemaBuilder_ == null) {
+          return schema_ == null ? com.google.protobuf.Struct.getDefaultInstance() : schema_;
+        } else {
+          return schemaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The JSON Schema that the model's output must conform to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct schema = 1;</code>
+       */
+      public Builder setSchema(com.google.protobuf.Struct value) {
+        if (schemaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          schema_ = value;
+          onChanged();
+        } else {
+          schemaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The JSON Schema that the model's output must conform to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct schema = 1;</code>
+       */
+      public Builder setSchema(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        if (schemaBuilder_ == null) {
+          schema_ = builderForValue.build();
+          onChanged();
+        } else {
+          schemaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The JSON Schema that the model's output must conform to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct schema = 1;</code>
+       */
+      public Builder mergeSchema(com.google.protobuf.Struct value) {
+        if (schemaBuilder_ == null) {
+          if (schema_ != null) {
+            schema_ =
+              com.google.protobuf.Struct.newBuilder(schema_).mergeFrom(value).buildPartial();
+          } else {
+            schema_ = value;
+          }
+          onChanged();
+        } else {
+          schemaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The JSON Schema that the model's output must conform to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct schema = 1;</code>
+       */
+      public Builder clearSchema() {
+        if (schemaBuilder_ == null) {
+          schema_ = null;
+          onChanged();
+        } else {
+          schema_ = null;
+          schemaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The JSON Schema that the model's output must conform to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct schema = 1;</code>
+       */
+      public com.google.protobuf.Struct.Builder getSchemaBuilder() {
+        
+        onChanged();
+        return getSchemaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The JSON Schema that the model's output must conform to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct schema = 1;</code>
+       */
+      public com.google.protobuf.StructOrBuilder getSchemaOrBuilder() {
+        if (schemaBuilder_ != null) {
+          return schemaBuilder_.getMessageOrBuilder();
+        } else {
+          return schema_ == null ?
+              com.google.protobuf.Struct.getDefaultInstance() : schema_;
+        }
+      }
+      /**
+       * <pre>
+       * The JSON Schema that the model's output must conform to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct schema = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+          getSchemaFieldBuilder() {
+        if (schemaBuilder_ == null) {
+          schemaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
+                  getSchema(),
+                  getParentForChildren(),
+                  isClean());
+          schema_ = null;
+        }
+        return schemaBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.foundation_models.v1.JsonSchema)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.foundation_models.v1.JsonSchema)
+    private static final yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema();
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<JsonSchema>
+        PARSER = new com.google.protobuf.AbstractParser<JsonSchema>() {
+      @java.lang.Override
+      public JsonSchema parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new JsonSchema(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<JsonSchema> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<JsonSchema> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.JsonSchema getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_foundation_models_v1_CompletionOptions_descriptor;
   private static final 
@@ -14080,6 +14769,11 @@ public final class TextCommon {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_foundation_models_v1_ToolResultList_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_foundation_models_v1_JsonSchema_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_foundation_models_v1_JsonSchema_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -14144,10 +14838,12 @@ public final class TextCommon {
       "(\t\022\021\n\007content\030\002 \001(\tH\000B\r\n\013ContentType\"X\n\016" +
       "ToolResultList\022F\n\014tool_results\030\001 \003(\01320.y" +
       "andex.cloud.ai.foundation_models.v1.Tool" +
-      "ResultB\206\001\n(yandex.cloud.api.ai.foundatio" +
-      "n_models.v1ZZgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/ai/foundation_mode" +
-      "ls/v1;foundation_modelsb\006proto3"
+      "Result\"5\n\nJsonSchema\022\'\n\006schema\030\001 \001(\0132\027.g" +
+      "oogle.protobuf.StructB\206\001\n(yandex.cloud.a" +
+      "pi.ai.foundation_models.v1ZZgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/ai/" +
+      "foundation_models/v1;foundation_modelsb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14245,6 +14941,12 @@ public final class TextCommon {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_ToolResultList_descriptor,
         new java.lang.String[] { "ToolResults", });
+    internal_static_yandex_cloud_ai_foundation_models_v1_JsonSchema_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_ai_foundation_models_v1_JsonSchema_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_foundation_models_v1_JsonSchema_descriptor,
+        new java.lang.String[] { "Schema", });
     com.google.protobuf.StructProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
   }

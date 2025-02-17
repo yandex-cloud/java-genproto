@@ -15768,22 +15768,52 @@ public final class DatasetServiceOuterClass {
 
     /**
      * <pre>
-     * Status of the datasets to list. Optional.
+     * Statuses of the datasets to list. Optional.
      * </pre>
      *
-     * <code>.yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
-     * @return The enum numeric value on the wire for status.
+     * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
+     * @return A list containing the status.
      */
-    int getStatusValue();
+    java.util.List<yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status> getStatusList();
     /**
      * <pre>
-     * Status of the datasets to list. Optional.
+     * Statuses of the datasets to list. Optional.
      * </pre>
      *
-     * <code>.yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
-     * @return The status.
+     * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
+     * @return The count of status.
      */
-    yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status getStatus();
+    int getStatusCount();
+    /**
+     * <pre>
+     * Statuses of the datasets to list. Optional.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
+     * @param index The index of the element to return.
+     * @return The status at the given index.
+     */
+    yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status getStatus(int index);
+    /**
+     * <pre>
+     * Statuses of the datasets to list. Optional.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
+     * @return A list containing the enum numeric values on the wire for status.
+     */
+    java.util.List<java.lang.Integer>
+    getStatusValueList();
+    /**
+     * <pre>
+     * Statuses of the datasets to list. Optional.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of status at the given index.
+     */
+    int getStatusValue(int index);
 
     /**
      * <pre>
@@ -15807,23 +15837,44 @@ public final class DatasetServiceOuterClass {
 
     /**
      * <pre>
-     * Task type of the datasets to list. Optional.
+     * Task types of the datasets to list. Optional.
      * </pre>
      *
-     * <code>string task_type_filter = 4;</code>
-     * @return The taskTypeFilter.
+     * <code>repeated string task_type_filter = 4;</code>
+     * @return A list containing the taskTypeFilter.
      */
-    java.lang.String getTaskTypeFilter();
+    java.util.List<java.lang.String>
+        getTaskTypeFilterList();
     /**
      * <pre>
-     * Task type of the datasets to list. Optional.
+     * Task types of the datasets to list. Optional.
      * </pre>
      *
-     * <code>string task_type_filter = 4;</code>
-     * @return The bytes for taskTypeFilter.
+     * <code>repeated string task_type_filter = 4;</code>
+     * @return The count of taskTypeFilter.
+     */
+    int getTaskTypeFilterCount();
+    /**
+     * <pre>
+     * Task types of the datasets to list. Optional.
+     * </pre>
+     *
+     * <code>repeated string task_type_filter = 4;</code>
+     * @param index The index of the element to return.
+     * @return The taskTypeFilter at the given index.
+     */
+    java.lang.String getTaskTypeFilter(int index);
+    /**
+     * <pre>
+     * Task types of the datasets to list. Optional.
+     * </pre>
+     *
+     * <code>repeated string task_type_filter = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the taskTypeFilter at the given index.
      */
     com.google.protobuf.ByteString
-        getTaskTypeFilterBytes();
+        getTaskTypeFilterBytes(int index);
 
     /**
      * <pre>
@@ -15874,9 +15925,9 @@ public final class DatasetServiceOuterClass {
     }
     private ListDatasetsRequest() {
       folderId_ = "";
-      status_ = 0;
+      status_ = java.util.Collections.emptyList();
       datasetNamePattern_ = "";
-      taskTypeFilter_ = "";
+      taskTypeFilter_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       pageToken_ = "";
     }
 
@@ -15900,6 +15951,7 @@ public final class DatasetServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -15918,8 +15970,25 @@ public final class DatasetServiceOuterClass {
             }
             case 16: {
               int rawValue = input.readEnum();
-
-              status_ = rawValue;
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                status_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              status_.add(rawValue);
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  status_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                status_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
               break;
             }
             case 26: {
@@ -15930,8 +15999,11 @@ public final class DatasetServiceOuterClass {
             }
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
-
-              taskTypeFilter_ = s;
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                taskTypeFilter_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              taskTypeFilter_.add(s);
               break;
             }
             case 40: {
@@ -15960,6 +16032,12 @@ public final class DatasetServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          status_ = java.util.Collections.unmodifiableList(status_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          taskTypeFilter_ = taskTypeFilter_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -16024,31 +16102,82 @@ public final class DatasetServiceOuterClass {
     }
 
     public static final int STATUS_FIELD_NUMBER = 2;
-    private int status_;
+    private java.util.List<java.lang.Integer> status_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status> status_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status>() {
+              public yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
+                yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status result = yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status.valueOf(from);
+                return result == null ? yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status.UNRECOGNIZED : result;
+              }
+            };
     /**
      * <pre>
-     * Status of the datasets to list. Optional.
+     * Statuses of the datasets to list. Optional.
      * </pre>
      *
-     * <code>.yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
-     * @return The enum numeric value on the wire for status.
+     * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
+     * @return A list containing the status.
      */
-    @java.lang.Override public int getStatusValue() {
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status> getStatusList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status>(status_, status_converter_);
+    }
+    /**
+     * <pre>
+     * Statuses of the datasets to list. Optional.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
+     * @return The count of status.
+     */
+    @java.lang.Override
+    public int getStatusCount() {
+      return status_.size();
+    }
+    /**
+     * <pre>
+     * Statuses of the datasets to list. Optional.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
+     * @param index The index of the element to return.
+     * @return The status at the given index.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status getStatus(int index) {
+      return status_converter_.convert(status_.get(index));
+    }
+    /**
+     * <pre>
+     * Statuses of the datasets to list. Optional.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
+     * @return A list containing the enum numeric values on the wire for status.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+    getStatusValueList() {
       return status_;
     }
     /**
      * <pre>
-     * Status of the datasets to list. Optional.
+     * Statuses of the datasets to list. Optional.
      * </pre>
      *
-     * <code>.yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
-     * @return The status.
+     * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of status at the given index.
      */
-    @java.lang.Override public yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status getStatus() {
-      @SuppressWarnings("deprecation")
-      yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status result = yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status.valueOf(status_);
-      return result == null ? yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status.UNRECOGNIZED : result;
+    @java.lang.Override
+    public int getStatusValue(int index) {
+      return status_.get(index);
     }
+    private int statusMemoizedSerializedSize;
 
     public static final int DATASET_NAME_PATTERN_FIELD_NUMBER = 3;
     private volatile java.lang.Object datasetNamePattern_;
@@ -16097,49 +16226,54 @@ public final class DatasetServiceOuterClass {
     }
 
     public static final int TASK_TYPE_FILTER_FIELD_NUMBER = 4;
-    private volatile java.lang.Object taskTypeFilter_;
+    private com.google.protobuf.LazyStringList taskTypeFilter_;
     /**
      * <pre>
-     * Task type of the datasets to list. Optional.
+     * Task types of the datasets to list. Optional.
      * </pre>
      *
-     * <code>string task_type_filter = 4;</code>
-     * @return The taskTypeFilter.
+     * <code>repeated string task_type_filter = 4;</code>
+     * @return A list containing the taskTypeFilter.
      */
-    @java.lang.Override
-    public java.lang.String getTaskTypeFilter() {
-      java.lang.Object ref = taskTypeFilter_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        taskTypeFilter_ = s;
-        return s;
-      }
+    public com.google.protobuf.ProtocolStringList
+        getTaskTypeFilterList() {
+      return taskTypeFilter_;
     }
     /**
      * <pre>
-     * Task type of the datasets to list. Optional.
+     * Task types of the datasets to list. Optional.
      * </pre>
      *
-     * <code>string task_type_filter = 4;</code>
-     * @return The bytes for taskTypeFilter.
+     * <code>repeated string task_type_filter = 4;</code>
+     * @return The count of taskTypeFilter.
      */
-    @java.lang.Override
+    public int getTaskTypeFilterCount() {
+      return taskTypeFilter_.size();
+    }
+    /**
+     * <pre>
+     * Task types of the datasets to list. Optional.
+     * </pre>
+     *
+     * <code>repeated string task_type_filter = 4;</code>
+     * @param index The index of the element to return.
+     * @return The taskTypeFilter at the given index.
+     */
+    public java.lang.String getTaskTypeFilter(int index) {
+      return taskTypeFilter_.get(index);
+    }
+    /**
+     * <pre>
+     * Task types of the datasets to list. Optional.
+     * </pre>
+     *
+     * <code>repeated string task_type_filter = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the taskTypeFilter at the given index.
+     */
     public com.google.protobuf.ByteString
-        getTaskTypeFilterBytes() {
-      java.lang.Object ref = taskTypeFilter_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        taskTypeFilter_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+        getTaskTypeFilterBytes(int index) {
+      return taskTypeFilter_.getByteString(index);
     }
 
     public static final int PAGE_SIZE_FIELD_NUMBER = 5;
@@ -16222,17 +16356,22 @@ public final class DatasetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      getSerializedSize();
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
-      if (status_ != yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status.STATUS_UNSPECIFIED.getNumber()) {
-        output.writeEnum(2, status_);
+      if (getStatusList().size() > 0) {
+        output.writeUInt32NoTag(18);
+        output.writeUInt32NoTag(statusMemoizedSerializedSize);
+      }
+      for (int i = 0; i < status_.size(); i++) {
+        output.writeEnumNoTag(status_.get(i));
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetNamePattern_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, datasetNamePattern_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(taskTypeFilter_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, taskTypeFilter_);
+      for (int i = 0; i < taskTypeFilter_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, taskTypeFilter_.getRaw(i));
       }
       if (pageSize_ != 0L) {
         output.writeInt64(5, pageSize_);
@@ -16252,15 +16391,28 @@ public final class DatasetServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
-      if (status_ != yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status.STATUS_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, status_);
+      {
+        int dataSize = 0;
+        for (int i = 0; i < status_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(status_.get(i));
+        }
+        size += dataSize;
+        if (!getStatusList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }statusMemoizedSerializedSize = dataSize;
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetNamePattern_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, datasetNamePattern_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(taskTypeFilter_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, taskTypeFilter_);
+      {
+        int dataSize = 0;
+        for (int i = 0; i < taskTypeFilter_.size(); i++) {
+          dataSize += computeStringSizeNoTag(taskTypeFilter_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTaskTypeFilterList().size();
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -16286,11 +16438,11 @@ public final class DatasetServiceOuterClass {
 
       if (!getFolderId()
           .equals(other.getFolderId())) return false;
-      if (status_ != other.status_) return false;
+      if (!status_.equals(other.status_)) return false;
       if (!getDatasetNamePattern()
           .equals(other.getDatasetNamePattern())) return false;
-      if (!getTaskTypeFilter()
-          .equals(other.getTaskTypeFilter())) return false;
+      if (!getTaskTypeFilterList()
+          .equals(other.getTaskTypeFilterList())) return false;
       if (getPageSize()
           != other.getPageSize()) return false;
       if (!getPageToken()
@@ -16308,12 +16460,16 @@ public final class DatasetServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getFolderId().hashCode();
-      hash = (37 * hash) + STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + status_;
+      if (getStatusCount() > 0) {
+        hash = (37 * hash) + STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + status_.hashCode();
+      }
       hash = (37 * hash) + DATASET_NAME_PATTERN_FIELD_NUMBER;
       hash = (53 * hash) + getDatasetNamePattern().hashCode();
-      hash = (37 * hash) + TASK_TYPE_FILTER_FIELD_NUMBER;
-      hash = (53 * hash) + getTaskTypeFilter().hashCode();
+      if (getTaskTypeFilterCount() > 0) {
+        hash = (37 * hash) + TASK_TYPE_FILTER_FIELD_NUMBER;
+        hash = (53 * hash) + getTaskTypeFilterList().hashCode();
+      }
       hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getPageSize());
@@ -16454,12 +16610,12 @@ public final class DatasetServiceOuterClass {
         super.clear();
         folderId_ = "";
 
-        status_ = 0;
-
+        status_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
         datasetNamePattern_ = "";
 
-        taskTypeFilter_ = "";
-
+        taskTypeFilter_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
         pageSize_ = 0L;
 
         pageToken_ = "";
@@ -16490,9 +16646,18 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListDatasetsRequest buildPartial() {
         yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListDatasetsRequest result = new yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListDatasetsRequest(this);
+        int from_bitField0_ = bitField0_;
         result.folderId_ = folderId_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          status_ = java.util.Collections.unmodifiableList(status_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
         result.status_ = status_;
         result.datasetNamePattern_ = datasetNamePattern_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          taskTypeFilter_ = taskTypeFilter_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
         result.taskTypeFilter_ = taskTypeFilter_;
         result.pageSize_ = pageSize_;
         result.pageToken_ = pageToken_;
@@ -16548,15 +16713,28 @@ public final class DatasetServiceOuterClass {
           folderId_ = other.folderId_;
           onChanged();
         }
-        if (other.status_ != 0) {
-          setStatusValue(other.getStatusValue());
+        if (!other.status_.isEmpty()) {
+          if (status_.isEmpty()) {
+            status_ = other.status_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureStatusIsMutable();
+            status_.addAll(other.status_);
+          }
+          onChanged();
         }
         if (!other.getDatasetNamePattern().isEmpty()) {
           datasetNamePattern_ = other.datasetNamePattern_;
           onChanged();
         }
-        if (!other.getTaskTypeFilter().isEmpty()) {
-          taskTypeFilter_ = other.taskTypeFilter_;
+        if (!other.taskTypeFilter_.isEmpty()) {
+          if (taskTypeFilter_.isEmpty()) {
+            taskTypeFilter_ = other.taskTypeFilter_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureTaskTypeFilterIsMutable();
+            taskTypeFilter_.addAll(other.taskTypeFilter_);
+          }
           onChanged();
         }
         if (other.getPageSize() != 0L) {
@@ -16594,6 +16772,7 @@ public final class DatasetServiceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object folderId_ = "";
       /**
@@ -16691,76 +16870,190 @@ public final class DatasetServiceOuterClass {
         return this;
       }
 
-      private int status_ = 0;
-      /**
-       * <pre>
-       * Status of the datasets to list. Optional.
-       * </pre>
-       *
-       * <code>.yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
-       * @return The enum numeric value on the wire for status.
-       */
-      @java.lang.Override public int getStatusValue() {
-        return status_;
+      private java.util.List<java.lang.Integer> status_ =
+        java.util.Collections.emptyList();
+      private void ensureStatusIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          status_ = new java.util.ArrayList<java.lang.Integer>(status_);
+          bitField0_ |= 0x00000001;
+        }
       }
       /**
        * <pre>
-       * Status of the datasets to list. Optional.
+       * Statuses of the datasets to list. Optional.
        * </pre>
        *
-       * <code>.yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
-       * @param value The enum numeric value on the wire for status to set.
-       * @return This builder for chaining.
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
+       * @return A list containing the status.
        */
-      public Builder setStatusValue(int value) {
-        
-        status_ = value;
-        onChanged();
-        return this;
+      public java.util.List<yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status> getStatusList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status>(status_, status_converter_);
       }
       /**
        * <pre>
-       * Status of the datasets to list. Optional.
+       * Statuses of the datasets to list. Optional.
        * </pre>
        *
-       * <code>.yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
-       * @return The status.
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
+       * @return The count of status.
        */
-      @java.lang.Override
-      public yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status getStatus() {
-        @SuppressWarnings("deprecation")
-        yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status result = yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status.valueOf(status_);
-        return result == null ? yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status.UNRECOGNIZED : result;
+      public int getStatusCount() {
+        return status_.size();
       }
       /**
        * <pre>
-       * Status of the datasets to list. Optional.
+       * Statuses of the datasets to list. Optional.
        * </pre>
        *
-       * <code>.yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
+       * @param index The index of the element to return.
+       * @return The status at the given index.
+       */
+      public yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status getStatus(int index) {
+        return status_converter_.convert(status_.get(index));
+      }
+      /**
+       * <pre>
+       * Statuses of the datasets to list. Optional.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
+       * @param index The index to set the value at.
        * @param value The status to set.
        * @return This builder for chaining.
        */
-      public Builder setStatus(yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status value) {
+      public Builder setStatus(
+          int index, yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status value) {
         if (value == null) {
           throw new NullPointerException();
         }
-        
-        status_ = value.getNumber();
+        ensureStatusIsMutable();
+        status_.set(index, value.getNumber());
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Status of the datasets to list. Optional.
+       * Statuses of the datasets to list. Optional.
        * </pre>
        *
-       * <code>.yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
+       * @param value The status to add.
+       * @return This builder for chaining.
+       */
+      public Builder addStatus(yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureStatusIsMutable();
+        status_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Statuses of the datasets to list. Optional.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
+       * @param values The status to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllStatus(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status> values) {
+        ensureStatusIsMutable();
+        for (yandex.cloud.api.ai.dataset.v1.Dataset.DatasetInfo.Status value : values) {
+          status_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Statuses of the datasets to list. Optional.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        
-        status_ = 0;
+        status_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Statuses of the datasets to list. Optional.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
+       * @return A list containing the enum numeric values on the wire for status.
+       */
+      public java.util.List<java.lang.Integer>
+      getStatusValueList() {
+        return java.util.Collections.unmodifiableList(status_);
+      }
+      /**
+       * <pre>
+       * Statuses of the datasets to list. Optional.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of status at the given index.
+       */
+      public int getStatusValue(int index) {
+        return status_.get(index);
+      }
+      /**
+       * <pre>
+       * Statuses of the datasets to list. Optional.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of status at the given index.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(
+          int index, int value) {
+        ensureStatusIsMutable();
+        status_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Statuses of the datasets to list. Optional.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
+       * @param value The enum numeric value on the wire for status to add.
+       * @return This builder for chaining.
+       */
+      public Builder addStatusValue(int value) {
+        ensureStatusIsMutable();
+        status_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Statuses of the datasets to list. Optional.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.dataset.v1.DatasetInfo.Status status = 2;</code>
+       * @param values The enum numeric values on the wire for status to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllStatusValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureStatusIsMutable();
+        for (int value : values) {
+          status_.add(value);
+        }
         onChanged();
         return this;
       }
@@ -16861,98 +17154,148 @@ public final class DatasetServiceOuterClass {
         return this;
       }
 
-      private java.lang.Object taskTypeFilter_ = "";
-      /**
-       * <pre>
-       * Task type of the datasets to list. Optional.
-       * </pre>
-       *
-       * <code>string task_type_filter = 4;</code>
-       * @return The taskTypeFilter.
-       */
-      public java.lang.String getTaskTypeFilter() {
-        java.lang.Object ref = taskTypeFilter_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          taskTypeFilter_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      private com.google.protobuf.LazyStringList taskTypeFilter_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTaskTypeFilterIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          taskTypeFilter_ = new com.google.protobuf.LazyStringArrayList(taskTypeFilter_);
+          bitField0_ |= 0x00000002;
+         }
       }
       /**
        * <pre>
-       * Task type of the datasets to list. Optional.
+       * Task types of the datasets to list. Optional.
        * </pre>
        *
-       * <code>string task_type_filter = 4;</code>
-       * @return The bytes for taskTypeFilter.
+       * <code>repeated string task_type_filter = 4;</code>
+       * @return A list containing the taskTypeFilter.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTaskTypeFilterList() {
+        return taskTypeFilter_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Task types of the datasets to list. Optional.
+       * </pre>
+       *
+       * <code>repeated string task_type_filter = 4;</code>
+       * @return The count of taskTypeFilter.
+       */
+      public int getTaskTypeFilterCount() {
+        return taskTypeFilter_.size();
+      }
+      /**
+       * <pre>
+       * Task types of the datasets to list. Optional.
+       * </pre>
+       *
+       * <code>repeated string task_type_filter = 4;</code>
+       * @param index The index of the element to return.
+       * @return The taskTypeFilter at the given index.
+       */
+      public java.lang.String getTaskTypeFilter(int index) {
+        return taskTypeFilter_.get(index);
+      }
+      /**
+       * <pre>
+       * Task types of the datasets to list. Optional.
+       * </pre>
+       *
+       * <code>repeated string task_type_filter = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the taskTypeFilter at the given index.
        */
       public com.google.protobuf.ByteString
-          getTaskTypeFilterBytes() {
-        java.lang.Object ref = taskTypeFilter_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          taskTypeFilter_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+          getTaskTypeFilterBytes(int index) {
+        return taskTypeFilter_.getByteString(index);
       }
       /**
        * <pre>
-       * Task type of the datasets to list. Optional.
+       * Task types of the datasets to list. Optional.
        * </pre>
        *
-       * <code>string task_type_filter = 4;</code>
+       * <code>repeated string task_type_filter = 4;</code>
+       * @param index The index to set the value at.
        * @param value The taskTypeFilter to set.
        * @return This builder for chaining.
        */
       public Builder setTaskTypeFilter(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTaskTypeFilterIsMutable();
+        taskTypeFilter_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Task types of the datasets to list. Optional.
+       * </pre>
+       *
+       * <code>repeated string task_type_filter = 4;</code>
+       * @param value The taskTypeFilter to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTaskTypeFilter(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  
-        taskTypeFilter_ = value;
+  ensureTaskTypeFilterIsMutable();
+        taskTypeFilter_.add(value);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Task type of the datasets to list. Optional.
+       * Task types of the datasets to list. Optional.
        * </pre>
        *
-       * <code>string task_type_filter = 4;</code>
+       * <code>repeated string task_type_filter = 4;</code>
+       * @param values The taskTypeFilter to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTaskTypeFilter(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTaskTypeFilterIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, taskTypeFilter_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Task types of the datasets to list. Optional.
+       * </pre>
+       *
+       * <code>repeated string task_type_filter = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearTaskTypeFilter() {
-        
-        taskTypeFilter_ = getDefaultInstance().getTaskTypeFilter();
+        taskTypeFilter_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Task type of the datasets to list. Optional.
+       * Task types of the datasets to list. Optional.
        * </pre>
        *
-       * <code>string task_type_filter = 4;</code>
-       * @param value The bytes for taskTypeFilter to set.
+       * <code>repeated string task_type_filter = 4;</code>
+       * @param value The bytes of the taskTypeFilter to add.
        * @return This builder for chaining.
        */
-      public Builder setTaskTypeFilterBytes(
+      public Builder addTaskTypeFilterBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-        
-        taskTypeFilter_ = value;
+        ensureTaskTypeFilterIsMutable();
+        taskTypeFilter_.add(value);
         onChanged();
         return this;
       }
@@ -26929,10 +27272,10 @@ public final class DatasetServiceOuterClass {
       "v1.UploadedPartInfo\"8\n\"FinishMultipartUp" +
       "loadDraftResponse\022\022\n\ndataset_id\030\001 \001(\t\"\315\001" +
       "\n\023ListDatasetsRequest\022\027\n\tfolder_id\030\001 \001(\t" +
-      "B\004\350\3071\001\022>\n\006status\030\002 \001(\0162..yandex.cloud.ai" +
+      "B\004\350\3071\001\022>\n\006status\030\002 \003(\0162..yandex.cloud.ai" +
       ".dataset.v1.DatasetInfo.Status\022\034\n\024datase" +
       "t_name_pattern\030\003 \001(\t\022\030\n\020task_type_filter" +
-      "\030\004 \001(\t\022\021\n\tpage_size\030\005 \001(\003\022\022\n\npage_token\030" +
+      "\030\004 \003(\t\022\021\n\tpage_size\030\005 \001(\003\022\022\n\npage_token\030" +
       "\006 \001(\t\"j\n\024ListDatasetsResponse\0229\n\010dataset" +
       "s\030\001 \003(\0132\'.yandex.cloud.ai.dataset.v1.Dat" +
       "asetInfo\022\027\n\017next_page_token\030\002 \001(\t\"3\n\030Lis" +

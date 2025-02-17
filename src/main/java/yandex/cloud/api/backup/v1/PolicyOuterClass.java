@@ -2236,6 +2236,33 @@ public final class PolicyOuterClass {
      * @return The quiesceSnapshottingEnabled.
      */
     boolean getQuiesceSnapshottingEnabled();
+
+    /**
+     * <pre>
+     * File filters to specify masks of files to backup or to exclude of backuping
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.PolicySettings.FileFilters file_filters = 19;</code>
+     * @return Whether the fileFilters field is set.
+     */
+    boolean hasFileFilters();
+    /**
+     * <pre>
+     * File filters to specify masks of files to backup or to exclude of backuping
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.PolicySettings.FileFilters file_filters = 19;</code>
+     * @return The fileFilters.
+     */
+    yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters getFileFilters();
+    /**
+     * <pre>
+     * File filters to specify masks of files to backup or to exclude of backuping
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.PolicySettings.FileFilters file_filters = 19;</code>
+     */
+    yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFiltersOrBuilder getFileFiltersOrBuilder();
   }
   /**
    * <pre>
@@ -2434,6 +2461,19 @@ public final class PolicyOuterClass {
             case 144: {
 
               quiesceSnapshottingEnabled_ = input.readBool();
+              break;
+            }
+            case 154: {
+              yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters.Builder subBuilder = null;
+              if (fileFilters_ != null) {
+                subBuilder = fileFilters_.toBuilder();
+              }
+              fileFilters_ = input.readMessage(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(fileFilters_);
+                fileFilters_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -16731,6 +16771,997 @@ public final class PolicyOuterClass {
 
     }
 
+    public interface FileFiltersOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.backup.v1.PolicySettings.FileFilters)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Do not backup files that match the following criteria
+       * </pre>
+       *
+       * <code>repeated string exclusion_masks = 1;</code>
+       * @return A list containing the exclusionMasks.
+       */
+      java.util.List<java.lang.String>
+          getExclusionMasksList();
+      /**
+       * <pre>
+       * Do not backup files that match the following criteria
+       * </pre>
+       *
+       * <code>repeated string exclusion_masks = 1;</code>
+       * @return The count of exclusionMasks.
+       */
+      int getExclusionMasksCount();
+      /**
+       * <pre>
+       * Do not backup files that match the following criteria
+       * </pre>
+       *
+       * <code>repeated string exclusion_masks = 1;</code>
+       * @param index The index of the element to return.
+       * @return The exclusionMasks at the given index.
+       */
+      java.lang.String getExclusionMasks(int index);
+      /**
+       * <pre>
+       * Do not backup files that match the following criteria
+       * </pre>
+       *
+       * <code>repeated string exclusion_masks = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the exclusionMasks at the given index.
+       */
+      com.google.protobuf.ByteString
+          getExclusionMasksBytes(int index);
+
+      /**
+       * <pre>
+       * Backup only files that match the following criteria
+       * </pre>
+       *
+       * <code>repeated string inclusion_masks = 2;</code>
+       * @return A list containing the inclusionMasks.
+       */
+      java.util.List<java.lang.String>
+          getInclusionMasksList();
+      /**
+       * <pre>
+       * Backup only files that match the following criteria
+       * </pre>
+       *
+       * <code>repeated string inclusion_masks = 2;</code>
+       * @return The count of inclusionMasks.
+       */
+      int getInclusionMasksCount();
+      /**
+       * <pre>
+       * Backup only files that match the following criteria
+       * </pre>
+       *
+       * <code>repeated string inclusion_masks = 2;</code>
+       * @param index The index of the element to return.
+       * @return The inclusionMasks at the given index.
+       */
+      java.lang.String getInclusionMasks(int index);
+      /**
+       * <pre>
+       * Backup only files that match the following criteria
+       * </pre>
+       *
+       * <code>repeated string inclusion_masks = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the inclusionMasks at the given index.
+       */
+      com.google.protobuf.ByteString
+          getInclusionMasksBytes(int index);
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.backup.v1.PolicySettings.FileFilters}
+     */
+    public static final class FileFilters extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.backup.v1.PolicySettings.FileFilters)
+        FileFiltersOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use FileFilters.newBuilder() to construct.
+      private FileFilters(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private FileFilters() {
+        exclusionMasks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        inclusionMasks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new FileFilters();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private FileFilters(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  exclusionMasks_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                exclusionMasks_.add(s);
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                  inclusionMasks_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000002;
+                }
+                inclusionMasks_.add(s);
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            exclusionMasks_ = exclusionMasks_.getUnmodifiableView();
+          }
+          if (((mutable_bitField0_ & 0x00000002) != 0)) {
+            inclusionMasks_ = inclusionMasks_.getUnmodifiableView();
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.backup.v1.PolicyOuterClass.internal_static_yandex_cloud_backup_v1_PolicySettings_FileFilters_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.backup.v1.PolicyOuterClass.internal_static_yandex_cloud_backup_v1_PolicySettings_FileFilters_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters.class, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters.Builder.class);
+      }
+
+      public static final int EXCLUSION_MASKS_FIELD_NUMBER = 1;
+      private com.google.protobuf.LazyStringList exclusionMasks_;
+      /**
+       * <pre>
+       * Do not backup files that match the following criteria
+       * </pre>
+       *
+       * <code>repeated string exclusion_masks = 1;</code>
+       * @return A list containing the exclusionMasks.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getExclusionMasksList() {
+        return exclusionMasks_;
+      }
+      /**
+       * <pre>
+       * Do not backup files that match the following criteria
+       * </pre>
+       *
+       * <code>repeated string exclusion_masks = 1;</code>
+       * @return The count of exclusionMasks.
+       */
+      public int getExclusionMasksCount() {
+        return exclusionMasks_.size();
+      }
+      /**
+       * <pre>
+       * Do not backup files that match the following criteria
+       * </pre>
+       *
+       * <code>repeated string exclusion_masks = 1;</code>
+       * @param index The index of the element to return.
+       * @return The exclusionMasks at the given index.
+       */
+      public java.lang.String getExclusionMasks(int index) {
+        return exclusionMasks_.get(index);
+      }
+      /**
+       * <pre>
+       * Do not backup files that match the following criteria
+       * </pre>
+       *
+       * <code>repeated string exclusion_masks = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the exclusionMasks at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getExclusionMasksBytes(int index) {
+        return exclusionMasks_.getByteString(index);
+      }
+
+      public static final int INCLUSION_MASKS_FIELD_NUMBER = 2;
+      private com.google.protobuf.LazyStringList inclusionMasks_;
+      /**
+       * <pre>
+       * Backup only files that match the following criteria
+       * </pre>
+       *
+       * <code>repeated string inclusion_masks = 2;</code>
+       * @return A list containing the inclusionMasks.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getInclusionMasksList() {
+        return inclusionMasks_;
+      }
+      /**
+       * <pre>
+       * Backup only files that match the following criteria
+       * </pre>
+       *
+       * <code>repeated string inclusion_masks = 2;</code>
+       * @return The count of inclusionMasks.
+       */
+      public int getInclusionMasksCount() {
+        return inclusionMasks_.size();
+      }
+      /**
+       * <pre>
+       * Backup only files that match the following criteria
+       * </pre>
+       *
+       * <code>repeated string inclusion_masks = 2;</code>
+       * @param index The index of the element to return.
+       * @return The inclusionMasks at the given index.
+       */
+      public java.lang.String getInclusionMasks(int index) {
+        return inclusionMasks_.get(index);
+      }
+      /**
+       * <pre>
+       * Backup only files that match the following criteria
+       * </pre>
+       *
+       * <code>repeated string inclusion_masks = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the inclusionMasks at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getInclusionMasksBytes(int index) {
+        return inclusionMasks_.getByteString(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < exclusionMasks_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, exclusionMasks_.getRaw(i));
+        }
+        for (int i = 0; i < inclusionMasks_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, inclusionMasks_.getRaw(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < exclusionMasks_.size(); i++) {
+            dataSize += computeStringSizeNoTag(exclusionMasks_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getExclusionMasksList().size();
+        }
+        {
+          int dataSize = 0;
+          for (int i = 0; i < inclusionMasks_.size(); i++) {
+            dataSize += computeStringSizeNoTag(inclusionMasks_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getInclusionMasksList().size();
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters other = (yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters) obj;
+
+        if (!getExclusionMasksList()
+            .equals(other.getExclusionMasksList())) return false;
+        if (!getInclusionMasksList()
+            .equals(other.getInclusionMasksList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getExclusionMasksCount() > 0) {
+          hash = (37 * hash) + EXCLUSION_MASKS_FIELD_NUMBER;
+          hash = (53 * hash) + getExclusionMasksList().hashCode();
+        }
+        if (getInclusionMasksCount() > 0) {
+          hash = (37 * hash) + INCLUSION_MASKS_FIELD_NUMBER;
+          hash = (53 * hash) + getInclusionMasksList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.backup.v1.PolicySettings.FileFilters}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.backup.v1.PolicySettings.FileFilters)
+          yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFiltersOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.backup.v1.PolicyOuterClass.internal_static_yandex_cloud_backup_v1_PolicySettings_FileFilters_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.backup.v1.PolicyOuterClass.internal_static_yandex_cloud_backup_v1_PolicySettings_FileFilters_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters.class, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          exclusionMasks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          inclusionMasks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.backup.v1.PolicyOuterClass.internal_static_yandex_cloud_backup_v1_PolicySettings_FileFilters_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters getDefaultInstanceForType() {
+          return yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters build() {
+          yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters buildPartial() {
+          yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters result = new yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters(this);
+          int from_bitField0_ = bitField0_;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            exclusionMasks_ = exclusionMasks_.getUnmodifiableView();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.exclusionMasks_ = exclusionMasks_;
+          if (((bitField0_ & 0x00000002) != 0)) {
+            inclusionMasks_ = inclusionMasks_.getUnmodifiableView();
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.inclusionMasks_ = inclusionMasks_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters) {
+            return mergeFrom((yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters other) {
+          if (other == yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters.getDefaultInstance()) return this;
+          if (!other.exclusionMasks_.isEmpty()) {
+            if (exclusionMasks_.isEmpty()) {
+              exclusionMasks_ = other.exclusionMasks_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureExclusionMasksIsMutable();
+              exclusionMasks_.addAll(other.exclusionMasks_);
+            }
+            onChanged();
+          }
+          if (!other.inclusionMasks_.isEmpty()) {
+            if (inclusionMasks_.isEmpty()) {
+              inclusionMasks_ = other.inclusionMasks_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureInclusionMasksIsMutable();
+              inclusionMasks_.addAll(other.inclusionMasks_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.LazyStringList exclusionMasks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureExclusionMasksIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            exclusionMasks_ = new com.google.protobuf.LazyStringArrayList(exclusionMasks_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+        /**
+         * <pre>
+         * Do not backup files that match the following criteria
+         * </pre>
+         *
+         * <code>repeated string exclusion_masks = 1;</code>
+         * @return A list containing the exclusionMasks.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getExclusionMasksList() {
+          return exclusionMasks_.getUnmodifiableView();
+        }
+        /**
+         * <pre>
+         * Do not backup files that match the following criteria
+         * </pre>
+         *
+         * <code>repeated string exclusion_masks = 1;</code>
+         * @return The count of exclusionMasks.
+         */
+        public int getExclusionMasksCount() {
+          return exclusionMasks_.size();
+        }
+        /**
+         * <pre>
+         * Do not backup files that match the following criteria
+         * </pre>
+         *
+         * <code>repeated string exclusion_masks = 1;</code>
+         * @param index The index of the element to return.
+         * @return The exclusionMasks at the given index.
+         */
+        public java.lang.String getExclusionMasks(int index) {
+          return exclusionMasks_.get(index);
+        }
+        /**
+         * <pre>
+         * Do not backup files that match the following criteria
+         * </pre>
+         *
+         * <code>repeated string exclusion_masks = 1;</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the exclusionMasks at the given index.
+         */
+        public com.google.protobuf.ByteString
+            getExclusionMasksBytes(int index) {
+          return exclusionMasks_.getByteString(index);
+        }
+        /**
+         * <pre>
+         * Do not backup files that match the following criteria
+         * </pre>
+         *
+         * <code>repeated string exclusion_masks = 1;</code>
+         * @param index The index to set the value at.
+         * @param value The exclusionMasks to set.
+         * @return This builder for chaining.
+         */
+        public Builder setExclusionMasks(
+            int index, java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureExclusionMasksIsMutable();
+          exclusionMasks_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Do not backup files that match the following criteria
+         * </pre>
+         *
+         * <code>repeated string exclusion_masks = 1;</code>
+         * @param value The exclusionMasks to add.
+         * @return This builder for chaining.
+         */
+        public Builder addExclusionMasks(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureExclusionMasksIsMutable();
+          exclusionMasks_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Do not backup files that match the following criteria
+         * </pre>
+         *
+         * <code>repeated string exclusion_masks = 1;</code>
+         * @param values The exclusionMasks to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllExclusionMasks(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureExclusionMasksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, exclusionMasks_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Do not backup files that match the following criteria
+         * </pre>
+         *
+         * <code>repeated string exclusion_masks = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearExclusionMasks() {
+          exclusionMasks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Do not backup files that match the following criteria
+         * </pre>
+         *
+         * <code>repeated string exclusion_masks = 1;</code>
+         * @param value The bytes of the exclusionMasks to add.
+         * @return This builder for chaining.
+         */
+        public Builder addExclusionMasksBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          ensureExclusionMasksIsMutable();
+          exclusionMasks_.add(value);
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.LazyStringList inclusionMasks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureInclusionMasksIsMutable() {
+          if (!((bitField0_ & 0x00000002) != 0)) {
+            inclusionMasks_ = new com.google.protobuf.LazyStringArrayList(inclusionMasks_);
+            bitField0_ |= 0x00000002;
+           }
+        }
+        /**
+         * <pre>
+         * Backup only files that match the following criteria
+         * </pre>
+         *
+         * <code>repeated string inclusion_masks = 2;</code>
+         * @return A list containing the inclusionMasks.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getInclusionMasksList() {
+          return inclusionMasks_.getUnmodifiableView();
+        }
+        /**
+         * <pre>
+         * Backup only files that match the following criteria
+         * </pre>
+         *
+         * <code>repeated string inclusion_masks = 2;</code>
+         * @return The count of inclusionMasks.
+         */
+        public int getInclusionMasksCount() {
+          return inclusionMasks_.size();
+        }
+        /**
+         * <pre>
+         * Backup only files that match the following criteria
+         * </pre>
+         *
+         * <code>repeated string inclusion_masks = 2;</code>
+         * @param index The index of the element to return.
+         * @return The inclusionMasks at the given index.
+         */
+        public java.lang.String getInclusionMasks(int index) {
+          return inclusionMasks_.get(index);
+        }
+        /**
+         * <pre>
+         * Backup only files that match the following criteria
+         * </pre>
+         *
+         * <code>repeated string inclusion_masks = 2;</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the inclusionMasks at the given index.
+         */
+        public com.google.protobuf.ByteString
+            getInclusionMasksBytes(int index) {
+          return inclusionMasks_.getByteString(index);
+        }
+        /**
+         * <pre>
+         * Backup only files that match the following criteria
+         * </pre>
+         *
+         * <code>repeated string inclusion_masks = 2;</code>
+         * @param index The index to set the value at.
+         * @param value The inclusionMasks to set.
+         * @return This builder for chaining.
+         */
+        public Builder setInclusionMasks(
+            int index, java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureInclusionMasksIsMutable();
+          inclusionMasks_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Backup only files that match the following criteria
+         * </pre>
+         *
+         * <code>repeated string inclusion_masks = 2;</code>
+         * @param value The inclusionMasks to add.
+         * @return This builder for chaining.
+         */
+        public Builder addInclusionMasks(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureInclusionMasksIsMutable();
+          inclusionMasks_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Backup only files that match the following criteria
+         * </pre>
+         *
+         * <code>repeated string inclusion_masks = 2;</code>
+         * @param values The inclusionMasks to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllInclusionMasks(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureInclusionMasksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, inclusionMasks_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Backup only files that match the following criteria
+         * </pre>
+         *
+         * <code>repeated string inclusion_masks = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearInclusionMasks() {
+          inclusionMasks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Backup only files that match the following criteria
+         * </pre>
+         *
+         * <code>repeated string inclusion_masks = 2;</code>
+         * @param value The bytes of the inclusionMasks to add.
+         * @return This builder for chaining.
+         */
+        public Builder addInclusionMasksBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          ensureInclusionMasksIsMutable();
+          inclusionMasks_.add(value);
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.backup.v1.PolicySettings.FileFilters)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.backup.v1.PolicySettings.FileFilters)
+      private static final yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters();
+      }
+
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<FileFilters>
+          PARSER = new com.google.protobuf.AbstractParser<FileFilters>() {
+        @java.lang.Override
+        public FileFilters parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new FileFilters(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<FileFilters> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<FileFilters> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public static final int COMPRESSION_FIELD_NUMBER = 1;
     private int compression_;
     /**
@@ -17191,6 +18222,44 @@ public final class PolicyOuterClass {
       return quiesceSnapshottingEnabled_;
     }
 
+    public static final int FILE_FILTERS_FIELD_NUMBER = 19;
+    private yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters fileFilters_;
+    /**
+     * <pre>
+     * File filters to specify masks of files to backup or to exclude of backuping
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.PolicySettings.FileFilters file_filters = 19;</code>
+     * @return Whether the fileFilters field is set.
+     */
+    @java.lang.Override
+    public boolean hasFileFilters() {
+      return fileFilters_ != null;
+    }
+    /**
+     * <pre>
+     * File filters to specify masks of files to backup or to exclude of backuping
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.PolicySettings.FileFilters file_filters = 19;</code>
+     * @return The fileFilters.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters getFileFilters() {
+      return fileFilters_ == null ? yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters.getDefaultInstance() : fileFilters_;
+    }
+    /**
+     * <pre>
+     * File filters to specify masks of files to backup or to exclude of backuping
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.PolicySettings.FileFilters file_filters = 19;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFiltersOrBuilder getFileFiltersOrBuilder() {
+      return getFileFilters();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -17252,6 +18321,9 @@ public final class PolicyOuterClass {
       }
       if (quiesceSnapshottingEnabled_ != false) {
         output.writeBool(18, quiesceSnapshottingEnabled_);
+      }
+      if (fileFilters_ != null) {
+        output.writeMessage(19, getFileFilters());
       }
       unknownFields.writeTo(output);
     }
@@ -17326,6 +18398,10 @@ public final class PolicyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(18, quiesceSnapshottingEnabled_);
       }
+      if (fileFilters_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, getFileFilters());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -17394,6 +18470,11 @@ public final class PolicyOuterClass {
           != other.getFastBackupEnabled()) return false;
       if (getQuiesceSnapshottingEnabled()
           != other.getQuiesceSnapshottingEnabled()) return false;
+      if (hasFileFilters() != other.hasFileFilters()) return false;
+      if (hasFileFilters()) {
+        if (!getFileFilters()
+            .equals(other.getFileFilters())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -17458,6 +18539,10 @@ public final class PolicyOuterClass {
       hash = (37 * hash) + QUIESCE_SNAPSHOTTING_ENABLED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getQuiesceSnapshottingEnabled());
+      if (hasFileFilters()) {
+        hash = (37 * hash) + FILE_FILTERS_FIELD_NUMBER;
+        hash = (53 * hash) + getFileFilters().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -17659,6 +18744,12 @@ public final class PolicyOuterClass {
 
         quiesceSnapshottingEnabled_ = false;
 
+        if (fileFiltersBuilder_ == null) {
+          fileFilters_ = null;
+        } else {
+          fileFilters_ = null;
+          fileFiltersBuilder_ = null;
+        }
         return this;
       }
 
@@ -17733,6 +18824,11 @@ public final class PolicyOuterClass {
         result.cbt_ = cbt_;
         result.fastBackupEnabled_ = fastBackupEnabled_;
         result.quiesceSnapshottingEnabled_ = quiesceSnapshottingEnabled_;
+        if (fileFiltersBuilder_ == null) {
+          result.fileFilters_ = fileFilters_;
+        } else {
+          result.fileFilters_ = fileFiltersBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -17828,6 +18924,9 @@ public final class PolicyOuterClass {
         }
         if (other.getQuiesceSnapshottingEnabled() != false) {
           setQuiesceSnapshottingEnabled(other.getQuiesceSnapshottingEnabled());
+        }
+        if (other.hasFileFilters()) {
+          mergeFileFilters(other.getFileFilters());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -19534,6 +20633,161 @@ public final class PolicyOuterClass {
         onChanged();
         return this;
       }
+
+      private yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters fileFilters_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters.Builder, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFiltersOrBuilder> fileFiltersBuilder_;
+      /**
+       * <pre>
+       * File filters to specify masks of files to backup or to exclude of backuping
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.PolicySettings.FileFilters file_filters = 19;</code>
+       * @return Whether the fileFilters field is set.
+       */
+      public boolean hasFileFilters() {
+        return fileFiltersBuilder_ != null || fileFilters_ != null;
+      }
+      /**
+       * <pre>
+       * File filters to specify masks of files to backup or to exclude of backuping
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.PolicySettings.FileFilters file_filters = 19;</code>
+       * @return The fileFilters.
+       */
+      public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters getFileFilters() {
+        if (fileFiltersBuilder_ == null) {
+          return fileFilters_ == null ? yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters.getDefaultInstance() : fileFilters_;
+        } else {
+          return fileFiltersBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * File filters to specify masks of files to backup or to exclude of backuping
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.PolicySettings.FileFilters file_filters = 19;</code>
+       */
+      public Builder setFileFilters(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters value) {
+        if (fileFiltersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          fileFilters_ = value;
+          onChanged();
+        } else {
+          fileFiltersBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * File filters to specify masks of files to backup or to exclude of backuping
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.PolicySettings.FileFilters file_filters = 19;</code>
+       */
+      public Builder setFileFilters(
+          yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters.Builder builderForValue) {
+        if (fileFiltersBuilder_ == null) {
+          fileFilters_ = builderForValue.build();
+          onChanged();
+        } else {
+          fileFiltersBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * File filters to specify masks of files to backup or to exclude of backuping
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.PolicySettings.FileFilters file_filters = 19;</code>
+       */
+      public Builder mergeFileFilters(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters value) {
+        if (fileFiltersBuilder_ == null) {
+          if (fileFilters_ != null) {
+            fileFilters_ =
+              yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters.newBuilder(fileFilters_).mergeFrom(value).buildPartial();
+          } else {
+            fileFilters_ = value;
+          }
+          onChanged();
+        } else {
+          fileFiltersBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * File filters to specify masks of files to backup or to exclude of backuping
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.PolicySettings.FileFilters file_filters = 19;</code>
+       */
+      public Builder clearFileFilters() {
+        if (fileFiltersBuilder_ == null) {
+          fileFilters_ = null;
+          onChanged();
+        } else {
+          fileFilters_ = null;
+          fileFiltersBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * File filters to specify masks of files to backup or to exclude of backuping
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.PolicySettings.FileFilters file_filters = 19;</code>
+       */
+      public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters.Builder getFileFiltersBuilder() {
+        
+        onChanged();
+        return getFileFiltersFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * File filters to specify masks of files to backup or to exclude of backuping
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.PolicySettings.FileFilters file_filters = 19;</code>
+       */
+      public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFiltersOrBuilder getFileFiltersOrBuilder() {
+        if (fileFiltersBuilder_ != null) {
+          return fileFiltersBuilder_.getMessageOrBuilder();
+        } else {
+          return fileFilters_ == null ?
+              yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters.getDefaultInstance() : fileFilters_;
+        }
+      }
+      /**
+       * <pre>
+       * File filters to specify masks of files to backup or to exclude of backuping
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.PolicySettings.FileFilters file_filters = 19;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters.Builder, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFiltersOrBuilder> 
+          getFileFiltersFieldBuilder() {
+        if (fileFiltersBuilder_ == null) {
+          fileFiltersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFilters.Builder, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFiltersOrBuilder>(
+                  getFileFilters(),
+                  getParentForChildren(),
+                  isClean());
+          fileFilters_ = null;
+        }
+        return fileFiltersBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -21075,6 +22329,11 @@ public final class PolicyOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_backup_v1_PolicySettings_Scheduling_BackupSet_SinceLastExecTime_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_backup_v1_PolicySettings_FileFilters_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_backup_v1_PolicySettings_FileFilters_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_backup_v1_PolicyApplication_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -21097,7 +22356,7 @@ public final class PolicyOuterClass {
       "\n\nupdated_at\030\004 \001(\0132\032.google.protobuf.Tim" +
       "estamp\022\017\n\007enabled\030\005 \001(\010\0228\n\010settings\030\006 \001(" +
       "\0132&.yandex.cloud.backup.v1.PolicySetting" +
-      "s\022\021\n\tfolder_id\030\007 \001(\t\"\202!\n\016PolicySettings\022" +
+      "s\022\021\n\tfolder_id\030\007 \001(\t\"\215\"\n\016PolicySettings\022" +
       "M\n\013compression\030\001 \001(\01622.yandex.cloud.back" +
       "up.v1.PolicySettings.CompressionB\004\350\3071\001\0224" +
       "\n\006format\030\002 \001(\0162\036.yandex.cloud.backup.v1." +
@@ -21124,98 +22383,101 @@ public final class PolicyOuterClass {
       "cbt\030\020 \001(\0162;.yandex.cloud.backup.v1.Polic" +
       "ySettings.ChangedBlockTrackingB\004\350\3071\001\022\033\n\023" +
       "fast_backup_enabled\030\021 \001(\010\022$\n\034quiesce_sna" +
-      "pshotting_enabled\030\022 \001(\010\032\317\001\n\010Interval\022H\n\004" +
-      "type\030\001 \001(\01624.yandex.cloud.backup.v1.Poli" +
-      "cySettings.Interval.TypeB\004\350\3071\001\022\025\n\005count\030" +
-      "\002 \001(\003B\006\372\3071\002>0\"b\n\004Type\022\024\n\020TYPE_UNSPECIFIE" +
-      "D\020\000\022\013\n\007SECONDS\020\001\022\013\n\007MINUTES\020\002\022\t\n\005HOURS\020\003" +
-      "\022\010\n\004DAYS\020\004\022\t\n\005WEEKS\020\005\022\n\n\006MONTHS\020\006\032\216\001\n\024Re" +
-      "triesConfiguration\022\017\n\007enabled\030\001 \001(\010\022G\n\010i" +
-      "nterval\030\002 \001(\0132/.yandex.cloud.backup.v1.P" +
-      "olicySettings.IntervalB\004\350\3071\001\022\034\n\014max_atte" +
-      "mpts\030\003 \001(\003B\006\372\3071\002>0\032\031\n\tSplitting\022\014\n\004size\030" +
-      "\001 \001(\003\032\362\001\n\037VolumeShadowCopyServiceSetting" +
-      "s\022\017\n\007enabled\030\001 \001(\010\022j\n\010provider\030\002 \001(\0162R.y" +
-      "andex.cloud.backup.v1.PolicySettings.Vol" +
-      "umeShadowCopyServiceSettings.VSSProvider" +
-      "B\004\350\3071\001\"R\n\013VSSProvider\022\034\n\030VSS_PROVIDER_UN" +
-      "SPECIFIED\020\000\022\n\n\006NATIVE\020\001\022\031\n\025TARGET_SYSTEM" +
-      "_DEFINED\020\002\032!\n\021ArchiveProperties\022\014\n\004name\030" +
-      "\001 \001(\t\032$\n\021PerformanceWindow\022\017\n\007enabled\030\001 " +
-      "\001(\010\032)\n\tTimeOfDay\022\014\n\004hour\030\001 \001(\003\022\016\n\006minute" +
-      "\030\002 \001(\003\032\277\002\n\tRetention\022M\n\005rules\030\001 \003(\0132>.ya" +
-      "ndex.cloud.backup.v1.PolicySettings.Rete" +
-      "ntion.RetentionRule\022\025\n\rbefore_backup\030\003 \001" +
-      "(\010\032\305\001\n\rRetentionRule\022H\n\nbackup_set\030\001 \003(\016" +
-      "24.yandex.cloud.backup.v1.PolicySettings" +
-      ".RepeatePeriod\022B\n\007max_age\030\002 \001(\0132/.yandex" +
-      ".cloud.backup.v1.PolicySettings.Interval" +
-      "H\000\022\023\n\tmax_count\030\003 \001(\003H\000B\021\n\tcondition\022\004\300\301" +
-      "1\001J\004\010\002\020\003\032\355\014\n\nScheduling\022X\n\013backup_sets\030\001" +
-      " \003(\0132;.yandex.cloud.backup.v1.PolicySett" +
-      "ings.Scheduling.BackupSetB\006\202\3101\002>0\022\017\n\007ena" +
-      "bled\030\002 \001(\010\022\034\n\024max_parallel_backups\030\003 \001(\003" +
-      "\022M\n\016rand_max_delay\030\004 \001(\0132/.yandex.cloud." +
-      "backup.v1.PolicySettings.IntervalB\004\350\3071\001\022" +
-      "N\n\006scheme\030\005 \001(\01628.yandex.cloud.backup.v1" +
-      ".PolicySettings.Scheduling.SchemeB\004\350\3071\001\022" +
-      "K\n\021weekly_backup_day\030\006 \001(\0162*.yandex.clou" +
-      "d.backup.v1.PolicySettings.DayB\004\350\3071\001\022Q\n\014" +
-      "task_failure\030\007 \001(\0132;.yandex.cloud.backup" +
-      ".v1.PolicySettings.RetriesConfiguration\032" +
-      "\356\007\n\tBackupSet\022P\n\004time\030\001 \001(\0132@.yandex.clo" +
-      "ud.backup.v1.PolicySettings.Scheduling.B" +
-      "ackupSet.TimeH\000\022m\n\024since_last_exec_time\030" +
-      "\002 \001(\0132M.yandex.cloud.backup.v1.PolicySet" +
-      "tings.Scheduling.BackupSet.SinceLastExec" +
-      "TimeH\000\022N\n\004type\030\003 \001(\0162@.yandex.cloud.back" +
-      "up.v1.PolicySettings.Scheduling.BackupSe" +
-      "t.Type\032\372\003\n\004Time\022B\n\010weekdays\030\001 \003(\0162*.yand" +
-      "ex.cloud.backup.v1.PolicySettings.DayB\004\220" +
-      "\3101\001\022C\n\trepeat_at\030\002 \003(\01320.yandex.cloud.ba" +
-      "ckup.v1.PolicySettings.TimeOfDay\022E\n\014repe" +
-      "at_every\030\003 \001(\0132/.yandex.cloud.backup.v1." +
-      "PolicySettings.Interval\022C\n\ttime_from\030\004 \001" +
-      "(\01320.yandex.cloud.backup.v1.PolicySettin" +
-      "gs.TimeOfDay\022A\n\007time_to\030\005 \001(\01320.yandex.c" +
-      "loud.backup.v1.PolicySettings.TimeOfDay\022" +
-      "\027\n\tmonthdays\030\006 \003(\003B\004\220\3101\001\022!\n\031include_last" +
-      "_day_of_month\030\007 \001(\010\022\024\n\006months\030\010 \003(\003B\004\220\3101" +
-      "\001\022H\n\004type\030\t \001(\01624.yandex.cloud.backup.v1" +
-      ".PolicySettings.RepeatePeriodB\004\350\3071\001\032Y\n\021S" +
-      "inceLastExecTime\022D\n\005delay\030\001 \001(\0132/.yandex" +
-      ".cloud.backup.v1.PolicySettings.Interval" +
-      "B\004\350\3071\001\"g\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\r\n\t" +
-      "TYPE_AUTO\020\001\022\r\n\tTYPE_FULL\020\002\022\024\n\020TYPE_INCRE" +
-      "MENTAL\020\003\022\025\n\021TYPE_DIFFERENTIAL\020\004B\017\n\007setti" +
-      "ng\022\004\300\3011\001\"\245\001\n\006Scheme\022\026\n\022SCHEME_UNSPECIFIE" +
-      "D\020\000\022\n\n\006SIMPLE\020\001\022\017\n\013ALWAYS_FULL\020\002\022\026\n\022ALWA" +
-      "YS_INCREMENTAL\020\003\022\026\n\022WEEKLY_INCREMENTAL\020\004" +
-      "\022!\n\035WEEKLY_FULL_DAILY_INCREMENTAL\020\005\022\n\n\006C" +
-      "USTOM\020\006\022\007\n\003CDP\020\007\"R\n\013Compression\022\033\n\027COMPR" +
-      "ESSION_UNSPECIFIED\020\000\022\n\n\006NORMAL\020\001\022\010\n\004HIGH" +
-      "\020\002\022\007\n\003MAX\020\003\022\007\n\003OFF\020\004\"_\n\rRepeatePeriod\022\036\n" +
-      "\032REPEATE_PERIOD_UNSPECIFIED\020\000\022\n\n\006HOURLY\020" +
-      "\001\022\t\n\005DAILY\020\002\022\n\n\006WEEKLY\020\003\022\013\n\007MONTHLY\020\004\"v\n" +
-      "\003Day\022\023\n\017DAY_UNSPECIFIED\020\000\022\n\n\006MONDAY\020\001\022\013\n" +
-      "\007TUESDAY\020\002\022\r\n\tWEDNESDAY\020\003\022\014\n\010THURSDAY\020\004\022" +
-      "\n\n\006FRIDAY\020\005\022\014\n\010SATURDAY\020\006\022\n\n\006SUNDAY\020\007\"v\n" +
-      "\024ChangedBlockTracking\022&\n\"CHANGED_BLOCK_T" +
-      "RACKING_UNSPECIFIED\020\000\022\022\n\016USE_IF_ENABLED\020" +
-      "\001\022\022\n\016ENABLE_AND_USE\020\002\022\016\n\nDO_NOT_USE\020\003J\004\010" +
-      "\r\020\016J\004\010\016\020\017\"\242\002\n\021PolicyApplication\022\021\n\tpolic" +
-      "y_id\030\001 \001(\t\022\033\n\023compute_instance_id\030\002 \001(\t\022" +
-      "\017\n\007enabled\030\003 \001(\010\022@\n\006status\030\004 \001(\01620.yande" +
-      "x.cloud.backup.v1.PolicyApplication.Stat" +
-      "us\022.\n\ncreated_at\030\005 \001(\0132\032.google.protobuf" +
-      ".Timestamp\022\025\n\ris_processing\030\006 \001(\010\"C\n\006Sta" +
-      "tus\022\026\n\022STATUS_UNSPECIFIED\020\000\022\006\n\002OK\020\001\022\013\n\007R" +
-      "UNNING\020\002\022\014\n\010DISABLED\020\003*J\n\006Format\022\026\n\022FORM" +
-      "AT_UNSPECIFIED\020\000\022\016\n\nVERSION_11\020\001\022\016\n\nVERS" +
-      "ION_12\020\002\022\010\n\004AUTO\020\003B_\n\032yandex.cloud.api.b" +
-      "ackup.v1ZAgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/backup/v1;backupb\006pro" +
-      "to3"
+      "pshotting_enabled\030\022 \001(\010\022H\n\014file_filters\030" +
+      "\023 \001(\01322.yandex.cloud.backup.v1.PolicySet" +
+      "tings.FileFilters\032\317\001\n\010Interval\022H\n\004type\030\001" +
+      " \001(\01624.yandex.cloud.backup.v1.PolicySett" +
+      "ings.Interval.TypeB\004\350\3071\001\022\025\n\005count\030\002 \001(\003B" +
+      "\006\372\3071\002>0\"b\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\013\n" +
+      "\007SECONDS\020\001\022\013\n\007MINUTES\020\002\022\t\n\005HOURS\020\003\022\010\n\004DA" +
+      "YS\020\004\022\t\n\005WEEKS\020\005\022\n\n\006MONTHS\020\006\032\216\001\n\024RetriesC" +
+      "onfiguration\022\017\n\007enabled\030\001 \001(\010\022G\n\010interva" +
+      "l\030\002 \001(\0132/.yandex.cloud.backup.v1.PolicyS" +
+      "ettings.IntervalB\004\350\3071\001\022\034\n\014max_attempts\030\003" +
+      " \001(\003B\006\372\3071\002>0\032\031\n\tSplitting\022\014\n\004size\030\001 \001(\003\032" +
+      "\362\001\n\037VolumeShadowCopyServiceSettings\022\017\n\007e" +
+      "nabled\030\001 \001(\010\022j\n\010provider\030\002 \001(\0162R.yandex." +
+      "cloud.backup.v1.PolicySettings.VolumeSha" +
+      "dowCopyServiceSettings.VSSProviderB\004\350\3071\001" +
+      "\"R\n\013VSSProvider\022\034\n\030VSS_PROVIDER_UNSPECIF" +
+      "IED\020\000\022\n\n\006NATIVE\020\001\022\031\n\025TARGET_SYSTEM_DEFIN" +
+      "ED\020\002\032!\n\021ArchiveProperties\022\014\n\004name\030\001 \001(\t\032" +
+      "$\n\021PerformanceWindow\022\017\n\007enabled\030\001 \001(\010\032)\n" +
+      "\tTimeOfDay\022\014\n\004hour\030\001 \001(\003\022\016\n\006minute\030\002 \001(\003" +
+      "\032\277\002\n\tRetention\022M\n\005rules\030\001 \003(\0132>.yandex.c" +
+      "loud.backup.v1.PolicySettings.Retention." +
+      "RetentionRule\022\025\n\rbefore_backup\030\003 \001(\010\032\305\001\n" +
+      "\rRetentionRule\022H\n\nbackup_set\030\001 \003(\01624.yan" +
+      "dex.cloud.backup.v1.PolicySettings.Repea" +
+      "tePeriod\022B\n\007max_age\030\002 \001(\0132/.yandex.cloud" +
+      ".backup.v1.PolicySettings.IntervalH\000\022\023\n\t" +
+      "max_count\030\003 \001(\003H\000B\021\n\tcondition\022\004\300\3011\001J\004\010\002" +
+      "\020\003\032\355\014\n\nScheduling\022X\n\013backup_sets\030\001 \003(\0132;" +
+      ".yandex.cloud.backup.v1.PolicySettings.S" +
+      "cheduling.BackupSetB\006\202\3101\002>0\022\017\n\007enabled\030\002" +
+      " \001(\010\022\034\n\024max_parallel_backups\030\003 \001(\003\022M\n\016ra" +
+      "nd_max_delay\030\004 \001(\0132/.yandex.cloud.backup" +
+      ".v1.PolicySettings.IntervalB\004\350\3071\001\022N\n\006sch" +
+      "eme\030\005 \001(\01628.yandex.cloud.backup.v1.Polic" +
+      "ySettings.Scheduling.SchemeB\004\350\3071\001\022K\n\021wee" +
+      "kly_backup_day\030\006 \001(\0162*.yandex.cloud.back" +
+      "up.v1.PolicySettings.DayB\004\350\3071\001\022Q\n\014task_f" +
+      "ailure\030\007 \001(\0132;.yandex.cloud.backup.v1.Po" +
+      "licySettings.RetriesConfiguration\032\356\007\n\tBa" +
+      "ckupSet\022P\n\004time\030\001 \001(\0132@.yandex.cloud.bac" +
+      "kup.v1.PolicySettings.Scheduling.BackupS" +
+      "et.TimeH\000\022m\n\024since_last_exec_time\030\002 \001(\0132" +
+      "M.yandex.cloud.backup.v1.PolicySettings." +
+      "Scheduling.BackupSet.SinceLastExecTimeH\000" +
+      "\022N\n\004type\030\003 \001(\0162@.yandex.cloud.backup.v1." +
+      "PolicySettings.Scheduling.BackupSet.Type" +
+      "\032\372\003\n\004Time\022B\n\010weekdays\030\001 \003(\0162*.yandex.clo" +
+      "ud.backup.v1.PolicySettings.DayB\004\220\3101\001\022C\n" +
+      "\trepeat_at\030\002 \003(\01320.yandex.cloud.backup.v" +
+      "1.PolicySettings.TimeOfDay\022E\n\014repeat_eve" +
+      "ry\030\003 \001(\0132/.yandex.cloud.backup.v1.Policy" +
+      "Settings.Interval\022C\n\ttime_from\030\004 \001(\01320.y" +
+      "andex.cloud.backup.v1.PolicySettings.Tim" +
+      "eOfDay\022A\n\007time_to\030\005 \001(\01320.yandex.cloud.b" +
+      "ackup.v1.PolicySettings.TimeOfDay\022\027\n\tmon" +
+      "thdays\030\006 \003(\003B\004\220\3101\001\022!\n\031include_last_day_o" +
+      "f_month\030\007 \001(\010\022\024\n\006months\030\010 \003(\003B\004\220\3101\001\022H\n\004t" +
+      "ype\030\t \001(\01624.yandex.cloud.backup.v1.Polic" +
+      "ySettings.RepeatePeriodB\004\350\3071\001\032Y\n\021SinceLa" +
+      "stExecTime\022D\n\005delay\030\001 \001(\0132/.yandex.cloud" +
+      ".backup.v1.PolicySettings.IntervalB\004\350\3071\001" +
+      "\"g\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\r\n\tTYPE_A" +
+      "UTO\020\001\022\r\n\tTYPE_FULL\020\002\022\024\n\020TYPE_INCREMENTAL" +
+      "\020\003\022\025\n\021TYPE_DIFFERENTIAL\020\004B\017\n\007setting\022\004\300\301" +
+      "1\001\"\245\001\n\006Scheme\022\026\n\022SCHEME_UNSPECIFIED\020\000\022\n\n" +
+      "\006SIMPLE\020\001\022\017\n\013ALWAYS_FULL\020\002\022\026\n\022ALWAYS_INC" +
+      "REMENTAL\020\003\022\026\n\022WEEKLY_INCREMENTAL\020\004\022!\n\035WE" +
+      "EKLY_FULL_DAILY_INCREMENTAL\020\005\022\n\n\006CUSTOM\020" +
+      "\006\022\007\n\003CDP\020\007\032?\n\013FileFilters\022\027\n\017exclusion_m" +
+      "asks\030\001 \003(\t\022\027\n\017inclusion_masks\030\002 \003(\t\"R\n\013C" +
+      "ompression\022\033\n\027COMPRESSION_UNSPECIFIED\020\000\022" +
+      "\n\n\006NORMAL\020\001\022\010\n\004HIGH\020\002\022\007\n\003MAX\020\003\022\007\n\003OFF\020\004\"" +
+      "_\n\rRepeatePeriod\022\036\n\032REPEATE_PERIOD_UNSPE" +
+      "CIFIED\020\000\022\n\n\006HOURLY\020\001\022\t\n\005DAILY\020\002\022\n\n\006WEEKL" +
+      "Y\020\003\022\013\n\007MONTHLY\020\004\"v\n\003Day\022\023\n\017DAY_UNSPECIFI" +
+      "ED\020\000\022\n\n\006MONDAY\020\001\022\013\n\007TUESDAY\020\002\022\r\n\tWEDNESD" +
+      "AY\020\003\022\014\n\010THURSDAY\020\004\022\n\n\006FRIDAY\020\005\022\014\n\010SATURD" +
+      "AY\020\006\022\n\n\006SUNDAY\020\007\"v\n\024ChangedBlockTracking" +
+      "\022&\n\"CHANGED_BLOCK_TRACKING_UNSPECIFIED\020\000" +
+      "\022\022\n\016USE_IF_ENABLED\020\001\022\022\n\016ENABLE_AND_USE\020\002" +
+      "\022\016\n\nDO_NOT_USE\020\003J\004\010\r\020\016J\004\010\016\020\017\"\242\002\n\021PolicyA" +
+      "pplication\022\021\n\tpolicy_id\030\001 \001(\t\022\033\n\023compute" +
+      "_instance_id\030\002 \001(\t\022\017\n\007enabled\030\003 \001(\010\022@\n\006s" +
+      "tatus\030\004 \001(\01620.yandex.cloud.backup.v1.Pol" +
+      "icyApplication.Status\022.\n\ncreated_at\030\005 \001(" +
+      "\0132\032.google.protobuf.Timestamp\022\025\n\ris_proc" +
+      "essing\030\006 \001(\010\"C\n\006Status\022\026\n\022STATUS_UNSPECI" +
+      "FIED\020\000\022\006\n\002OK\020\001\022\013\n\007RUNNING\020\002\022\014\n\010DISABLED\020" +
+      "\003*J\n\006Format\022\026\n\022FORMAT_UNSPECIFIED\020\000\022\016\n\nV" +
+      "ERSION_11\020\001\022\016\n\nVERSION_12\020\002\022\010\n\004AUTO\020\003B_\n" +
+      "\032yandex.cloud.api.backup.v1ZAgithub.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/ba" +
+      "ckup/v1;backupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21234,7 +22496,7 @@ public final class PolicyOuterClass {
     internal_static_yandex_cloud_backup_v1_PolicySettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_PolicySettings_descriptor,
-        new java.lang.String[] { "Compression", "Format", "MultiVolumeSnapshottingEnabled", "PreserveFileSecuritySettings", "Reattempts", "SilentModeEnabled", "Splitting", "VmSnapshotReattempts", "Vss", "Archive", "PerformanceWindow", "Retention", "Scheduling", "Cbt", "FastBackupEnabled", "QuiesceSnapshottingEnabled", });
+        new java.lang.String[] { "Compression", "Format", "MultiVolumeSnapshottingEnabled", "PreserveFileSecuritySettings", "Reattempts", "SilentModeEnabled", "Splitting", "VmSnapshotReattempts", "Vss", "Archive", "PerformanceWindow", "Retention", "Scheduling", "Cbt", "FastBackupEnabled", "QuiesceSnapshottingEnabled", "FileFilters", });
     internal_static_yandex_cloud_backup_v1_PolicySettings_Interval_descriptor =
       internal_static_yandex_cloud_backup_v1_PolicySettings_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_backup_v1_PolicySettings_Interval_fieldAccessorTable = new
@@ -21313,6 +22575,12 @@ public final class PolicyOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_PolicySettings_Scheduling_BackupSet_SinceLastExecTime_descriptor,
         new java.lang.String[] { "Delay", });
+    internal_static_yandex_cloud_backup_v1_PolicySettings_FileFilters_descriptor =
+      internal_static_yandex_cloud_backup_v1_PolicySettings_descriptor.getNestedTypes().get(9);
+    internal_static_yandex_cloud_backup_v1_PolicySettings_FileFilters_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_backup_v1_PolicySettings_FileFilters_descriptor,
+        new java.lang.String[] { "ExclusionMasks", "InclusionMasks", });
     internal_static_yandex_cloud_backup_v1_PolicyApplication_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_backup_v1_PolicyApplication_fieldAccessorTable = new
