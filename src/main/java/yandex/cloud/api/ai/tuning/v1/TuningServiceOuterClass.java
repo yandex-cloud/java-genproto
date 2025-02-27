@@ -30851,6 +30851,36 @@ public final class TuningServiceOuterClass {
      */
     yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParamsOrBuilder getTextClassificationMulticlassOrBuilder();
 
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+     * @return Whether the textEmbeddingPairParams field is set.
+     */
+    boolean hasTextEmbeddingPairParams();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+     * @return The textEmbeddingPairParams.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams getTextEmbeddingPairParams();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParamsOrBuilder getTextEmbeddingPairParamsOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+     * @return Whether the textEmbeddingTripletParams field is set.
+     */
+    boolean hasTextEmbeddingTripletParams();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+     * @return The textEmbeddingTripletParams.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams getTextEmbeddingTripletParams();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParamsOrBuilder getTextEmbeddingTripletParamsOrBuilder();
+
     public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.GetOptionsResponse.TuningParamsCase getTuningParamsCase();
   }
   /**
@@ -30975,6 +31005,34 @@ public final class TuningServiceOuterClass {
               tuningParamsCase_ = 102;
               break;
             }
+            case 826: {
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder subBuilder = null;
+              if (tuningParamsCase_ == 103) {
+                subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_).toBuilder();
+              }
+              tuningParams_ =
+                  input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_);
+                tuningParams_ = subBuilder.buildPartial();
+              }
+              tuningParamsCase_ = 103;
+              break;
+            }
+            case 834: {
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder subBuilder = null;
+              if (tuningParamsCase_ == 104) {
+                subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_).toBuilder();
+              }
+              tuningParams_ =
+                  input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_);
+                tuningParams_ = subBuilder.buildPartial();
+              }
+              tuningParamsCase_ = 104;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -31021,6 +31079,8 @@ public final class TuningServiceOuterClass {
       TEXT_TO_TEXT_COMPLETION(100),
       TEXT_CLASSIFICATION_MULTILABEL(101),
       TEXT_CLASSIFICATION_MULTICLASS(102),
+      TEXT_EMBEDDING_PAIR_PARAMS(103),
+      TEXT_EMBEDDING_TRIPLET_PARAMS(104),
       TUNINGPARAMS_NOT_SET(0);
       private final int value;
       private TuningParamsCase(int value) {
@@ -31041,6 +31101,8 @@ public final class TuningServiceOuterClass {
           case 100: return TEXT_TO_TEXT_COMPLETION;
           case 101: return TEXT_CLASSIFICATION_MULTILABEL;
           case 102: return TEXT_CLASSIFICATION_MULTICLASS;
+          case 103: return TEXT_EMBEDDING_PAIR_PARAMS;
+          case 104: return TEXT_EMBEDDING_TRIPLET_PARAMS;
           case 0: return TUNINGPARAMS_NOT_SET;
           default: return null;
         }
@@ -31305,6 +31367,68 @@ public final class TuningServiceOuterClass {
       return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.getDefaultInstance();
     }
 
+    public static final int TEXT_EMBEDDING_PAIR_PARAMS_FIELD_NUMBER = 103;
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+     * @return Whether the textEmbeddingPairParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasTextEmbeddingPairParams() {
+      return tuningParamsCase_ == 103;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+     * @return The textEmbeddingPairParams.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams getTextEmbeddingPairParams() {
+      if (tuningParamsCase_ == 103) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParamsOrBuilder getTextEmbeddingPairParamsOrBuilder() {
+      if (tuningParamsCase_ == 103) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance();
+    }
+
+    public static final int TEXT_EMBEDDING_TRIPLET_PARAMS_FIELD_NUMBER = 104;
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+     * @return Whether the textEmbeddingTripletParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasTextEmbeddingTripletParams() {
+      return tuningParamsCase_ == 104;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+     * @return The textEmbeddingTripletParams.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams getTextEmbeddingTripletParams() {
+      if (tuningParamsCase_ == 104) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParamsOrBuilder getTextEmbeddingTripletParamsOrBuilder() {
+      if (tuningParamsCase_ == 104) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -31340,6 +31464,12 @@ public final class TuningServiceOuterClass {
       if (tuningParamsCase_ == 102) {
         output.writeMessage(102, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_);
       }
+      if (tuningParamsCase_ == 103) {
+        output.writeMessage(103, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_);
+      }
+      if (tuningParamsCase_ == 104) {
+        output.writeMessage(104, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -31374,6 +31504,14 @@ public final class TuningServiceOuterClass {
       if (tuningParamsCase_ == 102) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(102, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_);
+      }
+      if (tuningParamsCase_ == 103) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(103, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_);
+      }
+      if (tuningParamsCase_ == 104) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(104, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -31411,6 +31549,14 @@ public final class TuningServiceOuterClass {
         case 102:
           if (!getTextClassificationMulticlass()
               .equals(other.getTextClassificationMulticlass())) return false;
+          break;
+        case 103:
+          if (!getTextEmbeddingPairParams()
+              .equals(other.getTextEmbeddingPairParams())) return false;
+          break;
+        case 104:
+          if (!getTextEmbeddingTripletParams()
+              .equals(other.getTextEmbeddingTripletParams())) return false;
           break;
         case 0:
         default:
@@ -31450,6 +31596,14 @@ public final class TuningServiceOuterClass {
         case 102:
           hash = (37 * hash) + TEXT_CLASSIFICATION_MULTICLASS_FIELD_NUMBER;
           hash = (53 * hash) + getTextClassificationMulticlass().hashCode();
+          break;
+        case 103:
+          hash = (37 * hash) + TEXT_EMBEDDING_PAIR_PARAMS_FIELD_NUMBER;
+          hash = (53 * hash) + getTextEmbeddingPairParams().hashCode();
+          break;
+        case 104:
+          hash = (37 * hash) + TEXT_EMBEDDING_TRIPLET_PARAMS_FIELD_NUMBER;
+          hash = (53 * hash) + getTextEmbeddingTripletParams().hashCode();
           break;
         case 0:
         default:
@@ -31675,6 +31829,20 @@ public final class TuningServiceOuterClass {
             result.tuningParams_ = textClassificationMulticlassBuilder_.build();
           }
         }
+        if (tuningParamsCase_ == 103) {
+          if (textEmbeddingPairParamsBuilder_ == null) {
+            result.tuningParams_ = tuningParams_;
+          } else {
+            result.tuningParams_ = textEmbeddingPairParamsBuilder_.build();
+          }
+        }
+        if (tuningParamsCase_ == 104) {
+          if (textEmbeddingTripletParamsBuilder_ == null) {
+            result.tuningParams_ = tuningParams_;
+          } else {
+            result.tuningParams_ = textEmbeddingTripletParamsBuilder_.build();
+          }
+        }
         result.tuningParamsCase_ = tuningParamsCase_;
         onBuilt();
         return result;
@@ -31795,6 +31963,14 @@ public final class TuningServiceOuterClass {
           }
           case TEXT_CLASSIFICATION_MULTICLASS: {
             mergeTextClassificationMulticlass(other.getTextClassificationMulticlass());
+            break;
+          }
+          case TEXT_EMBEDDING_PAIR_PARAMS: {
+            mergeTextEmbeddingPairParams(other.getTextEmbeddingPairParams());
+            break;
+          }
+          case TEXT_EMBEDDING_TRIPLET_PARAMS: {
+            mergeTextEmbeddingTripletParams(other.getTextEmbeddingTripletParams());
             break;
           }
           case TUNINGPARAMS_NOT_SET: {
@@ -32899,6 +33075,288 @@ public final class TuningServiceOuterClass {
         tuningParamsCase_ = 102;
         onChanged();;
         return textClassificationMulticlassBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParamsOrBuilder> textEmbeddingPairParamsBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       * @return Whether the textEmbeddingPairParams field is set.
+       */
+      @java.lang.Override
+      public boolean hasTextEmbeddingPairParams() {
+        return tuningParamsCase_ == 103;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       * @return The textEmbeddingPairParams.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams getTextEmbeddingPairParams() {
+        if (textEmbeddingPairParamsBuilder_ == null) {
+          if (tuningParamsCase_ == 103) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance();
+        } else {
+          if (tuningParamsCase_ == 103) {
+            return textEmbeddingPairParamsBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      public Builder setTextEmbeddingPairParams(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams value) {
+        if (textEmbeddingPairParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tuningParams_ = value;
+          onChanged();
+        } else {
+          textEmbeddingPairParamsBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 103;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      public Builder setTextEmbeddingPairParams(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder builderForValue) {
+        if (textEmbeddingPairParamsBuilder_ == null) {
+          tuningParams_ = builderForValue.build();
+          onChanged();
+        } else {
+          textEmbeddingPairParamsBuilder_.setMessage(builderForValue.build());
+        }
+        tuningParamsCase_ = 103;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      public Builder mergeTextEmbeddingPairParams(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams value) {
+        if (textEmbeddingPairParamsBuilder_ == null) {
+          if (tuningParamsCase_ == 103 &&
+              tuningParams_ != yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance()) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            tuningParams_ = value;
+          }
+          onChanged();
+        } else {
+          if (tuningParamsCase_ == 103) {
+            textEmbeddingPairParamsBuilder_.mergeFrom(value);
+          }
+          textEmbeddingPairParamsBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 103;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      public Builder clearTextEmbeddingPairParams() {
+        if (textEmbeddingPairParamsBuilder_ == null) {
+          if (tuningParamsCase_ == 103) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+            onChanged();
+          }
+        } else {
+          if (tuningParamsCase_ == 103) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+          }
+          textEmbeddingPairParamsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder getTextEmbeddingPairParamsBuilder() {
+        return getTextEmbeddingPairParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParamsOrBuilder getTextEmbeddingPairParamsOrBuilder() {
+        if ((tuningParamsCase_ == 103) && (textEmbeddingPairParamsBuilder_ != null)) {
+          return textEmbeddingPairParamsBuilder_.getMessageOrBuilder();
+        } else {
+          if (tuningParamsCase_ == 103) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParamsOrBuilder> 
+          getTextEmbeddingPairParamsFieldBuilder() {
+        if (textEmbeddingPairParamsBuilder_ == null) {
+          if (!(tuningParamsCase_ == 103)) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance();
+          }
+          textEmbeddingPairParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParamsOrBuilder>(
+                  (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_,
+                  getParentForChildren(),
+                  isClean());
+          tuningParams_ = null;
+        }
+        tuningParamsCase_ = 103;
+        onChanged();;
+        return textEmbeddingPairParamsBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParamsOrBuilder> textEmbeddingTripletParamsBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       * @return Whether the textEmbeddingTripletParams field is set.
+       */
+      @java.lang.Override
+      public boolean hasTextEmbeddingTripletParams() {
+        return tuningParamsCase_ == 104;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       * @return The textEmbeddingTripletParams.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams getTextEmbeddingTripletParams() {
+        if (textEmbeddingTripletParamsBuilder_ == null) {
+          if (tuningParamsCase_ == 104) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance();
+        } else {
+          if (tuningParamsCase_ == 104) {
+            return textEmbeddingTripletParamsBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      public Builder setTextEmbeddingTripletParams(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams value) {
+        if (textEmbeddingTripletParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tuningParams_ = value;
+          onChanged();
+        } else {
+          textEmbeddingTripletParamsBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 104;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      public Builder setTextEmbeddingTripletParams(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder builderForValue) {
+        if (textEmbeddingTripletParamsBuilder_ == null) {
+          tuningParams_ = builderForValue.build();
+          onChanged();
+        } else {
+          textEmbeddingTripletParamsBuilder_.setMessage(builderForValue.build());
+        }
+        tuningParamsCase_ = 104;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      public Builder mergeTextEmbeddingTripletParams(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams value) {
+        if (textEmbeddingTripletParamsBuilder_ == null) {
+          if (tuningParamsCase_ == 104 &&
+              tuningParams_ != yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance()) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            tuningParams_ = value;
+          }
+          onChanged();
+        } else {
+          if (tuningParamsCase_ == 104) {
+            textEmbeddingTripletParamsBuilder_.mergeFrom(value);
+          }
+          textEmbeddingTripletParamsBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 104;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      public Builder clearTextEmbeddingTripletParams() {
+        if (textEmbeddingTripletParamsBuilder_ == null) {
+          if (tuningParamsCase_ == 104) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+            onChanged();
+          }
+        } else {
+          if (tuningParamsCase_ == 104) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+          }
+          textEmbeddingTripletParamsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder getTextEmbeddingTripletParamsBuilder() {
+        return getTextEmbeddingTripletParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParamsOrBuilder getTextEmbeddingTripletParamsOrBuilder() {
+        if ((tuningParamsCase_ == 104) && (textEmbeddingTripletParamsBuilder_ != null)) {
+          return textEmbeddingTripletParamsBuilder_.getMessageOrBuilder();
+        } else {
+          if (tuningParamsCase_ == 104) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParamsOrBuilder> 
+          getTextEmbeddingTripletParamsFieldBuilder() {
+        if (textEmbeddingTripletParamsBuilder_ == null) {
+          if (!(tuningParamsCase_ == 104)) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance();
+          }
+          textEmbeddingTripletParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParamsOrBuilder>(
+                  (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_,
+                  getParentForChildren(),
+                  isClean());
+          tuningParams_ = null;
+        }
+        tuningParamsCase_ = 104;
+        onChanged();;
+        return textEmbeddingTripletParamsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -34639,7 +35097,7 @@ public final class TuningServiceOuterClass {
       "ypeJ\004\010\004\020\007J\004\010\t\020dJ\005\010f\020\310\001\"-\n\024GetMetricsUrlR" +
       "equest\022\025\n\007task_id\030\001 \001(\tB\004\350\3071\001\")\n\025GetMetr" +
       "icsUrlResponse\022\020\n\010load_url\030\001 \001(\t\"*\n\021GetO" +
-      "ptionsRequest\022\025\n\007task_id\030\001 \001(\tB\004\350\3071\001\"\257\004\n" +
+      "ptionsRequest\022\025\n\007task_id\030\001 \001(\tB\004\350\3071\001\"\351\005\n" +
       "\022GetOptionsResponse\022\017\n\007task_id\030\001 \001(\t\022\026\n\016" +
       "base_model_uri\030\002 \001(\t\022P\n\016train_datasets\030\003" +
       " \003(\01328.yandex.cloud.ai.tuning.v1.TuningR" +
@@ -34653,33 +35111,38 @@ public final class TuningServiceOuterClass {
       "assificationMultilabelParamsH\000\022g\n\036text_c" +
       "lassification_multiclass\030f \001(\0132=.yandex." +
       "cloud.ai.tuning.v1.TextClassificationMul" +
-      "ticlassParamsH\000B\017\n\rtuning_paramsJ\004\010\005\020d\"+" +
-      "\n\021ListErrorsRequest\022\026\n\016tuning_task_id\030\001 " +
-      "\001(\t\"R\n\022ListErrorsResponse\022<\n\014tuning_erro" +
-      "r\030\001 \003(\0132&.yandex.cloud.ai.tuning.v1.Tuni" +
-      "ngError2\227\006\n\rTuningService\022y\n\004Tune\022(.yand" +
-      "ex.cloud.ai.tuning.v1.TuningRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"$\262\322* \n\016Tu" +
-      "ningMetadata\022\016TuningResponse\022e\n\004List\022-.y" +
-      "andex.cloud.ai.tuning.v1.ListTuningsRequ" +
-      "est\032..yandex.cloud.ai.tuning.v1.ListTuni" +
-      "ngsResponse\022o\n\010Describe\0220.yandex.cloud.a" +
-      "i.tuning.v1.DescribeTuningRequest\0321.yand" +
-      "ex.cloud.ai.tuning.v1.DescribeTuningResp" +
-      "onse\022i\n\006Cancel\022..yandex.cloud.ai.tuning." +
-      "v1.CancelTuningRequest\032/.yandex.cloud.ai" +
-      ".tuning.v1.CancelTuningResponse\022r\n\rGetMe" +
-      "tricsUrl\022/.yandex.cloud.ai.tuning.v1.Get" +
-      "MetricsUrlRequest\0320.yandex.cloud.ai.tuni" +
-      "ng.v1.GetMetricsUrlResponse\022i\n\nGetOption" +
-      "s\022,.yandex.cloud.ai.tuning.v1.GetOptions" +
-      "Request\032-.yandex.cloud.ai.tuning.v1.GetO" +
-      "ptionsResponse\022i\n\nListErrors\022,.yandex.cl" +
-      "oud.ai.tuning.v1.ListErrorsRequest\032-.yan" +
-      "dex.cloud.ai.tuning.v1.ListErrorsRespons" +
-      "eBc\n\035yandex.cloud.api.ai.tuning.v1ZBgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/ai/tuning/v1;fomob\006proto3"
+      "ticlassParamsH\000\022X\n\032text_embedding_pair_p" +
+      "arams\030g \001(\01322.yandex.cloud.ai.tuning.v1." +
+      "TextEmbeddingPairParamsH\000\022^\n\035text_embedd" +
+      "ing_triplet_params\030h \001(\01325.yandex.cloud." +
+      "ai.tuning.v1.TextEmbeddingTripletParamsH" +
+      "\000B\017\n\rtuning_paramsJ\004\010\005\020d\"+\n\021ListErrorsRe" +
+      "quest\022\026\n\016tuning_task_id\030\001 \001(\t\"R\n\022ListErr" +
+      "orsResponse\022<\n\014tuning_error\030\001 \003(\0132&.yand" +
+      "ex.cloud.ai.tuning.v1.TuningError2\227\006\n\rTu" +
+      "ningService\022y\n\004Tune\022(.yandex.cloud.ai.tu" +
+      "ning.v1.TuningRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"$\262\322* \n\016TuningMetadata\022\016" +
+      "TuningResponse\022e\n\004List\022-.yandex.cloud.ai" +
+      ".tuning.v1.ListTuningsRequest\032..yandex.c" +
+      "loud.ai.tuning.v1.ListTuningsResponse\022o\n" +
+      "\010Describe\0220.yandex.cloud.ai.tuning.v1.De" +
+      "scribeTuningRequest\0321.yandex.cloud.ai.tu" +
+      "ning.v1.DescribeTuningResponse\022i\n\006Cancel" +
+      "\022..yandex.cloud.ai.tuning.v1.CancelTunin" +
+      "gRequest\032/.yandex.cloud.ai.tuning.v1.Can" +
+      "celTuningResponse\022r\n\rGetMetricsUrl\022/.yan" +
+      "dex.cloud.ai.tuning.v1.GetMetricsUrlRequ" +
+      "est\0320.yandex.cloud.ai.tuning.v1.GetMetri" +
+      "csUrlResponse\022i\n\nGetOptions\022,.yandex.clo" +
+      "ud.ai.tuning.v1.GetOptionsRequest\032-.yand" +
+      "ex.cloud.ai.tuning.v1.GetOptionsResponse" +
+      "\022i\n\nListErrors\022,.yandex.cloud.ai.tuning." +
+      "v1.ListErrorsRequest\032-.yandex.cloud.ai.t" +
+      "uning.v1.ListErrorsResponseBc\n\035yandex.cl" +
+      "oud.api.ai.tuning.v1ZBgithub.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/ai/tuning" +
+      "/v1;fomob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -34872,7 +35335,7 @@ public final class TuningServiceOuterClass {
     internal_static_yandex_cloud_ai_tuning_v1_GetOptionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_tuning_v1_GetOptionsResponse_descriptor,
-        new java.lang.String[] { "TaskId", "BaseModelUri", "TrainDatasets", "ValidationDatasets", "TextToTextCompletion", "TextClassificationMultilabel", "TextClassificationMulticlass", "TuningParams", });
+        new java.lang.String[] { "TaskId", "BaseModelUri", "TrainDatasets", "ValidationDatasets", "TextToTextCompletion", "TextClassificationMultilabel", "TextClassificationMulticlass", "TextEmbeddingPairParams", "TextEmbeddingTripletParams", "TuningParams", });
     internal_static_yandex_cloud_ai_tuning_v1_ListErrorsRequest_descriptor =
       getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_ai_tuning_v1_ListErrorsRequest_fieldAccessorTable = new

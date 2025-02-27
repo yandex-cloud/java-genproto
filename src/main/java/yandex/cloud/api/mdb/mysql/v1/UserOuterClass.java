@@ -247,6 +247,22 @@ public final class UserOuterClass {
      * <code>SHA256_PASSWORD = 3;</code>
      */
     SHA256_PASSWORD(3),
+    /**
+     * <pre>
+     * Use [MYSQL_NO_LOGIN Pluggable Authentication](https://dev.mysql.com/doc/refman/8.0/en/no-login-pluggable-authentication.html).
+     * </pre>
+     *
+     * <code>MYSQL_NO_LOGIN = 4;</code>
+     */
+    MYSQL_NO_LOGIN(4),
+    /**
+     * <pre>
+     * Use [IAM Pluggable Authentication](https://yandex.cloud/en/docs/iam/concepts/authorization/).
+     * </pre>
+     *
+     * <code>MDB_IAMPROXY_AUTH = 5;</code>
+     */
+    MDB_IAMPROXY_AUTH(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -278,6 +294,22 @@ public final class UserOuterClass {
      * <code>SHA256_PASSWORD = 3;</code>
      */
     public static final int SHA256_PASSWORD_VALUE = 3;
+    /**
+     * <pre>
+     * Use [MYSQL_NO_LOGIN Pluggable Authentication](https://dev.mysql.com/doc/refman/8.0/en/no-login-pluggable-authentication.html).
+     * </pre>
+     *
+     * <code>MYSQL_NO_LOGIN = 4;</code>
+     */
+    public static final int MYSQL_NO_LOGIN_VALUE = 4;
+    /**
+     * <pre>
+     * Use [IAM Pluggable Authentication](https://yandex.cloud/en/docs/iam/concepts/authorization/).
+     * </pre>
+     *
+     * <code>MDB_IAMPROXY_AUTH = 5;</code>
+     */
+    public static final int MDB_IAMPROXY_AUTH_VALUE = 5;
 
 
     public final int getNumber() {
@@ -308,6 +340,8 @@ public final class UserOuterClass {
         case 1: return MYSQL_NATIVE_PASSWORD;
         case 2: return CACHING_SHA2_PASSWORD;
         case 3: return SHA256_PASSWORD;
+        case 4: return MYSQL_NO_LOGIN;
+        case 5: return MDB_IAMPROXY_AUTH;
         default: return null;
       }
     }
@@ -8684,12 +8718,13 @@ public final class UserOuterClass {
       "N_UNSPECIFIED\020\000\022\026\n\022REPLICATION_CLIENT\020\001\022" +
       "\025\n\021REPLICATION_SLAVE\020\002\022\013\n\007PROCESS\020\003\022\031\n\025F" +
       "LUSH_OPTIMIZER_COSTS\020\004\022\020\n\014SHOW_ROUTINE\020\005" +
-      "*t\n\nAuthPlugin\022\033\n\027AUTH_PLUGIN_UNSPECIFIE" +
-      "D\020\000\022\031\n\025MYSQL_NATIVE_PASSWORD\020\001\022\031\n\025CACHIN" +
-      "G_SHA2_PASSWORD\020\002\022\023\n\017SHA256_PASSWORD\020\003Bd" +
-      "\n\035yandex.cloud.api.mdb.mysql.v1ZCgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/mdb/mysql/v1;mysqlb\006proto3"
+      "*\237\001\n\nAuthPlugin\022\033\n\027AUTH_PLUGIN_UNSPECIFI" +
+      "ED\020\000\022\031\n\025MYSQL_NATIVE_PASSWORD\020\001\022\031\n\025CACHI" +
+      "NG_SHA2_PASSWORD\020\002\022\023\n\017SHA256_PASSWORD\020\003\022" +
+      "\022\n\016MYSQL_NO_LOGIN\020\004\022\025\n\021MDB_IAMPROXY_AUTH" +
+      "\020\005Bd\n\035yandex.cloud.api.mdb.mysql.v1ZCgit" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/mdb/mysql/v1;mysqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

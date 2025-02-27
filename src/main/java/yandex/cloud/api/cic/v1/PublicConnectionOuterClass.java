@@ -374,6 +374,52 @@ public final class PublicConnectionOuterClass {
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * Status of the publicConnection.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cic.v1.PublicConnection.Status status = 19;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <pre>
+     * Status of the publicConnection.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cic.v1.PublicConnection.Status status = 19;</code>
+     * @return The status.
+     */
+    yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.Status getStatus();
+
+    /**
+     * <pre>
+     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 21;</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <pre>
+     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 21;</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+    /**
+     * <pre>
+     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 21;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
   }
   /**
    * <pre>
@@ -400,6 +446,7 @@ public final class PublicConnectionOuterClass {
       trunkConnectionId_ = "";
       ipv4AllowedServiceTypes_ = java.util.Collections.emptyList();
       ipv4PeerAnnouncedPrefixes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      status_ = 0;
     }
 
     @java.lang.Override
@@ -538,6 +585,25 @@ public final class PublicConnectionOuterClass {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 152: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
+            case 170: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (createdAt_ != null) {
+                subBuilder = createdAt_.toBuilder();
+              }
+              createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(createdAt_);
+                createdAt_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -787,6 +853,141 @@ public final class PublicConnectionOuterClass {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.cic.v1.PublicConnection.CloudServiceType)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.cic.v1.PublicConnection.Status}
+     */
+    public enum Status
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>STATUS_UNSPECIFIED = 0;</code>
+       */
+      STATUS_UNSPECIFIED(0),
+      /**
+       * <code>CREATING = 1;</code>
+       */
+      CREATING(1),
+      /**
+       * <code>UPDATING = 2;</code>
+       */
+      UPDATING(2),
+      /**
+       * <code>DELETING = 3;</code>
+       */
+      DELETING(3),
+      /**
+       * <code>ACTIVE = 4;</code>
+       */
+      ACTIVE(4),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>STATUS_UNSPECIFIED = 0;</code>
+       */
+      public static final int STATUS_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>CREATING = 1;</code>
+       */
+      public static final int CREATING_VALUE = 1;
+      /**
+       * <code>UPDATING = 2;</code>
+       */
+      public static final int UPDATING_VALUE = 2;
+      /**
+       * <code>DELETING = 3;</code>
+       */
+      public static final int DELETING_VALUE = 3;
+      /**
+       * <code>ACTIVE = 4;</code>
+       */
+      public static final int ACTIVE_VALUE = 4;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Status valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Status forNumber(int value) {
+        switch (value) {
+          case 0: return STATUS_UNSPECIFIED;
+          case 1: return CREATING;
+          case 2: return UPDATING;
+          case 3: return DELETING;
+          case 4: return ACTIVE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Status>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Status> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Status>() {
+              public Status findValueByNumber(int number) {
+                return Status.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final Status[] VALUES = values();
+
+      public static Status valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Status(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.cic.v1.PublicConnection.Status)
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -1401,6 +1602,71 @@ public final class PublicConnectionOuterClass {
       return map.get(key);
     }
 
+    public static final int STATUS_FIELD_NUMBER = 19;
+    private int status_;
+    /**
+     * <pre>
+     * Status of the publicConnection.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cic.v1.PublicConnection.Status status = 19;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * Status of the publicConnection.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cic.v1.PublicConnection.Status status = 19;</code>
+     * @return The status.
+     */
+    @java.lang.Override public yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.Status getStatus() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.Status result = yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.Status.valueOf(status_);
+      return result == null ? yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.Status.UNRECOGNIZED : result;
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 21;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <pre>
+     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 21;</code>
+     * @return Whether the createdAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
+    }
+    /**
+     * <pre>
+     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 21;</code>
+     * @return The createdAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <pre>
+     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 21;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return getCreatedAt();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1456,6 +1722,12 @@ public final class PublicConnectionOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           18);
+      if (status_ != yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.Status.STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(19, status_);
+      }
+      if (createdAt_ != null) {
+        output.writeMessage(21, getCreatedAt());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1521,6 +1793,14 @@ public final class PublicConnectionOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(18, labels__);
       }
+      if (status_ != yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.Status.STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(19, status_);
+      }
+      if (createdAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(21, getCreatedAt());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1563,6 +1843,12 @@ public final class PublicConnectionOuterClass {
           .equals(other.getIpv4PeerAnnouncedPrefixesList())) return false;
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (status_ != other.status_) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
+      if (hasCreatedAt()) {
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1605,6 +1891,12 @@ public final class PublicConnectionOuterClass {
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      if (hasCreatedAt()) {
+        hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedAt().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1794,6 +2086,14 @@ public final class PublicConnectionOuterClass {
         ipv4PeerAnnouncedPrefixes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
         internalGetMutableLabels().clear();
+        status_ = 0;
+
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
         return this;
       }
 
@@ -1849,6 +2149,12 @@ public final class PublicConnectionOuterClass {
         result.ipv4PeerAnnouncedPrefixes_ = ipv4PeerAnnouncedPrefixes_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        result.status_ = status_;
+        if (createdAtBuilder_ == null) {
+          result.createdAt_ = createdAt_;
+        } else {
+          result.createdAt_ = createdAtBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1949,6 +2255,12 @@ public final class PublicConnectionOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -3429,6 +3741,235 @@ public final class PublicConnectionOuterClass {
             .putAll(values);
         return this;
       }
+
+      private int status_ = 0;
+      /**
+       * <pre>
+       * Status of the publicConnection.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.PublicConnection.Status status = 19;</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <pre>
+       * Status of the publicConnection.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.PublicConnection.Status status = 19;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status of the publicConnection.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.PublicConnection.Status status = 19;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.Status getStatus() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.Status result = yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.Status.valueOf(status_);
+        return result == null ? yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.Status.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Status of the publicConnection.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.PublicConnection.Status status = 19;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.Status value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status of the publicConnection.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.PublicConnection.Status status = 19;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp createdAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 21;</code>
+       * @return Whether the createdAt field is set.
+       */
+      public boolean hasCreatedAt() {
+        return createdAtBuilder_ != null || createdAt_ != null;
+      }
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 21;</code>
+       * @return The createdAt.
+       */
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        } else {
+          return createdAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 21;</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdAt_ = value;
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 21;</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 21;</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (createdAt_ != null) {
+            createdAt_ =
+              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+          } else {
+            createdAt_ = value;
+          }
+          onChanged();
+        } else {
+          createdAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 21;</code>
+       */
+      public Builder clearCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+          onChanged();
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 21;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+        
+        onChanged();
+        return getCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 21;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+        if (createdAtBuilder_ != null) {
+          return createdAtBuilder_.getMessageOrBuilder();
+        } else {
+          return createdAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        }
+      }
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 21;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedAtFieldBuilder() {
+        if (createdAtBuilder_ == null) {
+          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          createdAt_ = null;
+        }
+        return createdAtBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3503,37 +4044,44 @@ public final class PublicConnectionOuterClass {
     java.lang.String[] descriptorData = {
       "\n+yandex/cloud/cic/v1/public_connection." +
       "proto\022\023yandex.cloud.cic.v1\032\036google/proto" +
-      "buf/wrappers.proto\032!yandex/cloud/cic/v1/" +
-      "peering.proto\"\345\006\n\020PublicConnection\022\n\n\002id" +
-      "\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(" +
-      "\t\022\021\n\tfolder_id\030\005 \001(\t\022\021\n\tregion_id\030\006 \001(\t\022" +
-      "\033\n\023trunk_connection_id\030\007 \001(\t\022,\n\007vlan_id\030" +
-      "\010 \001(\0132\033.google.protobuf.Int64Value\0222\n\014ip" +
-      "v4_peering\030\t \001(\0132\034.yandex.cloud.cic.v1.P" +
-      "eering\022Z\n\032ipv4_allowed_service_types\030\013 \003" +
-      "(\01626.yandex.cloud.cic.v1.PublicConnectio" +
-      "n.CloudServiceType\022$\n\034ipv4_peer_announce" +
-      "d_prefixes\030\r \003(\t\022A\n\006labels\030\022 \003(\01321.yande" +
-      "x.cloud.cic.v1.PublicConnection.LabelsEn" +
-      "try\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001\"\360\002\n\020CloudServiceType\022\"\n\036CLOUD" +
-      "_SERVICE_TYPE_UNSPECIFIED\020\000\022\034\n\024CLOUD_SER" +
-      "VICE_YANDEX\020\001\032\002\010\001\022\034\n\030CLOUD_SERVICE_ALL_P" +
-      "UBLIC\020\002\022\024\n\020CLOUD_SERVICE_S3\020\003\022\024\n\020CLOUD_S" +
-      "ERVICE_ML\020\004\022\027\n\023CLOUD_SERVICE_APIGW\020\005\022$\n " +
-      "CLOUD_SERVICE_CONTAINER_REGISTRY\020\006\022\031\n\025CL" +
-      "OUD_SERVICE_CONSOLE\020\007\022\034\n\030CLOUD_SERVICE_M" +
-      "ONITORING\020\010\022\034\n\030CLOUD_SERVICE_YANDEX_GPT\020" +
-      "\t\022#\n\037CLOUD_SERVICES_ALL_API_ENDPOINT\020\n\022\025" +
-      "\n\021CLOUD_SERVICE_YMQ\020\013J\004\010\004\020\005J\004\010\n\020\013J\004\010\014\020\rJ" +
-      "\004\010\016\020\022BV\n\027yandex.cloud.api.cic.v1Z;github" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/cic/v1;cicb\006proto3"
+      "buf/wrappers.proto\032\037google/protobuf/time" +
+      "stamp.proto\032!yandex/cloud/cic/v1/peering" +
+      ".proto\"\261\010\n\020PublicConnection\022\n\n\002id\030\001 \001(\t\022" +
+      "\014\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\021\n\tfo" +
+      "lder_id\030\005 \001(\t\022\021\n\tregion_id\030\006 \001(\t\022\033\n\023trun" +
+      "k_connection_id\030\007 \001(\t\022,\n\007vlan_id\030\010 \001(\0132\033" +
+      ".google.protobuf.Int64Value\0222\n\014ipv4_peer" +
+      "ing\030\t \001(\0132\034.yandex.cloud.cic.v1.Peering\022" +
+      "Z\n\032ipv4_allowed_service_types\030\013 \003(\01626.ya" +
+      "ndex.cloud.cic.v1.PublicConnection.Cloud" +
+      "ServiceType\022$\n\034ipv4_peer_announced_prefi" +
+      "xes\030\r \003(\t\022A\n\006labels\030\022 \003(\01321.yandex.cloud" +
+      ".cic.v1.PublicConnection.LabelsEntry\022<\n\006" +
+      "status\030\023 \001(\0162,.yandex.cloud.cic.v1.Publi" +
+      "cConnection.Status\022.\n\ncreated_at\030\025 \001(\0132\032" +
+      ".google.protobuf.Timestamp\032-\n\013LabelsEntr" +
+      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\360\002\n\020Cl" +
+      "oudServiceType\022\"\n\036CLOUD_SERVICE_TYPE_UNS" +
+      "PECIFIED\020\000\022\034\n\024CLOUD_SERVICE_YANDEX\020\001\032\002\010\001" +
+      "\022\034\n\030CLOUD_SERVICE_ALL_PUBLIC\020\002\022\024\n\020CLOUD_" +
+      "SERVICE_S3\020\003\022\024\n\020CLOUD_SERVICE_ML\020\004\022\027\n\023CL" +
+      "OUD_SERVICE_APIGW\020\005\022$\n CLOUD_SERVICE_CON" +
+      "TAINER_REGISTRY\020\006\022\031\n\025CLOUD_SERVICE_CONSO" +
+      "LE\020\007\022\034\n\030CLOUD_SERVICE_MONITORING\020\010\022\034\n\030CL" +
+      "OUD_SERVICE_YANDEX_GPT\020\t\022#\n\037CLOUD_SERVIC" +
+      "ES_ALL_API_ENDPOINT\020\n\022\025\n\021CLOUD_SERVICE_Y" +
+      "MQ\020\013\"V\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014" +
+      "\n\010CREATING\020\001\022\014\n\010UPDATING\020\002\022\014\n\010DELETING\020\003" +
+      "\022\n\n\006ACTIVE\020\004J\004\010\004\020\005J\004\010\n\020\013J\004\010\014\020\rJ\004\010\016\020\022J\004\010\024" +
+      "\020\025BV\n\027yandex.cloud.api.cic.v1Z;github.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "cic/v1;cicb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.WrappersProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.cic.v1.PeeringOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_cic_v1_PublicConnection_descriptor =
@@ -3541,7 +4089,7 @@ public final class PublicConnectionOuterClass {
     internal_static_yandex_cloud_cic_v1_PublicConnection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cic_v1_PublicConnection_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "FolderId", "RegionId", "TrunkConnectionId", "VlanId", "Ipv4Peering", "Ipv4AllowedServiceTypes", "Ipv4PeerAnnouncedPrefixes", "Labels", });
+        new java.lang.String[] { "Id", "Name", "Description", "FolderId", "RegionId", "TrunkConnectionId", "VlanId", "Ipv4Peering", "Ipv4AllowedServiceTypes", "Ipv4PeerAnnouncedPrefixes", "Labels", "Status", "CreatedAt", });
     internal_static_yandex_cloud_cic_v1_PublicConnection_LabelsEntry_descriptor =
       internal_static_yandex_cloud_cic_v1_PublicConnection_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_cic_v1_PublicConnection_LabelsEntry_fieldAccessorTable = new
@@ -3549,6 +4097,7 @@ public final class PublicConnectionOuterClass {
         internal_static_yandex_cloud_cic_v1_PublicConnection_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     com.google.protobuf.WrappersProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.cic.v1.PeeringOuterClass.getDescriptor();
   }
 

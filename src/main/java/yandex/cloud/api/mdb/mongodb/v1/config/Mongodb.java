@@ -8577,7 +8577,7 @@ public final class Mongodb {
 
       /**
        * <pre>
-       * If encryption at rest should be enabled or not
+       * If encryption at rest should be enabled or not, MongoDB Enterprise only
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
@@ -8586,7 +8586,7 @@ public final class Mongodb {
       boolean hasEnableEncryption();
       /**
        * <pre>
-       * If encryption at rest should be enabled or not
+       * If encryption at rest should be enabled or not, MongoDB Enterprise only
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
@@ -8595,7 +8595,7 @@ public final class Mongodb {
       com.google.protobuf.BoolValue getEnableEncryption();
       /**
        * <pre>
-       * If encryption at rest should be enabled or not
+       * If encryption at rest should be enabled or not, MongoDB Enterprise only
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
@@ -8604,7 +8604,7 @@ public final class Mongodb {
 
       /**
        * <pre>
-       * `kmip` section of mongod security config
+       * `kmip` section of mongod security config, MongoDB Enterprise only
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Security.KMIP kmip = 2;</code>
@@ -8613,7 +8613,7 @@ public final class Mongodb {
       boolean hasKmip();
       /**
        * <pre>
-       * `kmip` section of mongod security config
+       * `kmip` section of mongod security config, MongoDB Enterprise only
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Security.KMIP kmip = 2;</code>
@@ -8622,7 +8622,7 @@ public final class Mongodb {
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Security.KMIP getKmip();
       /**
        * <pre>
-       * `kmip` section of mongod security config
+       * `kmip` section of mongod security config, MongoDB Enterprise only
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Security.KMIP kmip = 2;</code>
@@ -10161,7 +10161,7 @@ public final class Mongodb {
       private com.google.protobuf.BoolValue enableEncryption_;
       /**
        * <pre>
-       * If encryption at rest should be enabled or not
+       * If encryption at rest should be enabled or not, MongoDB Enterprise only
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
@@ -10173,7 +10173,7 @@ public final class Mongodb {
       }
       /**
        * <pre>
-       * If encryption at rest should be enabled or not
+       * If encryption at rest should be enabled or not, MongoDB Enterprise only
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
@@ -10185,7 +10185,7 @@ public final class Mongodb {
       }
       /**
        * <pre>
-       * If encryption at rest should be enabled or not
+       * If encryption at rest should be enabled or not, MongoDB Enterprise only
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
@@ -10199,7 +10199,7 @@ public final class Mongodb {
       private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Security.KMIP kmip_;
       /**
        * <pre>
-       * `kmip` section of mongod security config
+       * `kmip` section of mongod security config, MongoDB Enterprise only
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Security.KMIP kmip = 2;</code>
@@ -10211,7 +10211,7 @@ public final class Mongodb {
       }
       /**
        * <pre>
-       * `kmip` section of mongod security config
+       * `kmip` section of mongod security config, MongoDB Enterprise only
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Security.KMIP kmip = 2;</code>
@@ -10223,7 +10223,7 @@ public final class Mongodb {
       }
       /**
        * <pre>
-       * `kmip` section of mongod security config
+       * `kmip` section of mongod security config, MongoDB Enterprise only
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Security.KMIP kmip = 2;</code>
@@ -10583,7 +10583,7 @@ public final class Mongodb {
             com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableEncryptionBuilder_;
         /**
          * <pre>
-         * If encryption at rest should be enabled or not
+         * If encryption at rest should be enabled or not, MongoDB Enterprise only
          * </pre>
          *
          * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
@@ -10594,7 +10594,7 @@ public final class Mongodb {
         }
         /**
          * <pre>
-         * If encryption at rest should be enabled or not
+         * If encryption at rest should be enabled or not, MongoDB Enterprise only
          * </pre>
          *
          * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
@@ -10609,7 +10609,7 @@ public final class Mongodb {
         }
         /**
          * <pre>
-         * If encryption at rest should be enabled or not
+         * If encryption at rest should be enabled or not, MongoDB Enterprise only
          * </pre>
          *
          * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
@@ -10629,7 +10629,7 @@ public final class Mongodb {
         }
         /**
          * <pre>
-         * If encryption at rest should be enabled or not
+         * If encryption at rest should be enabled or not, MongoDB Enterprise only
          * </pre>
          *
          * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
@@ -10647,7 +10647,7 @@ public final class Mongodb {
         }
         /**
          * <pre>
-         * If encryption at rest should be enabled or not
+         * If encryption at rest should be enabled or not, MongoDB Enterprise only
          * </pre>
          *
          * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
@@ -10669,7 +10669,7 @@ public final class Mongodb {
         }
         /**
          * <pre>
-         * If encryption at rest should be enabled or not
+         * If encryption at rest should be enabled or not, MongoDB Enterprise only
          * </pre>
          *
          * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
@@ -10687,7 +10687,7 @@ public final class Mongodb {
         }
         /**
          * <pre>
-         * If encryption at rest should be enabled or not
+         * If encryption at rest should be enabled or not, MongoDB Enterprise only
          * </pre>
          *
          * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
@@ -10699,7 +10699,7 @@ public final class Mongodb {
         }
         /**
          * <pre>
-         * If encryption at rest should be enabled or not
+         * If encryption at rest should be enabled or not, MongoDB Enterprise only
          * </pre>
          *
          * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
@@ -10714,7 +10714,7 @@ public final class Mongodb {
         }
         /**
          * <pre>
-         * If encryption at rest should be enabled or not
+         * If encryption at rest should be enabled or not, MongoDB Enterprise only
          * </pre>
          *
          * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
@@ -10738,7 +10738,7 @@ public final class Mongodb {
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Security.KMIP, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Security.KMIP.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Security.KMIPOrBuilder> kmipBuilder_;
         /**
          * <pre>
-         * `kmip` section of mongod security config
+         * `kmip` section of mongod security config, MongoDB Enterprise only
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Security.KMIP kmip = 2;</code>
@@ -10749,7 +10749,7 @@ public final class Mongodb {
         }
         /**
          * <pre>
-         * `kmip` section of mongod security config
+         * `kmip` section of mongod security config, MongoDB Enterprise only
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Security.KMIP kmip = 2;</code>
@@ -10764,7 +10764,7 @@ public final class Mongodb {
         }
         /**
          * <pre>
-         * `kmip` section of mongod security config
+         * `kmip` section of mongod security config, MongoDB Enterprise only
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Security.KMIP kmip = 2;</code>
@@ -10784,7 +10784,7 @@ public final class Mongodb {
         }
         /**
          * <pre>
-         * `kmip` section of mongod security config
+         * `kmip` section of mongod security config, MongoDB Enterprise only
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Security.KMIP kmip = 2;</code>
@@ -10802,7 +10802,7 @@ public final class Mongodb {
         }
         /**
          * <pre>
-         * `kmip` section of mongod security config
+         * `kmip` section of mongod security config, MongoDB Enterprise only
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Security.KMIP kmip = 2;</code>
@@ -10824,7 +10824,7 @@ public final class Mongodb {
         }
         /**
          * <pre>
-         * `kmip` section of mongod security config
+         * `kmip` section of mongod security config, MongoDB Enterprise only
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Security.KMIP kmip = 2;</code>
@@ -10842,7 +10842,7 @@ public final class Mongodb {
         }
         /**
          * <pre>
-         * `kmip` section of mongod security config
+         * `kmip` section of mongod security config, MongoDB Enterprise only
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Security.KMIP kmip = 2;</code>
@@ -10854,7 +10854,7 @@ public final class Mongodb {
         }
         /**
          * <pre>
-         * `kmip` section of mongod security config
+         * `kmip` section of mongod security config, MongoDB Enterprise only
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Security.KMIP kmip = 2;</code>
@@ -10869,7 +10869,7 @@ public final class Mongodb {
         }
         /**
          * <pre>
-         * `kmip` section of mongod security config
+         * `kmip` section of mongod security config, MongoDB Enterprise only
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Security.KMIP kmip = 2;</code>
@@ -10946,7 +10946,7 @@ public final class Mongodb {
 
       /**
        * <pre>
-       * Audit filter
+       * Audit filter, should be valid JSON object string
        * </pre>
        *
        * <code>string filter = 1;</code>
@@ -10955,7 +10955,7 @@ public final class Mongodb {
       java.lang.String getFilter();
       /**
        * <pre>
-       * Audit filter
+       * Audit filter, should be valid JSON object string
        * </pre>
        *
        * <code>string filter = 1;</code>
@@ -10967,6 +10967,7 @@ public final class Mongodb {
       /**
        * <pre>
        * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+       * !! Available for MongoDB Enterprise only !!
        * </pre>
        *
        * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
@@ -10976,6 +10977,7 @@ public final class Mongodb {
       /**
        * <pre>
        * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+       * !! Available for MongoDB Enterprise only !!
        * </pre>
        *
        * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
@@ -10985,6 +10987,7 @@ public final class Mongodb {
       /**
        * <pre>
        * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+       * !! Available for MongoDB Enterprise only !!
        * </pre>
        *
        * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
@@ -11092,7 +11095,7 @@ public final class Mongodb {
       private volatile java.lang.Object filter_;
       /**
        * <pre>
-       * Audit filter
+       * Audit filter, should be valid JSON object string
        * </pre>
        *
        * <code>string filter = 1;</code>
@@ -11113,7 +11116,7 @@ public final class Mongodb {
       }
       /**
        * <pre>
-       * Audit filter
+       * Audit filter, should be valid JSON object string
        * </pre>
        *
        * <code>string filter = 1;</code>
@@ -11139,6 +11142,7 @@ public final class Mongodb {
       /**
        * <pre>
        * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+       * !! Available for MongoDB Enterprise only !!
        * </pre>
        *
        * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
@@ -11151,6 +11155,7 @@ public final class Mongodb {
       /**
        * <pre>
        * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+       * !! Available for MongoDB Enterprise only !!
        * </pre>
        *
        * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
@@ -11163,6 +11168,7 @@ public final class Mongodb {
       /**
        * <pre>
        * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+       * !! Available for MongoDB Enterprise only !!
        * </pre>
        *
        * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
@@ -11507,7 +11513,7 @@ public final class Mongodb {
         private java.lang.Object filter_ = "";
         /**
          * <pre>
-         * Audit filter
+         * Audit filter, should be valid JSON object string
          * </pre>
          *
          * <code>string filter = 1;</code>
@@ -11527,7 +11533,7 @@ public final class Mongodb {
         }
         /**
          * <pre>
-         * Audit filter
+         * Audit filter, should be valid JSON object string
          * </pre>
          *
          * <code>string filter = 1;</code>
@@ -11548,7 +11554,7 @@ public final class Mongodb {
         }
         /**
          * <pre>
-         * Audit filter
+         * Audit filter, should be valid JSON object string
          * </pre>
          *
          * <code>string filter = 1;</code>
@@ -11567,7 +11573,7 @@ public final class Mongodb {
         }
         /**
          * <pre>
-         * Audit filter
+         * Audit filter, should be valid JSON object string
          * </pre>
          *
          * <code>string filter = 1;</code>
@@ -11581,7 +11587,7 @@ public final class Mongodb {
         }
         /**
          * <pre>
-         * Audit filter
+         * Audit filter, should be valid JSON object string
          * </pre>
          *
          * <code>string filter = 1;</code>
@@ -11606,6 +11612,7 @@ public final class Mongodb {
         /**
          * <pre>
          * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+         * !! Available for MongoDB Enterprise only !!
          * </pre>
          *
          * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
@@ -11617,6 +11624,7 @@ public final class Mongodb {
         /**
          * <pre>
          * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+         * !! Available for MongoDB Enterprise only !!
          * </pre>
          *
          * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
@@ -11632,6 +11640,7 @@ public final class Mongodb {
         /**
          * <pre>
          * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+         * !! Available for MongoDB Enterprise only !!
          * </pre>
          *
          * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
@@ -11652,6 +11661,7 @@ public final class Mongodb {
         /**
          * <pre>
          * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+         * !! Available for MongoDB Enterprise only !!
          * </pre>
          *
          * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
@@ -11670,6 +11680,7 @@ public final class Mongodb {
         /**
          * <pre>
          * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+         * !! Available for MongoDB Enterprise only !!
          * </pre>
          *
          * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
@@ -11692,6 +11703,7 @@ public final class Mongodb {
         /**
          * <pre>
          * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+         * !! Available for MongoDB Enterprise only !!
          * </pre>
          *
          * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
@@ -11710,6 +11722,7 @@ public final class Mongodb {
         /**
          * <pre>
          * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+         * !! Available for MongoDB Enterprise only !!
          * </pre>
          *
          * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
@@ -11722,6 +11735,7 @@ public final class Mongodb {
         /**
          * <pre>
          * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+         * !! Available for MongoDB Enterprise only !!
          * </pre>
          *
          * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
@@ -11737,6 +11751,7 @@ public final class Mongodb {
         /**
          * <pre>
          * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+         * !! Available for MongoDB Enterprise only !!
          * </pre>
          *
          * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
@@ -11814,6 +11829,7 @@ public final class Mongodb {
       /**
        * <pre>
        * Enables the auditing of authorization successes
+       * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
        * </pre>
        *
        * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
@@ -11823,6 +11839,7 @@ public final class Mongodb {
       /**
        * <pre>
        * Enables the auditing of authorization successes
+       * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
        * </pre>
        *
        * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
@@ -11832,6 +11849,7 @@ public final class Mongodb {
       /**
        * <pre>
        * Enables the auditing of authorization successes
+       * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
        * </pre>
        *
        * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
@@ -12019,6 +12037,7 @@ public final class Mongodb {
       /**
        * <pre>
        * Enables the auditing of authorization successes
+       * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
        * </pre>
        *
        * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
@@ -12031,6 +12050,7 @@ public final class Mongodb {
       /**
        * <pre>
        * Enables the auditing of authorization successes
+       * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
        * </pre>
        *
        * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
@@ -12043,6 +12063,7 @@ public final class Mongodb {
       /**
        * <pre>
        * Enables the auditing of authorization successes
+       * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
        * </pre>
        *
        * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
@@ -12515,6 +12536,7 @@ public final class Mongodb {
         /**
          * <pre>
          * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
          * </pre>
          *
          * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
@@ -12526,6 +12548,7 @@ public final class Mongodb {
         /**
          * <pre>
          * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
          * </pre>
          *
          * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
@@ -12541,6 +12564,7 @@ public final class Mongodb {
         /**
          * <pre>
          * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
          * </pre>
          *
          * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
@@ -12561,6 +12585,7 @@ public final class Mongodb {
         /**
          * <pre>
          * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
          * </pre>
          *
          * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
@@ -12579,6 +12604,7 @@ public final class Mongodb {
         /**
          * <pre>
          * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
          * </pre>
          *
          * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
@@ -12601,6 +12627,7 @@ public final class Mongodb {
         /**
          * <pre>
          * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
          * </pre>
          *
          * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
@@ -12619,6 +12646,7 @@ public final class Mongodb {
         /**
          * <pre>
          * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
          * </pre>
          *
          * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
@@ -12631,6 +12659,7 @@ public final class Mongodb {
         /**
          * <pre>
          * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
          * </pre>
          *
          * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
@@ -12646,6 +12675,7 @@ public final class Mongodb {
         /**
          * <pre>
          * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
          * </pre>
          *
          * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
@@ -14808,6 +14838,60 @@ public final class Mongodb {
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network net = 3;</code>
      */
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.NetworkOrBuilder getNetOrBuilder();
+
+    /**
+     * <pre>
+     * `setParameter` section of mongocfg configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.SetParameter set_parameter = 4;</code>
+     * @return Whether the setParameter field is set.
+     */
+    boolean hasSetParameter();
+    /**
+     * <pre>
+     * `setParameter` section of mongocfg configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.SetParameter set_parameter = 4;</code>
+     * @return The setParameter.
+     */
+    yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter getSetParameter();
+    /**
+     * <pre>
+     * `setParameter` section of mongocfg configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.SetParameter set_parameter = 4;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameterOrBuilder getSetParameterOrBuilder();
+
+    /**
+     * <pre>
+     * `AuditLog` section of mongocfg configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.AuditLog audit_log = 5;</code>
+     * @return Whether the auditLog field is set.
+     */
+    boolean hasAuditLog();
+    /**
+     * <pre>
+     * `AuditLog` section of mongocfg configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.AuditLog audit_log = 5;</code>
+     * @return The auditLog.
+     */
+    yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog getAuditLog();
+    /**
+     * <pre>
+     * `AuditLog` section of mongocfg configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.AuditLog audit_log = 5;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLogOrBuilder getAuditLogOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig}
@@ -14889,6 +14973,32 @@ public final class Mongodb {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(net_);
                 net_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter.Builder subBuilder = null;
+              if (setParameter_ != null) {
+                subBuilder = setParameter_.toBuilder();
+              }
+              setParameter_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(setParameter_);
+                setParameter_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog.Builder subBuilder = null;
+              if (auditLog_ != null) {
+                subBuilder = auditLog_.toBuilder();
+              }
+              auditLog_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(auditLog_);
+                auditLog_ = subBuilder.buildPartial();
               }
 
               break;
@@ -15076,6 +15186,33 @@ public final class Mongodb {
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Storage.WiredTiger.EngineConfig engine_config = 1;</code>
          */
         yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.EngineConfigOrBuilder getEngineConfigOrBuilder();
+
+        /**
+         * <pre>
+         * Index configuration for WiredTiger.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Storage.WiredTiger.IndexConfig index_config = 2;</code>
+         * @return Whether the indexConfig field is set.
+         */
+        boolean hasIndexConfig();
+        /**
+         * <pre>
+         * Index configuration for WiredTiger.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Storage.WiredTiger.IndexConfig index_config = 2;</code>
+         * @return The indexConfig.
+         */
+        yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig getIndexConfig();
+        /**
+         * <pre>
+         * Index configuration for WiredTiger.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Storage.WiredTiger.IndexConfig index_config = 2;</code>
+         */
+        yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfigOrBuilder getIndexConfigOrBuilder();
       }
       /**
        * <pre>
@@ -15135,6 +15272,19 @@ public final class Mongodb {
                   if (subBuilder != null) {
                     subBuilder.mergeFrom(engineConfig_);
                     engineConfig_ = subBuilder.buildPartial();
+                  }
+
+                  break;
+                }
+                case 18: {
+                  yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig.Builder subBuilder = null;
+                  if (indexConfig_ != null) {
+                    subBuilder = indexConfig_.toBuilder();
+                  }
+                  indexConfig_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig.parser(), extensionRegistry);
+                  if (subBuilder != null) {
+                    subBuilder.mergeFrom(indexConfig_);
+                    indexConfig_ = subBuilder.buildPartial();
                   }
 
                   break;
@@ -15852,6 +16002,687 @@ public final class Mongodb {
 
         }
 
+        public interface IndexConfigOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Storage.WiredTiger.IndexConfig)
+            com.google.protobuf.MessageOrBuilder {
+
+          /**
+           * <pre>
+           * Enables or disables [prefix compression](https://www.mongodb.com/docs/manual/reference/glossary/#std-term-prefix-compression)
+           * </pre>
+           *
+           * <code>.google.protobuf.BoolValue prefix_compression = 1;</code>
+           * @return Whether the prefixCompression field is set.
+           */
+          boolean hasPrefixCompression();
+          /**
+           * <pre>
+           * Enables or disables [prefix compression](https://www.mongodb.com/docs/manual/reference/glossary/#std-term-prefix-compression)
+           * </pre>
+           *
+           * <code>.google.protobuf.BoolValue prefix_compression = 1;</code>
+           * @return The prefixCompression.
+           */
+          com.google.protobuf.BoolValue getPrefixCompression();
+          /**
+           * <pre>
+           * Enables or disables [prefix compression](https://www.mongodb.com/docs/manual/reference/glossary/#std-term-prefix-compression)
+           * </pre>
+           *
+           * <code>.google.protobuf.BoolValue prefix_compression = 1;</code>
+           */
+          com.google.protobuf.BoolValueOrBuilder getPrefixCompressionOrBuilder();
+        }
+        /**
+         * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Storage.WiredTiger.IndexConfig}
+         */
+        public static final class IndexConfig extends
+            com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Storage.WiredTiger.IndexConfig)
+            IndexConfigOrBuilder {
+        private static final long serialVersionUID = 0L;
+          // Use IndexConfig.newBuilder() to construct.
+          private IndexConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
+          }
+          private IndexConfig() {
+          }
+
+          @java.lang.Override
+          @SuppressWarnings({"unused"})
+          protected java.lang.Object newInstance(
+              UnusedPrivateParameter unused) {
+            return new IndexConfig();
+          }
+
+          @java.lang.Override
+          public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+            return this.unknownFields;
+          }
+          private IndexConfig(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+              throw new java.lang.NullPointerException();
+            }
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+              boolean done = false;
+              while (!done) {
+                int tag = input.readTag();
+                switch (tag) {
+                  case 0:
+                    done = true;
+                    break;
+                  case 10: {
+                    com.google.protobuf.BoolValue.Builder subBuilder = null;
+                    if (prefixCompression_ != null) {
+                      subBuilder = prefixCompression_.toBuilder();
+                    }
+                    prefixCompression_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+                    if (subBuilder != null) {
+                      subBuilder.mergeFrom(prefixCompression_);
+                      prefixCompression_ = subBuilder.buildPartial();
+                    }
+
+                    break;
+                  }
+                  default: {
+                    if (!parseUnknownField(
+                        input, unknownFields, extensionRegistry, tag)) {
+                      done = true;
+                    }
+                    break;
+                  }
+                }
+              }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(
+                  e).setUnfinishedMessage(this);
+            } finally {
+              this.unknownFields = unknownFields.build();
+              makeExtensionsImmutable();
+            }
+          }
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_WiredTiger_IndexConfig_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_WiredTiger_IndexConfig_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig.Builder.class);
+          }
+
+          public static final int PREFIX_COMPRESSION_FIELD_NUMBER = 1;
+          private com.google.protobuf.BoolValue prefixCompression_;
+          /**
+           * <pre>
+           * Enables or disables [prefix compression](https://www.mongodb.com/docs/manual/reference/glossary/#std-term-prefix-compression)
+           * </pre>
+           *
+           * <code>.google.protobuf.BoolValue prefix_compression = 1;</code>
+           * @return Whether the prefixCompression field is set.
+           */
+          @java.lang.Override
+          public boolean hasPrefixCompression() {
+            return prefixCompression_ != null;
+          }
+          /**
+           * <pre>
+           * Enables or disables [prefix compression](https://www.mongodb.com/docs/manual/reference/glossary/#std-term-prefix-compression)
+           * </pre>
+           *
+           * <code>.google.protobuf.BoolValue prefix_compression = 1;</code>
+           * @return The prefixCompression.
+           */
+          @java.lang.Override
+          public com.google.protobuf.BoolValue getPrefixCompression() {
+            return prefixCompression_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : prefixCompression_;
+          }
+          /**
+           * <pre>
+           * Enables or disables [prefix compression](https://www.mongodb.com/docs/manual/reference/glossary/#std-term-prefix-compression)
+           * </pre>
+           *
+           * <code>.google.protobuf.BoolValue prefix_compression = 1;</code>
+           */
+          @java.lang.Override
+          public com.google.protobuf.BoolValueOrBuilder getPrefixCompressionOrBuilder() {
+            return getPrefixCompression();
+          }
+
+          private byte memoizedIsInitialized = -1;
+          @java.lang.Override
+          public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+          }
+
+          @java.lang.Override
+          public void writeTo(com.google.protobuf.CodedOutputStream output)
+                              throws java.io.IOException {
+            if (prefixCompression_ != null) {
+              output.writeMessage(1, getPrefixCompression());
+            }
+            unknownFields.writeTo(output);
+          }
+
+          @java.lang.Override
+          public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (prefixCompression_ != null) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSize(1, getPrefixCompression());
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+          }
+
+          @java.lang.Override
+          public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+             return true;
+            }
+            if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig)) {
+              return super.equals(obj);
+            }
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig) obj;
+
+            if (hasPrefixCompression() != other.hasPrefixCompression()) return false;
+            if (hasPrefixCompression()) {
+              if (!getPrefixCompression()
+                  .equals(other.getPrefixCompression())) return false;
+            }
+            if (!unknownFields.equals(other.unknownFields)) return false;
+            return true;
+          }
+
+          @java.lang.Override
+          public int hashCode() {
+            if (memoizedHashCode != 0) {
+              return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            if (hasPrefixCompression()) {
+              hash = (37 * hash) + PREFIX_COMPRESSION_FIELD_NUMBER;
+              hash = (53 * hash) + getPrefixCompression().hashCode();
+            }
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+          }
+
+          public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig parseFrom(
+              java.nio.ByteBuffer data)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+          }
+          public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig parseFrom(
+              java.nio.ByteBuffer data,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+          }
+          public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig parseFrom(
+              com.google.protobuf.ByteString data)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+          }
+          public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig parseFrom(
+              com.google.protobuf.ByteString data,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+          }
+          public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig parseFrom(byte[] data)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+          }
+          public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig parseFrom(
+              byte[] data,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+          }
+          public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig parseFrom(java.io.InputStream input)
+              throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                .parseWithIOException(PARSER, input);
+          }
+          public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig parseFrom(
+              java.io.InputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                .parseWithIOException(PARSER, input, extensionRegistry);
+          }
+          public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig parseDelimitedFrom(java.io.InputStream input)
+              throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                .parseDelimitedWithIOException(PARSER, input);
+          }
+          public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig parseDelimitedFrom(
+              java.io.InputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+          }
+          public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig parseFrom(
+              com.google.protobuf.CodedInputStream input)
+              throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                .parseWithIOException(PARSER, input);
+          }
+          public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig parseFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                .parseWithIOException(PARSER, input, extensionRegistry);
+          }
+
+          @java.lang.Override
+          public Builder newBuilderForType() { return newBuilder(); }
+          public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+          }
+          public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+          }
+          @java.lang.Override
+          public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE
+                ? new Builder() : new Builder().mergeFrom(this);
+          }
+
+          @java.lang.Override
+          protected Builder newBuilderForType(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+          }
+          /**
+           * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Storage.WiredTiger.IndexConfig}
+           */
+          public static final class Builder extends
+              com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+              // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Storage.WiredTiger.IndexConfig)
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfigOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor
+                getDescriptor() {
+              return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_WiredTiger_IndexConfig_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+                internalGetFieldAccessorTable() {
+              return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_WiredTiger_IndexConfig_fieldAccessorTable
+                  .ensureFieldAccessorsInitialized(
+                      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig.Builder.class);
+            }
+
+            // Construct using yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig.newBuilder()
+            private Builder() {
+              maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+              super(parent);
+              maybeForceBuilderInitialization();
+            }
+            private void maybeForceBuilderInitialization() {
+              if (com.google.protobuf.GeneratedMessageV3
+                      .alwaysUseFieldBuilders) {
+              }
+            }
+            @java.lang.Override
+            public Builder clear() {
+              super.clear();
+              if (prefixCompressionBuilder_ == null) {
+                prefixCompression_ = null;
+              } else {
+                prefixCompression_ = null;
+                prefixCompressionBuilder_ = null;
+              }
+              return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor
+                getDescriptorForType() {
+              return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_WiredTiger_IndexConfig_descriptor;
+            }
+
+            @java.lang.Override
+            public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig getDefaultInstanceForType() {
+              return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig build() {
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig result = buildPartial();
+              if (!result.isInitialized()) {
+                throw newUninitializedMessageException(result);
+              }
+              return result;
+            }
+
+            @java.lang.Override
+            public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig buildPartial() {
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig result = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig(this);
+              if (prefixCompressionBuilder_ == null) {
+                result.prefixCompression_ = prefixCompression_;
+              } else {
+                result.prefixCompression_ = prefixCompressionBuilder_.build();
+              }
+              onBuilt();
+              return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+              return super.clone();
+            }
+            @java.lang.Override
+            public Builder setField(
+                com.google.protobuf.Descriptors.FieldDescriptor field,
+                java.lang.Object value) {
+              return super.setField(field, value);
+            }
+            @java.lang.Override
+            public Builder clearField(
+                com.google.protobuf.Descriptors.FieldDescriptor field) {
+              return super.clearField(field);
+            }
+            @java.lang.Override
+            public Builder clearOneof(
+                com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+              return super.clearOneof(oneof);
+            }
+            @java.lang.Override
+            public Builder setRepeatedField(
+                com.google.protobuf.Descriptors.FieldDescriptor field,
+                int index, java.lang.Object value) {
+              return super.setRepeatedField(field, index, value);
+            }
+            @java.lang.Override
+            public Builder addRepeatedField(
+                com.google.protobuf.Descriptors.FieldDescriptor field,
+                java.lang.Object value) {
+              return super.addRepeatedField(field, value);
+            }
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+              if (other instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig) {
+                return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig)other);
+              } else {
+                super.mergeFrom(other);
+                return this;
+              }
+            }
+
+            public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig other) {
+              if (other == yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig.getDefaultInstance()) return this;
+              if (other.hasPrefixCompression()) {
+                mergePrefixCompression(other.getPrefixCompression());
+              }
+              this.mergeUnknownFields(other.unknownFields);
+              onChanged();
+              return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+              return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig parsedMessage = null;
+              try {
+                parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+              } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig) e.getUnfinishedMessage();
+                throw e.unwrapIOException();
+              } finally {
+                if (parsedMessage != null) {
+                  mergeFrom(parsedMessage);
+                }
+              }
+              return this;
+            }
+
+            private com.google.protobuf.BoolValue prefixCompression_;
+            private com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> prefixCompressionBuilder_;
+            /**
+             * <pre>
+             * Enables or disables [prefix compression](https://www.mongodb.com/docs/manual/reference/glossary/#std-term-prefix-compression)
+             * </pre>
+             *
+             * <code>.google.protobuf.BoolValue prefix_compression = 1;</code>
+             * @return Whether the prefixCompression field is set.
+             */
+            public boolean hasPrefixCompression() {
+              return prefixCompressionBuilder_ != null || prefixCompression_ != null;
+            }
+            /**
+             * <pre>
+             * Enables or disables [prefix compression](https://www.mongodb.com/docs/manual/reference/glossary/#std-term-prefix-compression)
+             * </pre>
+             *
+             * <code>.google.protobuf.BoolValue prefix_compression = 1;</code>
+             * @return The prefixCompression.
+             */
+            public com.google.protobuf.BoolValue getPrefixCompression() {
+              if (prefixCompressionBuilder_ == null) {
+                return prefixCompression_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : prefixCompression_;
+              } else {
+                return prefixCompressionBuilder_.getMessage();
+              }
+            }
+            /**
+             * <pre>
+             * Enables or disables [prefix compression](https://www.mongodb.com/docs/manual/reference/glossary/#std-term-prefix-compression)
+             * </pre>
+             *
+             * <code>.google.protobuf.BoolValue prefix_compression = 1;</code>
+             */
+            public Builder setPrefixCompression(com.google.protobuf.BoolValue value) {
+              if (prefixCompressionBuilder_ == null) {
+                if (value == null) {
+                  throw new NullPointerException();
+                }
+                prefixCompression_ = value;
+                onChanged();
+              } else {
+                prefixCompressionBuilder_.setMessage(value);
+              }
+
+              return this;
+            }
+            /**
+             * <pre>
+             * Enables or disables [prefix compression](https://www.mongodb.com/docs/manual/reference/glossary/#std-term-prefix-compression)
+             * </pre>
+             *
+             * <code>.google.protobuf.BoolValue prefix_compression = 1;</code>
+             */
+            public Builder setPrefixCompression(
+                com.google.protobuf.BoolValue.Builder builderForValue) {
+              if (prefixCompressionBuilder_ == null) {
+                prefixCompression_ = builderForValue.build();
+                onChanged();
+              } else {
+                prefixCompressionBuilder_.setMessage(builderForValue.build());
+              }
+
+              return this;
+            }
+            /**
+             * <pre>
+             * Enables or disables [prefix compression](https://www.mongodb.com/docs/manual/reference/glossary/#std-term-prefix-compression)
+             * </pre>
+             *
+             * <code>.google.protobuf.BoolValue prefix_compression = 1;</code>
+             */
+            public Builder mergePrefixCompression(com.google.protobuf.BoolValue value) {
+              if (prefixCompressionBuilder_ == null) {
+                if (prefixCompression_ != null) {
+                  prefixCompression_ =
+                    com.google.protobuf.BoolValue.newBuilder(prefixCompression_).mergeFrom(value).buildPartial();
+                } else {
+                  prefixCompression_ = value;
+                }
+                onChanged();
+              } else {
+                prefixCompressionBuilder_.mergeFrom(value);
+              }
+
+              return this;
+            }
+            /**
+             * <pre>
+             * Enables or disables [prefix compression](https://www.mongodb.com/docs/manual/reference/glossary/#std-term-prefix-compression)
+             * </pre>
+             *
+             * <code>.google.protobuf.BoolValue prefix_compression = 1;</code>
+             */
+            public Builder clearPrefixCompression() {
+              if (prefixCompressionBuilder_ == null) {
+                prefixCompression_ = null;
+                onChanged();
+              } else {
+                prefixCompression_ = null;
+                prefixCompressionBuilder_ = null;
+              }
+
+              return this;
+            }
+            /**
+             * <pre>
+             * Enables or disables [prefix compression](https://www.mongodb.com/docs/manual/reference/glossary/#std-term-prefix-compression)
+             * </pre>
+             *
+             * <code>.google.protobuf.BoolValue prefix_compression = 1;</code>
+             */
+            public com.google.protobuf.BoolValue.Builder getPrefixCompressionBuilder() {
+              
+              onChanged();
+              return getPrefixCompressionFieldBuilder().getBuilder();
+            }
+            /**
+             * <pre>
+             * Enables or disables [prefix compression](https://www.mongodb.com/docs/manual/reference/glossary/#std-term-prefix-compression)
+             * </pre>
+             *
+             * <code>.google.protobuf.BoolValue prefix_compression = 1;</code>
+             */
+            public com.google.protobuf.BoolValueOrBuilder getPrefixCompressionOrBuilder() {
+              if (prefixCompressionBuilder_ != null) {
+                return prefixCompressionBuilder_.getMessageOrBuilder();
+              } else {
+                return prefixCompression_ == null ?
+                    com.google.protobuf.BoolValue.getDefaultInstance() : prefixCompression_;
+              }
+            }
+            /**
+             * <pre>
+             * Enables or disables [prefix compression](https://www.mongodb.com/docs/manual/reference/glossary/#std-term-prefix-compression)
+             * </pre>
+             *
+             * <code>.google.protobuf.BoolValue prefix_compression = 1;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+                getPrefixCompressionFieldBuilder() {
+              if (prefixCompressionBuilder_ == null) {
+                prefixCompressionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                    com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                        getPrefixCompression(),
+                        getParentForChildren(),
+                        isClean());
+                prefixCompression_ = null;
+              }
+              return prefixCompressionBuilder_;
+            }
+            @java.lang.Override
+            public final Builder setUnknownFields(
+                final com.google.protobuf.UnknownFieldSet unknownFields) {
+              return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(
+                final com.google.protobuf.UnknownFieldSet unknownFields) {
+              return super.mergeUnknownFields(unknownFields);
+            }
+
+
+            // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Storage.WiredTiger.IndexConfig)
+          }
+
+          // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Storage.WiredTiger.IndexConfig)
+          private static final yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig DEFAULT_INSTANCE;
+          static {
+            DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig();
+          }
+
+          public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+          }
+
+          private static final com.google.protobuf.Parser<IndexConfig>
+              PARSER = new com.google.protobuf.AbstractParser<IndexConfig>() {
+            @java.lang.Override
+            public IndexConfig parsePartialFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+              return new IndexConfig(input, extensionRegistry);
+            }
+          };
+
+          public static com.google.protobuf.Parser<IndexConfig> parser() {
+            return PARSER;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Parser<IndexConfig> getParserForType() {
+            return PARSER;
+          }
+
+          @java.lang.Override
+          public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+          }
+
+        }
+
         public static final int ENGINE_CONFIG_FIELD_NUMBER = 1;
         private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.EngineConfig engineConfig_;
         /**
@@ -15890,6 +16721,44 @@ public final class Mongodb {
           return getEngineConfig();
         }
 
+        public static final int INDEX_CONFIG_FIELD_NUMBER = 2;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig indexConfig_;
+        /**
+         * <pre>
+         * Index configuration for WiredTiger.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Storage.WiredTiger.IndexConfig index_config = 2;</code>
+         * @return Whether the indexConfig field is set.
+         */
+        @java.lang.Override
+        public boolean hasIndexConfig() {
+          return indexConfig_ != null;
+        }
+        /**
+         * <pre>
+         * Index configuration for WiredTiger.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Storage.WiredTiger.IndexConfig index_config = 2;</code>
+         * @return The indexConfig.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig getIndexConfig() {
+          return indexConfig_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig.getDefaultInstance() : indexConfig_;
+        }
+        /**
+         * <pre>
+         * Index configuration for WiredTiger.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Storage.WiredTiger.IndexConfig index_config = 2;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfigOrBuilder getIndexConfigOrBuilder() {
+          return getIndexConfig();
+        }
+
         private byte memoizedIsInitialized = -1;
         @java.lang.Override
         public final boolean isInitialized() {
@@ -15907,6 +16776,9 @@ public final class Mongodb {
           if (engineConfig_ != null) {
             output.writeMessage(1, getEngineConfig());
           }
+          if (indexConfig_ != null) {
+            output.writeMessage(2, getIndexConfig());
+          }
           unknownFields.writeTo(output);
         }
 
@@ -15919,6 +16791,10 @@ public final class Mongodb {
           if (engineConfig_ != null) {
             size += com.google.protobuf.CodedOutputStream
               .computeMessageSize(1, getEngineConfig());
+          }
+          if (indexConfig_ != null) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(2, getIndexConfig());
           }
           size += unknownFields.getSerializedSize();
           memoizedSize = size;
@@ -15940,6 +16816,11 @@ public final class Mongodb {
             if (!getEngineConfig()
                 .equals(other.getEngineConfig())) return false;
           }
+          if (hasIndexConfig() != other.hasIndexConfig()) return false;
+          if (hasIndexConfig()) {
+            if (!getIndexConfig()
+                .equals(other.getIndexConfig())) return false;
+          }
           if (!unknownFields.equals(other.unknownFields)) return false;
           return true;
         }
@@ -15954,6 +16835,10 @@ public final class Mongodb {
           if (hasEngineConfig()) {
             hash = (37 * hash) + ENGINE_CONFIG_FIELD_NUMBER;
             hash = (53 * hash) + getEngineConfig().hashCode();
+          }
+          if (hasIndexConfig()) {
+            hash = (37 * hash) + INDEX_CONFIG_FIELD_NUMBER;
+            hash = (53 * hash) + getIndexConfig().hashCode();
           }
           hash = (29 * hash) + unknownFields.hashCode();
           memoizedHashCode = hash;
@@ -16098,6 +16983,12 @@ public final class Mongodb {
               engineConfig_ = null;
               engineConfigBuilder_ = null;
             }
+            if (indexConfigBuilder_ == null) {
+              indexConfig_ = null;
+            } else {
+              indexConfig_ = null;
+              indexConfigBuilder_ = null;
+            }
             return this;
           }
 
@@ -16128,6 +17019,11 @@ public final class Mongodb {
               result.engineConfig_ = engineConfig_;
             } else {
               result.engineConfig_ = engineConfigBuilder_.build();
+            }
+            if (indexConfigBuilder_ == null) {
+              result.indexConfig_ = indexConfig_;
+            } else {
+              result.indexConfig_ = indexConfigBuilder_.build();
             }
             onBuilt();
             return result;
@@ -16179,6 +17075,9 @@ public final class Mongodb {
             if (other == yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.getDefaultInstance()) return this;
             if (other.hasEngineConfig()) {
               mergeEngineConfig(other.getEngineConfig());
+            }
+            if (other.hasIndexConfig()) {
+              mergeIndexConfig(other.getIndexConfig());
             }
             this.mergeUnknownFields(other.unknownFields);
             onChanged();
@@ -16362,6 +17261,161 @@ public final class Mongodb {
               engineConfig_ = null;
             }
             return engineConfigBuilder_;
+          }
+
+          private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig indexConfig_;
+          private com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfigOrBuilder> indexConfigBuilder_;
+          /**
+           * <pre>
+           * Index configuration for WiredTiger.
+           * </pre>
+           *
+           * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Storage.WiredTiger.IndexConfig index_config = 2;</code>
+           * @return Whether the indexConfig field is set.
+           */
+          public boolean hasIndexConfig() {
+            return indexConfigBuilder_ != null || indexConfig_ != null;
+          }
+          /**
+           * <pre>
+           * Index configuration for WiredTiger.
+           * </pre>
+           *
+           * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Storage.WiredTiger.IndexConfig index_config = 2;</code>
+           * @return The indexConfig.
+           */
+          public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig getIndexConfig() {
+            if (indexConfigBuilder_ == null) {
+              return indexConfig_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig.getDefaultInstance() : indexConfig_;
+            } else {
+              return indexConfigBuilder_.getMessage();
+            }
+          }
+          /**
+           * <pre>
+           * Index configuration for WiredTiger.
+           * </pre>
+           *
+           * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Storage.WiredTiger.IndexConfig index_config = 2;</code>
+           */
+          public Builder setIndexConfig(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig value) {
+            if (indexConfigBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              indexConfig_ = value;
+              onChanged();
+            } else {
+              indexConfigBuilder_.setMessage(value);
+            }
+
+            return this;
+          }
+          /**
+           * <pre>
+           * Index configuration for WiredTiger.
+           * </pre>
+           *
+           * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Storage.WiredTiger.IndexConfig index_config = 2;</code>
+           */
+          public Builder setIndexConfig(
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig.Builder builderForValue) {
+            if (indexConfigBuilder_ == null) {
+              indexConfig_ = builderForValue.build();
+              onChanged();
+            } else {
+              indexConfigBuilder_.setMessage(builderForValue.build());
+            }
+
+            return this;
+          }
+          /**
+           * <pre>
+           * Index configuration for WiredTiger.
+           * </pre>
+           *
+           * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Storage.WiredTiger.IndexConfig index_config = 2;</code>
+           */
+          public Builder mergeIndexConfig(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig value) {
+            if (indexConfigBuilder_ == null) {
+              if (indexConfig_ != null) {
+                indexConfig_ =
+                  yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig.newBuilder(indexConfig_).mergeFrom(value).buildPartial();
+              } else {
+                indexConfig_ = value;
+              }
+              onChanged();
+            } else {
+              indexConfigBuilder_.mergeFrom(value);
+            }
+
+            return this;
+          }
+          /**
+           * <pre>
+           * Index configuration for WiredTiger.
+           * </pre>
+           *
+           * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Storage.WiredTiger.IndexConfig index_config = 2;</code>
+           */
+          public Builder clearIndexConfig() {
+            if (indexConfigBuilder_ == null) {
+              indexConfig_ = null;
+              onChanged();
+            } else {
+              indexConfig_ = null;
+              indexConfigBuilder_ = null;
+            }
+
+            return this;
+          }
+          /**
+           * <pre>
+           * Index configuration for WiredTiger.
+           * </pre>
+           *
+           * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Storage.WiredTiger.IndexConfig index_config = 2;</code>
+           */
+          public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig.Builder getIndexConfigBuilder() {
+            
+            onChanged();
+            return getIndexConfigFieldBuilder().getBuilder();
+          }
+          /**
+           * <pre>
+           * Index configuration for WiredTiger.
+           * </pre>
+           *
+           * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Storage.WiredTiger.IndexConfig index_config = 2;</code>
+           */
+          public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfigOrBuilder getIndexConfigOrBuilder() {
+            if (indexConfigBuilder_ != null) {
+              return indexConfigBuilder_.getMessageOrBuilder();
+            } else {
+              return indexConfig_ == null ?
+                  yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig.getDefaultInstance() : indexConfig_;
+            }
+          }
+          /**
+           * <pre>
+           * Index configuration for WiredTiger.
+           * </pre>
+           *
+           * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Storage.WiredTiger.IndexConfig index_config = 2;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfigOrBuilder> 
+              getIndexConfigFieldBuilder() {
+            if (indexConfigBuilder_ == null) {
+              indexConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfig.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.IndexConfigOrBuilder>(
+                      getIndexConfig(),
+                      getParentForChildren(),
+                      isClean());
+              indexConfig_ = null;
+            }
+            return indexConfigBuilder_;
           }
           @java.lang.Override
           public final Builder setUnknownFields(
@@ -18010,6 +19064,33 @@ public final class Mongodb {
        * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
        */
       com.google.protobuf.Int64ValueOrBuilder getMaxIncomingConnectionsOrBuilder();
+
+      /**
+       * <pre>
+       * Compression settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression compression = 2;</code>
+       * @return Whether the compression field is set.
+       */
+      boolean hasCompression();
+      /**
+       * <pre>
+       * Compression settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression compression = 2;</code>
+       * @return The compression.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression getCompression();
+      /**
+       * <pre>
+       * Compression settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression compression = 2;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.CompressionOrBuilder getCompressionOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network}
@@ -18069,6 +19150,19 @@ public final class Mongodb {
 
                 break;
               }
+              case 18: {
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Builder subBuilder = null;
+                if (compression_ != null) {
+                  subBuilder = compression_.toBuilder();
+                }
+                compression_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(compression_);
+                  compression_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -18099,6 +19193,1066 @@ public final class Mongodb {
         return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Network_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Builder.class);
+      }
+
+      public interface CompressionOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         * Specifies the default compressor(s) to use for communication between this mongod or mongos instance and:
+         * - other members of the deployment if the instance is part of a replica set or a sharded cluster
+         * - mongosh
+         * - drivers that support the OP_COMPRESSED message format.
+         * MongoDB supports the following compressors:
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
+         * @return A list containing the compressors.
+         */
+        java.util.List<yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Compressor> getCompressorsList();
+        /**
+         * <pre>
+         * Specifies the default compressor(s) to use for communication between this mongod or mongos instance and:
+         * - other members of the deployment if the instance is part of a replica set or a sharded cluster
+         * - mongosh
+         * - drivers that support the OP_COMPRESSED message format.
+         * MongoDB supports the following compressors:
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
+         * @return The count of compressors.
+         */
+        int getCompressorsCount();
+        /**
+         * <pre>
+         * Specifies the default compressor(s) to use for communication between this mongod or mongos instance and:
+         * - other members of the deployment if the instance is part of a replica set or a sharded cluster
+         * - mongosh
+         * - drivers that support the OP_COMPRESSED message format.
+         * MongoDB supports the following compressors:
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
+         * @param index The index of the element to return.
+         * @return The compressors at the given index.
+         */
+        yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Compressor getCompressors(int index);
+        /**
+         * <pre>
+         * Specifies the default compressor(s) to use for communication between this mongod or mongos instance and:
+         * - other members of the deployment if the instance is part of a replica set or a sharded cluster
+         * - mongosh
+         * - drivers that support the OP_COMPRESSED message format.
+         * MongoDB supports the following compressors:
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
+         * @return A list containing the enum numeric values on the wire for compressors.
+         */
+        java.util.List<java.lang.Integer>
+        getCompressorsValueList();
+        /**
+         * <pre>
+         * Specifies the default compressor(s) to use for communication between this mongod or mongos instance and:
+         * - other members of the deployment if the instance is part of a replica set or a sharded cluster
+         * - mongosh
+         * - drivers that support the OP_COMPRESSED message format.
+         * MongoDB supports the following compressors:
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
+         * @param index The index of the value to return.
+         * @return The enum numeric value on the wire of compressors at the given index.
+         */
+        int getCompressorsValue(int index);
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression}
+       */
+      public static final class Compression extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression)
+          CompressionOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use Compression.newBuilder() to construct.
+        private Compression(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private Compression() {
+          compressors_ = java.util.Collections.emptyList();
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new Compression();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private Compression(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          int mutable_bitField0_ = 0;
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  int rawValue = input.readEnum();
+                  if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                    compressors_ = new java.util.ArrayList<java.lang.Integer>();
+                    mutable_bitField0_ |= 0x00000001;
+                  }
+                  compressors_.add(rawValue);
+                  break;
+                }
+                case 10: {
+                  int length = input.readRawVarint32();
+                  int oldLimit = input.pushLimit(length);
+                  while(input.getBytesUntilLimit() > 0) {
+                    int rawValue = input.readEnum();
+                    if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                      compressors_ = new java.util.ArrayList<java.lang.Integer>();
+                      mutable_bitField0_ |= 0x00000001;
+                    }
+                    compressors_.add(rawValue);
+                  }
+                  input.popLimit(oldLimit);
+                  break;
+                }
+                default: {
+                  if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            if (((mutable_bitField0_ & 0x00000001) != 0)) {
+              compressors_ = java.util.Collections.unmodifiableList(compressors_);
+            }
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Network_Compression_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Network_Compression_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Builder.class);
+        }
+
+        /**
+         * Protobuf enum {@code yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression.Compressor}
+         */
+        public enum Compressor
+            implements com.google.protobuf.ProtocolMessageEnum {
+          /**
+           * <code>COMPRESSOR_UNSPECIFIED = 0;</code>
+           */
+          COMPRESSOR_UNSPECIFIED(0),
+          /**
+           * <pre>
+           * The [Snappy](https://docs.mongodb.com/v4.2/reference/glossary/#term-snappy) compression.
+           * </pre>
+           *
+           * <code>SNAPPY = 1;</code>
+           */
+          SNAPPY(1),
+          /**
+           * <pre>
+           * The [zlib](https://docs.mongodb.com/v4.2/reference/glossary/#term-zlib) compression.
+           * </pre>
+           *
+           * <code>ZLIB = 2;</code>
+           */
+          ZLIB(2),
+          /**
+           * <pre>
+           * The [zstd](https://docs.mongodb.com/v4.2/reference/glossary/#term-zstd) compression.
+           * </pre>
+           *
+           * <code>ZSTD = 3;</code>
+           */
+          ZSTD(3),
+          /**
+           * <pre>
+           *No compression
+           * </pre>
+           *
+           * <code>DISABLED = 4;</code>
+           */
+          DISABLED(4),
+          UNRECOGNIZED(-1),
+          ;
+
+          /**
+           * <code>COMPRESSOR_UNSPECIFIED = 0;</code>
+           */
+          public static final int COMPRESSOR_UNSPECIFIED_VALUE = 0;
+          /**
+           * <pre>
+           * The [Snappy](https://docs.mongodb.com/v4.2/reference/glossary/#term-snappy) compression.
+           * </pre>
+           *
+           * <code>SNAPPY = 1;</code>
+           */
+          public static final int SNAPPY_VALUE = 1;
+          /**
+           * <pre>
+           * The [zlib](https://docs.mongodb.com/v4.2/reference/glossary/#term-zlib) compression.
+           * </pre>
+           *
+           * <code>ZLIB = 2;</code>
+           */
+          public static final int ZLIB_VALUE = 2;
+          /**
+           * <pre>
+           * The [zstd](https://docs.mongodb.com/v4.2/reference/glossary/#term-zstd) compression.
+           * </pre>
+           *
+           * <code>ZSTD = 3;</code>
+           */
+          public static final int ZSTD_VALUE = 3;
+          /**
+           * <pre>
+           *No compression
+           * </pre>
+           *
+           * <code>DISABLED = 4;</code>
+           */
+          public static final int DISABLED_VALUE = 4;
+
+
+          public final int getNumber() {
+            if (this == UNRECOGNIZED) {
+              throw new java.lang.IllegalArgumentException(
+                  "Can't get the number of an unknown enum value.");
+            }
+            return value;
+          }
+
+          /**
+           * @param value The numeric wire value of the corresponding enum entry.
+           * @return The enum associated with the given numeric wire value.
+           * @deprecated Use {@link #forNumber(int)} instead.
+           */
+          @java.lang.Deprecated
+          public static Compressor valueOf(int value) {
+            return forNumber(value);
+          }
+
+          /**
+           * @param value The numeric wire value of the corresponding enum entry.
+           * @return The enum associated with the given numeric wire value.
+           */
+          public static Compressor forNumber(int value) {
+            switch (value) {
+              case 0: return COMPRESSOR_UNSPECIFIED;
+              case 1: return SNAPPY;
+              case 2: return ZLIB;
+              case 3: return ZSTD;
+              case 4: return DISABLED;
+              default: return null;
+            }
+          }
+
+          public static com.google.protobuf.Internal.EnumLiteMap<Compressor>
+              internalGetValueMap() {
+            return internalValueMap;
+          }
+          private static final com.google.protobuf.Internal.EnumLiteMap<
+              Compressor> internalValueMap =
+                new com.google.protobuf.Internal.EnumLiteMap<Compressor>() {
+                  public Compressor findValueByNumber(int number) {
+                    return Compressor.forNumber(number);
+                  }
+                };
+
+          public final com.google.protobuf.Descriptors.EnumValueDescriptor
+              getValueDescriptor() {
+            if (this == UNRECOGNIZED) {
+              throw new java.lang.IllegalStateException(
+                  "Can't get the descriptor of an unrecognized enum value.");
+            }
+            return getDescriptor().getValues().get(ordinal());
+          }
+          public final com.google.protobuf.Descriptors.EnumDescriptor
+              getDescriptorForType() {
+            return getDescriptor();
+          }
+          public static final com.google.protobuf.Descriptors.EnumDescriptor
+              getDescriptor() {
+            return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.getDescriptor().getEnumTypes().get(0);
+          }
+
+          private static final Compressor[] VALUES = values();
+
+          public static Compressor valueOf(
+              com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+            if (desc.getType() != getDescriptor()) {
+              throw new java.lang.IllegalArgumentException(
+                "EnumValueDescriptor is not for this type.");
+            }
+            if (desc.getIndex() == -1) {
+              return UNRECOGNIZED;
+            }
+            return VALUES[desc.getIndex()];
+          }
+
+          private final int value;
+
+          private Compressor(int value) {
+            this.value = value;
+          }
+
+          // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression.Compressor)
+        }
+
+        public static final int COMPRESSORS_FIELD_NUMBER = 1;
+        private java.util.List<java.lang.Integer> compressors_;
+        private static final com.google.protobuf.Internal.ListAdapter.Converter<
+            java.lang.Integer, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Compressor> compressors_converter_ =
+                new com.google.protobuf.Internal.ListAdapter.Converter<
+                    java.lang.Integer, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Compressor>() {
+                  public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Compressor convert(java.lang.Integer from) {
+                    @SuppressWarnings("deprecation")
+                    yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Compressor result = yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Compressor.valueOf(from);
+                    return result == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Compressor.UNRECOGNIZED : result;
+                  }
+                };
+        /**
+         * <pre>
+         * Specifies the default compressor(s) to use for communication between this mongod or mongos instance and:
+         * - other members of the deployment if the instance is part of a replica set or a sharded cluster
+         * - mongosh
+         * - drivers that support the OP_COMPRESSED message format.
+         * MongoDB supports the following compressors:
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
+         * @return A list containing the compressors.
+         */
+        @java.lang.Override
+        public java.util.List<yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Compressor> getCompressorsList() {
+          return new com.google.protobuf.Internal.ListAdapter<
+              java.lang.Integer, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Compressor>(compressors_, compressors_converter_);
+        }
+        /**
+         * <pre>
+         * Specifies the default compressor(s) to use for communication between this mongod or mongos instance and:
+         * - other members of the deployment if the instance is part of a replica set or a sharded cluster
+         * - mongosh
+         * - drivers that support the OP_COMPRESSED message format.
+         * MongoDB supports the following compressors:
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
+         * @return The count of compressors.
+         */
+        @java.lang.Override
+        public int getCompressorsCount() {
+          return compressors_.size();
+        }
+        /**
+         * <pre>
+         * Specifies the default compressor(s) to use for communication between this mongod or mongos instance and:
+         * - other members of the deployment if the instance is part of a replica set or a sharded cluster
+         * - mongosh
+         * - drivers that support the OP_COMPRESSED message format.
+         * MongoDB supports the following compressors:
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
+         * @param index The index of the element to return.
+         * @return The compressors at the given index.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Compressor getCompressors(int index) {
+          return compressors_converter_.convert(compressors_.get(index));
+        }
+        /**
+         * <pre>
+         * Specifies the default compressor(s) to use for communication between this mongod or mongos instance and:
+         * - other members of the deployment if the instance is part of a replica set or a sharded cluster
+         * - mongosh
+         * - drivers that support the OP_COMPRESSED message format.
+         * MongoDB supports the following compressors:
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
+         * @return A list containing the enum numeric values on the wire for compressors.
+         */
+        @java.lang.Override
+        public java.util.List<java.lang.Integer>
+        getCompressorsValueList() {
+          return compressors_;
+        }
+        /**
+         * <pre>
+         * Specifies the default compressor(s) to use for communication between this mongod or mongos instance and:
+         * - other members of the deployment if the instance is part of a replica set or a sharded cluster
+         * - mongosh
+         * - drivers that support the OP_COMPRESSED message format.
+         * MongoDB supports the following compressors:
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
+         * @param index The index of the value to return.
+         * @return The enum numeric value on the wire of compressors at the given index.
+         */
+        @java.lang.Override
+        public int getCompressorsValue(int index) {
+          return compressors_.get(index);
+        }
+        private int compressorsMemoizedSerializedSize;
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          getSerializedSize();
+          if (getCompressorsList().size() > 0) {
+            output.writeUInt32NoTag(10);
+            output.writeUInt32NoTag(compressorsMemoizedSerializedSize);
+          }
+          for (int i = 0; i < compressors_.size(); i++) {
+            output.writeEnumNoTag(compressors_.get(i));
+          }
+          unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          {
+            int dataSize = 0;
+            for (int i = 0; i < compressors_.size(); i++) {
+              dataSize += com.google.protobuf.CodedOutputStream
+                .computeEnumSizeNoTag(compressors_.get(i));
+            }
+            size += dataSize;
+            if (!getCompressorsList().isEmpty()) {  size += 1;
+              size += com.google.protobuf.CodedOutputStream
+                .computeUInt32SizeNoTag(dataSize);
+            }compressorsMemoizedSerializedSize = dataSize;
+          }
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression)) {
+            return super.equals(obj);
+          }
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression) obj;
+
+          if (!compressors_.equals(other.compressors_)) return false;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          if (getCompressorsCount() > 0) {
+            hash = (37 * hash) + COMPRESSORS_FIELD_NUMBER;
+            hash = (53 * hash) + compressors_.hashCode();
+          }
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression)
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.CompressionOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Network_Compression_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Network_Compression_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Builder.class);
+          }
+
+          // Construct using yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            compressors_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Network_Compression_descriptor;
+          }
+
+          @java.lang.Override
+          public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression getDefaultInstanceForType() {
+            return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression build() {
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression buildPartial() {
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression result = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression(this);
+            int from_bitField0_ = bitField0_;
+            if (((bitField0_ & 0x00000001) != 0)) {
+              compressors_ = java.util.Collections.unmodifiableList(compressors_);
+              bitField0_ = (bitField0_ & ~0x00000001);
+            }
+            result.compressors_ = compressors_;
+            onBuilt();
+            return result;
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression) {
+              return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression other) {
+            if (other == yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.getDefaultInstance()) return this;
+            if (!other.compressors_.isEmpty()) {
+              if (compressors_.isEmpty()) {
+                compressors_ = other.compressors_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+              } else {
+                ensureCompressorsIsMutable();
+                compressors_.addAll(other.compressors_);
+              }
+              onChanged();
+            }
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          private int bitField0_;
+
+          private java.util.List<java.lang.Integer> compressors_ =
+            java.util.Collections.emptyList();
+          private void ensureCompressorsIsMutable() {
+            if (!((bitField0_ & 0x00000001) != 0)) {
+              compressors_ = new java.util.ArrayList<java.lang.Integer>(compressors_);
+              bitField0_ |= 0x00000001;
+            }
+          }
+          /**
+           * <pre>
+           * Specifies the default compressor(s) to use for communication between this mongod or mongos instance and:
+           * - other members of the deployment if the instance is part of a replica set or a sharded cluster
+           * - mongosh
+           * - drivers that support the OP_COMPRESSED message format.
+           * MongoDB supports the following compressors:
+           * </pre>
+           *
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
+           * @return A list containing the compressors.
+           */
+          public java.util.List<yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Compressor> getCompressorsList() {
+            return new com.google.protobuf.Internal.ListAdapter<
+                java.lang.Integer, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Compressor>(compressors_, compressors_converter_);
+          }
+          /**
+           * <pre>
+           * Specifies the default compressor(s) to use for communication between this mongod or mongos instance and:
+           * - other members of the deployment if the instance is part of a replica set or a sharded cluster
+           * - mongosh
+           * - drivers that support the OP_COMPRESSED message format.
+           * MongoDB supports the following compressors:
+           * </pre>
+           *
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
+           * @return The count of compressors.
+           */
+          public int getCompressorsCount() {
+            return compressors_.size();
+          }
+          /**
+           * <pre>
+           * Specifies the default compressor(s) to use for communication between this mongod or mongos instance and:
+           * - other members of the deployment if the instance is part of a replica set or a sharded cluster
+           * - mongosh
+           * - drivers that support the OP_COMPRESSED message format.
+           * MongoDB supports the following compressors:
+           * </pre>
+           *
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
+           * @param index The index of the element to return.
+           * @return The compressors at the given index.
+           */
+          public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Compressor getCompressors(int index) {
+            return compressors_converter_.convert(compressors_.get(index));
+          }
+          /**
+           * <pre>
+           * Specifies the default compressor(s) to use for communication between this mongod or mongos instance and:
+           * - other members of the deployment if the instance is part of a replica set or a sharded cluster
+           * - mongosh
+           * - drivers that support the OP_COMPRESSED message format.
+           * MongoDB supports the following compressors:
+           * </pre>
+           *
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
+           * @param index The index to set the value at.
+           * @param value The compressors to set.
+           * @return This builder for chaining.
+           */
+          public Builder setCompressors(
+              int index, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Compressor value) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureCompressorsIsMutable();
+            compressors_.set(index, value.getNumber());
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Specifies the default compressor(s) to use for communication between this mongod or mongos instance and:
+           * - other members of the deployment if the instance is part of a replica set or a sharded cluster
+           * - mongosh
+           * - drivers that support the OP_COMPRESSED message format.
+           * MongoDB supports the following compressors:
+           * </pre>
+           *
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
+           * @param value The compressors to add.
+           * @return This builder for chaining.
+           */
+          public Builder addCompressors(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Compressor value) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureCompressorsIsMutable();
+            compressors_.add(value.getNumber());
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Specifies the default compressor(s) to use for communication between this mongod or mongos instance and:
+           * - other members of the deployment if the instance is part of a replica set or a sharded cluster
+           * - mongosh
+           * - drivers that support the OP_COMPRESSED message format.
+           * MongoDB supports the following compressors:
+           * </pre>
+           *
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
+           * @param values The compressors to add.
+           * @return This builder for chaining.
+           */
+          public Builder addAllCompressors(
+              java.lang.Iterable<? extends yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Compressor> values) {
+            ensureCompressorsIsMutable();
+            for (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Compressor value : values) {
+              compressors_.add(value.getNumber());
+            }
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Specifies the default compressor(s) to use for communication between this mongod or mongos instance and:
+           * - other members of the deployment if the instance is part of a replica set or a sharded cluster
+           * - mongosh
+           * - drivers that support the OP_COMPRESSED message format.
+           * MongoDB supports the following compressors:
+           * </pre>
+           *
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearCompressors() {
+            compressors_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Specifies the default compressor(s) to use for communication between this mongod or mongos instance and:
+           * - other members of the deployment if the instance is part of a replica set or a sharded cluster
+           * - mongosh
+           * - drivers that support the OP_COMPRESSED message format.
+           * MongoDB supports the following compressors:
+           * </pre>
+           *
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
+           * @return A list containing the enum numeric values on the wire for compressors.
+           */
+          public java.util.List<java.lang.Integer>
+          getCompressorsValueList() {
+            return java.util.Collections.unmodifiableList(compressors_);
+          }
+          /**
+           * <pre>
+           * Specifies the default compressor(s) to use for communication between this mongod or mongos instance and:
+           * - other members of the deployment if the instance is part of a replica set or a sharded cluster
+           * - mongosh
+           * - drivers that support the OP_COMPRESSED message format.
+           * MongoDB supports the following compressors:
+           * </pre>
+           *
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
+           * @param index The index of the value to return.
+           * @return The enum numeric value on the wire of compressors at the given index.
+           */
+          public int getCompressorsValue(int index) {
+            return compressors_.get(index);
+          }
+          /**
+           * <pre>
+           * Specifies the default compressor(s) to use for communication between this mongod or mongos instance and:
+           * - other members of the deployment if the instance is part of a replica set or a sharded cluster
+           * - mongosh
+           * - drivers that support the OP_COMPRESSED message format.
+           * MongoDB supports the following compressors:
+           * </pre>
+           *
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
+           * @param index The index of the value to return.
+           * @return The enum numeric value on the wire of compressors at the given index.
+           * @return This builder for chaining.
+           */
+          public Builder setCompressorsValue(
+              int index, int value) {
+            ensureCompressorsIsMutable();
+            compressors_.set(index, value);
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Specifies the default compressor(s) to use for communication between this mongod or mongos instance and:
+           * - other members of the deployment if the instance is part of a replica set or a sharded cluster
+           * - mongosh
+           * - drivers that support the OP_COMPRESSED message format.
+           * MongoDB supports the following compressors:
+           * </pre>
+           *
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
+           * @param value The enum numeric value on the wire for compressors to add.
+           * @return This builder for chaining.
+           */
+          public Builder addCompressorsValue(int value) {
+            ensureCompressorsIsMutable();
+            compressors_.add(value);
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Specifies the default compressor(s) to use for communication between this mongod or mongos instance and:
+           * - other members of the deployment if the instance is part of a replica set or a sharded cluster
+           * - mongosh
+           * - drivers that support the OP_COMPRESSED message format.
+           * MongoDB supports the following compressors:
+           * </pre>
+           *
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
+           * @param values The enum numeric values on the wire for compressors to add.
+           * @return This builder for chaining.
+           */
+          public Builder addAllCompressorsValue(
+              java.lang.Iterable<java.lang.Integer> values) {
+            ensureCompressorsIsMutable();
+            for (int value : values) {
+              compressors_.add(value);
+            }
+            onChanged();
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression)
+        }
+
+        // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression)
+        private static final yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression();
+        }
+
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<Compression>
+            PARSER = new com.google.protobuf.AbstractParser<Compression>() {
+          @java.lang.Override
+          public Compression parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new Compression(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<Compression> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<Compression> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
       }
 
       public static final int MAX_INCOMING_CONNECTIONS_FIELD_NUMBER = 1;
@@ -18139,6 +20293,44 @@ public final class Mongodb {
         return getMaxIncomingConnections();
       }
 
+      public static final int COMPRESSION_FIELD_NUMBER = 2;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression compression_;
+      /**
+       * <pre>
+       * Compression settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression compression = 2;</code>
+       * @return Whether the compression field is set.
+       */
+      @java.lang.Override
+      public boolean hasCompression() {
+        return compression_ != null;
+      }
+      /**
+       * <pre>
+       * Compression settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression compression = 2;</code>
+       * @return The compression.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression getCompression() {
+        return compression_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.getDefaultInstance() : compression_;
+      }
+      /**
+       * <pre>
+       * Compression settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression compression = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.CompressionOrBuilder getCompressionOrBuilder() {
+        return getCompression();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -18156,6 +20348,9 @@ public final class Mongodb {
         if (maxIncomingConnections_ != null) {
           output.writeMessage(1, getMaxIncomingConnections());
         }
+        if (compression_ != null) {
+          output.writeMessage(2, getCompression());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -18168,6 +20363,10 @@ public final class Mongodb {
         if (maxIncomingConnections_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(1, getMaxIncomingConnections());
+        }
+        if (compression_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getCompression());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -18189,6 +20388,11 @@ public final class Mongodb {
           if (!getMaxIncomingConnections()
               .equals(other.getMaxIncomingConnections())) return false;
         }
+        if (hasCompression() != other.hasCompression()) return false;
+        if (hasCompression()) {
+          if (!getCompression()
+              .equals(other.getCompression())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -18203,6 +20407,10 @@ public final class Mongodb {
         if (hasMaxIncomingConnections()) {
           hash = (37 * hash) + MAX_INCOMING_CONNECTIONS_FIELD_NUMBER;
           hash = (53 * hash) + getMaxIncomingConnections().hashCode();
+        }
+        if (hasCompression()) {
+          hash = (37 * hash) + COMPRESSION_FIELD_NUMBER;
+          hash = (53 * hash) + getCompression().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -18343,6 +20551,12 @@ public final class Mongodb {
             maxIncomingConnections_ = null;
             maxIncomingConnectionsBuilder_ = null;
           }
+          if (compressionBuilder_ == null) {
+            compression_ = null;
+          } else {
+            compression_ = null;
+            compressionBuilder_ = null;
+          }
           return this;
         }
 
@@ -18373,6 +20587,11 @@ public final class Mongodb {
             result.maxIncomingConnections_ = maxIncomingConnections_;
           } else {
             result.maxIncomingConnections_ = maxIncomingConnectionsBuilder_.build();
+          }
+          if (compressionBuilder_ == null) {
+            result.compression_ = compression_;
+          } else {
+            result.compression_ = compressionBuilder_.build();
           }
           onBuilt();
           return result;
@@ -18424,6 +20643,9 @@ public final class Mongodb {
           if (other == yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.getDefaultInstance()) return this;
           if (other.hasMaxIncomingConnections()) {
             mergeMaxIncomingConnections(other.getMaxIncomingConnections());
+          }
+          if (other.hasCompression()) {
+            mergeCompression(other.getCompression());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -18608,6 +20830,161 @@ public final class Mongodb {
           }
           return maxIncomingConnectionsBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression compression_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.CompressionOrBuilder> compressionBuilder_;
+        /**
+         * <pre>
+         * Compression settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression compression = 2;</code>
+         * @return Whether the compression field is set.
+         */
+        public boolean hasCompression() {
+          return compressionBuilder_ != null || compression_ != null;
+        }
+        /**
+         * <pre>
+         * Compression settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression compression = 2;</code>
+         * @return The compression.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression getCompression() {
+          if (compressionBuilder_ == null) {
+            return compression_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.getDefaultInstance() : compression_;
+          } else {
+            return compressionBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Compression settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression compression = 2;</code>
+         */
+        public Builder setCompression(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression value) {
+          if (compressionBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            compression_ = value;
+            onChanged();
+          } else {
+            compressionBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Compression settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression compression = 2;</code>
+         */
+        public Builder setCompression(
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Builder builderForValue) {
+          if (compressionBuilder_ == null) {
+            compression_ = builderForValue.build();
+            onChanged();
+          } else {
+            compressionBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Compression settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression compression = 2;</code>
+         */
+        public Builder mergeCompression(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression value) {
+          if (compressionBuilder_ == null) {
+            if (compression_ != null) {
+              compression_ =
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.newBuilder(compression_).mergeFrom(value).buildPartial();
+            } else {
+              compression_ = value;
+            }
+            onChanged();
+          } else {
+            compressionBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Compression settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression compression = 2;</code>
+         */
+        public Builder clearCompression() {
+          if (compressionBuilder_ == null) {
+            compression_ = null;
+            onChanged();
+          } else {
+            compression_ = null;
+            compressionBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Compression settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression compression = 2;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Builder getCompressionBuilder() {
+          
+          onChanged();
+          return getCompressionFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Compression settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression compression = 2;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.CompressionOrBuilder getCompressionOrBuilder() {
+          if (compressionBuilder_ != null) {
+            return compressionBuilder_.getMessageOrBuilder();
+          } else {
+            return compression_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.getDefaultInstance() : compression_;
+          }
+        }
+        /**
+         * <pre>
+         * Compression settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Network.Compression compression = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.CompressionOrBuilder> 
+            getCompressionFieldBuilder() {
+          if (compressionBuilder_ == null) {
+            compressionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.Compression.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network.CompressionOrBuilder>(
+                    getCompression(),
+                    getParentForChildren(),
+                    isClean());
+            compression_ = null;
+          }
+          return compressionBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -18656,6 +21033,1599 @@ public final class Mongodb {
 
       @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Network getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface SetParameterOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.SetParameter)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Enables or disables the mechanism that controls the rate at which the primary applies its writes with the
+       * goal of keeping the secondary members [majority committed](https://www.mongodb.com/docs/v4.2/reference/command/replSetGetStatus/#replSetGetStatus.optimes.lastCommittedOpTime)
+       * lag under a configurable maximum value.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_flow_control = 1;</code>
+       * @return Whether the enableFlowControl field is set.
+       */
+      boolean hasEnableFlowControl();
+      /**
+       * <pre>
+       * Enables or disables the mechanism that controls the rate at which the primary applies its writes with the
+       * goal of keeping the secondary members [majority committed](https://www.mongodb.com/docs/v4.2/reference/command/replSetGetStatus/#replSetGetStatus.optimes.lastCommittedOpTime)
+       * lag under a configurable maximum value.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_flow_control = 1;</code>
+       * @return The enableFlowControl.
+       */
+      com.google.protobuf.BoolValue getEnableFlowControl();
+      /**
+       * <pre>
+       * Enables or disables the mechanism that controls the rate at which the primary applies its writes with the
+       * goal of keeping the secondary members [majority committed](https://www.mongodb.com/docs/v4.2/reference/command/replSetGetStatus/#replSetGetStatus.optimes.lastCommittedOpTime)
+       * lag under a configurable maximum value.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_flow_control = 1;</code>
+       */
+      com.google.protobuf.BoolValueOrBuilder getEnableFlowControlOrBuilder();
+
+      /**
+       * <pre>
+       * Enables the auditing of authorization successes
+       * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue audit_authorization_success = 2;</code>
+       * @return Whether the auditAuthorizationSuccess field is set.
+       */
+      boolean hasAuditAuthorizationSuccess();
+      /**
+       * <pre>
+       * Enables the auditing of authorization successes
+       * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue audit_authorization_success = 2;</code>
+       * @return The auditAuthorizationSuccess.
+       */
+      com.google.protobuf.BoolValue getAuditAuthorizationSuccess();
+      /**
+       * <pre>
+       * Enables the auditing of authorization successes
+       * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue audit_authorization_success = 2;</code>
+       */
+      com.google.protobuf.BoolValueOrBuilder getAuditAuthorizationSuccessOrBuilder();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.SetParameter}
+     */
+    public static final class SetParameter extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.SetParameter)
+        SetParameterOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use SetParameter.newBuilder() to construct.
+      private SetParameter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private SetParameter() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new SetParameter();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private SetParameter(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.BoolValue.Builder subBuilder = null;
+                if (enableFlowControl_ != null) {
+                  subBuilder = enableFlowControl_.toBuilder();
+                }
+                enableFlowControl_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(enableFlowControl_);
+                  enableFlowControl_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 18: {
+                com.google.protobuf.BoolValue.Builder subBuilder = null;
+                if (auditAuthorizationSuccess_ != null) {
+                  subBuilder = auditAuthorizationSuccess_.toBuilder();
+                }
+                auditAuthorizationSuccess_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(auditAuthorizationSuccess_);
+                  auditAuthorizationSuccess_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_SetParameter_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_SetParameter_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter.Builder.class);
+      }
+
+      public static final int ENABLE_FLOW_CONTROL_FIELD_NUMBER = 1;
+      private com.google.protobuf.BoolValue enableFlowControl_;
+      /**
+       * <pre>
+       * Enables or disables the mechanism that controls the rate at which the primary applies its writes with the
+       * goal of keeping the secondary members [majority committed](https://www.mongodb.com/docs/v4.2/reference/command/replSetGetStatus/#replSetGetStatus.optimes.lastCommittedOpTime)
+       * lag under a configurable maximum value.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_flow_control = 1;</code>
+       * @return Whether the enableFlowControl field is set.
+       */
+      @java.lang.Override
+      public boolean hasEnableFlowControl() {
+        return enableFlowControl_ != null;
+      }
+      /**
+       * <pre>
+       * Enables or disables the mechanism that controls the rate at which the primary applies its writes with the
+       * goal of keeping the secondary members [majority committed](https://www.mongodb.com/docs/v4.2/reference/command/replSetGetStatus/#replSetGetStatus.optimes.lastCommittedOpTime)
+       * lag under a configurable maximum value.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_flow_control = 1;</code>
+       * @return The enableFlowControl.
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValue getEnableFlowControl() {
+        return enableFlowControl_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableFlowControl_;
+      }
+      /**
+       * <pre>
+       * Enables or disables the mechanism that controls the rate at which the primary applies its writes with the
+       * goal of keeping the secondary members [majority committed](https://www.mongodb.com/docs/v4.2/reference/command/replSetGetStatus/#replSetGetStatus.optimes.lastCommittedOpTime)
+       * lag under a configurable maximum value.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_flow_control = 1;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValueOrBuilder getEnableFlowControlOrBuilder() {
+        return getEnableFlowControl();
+      }
+
+      public static final int AUDIT_AUTHORIZATION_SUCCESS_FIELD_NUMBER = 2;
+      private com.google.protobuf.BoolValue auditAuthorizationSuccess_;
+      /**
+       * <pre>
+       * Enables the auditing of authorization successes
+       * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue audit_authorization_success = 2;</code>
+       * @return Whether the auditAuthorizationSuccess field is set.
+       */
+      @java.lang.Override
+      public boolean hasAuditAuthorizationSuccess() {
+        return auditAuthorizationSuccess_ != null;
+      }
+      /**
+       * <pre>
+       * Enables the auditing of authorization successes
+       * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue audit_authorization_success = 2;</code>
+       * @return The auditAuthorizationSuccess.
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValue getAuditAuthorizationSuccess() {
+        return auditAuthorizationSuccess_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : auditAuthorizationSuccess_;
+      }
+      /**
+       * <pre>
+       * Enables the auditing of authorization successes
+       * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue audit_authorization_success = 2;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValueOrBuilder getAuditAuthorizationSuccessOrBuilder() {
+        return getAuditAuthorizationSuccess();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (enableFlowControl_ != null) {
+          output.writeMessage(1, getEnableFlowControl());
+        }
+        if (auditAuthorizationSuccess_ != null) {
+          output.writeMessage(2, getAuditAuthorizationSuccess());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (enableFlowControl_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getEnableFlowControl());
+        }
+        if (auditAuthorizationSuccess_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getAuditAuthorizationSuccess());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter) obj;
+
+        if (hasEnableFlowControl() != other.hasEnableFlowControl()) return false;
+        if (hasEnableFlowControl()) {
+          if (!getEnableFlowControl()
+              .equals(other.getEnableFlowControl())) return false;
+        }
+        if (hasAuditAuthorizationSuccess() != other.hasAuditAuthorizationSuccess()) return false;
+        if (hasAuditAuthorizationSuccess()) {
+          if (!getAuditAuthorizationSuccess()
+              .equals(other.getAuditAuthorizationSuccess())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasEnableFlowControl()) {
+          hash = (37 * hash) + ENABLE_FLOW_CONTROL_FIELD_NUMBER;
+          hash = (53 * hash) + getEnableFlowControl().hashCode();
+        }
+        if (hasAuditAuthorizationSuccess()) {
+          hash = (37 * hash) + AUDIT_AUTHORIZATION_SUCCESS_FIELD_NUMBER;
+          hash = (53 * hash) + getAuditAuthorizationSuccess().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.SetParameter}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.SetParameter)
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameterOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_SetParameter_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_SetParameter_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (enableFlowControlBuilder_ == null) {
+            enableFlowControl_ = null;
+          } else {
+            enableFlowControl_ = null;
+            enableFlowControlBuilder_ = null;
+          }
+          if (auditAuthorizationSuccessBuilder_ == null) {
+            auditAuthorizationSuccess_ = null;
+          } else {
+            auditAuthorizationSuccess_ = null;
+            auditAuthorizationSuccessBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_SetParameter_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter build() {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter buildPartial() {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter result = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter(this);
+          if (enableFlowControlBuilder_ == null) {
+            result.enableFlowControl_ = enableFlowControl_;
+          } else {
+            result.enableFlowControl_ = enableFlowControlBuilder_.build();
+          }
+          if (auditAuthorizationSuccessBuilder_ == null) {
+            result.auditAuthorizationSuccess_ = auditAuthorizationSuccess_;
+          } else {
+            result.auditAuthorizationSuccess_ = auditAuthorizationSuccessBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter) {
+            return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter other) {
+          if (other == yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter.getDefaultInstance()) return this;
+          if (other.hasEnableFlowControl()) {
+            mergeEnableFlowControl(other.getEnableFlowControl());
+          }
+          if (other.hasAuditAuthorizationSuccess()) {
+            mergeAuditAuthorizationSuccess(other.getAuditAuthorizationSuccess());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private com.google.protobuf.BoolValue enableFlowControl_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableFlowControlBuilder_;
+        /**
+         * <pre>
+         * Enables or disables the mechanism that controls the rate at which the primary applies its writes with the
+         * goal of keeping the secondary members [majority committed](https://www.mongodb.com/docs/v4.2/reference/command/replSetGetStatus/#replSetGetStatus.optimes.lastCommittedOpTime)
+         * lag under a configurable maximum value.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue enable_flow_control = 1;</code>
+         * @return Whether the enableFlowControl field is set.
+         */
+        public boolean hasEnableFlowControl() {
+          return enableFlowControlBuilder_ != null || enableFlowControl_ != null;
+        }
+        /**
+         * <pre>
+         * Enables or disables the mechanism that controls the rate at which the primary applies its writes with the
+         * goal of keeping the secondary members [majority committed](https://www.mongodb.com/docs/v4.2/reference/command/replSetGetStatus/#replSetGetStatus.optimes.lastCommittedOpTime)
+         * lag under a configurable maximum value.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue enable_flow_control = 1;</code>
+         * @return The enableFlowControl.
+         */
+        public com.google.protobuf.BoolValue getEnableFlowControl() {
+          if (enableFlowControlBuilder_ == null) {
+            return enableFlowControl_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableFlowControl_;
+          } else {
+            return enableFlowControlBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Enables or disables the mechanism that controls the rate at which the primary applies its writes with the
+         * goal of keeping the secondary members [majority committed](https://www.mongodb.com/docs/v4.2/reference/command/replSetGetStatus/#replSetGetStatus.optimes.lastCommittedOpTime)
+         * lag under a configurable maximum value.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue enable_flow_control = 1;</code>
+         */
+        public Builder setEnableFlowControl(com.google.protobuf.BoolValue value) {
+          if (enableFlowControlBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            enableFlowControl_ = value;
+            onChanged();
+          } else {
+            enableFlowControlBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables or disables the mechanism that controls the rate at which the primary applies its writes with the
+         * goal of keeping the secondary members [majority committed](https://www.mongodb.com/docs/v4.2/reference/command/replSetGetStatus/#replSetGetStatus.optimes.lastCommittedOpTime)
+         * lag under a configurable maximum value.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue enable_flow_control = 1;</code>
+         */
+        public Builder setEnableFlowControl(
+            com.google.protobuf.BoolValue.Builder builderForValue) {
+          if (enableFlowControlBuilder_ == null) {
+            enableFlowControl_ = builderForValue.build();
+            onChanged();
+          } else {
+            enableFlowControlBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables or disables the mechanism that controls the rate at which the primary applies its writes with the
+         * goal of keeping the secondary members [majority committed](https://www.mongodb.com/docs/v4.2/reference/command/replSetGetStatus/#replSetGetStatus.optimes.lastCommittedOpTime)
+         * lag under a configurable maximum value.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue enable_flow_control = 1;</code>
+         */
+        public Builder mergeEnableFlowControl(com.google.protobuf.BoolValue value) {
+          if (enableFlowControlBuilder_ == null) {
+            if (enableFlowControl_ != null) {
+              enableFlowControl_ =
+                com.google.protobuf.BoolValue.newBuilder(enableFlowControl_).mergeFrom(value).buildPartial();
+            } else {
+              enableFlowControl_ = value;
+            }
+            onChanged();
+          } else {
+            enableFlowControlBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables or disables the mechanism that controls the rate at which the primary applies its writes with the
+         * goal of keeping the secondary members [majority committed](https://www.mongodb.com/docs/v4.2/reference/command/replSetGetStatus/#replSetGetStatus.optimes.lastCommittedOpTime)
+         * lag under a configurable maximum value.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue enable_flow_control = 1;</code>
+         */
+        public Builder clearEnableFlowControl() {
+          if (enableFlowControlBuilder_ == null) {
+            enableFlowControl_ = null;
+            onChanged();
+          } else {
+            enableFlowControl_ = null;
+            enableFlowControlBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables or disables the mechanism that controls the rate at which the primary applies its writes with the
+         * goal of keeping the secondary members [majority committed](https://www.mongodb.com/docs/v4.2/reference/command/replSetGetStatus/#replSetGetStatus.optimes.lastCommittedOpTime)
+         * lag under a configurable maximum value.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue enable_flow_control = 1;</code>
+         */
+        public com.google.protobuf.BoolValue.Builder getEnableFlowControlBuilder() {
+          
+          onChanged();
+          return getEnableFlowControlFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Enables or disables the mechanism that controls the rate at which the primary applies its writes with the
+         * goal of keeping the secondary members [majority committed](https://www.mongodb.com/docs/v4.2/reference/command/replSetGetStatus/#replSetGetStatus.optimes.lastCommittedOpTime)
+         * lag under a configurable maximum value.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue enable_flow_control = 1;</code>
+         */
+        public com.google.protobuf.BoolValueOrBuilder getEnableFlowControlOrBuilder() {
+          if (enableFlowControlBuilder_ != null) {
+            return enableFlowControlBuilder_.getMessageOrBuilder();
+          } else {
+            return enableFlowControl_ == null ?
+                com.google.protobuf.BoolValue.getDefaultInstance() : enableFlowControl_;
+          }
+        }
+        /**
+         * <pre>
+         * Enables or disables the mechanism that controls the rate at which the primary applies its writes with the
+         * goal of keeping the secondary members [majority committed](https://www.mongodb.com/docs/v4.2/reference/command/replSetGetStatus/#replSetGetStatus.optimes.lastCommittedOpTime)
+         * lag under a configurable maximum value.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue enable_flow_control = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+            getEnableFlowControlFieldBuilder() {
+          if (enableFlowControlBuilder_ == null) {
+            enableFlowControlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                    getEnableFlowControl(),
+                    getParentForChildren(),
+                    isClean());
+            enableFlowControl_ = null;
+          }
+          return enableFlowControlBuilder_;
+        }
+
+        private com.google.protobuf.BoolValue auditAuthorizationSuccess_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> auditAuthorizationSuccessBuilder_;
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 2;</code>
+         * @return Whether the auditAuthorizationSuccess field is set.
+         */
+        public boolean hasAuditAuthorizationSuccess() {
+          return auditAuthorizationSuccessBuilder_ != null || auditAuthorizationSuccess_ != null;
+        }
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 2;</code>
+         * @return The auditAuthorizationSuccess.
+         */
+        public com.google.protobuf.BoolValue getAuditAuthorizationSuccess() {
+          if (auditAuthorizationSuccessBuilder_ == null) {
+            return auditAuthorizationSuccess_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : auditAuthorizationSuccess_;
+          } else {
+            return auditAuthorizationSuccessBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 2;</code>
+         */
+        public Builder setAuditAuthorizationSuccess(com.google.protobuf.BoolValue value) {
+          if (auditAuthorizationSuccessBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            auditAuthorizationSuccess_ = value;
+            onChanged();
+          } else {
+            auditAuthorizationSuccessBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 2;</code>
+         */
+        public Builder setAuditAuthorizationSuccess(
+            com.google.protobuf.BoolValue.Builder builderForValue) {
+          if (auditAuthorizationSuccessBuilder_ == null) {
+            auditAuthorizationSuccess_ = builderForValue.build();
+            onChanged();
+          } else {
+            auditAuthorizationSuccessBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 2;</code>
+         */
+        public Builder mergeAuditAuthorizationSuccess(com.google.protobuf.BoolValue value) {
+          if (auditAuthorizationSuccessBuilder_ == null) {
+            if (auditAuthorizationSuccess_ != null) {
+              auditAuthorizationSuccess_ =
+                com.google.protobuf.BoolValue.newBuilder(auditAuthorizationSuccess_).mergeFrom(value).buildPartial();
+            } else {
+              auditAuthorizationSuccess_ = value;
+            }
+            onChanged();
+          } else {
+            auditAuthorizationSuccessBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 2;</code>
+         */
+        public Builder clearAuditAuthorizationSuccess() {
+          if (auditAuthorizationSuccessBuilder_ == null) {
+            auditAuthorizationSuccess_ = null;
+            onChanged();
+          } else {
+            auditAuthorizationSuccess_ = null;
+            auditAuthorizationSuccessBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 2;</code>
+         */
+        public com.google.protobuf.BoolValue.Builder getAuditAuthorizationSuccessBuilder() {
+          
+          onChanged();
+          return getAuditAuthorizationSuccessFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 2;</code>
+         */
+        public com.google.protobuf.BoolValueOrBuilder getAuditAuthorizationSuccessOrBuilder() {
+          if (auditAuthorizationSuccessBuilder_ != null) {
+            return auditAuthorizationSuccessBuilder_.getMessageOrBuilder();
+          } else {
+            return auditAuthorizationSuccess_ == null ?
+                com.google.protobuf.BoolValue.getDefaultInstance() : auditAuthorizationSuccess_;
+          }
+        }
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+            getAuditAuthorizationSuccessFieldBuilder() {
+          if (auditAuthorizationSuccessBuilder_ == null) {
+            auditAuthorizationSuccessBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                    getAuditAuthorizationSuccess(),
+                    getParentForChildren(),
+                    isClean());
+            auditAuthorizationSuccess_ = null;
+          }
+          return auditAuthorizationSuccessBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.SetParameter)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.SetParameter)
+      private static final yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter();
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<SetParameter>
+          PARSER = new com.google.protobuf.AbstractParser<SetParameter>() {
+        @java.lang.Override
+        public SetParameter parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new SetParameter(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<SetParameter> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<SetParameter> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface AuditLogOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.AuditLog)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Audit filter, should be valid JSON object string
+       * </pre>
+       *
+       * <code>string filter = 1;</code>
+       * @return The filter.
+       */
+      java.lang.String getFilter();
+      /**
+       * <pre>
+       * Audit filter, should be valid JSON object string
+       * </pre>
+       *
+       * <code>string filter = 1;</code>
+       * @return The bytes for filter.
+       */
+      com.google.protobuf.ByteString
+          getFilterBytes();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.AuditLog}
+     */
+    public static final class AuditLog extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.AuditLog)
+        AuditLogOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use AuditLog.newBuilder() to construct.
+      private AuditLog(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private AuditLog() {
+        filter_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new AuditLog();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private AuditLog(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                filter_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_AuditLog_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_AuditLog_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog.Builder.class);
+      }
+
+      public static final int FILTER_FIELD_NUMBER = 1;
+      private volatile java.lang.Object filter_;
+      /**
+       * <pre>
+       * Audit filter, should be valid JSON object string
+       * </pre>
+       *
+       * <code>string filter = 1;</code>
+       * @return The filter.
+       */
+      @java.lang.Override
+      public java.lang.String getFilter() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filter_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Audit filter, should be valid JSON object string
+       * </pre>
+       *
+       * <code>string filter = 1;</code>
+       * @return The bytes for filter.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getFilterBytes() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, filter_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, filter_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog) obj;
+
+        if (!getFilter()
+            .equals(other.getFilter())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + FILTER_FIELD_NUMBER;
+        hash = (53 * hash) + getFilter().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.AuditLog}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.AuditLog)
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLogOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_AuditLog_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_AuditLog_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          filter_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_AuditLog_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog build() {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog buildPartial() {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog result = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog(this);
+          result.filter_ = filter_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog) {
+            return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog other) {
+          if (other == yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog.getDefaultInstance()) return this;
+          if (!other.getFilter().isEmpty()) {
+            filter_ = other.filter_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object filter_ = "";
+        /**
+         * <pre>
+         * Audit filter, should be valid JSON object string
+         * </pre>
+         *
+         * <code>string filter = 1;</code>
+         * @return The filter.
+         */
+        public java.lang.String getFilter() {
+          java.lang.Object ref = filter_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            filter_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Audit filter, should be valid JSON object string
+         * </pre>
+         *
+         * <code>string filter = 1;</code>
+         * @return The bytes for filter.
+         */
+        public com.google.protobuf.ByteString
+            getFilterBytes() {
+          java.lang.Object ref = filter_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            filter_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Audit filter, should be valid JSON object string
+         * </pre>
+         *
+         * <code>string filter = 1;</code>
+         * @param value The filter to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFilter(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          filter_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Audit filter, should be valid JSON object string
+         * </pre>
+         *
+         * <code>string filter = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearFilter() {
+          
+          filter_ = getDefaultInstance().getFilter();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Audit filter, should be valid JSON object string
+         * </pre>
+         *
+         * <code>string filter = 1;</code>
+         * @param value The bytes for filter to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFilterBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          filter_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.AuditLog)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.AuditLog)
+      private static final yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog();
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<AuditLog>
+          PARSER = new com.google.protobuf.AbstractParser<AuditLog>() {
+        @java.lang.Override
+        public AuditLog parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new AuditLog(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<AuditLog> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<AuditLog> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -18775,6 +22745,82 @@ public final class Mongodb {
       return getNet();
     }
 
+    public static final int SET_PARAMETER_FIELD_NUMBER = 4;
+    private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter setParameter_;
+    /**
+     * <pre>
+     * `setParameter` section of mongocfg configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.SetParameter set_parameter = 4;</code>
+     * @return Whether the setParameter field is set.
+     */
+    @java.lang.Override
+    public boolean hasSetParameter() {
+      return setParameter_ != null;
+    }
+    /**
+     * <pre>
+     * `setParameter` section of mongocfg configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.SetParameter set_parameter = 4;</code>
+     * @return The setParameter.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter getSetParameter() {
+      return setParameter_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter.getDefaultInstance() : setParameter_;
+    }
+    /**
+     * <pre>
+     * `setParameter` section of mongocfg configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.SetParameter set_parameter = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameterOrBuilder getSetParameterOrBuilder() {
+      return getSetParameter();
+    }
+
+    public static final int AUDIT_LOG_FIELD_NUMBER = 5;
+    private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog auditLog_;
+    /**
+     * <pre>
+     * `AuditLog` section of mongocfg configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.AuditLog audit_log = 5;</code>
+     * @return Whether the auditLog field is set.
+     */
+    @java.lang.Override
+    public boolean hasAuditLog() {
+      return auditLog_ != null;
+    }
+    /**
+     * <pre>
+     * `AuditLog` section of mongocfg configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.AuditLog audit_log = 5;</code>
+     * @return The auditLog.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog getAuditLog() {
+      return auditLog_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog.getDefaultInstance() : auditLog_;
+    }
+    /**
+     * <pre>
+     * `AuditLog` section of mongocfg configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.AuditLog audit_log = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLogOrBuilder getAuditLogOrBuilder() {
+      return getAuditLog();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -18798,6 +22844,12 @@ public final class Mongodb {
       if (net_ != null) {
         output.writeMessage(3, getNet());
       }
+      if (setParameter_ != null) {
+        output.writeMessage(4, getSetParameter());
+      }
+      if (auditLog_ != null) {
+        output.writeMessage(5, getAuditLog());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -18818,6 +22870,14 @@ public final class Mongodb {
       if (net_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getNet());
+      }
+      if (setParameter_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getSetParameter());
+      }
+      if (auditLog_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getAuditLog());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -18849,6 +22909,16 @@ public final class Mongodb {
         if (!getNet()
             .equals(other.getNet())) return false;
       }
+      if (hasSetParameter() != other.hasSetParameter()) return false;
+      if (hasSetParameter()) {
+        if (!getSetParameter()
+            .equals(other.getSetParameter())) return false;
+      }
+      if (hasAuditLog() != other.hasAuditLog()) return false;
+      if (hasAuditLog()) {
+        if (!getAuditLog()
+            .equals(other.getAuditLog())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -18871,6 +22941,14 @@ public final class Mongodb {
       if (hasNet()) {
         hash = (37 * hash) + NET_FIELD_NUMBER;
         hash = (53 * hash) + getNet().hashCode();
+      }
+      if (hasSetParameter()) {
+        hash = (37 * hash) + SET_PARAMETER_FIELD_NUMBER;
+        hash = (53 * hash) + getSetParameter().hashCode();
+      }
+      if (hasAuditLog()) {
+        hash = (37 * hash) + AUDIT_LOG_FIELD_NUMBER;
+        hash = (53 * hash) + getAuditLog().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -19023,6 +23101,18 @@ public final class Mongodb {
           net_ = null;
           netBuilder_ = null;
         }
+        if (setParameterBuilder_ == null) {
+          setParameter_ = null;
+        } else {
+          setParameter_ = null;
+          setParameterBuilder_ = null;
+        }
+        if (auditLogBuilder_ == null) {
+          auditLog_ = null;
+        } else {
+          auditLog_ = null;
+          auditLogBuilder_ = null;
+        }
         return this;
       }
 
@@ -19063,6 +23153,16 @@ public final class Mongodb {
           result.net_ = net_;
         } else {
           result.net_ = netBuilder_.build();
+        }
+        if (setParameterBuilder_ == null) {
+          result.setParameter_ = setParameter_;
+        } else {
+          result.setParameter_ = setParameterBuilder_.build();
+        }
+        if (auditLogBuilder_ == null) {
+          result.auditLog_ = auditLog_;
+        } else {
+          result.auditLog_ = auditLogBuilder_.build();
         }
         onBuilt();
         return result;
@@ -19120,6 +23220,12 @@ public final class Mongodb {
         }
         if (other.hasNet()) {
           mergeNet(other.getNet());
+        }
+        if (other.hasSetParameter()) {
+          mergeSetParameter(other.getSetParameter());
+        }
+        if (other.hasAuditLog()) {
+          mergeAuditLog(other.getAuditLog());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -19614,6 +23720,316 @@ public final class Mongodb {
         }
         return netBuilder_;
       }
+
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter setParameter_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameterOrBuilder> setParameterBuilder_;
+      /**
+       * <pre>
+       * `setParameter` section of mongocfg configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.SetParameter set_parameter = 4;</code>
+       * @return Whether the setParameter field is set.
+       */
+      public boolean hasSetParameter() {
+        return setParameterBuilder_ != null || setParameter_ != null;
+      }
+      /**
+       * <pre>
+       * `setParameter` section of mongocfg configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.SetParameter set_parameter = 4;</code>
+       * @return The setParameter.
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter getSetParameter() {
+        if (setParameterBuilder_ == null) {
+          return setParameter_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter.getDefaultInstance() : setParameter_;
+        } else {
+          return setParameterBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * `setParameter` section of mongocfg configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.SetParameter set_parameter = 4;</code>
+       */
+      public Builder setSetParameter(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter value) {
+        if (setParameterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          setParameter_ = value;
+          onChanged();
+        } else {
+          setParameterBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `setParameter` section of mongocfg configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.SetParameter set_parameter = 4;</code>
+       */
+      public Builder setSetParameter(
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter.Builder builderForValue) {
+        if (setParameterBuilder_ == null) {
+          setParameter_ = builderForValue.build();
+          onChanged();
+        } else {
+          setParameterBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `setParameter` section of mongocfg configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.SetParameter set_parameter = 4;</code>
+       */
+      public Builder mergeSetParameter(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter value) {
+        if (setParameterBuilder_ == null) {
+          if (setParameter_ != null) {
+            setParameter_ =
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter.newBuilder(setParameter_).mergeFrom(value).buildPartial();
+          } else {
+            setParameter_ = value;
+          }
+          onChanged();
+        } else {
+          setParameterBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `setParameter` section of mongocfg configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.SetParameter set_parameter = 4;</code>
+       */
+      public Builder clearSetParameter() {
+        if (setParameterBuilder_ == null) {
+          setParameter_ = null;
+          onChanged();
+        } else {
+          setParameter_ = null;
+          setParameterBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `setParameter` section of mongocfg configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.SetParameter set_parameter = 4;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter.Builder getSetParameterBuilder() {
+        
+        onChanged();
+        return getSetParameterFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * `setParameter` section of mongocfg configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.SetParameter set_parameter = 4;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameterOrBuilder getSetParameterOrBuilder() {
+        if (setParameterBuilder_ != null) {
+          return setParameterBuilder_.getMessageOrBuilder();
+        } else {
+          return setParameter_ == null ?
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter.getDefaultInstance() : setParameter_;
+        }
+      }
+      /**
+       * <pre>
+       * `setParameter` section of mongocfg configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.SetParameter set_parameter = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameterOrBuilder> 
+          getSetParameterFieldBuilder() {
+        if (setParameterBuilder_ == null) {
+          setParameterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameter.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.SetParameterOrBuilder>(
+                  getSetParameter(),
+                  getParentForChildren(),
+                  isClean());
+          setParameter_ = null;
+        }
+        return setParameterBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog auditLog_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLogOrBuilder> auditLogBuilder_;
+      /**
+       * <pre>
+       * `AuditLog` section of mongocfg configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.AuditLog audit_log = 5;</code>
+       * @return Whether the auditLog field is set.
+       */
+      public boolean hasAuditLog() {
+        return auditLogBuilder_ != null || auditLog_ != null;
+      }
+      /**
+       * <pre>
+       * `AuditLog` section of mongocfg configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.AuditLog audit_log = 5;</code>
+       * @return The auditLog.
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog getAuditLog() {
+        if (auditLogBuilder_ == null) {
+          return auditLog_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog.getDefaultInstance() : auditLog_;
+        } else {
+          return auditLogBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * `AuditLog` section of mongocfg configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.AuditLog audit_log = 5;</code>
+       */
+      public Builder setAuditLog(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog value) {
+        if (auditLogBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          auditLog_ = value;
+          onChanged();
+        } else {
+          auditLogBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `AuditLog` section of mongocfg configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.AuditLog audit_log = 5;</code>
+       */
+      public Builder setAuditLog(
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog.Builder builderForValue) {
+        if (auditLogBuilder_ == null) {
+          auditLog_ = builderForValue.build();
+          onChanged();
+        } else {
+          auditLogBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `AuditLog` section of mongocfg configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.AuditLog audit_log = 5;</code>
+       */
+      public Builder mergeAuditLog(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog value) {
+        if (auditLogBuilder_ == null) {
+          if (auditLog_ != null) {
+            auditLog_ =
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog.newBuilder(auditLog_).mergeFrom(value).buildPartial();
+          } else {
+            auditLog_ = value;
+          }
+          onChanged();
+        } else {
+          auditLogBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `AuditLog` section of mongocfg configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.AuditLog audit_log = 5;</code>
+       */
+      public Builder clearAuditLog() {
+        if (auditLogBuilder_ == null) {
+          auditLog_ = null;
+          onChanged();
+        } else {
+          auditLog_ = null;
+          auditLogBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `AuditLog` section of mongocfg configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.AuditLog audit_log = 5;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog.Builder getAuditLogBuilder() {
+        
+        onChanged();
+        return getAuditLogFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * `AuditLog` section of mongocfg configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.AuditLog audit_log = 5;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLogOrBuilder getAuditLogOrBuilder() {
+        if (auditLogBuilder_ != null) {
+          return auditLogBuilder_.getMessageOrBuilder();
+        } else {
+          return auditLog_ == null ?
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog.getDefaultInstance() : auditLog_;
+        }
+      }
+      /**
+       * <pre>
+       * `AuditLog` section of mongocfg configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.AuditLog audit_log = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLogOrBuilder> 
+          getAuditLogFieldBuilder() {
+        if (auditLogBuilder_ == null) {
+          auditLogBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLog.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLogOrBuilder>(
+                  getAuditLog(),
+                  getParentForChildren(),
+                  isClean());
+          auditLog_ = null;
+        }
+        return auditLogBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -19697,6 +24113,60 @@ public final class Mongodb {
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.Network net = 3;</code>
      */
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.NetworkOrBuilder getNetOrBuilder();
+
+    /**
+     * <pre>
+     * `setParameter` section of mongos configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.SetParameter set_parameter = 4;</code>
+     * @return Whether the setParameter field is set.
+     */
+    boolean hasSetParameter();
+    /**
+     * <pre>
+     * `setParameter` section of mongos configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.SetParameter set_parameter = 4;</code>
+     * @return The setParameter.
+     */
+    yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter getSetParameter();
+    /**
+     * <pre>
+     * `setParameter` section of mongos configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.SetParameter set_parameter = 4;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameterOrBuilder getSetParameterOrBuilder();
+
+    /**
+     * <pre>
+     * `AuditLog` section of mongos configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.AuditLog audit_log = 5;</code>
+     * @return Whether the auditLog field is set.
+     */
+    boolean hasAuditLog();
+    /**
+     * <pre>
+     * `AuditLog` section of mongos configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.AuditLog audit_log = 5;</code>
+     * @return The auditLog.
+     */
+    yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog getAuditLog();
+    /**
+     * <pre>
+     * `AuditLog` section of mongos configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.AuditLog audit_log = 5;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLogOrBuilder getAuditLogOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongosConfig}
@@ -19752,6 +24222,32 @@ public final class Mongodb {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(net_);
                 net_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter.Builder subBuilder = null;
+              if (setParameter_ != null) {
+                subBuilder = setParameter_.toBuilder();
+              }
+              setParameter_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(setParameter_);
+                setParameter_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog.Builder subBuilder = null;
+              if (auditLog_ != null) {
+                subBuilder = auditLog_.toBuilder();
+              }
+              auditLog_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(auditLog_);
+                auditLog_ = subBuilder.buildPartial();
               }
 
               break;
@@ -21792,6 +26288,1306 @@ public final class Mongodb {
 
     }
 
+    public interface SetParameterOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.config.MongosConfig.SetParameter)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Enables the auditing of authorization successes
+       * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+       * @return Whether the auditAuthorizationSuccess field is set.
+       */
+      boolean hasAuditAuthorizationSuccess();
+      /**
+       * <pre>
+       * Enables the auditing of authorization successes
+       * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+       * @return The auditAuthorizationSuccess.
+       */
+      com.google.protobuf.BoolValue getAuditAuthorizationSuccess();
+      /**
+       * <pre>
+       * Enables the auditing of authorization successes
+       * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+       */
+      com.google.protobuf.BoolValueOrBuilder getAuditAuthorizationSuccessOrBuilder();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongosConfig.SetParameter}
+     */
+    public static final class SetParameter extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongosConfig.SetParameter)
+        SetParameterOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use SetParameter.newBuilder() to construct.
+      private SetParameter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private SetParameter() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new SetParameter();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private SetParameter(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.BoolValue.Builder subBuilder = null;
+                if (auditAuthorizationSuccess_ != null) {
+                  subBuilder = auditAuthorizationSuccess_.toBuilder();
+                }
+                auditAuthorizationSuccess_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(auditAuthorizationSuccess_);
+                  auditAuthorizationSuccess_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_SetParameter_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_SetParameter_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter.Builder.class);
+      }
+
+      public static final int AUDIT_AUTHORIZATION_SUCCESS_FIELD_NUMBER = 1;
+      private com.google.protobuf.BoolValue auditAuthorizationSuccess_;
+      /**
+       * <pre>
+       * Enables the auditing of authorization successes
+       * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+       * @return Whether the auditAuthorizationSuccess field is set.
+       */
+      @java.lang.Override
+      public boolean hasAuditAuthorizationSuccess() {
+        return auditAuthorizationSuccess_ != null;
+      }
+      /**
+       * <pre>
+       * Enables the auditing of authorization successes
+       * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+       * @return The auditAuthorizationSuccess.
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValue getAuditAuthorizationSuccess() {
+        return auditAuthorizationSuccess_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : auditAuthorizationSuccess_;
+      }
+      /**
+       * <pre>
+       * Enables the auditing of authorization successes
+       * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValueOrBuilder getAuditAuthorizationSuccessOrBuilder() {
+        return getAuditAuthorizationSuccess();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (auditAuthorizationSuccess_ != null) {
+          output.writeMessage(1, getAuditAuthorizationSuccess());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (auditAuthorizationSuccess_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getAuditAuthorizationSuccess());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter) obj;
+
+        if (hasAuditAuthorizationSuccess() != other.hasAuditAuthorizationSuccess()) return false;
+        if (hasAuditAuthorizationSuccess()) {
+          if (!getAuditAuthorizationSuccess()
+              .equals(other.getAuditAuthorizationSuccess())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasAuditAuthorizationSuccess()) {
+          hash = (37 * hash) + AUDIT_AUTHORIZATION_SUCCESS_FIELD_NUMBER;
+          hash = (53 * hash) + getAuditAuthorizationSuccess().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongosConfig.SetParameter}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.config.MongosConfig.SetParameter)
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameterOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_SetParameter_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_SetParameter_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (auditAuthorizationSuccessBuilder_ == null) {
+            auditAuthorizationSuccess_ = null;
+          } else {
+            auditAuthorizationSuccess_ = null;
+            auditAuthorizationSuccessBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_SetParameter_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter build() {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter buildPartial() {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter result = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter(this);
+          if (auditAuthorizationSuccessBuilder_ == null) {
+            result.auditAuthorizationSuccess_ = auditAuthorizationSuccess_;
+          } else {
+            result.auditAuthorizationSuccess_ = auditAuthorizationSuccessBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter) {
+            return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter other) {
+          if (other == yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter.getDefaultInstance()) return this;
+          if (other.hasAuditAuthorizationSuccess()) {
+            mergeAuditAuthorizationSuccess(other.getAuditAuthorizationSuccess());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private com.google.protobuf.BoolValue auditAuthorizationSuccess_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> auditAuthorizationSuccessBuilder_;
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+         * @return Whether the auditAuthorizationSuccess field is set.
+         */
+        public boolean hasAuditAuthorizationSuccess() {
+          return auditAuthorizationSuccessBuilder_ != null || auditAuthorizationSuccess_ != null;
+        }
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+         * @return The auditAuthorizationSuccess.
+         */
+        public com.google.protobuf.BoolValue getAuditAuthorizationSuccess() {
+          if (auditAuthorizationSuccessBuilder_ == null) {
+            return auditAuthorizationSuccess_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : auditAuthorizationSuccess_;
+          } else {
+            return auditAuthorizationSuccessBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+         */
+        public Builder setAuditAuthorizationSuccess(com.google.protobuf.BoolValue value) {
+          if (auditAuthorizationSuccessBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            auditAuthorizationSuccess_ = value;
+            onChanged();
+          } else {
+            auditAuthorizationSuccessBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+         */
+        public Builder setAuditAuthorizationSuccess(
+            com.google.protobuf.BoolValue.Builder builderForValue) {
+          if (auditAuthorizationSuccessBuilder_ == null) {
+            auditAuthorizationSuccess_ = builderForValue.build();
+            onChanged();
+          } else {
+            auditAuthorizationSuccessBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+         */
+        public Builder mergeAuditAuthorizationSuccess(com.google.protobuf.BoolValue value) {
+          if (auditAuthorizationSuccessBuilder_ == null) {
+            if (auditAuthorizationSuccess_ != null) {
+              auditAuthorizationSuccess_ =
+                com.google.protobuf.BoolValue.newBuilder(auditAuthorizationSuccess_).mergeFrom(value).buildPartial();
+            } else {
+              auditAuthorizationSuccess_ = value;
+            }
+            onChanged();
+          } else {
+            auditAuthorizationSuccessBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+         */
+        public Builder clearAuditAuthorizationSuccess() {
+          if (auditAuthorizationSuccessBuilder_ == null) {
+            auditAuthorizationSuccess_ = null;
+            onChanged();
+          } else {
+            auditAuthorizationSuccess_ = null;
+            auditAuthorizationSuccessBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+         */
+        public com.google.protobuf.BoolValue.Builder getAuditAuthorizationSuccessBuilder() {
+          
+          onChanged();
+          return getAuditAuthorizationSuccessFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+         */
+        public com.google.protobuf.BoolValueOrBuilder getAuditAuthorizationSuccessOrBuilder() {
+          if (auditAuthorizationSuccessBuilder_ != null) {
+            return auditAuthorizationSuccessBuilder_.getMessageOrBuilder();
+          } else {
+            return auditAuthorizationSuccess_ == null ?
+                com.google.protobuf.BoolValue.getDefaultInstance() : auditAuthorizationSuccess_;
+          }
+        }
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * https://www.mongodb.com/docs/manual/reference/parameters/#mongodb-parameter-param.auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+            getAuditAuthorizationSuccessFieldBuilder() {
+          if (auditAuthorizationSuccessBuilder_ == null) {
+            auditAuthorizationSuccessBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                    getAuditAuthorizationSuccess(),
+                    getParentForChildren(),
+                    isClean());
+            auditAuthorizationSuccess_ = null;
+          }
+          return auditAuthorizationSuccessBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.config.MongosConfig.SetParameter)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.config.MongosConfig.SetParameter)
+      private static final yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter();
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<SetParameter>
+          PARSER = new com.google.protobuf.AbstractParser<SetParameter>() {
+        @java.lang.Override
+        public SetParameter parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new SetParameter(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<SetParameter> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<SetParameter> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface AuditLogOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.config.MongosConfig.AuditLog)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Audit filter, should be valid JSON object string
+       * </pre>
+       *
+       * <code>string filter = 1;</code>
+       * @return The filter.
+       */
+      java.lang.String getFilter();
+      /**
+       * <pre>
+       * Audit filter, should be valid JSON object string
+       * </pre>
+       *
+       * <code>string filter = 1;</code>
+       * @return The bytes for filter.
+       */
+      com.google.protobuf.ByteString
+          getFilterBytes();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongosConfig.AuditLog}
+     */
+    public static final class AuditLog extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongosConfig.AuditLog)
+        AuditLogOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use AuditLog.newBuilder() to construct.
+      private AuditLog(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private AuditLog() {
+        filter_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new AuditLog();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private AuditLog(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                filter_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_AuditLog_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_AuditLog_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog.Builder.class);
+      }
+
+      public static final int FILTER_FIELD_NUMBER = 1;
+      private volatile java.lang.Object filter_;
+      /**
+       * <pre>
+       * Audit filter, should be valid JSON object string
+       * </pre>
+       *
+       * <code>string filter = 1;</code>
+       * @return The filter.
+       */
+      @java.lang.Override
+      public java.lang.String getFilter() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filter_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Audit filter, should be valid JSON object string
+       * </pre>
+       *
+       * <code>string filter = 1;</code>
+       * @return The bytes for filter.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getFilterBytes() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, filter_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, filter_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog) obj;
+
+        if (!getFilter()
+            .equals(other.getFilter())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + FILTER_FIELD_NUMBER;
+        hash = (53 * hash) + getFilter().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongosConfig.AuditLog}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.config.MongosConfig.AuditLog)
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLogOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_AuditLog_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_AuditLog_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          filter_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_AuditLog_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog build() {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog buildPartial() {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog result = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog(this);
+          result.filter_ = filter_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog) {
+            return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog other) {
+          if (other == yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog.getDefaultInstance()) return this;
+          if (!other.getFilter().isEmpty()) {
+            filter_ = other.filter_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object filter_ = "";
+        /**
+         * <pre>
+         * Audit filter, should be valid JSON object string
+         * </pre>
+         *
+         * <code>string filter = 1;</code>
+         * @return The filter.
+         */
+        public java.lang.String getFilter() {
+          java.lang.Object ref = filter_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            filter_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Audit filter, should be valid JSON object string
+         * </pre>
+         *
+         * <code>string filter = 1;</code>
+         * @return The bytes for filter.
+         */
+        public com.google.protobuf.ByteString
+            getFilterBytes() {
+          java.lang.Object ref = filter_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            filter_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Audit filter, should be valid JSON object string
+         * </pre>
+         *
+         * <code>string filter = 1;</code>
+         * @param value The filter to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFilter(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          filter_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Audit filter, should be valid JSON object string
+         * </pre>
+         *
+         * <code>string filter = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearFilter() {
+          
+          filter_ = getDefaultInstance().getFilter();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Audit filter, should be valid JSON object string
+         * </pre>
+         *
+         * <code>string filter = 1;</code>
+         * @param value The bytes for filter to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFilterBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          filter_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.config.MongosConfig.AuditLog)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.config.MongosConfig.AuditLog)
+      private static final yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog();
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<AuditLog>
+          PARSER = new com.google.protobuf.AbstractParser<AuditLog>() {
+        @java.lang.Override
+        public AuditLog parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new AuditLog(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<AuditLog> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<AuditLog> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public static final int NET_FIELD_NUMBER = 3;
     private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.Network net_;
     /**
@@ -21830,6 +27626,82 @@ public final class Mongodb {
       return getNet();
     }
 
+    public static final int SET_PARAMETER_FIELD_NUMBER = 4;
+    private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter setParameter_;
+    /**
+     * <pre>
+     * `setParameter` section of mongos configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.SetParameter set_parameter = 4;</code>
+     * @return Whether the setParameter field is set.
+     */
+    @java.lang.Override
+    public boolean hasSetParameter() {
+      return setParameter_ != null;
+    }
+    /**
+     * <pre>
+     * `setParameter` section of mongos configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.SetParameter set_parameter = 4;</code>
+     * @return The setParameter.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter getSetParameter() {
+      return setParameter_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter.getDefaultInstance() : setParameter_;
+    }
+    /**
+     * <pre>
+     * `setParameter` section of mongos configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.SetParameter set_parameter = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameterOrBuilder getSetParameterOrBuilder() {
+      return getSetParameter();
+    }
+
+    public static final int AUDIT_LOG_FIELD_NUMBER = 5;
+    private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog auditLog_;
+    /**
+     * <pre>
+     * `AuditLog` section of mongos configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.AuditLog audit_log = 5;</code>
+     * @return Whether the auditLog field is set.
+     */
+    @java.lang.Override
+    public boolean hasAuditLog() {
+      return auditLog_ != null;
+    }
+    /**
+     * <pre>
+     * `AuditLog` section of mongos configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.AuditLog audit_log = 5;</code>
+     * @return The auditLog.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog getAuditLog() {
+      return auditLog_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog.getDefaultInstance() : auditLog_;
+    }
+    /**
+     * <pre>
+     * `AuditLog` section of mongos configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.AuditLog audit_log = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLogOrBuilder getAuditLogOrBuilder() {
+      return getAuditLog();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -21847,6 +27719,12 @@ public final class Mongodb {
       if (net_ != null) {
         output.writeMessage(3, getNet());
       }
+      if (setParameter_ != null) {
+        output.writeMessage(4, getSetParameter());
+      }
+      if (auditLog_ != null) {
+        output.writeMessage(5, getAuditLog());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -21859,6 +27737,14 @@ public final class Mongodb {
       if (net_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getNet());
+      }
+      if (setParameter_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getSetParameter());
+      }
+      if (auditLog_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getAuditLog());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -21880,6 +27766,16 @@ public final class Mongodb {
         if (!getNet()
             .equals(other.getNet())) return false;
       }
+      if (hasSetParameter() != other.hasSetParameter()) return false;
+      if (hasSetParameter()) {
+        if (!getSetParameter()
+            .equals(other.getSetParameter())) return false;
+      }
+      if (hasAuditLog() != other.hasAuditLog()) return false;
+      if (hasAuditLog()) {
+        if (!getAuditLog()
+            .equals(other.getAuditLog())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -21894,6 +27790,14 @@ public final class Mongodb {
       if (hasNet()) {
         hash = (37 * hash) + NET_FIELD_NUMBER;
         hash = (53 * hash) + getNet().hashCode();
+      }
+      if (hasSetParameter()) {
+        hash = (37 * hash) + SET_PARAMETER_FIELD_NUMBER;
+        hash = (53 * hash) + getSetParameter().hashCode();
+      }
+      if (hasAuditLog()) {
+        hash = (37 * hash) + AUDIT_LOG_FIELD_NUMBER;
+        hash = (53 * hash) + getAuditLog().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -22034,6 +27938,18 @@ public final class Mongodb {
           net_ = null;
           netBuilder_ = null;
         }
+        if (setParameterBuilder_ == null) {
+          setParameter_ = null;
+        } else {
+          setParameter_ = null;
+          setParameterBuilder_ = null;
+        }
+        if (auditLogBuilder_ == null) {
+          auditLog_ = null;
+        } else {
+          auditLog_ = null;
+          auditLogBuilder_ = null;
+        }
         return this;
       }
 
@@ -22064,6 +27980,16 @@ public final class Mongodb {
           result.net_ = net_;
         } else {
           result.net_ = netBuilder_.build();
+        }
+        if (setParameterBuilder_ == null) {
+          result.setParameter_ = setParameter_;
+        } else {
+          result.setParameter_ = setParameterBuilder_.build();
+        }
+        if (auditLogBuilder_ == null) {
+          result.auditLog_ = auditLog_;
+        } else {
+          result.auditLog_ = auditLogBuilder_.build();
         }
         onBuilt();
         return result;
@@ -22115,6 +28041,12 @@ public final class Mongodb {
         if (other == yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.getDefaultInstance()) return this;
         if (other.hasNet()) {
           mergeNet(other.getNet());
+        }
+        if (other.hasSetParameter()) {
+          mergeSetParameter(other.getSetParameter());
+        }
+        if (other.hasAuditLog()) {
+          mergeAuditLog(other.getAuditLog());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -22298,6 +28230,316 @@ public final class Mongodb {
           net_ = null;
         }
         return netBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter setParameter_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameterOrBuilder> setParameterBuilder_;
+      /**
+       * <pre>
+       * `setParameter` section of mongos configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.SetParameter set_parameter = 4;</code>
+       * @return Whether the setParameter field is set.
+       */
+      public boolean hasSetParameter() {
+        return setParameterBuilder_ != null || setParameter_ != null;
+      }
+      /**
+       * <pre>
+       * `setParameter` section of mongos configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.SetParameter set_parameter = 4;</code>
+       * @return The setParameter.
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter getSetParameter() {
+        if (setParameterBuilder_ == null) {
+          return setParameter_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter.getDefaultInstance() : setParameter_;
+        } else {
+          return setParameterBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * `setParameter` section of mongos configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.SetParameter set_parameter = 4;</code>
+       */
+      public Builder setSetParameter(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter value) {
+        if (setParameterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          setParameter_ = value;
+          onChanged();
+        } else {
+          setParameterBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `setParameter` section of mongos configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.SetParameter set_parameter = 4;</code>
+       */
+      public Builder setSetParameter(
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter.Builder builderForValue) {
+        if (setParameterBuilder_ == null) {
+          setParameter_ = builderForValue.build();
+          onChanged();
+        } else {
+          setParameterBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `setParameter` section of mongos configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.SetParameter set_parameter = 4;</code>
+       */
+      public Builder mergeSetParameter(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter value) {
+        if (setParameterBuilder_ == null) {
+          if (setParameter_ != null) {
+            setParameter_ =
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter.newBuilder(setParameter_).mergeFrom(value).buildPartial();
+          } else {
+            setParameter_ = value;
+          }
+          onChanged();
+        } else {
+          setParameterBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `setParameter` section of mongos configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.SetParameter set_parameter = 4;</code>
+       */
+      public Builder clearSetParameter() {
+        if (setParameterBuilder_ == null) {
+          setParameter_ = null;
+          onChanged();
+        } else {
+          setParameter_ = null;
+          setParameterBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `setParameter` section of mongos configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.SetParameter set_parameter = 4;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter.Builder getSetParameterBuilder() {
+        
+        onChanged();
+        return getSetParameterFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * `setParameter` section of mongos configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.SetParameter set_parameter = 4;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameterOrBuilder getSetParameterOrBuilder() {
+        if (setParameterBuilder_ != null) {
+          return setParameterBuilder_.getMessageOrBuilder();
+        } else {
+          return setParameter_ == null ?
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter.getDefaultInstance() : setParameter_;
+        }
+      }
+      /**
+       * <pre>
+       * `setParameter` section of mongos configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.SetParameter set_parameter = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameterOrBuilder> 
+          getSetParameterFieldBuilder() {
+        if (setParameterBuilder_ == null) {
+          setParameterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameterOrBuilder>(
+                  getSetParameter(),
+                  getParentForChildren(),
+                  isClean());
+          setParameter_ = null;
+        }
+        return setParameterBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog auditLog_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLogOrBuilder> auditLogBuilder_;
+      /**
+       * <pre>
+       * `AuditLog` section of mongos configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.AuditLog audit_log = 5;</code>
+       * @return Whether the auditLog field is set.
+       */
+      public boolean hasAuditLog() {
+        return auditLogBuilder_ != null || auditLog_ != null;
+      }
+      /**
+       * <pre>
+       * `AuditLog` section of mongos configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.AuditLog audit_log = 5;</code>
+       * @return The auditLog.
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog getAuditLog() {
+        if (auditLogBuilder_ == null) {
+          return auditLog_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog.getDefaultInstance() : auditLog_;
+        } else {
+          return auditLogBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * `AuditLog` section of mongos configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.AuditLog audit_log = 5;</code>
+       */
+      public Builder setAuditLog(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog value) {
+        if (auditLogBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          auditLog_ = value;
+          onChanged();
+        } else {
+          auditLogBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `AuditLog` section of mongos configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.AuditLog audit_log = 5;</code>
+       */
+      public Builder setAuditLog(
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog.Builder builderForValue) {
+        if (auditLogBuilder_ == null) {
+          auditLog_ = builderForValue.build();
+          onChanged();
+        } else {
+          auditLogBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `AuditLog` section of mongos configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.AuditLog audit_log = 5;</code>
+       */
+      public Builder mergeAuditLog(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog value) {
+        if (auditLogBuilder_ == null) {
+          if (auditLog_ != null) {
+            auditLog_ =
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog.newBuilder(auditLog_).mergeFrom(value).buildPartial();
+          } else {
+            auditLog_ = value;
+          }
+          onChanged();
+        } else {
+          auditLogBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `AuditLog` section of mongos configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.AuditLog audit_log = 5;</code>
+       */
+      public Builder clearAuditLog() {
+        if (auditLogBuilder_ == null) {
+          auditLog_ = null;
+          onChanged();
+        } else {
+          auditLog_ = null;
+          auditLogBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `AuditLog` section of mongos configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.AuditLog audit_log = 5;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog.Builder getAuditLogBuilder() {
+        
+        onChanged();
+        return getAuditLogFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * `AuditLog` section of mongos configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.AuditLog audit_log = 5;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLogOrBuilder getAuditLogOrBuilder() {
+        if (auditLogBuilder_ != null) {
+          return auditLogBuilder_.getMessageOrBuilder();
+        } else {
+          return auditLog_ == null ?
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog.getDefaultInstance() : auditLog_;
+        }
+      }
+      /**
+       * <pre>
+       * `AuditLog` section of mongos configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.AuditLog audit_log = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLogOrBuilder> 
+          getAuditLogFieldBuilder() {
+        if (auditLogBuilder_ == null) {
+          auditLogBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLog.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLogOrBuilder>(
+                  getAuditLog(),
+                  getParentForChildren(),
+                  isClean());
+          auditLog_ = null;
+        }
+        return auditLogBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -26109,6 +32351,11 @@ public final class Mongodb {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_WiredTiger_EngineConfig_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_WiredTiger_IndexConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_WiredTiger_IndexConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_OperationProfiling_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -26118,6 +32365,21 @@ public final class Mongodb {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Network_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Network_Compression_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Network_Compression_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_SetParameter_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_SetParameter_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_AuditLog_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_AuditLog_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_descriptor;
   private static final 
@@ -26133,6 +32395,16 @@ public final class Mongodb {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_Network_Compression_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_SetParameter_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_SetParameter_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_AuditLog_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_AuditLog_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfigSet_descriptor;
   private static final 
@@ -26229,63 +32501,91 @@ public final class Mongodb {
       "obuf.BoolValue\0227\n\023enable_flow_control\030\002 " +
       "\001(\0132\032.google.protobuf.BoolValue\022T\n&min_s" +
       "napshot_history_window_in_seconds\030\003 \001(\0132" +
-      "\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\"\367\006" +
+      "\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\"\255\r" +
       "\n\016MongoCfgConfig\022K\n\007storage\030\001 \001(\0132:.yand" +
       "ex.cloud.mdb.mongodb.v1.config.MongoCfgC" +
       "onfig.Storage\022b\n\023operation_profiling\030\002 \001" +
       "(\0132E.yandex.cloud.mdb.mongodb.v1.config." +
       "MongoCfgConfig.OperationProfiling\022G\n\003net" +
       "\030\003 \001(\0132:.yandex.cloud.mdb.mongodb.v1.con" +
-      "fig.MongoCfgConfig.Network\032\244\002\n\007Storage\022Z" +
-      "\n\013wired_tiger\030\001 \001(\0132E.yandex.cloud.mdb.m" +
-      "ongodb.v1.config.MongoCfgConfig.Storage." +
-      "WiredTiger\032\274\001\n\nWiredTiger\022i\n\rengine_conf" +
-      "ig\030\001 \001(\0132R.yandex.cloud.mdb.mongodb.v1.c" +
-      "onfig.MongoCfgConfig.Storage.WiredTiger." +
-      "EngineConfig\032C\n\014EngineConfig\0223\n\rcache_si" +
-      "ze_gb\030\001 \001(\0132\034.google.protobuf.DoubleValu" +
-      "e\032\353\001\n\022OperationProfiling\022X\n\004mode\030\001 \001(\0162J" +
-      ".yandex.cloud.mdb.mongodb.v1.config.Mong" +
-      "oCfgConfig.OperationProfiling.Mode\022>\n\021sl" +
-      "ow_op_threshold\030\002 \001(\0132\033.google.protobuf." +
-      "Int64ValueB\006\372\3071\002>0\";\n\004Mode\022\024\n\020MODE_UNSPE" +
-      "CIFIED\020\000\022\007\n\003OFF\020\001\022\013\n\007SLOW_OP\020\002\022\007\n\003ALL\020\003\032" +
-      "V\n\007Network\022K\n\030max_incoming_connections\030\001" +
-      " \001(\0132\033.google.protobuf.Int64ValueB\014\372\3071\0101" +
-      "0-16384\"\340\003\n\014MongosConfig\022E\n\003net\030\003 \001(\01328." +
-      "yandex.cloud.mdb.mongodb.v1.config.Mongo" +
-      "sConfig.Network\032\210\003\n\007Network\022K\n\030max_incom" +
-      "ing_connections\030\001 \001(\0132\033.google.protobuf." +
-      "Int64ValueB\014\372\3071\01010-16384\022Y\n\013compression\030" +
-      "\002 \001(\0132D.yandex.cloud.mdb.mongodb.v1.conf" +
-      "ig.MongosConfig.Network.Compression\032\324\001\n\013" +
-      "Compression\022m\n\013compressors\030\001 \003(\0162O.yande" +
-      "x.cloud.mdb.mongodb.v1.config.MongosConf" +
-      "ig.Network.Compression.CompressorB\007\202\3101\0031" +
-      "-3\"V\n\nCompressor\022\032\n\026COMPRESSOR_UNSPECIFI" +
-      "ED\020\000\022\n\n\006SNAPPY\020\001\022\010\n\004ZLIB\020\002\022\010\n\004ZSTD\020\003\022\014\n\010" +
-      "DISABLED\020\004\"\356\001\n\017MongodConfigSet\022J\n\020effect" +
-      "ive_config\030\001 \001(\01320.yandex.cloud.mdb.mong" +
-      "odb.v1.config.MongodConfig\022E\n\013user_confi" +
-      "g\030\002 \001(\01320.yandex.cloud.mdb.mongodb.v1.co" +
-      "nfig.MongodConfig\022H\n\016default_config\030\003 \001(" +
+      "fig.MongoCfgConfig.Network\022V\n\rset_parame" +
+      "ter\030\004 \001(\0132?.yandex.cloud.mdb.mongodb.v1." +
+      "config.MongoCfgConfig.SetParameter\022N\n\tau" +
+      "dit_log\030\005 \001(\0132;.yandex.cloud.mdb.mongodb" +
+      ".v1.config.MongoCfgConfig.AuditLog\032\324\003\n\007S" +
+      "torage\022Z\n\013wired_tiger\030\001 \001(\0132E.yandex.clo" +
+      "ud.mdb.mongodb.v1.config.MongoCfgConfig." +
+      "Storage.WiredTiger\032\354\002\n\nWiredTiger\022i\n\reng" +
+      "ine_config\030\001 \001(\0132R.yandex.cloud.mdb.mong" +
+      "odb.v1.config.MongoCfgConfig.Storage.Wir" +
+      "edTiger.EngineConfig\022g\n\014index_config\030\002 \001" +
+      "(\0132Q.yandex.cloud.mdb.mongodb.v1.config." +
+      "MongoCfgConfig.Storage.WiredTiger.IndexC" +
+      "onfig\032C\n\014EngineConfig\0223\n\rcache_size_gb\030\001" +
+      " \001(\0132\034.google.protobuf.DoubleValue\032E\n\013In" +
+      "dexConfig\0226\n\022prefix_compression\030\001 \001(\0132\032." +
+      "google.protobuf.BoolValue\032\353\001\n\022OperationP" +
+      "rofiling\022X\n\004mode\030\001 \001(\0162J.yandex.cloud.md" +
+      "b.mongodb.v1.config.MongoCfgConfig.Opera" +
+      "tionProfiling.Mode\022>\n\021slow_op_threshold\030" +
+      "\002 \001(\0132\033.google.protobuf.Int64ValueB\006\372\3071\002" +
+      ">0\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\007\n\003OFF\020" +
+      "\001\022\013\n\007SLOW_OP\020\002\022\007\n\003ALL\020\003\032\214\003\n\007Network\022K\n\030m" +
+      "ax_incoming_connections\030\001 \001(\0132\033.google.p" +
+      "rotobuf.Int64ValueB\014\372\3071\01010-16384\022[\n\013comp" +
+      "ression\030\002 \001(\0132F.yandex.cloud.mdb.mongodb" +
+      ".v1.config.MongoCfgConfig.Network.Compre" +
+      "ssion\032\326\001\n\013Compression\022o\n\013compressors\030\001 \003" +
+      "(\0162Q.yandex.cloud.mdb.mongodb.v1.config." +
+      "MongoCfgConfig.Network.Compression.Compr" +
+      "essorB\007\202\3101\0031-3\"V\n\nCompressor\022\032\n\026COMPRESS" +
+      "OR_UNSPECIFIED\020\000\022\n\n\006SNAPPY\020\001\022\010\n\004ZLIB\020\002\022\010" +
+      "\n\004ZSTD\020\003\022\014\n\010DISABLED\020\004\032\210\001\n\014SetParameter\022" +
+      "7\n\023enable_flow_control\030\001 \001(\0132\032.google.pr" +
+      "otobuf.BoolValue\022?\n\033audit_authorization_" +
+      "success\030\002 \001(\0132\032.google.protobuf.BoolValu" +
+      "e\032\032\n\010AuditLog\022\016\n\006filter\030\001 \001(\t\"\361\005\n\014Mongos" +
+      "Config\022E\n\003net\030\003 \001(\01328.yandex.cloud.mdb.m" +
+      "ongodb.v1.config.MongosConfig.Network\022T\n" +
+      "\rset_parameter\030\004 \001(\0132=.yandex.cloud.mdb." +
+      "mongodb.v1.config.MongosConfig.SetParame" +
+      "ter\022L\n\taudit_log\030\005 \001(\01329.yandex.cloud.md" +
+      "b.mongodb.v1.config.MongosConfig.AuditLo" +
+      "g\032\210\003\n\007Network\022K\n\030max_incoming_connection" +
+      "s\030\001 \001(\0132\033.google.protobuf.Int64ValueB\014\372\307" +
+      "1\01010-16384\022Y\n\013compression\030\002 \001(\0132D.yandex" +
+      ".cloud.mdb.mongodb.v1.config.MongosConfi" +
+      "g.Network.Compression\032\324\001\n\013Compression\022m\n" +
+      "\013compressors\030\001 \003(\0162O.yandex.cloud.mdb.mo" +
+      "ngodb.v1.config.MongosConfig.Network.Com" +
+      "pression.CompressorB\007\202\3101\0031-3\"V\n\nCompress" +
+      "or\022\032\n\026COMPRESSOR_UNSPECIFIED\020\000\022\n\n\006SNAPPY" +
+      "\020\001\022\010\n\004ZLIB\020\002\022\010\n\004ZSTD\020\003\022\014\n\010DISABLED\020\004\032O\n\014" +
+      "SetParameter\022?\n\033audit_authorization_succ" +
+      "ess\030\001 \001(\0132\032.google.protobuf.BoolValue\032\032\n" +
+      "\010AuditLog\022\016\n\006filter\030\001 \001(\t\"\356\001\n\017MongodConf" +
+      "igSet\022J\n\020effective_config\030\001 \001(\01320.yandex" +
+      ".cloud.mdb.mongodb.v1.config.MongodConfi" +
+      "g\022E\n\013user_config\030\002 \001(\01320.yandex.cloud.md" +
+      "b.mongodb.v1.config.MongodConfig\022H\n\016defa" +
+      "ult_config\030\003 \001(\01320.yandex.cloud.mdb.mong" +
+      "odb.v1.config.MongodConfig\"\366\001\n\021MongoCfgC" +
+      "onfigSet\022L\n\020effective_config\030\001 \001(\01322.yan" +
+      "dex.cloud.mdb.mongodb.v1.config.MongoCfg" +
+      "Config\022G\n\013user_config\030\002 \001(\01322.yandex.clo" +
+      "ud.mdb.mongodb.v1.config.MongoCfgConfig\022" +
+      "J\n\016default_config\030\003 \001(\01322.yandex.cloud.m" +
+      "db.mongodb.v1.config.MongoCfgConfig\"\356\001\n\017" +
+      "MongosConfigSet\022J\n\020effective_config\030\001 \001(" +
       "\01320.yandex.cloud.mdb.mongodb.v1.config.M" +
-      "ongodConfig\"\366\001\n\021MongoCfgConfigSet\022L\n\020eff" +
-      "ective_config\030\001 \001(\01322.yandex.cloud.mdb.m" +
-      "ongodb.v1.config.MongoCfgConfig\022G\n\013user_" +
-      "config\030\002 \001(\01322.yandex.cloud.mdb.mongodb." +
-      "v1.config.MongoCfgConfig\022J\n\016default_conf" +
-      "ig\030\003 \001(\01322.yandex.cloud.mdb.mongodb.v1.c" +
-      "onfig.MongoCfgConfig\"\356\001\n\017MongosConfigSet" +
-      "\022J\n\020effective_config\030\001 \001(\01320.yandex.clou" +
-      "d.mdb.mongodb.v1.config.MongosConfig\022E\n\013" +
-      "user_config\030\002 \001(\01320.yandex.cloud.mdb.mon" +
-      "godb.v1.config.MongosConfig\022H\n\016default_c" +
-      "onfig\030\003 \001(\01320.yandex.cloud.mdb.mongodb.v" +
-      "1.config.MongosConfigBx\n&yandex.cloud.ap" +
-      "i.mdb.mongodb.v1.configZNgithub.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/mdb/mo" +
-      "ngodb/v1/config;mongodbb\006proto3"
+      "ongosConfig\022E\n\013user_config\030\002 \001(\01320.yande" +
+      "x.cloud.mdb.mongodb.v1.config.MongosConf" +
+      "ig\022H\n\016default_config\030\003 \001(\01320.yandex.clou" +
+      "d.mdb.mongodb.v1.config.MongosConfigBx\n&" +
+      "yandex.cloud.api.mdb.mongodb.v1.configZN" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/mdb/mongodb/v1/config;mongodbb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -26382,7 +32682,7 @@ public final class Mongodb {
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_descriptor,
-        new java.lang.String[] { "Storage", "OperationProfiling", "Net", });
+        new java.lang.String[] { "Storage", "OperationProfiling", "Net", "SetParameter", "AuditLog", });
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_fieldAccessorTable = new
@@ -26394,13 +32694,19 @@ public final class Mongodb {
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_WiredTiger_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_WiredTiger_descriptor,
-        new java.lang.String[] { "EngineConfig", });
+        new java.lang.String[] { "EngineConfig", "IndexConfig", });
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_WiredTiger_EngineConfig_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_WiredTiger_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_WiredTiger_EngineConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_WiredTiger_EngineConfig_descriptor,
         new java.lang.String[] { "CacheSizeGb", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_WiredTiger_IndexConfig_descriptor =
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_WiredTiger_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_WiredTiger_IndexConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_WiredTiger_IndexConfig_descriptor,
+        new java.lang.String[] { "PrefixCompression", });
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_OperationProfiling_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_OperationProfiling_fieldAccessorTable = new
@@ -26412,13 +32718,31 @@ public final class Mongodb {
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Network_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Network_descriptor,
-        new java.lang.String[] { "MaxIncomingConnections", });
+        new java.lang.String[] { "MaxIncomingConnections", "Compression", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Network_Compression_descriptor =
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Network_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Network_Compression_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Network_Compression_descriptor,
+        new java.lang.String[] { "Compressors", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_SetParameter_descriptor =
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_descriptor.getNestedTypes().get(3);
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_SetParameter_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_SetParameter_descriptor,
+        new java.lang.String[] { "EnableFlowControl", "AuditAuthorizationSuccess", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_AuditLog_descriptor =
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_descriptor.getNestedTypes().get(4);
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_AuditLog_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_AuditLog_descriptor,
+        new java.lang.String[] { "Filter", });
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_descriptor,
-        new java.lang.String[] { "Net", });
+        new java.lang.String[] { "Net", "SetParameter", "AuditLog", });
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_Network_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_Network_fieldAccessorTable = new
@@ -26431,6 +32755,18 @@ public final class Mongodb {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_Network_Compression_descriptor,
         new java.lang.String[] { "Compressors", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_SetParameter_descriptor =
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_SetParameter_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_SetParameter_descriptor,
+        new java.lang.String[] { "AuditAuthorizationSuccess", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_AuditLog_descriptor =
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_descriptor.getNestedTypes().get(2);
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_AuditLog_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_AuditLog_descriptor,
+        new java.lang.String[] { "Filter", });
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfigSet_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfigSet_fieldAccessorTable = new

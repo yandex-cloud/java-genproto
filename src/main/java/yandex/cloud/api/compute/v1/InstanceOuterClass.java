@@ -1106,6 +1106,26 @@ public final class InstanceOuterClass {
      * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 31;</code>
      */
     yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder getHardwareGenerationOrBuilder();
+
+    /**
+     * <pre>
+     * ID of the reserved instance pool that the instance belongs to.
+     * </pre>
+     *
+     * <code>string reserved_instance_pool_id = 32;</code>
+     * @return The reservedInstancePoolId.
+     */
+    java.lang.String getReservedInstancePoolId();
+    /**
+     * <pre>
+     * ID of the reserved instance pool that the instance belongs to.
+     * </pre>
+     *
+     * <code>string reserved_instance_pool_id = 32;</code>
+     * @return The bytes for reservedInstancePoolId.
+     */
+    com.google.protobuf.ByteString
+        getReservedInstancePoolIdBytes();
   }
   /**
    * <pre>
@@ -1140,6 +1160,7 @@ public final class InstanceOuterClass {
       hostGroupId_ = "";
       hostId_ = "";
       maintenancePolicy_ = 0;
+      reservedInstancePoolId_ = "";
     }
 
     @java.lang.Override
@@ -1448,6 +1469,12 @@ public final class InstanceOuterClass {
                 hardwareGeneration_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 258: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              reservedInstancePoolId_ = s;
               break;
             }
             default: {
@@ -3145,6 +3172,52 @@ public final class InstanceOuterClass {
       return getHardwareGeneration();
     }
 
+    public static final int RESERVED_INSTANCE_POOL_ID_FIELD_NUMBER = 32;
+    private volatile java.lang.Object reservedInstancePoolId_;
+    /**
+     * <pre>
+     * ID of the reserved instance pool that the instance belongs to.
+     * </pre>
+     *
+     * <code>string reserved_instance_pool_id = 32;</code>
+     * @return The reservedInstancePoolId.
+     */
+    @java.lang.Override
+    public java.lang.String getReservedInstancePoolId() {
+      java.lang.Object ref = reservedInstancePoolId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        reservedInstancePoolId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the reserved instance pool that the instance belongs to.
+     * </pre>
+     *
+     * <code>string reserved_instance_pool_id = 32;</code>
+     * @return The bytes for reservedInstancePoolId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReservedInstancePoolIdBytes() {
+      java.lang.Object ref = reservedInstancePoolId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reservedInstancePoolId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3251,6 +3324,9 @@ public final class InstanceOuterClass {
       }
       if (hardwareGeneration_ != null) {
         output.writeMessage(31, getHardwareGeneration());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reservedInstancePoolId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32, reservedInstancePoolId_);
       }
       unknownFields.writeTo(output);
     }
@@ -3379,6 +3455,9 @@ public final class InstanceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(31, getHardwareGeneration());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reservedInstancePoolId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32, reservedInstancePoolId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3483,6 +3562,8 @@ public final class InstanceOuterClass {
         if (!getHardwareGeneration()
             .equals(other.getHardwareGeneration())) return false;
       }
+      if (!getReservedInstancePoolId()
+          .equals(other.getReservedInstancePoolId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3586,6 +3667,8 @@ public final class InstanceOuterClass {
         hash = (37 * hash) + HARDWARE_GENERATION_FIELD_NUMBER;
         hash = (53 * hash) + getHardwareGeneration().hashCode();
       }
+      hash = (37 * hash) + RESERVED_INSTANCE_POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getReservedInstancePoolId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3869,6 +3952,8 @@ public final class InstanceOuterClass {
           hardwareGeneration_ = null;
           hardwareGenerationBuilder_ = null;
         }
+        reservedInstancePoolId_ = "";
+
         return this;
       }
 
@@ -4003,6 +4088,7 @@ public final class InstanceOuterClass {
         } else {
           result.hardwareGeneration_ = hardwareGenerationBuilder_.build();
         }
+        result.reservedInstancePoolId_ = reservedInstancePoolId_;
         onBuilt();
         return result;
       }
@@ -4237,6 +4323,10 @@ public final class InstanceOuterClass {
         }
         if (other.hasHardwareGeneration()) {
           mergeHardwareGeneration(other.getHardwareGeneration());
+        }
+        if (!other.getReservedInstancePoolId().isEmpty()) {
+          reservedInstancePoolId_ = other.reservedInstancePoolId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8638,6 +8728,102 @@ public final class InstanceOuterClass {
           hardwareGeneration_ = null;
         }
         return hardwareGenerationBuilder_;
+      }
+
+      private java.lang.Object reservedInstancePoolId_ = "";
+      /**
+       * <pre>
+       * ID of the reserved instance pool that the instance belongs to.
+       * </pre>
+       *
+       * <code>string reserved_instance_pool_id = 32;</code>
+       * @return The reservedInstancePoolId.
+       */
+      public java.lang.String getReservedInstancePoolId() {
+        java.lang.Object ref = reservedInstancePoolId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          reservedInstancePoolId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the reserved instance pool that the instance belongs to.
+       * </pre>
+       *
+       * <code>string reserved_instance_pool_id = 32;</code>
+       * @return The bytes for reservedInstancePoolId.
+       */
+      public com.google.protobuf.ByteString
+          getReservedInstancePoolIdBytes() {
+        java.lang.Object ref = reservedInstancePoolId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reservedInstancePoolId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the reserved instance pool that the instance belongs to.
+       * </pre>
+       *
+       * <code>string reserved_instance_pool_id = 32;</code>
+       * @param value The reservedInstancePoolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReservedInstancePoolId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        reservedInstancePoolId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the reserved instance pool that the instance belongs to.
+       * </pre>
+       *
+       * <code>string reserved_instance_pool_id = 32;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReservedInstancePoolId() {
+        
+        reservedInstancePoolId_ = getDefaultInstance().getReservedInstancePoolId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the reserved instance pool that the instance belongs to.
+       * </pre>
+       *
+       * <code>string reserved_instance_pool_id = 32;</code>
+       * @param value The bytes for reservedInstancePoolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReservedInstancePoolIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        reservedInstancePoolId_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -23764,7 +23950,7 @@ public final class InstanceOuterClass {
       "uf/duration.proto\032\037google/protobuf/times" +
       "tamp.proto\0321yandex/cloud/compute/v1/hard" +
       "ware_generation.proto\032)yandex/cloud/comp" +
-      "ute/v1/maintenance.proto\"\256\r\n\010Instance\022\n\n" +
+      "ute/v1/maintenance.proto\"\321\r\n\010Instance\022\n\n" +
       "\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_" +
       "at\030\003 \001(\0132\032.google.protobuf.Timestamp\022\014\n\004" +
       "name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022=\n\006label" +
@@ -23800,76 +23986,77 @@ public final class InstanceOuterClass {
       ";\n\030maintenance_grace_period\030\036 \001(\0132\031.goog" +
       "le.protobuf.Duration\022H\n\023hardware_generat" +
       "ion\030\037 \001(\0132+.yandex.cloud.compute.v1.Hard" +
-      "wareGeneration\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\rMetadataEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\254\001\n\006Statu" +
-      "s\022\026\n\022STATUS_UNSPECIFIED\020\000\022\020\n\014PROVISIONIN" +
-      "G\020\001\022\013\n\007RUNNING\020\002\022\014\n\010STOPPING\020\003\022\013\n\007STOPPE" +
-      "D\020\004\022\014\n\010STARTING\020\005\022\016\n\nRESTARTING\020\006\022\014\n\010UPD" +
-      "ATING\020\007\022\t\n\005ERROR\020\010\022\013\n\007CRASHED\020\t\022\014\n\010DELET" +
-      "ING\020\nJ\004\010\017\020\020J\004\010\031\020\032\"O\n\tResources\022\016\n\006memory" +
-      "\030\001 \001(\003\022\r\n\005cores\030\002 \001(\003\022\025\n\rcore_fraction\030\003" +
-      " \001(\003\022\014\n\004gpus\030\004 \001(\003\"\300\001\n\014AttachedDisk\0228\n\004m" +
-      "ode\030\001 \001(\0162*.yandex.cloud.compute.v1.Atta" +
-      "chedDisk.Mode\022\023\n\013device_name\030\002 \001(\t\022\023\n\013au" +
-      "to_delete\030\003 \001(\010\022\017\n\007disk_id\030\004 \001(\t\";\n\004Mode" +
-      "\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n" +
-      "\nREAD_WRITE\020\002\"6\n\021AttachedLocalDisk\022\014\n\004si" +
-      "ze\030\001 \001(\003\022\023\n\013device_name\030\002 \001(\t\"\275\001\n\022Attach" +
-      "edFilesystem\022>\n\004mode\030\001 \001(\01620.yandex.clou" +
-      "d.compute.v1.AttachedFilesystem.Mode\022\023\n\013" +
-      "device_name\030\002 \001(\t\022\025\n\rfilesystem_id\030\003 \001(\t" +
-      "\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_O" +
-      "NLY\020\001\022\016\n\nREAD_WRITE\020\002\"\357\001\n\020NetworkInterfa" +
-      "ce\022\r\n\005index\030\001 \001(\t\022\023\n\013mac_address\030\002 \001(\t\022\021" +
-      "\n\tsubnet_id\030\003 \001(\t\022C\n\022primary_v4_address\030" +
-      "\004 \001(\0132\'.yandex.cloud.compute.v1.PrimaryA" +
-      "ddress\022C\n\022primary_v6_address\030\005 \001(\0132\'.yan" +
-      "dex.cloud.compute.v1.PrimaryAddress\022\032\n\022s" +
-      "ecurity_group_ids\030\006 \003(\t\"\230\001\n\016PrimaryAddre" +
-      "ss\022\017\n\007address\030\001 \001(\t\022<\n\016one_to_one_nat\030\002 " +
-      "\001(\0132$.yandex.cloud.compute.v1.OneToOneNa" +
-      "t\0227\n\013dns_records\030\003 \003(\0132\".yandex.cloud.co" +
-      "mpute.v1.DnsRecord\"\217\001\n\013OneToOneNat\022\017\n\007ad" +
-      "dress\030\001 \001(\t\0226\n\nip_version\030\002 \001(\0162\".yandex" +
-      ".cloud.compute.v1.IpVersion\0227\n\013dns_recor" +
-      "ds\030\003 \003(\0132\".yandex.cloud.compute.v1.DnsRe" +
-      "cord\"H\n\tDnsRecord\022\014\n\004fqdn\030\001 \001(\t\022\023\n\013dns_z" +
-      "one_id\030\002 \001(\t\022\013\n\003ttl\030\003 \001(\003\022\013\n\003ptr\030\004 \001(\010\"\'" +
-      "\n\020SchedulingPolicy\022\023\n\013preemptible\030\001 \001(\010\"" +
-      "\256\001\n\017NetworkSettings\022;\n\004type\030\001 \001(\0162-.yand" +
-      "ex.cloud.compute.v1.NetworkSettings.Type" +
-      "\"^\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\014\n\010STANDA" +
-      "RD\020\001\022\030\n\024SOFTWARE_ACCELERATED\020\002\022\030\n\024HARDWA" +
-      "RE_ACCELERATED\020\003\"%\n\013GpuSettings\022\026\n\016gpu_c" +
-      "luster_id\030\001 \001(\t\"\344\002\n\017PlacementPolicy\022\032\n\022p" +
-      "lacement_group_id\030\001 \001(\t\022V\n\023host_affinity" +
-      "_rules\030\002 \003(\01329.yandex.cloud.compute.v1.P" +
-      "lacementPolicy.HostAffinityRule\022!\n\031place" +
-      "ment_group_partition\030\003 \001(\003\032\271\001\n\020HostAffin" +
-      "ityRule\022\013\n\003key\030\001 \001(\t\022N\n\002op\030\002 \001(\0162B.yande" +
-      "x.cloud.compute.v1.PlacementPolicy.HostA" +
-      "ffinityRule.Operator\022\016\n\006values\030\003 \003(\t\"8\n\010" +
-      "Operator\022\030\n\024OPERATOR_UNSPECIFIED\020\000\022\006\n\002IN" +
-      "\020\001\022\n\n\006NOT_IN\020\002\"\241\002\n\017MetadataOptions\022B\n\021gc" +
-      "e_http_endpoint\030\001 \001(\0162\'.yandex.cloud.com" +
-      "pute.v1.MetadataOption\022E\n\024aws_v1_http_en" +
-      "dpoint\030\002 \001(\0162\'.yandex.cloud.compute.v1.M" +
-      "etadataOption\022?\n\016gce_http_token\030\003 \001(\0162\'." +
-      "yandex.cloud.compute.v1.MetadataOption\022B" +
-      "\n\021aws_v1_http_token\030\004 \001(\0162\'.yandex.cloud" +
-      ".compute.v1.MetadataOption\"\311\001\n\022SerialPor" +
-      "tSettings\022W\n\021ssh_authorization\030\001 \001(\0162<.y" +
-      "andex.cloud.compute.v1.SerialPortSetting" +
-      "s.SSHAuthorization\"Z\n\020SSHAuthorization\022!" +
-      "\n\035SSH_AUTHORIZATION_UNSPECIFIED\020\000\022\025\n\021INS" +
-      "TANCE_METADATA\020\001\022\014\n\010OS_LOGIN\020\002*;\n\tIpVers" +
-      "ion\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020" +
-      "\001\022\010\n\004IPV6\020\002*L\n\016MetadataOption\022\037\n\033METADAT" +
-      "A_OPTION_UNSPECIFIED\020\000\022\013\n\007ENABLED\020\001\022\014\n\010D" +
-      "ISABLED\020\002Bb\n\033yandex.cloud.api.compute.v1" +
-      "ZCgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/compute/v1;computeb\006proto3"
+      "wareGeneration\022!\n\031reserved_instance_pool" +
+      "_id\030  \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\001\032/\n\rMetadataEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\254\001\n\006Status\022\026\n\022" +
+      "STATUS_UNSPECIFIED\020\000\022\020\n\014PROVISIONING\020\001\022\013" +
+      "\n\007RUNNING\020\002\022\014\n\010STOPPING\020\003\022\013\n\007STOPPED\020\004\022\014" +
+      "\n\010STARTING\020\005\022\016\n\nRESTARTING\020\006\022\014\n\010UPDATING" +
+      "\020\007\022\t\n\005ERROR\020\010\022\013\n\007CRASHED\020\t\022\014\n\010DELETING\020\n" +
+      "J\004\010\017\020\020J\004\010\031\020\032\"O\n\tResources\022\016\n\006memory\030\001 \001(" +
+      "\003\022\r\n\005cores\030\002 \001(\003\022\025\n\rcore_fraction\030\003 \001(\003\022" +
+      "\014\n\004gpus\030\004 \001(\003\"\300\001\n\014AttachedDisk\0228\n\004mode\030\001" +
+      " \001(\0162*.yandex.cloud.compute.v1.AttachedD" +
+      "isk.Mode\022\023\n\013device_name\030\002 \001(\t\022\023\n\013auto_de" +
+      "lete\030\003 \001(\010\022\017\n\007disk_id\030\004 \001(\t\";\n\004Mode\022\024\n\020M" +
+      "ODE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD" +
+      "_WRITE\020\002\"6\n\021AttachedLocalDisk\022\014\n\004size\030\001 " +
+      "\001(\003\022\023\n\013device_name\030\002 \001(\t\"\275\001\n\022AttachedFil" +
+      "esystem\022>\n\004mode\030\001 \001(\01620.yandex.cloud.com" +
+      "pute.v1.AttachedFilesystem.Mode\022\023\n\013devic" +
+      "e_name\030\002 \001(\t\022\025\n\rfilesystem_id\030\003 \001(\t\";\n\004M" +
+      "ode\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001" +
+      "\022\016\n\nREAD_WRITE\020\002\"\357\001\n\020NetworkInterface\022\r\n" +
+      "\005index\030\001 \001(\t\022\023\n\013mac_address\030\002 \001(\t\022\021\n\tsub" +
+      "net_id\030\003 \001(\t\022C\n\022primary_v4_address\030\004 \001(\013" +
+      "2\'.yandex.cloud.compute.v1.PrimaryAddres" +
+      "s\022C\n\022primary_v6_address\030\005 \001(\0132\'.yandex.c" +
+      "loud.compute.v1.PrimaryAddress\022\032\n\022securi" +
+      "ty_group_ids\030\006 \003(\t\"\230\001\n\016PrimaryAddress\022\017\n" +
+      "\007address\030\001 \001(\t\022<\n\016one_to_one_nat\030\002 \001(\0132$" +
+      ".yandex.cloud.compute.v1.OneToOneNat\0227\n\013" +
+      "dns_records\030\003 \003(\0132\".yandex.cloud.compute" +
+      ".v1.DnsRecord\"\217\001\n\013OneToOneNat\022\017\n\007address" +
+      "\030\001 \001(\t\0226\n\nip_version\030\002 \001(\0162\".yandex.clou" +
+      "d.compute.v1.IpVersion\0227\n\013dns_records\030\003 " +
+      "\003(\0132\".yandex.cloud.compute.v1.DnsRecord\"" +
+      "H\n\tDnsRecord\022\014\n\004fqdn\030\001 \001(\t\022\023\n\013dns_zone_i" +
+      "d\030\002 \001(\t\022\013\n\003ttl\030\003 \001(\003\022\013\n\003ptr\030\004 \001(\010\"\'\n\020Sch" +
+      "edulingPolicy\022\023\n\013preemptible\030\001 \001(\010\"\256\001\n\017N" +
+      "etworkSettings\022;\n\004type\030\001 \001(\0162-.yandex.cl" +
+      "oud.compute.v1.NetworkSettings.Type\"^\n\004T" +
+      "ype\022\024\n\020TYPE_UNSPECIFIED\020\000\022\014\n\010STANDARD\020\001\022" +
+      "\030\n\024SOFTWARE_ACCELERATED\020\002\022\030\n\024HARDWARE_AC" +
+      "CELERATED\020\003\"%\n\013GpuSettings\022\026\n\016gpu_cluste" +
+      "r_id\030\001 \001(\t\"\344\002\n\017PlacementPolicy\022\032\n\022placem" +
+      "ent_group_id\030\001 \001(\t\022V\n\023host_affinity_rule" +
+      "s\030\002 \003(\01329.yandex.cloud.compute.v1.Placem" +
+      "entPolicy.HostAffinityRule\022!\n\031placement_" +
+      "group_partition\030\003 \001(\003\032\271\001\n\020HostAffinityRu" +
+      "le\022\013\n\003key\030\001 \001(\t\022N\n\002op\030\002 \001(\0162B.yandex.clo" +
+      "ud.compute.v1.PlacementPolicy.HostAffini" +
+      "tyRule.Operator\022\016\n\006values\030\003 \003(\t\"8\n\010Opera" +
+      "tor\022\030\n\024OPERATOR_UNSPECIFIED\020\000\022\006\n\002IN\020\001\022\n\n" +
+      "\006NOT_IN\020\002\"\241\002\n\017MetadataOptions\022B\n\021gce_htt" +
+      "p_endpoint\030\001 \001(\0162\'.yandex.cloud.compute." +
+      "v1.MetadataOption\022E\n\024aws_v1_http_endpoin" +
+      "t\030\002 \001(\0162\'.yandex.cloud.compute.v1.Metada" +
+      "taOption\022?\n\016gce_http_token\030\003 \001(\0162\'.yande" +
+      "x.cloud.compute.v1.MetadataOption\022B\n\021aws" +
+      "_v1_http_token\030\004 \001(\0162\'.yandex.cloud.comp" +
+      "ute.v1.MetadataOption\"\311\001\n\022SerialPortSett" +
+      "ings\022W\n\021ssh_authorization\030\001 \001(\0162<.yandex" +
+      ".cloud.compute.v1.SerialPortSettings.SSH" +
+      "Authorization\"Z\n\020SSHAuthorization\022!\n\035SSH" +
+      "_AUTHORIZATION_UNSPECIFIED\020\000\022\025\n\021INSTANCE" +
+      "_METADATA\020\001\022\014\n\010OS_LOGIN\020\002*;\n\tIpVersion\022\032" +
+      "\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004" +
+      "IPV6\020\002*L\n\016MetadataOption\022\037\n\033METADATA_OPT" +
+      "ION_UNSPECIFIED\020\000\022\013\n\007ENABLED\020\001\022\014\n\010DISABL" +
+      "ED\020\002Bb\n\033yandex.cloud.api.compute.v1ZCgit" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/compute/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -23884,7 +24071,7 @@ public final class InstanceOuterClass {
     internal_static_yandex_cloud_compute_v1_Instance_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_Instance_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "ZoneId", "PlatformId", "Resources", "Status", "Metadata", "MetadataOptions", "BootDisk", "SecondaryDisks", "LocalDisks", "Filesystems", "NetworkInterfaces", "SerialPortSettings", "GpuSettings", "Fqdn", "SchedulingPolicy", "ServiceAccountId", "NetworkSettings", "PlacementPolicy", "HostGroupId", "HostId", "MaintenancePolicy", "MaintenanceGracePeriod", "HardwareGeneration", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "ZoneId", "PlatformId", "Resources", "Status", "Metadata", "MetadataOptions", "BootDisk", "SecondaryDisks", "LocalDisks", "Filesystems", "NetworkInterfaces", "SerialPortSettings", "GpuSettings", "Fqdn", "SchedulingPolicy", "ServiceAccountId", "NetworkSettings", "PlacementPolicy", "HostGroupId", "HostId", "MaintenancePolicy", "MaintenanceGracePeriod", "HardwareGeneration", "ReservedInstancePoolId", });
     internal_static_yandex_cloud_compute_v1_Instance_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_Instance_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_Instance_LabelsEntry_fieldAccessorTable = new

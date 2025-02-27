@@ -3420,6 +3420,53 @@ public final class ClusterServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getSegmentHostGroupIdsBytes(int index);
+
+    /**
+     * <pre>
+     * ID of the service account used for access Yandex Cloud resources.
+     * </pre>
+     *
+     * <code>string service_account_id = 24;</code>
+     * @return The serviceAccountId.
+     */
+    java.lang.String getServiceAccountId();
+    /**
+     * <pre>
+     * ID of the service account used for access Yandex Cloud resources.
+     * </pre>
+     *
+     * <code>string service_account_id = 24;</code>
+     * @return The bytes for serviceAccountId.
+     */
+    com.google.protobuf.ByteString
+        getServiceAccountIdBytes();
+
+    /**
+     * <pre>
+     * Cloud logging configuration
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 25;</code>
+     * @return Whether the logging field is set.
+     */
+    boolean hasLogging();
+    /**
+     * <pre>
+     * Cloud logging configuration
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 25;</code>
+     * @return The logging.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig getLogging();
+    /**
+     * <pre>
+     * Cloud logging configuration
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 25;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfigOrBuilder getLoggingOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.CreateClusterRequest}
@@ -3445,6 +3492,7 @@ public final class ClusterServiceOuterClass {
       hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       masterHostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       segmentHostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      serviceAccountId_ = "";
     }
 
     @java.lang.Override
@@ -3665,6 +3713,25 @@ public final class ClusterServiceOuterClass {
                 mutable_bitField0_ |= 0x00000010;
               }
               segmentHostGroupIds_.add(s);
+              break;
+            }
+            case 194: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceAccountId_ = s;
+              break;
+            }
+            case 202: {
+              yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig.Builder subBuilder = null;
+              if (logging_ != null) {
+                subBuilder = logging_.toBuilder();
+              }
+              logging_ = input.readMessage(yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logging_);
+                logging_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -4619,6 +4686,90 @@ public final class ClusterServiceOuterClass {
       return segmentHostGroupIds_.getByteString(index);
     }
 
+    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 24;
+    private volatile java.lang.Object serviceAccountId_;
+    /**
+     * <pre>
+     * ID of the service account used for access Yandex Cloud resources.
+     * </pre>
+     *
+     * <code>string service_account_id = 24;</code>
+     * @return The serviceAccountId.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceAccountId() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccountId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the service account used for access Yandex Cloud resources.
+     * </pre>
+     *
+     * <code>string service_account_id = 24;</code>
+     * @return The bytes for serviceAccountId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceAccountIdBytes() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceAccountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOGGING_FIELD_NUMBER = 25;
+    private yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig logging_;
+    /**
+     * <pre>
+     * Cloud logging configuration
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 25;</code>
+     * @return Whether the logging field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogging() {
+      return logging_ != null;
+    }
+    /**
+     * <pre>
+     * Cloud logging configuration
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 25;</code>
+     * @return The logging.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig getLogging() {
+      return logging_ == null ? yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig.getDefaultInstance() : logging_;
+    }
+    /**
+     * <pre>
+     * Cloud logging configuration
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 25;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfigOrBuilder getLoggingOrBuilder() {
+      return getLogging();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4701,6 +4852,12 @@ public final class ClusterServiceOuterClass {
       }
       for (int i = 0; i < segmentHostGroupIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 23, segmentHostGroupIds_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 24, serviceAccountId_);
+      }
+      if (logging_ != null) {
+        output.writeMessage(25, getLogging());
       }
       unknownFields.writeTo(output);
     }
@@ -4815,6 +4972,13 @@ public final class ClusterServiceOuterClass {
         size += dataSize;
         size += 2 * getSegmentHostGroupIdsList().size();
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(24, serviceAccountId_);
+      }
+      if (logging_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(25, getLogging());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4891,6 +5055,13 @@ public final class ClusterServiceOuterClass {
           .equals(other.getMasterHostGroupIdsList())) return false;
       if (!getSegmentHostGroupIdsList()
           .equals(other.getSegmentHostGroupIdsList())) return false;
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
+      if (hasLogging() != other.hasLogging()) return false;
+      if (hasLogging()) {
+        if (!getLogging()
+            .equals(other.getLogging())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4971,6 +5142,12 @@ public final class ClusterServiceOuterClass {
       if (getSegmentHostGroupIdsCount() > 0) {
         hash = (37 * hash) + SEGMENT_HOST_GROUP_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getSegmentHostGroupIdsList().hashCode();
+      }
+      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountId().hashCode();
+      if (hasLogging()) {
+        hash = (37 * hash) + LOGGING_FIELD_NUMBER;
+        hash = (53 * hash) + getLogging().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -5194,6 +5371,14 @@ public final class ClusterServiceOuterClass {
         bitField0_ = (bitField0_ & ~0x00000008);
         segmentHostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000010);
+        serviceAccountId_ = "";
+
+        if (loggingBuilder_ == null) {
+          logging_ = null;
+        } else {
+          logging_ = null;
+          loggingBuilder_ = null;
+        }
         return this;
       }
 
@@ -5284,6 +5469,12 @@ public final class ClusterServiceOuterClass {
           bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.segmentHostGroupIds_ = segmentHostGroupIds_;
+        result.serviceAccountId_ = serviceAccountId_;
+        if (loggingBuilder_ == null) {
+          result.logging_ = logging_;
+        } else {
+          result.logging_ = loggingBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -5430,6 +5621,13 @@ public final class ClusterServiceOuterClass {
             segmentHostGroupIds_.addAll(other.segmentHostGroupIds_);
           }
           onChanged();
+        }
+        if (!other.getServiceAccountId().isEmpty()) {
+          serviceAccountId_ = other.serviceAccountId_;
+          onChanged();
+        }
+        if (other.hasLogging()) {
+          mergeLogging(other.getLogging());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7961,6 +8159,257 @@ public final class ClusterServiceOuterClass {
         segmentHostGroupIds_.add(value);
         onChanged();
         return this;
+      }
+
+      private java.lang.Object serviceAccountId_ = "";
+      /**
+       * <pre>
+       * ID of the service account used for access Yandex Cloud resources.
+       * </pre>
+       *
+       * <code>string service_account_id = 24;</code>
+       * @return The serviceAccountId.
+       */
+      public java.lang.String getServiceAccountId() {
+        java.lang.Object ref = serviceAccountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access Yandex Cloud resources.
+       * </pre>
+       *
+       * <code>string service_account_id = 24;</code>
+       * @return The bytes for serviceAccountId.
+       */
+      public com.google.protobuf.ByteString
+          getServiceAccountIdBytes() {
+        java.lang.Object ref = serviceAccountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceAccountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access Yandex Cloud resources.
+       * </pre>
+       *
+       * <code>string service_account_id = 24;</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access Yandex Cloud resources.
+       * </pre>
+       *
+       * <code>string service_account_id = 24;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceAccountId() {
+        
+        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access Yandex Cloud resources.
+       * </pre>
+       *
+       * <code>string service_account_id = 24;</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig logging_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig, yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfigOrBuilder> loggingBuilder_;
+      /**
+       * <pre>
+       * Cloud logging configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 25;</code>
+       * @return Whether the logging field is set.
+       */
+      public boolean hasLogging() {
+        return loggingBuilder_ != null || logging_ != null;
+      }
+      /**
+       * <pre>
+       * Cloud logging configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 25;</code>
+       * @return The logging.
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig getLogging() {
+        if (loggingBuilder_ == null) {
+          return logging_ == null ? yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig.getDefaultInstance() : logging_;
+        } else {
+          return loggingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Cloud logging configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 25;</code>
+       */
+      public Builder setLogging(yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig value) {
+        if (loggingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logging_ = value;
+          onChanged();
+        } else {
+          loggingBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cloud logging configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 25;</code>
+       */
+      public Builder setLogging(
+          yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig.Builder builderForValue) {
+        if (loggingBuilder_ == null) {
+          logging_ = builderForValue.build();
+          onChanged();
+        } else {
+          loggingBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cloud logging configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 25;</code>
+       */
+      public Builder mergeLogging(yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig value) {
+        if (loggingBuilder_ == null) {
+          if (logging_ != null) {
+            logging_ =
+              yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig.newBuilder(logging_).mergeFrom(value).buildPartial();
+          } else {
+            logging_ = value;
+          }
+          onChanged();
+        } else {
+          loggingBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cloud logging configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 25;</code>
+       */
+      public Builder clearLogging() {
+        if (loggingBuilder_ == null) {
+          logging_ = null;
+          onChanged();
+        } else {
+          logging_ = null;
+          loggingBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cloud logging configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 25;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig.Builder getLoggingBuilder() {
+        
+        onChanged();
+        return getLoggingFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Cloud logging configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 25;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfigOrBuilder getLoggingOrBuilder() {
+        if (loggingBuilder_ != null) {
+          return loggingBuilder_.getMessageOrBuilder();
+        } else {
+          return logging_ == null ?
+              yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig.getDefaultInstance() : logging_;
+        }
+      }
+      /**
+       * <pre>
+       * Cloud logging configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 25;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig, yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfigOrBuilder> 
+          getLoggingFieldBuilder() {
+        if (loggingBuilder_ == null) {
+          loggingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig, yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfigOrBuilder>(
+                  getLogging(),
+                  getParentForChildren(),
+                  isClean());
+          logging_ = null;
+        }
+        return loggingBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11396,6 +11845,53 @@ public final class ClusterServiceOuterClass {
      * <code>.yandex.cloud.mdb.greenplum.v1.CloudStorage cloud_storage = 20;</code>
      */
     yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.CloudStorageOrBuilder getCloudStorageOrBuilder();
+
+    /**
+     * <pre>
+     * ID of the service account used for access YC resources.
+     * </pre>
+     *
+     * <code>string service_account_id = 21;</code>
+     * @return The serviceAccountId.
+     */
+    java.lang.String getServiceAccountId();
+    /**
+     * <pre>
+     * ID of the service account used for access YC resources.
+     * </pre>
+     *
+     * <code>string service_account_id = 21;</code>
+     * @return The bytes for serviceAccountId.
+     */
+    com.google.protobuf.ByteString
+        getServiceAccountIdBytes();
+
+    /**
+     * <pre>
+     * Cloud logging configuration
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 22;</code>
+     * @return Whether the logging field is set.
+     */
+    boolean hasLogging();
+    /**
+     * <pre>
+     * Cloud logging configuration
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 22;</code>
+     * @return The logging.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig getLogging();
+    /**
+     * <pre>
+     * Cloud logging configuration
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 22;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfigOrBuilder getLoggingOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.UpdateClusterRequest}
@@ -11416,6 +11912,7 @@ public final class ClusterServiceOuterClass {
       userPassword_ = "";
       networkId_ = "";
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      serviceAccountId_ = "";
     }
 
     @java.lang.Override
@@ -11593,6 +12090,25 @@ public final class ClusterServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(cloudStorage_);
                 cloudStorage_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 170: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceAccountId_ = s;
+              break;
+            }
+            case 178: {
+              yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig.Builder subBuilder = null;
+              if (logging_ != null) {
+                subBuilder = logging_.toBuilder();
+              }
+              logging_ = input.readMessage(yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logging_);
+                logging_ = subBuilder.buildPartial();
               }
 
               break;
@@ -12317,6 +12833,90 @@ public final class ClusterServiceOuterClass {
       return getCloudStorage();
     }
 
+    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 21;
+    private volatile java.lang.Object serviceAccountId_;
+    /**
+     * <pre>
+     * ID of the service account used for access YC resources.
+     * </pre>
+     *
+     * <code>string service_account_id = 21;</code>
+     * @return The serviceAccountId.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceAccountId() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccountId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the service account used for access YC resources.
+     * </pre>
+     *
+     * <code>string service_account_id = 21;</code>
+     * @return The bytes for serviceAccountId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceAccountIdBytes() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceAccountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOGGING_FIELD_NUMBER = 22;
+    private yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig logging_;
+    /**
+     * <pre>
+     * Cloud logging configuration
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 22;</code>
+     * @return Whether the logging field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogging() {
+      return logging_ != null;
+    }
+    /**
+     * <pre>
+     * Cloud logging configuration
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 22;</code>
+     * @return The logging.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig getLogging() {
+      return logging_ == null ? yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig.getDefaultInstance() : logging_;
+    }
+    /**
+     * <pre>
+     * Cloud logging configuration
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 22;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfigOrBuilder getLoggingOrBuilder() {
+      return getLogging();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12378,6 +12978,12 @@ public final class ClusterServiceOuterClass {
       }
       if (cloudStorage_ != null) {
         output.writeMessage(20, getCloudStorage());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 21, serviceAccountId_);
+      }
+      if (logging_ != null) {
+        output.writeMessage(22, getLogging());
       }
       unknownFields.writeTo(output);
     }
@@ -12453,6 +13059,13 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(20, getCloudStorage());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, serviceAccountId_);
+      }
+      if (logging_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(22, getLogging());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -12519,6 +13132,13 @@ public final class ClusterServiceOuterClass {
         if (!getCloudStorage()
             .equals(other.getCloudStorage())) return false;
       }
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
+      if (hasLogging() != other.hasLogging()) return false;
+      if (hasLogging()) {
+        if (!getLogging()
+            .equals(other.getLogging())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -12578,6 +13198,12 @@ public final class ClusterServiceOuterClass {
       if (hasCloudStorage()) {
         hash = (37 * hash) + CLOUD_STORAGE_FIELD_NUMBER;
         hash = (53 * hash) + getCloudStorage().hashCode();
+      }
+      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountId().hashCode();
+      if (hasLogging()) {
+        hash = (37 * hash) + LOGGING_FIELD_NUMBER;
+        hash = (53 * hash) + getLogging().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -12791,6 +13417,14 @@ public final class ClusterServiceOuterClass {
           cloudStorage_ = null;
           cloudStorageBuilder_ = null;
         }
+        serviceAccountId_ = "";
+
+        if (loggingBuilder_ == null) {
+          logging_ = null;
+        } else {
+          logging_ = null;
+          loggingBuilder_ = null;
+        }
         return this;
       }
 
@@ -12865,6 +13499,12 @@ public final class ClusterServiceOuterClass {
           result.cloudStorage_ = cloudStorage_;
         } else {
           result.cloudStorage_ = cloudStorageBuilder_.build();
+        }
+        result.serviceAccountId_ = serviceAccountId_;
+        if (loggingBuilder_ == null) {
+          result.logging_ = logging_;
+        } else {
+          result.logging_ = loggingBuilder_.build();
         }
         onBuilt();
         return result;
@@ -12969,6 +13609,13 @@ public final class ClusterServiceOuterClass {
         }
         if (other.hasCloudStorage()) {
           mergeCloudStorage(other.getCloudStorage());
+        }
+        if (!other.getServiceAccountId().isEmpty()) {
+          serviceAccountId_ = other.serviceAccountId_;
+          onChanged();
+        }
+        if (other.hasLogging()) {
+          mergeLogging(other.getLogging());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -14937,6 +15584,257 @@ public final class ClusterServiceOuterClass {
           cloudStorage_ = null;
         }
         return cloudStorageBuilder_;
+      }
+
+      private java.lang.Object serviceAccountId_ = "";
+      /**
+       * <pre>
+       * ID of the service account used for access YC resources.
+       * </pre>
+       *
+       * <code>string service_account_id = 21;</code>
+       * @return The serviceAccountId.
+       */
+      public java.lang.String getServiceAccountId() {
+        java.lang.Object ref = serviceAccountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access YC resources.
+       * </pre>
+       *
+       * <code>string service_account_id = 21;</code>
+       * @return The bytes for serviceAccountId.
+       */
+      public com.google.protobuf.ByteString
+          getServiceAccountIdBytes() {
+        java.lang.Object ref = serviceAccountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceAccountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access YC resources.
+       * </pre>
+       *
+       * <code>string service_account_id = 21;</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access YC resources.
+       * </pre>
+       *
+       * <code>string service_account_id = 21;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceAccountId() {
+        
+        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access YC resources.
+       * </pre>
+       *
+       * <code>string service_account_id = 21;</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig logging_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig, yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfigOrBuilder> loggingBuilder_;
+      /**
+       * <pre>
+       * Cloud logging configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 22;</code>
+       * @return Whether the logging field is set.
+       */
+      public boolean hasLogging() {
+        return loggingBuilder_ != null || logging_ != null;
+      }
+      /**
+       * <pre>
+       * Cloud logging configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 22;</code>
+       * @return The logging.
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig getLogging() {
+        if (loggingBuilder_ == null) {
+          return logging_ == null ? yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig.getDefaultInstance() : logging_;
+        } else {
+          return loggingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Cloud logging configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 22;</code>
+       */
+      public Builder setLogging(yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig value) {
+        if (loggingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logging_ = value;
+          onChanged();
+        } else {
+          loggingBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cloud logging configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 22;</code>
+       */
+      public Builder setLogging(
+          yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig.Builder builderForValue) {
+        if (loggingBuilder_ == null) {
+          logging_ = builderForValue.build();
+          onChanged();
+        } else {
+          loggingBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cloud logging configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 22;</code>
+       */
+      public Builder mergeLogging(yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig value) {
+        if (loggingBuilder_ == null) {
+          if (logging_ != null) {
+            logging_ =
+              yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig.newBuilder(logging_).mergeFrom(value).buildPartial();
+          } else {
+            logging_ = value;
+          }
+          onChanged();
+        } else {
+          loggingBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cloud logging configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 22;</code>
+       */
+      public Builder clearLogging() {
+        if (loggingBuilder_ == null) {
+          logging_ = null;
+          onChanged();
+        } else {
+          logging_ = null;
+          loggingBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cloud logging configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 22;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig.Builder getLoggingBuilder() {
+        
+        onChanged();
+        return getLoggingFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Cloud logging configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 22;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfigOrBuilder getLoggingOrBuilder() {
+        if (loggingBuilder_ != null) {
+          return loggingBuilder_.getMessageOrBuilder();
+        } else {
+          return logging_ == null ?
+              yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig.getDefaultInstance() : logging_;
+        }
+      }
+      /**
+       * <pre>
+       * Cloud logging configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LoggingConfig logging = 22;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig, yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfigOrBuilder> 
+          getLoggingFieldBuilder() {
+        if (loggingBuilder_ == null) {
+          loggingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig, yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.LoggingConfigOrBuilder>(
+                  getLogging(),
+                  getParentForChildren(),
+                  isClean());
+          logging_ = null;
+        }
+        return loggingBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -39719,6 +40617,26 @@ public final class ClusterServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getSegmentHostGroupIdsBytes(int index);
+
+    /**
+     * <pre>
+     * Service account that will be used to access a Yandex Cloud resources
+     * </pre>
+     *
+     * <code>string service_account_id = 24;</code>
+     * @return The serviceAccountId.
+     */
+    java.lang.String getServiceAccountId();
+    /**
+     * <pre>
+     * Service account that will be used to access a Yandex Cloud resources
+     * </pre>
+     *
+     * <code>string service_account_id = 24;</code>
+     * @return The bytes for serviceAccountId.
+     */
+    com.google.protobuf.ByteString
+        getServiceAccountIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.RestoreClusterRequest}
@@ -39745,6 +40663,7 @@ public final class ClusterServiceOuterClass {
       restoreOnly_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       masterHostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       segmentHostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      serviceAccountId_ = "";
     }
 
     @java.lang.Override
@@ -39956,6 +40875,12 @@ public final class ClusterServiceOuterClass {
                 mutable_bitField0_ |= 0x00000020;
               }
               segmentHostGroupIds_.add(s);
+              break;
+            }
+            case 194: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceAccountId_ = s;
               break;
             }
             default: {
@@ -40913,6 +41838,52 @@ public final class ClusterServiceOuterClass {
       return segmentHostGroupIds_.getByteString(index);
     }
 
+    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 24;
+    private volatile java.lang.Object serviceAccountId_;
+    /**
+     * <pre>
+     * Service account that will be used to access a Yandex Cloud resources
+     * </pre>
+     *
+     * <code>string service_account_id = 24;</code>
+     * @return The serviceAccountId.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceAccountId() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccountId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Service account that will be used to access a Yandex Cloud resources
+     * </pre>
+     *
+     * <code>string service_account_id = 24;</code>
+     * @return The bytes for serviceAccountId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceAccountIdBytes() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceAccountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -40992,6 +41963,9 @@ public final class ClusterServiceOuterClass {
       }
       for (int i = 0; i < segmentHostGroupIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 21, segmentHostGroupIds_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 24, serviceAccountId_);
       }
       unknownFields.writeTo(output);
     }
@@ -41106,6 +42080,9 @@ public final class ClusterServiceOuterClass {
         size += dataSize;
         size += 2 * getSegmentHostGroupIdsList().size();
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(24, serviceAccountId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -41177,6 +42154,8 @@ public final class ClusterServiceOuterClass {
           .equals(other.getMasterHostGroupIdsList())) return false;
       if (!getSegmentHostGroupIdsList()
           .equals(other.getSegmentHostGroupIdsList())) return false;
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -41255,6 +42234,8 @@ public final class ClusterServiceOuterClass {
         hash = (37 * hash) + SEGMENT_HOST_GROUP_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getSegmentHostGroupIdsList().hashCode();
       }
+      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -41471,6 +42452,8 @@ public final class ClusterServiceOuterClass {
         bitField0_ = (bitField0_ & ~0x00000010);
         segmentHostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000020);
+        serviceAccountId_ = "";
+
         return this;
       }
 
@@ -41560,6 +42543,7 @@ public final class ClusterServiceOuterClass {
           bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.segmentHostGroupIds_ = segmentHostGroupIds_;
+        result.serviceAccountId_ = serviceAccountId_;
         onBuilt();
         return result;
       }
@@ -41709,6 +42693,10 @@ public final class ClusterServiceOuterClass {
             ensureSegmentHostGroupIdsIsMutable();
             segmentHostGroupIds_.addAll(other.segmentHostGroupIds_);
           }
+          onChanged();
+        }
+        if (!other.getServiceAccountId().isEmpty()) {
+          serviceAccountId_ = other.serviceAccountId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -44195,6 +45183,102 @@ public final class ClusterServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private java.lang.Object serviceAccountId_ = "";
+      /**
+       * <pre>
+       * Service account that will be used to access a Yandex Cloud resources
+       * </pre>
+       *
+       * <code>string service_account_id = 24;</code>
+       * @return The serviceAccountId.
+       */
+      public java.lang.String getServiceAccountId() {
+        java.lang.Object ref = serviceAccountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Service account that will be used to access a Yandex Cloud resources
+       * </pre>
+       *
+       * <code>string service_account_id = 24;</code>
+       * @return The bytes for serviceAccountId.
+       */
+      public com.google.protobuf.ByteString
+          getServiceAccountIdBytes() {
+        java.lang.Object ref = serviceAccountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceAccountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Service account that will be used to access a Yandex Cloud resources
+       * </pre>
+       *
+       * <code>string service_account_id = 24;</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Service account that will be used to access a Yandex Cloud resources
+       * </pre>
+       *
+       * <code>string service_account_id = 24;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceAccountId() {
+        
+        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Service account that will be used to access a Yandex Cloud resources
+       * </pre>
+       *
+       * <code>string service_account_id = 24;</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -45263,7 +46347,7 @@ public final class ClusterServiceOuterClass {
       "<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"i\n\024Lis" +
       "tClustersResponse\0228\n\010clusters\030\001 \003(\0132&.ya" +
       "ndex.cloud.mdb.greenplum.v1.Cluster\022\027\n\017n" +
-      "ext_page_token\030\002 \001(\t\"\225\t\n\024CreateClusterRe" +
+      "ext_page_token\030\002 \001(\t\"\360\t\n\024CreateClusterRe" +
       "quest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022," +
       "\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9" +
       "_-]*\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\220\001\n" +
@@ -45291,244 +46375,249 @@ public final class ClusterServiceOuterClass {
       "1.ConfigSpec\022B\n\rcloud_storage\030\025 \001(\0132+.ya" +
       "ndex.cloud.mdb.greenplum.v1.CloudStorage" +
       "\022\035\n\025master_host_group_ids\030\026 \003(\t\022\036\n\026segme" +
-      "nt_host_group_ids\030\027 \003(\t\032-\n\013LabelsEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\022\020\023\"\221\006\n" +
-      "\nConfigSpec\022i\n\025greenplum_config_6_17\030\001 \001" +
-      "(\01322.yandex.cloud.mdb.greenplum.v1.Green" +
-      "plumConfig6_17H\000R\024greenplumConfig_6_17\022i" +
-      "\n\025greenplum_config_6_19\030\002 \001(\01322.yandex.c" +
-      "loud.mdb.greenplum.v1.GreenplumConfig6_1" +
-      "9H\000R\024greenplumConfig_6_19\022i\n\025greenplum_c" +
-      "onfig_6_21\030\004 \001(\01322.yandex.cloud.mdb.gree" +
-      "nplum.v1.GreenplumConfig6_21H\000R\024greenplu" +
-      "mConfig_6_21\022i\n\025greenplum_config_6_22\030\005 " +
-      "\001(\01322.yandex.cloud.mdb.greenplum.v1.Gree" +
-      "nplumConfig6_22H\000R\024greenplumConfig_6_22\022" +
-      "`\n\022greenplum_config_6\030\t \001(\0132/.yandex.clo" +
-      "ud.mdb.greenplum.v1.GreenplumConfig6H\000R\021" +
-      "greenplumConfig_6\022C\n\004pool\030\003 \001(\01325.yandex" +
-      ".cloud.mdb.greenplum.v1.ConnectionPooler" +
-      "Config\022X\n\025background_activities\030\006 \001(\01329." +
-      "yandex.cloud.mdb.greenplum.v1.Background" +
-      "ActivitiesConfig\022<\n\npxf_config\030\010 \001(\0132(.y" +
-      "andex.cloud.mdb.greenplum.v1.PXFConfigB\022" +
-      "\n\020greenplum_configJ\004\010\007\020\010\"+\n\025CreateCluste" +
-      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\266\007\n\024Update" +
-      "ClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.p" +
-      "rotobuf.FieldMask\022\036\n\013description\030\003 \001(\tB\t" +
-      "\212\3101\005<=256\022\220\001\n\006labels\030\004 \003(\0132?.yandex.clou" +
-      "d.mdb.greenplum.v1.UpdateClusterRequest." +
-      "LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a" +
-      "-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022(\n\004" +
-      "name\030\005 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022>" +
-      "\n\006config\030\006 \001(\0132..yandex.cloud.mdb.greenp" +
-      "lum.v1.GreenplumConfig\022P\n\rmaster_config\030" +
-      "\007 \001(\01329.yandex.cloud.mdb.greenplum.v1.Ma" +
-      "sterSubclusterConfigSpec\022R\n\016segment_conf" +
-      "ig\030\010 \001(\0132:.yandex.cloud.mdb.greenplum.v1" +
-      ".SegmentSubclusterConfigSpec\022$\n\ruser_pas" +
-      "sword\030\r \001(\tB\r\350\3071\001\212\3101\0058-128\022\034\n\nnetwork_id" +
-      "\030\016 \001(\tB\010\212\3101\004<=50\022L\n\022maintenance_window\030\017" +
-      " \001(\01320.yandex.cloud.mdb.greenplum.v1.Mai" +
-      "ntenanceWindow\022\032\n\022security_group_ids\030\021 \003" +
-      "(\t\022\033\n\023deletion_protection\030\022 \001(\010\022>\n\013confi" +
-      "g_spec\030\023 \001(\0132).yandex.cloud.mdb.greenplu" +
-      "m.v1.ConfigSpec\022B\n\rcloud_storage\030\024 \001(\0132+" +
-      ".yandex.cloud.mdb.greenplum.v1.CloudStor" +
-      "age\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001J\004\010\020\020\021J\004\010\t\020\r\"+\n\025UpdateClusterM" +
-      "etadata\022\022\n\ncluster_id\030\001 \001(\t\"-\n\027AddCluste" +
-      "rHostsMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\313\001\n\rE" +
-      "xpandRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\022\032\n\022segment_host_count\030\002 \001(\003\022#\n\033ad" +
-      "d_segments_per_host_count\030\003 \001(\003\022\020\n\010durat" +
-      "ion\030\004 \001(\003\022\020\n\010parallel\030\005 \001(\003\022\025\n\rclose_clu" +
-      "ster\030\006 \001(\010\022\034\n\024delay_redistribution\030\007 \001(\010" +
-      "\"8\n\024DeleteClusterRequest\022 \n\ncluster_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025DeleteClusterMetad" +
-      "ata\022\022\n\ncluster_id\030\001 \001(\t\"7\n\023StartClusterR" +
+      "nt_host_group_ids\030\027 \003(\t\022\032\n\022service_accou" +
+      "nt_id\030\030 \001(\t\022=\n\007logging\030\031 \001(\0132,.yandex.cl" +
+      "oud.mdb.greenplum.v1.LoggingConfig\032-\n\013La" +
+      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001J\004\010\022\020\023\"\221\006\n\nConfigSpec\022i\n\025greenplum_conf" +
+      "ig_6_17\030\001 \001(\01322.yandex.cloud.mdb.greenpl" +
+      "um.v1.GreenplumConfig6_17H\000R\024greenplumCo" +
+      "nfig_6_17\022i\n\025greenplum_config_6_19\030\002 \001(\013" +
+      "22.yandex.cloud.mdb.greenplum.v1.Greenpl" +
+      "umConfig6_19H\000R\024greenplumConfig_6_19\022i\n\025" +
+      "greenplum_config_6_21\030\004 \001(\01322.yandex.clo" +
+      "ud.mdb.greenplum.v1.GreenplumConfig6_21H" +
+      "\000R\024greenplumConfig_6_21\022i\n\025greenplum_con" +
+      "fig_6_22\030\005 \001(\01322.yandex.cloud.mdb.greenp" +
+      "lum.v1.GreenplumConfig6_22H\000R\024greenplumC" +
+      "onfig_6_22\022`\n\022greenplum_config_6\030\t \001(\0132/" +
+      ".yandex.cloud.mdb.greenplum.v1.Greenplum" +
+      "Config6H\000R\021greenplumConfig_6\022C\n\004pool\030\003 \001" +
+      "(\01325.yandex.cloud.mdb.greenplum.v1.Conne" +
+      "ctionPoolerConfig\022X\n\025background_activiti" +
+      "es\030\006 \001(\01329.yandex.cloud.mdb.greenplum.v1" +
+      ".BackgroundActivitiesConfig\022<\n\npxf_confi" +
+      "g\030\010 \001(\0132(.yandex.cloud.mdb.greenplum.v1." +
+      "PXFConfigB\022\n\020greenplum_configJ\004\010\007\020\010\"+\n\025C" +
+      "reateClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t" +
+      "\"\221\010\n\024UpdateClusterRequest\022 \n\ncluster_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\013" +
+      "2\032.google.protobuf.FieldMask\022\036\n\013descript" +
+      "ion\030\003 \001(\tB\t\212\3101\005<=256\022\220\001\n\006labels\030\004 \003(\0132?." +
+      "yandex.cloud.mdb.greenplum.v1.UpdateClus" +
+      "terRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63" +
+      "\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0" +
+      "-9a-z]*\022(\n\004name\030\005 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA" +
+      "-Z0-9_-]*\022>\n\006config\030\006 \001(\0132..yandex.cloud" +
+      ".mdb.greenplum.v1.GreenplumConfig\022P\n\rmas" +
+      "ter_config\030\007 \001(\01329.yandex.cloud.mdb.gree" +
+      "nplum.v1.MasterSubclusterConfigSpec\022R\n\016s" +
+      "egment_config\030\010 \001(\0132:.yandex.cloud.mdb.g" +
+      "reenplum.v1.SegmentSubclusterConfigSpec\022" +
+      "$\n\ruser_password\030\r \001(\tB\r\350\3071\001\212\3101\0058-128\022\034\n" +
+      "\nnetwork_id\030\016 \001(\tB\010\212\3101\004<=50\022L\n\022maintenan" +
+      "ce_window\030\017 \001(\01320.yandex.cloud.mdb.green" +
+      "plum.v1.MaintenanceWindow\022\032\n\022security_gr" +
+      "oup_ids\030\021 \003(\t\022\033\n\023deletion_protection\030\022 \001" +
+      "(\010\022>\n\013config_spec\030\023 \001(\0132).yandex.cloud.m" +
+      "db.greenplum.v1.ConfigSpec\022B\n\rcloud_stor" +
+      "age\030\024 \001(\0132+.yandex.cloud.mdb.greenplum.v" +
+      "1.CloudStorage\022\032\n\022service_account_id\030\025 \001" +
+      "(\t\022=\n\007logging\030\026 \001(\0132,.yandex.cloud.mdb.g" +
+      "reenplum.v1.LoggingConfig\032-\n\013LabelsEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\020\020\021J\004" +
+      "\010\t\020\r\"+\n\025UpdateClusterMetadata\022\022\n\ncluster" +
+      "_id\030\001 \001(\t\"-\n\027AddClusterHostsMetadata\022\022\n\n" +
+      "cluster_id\030\001 \001(\t\"\313\001\n\rExpandRequest\022 \n\ncl" +
+      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022segment_" +
+      "host_count\030\002 \001(\003\022#\n\033add_segments_per_hos" +
+      "t_count\030\003 \001(\003\022\020\n\010duration\030\004 \001(\003\022\020\n\010paral" +
+      "lel\030\005 \001(\003\022\025\n\rclose_cluster\030\006 \001(\010\022\034\n\024dela" +
+      "y_redistribution\030\007 \001(\010\"8\n\024DeleteClusterR" +
       "equest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\"*\n\024StartClusterMetadata\022\022\n\ncluster_id\030\001" +
-      " \001(\t\"6\n\022StopClusterRequest\022 \n\ncluster_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023StopClusterMetad" +
-      "ata\022\022\n\ncluster_id\030\001 \001(\t\"c\n\022MoveClusterRe" +
-      "quest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "+\n\025destination_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\"b\n\023MoveClusterMetadata\022\022\n\ncluster_i" +
-      "d\030\001 \001(\t\022\030\n\020source_folder_id\030\002 \001(\t\022\035\n\025des" +
-      "tination_folder_id\030\003 \001(\t\"~\n\034ListClusterO" +
-      "perationsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=100" +
-      "0\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035List" +
-      "ClusterOperationsResponse\0225\n\noperations\030" +
-      "\001 \003(\0132!.yandex.cloud.operation.Operation" +
-      "\022\027\n\017next_page_token\030\002 \001(\t\"y\n\027ListCluster" +
-      "HostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n" +
-      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"g\n\030ListClus" +
-      "terHostsResponse\0222\n\005hosts\030\001 \003(\0132#.yandex" +
-      ".cloud.mdb.greenplum.v1.Host\022\027\n\017next_pag" +
-      "e_token\030\002 \001(\t\"Y\n\032MasterSubclusterConfigS" +
-      "pec\022;\n\tresources\030\001 \001(\0132(.yandex.cloud.md" +
-      "b.greenplum.v1.Resources\"Z\n\033SegmentSubcl" +
-      "usterConfigSpec\022;\n\tresources\030\001 \001(\0132(.yan" +
-      "dex.cloud.mdb.greenplum.v1.Resources\"j\n\027" +
-      "ListClusterLogsResponse\0226\n\004logs\030\001 \003(\0132(." +
-      "yandex.cloud.mdb.greenplum.v1.LogRecord\022" +
-      "\027\n\017next_page_token\030\002 \001(\t\"\262\001\n\tLogRecord\022-" +
-      "\n\ttimestamp\030\001 \001(\0132\032.google.protobuf.Time" +
-      "stamp\022F\n\007message\030\002 \003(\01325.yandex.cloud.md" +
-      "b.greenplum.v1.LogRecord.MessageEntry\032.\n" +
-      "\014MessageEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\"\345\003\n\026ListClusterLogsRequest\022 \n\nclus" +
-      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_fil" +
-      "ter\030\002 \003(\t\022W\n\014service_type\030\003 \001(\0162A.yandex" +
-      ".cloud.mdb.greenplum.v1.ListClusterLogsR" +
-      "equest.ServiceType\022-\n\tfrom_time\030\004 \001(\0132\032." +
-      "google.protobuf.Timestamp\022+\n\007to_time\030\005 \001" +
-      "(\0132\032.google.protobuf.Timestamp\022\035\n\tpage_s" +
-      "ize\030\006 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\007 \001(" +
-      "\tB\t\212\3101\005<=100\022\036\n\026always_next_page_token\030\010" +
-      " \001(\010\022\032\n\006filter\030\t \001(\tB\n\212\3101\006<=1000\"c\n\013Serv" +
-      "iceType\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\r\n" +
-      "\tGREENPLUM\020\001\022\024\n\020GREENPLUM_POOLER\020\002\022\021\n\rGR" +
-      "EENPLUM_PXF\020\003\"{\n\031ListClusterBackupsReque" +
-      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\t" +
-      "page_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_toke" +
-      "n\030\003 \001(\tB\t\212\3101\005<=100\"f\n\017StreamLogRecord\0228\n" +
-      "\006record\030\001 \001(\0132(.yandex.cloud.mdb.greenpl" +
-      "um.v1.LogRecord\022\031\n\021next_record_token\030\002 \001" +
-      "(\t\"\254\003\n\030StreamClusterLogsRequest\022 \n\nclust" +
-      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filt" +
-      "er\030\002 \003(\t\022Y\n\014service_type\030\003 \001(\0162C.yandex." +
-      "cloud.mdb.greenplum.v1.StreamClusterLogs" +
-      "Request.ServiceType\022-\n\tfrom_time\030\004 \001(\0132\032" +
-      ".google.protobuf.Timestamp\022+\n\007to_time\030\005 " +
-      "\001(\0132\032.google.protobuf.Timestamp\022\037\n\014recor" +
-      "d_token\030\006 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\007 \001(\t" +
-      "B\n\212\3101\006<=1000\"c\n\013ServiceType\022\034\n\030SERVICE_T" +
-      "YPE_UNSPECIFIED\020\000\022\r\n\tGREENPLUM\020\001\022\024\n\020GREE" +
-      "NPLUM_POOLER\020\002\022\021\n\rGREENPLUM_PXF\020\003\"m\n\032Lis" +
-      "tClusterBackupsResponse\0226\n\007backups\030\001 \003(\013" +
-      "2%.yandex.cloud.mdb.greenplum.v1.Backup\022" +
-      "\027\n\017next_page_token\030\002 \001(\t\"8\n\024BackupCluste" +
+      "\"+\n\025DeleteClusterMetadata\022\022\n\ncluster_id\030" +
+      "\001 \001(\t\"7\n\023StartClusterRequest\022 \n\ncluster_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClusterMe" +
+      "tadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopCluste" +
       "rRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\">\n\025BackupClusterMetadata\022\022\n\ncluster_i" +
-      "d\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t\"\320\010\n\025RestoreCl" +
-      "usterRequest\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001\022(\n" +
-      "\004time\030\020 \001(\0132\032.google.protobuf.Timestamp\022" +
-      "\037\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004name" +
-      "\030\003 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\036" +
-      "\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\221\001\n\006label" +
-      "s\030\005 \003(\0132@.yandex.cloud.mdb.greenplum.v1." +
-      "RestoreClusterRequest.LabelsEntryB?\202\3101\004<" +
-      "=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022" +
-      "\022\020[a-z][-_0-9a-z]*\022M\n\013environment\030\006 \001(\0162" +
-      "2.yandex.cloud.mdb.greenplum.v1.Cluster." +
-      "EnvironmentB\004\350\3071\001\022E\n\006config\030\007 \001(\01325.yand" +
-      "ex.cloud.mdb.greenplum.v1.GreenplumResto" +
-      "reConfig\022B\n\020master_resources\030\010 \001(\0132(.yan" +
-      "dex.cloud.mdb.greenplum.v1.Resources\022C\n\021" +
-      "segment_resources\030\t \001(\0132(.yandex.cloud.m" +
-      "db.greenplum.v1.Resources\022 \n\nnetwork_id\030" +
-      "\n \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022security_group_id" +
-      "s\030\013 \003(\t\022\033\n\023deletion_protection\030\014 \001(\010\022\026\n\016" +
-      "host_group_ids\030\r \003(\t\022\032\n\022placement_group_" +
-      "id\030\016 \001(\t\022L\n\022maintenance_window\030\017 \001(\01320.y" +
-      "andex.cloud.mdb.greenplum.v1.Maintenance" +
-      "Window\022\032\n\022segment_host_count\030\021 \001(\003\022\027\n\017se" +
-      "gment_in_host\030\022 \001(\003\022R\n\014restore_only\030\023 \003(" +
-      "\tB<\202\3101\004<=50\212\3101\005<=256\362\3071\'[a-zA-Z0-9\\*_]*(" +
-      "\\/[a-zA-Z0-9\\*_]*){0,2}\022\035\n\025master_host_g" +
-      "roup_ids\030\024 \003(\t\022\036\n\026segment_host_group_ids" +
-      "\030\025 \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t:\0028\001\"?\n\026RestoreClusterMetadata\022" +
-      "\022\n\ncluster_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t2\206" +
-      "\031\n\016ClusterService\022\224\001\n\003Get\0220.yandex.cloud" +
-      ".mdb.greenplum.v1.GetClusterRequest\032&.ya" +
-      "ndex.cloud.mdb.greenplum.v1.Cluster\"3\202\323\344" +
-      "\223\002-\022+/managed-greenplum/v1/clusters/{clu" +
-      "ster_id}\022\227\001\n\004List\0222.yandex.cloud.mdb.gre" +
-      "enplum.v1.ListClustersRequest\0323.yandex.c" +
-      "loud.mdb.greenplum.v1.ListClustersRespon" +
-      "se\"&\202\323\344\223\002 \022\036/managed-greenplum/v1/cluste" +
-      "rs\022\257\001\n\006Create\0223.yandex.cloud.mdb.greenpl" +
-      "um.v1.CreateClusterRequest\032!.yandex.clou" +
-      "d.operation.Operation\"M\202\323\344\223\002#\"\036/managed-" +
-      "greenplum/v1/clusters:\001*\262\322* \n\025CreateClus" +
-      "terMetadata\022\007Cluster\022\274\001\n\006Update\0223.yandex" +
-      ".cloud.mdb.greenplum.v1.UpdateClusterReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "Z\202\323\344\223\00202+/managed-greenplum/v1/clusters/" +
-      "{cluster_id}:\001*\262\322* \n\025UpdateClusterMetada" +
-      "ta\022\007Cluster\022\276\001\n\006Expand\022,.yandex.cloud.md" +
-      "b.greenplum.v1.ExpandRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"c\202\323\344\223\0027\"2/manage" +
-      "d-greenplum/v1/clusters/{cluster_id}/exp" +
-      "and:\001*\262\322*\"\n\027AddClusterHostsMetadata\022\007Clu" +
-      "ster\022\307\001\n\006Delete\0223.yandex.cloud.mdb.green" +
-      "plum.v1.DeleteClusterRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"e\202\323\344\223\002-*+/manage" +
-      "d-greenplum/v1/clusters/{cluster_id}\262\322*." +
-      "\n\025DeleteClusterMetadata\022\025google.protobuf" +
-      ".Empty\022\274\001\n\005Start\0222.yandex.cloud.mdb.gree" +
-      "nplum.v1.StartClusterRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"\\\202\323\344\223\0023\"1/manage" +
-      "d-greenplum/v1/clusters/{cluster_id}:sta" +
-      "rt\262\322*\037\n\024StartClusterMetadata\022\007Cluster\022\270\001" +
-      "\n\004Stop\0221.yandex.cloud.mdb.greenplum.v1.S" +
-      "topClusterRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"Z\202\323\344\223\0022\"0/managed-greenplum" +
-      "/v1/clusters/{cluster_id}:stop\262\322*\036\n\023Stop" +
-      "ClusterMetadata\022\007Cluster\022\273\001\n\004Move\0221.yand" +
-      "ex.cloud.mdb.greenplum.v1.MoveClusterReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "]\202\323\344\223\0025\"0/managed-greenplum/v1/clusters/" +
-      "{cluster_id}:move:\001*\262\322*\036\n\023MoveClusterMet" +
-      "adata\022\007Cluster\022\313\001\n\016ListOperations\022;.yand" +
-      "ex.cloud.mdb.greenplum.v1.ListClusterOpe" +
-      "rationsRequest\032<.yandex.cloud.mdb.greenp" +
-      "lum.v1.ListClusterOperationsResponse\">\202\323" +
-      "\344\223\0028\0226/managed-greenplum/v1/clusters/{cl" +
-      "uster_id}/operations\022\304\001\n\017ListMasterHosts" +
-      "\0226.yandex.cloud.mdb.greenplum.v1.ListClu" +
-      "sterHostsRequest\0327.yandex.cloud.mdb.gree" +
-      "nplum.v1.ListClusterHostsResponse\"@\202\323\344\223\002" +
-      ":\0228/managed-greenplum/v1/clusters/{clust" +
-      "er_id}/master-hosts\022\306\001\n\020ListSegmentHosts" +
-      "\0226.yandex.cloud.mdb.greenplum.v1.ListClu" +
-      "sterHostsRequest\0327.yandex.cloud.mdb.gree" +
-      "nplum.v1.ListClusterHostsResponse\"A\202\323\344\223\002" +
-      ";\0229/managed-greenplum/v1/clusters/{clust" +
-      "er_id}/segment-hosts\022\263\001\n\010ListLogs\0225.yand" +
-      "ex.cloud.mdb.greenplum.v1.ListClusterLog" +
-      "sRequest\0326.yandex.cloud.mdb.greenplum.v1" +
-      ".ListClusterLogsResponse\"8\202\323\344\223\0022\0220/manag" +
-      "ed-greenplum/v1/clusters/{cluster_id}:lo" +
-      "gs\022\270\001\n\nStreamLogs\0227.yandex.cloud.mdb.gre" +
-      "enplum.v1.StreamClusterLogsRequest\032..yan" +
-      "dex.cloud.mdb.greenplum.v1.StreamLogReco" +
-      "rd\"?\202\323\344\223\0029\0227/managed-greenplum/v1/cluste" +
-      "rs/{cluster_id}:stream_logs0\001\022\277\001\n\013ListBa" +
-      "ckups\0228.yandex.cloud.mdb.greenplum.v1.Li" +
-      "stClusterBackupsRequest\0329.yandex.cloud.m" +
-      "db.greenplum.v1.ListClusterBackupsRespon" +
-      "se\";\202\323\344\223\0025\0223/managed-greenplum/v1/cluste" +
-      "rs/{cluster_id}/backups\022\300\001\n\006Backup\0223.yan" +
-      "dex.cloud.mdb.greenplum.v1.BackupCluster" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"^\202\323\344\223\0024\"2/managed-greenplum/v1/cluste" +
-      "rs/{cluster_id}:backup\262\322* \n\025BackupCluste" +
-      "rMetadata\022\007Cluster\022\272\001\n\007Restore\0224.yandex." +
-      "cloud.mdb.greenplum.v1.RestoreClusterReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "V\202\323\344\223\002+\"&/managed-greenplum/v1/clusters:" +
-      "restore:\001*\262\322*!\n\026RestoreClusterMetadata\022\007" +
-      "ClusterBp\n!yandex.cloud.api.mdb.greenplu" +
-      "m.v1ZKgithub.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/mdb/greenplum/v1;greenplu" +
-      "mb\006proto3"
+      "50\")\n\023StopClusterMetadata\022\022\n\ncluster_id\030" +
+      "\001 \001(\t\"c\n\022MoveClusterRequest\022 \n\ncluster_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_fol" +
+      "der_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\023MoveCluste" +
+      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\030\n\020source_" +
+      "folder_id\030\002 \001(\t\022\035\n\025destination_folder_id" +
+      "\030\003 \001(\t\"~\n\034ListClusterOperationsRequest\022 " +
+      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage" +
+      "_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 " +
+      "\001(\tB\t\212\3101\005<=100\"o\n\035ListClusterOperationsR" +
+      "esponse\0225\n\noperations\030\001 \003(\0132!.yandex.clo" +
+      "ud.operation.Operation\022\027\n\017next_page_toke" +
+      "n\030\002 \001(\t\"y\n\027ListClusterHostsRequest\022 \n\ncl" +
+      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_siz" +
+      "e\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB" +
+      "\t\212\3101\005<=100\"g\n\030ListClusterHostsResponse\0222" +
+      "\n\005hosts\030\001 \003(\0132#.yandex.cloud.mdb.greenpl" +
+      "um.v1.Host\022\027\n\017next_page_token\030\002 \001(\t\"Y\n\032M" +
+      "asterSubclusterConfigSpec\022;\n\tresources\030\001" +
+      " \001(\0132(.yandex.cloud.mdb.greenplum.v1.Res" +
+      "ources\"Z\n\033SegmentSubclusterConfigSpec\022;\n" +
+      "\tresources\030\001 \001(\0132(.yandex.cloud.mdb.gree" +
+      "nplum.v1.Resources\"j\n\027ListClusterLogsRes" +
+      "ponse\0226\n\004logs\030\001 \003(\0132(.yandex.cloud.mdb.g" +
+      "reenplum.v1.LogRecord\022\027\n\017next_page_token" +
+      "\030\002 \001(\t\"\262\001\n\tLogRecord\022-\n\ttimestamp\030\001 \001(\0132" +
+      "\032.google.protobuf.Timestamp\022F\n\007message\030\002" +
+      " \003(\01325.yandex.cloud.mdb.greenplum.v1.Log" +
+      "Record.MessageEntry\032.\n\014MessageEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\345\003\n\026ListClus" +
+      "terLogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022W\n\014servi" +
+      "ce_type\030\003 \001(\0162A.yandex.cloud.mdb.greenpl" +
+      "um.v1.ListClusterLogsRequest.ServiceType" +
+      "\022-\n\tfrom_time\030\004 \001(\0132\032.google.protobuf.Ti" +
+      "mestamp\022+\n\007to_time\030\005 \001(\0132\032.google.protob" +
+      "uf.Timestamp\022\035\n\tpage_size\030\006 \001(\003B\n\372\3071\006<=1" +
+      "000\022\035\n\npage_token\030\007 \001(\tB\t\212\3101\005<=100\022\036\n\026al" +
+      "ways_next_page_token\030\010 \001(\010\022\032\n\006filter\030\t \001" +
+      "(\tB\n\212\3101\006<=1000\"c\n\013ServiceType\022\034\n\030SERVICE" +
+      "_TYPE_UNSPECIFIED\020\000\022\r\n\tGREENPLUM\020\001\022\024\n\020GR" +
+      "EENPLUM_POOLER\020\002\022\021\n\rGREENPLUM_PXF\020\003\"{\n\031L" +
+      "istClusterBackupsRequest\022 \n\ncluster_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
+      "\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
+      "\"f\n\017StreamLogRecord\0228\n\006record\030\001 \001(\0132(.ya" +
+      "ndex.cloud.mdb.greenplum.v1.LogRecord\022\031\n" +
+      "\021next_record_token\030\002 \001(\t\"\254\003\n\030StreamClust" +
+      "erLogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022Y\n\014servic" +
+      "e_type\030\003 \001(\0162C.yandex.cloud.mdb.greenplu" +
+      "m.v1.StreamClusterLogsRequest.ServiceTyp" +
+      "e\022-\n\tfrom_time\030\004 \001(\0132\032.google.protobuf.T" +
+      "imestamp\022+\n\007to_time\030\005 \001(\0132\032.google.proto" +
+      "buf.Timestamp\022\037\n\014record_token\030\006 \001(\tB\t\212\3101" +
+      "\005<=100\022\032\n\006filter\030\007 \001(\tB\n\212\3101\006<=1000\"c\n\013Se" +
+      "rviceType\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022" +
+      "\r\n\tGREENPLUM\020\001\022\024\n\020GREENPLUM_POOLER\020\002\022\021\n\r" +
+      "GREENPLUM_PXF\020\003\"m\n\032ListClusterBackupsRes" +
+      "ponse\0226\n\007backups\030\001 \003(\0132%.yandex.cloud.md" +
+      "b.greenplum.v1.Backup\022\027\n\017next_page_token" +
+      "\030\002 \001(\t\"8\n\024BackupClusterRequest\022 \n\ncluste" +
+      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\">\n\025BackupCluste" +
+      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tbackup_" +
+      "id\030\002 \001(\t\"\370\010\n\025RestoreClusterRequest\022\027\n\tba" +
+      "ckup_id\030\001 \001(\tB\004\350\3071\001\022(\n\004time\030\020 \001(\0132\032.goog" +
+      "le.protobuf.Timestamp\022\037\n\tfolder_id\030\002 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022,\n\004name\030\003 \001(\tB\036\350\3071\001\212\3101\004<=" +
+      "63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013description\030\004 \001(" +
+      "\tB\t\212\3101\005<=256\022\221\001\n\006labels\030\005 \003(\0132@.yandex.c" +
+      "loud.mdb.greenplum.v1.RestoreClusterRequ" +
+      "est.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_" +
+      "0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*" +
+      "\022M\n\013environment\030\006 \001(\01622.yandex.cloud.mdb" +
+      ".greenplum.v1.Cluster.EnvironmentB\004\350\3071\001\022" +
+      "E\n\006config\030\007 \001(\01325.yandex.cloud.mdb.green" +
+      "plum.v1.GreenplumRestoreConfig\022B\n\020master" +
+      "_resources\030\010 \001(\0132(.yandex.cloud.mdb.gree" +
+      "nplum.v1.Resources\022C\n\021segment_resources\030" +
+      "\t \001(\0132(.yandex.cloud.mdb.greenplum.v1.Re" +
+      "sources\022 \n\nnetwork_id\030\n \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\022\032\n\022security_group_ids\030\013 \003(\t\022\033\n\023deletio" +
+      "n_protection\030\014 \001(\010\022\026\n\016host_group_ids\030\r \003" +
+      "(\t\022\032\n\022placement_group_id\030\016 \001(\t\022L\n\022mainte" +
+      "nance_window\030\017 \001(\01320.yandex.cloud.mdb.gr" +
+      "eenplum.v1.MaintenanceWindow\022\032\n\022segment_" +
+      "host_count\030\021 \001(\003\022\027\n\017segment_in_host\030\022 \001(" +
+      "\003\022R\n\014restore_only\030\023 \003(\tB<\202\3101\004<=50\212\3101\005<=2" +
+      "56\362\3071\'[a-zA-Z0-9\\*_]*(\\/[a-zA-Z0-9\\*_]*)" +
+      "{0,2}\022\035\n\025master_host_group_ids\030\024 \003(\t\022\036\n\026" +
+      "segment_host_group_ids\030\025 \003(\t\022\032\n\022service_" +
+      "account_id\030\030 \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\026\020\027J\004\010\027\020\030\"?\n\026R" +
+      "estoreClusterMetadata\022\022\n\ncluster_id\030\001 \001(" +
+      "\t\022\021\n\tbackup_id\030\002 \001(\t2\206\031\n\016ClusterService\022" +
+      "\224\001\n\003Get\0220.yandex.cloud.mdb.greenplum.v1." +
+      "GetClusterRequest\032&.yandex.cloud.mdb.gre" +
+      "enplum.v1.Cluster\"3\202\323\344\223\002-\022+/managed-gree" +
+      "nplum/v1/clusters/{cluster_id}\022\227\001\n\004List\022" +
+      "2.yandex.cloud.mdb.greenplum.v1.ListClus" +
+      "tersRequest\0323.yandex.cloud.mdb.greenplum" +
+      ".v1.ListClustersResponse\"&\202\323\344\223\002 \022\036/manag" +
+      "ed-greenplum/v1/clusters\022\257\001\n\006Create\0223.ya" +
+      "ndex.cloud.mdb.greenplum.v1.CreateCluste" +
+      "rRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"M\202\323\344\223\002#\"\036/managed-greenplum/v1/clust" +
+      "ers:\001*\262\322* \n\025CreateClusterMetadata\022\007Clust" +
+      "er\022\274\001\n\006Update\0223.yandex.cloud.mdb.greenpl" +
+      "um.v1.UpdateClusterRequest\032!.yandex.clou" +
+      "d.operation.Operation\"Z\202\323\344\223\00202+/managed-" +
+      "greenplum/v1/clusters/{cluster_id}:\001*\262\322*" +
+      " \n\025UpdateClusterMetadata\022\007Cluster\022\276\001\n\006Ex" +
+      "pand\022,.yandex.cloud.mdb.greenplum.v1.Exp" +
+      "andRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"c\202\323\344\223\0027\"2/managed-greenplum/v1/clu" +
+      "sters/{cluster_id}/expand:\001*\262\322*\"\n\027AddClu" +
+      "sterHostsMetadata\022\007Cluster\022\307\001\n\006Delete\0223." +
+      "yandex.cloud.mdb.greenplum.v1.DeleteClus" +
+      "terRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"e\202\323\344\223\002-*+/managed-greenplum/v1/clu" +
+      "sters/{cluster_id}\262\322*.\n\025DeleteClusterMet" +
+      "adata\022\025google.protobuf.Empty\022\274\001\n\005Start\0222" +
+      ".yandex.cloud.mdb.greenplum.v1.StartClus" +
+      "terRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"\\\202\323\344\223\0023\"1/managed-greenplum/v1/clu" +
+      "sters/{cluster_id}:start\262\322*\037\n\024StartClust" +
+      "erMetadata\022\007Cluster\022\270\001\n\004Stop\0221.yandex.cl" +
+      "oud.mdb.greenplum.v1.StopClusterRequest\032" +
+      "!.yandex.cloud.operation.Operation\"Z\202\323\344\223" +
+      "\0022\"0/managed-greenplum/v1/clusters/{clus" +
+      "ter_id}:stop\262\322*\036\n\023StopClusterMetadata\022\007C" +
+      "luster\022\273\001\n\004Move\0221.yandex.cloud.mdb.green" +
+      "plum.v1.MoveClusterRequest\032!.yandex.clou" +
+      "d.operation.Operation\"]\202\323\344\223\0025\"0/managed-" +
+      "greenplum/v1/clusters/{cluster_id}:move:" +
+      "\001*\262\322*\036\n\023MoveClusterMetadata\022\007Cluster\022\313\001\n" +
+      "\016ListOperations\022;.yandex.cloud.mdb.green" +
+      "plum.v1.ListClusterOperationsRequest\032<.y" +
+      "andex.cloud.mdb.greenplum.v1.ListCluster" +
+      "OperationsResponse\">\202\323\344\223\0028\0226/managed-gre" +
+      "enplum/v1/clusters/{cluster_id}/operatio" +
+      "ns\022\304\001\n\017ListMasterHosts\0226.yandex.cloud.md" +
+      "b.greenplum.v1.ListClusterHostsRequest\0327" +
+      ".yandex.cloud.mdb.greenplum.v1.ListClust" +
+      "erHostsResponse\"@\202\323\344\223\002:\0228/managed-greenp" +
+      "lum/v1/clusters/{cluster_id}/master-host" +
+      "s\022\306\001\n\020ListSegmentHosts\0226.yandex.cloud.md" +
+      "b.greenplum.v1.ListClusterHostsRequest\0327" +
+      ".yandex.cloud.mdb.greenplum.v1.ListClust" +
+      "erHostsResponse\"A\202\323\344\223\002;\0229/managed-greenp" +
+      "lum/v1/clusters/{cluster_id}/segment-hos" +
+      "ts\022\263\001\n\010ListLogs\0225.yandex.cloud.mdb.green" +
+      "plum.v1.ListClusterLogsRequest\0326.yandex." +
+      "cloud.mdb.greenplum.v1.ListClusterLogsRe" +
+      "sponse\"8\202\323\344\223\0022\0220/managed-greenplum/v1/cl" +
+      "usters/{cluster_id}:logs\022\270\001\n\nStreamLogs\022" +
+      "7.yandex.cloud.mdb.greenplum.v1.StreamCl" +
+      "usterLogsRequest\032..yandex.cloud.mdb.gree" +
+      "nplum.v1.StreamLogRecord\"?\202\323\344\223\0029\0227/manag" +
+      "ed-greenplum/v1/clusters/{cluster_id}:st" +
+      "ream_logs0\001\022\277\001\n\013ListBackups\0228.yandex.clo" +
+      "ud.mdb.greenplum.v1.ListClusterBackupsRe" +
+      "quest\0329.yandex.cloud.mdb.greenplum.v1.Li" +
+      "stClusterBackupsResponse\";\202\323\344\223\0025\0223/manag" +
+      "ed-greenplum/v1/clusters/{cluster_id}/ba" +
+      "ckups\022\300\001\n\006Backup\0223.yandex.cloud.mdb.gree" +
+      "nplum.v1.BackupClusterRequest\032!.yandex.c" +
+      "loud.operation.Operation\"^\202\323\344\223\0024\"2/manag" +
+      "ed-greenplum/v1/clusters/{cluster_id}:ba" +
+      "ckup\262\322* \n\025BackupClusterMetadata\022\007Cluster" +
+      "\022\272\001\n\007Restore\0224.yandex.cloud.mdb.greenplu" +
+      "m.v1.RestoreClusterRequest\032!.yandex.clou" +
+      "d.operation.Operation\"V\202\323\344\223\002+\"&/managed-" +
+      "greenplum/v1/clusters:restore:\001*\262\322*!\n\026Re" +
+      "storeClusterMetadata\022\007ClusterBp\n!yandex." +
+      "cloud.api.mdb.greenplum.v1ZKgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/mdb" +
+      "/greenplum/v1;greenplumb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -45569,7 +46658,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_greenplum_v1_CreateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_CreateClusterRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Environment", "Config", "MasterConfig", "SegmentConfig", "MasterHostCount", "SegmentInHost", "SegmentHostCount", "UserName", "UserPassword", "NetworkId", "SecurityGroupIds", "DeletionProtection", "HostGroupIds", "MaintenanceWindow", "ConfigSpec", "CloudStorage", "MasterHostGroupIds", "SegmentHostGroupIds", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Environment", "Config", "MasterConfig", "SegmentConfig", "MasterHostCount", "SegmentInHost", "SegmentHostCount", "UserName", "UserPassword", "NetworkId", "SecurityGroupIds", "DeletionProtection", "HostGroupIds", "MaintenanceWindow", "ConfigSpec", "CloudStorage", "MasterHostGroupIds", "SegmentHostGroupIds", "ServiceAccountId", "Logging", });
     internal_static_yandex_cloud_mdb_greenplum_v1_CreateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_greenplum_v1_CreateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_greenplum_v1_CreateClusterRequest_LabelsEntry_fieldAccessorTable = new
@@ -45593,7 +46682,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_greenplum_v1_UpdateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_UpdateClusterRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "UpdateMask", "Description", "Labels", "Name", "Config", "MasterConfig", "SegmentConfig", "UserPassword", "NetworkId", "MaintenanceWindow", "SecurityGroupIds", "DeletionProtection", "ConfigSpec", "CloudStorage", });
+        new java.lang.String[] { "ClusterId", "UpdateMask", "Description", "Labels", "Name", "Config", "MasterConfig", "SegmentConfig", "UserPassword", "NetworkId", "MaintenanceWindow", "SecurityGroupIds", "DeletionProtection", "ConfigSpec", "CloudStorage", "ServiceAccountId", "Logging", });
     internal_static_yandex_cloud_mdb_greenplum_v1_UpdateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_greenplum_v1_UpdateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_greenplum_v1_UpdateClusterRequest_LabelsEntry_fieldAccessorTable = new
@@ -45767,7 +46856,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_greenplum_v1_RestoreClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_RestoreClusterRequest_descriptor,
-        new java.lang.String[] { "BackupId", "Time", "FolderId", "Name", "Description", "Labels", "Environment", "Config", "MasterResources", "SegmentResources", "NetworkId", "SecurityGroupIds", "DeletionProtection", "HostGroupIds", "PlacementGroupId", "MaintenanceWindow", "SegmentHostCount", "SegmentInHost", "RestoreOnly", "MasterHostGroupIds", "SegmentHostGroupIds", });
+        new java.lang.String[] { "BackupId", "Time", "FolderId", "Name", "Description", "Labels", "Environment", "Config", "MasterResources", "SegmentResources", "NetworkId", "SecurityGroupIds", "DeletionProtection", "HostGroupIds", "PlacementGroupId", "MaintenanceWindow", "SegmentHostCount", "SegmentInHost", "RestoreOnly", "MasterHostGroupIds", "SegmentHostGroupIds", "ServiceAccountId", });
     internal_static_yandex_cloud_mdb_greenplum_v1_RestoreClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_greenplum_v1_RestoreClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_greenplum_v1_RestoreClusterRequest_LabelsEntry_fieldAccessorTable = new

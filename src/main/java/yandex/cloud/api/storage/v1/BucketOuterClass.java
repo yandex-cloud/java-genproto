@@ -6349,7 +6349,7 @@ public final class BucketOuterClass {
        * ID of the account who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
        * </pre>
        *
-       * <code>string grantee_id = 3;</code>
+       * <code>string grantee_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The granteeId.
        */
       java.lang.String getGranteeId();
@@ -6358,7 +6358,7 @@ public final class BucketOuterClass {
        * ID of the account who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
        * </pre>
        *
-       * <code>string grantee_id = 3;</code>
+       * <code>string grantee_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for granteeId.
        */
       com.google.protobuf.ByteString
@@ -6907,7 +6907,7 @@ public final class BucketOuterClass {
        * ID of the account who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
        * </pre>
        *
-       * <code>string grantee_id = 3;</code>
+       * <code>string grantee_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The granteeId.
        */
       @java.lang.Override
@@ -6928,7 +6928,7 @@ public final class BucketOuterClass {
        * ID of the account who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
        * </pre>
        *
-       * <code>string grantee_id = 3;</code>
+       * <code>string grantee_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for granteeId.
        */
       @java.lang.Override
@@ -7438,7 +7438,7 @@ public final class BucketOuterClass {
          * ID of the account who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
          * </pre>
          *
-         * <code>string grantee_id = 3;</code>
+         * <code>string grantee_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
          * @return The granteeId.
          */
         public java.lang.String getGranteeId() {
@@ -7458,7 +7458,7 @@ public final class BucketOuterClass {
          * ID of the account who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
          * </pre>
          *
-         * <code>string grantee_id = 3;</code>
+         * <code>string grantee_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
          * @return The bytes for granteeId.
          */
         public com.google.protobuf.ByteString
@@ -7479,7 +7479,7 @@ public final class BucketOuterClass {
          * ID of the account who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
          * </pre>
          *
-         * <code>string grantee_id = 3;</code>
+         * <code>string grantee_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
          * @param value The granteeId to set.
          * @return This builder for chaining.
          */
@@ -7498,7 +7498,7 @@ public final class BucketOuterClass {
          * ID of the account who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
          * </pre>
          *
-         * <code>string grantee_id = 3;</code>
+         * <code>string grantee_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
          * @return This builder for chaining.
          */
         public Builder clearGranteeId() {
@@ -7512,7 +7512,7 @@ public final class BucketOuterClass {
          * ID of the account who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
          * </pre>
          *
-         * <code>string grantee_id = 3;</code>
+         * <code>string grantee_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
          * @param value The bytes for granteeId to set.
          * @return This builder for chaining.
          */
@@ -43591,159 +43591,160 @@ public final class BucketOuterClass {
       "d.storage.v1.Encryption\022Y\n\031allowed_priva" +
       "te_endpoints\030\021 \001(\01326.yandex.cloud.storag" +
       "e.v1.BucketAllowedPrivateEndpoints\"!\n\003Ta" +
-      "g\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"\222\004\n\003ACL\0222\n" +
+      "g\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"\234\004\n\003ACL\0222\n" +
       "\006grants\030\001 \003(\0132\".yandex.cloud.storage.v1." +
-      "ACL.Grant\032\326\003\n\005Grant\022G\n\npermission\030\001 \001(\0162" +
+      "ACL.Grant\032\340\003\n\005Grant\022G\n\npermission\030\001 \001(\0162" +
       "-.yandex.cloud.storage.v1.ACL.Grant.Perm" +
       "issionB\004\350\3071\001\022F\n\ngrant_type\030\002 \001(\0162,.yande" +
       "x.cloud.storage.v1.ACL.Grant.GrantTypeB\004" +
-      "\350\3071\001\022\022\n\ngrantee_id\030\003 \001(\t\"\243\001\n\nPermission\022" +
-      "\032\n\026PERMISSION_UNSPECIFIED\020\000\022\033\n\027PERMISSIO" +
-      "N_FULL_CONTROL\020\001\022\024\n\020PERMISSION_WRITE\020\002\022\030" +
-      "\n\024PERMISSION_WRITE_ACP\020\003\022\023\n\017PERMISSION_R" +
-      "EAD\020\004\022\027\n\023PERMISSION_READ_ACP\020\005\"\201\001\n\tGrant" +
-      "Type\022\032\n\026GRANT_TYPE_UNSPECIFIED\020\000\022\026\n\022GRAN" +
-      "T_TYPE_ACCOUNT\020\001\022&\n\"GRANT_TYPE_ALL_AUTHE" +
-      "NTICATED_USERS\020\002\022\030\n\024GRANT_TYPE_ALL_USERS" +
-      "\020\003\"\233\001\n\024AnonymousAccessFlags\022(\n\004read\030\001 \001(" +
-      "\0132\032.google.protobuf.BoolValue\022(\n\004list\030\002 " +
-      "\001(\0132\032.google.protobuf.BoolValue\022/\n\013confi" +
-      "g_read\030\003 \001(\0132\032.google.protobuf.BoolValue" +
-      "\"\344\002\n\010CorsRule\022\n\n\002id\030\001 \001(\t\022M\n\017allowed_met" +
-      "hods\030\002 \003(\0162(.yandex.cloud.storage.v1.Cor" +
-      "sRule.MethodB\n\202\3101\002>0\220\3101\001\022\027\n\017allowed_head" +
-      "ers\030\003 \003(\t\022\037\n\017allowed_origins\030\004 \003(\tB\006\202\3101\002" +
-      ">0\022\026\n\016expose_headers\030\005 \003(\t\0224\n\017max_age_se" +
-      "conds\030\006 \001(\0132\033.google.protobuf.Int64Value" +
-      "\"u\n\006Method\022\026\n\022METHOD_UNSPECIFIED\020\000\022\016\n\nME" +
-      "THOD_GET\020\001\022\017\n\013METHOD_HEAD\020\002\022\017\n\013METHOD_PO" +
-      "ST\020\003\022\016\n\nMETHOD_PUT\020\004\022\021\n\rMETHOD_DELETE\020\005\"" +
-      "\274\006\n\017WebsiteSettings\022\r\n\005index\030\001 \001(\t\022\r\n\005er" +
-      "ror\030\002 \001(\t\022N\n\025redirect_all_requests\030\003 \001(\013" +
-      "2/.yandex.cloud.storage.v1.WebsiteSettin" +
-      "gs.Scheme\022K\n\rrouting_rules\030\004 \003(\01324.yande" +
-      "x.cloud.storage.v1.WebsiteSettings.Routi" +
-      "ngRule\032_\n\006Scheme\022C\n\010protocol\030\001 \001(\01621.yan" +
-      "dex.cloud.storage.v1.WebsiteSettings.Pro" +
-      "tocol\022\020\n\010hostname\030\002 \001(\t\032O\n\tCondition\022\'\n\037" +
-      "http_error_code_returned_equals\030\001 \001(\t\022\031\n" +
-      "\021key_prefix_equals\030\002 \001(\t\032\322\001\n\010Redirect\022\020\n" +
-      "\010hostname\030\001 \001(\t\0224\n\022http_redirect_code\030\002 " +
-      "\001(\tB\030\362\3071\0243(0[1-9]|[1-9][0-9])\022C\n\010protoco" +
-      "l\030\003 \001(\01621.yandex.cloud.storage.v1.Websit" +
-      "eSettings.Protocol\022\037\n\027replace_key_prefix" +
-      "_with\030\004 \001(\t\022\030\n\020replace_key_with\030\005 \001(\t\032\231\001" +
-      "\n\013RoutingRule\022E\n\tcondition\030\001 \001(\01322.yande" +
-      "x.cloud.storage.v1.WebsiteSettings.Condi" +
-      "tion\022C\n\010redirect\030\002 \001(\01321.yandex.cloud.st" +
-      "orage.v1.WebsiteSettings.Redirect\"K\n\010Pro" +
-      "tocol\022\030\n\024PROTOCOL_UNSPECIFIED\020\000\022\021\n\rPROTO" +
-      "COL_HTTP\020\001\022\022\n\016PROTOCOL_HTTPS\020\002\"\345\r\n\rLifec" +
-      "ycleRule\022(\n\002id\030\001 \001(\0132\034.google.protobuf.S" +
-      "tringValue\022\017\n\007enabled\030\002 \001(\010\022A\n\006filter\030\003 " +
-      "\001(\01321.yandex.cloud.storage.v1.LifecycleR" +
-      "ule.RuleFilter\022E\n\nexpiration\030\004 \001(\01321.yan" +
-      "dex.cloud.storage.v1.LifecycleRule.Expir" +
-      "ation\022F\n\013transitions\030\005 \003(\01321.yandex.clou" +
-      "d.storage.v1.LifecycleRule.Transition\022[\n" +
-      "!abort_incomplete_multipart_upload\030\006 \001(\013" +
-      "20.yandex.cloud.storage.v1.LifecycleRule" +
-      ".AfterDays\022Z\n\025noncurrent_expiration\030\007 \001(" +
-      "\0132;.yandex.cloud.storage.v1.LifecycleRul" +
-      "e.NoncurrentExpiration\022[\n\026noncurrent_tra" +
-      "nsitions\030\010 \003(\0132;.yandex.cloud.storage.v1" +
-      ".LifecycleRule.NoncurrentTransition\022a\n\031n" +
-      "oncurrent_delete_markers\030\t \001(\0132>.yandex." +
-      "cloud.storage.v1.LifecycleRule.Noncurren" +
-      "tDeleteMarkers\032G\n\tAfterDays\022:\n\025days_afte" +
-      "r_expiration\030\001 \001(\0132\033.google.protobuf.Int" +
-      "64Value\032O\n\027NoncurrentDeleteMarkers\0224\n\017no" +
-      "ncurrent_days\030\001 \001(\0132\033.google.protobuf.In" +
-      "t64Value\032L\n\024NoncurrentExpiration\0224\n\017nonc" +
-      "urrent_days\030\001 \001(\0132\033.google.protobuf.Int6" +
-      "4Value\032i\n\024NoncurrentTransition\0224\n\017noncur" +
-      "rent_days\030\001 \001(\0132\033.google.protobuf.Int64V" +
-      "alue\022\033\n\rstorage_class\030\002 \001(\tB\004\350\3071\001\032\204\001\n\nTr" +
-      "ansition\022(\n\004date\030\001 \001(\0132\032.google.protobuf" +
-      ".Timestamp\022)\n\004days\030\002 \001(\0132\033.google.protob" +
-      "uf.Int64Value\022\033\n\rstorage_class\030\004 \001(\tB\004\350\307" +
-      "1\001J\004\010\003\020\004\032\243\001\n\nExpiration\022(\n\004date\030\001 \001(\0132\032." +
-      "google.protobuf.Timestamp\022)\n\004days\030\002 \001(\0132" +
-      "\033.google.protobuf.Int64Value\022@\n\034expired_" +
-      "object_delete_marker\030\003 \001(\0132\032.google.prot" +
-      "obuf.BoolValue\032\315\003\n\nRuleFilter\022\016\n\006prefix\030" +
-      "\001 \001(\t\022=\n\030object_size_greater_than\030\002 \001(\0132" +
-      "\033.google.protobuf.Int64Value\022:\n\025object_s" +
-      "ize_less_than\030\003 \001(\0132\033.google.protobuf.In" +
-      "t64Value\022)\n\003tag\030\004 \001(\0132\034.yandex.cloud.sto" +
-      "rage.v1.Tag\022K\n\014and_operator\030\005 \001(\01325.yand" +
-      "ex.cloud.storage.v1.LifecycleRule.RuleFi" +
-      "lter.And\032\273\001\n\003And\022\016\n\006prefix\030\001 \001(\t\022=\n\030obje" +
-      "ct_size_greater_than\030\002 \001(\0132\033.google.prot" +
-      "obuf.Int64Value\022:\n\025object_size_less_than" +
-      "\030\003 \001(\0132\033.google.protobuf.Int64Value\022)\n\003t" +
-      "ag\030\004 \003(\0132\034.yandex.cloud.storage.v1.Tag\"\335" +
-      "\001\n\010Counters\022\032\n\022simple_object_size\030\001 \001(\003\022" +
-      "\033\n\023simple_object_count\030\002 \001(\003\022\032\n\022objects_" +
-      "parts_size\030\003 \001(\003\022\033\n\023objects_parts_count\030" +
-      "\004 \001(\003\022\036\n\026multipart_objects_size\030\005 \001(\003\022\037\n" +
-      "\027multipart_objects_count\030\006 \001(\003\022\036\n\026active" +
-      "_multipart_count\030\007 \001(\003\"]\n\023OptionalSizeBy" +
-      "Class\022\025\n\rstorage_class\030\001 \001(\t\022/\n\nclass_si" +
-      "ze\030\002 \001(\0132\033.google.protobuf.Int64Value\"8\n" +
-      "\013SizeByClass\022\025\n\rstorage_class\030\001 \001(\t\022\022\n\nc" +
-      "lass_size\030\002 \001(\003\"]\n\017CountersByClass\022\025\n\rst" +
-      "orage_class\030\001 \001(\t\0223\n\010counters\030\002 \001(\0132!.ya" +
-      "ndex.cloud.storage.v1.Counters\"\252\004\n\013Bucke" +
-      "tStats\022\014\n\004name\030\001 \001(\t\022-\n\010max_size\030\002 \001(\0132\033" +
-      ".google.protobuf.Int64Value\022\021\n\tused_size" +
-      "\030\003 \001(\003\022M\n\027storage_class_max_sizes\030\004 \003(\0132" +
-      ",.yandex.cloud.storage.v1.OptionalSizeBy" +
-      "Class\022F\n\030storage_class_used_sizes\030\005 \003(\0132" +
-      "$.yandex.cloud.storage.v1.SizeByClass\022H\n" +
-      "\026storage_class_counters\030\006 \003(\0132(.yandex.c" +
-      "loud.storage.v1.CountersByClass\022;\n\025defau" +
-      "lt_storage_class\030\007 \001(\0132\034.google.protobuf" +
-      ".StringValue\022M\n\026anonymous_access_flags\030\010" +
-      " \001(\0132-.yandex.cloud.storage.v1.Anonymous" +
-      "AccessFlags\022.\n\ncreated_at\030\t \001(\0132\032.google" +
-      ".protobuf.Timestamp\022.\n\nupdated_at\030\n \001(\0132" +
-      "\032.google.protobuf.Timestamp\"\301\003\n\013HTTPSCon" +
-      "fig\022\014\n\004name\030\001 \001(\t\022D\n\013source_type\030\002 \001(\0162/" +
-      ".yandex.cloud.storage.v1.HTTPSConfig.Sou" +
-      "rceType\022,\n\006issuer\030\003 \001(\0132\034.google.protobu" +
-      "f.StringValue\022-\n\007subject\030\004 \001(\0132\034.google." +
-      "protobuf.StringValue\022\021\n\tdns_names\030\005 \003(\t\022" +
-      ".\n\nnot_before\030\006 \001(\0132\032.google.protobuf.Ti" +
-      "mestamp\022-\n\tnot_after\030\007 \001(\0132\032.google.prot" +
-      "obuf.Timestamp\022\026\n\016certificate_id\030\010 \001(\t\"w" +
-      "\n\nSourceType\022\033\n\027SOURCE_TYPE_UNSPECIFIED\020" +
-      "\000\022\034\n\030SOURCE_TYPE_SELF_MANAGED\020\001\022.\n*SOURC" +
-      "E_TYPE_MANAGED_BY_CERTIFICATE_MANAGER\020\002\"" +
-      "\363\003\n\nObjectLock\022D\n\006status\030\002 \001(\01624.yandex." +
-      "cloud.storage.v1.ObjectLock.ObjectLockSt" +
-      "atus\022O\n\021default_retention\030\003 \001(\01324.yandex" +
-      ".cloud.storage.v1.ObjectLock.DefaultRete" +
-      "ntion\032\324\001\n\020DefaultRetention\022G\n\004mode\030\001 \001(\016" +
-      "29.yandex.cloud.storage.v1.ObjectLock.De" +
-      "faultRetention.Mode\022\016\n\004days\030\002 \001(\003H\000\022\017\n\005y" +
-      "ears\030\003 \001(\003H\000\"F\n\004Mode\022\024\n\020MODE_UNSPECIFIED" +
-      "\020\000\022\023\n\017MODE_GOVERNANCE\020\001\022\023\n\017MODE_COMPLIAN" +
-      "CE\020\002B\016\n\006period\022\004\300\3011\001\"w\n\020ObjectLockStatus" +
-      "\022\"\n\036OBJECT_LOCK_STATUS_UNSPECIFIED\020\000\022\037\n\033" +
-      "OBJECT_LOCK_STATUS_DISABLED\020\001\022\036\n\032OBJECT_" +
-      "LOCK_STATUS_ENABLED\020\002\"\223\001\n\nEncryption\022A\n\005" +
-      "rules\030\001 \003(\01322.yandex.cloud.storage.v1.En" +
-      "cryption.EncryptionRule\032B\n\016EncryptionRul" +
-      "e\022\031\n\021kms_master_key_id\030\001 \001(\t\022\025\n\rsse_algo" +
-      "rithm\030\002 \001(\t\"K\n\035BucketAllowedPrivateEndpo" +
-      "ints\022\017\n\007enabled\030\001 \001(\010\022\031\n\021private_endpoin" +
-      "ts\030\002 \003(\t*s\n\nVersioning\022\032\n\026VERSIONING_UNS" +
-      "PECIFIED\020\000\022\027\n\023VERSIONING_DISABLED\020\001\022\026\n\022V" +
-      "ERSIONING_ENABLED\020\002\022\030\n\024VERSIONING_SUSPEN" +
-      "DED\020\003Bb\n\033yandex.cloud.api.storage.v1ZCgi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/storage/v1;storageb\006proto3"
+      "\350\3071\001\022\034\n\ngrantee_id\030\003 \001(\tB\010\212\3101\004<=50\"\243\001\n\nP" +
+      "ermission\022\032\n\026PERMISSION_UNSPECIFIED\020\000\022\033\n" +
+      "\027PERMISSION_FULL_CONTROL\020\001\022\024\n\020PERMISSION" +
+      "_WRITE\020\002\022\030\n\024PERMISSION_WRITE_ACP\020\003\022\023\n\017PE" +
+      "RMISSION_READ\020\004\022\027\n\023PERMISSION_READ_ACP\020\005" +
+      "\"\201\001\n\tGrantType\022\032\n\026GRANT_TYPE_UNSPECIFIED" +
+      "\020\000\022\026\n\022GRANT_TYPE_ACCOUNT\020\001\022&\n\"GRANT_TYPE" +
+      "_ALL_AUTHENTICATED_USERS\020\002\022\030\n\024GRANT_TYPE" +
+      "_ALL_USERS\020\003\"\233\001\n\024AnonymousAccessFlags\022(\n" +
+      "\004read\030\001 \001(\0132\032.google.protobuf.BoolValue\022" +
+      "(\n\004list\030\002 \001(\0132\032.google.protobuf.BoolValu" +
+      "e\022/\n\013config_read\030\003 \001(\0132\032.google.protobuf" +
+      ".BoolValue\"\344\002\n\010CorsRule\022\n\n\002id\030\001 \001(\t\022M\n\017a" +
+      "llowed_methods\030\002 \003(\0162(.yandex.cloud.stor" +
+      "age.v1.CorsRule.MethodB\n\202\3101\002>0\220\3101\001\022\027\n\017al" +
+      "lowed_headers\030\003 \003(\t\022\037\n\017allowed_origins\030\004" +
+      " \003(\tB\006\202\3101\002>0\022\026\n\016expose_headers\030\005 \003(\t\0224\n\017" +
+      "max_age_seconds\030\006 \001(\0132\033.google.protobuf." +
+      "Int64Value\"u\n\006Method\022\026\n\022METHOD_UNSPECIFI" +
+      "ED\020\000\022\016\n\nMETHOD_GET\020\001\022\017\n\013METHOD_HEAD\020\002\022\017\n" +
+      "\013METHOD_POST\020\003\022\016\n\nMETHOD_PUT\020\004\022\021\n\rMETHOD" +
+      "_DELETE\020\005\"\274\006\n\017WebsiteSettings\022\r\n\005index\030\001" +
+      " \001(\t\022\r\n\005error\030\002 \001(\t\022N\n\025redirect_all_requ" +
+      "ests\030\003 \001(\0132/.yandex.cloud.storage.v1.Web" +
+      "siteSettings.Scheme\022K\n\rrouting_rules\030\004 \003" +
+      "(\01324.yandex.cloud.storage.v1.WebsiteSett" +
+      "ings.RoutingRule\032_\n\006Scheme\022C\n\010protocol\030\001" +
+      " \001(\01621.yandex.cloud.storage.v1.WebsiteSe" +
+      "ttings.Protocol\022\020\n\010hostname\030\002 \001(\t\032O\n\tCon" +
+      "dition\022\'\n\037http_error_code_returned_equal" +
+      "s\030\001 \001(\t\022\031\n\021key_prefix_equals\030\002 \001(\t\032\322\001\n\010R" +
+      "edirect\022\020\n\010hostname\030\001 \001(\t\0224\n\022http_redire" +
+      "ct_code\030\002 \001(\tB\030\362\3071\0243(0[1-9]|[1-9][0-9])\022" +
+      "C\n\010protocol\030\003 \001(\01621.yandex.cloud.storage" +
+      ".v1.WebsiteSettings.Protocol\022\037\n\027replace_" +
+      "key_prefix_with\030\004 \001(\t\022\030\n\020replace_key_wit" +
+      "h\030\005 \001(\t\032\231\001\n\013RoutingRule\022E\n\tcondition\030\001 \001" +
+      "(\01322.yandex.cloud.storage.v1.WebsiteSett" +
+      "ings.Condition\022C\n\010redirect\030\002 \001(\01321.yande" +
+      "x.cloud.storage.v1.WebsiteSettings.Redir" +
+      "ect\"K\n\010Protocol\022\030\n\024PROTOCOL_UNSPECIFIED\020" +
+      "\000\022\021\n\rPROTOCOL_HTTP\020\001\022\022\n\016PROTOCOL_HTTPS\020\002" +
+      "\"\345\r\n\rLifecycleRule\022(\n\002id\030\001 \001(\0132\034.google." +
+      "protobuf.StringValue\022\017\n\007enabled\030\002 \001(\010\022A\n" +
+      "\006filter\030\003 \001(\01321.yandex.cloud.storage.v1." +
+      "LifecycleRule.RuleFilter\022E\n\nexpiration\030\004" +
+      " \001(\01321.yandex.cloud.storage.v1.Lifecycle" +
+      "Rule.Expiration\022F\n\013transitions\030\005 \003(\01321.y" +
+      "andex.cloud.storage.v1.LifecycleRule.Tra" +
+      "nsition\022[\n!abort_incomplete_multipart_up" +
+      "load\030\006 \001(\01320.yandex.cloud.storage.v1.Lif" +
+      "ecycleRule.AfterDays\022Z\n\025noncurrent_expir" +
+      "ation\030\007 \001(\0132;.yandex.cloud.storage.v1.Li" +
+      "fecycleRule.NoncurrentExpiration\022[\n\026nonc" +
+      "urrent_transitions\030\010 \003(\0132;.yandex.cloud." +
+      "storage.v1.LifecycleRule.NoncurrentTrans" +
+      "ition\022a\n\031noncurrent_delete_markers\030\t \001(\013" +
+      "2>.yandex.cloud.storage.v1.LifecycleRule" +
+      ".NoncurrentDeleteMarkers\032G\n\tAfterDays\022:\n" +
+      "\025days_after_expiration\030\001 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\032O\n\027NoncurrentDeleteMar" +
+      "kers\0224\n\017noncurrent_days\030\001 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\032L\n\024NoncurrentExpirati" +
+      "on\0224\n\017noncurrent_days\030\001 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\032i\n\024NoncurrentTransition" +
+      "\0224\n\017noncurrent_days\030\001 \001(\0132\033.google.proto" +
+      "buf.Int64Value\022\033\n\rstorage_class\030\002 \001(\tB\004\350" +
+      "\3071\001\032\204\001\n\nTransition\022(\n\004date\030\001 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\022)\n\004days\030\002 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\022\033\n\rstorage_class" +
+      "\030\004 \001(\tB\004\350\3071\001J\004\010\003\020\004\032\243\001\n\nExpiration\022(\n\004dat" +
+      "e\030\001 \001(\0132\032.google.protobuf.Timestamp\022)\n\004d" +
+      "ays\030\002 \001(\0132\033.google.protobuf.Int64Value\022@" +
+      "\n\034expired_object_delete_marker\030\003 \001(\0132\032.g" +
+      "oogle.protobuf.BoolValue\032\315\003\n\nRuleFilter\022" +
+      "\016\n\006prefix\030\001 \001(\t\022=\n\030object_size_greater_t" +
+      "han\030\002 \001(\0132\033.google.protobuf.Int64Value\022:" +
+      "\n\025object_size_less_than\030\003 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\022)\n\003tag\030\004 \001(\0132\034.yandex" +
+      ".cloud.storage.v1.Tag\022K\n\014and_operator\030\005 " +
+      "\001(\01325.yandex.cloud.storage.v1.LifecycleR" +
+      "ule.RuleFilter.And\032\273\001\n\003And\022\016\n\006prefix\030\001 \001" +
+      "(\t\022=\n\030object_size_greater_than\030\002 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\022:\n\025object_size" +
+      "_less_than\030\003 \001(\0132\033.google.protobuf.Int64" +
+      "Value\022)\n\003tag\030\004 \003(\0132\034.yandex.cloud.storag" +
+      "e.v1.Tag\"\335\001\n\010Counters\022\032\n\022simple_object_s" +
+      "ize\030\001 \001(\003\022\033\n\023simple_object_count\030\002 \001(\003\022\032" +
+      "\n\022objects_parts_size\030\003 \001(\003\022\033\n\023objects_pa" +
+      "rts_count\030\004 \001(\003\022\036\n\026multipart_objects_siz" +
+      "e\030\005 \001(\003\022\037\n\027multipart_objects_count\030\006 \001(\003" +
+      "\022\036\n\026active_multipart_count\030\007 \001(\003\"]\n\023Opti" +
+      "onalSizeByClass\022\025\n\rstorage_class\030\001 \001(\t\022/" +
+      "\n\nclass_size\030\002 \001(\0132\033.google.protobuf.Int" +
+      "64Value\"8\n\013SizeByClass\022\025\n\rstorage_class\030" +
+      "\001 \001(\t\022\022\n\nclass_size\030\002 \001(\003\"]\n\017CountersByC" +
+      "lass\022\025\n\rstorage_class\030\001 \001(\t\0223\n\010counters\030" +
+      "\002 \001(\0132!.yandex.cloud.storage.v1.Counters" +
+      "\"\252\004\n\013BucketStats\022\014\n\004name\030\001 \001(\t\022-\n\010max_si" +
+      "ze\030\002 \001(\0132\033.google.protobuf.Int64Value\022\021\n" +
+      "\tused_size\030\003 \001(\003\022M\n\027storage_class_max_si" +
+      "zes\030\004 \003(\0132,.yandex.cloud.storage.v1.Opti" +
+      "onalSizeByClass\022F\n\030storage_class_used_si" +
+      "zes\030\005 \003(\0132$.yandex.cloud.storage.v1.Size" +
+      "ByClass\022H\n\026storage_class_counters\030\006 \003(\0132" +
+      "(.yandex.cloud.storage.v1.CountersByClas" +
+      "s\022;\n\025default_storage_class\030\007 \001(\0132\034.googl" +
+      "e.protobuf.StringValue\022M\n\026anonymous_acce" +
+      "ss_flags\030\010 \001(\0132-.yandex.cloud.storage.v1" +
+      ".AnonymousAccessFlags\022.\n\ncreated_at\030\t \001(" +
+      "\0132\032.google.protobuf.Timestamp\022.\n\nupdated" +
+      "_at\030\n \001(\0132\032.google.protobuf.Timestamp\"\301\003" +
+      "\n\013HTTPSConfig\022\014\n\004name\030\001 \001(\t\022D\n\013source_ty" +
+      "pe\030\002 \001(\0162/.yandex.cloud.storage.v1.HTTPS" +
+      "Config.SourceType\022,\n\006issuer\030\003 \001(\0132\034.goog" +
+      "le.protobuf.StringValue\022-\n\007subject\030\004 \001(\013" +
+      "2\034.google.protobuf.StringValue\022\021\n\tdns_na" +
+      "mes\030\005 \003(\t\022.\n\nnot_before\030\006 \001(\0132\032.google.p" +
+      "rotobuf.Timestamp\022-\n\tnot_after\030\007 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\022\026\n\016certificate_" +
+      "id\030\010 \001(\t\"w\n\nSourceType\022\033\n\027SOURCE_TYPE_UN" +
+      "SPECIFIED\020\000\022\034\n\030SOURCE_TYPE_SELF_MANAGED\020" +
+      "\001\022.\n*SOURCE_TYPE_MANAGED_BY_CERTIFICATE_" +
+      "MANAGER\020\002\"\363\003\n\nObjectLock\022D\n\006status\030\002 \001(\016" +
+      "24.yandex.cloud.storage.v1.ObjectLock.Ob" +
+      "jectLockStatus\022O\n\021default_retention\030\003 \001(" +
+      "\01324.yandex.cloud.storage.v1.ObjectLock.D" +
+      "efaultRetention\032\324\001\n\020DefaultRetention\022G\n\004" +
+      "mode\030\001 \001(\01629.yandex.cloud.storage.v1.Obj" +
+      "ectLock.DefaultRetention.Mode\022\016\n\004days\030\002 " +
+      "\001(\003H\000\022\017\n\005years\030\003 \001(\003H\000\"F\n\004Mode\022\024\n\020MODE_U" +
+      "NSPECIFIED\020\000\022\023\n\017MODE_GOVERNANCE\020\001\022\023\n\017MOD" +
+      "E_COMPLIANCE\020\002B\016\n\006period\022\004\300\3011\001\"w\n\020Object" +
+      "LockStatus\022\"\n\036OBJECT_LOCK_STATUS_UNSPECI" +
+      "FIED\020\000\022\037\n\033OBJECT_LOCK_STATUS_DISABLED\020\001\022" +
+      "\036\n\032OBJECT_LOCK_STATUS_ENABLED\020\002\"\223\001\n\nEncr" +
+      "yption\022A\n\005rules\030\001 \003(\01322.yandex.cloud.sto" +
+      "rage.v1.Encryption.EncryptionRule\032B\n\016Enc" +
+      "ryptionRule\022\031\n\021kms_master_key_id\030\001 \001(\t\022\025" +
+      "\n\rsse_algorithm\030\002 \001(\t\"K\n\035BucketAllowedPr" +
+      "ivateEndpoints\022\017\n\007enabled\030\001 \001(\010\022\031\n\021priva" +
+      "te_endpoints\030\002 \003(\t*s\n\nVersioning\022\032\n\026VERS" +
+      "IONING_UNSPECIFIED\020\000\022\027\n\023VERSIONING_DISAB" +
+      "LED\020\001\022\026\n\022VERSIONING_ENABLED\020\002\022\030\n\024VERSION" +
+      "ING_SUSPENDED\020\003Bb\n\033yandex.cloud.api.stor" +
+      "age.v1ZCgithub.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/storage/v1;storageb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -43942,6 +43943,7 @@ public final class BucketOuterClass {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);
+    registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);
     registry.add(yandex.cloud.api.Validation.size);

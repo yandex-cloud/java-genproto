@@ -324,6 +324,52 @@ public final class PrivateConnectionOuterClass {
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * Status of the privateConnection.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cic.v1.PrivateConnection.Status status = 25;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <pre>
+     * Status of the privateConnection.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cic.v1.PrivateConnection.Status status = 25;</code>
+     * @return The status.
+     */
+    yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.Status getStatus();
+
+    /**
+     * <pre>
+     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 27;</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <pre>
+     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 27;</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+    /**
+     * <pre>
+     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 27;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
   }
   /**
    * <pre>
@@ -349,6 +395,7 @@ public final class PrivateConnectionOuterClass {
       regionId_ = "";
       trunkConnectionId_ = "";
       ipv4StaticRoutes_ = java.util.Collections.emptyList();
+      status_ = 0;
     }
 
     @java.lang.Override
@@ -466,6 +513,25 @@ public final class PrivateConnectionOuterClass {
                   labels__.getKey(), labels__.getValue());
               break;
             }
+            case 200: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
+            case 218: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (createdAt_ != null) {
+                subBuilder = createdAt_.toBuilder();
+              }
+              createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(createdAt_);
+                createdAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -513,6 +579,141 @@ public final class PrivateConnectionOuterClass {
               yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.class, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.Builder.class);
     }
 
+    /**
+     * Protobuf enum {@code yandex.cloud.cic.v1.PrivateConnection.Status}
+     */
+    public enum Status
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>STATUS_UNSPECIFIED = 0;</code>
+       */
+      STATUS_UNSPECIFIED(0),
+      /**
+       * <code>CREATING = 1;</code>
+       */
+      CREATING(1),
+      /**
+       * <code>UPDATING = 2;</code>
+       */
+      UPDATING(2),
+      /**
+       * <code>DELETING = 3;</code>
+       */
+      DELETING(3),
+      /**
+       * <code>ACTIVE = 4;</code>
+       */
+      ACTIVE(4),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>STATUS_UNSPECIFIED = 0;</code>
+       */
+      public static final int STATUS_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>CREATING = 1;</code>
+       */
+      public static final int CREATING_VALUE = 1;
+      /**
+       * <code>UPDATING = 2;</code>
+       */
+      public static final int UPDATING_VALUE = 2;
+      /**
+       * <code>DELETING = 3;</code>
+       */
+      public static final int DELETING_VALUE = 3;
+      /**
+       * <code>ACTIVE = 4;</code>
+       */
+      public static final int ACTIVE_VALUE = 4;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Status valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Status forNumber(int value) {
+        switch (value) {
+          case 0: return STATUS_UNSPECIFIED;
+          case 1: return CREATING;
+          case 2: return UPDATING;
+          case 3: return DELETING;
+          case 4: return ACTIVE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Status>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Status> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Status>() {
+              public Status findValueByNumber(int number) {
+                return Status.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Status[] VALUES = values();
+
+      public static Status valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Status(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.cic.v1.PrivateConnection.Status)
+    }
+
     public interface StaticRouteOrBuilder extends
         // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.PrivateConnection.StaticRoute)
         com.google.protobuf.MessageOrBuilder {
@@ -538,59 +739,6 @@ public final class PrivateConnectionOuterClass {
        */
       com.google.protobuf.ByteString
           getPrefixBytes();
-
-      /**
-       * <pre>
-       * PeerIp.
-       * It's an ip with just an ipAddress format without mask.
-       * Will be removed in some next release
-       * </pre>
-       *
-       * <code>repeated string next_hop = 2 [deprecated = true];</code>
-       * @deprecated
-       * @return A list containing the nextHop.
-       */
-      @java.lang.Deprecated java.util.List<java.lang.String>
-          getNextHopList();
-      /**
-       * <pre>
-       * PeerIp.
-       * It's an ip with just an ipAddress format without mask.
-       * Will be removed in some next release
-       * </pre>
-       *
-       * <code>repeated string next_hop = 2 [deprecated = true];</code>
-       * @deprecated
-       * @return The count of nextHop.
-       */
-      @java.lang.Deprecated int getNextHopCount();
-      /**
-       * <pre>
-       * PeerIp.
-       * It's an ip with just an ipAddress format without mask.
-       * Will be removed in some next release
-       * </pre>
-       *
-       * <code>repeated string next_hop = 2 [deprecated = true];</code>
-       * @deprecated
-       * @param index The index of the element to return.
-       * @return The nextHop at the given index.
-       */
-      @java.lang.Deprecated java.lang.String getNextHop(int index);
-      /**
-       * <pre>
-       * PeerIp.
-       * It's an ip with just an ipAddress format without mask.
-       * Will be removed in some next release
-       * </pre>
-       *
-       * <code>repeated string next_hop = 2 [deprecated = true];</code>
-       * @deprecated
-       * @param index The index of the value to return.
-       * @return The bytes of the nextHop at the given index.
-       */
-      @java.lang.Deprecated com.google.protobuf.ByteString
-          getNextHopBytes(int index);
     }
     /**
      * Protobuf type {@code yandex.cloud.cic.v1.PrivateConnection.StaticRoute}
@@ -606,7 +754,6 @@ public final class PrivateConnectionOuterClass {
       }
       private StaticRoute() {
         prefix_ = "";
-        nextHop_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       }
 
       @java.lang.Override
@@ -629,7 +776,6 @@ public final class PrivateConnectionOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -644,15 +790,6 @@ public final class PrivateConnectionOuterClass {
                 java.lang.String s = input.readStringRequireUtf8();
 
                 prefix_ = s;
-                break;
-              }
-              case 18: {
-                java.lang.String s = input.readStringRequireUtf8();
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  nextHop_ = new com.google.protobuf.LazyStringArrayList();
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                nextHop_.add(s);
                 break;
               }
               default: {
@@ -670,9 +807,6 @@ public final class PrivateConnectionOuterClass {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
-          if (((mutable_bitField0_ & 0x00000001) != 0)) {
-            nextHop_ = nextHop_.getUnmodifiableView();
-          }
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
@@ -738,69 +872,6 @@ public final class PrivateConnectionOuterClass {
         }
       }
 
-      public static final int NEXT_HOP_FIELD_NUMBER = 2;
-      private com.google.protobuf.LazyStringList nextHop_;
-      /**
-       * <pre>
-       * PeerIp.
-       * It's an ip with just an ipAddress format without mask.
-       * Will be removed in some next release
-       * </pre>
-       *
-       * <code>repeated string next_hop = 2 [deprecated = true];</code>
-       * @deprecated
-       * @return A list containing the nextHop.
-       */
-      @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
-          getNextHopList() {
-        return nextHop_;
-      }
-      /**
-       * <pre>
-       * PeerIp.
-       * It's an ip with just an ipAddress format without mask.
-       * Will be removed in some next release
-       * </pre>
-       *
-       * <code>repeated string next_hop = 2 [deprecated = true];</code>
-       * @deprecated
-       * @return The count of nextHop.
-       */
-      @java.lang.Deprecated public int getNextHopCount() {
-        return nextHop_.size();
-      }
-      /**
-       * <pre>
-       * PeerIp.
-       * It's an ip with just an ipAddress format without mask.
-       * Will be removed in some next release
-       * </pre>
-       *
-       * <code>repeated string next_hop = 2 [deprecated = true];</code>
-       * @deprecated
-       * @param index The index of the element to return.
-       * @return The nextHop at the given index.
-       */
-      @java.lang.Deprecated public java.lang.String getNextHop(int index) {
-        return nextHop_.get(index);
-      }
-      /**
-       * <pre>
-       * PeerIp.
-       * It's an ip with just an ipAddress format without mask.
-       * Will be removed in some next release
-       * </pre>
-       *
-       * <code>repeated string next_hop = 2 [deprecated = true];</code>
-       * @deprecated
-       * @param index The index of the value to return.
-       * @return The bytes of the nextHop at the given index.
-       */
-      @java.lang.Deprecated public com.google.protobuf.ByteString
-          getNextHopBytes(int index) {
-        return nextHop_.getByteString(index);
-      }
-
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -818,9 +889,6 @@ public final class PrivateConnectionOuterClass {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, prefix_);
         }
-        for (int i = 0; i < nextHop_.size(); i++) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextHop_.getRaw(i));
-        }
         unknownFields.writeTo(output);
       }
 
@@ -832,14 +900,6 @@ public final class PrivateConnectionOuterClass {
         size = 0;
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, prefix_);
-        }
-        {
-          int dataSize = 0;
-          for (int i = 0; i < nextHop_.size(); i++) {
-            dataSize += computeStringSizeNoTag(nextHop_.getRaw(i));
-          }
-          size += dataSize;
-          size += 1 * getNextHopList().size();
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -858,8 +918,6 @@ public final class PrivateConnectionOuterClass {
 
         if (!getPrefix()
             .equals(other.getPrefix())) return false;
-        if (!getNextHopList()
-            .equals(other.getNextHopList())) return false;
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -873,10 +931,6 @@ public final class PrivateConnectionOuterClass {
         hash = (19 * hash) + getDescriptor().hashCode();
         hash = (37 * hash) + PREFIX_FIELD_NUMBER;
         hash = (53 * hash) + getPrefix().hashCode();
-        if (getNextHopCount() > 0) {
-          hash = (37 * hash) + NEXT_HOP_FIELD_NUMBER;
-          hash = (53 * hash) + getNextHopList().hashCode();
-        }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -1012,8 +1066,6 @@ public final class PrivateConnectionOuterClass {
           super.clear();
           prefix_ = "";
 
-          nextHop_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-          bitField0_ = (bitField0_ & ~0x00000001);
           return this;
         }
 
@@ -1040,13 +1092,7 @@ public final class PrivateConnectionOuterClass {
         @java.lang.Override
         public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute buildPartial() {
           yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute result = new yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute(this);
-          int from_bitField0_ = bitField0_;
           result.prefix_ = prefix_;
-          if (((bitField0_ & 0x00000001) != 0)) {
-            nextHop_ = nextHop_.getUnmodifiableView();
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.nextHop_ = nextHop_;
           onBuilt();
           return result;
         }
@@ -1099,16 +1145,6 @@ public final class PrivateConnectionOuterClass {
             prefix_ = other.prefix_;
             onChanged();
           }
-          if (!other.nextHop_.isEmpty()) {
-            if (nextHop_.isEmpty()) {
-              nextHop_ = other.nextHop_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureNextHopIsMutable();
-              nextHop_.addAll(other.nextHop_);
-            }
-            onChanged();
-          }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
           return this;
@@ -1137,7 +1173,6 @@ public final class PrivateConnectionOuterClass {
           }
           return this;
         }
-        private int bitField0_;
 
         private java.lang.Object prefix_ = "";
         /**
@@ -1236,179 +1271,6 @@ public final class PrivateConnectionOuterClass {
   checkByteStringIsUtf8(value);
           
           prefix_ = value;
-          onChanged();
-          return this;
-        }
-
-        private com.google.protobuf.LazyStringList nextHop_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        private void ensureNextHopIsMutable() {
-          if (!((bitField0_ & 0x00000001) != 0)) {
-            nextHop_ = new com.google.protobuf.LazyStringArrayList(nextHop_);
-            bitField0_ |= 0x00000001;
-           }
-        }
-        /**
-         * <pre>
-         * PeerIp.
-         * It's an ip with just an ipAddress format without mask.
-         * Will be removed in some next release
-         * </pre>
-         *
-         * <code>repeated string next_hop = 2 [deprecated = true];</code>
-         * @deprecated
-         * @return A list containing the nextHop.
-         */
-        @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
-            getNextHopList() {
-          return nextHop_.getUnmodifiableView();
-        }
-        /**
-         * <pre>
-         * PeerIp.
-         * It's an ip with just an ipAddress format without mask.
-         * Will be removed in some next release
-         * </pre>
-         *
-         * <code>repeated string next_hop = 2 [deprecated = true];</code>
-         * @deprecated
-         * @return The count of nextHop.
-         */
-        @java.lang.Deprecated public int getNextHopCount() {
-          return nextHop_.size();
-        }
-        /**
-         * <pre>
-         * PeerIp.
-         * It's an ip with just an ipAddress format without mask.
-         * Will be removed in some next release
-         * </pre>
-         *
-         * <code>repeated string next_hop = 2 [deprecated = true];</code>
-         * @deprecated
-         * @param index The index of the element to return.
-         * @return The nextHop at the given index.
-         */
-        @java.lang.Deprecated public java.lang.String getNextHop(int index) {
-          return nextHop_.get(index);
-        }
-        /**
-         * <pre>
-         * PeerIp.
-         * It's an ip with just an ipAddress format without mask.
-         * Will be removed in some next release
-         * </pre>
-         *
-         * <code>repeated string next_hop = 2 [deprecated = true];</code>
-         * @deprecated
-         * @param index The index of the value to return.
-         * @return The bytes of the nextHop at the given index.
-         */
-        @java.lang.Deprecated public com.google.protobuf.ByteString
-            getNextHopBytes(int index) {
-          return nextHop_.getByteString(index);
-        }
-        /**
-         * <pre>
-         * PeerIp.
-         * It's an ip with just an ipAddress format without mask.
-         * Will be removed in some next release
-         * </pre>
-         *
-         * <code>repeated string next_hop = 2 [deprecated = true];</code>
-         * @deprecated
-         * @param index The index to set the value at.
-         * @param value The nextHop to set.
-         * @return This builder for chaining.
-         */
-        @java.lang.Deprecated public Builder setNextHop(
-            int index, java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureNextHopIsMutable();
-          nextHop_.set(index, value);
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * PeerIp.
-         * It's an ip with just an ipAddress format without mask.
-         * Will be removed in some next release
-         * </pre>
-         *
-         * <code>repeated string next_hop = 2 [deprecated = true];</code>
-         * @deprecated
-         * @param value The nextHop to add.
-         * @return This builder for chaining.
-         */
-        @java.lang.Deprecated public Builder addNextHop(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureNextHopIsMutable();
-          nextHop_.add(value);
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * PeerIp.
-         * It's an ip with just an ipAddress format without mask.
-         * Will be removed in some next release
-         * </pre>
-         *
-         * <code>repeated string next_hop = 2 [deprecated = true];</code>
-         * @deprecated
-         * @param values The nextHop to add.
-         * @return This builder for chaining.
-         */
-        @java.lang.Deprecated public Builder addAllNextHop(
-            java.lang.Iterable<java.lang.String> values) {
-          ensureNextHopIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, nextHop_);
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * PeerIp.
-         * It's an ip with just an ipAddress format without mask.
-         * Will be removed in some next release
-         * </pre>
-         *
-         * <code>repeated string next_hop = 2 [deprecated = true];</code>
-         * @deprecated
-         * @return This builder for chaining.
-         */
-        @java.lang.Deprecated public Builder clearNextHop() {
-          nextHop_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * PeerIp.
-         * It's an ip with just an ipAddress format without mask.
-         * Will be removed in some next release
-         * </pre>
-         *
-         * <code>repeated string next_hop = 2 [deprecated = true];</code>
-         * @deprecated
-         * @param value The bytes of the nextHop to add.
-         * @return This builder for chaining.
-         */
-        @java.lang.Deprecated public Builder addNextHopBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          ensureNextHopIsMutable();
-          nextHop_.add(value);
           onChanged();
           return this;
         }
@@ -2004,6 +1866,71 @@ public final class PrivateConnectionOuterClass {
       return map.get(key);
     }
 
+    public static final int STATUS_FIELD_NUMBER = 25;
+    private int status_;
+    /**
+     * <pre>
+     * Status of the privateConnection.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cic.v1.PrivateConnection.Status status = 25;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * Status of the privateConnection.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cic.v1.PrivateConnection.Status status = 25;</code>
+     * @return The status.
+     */
+    @java.lang.Override public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.Status getStatus() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.Status result = yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.Status.valueOf(status_);
+      return result == null ? yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.Status.UNRECOGNIZED : result;
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 27;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <pre>
+     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 27;</code>
+     * @return Whether the createdAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
+    }
+    /**
+     * <pre>
+     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 27;</code>
+     * @return The createdAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <pre>
+     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 27;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return getCreatedAt();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2051,6 +1978,12 @@ public final class PrivateConnectionOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           24);
+      if (status_ != yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.Status.STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(25, status_);
+      }
+      if (createdAt_ != null) {
+        output.writeMessage(27, getCreatedAt());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2100,6 +2033,14 @@ public final class PrivateConnectionOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(24, labels__);
       }
+      if (status_ != yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.Status.STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(25, status_);
+      }
+      if (createdAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(27, getCreatedAt());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2141,6 +2082,12 @@ public final class PrivateConnectionOuterClass {
           .equals(other.getIpv4StaticRoutesList())) return false;
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (status_ != other.status_) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
+      if (hasCreatedAt()) {
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2179,6 +2126,12 @@ public final class PrivateConnectionOuterClass {
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      if (hasCreatedAt()) {
+        hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedAt().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2371,6 +2324,14 @@ public final class PrivateConnectionOuterClass {
           ipv4StaticRoutesBuilder_.clear();
         }
         internalGetMutableLabels().clear();
+        status_ = 0;
+
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
         return this;
       }
 
@@ -2425,6 +2386,12 @@ public final class PrivateConnectionOuterClass {
         }
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        result.status_ = status_;
+        if (createdAtBuilder_ == null) {
+          result.createdAt_ = createdAt_;
+        } else {
+          result.createdAt_ = createdAtBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -2531,6 +2498,12 @@ public final class PrivateConnectionOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -3980,6 +3953,235 @@ public final class PrivateConnectionOuterClass {
             .putAll(values);
         return this;
       }
+
+      private int status_ = 0;
+      /**
+       * <pre>
+       * Status of the privateConnection.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.PrivateConnection.Status status = 25;</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <pre>
+       * Status of the privateConnection.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.PrivateConnection.Status status = 25;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status of the privateConnection.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.PrivateConnection.Status status = 25;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.Status getStatus() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.Status result = yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.Status.valueOf(status_);
+        return result == null ? yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.Status.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Status of the privateConnection.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.PrivateConnection.Status status = 25;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.Status value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status of the privateConnection.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.PrivateConnection.Status status = 25;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp createdAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 27;</code>
+       * @return Whether the createdAt field is set.
+       */
+      public boolean hasCreatedAt() {
+        return createdAtBuilder_ != null || createdAt_ != null;
+      }
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 27;</code>
+       * @return The createdAt.
+       */
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        } else {
+          return createdAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 27;</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdAt_ = value;
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 27;</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 27;</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (createdAt_ != null) {
+            createdAt_ =
+              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+          } else {
+            createdAt_ = value;
+          }
+          onChanged();
+        } else {
+          createdAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 27;</code>
+       */
+      public Builder clearCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+          onChanged();
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 27;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+        
+        onChanged();
+        return getCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 27;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+        if (createdAtBuilder_ != null) {
+          return createdAtBuilder_.getMessageOrBuilder();
+        } else {
+          return createdAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        }
+      }
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 27;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedAtFieldBuilder() {
+        if (createdAtBuilder_ == null) {
+          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          createdAt_ = null;
+        }
+        return createdAtBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4059,28 +4261,34 @@ public final class PrivateConnectionOuterClass {
     java.lang.String[] descriptorData = {
       "\n,yandex/cloud/cic/v1/private_connection" +
       ".proto\022\023yandex.cloud.cic.v1\032\036google/prot" +
-      "obuf/wrappers.proto\032!yandex/cloud/cic/v1" +
-      "/peering.proto\"\361\003\n\021PrivateConnection\022\n\n\002" +
-      "id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013description\030\003 " +
-      "\001(\t\022\021\n\tfolder_id\030\005 \001(\t\022\021\n\tregion_id\030\006 \001(" +
-      "\t\022\033\n\023trunk_connection_id\030\007 \001(\t\022,\n\007vlan_i" +
-      "d\030\010 \001(\0132\033.google.protobuf.Int64Value\0222\n\014" +
-      "ipv4_peering\030\t \001(\0132\034.yandex.cloud.cic.v1" +
-      ".Peering\022N\n\022ipv4_static_routes\030\022 \003(\01322.y" +
-      "andex.cloud.cic.v1.PrivateConnection.Sta" +
-      "ticRoute\022B\n\006labels\030\030 \003(\01322.yandex.cloud." +
-      "cic.v1.PrivateConnection.LabelsEntry\032-\n\013" +
-      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001\0323\n\013StaticRoute\022\016\n\006prefix\030\001 \001(\t\022\024\n\010ne" +
-      "xt_hop\030\002 \003(\tB\002\030\001J\004\010\004\020\005J\004\010\n\020\022J\004\010\023\020\030BV\n\027ya" +
-      "ndex.cloud.api.cic.v1Z;github.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/cic/v1;c" +
-      "icb\006proto3"
+      "obuf/wrappers.proto\032\037google/protobuf/tim" +
+      "estamp.proto\032!yandex/cloud/cic/v1/peerin" +
+      "g.proto\"\250\005\n\021PrivateConnection\022\n\n\002id\030\001 \001(" +
+      "\t\022\014\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\021\n\t" +
+      "folder_id\030\005 \001(\t\022\021\n\tregion_id\030\006 \001(\t\022\033\n\023tr" +
+      "unk_connection_id\030\007 \001(\t\022,\n\007vlan_id\030\010 \001(\013" +
+      "2\033.google.protobuf.Int64Value\0222\n\014ipv4_pe" +
+      "ering\030\t \001(\0132\034.yandex.cloud.cic.v1.Peerin" +
+      "g\022N\n\022ipv4_static_routes\030\022 \003(\01322.yandex.c" +
+      "loud.cic.v1.PrivateConnection.StaticRout" +
+      "e\022B\n\006labels\030\030 \003(\01322.yandex.cloud.cic.v1." +
+      "PrivateConnection.LabelsEntry\022=\n\006status\030" +
+      "\031 \001(\0162-.yandex.cloud.cic.v1.PrivateConne" +
+      "ction.Status\022.\n\ncreated_at\030\033 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\032-\n\013LabelsEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\035\n\013StaticRou" +
+      "te\022\016\n\006prefix\030\001 \001(\t\"V\n\006Status\022\026\n\022STATUS_U" +
+      "NSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\014\n\010UPDATING\020\002" +
+      "\022\014\n\010DELETING\020\003\022\n\n\006ACTIVE\020\004J\004\010\004\020\005J\004\010\n\020\022J\004" +
+      "\010\023\020\030J\004\010\032\020\033BV\n\027yandex.cloud.api.cic.v1Z;g" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/cic/v1;cicb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.WrappersProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.cic.v1.PeeringOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_cic_v1_PrivateConnection_descriptor =
@@ -4088,7 +4296,7 @@ public final class PrivateConnectionOuterClass {
     internal_static_yandex_cloud_cic_v1_PrivateConnection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cic_v1_PrivateConnection_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "FolderId", "RegionId", "TrunkConnectionId", "VlanId", "Ipv4Peering", "Ipv4StaticRoutes", "Labels", });
+        new java.lang.String[] { "Id", "Name", "Description", "FolderId", "RegionId", "TrunkConnectionId", "VlanId", "Ipv4Peering", "Ipv4StaticRoutes", "Labels", "Status", "CreatedAt", });
     internal_static_yandex_cloud_cic_v1_PrivateConnection_LabelsEntry_descriptor =
       internal_static_yandex_cloud_cic_v1_PrivateConnection_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_cic_v1_PrivateConnection_LabelsEntry_fieldAccessorTable = new
@@ -4100,8 +4308,9 @@ public final class PrivateConnectionOuterClass {
     internal_static_yandex_cloud_cic_v1_PrivateConnection_StaticRoute_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cic_v1_PrivateConnection_StaticRoute_descriptor,
-        new java.lang.String[] { "Prefix", "NextHop", });
+        new java.lang.String[] { "Prefix", });
     com.google.protobuf.WrappersProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.cic.v1.PeeringOuterClass.getDescriptor();
   }
 

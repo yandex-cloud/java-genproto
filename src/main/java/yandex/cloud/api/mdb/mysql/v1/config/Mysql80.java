@@ -3916,6 +3916,22 @@ public final class Mysql80 {
        * <code>SHA256_PASSWORD = 3;</code>
        */
       SHA256_PASSWORD(3),
+      /**
+       * <pre>
+       * Use [MYSQL_NO_LOGIN Pluggable Authentication](https://dev.mysql.com/doc/refman/8.0/en/no-login-pluggable-authentication.html).
+       * </pre>
+       *
+       * <code>MYSQL_NO_LOGIN = 4;</code>
+       */
+      MYSQL_NO_LOGIN(4),
+      /**
+       * <pre>
+       * Use [IAM Pluggable Authentication](https://yandex.cloud/en/docs/iam/concepts/authorization/).
+       * </pre>
+       *
+       * <code>MDB_IAMPROXY_AUTH = 5;</code>
+       */
+      MDB_IAMPROXY_AUTH(5),
       UNRECOGNIZED(-1),
       ;
 
@@ -3947,6 +3963,22 @@ public final class Mysql80 {
        * <code>SHA256_PASSWORD = 3;</code>
        */
       public static final int SHA256_PASSWORD_VALUE = 3;
+      /**
+       * <pre>
+       * Use [MYSQL_NO_LOGIN Pluggable Authentication](https://dev.mysql.com/doc/refman/8.0/en/no-login-pluggable-authentication.html).
+       * </pre>
+       *
+       * <code>MYSQL_NO_LOGIN = 4;</code>
+       */
+      public static final int MYSQL_NO_LOGIN_VALUE = 4;
+      /**
+       * <pre>
+       * Use [IAM Pluggable Authentication](https://yandex.cloud/en/docs/iam/concepts/authorization/).
+       * </pre>
+       *
+       * <code>MDB_IAMPROXY_AUTH = 5;</code>
+       */
+      public static final int MDB_IAMPROXY_AUTH_VALUE = 5;
 
 
       public final int getNumber() {
@@ -3977,6 +4009,8 @@ public final class Mysql80 {
           case 1: return MYSQL_NATIVE_PASSWORD;
           case 2: return CACHING_SHA2_PASSWORD;
           case 3: return SHA256_PASSWORD;
+          case 4: return MYSQL_NO_LOGIN;
+          case 5: return MDB_IAMPROXY_AUTH;
           default: return null;
         }
       }
@@ -25110,7 +25144,7 @@ public final class Mysql80 {
       "\n/yandex/cloud/mdb/mysql/v1/config/mysql" +
       "8_0.proto\022 yandex.cloud.mdb.mysql.v1.con" +
       "fig\032\036google/protobuf/wrappers.proto\032\035yan" +
-      "dex/cloud/validation.proto\"\2409\n\016MysqlConf" +
+      "dex/cloud/validation.proto\"\3149\n\016MysqlConf" +
       "ig8_0\022K\n\027innodb_buffer_pool_size\030\001 \001(\0132\033" +
       ".google.protobuf.Int64ValueB\r\372\3071\t>=52428" +
       "80\022B\n\017max_connections\030\002 \001(\0132\033.google.pro" +
@@ -25273,37 +25307,38 @@ public final class Mysql80 {
       "\022\021\n\rREAL_AS_FLOAT\020\022\022\025\n\021STRICT_ALL_TABLES" +
       "\020\023\022\027\n\023STRICT_TRANS_TABLES\020\024\022\034\n\030TIME_TRUN" +
       "CATE_FRACTIONAL\020\025\022\010\n\004ANSI\020\026\022\017\n\013TRADITION" +
-      "AL\020\027\022\024\n\020NO_DIR_IN_CREATE\020\030\"t\n\nAuthPlugin" +
-      "\022\033\n\027AUTH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_N" +
-      "ATIVE_PASSWORD\020\001\022\031\n\025CACHING_SHA2_PASSWOR" +
-      "D\020\002\022\023\n\017SHA256_PASSWORD\020\003\"x\n\024TransactionI" +
-      "solation\022%\n!TRANSACTION_ISOLATION_UNSPEC" +
-      "IFIED\020\000\022\022\n\016READ_COMMITTED\020\001\022\023\n\017REPEATABL" +
-      "E_READ\020\002\022\020\n\014SERIALIZABLE\020\003\"U\n\016BinlogRowI" +
-      "mage\022 \n\034BINLOG_ROW_IMAGE_UNSPECIFIED\020\000\022\010" +
-      "\n\004FULL\020\001\022\013\n\007MINIMAL\020\002\022\n\n\006NOBLOB\020\003\"Y\n\021Sla" +
-      "veParallelType\022#\n\037SLAVE_PARALLEL_TYPE_UN" +
-      "SPECIFIED\020\000\022\014\n\010DATABASE\020\001\022\021\n\rLOGICAL_CLO" +
-      "CK\020\002\"M\n\017LogSlowRateType\022\"\n\036LOG_SLOW_RATE" +
-      "_TYPE_UNSPECIFIED\020\000\022\013\n\007SESSION\020\001\022\t\n\005QUER" +
-      "Y\020\002\"\241\001\n\021LogSlowFilterType\022$\n LOG_SLOW_FI" +
-      "LTER_TYPE_UNSPECIFIED\020\000\022\r\n\tFULL_SCAN\020\001\022\r" +
-      "\n\tFULL_JOIN\020\002\022\r\n\tTMP_TABLE\020\003\022\025\n\021TMP_TABL" +
-      "E_ON_DISK\020\004\022\014\n\010FILESORT\020\005\022\024\n\020FILESORT_ON" +
-      "_DISK\020\006\"\223\001\n#BinlogTransactionDependencyT" +
-      "racking\0226\n2BINLOG_TRANSACTION_DEPENDENCY" +
-      "_TRACKING_UNSPECIFIED\020\000\022\020\n\014COMMIT_ORDER\020" +
-      "\001\022\014\n\010WRITESET\020\002\022\024\n\020WRITESET_SESSION\020\003\"\360\001" +
-      "\n\021MysqlConfigSet8_0\022J\n\020effective_config\030" +
-      "\001 \001(\01320.yandex.cloud.mdb.mysql.v1.config" +
-      ".MysqlConfig8_0\022E\n\013user_config\030\002 \001(\01320.y" +
-      "andex.cloud.mdb.mysql.v1.config.MysqlCon" +
-      "fig8_0\022H\n\016default_config\030\003 \001(\01320.yandex." +
-      "cloud.mdb.mysql.v1.config.MysqlConfig8_0" +
-      "Br\n$yandex.cloud.api.mdb.mysql.v1.config" +
-      "ZJgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/mdb/mysql/v1/config;mysqlb\006pr" +
-      "oto3"
+      "AL\020\027\022\024\n\020NO_DIR_IN_CREATE\020\030\"\237\001\n\nAuthPlugi" +
+      "n\022\033\n\027AUTH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_" +
+      "NATIVE_PASSWORD\020\001\022\031\n\025CACHING_SHA2_PASSWO" +
+      "RD\020\002\022\023\n\017SHA256_PASSWORD\020\003\022\022\n\016MYSQL_NO_LO" +
+      "GIN\020\004\022\025\n\021MDB_IAMPROXY_AUTH\020\005\"x\n\024Transact" +
+      "ionIsolation\022%\n!TRANSACTION_ISOLATION_UN" +
+      "SPECIFIED\020\000\022\022\n\016READ_COMMITTED\020\001\022\023\n\017REPEA" +
+      "TABLE_READ\020\002\022\020\n\014SERIALIZABLE\020\003\"U\n\016Binlog" +
+      "RowImage\022 \n\034BINLOG_ROW_IMAGE_UNSPECIFIED" +
+      "\020\000\022\010\n\004FULL\020\001\022\013\n\007MINIMAL\020\002\022\n\n\006NOBLOB\020\003\"Y\n" +
+      "\021SlaveParallelType\022#\n\037SLAVE_PARALLEL_TYP" +
+      "E_UNSPECIFIED\020\000\022\014\n\010DATABASE\020\001\022\021\n\rLOGICAL" +
+      "_CLOCK\020\002\"M\n\017LogSlowRateType\022\"\n\036LOG_SLOW_" +
+      "RATE_TYPE_UNSPECIFIED\020\000\022\013\n\007SESSION\020\001\022\t\n\005" +
+      "QUERY\020\002\"\241\001\n\021LogSlowFilterType\022$\n LOG_SLO" +
+      "W_FILTER_TYPE_UNSPECIFIED\020\000\022\r\n\tFULL_SCAN" +
+      "\020\001\022\r\n\tFULL_JOIN\020\002\022\r\n\tTMP_TABLE\020\003\022\025\n\021TMP_" +
+      "TABLE_ON_DISK\020\004\022\014\n\010FILESORT\020\005\022\024\n\020FILESOR" +
+      "T_ON_DISK\020\006\"\223\001\n#BinlogTransactionDepende" +
+      "ncyTracking\0226\n2BINLOG_TRANSACTION_DEPEND" +
+      "ENCY_TRACKING_UNSPECIFIED\020\000\022\020\n\014COMMIT_OR" +
+      "DER\020\001\022\014\n\010WRITESET\020\002\022\024\n\020WRITESET_SESSION\020" +
+      "\003\"\360\001\n\021MysqlConfigSet8_0\022J\n\020effective_con" +
+      "fig\030\001 \001(\01320.yandex.cloud.mdb.mysql.v1.co" +
+      "nfig.MysqlConfig8_0\022E\n\013user_config\030\002 \001(\013" +
+      "20.yandex.cloud.mdb.mysql.v1.config.Mysq" +
+      "lConfig8_0\022H\n\016default_config\030\003 \001(\01320.yan" +
+      "dex.cloud.mdb.mysql.v1.config.MysqlConfi" +
+      "g8_0Br\n$yandex.cloud.api.mdb.mysql.v1.co" +
+      "nfigZJgithub.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/mdb/mysql/v1/config;mysql" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

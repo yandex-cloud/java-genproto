@@ -124,7 +124,7 @@ public final class RoutingInstanceOuterClass {
 
     /**
      * <pre>
-     * List of the info about vpcNetworks which are attached to routingInstance
+     * List of the info about vpcNetworks which are attached to routingInstance.
      * </pre>
      *
      * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -133,7 +133,7 @@ public final class RoutingInstanceOuterClass {
         getVpcInfoList();
     /**
      * <pre>
-     * List of the info about vpcNetworks which are attached to routingInstance
+     * List of the info about vpcNetworks which are attached to routingInstance.
      * </pre>
      *
      * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -141,7 +141,7 @@ public final class RoutingInstanceOuterClass {
     yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcInfo getVpcInfo(int index);
     /**
      * <pre>
-     * List of the info about vpcNetworks which are attached to routingInstance
+     * List of the info about vpcNetworks which are attached to routingInstance.
      * </pre>
      *
      * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -149,7 +149,7 @@ public final class RoutingInstanceOuterClass {
     int getVpcInfoCount();
     /**
      * <pre>
-     * List of the info about vpcNetworks which are attached to routingInstance
+     * List of the info about vpcNetworks which are attached to routingInstance.
      * </pre>
      *
      * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -158,7 +158,7 @@ public final class RoutingInstanceOuterClass {
         getVpcInfoOrBuilderList();
     /**
      * <pre>
-     * List of the info about vpcNetworks which are attached to routingInstance
+     * List of the info about vpcNetworks which are attached to routingInstance.
      * </pre>
      *
      * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -168,7 +168,7 @@ public final class RoutingInstanceOuterClass {
 
     /**
      * <pre>
-     * List of the info about privateConnections which are attached to routingInstance
+     * List of the info about privateConnections which are attached to routingInstance.
      * </pre>
      *
      * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -177,7 +177,7 @@ public final class RoutingInstanceOuterClass {
         getCicPrivateConnectionInfoList();
     /**
      * <pre>
-     * List of the info about privateConnections which are attached to routingInstance
+     * List of the info about privateConnections which are attached to routingInstance.
      * </pre>
      *
      * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -185,7 +185,7 @@ public final class RoutingInstanceOuterClass {
     yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.CicPrivateConnectionInfo getCicPrivateConnectionInfo(int index);
     /**
      * <pre>
-     * List of the info about privateConnections which are attached to routingInstance
+     * List of the info about privateConnections which are attached to routingInstance.
      * </pre>
      *
      * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -193,7 +193,7 @@ public final class RoutingInstanceOuterClass {
     int getCicPrivateConnectionInfoCount();
     /**
      * <pre>
-     * List of the info about privateConnections which are attached to routingInstance
+     * List of the info about privateConnections which are attached to routingInstance.
      * </pre>
      *
      * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -202,7 +202,7 @@ public final class RoutingInstanceOuterClass {
         getCicPrivateConnectionInfoOrBuilderList();
     /**
      * <pre>
-     * List of the info about privateConnections which are attached to routingInstance
+     * List of the info about privateConnections which are attached to routingInstance.
      * </pre>
      *
      * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -228,6 +228,33 @@ public final class RoutingInstanceOuterClass {
      * @return The status.
      */
     yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.Status getStatus();
+
+    /**
+     * <pre>
+     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 11;</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <pre>
+     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 11;</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+    /**
+     * <pre>
+     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 11;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
      * <pre>
@@ -414,6 +441,19 @@ public final class RoutingInstanceOuterClass {
               int rawValue = input.readEnum();
 
               status_ = rawValue;
+              break;
+            }
+            case 90: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (createdAt_ != null) {
+                subBuilder = createdAt_.toBuilder();
+              }
+              createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(createdAt_);
+                createdAt_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             case 194: {
@@ -4120,7 +4160,7 @@ public final class RoutingInstanceOuterClass {
     private java.util.List<yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcInfo> vpcInfo_;
     /**
      * <pre>
-     * List of the info about vpcNetworks which are attached to routingInstance
+     * List of the info about vpcNetworks which are attached to routingInstance.
      * </pre>
      *
      * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -4131,7 +4171,7 @@ public final class RoutingInstanceOuterClass {
     }
     /**
      * <pre>
-     * List of the info about vpcNetworks which are attached to routingInstance
+     * List of the info about vpcNetworks which are attached to routingInstance.
      * </pre>
      *
      * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -4143,7 +4183,7 @@ public final class RoutingInstanceOuterClass {
     }
     /**
      * <pre>
-     * List of the info about vpcNetworks which are attached to routingInstance
+     * List of the info about vpcNetworks which are attached to routingInstance.
      * </pre>
      *
      * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -4154,7 +4194,7 @@ public final class RoutingInstanceOuterClass {
     }
     /**
      * <pre>
-     * List of the info about vpcNetworks which are attached to routingInstance
+     * List of the info about vpcNetworks which are attached to routingInstance.
      * </pre>
      *
      * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -4165,7 +4205,7 @@ public final class RoutingInstanceOuterClass {
     }
     /**
      * <pre>
-     * List of the info about vpcNetworks which are attached to routingInstance
+     * List of the info about vpcNetworks which are attached to routingInstance.
      * </pre>
      *
      * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -4180,7 +4220,7 @@ public final class RoutingInstanceOuterClass {
     private java.util.List<yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.CicPrivateConnectionInfo> cicPrivateConnectionInfo_;
     /**
      * <pre>
-     * List of the info about privateConnections which are attached to routingInstance
+     * List of the info about privateConnections which are attached to routingInstance.
      * </pre>
      *
      * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -4191,7 +4231,7 @@ public final class RoutingInstanceOuterClass {
     }
     /**
      * <pre>
-     * List of the info about privateConnections which are attached to routingInstance
+     * List of the info about privateConnections which are attached to routingInstance.
      * </pre>
      *
      * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -4203,7 +4243,7 @@ public final class RoutingInstanceOuterClass {
     }
     /**
      * <pre>
-     * List of the info about privateConnections which are attached to routingInstance
+     * List of the info about privateConnections which are attached to routingInstance.
      * </pre>
      *
      * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -4214,7 +4254,7 @@ public final class RoutingInstanceOuterClass {
     }
     /**
      * <pre>
-     * List of the info about privateConnections which are attached to routingInstance
+     * List of the info about privateConnections which are attached to routingInstance.
      * </pre>
      *
      * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -4225,7 +4265,7 @@ public final class RoutingInstanceOuterClass {
     }
     /**
      * <pre>
-     * List of the info about privateConnections which are attached to routingInstance
+     * List of the info about privateConnections which are attached to routingInstance.
      * </pre>
      *
      * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -4261,6 +4301,44 @@ public final class RoutingInstanceOuterClass {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.Status result = yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.Status.UNRECOGNIZED : result;
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 11;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <pre>
+     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 11;</code>
+     * @return Whether the createdAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
+    }
+    /**
+     * <pre>
+     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 11;</code>
+     * @return The createdAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <pre>
+     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 11;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return getCreatedAt();
     }
 
     public static final int LABELS_FIELD_NUMBER = 24;
@@ -4418,6 +4496,9 @@ public final class RoutingInstanceOuterClass {
       if (status_ != yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.Status.STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(9, status_);
       }
+      if (createdAt_ != null) {
+        output.writeMessage(11, getCreatedAt());
+      }
       com.google.protobuf.GeneratedMessageV3
         .serializeStringMapTo(
           output,
@@ -4460,6 +4541,10 @@ public final class RoutingInstanceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(9, status_);
       }
+      if (createdAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getCreatedAt());
+      }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
            : internalGetLabels().getMap().entrySet()) {
         com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
@@ -4500,6 +4585,11 @@ public final class RoutingInstanceOuterClass {
       if (!getCicPrivateConnectionInfoList()
           .equals(other.getCicPrivateConnectionInfoList())) return false;
       if (status_ != other.status_) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
+      if (hasCreatedAt()) {
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
+      }
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -4533,6 +4623,10 @@ public final class RoutingInstanceOuterClass {
       }
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      if (hasCreatedAt()) {
+        hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedAt().hashCode();
+      }
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
@@ -4718,6 +4812,12 @@ public final class RoutingInstanceOuterClass {
         }
         status_ = 0;
 
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
         internalGetMutableLabels().clear();
         return this;
       }
@@ -4770,6 +4870,11 @@ public final class RoutingInstanceOuterClass {
           result.cicPrivateConnectionInfo_ = cicPrivateConnectionInfoBuilder_.build();
         }
         result.status_ = status_;
+        if (createdAtBuilder_ == null) {
+          result.createdAt_ = createdAt_;
+        } else {
+          result.createdAt_ = createdAtBuilder_.build();
+        }
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
         onBuilt();
@@ -4894,6 +4999,9 @@ public final class RoutingInstanceOuterClass {
         }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
+        }
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
@@ -5431,7 +5539,7 @@ public final class RoutingInstanceOuterClass {
 
       /**
        * <pre>
-       * List of the info about vpcNetworks which are attached to routingInstance
+       * List of the info about vpcNetworks which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -5445,7 +5553,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about vpcNetworks which are attached to routingInstance
+       * List of the info about vpcNetworks which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -5459,7 +5567,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about vpcNetworks which are attached to routingInstance
+       * List of the info about vpcNetworks which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -5473,7 +5581,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about vpcNetworks which are attached to routingInstance
+       * List of the info about vpcNetworks which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -5494,7 +5602,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about vpcNetworks which are attached to routingInstance
+       * List of the info about vpcNetworks which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -5512,7 +5620,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about vpcNetworks which are attached to routingInstance
+       * List of the info about vpcNetworks which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -5532,7 +5640,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about vpcNetworks which are attached to routingInstance
+       * List of the info about vpcNetworks which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -5553,7 +5661,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about vpcNetworks which are attached to routingInstance
+       * List of the info about vpcNetworks which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -5571,7 +5679,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about vpcNetworks which are attached to routingInstance
+       * List of the info about vpcNetworks which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -5589,7 +5697,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about vpcNetworks which are attached to routingInstance
+       * List of the info about vpcNetworks which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -5608,7 +5716,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about vpcNetworks which are attached to routingInstance
+       * List of the info about vpcNetworks which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -5625,7 +5733,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about vpcNetworks which are attached to routingInstance
+       * List of the info about vpcNetworks which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -5642,7 +5750,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about vpcNetworks which are attached to routingInstance
+       * List of the info about vpcNetworks which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -5653,7 +5761,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about vpcNetworks which are attached to routingInstance
+       * List of the info about vpcNetworks which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -5667,7 +5775,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about vpcNetworks which are attached to routingInstance
+       * List of the info about vpcNetworks which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -5682,7 +5790,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about vpcNetworks which are attached to routingInstance
+       * List of the info about vpcNetworks which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -5693,7 +5801,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about vpcNetworks which are attached to routingInstance
+       * List of the info about vpcNetworks which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -5705,7 +5813,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about vpcNetworks which are attached to routingInstance
+       * List of the info about vpcNetworks which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcInfo vpc_info = 7;</code>
@@ -5743,7 +5851,7 @@ public final class RoutingInstanceOuterClass {
 
       /**
        * <pre>
-       * List of the info about privateConnections which are attached to routingInstance
+       * List of the info about privateConnections which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -5757,7 +5865,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about privateConnections which are attached to routingInstance
+       * List of the info about privateConnections which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -5771,7 +5879,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about privateConnections which are attached to routingInstance
+       * List of the info about privateConnections which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -5785,7 +5893,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about privateConnections which are attached to routingInstance
+       * List of the info about privateConnections which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -5806,7 +5914,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about privateConnections which are attached to routingInstance
+       * List of the info about privateConnections which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -5824,7 +5932,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about privateConnections which are attached to routingInstance
+       * List of the info about privateConnections which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -5844,7 +5952,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about privateConnections which are attached to routingInstance
+       * List of the info about privateConnections which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -5865,7 +5973,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about privateConnections which are attached to routingInstance
+       * List of the info about privateConnections which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -5883,7 +5991,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about privateConnections which are attached to routingInstance
+       * List of the info about privateConnections which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -5901,7 +6009,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about privateConnections which are attached to routingInstance
+       * List of the info about privateConnections which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -5920,7 +6028,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about privateConnections which are attached to routingInstance
+       * List of the info about privateConnections which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -5937,7 +6045,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about privateConnections which are attached to routingInstance
+       * List of the info about privateConnections which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -5954,7 +6062,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about privateConnections which are attached to routingInstance
+       * List of the info about privateConnections which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -5965,7 +6073,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about privateConnections which are attached to routingInstance
+       * List of the info about privateConnections which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -5979,7 +6087,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about privateConnections which are attached to routingInstance
+       * List of the info about privateConnections which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -5994,7 +6102,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about privateConnections which are attached to routingInstance
+       * List of the info about privateConnections which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -6005,7 +6113,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about privateConnections which are attached to routingInstance
+       * List of the info about privateConnections which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -6017,7 +6125,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * List of the info about privateConnections which are attached to routingInstance
+       * List of the info about privateConnections which are attached to routingInstance.
        * </pre>
        *
        * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.CicPrivateConnectionInfo cic_private_connection_info = 8;</code>
@@ -6113,6 +6221,161 @@ public final class RoutingInstanceOuterClass {
         status_ = 0;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.Timestamp createdAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
+       * @return Whether the createdAt field is set.
+       */
+      public boolean hasCreatedAt() {
+        return createdAtBuilder_ != null || createdAt_ != null;
+      }
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
+       * @return The createdAt.
+       */
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        } else {
+          return createdAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdAt_ = value;
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (createdAt_ != null) {
+            createdAt_ =
+              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+          } else {
+            createdAt_ = value;
+          }
+          onChanged();
+        } else {
+          createdAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
+       */
+      public Builder clearCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+          onChanged();
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+        
+        onChanged();
+        return getCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+        if (createdAtBuilder_ != null) {
+          return createdAtBuilder_.getMessageOrBuilder();
+        } else {
+          return createdAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        }
+      }
+      /**
+       * <pre>
+       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedAtFieldBuilder() {
+        if (createdAtBuilder_ == null) {
+          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          createdAt_ = null;
+        }
+        return createdAtBuilder_;
       }
 
       private com.google.protobuf.MapField<
@@ -6402,43 +6665,46 @@ public final class RoutingInstanceOuterClass {
     java.lang.String[] descriptorData = {
       "\n2yandex/cloud/cloudrouter/v1/routing_in" +
       "stance.proto\022\033yandex.cloud.cloudrouter.v" +
-      "1\"\204\007\n\017RoutingInstance\022\n\n\002id\030\001 \001(\t\022\014\n\004nam" +
-      "e\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\021\n\tfolder_i" +
-      "d\030\005 \001(\t\022\021\n\tregion_id\030\006 \001(\t\022F\n\010vpc_info\030\007" +
-      " \003(\01324.yandex.cloud.cloudrouter.v1.Routi" +
-      "ngInstance.VpcInfo\022j\n\033cic_private_connec" +
-      "tion_info\030\010 \003(\0132E.yandex.cloud.cloudrout" +
-      "er.v1.RoutingInstance.CicPrivateConnecti" +
-      "onInfo\022C\n\006status\030\t \001(\01623.yandex.cloud.cl" +
-      "oudrouter.v1.RoutingInstance.Status\022H\n\006l" +
-      "abels\030\030 \003(\01328.yandex.cloud.cloudrouter.v" +
-      "1.RoutingInstance.LabelsEntry\032-\n\013LabelsE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032=\n\030" +
-      "CicPrivateConnectionInfo\022!\n\031cic_private_" +
-      "connection_id\030\001 \001(\t\032k\n\007VpcInfo\022\026\n\016vpc_ne" +
-      "twork_id\030\001 \001(\t\022H\n\010az_infos\030\002 \003(\01326.yande" +
-      "x.cloud.cloudrouter.v1.RoutingInstance.V" +
-      "pcAzInfo\032b\n\tVpcAzInfo\022O\n\013manual_info\030\002 \001" +
-      "(\0132:.yandex.cloud.cloudrouter.v1.Routing" +
-      "Instance.VpcManualInfoJ\004\010\001\020\002\0326\n\rVpcManua" +
-      "lInfo\022\r\n\005az_id\030\001 \001(\t\022\020\n\010prefixes\030\005 \003(\tJ\004" +
-      "\010\002\020\005\"V\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014" +
-      "\n\010CREATING\020\001\022\014\n\010UPDATING\020\002\022\014\n\010DELETING\020\003" +
-      "\022\n\n\006ACTIVE\020\004J\004\010\004\020\005J\004\010\n\020\030Bn\n\037yandex.cloud" +
-      ".api.cloudrouter.v1ZKgithub.com/yandex-c" +
-      "loud/go-genproto/yandex/cloud/cloudroute" +
-      "r/v1;cloudrouterb\006proto3"
+      "1\032\037google/protobuf/timestamp.proto\"\272\007\n\017R" +
+      "outingInstance\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t" +
+      "\022\023\n\013description\030\003 \001(\t\022\021\n\tfolder_id\030\005 \001(\t" +
+      "\022\021\n\tregion_id\030\006 \001(\t\022F\n\010vpc_info\030\007 \003(\01324." +
+      "yandex.cloud.cloudrouter.v1.RoutingInsta" +
+      "nce.VpcInfo\022j\n\033cic_private_connection_in" +
+      "fo\030\010 \003(\0132E.yandex.cloud.cloudrouter.v1.R" +
+      "outingInstance.CicPrivateConnectionInfo\022" +
+      "C\n\006status\030\t \001(\01623.yandex.cloud.cloudrout" +
+      "er.v1.RoutingInstance.Status\022.\n\ncreated_" +
+      "at\030\013 \001(\0132\032.google.protobuf.Timestamp\022H\n\006" +
+      "labels\030\030 \003(\01328.yandex.cloud.cloudrouter." +
+      "v1.RoutingInstance.LabelsEntry\032-\n\013Labels" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032=\n" +
+      "\030CicPrivateConnectionInfo\022!\n\031cic_private" +
+      "_connection_id\030\001 \001(\t\032k\n\007VpcInfo\022\026\n\016vpc_n" +
+      "etwork_id\030\001 \001(\t\022H\n\010az_infos\030\002 \003(\01326.yand" +
+      "ex.cloud.cloudrouter.v1.RoutingInstance." +
+      "VpcAzInfo\032b\n\tVpcAzInfo\022O\n\013manual_info\030\002 " +
+      "\001(\0132:.yandex.cloud.cloudrouter.v1.Routin" +
+      "gInstance.VpcManualInfoJ\004\010\001\020\002\0326\n\rVpcManu" +
+      "alInfo\022\r\n\005az_id\030\001 \001(\t\022\020\n\010prefixes\030\005 \003(\tJ" +
+      "\004\010\002\020\005\"V\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022" +
+      "\014\n\010CREATING\020\001\022\014\n\010UPDATING\020\002\022\014\n\010DELETING\020" +
+      "\003\022\n\n\006ACTIVE\020\004J\004\010\004\020\005J\004\010\n\020\013J\004\010\014\020\030Bn\n\037yande" +
+      "x.cloud.api.cloudrouter.v1ZKgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/clo" +
+      "udrouter/v1;cloudrouterb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_yandex_cloud_cloudrouter_v1_RoutingInstance_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_cloudrouter_v1_RoutingInstance_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cloudrouter_v1_RoutingInstance_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "FolderId", "RegionId", "VpcInfo", "CicPrivateConnectionInfo", "Status", "Labels", });
+        new java.lang.String[] { "Id", "Name", "Description", "FolderId", "RegionId", "VpcInfo", "CicPrivateConnectionInfo", "Status", "CreatedAt", "Labels", });
     internal_static_yandex_cloud_cloudrouter_v1_RoutingInstance_LabelsEntry_descriptor =
       internal_static_yandex_cloud_cloudrouter_v1_RoutingInstance_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_cloudrouter_v1_RoutingInstance_LabelsEntry_fieldAccessorTable = new
@@ -6469,6 +6735,7 @@ public final class RoutingInstanceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cloudrouter_v1_RoutingInstance_VpcManualInfo_descriptor,
         new java.lang.String[] { "AzId", "Prefixes", });
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

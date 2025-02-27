@@ -10124,70 +10124,88 @@ public final class ChannelServiceOuterClass {
       "proto\022\025yandex.cloud.video.v1\032\034google/api" +
       "/annotations.proto\032 google/protobuf/fiel" +
       "d_mask.proto\032 yandex/cloud/api/operation" +
-      ".proto\032&yandex/cloud/operation/operation" +
-      ".proto\032\035yandex/cloud/validation.proto\032#y" +
-      "andex/cloud/video/v1/channel.proto\"5\n\021Ge" +
-      "tChannelRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\"\255\001\n\023ListChannelsRequest\022%\n\017org" +
-      "anization_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\034\n\tpage" +
-      "_size\030d \001(\003B\t\372\3071\005<=100\022\035\n\npage_token\030e \001" +
-      "(\tB\t\212\3101\005<=200\022\020\n\010order_by\030f \001(\t\022\032\n\006filte" +
-      "r\030g \001(\tB\n\212\3101\006<=1000J\004\010\002\020d\"g\n\024ListChannel" +
-      "sResponse\0220\n\010channels\030\001 \003(\0132\036.yandex.clo" +
-      "ud.video.v1.Channel\022\027\n\017next_page_token\030d" +
-      " \001(\tJ\004\010\002\020d\"\255\002\n\024CreateChannelRequest\022%\n\017o" +
-      "rganization_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\023\n\005ti" +
-      "tle\030\002 \001(\tB\004\350\3071\001\022\023\n\013description\030\003 \001(\t\022\215\001\n" +
-      "\006labels\030\310\001 \003(\01327.yandex.cloud.video.v1.C" +
-      "reateChannelRequest.LabelsEntryBC\202\3101\004<=6" +
-      "4\212\3101\004<=63\362\3071\017[-_.@:/0-9a-z]*\262\3101\006\032\004<=63\262\310" +
-      "1\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\005\010\004\020\310\001\"+\n\025Cr" +
-      "eateChannelMetadata\022\022\n\nchannel_id\030\001 \001(\t\"" +
-      "\322\002\n\024UpdateChannelRequest\022 \n\nchannel_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022.\n\nfield_mask\030\002 \001(\0132\032" +
-      ".google.protobuf.FieldMask\022\r\n\005title\030\003 \001(" +
-      "\t\022\023\n\013description\030\004 \001(\t\022\215\001\n\006labels\030\310\001 \003(\013" +
-      "27.yandex.cloud.video.v1.UpdateChannelRe" +
-      "quest.LabelsEntryBC\202\3101\004<=64\212\3101\004<=63\362\3071\017[" +
-      "-_.@:/0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-" +
-      "9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t:\0028\001J\005\010\005\020\310\001\"+\n\025UpdateChannelMet" +
-      "adata\022\022\n\nchannel_id\030\001 \001(\t\"8\n\024DeleteChann" +
+      ".proto\032 yandex/cloud/access/access.proto" +
+      "\032&yandex/cloud/operation/operation.proto" +
+      "\032\035yandex/cloud/validation.proto\032#yandex/" +
+      "cloud/video/v1/channel.proto\"5\n\021GetChann" +
       "elRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\"+\n\025DeleteChannelMetadata\022\022\n\nchannel_" +
-      "id\030\001 \001(\t\"k\n\032BatchDeleteChannelsRequest\022%" +
-      "\n\017organization_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022&\n" +
-      "\013channel_ids\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<=50\"2\n" +
-      "\033BatchDeleteChannelsMetadata\022\023\n\013channel_" +
-      "ids\030\001 \003(\t2\317\007\n\016ChannelService\022x\n\003Get\022(.ya" +
-      "ndex.cloud.video.v1.GetChannelRequest\032\036." +
-      "yandex.cloud.video.v1.Channel\"\'\202\323\344\223\002!\022\037/" +
-      "video/v1/channels/{channel_id}\022{\n\004List\022*" +
-      ".yandex.cloud.video.v1.ListChannelsReque" +
-      "st\032+.yandex.cloud.video.v1.ListChannelsR" +
-      "esponse\"\032\202\323\344\223\002\024\022\022/video/v1/channels\022\233\001\n\006" +
-      "Create\022+.yandex.cloud.video.v1.CreateCha" +
-      "nnelRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"A\202\323\344\223\002\027\"\022/video/v1/channels:\001*\262\322*" +
-      " \n\025CreateChannelMetadata\022\007Channel\022\250\001\n\006Up" +
-      "date\022+.yandex.cloud.video.v1.UpdateChann" +
-      "elRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"N\202\323\344\223\002$2\037/video/v1/channels/{channe" +
-      "l_id}:\001*\262\322* \n\025UpdateChannelMetadata\022\007Cha" +
-      "nnel\022\263\001\n\006Delete\022+.yandex.cloud.video.v1." +
-      "DeleteChannelRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"Y\202\323\344\223\002!*\037/video/v1/chann" +
-      "els/{channel_id}\262\322*.\n\025DeleteChannelMetad" +
-      "ata\022\025google.protobuf.Empty\022\306\001\n\013BatchDele" +
-      "te\0221.yandex.cloud.video.v1.BatchDeleteCh" +
-      "annelsRequest\032!.yandex.cloud.operation.O" +
-      "peration\"a\202\323\344\223\002#\"\036/video/v1/channels:bat" +
-      "chDelete:\001*\262\322*4\n\033BatchDeleteChannelsMeta" +
-      "data\022\025google.protobuf.EmptyB\\\n\031yandex.cl" +
-      "oud.api.video.v1Z?github.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/video/v1;vide" +
-      "ob\006proto3"
+      "=50\"\255\001\n\023ListChannelsRequest\022%\n\017organizat" +
+      "ion_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\034\n\tpage_size\030" +
+      "d \001(\003B\t\372\3071\005<=100\022\035\n\npage_token\030e \001(\tB\t\212\310" +
+      "1\005<=200\022\020\n\010order_by\030f \001(\t\022\032\n\006filter\030g \001(" +
+      "\tB\n\212\3101\006<=1000J\004\010\002\020d\"g\n\024ListChannelsRespo" +
+      "nse\0220\n\010channels\030\001 \003(\0132\036.yandex.cloud.vid" +
+      "eo.v1.Channel\022\027\n\017next_page_token\030d \001(\tJ\004" +
+      "\010\002\020d\"\255\002\n\024CreateChannelRequest\022%\n\017organiz" +
+      "ation_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\023\n\005title\030\002 " +
+      "\001(\tB\004\350\3071\001\022\023\n\013description\030\003 \001(\t\022\215\001\n\006label" +
+      "s\030\310\001 \003(\01327.yandex.cloud.video.v1.CreateC" +
+      "hannelRequest.LabelsEntryBC\202\3101\004<=64\212\3101\004<" +
+      "=63\362\3071\017[-_.@:/0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a" +
+      "-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\005\010\004\020\310\001\"+\n\025CreateCh" +
+      "annelMetadata\022\022\n\nchannel_id\030\001 \001(\t\"\322\002\n\024Up" +
+      "dateChannelRequest\022 \n\nchannel_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022.\n\nfield_mask\030\002 \001(\0132\032.googl" +
+      "e.protobuf.FieldMask\022\r\n\005title\030\003 \001(\t\022\023\n\013d" +
+      "escription\030\004 \001(\t\022\215\001\n\006labels\030\310\001 \003(\01327.yan" +
+      "dex.cloud.video.v1.UpdateChannelRequest." +
+      "LabelsEntryBC\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_.@:/" +
+      "0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*" +
+      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
+      "\001(\t:\0028\001J\005\010\005\020\310\001\"+\n\025UpdateChannelMetadata\022" +
+      "\022\n\nchannel_id\030\001 \001(\t\"8\n\024DeleteChannelRequ" +
+      "est\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n" +
+      "\025DeleteChannelMetadata\022\022\n\nchannel_id\030\001 \001" +
+      "(\t\"k\n\032BatchDeleteChannelsRequest\022%\n\017orga" +
+      "nization_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022&\n\013chann" +
+      "el_ids\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<=50\"2\n\033Batch" +
+      "DeleteChannelsMetadata\022\023\n\013channel_ids\030\001 " +
+      "\003(\t2\370\014\n\016ChannelService\022x\n\003Get\022(.yandex.c" +
+      "loud.video.v1.GetChannelRequest\032\036.yandex" +
+      ".cloud.video.v1.Channel\"\'\202\323\344\223\002!\022\037/video/" +
+      "v1/channels/{channel_id}\022{\n\004List\022*.yande" +
+      "x.cloud.video.v1.ListChannelsRequest\032+.y" +
+      "andex.cloud.video.v1.ListChannelsRespons" +
+      "e\"\032\202\323\344\223\002\024\022\022/video/v1/channels\022\233\001\n\006Create" +
+      "\022+.yandex.cloud.video.v1.CreateChannelRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"A\202\323\344\223\002\027\"\022/video/v1/channels:\001*\262\322* \n\025Cre" +
+      "ateChannelMetadata\022\007Channel\022\250\001\n\006Update\022+" +
+      ".yandex.cloud.video.v1.UpdateChannelRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"N" +
+      "\202\323\344\223\002$2\037/video/v1/channels/{channel_id}:" +
+      "\001*\262\322* \n\025UpdateChannelMetadata\022\007Channel\022\263" +
+      "\001\n\006Delete\022+.yandex.cloud.video.v1.Delete" +
+      "ChannelRequest\032!.yandex.cloud.operation." +
+      "Operation\"Y\202\323\344\223\002!*\037/video/v1/channels/{c" +
+      "hannel_id}\262\322*.\n\025DeleteChannelMetadata\022\025g" +
+      "oogle.protobuf.Empty\022\306\001\n\013BatchDelete\0221.y" +
+      "andex.cloud.video.v1.BatchDeleteChannels" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"a\202\323\344\223\002#\"\036/video/v1/channels:batchDele" +
+      "te:\001*\262\322*4\n\033BatchDeleteChannelsMetadata\022\025" +
+      "google.protobuf.Empty\022\262\001\n\022ListAccessBind" +
+      "ings\022..yandex.cloud.access.ListAccessBin" +
+      "dingsRequest\032/.yandex.cloud.access.ListA" +
+      "ccessBindingsResponse\";\202\323\344\223\0025\0223/video/v1" +
+      "/channels/{resource_id}:listAccessBindin" +
+      "gs\022\361\001\n\021SetAccessBindings\022-.yandex.cloud." +
+      "access.SetAccessBindingsRequest\032!.yandex" +
+      ".cloud.operation.Operation\"\211\001\202\323\344\223\0027\"2/vi" +
+      "deo/v1/channels/{resource_id}:setAccessB" +
+      "indings:\001*\262\322*H\n access.SetAccessBindings" +
+      "Metadata\022$access.AccessBindingsOperation" +
+      "Result\022\375\001\n\024UpdateAccessBindings\0220.yandex" +
+      ".cloud.access.UpdateAccessBindingsReques" +
+      "t\032!.yandex.cloud.operation.Operation\"\217\001\202" +
+      "\323\344\223\002:25/video/v1/channels/{resource_id}:" +
+      "updateAccessBindings:\001*\262\322*K\n#access.Upda" +
+      "teAccessBindingsMetadata\022$access.AccessB" +
+      "indingsOperationResultB\\\n\031yandex.cloud.a" +
+      "pi.video.v1Z?github.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/video/v1;videob\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10195,6 +10213,7 @@ public final class ChannelServiceOuterClass {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.access.Access.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.video.v1.ChannelOuterClass.getDescriptor(),
@@ -10292,6 +10311,7 @@ public final class ChannelServiceOuterClass {
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.access.Access.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.video.v1.ChannelOuterClass.getDescriptor();

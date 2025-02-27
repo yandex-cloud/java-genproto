@@ -633,7 +633,7 @@ public final class PrivateConnectionServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the folder to list privateConnections in.
+     * ID of the folder to list PrivateConnection resources.
      * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
@@ -643,7 +643,7 @@ public final class PrivateConnectionServiceOuterClass {
     java.lang.String getFolderId();
     /**
      * <pre>
-     * ID of the folder to list privateConnections in.
+     * ID of the folder to list PrivateConnection resources.
      * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
@@ -823,7 +823,7 @@ public final class PrivateConnectionServiceOuterClass {
     private volatile java.lang.Object folderId_;
     /**
      * <pre>
-     * ID of the folder to list privateConnections in.
+     * ID of the folder to list PrivateConnection resources.
      * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
@@ -845,7 +845,7 @@ public final class PrivateConnectionServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the folder to list privateConnections in.
+     * ID of the folder to list PrivateConnection resources.
      * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
@@ -1344,7 +1344,7 @@ public final class PrivateConnectionServiceOuterClass {
       private java.lang.Object folderId_ = "";
       /**
        * <pre>
-       * ID of the folder to list privateConnections in.
+       * ID of the folder to list PrivateConnection resources.
        * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
@@ -1365,7 +1365,7 @@ public final class PrivateConnectionServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder to list privateConnections in.
+       * ID of the folder to list PrivateConnection resources.
        * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
@@ -1387,7 +1387,7 @@ public final class PrivateConnectionServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder to list privateConnections in.
+       * ID of the folder to list PrivateConnection resources.
        * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
@@ -1407,7 +1407,7 @@ public final class PrivateConnectionServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder to list privateConnections in.
+       * ID of the folder to list PrivateConnection resources.
        * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
@@ -1422,7 +1422,7 @@ public final class PrivateConnectionServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder to list privateConnections in.
+       * ID of the folder to list PrivateConnection resources.
        * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
@@ -2899,6 +2899,13862 @@ public final class PrivateConnectionServiceOuterClass {
 
   }
 
+  public interface CreatePrivateConnectionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.CreatePrivateConnectionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Name of the privateConnection.
+     * The name must be unique within the folder.
+     * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of the privateConnection.
+     * The name must be unique within the folder.
+     * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Optional description of the privateConnection. 0-256 characters long.
+     * </pre>
+     *
+     * <code>string description = 2;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Optional description of the privateConnection. 0-256 characters long.
+     * </pre>
+     *
+     * <code>string description = 2;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * ID of the folder that the privateConnection belongs to.
+     * </pre>
+     *
+     * <code>string folder_id = 4;</code>
+     * @return The folderId.
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * ID of the folder that the privateConnection belongs to.
+     * </pre>
+     *
+     * <code>string folder_id = 4;</code>
+     * @return The bytes for folderId.
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
+
+    /**
+     * <pre>
+     * ID of the region that the privateConnection belongs to.
+     * </pre>
+     *
+     * <code>string region_id = 5;</code>
+     * @return The regionId.
+     */
+    java.lang.String getRegionId();
+    /**
+     * <pre>
+     * ID of the region that the privateConnection belongs to.
+     * </pre>
+     *
+     * <code>string region_id = 5;</code>
+     * @return The bytes for regionId.
+     */
+    com.google.protobuf.ByteString
+        getRegionIdBytes();
+
+    /**
+     * <pre>
+     * ID of the trunk_connection that the privateConnection belongs to.
+     * </pre>
+     *
+     * <code>string trunk_connection_id = 6;</code>
+     * @return The trunkConnectionId.
+     */
+    java.lang.String getTrunkConnectionId();
+    /**
+     * <pre>
+     * ID of the trunk_connection that the privateConnection belongs to.
+     * </pre>
+     *
+     * <code>string trunk_connection_id = 6;</code>
+     * @return The bytes for trunkConnectionId.
+     */
+    com.google.protobuf.ByteString
+        getTrunkConnectionIdBytes();
+
+    /**
+     * <pre>
+     * VLAN_ID that the privateConnection uses in multiplexing.
+     * Not used in connections over partners-II
+     * Value range: [1, 4095]
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+     * @return Whether the vlanId field is set.
+     */
+    boolean hasVlanId();
+    /**
+     * <pre>
+     * VLAN_ID that the privateConnection uses in multiplexing.
+     * Not used in connections over partners-II
+     * Value range: [1, 4095]
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+     * @return The vlanId.
+     */
+    com.google.protobuf.Int64Value getVlanId();
+    /**
+     * <pre>
+     * VLAN_ID that the privateConnection uses in multiplexing.
+     * Not used in connections over partners-II
+     * Value range: [1, 4095]
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getVlanIdOrBuilder();
+
+    /**
+     * <pre>
+     * IPv4 peering config of connection
+     * </pre>
+     *
+     * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+     * @return Whether the ipv4Peering field is set.
+     */
+    boolean hasIpv4Peering();
+    /**
+     * <pre>
+     * IPv4 peering config of connection
+     * </pre>
+     *
+     * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+     * @return The ipv4Peering.
+     */
+    yandex.cloud.api.cic.v1.PeeringOuterClass.Peering getIpv4Peering();
+    /**
+     * <pre>
+     * IPv4 peering config of connection
+     * </pre>
+     *
+     * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+     */
+    yandex.cloud.api.cic.v1.PeeringOuterClass.PeeringOrBuilder getIpv4PeeringOrBuilder();
+
+    /**
+     * <pre>
+     * IPv4 StaticRoute config of connection
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+     */
+    java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute> 
+        getIpv4StaticRoutesList();
+    /**
+     * <pre>
+     * IPv4 StaticRoute config of connection
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+     */
+    yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute getIpv4StaticRoutes(int index);
+    /**
+     * <pre>
+     * IPv4 StaticRoute config of connection
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+     */
+    int getIpv4StaticRoutesCount();
+    /**
+     * <pre>
+     * IPv4 StaticRoute config of connection
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder> 
+        getIpv4StaticRoutesOrBuilderList();
+    /**
+     * <pre>
+     * IPv4 StaticRoute config of connection
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+     */
+    yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder getIpv4StaticRoutesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cic.v1.CreatePrivateConnectionRequest}
+   */
+  public static final class CreatePrivateConnectionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cic.v1.CreatePrivateConnectionRequest)
+      CreatePrivateConnectionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreatePrivateConnectionRequest.newBuilder() to construct.
+    private CreatePrivateConnectionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreatePrivateConnectionRequest() {
+      name_ = "";
+      description_ = "";
+      folderId_ = "";
+      regionId_ = "";
+      trunkConnectionId_ = "";
+      ipv4StaticRoutes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreatePrivateConnectionRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CreatePrivateConnectionRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              folderId_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              regionId_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              trunkConnectionId_ = s;
+              break;
+            }
+            case 58: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (vlanId_ != null) {
+                subBuilder = vlanId_.toBuilder();
+              }
+              vlanId_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(vlanId_);
+                vlanId_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 82: {
+              yandex.cloud.api.cic.v1.PeeringOuterClass.Peering.Builder subBuilder = null;
+              if (ipv4Peering_ != null) {
+                subBuilder = ipv4Peering_.toBuilder();
+              }
+              ipv4Peering_ = input.readMessage(yandex.cloud.api.cic.v1.PeeringOuterClass.Peering.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(ipv4Peering_);
+                ipv4Peering_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 154: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                ipv4StaticRoutes_ = new java.util.ArrayList<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              ipv4StaticRoutes_.add(
+                  input.readMessage(yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.parser(), extensionRegistry));
+              break;
+            }
+            case 210: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          ipv4StaticRoutes_ = java.util.Collections.unmodifiableList(ipv4StaticRoutes_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionRequest_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 26:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Name of the privateConnection.
+     * The name must be unique within the folder.
+     * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the privateConnection.
+     * The name must be unique within the folder.
+     * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Optional description of the privateConnection. 0-256 characters long.
+     * </pre>
+     *
+     * <code>string description = 2;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Optional description of the privateConnection. 0-256 characters long.
+     * </pre>
+     *
+     * <code>string description = 2;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FOLDER_ID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object folderId_;
+    /**
+     * <pre>
+     * ID of the folder that the privateConnection belongs to.
+     * </pre>
+     *
+     * <code>string folder_id = 4;</code>
+     * @return The folderId.
+     */
+    @java.lang.Override
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        folderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the folder that the privateConnection belongs to.
+     * </pre>
+     *
+     * <code>string folder_id = 4;</code>
+     * @return The bytes for folderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        folderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REGION_ID_FIELD_NUMBER = 5;
+    private volatile java.lang.Object regionId_;
+    /**
+     * <pre>
+     * ID of the region that the privateConnection belongs to.
+     * </pre>
+     *
+     * <code>string region_id = 5;</code>
+     * @return The regionId.
+     */
+    @java.lang.Override
+    public java.lang.String getRegionId() {
+      java.lang.Object ref = regionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        regionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the region that the privateConnection belongs to.
+     * </pre>
+     *
+     * <code>string region_id = 5;</code>
+     * @return The bytes for regionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegionIdBytes() {
+      java.lang.Object ref = regionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        regionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRUNK_CONNECTION_ID_FIELD_NUMBER = 6;
+    private volatile java.lang.Object trunkConnectionId_;
+    /**
+     * <pre>
+     * ID of the trunk_connection that the privateConnection belongs to.
+     * </pre>
+     *
+     * <code>string trunk_connection_id = 6;</code>
+     * @return The trunkConnectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getTrunkConnectionId() {
+      java.lang.Object ref = trunkConnectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        trunkConnectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the trunk_connection that the privateConnection belongs to.
+     * </pre>
+     *
+     * <code>string trunk_connection_id = 6;</code>
+     * @return The bytes for trunkConnectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTrunkConnectionIdBytes() {
+      java.lang.Object ref = trunkConnectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        trunkConnectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VLAN_ID_FIELD_NUMBER = 7;
+    private com.google.protobuf.Int64Value vlanId_;
+    /**
+     * <pre>
+     * VLAN_ID that the privateConnection uses in multiplexing.
+     * Not used in connections over partners-II
+     * Value range: [1, 4095]
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+     * @return Whether the vlanId field is set.
+     */
+    @java.lang.Override
+    public boolean hasVlanId() {
+      return vlanId_ != null;
+    }
+    /**
+     * <pre>
+     * VLAN_ID that the privateConnection uses in multiplexing.
+     * Not used in connections over partners-II
+     * Value range: [1, 4095]
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+     * @return The vlanId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getVlanId() {
+      return vlanId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : vlanId_;
+    }
+    /**
+     * <pre>
+     * VLAN_ID that the privateConnection uses in multiplexing.
+     * Not used in connections over partners-II
+     * Value range: [1, 4095]
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getVlanIdOrBuilder() {
+      return getVlanId();
+    }
+
+    public static final int IPV4_PEERING_FIELD_NUMBER = 10;
+    private yandex.cloud.api.cic.v1.PeeringOuterClass.Peering ipv4Peering_;
+    /**
+     * <pre>
+     * IPv4 peering config of connection
+     * </pre>
+     *
+     * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+     * @return Whether the ipv4Peering field is set.
+     */
+    @java.lang.Override
+    public boolean hasIpv4Peering() {
+      return ipv4Peering_ != null;
+    }
+    /**
+     * <pre>
+     * IPv4 peering config of connection
+     * </pre>
+     *
+     * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+     * @return The ipv4Peering.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PeeringOuterClass.Peering getIpv4Peering() {
+      return ipv4Peering_ == null ? yandex.cloud.api.cic.v1.PeeringOuterClass.Peering.getDefaultInstance() : ipv4Peering_;
+    }
+    /**
+     * <pre>
+     * IPv4 peering config of connection
+     * </pre>
+     *
+     * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PeeringOuterClass.PeeringOrBuilder getIpv4PeeringOrBuilder() {
+      return getIpv4Peering();
+    }
+
+    public static final int IPV4_STATIC_ROUTES_FIELD_NUMBER = 19;
+    private java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute> ipv4StaticRoutes_;
+    /**
+     * <pre>
+     * IPv4 StaticRoute config of connection
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute> getIpv4StaticRoutesList() {
+      return ipv4StaticRoutes_;
+    }
+    /**
+     * <pre>
+     * IPv4 StaticRoute config of connection
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder> 
+        getIpv4StaticRoutesOrBuilderList() {
+      return ipv4StaticRoutes_;
+    }
+    /**
+     * <pre>
+     * IPv4 StaticRoute config of connection
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+     */
+    @java.lang.Override
+    public int getIpv4StaticRoutesCount() {
+      return ipv4StaticRoutes_.size();
+    }
+    /**
+     * <pre>
+     * IPv4 StaticRoute config of connection
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute getIpv4StaticRoutes(int index) {
+      return ipv4StaticRoutes_.get(index);
+    }
+    /**
+     * <pre>
+     * IPv4 StaticRoute config of connection
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder getIpv4StaticRoutesOrBuilder(
+        int index) {
+      return ipv4StaticRoutes_.get(index);
+    }
+
+    public static final int LABELS_FIELD_NUMBER = 26;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, folderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, regionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(trunkConnectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, trunkConnectionId_);
+      }
+      if (vlanId_ != null) {
+        output.writeMessage(7, getVlanId());
+      }
+      if (ipv4Peering_ != null) {
+        output.writeMessage(10, getIpv4Peering());
+      }
+      for (int i = 0; i < ipv4StaticRoutes_.size(); i++) {
+        output.writeMessage(19, ipv4StaticRoutes_.get(i));
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          26);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, folderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, regionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(trunkConnectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, trunkConnectionId_);
+      }
+      if (vlanId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getVlanId());
+      }
+      if (ipv4Peering_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getIpv4Peering());
+      }
+      for (int i = 0; i < ipv4StaticRoutes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, ipv4StaticRoutes_.get(i));
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(26, labels__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest other = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getRegionId()
+          .equals(other.getRegionId())) return false;
+      if (!getTrunkConnectionId()
+          .equals(other.getTrunkConnectionId())) return false;
+      if (hasVlanId() != other.hasVlanId()) return false;
+      if (hasVlanId()) {
+        if (!getVlanId()
+            .equals(other.getVlanId())) return false;
+      }
+      if (hasIpv4Peering() != other.hasIpv4Peering()) return false;
+      if (hasIpv4Peering()) {
+        if (!getIpv4Peering()
+            .equals(other.getIpv4Peering())) return false;
+      }
+      if (!getIpv4StaticRoutesList()
+          .equals(other.getIpv4StaticRoutesList())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFolderId().hashCode();
+      hash = (37 * hash) + REGION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRegionId().hashCode();
+      hash = (37 * hash) + TRUNK_CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTrunkConnectionId().hashCode();
+      if (hasVlanId()) {
+        hash = (37 * hash) + VLAN_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getVlanId().hashCode();
+      }
+      if (hasIpv4Peering()) {
+        hash = (37 * hash) + IPV4_PEERING_FIELD_NUMBER;
+        hash = (53 * hash) + getIpv4Peering().hashCode();
+      }
+      if (getIpv4StaticRoutesCount() > 0) {
+        hash = (37 * hash) + IPV4_STATIC_ROUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getIpv4StaticRoutesList().hashCode();
+      }
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cic.v1.CreatePrivateConnectionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cic.v1.CreatePrivateConnectionRequest)
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionRequest_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 26:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 26:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getIpv4StaticRoutesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+
+        description_ = "";
+
+        folderId_ = "";
+
+        regionId_ = "";
+
+        trunkConnectionId_ = "";
+
+        if (vlanIdBuilder_ == null) {
+          vlanId_ = null;
+        } else {
+          vlanId_ = null;
+          vlanIdBuilder_ = null;
+        }
+        if (ipv4PeeringBuilder_ == null) {
+          ipv4Peering_ = null;
+        } else {
+          ipv4Peering_ = null;
+          ipv4PeeringBuilder_ = null;
+        }
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ipv4StaticRoutes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          ipv4StaticRoutesBuilder_.clear();
+        }
+        internalGetMutableLabels().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest build() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest buildPartial() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest result = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.name_ = name_;
+        result.description_ = description_;
+        result.folderId_ = folderId_;
+        result.regionId_ = regionId_;
+        result.trunkConnectionId_ = trunkConnectionId_;
+        if (vlanIdBuilder_ == null) {
+          result.vlanId_ = vlanId_;
+        } else {
+          result.vlanId_ = vlanIdBuilder_.build();
+        }
+        if (ipv4PeeringBuilder_ == null) {
+          result.ipv4Peering_ = ipv4Peering_;
+        } else {
+          result.ipv4Peering_ = ipv4PeeringBuilder_.build();
+        }
+        if (ipv4StaticRoutesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            ipv4StaticRoutes_ = java.util.Collections.unmodifiableList(ipv4StaticRoutes_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.ipv4StaticRoutes_ = ipv4StaticRoutes_;
+        } else {
+          result.ipv4StaticRoutes_ = ipv4StaticRoutesBuilder_.build();
+        }
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest) {
+          return mergeFrom((yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest other) {
+        if (other == yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        if (!other.getFolderId().isEmpty()) {
+          folderId_ = other.folderId_;
+          onChanged();
+        }
+        if (!other.getRegionId().isEmpty()) {
+          regionId_ = other.regionId_;
+          onChanged();
+        }
+        if (!other.getTrunkConnectionId().isEmpty()) {
+          trunkConnectionId_ = other.trunkConnectionId_;
+          onChanged();
+        }
+        if (other.hasVlanId()) {
+          mergeVlanId(other.getVlanId());
+        }
+        if (other.hasIpv4Peering()) {
+          mergeIpv4Peering(other.getIpv4Peering());
+        }
+        if (ipv4StaticRoutesBuilder_ == null) {
+          if (!other.ipv4StaticRoutes_.isEmpty()) {
+            if (ipv4StaticRoutes_.isEmpty()) {
+              ipv4StaticRoutes_ = other.ipv4StaticRoutes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureIpv4StaticRoutesIsMutable();
+              ipv4StaticRoutes_.addAll(other.ipv4StaticRoutes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.ipv4StaticRoutes_.isEmpty()) {
+            if (ipv4StaticRoutesBuilder_.isEmpty()) {
+              ipv4StaticRoutesBuilder_.dispose();
+              ipv4StaticRoutesBuilder_ = null;
+              ipv4StaticRoutes_ = other.ipv4StaticRoutes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              ipv4StaticRoutesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getIpv4StaticRoutesFieldBuilder() : null;
+            } else {
+              ipv4StaticRoutesBuilder_.addAllMessages(other.ipv4StaticRoutes_);
+            }
+          }
+        }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name of the privateConnection.
+       * The name must be unique within the folder.
+       * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the privateConnection.
+       * The name must be unique within the folder.
+       * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the privateConnection.
+       * The name must be unique within the folder.
+       * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the privateConnection.
+       * The name must be unique within the folder.
+       * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the privateConnection.
+       * The name must be unique within the folder.
+       * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Optional description of the privateConnection. 0-256 characters long.
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional description of the privateConnection. 0-256 characters long.
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional description of the privateConnection. 0-256 characters long.
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional description of the privateConnection. 0-256 characters long.
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional description of the privateConnection. 0-256 characters long.
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object folderId_ = "";
+      /**
+       * <pre>
+       * ID of the folder that the privateConnection belongs to.
+       * </pre>
+       *
+       * <code>string folder_id = 4;</code>
+       * @return The folderId.
+       */
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder that the privateConnection belongs to.
+       * </pre>
+       *
+       * <code>string folder_id = 4;</code>
+       * @return The bytes for folderId.
+       */
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder that the privateConnection belongs to.
+       * </pre>
+       *
+       * <code>string folder_id = 4;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder that the privateConnection belongs to.
+       * </pre>
+       *
+       * <code>string folder_id = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFolderId() {
+        
+        folderId_ = getDefaultInstance().getFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder that the privateConnection belongs to.
+       * </pre>
+       *
+       * <code>string folder_id = 4;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object regionId_ = "";
+      /**
+       * <pre>
+       * ID of the region that the privateConnection belongs to.
+       * </pre>
+       *
+       * <code>string region_id = 5;</code>
+       * @return The regionId.
+       */
+      public java.lang.String getRegionId() {
+        java.lang.Object ref = regionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          regionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the region that the privateConnection belongs to.
+       * </pre>
+       *
+       * <code>string region_id = 5;</code>
+       * @return The bytes for regionId.
+       */
+      public com.google.protobuf.ByteString
+          getRegionIdBytes() {
+        java.lang.Object ref = regionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          regionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the region that the privateConnection belongs to.
+       * </pre>
+       *
+       * <code>string region_id = 5;</code>
+       * @param value The regionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        regionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the region that the privateConnection belongs to.
+       * </pre>
+       *
+       * <code>string region_id = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegionId() {
+        
+        regionId_ = getDefaultInstance().getRegionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the region that the privateConnection belongs to.
+       * </pre>
+       *
+       * <code>string region_id = 5;</code>
+       * @param value The bytes for regionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        regionId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object trunkConnectionId_ = "";
+      /**
+       * <pre>
+       * ID of the trunk_connection that the privateConnection belongs to.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 6;</code>
+       * @return The trunkConnectionId.
+       */
+      public java.lang.String getTrunkConnectionId() {
+        java.lang.Object ref = trunkConnectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          trunkConnectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the trunk_connection that the privateConnection belongs to.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 6;</code>
+       * @return The bytes for trunkConnectionId.
+       */
+      public com.google.protobuf.ByteString
+          getTrunkConnectionIdBytes() {
+        java.lang.Object ref = trunkConnectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          trunkConnectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the trunk_connection that the privateConnection belongs to.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 6;</code>
+       * @param value The trunkConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrunkConnectionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        trunkConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the trunk_connection that the privateConnection belongs to.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTrunkConnectionId() {
+        
+        trunkConnectionId_ = getDefaultInstance().getTrunkConnectionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the trunk_connection that the privateConnection belongs to.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 6;</code>
+       * @param value The bytes for trunkConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrunkConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        trunkConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value vlanId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> vlanIdBuilder_;
+      /**
+       * <pre>
+       * VLAN_ID that the privateConnection uses in multiplexing.
+       * Not used in connections over partners-II
+       * Value range: [1, 4095]
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+       * @return Whether the vlanId field is set.
+       */
+      public boolean hasVlanId() {
+        return vlanIdBuilder_ != null || vlanId_ != null;
+      }
+      /**
+       * <pre>
+       * VLAN_ID that the privateConnection uses in multiplexing.
+       * Not used in connections over partners-II
+       * Value range: [1, 4095]
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+       * @return The vlanId.
+       */
+      public com.google.protobuf.Int64Value getVlanId() {
+        if (vlanIdBuilder_ == null) {
+          return vlanId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : vlanId_;
+        } else {
+          return vlanIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * VLAN_ID that the privateConnection uses in multiplexing.
+       * Not used in connections over partners-II
+       * Value range: [1, 4095]
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+       */
+      public Builder setVlanId(com.google.protobuf.Int64Value value) {
+        if (vlanIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          vlanId_ = value;
+          onChanged();
+        } else {
+          vlanIdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * VLAN_ID that the privateConnection uses in multiplexing.
+       * Not used in connections over partners-II
+       * Value range: [1, 4095]
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+       */
+      public Builder setVlanId(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (vlanIdBuilder_ == null) {
+          vlanId_ = builderForValue.build();
+          onChanged();
+        } else {
+          vlanIdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * VLAN_ID that the privateConnection uses in multiplexing.
+       * Not used in connections over partners-II
+       * Value range: [1, 4095]
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+       */
+      public Builder mergeVlanId(com.google.protobuf.Int64Value value) {
+        if (vlanIdBuilder_ == null) {
+          if (vlanId_ != null) {
+            vlanId_ =
+              com.google.protobuf.Int64Value.newBuilder(vlanId_).mergeFrom(value).buildPartial();
+          } else {
+            vlanId_ = value;
+          }
+          onChanged();
+        } else {
+          vlanIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * VLAN_ID that the privateConnection uses in multiplexing.
+       * Not used in connections over partners-II
+       * Value range: [1, 4095]
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+       */
+      public Builder clearVlanId() {
+        if (vlanIdBuilder_ == null) {
+          vlanId_ = null;
+          onChanged();
+        } else {
+          vlanId_ = null;
+          vlanIdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * VLAN_ID that the privateConnection uses in multiplexing.
+       * Not used in connections over partners-II
+       * Value range: [1, 4095]
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getVlanIdBuilder() {
+        
+        onChanged();
+        return getVlanIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * VLAN_ID that the privateConnection uses in multiplexing.
+       * Not used in connections over partners-II
+       * Value range: [1, 4095]
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getVlanIdOrBuilder() {
+        if (vlanIdBuilder_ != null) {
+          return vlanIdBuilder_.getMessageOrBuilder();
+        } else {
+          return vlanId_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : vlanId_;
+        }
+      }
+      /**
+       * <pre>
+       * VLAN_ID that the privateConnection uses in multiplexing.
+       * Not used in connections over partners-II
+       * Value range: [1, 4095]
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getVlanIdFieldBuilder() {
+        if (vlanIdBuilder_ == null) {
+          vlanIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getVlanId(),
+                  getParentForChildren(),
+                  isClean());
+          vlanId_ = null;
+        }
+        return vlanIdBuilder_;
+      }
+
+      private yandex.cloud.api.cic.v1.PeeringOuterClass.Peering ipv4Peering_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cic.v1.PeeringOuterClass.Peering, yandex.cloud.api.cic.v1.PeeringOuterClass.Peering.Builder, yandex.cloud.api.cic.v1.PeeringOuterClass.PeeringOrBuilder> ipv4PeeringBuilder_;
+      /**
+       * <pre>
+       * IPv4 peering config of connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+       * @return Whether the ipv4Peering field is set.
+       */
+      public boolean hasIpv4Peering() {
+        return ipv4PeeringBuilder_ != null || ipv4Peering_ != null;
+      }
+      /**
+       * <pre>
+       * IPv4 peering config of connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+       * @return The ipv4Peering.
+       */
+      public yandex.cloud.api.cic.v1.PeeringOuterClass.Peering getIpv4Peering() {
+        if (ipv4PeeringBuilder_ == null) {
+          return ipv4Peering_ == null ? yandex.cloud.api.cic.v1.PeeringOuterClass.Peering.getDefaultInstance() : ipv4Peering_;
+        } else {
+          return ipv4PeeringBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 peering config of connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+       */
+      public Builder setIpv4Peering(yandex.cloud.api.cic.v1.PeeringOuterClass.Peering value) {
+        if (ipv4PeeringBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ipv4Peering_ = value;
+          onChanged();
+        } else {
+          ipv4PeeringBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 peering config of connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+       */
+      public Builder setIpv4Peering(
+          yandex.cloud.api.cic.v1.PeeringOuterClass.Peering.Builder builderForValue) {
+        if (ipv4PeeringBuilder_ == null) {
+          ipv4Peering_ = builderForValue.build();
+          onChanged();
+        } else {
+          ipv4PeeringBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 peering config of connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+       */
+      public Builder mergeIpv4Peering(yandex.cloud.api.cic.v1.PeeringOuterClass.Peering value) {
+        if (ipv4PeeringBuilder_ == null) {
+          if (ipv4Peering_ != null) {
+            ipv4Peering_ =
+              yandex.cloud.api.cic.v1.PeeringOuterClass.Peering.newBuilder(ipv4Peering_).mergeFrom(value).buildPartial();
+          } else {
+            ipv4Peering_ = value;
+          }
+          onChanged();
+        } else {
+          ipv4PeeringBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 peering config of connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+       */
+      public Builder clearIpv4Peering() {
+        if (ipv4PeeringBuilder_ == null) {
+          ipv4Peering_ = null;
+          onChanged();
+        } else {
+          ipv4Peering_ = null;
+          ipv4PeeringBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 peering config of connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+       */
+      public yandex.cloud.api.cic.v1.PeeringOuterClass.Peering.Builder getIpv4PeeringBuilder() {
+        
+        onChanged();
+        return getIpv4PeeringFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * IPv4 peering config of connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+       */
+      public yandex.cloud.api.cic.v1.PeeringOuterClass.PeeringOrBuilder getIpv4PeeringOrBuilder() {
+        if (ipv4PeeringBuilder_ != null) {
+          return ipv4PeeringBuilder_.getMessageOrBuilder();
+        } else {
+          return ipv4Peering_ == null ?
+              yandex.cloud.api.cic.v1.PeeringOuterClass.Peering.getDefaultInstance() : ipv4Peering_;
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 peering config of connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cic.v1.PeeringOuterClass.Peering, yandex.cloud.api.cic.v1.PeeringOuterClass.Peering.Builder, yandex.cloud.api.cic.v1.PeeringOuterClass.PeeringOrBuilder> 
+          getIpv4PeeringFieldBuilder() {
+        if (ipv4PeeringBuilder_ == null) {
+          ipv4PeeringBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.cic.v1.PeeringOuterClass.Peering, yandex.cloud.api.cic.v1.PeeringOuterClass.Peering.Builder, yandex.cloud.api.cic.v1.PeeringOuterClass.PeeringOrBuilder>(
+                  getIpv4Peering(),
+                  getParentForChildren(),
+                  isClean());
+          ipv4Peering_ = null;
+        }
+        return ipv4PeeringBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute> ipv4StaticRoutes_ =
+        java.util.Collections.emptyList();
+      private void ensureIpv4StaticRoutesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          ipv4StaticRoutes_ = new java.util.ArrayList<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute>(ipv4StaticRoutes_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder> ipv4StaticRoutesBuilder_;
+
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute> getIpv4StaticRoutesList() {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(ipv4StaticRoutes_);
+        } else {
+          return ipv4StaticRoutesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public int getIpv4StaticRoutesCount() {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          return ipv4StaticRoutes_.size();
+        } else {
+          return ipv4StaticRoutesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute getIpv4StaticRoutes(int index) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          return ipv4StaticRoutes_.get(index);
+        } else {
+          return ipv4StaticRoutesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public Builder setIpv4StaticRoutes(
+          int index, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute value) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.set(index, value);
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public Builder setIpv4StaticRoutes(
+          int index, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder builderForValue) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public Builder addIpv4StaticRoutes(yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute value) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.add(value);
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public Builder addIpv4StaticRoutes(
+          int index, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute value) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.add(index, value);
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public Builder addIpv4StaticRoutes(
+          yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder builderForValue) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public Builder addIpv4StaticRoutes(
+          int index, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder builderForValue) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public Builder addAllIpv4StaticRoutes(
+          java.lang.Iterable<? extends yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute> values) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ensureIpv4StaticRoutesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, ipv4StaticRoutes_);
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public Builder clearIpv4StaticRoutes() {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ipv4StaticRoutes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public Builder removeIpv4StaticRoutes(int index) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.remove(index);
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder getIpv4StaticRoutesBuilder(
+          int index) {
+        return getIpv4StaticRoutesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder getIpv4StaticRoutesOrBuilder(
+          int index) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          return ipv4StaticRoutes_.get(index);  } else {
+          return ipv4StaticRoutesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder> 
+           getIpv4StaticRoutesOrBuilderList() {
+        if (ipv4StaticRoutesBuilder_ != null) {
+          return ipv4StaticRoutesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(ipv4StaticRoutes_);
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder addIpv4StaticRoutesBuilder() {
+        return getIpv4StaticRoutesFieldBuilder().addBuilder(
+            yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder addIpv4StaticRoutesBuilder(
+          int index) {
+        return getIpv4StaticRoutesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder> 
+           getIpv4StaticRoutesBuilderList() {
+        return getIpv4StaticRoutesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder> 
+          getIpv4StaticRoutesFieldBuilder() {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ipv4StaticRoutesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder>(
+                  ipv4StaticRoutes_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          ipv4StaticRoutes_ = null;
+        }
+        return ipv4StaticRoutesBuilder_;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Resource labels, `key:value` pairs.
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63.
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63.
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Resource labels, `key:value` pairs.
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63.
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63.
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Resource labels, `key:value` pairs.
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63.
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63.
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Resource labels, `key:value` pairs.
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63.
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63.
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels, `key:value` pairs.
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63.
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63.
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Resource labels, `key:value` pairs.
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63.
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63.
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels, `key:value` pairs.
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63.
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63.
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cic.v1.CreatePrivateConnectionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cic.v1.CreatePrivateConnectionRequest)
+    private static final yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest();
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CreatePrivateConnectionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CreatePrivateConnectionRequest>() {
+      @java.lang.Override
+      public CreatePrivateConnectionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CreatePrivateConnectionRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreatePrivateConnectionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreatePrivateConnectionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CreatePrivateConnectionMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.CreatePrivateConnectionMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1;</code>
+     * @return The privateConnectionId.
+     */
+    java.lang.String getPrivateConnectionId();
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1;</code>
+     * @return The bytes for privateConnectionId.
+     */
+    com.google.protobuf.ByteString
+        getPrivateConnectionIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cic.v1.CreatePrivateConnectionMetadata}
+   */
+  public static final class CreatePrivateConnectionMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cic.v1.CreatePrivateConnectionMetadata)
+      CreatePrivateConnectionMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreatePrivateConnectionMetadata.newBuilder() to construct.
+    private CreatePrivateConnectionMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreatePrivateConnectionMetadata() {
+      privateConnectionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreatePrivateConnectionMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CreatePrivateConnectionMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              privateConnectionId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata.Builder.class);
+    }
+
+    public static final int PRIVATE_CONNECTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object privateConnectionId_;
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1;</code>
+     * @return The privateConnectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getPrivateConnectionId() {
+      java.lang.Object ref = privateConnectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        privateConnectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1;</code>
+     * @return The bytes for privateConnectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrivateConnectionIdBytes() {
+      java.lang.Object ref = privateConnectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        privateConnectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateConnectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, privateConnectionId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateConnectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, privateConnectionId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata other = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata) obj;
+
+      if (!getPrivateConnectionId()
+          .equals(other.getPrivateConnectionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PRIVATE_CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPrivateConnectionId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cic.v1.CreatePrivateConnectionMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cic.v1.CreatePrivateConnectionMetadata)
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        privateConnectionId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata build() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata buildPartial() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata result = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata(this);
+        result.privateConnectionId_ = privateConnectionId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata) {
+          return mergeFrom((yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata other) {
+        if (other == yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata.getDefaultInstance()) return this;
+        if (!other.getPrivateConnectionId().isEmpty()) {
+          privateConnectionId_ = other.privateConnectionId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object privateConnectionId_ = "";
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @return The privateConnectionId.
+       */
+      public java.lang.String getPrivateConnectionId() {
+        java.lang.Object ref = privateConnectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          privateConnectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @return The bytes for privateConnectionId.
+       */
+      public com.google.protobuf.ByteString
+          getPrivateConnectionIdBytes() {
+        java.lang.Object ref = privateConnectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          privateConnectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @param value The privateConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateConnectionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        privateConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivateConnectionId() {
+        
+        privateConnectionId_ = getDefaultInstance().getPrivateConnectionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @param value The bytes for privateConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        privateConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cic.v1.CreatePrivateConnectionMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cic.v1.CreatePrivateConnectionMetadata)
+    private static final yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata();
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CreatePrivateConnectionMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<CreatePrivateConnectionMetadata>() {
+      @java.lang.Override
+      public CreatePrivateConnectionMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CreatePrivateConnectionMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreatePrivateConnectionMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreatePrivateConnectionMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.CreatePrivateConnectionMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdatePrivateConnectionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.UpdatePrivateConnectionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The privateConnectionId.
+     */
+    java.lang.String getPrivateConnectionId();
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for privateConnectionId.
+     */
+    com.google.protobuf.ByteString
+        getPrivateConnectionIdBytes();
+
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the PrivateConnection resource are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
+     */
+    boolean hasUpdateMask();
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the PrivateConnection resource are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
+     */
+    com.google.protobuf.FieldMask getUpdateMask();
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the PrivateConnection resource are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
+
+    /**
+     * <pre>
+     * Name of the privateConnection.
+     * The name must be unique within the folder.
+     * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
+     * </pre>
+     *
+     * <code>string name = 3;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of the privateConnection.
+     * The name must be unique within the folder.
+     * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
+     * </pre>
+     *
+     * <code>string name = 3;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Optional description of the privateConnection. 0-256 characters long.
+     * </pre>
+     *
+     * <code>string description = 4;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Optional description of the privateConnection. 0-256 characters long.
+     * </pre>
+     *
+     * <code>string description = 4;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * ID of the region that the privateConnection belongs to.
+     * </pre>
+     *
+     * <code>string region_id = 7;</code>
+     * @return The regionId.
+     */
+    java.lang.String getRegionId();
+    /**
+     * <pre>
+     * ID of the region that the privateConnection belongs to.
+     * </pre>
+     *
+     * <code>string region_id = 7;</code>
+     * @return The bytes for regionId.
+     */
+    com.google.protobuf.ByteString
+        getRegionIdBytes();
+
+    /**
+     * <pre>
+     * ID of the trunk_connection that the privateConnection belongs to.
+     * </pre>
+     *
+     * <code>string trunk_connection_id = 8;</code>
+     * @return The trunkConnectionId.
+     */
+    java.lang.String getTrunkConnectionId();
+    /**
+     * <pre>
+     * ID of the trunk_connection that the privateConnection belongs to.
+     * </pre>
+     *
+     * <code>string trunk_connection_id = 8;</code>
+     * @return The bytes for trunkConnectionId.
+     */
+    com.google.protobuf.ByteString
+        getTrunkConnectionIdBytes();
+
+    /**
+     * <pre>
+     * VLAN_ID that the privateConnection uses in multiplexing.
+     * Not used in connections over partners-II
+     * Value range: [1, 4095]
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+     * @return Whether the vlanId field is set.
+     */
+    boolean hasVlanId();
+    /**
+     * <pre>
+     * VLAN_ID that the privateConnection uses in multiplexing.
+     * Not used in connections over partners-II
+     * Value range: [1, 4095]
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+     * @return The vlanId.
+     */
+    com.google.protobuf.Int64Value getVlanId();
+    /**
+     * <pre>
+     * VLAN_ID that the privateConnection uses in multiplexing.
+     * Not used in connections over partners-II
+     * Value range: [1, 4095]
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getVlanIdOrBuilder();
+
+    /**
+     * <pre>
+     * IPv4 peering config of connection
+     * </pre>
+     *
+     * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+     * @return Whether the ipv4Peering field is set.
+     */
+    boolean hasIpv4Peering();
+    /**
+     * <pre>
+     * IPv4 peering config of connection
+     * </pre>
+     *
+     * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+     * @return The ipv4Peering.
+     */
+    yandex.cloud.api.cic.v1.PeeringOuterClass.Peering getIpv4Peering();
+    /**
+     * <pre>
+     * IPv4 peering config of connection
+     * </pre>
+     *
+     * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+     */
+    yandex.cloud.api.cic.v1.PeeringOuterClass.PeeringOrBuilder getIpv4PeeringOrBuilder();
+
+    /**
+     * <pre>
+     * IPv4 StaticRoute config of connection
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+     */
+    java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute> 
+        getIpv4StaticRoutesList();
+    /**
+     * <pre>
+     * IPv4 StaticRoute config of connection
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+     */
+    yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute getIpv4StaticRoutes(int index);
+    /**
+     * <pre>
+     * IPv4 StaticRoute config of connection
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+     */
+    int getIpv4StaticRoutesCount();
+    /**
+     * <pre>
+     * IPv4 StaticRoute config of connection
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder> 
+        getIpv4StaticRoutesOrBuilderList();
+    /**
+     * <pre>
+     * IPv4 StaticRoute config of connection
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+     */
+    yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder getIpv4StaticRoutesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cic.v1.UpdatePrivateConnectionRequest}
+   */
+  public static final class UpdatePrivateConnectionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cic.v1.UpdatePrivateConnectionRequest)
+      UpdatePrivateConnectionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdatePrivateConnectionRequest.newBuilder() to construct.
+    private UpdatePrivateConnectionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdatePrivateConnectionRequest() {
+      privateConnectionId_ = "";
+      name_ = "";
+      description_ = "";
+      regionId_ = "";
+      trunkConnectionId_ = "";
+      ipv4StaticRoutes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdatePrivateConnectionRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdatePrivateConnectionRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              privateConnectionId_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.FieldMask.Builder subBuilder = null;
+              if (updateMask_ != null) {
+                subBuilder = updateMask_.toBuilder();
+              }
+              updateMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(updateMask_);
+                updateMask_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              regionId_ = s;
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              trunkConnectionId_ = s;
+              break;
+            }
+            case 74: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (vlanId_ != null) {
+                subBuilder = vlanId_.toBuilder();
+              }
+              vlanId_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(vlanId_);
+                vlanId_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 82: {
+              yandex.cloud.api.cic.v1.PeeringOuterClass.Peering.Builder subBuilder = null;
+              if (ipv4Peering_ != null) {
+                subBuilder = ipv4Peering_.toBuilder();
+              }
+              ipv4Peering_ = input.readMessage(yandex.cloud.api.cic.v1.PeeringOuterClass.Peering.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(ipv4Peering_);
+                ipv4Peering_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 154: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                ipv4StaticRoutes_ = new java.util.ArrayList<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              ipv4StaticRoutes_.add(
+                  input.readMessage(yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.parser(), extensionRegistry));
+              break;
+            }
+            case 210: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          ipv4StaticRoutes_ = java.util.Collections.unmodifiableList(ipv4StaticRoutes_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionRequest_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 26:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest.Builder.class);
+    }
+
+    public static final int PRIVATE_CONNECTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object privateConnectionId_;
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The privateConnectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getPrivateConnectionId() {
+      java.lang.Object ref = privateConnectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        privateConnectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for privateConnectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrivateConnectionIdBytes() {
+      java.lang.Object ref = privateConnectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        privateConnectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UPDATE_MASK_FIELD_NUMBER = 2;
+    private com.google.protobuf.FieldMask updateMask_;
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the PrivateConnection resource are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
+     */
+    @java.lang.Override
+    public boolean hasUpdateMask() {
+      return updateMask_ != null;
+    }
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the PrivateConnection resource are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
+     */
+    @java.lang.Override
+    public com.google.protobuf.FieldMask getUpdateMask() {
+      return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+    }
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the PrivateConnection resource are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+      return getUpdateMask();
+    }
+
+    public static final int NAME_FIELD_NUMBER = 3;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Name of the privateConnection.
+     * The name must be unique within the folder.
+     * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
+     * </pre>
+     *
+     * <code>string name = 3;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the privateConnection.
+     * The name must be unique within the folder.
+     * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
+     * </pre>
+     *
+     * <code>string name = 3;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 4;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Optional description of the privateConnection. 0-256 characters long.
+     * </pre>
+     *
+     * <code>string description = 4;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Optional description of the privateConnection. 0-256 characters long.
+     * </pre>
+     *
+     * <code>string description = 4;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REGION_ID_FIELD_NUMBER = 7;
+    private volatile java.lang.Object regionId_;
+    /**
+     * <pre>
+     * ID of the region that the privateConnection belongs to.
+     * </pre>
+     *
+     * <code>string region_id = 7;</code>
+     * @return The regionId.
+     */
+    @java.lang.Override
+    public java.lang.String getRegionId() {
+      java.lang.Object ref = regionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        regionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the region that the privateConnection belongs to.
+     * </pre>
+     *
+     * <code>string region_id = 7;</code>
+     * @return The bytes for regionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegionIdBytes() {
+      java.lang.Object ref = regionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        regionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRUNK_CONNECTION_ID_FIELD_NUMBER = 8;
+    private volatile java.lang.Object trunkConnectionId_;
+    /**
+     * <pre>
+     * ID of the trunk_connection that the privateConnection belongs to.
+     * </pre>
+     *
+     * <code>string trunk_connection_id = 8;</code>
+     * @return The trunkConnectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getTrunkConnectionId() {
+      java.lang.Object ref = trunkConnectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        trunkConnectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the trunk_connection that the privateConnection belongs to.
+     * </pre>
+     *
+     * <code>string trunk_connection_id = 8;</code>
+     * @return The bytes for trunkConnectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTrunkConnectionIdBytes() {
+      java.lang.Object ref = trunkConnectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        trunkConnectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VLAN_ID_FIELD_NUMBER = 9;
+    private com.google.protobuf.Int64Value vlanId_;
+    /**
+     * <pre>
+     * VLAN_ID that the privateConnection uses in multiplexing.
+     * Not used in connections over partners-II
+     * Value range: [1, 4095]
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+     * @return Whether the vlanId field is set.
+     */
+    @java.lang.Override
+    public boolean hasVlanId() {
+      return vlanId_ != null;
+    }
+    /**
+     * <pre>
+     * VLAN_ID that the privateConnection uses in multiplexing.
+     * Not used in connections over partners-II
+     * Value range: [1, 4095]
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+     * @return The vlanId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getVlanId() {
+      return vlanId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : vlanId_;
+    }
+    /**
+     * <pre>
+     * VLAN_ID that the privateConnection uses in multiplexing.
+     * Not used in connections over partners-II
+     * Value range: [1, 4095]
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getVlanIdOrBuilder() {
+      return getVlanId();
+    }
+
+    public static final int IPV4_PEERING_FIELD_NUMBER = 10;
+    private yandex.cloud.api.cic.v1.PeeringOuterClass.Peering ipv4Peering_;
+    /**
+     * <pre>
+     * IPv4 peering config of connection
+     * </pre>
+     *
+     * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+     * @return Whether the ipv4Peering field is set.
+     */
+    @java.lang.Override
+    public boolean hasIpv4Peering() {
+      return ipv4Peering_ != null;
+    }
+    /**
+     * <pre>
+     * IPv4 peering config of connection
+     * </pre>
+     *
+     * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+     * @return The ipv4Peering.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PeeringOuterClass.Peering getIpv4Peering() {
+      return ipv4Peering_ == null ? yandex.cloud.api.cic.v1.PeeringOuterClass.Peering.getDefaultInstance() : ipv4Peering_;
+    }
+    /**
+     * <pre>
+     * IPv4 peering config of connection
+     * </pre>
+     *
+     * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PeeringOuterClass.PeeringOrBuilder getIpv4PeeringOrBuilder() {
+      return getIpv4Peering();
+    }
+
+    public static final int IPV4_STATIC_ROUTES_FIELD_NUMBER = 19;
+    private java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute> ipv4StaticRoutes_;
+    /**
+     * <pre>
+     * IPv4 StaticRoute config of connection
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute> getIpv4StaticRoutesList() {
+      return ipv4StaticRoutes_;
+    }
+    /**
+     * <pre>
+     * IPv4 StaticRoute config of connection
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder> 
+        getIpv4StaticRoutesOrBuilderList() {
+      return ipv4StaticRoutes_;
+    }
+    /**
+     * <pre>
+     * IPv4 StaticRoute config of connection
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+     */
+    @java.lang.Override
+    public int getIpv4StaticRoutesCount() {
+      return ipv4StaticRoutes_.size();
+    }
+    /**
+     * <pre>
+     * IPv4 StaticRoute config of connection
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute getIpv4StaticRoutes(int index) {
+      return ipv4StaticRoutes_.get(index);
+    }
+    /**
+     * <pre>
+     * IPv4 StaticRoute config of connection
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder getIpv4StaticRoutesOrBuilder(
+        int index) {
+      return ipv4StaticRoutes_.get(index);
+    }
+
+    public static final int LABELS_FIELD_NUMBER = 26;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateConnectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, privateConnectionId_);
+      }
+      if (updateMask_ != null) {
+        output.writeMessage(2, getUpdateMask());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, regionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(trunkConnectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, trunkConnectionId_);
+      }
+      if (vlanId_ != null) {
+        output.writeMessage(9, getVlanId());
+      }
+      if (ipv4Peering_ != null) {
+        output.writeMessage(10, getIpv4Peering());
+      }
+      for (int i = 0; i < ipv4StaticRoutes_.size(); i++) {
+        output.writeMessage(19, ipv4StaticRoutes_.get(i));
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          26);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateConnectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, privateConnectionId_);
+      }
+      if (updateMask_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getUpdateMask());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, regionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(trunkConnectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, trunkConnectionId_);
+      }
+      if (vlanId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getVlanId());
+      }
+      if (ipv4Peering_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getIpv4Peering());
+      }
+      for (int i = 0; i < ipv4StaticRoutes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, ipv4StaticRoutes_.get(i));
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(26, labels__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest other = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest) obj;
+
+      if (!getPrivateConnectionId()
+          .equals(other.getPrivateConnectionId())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
+      if (hasUpdateMask()) {
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
+      }
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getRegionId()
+          .equals(other.getRegionId())) return false;
+      if (!getTrunkConnectionId()
+          .equals(other.getTrunkConnectionId())) return false;
+      if (hasVlanId() != other.hasVlanId()) return false;
+      if (hasVlanId()) {
+        if (!getVlanId()
+            .equals(other.getVlanId())) return false;
+      }
+      if (hasIpv4Peering() != other.hasIpv4Peering()) return false;
+      if (hasIpv4Peering()) {
+        if (!getIpv4Peering()
+            .equals(other.getIpv4Peering())) return false;
+      }
+      if (!getIpv4StaticRoutesList()
+          .equals(other.getIpv4StaticRoutesList())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PRIVATE_CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPrivateConnectionId().hashCode();
+      if (hasUpdateMask()) {
+        hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdateMask().hashCode();
+      }
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + REGION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRegionId().hashCode();
+      hash = (37 * hash) + TRUNK_CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTrunkConnectionId().hashCode();
+      if (hasVlanId()) {
+        hash = (37 * hash) + VLAN_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getVlanId().hashCode();
+      }
+      if (hasIpv4Peering()) {
+        hash = (37 * hash) + IPV4_PEERING_FIELD_NUMBER;
+        hash = (53 * hash) + getIpv4Peering().hashCode();
+      }
+      if (getIpv4StaticRoutesCount() > 0) {
+        hash = (37 * hash) + IPV4_STATIC_ROUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getIpv4StaticRoutesList().hashCode();
+      }
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cic.v1.UpdatePrivateConnectionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cic.v1.UpdatePrivateConnectionRequest)
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionRequest_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 26:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 26:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getIpv4StaticRoutesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        privateConnectionId_ = "";
+
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
+        name_ = "";
+
+        description_ = "";
+
+        regionId_ = "";
+
+        trunkConnectionId_ = "";
+
+        if (vlanIdBuilder_ == null) {
+          vlanId_ = null;
+        } else {
+          vlanId_ = null;
+          vlanIdBuilder_ = null;
+        }
+        if (ipv4PeeringBuilder_ == null) {
+          ipv4Peering_ = null;
+        } else {
+          ipv4Peering_ = null;
+          ipv4PeeringBuilder_ = null;
+        }
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ipv4StaticRoutes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          ipv4StaticRoutesBuilder_.clear();
+        }
+        internalGetMutableLabels().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest build() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest buildPartial() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest result = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.privateConnectionId_ = privateConnectionId_;
+        if (updateMaskBuilder_ == null) {
+          result.updateMask_ = updateMask_;
+        } else {
+          result.updateMask_ = updateMaskBuilder_.build();
+        }
+        result.name_ = name_;
+        result.description_ = description_;
+        result.regionId_ = regionId_;
+        result.trunkConnectionId_ = trunkConnectionId_;
+        if (vlanIdBuilder_ == null) {
+          result.vlanId_ = vlanId_;
+        } else {
+          result.vlanId_ = vlanIdBuilder_.build();
+        }
+        if (ipv4PeeringBuilder_ == null) {
+          result.ipv4Peering_ = ipv4Peering_;
+        } else {
+          result.ipv4Peering_ = ipv4PeeringBuilder_.build();
+        }
+        if (ipv4StaticRoutesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            ipv4StaticRoutes_ = java.util.Collections.unmodifiableList(ipv4StaticRoutes_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.ipv4StaticRoutes_ = ipv4StaticRoutes_;
+        } else {
+          result.ipv4StaticRoutes_ = ipv4StaticRoutesBuilder_.build();
+        }
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest) {
+          return mergeFrom((yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest other) {
+        if (other == yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest.getDefaultInstance()) return this;
+        if (!other.getPrivateConnectionId().isEmpty()) {
+          privateConnectionId_ = other.privateConnectionId_;
+          onChanged();
+        }
+        if (other.hasUpdateMask()) {
+          mergeUpdateMask(other.getUpdateMask());
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        if (!other.getRegionId().isEmpty()) {
+          regionId_ = other.regionId_;
+          onChanged();
+        }
+        if (!other.getTrunkConnectionId().isEmpty()) {
+          trunkConnectionId_ = other.trunkConnectionId_;
+          onChanged();
+        }
+        if (other.hasVlanId()) {
+          mergeVlanId(other.getVlanId());
+        }
+        if (other.hasIpv4Peering()) {
+          mergeIpv4Peering(other.getIpv4Peering());
+        }
+        if (ipv4StaticRoutesBuilder_ == null) {
+          if (!other.ipv4StaticRoutes_.isEmpty()) {
+            if (ipv4StaticRoutes_.isEmpty()) {
+              ipv4StaticRoutes_ = other.ipv4StaticRoutes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureIpv4StaticRoutesIsMutable();
+              ipv4StaticRoutes_.addAll(other.ipv4StaticRoutes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.ipv4StaticRoutes_.isEmpty()) {
+            if (ipv4StaticRoutesBuilder_.isEmpty()) {
+              ipv4StaticRoutesBuilder_.dispose();
+              ipv4StaticRoutesBuilder_ = null;
+              ipv4StaticRoutes_ = other.ipv4StaticRoutes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              ipv4StaticRoutesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getIpv4StaticRoutesFieldBuilder() : null;
+            } else {
+              ipv4StaticRoutesBuilder_.addAllMessages(other.ipv4StaticRoutes_);
+            }
+          }
+        }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object privateConnectionId_ = "";
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The privateConnectionId.
+       */
+      public java.lang.String getPrivateConnectionId() {
+        java.lang.Object ref = privateConnectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          privateConnectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for privateConnectionId.
+       */
+      public com.google.protobuf.ByteString
+          getPrivateConnectionIdBytes() {
+        java.lang.Object ref = privateConnectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          privateConnectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The privateConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateConnectionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        privateConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivateConnectionId() {
+        
+        privateConnectionId_ = getDefaultInstance().getPrivateConnectionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for privateConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        privateConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.FieldMask updateMask_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the PrivateConnection resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return Whether the updateMask field is set.
+       */
+      public boolean hasUpdateMask() {
+        return updateMaskBuilder_ != null || updateMask_ != null;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the PrivateConnection resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return The updateMask.
+       */
+      public com.google.protobuf.FieldMask getUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        } else {
+          return updateMaskBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the PrivateConnection resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updateMask_ = value;
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the PrivateConnection resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public Builder setUpdateMask(
+          com.google.protobuf.FieldMask.Builder builderForValue) {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = builderForValue.build();
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the PrivateConnection resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (updateMask_ != null) {
+            updateMask_ =
+              com.google.protobuf.FieldMask.newBuilder(updateMask_).mergeFrom(value).buildPartial();
+          } else {
+            updateMask_ = value;
+          }
+          onChanged();
+        } else {
+          updateMaskBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the PrivateConnection resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public Builder clearUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+          onChanged();
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the PrivateConnection resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
+        
+        onChanged();
+        return getUpdateMaskFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the PrivateConnection resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+        if (updateMaskBuilder_ != null) {
+          return updateMaskBuilder_.getMessageOrBuilder();
+        } else {
+          return updateMask_ == null ?
+              com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        }
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the PrivateConnection resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
+          getUpdateMaskFieldBuilder() {
+        if (updateMaskBuilder_ == null) {
+          updateMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
+                  getUpdateMask(),
+                  getParentForChildren(),
+                  isClean());
+          updateMask_ = null;
+        }
+        return updateMaskBuilder_;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name of the privateConnection.
+       * The name must be unique within the folder.
+       * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
+       * </pre>
+       *
+       * <code>string name = 3;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the privateConnection.
+       * The name must be unique within the folder.
+       * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
+       * </pre>
+       *
+       * <code>string name = 3;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the privateConnection.
+       * The name must be unique within the folder.
+       * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
+       * </pre>
+       *
+       * <code>string name = 3;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the privateConnection.
+       * The name must be unique within the folder.
+       * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
+       * </pre>
+       *
+       * <code>string name = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the privateConnection.
+       * The name must be unique within the folder.
+       * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
+       * </pre>
+       *
+       * <code>string name = 3;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Optional description of the privateConnection. 0-256 characters long.
+       * </pre>
+       *
+       * <code>string description = 4;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional description of the privateConnection. 0-256 characters long.
+       * </pre>
+       *
+       * <code>string description = 4;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional description of the privateConnection. 0-256 characters long.
+       * </pre>
+       *
+       * <code>string description = 4;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional description of the privateConnection. 0-256 characters long.
+       * </pre>
+       *
+       * <code>string description = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional description of the privateConnection. 0-256 characters long.
+       * </pre>
+       *
+       * <code>string description = 4;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object regionId_ = "";
+      /**
+       * <pre>
+       * ID of the region that the privateConnection belongs to.
+       * </pre>
+       *
+       * <code>string region_id = 7;</code>
+       * @return The regionId.
+       */
+      public java.lang.String getRegionId() {
+        java.lang.Object ref = regionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          regionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the region that the privateConnection belongs to.
+       * </pre>
+       *
+       * <code>string region_id = 7;</code>
+       * @return The bytes for regionId.
+       */
+      public com.google.protobuf.ByteString
+          getRegionIdBytes() {
+        java.lang.Object ref = regionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          regionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the region that the privateConnection belongs to.
+       * </pre>
+       *
+       * <code>string region_id = 7;</code>
+       * @param value The regionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        regionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the region that the privateConnection belongs to.
+       * </pre>
+       *
+       * <code>string region_id = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegionId() {
+        
+        regionId_ = getDefaultInstance().getRegionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the region that the privateConnection belongs to.
+       * </pre>
+       *
+       * <code>string region_id = 7;</code>
+       * @param value The bytes for regionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        regionId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object trunkConnectionId_ = "";
+      /**
+       * <pre>
+       * ID of the trunk_connection that the privateConnection belongs to.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 8;</code>
+       * @return The trunkConnectionId.
+       */
+      public java.lang.String getTrunkConnectionId() {
+        java.lang.Object ref = trunkConnectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          trunkConnectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the trunk_connection that the privateConnection belongs to.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 8;</code>
+       * @return The bytes for trunkConnectionId.
+       */
+      public com.google.protobuf.ByteString
+          getTrunkConnectionIdBytes() {
+        java.lang.Object ref = trunkConnectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          trunkConnectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the trunk_connection that the privateConnection belongs to.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 8;</code>
+       * @param value The trunkConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrunkConnectionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        trunkConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the trunk_connection that the privateConnection belongs to.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTrunkConnectionId() {
+        
+        trunkConnectionId_ = getDefaultInstance().getTrunkConnectionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the trunk_connection that the privateConnection belongs to.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 8;</code>
+       * @param value The bytes for trunkConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrunkConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        trunkConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value vlanId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> vlanIdBuilder_;
+      /**
+       * <pre>
+       * VLAN_ID that the privateConnection uses in multiplexing.
+       * Not used in connections over partners-II
+       * Value range: [1, 4095]
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+       * @return Whether the vlanId field is set.
+       */
+      public boolean hasVlanId() {
+        return vlanIdBuilder_ != null || vlanId_ != null;
+      }
+      /**
+       * <pre>
+       * VLAN_ID that the privateConnection uses in multiplexing.
+       * Not used in connections over partners-II
+       * Value range: [1, 4095]
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+       * @return The vlanId.
+       */
+      public com.google.protobuf.Int64Value getVlanId() {
+        if (vlanIdBuilder_ == null) {
+          return vlanId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : vlanId_;
+        } else {
+          return vlanIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * VLAN_ID that the privateConnection uses in multiplexing.
+       * Not used in connections over partners-II
+       * Value range: [1, 4095]
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+       */
+      public Builder setVlanId(com.google.protobuf.Int64Value value) {
+        if (vlanIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          vlanId_ = value;
+          onChanged();
+        } else {
+          vlanIdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * VLAN_ID that the privateConnection uses in multiplexing.
+       * Not used in connections over partners-II
+       * Value range: [1, 4095]
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+       */
+      public Builder setVlanId(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (vlanIdBuilder_ == null) {
+          vlanId_ = builderForValue.build();
+          onChanged();
+        } else {
+          vlanIdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * VLAN_ID that the privateConnection uses in multiplexing.
+       * Not used in connections over partners-II
+       * Value range: [1, 4095]
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+       */
+      public Builder mergeVlanId(com.google.protobuf.Int64Value value) {
+        if (vlanIdBuilder_ == null) {
+          if (vlanId_ != null) {
+            vlanId_ =
+              com.google.protobuf.Int64Value.newBuilder(vlanId_).mergeFrom(value).buildPartial();
+          } else {
+            vlanId_ = value;
+          }
+          onChanged();
+        } else {
+          vlanIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * VLAN_ID that the privateConnection uses in multiplexing.
+       * Not used in connections over partners-II
+       * Value range: [1, 4095]
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+       */
+      public Builder clearVlanId() {
+        if (vlanIdBuilder_ == null) {
+          vlanId_ = null;
+          onChanged();
+        } else {
+          vlanId_ = null;
+          vlanIdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * VLAN_ID that the privateConnection uses in multiplexing.
+       * Not used in connections over partners-II
+       * Value range: [1, 4095]
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getVlanIdBuilder() {
+        
+        onChanged();
+        return getVlanIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * VLAN_ID that the privateConnection uses in multiplexing.
+       * Not used in connections over partners-II
+       * Value range: [1, 4095]
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getVlanIdOrBuilder() {
+        if (vlanIdBuilder_ != null) {
+          return vlanIdBuilder_.getMessageOrBuilder();
+        } else {
+          return vlanId_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : vlanId_;
+        }
+      }
+      /**
+       * <pre>
+       * VLAN_ID that the privateConnection uses in multiplexing.
+       * Not used in connections over partners-II
+       * Value range: [1, 4095]
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getVlanIdFieldBuilder() {
+        if (vlanIdBuilder_ == null) {
+          vlanIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getVlanId(),
+                  getParentForChildren(),
+                  isClean());
+          vlanId_ = null;
+        }
+        return vlanIdBuilder_;
+      }
+
+      private yandex.cloud.api.cic.v1.PeeringOuterClass.Peering ipv4Peering_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cic.v1.PeeringOuterClass.Peering, yandex.cloud.api.cic.v1.PeeringOuterClass.Peering.Builder, yandex.cloud.api.cic.v1.PeeringOuterClass.PeeringOrBuilder> ipv4PeeringBuilder_;
+      /**
+       * <pre>
+       * IPv4 peering config of connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+       * @return Whether the ipv4Peering field is set.
+       */
+      public boolean hasIpv4Peering() {
+        return ipv4PeeringBuilder_ != null || ipv4Peering_ != null;
+      }
+      /**
+       * <pre>
+       * IPv4 peering config of connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+       * @return The ipv4Peering.
+       */
+      public yandex.cloud.api.cic.v1.PeeringOuterClass.Peering getIpv4Peering() {
+        if (ipv4PeeringBuilder_ == null) {
+          return ipv4Peering_ == null ? yandex.cloud.api.cic.v1.PeeringOuterClass.Peering.getDefaultInstance() : ipv4Peering_;
+        } else {
+          return ipv4PeeringBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 peering config of connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+       */
+      public Builder setIpv4Peering(yandex.cloud.api.cic.v1.PeeringOuterClass.Peering value) {
+        if (ipv4PeeringBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ipv4Peering_ = value;
+          onChanged();
+        } else {
+          ipv4PeeringBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 peering config of connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+       */
+      public Builder setIpv4Peering(
+          yandex.cloud.api.cic.v1.PeeringOuterClass.Peering.Builder builderForValue) {
+        if (ipv4PeeringBuilder_ == null) {
+          ipv4Peering_ = builderForValue.build();
+          onChanged();
+        } else {
+          ipv4PeeringBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 peering config of connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+       */
+      public Builder mergeIpv4Peering(yandex.cloud.api.cic.v1.PeeringOuterClass.Peering value) {
+        if (ipv4PeeringBuilder_ == null) {
+          if (ipv4Peering_ != null) {
+            ipv4Peering_ =
+              yandex.cloud.api.cic.v1.PeeringOuterClass.Peering.newBuilder(ipv4Peering_).mergeFrom(value).buildPartial();
+          } else {
+            ipv4Peering_ = value;
+          }
+          onChanged();
+        } else {
+          ipv4PeeringBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 peering config of connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+       */
+      public Builder clearIpv4Peering() {
+        if (ipv4PeeringBuilder_ == null) {
+          ipv4Peering_ = null;
+          onChanged();
+        } else {
+          ipv4Peering_ = null;
+          ipv4PeeringBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 peering config of connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+       */
+      public yandex.cloud.api.cic.v1.PeeringOuterClass.Peering.Builder getIpv4PeeringBuilder() {
+        
+        onChanged();
+        return getIpv4PeeringFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * IPv4 peering config of connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+       */
+      public yandex.cloud.api.cic.v1.PeeringOuterClass.PeeringOrBuilder getIpv4PeeringOrBuilder() {
+        if (ipv4PeeringBuilder_ != null) {
+          return ipv4PeeringBuilder_.getMessageOrBuilder();
+        } else {
+          return ipv4Peering_ == null ?
+              yandex.cloud.api.cic.v1.PeeringOuterClass.Peering.getDefaultInstance() : ipv4Peering_;
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 peering config of connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.Peering ipv4_peering = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cic.v1.PeeringOuterClass.Peering, yandex.cloud.api.cic.v1.PeeringOuterClass.Peering.Builder, yandex.cloud.api.cic.v1.PeeringOuterClass.PeeringOrBuilder> 
+          getIpv4PeeringFieldBuilder() {
+        if (ipv4PeeringBuilder_ == null) {
+          ipv4PeeringBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.cic.v1.PeeringOuterClass.Peering, yandex.cloud.api.cic.v1.PeeringOuterClass.Peering.Builder, yandex.cloud.api.cic.v1.PeeringOuterClass.PeeringOrBuilder>(
+                  getIpv4Peering(),
+                  getParentForChildren(),
+                  isClean());
+          ipv4Peering_ = null;
+        }
+        return ipv4PeeringBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute> ipv4StaticRoutes_ =
+        java.util.Collections.emptyList();
+      private void ensureIpv4StaticRoutesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          ipv4StaticRoutes_ = new java.util.ArrayList<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute>(ipv4StaticRoutes_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder> ipv4StaticRoutesBuilder_;
+
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute> getIpv4StaticRoutesList() {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(ipv4StaticRoutes_);
+        } else {
+          return ipv4StaticRoutesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public int getIpv4StaticRoutesCount() {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          return ipv4StaticRoutes_.size();
+        } else {
+          return ipv4StaticRoutesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute getIpv4StaticRoutes(int index) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          return ipv4StaticRoutes_.get(index);
+        } else {
+          return ipv4StaticRoutesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public Builder setIpv4StaticRoutes(
+          int index, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute value) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.set(index, value);
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public Builder setIpv4StaticRoutes(
+          int index, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder builderForValue) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public Builder addIpv4StaticRoutes(yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute value) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.add(value);
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public Builder addIpv4StaticRoutes(
+          int index, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute value) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.add(index, value);
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public Builder addIpv4StaticRoutes(
+          yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder builderForValue) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public Builder addIpv4StaticRoutes(
+          int index, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder builderForValue) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public Builder addAllIpv4StaticRoutes(
+          java.lang.Iterable<? extends yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute> values) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ensureIpv4StaticRoutesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, ipv4StaticRoutes_);
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public Builder clearIpv4StaticRoutes() {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ipv4StaticRoutes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public Builder removeIpv4StaticRoutes(int index) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.remove(index);
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder getIpv4StaticRoutesBuilder(
+          int index) {
+        return getIpv4StaticRoutesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder getIpv4StaticRoutesOrBuilder(
+          int index) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          return ipv4StaticRoutes_.get(index);  } else {
+          return ipv4StaticRoutesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder> 
+           getIpv4StaticRoutesOrBuilderList() {
+        if (ipv4StaticRoutesBuilder_ != null) {
+          return ipv4StaticRoutesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(ipv4StaticRoutes_);
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder addIpv4StaticRoutesBuilder() {
+        return getIpv4StaticRoutesFieldBuilder().addBuilder(
+            yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder addIpv4StaticRoutesBuilder(
+          int index) {
+        return getIpv4StaticRoutesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute config of connection
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 19;</code>
+       */
+      public java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder> 
+           getIpv4StaticRoutesBuilderList() {
+        return getIpv4StaticRoutesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder> 
+          getIpv4StaticRoutesFieldBuilder() {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ipv4StaticRoutesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder>(
+                  ipv4StaticRoutes_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          ipv4StaticRoutes_ = null;
+        }
+        return ipv4StaticRoutesBuilder_;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Resource labels, `key:value` pairs.
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63.
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63.
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Resource labels, `key:value` pairs.
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63.
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63.
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Resource labels, `key:value` pairs.
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63.
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63.
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Resource labels, `key:value` pairs.
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63.
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63.
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels, `key:value` pairs.
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63.
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63.
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Resource labels, `key:value` pairs.
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63.
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63.
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels, `key:value` pairs.
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63.
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63.
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cic.v1.UpdatePrivateConnectionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cic.v1.UpdatePrivateConnectionRequest)
+    private static final yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest();
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdatePrivateConnectionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpdatePrivateConnectionRequest>() {
+      @java.lang.Override
+      public UpdatePrivateConnectionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdatePrivateConnectionRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdatePrivateConnectionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdatePrivateConnectionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdatePrivateConnectionMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.UpdatePrivateConnectionMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1;</code>
+     * @return The privateConnectionId.
+     */
+    java.lang.String getPrivateConnectionId();
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1;</code>
+     * @return The bytes for privateConnectionId.
+     */
+    com.google.protobuf.ByteString
+        getPrivateConnectionIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cic.v1.UpdatePrivateConnectionMetadata}
+   */
+  public static final class UpdatePrivateConnectionMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cic.v1.UpdatePrivateConnectionMetadata)
+      UpdatePrivateConnectionMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdatePrivateConnectionMetadata.newBuilder() to construct.
+    private UpdatePrivateConnectionMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdatePrivateConnectionMetadata() {
+      privateConnectionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdatePrivateConnectionMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdatePrivateConnectionMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              privateConnectionId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata.Builder.class);
+    }
+
+    public static final int PRIVATE_CONNECTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object privateConnectionId_;
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1;</code>
+     * @return The privateConnectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getPrivateConnectionId() {
+      java.lang.Object ref = privateConnectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        privateConnectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1;</code>
+     * @return The bytes for privateConnectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrivateConnectionIdBytes() {
+      java.lang.Object ref = privateConnectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        privateConnectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateConnectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, privateConnectionId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateConnectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, privateConnectionId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata other = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata) obj;
+
+      if (!getPrivateConnectionId()
+          .equals(other.getPrivateConnectionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PRIVATE_CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPrivateConnectionId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cic.v1.UpdatePrivateConnectionMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cic.v1.UpdatePrivateConnectionMetadata)
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        privateConnectionId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata build() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata buildPartial() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata result = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata(this);
+        result.privateConnectionId_ = privateConnectionId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata) {
+          return mergeFrom((yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata other) {
+        if (other == yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata.getDefaultInstance()) return this;
+        if (!other.getPrivateConnectionId().isEmpty()) {
+          privateConnectionId_ = other.privateConnectionId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object privateConnectionId_ = "";
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @return The privateConnectionId.
+       */
+      public java.lang.String getPrivateConnectionId() {
+        java.lang.Object ref = privateConnectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          privateConnectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @return The bytes for privateConnectionId.
+       */
+      public com.google.protobuf.ByteString
+          getPrivateConnectionIdBytes() {
+        java.lang.Object ref = privateConnectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          privateConnectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @param value The privateConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateConnectionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        privateConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivateConnectionId() {
+        
+        privateConnectionId_ = getDefaultInstance().getPrivateConnectionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @param value The bytes for privateConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        privateConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cic.v1.UpdatePrivateConnectionMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cic.v1.UpdatePrivateConnectionMetadata)
+    private static final yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata();
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdatePrivateConnectionMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<UpdatePrivateConnectionMetadata>() {
+      @java.lang.Override
+      public UpdatePrivateConnectionMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdatePrivateConnectionMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdatePrivateConnectionMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdatePrivateConnectionMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpdatePrivateConnectionMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeletePrivateConnectionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.DeletePrivateConnectionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The privateConnectionId.
+     */
+    java.lang.String getPrivateConnectionId();
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for privateConnectionId.
+     */
+    com.google.protobuf.ByteString
+        getPrivateConnectionIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cic.v1.DeletePrivateConnectionRequest}
+   */
+  public static final class DeletePrivateConnectionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cic.v1.DeletePrivateConnectionRequest)
+      DeletePrivateConnectionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeletePrivateConnectionRequest.newBuilder() to construct.
+    private DeletePrivateConnectionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeletePrivateConnectionRequest() {
+      privateConnectionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeletePrivateConnectionRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeletePrivateConnectionRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              privateConnectionId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_DeletePrivateConnectionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_DeletePrivateConnectionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest.Builder.class);
+    }
+
+    public static final int PRIVATE_CONNECTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object privateConnectionId_;
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The privateConnectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getPrivateConnectionId() {
+      java.lang.Object ref = privateConnectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        privateConnectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for privateConnectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrivateConnectionIdBytes() {
+      java.lang.Object ref = privateConnectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        privateConnectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateConnectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, privateConnectionId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateConnectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, privateConnectionId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest other = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest) obj;
+
+      if (!getPrivateConnectionId()
+          .equals(other.getPrivateConnectionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PRIVATE_CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPrivateConnectionId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cic.v1.DeletePrivateConnectionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cic.v1.DeletePrivateConnectionRequest)
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_DeletePrivateConnectionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_DeletePrivateConnectionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        privateConnectionId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_DeletePrivateConnectionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest build() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest buildPartial() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest result = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest(this);
+        result.privateConnectionId_ = privateConnectionId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest) {
+          return mergeFrom((yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest other) {
+        if (other == yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest.getDefaultInstance()) return this;
+        if (!other.getPrivateConnectionId().isEmpty()) {
+          privateConnectionId_ = other.privateConnectionId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object privateConnectionId_ = "";
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The privateConnectionId.
+       */
+      public java.lang.String getPrivateConnectionId() {
+        java.lang.Object ref = privateConnectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          privateConnectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for privateConnectionId.
+       */
+      public com.google.protobuf.ByteString
+          getPrivateConnectionIdBytes() {
+        java.lang.Object ref = privateConnectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          privateConnectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The privateConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateConnectionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        privateConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivateConnectionId() {
+        
+        privateConnectionId_ = getDefaultInstance().getPrivateConnectionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for privateConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        privateConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cic.v1.DeletePrivateConnectionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cic.v1.DeletePrivateConnectionRequest)
+    private static final yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest();
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeletePrivateConnectionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeletePrivateConnectionRequest>() {
+      @java.lang.Override
+      public DeletePrivateConnectionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeletePrivateConnectionRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeletePrivateConnectionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeletePrivateConnectionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeletePrivateConnectionMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.DeletePrivateConnectionMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1;</code>
+     * @return The privateConnectionId.
+     */
+    java.lang.String getPrivateConnectionId();
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1;</code>
+     * @return The bytes for privateConnectionId.
+     */
+    com.google.protobuf.ByteString
+        getPrivateConnectionIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cic.v1.DeletePrivateConnectionMetadata}
+   */
+  public static final class DeletePrivateConnectionMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cic.v1.DeletePrivateConnectionMetadata)
+      DeletePrivateConnectionMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeletePrivateConnectionMetadata.newBuilder() to construct.
+    private DeletePrivateConnectionMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeletePrivateConnectionMetadata() {
+      privateConnectionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeletePrivateConnectionMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeletePrivateConnectionMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              privateConnectionId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_DeletePrivateConnectionMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_DeletePrivateConnectionMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata.Builder.class);
+    }
+
+    public static final int PRIVATE_CONNECTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object privateConnectionId_;
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1;</code>
+     * @return The privateConnectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getPrivateConnectionId() {
+      java.lang.Object ref = privateConnectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        privateConnectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1;</code>
+     * @return The bytes for privateConnectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrivateConnectionIdBytes() {
+      java.lang.Object ref = privateConnectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        privateConnectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateConnectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, privateConnectionId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateConnectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, privateConnectionId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata other = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata) obj;
+
+      if (!getPrivateConnectionId()
+          .equals(other.getPrivateConnectionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PRIVATE_CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPrivateConnectionId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cic.v1.DeletePrivateConnectionMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cic.v1.DeletePrivateConnectionMetadata)
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_DeletePrivateConnectionMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_DeletePrivateConnectionMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        privateConnectionId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_DeletePrivateConnectionMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata build() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata buildPartial() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata result = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata(this);
+        result.privateConnectionId_ = privateConnectionId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata) {
+          return mergeFrom((yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata other) {
+        if (other == yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata.getDefaultInstance()) return this;
+        if (!other.getPrivateConnectionId().isEmpty()) {
+          privateConnectionId_ = other.privateConnectionId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object privateConnectionId_ = "";
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @return The privateConnectionId.
+       */
+      public java.lang.String getPrivateConnectionId() {
+        java.lang.Object ref = privateConnectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          privateConnectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @return The bytes for privateConnectionId.
+       */
+      public com.google.protobuf.ByteString
+          getPrivateConnectionIdBytes() {
+        java.lang.Object ref = privateConnectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          privateConnectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @param value The privateConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateConnectionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        privateConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivateConnectionId() {
+        
+        privateConnectionId_ = getDefaultInstance().getPrivateConnectionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @param value The bytes for privateConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        privateConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cic.v1.DeletePrivateConnectionMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cic.v1.DeletePrivateConnectionMetadata)
+    private static final yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata();
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeletePrivateConnectionMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<DeletePrivateConnectionMetadata>() {
+      @java.lang.Override
+      public DeletePrivateConnectionMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeletePrivateConnectionMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeletePrivateConnectionMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeletePrivateConnectionMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.DeletePrivateConnectionMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpsertStaticRouteRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.UpsertStaticRouteRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The privateConnectionId.
+     */
+    java.lang.String getPrivateConnectionId();
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for privateConnectionId.
+     */
+    com.google.protobuf.ByteString
+        getPrivateConnectionIdBytes();
+
+    /**
+     * <pre>
+     * IPv4 StaticRoute configs to upsert
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+     */
+    java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute> 
+        getIpv4StaticRoutesList();
+    /**
+     * <pre>
+     * IPv4 StaticRoute configs to upsert
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+     */
+    yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute getIpv4StaticRoutes(int index);
+    /**
+     * <pre>
+     * IPv4 StaticRoute configs to upsert
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+     */
+    int getIpv4StaticRoutesCount();
+    /**
+     * <pre>
+     * IPv4 StaticRoute configs to upsert
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder> 
+        getIpv4StaticRoutesOrBuilderList();
+    /**
+     * <pre>
+     * IPv4 StaticRoute configs to upsert
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+     */
+    yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder getIpv4StaticRoutesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cic.v1.UpsertStaticRouteRequest}
+   */
+  public static final class UpsertStaticRouteRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cic.v1.UpsertStaticRouteRequest)
+      UpsertStaticRouteRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpsertStaticRouteRequest.newBuilder() to construct.
+    private UpsertStaticRouteRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpsertStaticRouteRequest() {
+      privateConnectionId_ = "";
+      ipv4StaticRoutes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpsertStaticRouteRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpsertStaticRouteRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              privateConnectionId_ = s;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                ipv4StaticRoutes_ = new java.util.ArrayList<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              ipv4StaticRoutes_.add(
+                  input.readMessage(yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          ipv4StaticRoutes_ = java.util.Collections.unmodifiableList(ipv4StaticRoutes_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_UpsertStaticRouteRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_UpsertStaticRouteRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest.Builder.class);
+    }
+
+    public static final int PRIVATE_CONNECTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object privateConnectionId_;
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The privateConnectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getPrivateConnectionId() {
+      java.lang.Object ref = privateConnectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        privateConnectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for privateConnectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrivateConnectionIdBytes() {
+      java.lang.Object ref = privateConnectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        privateConnectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IPV4_STATIC_ROUTES_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute> ipv4StaticRoutes_;
+    /**
+     * <pre>
+     * IPv4 StaticRoute configs to upsert
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute> getIpv4StaticRoutesList() {
+      return ipv4StaticRoutes_;
+    }
+    /**
+     * <pre>
+     * IPv4 StaticRoute configs to upsert
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder> 
+        getIpv4StaticRoutesOrBuilderList() {
+      return ipv4StaticRoutes_;
+    }
+    /**
+     * <pre>
+     * IPv4 StaticRoute configs to upsert
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+     */
+    @java.lang.Override
+    public int getIpv4StaticRoutesCount() {
+      return ipv4StaticRoutes_.size();
+    }
+    /**
+     * <pre>
+     * IPv4 StaticRoute configs to upsert
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute getIpv4StaticRoutes(int index) {
+      return ipv4StaticRoutes_.get(index);
+    }
+    /**
+     * <pre>
+     * IPv4 StaticRoute configs to upsert
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder getIpv4StaticRoutesOrBuilder(
+        int index) {
+      return ipv4StaticRoutes_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateConnectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, privateConnectionId_);
+      }
+      for (int i = 0; i < ipv4StaticRoutes_.size(); i++) {
+        output.writeMessage(2, ipv4StaticRoutes_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateConnectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, privateConnectionId_);
+      }
+      for (int i = 0; i < ipv4StaticRoutes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, ipv4StaticRoutes_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest other = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest) obj;
+
+      if (!getPrivateConnectionId()
+          .equals(other.getPrivateConnectionId())) return false;
+      if (!getIpv4StaticRoutesList()
+          .equals(other.getIpv4StaticRoutesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PRIVATE_CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPrivateConnectionId().hashCode();
+      if (getIpv4StaticRoutesCount() > 0) {
+        hash = (37 * hash) + IPV4_STATIC_ROUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getIpv4StaticRoutesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cic.v1.UpsertStaticRouteRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cic.v1.UpsertStaticRouteRequest)
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_UpsertStaticRouteRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_UpsertStaticRouteRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getIpv4StaticRoutesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        privateConnectionId_ = "";
+
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ipv4StaticRoutes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          ipv4StaticRoutesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_UpsertStaticRouteRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest build() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest buildPartial() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest result = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.privateConnectionId_ = privateConnectionId_;
+        if (ipv4StaticRoutesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            ipv4StaticRoutes_ = java.util.Collections.unmodifiableList(ipv4StaticRoutes_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.ipv4StaticRoutes_ = ipv4StaticRoutes_;
+        } else {
+          result.ipv4StaticRoutes_ = ipv4StaticRoutesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest) {
+          return mergeFrom((yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest other) {
+        if (other == yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest.getDefaultInstance()) return this;
+        if (!other.getPrivateConnectionId().isEmpty()) {
+          privateConnectionId_ = other.privateConnectionId_;
+          onChanged();
+        }
+        if (ipv4StaticRoutesBuilder_ == null) {
+          if (!other.ipv4StaticRoutes_.isEmpty()) {
+            if (ipv4StaticRoutes_.isEmpty()) {
+              ipv4StaticRoutes_ = other.ipv4StaticRoutes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureIpv4StaticRoutesIsMutable();
+              ipv4StaticRoutes_.addAll(other.ipv4StaticRoutes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.ipv4StaticRoutes_.isEmpty()) {
+            if (ipv4StaticRoutesBuilder_.isEmpty()) {
+              ipv4StaticRoutesBuilder_.dispose();
+              ipv4StaticRoutesBuilder_ = null;
+              ipv4StaticRoutes_ = other.ipv4StaticRoutes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              ipv4StaticRoutesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getIpv4StaticRoutesFieldBuilder() : null;
+            } else {
+              ipv4StaticRoutesBuilder_.addAllMessages(other.ipv4StaticRoutes_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object privateConnectionId_ = "";
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The privateConnectionId.
+       */
+      public java.lang.String getPrivateConnectionId() {
+        java.lang.Object ref = privateConnectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          privateConnectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for privateConnectionId.
+       */
+      public com.google.protobuf.ByteString
+          getPrivateConnectionIdBytes() {
+        java.lang.Object ref = privateConnectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          privateConnectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The privateConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateConnectionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        privateConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivateConnectionId() {
+        
+        privateConnectionId_ = getDefaultInstance().getPrivateConnectionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for privateConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        privateConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute> ipv4StaticRoutes_ =
+        java.util.Collections.emptyList();
+      private void ensureIpv4StaticRoutesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          ipv4StaticRoutes_ = new java.util.ArrayList<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute>(ipv4StaticRoutes_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder> ipv4StaticRoutesBuilder_;
+
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to upsert
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute> getIpv4StaticRoutesList() {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(ipv4StaticRoutes_);
+        } else {
+          return ipv4StaticRoutesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to upsert
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public int getIpv4StaticRoutesCount() {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          return ipv4StaticRoutes_.size();
+        } else {
+          return ipv4StaticRoutesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to upsert
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute getIpv4StaticRoutes(int index) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          return ipv4StaticRoutes_.get(index);
+        } else {
+          return ipv4StaticRoutesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to upsert
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public Builder setIpv4StaticRoutes(
+          int index, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute value) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.set(index, value);
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to upsert
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public Builder setIpv4StaticRoutes(
+          int index, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder builderForValue) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to upsert
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public Builder addIpv4StaticRoutes(yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute value) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.add(value);
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to upsert
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public Builder addIpv4StaticRoutes(
+          int index, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute value) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.add(index, value);
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to upsert
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public Builder addIpv4StaticRoutes(
+          yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder builderForValue) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to upsert
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public Builder addIpv4StaticRoutes(
+          int index, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder builderForValue) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to upsert
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public Builder addAllIpv4StaticRoutes(
+          java.lang.Iterable<? extends yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute> values) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ensureIpv4StaticRoutesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, ipv4StaticRoutes_);
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to upsert
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public Builder clearIpv4StaticRoutes() {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ipv4StaticRoutes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to upsert
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public Builder removeIpv4StaticRoutes(int index) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.remove(index);
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to upsert
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder getIpv4StaticRoutesBuilder(
+          int index) {
+        return getIpv4StaticRoutesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to upsert
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder getIpv4StaticRoutesOrBuilder(
+          int index) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          return ipv4StaticRoutes_.get(index);  } else {
+          return ipv4StaticRoutesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to upsert
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder> 
+           getIpv4StaticRoutesOrBuilderList() {
+        if (ipv4StaticRoutesBuilder_ != null) {
+          return ipv4StaticRoutesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(ipv4StaticRoutes_);
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to upsert
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder addIpv4StaticRoutesBuilder() {
+        return getIpv4StaticRoutesFieldBuilder().addBuilder(
+            yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to upsert
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder addIpv4StaticRoutesBuilder(
+          int index) {
+        return getIpv4StaticRoutesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to upsert
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder> 
+           getIpv4StaticRoutesBuilderList() {
+        return getIpv4StaticRoutesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder> 
+          getIpv4StaticRoutesFieldBuilder() {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ipv4StaticRoutesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder>(
+                  ipv4StaticRoutes_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          ipv4StaticRoutes_ = null;
+        }
+        return ipv4StaticRoutesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cic.v1.UpsertStaticRouteRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cic.v1.UpsertStaticRouteRequest)
+    private static final yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest();
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpsertStaticRouteRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpsertStaticRouteRequest>() {
+      @java.lang.Override
+      public UpsertStaticRouteRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpsertStaticRouteRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpsertStaticRouteRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpsertStaticRouteRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpsertStaticRouteMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.UpsertStaticRouteMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1;</code>
+     * @return The privateConnectionId.
+     */
+    java.lang.String getPrivateConnectionId();
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1;</code>
+     * @return The bytes for privateConnectionId.
+     */
+    com.google.protobuf.ByteString
+        getPrivateConnectionIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cic.v1.UpsertStaticRouteMetadata}
+   */
+  public static final class UpsertStaticRouteMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cic.v1.UpsertStaticRouteMetadata)
+      UpsertStaticRouteMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpsertStaticRouteMetadata.newBuilder() to construct.
+    private UpsertStaticRouteMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpsertStaticRouteMetadata() {
+      privateConnectionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpsertStaticRouteMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpsertStaticRouteMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              privateConnectionId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_UpsertStaticRouteMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_UpsertStaticRouteMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata.Builder.class);
+    }
+
+    public static final int PRIVATE_CONNECTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object privateConnectionId_;
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1;</code>
+     * @return The privateConnectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getPrivateConnectionId() {
+      java.lang.Object ref = privateConnectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        privateConnectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1;</code>
+     * @return The bytes for privateConnectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrivateConnectionIdBytes() {
+      java.lang.Object ref = privateConnectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        privateConnectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateConnectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, privateConnectionId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateConnectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, privateConnectionId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata other = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata) obj;
+
+      if (!getPrivateConnectionId()
+          .equals(other.getPrivateConnectionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PRIVATE_CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPrivateConnectionId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cic.v1.UpsertStaticRouteMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cic.v1.UpsertStaticRouteMetadata)
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_UpsertStaticRouteMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_UpsertStaticRouteMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        privateConnectionId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_UpsertStaticRouteMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata build() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata buildPartial() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata result = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata(this);
+        result.privateConnectionId_ = privateConnectionId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata) {
+          return mergeFrom((yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata other) {
+        if (other == yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata.getDefaultInstance()) return this;
+        if (!other.getPrivateConnectionId().isEmpty()) {
+          privateConnectionId_ = other.privateConnectionId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object privateConnectionId_ = "";
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @return The privateConnectionId.
+       */
+      public java.lang.String getPrivateConnectionId() {
+        java.lang.Object ref = privateConnectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          privateConnectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @return The bytes for privateConnectionId.
+       */
+      public com.google.protobuf.ByteString
+          getPrivateConnectionIdBytes() {
+        java.lang.Object ref = privateConnectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          privateConnectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @param value The privateConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateConnectionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        privateConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivateConnectionId() {
+        
+        privateConnectionId_ = getDefaultInstance().getPrivateConnectionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @param value The bytes for privateConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        privateConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cic.v1.UpsertStaticRouteMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cic.v1.UpsertStaticRouteMetadata)
+    private static final yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata();
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpsertStaticRouteMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<UpsertStaticRouteMetadata>() {
+      @java.lang.Override
+      public UpsertStaticRouteMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpsertStaticRouteMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpsertStaticRouteMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpsertStaticRouteMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.UpsertStaticRouteMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RemoveStaticRouteRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.RemoveStaticRouteRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The privateConnectionId.
+     */
+    java.lang.String getPrivateConnectionId();
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for privateConnectionId.
+     */
+    com.google.protobuf.ByteString
+        getPrivateConnectionIdBytes();
+
+    /**
+     * <pre>
+     * IPv4 StaticRoute configs to remove
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+     */
+    java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute> 
+        getIpv4StaticRoutesList();
+    /**
+     * <pre>
+     * IPv4 StaticRoute configs to remove
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+     */
+    yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute getIpv4StaticRoutes(int index);
+    /**
+     * <pre>
+     * IPv4 StaticRoute configs to remove
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+     */
+    int getIpv4StaticRoutesCount();
+    /**
+     * <pre>
+     * IPv4 StaticRoute configs to remove
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder> 
+        getIpv4StaticRoutesOrBuilderList();
+    /**
+     * <pre>
+     * IPv4 StaticRoute configs to remove
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+     */
+    yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder getIpv4StaticRoutesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cic.v1.RemoveStaticRouteRequest}
+   */
+  public static final class RemoveStaticRouteRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cic.v1.RemoveStaticRouteRequest)
+      RemoveStaticRouteRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RemoveStaticRouteRequest.newBuilder() to construct.
+    private RemoveStaticRouteRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RemoveStaticRouteRequest() {
+      privateConnectionId_ = "";
+      ipv4StaticRoutes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RemoveStaticRouteRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RemoveStaticRouteRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              privateConnectionId_ = s;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                ipv4StaticRoutes_ = new java.util.ArrayList<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              ipv4StaticRoutes_.add(
+                  input.readMessage(yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          ipv4StaticRoutes_ = java.util.Collections.unmodifiableList(ipv4StaticRoutes_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_RemoveStaticRouteRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_RemoveStaticRouteRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest.Builder.class);
+    }
+
+    public static final int PRIVATE_CONNECTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object privateConnectionId_;
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The privateConnectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getPrivateConnectionId() {
+      java.lang.Object ref = privateConnectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        privateConnectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for privateConnectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrivateConnectionIdBytes() {
+      java.lang.Object ref = privateConnectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        privateConnectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IPV4_STATIC_ROUTES_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute> ipv4StaticRoutes_;
+    /**
+     * <pre>
+     * IPv4 StaticRoute configs to remove
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute> getIpv4StaticRoutesList() {
+      return ipv4StaticRoutes_;
+    }
+    /**
+     * <pre>
+     * IPv4 StaticRoute configs to remove
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder> 
+        getIpv4StaticRoutesOrBuilderList() {
+      return ipv4StaticRoutes_;
+    }
+    /**
+     * <pre>
+     * IPv4 StaticRoute configs to remove
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+     */
+    @java.lang.Override
+    public int getIpv4StaticRoutesCount() {
+      return ipv4StaticRoutes_.size();
+    }
+    /**
+     * <pre>
+     * IPv4 StaticRoute configs to remove
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute getIpv4StaticRoutes(int index) {
+      return ipv4StaticRoutes_.get(index);
+    }
+    /**
+     * <pre>
+     * IPv4 StaticRoute configs to remove
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder getIpv4StaticRoutesOrBuilder(
+        int index) {
+      return ipv4StaticRoutes_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateConnectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, privateConnectionId_);
+      }
+      for (int i = 0; i < ipv4StaticRoutes_.size(); i++) {
+        output.writeMessage(2, ipv4StaticRoutes_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateConnectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, privateConnectionId_);
+      }
+      for (int i = 0; i < ipv4StaticRoutes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, ipv4StaticRoutes_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest other = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest) obj;
+
+      if (!getPrivateConnectionId()
+          .equals(other.getPrivateConnectionId())) return false;
+      if (!getIpv4StaticRoutesList()
+          .equals(other.getIpv4StaticRoutesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PRIVATE_CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPrivateConnectionId().hashCode();
+      if (getIpv4StaticRoutesCount() > 0) {
+        hash = (37 * hash) + IPV4_STATIC_ROUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getIpv4StaticRoutesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cic.v1.RemoveStaticRouteRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cic.v1.RemoveStaticRouteRequest)
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_RemoveStaticRouteRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_RemoveStaticRouteRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getIpv4StaticRoutesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        privateConnectionId_ = "";
+
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ipv4StaticRoutes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          ipv4StaticRoutesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_RemoveStaticRouteRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest build() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest buildPartial() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest result = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.privateConnectionId_ = privateConnectionId_;
+        if (ipv4StaticRoutesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            ipv4StaticRoutes_ = java.util.Collections.unmodifiableList(ipv4StaticRoutes_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.ipv4StaticRoutes_ = ipv4StaticRoutes_;
+        } else {
+          result.ipv4StaticRoutes_ = ipv4StaticRoutesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest) {
+          return mergeFrom((yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest other) {
+        if (other == yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest.getDefaultInstance()) return this;
+        if (!other.getPrivateConnectionId().isEmpty()) {
+          privateConnectionId_ = other.privateConnectionId_;
+          onChanged();
+        }
+        if (ipv4StaticRoutesBuilder_ == null) {
+          if (!other.ipv4StaticRoutes_.isEmpty()) {
+            if (ipv4StaticRoutes_.isEmpty()) {
+              ipv4StaticRoutes_ = other.ipv4StaticRoutes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureIpv4StaticRoutesIsMutable();
+              ipv4StaticRoutes_.addAll(other.ipv4StaticRoutes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.ipv4StaticRoutes_.isEmpty()) {
+            if (ipv4StaticRoutesBuilder_.isEmpty()) {
+              ipv4StaticRoutesBuilder_.dispose();
+              ipv4StaticRoutesBuilder_ = null;
+              ipv4StaticRoutes_ = other.ipv4StaticRoutes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              ipv4StaticRoutesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getIpv4StaticRoutesFieldBuilder() : null;
+            } else {
+              ipv4StaticRoutesBuilder_.addAllMessages(other.ipv4StaticRoutes_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object privateConnectionId_ = "";
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The privateConnectionId.
+       */
+      public java.lang.String getPrivateConnectionId() {
+        java.lang.Object ref = privateConnectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          privateConnectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for privateConnectionId.
+       */
+      public com.google.protobuf.ByteString
+          getPrivateConnectionIdBytes() {
+        java.lang.Object ref = privateConnectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          privateConnectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The privateConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateConnectionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        privateConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivateConnectionId() {
+        
+        privateConnectionId_ = getDefaultInstance().getPrivateConnectionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for privateConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        privateConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute> ipv4StaticRoutes_ =
+        java.util.Collections.emptyList();
+      private void ensureIpv4StaticRoutesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          ipv4StaticRoutes_ = new java.util.ArrayList<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute>(ipv4StaticRoutes_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder> ipv4StaticRoutesBuilder_;
+
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to remove
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute> getIpv4StaticRoutesList() {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(ipv4StaticRoutes_);
+        } else {
+          return ipv4StaticRoutesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to remove
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public int getIpv4StaticRoutesCount() {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          return ipv4StaticRoutes_.size();
+        } else {
+          return ipv4StaticRoutesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to remove
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute getIpv4StaticRoutes(int index) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          return ipv4StaticRoutes_.get(index);
+        } else {
+          return ipv4StaticRoutesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to remove
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public Builder setIpv4StaticRoutes(
+          int index, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute value) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.set(index, value);
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to remove
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public Builder setIpv4StaticRoutes(
+          int index, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder builderForValue) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to remove
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public Builder addIpv4StaticRoutes(yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute value) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.add(value);
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to remove
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public Builder addIpv4StaticRoutes(
+          int index, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute value) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.add(index, value);
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to remove
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public Builder addIpv4StaticRoutes(
+          yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder builderForValue) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to remove
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public Builder addIpv4StaticRoutes(
+          int index, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder builderForValue) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to remove
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public Builder addAllIpv4StaticRoutes(
+          java.lang.Iterable<? extends yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute> values) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ensureIpv4StaticRoutesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, ipv4StaticRoutes_);
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to remove
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public Builder clearIpv4StaticRoutes() {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ipv4StaticRoutes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to remove
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public Builder removeIpv4StaticRoutes(int index) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ensureIpv4StaticRoutesIsMutable();
+          ipv4StaticRoutes_.remove(index);
+          onChanged();
+        } else {
+          ipv4StaticRoutesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to remove
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder getIpv4StaticRoutesBuilder(
+          int index) {
+        return getIpv4StaticRoutesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to remove
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder getIpv4StaticRoutesOrBuilder(
+          int index) {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          return ipv4StaticRoutes_.get(index);  } else {
+          return ipv4StaticRoutesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to remove
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder> 
+           getIpv4StaticRoutesOrBuilderList() {
+        if (ipv4StaticRoutesBuilder_ != null) {
+          return ipv4StaticRoutesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(ipv4StaticRoutes_);
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to remove
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder addIpv4StaticRoutesBuilder() {
+        return getIpv4StaticRoutesFieldBuilder().addBuilder(
+            yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to remove
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder addIpv4StaticRoutesBuilder(
+          int index) {
+        return getIpv4StaticRoutesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * IPv4 StaticRoute configs to remove
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection.StaticRoute ipv4_static_routes = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder> 
+           getIpv4StaticRoutesBuilderList() {
+        return getIpv4StaticRoutesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder> 
+          getIpv4StaticRoutesFieldBuilder() {
+        if (ipv4StaticRoutesBuilder_ == null) {
+          ipv4StaticRoutesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRoute.Builder, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.StaticRouteOrBuilder>(
+                  ipv4StaticRoutes_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          ipv4StaticRoutes_ = null;
+        }
+        return ipv4StaticRoutesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cic.v1.RemoveStaticRouteRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cic.v1.RemoveStaticRouteRequest)
+    private static final yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest();
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RemoveStaticRouteRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RemoveStaticRouteRequest>() {
+      @java.lang.Override
+      public RemoveStaticRouteRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RemoveStaticRouteRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RemoveStaticRouteRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RemoveStaticRouteRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RemoveStaticRouteMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.RemoveStaticRouteMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1;</code>
+     * @return The privateConnectionId.
+     */
+    java.lang.String getPrivateConnectionId();
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1;</code>
+     * @return The bytes for privateConnectionId.
+     */
+    com.google.protobuf.ByteString
+        getPrivateConnectionIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cic.v1.RemoveStaticRouteMetadata}
+   */
+  public static final class RemoveStaticRouteMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cic.v1.RemoveStaticRouteMetadata)
+      RemoveStaticRouteMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RemoveStaticRouteMetadata.newBuilder() to construct.
+    private RemoveStaticRouteMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RemoveStaticRouteMetadata() {
+      privateConnectionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RemoveStaticRouteMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RemoveStaticRouteMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              privateConnectionId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_RemoveStaticRouteMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_RemoveStaticRouteMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata.Builder.class);
+    }
+
+    public static final int PRIVATE_CONNECTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object privateConnectionId_;
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1;</code>
+     * @return The privateConnectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getPrivateConnectionId() {
+      java.lang.Object ref = privateConnectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        privateConnectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1;</code>
+     * @return The bytes for privateConnectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrivateConnectionIdBytes() {
+      java.lang.Object ref = privateConnectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        privateConnectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateConnectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, privateConnectionId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateConnectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, privateConnectionId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata other = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata) obj;
+
+      if (!getPrivateConnectionId()
+          .equals(other.getPrivateConnectionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PRIVATE_CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPrivateConnectionId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cic.v1.RemoveStaticRouteMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cic.v1.RemoveStaticRouteMetadata)
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_RemoveStaticRouteMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_RemoveStaticRouteMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        privateConnectionId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_RemoveStaticRouteMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata build() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata buildPartial() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata result = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata(this);
+        result.privateConnectionId_ = privateConnectionId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata) {
+          return mergeFrom((yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata other) {
+        if (other == yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata.getDefaultInstance()) return this;
+        if (!other.getPrivateConnectionId().isEmpty()) {
+          privateConnectionId_ = other.privateConnectionId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object privateConnectionId_ = "";
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @return The privateConnectionId.
+       */
+      public java.lang.String getPrivateConnectionId() {
+        java.lang.Object ref = privateConnectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          privateConnectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @return The bytes for privateConnectionId.
+       */
+      public com.google.protobuf.ByteString
+          getPrivateConnectionIdBytes() {
+        java.lang.Object ref = privateConnectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          privateConnectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @param value The privateConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateConnectionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        privateConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivateConnectionId() {
+        
+        privateConnectionId_ = getDefaultInstance().getPrivateConnectionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @param value The bytes for privateConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        privateConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cic.v1.RemoveStaticRouteMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cic.v1.RemoveStaticRouteMetadata)
+    private static final yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata();
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RemoveStaticRouteMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<RemoveStaticRouteMetadata>() {
+      @java.lang.Override
+      public RemoveStaticRouteMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RemoveStaticRouteMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RemoveStaticRouteMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RemoveStaticRouteMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListPrivateConnectionOperationsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.ListPrivateConnectionOperationsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The privateConnectionId.
+     */
+    java.lang.String getPrivateConnectionId();
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for privateConnectionId.
+     */
+    com.google.protobuf.ByteString
+        getPrivateConnectionIdBytes();
+
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size],
+     * the service returns a [ListPrivateConnectionOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListPrivateConnectionOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListPrivateConnectionOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cic.v1.ListPrivateConnectionOperationsRequest}
+   */
+  public static final class ListPrivateConnectionOperationsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cic.v1.ListPrivateConnectionOperationsRequest)
+      ListPrivateConnectionOperationsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListPrivateConnectionOperationsRequest.newBuilder() to construct.
+    private ListPrivateConnectionOperationsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListPrivateConnectionOperationsRequest() {
+      privateConnectionId_ = "";
+      pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListPrivateConnectionOperationsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListPrivateConnectionOperationsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              privateConnectionId_ = s;
+              break;
+            }
+            case 16: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest.Builder.class);
+    }
+
+    public static final int PRIVATE_CONNECTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object privateConnectionId_;
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The privateConnectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getPrivateConnectionId() {
+      java.lang.Object ref = privateConnectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        privateConnectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for privateConnectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrivateConnectionIdBytes() {
+      java.lang.Object ref = privateConnectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        privateConnectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 2;
+    private long pageSize_;
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size],
+     * the service returns a [ListPrivateConnectionOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListPrivateConnectionOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListPrivateConnectionOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateConnectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, privateConnectionId_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateConnectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, privateConnectionId_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest other = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest) obj;
+
+      if (!getPrivateConnectionId()
+          .equals(other.getPrivateConnectionId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PRIVATE_CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPrivateConnectionId().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cic.v1.ListPrivateConnectionOperationsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cic.v1.ListPrivateConnectionOperationsRequest)
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        privateConnectionId_ = "";
+
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest build() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest buildPartial() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest result = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest(this);
+        result.privateConnectionId_ = privateConnectionId_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest) {
+          return mergeFrom((yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest other) {
+        if (other == yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest.getDefaultInstance()) return this;
+        if (!other.getPrivateConnectionId().isEmpty()) {
+          privateConnectionId_ = other.privateConnectionId_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object privateConnectionId_ = "";
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The privateConnectionId.
+       */
+      public java.lang.String getPrivateConnectionId() {
+        java.lang.Object ref = privateConnectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          privateConnectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for privateConnectionId.
+       */
+      public com.google.protobuf.ByteString
+          getPrivateConnectionIdBytes() {
+        java.lang.Object ref = privateConnectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          privateConnectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The privateConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateConnectionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        privateConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivateConnectionId() {
+        
+        privateConnectionId_ = getDefaultInstance().getPrivateConnectionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for privateConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        privateConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListPrivateConnectionOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListPrivateConnectionOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListPrivateConnectionOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListPrivateConnectionOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListPrivateConnectionOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListPrivateConnectionOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListPrivateConnectionOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListPrivateConnectionOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cic.v1.ListPrivateConnectionOperationsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cic.v1.ListPrivateConnectionOperationsRequest)
+    private static final yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest();
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListPrivateConnectionOperationsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListPrivateConnectionOperationsRequest>() {
+      @java.lang.Override
+      public ListPrivateConnectionOperationsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListPrivateConnectionOperationsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListPrivateConnectionOperationsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListPrivateConnectionOperationsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListPrivateConnectionOperationsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.ListPrivateConnectionOperationsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of PrivateConnection operations.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> 
+        getOperationsList();
+    /**
+     * <pre>
+     * List of PrivateConnection operations.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index);
+    /**
+     * <pre>
+     * List of PrivateConnection operations.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    int getOperationsCount();
+    /**
+     * <pre>
+     * List of PrivateConnection operations.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
+        getOperationsOrBuilderList();
+    /**
+     * <pre>
+     * List of PrivateConnection operations.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListPrivateConnectionOperationsRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListPrivateConnectionOperationsRequest.page_token] query parameter
+     * in the next list request. Subsequent list requests will have their own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListPrivateConnectionOperationsRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListPrivateConnectionOperationsRequest.page_token] query parameter
+     * in the next list request. Subsequent list requests will have their own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cic.v1.ListPrivateConnectionOperationsResponse}
+   */
+  public static final class ListPrivateConnectionOperationsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cic.v1.ListPrivateConnectionOperationsResponse)
+      ListPrivateConnectionOperationsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListPrivateConnectionOperationsResponse.newBuilder() to construct.
+    private ListPrivateConnectionOperationsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListPrivateConnectionOperationsResponse() {
+      operations_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListPrivateConnectionOperationsResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListPrivateConnectionOperationsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              operations_.add(
+                  input.readMessage(yandex.cloud.api.operation.OperationOuterClass.Operation.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          operations_ = java.util.Collections.unmodifiableList(operations_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse.Builder.class);
+    }
+
+    public static final int OPERATIONS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
+    /**
+     * <pre>
+     * List of PrivateConnection operations.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
+      return operations_;
+    }
+    /**
+     * <pre>
+     * List of PrivateConnection operations.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
+        getOperationsOrBuilderList() {
+      return operations_;
+    }
+    /**
+     * <pre>
+     * List of PrivateConnection operations.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    @java.lang.Override
+    public int getOperationsCount() {
+      return operations_.size();
+    }
+    /**
+     * <pre>
+     * List of PrivateConnection operations.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
+      return operations_.get(index);
+    }
+    /**
+     * <pre>
+     * List of PrivateConnection operations.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
+        int index) {
+      return operations_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListPrivateConnectionOperationsRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListPrivateConnectionOperationsRequest.page_token] query parameter
+     * in the next list request. Subsequent list requests will have their own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListPrivateConnectionOperationsRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListPrivateConnectionOperationsRequest.page_token] query parameter
+     * in the next list request. Subsequent list requests will have their own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < operations_.size(); i++) {
+        output.writeMessage(1, operations_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < operations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, operations_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse other = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse) obj;
+
+      if (!getOperationsList()
+          .equals(other.getOperationsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getOperationsCount() > 0) {
+        hash = (37 * hash) + OPERATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getOperationsList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cic.v1.ListPrivateConnectionOperationsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cic.v1.ListPrivateConnectionOperationsResponse)
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOperationsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (operationsBuilder_ == null) {
+          operations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          operationsBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse build() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse buildPartial() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse result = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (operationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            operations_ = java.util.Collections.unmodifiableList(operations_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.operations_ = operations_;
+        } else {
+          result.operations_ = operationsBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse) {
+          return mergeFrom((yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse other) {
+        if (other == yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse.getDefaultInstance()) return this;
+        if (operationsBuilder_ == null) {
+          if (!other.operations_.isEmpty()) {
+            if (operations_.isEmpty()) {
+              operations_ = other.operations_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureOperationsIsMutable();
+              operations_.addAll(other.operations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.operations_.isEmpty()) {
+            if (operationsBuilder_.isEmpty()) {
+              operationsBuilder_.dispose();
+              operationsBuilder_ = null;
+              operations_ = other.operations_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              operationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOperationsFieldBuilder() : null;
+            } else {
+              operationsBuilder_.addAllMessages(other.operations_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_ =
+        java.util.Collections.emptyList();
+      private void ensureOperationsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>(operations_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> operationsBuilder_;
+
+      /**
+       * <pre>
+       * List of PrivateConnection operations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
+        if (operationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(operations_);
+        } else {
+          return operationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection operations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public int getOperationsCount() {
+        if (operationsBuilder_ == null) {
+          return operations_.size();
+        } else {
+          return operationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection operations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
+        if (operationsBuilder_ == null) {
+          return operations_.get(index);
+        } else {
+          return operationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection operations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder setOperations(
+          int index, yandex.cloud.api.operation.OperationOuterClass.Operation value) {
+        if (operationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOperationsIsMutable();
+          operations_.set(index, value);
+          onChanged();
+        } else {
+          operationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection operations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder setOperations(
+          int index, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder builderForValue) {
+        if (operationsBuilder_ == null) {
+          ensureOperationsIsMutable();
+          operations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          operationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection operations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder addOperations(yandex.cloud.api.operation.OperationOuterClass.Operation value) {
+        if (operationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOperationsIsMutable();
+          operations_.add(value);
+          onChanged();
+        } else {
+          operationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection operations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder addOperations(
+          int index, yandex.cloud.api.operation.OperationOuterClass.Operation value) {
+        if (operationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOperationsIsMutable();
+          operations_.add(index, value);
+          onChanged();
+        } else {
+          operationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection operations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder addOperations(
+          yandex.cloud.api.operation.OperationOuterClass.Operation.Builder builderForValue) {
+        if (operationsBuilder_ == null) {
+          ensureOperationsIsMutable();
+          operations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          operationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection operations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder addOperations(
+          int index, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder builderForValue) {
+        if (operationsBuilder_ == null) {
+          ensureOperationsIsMutable();
+          operations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          operationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection operations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder addAllOperations(
+          java.lang.Iterable<? extends yandex.cloud.api.operation.OperationOuterClass.Operation> values) {
+        if (operationsBuilder_ == null) {
+          ensureOperationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, operations_);
+          onChanged();
+        } else {
+          operationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection operations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder clearOperations() {
+        if (operationsBuilder_ == null) {
+          operations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          operationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection operations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder removeOperations(int index) {
+        if (operationsBuilder_ == null) {
+          ensureOperationsIsMutable();
+          operations_.remove(index);
+          onChanged();
+        } else {
+          operationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection operations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder getOperationsBuilder(
+          int index) {
+        return getOperationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection operations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
+          int index) {
+        if (operationsBuilder_ == null) {
+          return operations_.get(index);  } else {
+          return operationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection operations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
+           getOperationsOrBuilderList() {
+        if (operationsBuilder_ != null) {
+          return operationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(operations_);
+        }
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection operations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder() {
+        return getOperationsFieldBuilder().addBuilder(
+            yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection operations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder(
+          int index) {
+        return getOperationsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection operations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation.Builder> 
+           getOperationsBuilderList() {
+        return getOperationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
+          getOperationsFieldBuilder() {
+        if (operationsBuilder_ == null) {
+          operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder>(
+                  operations_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          operations_ = null;
+        }
+        return operationsBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListPrivateConnectionOperationsRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListPrivateConnectionOperationsRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListPrivateConnectionOperationsRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListPrivateConnectionOperationsRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListPrivateConnectionOperationsRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListPrivateConnectionOperationsRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListPrivateConnectionOperationsRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListPrivateConnectionOperationsRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListPrivateConnectionOperationsRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListPrivateConnectionOperationsRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cic.v1.ListPrivateConnectionOperationsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cic.v1.ListPrivateConnectionOperationsResponse)
+    private static final yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse();
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListPrivateConnectionOperationsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListPrivateConnectionOperationsResponse>() {
+      @java.lang.Override
+      public ListPrivateConnectionOperationsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListPrivateConnectionOperationsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListPrivateConnectionOperationsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListPrivateConnectionOperationsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_cic_v1_GetPrivateConnectionRequest_descriptor;
   private static final 
@@ -2914,6 +16770,76 @@ public final class PrivateConnectionServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_cic_v1_ListPrivateConnectionsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionRequest_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionRequest_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cic_v1_DeletePrivateConnectionRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cic_v1_DeletePrivateConnectionRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cic_v1_DeletePrivateConnectionMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cic_v1_DeletePrivateConnectionMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cic_v1_UpsertStaticRouteRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cic_v1_UpsertStaticRouteRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cic_v1_UpsertStaticRouteMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cic_v1_UpsertStaticRouteMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cic_v1_RemoveStaticRouteRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cic_v1_RemoveStaticRouteRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cic_v1_RemoveStaticRouteMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cic_v1_RemoveStaticRouteMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2925,35 +16851,131 @@ public final class PrivateConnectionServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n4yandex/cloud/cic/v1/private_connection" +
       "_service.proto\022\023yandex.cloud.cic.v1\032\034goo" +
-      "gle/api/annotations.proto\032\035yandex/cloud/" +
-      "validation.proto\032,yandex/cloud/cic/v1/pr" +
-      "ivate_connection.proto\"J\n\033GetPrivateConn" +
-      "ectionRequest\022+\n\025private_connection_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\"\232\001\n\035ListPrivateConnec" +
-      "tionsRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\n" +
-      "page_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 " +
-      "\001(\tB\n\212\3101\006<=1000\"~\n\036ListPrivateConnection" +
-      "sResponse\022C\n\023private_connections\030\001 \003(\0132&" +
-      ".yandex.cloud.cic.v1.PrivateConnection\022\027" +
-      "\n\017next_page_token\030\002 \001(\t2\316\002\n\030PrivateConne" +
-      "ctionService\022\233\001\n\003Get\0220.yandex.cloud.cic." +
-      "v1.GetPrivateConnectionRequest\032&.yandex." +
-      "cloud.cic.v1.PrivateConnection\":\202\323\344\223\0024\0222" +
-      "/cic/v1/privateConnections/{private_conn" +
-      "ection_id}\022\223\001\n\004List\0222.yandex.cloud.cic.v" +
-      "1.ListPrivateConnectionsRequest\0323.yandex" +
-      ".cloud.cic.v1.ListPrivateConnectionsResp" +
-      "onse\"\"\202\323\344\223\002\034\022\032/cic/v1/privateConnections" +
-      "BV\n\027yandex.cloud.api.cic.v1Z;github.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/ci" +
-      "c/v1;cicb\006proto3"
+      "gle/api/annotations.proto\032 google/protob" +
+      "uf/field_mask.proto\032\036google/protobuf/wra" +
+      "ppers.proto\032\035yandex/cloud/validation.pro" +
+      "to\032 yandex/cloud/api/operation.proto\032&ya" +
+      "ndex/cloud/operation/operation.proto\032!ya" +
+      "ndex/cloud/cic/v1/peering.proto\032,yandex/" +
+      "cloud/cic/v1/private_connection.proto\"J\n" +
+      "\033GetPrivateConnectionRequest\022+\n\025private_" +
+      "connection_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\232\001\n\035Li" +
+      "stPrivateConnectionsRequest\022\037\n\tfolder_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B" +
+      "\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=1" +
+      "00\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"~\n\036ListPr" +
+      "ivateConnectionsResponse\022C\n\023private_conn" +
+      "ections\030\001 \003(\0132&.yandex.cloud.cic.v1.Priv" +
+      "ateConnection\022\027\n\017next_page_token\030\002 \001(\t\"\222" +
+      "\004\n\036CreatePrivateConnectionRequest\022\014\n\004nam" +
+      "e\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\021\n\tfolder_i" +
+      "d\030\004 \001(\t\022\021\n\tregion_id\030\005 \001(\t\022\033\n\023trunk_conn" +
+      "ection_id\030\006 \001(\t\022,\n\007vlan_id\030\007 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\0222\n\014ipv4_peering\030\n " +
+      "\001(\0132\034.yandex.cloud.cic.v1.Peering\022N\n\022ipv" +
+      "4_static_routes\030\023 \003(\01322.yandex.cloud.cic" +
+      ".v1.PrivateConnection.StaticRoute\022\220\001\n\006la" +
+      "bels\030\032 \003(\0132?.yandex.cloud.cic.v1.CreateP" +
+      "rivateConnectionRequest.LabelsEntryB?\202\3101" +
+      "\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\310" +
+      "1\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\003\020\004J\004\010\010\020\nJ" +
+      "\004\010\013\020\023J\004\010\024\020\032\"@\n\037CreatePrivateConnectionMe" +
+      "tadata\022\035\n\025private_connection_id\030\001 \001(\t\"\327\004" +
+      "\n\036UpdatePrivateConnectionRequest\022+\n\025priv" +
+      "ate_connection_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n" +
+      "\013update_mask\030\002 \001(\0132\032.google.protobuf.Fie" +
+      "ldMask\022\014\n\004name\030\003 \001(\t\022\023\n\013description\030\004 \001(" +
+      "\t\022\021\n\tregion_id\030\007 \001(\t\022\033\n\023trunk_connection" +
+      "_id\030\010 \001(\t\022,\n\007vlan_id\030\t \001(\0132\033.google.prot" +
+      "obuf.Int64Value\0222\n\014ipv4_peering\030\n \001(\0132\034." +
+      "yandex.cloud.cic.v1.Peering\022N\n\022ipv4_stat" +
+      "ic_routes\030\023 \003(\01322.yandex.cloud.cic.v1.Pr" +
+      "ivateConnection.StaticRoute\022\220\001\n\006labels\030\032" +
+      " \003(\0132?.yandex.cloud.cic.v1.UpdatePrivate" +
+      "ConnectionRequest.LabelsEntryB?\202\3101\004<=64\212" +
+      "\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a" +
+      "-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\005\020\007J\004\010\013\020\023J\004\010\024\020\032\"" +
+      "@\n\037UpdatePrivateConnectionMetadata\022\035\n\025pr" +
+      "ivate_connection_id\030\001 \001(\t\"M\n\036DeletePriva" +
+      "teConnectionRequest\022+\n\025private_connectio" +
+      "n_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"@\n\037DeletePrivat" +
+      "eConnectionMetadata\022\035\n\025private_connectio" +
+      "n_id\030\001 \001(\t\"\235\001\n\030UpsertStaticRouteRequest\022" +
+      "+\n\025private_connection_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022N\n\022ipv4_static_routes\030\002 \003(\01322.yande" +
+      "x.cloud.cic.v1.PrivateConnection.StaticR" +
+      "outeJ\004\010\003\020\004\":\n\031UpsertStaticRouteMetadata\022" +
+      "\035\n\025private_connection_id\030\001 \001(\t\"\235\001\n\030Remov" +
+      "eStaticRouteRequest\022+\n\025private_connectio" +
+      "n_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022N\n\022ipv4_static_" +
+      "routes\030\002 \003(\01322.yandex.cloud.cic.v1.Priva" +
+      "teConnection.StaticRouteJ\004\010\003\020\004\":\n\031Remove" +
+      "StaticRouteMetadata\022\035\n\025private_connectio" +
+      "n_id\030\001 \001(\t\"\223\001\n&ListPrivateConnectionOper" +
+      "ationsRequest\022+\n\025private_connection_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
+      "\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
+      "\"y\n\'ListPrivateConnectionOperationsRespo" +
+      "nse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.o" +
+      "peration.Operation\022\027\n\017next_page_token\030\002 " +
+      "\001(\t2\374\014\n\030PrivateConnectionService\022\233\001\n\003Get" +
+      "\0220.yandex.cloud.cic.v1.GetPrivateConnect" +
+      "ionRequest\032&.yandex.cloud.cic.v1.Private" +
+      "Connection\":\202\323\344\223\0024\0222/cic/v1/privateConne" +
+      "ctions/{private_connection_id}\022\223\001\n\004List\022" +
+      "2.yandex.cloud.cic.v1.ListPrivateConnect" +
+      "ionsRequest\0323.yandex.cloud.cic.v1.ListPr" +
+      "ivateConnectionsResponse\"\"\202\323\344\223\002\034\022\032/cic/v" +
+      "1/privateConnections\022\277\001\n\006Create\0223.yandex" +
+      ".cloud.cic.v1.CreatePrivateConnectionReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "]\262\322*4\n\037CreatePrivateConnectionMetadata\022\021" +
+      "PrivateConnection\202\323\344\223\002\037\"\032/cic/v1/private" +
+      "Connections:\001*\022\327\001\n\006Update\0223.yandex.cloud" +
+      ".cic.v1.UpdatePrivateConnectionRequest\032!" +
+      ".yandex.cloud.operation.Operation\"u\262\322*4\n" +
+      "\037UpdatePrivateConnectionMetadata\022\021Privat" +
+      "eConnection\202\323\344\223\002722/cic/v1/privateConnec" +
+      "tions/{private_connection_id}:\001*\022\330\001\n\006Del" +
+      "ete\0223.yandex.cloud.cic.v1.DeletePrivateC" +
+      "onnectionRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"v\262\322*8\n\037DeletePrivateConnecti" +
+      "onMetadata\022\025google.protobuf.Empty\202\323\344\223\0024*" +
+      "2/cic/v1/privateConnections/{private_con" +
+      "nection_id}\022\356\001\n\021UpsertStaticRoute\022-.yand" +
+      "ex.cloud.cic.v1.UpsertStaticRouteRequest" +
+      "\032!.yandex.cloud.operation.Operation\"\206\001\262\322" +
+      "*2\n\031UpsertStaticRouteMetadata\022\025google.pr" +
+      "otobuf.Empty\202\323\344\223\002J\"E/cic/v1/privateConne" +
+      "ctions/{private_connection_id}:upsertSta" +
+      "ticRoutes:\001*\022\356\001\n\021RemoveStaticRoute\022-.yan" +
+      "dex.cloud.cic.v1.RemoveStaticRouteReques" +
+      "t\032!.yandex.cloud.operation.Operation\"\206\001\262" +
+      "\322*2\n\031RemoveStaticRouteMetadata\022\025google.p" +
+      "rotobuf.Empty\202\323\344\223\002J\"E/cic/v1/privateConn" +
+      "ections/{private_connection_id}:removeSt" +
+      "aticRoutes:\001*\022\322\001\n\016ListOperations\022;.yande" +
+      "x.cloud.cic.v1.ListPrivateConnectionOper" +
+      "ationsRequest\032<.yandex.cloud.cic.v1.List" +
+      "PrivateConnectionOperationsResponse\"E\202\323\344" +
+      "\223\002?\022=/cic/v1/privateConnections/{private" +
+      "_connection_id}/operationsBV\n\027yandex.clo" +
+      "ud.api.cic.v1Z;github.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/cic/v1;cicb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
+          yandex.cloud.api.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.cic.v1.PeeringOuterClass.getDescriptor(),
           yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_cic_v1_GetPrivateConnectionRequest_descriptor =
@@ -2974,16 +16996,109 @@ public final class PrivateConnectionServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cic_v1_ListPrivateConnectionsResponse_descriptor,
         new java.lang.String[] { "PrivateConnections", "NextPageToken", });
+    internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionRequest_descriptor,
+        new java.lang.String[] { "Name", "Description", "FolderId", "RegionId", "TrunkConnectionId", "VlanId", "Ipv4Peering", "Ipv4StaticRoutes", "Labels", });
+    internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cic_v1_CreatePrivateConnectionMetadata_descriptor,
+        new java.lang.String[] { "PrivateConnectionId", });
+    internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionRequest_descriptor,
+        new java.lang.String[] { "PrivateConnectionId", "UpdateMask", "Name", "Description", "RegionId", "TrunkConnectionId", "VlanId", "Ipv4Peering", "Ipv4StaticRoutes", "Labels", });
+    internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cic_v1_UpdatePrivateConnectionMetadata_descriptor,
+        new java.lang.String[] { "PrivateConnectionId", });
+    internal_static_yandex_cloud_cic_v1_DeletePrivateConnectionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_yandex_cloud_cic_v1_DeletePrivateConnectionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cic_v1_DeletePrivateConnectionRequest_descriptor,
+        new java.lang.String[] { "PrivateConnectionId", });
+    internal_static_yandex_cloud_cic_v1_DeletePrivateConnectionMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_yandex_cloud_cic_v1_DeletePrivateConnectionMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cic_v1_DeletePrivateConnectionMetadata_descriptor,
+        new java.lang.String[] { "PrivateConnectionId", });
+    internal_static_yandex_cloud_cic_v1_UpsertStaticRouteRequest_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_cic_v1_UpsertStaticRouteRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cic_v1_UpsertStaticRouteRequest_descriptor,
+        new java.lang.String[] { "PrivateConnectionId", "Ipv4StaticRoutes", });
+    internal_static_yandex_cloud_cic_v1_UpsertStaticRouteMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_cic_v1_UpsertStaticRouteMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cic_v1_UpsertStaticRouteMetadata_descriptor,
+        new java.lang.String[] { "PrivateConnectionId", });
+    internal_static_yandex_cloud_cic_v1_RemoveStaticRouteRequest_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_cic_v1_RemoveStaticRouteRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cic_v1_RemoveStaticRouteRequest_descriptor,
+        new java.lang.String[] { "PrivateConnectionId", "Ipv4StaticRoutes", });
+    internal_static_yandex_cloud_cic_v1_RemoveStaticRouteMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_cic_v1_RemoveStaticRouteMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cic_v1_RemoveStaticRouteMetadata_descriptor,
+        new java.lang.String[] { "PrivateConnectionId", });
+    internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsRequest_descriptor,
+        new java.lang.String[] { "PrivateConnectionId", "PageSize", "PageToken", });
+    internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsResponse_descriptor,
+        new java.lang.String[] { "Operations", "NextPageToken", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.mapKey);
+    registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
+    yandex.cloud.api.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.cic.v1.PeeringOuterClass.getDescriptor();
     yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.getDescriptor();
   }
 

@@ -19375,6 +19375,33 @@ public final class EpisodeServiceOuterClass {
      * <code>.yandex.cloud.video.v1.EpisodePlayerParams params = 2;</code>
      */
     yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePlayerParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <pre>
+     * Optional field, used to set custom url expiration duration for episodes with sign_url_access
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+     * @return Whether the signedUrlExpirationDuration field is set.
+     */
+    boolean hasSignedUrlExpirationDuration();
+    /**
+     * <pre>
+     * Optional field, used to set custom url expiration duration for episodes with sign_url_access
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+     * @return The signedUrlExpirationDuration.
+     */
+    com.google.protobuf.Duration getSignedUrlExpirationDuration();
+    /**
+     * <pre>
+     * Optional field, used to set custom url expiration duration for episodes with sign_url_access
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+     */
+    com.google.protobuf.DurationOrBuilder getSignedUrlExpirationDurationOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.video.v1.GetEpisodePlayerURLRequest}
@@ -19437,6 +19464,19 @@ public final class EpisodeServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(params_);
                 params_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (signedUrlExpirationDuration_ != null) {
+                subBuilder = signedUrlExpirationDuration_.toBuilder();
+              }
+              signedUrlExpirationDuration_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(signedUrlExpirationDuration_);
+                signedUrlExpirationDuration_ = subBuilder.buildPartial();
               }
 
               break;
@@ -19545,6 +19585,44 @@ public final class EpisodeServiceOuterClass {
       return getParams();
     }
 
+    public static final int SIGNED_URL_EXPIRATION_DURATION_FIELD_NUMBER = 3;
+    private com.google.protobuf.Duration signedUrlExpirationDuration_;
+    /**
+     * <pre>
+     * Optional field, used to set custom url expiration duration for episodes with sign_url_access
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+     * @return Whether the signedUrlExpirationDuration field is set.
+     */
+    @java.lang.Override
+    public boolean hasSignedUrlExpirationDuration() {
+      return signedUrlExpirationDuration_ != null;
+    }
+    /**
+     * <pre>
+     * Optional field, used to set custom url expiration duration for episodes with sign_url_access
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+     * @return The signedUrlExpirationDuration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getSignedUrlExpirationDuration() {
+      return signedUrlExpirationDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : signedUrlExpirationDuration_;
+    }
+    /**
+     * <pre>
+     * Optional field, used to set custom url expiration duration for episodes with sign_url_access
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getSignedUrlExpirationDurationOrBuilder() {
+      return getSignedUrlExpirationDuration();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -19565,6 +19643,9 @@ public final class EpisodeServiceOuterClass {
       if (params_ != null) {
         output.writeMessage(2, getParams());
       }
+      if (signedUrlExpirationDuration_ != null) {
+        output.writeMessage(3, getSignedUrlExpirationDuration());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -19580,6 +19661,10 @@ public final class EpisodeServiceOuterClass {
       if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getParams());
+      }
+      if (signedUrlExpirationDuration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getSignedUrlExpirationDuration());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -19603,6 +19688,11 @@ public final class EpisodeServiceOuterClass {
         if (!getParams()
             .equals(other.getParams())) return false;
       }
+      if (hasSignedUrlExpirationDuration() != other.hasSignedUrlExpirationDuration()) return false;
+      if (hasSignedUrlExpirationDuration()) {
+        if (!getSignedUrlExpirationDuration()
+            .equals(other.getSignedUrlExpirationDuration())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -19619,6 +19709,10 @@ public final class EpisodeServiceOuterClass {
       if (hasParams()) {
         hash = (37 * hash) + PARAMS_FIELD_NUMBER;
         hash = (53 * hash) + getParams().hashCode();
+      }
+      if (hasSignedUrlExpirationDuration()) {
+        hash = (37 * hash) + SIGNED_URL_EXPIRATION_DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getSignedUrlExpirationDuration().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -19761,6 +19855,12 @@ public final class EpisodeServiceOuterClass {
           params_ = null;
           paramsBuilder_ = null;
         }
+        if (signedUrlExpirationDurationBuilder_ == null) {
+          signedUrlExpirationDuration_ = null;
+        } else {
+          signedUrlExpirationDuration_ = null;
+          signedUrlExpirationDurationBuilder_ = null;
+        }
         return this;
       }
 
@@ -19792,6 +19892,11 @@ public final class EpisodeServiceOuterClass {
           result.params_ = params_;
         } else {
           result.params_ = paramsBuilder_.build();
+        }
+        if (signedUrlExpirationDurationBuilder_ == null) {
+          result.signedUrlExpirationDuration_ = signedUrlExpirationDuration_;
+        } else {
+          result.signedUrlExpirationDuration_ = signedUrlExpirationDurationBuilder_.build();
         }
         onBuilt();
         return result;
@@ -19847,6 +19952,9 @@ public final class EpisodeServiceOuterClass {
         }
         if (other.hasParams()) {
           mergeParams(other.getParams());
+        }
+        if (other.hasSignedUrlExpirationDuration()) {
+          mergeSignedUrlExpirationDuration(other.getSignedUrlExpirationDuration());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -20090,6 +20198,161 @@ public final class EpisodeServiceOuterClass {
           params_ = null;
         }
         return paramsBuilder_;
+      }
+
+      private com.google.protobuf.Duration signedUrlExpirationDuration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> signedUrlExpirationDurationBuilder_;
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for episodes with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+       * @return Whether the signedUrlExpirationDuration field is set.
+       */
+      public boolean hasSignedUrlExpirationDuration() {
+        return signedUrlExpirationDurationBuilder_ != null || signedUrlExpirationDuration_ != null;
+      }
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for episodes with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+       * @return The signedUrlExpirationDuration.
+       */
+      public com.google.protobuf.Duration getSignedUrlExpirationDuration() {
+        if (signedUrlExpirationDurationBuilder_ == null) {
+          return signedUrlExpirationDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : signedUrlExpirationDuration_;
+        } else {
+          return signedUrlExpirationDurationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for episodes with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+       */
+      public Builder setSignedUrlExpirationDuration(com.google.protobuf.Duration value) {
+        if (signedUrlExpirationDurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          signedUrlExpirationDuration_ = value;
+          onChanged();
+        } else {
+          signedUrlExpirationDurationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for episodes with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+       */
+      public Builder setSignedUrlExpirationDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (signedUrlExpirationDurationBuilder_ == null) {
+          signedUrlExpirationDuration_ = builderForValue.build();
+          onChanged();
+        } else {
+          signedUrlExpirationDurationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for episodes with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+       */
+      public Builder mergeSignedUrlExpirationDuration(com.google.protobuf.Duration value) {
+        if (signedUrlExpirationDurationBuilder_ == null) {
+          if (signedUrlExpirationDuration_ != null) {
+            signedUrlExpirationDuration_ =
+              com.google.protobuf.Duration.newBuilder(signedUrlExpirationDuration_).mergeFrom(value).buildPartial();
+          } else {
+            signedUrlExpirationDuration_ = value;
+          }
+          onChanged();
+        } else {
+          signedUrlExpirationDurationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for episodes with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+       */
+      public Builder clearSignedUrlExpirationDuration() {
+        if (signedUrlExpirationDurationBuilder_ == null) {
+          signedUrlExpirationDuration_ = null;
+          onChanged();
+        } else {
+          signedUrlExpirationDuration_ = null;
+          signedUrlExpirationDurationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for episodes with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+       */
+      public com.google.protobuf.Duration.Builder getSignedUrlExpirationDurationBuilder() {
+        
+        onChanged();
+        return getSignedUrlExpirationDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for episodes with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getSignedUrlExpirationDurationOrBuilder() {
+        if (signedUrlExpirationDurationBuilder_ != null) {
+          return signedUrlExpirationDurationBuilder_.getMessageOrBuilder();
+        } else {
+          return signedUrlExpirationDuration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : signedUrlExpirationDuration_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for episodes with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getSignedUrlExpirationDurationFieldBuilder() {
+        if (signedUrlExpirationDurationBuilder_ == null) {
+          signedUrlExpirationDurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getSignedUrlExpirationDuration(),
+                  getParentForChildren(),
+                  isClean());
+          signedUrlExpirationDuration_ = null;
+        }
+        return signedUrlExpirationDurationBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -23158,135 +23421,139 @@ public final class EpisodeServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n+yandex/cloud/video/v1/episode_service." +
       "proto\022\025yandex.cloud.video.v1\032\034google/api" +
-      "/annotations.proto\032 google/protobuf/fiel" +
-      "d_mask.proto\032\037google/protobuf/timestamp." +
-      "proto\032 yandex/cloud/api/operation.proto\032" +
-      "&yandex/cloud/operation/operation.proto\032" +
-      "\035yandex/cloud/validation.proto\032#yandex/c" +
-      "loud/video/v1/episode.proto\032$yandex/clou" +
-      "d/video/v1/manifest.proto\"5\n\021GetEpisodeR" +
-      "equest\022 \n\nepisode_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\"\325\001\n\023ListEpisodesRequest\022\035\n\tstream_id\030\001 " +
-      "\001(\tB\010\212\3101\004<=50H\000\022\033\n\007line_id\030\002 \001(\tB\010\212\3101\004<=" +
-      "50H\000\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=100\022\035\n\npa" +
-      "ge_token\030e \001(\tB\t\212\3101\005<=200\022\020\n\010order_by\030f " +
-      "\001(\t\022\032\n\006filter\030g \001(\tB\n\212\3101\006<=1000B\021\n\tparen" +
-      "t_id\022\004\300\3011\001J\004\010\003\020d\"g\n\024ListEpisodesResponse" +
-      "\0220\n\010episodes\030\001 \003(\0132\036.yandex.cloud.video." +
-      "v1.Episode\022\027\n\017next_page_token\030d \001(\tJ\004\010\002\020" +
-      "d\"c\n\027BatchGetEpisodesRequest\022 \n\nchannel_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022&\n\013episode_ids\030\002 " +
-      "\003(\tB\021\202\3101\0051-100\212\3101\004<=50\"L\n\030BatchGetEpisod" +
-      "esResponse\0220\n\010episodes\030\001 \003(\0132\036.yandex.cl" +
-      "oud.video.v1.Episode\"\307\004\n\024CreateEpisodeRe" +
-      "quest\022\035\n\tstream_id\030d \001(\tB\010\212\3101\004<=50H\000\022\033\n\007" +
-      "line_id\030e \001(\tB\010\212\3101\004<=50H\000\022\023\n\005title\030\002 \001(\t" +
-      "B\004\350\3071\001\022\023\n\013description\030\003 \001(\t\022\036\n\014thumbnail" +
-      "_id\030\004 \001(\tB\010\212\3101\004<=50\022.\n\nstart_time\030\005 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022/\n\013finish_ti" +
-      "me\030\006 \001(\0132\032.google.protobuf.Timestamp\022\023\n\013" +
-      "dvr_seconds\030\007 \001(\003\022J\n\rpublic_access\030\350\007 \001(" +
-      "\01320.yandex.cloud.video.v1.EpisodePublicA" +
-      "ccessParamsH\001\022S\n\022auth_system_access\030\352\007 \001" +
-      "(\01324.yandex.cloud.video.v1.EpisodeAuthSy" +
-      "stemAccessParamsH\001\022M\n\017sign_url_access\030\353\007" +
-      " \001(\01321.yandex.cloud.video.v1.EpisodeSign" +
-      "URLAccessParamsH\001B\021\n\tparent_id\022\004\300\3011\001B\025\n\r" +
-      "access_rights\022\004\300\3011\001J\006\010\351\007\020\352\007J\004\010\001\020\002J\004\010\010\020dJ" +
-      "\005\010f\020\350\007\"\033\n\031EpisodePublicAccessParams\"\037\n\035E" +
-      "pisodeAuthSystemAccessParams\"\034\n\032EpisodeS" +
-      "ignURLAccessParams\"+\n\025CreateEpisodeMetad" +
-      "ata\022\022\n\nepisode_id\030\001 \001(\t\"\262\004\n\024UpdateEpisod" +
-      "eRequest\022 \n\nepisode_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022.\n\nfield_mask\030\002 \001(\0132\032.google.protobuf" +
-      ".FieldMask\022\r\n\005title\030\003 \001(\t\022\023\n\013description" +
-      "\030\004 \001(\t\022\036\n\014thumbnail_id\030\005 \001(\tB\010\212\3101\004<=50\022." +
-      "\n\nstart_time\030\006 \001(\0132\032.google.protobuf.Tim" +
-      "estamp\022/\n\013finish_time\030\007 \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\022\023\n\013dvr_seconds\030\010 \001(\003\022J\n\r" +
-      "public_access\030\350\007 \001(\01320.yandex.cloud.vide" +
-      "o.v1.EpisodePublicAccessParamsH\000\022S\n\022auth" +
-      "_system_access\030\352\007 \001(\01324.yandex.cloud.vid" +
-      "eo.v1.EpisodeAuthSystemAccessParamsH\000\022M\n" +
-      "\017sign_url_access\030\353\007 \001(\01321.yandex.cloud.v" +
-      "ideo.v1.EpisodeSignURLAccessParamsH\000B\017\n\r" +
-      "access_rightsJ\006\010\351\007\020\352\007J\005\010\t\020\350\007\"+\n\025UpdateEp" +
-      "isodeMetadata\022\022\n\nepisode_id\030\001 \001(\t\"8\n\024Del" +
-      "eteEpisodeRequest\022 \n\nepisode_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\"+\n\025DeleteEpisodeMetadata\022\022\n\n" +
-      "episode_id\030\001 \001(\t\"\222\001\n\032BatchDeleteEpisodes" +
-      "Request\022\035\n\tstream_id\030d \001(\tB\010\212\3101\004<=50H\000\022\033" +
-      "\n\007line_id\030e \001(\tB\010\212\3101\004<=50H\000\022&\n\013episode_i" +
-      "ds\030\001 \003(\tB\021\202\3101\0051-100\212\3101\004<=50B\n\n\002id\022\004\300\3011\001J" +
-      "\004\010\002\020d\"2\n\033BatchDeleteEpisodesMetadata\022\023\n\013" +
-      "episode_ids\030\001 \003(\t\"\354\001\n\033PerformEpisodeActi" +
-      "onRequest\022 \n\nepisode_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022?\n\007publish\030\352\007 \001(\0132+.yandex.cloud.vid" +
-      "eo.v1.PublishEpisodeActionH\000\022C\n\tunpublis" +
-      "h\030\353\007 \001(\0132-.yandex.cloud.video.v1.Unpubli" +
-      "shEpisodeActionH\000B\016\n\006action\022\004\300\3011\001J\006\010\350\007\020\351" +
-      "\007J\006\010\351\007\020\352\007J\005\010\002\020\350\007\"\026\n\024PublishEpisodeAction" +
-      "\"\030\n\026UnpublishEpisodeAction\"2\n\034PerformEpi" +
-      "sodeActionMetadata\022\022\n\nepisode_id\030\001 \001(\t\"z" +
-      "\n\032GetEpisodePlayerURLRequest\022 \n\nepisode_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022:\n\006params\030\002 \001(\0132*" +
-      ".yandex.cloud.video.v1.EpisodePlayerPara" +
-      "ms\"E\n\023EpisodePlayerParams\022\014\n\004mute\030\001 \001(\010\022" +
-      "\020\n\010autoplay\030\002 \001(\010\022\016\n\006hidden\030\003 \001(\010\"?\n\033Get" +
-      "EpisodePlayerURLResponse\022\022\n\nplayer_url\030\001" +
-      " \001(\t\022\014\n\004html\030\002 \001(\t\">\n\032GetEpisodeManifest" +
-      "sRequest\022 \n\nepisode_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\"Q\n\033GetEpisodeManifestsResponse\0222\n\tman" +
-      "ifests\030\001 \003(\0132\037.yandex.cloud.video.v1.Man" +
-      "ifest2\346\014\n\016EpisodeService\022x\n\003Get\022(.yandex" +
-      ".cloud.video.v1.GetEpisodeRequest\032\036.yand" +
-      "ex.cloud.video.v1.Episode\"\'\202\323\344\223\002!\022\037/vide" +
-      "o/v1/episodes/{episode_id}\022{\n\004List\022*.yan" +
-      "dex.cloud.video.v1.ListEpisodesRequest\032+" +
-      ".yandex.cloud.video.v1.ListEpisodesRespo" +
-      "nse\"\032\202\323\344\223\002\024\022\022/video/v1/episodes\022\223\001\n\010Batc" +
-      "hGet\022..yandex.cloud.video.v1.BatchGetEpi" +
-      "sodesRequest\032/.yandex.cloud.video.v1.Bat" +
-      "chGetEpisodesResponse\"&\202\323\344\223\002 \"\033/video/v1" +
-      "/episodes:batchGet:\001*\022\233\001\n\006Create\022+.yande" +
-      "x.cloud.video.v1.CreateEpisodeRequest\032!." +
-      "yandex.cloud.operation.Operation\"A\202\323\344\223\002\027" +
-      "\"\022/video/v1/episodes:\001*\262\322* \n\025CreateEpiso" +
-      "deMetadata\022\007Episode\022\250\001\n\006Update\022+.yandex." +
-      "cloud.video.v1.UpdateEpisodeRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"N\202\323\344\223\002$2\037" +
-      "/video/v1/episodes/{episode_id}:\001*\262\322* \n\025" +
-      "UpdateEpisodeMetadata\022\007Episode\022\263\001\n\006Delet" +
-      "e\022+.yandex.cloud.video.v1.DeleteEpisodeR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"Y\202\323\344\223\002!*\037/video/v1/episodes/{episode_i" +
-      "d}\262\322*.\n\025DeleteEpisodeMetadata\022\025google.pr" +
-      "otobuf.Empty\022\235\001\n\013BatchDelete\0221.yandex.cl" +
-      "oud.video.v1.BatchDeleteEpisodesRequest\032" +
-      "!.yandex.cloud.operation.Operation\"8\262\322*4" +
-      "\n\033BatchDeleteEpisodesMetadata\022\025google.pr" +
-      "otobuf.Empty\022\313\001\n\rPerformAction\0222.yandex." +
-      "cloud.video.v1.PerformEpisodeActionReque" +
-      "st\032!.yandex.cloud.operation.Operation\"c\202" +
-      "\323\344\223\0022\"-/video/v1/episodes/{episode_id}:p" +
-      "erformAction:\001*\262\322*\'\n\034PerformEpisodeActio" +
-      "nMetadata\022\007Episode\022\253\001\n\014GetPlayerURL\0221.ya" +
-      "ndex.cloud.video.v1.GetEpisodePlayerURLR" +
-      "equest\0322.yandex.cloud.video.v1.GetEpisod" +
-      "ePlayerURLResponse\"4\202\323\344\223\002.\022,/video/v1/ep" +
-      "isodes/{episode_id}:getPlayerUrl\022\253\001\n\014Get" +
-      "Manifests\0221.yandex.cloud.video.v1.GetEpi" +
-      "sodeManifestsRequest\0322.yandex.cloud.vide" +
-      "o.v1.GetEpisodeManifestsResponse\"4\202\323\344\223\002." +
-      "\022,/video/v1/episodes/{episode_id}:getMan" +
-      "ifestsB\\\n\031yandex.cloud.api.video.v1Z?git" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/video/v1;videob\006proto3"
+      "/annotations.proto\032\036google/protobuf/dura" +
+      "tion.proto\032 google/protobuf/field_mask.p" +
+      "roto\032\037google/protobuf/timestamp.proto\032 y" +
+      "andex/cloud/api/operation.proto\032&yandex/" +
+      "cloud/operation/operation.proto\032\035yandex/" +
+      "cloud/validation.proto\032#yandex/cloud/vid" +
+      "eo/v1/episode.proto\032$yandex/cloud/video/" +
+      "v1/manifest.proto\"5\n\021GetEpisodeRequest\022 " +
+      "\n\nepisode_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\325\001\n\023Lis" +
+      "tEpisodesRequest\022\035\n\tstream_id\030\001 \001(\tB\010\212\3101" +
+      "\004<=50H\000\022\033\n\007line_id\030\002 \001(\tB\010\212\3101\004<=50H\000\022\034\n\t" +
+      "page_size\030d \001(\003B\t\372\3071\005<=100\022\035\n\npage_token" +
+      "\030e \001(\tB\t\212\3101\005<=200\022\020\n\010order_by\030f \001(\t\022\032\n\006f" +
+      "ilter\030g \001(\tB\n\212\3101\006<=1000B\021\n\tparent_id\022\004\300\301" +
+      "1\001J\004\010\003\020d\"g\n\024ListEpisodesResponse\0220\n\010epis" +
+      "odes\030\001 \003(\0132\036.yandex.cloud.video.v1.Episo" +
+      "de\022\027\n\017next_page_token\030d \001(\tJ\004\010\002\020d\"c\n\027Bat" +
+      "chGetEpisodesRequest\022 \n\nchannel_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022&\n\013episode_ids\030\002 \003(\tB\021\202\3101" +
+      "\0051-100\212\3101\004<=50\"L\n\030BatchGetEpisodesRespon" +
+      "se\0220\n\010episodes\030\001 \003(\0132\036.yandex.cloud.vide" +
+      "o.v1.Episode\"\307\004\n\024CreateEpisodeRequest\022\035\n" +
+      "\tstream_id\030d \001(\tB\010\212\3101\004<=50H\000\022\033\n\007line_id\030" +
+      "e \001(\tB\010\212\3101\004<=50H\000\022\023\n\005title\030\002 \001(\tB\004\350\3071\001\022\023" +
+      "\n\013description\030\003 \001(\t\022\036\n\014thumbnail_id\030\004 \001(" +
+      "\tB\010\212\3101\004<=50\022.\n\nstart_time\030\005 \001(\0132\032.google" +
+      ".protobuf.Timestamp\022/\n\013finish_time\030\006 \001(\013" +
+      "2\032.google.protobuf.Timestamp\022\023\n\013dvr_seco" +
+      "nds\030\007 \001(\003\022J\n\rpublic_access\030\350\007 \001(\01320.yand" +
+      "ex.cloud.video.v1.EpisodePublicAccessPar" +
+      "amsH\001\022S\n\022auth_system_access\030\352\007 \001(\01324.yan" +
+      "dex.cloud.video.v1.EpisodeAuthSystemAcce" +
+      "ssParamsH\001\022M\n\017sign_url_access\030\353\007 \001(\01321.y" +
+      "andex.cloud.video.v1.EpisodeSignURLAcces" +
+      "sParamsH\001B\021\n\tparent_id\022\004\300\3011\001B\025\n\raccess_r" +
+      "ights\022\004\300\3011\001J\006\010\351\007\020\352\007J\004\010\001\020\002J\004\010\010\020dJ\005\010f\020\350\007\"\033" +
+      "\n\031EpisodePublicAccessParams\"\037\n\035EpisodeAu" +
+      "thSystemAccessParams\"\034\n\032EpisodeSignURLAc" +
+      "cessParams\"+\n\025CreateEpisodeMetadata\022\022\n\ne" +
+      "pisode_id\030\001 \001(\t\"\262\004\n\024UpdateEpisodeRequest" +
+      "\022 \n\nepisode_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022.\n\nfi" +
+      "eld_mask\030\002 \001(\0132\032.google.protobuf.FieldMa" +
+      "sk\022\r\n\005title\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022\036" +
+      "\n\014thumbnail_id\030\005 \001(\tB\010\212\3101\004<=50\022.\n\nstart_" +
+      "time\030\006 \001(\0132\032.google.protobuf.Timestamp\022/" +
+      "\n\013finish_time\030\007 \001(\0132\032.google.protobuf.Ti" +
+      "mestamp\022\023\n\013dvr_seconds\030\010 \001(\003\022J\n\rpublic_a" +
+      "ccess\030\350\007 \001(\01320.yandex.cloud.video.v1.Epi" +
+      "sodePublicAccessParamsH\000\022S\n\022auth_system_" +
+      "access\030\352\007 \001(\01324.yandex.cloud.video.v1.Ep" +
+      "isodeAuthSystemAccessParamsH\000\022M\n\017sign_ur" +
+      "l_access\030\353\007 \001(\01321.yandex.cloud.video.v1." +
+      "EpisodeSignURLAccessParamsH\000B\017\n\raccess_r" +
+      "ightsJ\006\010\351\007\020\352\007J\005\010\t\020\350\007\"+\n\025UpdateEpisodeMet" +
+      "adata\022\022\n\nepisode_id\030\001 \001(\t\"8\n\024DeleteEpiso" +
+      "deRequest\022 \n\nepisode_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\"+\n\025DeleteEpisodeMetadata\022\022\n\nepisode_" +
+      "id\030\001 \001(\t\"\222\001\n\032BatchDeleteEpisodesRequest\022" +
+      "\035\n\tstream_id\030d \001(\tB\010\212\3101\004<=50H\000\022\033\n\007line_i" +
+      "d\030e \001(\tB\010\212\3101\004<=50H\000\022&\n\013episode_ids\030\001 \003(\t" +
+      "B\021\202\3101\0051-100\212\3101\004<=50B\n\n\002id\022\004\300\3011\001J\004\010\002\020d\"2\n" +
+      "\033BatchDeleteEpisodesMetadata\022\023\n\013episode_" +
+      "ids\030\001 \003(\t\"\354\001\n\033PerformEpisodeActionReques" +
+      "t\022 \n\nepisode_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022?\n\007p" +
+      "ublish\030\352\007 \001(\0132+.yandex.cloud.video.v1.Pu" +
+      "blishEpisodeActionH\000\022C\n\tunpublish\030\353\007 \001(\013" +
+      "2-.yandex.cloud.video.v1.UnpublishEpisod" +
+      "eActionH\000B\016\n\006action\022\004\300\3011\001J\006\010\350\007\020\351\007J\006\010\351\007\020\352" +
+      "\007J\005\010\002\020\350\007\"\026\n\024PublishEpisodeAction\"\030\n\026Unpu" +
+      "blishEpisodeAction\"2\n\034PerformEpisodeActi" +
+      "onMetadata\022\022\n\nepisode_id\030\001 \001(\t\"\275\001\n\032GetEp" +
+      "isodePlayerURLRequest\022 \n\nepisode_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\022:\n\006params\030\002 \001(\0132*.yandex" +
+      ".cloud.video.v1.EpisodePlayerParams\022A\n\036s" +
+      "igned_url_expiration_duration\030\003 \001(\0132\031.go" +
+      "ogle.protobuf.Duration\"E\n\023EpisodePlayerP" +
+      "arams\022\014\n\004mute\030\001 \001(\010\022\020\n\010autoplay\030\002 \001(\010\022\016\n" +
+      "\006hidden\030\003 \001(\010\"?\n\033GetEpisodePlayerURLResp" +
+      "onse\022\022\n\nplayer_url\030\001 \001(\t\022\014\n\004html\030\002 \001(\t\">" +
+      "\n\032GetEpisodeManifestsRequest\022 \n\nepisode_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"Q\n\033GetEpisodeMani" +
+      "festsResponse\0222\n\tmanifests\030\001 \003(\0132\037.yande" +
+      "x.cloud.video.v1.Manifest2\346\014\n\016EpisodeSer" +
+      "vice\022x\n\003Get\022(.yandex.cloud.video.v1.GetE" +
+      "pisodeRequest\032\036.yandex.cloud.video.v1.Ep" +
+      "isode\"\'\202\323\344\223\002!\022\037/video/v1/episodes/{episo" +
+      "de_id}\022{\n\004List\022*.yandex.cloud.video.v1.L" +
+      "istEpisodesRequest\032+.yandex.cloud.video." +
+      "v1.ListEpisodesResponse\"\032\202\323\344\223\002\024\022\022/video/" +
+      "v1/episodes\022\223\001\n\010BatchGet\022..yandex.cloud." +
+      "video.v1.BatchGetEpisodesRequest\032/.yande" +
+      "x.cloud.video.v1.BatchGetEpisodesRespons" +
+      "e\"&\202\323\344\223\002 \"\033/video/v1/episodes:batchGet:\001" +
+      "*\022\233\001\n\006Create\022+.yandex.cloud.video.v1.Cre" +
+      "ateEpisodeRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"A\202\323\344\223\002\027\"\022/video/v1/episodes" +
+      ":\001*\262\322* \n\025CreateEpisodeMetadata\022\007Episode\022" +
+      "\250\001\n\006Update\022+.yandex.cloud.video.v1.Updat" +
+      "eEpisodeRequest\032!.yandex.cloud.operation" +
+      ".Operation\"N\202\323\344\223\002$2\037/video/v1/episodes/{" +
+      "episode_id}:\001*\262\322* \n\025UpdateEpisodeMetadat" +
+      "a\022\007Episode\022\263\001\n\006Delete\022+.yandex.cloud.vid" +
+      "eo.v1.DeleteEpisodeRequest\032!.yandex.clou" +
+      "d.operation.Operation\"Y\202\323\344\223\002!*\037/video/v1" +
+      "/episodes/{episode_id}\262\322*.\n\025DeleteEpisod" +
+      "eMetadata\022\025google.protobuf.Empty\022\235\001\n\013Bat" +
+      "chDelete\0221.yandex.cloud.video.v1.BatchDe" +
+      "leteEpisodesRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"8\262\322*4\n\033BatchDeleteEpisode" +
+      "sMetadata\022\025google.protobuf.Empty\022\313\001\n\rPer" +
+      "formAction\0222.yandex.cloud.video.v1.Perfo" +
+      "rmEpisodeActionRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"c\202\323\344\223\0022\"-/video/v1/epi" +
+      "sodes/{episode_id}:performAction:\001*\262\322*\'\n" +
+      "\034PerformEpisodeActionMetadata\022\007Episode\022\253" +
+      "\001\n\014GetPlayerURL\0221.yandex.cloud.video.v1." +
+      "GetEpisodePlayerURLRequest\0322.yandex.clou" +
+      "d.video.v1.GetEpisodePlayerURLResponse\"4" +
+      "\202\323\344\223\002.\022,/video/v1/episodes/{episode_id}:" +
+      "getPlayerUrl\022\253\001\n\014GetManifests\0221.yandex.c" +
+      "loud.video.v1.GetEpisodeManifestsRequest" +
+      "\0322.yandex.cloud.video.v1.GetEpisodeManif" +
+      "estsResponse\"4\202\323\344\223\002.\022,/video/v1/episodes" +
+      "/{episode_id}:getManifestsB\\\n\031yandex.clo" +
+      "ud.api.video.v1Z?github.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/video/v1;video" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
@@ -23420,7 +23687,7 @@ public final class EpisodeServiceOuterClass {
     internal_static_yandex_cloud_video_v1_GetEpisodePlayerURLRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_GetEpisodePlayerURLRequest_descriptor,
-        new java.lang.String[] { "EpisodeId", "Params", });
+        new java.lang.String[] { "EpisodeId", "Params", "SignedUrlExpirationDuration", });
     internal_static_yandex_cloud_video_v1_EpisodePlayerParams_descriptor =
       getDescriptor().getMessageTypes().get(21);
     internal_static_yandex_cloud_video_v1_EpisodePlayerParams_fieldAccessorTable = new
@@ -23457,6 +23724,7 @@ public final class EpisodeServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();

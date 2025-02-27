@@ -20,7 +20,7 @@ public final class PartnerOuterClass {
 
     /**
      * <pre>
-     * ID of the routingInstance.
+     * ID of the partner.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -29,7 +29,7 @@ public final class PartnerOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * ID of the routingInstance.
+     * ID of the partner.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -300,7 +300,7 @@ public final class PartnerOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * ID of the routingInstance.
+     * ID of the partner.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -321,7 +321,7 @@ public final class PartnerOuterClass {
     }
     /**
      * <pre>
-     * ID of the routingInstance.
+     * ID of the partner.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -757,7 +757,7 @@ public final class PartnerOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * ID of the routingInstance.
+       * ID of the partner.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -777,7 +777,7 @@ public final class PartnerOuterClass {
       }
       /**
        * <pre>
-       * ID of the routingInstance.
+       * ID of the partner.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -798,7 +798,7 @@ public final class PartnerOuterClass {
       }
       /**
        * <pre>
-       * ID of the routingInstance.
+       * ID of the partner.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -817,7 +817,7 @@ public final class PartnerOuterClass {
       }
       /**
        * <pre>
-       * ID of the routingInstance.
+       * ID of the partner.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -831,7 +831,7 @@ public final class PartnerOuterClass {
       }
       /**
        * <pre>
-       * ID of the routingInstance.
+       * ID of the partner.
        * </pre>
        *
        * <code>string id = 1;</code>
