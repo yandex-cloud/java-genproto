@@ -2930,6 +2930,43 @@ public final class PERBS {
      * @return The deletionProtection.
      */
     boolean getDeletionProtection();
+
+    /**
+     * <pre>
+     * Is logging from the bus enabled.
+     * </pre>
+     *
+     * <code>bool logging_enabled = 6;</code>
+     * @return The loggingEnabled.
+     */
+    boolean getLoggingEnabled();
+
+    /**
+     * <pre>
+     * Options for logging from the bus.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 7;</code>
+     * @return Whether the logOptions field is set.
+     */
+    boolean hasLogOptions();
+    /**
+     * <pre>
+     * Options for logging from the bus.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 7;</code>
+     * @return The logOptions.
+     */
+    yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions getLogOptions();
+    /**
+     * <pre>
+     * Options for logging from the bus.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 7;</code>
+     */
+    yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptionsOrBuilder getLogOptionsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.eventrouter.v1.CreateBusRequest}
@@ -3014,6 +3051,24 @@ public final class PERBS {
             case 40: {
 
               deletionProtection_ = input.readBool();
+              break;
+            }
+            case 48: {
+
+              loggingEnabled_ = input.readBool();
+              break;
+            }
+            case 58: {
+              yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions.Builder subBuilder = null;
+              if (logOptions_ != null) {
+                subBuilder = logOptions_.toBuilder();
+              }
+              logOptions_ = input.readMessage(yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logOptions_);
+                logOptions_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -3310,6 +3365,59 @@ public final class PERBS {
       return deletionProtection_;
     }
 
+    public static final int LOGGING_ENABLED_FIELD_NUMBER = 6;
+    private boolean loggingEnabled_;
+    /**
+     * <pre>
+     * Is logging from the bus enabled.
+     * </pre>
+     *
+     * <code>bool logging_enabled = 6;</code>
+     * @return The loggingEnabled.
+     */
+    @java.lang.Override
+    public boolean getLoggingEnabled() {
+      return loggingEnabled_;
+    }
+
+    public static final int LOG_OPTIONS_FIELD_NUMBER = 7;
+    private yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions logOptions_;
+    /**
+     * <pre>
+     * Options for logging from the bus.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 7;</code>
+     * @return Whether the logOptions field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogOptions() {
+      return logOptions_ != null;
+    }
+    /**
+     * <pre>
+     * Options for logging from the bus.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 7;</code>
+     * @return The logOptions.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions getLogOptions() {
+      return logOptions_ == null ? yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions.getDefaultInstance() : logOptions_;
+    }
+    /**
+     * <pre>
+     * Options for logging from the bus.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptionsOrBuilder getLogOptionsOrBuilder() {
+      return getLogOptions();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3341,6 +3449,12 @@ public final class PERBS {
           4);
       if (deletionProtection_ != false) {
         output.writeBool(5, deletionProtection_);
+      }
+      if (loggingEnabled_ != false) {
+        output.writeBool(6, loggingEnabled_);
+      }
+      if (logOptions_ != null) {
+        output.writeMessage(7, getLogOptions());
       }
       unknownFields.writeTo(output);
     }
@@ -3374,6 +3488,14 @@ public final class PERBS {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(5, deletionProtection_);
       }
+      if (loggingEnabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, loggingEnabled_);
+      }
+      if (logOptions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getLogOptions());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3399,6 +3521,13 @@ public final class PERBS {
           other.internalGetLabels())) return false;
       if (getDeletionProtection()
           != other.getDeletionProtection()) return false;
+      if (getLoggingEnabled()
+          != other.getLoggingEnabled()) return false;
+      if (hasLogOptions() != other.hasLogOptions()) return false;
+      if (hasLogOptions()) {
+        if (!getLogOptions()
+            .equals(other.getLogOptions())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3423,6 +3552,13 @@ public final class PERBS {
       hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDeletionProtection());
+      hash = (37 * hash) + LOGGING_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getLoggingEnabled());
+      if (hasLogOptions()) {
+        hash = (37 * hash) + LOG_OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getLogOptions().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3587,6 +3723,14 @@ public final class PERBS {
         internalGetMutableLabels().clear();
         deletionProtection_ = false;
 
+        loggingEnabled_ = false;
+
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = null;
+        } else {
+          logOptions_ = null;
+          logOptionsBuilder_ = null;
+        }
         return this;
       }
 
@@ -3620,6 +3764,12 @@ public final class PERBS {
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
         result.deletionProtection_ = deletionProtection_;
+        result.loggingEnabled_ = loggingEnabled_;
+        if (logOptionsBuilder_ == null) {
+          result.logOptions_ = logOptions_;
+        } else {
+          result.logOptions_ = logOptionsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -3684,6 +3834,12 @@ public final class PERBS {
             other.internalGetLabels());
         if (other.getDeletionProtection() != false) {
           setDeletionProtection(other.getDeletionProtection());
+        }
+        if (other.getLoggingEnabled() != false) {
+          setLoggingEnabled(other.getLoggingEnabled());
+        }
+        if (other.hasLogOptions()) {
+          mergeLogOptions(other.getLogOptions());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4203,6 +4359,204 @@ public final class PERBS {
         deletionProtection_ = false;
         onChanged();
         return this;
+      }
+
+      private boolean loggingEnabled_ ;
+      /**
+       * <pre>
+       * Is logging from the bus enabled.
+       * </pre>
+       *
+       * <code>bool logging_enabled = 6;</code>
+       * @return The loggingEnabled.
+       */
+      @java.lang.Override
+      public boolean getLoggingEnabled() {
+        return loggingEnabled_;
+      }
+      /**
+       * <pre>
+       * Is logging from the bus enabled.
+       * </pre>
+       *
+       * <code>bool logging_enabled = 6;</code>
+       * @param value The loggingEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLoggingEnabled(boolean value) {
+        
+        loggingEnabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Is logging from the bus enabled.
+       * </pre>
+       *
+       * <code>bool logging_enabled = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLoggingEnabled() {
+        
+        loggingEnabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions logOptions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions, yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions.Builder, yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptionsOrBuilder> logOptionsBuilder_;
+      /**
+       * <pre>
+       * Options for logging from the bus.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 7;</code>
+       * @return Whether the logOptions field is set.
+       */
+      public boolean hasLogOptions() {
+        return logOptionsBuilder_ != null || logOptions_ != null;
+      }
+      /**
+       * <pre>
+       * Options for logging from the bus.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 7;</code>
+       * @return The logOptions.
+       */
+      public yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions getLogOptions() {
+        if (logOptionsBuilder_ == null) {
+          return logOptions_ == null ? yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions.getDefaultInstance() : logOptions_;
+        } else {
+          return logOptionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Options for logging from the bus.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 7;</code>
+       */
+      public Builder setLogOptions(yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions value) {
+        if (logOptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logOptions_ = value;
+          onChanged();
+        } else {
+          logOptionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for logging from the bus.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 7;</code>
+       */
+      public Builder setLogOptions(
+          yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions.Builder builderForValue) {
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          logOptionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for logging from the bus.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 7;</code>
+       */
+      public Builder mergeLogOptions(yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions value) {
+        if (logOptionsBuilder_ == null) {
+          if (logOptions_ != null) {
+            logOptions_ =
+              yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions.newBuilder(logOptions_).mergeFrom(value).buildPartial();
+          } else {
+            logOptions_ = value;
+          }
+          onChanged();
+        } else {
+          logOptionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for logging from the bus.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 7;</code>
+       */
+      public Builder clearLogOptions() {
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = null;
+          onChanged();
+        } else {
+          logOptions_ = null;
+          logOptionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for logging from the bus.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 7;</code>
+       */
+      public yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions.Builder getLogOptionsBuilder() {
+        
+        onChanged();
+        return getLogOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Options for logging from the bus.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 7;</code>
+       */
+      public yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptionsOrBuilder getLogOptionsOrBuilder() {
+        if (logOptionsBuilder_ != null) {
+          return logOptionsBuilder_.getMessageOrBuilder();
+        } else {
+          return logOptions_ == null ?
+              yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions.getDefaultInstance() : logOptions_;
+        }
+      }
+      /**
+       * <pre>
+       * Options for logging from the bus.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions, yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions.Builder, yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptionsOrBuilder> 
+          getLogOptionsFieldBuilder() {
+        if (logOptionsBuilder_ == null) {
+          logOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions, yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions.Builder, yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptionsOrBuilder>(
+                  getLogOptions(),
+                  getParentForChildren(),
+                  isClean());
+          logOptions_ = null;
+        }
+        return logOptionsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -5201,6 +5555,43 @@ public final class PERBS {
      * @return The deletionProtection.
      */
     boolean getDeletionProtection();
+
+    /**
+     * <pre>
+     * Is logging from the bus enabled.
+     * </pre>
+     *
+     * <code>bool logging_enabled = 7;</code>
+     * @return The loggingEnabled.
+     */
+    boolean getLoggingEnabled();
+
+    /**
+     * <pre>
+     * New options for logging from the bus.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 8;</code>
+     * @return Whether the logOptions field is set.
+     */
+    boolean hasLogOptions();
+    /**
+     * <pre>
+     * New options for logging from the bus.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 8;</code>
+     * @return The logOptions.
+     */
+    yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions getLogOptions();
+    /**
+     * <pre>
+     * New options for logging from the bus.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 8;</code>
+     */
+    yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptionsOrBuilder getLogOptionsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.eventrouter.v1.UpdateBusRequest}
@@ -5298,6 +5689,24 @@ public final class PERBS {
             case 48: {
 
               deletionProtection_ = input.readBool();
+              break;
+            }
+            case 56: {
+
+              loggingEnabled_ = input.readBool();
+              break;
+            }
+            case 66: {
+              yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions.Builder subBuilder = null;
+              if (logOptions_ != null) {
+                subBuilder = logOptions_.toBuilder();
+              }
+              logOptions_ = input.readMessage(yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logOptions_);
+                logOptions_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -5632,6 +6041,59 @@ public final class PERBS {
       return deletionProtection_;
     }
 
+    public static final int LOGGING_ENABLED_FIELD_NUMBER = 7;
+    private boolean loggingEnabled_;
+    /**
+     * <pre>
+     * Is logging from the bus enabled.
+     * </pre>
+     *
+     * <code>bool logging_enabled = 7;</code>
+     * @return The loggingEnabled.
+     */
+    @java.lang.Override
+    public boolean getLoggingEnabled() {
+      return loggingEnabled_;
+    }
+
+    public static final int LOG_OPTIONS_FIELD_NUMBER = 8;
+    private yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions logOptions_;
+    /**
+     * <pre>
+     * New options for logging from the bus.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 8;</code>
+     * @return Whether the logOptions field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogOptions() {
+      return logOptions_ != null;
+    }
+    /**
+     * <pre>
+     * New options for logging from the bus.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 8;</code>
+     * @return The logOptions.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions getLogOptions() {
+      return logOptions_ == null ? yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions.getDefaultInstance() : logOptions_;
+    }
+    /**
+     * <pre>
+     * New options for logging from the bus.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 8;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptionsOrBuilder getLogOptionsOrBuilder() {
+      return getLogOptions();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5666,6 +6128,12 @@ public final class PERBS {
           5);
       if (deletionProtection_ != false) {
         output.writeBool(6, deletionProtection_);
+      }
+      if (loggingEnabled_ != false) {
+        output.writeBool(7, loggingEnabled_);
+      }
+      if (logOptions_ != null) {
+        output.writeMessage(8, getLogOptions());
       }
       unknownFields.writeTo(output);
     }
@@ -5703,6 +6171,14 @@ public final class PERBS {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, deletionProtection_);
       }
+      if (loggingEnabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, loggingEnabled_);
+      }
+      if (logOptions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getLogOptions());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5733,6 +6209,13 @@ public final class PERBS {
           other.internalGetLabels())) return false;
       if (getDeletionProtection()
           != other.getDeletionProtection()) return false;
+      if (getLoggingEnabled()
+          != other.getLoggingEnabled()) return false;
+      if (hasLogOptions() != other.hasLogOptions()) return false;
+      if (hasLogOptions()) {
+        if (!getLogOptions()
+            .equals(other.getLogOptions())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5761,6 +6244,13 @@ public final class PERBS {
       hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDeletionProtection());
+      hash = (37 * hash) + LOGGING_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getLoggingEnabled());
+      if (hasLogOptions()) {
+        hash = (37 * hash) + LOG_OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getLogOptions().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5931,6 +6421,14 @@ public final class PERBS {
         internalGetMutableLabels().clear();
         deletionProtection_ = false;
 
+        loggingEnabled_ = false;
+
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = null;
+        } else {
+          logOptions_ = null;
+          logOptionsBuilder_ = null;
+        }
         return this;
       }
 
@@ -5969,6 +6467,12 @@ public final class PERBS {
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
         result.deletionProtection_ = deletionProtection_;
+        result.loggingEnabled_ = loggingEnabled_;
+        if (logOptionsBuilder_ == null) {
+          result.logOptions_ = logOptions_;
+        } else {
+          result.logOptions_ = logOptionsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -6036,6 +6540,12 @@ public final class PERBS {
             other.internalGetLabels());
         if (other.getDeletionProtection() != false) {
           setDeletionProtection(other.getDeletionProtection());
+        }
+        if (other.getLoggingEnabled() != false) {
+          setLoggingEnabled(other.getLoggingEnabled());
+        }
+        if (other.hasLogOptions()) {
+          mergeLogOptions(other.getLogOptions());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6710,6 +7220,204 @@ public final class PERBS {
         deletionProtection_ = false;
         onChanged();
         return this;
+      }
+
+      private boolean loggingEnabled_ ;
+      /**
+       * <pre>
+       * Is logging from the bus enabled.
+       * </pre>
+       *
+       * <code>bool logging_enabled = 7;</code>
+       * @return The loggingEnabled.
+       */
+      @java.lang.Override
+      public boolean getLoggingEnabled() {
+        return loggingEnabled_;
+      }
+      /**
+       * <pre>
+       * Is logging from the bus enabled.
+       * </pre>
+       *
+       * <code>bool logging_enabled = 7;</code>
+       * @param value The loggingEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLoggingEnabled(boolean value) {
+        
+        loggingEnabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Is logging from the bus enabled.
+       * </pre>
+       *
+       * <code>bool logging_enabled = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLoggingEnabled() {
+        
+        loggingEnabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions logOptions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions, yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions.Builder, yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptionsOrBuilder> logOptionsBuilder_;
+      /**
+       * <pre>
+       * New options for logging from the bus.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 8;</code>
+       * @return Whether the logOptions field is set.
+       */
+      public boolean hasLogOptions() {
+        return logOptionsBuilder_ != null || logOptions_ != null;
+      }
+      /**
+       * <pre>
+       * New options for logging from the bus.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 8;</code>
+       * @return The logOptions.
+       */
+      public yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions getLogOptions() {
+        if (logOptionsBuilder_ == null) {
+          return logOptions_ == null ? yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions.getDefaultInstance() : logOptions_;
+        } else {
+          return logOptionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * New options for logging from the bus.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 8;</code>
+       */
+      public Builder setLogOptions(yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions value) {
+        if (logOptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logOptions_ = value;
+          onChanged();
+        } else {
+          logOptionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New options for logging from the bus.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 8;</code>
+       */
+      public Builder setLogOptions(
+          yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions.Builder builderForValue) {
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          logOptionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New options for logging from the bus.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 8;</code>
+       */
+      public Builder mergeLogOptions(yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions value) {
+        if (logOptionsBuilder_ == null) {
+          if (logOptions_ != null) {
+            logOptions_ =
+              yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions.newBuilder(logOptions_).mergeFrom(value).buildPartial();
+          } else {
+            logOptions_ = value;
+          }
+          onChanged();
+        } else {
+          logOptionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New options for logging from the bus.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 8;</code>
+       */
+      public Builder clearLogOptions() {
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = null;
+          onChanged();
+        } else {
+          logOptions_ = null;
+          logOptionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New options for logging from the bus.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 8;</code>
+       */
+      public yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions.Builder getLogOptionsBuilder() {
+        
+        onChanged();
+        return getLogOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * New options for logging from the bus.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 8;</code>
+       */
+      public yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptionsOrBuilder getLogOptionsOrBuilder() {
+        if (logOptionsBuilder_ != null) {
+          return logOptionsBuilder_.getMessageOrBuilder();
+        } else {
+          return logOptions_ == null ?
+              yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions.getDefaultInstance() : logOptions_;
+        }
+      }
+      /**
+       * <pre>
+       * New options for logging from the bus.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.eventrouter.v1.LogOptions log_options = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions, yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions.Builder, yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptionsOrBuilder> 
+          getLogOptionsFieldBuilder() {
+        if (logOptionsBuilder_ == null) {
+          logOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions, yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions.Builder, yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptionsOrBuilder>(
+                  getLogOptions(),
+                  getParentForChildren(),
+                  isClean());
+          logOptions_ = null;
+        }
+        return logOptionsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10876,7 +11584,7 @@ public final class PERBS {
       "age_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\022\016\n\006fi" +
       "lter\030\004 \001(\t\"h\n\021ListBusesResponse\022:\n\005buses" +
       "\030\001 \003(\0132+.yandex.cloud.serverless.eventro" +
-      "uter.v1.Bus\022\027\n\017next_page_token\030\002 \001(\t\"\340\002\n" +
+      "uter.v1.Bus\022\027\n\017next_page_token\030\002 \001(\t\"\302\003\n" +
       "\020CreateBusRequest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\307" +
       "1\001\022/\n\004name\030\002 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1," +
       "61}[a-z0-9]\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=" +
@@ -10884,76 +11592,81 @@ public final class PERBS {
       "erless.eventrouter.v1.CreateBusRequest.L" +
       "abelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-" +
       "z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\033\n\023d" +
-      "eletion_protection\030\005 \001(\010\032-\n\013LabelsEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"6\n\021Creat" +
-      "eBusMetadata\022\016\n\006bus_id\030\001 \001(\t\022\021\n\tfolder_i" +
-      "d\030\002 \001(\t\"\216\003\n\020UpdateBusRequest\022\024\n\006bus_id\030\001" +
-      " \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.google" +
-      ".protobuf.FieldMask\022/\n\004name\030\003 \001(\tB!\362\3071\035|" +
-      "[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013descript" +
-      "ion\030\004 \001(\tB\t\212\3101\005<=256\022\225\001\n\006labels\030\005 \003(\0132D." +
-      "yandex.cloud.serverless.eventrouter.v1.U" +
-      "pdateBusRequest.LabelsEntryB?\202\3101\004<=64\212\3101" +
-      "\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z" +
-      "][-_0-9a-z]*\022\033\n\023deletion_protection\030\006 \001(" +
-      "\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\")\n\021UpdateBusMetadata\022\024\n\006bus_id\030" +
-      "\001 \001(\tB\004\350\3071\001\"(\n\020DeleteBusRequest\022\024\n\006bus_i" +
-      "d\030\001 \001(\tB\004\350\3071\001\")\n\021DeleteBusMetadata\022\024\n\006bu" +
-      "s_id\030\001 \001(\tB\004\350\3071\001\"\212\001\n\030ListBusOperationsRe" +
-      "quest\022\024\n\006bus_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size" +
-      "\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t" +
-      "\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"k\n" +
-      "\031ListBusOperationsResponse\0225\n\noperations" +
-      "\030\001 \003(\0132!.yandex.cloud.operation.Operatio" +
-      "n\022\027\n\017next_page_token\030\002 \001(\t2\256\r\n\nBusServic" +
-      "e\022\221\001\n\003Get\0225.yandex.cloud.serverless.even" +
-      "trouter.v1.GetBusRequest\032+.yandex.cloud." +
-      "serverless.eventrouter.v1.Bus\"&\202\323\344\223\002 \022\036/" +
-      "eventrouter/v1/buses/{bus_id}\022\232\001\n\004List\0228" +
+      "eletion_protection\030\005 \001(\010\022\027\n\017logging_enab" +
+      "led\030\006 \001(\010\022G\n\013log_options\030\007 \001(\01322.yandex." +
+      "cloud.serverless.eventrouter.v1.LogOptio" +
+      "ns\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001\"6\n\021CreateBusMetadata\022\016\n\006bus_id" +
+      "\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\"\360\003\n\020UpdateBusR" +
+      "equest\022\024\n\006bus_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_m" +
+      "ask\030\002 \001(\0132\032.google.protobuf.FieldMask\022/\n" +
+      "\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a" +
+      "-z0-9]\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\225" +
+      "\001\n\006labels\030\005 \003(\0132D.yandex.cloud.serverles" +
+      "s.eventrouter.v1.UpdateBusRequest.Labels" +
+      "EntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\310" +
+      "1\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\033\n\023deleti" +
+      "on_protection\030\006 \001(\010\022\027\n\017logging_enabled\030\007" +
+      " \001(\010\022G\n\013log_options\030\010 \001(\01322.yandex.cloud" +
+      ".serverless.eventrouter.v1.LogOptions\032-\n" +
+      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001\")\n\021UpdateBusMetadata\022\024\n\006bus_id\030\001 \001(" +
+      "\tB\004\350\3071\001\"(\n\020DeleteBusRequest\022\024\n\006bus_id\030\001 " +
+      "\001(\tB\004\350\3071\001\")\n\021DeleteBusMetadata\022\024\n\006bus_id" +
+      "\030\001 \001(\tB\004\350\3071\001\"\212\001\n\030ListBusOperationsReques" +
+      "t\022\024\n\006bus_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001" +
+      "(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
+      "<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"k\n\031Lis" +
+      "tBusOperationsResponse\0225\n\noperations\030\001 \003" +
+      "(\0132!.yandex.cloud.operation.Operation\022\027\n" +
+      "\017next_page_token\030\002 \001(\t2\256\r\n\nBusService\022\221\001" +
+      "\n\003Get\0225.yandex.cloud.serverless.eventrou" +
+      "ter.v1.GetBusRequest\032+.yandex.cloud.serv" +
+      "erless.eventrouter.v1.Bus\"&\202\323\344\223\002 \022\036/even" +
+      "trouter/v1/buses/{bus_id}\022\232\001\n\004List\0228.yan" +
+      "dex.cloud.serverless.eventrouter.v1.List" +
+      "BusesRequest\0329.yandex.cloud.serverless.e" +
+      "ventrouter.v1.ListBusesResponse\"\035\202\323\344\223\002\027\022" +
+      "\025/eventrouter/v1/buses\022\243\001\n\006Create\0228.yand" +
+      "ex.cloud.serverless.eventrouter.v1.Creat" +
+      "eBusRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"<\202\323\344\223\002\032\"\025/eventrouter/v1/buses:\001*" +
+      "\262\322*\030\n\021CreateBusMetadata\022\003Bus\022\254\001\n\006Update\022" +
+      "8.yandex.cloud.serverless.eventrouter.v1" +
+      ".UpdateBusRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"E\202\323\344\223\002#2\036/eventrouter/v1/bu" +
+      "ses/{bus_id}:\001*\262\322*\030\n\021UpdateBusMetadata\022\003" +
+      "Bus\022\273\001\n\006Delete\0228.yandex.cloud.serverless" +
+      ".eventrouter.v1.DeleteBusRequest\032!.yande" +
+      "x.cloud.operation.Operation\"T\202\323\344\223\002 *\036/ev" +
+      "entrouter/v1/buses/{bus_id}\262\322**\n\021DeleteB" +
+      "usMetadata\022\025google.protobuf.Empty\022\310\001\n\016Li" +
+      "stOperations\022@.yandex.cloud.serverless.e" +
+      "ventrouter.v1.ListBusOperationsRequest\032A" +
       ".yandex.cloud.serverless.eventrouter.v1." +
-      "ListBusesRequest\0329.yandex.cloud.serverle" +
-      "ss.eventrouter.v1.ListBusesResponse\"\035\202\323\344" +
-      "\223\002\027\022\025/eventrouter/v1/buses\022\243\001\n\006Create\0228." +
-      "yandex.cloud.serverless.eventrouter.v1.C" +
-      "reateBusRequest\032!.yandex.cloud.operation" +
-      ".Operation\"<\202\323\344\223\002\032\"\025/eventrouter/v1/buse" +
-      "s:\001*\262\322*\030\n\021CreateBusMetadata\022\003Bus\022\254\001\n\006Upd" +
-      "ate\0228.yandex.cloud.serverless.eventroute" +
-      "r.v1.UpdateBusRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"E\202\323\344\223\002#2\036/eventrouter/v" +
-      "1/buses/{bus_id}:\001*\262\322*\030\n\021UpdateBusMetada" +
-      "ta\022\003Bus\022\273\001\n\006Delete\0228.yandex.cloud.server" +
-      "less.eventrouter.v1.DeleteBusRequest\032!.y" +
-      "andex.cloud.operation.Operation\"T\202\323\344\223\002 *" +
-      "\036/eventrouter/v1/buses/{bus_id}\262\322**\n\021Del" +
-      "eteBusMetadata\022\025google.protobuf.Empty\022\310\001" +
-      "\n\016ListOperations\022@.yandex.cloud.serverle" +
-      "ss.eventrouter.v1.ListBusOperationsReque" +
-      "st\032A.yandex.cloud.serverless.eventrouter" +
-      ".v1.ListBusOperationsResponse\"1\202\323\344\223\002+\022)/" +
-      "eventrouter/v1/buses/{bus_id}/operations" +
-      "\022\265\001\n\022ListAccessBindings\022..yandex.cloud.a" +
-      "ccess.ListAccessBindingsRequest\032/.yandex" +
-      ".cloud.access.ListAccessBindingsResponse" +
-      "\">\202\323\344\223\0028\0226/eventrouter/v1/buses/{resourc" +
-      "e_id}:listAccessBindings\022\344\001\n\021SetAccessBi" +
-      "ndings\022-.yandex.cloud.access.SetAccessBi" +
-      "ndingsRequest\032!.yandex.cloud.operation.O" +
-      "peration\"}\202\323\344\223\002:\"5/eventrouter/v1/buses/" +
-      "{resource_id}:setAccessBindings:\001*\262\322*9\n " +
-      "access.SetAccessBindingsMetadata\022\025google" +
-      ".protobuf.Empty\022\361\001\n\024UpdateAccessBindings" +
-      "\0220.yandex.cloud.access.UpdateAccessBindi" +
-      "ngsRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"\203\001\202\323\344\223\002=28/eventrouter/v1/buses/{r" +
-      "esource_id}:updateAccessBindings:\001*\262\322*<\n" +
-      "#access.UpdateAccessBindingsMetadata\022\025go" +
-      "ogle.protobuf.EmptyB\213\001\n*yandex.cloud.api" +
-      ".serverless.eventrouter.v1B\005PERBSZVgithu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/serverless/eventrouter/v1;eventroute" +
-      "rb\006proto3"
+      "ListBusOperationsResponse\"1\202\323\344\223\002+\022)/even" +
+      "trouter/v1/buses/{bus_id}/operations\022\265\001\n" +
+      "\022ListAccessBindings\022..yandex.cloud.acces" +
+      "s.ListAccessBindingsRequest\032/.yandex.clo" +
+      "ud.access.ListAccessBindingsResponse\">\202\323" +
+      "\344\223\0028\0226/eventrouter/v1/buses/{resource_id" +
+      "}:listAccessBindings\022\344\001\n\021SetAccessBindin" +
+      "gs\022-.yandex.cloud.access.SetAccessBindin" +
+      "gsRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"}\202\323\344\223\002:\"5/eventrouter/v1/buses/{res" +
+      "ource_id}:setAccessBindings:\001*\262\322*9\n acce" +
+      "ss.SetAccessBindingsMetadata\022\025google.pro" +
+      "tobuf.Empty\022\361\001\n\024UpdateAccessBindings\0220.y" +
+      "andex.cloud.access.UpdateAccessBindingsR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"\203\001\202\323\344\223\002=28/eventrouter/v1/buses/{resou" +
+      "rce_id}:updateAccessBindings:\001*\262\322*<\n#acc" +
+      "ess.UpdateAccessBindingsMetadata\022\025google" +
+      ".protobuf.EmptyB\213\001\n*yandex.cloud.api.ser" +
+      "verless.eventrouter.v1B\005PERBSZVgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "serverless/eventrouter/v1;eventrouterb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10989,7 +11702,7 @@ public final class PERBS {
     internal_static_yandex_cloud_serverless_eventrouter_v1_CreateBusRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_eventrouter_v1_CreateBusRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "DeletionProtection", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "DeletionProtection", "LoggingEnabled", "LogOptions", });
     internal_static_yandex_cloud_serverless_eventrouter_v1_CreateBusRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_serverless_eventrouter_v1_CreateBusRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_eventrouter_v1_CreateBusRequest_LabelsEntry_fieldAccessorTable = new
@@ -11007,7 +11720,7 @@ public final class PERBS {
     internal_static_yandex_cloud_serverless_eventrouter_v1_UpdateBusRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_eventrouter_v1_UpdateBusRequest_descriptor,
-        new java.lang.String[] { "BusId", "UpdateMask", "Name", "Description", "Labels", "DeletionProtection", });
+        new java.lang.String[] { "BusId", "UpdateMask", "Name", "Description", "Labels", "DeletionProtection", "LoggingEnabled", "LogOptions", });
     internal_static_yandex_cloud_serverless_eventrouter_v1_UpdateBusRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_serverless_eventrouter_v1_UpdateBusRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_eventrouter_v1_UpdateBusRequest_LabelsEntry_fieldAccessorTable = new

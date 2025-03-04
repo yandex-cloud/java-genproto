@@ -663,6 +663,10 @@ public final class TrunkConnectionOuterClass {
        * <code>CAPACITY_100_GBPS = 17;</code>
        */
       CAPACITY_100_GBPS(17),
+      /**
+       * <code>CAPACITY_200_GBPS = 18;</code>
+       */
+      CAPACITY_200_GBPS(18),
       UNRECOGNIZED(-1),
       ;
 
@@ -738,6 +742,10 @@ public final class TrunkConnectionOuterClass {
        * <code>CAPACITY_100_GBPS = 17;</code>
        */
       public static final int CAPACITY_100_GBPS_VALUE = 17;
+      /**
+       * <code>CAPACITY_200_GBPS = 18;</code>
+       */
+      public static final int CAPACITY_200_GBPS_VALUE = 18;
 
 
       public final int getNumber() {
@@ -782,6 +790,7 @@ public final class TrunkConnectionOuterClass {
           case 15: return CAPACITY_40_GBPS;
           case 16: return CAPACITY_50_GBPS;
           case 17: return CAPACITY_100_GBPS;
+          case 18: return CAPACITY_200_GBPS;
           default: return null;
         }
       }
@@ -6919,7 +6928,7 @@ public final class TrunkConnectionOuterClass {
       "tamp.proto\0321yandex/cloud/cic/v1/common/t" +
       "ransceiver_type.proto\0328yandex/cloud/cic/" +
       "v1/common/lag_allocation_settings.proto\"" +
-      "\332\r\n\017TrunkConnection\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030" +
+      "\361\r\n\017TrunkConnection\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030" +
       "\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\021\n\tfolder_id\030" +
       "\005 \001(\t\022\021\n\tregion_id\030\006 \001(\t\022.\n\ncreated_at\030\007" +
       " \001(\0132\032.google.protobuf.Timestamp\022^\n\030sing" +
@@ -6949,7 +6958,7 @@ public final class TrunkConnectionOuterClass {
       "cic.v1.common.TransceiverType\022R\n\027lag_all" +
       "ocation_settings\030\003 \001(\01321.yandex.cloud.ci" +
       "c.v1.common.LagAllocationSettings\022\032\n\022acc" +
-      "ess_device_name\030\004 \001(\tJ\004\010\002\020\003\"\233\003\n\010Capacity" +
+      "ess_device_name\030\004 \001(\tJ\004\010\002\020\003\"\262\003\n\010Capacity" +
       "\022\030\n\024CAPACITY_UNSPECIFIED\020\000\022\024\n\020CAPACITY_5" +
       "0_MBPS\020\001\022\025\n\021CAPACITY_100_MBPS\020\002\022\025\n\021CAPAC" +
       "ITY_200_MBPS\020\003\022\025\n\021CAPACITY_300_MBPS\020\004\022\025\n" +
@@ -6960,12 +6969,12 @@ public final class TrunkConnectionOuterClass {
       "_10_GBPS\020\014\022\024\n\020CAPACITY_20_GBPS\020\r\022\024\n\020CAPA" +
       "CITY_30_GBPS\020\016\022\024\n\020CAPACITY_40_GBPS\020\017\022\024\n\020" +
       "CAPACITY_50_GBPS\020\020\022\025\n\021CAPACITY_100_GBPS\020" +
-      "\021\"V\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010C" +
-      "REATING\020\001\022\014\n\010UPDATING\020\002\022\014\n\010DELETING\020\003\022\n\n" +
-      "\006ACTIVE\020\004B\007\n\005jointJ\004\010\004\020\005J\004\010\010\020\tJ\004\010\r\020\026BV\n\027" +
-      "yandex.cloud.api.cic.v1Z;github.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/cic/v1" +
-      ";cicb\006proto3"
+      "\021\022\025\n\021CAPACITY_200_GBPS\020\022\"V\n\006Status\022\026\n\022ST" +
+      "ATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\014\n\010UPDA" +
+      "TING\020\002\022\014\n\010DELETING\020\003\022\n\n\006ACTIVE\020\004B\007\n\005join" +
+      "tJ\004\010\004\020\005J\004\010\010\020\tJ\004\010\r\020\026BV\n\027yandex.cloud.api." +
+      "cic.v1Z;github.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/cic/v1;cicb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

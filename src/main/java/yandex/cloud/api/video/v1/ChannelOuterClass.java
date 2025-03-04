@@ -205,6 +205,33 @@ public final class ChannelOuterClass {
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * Channel settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+     * @return Whether the settings field is set.
+     */
+    boolean hasSettings();
+    /**
+     * <pre>
+     * Channel settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+     * @return The settings.
+     */
+    yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings getSettings();
+    /**
+     * <pre>
+     * Channel settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+     */
+    yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettingsOrBuilder getSettingsOrBuilder();
   }
   /**
    * <pre>
@@ -321,6 +348,19 @@ public final class ChannelOuterClass {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 1610: {
+              yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.Builder subBuilder = null;
+              if (settings_ != null) {
+                subBuilder = settings_.toBuilder();
+              }
+              settings_ = input.readMessage(yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(settings_);
+                settings_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -724,6 +764,44 @@ public final class ChannelOuterClass {
       return map.get(key);
     }
 
+    public static final int SETTINGS_FIELD_NUMBER = 201;
+    private yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings settings_;
+    /**
+     * <pre>
+     * Channel settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+     * @return Whether the settings field is set.
+     */
+    @java.lang.Override
+    public boolean hasSettings() {
+      return settings_ != null;
+    }
+    /**
+     * <pre>
+     * Channel settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+     * @return The settings.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings getSettings() {
+      return settings_ == null ? yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.getDefaultInstance() : settings_;
+    }
+    /**
+     * <pre>
+     * Channel settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettingsOrBuilder getSettingsOrBuilder() {
+      return getSettings();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -762,6 +840,9 @@ public final class ChannelOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           200);
+      if (settings_ != null) {
+        output.writeMessage(201, getSettings());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -801,6 +882,10 @@ public final class ChannelOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(200, labels__);
       }
+      if (settings_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(201, getSettings());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -836,6 +921,11 @@ public final class ChannelOuterClass {
       }
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (hasSettings() != other.hasSettings()) return false;
+      if (hasSettings()) {
+        if (!getSettings()
+            .equals(other.getSettings())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -866,6 +956,10 @@ public final class ChannelOuterClass {
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      if (hasSettings()) {
+        hash = (37 * hash) + SETTINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getSettings().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1047,6 +1141,12 @@ public final class ChannelOuterClass {
           updatedAtBuilder_ = null;
         }
         internalGetMutableLabels().clear();
+        if (settingsBuilder_ == null) {
+          settings_ = null;
+        } else {
+          settings_ = null;
+          settingsBuilder_ = null;
+        }
         return this;
       }
 
@@ -1090,6 +1190,11 @@ public final class ChannelOuterClass {
         }
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        if (settingsBuilder_ == null) {
+          result.settings_ = settings_;
+        } else {
+          result.settings_ = settingsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1162,6 +1267,9 @@ public final class ChannelOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (other.hasSettings()) {
+          mergeSettings(other.getSettings());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -2044,6 +2152,161 @@ public final class ChannelOuterClass {
             .putAll(values);
         return this;
       }
+
+      private yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings settings_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.Builder, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettingsOrBuilder> settingsBuilder_;
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       * @return Whether the settings field is set.
+       */
+      public boolean hasSettings() {
+        return settingsBuilder_ != null || settings_ != null;
+      }
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       * @return The settings.
+       */
+      public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings getSettings() {
+        if (settingsBuilder_ == null) {
+          return settings_ == null ? yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.getDefaultInstance() : settings_;
+        } else {
+          return settingsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       */
+      public Builder setSettings(yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings value) {
+        if (settingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          settings_ = value;
+          onChanged();
+        } else {
+          settingsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       */
+      public Builder setSettings(
+          yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.Builder builderForValue) {
+        if (settingsBuilder_ == null) {
+          settings_ = builderForValue.build();
+          onChanged();
+        } else {
+          settingsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       */
+      public Builder mergeSettings(yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings value) {
+        if (settingsBuilder_ == null) {
+          if (settings_ != null) {
+            settings_ =
+              yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.newBuilder(settings_).mergeFrom(value).buildPartial();
+          } else {
+            settings_ = value;
+          }
+          onChanged();
+        } else {
+          settingsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       */
+      public Builder clearSettings() {
+        if (settingsBuilder_ == null) {
+          settings_ = null;
+          onChanged();
+        } else {
+          settings_ = null;
+          settingsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       */
+      public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.Builder getSettingsBuilder() {
+        
+        onChanged();
+        return getSettingsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       */
+      public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettingsOrBuilder getSettingsOrBuilder() {
+        if (settingsBuilder_ != null) {
+          return settingsBuilder_.getMessageOrBuilder();
+        } else {
+          return settings_ == null ?
+              yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.getDefaultInstance() : settings_;
+        }
+      }
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.Builder, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettingsOrBuilder> 
+          getSettingsFieldBuilder() {
+        if (settingsBuilder_ == null) {
+          settingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.Builder, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettingsOrBuilder>(
+                  getSettings(),
+                  getParentForChildren(),
+                  isClean());
+          settings_ = null;
+        }
+        return settingsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2097,6 +2360,2120 @@ public final class ChannelOuterClass {
 
   }
 
+  public interface ChannelSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.ChannelSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Advertisement settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
+     * @return Whether the advertisement field is set.
+     */
+    boolean hasAdvertisement();
+    /**
+     * <pre>
+     * Advertisement settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
+     * @return The advertisement.
+     */
+    yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings getAdvertisement();
+    /**
+     * <pre>
+     * Advertisement settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
+     */
+    yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettingsOrBuilder getAdvertisementOrBuilder();
+  }
+  /**
+   * <pre>
+   * Channel settings.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.video.v1.ChannelSettings}
+   */
+  public static final class ChannelSettings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.ChannelSettings)
+      ChannelSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ChannelSettings.newBuilder() to construct.
+    private ChannelSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ChannelSettings() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ChannelSettings();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ChannelSettings(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.Builder subBuilder = null;
+              if (advertisement_ != null) {
+                subBuilder = advertisement_.toBuilder();
+              }
+              advertisement_ = input.readMessage(yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(advertisement_);
+                advertisement_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_ChannelSettings_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_ChannelSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.class, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.Builder.class);
+    }
+
+    public static final int ADVERTISEMENT_FIELD_NUMBER = 1;
+    private yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings advertisement_;
+    /**
+     * <pre>
+     * Advertisement settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
+     * @return Whether the advertisement field is set.
+     */
+    @java.lang.Override
+    public boolean hasAdvertisement() {
+      return advertisement_ != null;
+    }
+    /**
+     * <pre>
+     * Advertisement settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
+     * @return The advertisement.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings getAdvertisement() {
+      return advertisement_ == null ? yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.getDefaultInstance() : advertisement_;
+    }
+    /**
+     * <pre>
+     * Advertisement settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettingsOrBuilder getAdvertisementOrBuilder() {
+      return getAdvertisement();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (advertisement_ != null) {
+        output.writeMessage(1, getAdvertisement());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (advertisement_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getAdvertisement());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings other = (yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings) obj;
+
+      if (hasAdvertisement() != other.hasAdvertisement()) return false;
+      if (hasAdvertisement()) {
+        if (!getAdvertisement()
+            .equals(other.getAdvertisement())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAdvertisement()) {
+        hash = (37 * hash) + ADVERTISEMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getAdvertisement().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Channel settings.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.video.v1.ChannelSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.ChannelSettings)
+        yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_ChannelSettings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_ChannelSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.class, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (advertisementBuilder_ == null) {
+          advertisement_ = null;
+        } else {
+          advertisement_ = null;
+          advertisementBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_ChannelSettings_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings getDefaultInstanceForType() {
+        return yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings build() {
+        yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings buildPartial() {
+        yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings result = new yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings(this);
+        if (advertisementBuilder_ == null) {
+          result.advertisement_ = advertisement_;
+        } else {
+          result.advertisement_ = advertisementBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings) {
+          return mergeFrom((yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings other) {
+        if (other == yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.getDefaultInstance()) return this;
+        if (other.hasAdvertisement()) {
+          mergeAdvertisement(other.getAdvertisement());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings advertisement_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings, yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.Builder, yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettingsOrBuilder> advertisementBuilder_;
+      /**
+       * <pre>
+       * Advertisement settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
+       * @return Whether the advertisement field is set.
+       */
+      public boolean hasAdvertisement() {
+        return advertisementBuilder_ != null || advertisement_ != null;
+      }
+      /**
+       * <pre>
+       * Advertisement settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
+       * @return The advertisement.
+       */
+      public yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings getAdvertisement() {
+        if (advertisementBuilder_ == null) {
+          return advertisement_ == null ? yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.getDefaultInstance() : advertisement_;
+        } else {
+          return advertisementBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Advertisement settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
+       */
+      public Builder setAdvertisement(yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings value) {
+        if (advertisementBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          advertisement_ = value;
+          onChanged();
+        } else {
+          advertisementBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Advertisement settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
+       */
+      public Builder setAdvertisement(
+          yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.Builder builderForValue) {
+        if (advertisementBuilder_ == null) {
+          advertisement_ = builderForValue.build();
+          onChanged();
+        } else {
+          advertisementBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Advertisement settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
+       */
+      public Builder mergeAdvertisement(yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings value) {
+        if (advertisementBuilder_ == null) {
+          if (advertisement_ != null) {
+            advertisement_ =
+              yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.newBuilder(advertisement_).mergeFrom(value).buildPartial();
+          } else {
+            advertisement_ = value;
+          }
+          onChanged();
+        } else {
+          advertisementBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Advertisement settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
+       */
+      public Builder clearAdvertisement() {
+        if (advertisementBuilder_ == null) {
+          advertisement_ = null;
+          onChanged();
+        } else {
+          advertisement_ = null;
+          advertisementBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Advertisement settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
+       */
+      public yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.Builder getAdvertisementBuilder() {
+        
+        onChanged();
+        return getAdvertisementFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Advertisement settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
+       */
+      public yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettingsOrBuilder getAdvertisementOrBuilder() {
+        if (advertisementBuilder_ != null) {
+          return advertisementBuilder_.getMessageOrBuilder();
+        } else {
+          return advertisement_ == null ?
+              yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.getDefaultInstance() : advertisement_;
+        }
+      }
+      /**
+       * <pre>
+       * Advertisement settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings, yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.Builder, yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettingsOrBuilder> 
+          getAdvertisementFieldBuilder() {
+        if (advertisementBuilder_ == null) {
+          advertisementBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings, yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.Builder, yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettingsOrBuilder>(
+                  getAdvertisement(),
+                  getParentForChildren(),
+                  isClean());
+          advertisement_ = null;
+        }
+        return advertisementBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.ChannelSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.ChannelSettings)
+    private static final yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings();
+    }
+
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ChannelSettings>
+        PARSER = new com.google.protobuf.AbstractParser<ChannelSettings>() {
+      @java.lang.Override
+      public ChannelSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ChannelSettings(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ChannelSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ChannelSettings> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AdvertisementSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.AdvertisementSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
+     * @return Whether the yandexDirect field is set.
+     */
+    boolean hasYandexDirect();
+    /**
+     * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
+     * @return The yandexDirect.
+     */
+    yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect getYandexDirect();
+    /**
+     * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
+     */
+    yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirectOrBuilder getYandexDirectOrBuilder();
+
+    public yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.ProviderCase getProviderCase();
+  }
+  /**
+   * <pre>
+   * Advertisement settings.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.video.v1.AdvertisementSettings}
+   */
+  public static final class AdvertisementSettings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.AdvertisementSettings)
+      AdvertisementSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AdvertisementSettings.newBuilder() to construct.
+    private AdvertisementSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AdvertisementSettings() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AdvertisementSettings();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AdvertisementSettings(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 802: {
+              yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect.Builder subBuilder = null;
+              if (providerCase_ == 100) {
+                subBuilder = ((yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect) provider_).toBuilder();
+              }
+              provider_ =
+                  input.readMessage(yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect) provider_);
+                provider_ = subBuilder.buildPartial();
+              }
+              providerCase_ = 100;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_AdvertisementSettings_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_AdvertisementSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.class, yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.Builder.class);
+    }
+
+    public interface YandexDirectOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.AdvertisementSettings.YandexDirect)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Enable Partner Ad for Live and VOD content.
+       * </pre>
+       *
+       * <code>bool enable = 1;</code>
+       * @return The enable.
+       */
+      boolean getEnable();
+
+      /**
+       * <pre>
+       * Advertisement page ID.
+       * </pre>
+       *
+       * <code>int64 page_id = 2;</code>
+       * @return The pageId.
+       */
+      long getPageId();
+
+      /**
+       * <pre>
+       * Advertisement category.
+       * </pre>
+       *
+       * <code>int64 category = 3;</code>
+       * @return The category.
+       */
+      long getCategory();
+    }
+    /**
+     * <pre>
+     * YandexDirect provider settings.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.video.v1.AdvertisementSettings.YandexDirect}
+     */
+    public static final class YandexDirect extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.AdvertisementSettings.YandexDirect)
+        YandexDirectOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use YandexDirect.newBuilder() to construct.
+      private YandexDirect(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private YandexDirect() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new YandexDirect();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private YandexDirect(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                enable_ = input.readBool();
+                break;
+              }
+              case 16: {
+
+                pageId_ = input.readInt64();
+                break;
+              }
+              case 24: {
+
+                category_ = input.readInt64();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_AdvertisementSettings_YandexDirect_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_AdvertisementSettings_YandexDirect_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect.class, yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect.Builder.class);
+      }
+
+      public static final int ENABLE_FIELD_NUMBER = 1;
+      private boolean enable_;
+      /**
+       * <pre>
+       * Enable Partner Ad for Live and VOD content.
+       * </pre>
+       *
+       * <code>bool enable = 1;</code>
+       * @return The enable.
+       */
+      @java.lang.Override
+      public boolean getEnable() {
+        return enable_;
+      }
+
+      public static final int PAGE_ID_FIELD_NUMBER = 2;
+      private long pageId_;
+      /**
+       * <pre>
+       * Advertisement page ID.
+       * </pre>
+       *
+       * <code>int64 page_id = 2;</code>
+       * @return The pageId.
+       */
+      @java.lang.Override
+      public long getPageId() {
+        return pageId_;
+      }
+
+      public static final int CATEGORY_FIELD_NUMBER = 3;
+      private long category_;
+      /**
+       * <pre>
+       * Advertisement category.
+       * </pre>
+       *
+       * <code>int64 category = 3;</code>
+       * @return The category.
+       */
+      @java.lang.Override
+      public long getCategory() {
+        return category_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (enable_ != false) {
+          output.writeBool(1, enable_);
+        }
+        if (pageId_ != 0L) {
+          output.writeInt64(2, pageId_);
+        }
+        if (category_ != 0L) {
+          output.writeInt64(3, category_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (enable_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(1, enable_);
+        }
+        if (pageId_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(2, pageId_);
+        }
+        if (category_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(3, category_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect other = (yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect) obj;
+
+        if (getEnable()
+            != other.getEnable()) return false;
+        if (getPageId()
+            != other.getPageId()) return false;
+        if (getCategory()
+            != other.getCategory()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + ENABLE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEnable());
+        hash = (37 * hash) + PAGE_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getPageId());
+        hash = (37 * hash) + CATEGORY_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getCategory());
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * YandexDirect provider settings.
+       * </pre>
+       *
+       * Protobuf type {@code yandex.cloud.video.v1.AdvertisementSettings.YandexDirect}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.AdvertisementSettings.YandexDirect)
+          yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirectOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_AdvertisementSettings_YandexDirect_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_AdvertisementSettings_YandexDirect_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect.class, yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          enable_ = false;
+
+          pageId_ = 0L;
+
+          category_ = 0L;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_AdvertisementSettings_YandexDirect_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect getDefaultInstanceForType() {
+          return yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect build() {
+          yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect buildPartial() {
+          yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect result = new yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect(this);
+          result.enable_ = enable_;
+          result.pageId_ = pageId_;
+          result.category_ = category_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect) {
+            return mergeFrom((yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect other) {
+          if (other == yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect.getDefaultInstance()) return this;
+          if (other.getEnable() != false) {
+            setEnable(other.getEnable());
+          }
+          if (other.getPageId() != 0L) {
+            setPageId(other.getPageId());
+          }
+          if (other.getCategory() != 0L) {
+            setCategory(other.getCategory());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private boolean enable_ ;
+        /**
+         * <pre>
+         * Enable Partner Ad for Live and VOD content.
+         * </pre>
+         *
+         * <code>bool enable = 1;</code>
+         * @return The enable.
+         */
+        @java.lang.Override
+        public boolean getEnable() {
+          return enable_;
+        }
+        /**
+         * <pre>
+         * Enable Partner Ad for Live and VOD content.
+         * </pre>
+         *
+         * <code>bool enable = 1;</code>
+         * @param value The enable to set.
+         * @return This builder for chaining.
+         */
+        public Builder setEnable(boolean value) {
+          
+          enable_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Enable Partner Ad for Live and VOD content.
+         * </pre>
+         *
+         * <code>bool enable = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearEnable() {
+          
+          enable_ = false;
+          onChanged();
+          return this;
+        }
+
+        private long pageId_ ;
+        /**
+         * <pre>
+         * Advertisement page ID.
+         * </pre>
+         *
+         * <code>int64 page_id = 2;</code>
+         * @return The pageId.
+         */
+        @java.lang.Override
+        public long getPageId() {
+          return pageId_;
+        }
+        /**
+         * <pre>
+         * Advertisement page ID.
+         * </pre>
+         *
+         * <code>int64 page_id = 2;</code>
+         * @param value The pageId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPageId(long value) {
+          
+          pageId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Advertisement page ID.
+         * </pre>
+         *
+         * <code>int64 page_id = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPageId() {
+          
+          pageId_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long category_ ;
+        /**
+         * <pre>
+         * Advertisement category.
+         * </pre>
+         *
+         * <code>int64 category = 3;</code>
+         * @return The category.
+         */
+        @java.lang.Override
+        public long getCategory() {
+          return category_;
+        }
+        /**
+         * <pre>
+         * Advertisement category.
+         * </pre>
+         *
+         * <code>int64 category = 3;</code>
+         * @param value The category to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCategory(long value) {
+          
+          category_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Advertisement category.
+         * </pre>
+         *
+         * <code>int64 category = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCategory() {
+          
+          category_ = 0L;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.AdvertisementSettings.YandexDirect)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.AdvertisementSettings.YandexDirect)
+      private static final yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect();
+      }
+
+      public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<YandexDirect>
+          PARSER = new com.google.protobuf.AbstractParser<YandexDirect>() {
+        @java.lang.Override
+        public YandexDirect parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new YandexDirect(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<YandexDirect> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<YandexDirect> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int providerCase_ = 0;
+    private java.lang.Object provider_;
+    public enum ProviderCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      YANDEX_DIRECT(100),
+      PROVIDER_NOT_SET(0);
+      private final int value;
+      private ProviderCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ProviderCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ProviderCase forNumber(int value) {
+        switch (value) {
+          case 100: return YANDEX_DIRECT;
+          case 0: return PROVIDER_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ProviderCase
+    getProviderCase() {
+      return ProviderCase.forNumber(
+          providerCase_);
+    }
+
+    public static final int YANDEX_DIRECT_FIELD_NUMBER = 100;
+    /**
+     * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
+     * @return Whether the yandexDirect field is set.
+     */
+    @java.lang.Override
+    public boolean hasYandexDirect() {
+      return providerCase_ == 100;
+    }
+    /**
+     * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
+     * @return The yandexDirect.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect getYandexDirect() {
+      if (providerCase_ == 100) {
+         return (yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect) provider_;
+      }
+      return yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirectOrBuilder getYandexDirectOrBuilder() {
+      if (providerCase_ == 100) {
+         return (yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect) provider_;
+      }
+      return yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (providerCase_ == 100) {
+        output.writeMessage(100, (yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect) provider_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (providerCase_ == 100) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(100, (yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect) provider_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings other = (yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings) obj;
+
+      if (!getProviderCase().equals(other.getProviderCase())) return false;
+      switch (providerCase_) {
+        case 100:
+          if (!getYandexDirect()
+              .equals(other.getYandexDirect())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (providerCase_) {
+        case 100:
+          hash = (37 * hash) + YANDEX_DIRECT_FIELD_NUMBER;
+          hash = (53 * hash) + getYandexDirect().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Advertisement settings.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.video.v1.AdvertisementSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.AdvertisementSettings)
+        yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_AdvertisementSettings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_AdvertisementSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.class, yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        providerCase_ = 0;
+        provider_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_AdvertisementSettings_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings getDefaultInstanceForType() {
+        return yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings build() {
+        yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings buildPartial() {
+        yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings result = new yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings(this);
+        if (providerCase_ == 100) {
+          if (yandexDirectBuilder_ == null) {
+            result.provider_ = provider_;
+          } else {
+            result.provider_ = yandexDirectBuilder_.build();
+          }
+        }
+        result.providerCase_ = providerCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings) {
+          return mergeFrom((yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings other) {
+        if (other == yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.getDefaultInstance()) return this;
+        switch (other.getProviderCase()) {
+          case YANDEX_DIRECT: {
+            mergeYandexDirect(other.getYandexDirect());
+            break;
+          }
+          case PROVIDER_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int providerCase_ = 0;
+      private java.lang.Object provider_;
+      public ProviderCase
+          getProviderCase() {
+        return ProviderCase.forNumber(
+            providerCase_);
+      }
+
+      public Builder clearProvider() {
+        providerCase_ = 0;
+        provider_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect, yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect.Builder, yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirectOrBuilder> yandexDirectBuilder_;
+      /**
+       * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
+       * @return Whether the yandexDirect field is set.
+       */
+      @java.lang.Override
+      public boolean hasYandexDirect() {
+        return providerCase_ == 100;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
+       * @return The yandexDirect.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect getYandexDirect() {
+        if (yandexDirectBuilder_ == null) {
+          if (providerCase_ == 100) {
+            return (yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect) provider_;
+          }
+          return yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect.getDefaultInstance();
+        } else {
+          if (providerCase_ == 100) {
+            return yandexDirectBuilder_.getMessage();
+          }
+          return yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
+       */
+      public Builder setYandexDirect(yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect value) {
+        if (yandexDirectBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          provider_ = value;
+          onChanged();
+        } else {
+          yandexDirectBuilder_.setMessage(value);
+        }
+        providerCase_ = 100;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
+       */
+      public Builder setYandexDirect(
+          yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect.Builder builderForValue) {
+        if (yandexDirectBuilder_ == null) {
+          provider_ = builderForValue.build();
+          onChanged();
+        } else {
+          yandexDirectBuilder_.setMessage(builderForValue.build());
+        }
+        providerCase_ = 100;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
+       */
+      public Builder mergeYandexDirect(yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect value) {
+        if (yandexDirectBuilder_ == null) {
+          if (providerCase_ == 100 &&
+              provider_ != yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect.getDefaultInstance()) {
+            provider_ = yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect.newBuilder((yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect) provider_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            provider_ = value;
+          }
+          onChanged();
+        } else {
+          if (providerCase_ == 100) {
+            yandexDirectBuilder_.mergeFrom(value);
+          }
+          yandexDirectBuilder_.setMessage(value);
+        }
+        providerCase_ = 100;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
+       */
+      public Builder clearYandexDirect() {
+        if (yandexDirectBuilder_ == null) {
+          if (providerCase_ == 100) {
+            providerCase_ = 0;
+            provider_ = null;
+            onChanged();
+          }
+        } else {
+          if (providerCase_ == 100) {
+            providerCase_ = 0;
+            provider_ = null;
+          }
+          yandexDirectBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
+       */
+      public yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect.Builder getYandexDirectBuilder() {
+        return getYandexDirectFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirectOrBuilder getYandexDirectOrBuilder() {
+        if ((providerCase_ == 100) && (yandexDirectBuilder_ != null)) {
+          return yandexDirectBuilder_.getMessageOrBuilder();
+        } else {
+          if (providerCase_ == 100) {
+            return (yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect) provider_;
+          }
+          return yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect, yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect.Builder, yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirectOrBuilder> 
+          getYandexDirectFieldBuilder() {
+        if (yandexDirectBuilder_ == null) {
+          if (!(providerCase_ == 100)) {
+            provider_ = yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect.getDefaultInstance();
+          }
+          yandexDirectBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect, yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect.Builder, yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirectOrBuilder>(
+                  (yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect) provider_,
+                  getParentForChildren(),
+                  isClean());
+          provider_ = null;
+        }
+        providerCase_ = 100;
+        onChanged();;
+        return yandexDirectBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.AdvertisementSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.AdvertisementSettings)
+    private static final yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings();
+    }
+
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AdvertisementSettings>
+        PARSER = new com.google.protobuf.AbstractParser<AdvertisementSettings>() {
+      @java.lang.Override
+      public AdvertisementSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AdvertisementSettings(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AdvertisementSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AdvertisementSettings> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_video_v1_Channel_descriptor;
   private static final 
@@ -2107,6 +4484,21 @@ public final class ChannelOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_video_v1_Channel_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_ChannelSettings_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_ChannelSettings_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_AdvertisementSettings_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_AdvertisementSettings_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_AdvertisementSettings_YandexDirect_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_AdvertisementSettings_YandexDirect_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2118,17 +4510,25 @@ public final class ChannelOuterClass {
     java.lang.String[] descriptorData = {
       "\n#yandex/cloud/video/v1/channel.proto\022\025y" +
       "andex.cloud.video.v1\032\037google/protobuf/ti" +
-      "mestamp.proto\"\253\002\n\007Channel\022\n\n\002id\030\001 \001(\t\022\027\n" +
+      "mestamp.proto\"\346\002\n\007Channel\022\n\n\002id\030\001 \001(\t\022\027\n" +
       "\017organization_id\030\002 \001(\t\022\r\n\005title\030\003 \001(\t\022\023\n" +
       "\013description\030\004 \001(\t\022.\n\ncreated_at\030d \001(\0132\032" +
       ".google.protobuf.Timestamp\022.\n\nupdated_at" +
       "\030e \001(\0132\032.google.protobuf.Timestamp\022;\n\006la" +
       "bels\030\310\001 \003(\0132*.yandex.cloud.video.v1.Chan" +
-      "nel.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\005\020dJ\005\010f\020\310\001B\\\n\031y" +
-      "andex.cloud.api.video.v1Z?github.com/yan" +
-      "dex-cloud/go-genproto/yandex/cloud/video" +
-      "/v1;videob\006proto3"
+      "nel.LabelsEntry\0229\n\010settings\030\311\001 \001(\0132&.yan" +
+      "dex.cloud.video.v1.ChannelSettings\032-\n\013La" +
+      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001J\004\010\005\020dJ\005\010f\020\310\001\"V\n\017ChannelSettings\022C\n\radv" +
+      "ertisement\030\001 \001(\0132,.yandex.cloud.video.v1" +
+      ".AdvertisementSettings\"\300\001\n\025Advertisement" +
+      "Settings\022R\n\ryandex_direct\030d \001(\01329.yandex" +
+      ".cloud.video.v1.AdvertisementSettings.Ya" +
+      "ndexDirectH\000\032A\n\014YandexDirect\022\016\n\006enable\030\001" +
+      " \001(\010\022\017\n\007page_id\030\002 \001(\003\022\020\n\010category\030\003 \001(\003B" +
+      "\n\n\010providerJ\004\010\001\020dB\\\n\031yandex.cloud.api.vi" +
+      "deo.v1Z?github.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/video/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2140,13 +4540,31 @@ public final class ChannelOuterClass {
     internal_static_yandex_cloud_video_v1_Channel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_Channel_descriptor,
-        new java.lang.String[] { "Id", "OrganizationId", "Title", "Description", "CreatedAt", "UpdatedAt", "Labels", });
+        new java.lang.String[] { "Id", "OrganizationId", "Title", "Description", "CreatedAt", "UpdatedAt", "Labels", "Settings", });
     internal_static_yandex_cloud_video_v1_Channel_LabelsEntry_descriptor =
       internal_static_yandex_cloud_video_v1_Channel_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_video_v1_Channel_LabelsEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_Channel_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_video_v1_ChannelSettings_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_video_v1_ChannelSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_ChannelSettings_descriptor,
+        new java.lang.String[] { "Advertisement", });
+    internal_static_yandex_cloud_video_v1_AdvertisementSettings_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_video_v1_AdvertisementSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_AdvertisementSettings_descriptor,
+        new java.lang.String[] { "YandexDirect", "Provider", });
+    internal_static_yandex_cloud_video_v1_AdvertisementSettings_YandexDirect_descriptor =
+      internal_static_yandex_cloud_video_v1_AdvertisementSettings_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_video_v1_AdvertisementSettings_YandexDirect_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_AdvertisementSettings_YandexDirect_descriptor,
+        new java.lang.String[] { "Enable", "PageId", "Category", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

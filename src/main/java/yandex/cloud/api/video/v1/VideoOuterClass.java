@@ -349,6 +349,39 @@ public final class VideoOuterClass {
 
     /**
      * <pre>
+     * Enable advertisement for this video.
+     * Default: true.
+     * Use this to disable advertisement for a specific video.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_ad = 17;</code>
+     * @return Whether the enableAd field is set.
+     */
+    boolean hasEnableAd();
+    /**
+     * <pre>
+     * Enable advertisement for this video.
+     * Default: true.
+     * Use this to disable advertisement for a specific video.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_ad = 17;</code>
+     * @return The enableAd.
+     */
+    com.google.protobuf.BoolValue getEnableAd();
+    /**
+     * <pre>
+     * Enable advertisement for this video.
+     * Default: true.
+     * Use this to disable advertisement for a specific video.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_ad = 17;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getEnableAdOrBuilder();
+
+    /**
+     * <pre>
      * IDs of active video subtitles.
      * </pre>
      *
@@ -731,6 +764,19 @@ public final class VideoOuterClass {
                 mutable_bitField0_ |= 0x00000001;
               }
               subtitleIds_.add(s);
+              break;
+            }
+            case 138: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (enableAd_ != null) {
+                subBuilder = enableAd_.toBuilder();
+              }
+              enableAd_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(enableAd_);
+                enableAd_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             case 802: {
@@ -1626,6 +1672,50 @@ public final class VideoOuterClass {
       return result == null ? yandex.cloud.api.video.v1.VideoOuterClass.AutoTranscode.UNRECOGNIZED : result;
     }
 
+    public static final int ENABLE_AD_FIELD_NUMBER = 17;
+    private com.google.protobuf.BoolValue enableAd_;
+    /**
+     * <pre>
+     * Enable advertisement for this video.
+     * Default: true.
+     * Use this to disable advertisement for a specific video.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_ad = 17;</code>
+     * @return Whether the enableAd field is set.
+     */
+    @java.lang.Override
+    public boolean hasEnableAd() {
+      return enableAd_ != null;
+    }
+    /**
+     * <pre>
+     * Enable advertisement for this video.
+     * Default: true.
+     * Use this to disable advertisement for a specific video.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_ad = 17;</code>
+     * @return The enableAd.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getEnableAd() {
+      return enableAd_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableAd_;
+    }
+    /**
+     * <pre>
+     * Enable advertisement for this video.
+     * Default: true.
+     * Use this to disable advertisement for a specific video.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_ad = 17;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getEnableAdOrBuilder() {
+      return getEnableAd();
+    }
+
     public static final int SUBTITLE_IDS_FIELD_NUMBER = 12;
     private com.google.protobuf.LazyStringList subtitleIds_;
     /**
@@ -2066,6 +2156,9 @@ public final class VideoOuterClass {
       for (int i = 0; i < subtitleIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, subtitleIds_.getRaw(i));
       }
+      if (enableAd_ != null) {
+        output.writeMessage(17, getEnableAd());
+      }
       if (createdAt_ != null) {
         output.writeMessage(100, getCreatedAt());
       }
@@ -2138,6 +2231,10 @@ public final class VideoOuterClass {
         size += dataSize;
         size += 1 * getSubtitleIdsList().size();
       }
+      if (enableAd_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(17, getEnableAd());
+      }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(100, getCreatedAt());
@@ -2205,6 +2302,11 @@ public final class VideoOuterClass {
       }
       if (visibilityStatus_ != other.visibilityStatus_) return false;
       if (autoTranscode_ != other.autoTranscode_) return false;
+      if (hasEnableAd() != other.hasEnableAd()) return false;
+      if (hasEnableAd()) {
+        if (!getEnableAd()
+            .equals(other.getEnableAd())) return false;
+      }
       if (!getSubtitleIdsList()
           .equals(other.getSubtitleIdsList())) return false;
       if (hasCreatedAt() != other.hasCreatedAt()) return false;
@@ -2276,6 +2378,10 @@ public final class VideoOuterClass {
       hash = (53 * hash) + visibilityStatus_;
       hash = (37 * hash) + AUTO_TRANSCODE_FIELD_NUMBER;
       hash = (53 * hash) + autoTranscode_;
+      if (hasEnableAd()) {
+        hash = (37 * hash) + ENABLE_AD_FIELD_NUMBER;
+        hash = (53 * hash) + getEnableAd().hashCode();
+      }
       if (getSubtitleIdsCount() > 0) {
         hash = (37 * hash) + SUBTITLE_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getSubtitleIdsList().hashCode();
@@ -2493,6 +2599,12 @@ public final class VideoOuterClass {
 
         autoTranscode_ = 0;
 
+        if (enableAdBuilder_ == null) {
+          enableAd_ = null;
+        } else {
+          enableAd_ = null;
+          enableAdBuilder_ = null;
+        }
         subtitleIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         if (createdAtBuilder_ == null) {
@@ -2552,6 +2664,11 @@ public final class VideoOuterClass {
         }
         result.visibilityStatus_ = visibilityStatus_;
         result.autoTranscode_ = autoTranscode_;
+        if (enableAdBuilder_ == null) {
+          result.enableAd_ = enableAd_;
+        } else {
+          result.enableAd_ = enableAdBuilder_.build();
+        }
         if (((bitField0_ & 0x00000001) != 0)) {
           subtitleIds_ = subtitleIds_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -2678,6 +2795,9 @@ public final class VideoOuterClass {
         }
         if (other.autoTranscode_ != 0) {
           setAutoTranscodeValue(other.getAutoTranscodeValue());
+        }
+        if (other.hasEnableAd()) {
+          mergeEnableAd(other.getEnableAd());
         }
         if (!other.subtitleIds_.isEmpty()) {
           if (subtitleIds_.isEmpty()) {
@@ -3648,6 +3768,179 @@ public final class VideoOuterClass {
         autoTranscode_ = 0;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.BoolValue enableAd_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableAdBuilder_;
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 17;</code>
+       * @return Whether the enableAd field is set.
+       */
+      public boolean hasEnableAd() {
+        return enableAdBuilder_ != null || enableAd_ != null;
+      }
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 17;</code>
+       * @return The enableAd.
+       */
+      public com.google.protobuf.BoolValue getEnableAd() {
+        if (enableAdBuilder_ == null) {
+          return enableAd_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableAd_;
+        } else {
+          return enableAdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 17;</code>
+       */
+      public Builder setEnableAd(com.google.protobuf.BoolValue value) {
+        if (enableAdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          enableAd_ = value;
+          onChanged();
+        } else {
+          enableAdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 17;</code>
+       */
+      public Builder setEnableAd(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (enableAdBuilder_ == null) {
+          enableAd_ = builderForValue.build();
+          onChanged();
+        } else {
+          enableAdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 17;</code>
+       */
+      public Builder mergeEnableAd(com.google.protobuf.BoolValue value) {
+        if (enableAdBuilder_ == null) {
+          if (enableAd_ != null) {
+            enableAd_ =
+              com.google.protobuf.BoolValue.newBuilder(enableAd_).mergeFrom(value).buildPartial();
+          } else {
+            enableAd_ = value;
+          }
+          onChanged();
+        } else {
+          enableAdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 17;</code>
+       */
+      public Builder clearEnableAd() {
+        if (enableAdBuilder_ == null) {
+          enableAd_ = null;
+          onChanged();
+        } else {
+          enableAd_ = null;
+          enableAdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 17;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getEnableAdBuilder() {
+        
+        onChanged();
+        return getEnableAdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 17;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getEnableAdOrBuilder() {
+        if (enableAdBuilder_ != null) {
+          return enableAdBuilder_.getMessageOrBuilder();
+        } else {
+          return enableAd_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : enableAd_;
+        }
+      }
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 17;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getEnableAdFieldBuilder() {
+        if (enableAdBuilder_ == null) {
+          enableAdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getEnableAd(),
+                  getParentForChildren(),
+                  isClean());
+          enableAd_ = null;
+        }
+        return enableAdBuilder_;
       }
 
       private com.google.protobuf.LazyStringList subtitleIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -6925,55 +7218,58 @@ public final class VideoOuterClass {
       "\n!yandex/cloud/video/v1/video.proto\022\025yan" +
       "dex.cloud.video.v1\032\036google/protobuf/dura" +
       "tion.proto\032\037google/protobuf/timestamp.pr" +
-      "oto\"\343\010\n\005Video\022\n\n\002id\030\001 \001(\t\022\022\n\nchannel_id\030" +
-      "\002 \001(\t\022\r\n\005title\030\003 \001(\t\022\023\n\013description\030\004 \001(" +
-      "\t\022\024\n\014thumbnail_id\030\005 \001(\t\0228\n\006status\030\006 \001(\0162" +
-      "(.yandex.cloud.video.v1.Video.VideoStatu" +
-      "s\022+\n\010duration\030\010 \001(\0132\031.google.protobuf.Du" +
-      "ration\022H\n\021visibility_status\030\t \001(\0162-.yand" +
-      "ex.cloud.video.v1.Video.VisibilityStatus" +
-      "\022<\n\016auto_transcode\030\013 \001(\0162$.yandex.cloud." +
-      "video.v1.AutoTranscode\022\024\n\014subtitle_ids\030\014" +
-      " \003(\t\0227\n\004tusd\030\350\007 \001(\0132&.yandex.cloud.video" +
-      ".v1.VideoTUSDSourceH\000\022H\n\rpublic_access\030\320" +
-      "\017 \001(\0132..yandex.cloud.video.v1.VideoPubli" +
-      "cAccessRightsH\001\022Q\n\022auth_system_access\030\322\017" +
-      " \001(\01322.yandex.cloud.video.v1.VideoAuthSy" +
-      "stemAccessRightsH\001\022K\n\017sign_url_access\030\323\017" +
-      " \001(\0132/.yandex.cloud.video.v1.VideoSignUR" +
-      "LAccessRightsH\001\022.\n\ncreated_at\030d \001(\0132\032.go" +
-      "ogle.protobuf.Timestamp\022.\n\nupdated_at\030e " +
-      "\001(\0132\032.google.protobuf.Timestamp\0229\n\006label" +
-      "s\030\310\001 \003(\0132(.yandex.cloud.video.v1.Video.L" +
-      "abelsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001\"k\n\013VideoStatus\022\034\n\030VIDE" +
-      "O_STATUS_UNSPECIFIED\020\000\022\022\n\016WAIT_UPLOADING" +
-      "\020\001\022\016\n\nPROCESSING\020\004\022\t\n\005READY\020\005\022\t\n\005ERROR\020\007" +
-      "\"\004\010\006\020\006\"U\n\020VisibilityStatus\022!\n\035VISIBILITY" +
-      "_STATUS_UNSPECIFIED\020\000\022\r\n\tPUBLISHED\020\001\022\017\n\013" +
-      "UNPUBLISHED\020\002B\010\n\006sourceB\017\n\raccess_rights" +
-      "J\006\010\321\017\020\322\017J\004\010\007\020\010J\004\010\n\020\013J\004\010\r\020dJ\005\010f\020\310\001J\006\010\311\001\020\350" +
-      "\007J\006\010\351\007\020\320\017\"\036\n\017VideoTUSDSource\022\013\n\003url\030\001 \001(" +
-      "\t\"\031\n\027VideoPublicAccessRights\"\035\n\033VideoAut" +
-      "hSystemAccessRights\"\032\n\030VideoSignURLAcces" +
-      "sRights*H\n\rAutoTranscode\022\036\n\032AUTO_TRANSCO" +
-      "DE_UNSPECIFIED\020\000\022\n\n\006ENABLE\020\001\022\013\n\007DISABLE\020" +
-      "\002B\\\n\031yandex.cloud.api.video.v1Z?github.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/video/v1;videob\006proto3"
+      "oto\032\036google/protobuf/wrappers.proto\"\230\t\n\005" +
+      "Video\022\n\n\002id\030\001 \001(\t\022\022\n\nchannel_id\030\002 \001(\t\022\r\n" +
+      "\005title\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022\024\n\014thu" +
+      "mbnail_id\030\005 \001(\t\0228\n\006status\030\006 \001(\0162(.yandex" +
+      ".cloud.video.v1.Video.VideoStatus\022+\n\010dur" +
+      "ation\030\010 \001(\0132\031.google.protobuf.Duration\022H" +
+      "\n\021visibility_status\030\t \001(\0162-.yandex.cloud" +
+      ".video.v1.Video.VisibilityStatus\022<\n\016auto" +
+      "_transcode\030\013 \001(\0162$.yandex.cloud.video.v1" +
+      ".AutoTranscode\022-\n\tenable_ad\030\021 \001(\0132\032.goog" +
+      "le.protobuf.BoolValue\022\024\n\014subtitle_ids\030\014 " +
+      "\003(\t\0227\n\004tusd\030\350\007 \001(\0132&.yandex.cloud.video." +
+      "v1.VideoTUSDSourceH\000\022H\n\rpublic_access\030\320\017" +
+      " \001(\0132..yandex.cloud.video.v1.VideoPublic" +
+      "AccessRightsH\001\022Q\n\022auth_system_access\030\322\017 " +
+      "\001(\01322.yandex.cloud.video.v1.VideoAuthSys" +
+      "temAccessRightsH\001\022K\n\017sign_url_access\030\323\017 " +
+      "\001(\0132/.yandex.cloud.video.v1.VideoSignURL" +
+      "AccessRightsH\001\022.\n\ncreated_at\030d \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\022.\n\nupdated_at\030e \001" +
+      "(\0132\032.google.protobuf.Timestamp\0229\n\006labels" +
+      "\030\310\001 \003(\0132(.yandex.cloud.video.v1.Video.La" +
+      "belsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\001\"k\n\013VideoStatus\022\034\n\030VIDEO" +
+      "_STATUS_UNSPECIFIED\020\000\022\022\n\016WAIT_UPLOADING\020" +
+      "\001\022\016\n\nPROCESSING\020\004\022\t\n\005READY\020\005\022\t\n\005ERROR\020\007\"" +
+      "\004\010\006\020\006\"U\n\020VisibilityStatus\022!\n\035VISIBILITY_" +
+      "STATUS_UNSPECIFIED\020\000\022\r\n\tPUBLISHED\020\001\022\017\n\013U" +
+      "NPUBLISHED\020\002B\010\n\006sourceB\017\n\raccess_rightsJ" +
+      "\006\010\321\017\020\322\017J\004\010\007\020\010J\004\010\n\020\013J\004\010\r\020\021J\004\010\022\020dJ\005\010f\020\310\001J\006" +
+      "\010\311\001\020\350\007J\006\010\351\007\020\320\017\"\036\n\017VideoTUSDSource\022\013\n\003url" +
+      "\030\001 \001(\t\"\031\n\027VideoPublicAccessRights\"\035\n\033Vid" +
+      "eoAuthSystemAccessRights\"\032\n\030VideoSignURL" +
+      "AccessRights*H\n\rAutoTranscode\022\036\n\032AUTO_TR" +
+      "ANSCODE_UNSPECIFIED\020\000\022\n\n\006ENABLE\020\001\022\013\n\007DIS" +
+      "ABLE\020\002B\\\n\031yandex.cloud.api.video.v1Z?git" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/video/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
         });
     internal_static_yandex_cloud_video_v1_Video_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_video_v1_Video_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_Video_descriptor,
-        new java.lang.String[] { "Id", "ChannelId", "Title", "Description", "ThumbnailId", "Status", "Duration", "VisibilityStatus", "AutoTranscode", "SubtitleIds", "Tusd", "PublicAccess", "AuthSystemAccess", "SignUrlAccess", "CreatedAt", "UpdatedAt", "Labels", "Source", "AccessRights", });
+        new java.lang.String[] { "Id", "ChannelId", "Title", "Description", "ThumbnailId", "Status", "Duration", "VisibilityStatus", "AutoTranscode", "EnableAd", "SubtitleIds", "Tusd", "PublicAccess", "AuthSystemAccess", "SignUrlAccess", "CreatedAt", "UpdatedAt", "Labels", "Source", "AccessRights", });
     internal_static_yandex_cloud_video_v1_Video_LabelsEntry_descriptor =
       internal_static_yandex_cloud_video_v1_Video_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_video_v1_Video_LabelsEntry_fieldAccessorTable = new
@@ -7006,6 +7302,7 @@ public final class VideoOuterClass {
         new java.lang.String[] { });
     com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -4833,6 +4833,39 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
+     * Enable advertisement for this video.
+     * Default: true.
+     * Use this to disable advertisement for a specific video.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+     * @return Whether the enableAd field is set.
+     */
+    boolean hasEnableAd();
+    /**
+     * <pre>
+     * Enable advertisement for this video.
+     * Default: true.
+     * Use this to disable advertisement for a specific video.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+     * @return The enableAd.
+     */
+    com.google.protobuf.BoolValue getEnableAd();
+    /**
+     * <pre>
+     * Enable advertisement for this video.
+     * Default: true.
+     * Use this to disable advertisement for a specific video.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getEnableAdOrBuilder();
+
+    /**
+     * <pre>
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
@@ -5076,6 +5109,19 @@ public final class VideoServiceOuterClass {
               int rawValue = input.readEnum();
 
               autoTranscode_ = rawValue;
+              break;
+            }
+            case 66: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (enableAd_ != null) {
+                subBuilder = enableAd_.toBuilder();
+              }
+              enableAd_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(enableAd_);
+                enableAd_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             case 1602: {
@@ -5484,6 +5530,50 @@ public final class VideoServiceOuterClass {
       return result == null ? yandex.cloud.api.video.v1.VideoOuterClass.AutoTranscode.UNRECOGNIZED : result;
     }
 
+    public static final int ENABLE_AD_FIELD_NUMBER = 8;
+    private com.google.protobuf.BoolValue enableAd_;
+    /**
+     * <pre>
+     * Enable advertisement for this video.
+     * Default: true.
+     * Use this to disable advertisement for a specific video.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+     * @return Whether the enableAd field is set.
+     */
+    @java.lang.Override
+    public boolean hasEnableAd() {
+      return enableAd_ != null;
+    }
+    /**
+     * <pre>
+     * Enable advertisement for this video.
+     * Default: true.
+     * Use this to disable advertisement for a specific video.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+     * @return The enableAd.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getEnableAd() {
+      return enableAd_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableAd_;
+    }
+    /**
+     * <pre>
+     * Enable advertisement for this video.
+     * Default: true.
+     * Use this to disable advertisement for a specific video.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getEnableAdOrBuilder() {
+      return getEnableAd();
+    }
+
     public static final int LABELS_FIELD_NUMBER = 200;
     private static final class LabelsDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
@@ -5782,6 +5872,9 @@ public final class VideoServiceOuterClass {
       if (autoTranscode_ != yandex.cloud.api.video.v1.VideoOuterClass.AutoTranscode.AUTO_TRANSCODE_UNSPECIFIED.getNumber()) {
         output.writeEnum(5, autoTranscode_);
       }
+      if (enableAd_ != null) {
+        output.writeMessage(8, getEnableAd());
+      }
       com.google.protobuf.GeneratedMessageV3
         .serializeStringMapTo(
           output,
@@ -5824,6 +5917,10 @@ public final class VideoServiceOuterClass {
       if (autoTranscode_ != yandex.cloud.api.video.v1.VideoOuterClass.AutoTranscode.AUTO_TRANSCODE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, autoTranscode_);
+      }
+      if (enableAd_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getEnableAd());
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
            : internalGetLabels().getMap().entrySet()) {
@@ -5875,6 +5972,11 @@ public final class VideoServiceOuterClass {
       if (!getThumbnailId()
           .equals(other.getThumbnailId())) return false;
       if (autoTranscode_ != other.autoTranscode_) return false;
+      if (hasEnableAd() != other.hasEnableAd()) return false;
+      if (hasEnableAd()) {
+        if (!getEnableAd()
+            .equals(other.getEnableAd())) return false;
+      }
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
       if (!getSourceCase().equals(other.getSourceCase())) return false;
@@ -5924,6 +6026,10 @@ public final class VideoServiceOuterClass {
       hash = (53 * hash) + getThumbnailId().hashCode();
       hash = (37 * hash) + AUTO_TRANSCODE_FIELD_NUMBER;
       hash = (53 * hash) + autoTranscode_;
+      if (hasEnableAd()) {
+        hash = (37 * hash) + ENABLE_AD_FIELD_NUMBER;
+        hash = (53 * hash) + getEnableAd().hashCode();
+      }
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
@@ -6117,6 +6223,12 @@ public final class VideoServiceOuterClass {
 
         autoTranscode_ = 0;
 
+        if (enableAdBuilder_ == null) {
+          enableAd_ = null;
+        } else {
+          enableAd_ = null;
+          enableAdBuilder_ = null;
+        }
         internalGetMutableLabels().clear();
         sourceCase_ = 0;
         source_ = null;
@@ -6154,6 +6266,11 @@ public final class VideoServiceOuterClass {
         result.description_ = description_;
         result.thumbnailId_ = thumbnailId_;
         result.autoTranscode_ = autoTranscode_;
+        if (enableAdBuilder_ == null) {
+          result.enableAd_ = enableAd_;
+        } else {
+          result.enableAd_ = enableAdBuilder_.build();
+        }
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
         if (sourceCase_ == 1000) {
@@ -6252,6 +6369,9 @@ public final class VideoServiceOuterClass {
         }
         if (other.autoTranscode_ != 0) {
           setAutoTranscodeValue(other.getAutoTranscodeValue());
+        }
+        if (other.hasEnableAd()) {
+          mergeEnableAd(other.getEnableAd());
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
@@ -6797,6 +6917,179 @@ public final class VideoServiceOuterClass {
         autoTranscode_ = 0;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.BoolValue enableAd_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableAdBuilder_;
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+       * @return Whether the enableAd field is set.
+       */
+      public boolean hasEnableAd() {
+        return enableAdBuilder_ != null || enableAd_ != null;
+      }
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+       * @return The enableAd.
+       */
+      public com.google.protobuf.BoolValue getEnableAd() {
+        if (enableAdBuilder_ == null) {
+          return enableAd_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableAd_;
+        } else {
+          return enableAdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+       */
+      public Builder setEnableAd(com.google.protobuf.BoolValue value) {
+        if (enableAdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          enableAd_ = value;
+          onChanged();
+        } else {
+          enableAdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+       */
+      public Builder setEnableAd(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (enableAdBuilder_ == null) {
+          enableAd_ = builderForValue.build();
+          onChanged();
+        } else {
+          enableAdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+       */
+      public Builder mergeEnableAd(com.google.protobuf.BoolValue value) {
+        if (enableAdBuilder_ == null) {
+          if (enableAd_ != null) {
+            enableAd_ =
+              com.google.protobuf.BoolValue.newBuilder(enableAd_).mergeFrom(value).buildPartial();
+          } else {
+            enableAd_ = value;
+          }
+          onChanged();
+        } else {
+          enableAdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+       */
+      public Builder clearEnableAd() {
+        if (enableAdBuilder_ == null) {
+          enableAd_ = null;
+          onChanged();
+        } else {
+          enableAd_ = null;
+          enableAdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getEnableAdBuilder() {
+        
+        onChanged();
+        return getEnableAdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getEnableAdOrBuilder() {
+        if (enableAdBuilder_ != null) {
+          return enableAdBuilder_.getMessageOrBuilder();
+        } else {
+          return enableAd_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : enableAd_;
+        }
+      }
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getEnableAdFieldBuilder() {
+        if (enableAdBuilder_ == null) {
+          enableAdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getEnableAd(),
+                  getParentForChildren(),
+                  isClean());
+          enableAd_ = null;
+        }
+        return enableAdBuilder_;
       }
 
       private com.google.protobuf.MapField<
@@ -10403,6 +10696,39 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
+     * Enable advertisement for this video.
+     * Default: true.
+     * Use this to disable advertisement for a specific video.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+     * @return Whether the enableAd field is set.
+     */
+    boolean hasEnableAd();
+    /**
+     * <pre>
+     * Enable advertisement for this video.
+     * Default: true.
+     * Use this to disable advertisement for a specific video.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+     * @return The enableAd.
+     */
+    com.google.protobuf.BoolValue getEnableAd();
+    /**
+     * <pre>
+     * Enable advertisement for this video.
+     * Default: true.
+     * Use this to disable advertisement for a specific video.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getEnableAdOrBuilder();
+
+    /**
+     * <pre>
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
@@ -10594,6 +10920,19 @@ public final class VideoServiceOuterClass {
               int rawValue = input.readEnum();
 
               autoTranscode_ = rawValue;
+              break;
+            }
+            case 66: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (enableAd_ != null) {
+                subBuilder = enableAd_.toBuilder();
+              }
+              enableAd_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(enableAd_);
+                enableAd_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             case 1602: {
@@ -10987,6 +11326,50 @@ public final class VideoServiceOuterClass {
       return result == null ? yandex.cloud.api.video.v1.VideoOuterClass.AutoTranscode.UNRECOGNIZED : result;
     }
 
+    public static final int ENABLE_AD_FIELD_NUMBER = 8;
+    private com.google.protobuf.BoolValue enableAd_;
+    /**
+     * <pre>
+     * Enable advertisement for this video.
+     * Default: true.
+     * Use this to disable advertisement for a specific video.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+     * @return Whether the enableAd field is set.
+     */
+    @java.lang.Override
+    public boolean hasEnableAd() {
+      return enableAd_ != null;
+    }
+    /**
+     * <pre>
+     * Enable advertisement for this video.
+     * Default: true.
+     * Use this to disable advertisement for a specific video.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+     * @return The enableAd.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getEnableAd() {
+      return enableAd_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableAd_;
+    }
+    /**
+     * <pre>
+     * Enable advertisement for this video.
+     * Default: true.
+     * Use this to disable advertisement for a specific video.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getEnableAdOrBuilder() {
+      return getEnableAd();
+    }
+
     public static final int LABELS_FIELD_NUMBER = 200;
     private static final class LabelsDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
@@ -11209,6 +11592,9 @@ public final class VideoServiceOuterClass {
       if (autoTranscode_ != yandex.cloud.api.video.v1.VideoOuterClass.AutoTranscode.AUTO_TRANSCODE_UNSPECIFIED.getNumber()) {
         output.writeEnum(6, autoTranscode_);
       }
+      if (enableAd_ != null) {
+        output.writeMessage(8, getEnableAd());
+      }
       com.google.protobuf.GeneratedMessageV3
         .serializeStringMapTo(
           output,
@@ -11252,6 +11638,10 @@ public final class VideoServiceOuterClass {
       if (autoTranscode_ != yandex.cloud.api.video.v1.VideoOuterClass.AutoTranscode.AUTO_TRANSCODE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(6, autoTranscode_);
+      }
+      if (enableAd_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getEnableAd());
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
            : internalGetLabels().getMap().entrySet()) {
@@ -11304,6 +11694,11 @@ public final class VideoServiceOuterClass {
       if (!getThumbnailId()
           .equals(other.getThumbnailId())) return false;
       if (autoTranscode_ != other.autoTranscode_) return false;
+      if (hasEnableAd() != other.hasEnableAd()) return false;
+      if (hasEnableAd()) {
+        if (!getEnableAd()
+            .equals(other.getEnableAd())) return false;
+      }
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
       if (!getAccessRightsCase().equals(other.getAccessRightsCase())) return false;
@@ -11348,6 +11743,10 @@ public final class VideoServiceOuterClass {
       hash = (53 * hash) + getThumbnailId().hashCode();
       hash = (37 * hash) + AUTO_TRANSCODE_FIELD_NUMBER;
       hash = (53 * hash) + autoTranscode_;
+      if (hasEnableAd()) {
+        hash = (37 * hash) + ENABLE_AD_FIELD_NUMBER;
+        hash = (53 * hash) + getEnableAd().hashCode();
+      }
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
@@ -11539,6 +11938,12 @@ public final class VideoServiceOuterClass {
 
         autoTranscode_ = 0;
 
+        if (enableAdBuilder_ == null) {
+          enableAd_ = null;
+        } else {
+          enableAd_ = null;
+          enableAdBuilder_ = null;
+        }
         internalGetMutableLabels().clear();
         accessRightsCase_ = 0;
         accessRights_ = null;
@@ -11579,6 +11984,11 @@ public final class VideoServiceOuterClass {
         result.description_ = description_;
         result.thumbnailId_ = thumbnailId_;
         result.autoTranscode_ = autoTranscode_;
+        if (enableAdBuilder_ == null) {
+          result.enableAd_ = enableAd_;
+        } else {
+          result.enableAd_ = enableAdBuilder_.build();
+        }
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
         if (accessRightsCase_ == 2000) {
@@ -11672,6 +12082,9 @@ public final class VideoServiceOuterClass {
         }
         if (other.autoTranscode_ != 0) {
           setAutoTranscodeValue(other.getAutoTranscodeValue());
+        }
+        if (other.hasEnableAd()) {
+          mergeEnableAd(other.getEnableAd());
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
@@ -12348,6 +12761,179 @@ public final class VideoServiceOuterClass {
         autoTranscode_ = 0;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.BoolValue enableAd_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableAdBuilder_;
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+       * @return Whether the enableAd field is set.
+       */
+      public boolean hasEnableAd() {
+        return enableAdBuilder_ != null || enableAd_ != null;
+      }
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+       * @return The enableAd.
+       */
+      public com.google.protobuf.BoolValue getEnableAd() {
+        if (enableAdBuilder_ == null) {
+          return enableAd_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableAd_;
+        } else {
+          return enableAdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+       */
+      public Builder setEnableAd(com.google.protobuf.BoolValue value) {
+        if (enableAdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          enableAd_ = value;
+          onChanged();
+        } else {
+          enableAdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+       */
+      public Builder setEnableAd(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (enableAdBuilder_ == null) {
+          enableAd_ = builderForValue.build();
+          onChanged();
+        } else {
+          enableAdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+       */
+      public Builder mergeEnableAd(com.google.protobuf.BoolValue value) {
+        if (enableAdBuilder_ == null) {
+          if (enableAd_ != null) {
+            enableAd_ =
+              com.google.protobuf.BoolValue.newBuilder(enableAd_).mergeFrom(value).buildPartial();
+          } else {
+            enableAd_ = value;
+          }
+          onChanged();
+        } else {
+          enableAdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+       */
+      public Builder clearEnableAd() {
+        if (enableAdBuilder_ == null) {
+          enableAd_ = null;
+          onChanged();
+        } else {
+          enableAd_ = null;
+          enableAdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getEnableAdBuilder() {
+        
+        onChanged();
+        return getEnableAdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getEnableAdOrBuilder() {
+        if (enableAdBuilder_ != null) {
+          return enableAdBuilder_.getMessageOrBuilder();
+        } else {
+          return enableAd_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : enableAd_;
+        }
+      }
+      /**
+       * <pre>
+       * Enable advertisement for this video.
+       * Default: true.
+       * Use this to disable advertisement for a specific video.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getEnableAdFieldBuilder() {
+        if (enableAdBuilder_ == null) {
+          enableAdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getEnableAd(),
+                  getParentForChildren(),
+                  isClean());
+          enableAd_ = null;
+        }
+        return enableAdBuilder_;
       }
 
       private com.google.protobuf.MapField<
@@ -24852,141 +25438,145 @@ public final class VideoServiceOuterClass {
       "oto\022\025yandex.cloud.video.v1\032\034google/api/a" +
       "nnotations.proto\032\036google/protobuf/durati" +
       "on.proto\032 google/protobuf/field_mask.pro" +
-      "to\032 yandex/cloud/api/operation.proto\032&ya" +
-      "ndex/cloud/operation/operation.proto\032\035ya" +
-      "ndex/cloud/validation.proto\032$yandex/clou" +
-      "d/video/v1/manifest.proto\032!yandex/cloud/" +
-      "video/v1/video.proto\"1\n\017GetVideoRequest\022" +
-      "\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\245\001\n\020List" +
-      "VideoRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=100\022\035\n\n" +
-      "page_token\030e \001(\tB\t\212\3101\005<=200\022\020\n\010order_by\030" +
-      "f \001(\t\022\032\n\006filter\030g \001(\tB\n\212\3101\006<=1000J\004\010\002\020d\"" +
-      "`\n\021ListVideoResponse\022,\n\006videos\030\001 \003(\0132\034.y" +
-      "andex.cloud.video.v1.Video\022\027\n\017next_page_" +
-      "token\030d \001(\tJ\004\010\002\020d\"_\n\025BatchGetVideosReque" +
-      "st\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022$\n\t" +
-      "video_ids\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<=50\"F\n\026Ba" +
-      "tchGetVideosResponse\022,\n\006videos\030\001 \003(\0132\034.y" +
-      "andex.cloud.video.v1.Video\"\344\005\n\022CreateVid" +
-      "eoRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022\023\n\005title\030\002 \001(\tB\004\350\3071\001\022\023\n\013description\030" +
-      "\003 \001(\t\022\036\n\014thumbnail_id\030\004 \001(\tB\010\212\3101\004<=50\022<\n" +
-      "\016auto_transcode\030\005 \001(\0162$.yandex.cloud.vid" +
-      "eo.v1.AutoTranscode\022\213\001\n\006labels\030\310\001 \003(\01325." +
-      "yandex.cloud.video.v1.CreateVideoRequest" +
-      ".LabelsEntryBC\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_.@:" +
-      "/0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]" +
-      "*\0227\n\004tusd\030\350\007 \001(\0132&.yandex.cloud.video.v1" +
-      ".VideoTUSDParamsH\000\022H\n\rpublic_access\030\320\017 \001" +
-      "(\0132..yandex.cloud.video.v1.VideoPublicAc" +
-      "cessParamsH\001\022Q\n\022auth_system_access\030\322\017 \001(" +
-      "\01322.yandex.cloud.video.v1.VideoAuthSyste" +
-      "mAccessParamsH\001\022K\n\017sign_url_access\030\323\017 \001(" +
-      "\0132/.yandex.cloud.video.v1.VideoSignURLAc" +
-      "cessParamsH\001\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n\006source\022\004\300\3011\001B\025\n\ra" +
-      "ccess_rights\022\004\300\3011\001J\006\010\321\017\020\322\017J\005\010\006\020\310\001J\006\010\311\001\020\350" +
-      "\007J\006\010\351\007\020\320\017\"?\n\017VideoTUSDParams\022\031\n\tfile_siz" +
-      "e\030\001 \001(\003B\006\372\3071\002>0\022\021\n\tfile_name\030\002 \001(\t\"\031\n\027Vi" +
-      "deoPublicAccessParams\"\035\n\033VideoAuthSystem" +
-      "AccessParams\"\032\n\030VideoSignURLAccessParams" +
-      "\"\'\n\023CreateVideoMetadata\022\020\n\010video_id\030\001 \001(" +
-      "\t\"\265\005\n\022UpdateVideoRequest\022\036\n\010video_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022.\n\nfield_mask\030\002 \001(\0132\032.g" +
-      "oogle.protobuf.FieldMask\022\r\n\005title\030\003 \001(\t\022" +
-      "\023\n\013description\030\004 \001(\t\022\036\n\014thumbnail_id\030\005 \001" +
-      "(\tB\010\212\3101\004<=50\022<\n\016auto_transcode\030\006 \001(\0162$.y" +
-      "andex.cloud.video.v1.AutoTranscode\022\213\001\n\006l" +
-      "abels\030\310\001 \003(\01325.yandex.cloud.video.v1.Upd" +
-      "ateVideoRequest.LabelsEntryBC\202\3101\004<=64\212\3101" +
-      "\004<=63\362\3071\017[-_.@:/0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020" +
-      "[a-z][-_0-9a-z]*\022H\n\rpublic_access\030\320\017 \001(\013" +
-      "2..yandex.cloud.video.v1.VideoPublicAcce" +
-      "ssParamsH\000\022Q\n\022auth_system_access\030\322\017 \001(\0132" +
-      "2.yandex.cloud.video.v1.VideoAuthSystemA" +
-      "ccessParamsH\000\022K\n\017sign_url_access\030\323\017 \001(\0132" +
-      "/.yandex.cloud.video.v1.VideoSignURLAcce" +
-      "ssParamsH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001B\017\n\raccess_rightsJ\006\010\321\017\020" +
-      "\322\017J\005\010\007\020\310\001J\006\010\311\001\020\320\017\"\'\n\023UpdateVideoMetadata" +
-      "\022\020\n\010video_id\030\001 \001(\t\"o\n\025TranscodeVideoRequ" +
-      "est\022\020\n\010video_id\030\001 \001(\t\022.\n\nfield_mask\030\002 \001(" +
-      "\0132\032.google.protobuf.FieldMask\022\024\n\014subtitl" +
-      "e_ids\030\003 \003(\t\"*\n\026TranscodeVideoMetadata\022\020\n" +
-      "\010video_id\030\001 \001(\t\"4\n\022DeleteVideoRequest\022\036\n" +
-      "\010video_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\'\n\023DeleteV" +
-      "ideoMetadata\022\020\n\010video_id\030\001 \001(\t\"b\n\030BatchD" +
-      "eleteVideosRequest\022 \n\nchannel_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\022$\n\tvideo_ids\030\002 \003(\tB\021\202\3101\0051-1" +
-      "00\212\3101\004<=50\".\n\031BatchDeleteVideosMetadata\022" +
-      "\021\n\tvideo_ids\030\001 \003(\t\"\324\001\n\031PerformVideoActio" +
-      "nRequest\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022=\n\007publish\030\350\007 \001(\0132).yandex.cloud.video." +
-      "v1.PublishVideoActionH\000\022A\n\tunpublish\030\351\007 " +
-      "\001(\0132+.yandex.cloud.video.v1.UnpublishVid" +
-      "eoActionH\000B\016\n\006action\022\004\300\3011\001J\005\010\002\020\350\007\"\024\n\022Pub" +
-      "lishVideoAction\"\026\n\024UnpublishVideoAction\"" +
-      ".\n\032PerformVideoActionMetadata\022\020\n\010video_i" +
-      "d\030\001 \001(\t\"\267\001\n\030GetVideoPlayerURLRequest\022\036\n\010" +
-      "video_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0228\n\006params\030\002" +
-      " \001(\0132(.yandex.cloud.video.v1.VideoPlayer" +
-      "Params\022A\n\036signed_url_expiration_duration" +
-      "\030\003 \001(\0132\031.google.protobuf.Duration\"C\n\021Vid" +
-      "eoPlayerParams\022\014\n\004mute\030\001 \001(\010\022\020\n\010autoplay" +
-      "\030\002 \001(\010\022\016\n\006hidden\030\003 \001(\010\"=\n\031GetVideoPlayer" +
-      "URLResponse\022\022\n\nplayer_url\030\001 \001(\t\022\014\n\004html\030" +
-      "\002 \001(\t\":\n\030GetVideoManifestsRequest\022\036\n\010vid" +
-      "eo_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"O\n\031GetVideoMan" +
-      "ifestsResponse\0222\n\tmanifests\030\001 \003(\0132\037.yand" +
-      "ex.cloud.video.v1.Manifest2\361\r\n\014VideoServ" +
-      "ice\022p\n\003Get\022&.yandex.cloud.video.v1.GetVi" +
-      "deoRequest\032\034.yandex.cloud.video.v1.Video" +
-      "\"#\202\323\344\223\002\035\022\033/video/v1/videos/{video_id}\022s\n" +
-      "\004List\022\'.yandex.cloud.video.v1.ListVideoR" +
-      "equest\032(.yandex.cloud.video.v1.ListVideo" +
-      "Response\"\030\202\323\344\223\002\022\022\020/video/v1/videos\022\215\001\n\010B" +
-      "atchGet\022,.yandex.cloud.video.v1.BatchGet" +
-      "VideosRequest\032-.yandex.cloud.video.v1.Ba" +
-      "tchGetVideosResponse\"$\202\323\344\223\002\036\"\031/video/v1/" +
-      "videos:batchGet:\001*\022\223\001\n\006Create\022).yandex.c" +
-      "loud.video.v1.CreateVideoRequest\032!.yande" +
-      "x.cloud.operation.Operation\";\202\323\344\223\002\025\"\020/vi" +
-      "deo/v1/videos:\001*\262\322*\034\n\023CreateVideoMetadat" +
-      "a\022\005Video\022\236\001\n\006Update\022).yandex.cloud.video" +
-      ".v1.UpdateVideoRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"F\202\323\344\223\002 2\033/video/v1/vid" +
-      "eos/{video_id}:\001*\262\322*\034\n\023UpdateVideoMetada" +
-      "ta\022\005Video\022\261\001\n\tTranscode\022,.yandex.cloud.v" +
-      "ideo.v1.TranscodeVideoRequest\032!.yandex.c" +
-      "loud.operation.Operation\"S\202\323\344\223\002*\"%/video" +
-      "/v1/videos/{video_id}:transcode:\001*\262\322*\037\n\026" +
-      "TranscodeVideoMetadata\022\005Video\022\253\001\n\006Delete" +
-      "\022).yandex.cloud.video.v1.DeleteVideoRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"S" +
-      "\202\323\344\223\002\035*\033/video/v1/videos/{video_id}\262\322*,\n" +
-      "\023DeleteVideoMetadata\022\025google.protobuf.Em" +
-      "pty\022\300\001\n\013BatchDelete\022/.yandex.cloud.video" +
-      ".v1.BatchDeleteVideosRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"]\202\323\344\223\002!\"\034/video/" +
-      "v1/videos:batchDelete:\001*\262\322*2\n\031BatchDelet" +
-      "eVideosMetadata\022\025google.protobuf.Empty\022\301" +
-      "\001\n\rPerformAction\0220.yandex.cloud.video.v1" +
-      ".PerformVideoActionRequest\032!.yandex.clou" +
-      "d.operation.Operation\"[\202\323\344\223\002.\")/video/v1" +
-      "/videos/{video_id}:performAction:\001*\262\322*#\n" +
-      "\032PerformVideoActionMetadata\022\005Video\022\243\001\n\014G" +
-      "etPlayerURL\022/.yandex.cloud.video.v1.GetV" +
-      "ideoPlayerURLRequest\0320.yandex.cloud.vide" +
-      "o.v1.GetVideoPlayerURLResponse\"0\202\323\344\223\002*\022(" +
-      "/video/v1/videos/{video_id}:getPlayerURL" +
-      "\022\243\001\n\014GetManifests\022/.yandex.cloud.video.v" +
-      "1.GetVideoManifestsRequest\0320.yandex.clou" +
-      "d.video.v1.GetVideoManifestsResponse\"0\202\323" +
-      "\344\223\002*\022(/video/v1/videos/{video_id}:getMan" +
-      "ifestsB\\\n\031yandex.cloud.api.video.v1Z?git" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/video/v1;videob\006proto3"
+      "to\032\036google/protobuf/wrappers.proto\032 yand" +
+      "ex/cloud/api/operation.proto\032&yandex/clo" +
+      "ud/operation/operation.proto\032\035yandex/clo" +
+      "ud/validation.proto\032$yandex/cloud/video/" +
+      "v1/manifest.proto\032!yandex/cloud/video/v1" +
+      "/video.proto\"1\n\017GetVideoRequest\022\036\n\010video" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\245\001\n\020ListVideoReq" +
+      "uest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\034" +
+      "\n\tpage_size\030d \001(\003B\t\372\3071\005<=100\022\035\n\npage_tok" +
+      "en\030e \001(\tB\t\212\3101\005<=200\022\020\n\010order_by\030f \001(\t\022\032\n" +
+      "\006filter\030g \001(\tB\n\212\3101\006<=1000J\004\010\002\020d\"`\n\021ListV" +
+      "ideoResponse\022,\n\006videos\030\001 \003(\0132\034.yandex.cl" +
+      "oud.video.v1.Video\022\027\n\017next_page_token\030d " +
+      "\001(\tJ\004\010\002\020d\"_\n\025BatchGetVideosRequest\022 \n\nch" +
+      "annel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022$\n\tvideo_id" +
+      "s\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<=50\"F\n\026BatchGetVi" +
+      "deosResponse\022,\n\006videos\030\001 \003(\0132\034.yandex.cl" +
+      "oud.video.v1.Video\"\231\006\n\022CreateVideoReques" +
+      "t\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\023\n\005t" +
+      "itle\030\002 \001(\tB\004\350\3071\001\022\023\n\013description\030\003 \001(\t\022\036\n" +
+      "\014thumbnail_id\030\004 \001(\tB\010\212\3101\004<=50\022<\n\016auto_tr" +
+      "anscode\030\005 \001(\0162$.yandex.cloud.video.v1.Au" +
+      "toTranscode\022-\n\tenable_ad\030\010 \001(\0132\032.google." +
+      "protobuf.BoolValue\022\213\001\n\006labels\030\310\001 \003(\01325.y" +
+      "andex.cloud.video.v1.CreateVideoRequest." +
+      "LabelsEntryBC\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_.@:/" +
+      "0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*" +
+      "\0227\n\004tusd\030\350\007 \001(\0132&.yandex.cloud.video.v1." +
+      "VideoTUSDParamsH\000\022H\n\rpublic_access\030\320\017 \001(" +
+      "\0132..yandex.cloud.video.v1.VideoPublicAcc" +
+      "essParamsH\001\022Q\n\022auth_system_access\030\322\017 \001(\013" +
+      "22.yandex.cloud.video.v1.VideoAuthSystem" +
+      "AccessParamsH\001\022K\n\017sign_url_access\030\323\017 \001(\013" +
+      "2/.yandex.cloud.video.v1.VideoSignURLAcc" +
+      "essParamsH\001\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001B\016\n\006source\022\004\300\3011\001B\025\n\rac" +
+      "cess_rights\022\004\300\3011\001J\006\010\321\017\020\322\017J\004\010\006\020\010J\005\010\t\020\310\001J\006" +
+      "\010\311\001\020\350\007J\006\010\351\007\020\320\017\"?\n\017VideoTUSDParams\022\031\n\tfil" +
+      "e_size\030\001 \001(\003B\006\372\3071\002>0\022\021\n\tfile_name\030\002 \001(\t\"" +
+      "\031\n\027VideoPublicAccessParams\"\035\n\033VideoAuthS" +
+      "ystemAccessParams\"\032\n\030VideoSignURLAccessP" +
+      "arams\"\'\n\023CreateVideoMetadata\022\020\n\010video_id" +
+      "\030\001 \001(\t\"\352\005\n\022UpdateVideoRequest\022\036\n\010video_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022.\n\nfield_mask\030\002 \001(" +
+      "\0132\032.google.protobuf.FieldMask\022\r\n\005title\030\003" +
+      " \001(\t\022\023\n\013description\030\004 \001(\t\022\036\n\014thumbnail_i" +
+      "d\030\005 \001(\tB\010\212\3101\004<=50\022<\n\016auto_transcode\030\006 \001(" +
+      "\0162$.yandex.cloud.video.v1.AutoTranscode\022" +
+      "-\n\tenable_ad\030\010 \001(\0132\032.google.protobuf.Boo" +
+      "lValue\022\213\001\n\006labels\030\310\001 \003(\01325.yandex.cloud." +
+      "video.v1.UpdateVideoRequest.LabelsEntryB" +
+      "C\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_.@:/0-9a-z]*\262\3101\006" +
+      "\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022H\n\rpublic_a" +
+      "ccess\030\320\017 \001(\0132..yandex.cloud.video.v1.Vid" +
+      "eoPublicAccessParamsH\000\022Q\n\022auth_system_ac" +
+      "cess\030\322\017 \001(\01322.yandex.cloud.video.v1.Vide" +
+      "oAuthSystemAccessParamsH\000\022K\n\017sign_url_ac" +
+      "cess\030\323\017 \001(\0132/.yandex.cloud.video.v1.Vide" +
+      "oSignURLAccessParamsH\000\032-\n\013LabelsEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\017\n\raccess_" +
+      "rightsJ\006\010\321\017\020\322\017J\004\010\007\020\010J\005\010\t\020\310\001J\006\010\311\001\020\320\017\"\'\n\023U" +
+      "pdateVideoMetadata\022\020\n\010video_id\030\001 \001(\t\"o\n\025" +
+      "TranscodeVideoRequest\022\020\n\010video_id\030\001 \001(\t\022" +
+      ".\n\nfield_mask\030\002 \001(\0132\032.google.protobuf.Fi" +
+      "eldMask\022\024\n\014subtitle_ids\030\003 \003(\t\"*\n\026Transco" +
+      "deVideoMetadata\022\020\n\010video_id\030\001 \001(\t\"4\n\022Del" +
+      "eteVideoRequest\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\"\'\n\023DeleteVideoMetadata\022\020\n\010video_" +
+      "id\030\001 \001(\t\"b\n\030BatchDeleteVideosRequest\022 \n\n" +
+      "channel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022$\n\tvideo_" +
+      "ids\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<=50\".\n\031BatchDel" +
+      "eteVideosMetadata\022\021\n\tvideo_ids\030\001 \003(\t\"\324\001\n" +
+      "\031PerformVideoActionRequest\022\036\n\010video_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022=\n\007publish\030\350\007 \001(\0132).y" +
+      "andex.cloud.video.v1.PublishVideoActionH" +
+      "\000\022A\n\tunpublish\030\351\007 \001(\0132+.yandex.cloud.vid" +
+      "eo.v1.UnpublishVideoActionH\000B\016\n\006action\022\004" +
+      "\300\3011\001J\005\010\002\020\350\007\"\024\n\022PublishVideoAction\"\026\n\024Unp" +
+      "ublishVideoAction\".\n\032PerformVideoActionM" +
+      "etadata\022\020\n\010video_id\030\001 \001(\t\"\267\001\n\030GetVideoPl" +
+      "ayerURLRequest\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\0228\n\006params\030\002 \001(\0132(.yandex.cloud.vi" +
+      "deo.v1.VideoPlayerParams\022A\n\036signed_url_e" +
+      "xpiration_duration\030\003 \001(\0132\031.google.protob" +
+      "uf.Duration\"C\n\021VideoPlayerParams\022\014\n\004mute" +
+      "\030\001 \001(\010\022\020\n\010autoplay\030\002 \001(\010\022\016\n\006hidden\030\003 \001(\010" +
+      "\"=\n\031GetVideoPlayerURLResponse\022\022\n\nplayer_" +
+      "url\030\001 \001(\t\022\014\n\004html\030\002 \001(\t\":\n\030GetVideoManif" +
+      "estsRequest\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\"O\n\031GetVideoManifestsResponse\0222\n\tmani" +
+      "fests\030\001 \003(\0132\037.yandex.cloud.video.v1.Mani" +
+      "fest2\361\r\n\014VideoService\022p\n\003Get\022&.yandex.cl" +
+      "oud.video.v1.GetVideoRequest\032\034.yandex.cl" +
+      "oud.video.v1.Video\"#\202\323\344\223\002\035\022\033/video/v1/vi" +
+      "deos/{video_id}\022s\n\004List\022\'.yandex.cloud.v" +
+      "ideo.v1.ListVideoRequest\032(.yandex.cloud." +
+      "video.v1.ListVideoResponse\"\030\202\323\344\223\002\022\022\020/vid" +
+      "eo/v1/videos\022\215\001\n\010BatchGet\022,.yandex.cloud" +
+      ".video.v1.BatchGetVideosRequest\032-.yandex" +
+      ".cloud.video.v1.BatchGetVideosResponse\"$" +
+      "\202\323\344\223\002\036\"\031/video/v1/videos:batchGet:\001*\022\223\001\n" +
+      "\006Create\022).yandex.cloud.video.v1.CreateVi" +
+      "deoRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\";\202\323\344\223\002\025\"\020/video/v1/videos:\001*\262\322*\034\n\023" +
+      "CreateVideoMetadata\022\005Video\022\236\001\n\006Update\022)." +
+      "yandex.cloud.video.v1.UpdateVideoRequest" +
+      "\032!.yandex.cloud.operation.Operation\"F\202\323\344" +
+      "\223\002 2\033/video/v1/videos/{video_id}:\001*\262\322*\034\n" +
+      "\023UpdateVideoMetadata\022\005Video\022\261\001\n\tTranscod" +
+      "e\022,.yandex.cloud.video.v1.TranscodeVideo" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"S\202\323\344\223\002*\"%/video/v1/videos/{video_id}:" +
+      "transcode:\001*\262\322*\037\n\026TranscodeVideoMetadata" +
+      "\022\005Video\022\253\001\n\006Delete\022).yandex.cloud.video." +
+      "v1.DeleteVideoRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"S\202\323\344\223\002\035*\033/video/v1/vide" +
+      "os/{video_id}\262\322*,\n\023DeleteVideoMetadata\022\025" +
+      "google.protobuf.Empty\022\300\001\n\013BatchDelete\022/." +
+      "yandex.cloud.video.v1.BatchDeleteVideosR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"]\202\323\344\223\002!\"\034/video/v1/videos:batchDelete:" +
+      "\001*\262\322*2\n\031BatchDeleteVideosMetadata\022\025googl" +
+      "e.protobuf.Empty\022\301\001\n\rPerformAction\0220.yan" +
+      "dex.cloud.video.v1.PerformVideoActionReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "[\202\323\344\223\002.\")/video/v1/videos/{video_id}:per" +
+      "formAction:\001*\262\322*#\n\032PerformVideoActionMet" +
+      "adata\022\005Video\022\243\001\n\014GetPlayerURL\022/.yandex.c" +
+      "loud.video.v1.GetVideoPlayerURLRequest\0320" +
+      ".yandex.cloud.video.v1.GetVideoPlayerURL" +
+      "Response\"0\202\323\344\223\002*\022(/video/v1/videos/{vide" +
+      "o_id}:getPlayerURL\022\243\001\n\014GetManifests\022/.ya" +
+      "ndex.cloud.video.v1.GetVideoManifestsReq" +
+      "uest\0320.yandex.cloud.video.v1.GetVideoMan" +
+      "ifestsResponse\"0\202\323\344\223\002*\022(/video/v1/videos" +
+      "/{video_id}:getManifestsB\\\n\031yandex.cloud" +
+      ".api.video.v1Z?github.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/video/v1;videob\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -24994,6 +25584,7 @@ public final class VideoServiceOuterClass {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
@@ -25035,7 +25626,7 @@ public final class VideoServiceOuterClass {
     internal_static_yandex_cloud_video_v1_CreateVideoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_CreateVideoRequest_descriptor,
-        new java.lang.String[] { "ChannelId", "Title", "Description", "ThumbnailId", "AutoTranscode", "Labels", "Tusd", "PublicAccess", "AuthSystemAccess", "SignUrlAccess", "Source", "AccessRights", });
+        new java.lang.String[] { "ChannelId", "Title", "Description", "ThumbnailId", "AutoTranscode", "EnableAd", "Labels", "Tusd", "PublicAccess", "AuthSystemAccess", "SignUrlAccess", "Source", "AccessRights", });
     internal_static_yandex_cloud_video_v1_CreateVideoRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_video_v1_CreateVideoRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_video_v1_CreateVideoRequest_LabelsEntry_fieldAccessorTable = new
@@ -25077,7 +25668,7 @@ public final class VideoServiceOuterClass {
     internal_static_yandex_cloud_video_v1_UpdateVideoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_UpdateVideoRequest_descriptor,
-        new java.lang.String[] { "VideoId", "FieldMask", "Title", "Description", "ThumbnailId", "AutoTranscode", "Labels", "PublicAccess", "AuthSystemAccess", "SignUrlAccess", "AccessRights", });
+        new java.lang.String[] { "VideoId", "FieldMask", "Title", "Description", "ThumbnailId", "AutoTranscode", "EnableAd", "Labels", "PublicAccess", "AuthSystemAccess", "SignUrlAccess", "AccessRights", });
     internal_static_yandex_cloud_video_v1_UpdateVideoRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_video_v1_UpdateVideoRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_video_v1_UpdateVideoRequest_LabelsEntry_fieldAccessorTable = new
@@ -25196,6 +25787,7 @@ public final class VideoServiceOuterClass {
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();

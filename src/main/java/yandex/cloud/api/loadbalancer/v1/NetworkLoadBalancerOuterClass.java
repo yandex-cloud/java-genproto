@@ -491,6 +491,16 @@ public final class NetworkLoadBalancerOuterClass {
      * @return The deletionProtection.
      */
     boolean getDeletionProtection();
+
+    /**
+     * <pre>
+     * Specifies if network load balancer available to zonal shift.
+     * </pre>
+     *
+     * <code>bool allow_zonal_shift = 15;</code>
+     * @return The allowZonalShift.
+     */
+    boolean getAllowZonalShift();
   }
   /**
    * <pre>
@@ -647,6 +657,11 @@ public final class NetworkLoadBalancerOuterClass {
             case 112: {
 
               deletionProtection_ = input.readBool();
+              break;
+            }
+            case 120: {
+
+              allowZonalShift_ = input.readBool();
               break;
             }
             default: {
@@ -1756,6 +1771,21 @@ public final class NetworkLoadBalancerOuterClass {
       return deletionProtection_;
     }
 
+    public static final int ALLOW_ZONAL_SHIFT_FIELD_NUMBER = 15;
+    private boolean allowZonalShift_;
+    /**
+     * <pre>
+     * Specifies if network load balancer available to zonal shift.
+     * </pre>
+     *
+     * <code>bool allow_zonal_shift = 15;</code>
+     * @return The allowZonalShift.
+     */
+    @java.lang.Override
+    public boolean getAllowZonalShift() {
+      return allowZonalShift_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1811,6 +1841,9 @@ public final class NetworkLoadBalancerOuterClass {
       }
       if (deletionProtection_ != false) {
         output.writeBool(14, deletionProtection_);
+      }
+      if (allowZonalShift_ != false) {
+        output.writeBool(15, allowZonalShift_);
       }
       unknownFields.writeTo(output);
     }
@@ -1874,6 +1907,10 @@ public final class NetworkLoadBalancerOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(14, deletionProtection_);
       }
+      if (allowZonalShift_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(15, allowZonalShift_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1915,6 +1952,8 @@ public final class NetworkLoadBalancerOuterClass {
           .equals(other.getAttachedTargetGroupsList())) return false;
       if (getDeletionProtection()
           != other.getDeletionProtection()) return false;
+      if (getAllowZonalShift()
+          != other.getAllowZonalShift()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1961,6 +2000,9 @@ public final class NetworkLoadBalancerOuterClass {
       hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDeletionProtection());
+      hash = (37 * hash) + ALLOW_ZONAL_SHIFT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAllowZonalShift());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2159,6 +2201,8 @@ public final class NetworkLoadBalancerOuterClass {
         }
         deletionProtection_ = false;
 
+        allowZonalShift_ = false;
+
         return this;
       }
 
@@ -2220,6 +2264,7 @@ public final class NetworkLoadBalancerOuterClass {
           result.attachedTargetGroups_ = attachedTargetGroupsBuilder_.build();
         }
         result.deletionProtection_ = deletionProtection_;
+        result.allowZonalShift_ = allowZonalShift_;
         onBuilt();
         return result;
       }
@@ -2356,6 +2401,9 @@ public final class NetworkLoadBalancerOuterClass {
         }
         if (other.getDeletionProtection() != false) {
           setDeletionProtection(other.getDeletionProtection());
+        }
+        if (other.getAllowZonalShift() != false) {
+          setAllowZonalShift(other.getAllowZonalShift());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4066,6 +4114,49 @@ public final class NetworkLoadBalancerOuterClass {
       public Builder clearDeletionProtection() {
         
         deletionProtection_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean allowZonalShift_ ;
+      /**
+       * <pre>
+       * Specifies if network load balancer available to zonal shift.
+       * </pre>
+       *
+       * <code>bool allow_zonal_shift = 15;</code>
+       * @return The allowZonalShift.
+       */
+      @java.lang.Override
+      public boolean getAllowZonalShift() {
+        return allowZonalShift_;
+      }
+      /**
+       * <pre>
+       * Specifies if network load balancer available to zonal shift.
+       * </pre>
+       *
+       * <code>bool allow_zonal_shift = 15;</code>
+       * @param value The allowZonalShift to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowZonalShift(boolean value) {
+        
+        allowZonalShift_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies if network load balancer available to zonal shift.
+       * </pre>
+       *
+       * <code>bool allow_zonal_shift = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowZonalShift() {
+        
+        allowZonalShift_ = false;
         onChanged();
         return this;
       }
@@ -7990,7 +8081,7 @@ public final class NetworkLoadBalancerOuterClass {
       "ancer.v1\032\037google/protobuf/timestamp.prot" +
       "o\032/yandex/cloud/loadbalancer/v1/health_c" +
       "heck.proto\032\035yandex/cloud/validation.prot" +
-      "o\"\300\007\n\023NetworkLoadBalancer\022\n\n\002id\030\001 \001(\t\022\021\n" +
+      "o\"\333\007\n\023NetworkLoadBalancer\022\n\n\002id\030\001 \001(\t\022\021\n" +
       "\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.g" +
       "oogle.protobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023" +
       "\n\013description\030\005 \001(\t\022M\n\006labels\030\006 \003(\0132=.ya" +
@@ -8006,35 +8097,36 @@ public final class NetworkLoadBalancerOuterClass {
       "r.v1.Listener\022Q\n\026attached_target_groups\030" +
       "\r \003(\01321.yandex.cloud.loadbalancer.v1.Att" +
       "achedTargetGroup\022\033\n\023deletion_protection\030" +
-      "\016 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\"\177\n\006Status\022\026\n\022STATUS_UNSPECI" +
-      "FIED\020\000\022\014\n\010CREATING\020\001\022\014\n\010STARTING\020\002\022\n\n\006AC" +
-      "TIVE\020\003\022\014\n\010STOPPING\020\004\022\013\n\007STOPPED\020\005\022\014\n\010DEL" +
-      "ETING\020\006\022\014\n\010INACTIVE\020\007\"8\n\004Type\022\024\n\020TYPE_UN" +
-      "SPECIFIED\020\000\022\014\n\010EXTERNAL\020\001\022\014\n\010INTERNAL\020\002\"" +
-      "M\n\017SessionAffinity\022 \n\034SESSION_AFFINITY_U" +
-      "NSPECIFIED\020\000\022\030\n\024CLIENT_IP_PORT_PROTO\020\001J\004" +
-      "\010\010\020\t\"\205\001\n\023AttachedTargetGroup\022%\n\017target_g" +
-      "roup_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022G\n\rhealth_ch" +
-      "ecks\030\002 \003(\0132).yandex.cloud.loadbalancer.v" +
-      "1.HealthCheckB\005\202\3101\0011\"\227\002\n\010Listener\022\014\n\004nam" +
-      "e\030\001 \001(\t\022\017\n\007address\030\002 \001(\t\022\014\n\004port\030\003 \001(\003\022A" +
-      "\n\010protocol\030\004 \001(\0162/.yandex.cloud.loadbala" +
-      "ncer.v1.Listener.Protocol\022\023\n\013target_port" +
-      "\030\005 \001(\003\022\021\n\tsubnet_id\030\006 \001(\t\022;\n\nip_version\030" +
-      "\007 \001(\0162\'.yandex.cloud.loadbalancer.v1.IpV" +
-      "ersion\"6\n\010Protocol\022\030\n\024PROTOCOL_UNSPECIFI" +
-      "ED\020\000\022\007\n\003TCP\020\001\022\007\n\003UDP\020\002\"\332\001\n\013TargetState\022\021" +
-      "\n\tsubnet_id\030\001 \001(\t\022\017\n\007address\030\002 \001(\t\022@\n\006st" +
-      "atus\030\003 \001(\01620.yandex.cloud.loadbalancer.v" +
-      "1.TargetState.Status\"e\n\006Status\022\026\n\022STATUS" +
-      "_UNSPECIFIED\020\000\022\013\n\007INITIAL\020\001\022\013\n\007HEALTHY\020\002" +
-      "\022\r\n\tUNHEALTHY\020\003\022\014\n\010DRAINING\020\004\022\014\n\010INACTIV" +
-      "E\020\005*;\n\tIpVersion\022\032\n\026IP_VERSION_UNSPECIFI" +
-      "ED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002Bq\n yandex.cloud" +
-      ".api.loadbalancer.v1ZMgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/loadbalan" +
-      "cer/v1;loadbalancerb\006proto3"
+      "\016 \001(\010\022\031\n\021allow_zonal_shift\030\017 \001(\010\032-\n\013Labe" +
+      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
+      "\177\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CRE" +
+      "ATING\020\001\022\014\n\010STARTING\020\002\022\n\n\006ACTIVE\020\003\022\014\n\010STO" +
+      "PPING\020\004\022\013\n\007STOPPED\020\005\022\014\n\010DELETING\020\006\022\014\n\010IN" +
+      "ACTIVE\020\007\"8\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\014" +
+      "\n\010EXTERNAL\020\001\022\014\n\010INTERNAL\020\002\"M\n\017SessionAff" +
+      "inity\022 \n\034SESSION_AFFINITY_UNSPECIFIED\020\000\022" +
+      "\030\n\024CLIENT_IP_PORT_PROTO\020\001J\004\010\010\020\t\"\205\001\n\023Atta" +
+      "chedTargetGroup\022%\n\017target_group_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022G\n\rhealth_checks\030\002 \003(\0132)." +
+      "yandex.cloud.loadbalancer.v1.HealthCheck" +
+      "B\005\202\3101\0011\"\227\002\n\010Listener\022\014\n\004name\030\001 \001(\t\022\017\n\007ad" +
+      "dress\030\002 \001(\t\022\014\n\004port\030\003 \001(\003\022A\n\010protocol\030\004 " +
+      "\001(\0162/.yandex.cloud.loadbalancer.v1.Liste" +
+      "ner.Protocol\022\023\n\013target_port\030\005 \001(\003\022\021\n\tsub" +
+      "net_id\030\006 \001(\t\022;\n\nip_version\030\007 \001(\0162\'.yande" +
+      "x.cloud.loadbalancer.v1.IpVersion\"6\n\010Pro" +
+      "tocol\022\030\n\024PROTOCOL_UNSPECIFIED\020\000\022\007\n\003TCP\020\001" +
+      "\022\007\n\003UDP\020\002\"\332\001\n\013TargetState\022\021\n\tsubnet_id\030\001" +
+      " \001(\t\022\017\n\007address\030\002 \001(\t\022@\n\006status\030\003 \001(\01620." +
+      "yandex.cloud.loadbalancer.v1.TargetState" +
+      ".Status\"e\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020" +
+      "\000\022\013\n\007INITIAL\020\001\022\013\n\007HEALTHY\020\002\022\r\n\tUNHEALTHY" +
+      "\020\003\022\014\n\010DRAINING\020\004\022\014\n\010INACTIVE\020\005*;\n\tIpVers" +
+      "ion\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020" +
+      "\001\022\010\n\004IPV6\020\002Bq\n yandex.cloud.api.loadbala" +
+      "ncer.v1ZMgithub.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/loadbalancer/v1;loadba" +
+      "lancerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8048,7 +8140,7 @@ public final class NetworkLoadBalancerOuterClass {
     internal_static_yandex_cloud_loadbalancer_v1_NetworkLoadBalancer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadbalancer_v1_NetworkLoadBalancer_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "RegionId", "Status", "Type", "SessionAffinity", "Listeners", "AttachedTargetGroups", "DeletionProtection", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "RegionId", "Status", "Type", "SessionAffinity", "Listeners", "AttachedTargetGroups", "DeletionProtection", "AllowZonalShift", });
     internal_static_yandex_cloud_loadbalancer_v1_NetworkLoadBalancer_LabelsEntry_descriptor =
       internal_static_yandex_cloud_loadbalancer_v1_NetworkLoadBalancer_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_loadbalancer_v1_NetworkLoadBalancer_LabelsEntry_fieldAccessorTable = new

@@ -1566,6 +1566,93 @@ public final class Clickhouse {
     com.google.protobuf.Int64ValueOrBuilder getAsynchronousInsertLogRetentionTimeOrBuilder();
 
     /**
+     * <pre>
+     * Enable or disable processors_profile_log system table.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue processors_profile_log_enabled = 71;</code>
+     * @return Whether the processorsProfileLogEnabled field is set.
+     */
+    boolean hasProcessorsProfileLogEnabled();
+    /**
+     * <pre>
+     * Enable or disable processors_profile_log system table.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue processors_profile_log_enabled = 71;</code>
+     * @return The processorsProfileLogEnabled.
+     */
+    com.google.protobuf.BoolValue getProcessorsProfileLogEnabled();
+    /**
+     * <pre>
+     * Enable or disable processors_profile_log system table.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue processors_profile_log_enabled = 71;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getProcessorsProfileLogEnabledOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum size that processors_profile_log can grow to before old data will be removed.
+     * If set to 0 (default), automatic removal of processors_profile_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value processors_profile_log_retention_size = 72;</code>
+     * @return Whether the processorsProfileLogRetentionSize field is set.
+     */
+    boolean hasProcessorsProfileLogRetentionSize();
+    /**
+     * <pre>
+     * The maximum size that processors_profile_log can grow to before old data will be removed.
+     * If set to 0 (default), automatic removal of processors_profile_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value processors_profile_log_retention_size = 72;</code>
+     * @return The processorsProfileLogRetentionSize.
+     */
+    com.google.protobuf.Int64Value getProcessorsProfileLogRetentionSize();
+    /**
+     * <pre>
+     * The maximum size that processors_profile_log can grow to before old data will be removed.
+     * If set to 0 (default), automatic removal of processors_profile_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value processors_profile_log_retention_size = 72;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getProcessorsProfileLogRetentionSizeOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum time that processors_profile_log records will be retained before removal.
+     * If set to 0, automatic removal of processors_profile_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value processors_profile_log_retention_time = 73;</code>
+     * @return Whether the processorsProfileLogRetentionTime field is set.
+     */
+    boolean hasProcessorsProfileLogRetentionTime();
+    /**
+     * <pre>
+     * The maximum time that processors_profile_log records will be retained before removal.
+     * If set to 0, automatic removal of processors_profile_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value processors_profile_log_retention_time = 73;</code>
+     * @return The processorsProfileLogRetentionTime.
+     */
+    com.google.protobuf.Int64Value getProcessorsProfileLogRetentionTime();
+    /**
+     * <pre>
+     * The maximum time that processors_profile_log records will be retained before removal.
+     * If set to 0, automatic removal of processors_profile_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value processors_profile_log_retention_time = 73;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getProcessorsProfileLogRetentionTimeOrBuilder();
+
+    /**
      * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
      * @return Whether the backgroundPoolSize field is set.
      */
@@ -2899,6 +2986,45 @@ public final class Clickhouse {
 
               break;
             }
+            case 570: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (processorsProfileLogEnabled_ != null) {
+                subBuilder = processorsProfileLogEnabled_.toBuilder();
+              }
+              processorsProfileLogEnabled_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(processorsProfileLogEnabled_);
+                processorsProfileLogEnabled_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 578: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (processorsProfileLogRetentionSize_ != null) {
+                subBuilder = processorsProfileLogRetentionSize_.toBuilder();
+              }
+              processorsProfileLogRetentionSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(processorsProfileLogRetentionSize_);
+                processorsProfileLogRetentionSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 586: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (processorsProfileLogRetentionTime_ != null) {
+                subBuilder = processorsProfileLogRetentionTime_.toBuilder();
+              }
+              processorsProfileLogRetentionTime_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(processorsProfileLogRetentionTime_);
+                processorsProfileLogRetentionTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3810,6 +3936,73 @@ public final class Clickhouse {
        * <code>.google.protobuf.Int64Value max_cleanup_delay_period = 28 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       com.google.protobuf.Int64ValueOrBuilder getMaxCleanupDelayPeriodOrBuilder();
+
+      /**
+       * <pre>
+       * Determines the behavior of background merges for MergeTree tables with projections.
+       * https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#deduplicate_merge_projection_mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree.DeduplicateMergeProjectionMode deduplicate_merge_projection_mode = 29;</code>
+       * @return The enum numeric value on the wire for deduplicateMergeProjectionMode.
+       */
+      int getDeduplicateMergeProjectionModeValue();
+      /**
+       * <pre>
+       * Determines the behavior of background merges for MergeTree tables with projections.
+       * https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#deduplicate_merge_projection_mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree.DeduplicateMergeProjectionMode deduplicate_merge_projection_mode = 29;</code>
+       * @return The deduplicateMergeProjectionMode.
+       */
+      yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.DeduplicateMergeProjectionMode getDeduplicateMergeProjectionMode();
+
+      /**
+       * <pre>
+       * Determines the behavior of lightweight deletes for MergeTree tables with projections.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree.LightweightMutationProjectionMode lightweight_mutation_projection_mode = 30;</code>
+       * @return The enum numeric value on the wire for lightweightMutationProjectionMode.
+       */
+      int getLightweightMutationProjectionModeValue();
+      /**
+       * <pre>
+       * Determines the behavior of lightweight deletes for MergeTree tables with projections.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree.LightweightMutationProjectionMode lightweight_mutation_projection_mode = 30;</code>
+       * @return The lightweightMutationProjectionMode.
+       */
+      yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.LightweightMutationProjectionMode getLightweightMutationProjectionMode();
+
+      /**
+       * <pre>
+       * Only recalculate ttl info when MATERIALIZE TTL.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue materialize_ttl_recalculate_only = 31;</code>
+       * @return Whether the materializeTtlRecalculateOnly field is set.
+       */
+      boolean hasMaterializeTtlRecalculateOnly();
+      /**
+       * <pre>
+       * Only recalculate ttl info when MATERIALIZE TTL.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue materialize_ttl_recalculate_only = 31;</code>
+       * @return The materializeTtlRecalculateOnly.
+       */
+      com.google.protobuf.BoolValue getMaterializeTtlRecalculateOnly();
+      /**
+       * <pre>
+       * Only recalculate ttl info when MATERIALIZE TTL.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue materialize_ttl_recalculate_only = 31;</code>
+       */
+      com.google.protobuf.BoolValueOrBuilder getMaterializeTtlRecalculateOnlyOrBuilder();
     }
     /**
      * <pre>
@@ -3828,6 +4021,8 @@ public final class Clickhouse {
         super(builder);
       }
       private MergeTree() {
+        deduplicateMergeProjectionMode_ = 0;
+        lightweightMutationProjectionMode_ = 0;
       }
 
       @java.lang.Override
@@ -4224,6 +4419,31 @@ public final class Clickhouse {
 
                 break;
               }
+              case 232: {
+                int rawValue = input.readEnum();
+
+                deduplicateMergeProjectionMode_ = rawValue;
+                break;
+              }
+              case 240: {
+                int rawValue = input.readEnum();
+
+                lightweightMutationProjectionMode_ = rawValue;
+                break;
+              }
+              case 250: {
+                com.google.protobuf.BoolValue.Builder subBuilder = null;
+                if (materializeTtlRecalculateOnly_ != null) {
+                  subBuilder = materializeTtlRecalculateOnly_.toBuilder();
+                }
+                materializeTtlRecalculateOnly_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(materializeTtlRecalculateOnly_);
+                  materializeTtlRecalculateOnly_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -4254,6 +4474,267 @@ public final class Clickhouse {
         return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_MergeTree_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.class, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.Builder.class);
+      }
+
+      /**
+       * Protobuf enum {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree.DeduplicateMergeProjectionMode}
+       */
+      public enum DeduplicateMergeProjectionMode
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <code>DEDUPLICATE_MERGE_PROJECTION_MODE_UNSPECIFIED = 0;</code>
+         */
+        DEDUPLICATE_MERGE_PROJECTION_MODE_UNSPECIFIED(0),
+        /**
+         * <code>DEDUPLICATE_MERGE_PROJECTION_MODE_IGNORE = 1;</code>
+         */
+        DEDUPLICATE_MERGE_PROJECTION_MODE_IGNORE(1),
+        /**
+         * <code>DEDUPLICATE_MERGE_PROJECTION_MODE_THROW = 2;</code>
+         */
+        DEDUPLICATE_MERGE_PROJECTION_MODE_THROW(2),
+        /**
+         * <code>DEDUPLICATE_MERGE_PROJECTION_MODE_DROP = 3;</code>
+         */
+        DEDUPLICATE_MERGE_PROJECTION_MODE_DROP(3),
+        /**
+         * <code>DEDUPLICATE_MERGE_PROJECTION_MODE_REBUILD = 4;</code>
+         */
+        DEDUPLICATE_MERGE_PROJECTION_MODE_REBUILD(4),
+        UNRECOGNIZED(-1),
+        ;
+
+        /**
+         * <code>DEDUPLICATE_MERGE_PROJECTION_MODE_UNSPECIFIED = 0;</code>
+         */
+        public static final int DEDUPLICATE_MERGE_PROJECTION_MODE_UNSPECIFIED_VALUE = 0;
+        /**
+         * <code>DEDUPLICATE_MERGE_PROJECTION_MODE_IGNORE = 1;</code>
+         */
+        public static final int DEDUPLICATE_MERGE_PROJECTION_MODE_IGNORE_VALUE = 1;
+        /**
+         * <code>DEDUPLICATE_MERGE_PROJECTION_MODE_THROW = 2;</code>
+         */
+        public static final int DEDUPLICATE_MERGE_PROJECTION_MODE_THROW_VALUE = 2;
+        /**
+         * <code>DEDUPLICATE_MERGE_PROJECTION_MODE_DROP = 3;</code>
+         */
+        public static final int DEDUPLICATE_MERGE_PROJECTION_MODE_DROP_VALUE = 3;
+        /**
+         * <code>DEDUPLICATE_MERGE_PROJECTION_MODE_REBUILD = 4;</code>
+         */
+        public static final int DEDUPLICATE_MERGE_PROJECTION_MODE_REBUILD_VALUE = 4;
+
+
+        public final int getNumber() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalArgumentException(
+                "Can't get the number of an unknown enum value.");
+          }
+          return value;
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static DeduplicateMergeProjectionMode valueOf(int value) {
+          return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static DeduplicateMergeProjectionMode forNumber(int value) {
+          switch (value) {
+            case 0: return DEDUPLICATE_MERGE_PROJECTION_MODE_UNSPECIFIED;
+            case 1: return DEDUPLICATE_MERGE_PROJECTION_MODE_IGNORE;
+            case 2: return DEDUPLICATE_MERGE_PROJECTION_MODE_THROW;
+            case 3: return DEDUPLICATE_MERGE_PROJECTION_MODE_DROP;
+            case 4: return DEDUPLICATE_MERGE_PROJECTION_MODE_REBUILD;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<DeduplicateMergeProjectionMode>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            DeduplicateMergeProjectionMode> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<DeduplicateMergeProjectionMode>() {
+                public DeduplicateMergeProjectionMode findValueByNumber(int number) {
+                  return DeduplicateMergeProjectionMode.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalStateException(
+                "Can't get the descriptor of an unrecognized enum value.");
+          }
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.getDescriptor().getEnumTypes().get(0);
+        }
+
+        private static final DeduplicateMergeProjectionMode[] VALUES = values();
+
+        public static DeduplicateMergeProjectionMode valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          if (desc.getIndex() == -1) {
+            return UNRECOGNIZED;
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private DeduplicateMergeProjectionMode(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree.DeduplicateMergeProjectionMode)
+      }
+
+      /**
+       * Protobuf enum {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree.LightweightMutationProjectionMode}
+       */
+      public enum LightweightMutationProjectionMode
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <code>LIGHTWEIGHT_MUTATION_PROJECTION_MODE_UNSPECIFIED = 0;</code>
+         */
+        LIGHTWEIGHT_MUTATION_PROJECTION_MODE_UNSPECIFIED(0),
+        /**
+         * <code>LIGHTWEIGHT_MUTATION_PROJECTION_MODE_THROW = 1;</code>
+         */
+        LIGHTWEIGHT_MUTATION_PROJECTION_MODE_THROW(1),
+        /**
+         * <code>LIGHTWEIGHT_MUTATION_PROJECTION_MODE_DROP = 2;</code>
+         */
+        LIGHTWEIGHT_MUTATION_PROJECTION_MODE_DROP(2),
+        /**
+         * <code>LIGHTWEIGHT_MUTATION_PROJECTION_MODE_REBUILD = 3;</code>
+         */
+        LIGHTWEIGHT_MUTATION_PROJECTION_MODE_REBUILD(3),
+        UNRECOGNIZED(-1),
+        ;
+
+        /**
+         * <code>LIGHTWEIGHT_MUTATION_PROJECTION_MODE_UNSPECIFIED = 0;</code>
+         */
+        public static final int LIGHTWEIGHT_MUTATION_PROJECTION_MODE_UNSPECIFIED_VALUE = 0;
+        /**
+         * <code>LIGHTWEIGHT_MUTATION_PROJECTION_MODE_THROW = 1;</code>
+         */
+        public static final int LIGHTWEIGHT_MUTATION_PROJECTION_MODE_THROW_VALUE = 1;
+        /**
+         * <code>LIGHTWEIGHT_MUTATION_PROJECTION_MODE_DROP = 2;</code>
+         */
+        public static final int LIGHTWEIGHT_MUTATION_PROJECTION_MODE_DROP_VALUE = 2;
+        /**
+         * <code>LIGHTWEIGHT_MUTATION_PROJECTION_MODE_REBUILD = 3;</code>
+         */
+        public static final int LIGHTWEIGHT_MUTATION_PROJECTION_MODE_REBUILD_VALUE = 3;
+
+
+        public final int getNumber() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalArgumentException(
+                "Can't get the number of an unknown enum value.");
+          }
+          return value;
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static LightweightMutationProjectionMode valueOf(int value) {
+          return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static LightweightMutationProjectionMode forNumber(int value) {
+          switch (value) {
+            case 0: return LIGHTWEIGHT_MUTATION_PROJECTION_MODE_UNSPECIFIED;
+            case 1: return LIGHTWEIGHT_MUTATION_PROJECTION_MODE_THROW;
+            case 2: return LIGHTWEIGHT_MUTATION_PROJECTION_MODE_DROP;
+            case 3: return LIGHTWEIGHT_MUTATION_PROJECTION_MODE_REBUILD;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<LightweightMutationProjectionMode>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            LightweightMutationProjectionMode> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<LightweightMutationProjectionMode>() {
+                public LightweightMutationProjectionMode findValueByNumber(int number) {
+                  return LightweightMutationProjectionMode.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalStateException(
+                "Can't get the descriptor of an unrecognized enum value.");
+          }
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.getDescriptor().getEnumTypes().get(1);
+        }
+
+        private static final LightweightMutationProjectionMode[] VALUES = values();
+
+        public static LightweightMutationProjectionMode valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          if (desc.getIndex() == -1) {
+            return UNRECOGNIZED;
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private LightweightMutationProjectionMode(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree.LightweightMutationProjectionMode)
       }
 
       public static final int REPLICATED_DEDUPLICATION_WINDOW_FIELD_NUMBER = 1;
@@ -5281,6 +5762,100 @@ public final class Clickhouse {
         return getMaxCleanupDelayPeriod();
       }
 
+      public static final int DEDUPLICATE_MERGE_PROJECTION_MODE_FIELD_NUMBER = 29;
+      private int deduplicateMergeProjectionMode_;
+      /**
+       * <pre>
+       * Determines the behavior of background merges for MergeTree tables with projections.
+       * https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#deduplicate_merge_projection_mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree.DeduplicateMergeProjectionMode deduplicate_merge_projection_mode = 29;</code>
+       * @return The enum numeric value on the wire for deduplicateMergeProjectionMode.
+       */
+      @java.lang.Override public int getDeduplicateMergeProjectionModeValue() {
+        return deduplicateMergeProjectionMode_;
+      }
+      /**
+       * <pre>
+       * Determines the behavior of background merges for MergeTree tables with projections.
+       * https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#deduplicate_merge_projection_mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree.DeduplicateMergeProjectionMode deduplicate_merge_projection_mode = 29;</code>
+       * @return The deduplicateMergeProjectionMode.
+       */
+      @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.DeduplicateMergeProjectionMode getDeduplicateMergeProjectionMode() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.DeduplicateMergeProjectionMode result = yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.DeduplicateMergeProjectionMode.valueOf(deduplicateMergeProjectionMode_);
+        return result == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.DeduplicateMergeProjectionMode.UNRECOGNIZED : result;
+      }
+
+      public static final int LIGHTWEIGHT_MUTATION_PROJECTION_MODE_FIELD_NUMBER = 30;
+      private int lightweightMutationProjectionMode_;
+      /**
+       * <pre>
+       * Determines the behavior of lightweight deletes for MergeTree tables with projections.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree.LightweightMutationProjectionMode lightweight_mutation_projection_mode = 30;</code>
+       * @return The enum numeric value on the wire for lightweightMutationProjectionMode.
+       */
+      @java.lang.Override public int getLightweightMutationProjectionModeValue() {
+        return lightweightMutationProjectionMode_;
+      }
+      /**
+       * <pre>
+       * Determines the behavior of lightweight deletes for MergeTree tables with projections.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree.LightweightMutationProjectionMode lightweight_mutation_projection_mode = 30;</code>
+       * @return The lightweightMutationProjectionMode.
+       */
+      @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.LightweightMutationProjectionMode getLightweightMutationProjectionMode() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.LightweightMutationProjectionMode result = yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.LightweightMutationProjectionMode.valueOf(lightweightMutationProjectionMode_);
+        return result == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.LightweightMutationProjectionMode.UNRECOGNIZED : result;
+      }
+
+      public static final int MATERIALIZE_TTL_RECALCULATE_ONLY_FIELD_NUMBER = 31;
+      private com.google.protobuf.BoolValue materializeTtlRecalculateOnly_;
+      /**
+       * <pre>
+       * Only recalculate ttl info when MATERIALIZE TTL.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue materialize_ttl_recalculate_only = 31;</code>
+       * @return Whether the materializeTtlRecalculateOnly field is set.
+       */
+      @java.lang.Override
+      public boolean hasMaterializeTtlRecalculateOnly() {
+        return materializeTtlRecalculateOnly_ != null;
+      }
+      /**
+       * <pre>
+       * Only recalculate ttl info when MATERIALIZE TTL.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue materialize_ttl_recalculate_only = 31;</code>
+       * @return The materializeTtlRecalculateOnly.
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValue getMaterializeTtlRecalculateOnly() {
+        return materializeTtlRecalculateOnly_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : materializeTtlRecalculateOnly_;
+      }
+      /**
+       * <pre>
+       * Only recalculate ttl info when MATERIALIZE TTL.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue materialize_ttl_recalculate_only = 31;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValueOrBuilder getMaterializeTtlRecalculateOnlyOrBuilder() {
+        return getMaterializeTtlRecalculateOnly();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -5378,6 +5953,15 @@ public final class Clickhouse {
         }
         if (maxCleanupDelayPeriod_ != null) {
           output.writeMessage(28, getMaxCleanupDelayPeriod());
+        }
+        if (deduplicateMergeProjectionMode_ != yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.DeduplicateMergeProjectionMode.DEDUPLICATE_MERGE_PROJECTION_MODE_UNSPECIFIED.getNumber()) {
+          output.writeEnum(29, deduplicateMergeProjectionMode_);
+        }
+        if (lightweightMutationProjectionMode_ != yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.LightweightMutationProjectionMode.LIGHTWEIGHT_MUTATION_PROJECTION_MODE_UNSPECIFIED.getNumber()) {
+          output.writeEnum(30, lightweightMutationProjectionMode_);
+        }
+        if (materializeTtlRecalculateOnly_ != null) {
+          output.writeMessage(31, getMaterializeTtlRecalculateOnly());
         }
         unknownFields.writeTo(output);
       }
@@ -5499,6 +6083,18 @@ public final class Clickhouse {
         if (maxCleanupDelayPeriod_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(28, getMaxCleanupDelayPeriod());
+        }
+        if (deduplicateMergeProjectionMode_ != yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.DeduplicateMergeProjectionMode.DEDUPLICATE_MERGE_PROJECTION_MODE_UNSPECIFIED.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(29, deduplicateMergeProjectionMode_);
+        }
+        if (lightweightMutationProjectionMode_ != yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.LightweightMutationProjectionMode.LIGHTWEIGHT_MUTATION_PROJECTION_MODE_UNSPECIFIED.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(30, lightweightMutationProjectionMode_);
+        }
+        if (materializeTtlRecalculateOnly_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(31, getMaterializeTtlRecalculateOnly());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -5655,6 +6251,13 @@ public final class Clickhouse {
           if (!getMaxCleanupDelayPeriod()
               .equals(other.getMaxCleanupDelayPeriod())) return false;
         }
+        if (deduplicateMergeProjectionMode_ != other.deduplicateMergeProjectionMode_) return false;
+        if (lightweightMutationProjectionMode_ != other.lightweightMutationProjectionMode_) return false;
+        if (hasMaterializeTtlRecalculateOnly() != other.hasMaterializeTtlRecalculateOnly()) return false;
+        if (hasMaterializeTtlRecalculateOnly()) {
+          if (!getMaterializeTtlRecalculateOnly()
+              .equals(other.getMaterializeTtlRecalculateOnly())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -5777,6 +6380,14 @@ public final class Clickhouse {
         if (hasMaxCleanupDelayPeriod()) {
           hash = (37 * hash) + MAX_CLEANUP_DELAY_PERIOD_FIELD_NUMBER;
           hash = (53 * hash) + getMaxCleanupDelayPeriod().hashCode();
+        }
+        hash = (37 * hash) + DEDUPLICATE_MERGE_PROJECTION_MODE_FIELD_NUMBER;
+        hash = (53 * hash) + deduplicateMergeProjectionMode_;
+        hash = (37 * hash) + LIGHTWEIGHT_MUTATION_PROJECTION_MODE_FIELD_NUMBER;
+        hash = (53 * hash) + lightweightMutationProjectionMode_;
+        if (hasMaterializeTtlRecalculateOnly()) {
+          hash = (37 * hash) + MATERIALIZE_TTL_RECALCULATE_ONLY_FIELD_NUMBER;
+          hash = (53 * hash) + getMaterializeTtlRecalculateOnly().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -6083,6 +6694,16 @@ public final class Clickhouse {
             maxCleanupDelayPeriod_ = null;
             maxCleanupDelayPeriodBuilder_ = null;
           }
+          deduplicateMergeProjectionMode_ = 0;
+
+          lightweightMutationProjectionMode_ = 0;
+
+          if (materializeTtlRecalculateOnlyBuilder_ == null) {
+            materializeTtlRecalculateOnly_ = null;
+          } else {
+            materializeTtlRecalculateOnly_ = null;
+            materializeTtlRecalculateOnlyBuilder_ = null;
+          }
           return this;
         }
 
@@ -6249,6 +6870,13 @@ public final class Clickhouse {
           } else {
             result.maxCleanupDelayPeriod_ = maxCleanupDelayPeriodBuilder_.build();
           }
+          result.deduplicateMergeProjectionMode_ = deduplicateMergeProjectionMode_;
+          result.lightweightMutationProjectionMode_ = lightweightMutationProjectionMode_;
+          if (materializeTtlRecalculateOnlyBuilder_ == null) {
+            result.materializeTtlRecalculateOnly_ = materializeTtlRecalculateOnly_;
+          } else {
+            result.materializeTtlRecalculateOnly_ = materializeTtlRecalculateOnlyBuilder_.build();
+          }
           onBuilt();
           return result;
         }
@@ -6380,6 +7008,15 @@ public final class Clickhouse {
           }
           if (other.hasMaxCleanupDelayPeriod()) {
             mergeMaxCleanupDelayPeriod(other.getMaxCleanupDelayPeriod());
+          }
+          if (other.deduplicateMergeProjectionMode_ != 0) {
+            setDeduplicateMergeProjectionModeValue(other.getDeduplicateMergeProjectionModeValue());
+          }
+          if (other.lightweightMutationProjectionMode_ != 0) {
+            setLightweightMutationProjectionModeValue(other.getLightweightMutationProjectionModeValue());
+          }
+          if (other.hasMaterializeTtlRecalculateOnly()) {
+            mergeMaterializeTtlRecalculateOnly(other.getMaterializeTtlRecalculateOnly());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -10631,6 +11268,314 @@ public final class Clickhouse {
             maxCleanupDelayPeriod_ = null;
           }
           return maxCleanupDelayPeriodBuilder_;
+        }
+
+        private int deduplicateMergeProjectionMode_ = 0;
+        /**
+         * <pre>
+         * Determines the behavior of background merges for MergeTree tables with projections.
+         * https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#deduplicate_merge_projection_mode
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree.DeduplicateMergeProjectionMode deduplicate_merge_projection_mode = 29;</code>
+         * @return The enum numeric value on the wire for deduplicateMergeProjectionMode.
+         */
+        @java.lang.Override public int getDeduplicateMergeProjectionModeValue() {
+          return deduplicateMergeProjectionMode_;
+        }
+        /**
+         * <pre>
+         * Determines the behavior of background merges for MergeTree tables with projections.
+         * https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#deduplicate_merge_projection_mode
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree.DeduplicateMergeProjectionMode deduplicate_merge_projection_mode = 29;</code>
+         * @param value The enum numeric value on the wire for deduplicateMergeProjectionMode to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDeduplicateMergeProjectionModeValue(int value) {
+          
+          deduplicateMergeProjectionMode_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Determines the behavior of background merges for MergeTree tables with projections.
+         * https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#deduplicate_merge_projection_mode
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree.DeduplicateMergeProjectionMode deduplicate_merge_projection_mode = 29;</code>
+         * @return The deduplicateMergeProjectionMode.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.DeduplicateMergeProjectionMode getDeduplicateMergeProjectionMode() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.DeduplicateMergeProjectionMode result = yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.DeduplicateMergeProjectionMode.valueOf(deduplicateMergeProjectionMode_);
+          return result == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.DeduplicateMergeProjectionMode.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * Determines the behavior of background merges for MergeTree tables with projections.
+         * https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#deduplicate_merge_projection_mode
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree.DeduplicateMergeProjectionMode deduplicate_merge_projection_mode = 29;</code>
+         * @param value The deduplicateMergeProjectionMode to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDeduplicateMergeProjectionMode(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.DeduplicateMergeProjectionMode value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          
+          deduplicateMergeProjectionMode_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Determines the behavior of background merges for MergeTree tables with projections.
+         * https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#deduplicate_merge_projection_mode
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree.DeduplicateMergeProjectionMode deduplicate_merge_projection_mode = 29;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearDeduplicateMergeProjectionMode() {
+          
+          deduplicateMergeProjectionMode_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int lightweightMutationProjectionMode_ = 0;
+        /**
+         * <pre>
+         * Determines the behavior of lightweight deletes for MergeTree tables with projections.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree.LightweightMutationProjectionMode lightweight_mutation_projection_mode = 30;</code>
+         * @return The enum numeric value on the wire for lightweightMutationProjectionMode.
+         */
+        @java.lang.Override public int getLightweightMutationProjectionModeValue() {
+          return lightweightMutationProjectionMode_;
+        }
+        /**
+         * <pre>
+         * Determines the behavior of lightweight deletes for MergeTree tables with projections.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree.LightweightMutationProjectionMode lightweight_mutation_projection_mode = 30;</code>
+         * @param value The enum numeric value on the wire for lightweightMutationProjectionMode to set.
+         * @return This builder for chaining.
+         */
+        public Builder setLightweightMutationProjectionModeValue(int value) {
+          
+          lightweightMutationProjectionMode_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Determines the behavior of lightweight deletes for MergeTree tables with projections.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree.LightweightMutationProjectionMode lightweight_mutation_projection_mode = 30;</code>
+         * @return The lightweightMutationProjectionMode.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.LightweightMutationProjectionMode getLightweightMutationProjectionMode() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.LightweightMutationProjectionMode result = yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.LightweightMutationProjectionMode.valueOf(lightweightMutationProjectionMode_);
+          return result == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.LightweightMutationProjectionMode.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * Determines the behavior of lightweight deletes for MergeTree tables with projections.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree.LightweightMutationProjectionMode lightweight_mutation_projection_mode = 30;</code>
+         * @param value The lightweightMutationProjectionMode to set.
+         * @return This builder for chaining.
+         */
+        public Builder setLightweightMutationProjectionMode(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.LightweightMutationProjectionMode value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          
+          lightweightMutationProjectionMode_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Determines the behavior of lightweight deletes for MergeTree tables with projections.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree.LightweightMutationProjectionMode lightweight_mutation_projection_mode = 30;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearLightweightMutationProjectionMode() {
+          
+          lightweightMutationProjectionMode_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.BoolValue materializeTtlRecalculateOnly_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> materializeTtlRecalculateOnlyBuilder_;
+        /**
+         * <pre>
+         * Only recalculate ttl info when MATERIALIZE TTL.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue materialize_ttl_recalculate_only = 31;</code>
+         * @return Whether the materializeTtlRecalculateOnly field is set.
+         */
+        public boolean hasMaterializeTtlRecalculateOnly() {
+          return materializeTtlRecalculateOnlyBuilder_ != null || materializeTtlRecalculateOnly_ != null;
+        }
+        /**
+         * <pre>
+         * Only recalculate ttl info when MATERIALIZE TTL.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue materialize_ttl_recalculate_only = 31;</code>
+         * @return The materializeTtlRecalculateOnly.
+         */
+        public com.google.protobuf.BoolValue getMaterializeTtlRecalculateOnly() {
+          if (materializeTtlRecalculateOnlyBuilder_ == null) {
+            return materializeTtlRecalculateOnly_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : materializeTtlRecalculateOnly_;
+          } else {
+            return materializeTtlRecalculateOnlyBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Only recalculate ttl info when MATERIALIZE TTL.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue materialize_ttl_recalculate_only = 31;</code>
+         */
+        public Builder setMaterializeTtlRecalculateOnly(com.google.protobuf.BoolValue value) {
+          if (materializeTtlRecalculateOnlyBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            materializeTtlRecalculateOnly_ = value;
+            onChanged();
+          } else {
+            materializeTtlRecalculateOnlyBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Only recalculate ttl info when MATERIALIZE TTL.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue materialize_ttl_recalculate_only = 31;</code>
+         */
+        public Builder setMaterializeTtlRecalculateOnly(
+            com.google.protobuf.BoolValue.Builder builderForValue) {
+          if (materializeTtlRecalculateOnlyBuilder_ == null) {
+            materializeTtlRecalculateOnly_ = builderForValue.build();
+            onChanged();
+          } else {
+            materializeTtlRecalculateOnlyBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Only recalculate ttl info when MATERIALIZE TTL.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue materialize_ttl_recalculate_only = 31;</code>
+         */
+        public Builder mergeMaterializeTtlRecalculateOnly(com.google.protobuf.BoolValue value) {
+          if (materializeTtlRecalculateOnlyBuilder_ == null) {
+            if (materializeTtlRecalculateOnly_ != null) {
+              materializeTtlRecalculateOnly_ =
+                com.google.protobuf.BoolValue.newBuilder(materializeTtlRecalculateOnly_).mergeFrom(value).buildPartial();
+            } else {
+              materializeTtlRecalculateOnly_ = value;
+            }
+            onChanged();
+          } else {
+            materializeTtlRecalculateOnlyBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Only recalculate ttl info when MATERIALIZE TTL.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue materialize_ttl_recalculate_only = 31;</code>
+         */
+        public Builder clearMaterializeTtlRecalculateOnly() {
+          if (materializeTtlRecalculateOnlyBuilder_ == null) {
+            materializeTtlRecalculateOnly_ = null;
+            onChanged();
+          } else {
+            materializeTtlRecalculateOnly_ = null;
+            materializeTtlRecalculateOnlyBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Only recalculate ttl info when MATERIALIZE TTL.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue materialize_ttl_recalculate_only = 31;</code>
+         */
+        public com.google.protobuf.BoolValue.Builder getMaterializeTtlRecalculateOnlyBuilder() {
+          
+          onChanged();
+          return getMaterializeTtlRecalculateOnlyFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Only recalculate ttl info when MATERIALIZE TTL.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue materialize_ttl_recalculate_only = 31;</code>
+         */
+        public com.google.protobuf.BoolValueOrBuilder getMaterializeTtlRecalculateOnlyOrBuilder() {
+          if (materializeTtlRecalculateOnlyBuilder_ != null) {
+            return materializeTtlRecalculateOnlyBuilder_.getMessageOrBuilder();
+          } else {
+            return materializeTtlRecalculateOnly_ == null ?
+                com.google.protobuf.BoolValue.getDefaultInstance() : materializeTtlRecalculateOnly_;
+          }
+        }
+        /**
+         * <pre>
+         * Only recalculate ttl info when MATERIALIZE TTL.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue materialize_ttl_recalculate_only = 31;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+            getMaterializeTtlRecalculateOnlyFieldBuilder() {
+          if (materializeTtlRecalculateOnlyBuilder_ == null) {
+            materializeTtlRecalculateOnlyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                    getMaterializeTtlRecalculateOnly(),
+                    getParentForChildren(),
+                    isClean());
+            materializeTtlRecalculateOnly_ = null;
+          }
+          return materializeTtlRecalculateOnlyBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -32759,6 +33704,91 @@ public final class Clickhouse {
 
         /**
          * <pre>
+         * Allows to read expired keys.
+         * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue allow_read_expired_keys = 5;</code>
+         * @return Whether the allowReadExpiredKeys field is set.
+         */
+        boolean hasAllowReadExpiredKeys();
+        /**
+         * <pre>
+         * Allows to read expired keys.
+         * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue allow_read_expired_keys = 5;</code>
+         * @return The allowReadExpiredKeys.
+         */
+        com.google.protobuf.BoolValue getAllowReadExpiredKeys();
+        /**
+         * <pre>
+         * Allows to read expired keys.
+         * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue allow_read_expired_keys = 5;</code>
+         */
+        com.google.protobuf.BoolValueOrBuilder getAllowReadExpiredKeysOrBuilder();
+
+        /**
+         * <pre>
+         * Max size of update queue.
+         * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+         * </pre>
+         *
+         * <code>int64 max_update_queue_size = 6;</code>
+         * @return The maxUpdateQueueSize.
+         */
+        long getMaxUpdateQueueSize();
+
+        /**
+         * <pre>
+         * Max timeout in milliseconds for push update task into queue.
+         * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+         * </pre>
+         *
+         * <code>int64 update_queue_push_timeout_milliseconds = 7;</code>
+         * @return The updateQueuePushTimeoutMilliseconds.
+         */
+        long getUpdateQueuePushTimeoutMilliseconds();
+
+        /**
+         * <pre>
+         * Max wait timeout in milliseconds for update task to complete.
+         * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+         * </pre>
+         *
+         * <code>int64 query_wait_timeout_milliseconds = 8;</code>
+         * @return The queryWaitTimeoutMilliseconds.
+         */
+        long getQueryWaitTimeoutMilliseconds();
+
+        /**
+         * <pre>
+         * Max threads for cache dictionary update.
+         * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+         * </pre>
+         *
+         * <code>int64 max_threads_for_updates = 9;</code>
+         * @return The maxThreadsForUpdates.
+         */
+        long getMaxThreadsForUpdates();
+
+        /**
+         * <pre>
+         * Initial dictionary key size.
+         * Applicable only for FLAT layout type.
+         * </pre>
+         *
+         * <code>int64 initial_array_size = 10;</code>
+         * @return The initialArraySize.
+         */
+        long getInitialArraySize();
+
+        /**
+         * <pre>
          * Maximum dictionary key size.
          * Applicable only for FLAT layout type.
          * </pre>
@@ -32767,6 +33797,39 @@ public final class Clickhouse {
          * @return The maxArraySize.
          */
         long getMaxArraySize();
+
+        /**
+         * <pre>
+         * Allows to retrieve key attribute using dictGetString function.
+         * Enabling this option increases memory usage.
+         * Applicable only for IP_TRIE layout type.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue access_to_key_from_attributes = 4;</code>
+         * @return Whether the accessToKeyFromAttributes field is set.
+         */
+        boolean hasAccessToKeyFromAttributes();
+        /**
+         * <pre>
+         * Allows to retrieve key attribute using dictGetString function.
+         * Enabling this option increases memory usage.
+         * Applicable only for IP_TRIE layout type.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue access_to_key_from_attributes = 4;</code>
+         * @return The accessToKeyFromAttributes.
+         */
+        com.google.protobuf.BoolValue getAccessToKeyFromAttributes();
+        /**
+         * <pre>
+         * Allows to retrieve key attribute using dictGetString function.
+         * Enabling this option increases memory usage.
+         * Applicable only for IP_TRIE layout type.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue access_to_key_from_attributes = 4;</code>
+         */
+        com.google.protobuf.BoolValueOrBuilder getAccessToKeyFromAttributesOrBuilder();
       }
       /**
        * <pre>
@@ -32832,6 +33895,57 @@ public final class Clickhouse {
                 case 24: {
 
                   maxArraySize_ = input.readInt64();
+                  break;
+                }
+                case 34: {
+                  com.google.protobuf.BoolValue.Builder subBuilder = null;
+                  if (accessToKeyFromAttributes_ != null) {
+                    subBuilder = accessToKeyFromAttributes_.toBuilder();
+                  }
+                  accessToKeyFromAttributes_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+                  if (subBuilder != null) {
+                    subBuilder.mergeFrom(accessToKeyFromAttributes_);
+                    accessToKeyFromAttributes_ = subBuilder.buildPartial();
+                  }
+
+                  break;
+                }
+                case 42: {
+                  com.google.protobuf.BoolValue.Builder subBuilder = null;
+                  if (allowReadExpiredKeys_ != null) {
+                    subBuilder = allowReadExpiredKeys_.toBuilder();
+                  }
+                  allowReadExpiredKeys_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+                  if (subBuilder != null) {
+                    subBuilder.mergeFrom(allowReadExpiredKeys_);
+                    allowReadExpiredKeys_ = subBuilder.buildPartial();
+                  }
+
+                  break;
+                }
+                case 48: {
+
+                  maxUpdateQueueSize_ = input.readInt64();
+                  break;
+                }
+                case 56: {
+
+                  updateQueuePushTimeoutMilliseconds_ = input.readInt64();
+                  break;
+                }
+                case 64: {
+
+                  queryWaitTimeoutMilliseconds_ = input.readInt64();
+                  break;
+                }
+                case 72: {
+
+                  maxThreadsForUpdates_ = input.readInt64();
+                  break;
+                }
+                case 80: {
+
+                  initialArraySize_ = input.readInt64();
                   break;
                 }
                 default: {
@@ -32930,6 +34044,54 @@ public final class Clickhouse {
            * <code>COMPLEX_KEY_CACHE = 6;</code>
            */
           COMPLEX_KEY_CACHE(6),
+          /**
+           * <pre>
+           * Similar to HASHED, but uses less memory in favor of more CPU usage.
+           * </pre>
+           *
+           * <code>SPARSE_HASHED = 7;</code>
+           */
+          SPARSE_HASHED(7),
+          /**
+           * <pre>
+           * Similar to SPARSE_HASHED, to be used with composite keys.
+           * </pre>
+           *
+           * <code>COMPLEX_KEY_SPARSE_HASHED = 8;</code>
+           */
+          COMPLEX_KEY_SPARSE_HASHED(8),
+          /**
+           * <pre>
+           * Similar to RANGE_HASHED, to be used with composite keys.
+           * </pre>
+           *
+           * <code>COMPLEX_KEY_RANGE_HASHED = 9;</code>
+           */
+          COMPLEX_KEY_RANGE_HASHED(9),
+          /**
+           * <pre>
+           * The dictionary is not stored in memory and directly goes to the source during the processing of a request.
+           * </pre>
+           *
+           * <code>DIRECT = 10;</code>
+           */
+          DIRECT(10),
+          /**
+           * <pre>
+           * Similar to DIRECT, to be used with composite keys.
+           * </pre>
+           *
+           * <code>COMPLEX_KEY_DIRECT = 11;</code>
+           */
+          COMPLEX_KEY_DIRECT(11),
+          /**
+           * <pre>
+           * The specialized layout type for mapping network prefixes (IP addresses) to metadata such as ASN.
+           * </pre>
+           *
+           * <code>IP_TRIE = 12;</code>
+           */
+          IP_TRIE(12),
           UNRECOGNIZED(-1),
           ;
 
@@ -32992,6 +34154,54 @@ public final class Clickhouse {
            * <code>COMPLEX_KEY_CACHE = 6;</code>
            */
           public static final int COMPLEX_KEY_CACHE_VALUE = 6;
+          /**
+           * <pre>
+           * Similar to HASHED, but uses less memory in favor of more CPU usage.
+           * </pre>
+           *
+           * <code>SPARSE_HASHED = 7;</code>
+           */
+          public static final int SPARSE_HASHED_VALUE = 7;
+          /**
+           * <pre>
+           * Similar to SPARSE_HASHED, to be used with composite keys.
+           * </pre>
+           *
+           * <code>COMPLEX_KEY_SPARSE_HASHED = 8;</code>
+           */
+          public static final int COMPLEX_KEY_SPARSE_HASHED_VALUE = 8;
+          /**
+           * <pre>
+           * Similar to RANGE_HASHED, to be used with composite keys.
+           * </pre>
+           *
+           * <code>COMPLEX_KEY_RANGE_HASHED = 9;</code>
+           */
+          public static final int COMPLEX_KEY_RANGE_HASHED_VALUE = 9;
+          /**
+           * <pre>
+           * The dictionary is not stored in memory and directly goes to the source during the processing of a request.
+           * </pre>
+           *
+           * <code>DIRECT = 10;</code>
+           */
+          public static final int DIRECT_VALUE = 10;
+          /**
+           * <pre>
+           * Similar to DIRECT, to be used with composite keys.
+           * </pre>
+           *
+           * <code>COMPLEX_KEY_DIRECT = 11;</code>
+           */
+          public static final int COMPLEX_KEY_DIRECT_VALUE = 11;
+          /**
+           * <pre>
+           * The specialized layout type for mapping network prefixes (IP addresses) to metadata such as ASN.
+           * </pre>
+           *
+           * <code>IP_TRIE = 12;</code>
+           */
+          public static final int IP_TRIE_VALUE = 12;
 
 
           public final int getNumber() {
@@ -33025,6 +34235,12 @@ public final class Clickhouse {
               case 4: return RANGE_HASHED;
               case 5: return CACHE;
               case 6: return COMPLEX_KEY_CACHE;
+              case 7: return SPARSE_HASHED;
+              case 8: return COMPLEX_KEY_SPARSE_HASHED;
+              case 9: return COMPLEX_KEY_RANGE_HASHED;
+              case 10: return DIRECT;
+              case 11: return COMPLEX_KEY_DIRECT;
+              case 12: return IP_TRIE;
               default: return null;
             }
           }
@@ -33124,6 +34340,127 @@ public final class Clickhouse {
           return sizeInCells_;
         }
 
+        public static final int ALLOW_READ_EXPIRED_KEYS_FIELD_NUMBER = 5;
+        private com.google.protobuf.BoolValue allowReadExpiredKeys_;
+        /**
+         * <pre>
+         * Allows to read expired keys.
+         * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue allow_read_expired_keys = 5;</code>
+         * @return Whether the allowReadExpiredKeys field is set.
+         */
+        @java.lang.Override
+        public boolean hasAllowReadExpiredKeys() {
+          return allowReadExpiredKeys_ != null;
+        }
+        /**
+         * <pre>
+         * Allows to read expired keys.
+         * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue allow_read_expired_keys = 5;</code>
+         * @return The allowReadExpiredKeys.
+         */
+        @java.lang.Override
+        public com.google.protobuf.BoolValue getAllowReadExpiredKeys() {
+          return allowReadExpiredKeys_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : allowReadExpiredKeys_;
+        }
+        /**
+         * <pre>
+         * Allows to read expired keys.
+         * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue allow_read_expired_keys = 5;</code>
+         */
+        @java.lang.Override
+        public com.google.protobuf.BoolValueOrBuilder getAllowReadExpiredKeysOrBuilder() {
+          return getAllowReadExpiredKeys();
+        }
+
+        public static final int MAX_UPDATE_QUEUE_SIZE_FIELD_NUMBER = 6;
+        private long maxUpdateQueueSize_;
+        /**
+         * <pre>
+         * Max size of update queue.
+         * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+         * </pre>
+         *
+         * <code>int64 max_update_queue_size = 6;</code>
+         * @return The maxUpdateQueueSize.
+         */
+        @java.lang.Override
+        public long getMaxUpdateQueueSize() {
+          return maxUpdateQueueSize_;
+        }
+
+        public static final int UPDATE_QUEUE_PUSH_TIMEOUT_MILLISECONDS_FIELD_NUMBER = 7;
+        private long updateQueuePushTimeoutMilliseconds_;
+        /**
+         * <pre>
+         * Max timeout in milliseconds for push update task into queue.
+         * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+         * </pre>
+         *
+         * <code>int64 update_queue_push_timeout_milliseconds = 7;</code>
+         * @return The updateQueuePushTimeoutMilliseconds.
+         */
+        @java.lang.Override
+        public long getUpdateQueuePushTimeoutMilliseconds() {
+          return updateQueuePushTimeoutMilliseconds_;
+        }
+
+        public static final int QUERY_WAIT_TIMEOUT_MILLISECONDS_FIELD_NUMBER = 8;
+        private long queryWaitTimeoutMilliseconds_;
+        /**
+         * <pre>
+         * Max wait timeout in milliseconds for update task to complete.
+         * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+         * </pre>
+         *
+         * <code>int64 query_wait_timeout_milliseconds = 8;</code>
+         * @return The queryWaitTimeoutMilliseconds.
+         */
+        @java.lang.Override
+        public long getQueryWaitTimeoutMilliseconds() {
+          return queryWaitTimeoutMilliseconds_;
+        }
+
+        public static final int MAX_THREADS_FOR_UPDATES_FIELD_NUMBER = 9;
+        private long maxThreadsForUpdates_;
+        /**
+         * <pre>
+         * Max threads for cache dictionary update.
+         * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+         * </pre>
+         *
+         * <code>int64 max_threads_for_updates = 9;</code>
+         * @return The maxThreadsForUpdates.
+         */
+        @java.lang.Override
+        public long getMaxThreadsForUpdates() {
+          return maxThreadsForUpdates_;
+        }
+
+        public static final int INITIAL_ARRAY_SIZE_FIELD_NUMBER = 10;
+        private long initialArraySize_;
+        /**
+         * <pre>
+         * Initial dictionary key size.
+         * Applicable only for FLAT layout type.
+         * </pre>
+         *
+         * <code>int64 initial_array_size = 10;</code>
+         * @return The initialArraySize.
+         */
+        @java.lang.Override
+        public long getInitialArraySize() {
+          return initialArraySize_;
+        }
+
         public static final int MAX_ARRAY_SIZE_FIELD_NUMBER = 3;
         private long maxArraySize_;
         /**
@@ -33138,6 +34475,50 @@ public final class Clickhouse {
         @java.lang.Override
         public long getMaxArraySize() {
           return maxArraySize_;
+        }
+
+        public static final int ACCESS_TO_KEY_FROM_ATTRIBUTES_FIELD_NUMBER = 4;
+        private com.google.protobuf.BoolValue accessToKeyFromAttributes_;
+        /**
+         * <pre>
+         * Allows to retrieve key attribute using dictGetString function.
+         * Enabling this option increases memory usage.
+         * Applicable only for IP_TRIE layout type.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue access_to_key_from_attributes = 4;</code>
+         * @return Whether the accessToKeyFromAttributes field is set.
+         */
+        @java.lang.Override
+        public boolean hasAccessToKeyFromAttributes() {
+          return accessToKeyFromAttributes_ != null;
+        }
+        /**
+         * <pre>
+         * Allows to retrieve key attribute using dictGetString function.
+         * Enabling this option increases memory usage.
+         * Applicable only for IP_TRIE layout type.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue access_to_key_from_attributes = 4;</code>
+         * @return The accessToKeyFromAttributes.
+         */
+        @java.lang.Override
+        public com.google.protobuf.BoolValue getAccessToKeyFromAttributes() {
+          return accessToKeyFromAttributes_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : accessToKeyFromAttributes_;
+        }
+        /**
+         * <pre>
+         * Allows to retrieve key attribute using dictGetString function.
+         * Enabling this option increases memory usage.
+         * Applicable only for IP_TRIE layout type.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue access_to_key_from_attributes = 4;</code>
+         */
+        @java.lang.Override
+        public com.google.protobuf.BoolValueOrBuilder getAccessToKeyFromAttributesOrBuilder() {
+          return getAccessToKeyFromAttributes();
         }
 
         private byte memoizedIsInitialized = -1;
@@ -33163,6 +34544,27 @@ public final class Clickhouse {
           if (maxArraySize_ != 0L) {
             output.writeInt64(3, maxArraySize_);
           }
+          if (accessToKeyFromAttributes_ != null) {
+            output.writeMessage(4, getAccessToKeyFromAttributes());
+          }
+          if (allowReadExpiredKeys_ != null) {
+            output.writeMessage(5, getAllowReadExpiredKeys());
+          }
+          if (maxUpdateQueueSize_ != 0L) {
+            output.writeInt64(6, maxUpdateQueueSize_);
+          }
+          if (updateQueuePushTimeoutMilliseconds_ != 0L) {
+            output.writeInt64(7, updateQueuePushTimeoutMilliseconds_);
+          }
+          if (queryWaitTimeoutMilliseconds_ != 0L) {
+            output.writeInt64(8, queryWaitTimeoutMilliseconds_);
+          }
+          if (maxThreadsForUpdates_ != 0L) {
+            output.writeInt64(9, maxThreadsForUpdates_);
+          }
+          if (initialArraySize_ != 0L) {
+            output.writeInt64(10, initialArraySize_);
+          }
           unknownFields.writeTo(output);
         }
 
@@ -33184,6 +34586,34 @@ public final class Clickhouse {
             size += com.google.protobuf.CodedOutputStream
               .computeInt64Size(3, maxArraySize_);
           }
+          if (accessToKeyFromAttributes_ != null) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(4, getAccessToKeyFromAttributes());
+          }
+          if (allowReadExpiredKeys_ != null) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(5, getAllowReadExpiredKeys());
+          }
+          if (maxUpdateQueueSize_ != 0L) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt64Size(6, maxUpdateQueueSize_);
+          }
+          if (updateQueuePushTimeoutMilliseconds_ != 0L) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt64Size(7, updateQueuePushTimeoutMilliseconds_);
+          }
+          if (queryWaitTimeoutMilliseconds_ != 0L) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt64Size(8, queryWaitTimeoutMilliseconds_);
+          }
+          if (maxThreadsForUpdates_ != 0L) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt64Size(9, maxThreadsForUpdates_);
+          }
+          if (initialArraySize_ != 0L) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt64Size(10, initialArraySize_);
+          }
           size += unknownFields.getSerializedSize();
           memoizedSize = size;
           return size;
@@ -33202,8 +34632,28 @@ public final class Clickhouse {
           if (type_ != other.type_) return false;
           if (getSizeInCells()
               != other.getSizeInCells()) return false;
+          if (hasAllowReadExpiredKeys() != other.hasAllowReadExpiredKeys()) return false;
+          if (hasAllowReadExpiredKeys()) {
+            if (!getAllowReadExpiredKeys()
+                .equals(other.getAllowReadExpiredKeys())) return false;
+          }
+          if (getMaxUpdateQueueSize()
+              != other.getMaxUpdateQueueSize()) return false;
+          if (getUpdateQueuePushTimeoutMilliseconds()
+              != other.getUpdateQueuePushTimeoutMilliseconds()) return false;
+          if (getQueryWaitTimeoutMilliseconds()
+              != other.getQueryWaitTimeoutMilliseconds()) return false;
+          if (getMaxThreadsForUpdates()
+              != other.getMaxThreadsForUpdates()) return false;
+          if (getInitialArraySize()
+              != other.getInitialArraySize()) return false;
           if (getMaxArraySize()
               != other.getMaxArraySize()) return false;
+          if (hasAccessToKeyFromAttributes() != other.hasAccessToKeyFromAttributes()) return false;
+          if (hasAccessToKeyFromAttributes()) {
+            if (!getAccessToKeyFromAttributes()
+                .equals(other.getAccessToKeyFromAttributes())) return false;
+          }
           if (!unknownFields.equals(other.unknownFields)) return false;
           return true;
         }
@@ -33220,9 +34670,32 @@ public final class Clickhouse {
           hash = (37 * hash) + SIZE_IN_CELLS_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
               getSizeInCells());
+          if (hasAllowReadExpiredKeys()) {
+            hash = (37 * hash) + ALLOW_READ_EXPIRED_KEYS_FIELD_NUMBER;
+            hash = (53 * hash) + getAllowReadExpiredKeys().hashCode();
+          }
+          hash = (37 * hash) + MAX_UPDATE_QUEUE_SIZE_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getMaxUpdateQueueSize());
+          hash = (37 * hash) + UPDATE_QUEUE_PUSH_TIMEOUT_MILLISECONDS_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getUpdateQueuePushTimeoutMilliseconds());
+          hash = (37 * hash) + QUERY_WAIT_TIMEOUT_MILLISECONDS_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getQueryWaitTimeoutMilliseconds());
+          hash = (37 * hash) + MAX_THREADS_FOR_UPDATES_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getMaxThreadsForUpdates());
+          hash = (37 * hash) + INITIAL_ARRAY_SIZE_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getInitialArraySize());
           hash = (37 * hash) + MAX_ARRAY_SIZE_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
               getMaxArraySize());
+          if (hasAccessToKeyFromAttributes()) {
+            hash = (37 * hash) + ACCESS_TO_KEY_FROM_ATTRIBUTES_FIELD_NUMBER;
+            hash = (53 * hash) + getAccessToKeyFromAttributes().hashCode();
+          }
           hash = (29 * hash) + unknownFields.hashCode();
           memoizedHashCode = hash;
           return hash;
@@ -33364,8 +34837,30 @@ public final class Clickhouse {
 
             sizeInCells_ = 0L;
 
+            if (allowReadExpiredKeysBuilder_ == null) {
+              allowReadExpiredKeys_ = null;
+            } else {
+              allowReadExpiredKeys_ = null;
+              allowReadExpiredKeysBuilder_ = null;
+            }
+            maxUpdateQueueSize_ = 0L;
+
+            updateQueuePushTimeoutMilliseconds_ = 0L;
+
+            queryWaitTimeoutMilliseconds_ = 0L;
+
+            maxThreadsForUpdates_ = 0L;
+
+            initialArraySize_ = 0L;
+
             maxArraySize_ = 0L;
 
+            if (accessToKeyFromAttributesBuilder_ == null) {
+              accessToKeyFromAttributes_ = null;
+            } else {
+              accessToKeyFromAttributes_ = null;
+              accessToKeyFromAttributesBuilder_ = null;
+            }
             return this;
           }
 
@@ -33394,7 +34889,22 @@ public final class Clickhouse {
             yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Layout result = new yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Layout(this);
             result.type_ = type_;
             result.sizeInCells_ = sizeInCells_;
+            if (allowReadExpiredKeysBuilder_ == null) {
+              result.allowReadExpiredKeys_ = allowReadExpiredKeys_;
+            } else {
+              result.allowReadExpiredKeys_ = allowReadExpiredKeysBuilder_.build();
+            }
+            result.maxUpdateQueueSize_ = maxUpdateQueueSize_;
+            result.updateQueuePushTimeoutMilliseconds_ = updateQueuePushTimeoutMilliseconds_;
+            result.queryWaitTimeoutMilliseconds_ = queryWaitTimeoutMilliseconds_;
+            result.maxThreadsForUpdates_ = maxThreadsForUpdates_;
+            result.initialArraySize_ = initialArraySize_;
             result.maxArraySize_ = maxArraySize_;
+            if (accessToKeyFromAttributesBuilder_ == null) {
+              result.accessToKeyFromAttributes_ = accessToKeyFromAttributes_;
+            } else {
+              result.accessToKeyFromAttributes_ = accessToKeyFromAttributesBuilder_.build();
+            }
             onBuilt();
             return result;
           }
@@ -33449,8 +34959,29 @@ public final class Clickhouse {
             if (other.getSizeInCells() != 0L) {
               setSizeInCells(other.getSizeInCells());
             }
+            if (other.hasAllowReadExpiredKeys()) {
+              mergeAllowReadExpiredKeys(other.getAllowReadExpiredKeys());
+            }
+            if (other.getMaxUpdateQueueSize() != 0L) {
+              setMaxUpdateQueueSize(other.getMaxUpdateQueueSize());
+            }
+            if (other.getUpdateQueuePushTimeoutMilliseconds() != 0L) {
+              setUpdateQueuePushTimeoutMilliseconds(other.getUpdateQueuePushTimeoutMilliseconds());
+            }
+            if (other.getQueryWaitTimeoutMilliseconds() != 0L) {
+              setQueryWaitTimeoutMilliseconds(other.getQueryWaitTimeoutMilliseconds());
+            }
+            if (other.getMaxThreadsForUpdates() != 0L) {
+              setMaxThreadsForUpdates(other.getMaxThreadsForUpdates());
+            }
+            if (other.getInitialArraySize() != 0L) {
+              setInitialArraySize(other.getInitialArraySize());
+            }
             if (other.getMaxArraySize() != 0L) {
               setMaxArraySize(other.getMaxArraySize());
+            }
+            if (other.hasAccessToKeyFromAttributes()) {
+              mergeAccessToKeyFromAttributes(other.getAccessToKeyFromAttributes());
             }
             this.mergeUnknownFields(other.unknownFields);
             onChanged();
@@ -33601,6 +35132,400 @@ public final class Clickhouse {
             return this;
           }
 
+          private com.google.protobuf.BoolValue allowReadExpiredKeys_;
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> allowReadExpiredKeysBuilder_;
+          /**
+           * <pre>
+           * Allows to read expired keys.
+           * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+           * </pre>
+           *
+           * <code>.google.protobuf.BoolValue allow_read_expired_keys = 5;</code>
+           * @return Whether the allowReadExpiredKeys field is set.
+           */
+          public boolean hasAllowReadExpiredKeys() {
+            return allowReadExpiredKeysBuilder_ != null || allowReadExpiredKeys_ != null;
+          }
+          /**
+           * <pre>
+           * Allows to read expired keys.
+           * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+           * </pre>
+           *
+           * <code>.google.protobuf.BoolValue allow_read_expired_keys = 5;</code>
+           * @return The allowReadExpiredKeys.
+           */
+          public com.google.protobuf.BoolValue getAllowReadExpiredKeys() {
+            if (allowReadExpiredKeysBuilder_ == null) {
+              return allowReadExpiredKeys_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : allowReadExpiredKeys_;
+            } else {
+              return allowReadExpiredKeysBuilder_.getMessage();
+            }
+          }
+          /**
+           * <pre>
+           * Allows to read expired keys.
+           * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+           * </pre>
+           *
+           * <code>.google.protobuf.BoolValue allow_read_expired_keys = 5;</code>
+           */
+          public Builder setAllowReadExpiredKeys(com.google.protobuf.BoolValue value) {
+            if (allowReadExpiredKeysBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              allowReadExpiredKeys_ = value;
+              onChanged();
+            } else {
+              allowReadExpiredKeysBuilder_.setMessage(value);
+            }
+
+            return this;
+          }
+          /**
+           * <pre>
+           * Allows to read expired keys.
+           * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+           * </pre>
+           *
+           * <code>.google.protobuf.BoolValue allow_read_expired_keys = 5;</code>
+           */
+          public Builder setAllowReadExpiredKeys(
+              com.google.protobuf.BoolValue.Builder builderForValue) {
+            if (allowReadExpiredKeysBuilder_ == null) {
+              allowReadExpiredKeys_ = builderForValue.build();
+              onChanged();
+            } else {
+              allowReadExpiredKeysBuilder_.setMessage(builderForValue.build());
+            }
+
+            return this;
+          }
+          /**
+           * <pre>
+           * Allows to read expired keys.
+           * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+           * </pre>
+           *
+           * <code>.google.protobuf.BoolValue allow_read_expired_keys = 5;</code>
+           */
+          public Builder mergeAllowReadExpiredKeys(com.google.protobuf.BoolValue value) {
+            if (allowReadExpiredKeysBuilder_ == null) {
+              if (allowReadExpiredKeys_ != null) {
+                allowReadExpiredKeys_ =
+                  com.google.protobuf.BoolValue.newBuilder(allowReadExpiredKeys_).mergeFrom(value).buildPartial();
+              } else {
+                allowReadExpiredKeys_ = value;
+              }
+              onChanged();
+            } else {
+              allowReadExpiredKeysBuilder_.mergeFrom(value);
+            }
+
+            return this;
+          }
+          /**
+           * <pre>
+           * Allows to read expired keys.
+           * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+           * </pre>
+           *
+           * <code>.google.protobuf.BoolValue allow_read_expired_keys = 5;</code>
+           */
+          public Builder clearAllowReadExpiredKeys() {
+            if (allowReadExpiredKeysBuilder_ == null) {
+              allowReadExpiredKeys_ = null;
+              onChanged();
+            } else {
+              allowReadExpiredKeys_ = null;
+              allowReadExpiredKeysBuilder_ = null;
+            }
+
+            return this;
+          }
+          /**
+           * <pre>
+           * Allows to read expired keys.
+           * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+           * </pre>
+           *
+           * <code>.google.protobuf.BoolValue allow_read_expired_keys = 5;</code>
+           */
+          public com.google.protobuf.BoolValue.Builder getAllowReadExpiredKeysBuilder() {
+            
+            onChanged();
+            return getAllowReadExpiredKeysFieldBuilder().getBuilder();
+          }
+          /**
+           * <pre>
+           * Allows to read expired keys.
+           * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+           * </pre>
+           *
+           * <code>.google.protobuf.BoolValue allow_read_expired_keys = 5;</code>
+           */
+          public com.google.protobuf.BoolValueOrBuilder getAllowReadExpiredKeysOrBuilder() {
+            if (allowReadExpiredKeysBuilder_ != null) {
+              return allowReadExpiredKeysBuilder_.getMessageOrBuilder();
+            } else {
+              return allowReadExpiredKeys_ == null ?
+                  com.google.protobuf.BoolValue.getDefaultInstance() : allowReadExpiredKeys_;
+            }
+          }
+          /**
+           * <pre>
+           * Allows to read expired keys.
+           * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+           * </pre>
+           *
+           * <code>.google.protobuf.BoolValue allow_read_expired_keys = 5;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+              getAllowReadExpiredKeysFieldBuilder() {
+            if (allowReadExpiredKeysBuilder_ == null) {
+              allowReadExpiredKeysBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                      getAllowReadExpiredKeys(),
+                      getParentForChildren(),
+                      isClean());
+              allowReadExpiredKeys_ = null;
+            }
+            return allowReadExpiredKeysBuilder_;
+          }
+
+          private long maxUpdateQueueSize_ ;
+          /**
+           * <pre>
+           * Max size of update queue.
+           * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+           * </pre>
+           *
+           * <code>int64 max_update_queue_size = 6;</code>
+           * @return The maxUpdateQueueSize.
+           */
+          @java.lang.Override
+          public long getMaxUpdateQueueSize() {
+            return maxUpdateQueueSize_;
+          }
+          /**
+           * <pre>
+           * Max size of update queue.
+           * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+           * </pre>
+           *
+           * <code>int64 max_update_queue_size = 6;</code>
+           * @param value The maxUpdateQueueSize to set.
+           * @return This builder for chaining.
+           */
+          public Builder setMaxUpdateQueueSize(long value) {
+            
+            maxUpdateQueueSize_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Max size of update queue.
+           * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+           * </pre>
+           *
+           * <code>int64 max_update_queue_size = 6;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearMaxUpdateQueueSize() {
+            
+            maxUpdateQueueSize_ = 0L;
+            onChanged();
+            return this;
+          }
+
+          private long updateQueuePushTimeoutMilliseconds_ ;
+          /**
+           * <pre>
+           * Max timeout in milliseconds for push update task into queue.
+           * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+           * </pre>
+           *
+           * <code>int64 update_queue_push_timeout_milliseconds = 7;</code>
+           * @return The updateQueuePushTimeoutMilliseconds.
+           */
+          @java.lang.Override
+          public long getUpdateQueuePushTimeoutMilliseconds() {
+            return updateQueuePushTimeoutMilliseconds_;
+          }
+          /**
+           * <pre>
+           * Max timeout in milliseconds for push update task into queue.
+           * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+           * </pre>
+           *
+           * <code>int64 update_queue_push_timeout_milliseconds = 7;</code>
+           * @param value The updateQueuePushTimeoutMilliseconds to set.
+           * @return This builder for chaining.
+           */
+          public Builder setUpdateQueuePushTimeoutMilliseconds(long value) {
+            
+            updateQueuePushTimeoutMilliseconds_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Max timeout in milliseconds for push update task into queue.
+           * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+           * </pre>
+           *
+           * <code>int64 update_queue_push_timeout_milliseconds = 7;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearUpdateQueuePushTimeoutMilliseconds() {
+            
+            updateQueuePushTimeoutMilliseconds_ = 0L;
+            onChanged();
+            return this;
+          }
+
+          private long queryWaitTimeoutMilliseconds_ ;
+          /**
+           * <pre>
+           * Max wait timeout in milliseconds for update task to complete.
+           * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+           * </pre>
+           *
+           * <code>int64 query_wait_timeout_milliseconds = 8;</code>
+           * @return The queryWaitTimeoutMilliseconds.
+           */
+          @java.lang.Override
+          public long getQueryWaitTimeoutMilliseconds() {
+            return queryWaitTimeoutMilliseconds_;
+          }
+          /**
+           * <pre>
+           * Max wait timeout in milliseconds for update task to complete.
+           * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+           * </pre>
+           *
+           * <code>int64 query_wait_timeout_milliseconds = 8;</code>
+           * @param value The queryWaitTimeoutMilliseconds to set.
+           * @return This builder for chaining.
+           */
+          public Builder setQueryWaitTimeoutMilliseconds(long value) {
+            
+            queryWaitTimeoutMilliseconds_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Max wait timeout in milliseconds for update task to complete.
+           * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+           * </pre>
+           *
+           * <code>int64 query_wait_timeout_milliseconds = 8;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearQueryWaitTimeoutMilliseconds() {
+            
+            queryWaitTimeoutMilliseconds_ = 0L;
+            onChanged();
+            return this;
+          }
+
+          private long maxThreadsForUpdates_ ;
+          /**
+           * <pre>
+           * Max threads for cache dictionary update.
+           * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+           * </pre>
+           *
+           * <code>int64 max_threads_for_updates = 9;</code>
+           * @return The maxThreadsForUpdates.
+           */
+          @java.lang.Override
+          public long getMaxThreadsForUpdates() {
+            return maxThreadsForUpdates_;
+          }
+          /**
+           * <pre>
+           * Max threads for cache dictionary update.
+           * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+           * </pre>
+           *
+           * <code>int64 max_threads_for_updates = 9;</code>
+           * @param value The maxThreadsForUpdates to set.
+           * @return This builder for chaining.
+           */
+          public Builder setMaxThreadsForUpdates(long value) {
+            
+            maxThreadsForUpdates_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Max threads for cache dictionary update.
+           * Applicable only for CACHE and COMPLEX_KEY_CACHE layout types.
+           * </pre>
+           *
+           * <code>int64 max_threads_for_updates = 9;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearMaxThreadsForUpdates() {
+            
+            maxThreadsForUpdates_ = 0L;
+            onChanged();
+            return this;
+          }
+
+          private long initialArraySize_ ;
+          /**
+           * <pre>
+           * Initial dictionary key size.
+           * Applicable only for FLAT layout type.
+           * </pre>
+           *
+           * <code>int64 initial_array_size = 10;</code>
+           * @return The initialArraySize.
+           */
+          @java.lang.Override
+          public long getInitialArraySize() {
+            return initialArraySize_;
+          }
+          /**
+           * <pre>
+           * Initial dictionary key size.
+           * Applicable only for FLAT layout type.
+           * </pre>
+           *
+           * <code>int64 initial_array_size = 10;</code>
+           * @param value The initialArraySize to set.
+           * @return This builder for chaining.
+           */
+          public Builder setInitialArraySize(long value) {
+            
+            initialArraySize_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Initial dictionary key size.
+           * Applicable only for FLAT layout type.
+           * </pre>
+           *
+           * <code>int64 initial_array_size = 10;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearInitialArraySize() {
+            
+            initialArraySize_ = 0L;
+            onChanged();
+            return this;
+          }
+
           private long maxArraySize_ ;
           /**
            * <pre>
@@ -33645,6 +35570,179 @@ public final class Clickhouse {
             maxArraySize_ = 0L;
             onChanged();
             return this;
+          }
+
+          private com.google.protobuf.BoolValue accessToKeyFromAttributes_;
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> accessToKeyFromAttributesBuilder_;
+          /**
+           * <pre>
+           * Allows to retrieve key attribute using dictGetString function.
+           * Enabling this option increases memory usage.
+           * Applicable only for IP_TRIE layout type.
+           * </pre>
+           *
+           * <code>.google.protobuf.BoolValue access_to_key_from_attributes = 4;</code>
+           * @return Whether the accessToKeyFromAttributes field is set.
+           */
+          public boolean hasAccessToKeyFromAttributes() {
+            return accessToKeyFromAttributesBuilder_ != null || accessToKeyFromAttributes_ != null;
+          }
+          /**
+           * <pre>
+           * Allows to retrieve key attribute using dictGetString function.
+           * Enabling this option increases memory usage.
+           * Applicable only for IP_TRIE layout type.
+           * </pre>
+           *
+           * <code>.google.protobuf.BoolValue access_to_key_from_attributes = 4;</code>
+           * @return The accessToKeyFromAttributes.
+           */
+          public com.google.protobuf.BoolValue getAccessToKeyFromAttributes() {
+            if (accessToKeyFromAttributesBuilder_ == null) {
+              return accessToKeyFromAttributes_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : accessToKeyFromAttributes_;
+            } else {
+              return accessToKeyFromAttributesBuilder_.getMessage();
+            }
+          }
+          /**
+           * <pre>
+           * Allows to retrieve key attribute using dictGetString function.
+           * Enabling this option increases memory usage.
+           * Applicable only for IP_TRIE layout type.
+           * </pre>
+           *
+           * <code>.google.protobuf.BoolValue access_to_key_from_attributes = 4;</code>
+           */
+          public Builder setAccessToKeyFromAttributes(com.google.protobuf.BoolValue value) {
+            if (accessToKeyFromAttributesBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              accessToKeyFromAttributes_ = value;
+              onChanged();
+            } else {
+              accessToKeyFromAttributesBuilder_.setMessage(value);
+            }
+
+            return this;
+          }
+          /**
+           * <pre>
+           * Allows to retrieve key attribute using dictGetString function.
+           * Enabling this option increases memory usage.
+           * Applicable only for IP_TRIE layout type.
+           * </pre>
+           *
+           * <code>.google.protobuf.BoolValue access_to_key_from_attributes = 4;</code>
+           */
+          public Builder setAccessToKeyFromAttributes(
+              com.google.protobuf.BoolValue.Builder builderForValue) {
+            if (accessToKeyFromAttributesBuilder_ == null) {
+              accessToKeyFromAttributes_ = builderForValue.build();
+              onChanged();
+            } else {
+              accessToKeyFromAttributesBuilder_.setMessage(builderForValue.build());
+            }
+
+            return this;
+          }
+          /**
+           * <pre>
+           * Allows to retrieve key attribute using dictGetString function.
+           * Enabling this option increases memory usage.
+           * Applicable only for IP_TRIE layout type.
+           * </pre>
+           *
+           * <code>.google.protobuf.BoolValue access_to_key_from_attributes = 4;</code>
+           */
+          public Builder mergeAccessToKeyFromAttributes(com.google.protobuf.BoolValue value) {
+            if (accessToKeyFromAttributesBuilder_ == null) {
+              if (accessToKeyFromAttributes_ != null) {
+                accessToKeyFromAttributes_ =
+                  com.google.protobuf.BoolValue.newBuilder(accessToKeyFromAttributes_).mergeFrom(value).buildPartial();
+              } else {
+                accessToKeyFromAttributes_ = value;
+              }
+              onChanged();
+            } else {
+              accessToKeyFromAttributesBuilder_.mergeFrom(value);
+            }
+
+            return this;
+          }
+          /**
+           * <pre>
+           * Allows to retrieve key attribute using dictGetString function.
+           * Enabling this option increases memory usage.
+           * Applicable only for IP_TRIE layout type.
+           * </pre>
+           *
+           * <code>.google.protobuf.BoolValue access_to_key_from_attributes = 4;</code>
+           */
+          public Builder clearAccessToKeyFromAttributes() {
+            if (accessToKeyFromAttributesBuilder_ == null) {
+              accessToKeyFromAttributes_ = null;
+              onChanged();
+            } else {
+              accessToKeyFromAttributes_ = null;
+              accessToKeyFromAttributesBuilder_ = null;
+            }
+
+            return this;
+          }
+          /**
+           * <pre>
+           * Allows to retrieve key attribute using dictGetString function.
+           * Enabling this option increases memory usage.
+           * Applicable only for IP_TRIE layout type.
+           * </pre>
+           *
+           * <code>.google.protobuf.BoolValue access_to_key_from_attributes = 4;</code>
+           */
+          public com.google.protobuf.BoolValue.Builder getAccessToKeyFromAttributesBuilder() {
+            
+            onChanged();
+            return getAccessToKeyFromAttributesFieldBuilder().getBuilder();
+          }
+          /**
+           * <pre>
+           * Allows to retrieve key attribute using dictGetString function.
+           * Enabling this option increases memory usage.
+           * Applicable only for IP_TRIE layout type.
+           * </pre>
+           *
+           * <code>.google.protobuf.BoolValue access_to_key_from_attributes = 4;</code>
+           */
+          public com.google.protobuf.BoolValueOrBuilder getAccessToKeyFromAttributesOrBuilder() {
+            if (accessToKeyFromAttributesBuilder_ != null) {
+              return accessToKeyFromAttributesBuilder_.getMessageOrBuilder();
+            } else {
+              return accessToKeyFromAttributes_ == null ?
+                  com.google.protobuf.BoolValue.getDefaultInstance() : accessToKeyFromAttributes_;
+            }
+          }
+          /**
+           * <pre>
+           * Allows to retrieve key attribute using dictGetString function.
+           * Enabling this option increases memory usage.
+           * Applicable only for IP_TRIE layout type.
+           * </pre>
+           *
+           * <code>.google.protobuf.BoolValue access_to_key_from_attributes = 4;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+              getAccessToKeyFromAttributesFieldBuilder() {
+            if (accessToKeyFromAttributesBuilder_ == null) {
+              accessToKeyFromAttributesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                      getAccessToKeyFromAttributes(),
+                      getParentForChildren(),
+                      isClean());
+              accessToKeyFromAttributes_ = null;
+            }
+            return accessToKeyFromAttributesBuilder_;
           }
           @java.lang.Override
           public final Builder setUnknownFields(
@@ -46380,6 +48478,126 @@ public final class Clickhouse {
       return getAsynchronousInsertLogRetentionTime();
     }
 
+    public static final int PROCESSORS_PROFILE_LOG_ENABLED_FIELD_NUMBER = 71;
+    private com.google.protobuf.BoolValue processorsProfileLogEnabled_;
+    /**
+     * <pre>
+     * Enable or disable processors_profile_log system table.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue processors_profile_log_enabled = 71;</code>
+     * @return Whether the processorsProfileLogEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasProcessorsProfileLogEnabled() {
+      return processorsProfileLogEnabled_ != null;
+    }
+    /**
+     * <pre>
+     * Enable or disable processors_profile_log system table.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue processors_profile_log_enabled = 71;</code>
+     * @return The processorsProfileLogEnabled.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getProcessorsProfileLogEnabled() {
+      return processorsProfileLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : processorsProfileLogEnabled_;
+    }
+    /**
+     * <pre>
+     * Enable or disable processors_profile_log system table.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue processors_profile_log_enabled = 71;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getProcessorsProfileLogEnabledOrBuilder() {
+      return getProcessorsProfileLogEnabled();
+    }
+
+    public static final int PROCESSORS_PROFILE_LOG_RETENTION_SIZE_FIELD_NUMBER = 72;
+    private com.google.protobuf.Int64Value processorsProfileLogRetentionSize_;
+    /**
+     * <pre>
+     * The maximum size that processors_profile_log can grow to before old data will be removed.
+     * If set to 0 (default), automatic removal of processors_profile_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value processors_profile_log_retention_size = 72;</code>
+     * @return Whether the processorsProfileLogRetentionSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasProcessorsProfileLogRetentionSize() {
+      return processorsProfileLogRetentionSize_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum size that processors_profile_log can grow to before old data will be removed.
+     * If set to 0 (default), automatic removal of processors_profile_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value processors_profile_log_retention_size = 72;</code>
+     * @return The processorsProfileLogRetentionSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getProcessorsProfileLogRetentionSize() {
+      return processorsProfileLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : processorsProfileLogRetentionSize_;
+    }
+    /**
+     * <pre>
+     * The maximum size that processors_profile_log can grow to before old data will be removed.
+     * If set to 0 (default), automatic removal of processors_profile_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value processors_profile_log_retention_size = 72;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getProcessorsProfileLogRetentionSizeOrBuilder() {
+      return getProcessorsProfileLogRetentionSize();
+    }
+
+    public static final int PROCESSORS_PROFILE_LOG_RETENTION_TIME_FIELD_NUMBER = 73;
+    private com.google.protobuf.Int64Value processorsProfileLogRetentionTime_;
+    /**
+     * <pre>
+     * The maximum time that processors_profile_log records will be retained before removal.
+     * If set to 0, automatic removal of processors_profile_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value processors_profile_log_retention_time = 73;</code>
+     * @return Whether the processorsProfileLogRetentionTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasProcessorsProfileLogRetentionTime() {
+      return processorsProfileLogRetentionTime_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum time that processors_profile_log records will be retained before removal.
+     * If set to 0, automatic removal of processors_profile_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value processors_profile_log_retention_time = 73;</code>
+     * @return The processorsProfileLogRetentionTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getProcessorsProfileLogRetentionTime() {
+      return processorsProfileLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : processorsProfileLogRetentionTime_;
+    }
+    /**
+     * <pre>
+     * The maximum time that processors_profile_log records will be retained before removal.
+     * If set to 0, automatic removal of processors_profile_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value processors_profile_log_retention_time = 73;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getProcessorsProfileLogRetentionTimeOrBuilder() {
+      return getProcessorsProfileLogRetentionTime();
+    }
+
     public static final int BACKGROUND_POOL_SIZE_FIELD_NUMBER = 33;
     private com.google.protobuf.Int64Value backgroundPoolSize_;
     /**
@@ -47196,6 +49414,15 @@ public final class Clickhouse {
       if (jdbcBridge_ != null) {
         output.writeMessage(70, getJdbcBridge());
       }
+      if (processorsProfileLogEnabled_ != null) {
+        output.writeMessage(71, getProcessorsProfileLogEnabled());
+      }
+      if (processorsProfileLogRetentionSize_ != null) {
+        output.writeMessage(72, getProcessorsProfileLogRetentionSize());
+      }
+      if (processorsProfileLogRetentionTime_ != null) {
+        output.writeMessage(73, getProcessorsProfileLogRetentionTime());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -47483,6 +49710,18 @@ public final class Clickhouse {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(70, getJdbcBridge());
       }
+      if (processorsProfileLogEnabled_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(71, getProcessorsProfileLogEnabled());
+      }
+      if (processorsProfileLogRetentionSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(72, getProcessorsProfileLogRetentionSize());
+      }
+      if (processorsProfileLogRetentionTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(73, getProcessorsProfileLogRetentionTime());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -47741,6 +49980,21 @@ public final class Clickhouse {
       if (hasAsynchronousInsertLogRetentionTime()) {
         if (!getAsynchronousInsertLogRetentionTime()
             .equals(other.getAsynchronousInsertLogRetentionTime())) return false;
+      }
+      if (hasProcessorsProfileLogEnabled() != other.hasProcessorsProfileLogEnabled()) return false;
+      if (hasProcessorsProfileLogEnabled()) {
+        if (!getProcessorsProfileLogEnabled()
+            .equals(other.getProcessorsProfileLogEnabled())) return false;
+      }
+      if (hasProcessorsProfileLogRetentionSize() != other.hasProcessorsProfileLogRetentionSize()) return false;
+      if (hasProcessorsProfileLogRetentionSize()) {
+        if (!getProcessorsProfileLogRetentionSize()
+            .equals(other.getProcessorsProfileLogRetentionSize())) return false;
+      }
+      if (hasProcessorsProfileLogRetentionTime() != other.hasProcessorsProfileLogRetentionTime()) return false;
+      if (hasProcessorsProfileLogRetentionTime()) {
+        if (!getProcessorsProfileLogRetentionTime()
+            .equals(other.getProcessorsProfileLogRetentionTime())) return false;
       }
       if (hasBackgroundPoolSize() != other.hasBackgroundPoolSize()) return false;
       if (hasBackgroundPoolSize()) {
@@ -48037,6 +50291,18 @@ public final class Clickhouse {
       if (hasAsynchronousInsertLogRetentionTime()) {
         hash = (37 * hash) + ASYNCHRONOUS_INSERT_LOG_RETENTION_TIME_FIELD_NUMBER;
         hash = (53 * hash) + getAsynchronousInsertLogRetentionTime().hashCode();
+      }
+      if (hasProcessorsProfileLogEnabled()) {
+        hash = (37 * hash) + PROCESSORS_PROFILE_LOG_ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + getProcessorsProfileLogEnabled().hashCode();
+      }
+      if (hasProcessorsProfileLogRetentionSize()) {
+        hash = (37 * hash) + PROCESSORS_PROFILE_LOG_RETENTION_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getProcessorsProfileLogRetentionSize().hashCode();
+      }
+      if (hasProcessorsProfileLogRetentionTime()) {
+        hash = (37 * hash) + PROCESSORS_PROFILE_LOG_RETENTION_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getProcessorsProfileLogRetentionTime().hashCode();
       }
       if (hasBackgroundPoolSize()) {
         hash = (37 * hash) + BACKGROUND_POOL_SIZE_FIELD_NUMBER;
@@ -48554,6 +50820,24 @@ public final class Clickhouse {
           asynchronousInsertLogRetentionTime_ = null;
           asynchronousInsertLogRetentionTimeBuilder_ = null;
         }
+        if (processorsProfileLogEnabledBuilder_ == null) {
+          processorsProfileLogEnabled_ = null;
+        } else {
+          processorsProfileLogEnabled_ = null;
+          processorsProfileLogEnabledBuilder_ = null;
+        }
+        if (processorsProfileLogRetentionSizeBuilder_ == null) {
+          processorsProfileLogRetentionSize_ = null;
+        } else {
+          processorsProfileLogRetentionSize_ = null;
+          processorsProfileLogRetentionSizeBuilder_ = null;
+        }
+        if (processorsProfileLogRetentionTimeBuilder_ == null) {
+          processorsProfileLogRetentionTime_ = null;
+        } else {
+          processorsProfileLogRetentionTime_ = null;
+          processorsProfileLogRetentionTimeBuilder_ = null;
+        }
         if (backgroundPoolSizeBuilder_ == null) {
           backgroundPoolSize_ = null;
         } else {
@@ -48947,6 +51231,21 @@ public final class Clickhouse {
         } else {
           result.asynchronousInsertLogRetentionTime_ = asynchronousInsertLogRetentionTimeBuilder_.build();
         }
+        if (processorsProfileLogEnabledBuilder_ == null) {
+          result.processorsProfileLogEnabled_ = processorsProfileLogEnabled_;
+        } else {
+          result.processorsProfileLogEnabled_ = processorsProfileLogEnabledBuilder_.build();
+        }
+        if (processorsProfileLogRetentionSizeBuilder_ == null) {
+          result.processorsProfileLogRetentionSize_ = processorsProfileLogRetentionSize_;
+        } else {
+          result.processorsProfileLogRetentionSize_ = processorsProfileLogRetentionSizeBuilder_.build();
+        }
+        if (processorsProfileLogRetentionTimeBuilder_ == null) {
+          result.processorsProfileLogRetentionTime_ = processorsProfileLogRetentionTime_;
+        } else {
+          result.processorsProfileLogRetentionTime_ = processorsProfileLogRetentionTimeBuilder_.build();
+        }
         if (backgroundPoolSizeBuilder_ == null) {
           result.backgroundPoolSize_ = backgroundPoolSize_;
         } else {
@@ -49334,6 +51633,15 @@ public final class Clickhouse {
         }
         if (other.hasAsynchronousInsertLogRetentionTime()) {
           mergeAsynchronousInsertLogRetentionTime(other.getAsynchronousInsertLogRetentionTime());
+        }
+        if (other.hasProcessorsProfileLogEnabled()) {
+          mergeProcessorsProfileLogEnabled(other.getProcessorsProfileLogEnabled());
+        }
+        if (other.hasProcessorsProfileLogRetentionSize()) {
+          mergeProcessorsProfileLogRetentionSize(other.getProcessorsProfileLogRetentionSize());
+        }
+        if (other.hasProcessorsProfileLogRetentionTime()) {
+          mergeProcessorsProfileLogRetentionTime(other.getProcessorsProfileLogRetentionTime());
         }
         if (other.hasBackgroundPoolSize()) {
           mergeBackgroundPoolSize(other.getBackgroundPoolSize());
@@ -58300,6 +60608,489 @@ public final class Clickhouse {
         return asynchronousInsertLogRetentionTimeBuilder_;
       }
 
+      private com.google.protobuf.BoolValue processorsProfileLogEnabled_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> processorsProfileLogEnabledBuilder_;
+      /**
+       * <pre>
+       * Enable or disable processors_profile_log system table.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue processors_profile_log_enabled = 71;</code>
+       * @return Whether the processorsProfileLogEnabled field is set.
+       */
+      public boolean hasProcessorsProfileLogEnabled() {
+        return processorsProfileLogEnabledBuilder_ != null || processorsProfileLogEnabled_ != null;
+      }
+      /**
+       * <pre>
+       * Enable or disable processors_profile_log system table.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue processors_profile_log_enabled = 71;</code>
+       * @return The processorsProfileLogEnabled.
+       */
+      public com.google.protobuf.BoolValue getProcessorsProfileLogEnabled() {
+        if (processorsProfileLogEnabledBuilder_ == null) {
+          return processorsProfileLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : processorsProfileLogEnabled_;
+        } else {
+          return processorsProfileLogEnabledBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enable or disable processors_profile_log system table.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue processors_profile_log_enabled = 71;</code>
+       */
+      public Builder setProcessorsProfileLogEnabled(com.google.protobuf.BoolValue value) {
+        if (processorsProfileLogEnabledBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          processorsProfileLogEnabled_ = value;
+          onChanged();
+        } else {
+          processorsProfileLogEnabledBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable processors_profile_log system table.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue processors_profile_log_enabled = 71;</code>
+       */
+      public Builder setProcessorsProfileLogEnabled(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (processorsProfileLogEnabledBuilder_ == null) {
+          processorsProfileLogEnabled_ = builderForValue.build();
+          onChanged();
+        } else {
+          processorsProfileLogEnabledBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable processors_profile_log system table.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue processors_profile_log_enabled = 71;</code>
+       */
+      public Builder mergeProcessorsProfileLogEnabled(com.google.protobuf.BoolValue value) {
+        if (processorsProfileLogEnabledBuilder_ == null) {
+          if (processorsProfileLogEnabled_ != null) {
+            processorsProfileLogEnabled_ =
+              com.google.protobuf.BoolValue.newBuilder(processorsProfileLogEnabled_).mergeFrom(value).buildPartial();
+          } else {
+            processorsProfileLogEnabled_ = value;
+          }
+          onChanged();
+        } else {
+          processorsProfileLogEnabledBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable processors_profile_log system table.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue processors_profile_log_enabled = 71;</code>
+       */
+      public Builder clearProcessorsProfileLogEnabled() {
+        if (processorsProfileLogEnabledBuilder_ == null) {
+          processorsProfileLogEnabled_ = null;
+          onChanged();
+        } else {
+          processorsProfileLogEnabled_ = null;
+          processorsProfileLogEnabledBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable processors_profile_log system table.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue processors_profile_log_enabled = 71;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getProcessorsProfileLogEnabledBuilder() {
+        
+        onChanged();
+        return getProcessorsProfileLogEnabledFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enable or disable processors_profile_log system table.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue processors_profile_log_enabled = 71;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getProcessorsProfileLogEnabledOrBuilder() {
+        if (processorsProfileLogEnabledBuilder_ != null) {
+          return processorsProfileLogEnabledBuilder_.getMessageOrBuilder();
+        } else {
+          return processorsProfileLogEnabled_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : processorsProfileLogEnabled_;
+        }
+      }
+      /**
+       * <pre>
+       * Enable or disable processors_profile_log system table.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue processors_profile_log_enabled = 71;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getProcessorsProfileLogEnabledFieldBuilder() {
+        if (processorsProfileLogEnabledBuilder_ == null) {
+          processorsProfileLogEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getProcessorsProfileLogEnabled(),
+                  getParentForChildren(),
+                  isClean());
+          processorsProfileLogEnabled_ = null;
+        }
+        return processorsProfileLogEnabledBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value processorsProfileLogRetentionSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> processorsProfileLogRetentionSizeBuilder_;
+      /**
+       * <pre>
+       * The maximum size that processors_profile_log can grow to before old data will be removed.
+       * If set to 0 (default), automatic removal of processors_profile_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value processors_profile_log_retention_size = 72;</code>
+       * @return Whether the processorsProfileLogRetentionSize field is set.
+       */
+      public boolean hasProcessorsProfileLogRetentionSize() {
+        return processorsProfileLogRetentionSizeBuilder_ != null || processorsProfileLogRetentionSize_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum size that processors_profile_log can grow to before old data will be removed.
+       * If set to 0 (default), automatic removal of processors_profile_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value processors_profile_log_retention_size = 72;</code>
+       * @return The processorsProfileLogRetentionSize.
+       */
+      public com.google.protobuf.Int64Value getProcessorsProfileLogRetentionSize() {
+        if (processorsProfileLogRetentionSizeBuilder_ == null) {
+          return processorsProfileLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : processorsProfileLogRetentionSize_;
+        } else {
+          return processorsProfileLogRetentionSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size that processors_profile_log can grow to before old data will be removed.
+       * If set to 0 (default), automatic removal of processors_profile_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value processors_profile_log_retention_size = 72;</code>
+       */
+      public Builder setProcessorsProfileLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (processorsProfileLogRetentionSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          processorsProfileLogRetentionSize_ = value;
+          onChanged();
+        } else {
+          processorsProfileLogRetentionSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that processors_profile_log can grow to before old data will be removed.
+       * If set to 0 (default), automatic removal of processors_profile_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value processors_profile_log_retention_size = 72;</code>
+       */
+      public Builder setProcessorsProfileLogRetentionSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (processorsProfileLogRetentionSizeBuilder_ == null) {
+          processorsProfileLogRetentionSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          processorsProfileLogRetentionSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that processors_profile_log can grow to before old data will be removed.
+       * If set to 0 (default), automatic removal of processors_profile_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value processors_profile_log_retention_size = 72;</code>
+       */
+      public Builder mergeProcessorsProfileLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (processorsProfileLogRetentionSizeBuilder_ == null) {
+          if (processorsProfileLogRetentionSize_ != null) {
+            processorsProfileLogRetentionSize_ =
+              com.google.protobuf.Int64Value.newBuilder(processorsProfileLogRetentionSize_).mergeFrom(value).buildPartial();
+          } else {
+            processorsProfileLogRetentionSize_ = value;
+          }
+          onChanged();
+        } else {
+          processorsProfileLogRetentionSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that processors_profile_log can grow to before old data will be removed.
+       * If set to 0 (default), automatic removal of processors_profile_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value processors_profile_log_retention_size = 72;</code>
+       */
+      public Builder clearProcessorsProfileLogRetentionSize() {
+        if (processorsProfileLogRetentionSizeBuilder_ == null) {
+          processorsProfileLogRetentionSize_ = null;
+          onChanged();
+        } else {
+          processorsProfileLogRetentionSize_ = null;
+          processorsProfileLogRetentionSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that processors_profile_log can grow to before old data will be removed.
+       * If set to 0 (default), automatic removal of processors_profile_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value processors_profile_log_retention_size = 72;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getProcessorsProfileLogRetentionSizeBuilder() {
+        
+        onChanged();
+        return getProcessorsProfileLogRetentionSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum size that processors_profile_log can grow to before old data will be removed.
+       * If set to 0 (default), automatic removal of processors_profile_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value processors_profile_log_retention_size = 72;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getProcessorsProfileLogRetentionSizeOrBuilder() {
+        if (processorsProfileLogRetentionSizeBuilder_ != null) {
+          return processorsProfileLogRetentionSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return processorsProfileLogRetentionSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : processorsProfileLogRetentionSize_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size that processors_profile_log can grow to before old data will be removed.
+       * If set to 0 (default), automatic removal of processors_profile_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value processors_profile_log_retention_size = 72;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getProcessorsProfileLogRetentionSizeFieldBuilder() {
+        if (processorsProfileLogRetentionSizeBuilder_ == null) {
+          processorsProfileLogRetentionSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getProcessorsProfileLogRetentionSize(),
+                  getParentForChildren(),
+                  isClean());
+          processorsProfileLogRetentionSize_ = null;
+        }
+        return processorsProfileLogRetentionSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value processorsProfileLogRetentionTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> processorsProfileLogRetentionTimeBuilder_;
+      /**
+       * <pre>
+       * The maximum time that processors_profile_log records will be retained before removal.
+       * If set to 0, automatic removal of processors_profile_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value processors_profile_log_retention_time = 73;</code>
+       * @return Whether the processorsProfileLogRetentionTime field is set.
+       */
+      public boolean hasProcessorsProfileLogRetentionTime() {
+        return processorsProfileLogRetentionTimeBuilder_ != null || processorsProfileLogRetentionTime_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum time that processors_profile_log records will be retained before removal.
+       * If set to 0, automatic removal of processors_profile_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value processors_profile_log_retention_time = 73;</code>
+       * @return The processorsProfileLogRetentionTime.
+       */
+      public com.google.protobuf.Int64Value getProcessorsProfileLogRetentionTime() {
+        if (processorsProfileLogRetentionTimeBuilder_ == null) {
+          return processorsProfileLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : processorsProfileLogRetentionTime_;
+        } else {
+          return processorsProfileLogRetentionTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time that processors_profile_log records will be retained before removal.
+       * If set to 0, automatic removal of processors_profile_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value processors_profile_log_retention_time = 73;</code>
+       */
+      public Builder setProcessorsProfileLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (processorsProfileLogRetentionTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          processorsProfileLogRetentionTime_ = value;
+          onChanged();
+        } else {
+          processorsProfileLogRetentionTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that processors_profile_log records will be retained before removal.
+       * If set to 0, automatic removal of processors_profile_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value processors_profile_log_retention_time = 73;</code>
+       */
+      public Builder setProcessorsProfileLogRetentionTime(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (processorsProfileLogRetentionTimeBuilder_ == null) {
+          processorsProfileLogRetentionTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          processorsProfileLogRetentionTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that processors_profile_log records will be retained before removal.
+       * If set to 0, automatic removal of processors_profile_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value processors_profile_log_retention_time = 73;</code>
+       */
+      public Builder mergeProcessorsProfileLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (processorsProfileLogRetentionTimeBuilder_ == null) {
+          if (processorsProfileLogRetentionTime_ != null) {
+            processorsProfileLogRetentionTime_ =
+              com.google.protobuf.Int64Value.newBuilder(processorsProfileLogRetentionTime_).mergeFrom(value).buildPartial();
+          } else {
+            processorsProfileLogRetentionTime_ = value;
+          }
+          onChanged();
+        } else {
+          processorsProfileLogRetentionTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that processors_profile_log records will be retained before removal.
+       * If set to 0, automatic removal of processors_profile_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value processors_profile_log_retention_time = 73;</code>
+       */
+      public Builder clearProcessorsProfileLogRetentionTime() {
+        if (processorsProfileLogRetentionTimeBuilder_ == null) {
+          processorsProfileLogRetentionTime_ = null;
+          onChanged();
+        } else {
+          processorsProfileLogRetentionTime_ = null;
+          processorsProfileLogRetentionTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that processors_profile_log records will be retained before removal.
+       * If set to 0, automatic removal of processors_profile_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value processors_profile_log_retention_time = 73;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getProcessorsProfileLogRetentionTimeBuilder() {
+        
+        onChanged();
+        return getProcessorsProfileLogRetentionTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum time that processors_profile_log records will be retained before removal.
+       * If set to 0, automatic removal of processors_profile_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value processors_profile_log_retention_time = 73;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getProcessorsProfileLogRetentionTimeOrBuilder() {
+        if (processorsProfileLogRetentionTimeBuilder_ != null) {
+          return processorsProfileLogRetentionTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return processorsProfileLogRetentionTime_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : processorsProfileLogRetentionTime_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time that processors_profile_log records will be retained before removal.
+       * If set to 0, automatic removal of processors_profile_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value processors_profile_log_retention_time = 73;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getProcessorsProfileLogRetentionTimeFieldBuilder() {
+        if (processorsProfileLogRetentionTimeBuilder_ == null) {
+          processorsProfileLogRetentionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getProcessorsProfileLogRetentionTime(),
+                  getParentForChildren(),
+                  isClean());
+          processorsProfileLogRetentionTime_ = null;
+        }
+        return processorsProfileLogRetentionTimeBuilder_;
+      }
+
       private com.google.protobuf.Int64Value backgroundPoolSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backgroundPoolSizeBuilder_;
@@ -62250,8 +65041,8 @@ public final class Clickhouse {
       "\n6yandex/cloud/mdb/clickhouse/v1/config/" +
       "clickhouse.proto\022%yandex.cloud.mdb.click" +
       "house.v1.config\032\036google/protobuf/wrapper" +
-      "s.proto\032\035yandex/cloud/validation.proto\"\367" +
-      "l\n\020ClickhouseConfig\022S\n\tlog_level\030\001 \001(\0162@" +
+      "s.proto\032\035yandex/cloud/validation.proto\"\353" +
+      "x\n\020ClickhouseConfig\022S\n\tlog_level\030\001 \001(\0162@" +
       ".yandex.cloud.mdb.clickhouse.v1.config.C" +
       "lickhouseConfig.LogLevel\022U\n\nmerge_tree\030\002" +
       " \001(\0132A.yandex.cloud.mdb.clickhouse.v1.co" +
@@ -62345,271 +65136,309 @@ public final class Clickhouse {
       "tion_size\030@ \001(\0132\033.google.protobuf.Int64V" +
       "alueB\007\372\3071\003>=0\022T\n&asynchronous_insert_log" +
       "_retention_time\030A \001(\0132\033.google.protobuf." +
-      "Int64ValueB\007\372\3071\003>=0\022A\n\024background_pool_s" +
-      "ize\030! \001(\0132\033.google.protobuf.Int64ValueB\006" +
-      "\372\3071\002>0\022Z\n-background_merges_mutations_co" +
-      "ncurrency_ratio\0300 \001(\0132\033.google.protobuf." +
-      "Int64ValueB\006\372\3071\002>0\022J\n\035background_schedul" +
-      "e_pool_size\030\" \001(\0132\033.google.protobuf.Int6" +
-      "4ValueB\006\372\3071\002>0\022I\n\034background_fetches_poo" +
-      "l_size\030& \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\006\372\3071\002>0\022F\n\031background_move_pool_size\030\'" +
-      " \001(\0132\033.google.protobuf.Int64ValueB\006\372\3071\002>" +
-      "0\022V\n)background_distributed_schedule_poo" +
-      "l_size\030( \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\006\372\3071\002>0\022W\n*background_buffer_flush_sch" +
-      "edule_pool_size\030) \001(\0132\033.google.protobuf." +
-      "Int64ValueB\006\372\3071\002>0\022Y\n,background_message" +
-      "_broker_schedule_pool_size\030. \001(\0132\033.googl" +
-      "e.protobuf.Int64ValueB\006\372\3071\002>0\022H\n\033backgro" +
-      "und_common_pool_size\030/ \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\006\372\3071\002>0\0226\n\020default_datab" +
-      "ase\030+ \001(\0132\034.google.protobuf.StringValue\022" +
-      "?\n\032total_memory_profiler_step\030, \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\022M\n\'total_memory" +
-      "_tracker_sample_probability\030- \001(\0132\034.goog" +
-      "le.protobuf.DoubleValue\022m\n\023query_masking" +
-      "_rules\030C \003(\0132H.yandex.cloud.mdb.clickhou" +
-      "se.v1.config.ClickhouseConfig.QueryMaski" +
-      "ngRuleB\006\202\3101\002>0\022:\n\026dictionaries_lazy_load" +
-      "\030D \001(\0132\032.google.protobuf.BoolValue\022W\n\013qu" +
-      "ery_cache\030E \001(\0132B.yandex.cloud.mdb.click" +
-      "house.v1.config.ClickhouseConfig.QueryCa" +
-      "che\022W\n\013jdbc_bridge\030F \001(\0132B.yandex.cloud." +
-      "mdb.clickhouse.v1.config.ClickhouseConfi" +
-      "g.JdbcBridge\032\324\017\n\tMergeTree\022D\n\037replicated" +
-      "_deduplication_window\030\001 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\022L\n\'replicated_deduplica" +
-      "tion_window_seconds\030\002 \001(\0132\033.google.proto" +
-      "buf.Int64Value\022:\n\025parts_to_delay_insert\030" +
-      "\003 \001(\0132\033.google.protobuf.Int64Value\022:\n\025pa" +
-      "rts_to_throw_insert\030\004 \001(\0132\033.google.proto" +
-      "buf.Int64Value\022C\n\036inactive_parts_to_dela" +
-      "y_insert\030\t \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\022C\n\036inactive_parts_to_throw_insert\030\n " +
-      "\001(\0132\033.google.protobuf.Int64Value\022C\n\036max_" +
-      "replicated_merges_in_queue\030\005 \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\022^\n9number_of_free_" +
-      "entries_in_pool_to_lower_max_size_of_mer" +
-      "ge\030\006 \001(\0132\033.google.protobuf.Int64Value\022L\n" +
-      "\'max_bytes_to_merge_at_min_space_in_pool" +
-      "\030\007 \001(\0132\033.google.protobuf.Int64Value\022L\n\'m" +
-      "ax_bytes_to_merge_at_max_space_in_pool\030\010" +
-      " \001(\0132\033.google.protobuf.Int64Value\022<\n\027min" +
-      "_bytes_for_wide_part\030\013 \001(\0132\033.google.prot" +
-      "obuf.Int64Value\022;\n\026min_rows_for_wide_par" +
-      "t\030\014 \001(\0132\033.google.protobuf.Int64Value\0227\n\023" +
-      "ttl_only_drop_parts\030\r \001(\0132\032.google.proto" +
-      "buf.BoolValue\022I\n%allow_remote_fs_zero_co" +
-      "py_replication\030\016 \001(\0132\032.google.protobuf.B" +
-      "oolValue\022;\n\026merge_with_ttl_timeout\030\017 \001(\013" +
-      "2\033.google.protobuf.Int64Value\022I\n$merge_w" +
-      "ith_recompression_ttl_timeout\030\020 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\0227\n\022max_parts_in" +
-      "_total\030\021 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\022J\n%max_number_of_merges_with_ttl_in_po" +
-      "ol\030\022 \001(\0132\033.google.protobuf.Int64Value\0229\n" +
-      "\024cleanup_delay_period\030\023 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\022W\n2number_of_free_entri" +
-      "es_in_pool_to_execute_mutation\030\024 \001(\0132\033.g" +
-      "oogle.protobuf.Int64Value\022R\n$max_avg_par" +
-      "t_size_for_too_many_parts\030\025 \001(\0132\033.google" +
-      ".protobuf.Int64ValueB\007\372\3071\003>=0\022L\n\036min_age" +
-      "_to_force_merge_seconds\030\026 \001(\0132\033.google.p" +
-      "rotobuf.Int64ValueB\007\372\3071\003>=0\022L\n(min_age_t" +
-      "o_force_merge_on_partition_only\030\027 \001(\0132\032." +
-      "google.protobuf.BoolValue\022E\n\030merge_selec" +
-      "ting_sleep_ms\030\030 \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\006\372\3071\002>0\022A\n\024merge_max_block_size" +
-      "\030\031 \001(\0132\033.google.protobuf.Int64ValueB\006\372\3071" +
-      "\002>0\022B\n\036check_sample_column_is_correct\030\032 " +
-      "\001(\0132\032.google.protobuf.BoolValue\022J\n\034max_m" +
-      "erge_selecting_sleep_ms\030\033 \001(\0132\033.google.p" +
-      "rotobuf.Int64ValueB\007\372\3071\003>=0\022F\n\030max_clean" +
-      "up_delay_period\030\034 \001(\0132\033.google.protobuf." +
-      "Int64ValueB\007\372\3071\003>=0\032\240\r\n\005Kafka\022i\n\021securit" +
-      "y_protocol\030\001 \001(\0162N.yandex.cloud.mdb.clic" +
-      "khouse.v1.config.ClickhouseConfig.Kafka." +
-      "SecurityProtocol\022c\n\016sasl_mechanism\030\002 \001(\016" +
-      "2K.yandex.cloud.mdb.clickhouse.v1.config" +
-      ".ClickhouseConfig.Kafka.SaslMechanism\022\025\n" +
-      "\rsasl_username\030\003 \001(\t\022\025\n\rsasl_password\030\004 " +
-      "\001(\t\022G\n#enable_ssl_certificate_verificati" +
-      "on\030\005 \001(\0132\032.google.protobuf.BoolValue\022B\n\024" +
-      "max_poll_interval_ms\030\006 \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\007\372\3071\003>=0\022@\n\022session_time" +
-      "out_ms\030\007 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\007\372\3071\003>=0\022R\n\005debug\030\010 \001(\0162C.yandex.cloud" +
-      ".mdb.clickhouse.v1.config.ClickhouseConf" +
-      "ig.Kafka.Debug\022h\n\021auto_offset_reset\030\t \001(" +
-      "\0162M.yandex.cloud.mdb.clickhouse.v1.confi" +
-      "g.ClickhouseConfig.Kafka.AutoOffsetReset" +
-      "\"\267\001\n\020SecurityProtocol\022!\n\035SECURITY_PROTOC" +
-      "OL_UNSPECIFIED\020\000\022\037\n\033SECURITY_PROTOCOL_PL" +
-      "AINTEXT\020\001\022\031\n\025SECURITY_PROTOCOL_SSL\020\002\022$\n " +
-      "SECURITY_PROTOCOL_SASL_PLAINTEXT\020\003\022\036\n\032SE" +
-      "CURITY_PROTOCOL_SASL_SSL\020\004\"\250\001\n\rSaslMecha" +
-      "nism\022\036\n\032SASL_MECHANISM_UNSPECIFIED\020\000\022\031\n\025" +
-      "SASL_MECHANISM_GSSAPI\020\001\022\030\n\024SASL_MECHANIS" +
-      "M_PLAIN\020\002\022 \n\034SASL_MECHANISM_SCRAM_SHA_25" +
-      "6\020\003\022 \n\034SASL_MECHANISM_SCRAM_SHA_512\020\004\"\231\003" +
-      "\n\005Debug\022\025\n\021DEBUG_UNSPECIFIED\020\000\022\021\n\rDEBUG_" +
-      "GENERIC\020\001\022\020\n\014DEBUG_BROKER\020\002\022\017\n\013DEBUG_TOP" +
-      "IC\020\003\022\022\n\016DEBUG_METADATA\020\004\022\021\n\rDEBUG_FEATUR" +
-      "E\020\005\022\017\n\013DEBUG_QUEUE\020\006\022\r\n\tDEBUG_MSG\020\007\022\022\n\016D" +
-      "EBUG_PROTOCOL\020\010\022\016\n\nDEBUG_CGRP\020\t\022\022\n\016DEBUG" +
-      "_SECURITY\020\n\022\017\n\013DEBUG_FETCH\020\013\022\025\n\021DEBUG_IN" +
-      "TERCEPTOR\020\014\022\020\n\014DEBUG_PLUGIN\020\r\022\022\n\016DEBUG_C" +
-      "ONSUMER\020\016\022\017\n\013DEBUG_ADMIN\020\017\022\r\n\tDEBUG_EOS\020" +
-      "\020\022\016\n\nDEBUG_MOCK\020\021\022\022\n\016DEBUG_ASSIGNOR\020\022\022\016\n" +
-      "\nDEBUG_CONF\020\023\022\023\n\017DEBUG_TELEMETRY\020\024\022\r\n\tDE" +
-      "BUG_ALL\020\025\"\212\002\n\017AutoOffsetReset\022!\n\035AUTO_OF" +
-      "FSET_RESET_UNSPECIFIED\020\000\022\036\n\032AUTO_OFFSET_" +
-      "RESET_SMALLEST\020\001\022\036\n\032AUTO_OFFSET_RESET_EA" +
-      "RLIEST\020\002\022\037\n\033AUTO_OFFSET_RESET_BEGINNING\020" +
-      "\003\022\035\n\031AUTO_OFFSET_RESET_LARGEST\020\004\022\034\n\030AUTO" +
-      "_OFFSET_RESET_LATEST\020\005\022\031\n\025AUTO_OFFSET_RE" +
-      "SET_END\020\006\022\033\n\027AUTO_OFFSET_RESET_ERROR\020\007\032w" +
-      "\n\nKafkaTopic\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022U\n\010sett" +
-      "ings\030\002 \001(\0132=.yandex.cloud.mdb.clickhouse" +
-      ".v1.config.ClickhouseConfig.KafkaB\004\350\3071\001\032" +
-      "=\n\010Rabbitmq\022\020\n\010username\030\001 \001(\t\022\020\n\010passwor" +
-      "d\030\002 \001(\t\022\r\n\005vhost\030\003 \001(\t\032\220\002\n\013Compression\022Z" +
-      "\n\006method\030\001 \001(\0162J.yandex.cloud.mdb.clickh" +
-      "ouse.v1.config.ClickhouseConfig.Compress" +
-      "ion.Method\022\036\n\rmin_part_size\030\002 \001(\003B\007\372\3071\003>" +
-      "=1\022\033\n\023min_part_size_ratio\030\003 \001(\001\0223\n\005level" +
-      "\030\004 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
-      "\003>=0\"3\n\006Method\022\026\n\022METHOD_UNSPECIFIED\020\000\022\007" +
-      "\n\003LZ4\020\001\022\010\n\004ZSTD\020\002\032\374\034\n\022ExternalDictionary" +
-      "\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022m\n\tstructure\030\002 \001(\0132" +
-      "T.yandex.cloud.mdb.clickhouse.v1.config." +
-      "ClickhouseConfig.ExternalDictionary.Stru" +
-      "ctureB\004\350\3071\001\022g\n\006layout\030\003 \001(\0132Q.yandex.clo" +
-      "ud.mdb.clickhouse.v1.config.ClickhouseCo" +
-      "nfig.ExternalDictionary.LayoutB\004\350\3071\001\022\030\n\016" +
-      "fixed_lifetime\030\004 \001(\003H\000\022j\n\016lifetime_range" +
-      "\030\005 \001(\0132P.yandex.cloud.mdb.clickhouse.v1." +
-      "config.ClickhouseConfig.ExternalDictiona" +
-      "ry.RangeH\000\022l\n\013http_source\030\006 \001(\0132U.yandex" +
-      ".cloud.mdb.clickhouse.v1.config.Clickhou" +
-      "seConfig.ExternalDictionary.HttpSourceH\001" +
-      "\022n\n\014mysql_source\030\007 \001(\0132V.yandex.cloud.md" +
-      "b.clickhouse.v1.config.ClickhouseConfig." +
-      "ExternalDictionary.MysqlSourceH\001\022x\n\021clic" +
-      "khouse_source\030\010 \001(\0132[.yandex.cloud.mdb.c" +
-      "lickhouse.v1.config.ClickhouseConfig.Ext" +
-      "ernalDictionary.ClickhouseSourceH\001\022r\n\016mo" +
-      "ngodb_source\030\t \001(\0132X.yandex.cloud.mdb.cl" +
-      "ickhouse.v1.config.ClickhouseConfig.Exte" +
-      "rnalDictionary.MongodbSourceH\001\022x\n\021postgr" +
-      "esql_source\030\n \001(\0132[.yandex.cloud.mdb.cli" +
-      "ckhouse.v1.config.ClickhouseConfig.Exter" +
-      "nalDictionary.PostgresqlSourceH\001\032\327\001\n\nHtt" +
-      "pSource\022\021\n\003url\030\001 \001(\tB\004\350\3071\001\022\024\n\006format\030\002 \001" +
-      "(\tB\004\350\3071\001\022m\n\007headers\030\003 \003(\0132\\.yandex.cloud" +
-      ".mdb.clickhouse.v1.config.ClickhouseConf" +
-      "ig.ExternalDictionary.HttpSource.Header\032" +
-      "1\n\006Header\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\023\n\005value\030\002" +
-      " \001(\tB\004\350\3071\001\032\377\003\n\013MysqlSource\022\020\n\002db\030\001 \001(\tB\004" +
-      "\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\031\n\004port\030\003 \001(\003B" +
-      "\013\372\3071\0070-65535\022\014\n\004user\030\004 \001(\t\022\020\n\010password\030\005" +
-      " \001(\t\022x\n\010replicas\030\006 \003(\0132^.yandex.cloud.md" +
-      "b.clickhouse.v1.config.ClickhouseConfig." +
-      "ExternalDictionary.MysqlSource.ReplicaB\006" +
-      "\202\3101\002>0\022\r\n\005where\030\007 \001(\t\022\030\n\020invalidate_quer" +
-      "y\030\010 \001(\t\0224\n\020close_connection\030\t \001(\0132\032.goog" +
-      "le.protobuf.BoolValue\0224\n\020share_connectio" +
-      "n\030\n \001(\0132\032.google.protobuf.BoolValue\032\177\n\007R" +
-      "eplica\022\033\n\004host\030\001 \001(\tB\r\350\3071\001\212\3101\005<=253\022\034\n\010p" +
-      "riority\030\002 \001(\003B\n\350\3071\001\372\3071\002>0\022\031\n\004port\030\003 \001(\003B" +
-      "\013\372\3071\0070-65535\022\014\n\004user\030\004 \001(\t\022\020\n\010password\030\005" +
-      " \001(\t\032\316\001\n\020ClickhouseSource\022\020\n\002db\030\001 \001(\tB\004\350" +
-      "\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\027\n\004host\030\003 \001(\tB\t" +
-      "\212\3101\005<=253\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022\022\n\004" +
-      "user\030\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(\t\022\r\n\005wh" +
-      "ere\030\007 \001(\t\022*\n\006secure\030\010 \001(\0132\032.google.proto" +
-      "buf.BoolValue\032\246\001\n\rMongodbSource\022\020\n\002db\030\001 " +
-      "\001(\tB\004\350\3071\001\022\030\n\ncollection\030\002 \001(\tB\004\350\3071\001\022\027\n\004h" +
-      "ost\030\003 \001(\tB\t\212\3101\005<=253\022\031\n\004port\030\004 \001(\003B\013\372\3071\007" +
-      "0-65535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010password\030" +
-      "\006 \001(\t\022\017\n\007options\030\007 \001(\t\032\213\003\n\020PostgresqlSou" +
-      "rce\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\307" +
-      "1\001\022\025\n\005hosts\030\003 \003(\tB\006\202\3101\002>0\022\031\n\004port\030\004 \001(\003B" +
-      "\013\372\3071\0070-65535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010pass" +
-      "word\030\006 \001(\t\022\030\n\020invalidate_query\030\007 \001(\t\022u\n\010" +
-      "ssl_mode\030\010 \001(\0162c.yandex.cloud.mdb.clickh" +
-      "ouse.v1.config.ClickhouseConfig.External" +
-      "Dictionary.PostgresqlSource.SslMode\"g\n\007S" +
-      "slMode\022\030\n\024SSL_MODE_UNSPECIFIED\020\000\022\013\n\007DISA" +
-      "BLE\020\001\022\t\n\005ALLOW\020\002\022\n\n\006PREFER\020\003\022\r\n\tVERIFY_C" +
-      "A\020\004\022\017\n\013VERIFY_FULL\020\005\032\336\006\n\tStructure\022c\n\002id" +
-      "\030\001 \001(\0132W.yandex.cloud.mdb.clickhouse.v1." +
-      "config.ClickhouseConfig.ExternalDictiona" +
-      "ry.Structure.Id\022e\n\003key\030\003 \001(\0132X.yandex.cl" +
+      "Int64ValueB\007\372\3071\003>=0\022B\n\036processors_profil" +
+      "e_log_enabled\030G \001(\0132\032.google.protobuf.Bo" +
+      "olValue\022J\n%processors_profile_log_retent" +
+      "ion_size\030H \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\022J\n%processors_profile_log_retention_" +
+      "time\030I \001(\0132\033.google.protobuf.Int64Value\022" +
+      "A\n\024background_pool_size\030! \001(\0132\033.google.p" +
+      "rotobuf.Int64ValueB\006\372\3071\002>0\022Z\n-background" +
+      "_merges_mutations_concurrency_ratio\0300 \001(" +
+      "\0132\033.google.protobuf.Int64ValueB\006\372\3071\002>0\022J" +
+      "\n\035background_schedule_pool_size\030\" \001(\0132\033." +
+      "google.protobuf.Int64ValueB\006\372\3071\002>0\022I\n\034ba" +
+      "ckground_fetches_pool_size\030& \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\006\372\3071\002>0\022F\n\031backgro" +
+      "und_move_pool_size\030\' \001(\0132\033.google.protob" +
+      "uf.Int64ValueB\006\372\3071\002>0\022V\n)background_dist" +
+      "ributed_schedule_pool_size\030( \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\006\372\3071\002>0\022W\n*backgro" +
+      "und_buffer_flush_schedule_pool_size\030) \001(" +
+      "\0132\033.google.protobuf.Int64ValueB\006\372\3071\002>0\022Y" +
+      "\n,background_message_broker_schedule_poo" +
+      "l_size\030. \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\006\372\3071\002>0\022H\n\033background_common_pool_size" +
+      "\030/ \001(\0132\033.google.protobuf.Int64ValueB\006\372\3071" +
+      "\002>0\0226\n\020default_database\030+ \001(\0132\034.google.p" +
+      "rotobuf.StringValue\022?\n\032total_memory_prof" +
+      "iler_step\030, \001(\0132\033.google.protobuf.Int64V" +
+      "alue\022M\n\'total_memory_tracker_sample_prob" +
+      "ability\030- \001(\0132\034.google.protobuf.DoubleVa" +
+      "lue\022m\n\023query_masking_rules\030C \003(\0132H.yande" +
+      "x.cloud.mdb.clickhouse.v1.config.Clickho" +
+      "useConfig.QueryMaskingRuleB\006\202\3101\002>0\022:\n\026di" +
+      "ctionaries_lazy_load\030D \001(\0132\032.google.prot" +
+      "obuf.BoolValue\022W\n\013query_cache\030E \001(\0132B.ya" +
+      "ndex.cloud.mdb.clickhouse.v1.config.Clic" +
+      "khouseConfig.QueryCache\022W\n\013jdbc_bridge\030F" +
+      " \001(\0132B.yandex.cloud.mdb.clickhouse.v1.co" +
+      "nfig.ClickhouseConfig.JdbcBridge\032\265\026\n\tMer" +
+      "geTree\022D\n\037replicated_deduplication_windo" +
+      "w\030\001 \001(\0132\033.google.protobuf.Int64Value\022L\n\'" +
+      "replicated_deduplication_window_seconds\030" +
+      "\002 \001(\0132\033.google.protobuf.Int64Value\022:\n\025pa" +
+      "rts_to_delay_insert\030\003 \001(\0132\033.google.proto" +
+      "buf.Int64Value\022:\n\025parts_to_throw_insert\030" +
+      "\004 \001(\0132\033.google.protobuf.Int64Value\022C\n\036in" +
+      "active_parts_to_delay_insert\030\t \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\022C\n\036inactive_part" +
+      "s_to_throw_insert\030\n \001(\0132\033.google.protobu" +
+      "f.Int64Value\022C\n\036max_replicated_merges_in" +
+      "_queue\030\005 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\022^\n9number_of_free_entries_in_pool_to_l" +
+      "ower_max_size_of_merge\030\006 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\022L\n\'max_bytes_to_merge_" +
+      "at_min_space_in_pool\030\007 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022L\n\'max_bytes_to_merge_at" +
+      "_max_space_in_pool\030\010 \001(\0132\033.google.protob" +
+      "uf.Int64Value\022<\n\027min_bytes_for_wide_part" +
+      "\030\013 \001(\0132\033.google.protobuf.Int64Value\022;\n\026m" +
+      "in_rows_for_wide_part\030\014 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\0227\n\023ttl_only_drop_parts\030" +
+      "\r \001(\0132\032.google.protobuf.BoolValue\022I\n%all" +
+      "ow_remote_fs_zero_copy_replication\030\016 \001(\013" +
+      "2\032.google.protobuf.BoolValue\022;\n\026merge_wi" +
+      "th_ttl_timeout\030\017 \001(\0132\033.google.protobuf.I" +
+      "nt64Value\022I\n$merge_with_recompression_tt" +
+      "l_timeout\030\020 \001(\0132\033.google.protobuf.Int64V" +
+      "alue\0227\n\022max_parts_in_total\030\021 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\022J\n%max_number_of_m" +
+      "erges_with_ttl_in_pool\030\022 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\0229\n\024cleanup_delay_perio" +
+      "d\030\023 \001(\0132\033.google.protobuf.Int64Value\022W\n2" +
+      "number_of_free_entries_in_pool_to_execut" +
+      "e_mutation\030\024 \001(\0132\033.google.protobuf.Int64" +
+      "Value\022R\n$max_avg_part_size_for_too_many_" +
+      "parts\030\025 \001(\0132\033.google.protobuf.Int64Value" +
+      "B\007\372\3071\003>=0\022L\n\036min_age_to_force_merge_seco" +
+      "nds\030\026 \001(\0132\033.google.protobuf.Int64ValueB\007" +
+      "\372\3071\003>=0\022L\n(min_age_to_force_merge_on_par" +
+      "tition_only\030\027 \001(\0132\032.google.protobuf.Bool" +
+      "Value\022E\n\030merge_selecting_sleep_ms\030\030 \001(\0132" +
+      "\033.google.protobuf.Int64ValueB\006\372\3071\002>0\022A\n\024" +
+      "merge_max_block_size\030\031 \001(\0132\033.google.prot" +
+      "obuf.Int64ValueB\006\372\3071\002>0\022B\n\036check_sample_" +
+      "column_is_correct\030\032 \001(\0132\032.google.protobu" +
+      "f.BoolValue\022J\n\034max_merge_selecting_sleep" +
+      "_ms\030\033 \001(\0132\033.google.protobuf.Int64ValueB\007" +
+      "\372\3071\003>=0\022F\n\030max_cleanup_delay_period\030\034 \001(" +
+      "\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022" +
+      "\213\001\n!deduplicate_merge_projection_mode\030\035 " +
+      "\001(\0162`.yandex.cloud.mdb.clickhouse.v1.con" +
+      "fig.ClickhouseConfig.MergeTree.Deduplica" +
+      "teMergeProjectionMode\022\221\001\n$lightweight_mu" +
+      "tation_projection_mode\030\036 \001(\0162c.yandex.cl" +
       "oud.mdb.clickhouse.v1.config.ClickhouseC" +
-      "onfig.ExternalDictionary.Structure.Key\022q" +
-      "\n\trange_min\030\004 \001(\0132^.yandex.cloud.mdb.cli" +
-      "ckhouse.v1.config.ClickhouseConfig.Exter" +
-      "nalDictionary.Structure.Attribute\022q\n\tran" +
-      "ge_max\030\005 \001(\0132^.yandex.cloud.mdb.clickhou" +
-      "se.v1.config.ClickhouseConfig.ExternalDi" +
-      "ctionary.Structure.Attribute\022z\n\nattribut" +
-      "es\030\002 \003(\0132^.yandex.cloud.mdb.clickhouse.v" +
-      "1.config.ClickhouseConfig.ExternalDictio" +
-      "nary.Structure.AttributeB\006\202\3101\002>0\032\204\001\n\tAtt" +
-      "ribute\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\022\n\004type\030\002 \001(\t" +
-      "B\004\350\3071\001\022\022\n\nnull_value\030\003 \001(\t\022\022\n\nexpression" +
-      "\030\004 \001(\t\022\024\n\014hierarchical\030\005 \001(\010\022\021\n\tinjectiv" +
-      "e\030\006 \001(\010\032\030\n\002Id\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\032\201\001\n\003Ke" +
-      "y\022z\n\nattributes\030\001 \003(\0132^.yandex.cloud.mdb" +
-      ".clickhouse.v1.config.ClickhouseConfig.E" +
-      "xternalDictionary.Structure.AttributeB\006\202" +
-      "\3101\002>0\032\243\002\n\006Layout\022j\n\004type\030\001 \001(\0162V.yandex." +
+      "onfig.MergeTree.LightweightMutationProje" +
+      "ctionMode\022D\n materialize_ttl_recalculate" +
+      "_only\030\037 \001(\0132\032.google.protobuf.BoolValue\"" +
+      "\211\002\n\036DeduplicateMergeProjectionMode\0221\n-DE" +
+      "DUPLICATE_MERGE_PROJECTION_MODE_UNSPECIF" +
+      "IED\020\000\022,\n(DEDUPLICATE_MERGE_PROJECTION_MO" +
+      "DE_IGNORE\020\001\022+\n\'DEDUPLICATE_MERGE_PROJECT" +
+      "ION_MODE_THROW\020\002\022*\n&DEDUPLICATE_MERGE_PR" +
+      "OJECTION_MODE_DROP\020\003\022-\n)DEDUPLICATE_MERG" +
+      "E_PROJECTION_MODE_REBUILD\020\004\"\352\001\n!Lightwei" +
+      "ghtMutationProjectionMode\0224\n0LIGHTWEIGHT" +
+      "_MUTATION_PROJECTION_MODE_UNSPECIFIED\020\000\022" +
+      ".\n*LIGHTWEIGHT_MUTATION_PROJECTION_MODE_" +
+      "THROW\020\001\022-\n)LIGHTWEIGHT_MUTATION_PROJECTI" +
+      "ON_MODE_DROP\020\002\0220\n,LIGHTWEIGHT_MUTATION_P" +
+      "ROJECTION_MODE_REBUILD\020\003\032\240\r\n\005Kafka\022i\n\021se" +
+      "curity_protocol\030\001 \001(\0162N.yandex.cloud.mdb" +
+      ".clickhouse.v1.config.ClickhouseConfig.K" +
+      "afka.SecurityProtocol\022c\n\016sasl_mechanism\030" +
+      "\002 \001(\0162K.yandex.cloud.mdb.clickhouse.v1.c" +
+      "onfig.ClickhouseConfig.Kafka.SaslMechani" +
+      "sm\022\025\n\rsasl_username\030\003 \001(\t\022\025\n\rsasl_passwo" +
+      "rd\030\004 \001(\t\022G\n#enable_ssl_certificate_verif" +
+      "ication\030\005 \001(\0132\032.google.protobuf.BoolValu" +
+      "e\022B\n\024max_poll_interval_ms\030\006 \001(\0132\033.google" +
+      ".protobuf.Int64ValueB\007\372\3071\003>=0\022@\n\022session" +
+      "_timeout_ms\030\007 \001(\0132\033.google.protobuf.Int6" +
+      "4ValueB\007\372\3071\003>=0\022R\n\005debug\030\010 \001(\0162C.yandex." +
       "cloud.mdb.clickhouse.v1.config.Clickhous" +
-      "eConfig.ExternalDictionary.Layout.TypeB\004" +
-      "\350\3071\001\022\025\n\rsize_in_cells\030\002 \001(\003\022\026\n\016max_array" +
-      "_size\030\003 \001(\003\"~\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020" +
-      "\000\022\010\n\004FLAT\020\001\022\n\n\006HASHED\020\002\022\026\n\022COMPLEX_KEY_H" +
-      "ASHED\020\003\022\020\n\014RANGE_HASHED\020\004\022\t\n\005CACHE\020\005\022\025\n\021" +
-      "COMPLEX_KEY_CACHE\020\006\032!\n\005Range\022\013\n\003min\030\001 \001(" +
-      "\003\022\013\n\003max\030\002 \001(\003B\020\n\010lifetime\022\004\300\3011\001B\016\n\006sour" +
-      "ce\022\004\300\3011\001\032\341\003\n\016GraphiteRollup\022\022\n\004name\030\001 \001(" +
-      "\tB\004\350\3071\001\022h\n\010patterns\030\002 \003(\0132N.yandex.cloud" +
-      ".mdb.clickhouse.v1.config.ClickhouseConf" +
-      "ig.GraphiteRollup.PatternB\006\202\3101\002>0\022\030\n\020pat" +
-      "h_column_name\030\003 \001(\t\022\030\n\020time_column_name\030" +
-      "\004 \001(\t\022\031\n\021value_column_name\030\005 \001(\t\022\033\n\023vers" +
-      "ion_column_name\030\006 \001(\t\032\344\001\n\007Pattern\022\016\n\006reg" +
-      "exp\030\001 \001(\t\022\026\n\010function\030\002 \001(\tB\004\350\3071\001\022s\n\tret" +
-      "ention\030\003 \003(\0132X.yandex.cloud.mdb.clickhou" +
-      "se.v1.config.ClickhouseConfig.GraphiteRo" +
-      "llup.Pattern.RetentionB\006\202\3101\002>0\032<\n\tRetent" +
-      "ion\022\024\n\003age\030\001 \001(\003B\007\372\3071\003>=0\022\031\n\tprecision\030\002" +
-      " \001(\003B\006\372\3071\002>0\032G\n\020QueryMaskingRule\022\014\n\004name" +
-      "\030\001 \001(\t\022\024\n\006regexp\030\002 \001(\tB\004\350\3071\001\022\017\n\007replace\030" +
-      "\003 \001(\t\032\225\002\n\nQueryCache\022?\n\021max_size_in_byte" +
-      "s\030\001 \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
-      "1\003>=0\0229\n\013max_entries\030\002 \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\007\372\3071\003>=0\022E\n\027max_entry_si" +
-      "ze_in_bytes\030\003 \001(\0132\033.google.protobuf.Int6" +
-      "4ValueB\007\372\3071\003>=0\022D\n\026max_entry_size_in_row" +
-      "s\030\004 \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
-      "1\003>=0\032K\n\nJdbcBridge\022\022\n\004host\030\001 \001(\tB\004\350\3071\001\022" +
-      ")\n\004port\030\002 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\"d\n\010LogLevel\022\031\n\025LOG_LEVEL_UNSPECIFIED\020" +
-      "\000\022\t\n\005TRACE\020\001\022\t\n\005DEBUG\020\002\022\017\n\013INFORMATION\020\003" +
-      "\022\013\n\007WARNING\020\004\022\t\n\005ERROR\020\005\"\215\002\n\023ClickhouseC" +
-      "onfigSet\022W\n\020effective_config\030\001 \001(\01327.yan" +
-      "dex.cloud.mdb.clickhouse.v1.config.Click" +
-      "houseConfigB\004\350\3071\001\022L\n\013user_config\030\002 \001(\01327" +
+      "eConfig.Kafka.Debug\022h\n\021auto_offset_reset" +
+      "\030\t \001(\0162M.yandex.cloud.mdb.clickhouse.v1." +
+      "config.ClickhouseConfig.Kafka.AutoOffset" +
+      "Reset\"\267\001\n\020SecurityProtocol\022!\n\035SECURITY_P" +
+      "ROTOCOL_UNSPECIFIED\020\000\022\037\n\033SECURITY_PROTOC" +
+      "OL_PLAINTEXT\020\001\022\031\n\025SECURITY_PROTOCOL_SSL\020" +
+      "\002\022$\n SECURITY_PROTOCOL_SASL_PLAINTEXT\020\003\022" +
+      "\036\n\032SECURITY_PROTOCOL_SASL_SSL\020\004\"\250\001\n\rSasl" +
+      "Mechanism\022\036\n\032SASL_MECHANISM_UNSPECIFIED\020" +
+      "\000\022\031\n\025SASL_MECHANISM_GSSAPI\020\001\022\030\n\024SASL_MEC" +
+      "HANISM_PLAIN\020\002\022 \n\034SASL_MECHANISM_SCRAM_S" +
+      "HA_256\020\003\022 \n\034SASL_MECHANISM_SCRAM_SHA_512" +
+      "\020\004\"\231\003\n\005Debug\022\025\n\021DEBUG_UNSPECIFIED\020\000\022\021\n\rD" +
+      "EBUG_GENERIC\020\001\022\020\n\014DEBUG_BROKER\020\002\022\017\n\013DEBU" +
+      "G_TOPIC\020\003\022\022\n\016DEBUG_METADATA\020\004\022\021\n\rDEBUG_F" +
+      "EATURE\020\005\022\017\n\013DEBUG_QUEUE\020\006\022\r\n\tDEBUG_MSG\020\007" +
+      "\022\022\n\016DEBUG_PROTOCOL\020\010\022\016\n\nDEBUG_CGRP\020\t\022\022\n\016" +
+      "DEBUG_SECURITY\020\n\022\017\n\013DEBUG_FETCH\020\013\022\025\n\021DEB" +
+      "UG_INTERCEPTOR\020\014\022\020\n\014DEBUG_PLUGIN\020\r\022\022\n\016DE" +
+      "BUG_CONSUMER\020\016\022\017\n\013DEBUG_ADMIN\020\017\022\r\n\tDEBUG" +
+      "_EOS\020\020\022\016\n\nDEBUG_MOCK\020\021\022\022\n\016DEBUG_ASSIGNOR" +
+      "\020\022\022\016\n\nDEBUG_CONF\020\023\022\023\n\017DEBUG_TELEMETRY\020\024\022" +
+      "\r\n\tDEBUG_ALL\020\025\"\212\002\n\017AutoOffsetReset\022!\n\035AU" +
+      "TO_OFFSET_RESET_UNSPECIFIED\020\000\022\036\n\032AUTO_OF" +
+      "FSET_RESET_SMALLEST\020\001\022\036\n\032AUTO_OFFSET_RES" +
+      "ET_EARLIEST\020\002\022\037\n\033AUTO_OFFSET_RESET_BEGIN" +
+      "NING\020\003\022\035\n\031AUTO_OFFSET_RESET_LARGEST\020\004\022\034\n" +
+      "\030AUTO_OFFSET_RESET_LATEST\020\005\022\031\n\025AUTO_OFFS" +
+      "ET_RESET_END\020\006\022\033\n\027AUTO_OFFSET_RESET_ERRO" +
+      "R\020\007\032w\n\nKafkaTopic\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022U\n" +
+      "\010settings\030\002 \001(\0132=.yandex.cloud.mdb.click" +
+      "house.v1.config.ClickhouseConfig.KafkaB\004" +
+      "\350\3071\001\032=\n\010Rabbitmq\022\020\n\010username\030\001 \001(\t\022\020\n\010pa" +
+      "ssword\030\002 \001(\t\022\r\n\005vhost\030\003 \001(\t\032\220\002\n\013Compress" +
+      "ion\022Z\n\006method\030\001 \001(\0162J.yandex.cloud.mdb.c" +
+      "lickhouse.v1.config.ClickhouseConfig.Com" +
+      "pression.Method\022\036\n\rmin_part_size\030\002 \001(\003B\007" +
+      "\372\3071\003>=1\022\033\n\023min_part_size_ratio\030\003 \001(\001\0223\n\005" +
+      "level\030\004 \001(\0132\033.google.protobuf.Int64Value" +
+      "B\007\372\3071\003>=0\"3\n\006Method\022\026\n\022METHOD_UNSPECIFIE" +
+      "D\020\000\022\007\n\003LZ4\020\001\022\010\n\004ZSTD\020\002\032\263 \n\022ExternalDicti" +
+      "onary\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022m\n\tstructure\030\002" +
+      " \001(\0132T.yandex.cloud.mdb.clickhouse.v1.co" +
+      "nfig.ClickhouseConfig.ExternalDictionary" +
+      ".StructureB\004\350\3071\001\022g\n\006layout\030\003 \001(\0132Q.yande" +
+      "x.cloud.mdb.clickhouse.v1.config.Clickho" +
+      "useConfig.ExternalDictionary.LayoutB\004\350\3071" +
+      "\001\022\030\n\016fixed_lifetime\030\004 \001(\003H\000\022j\n\016lifetime_" +
+      "range\030\005 \001(\0132P.yandex.cloud.mdb.clickhous" +
+      "e.v1.config.ClickhouseConfig.ExternalDic" +
+      "tionary.RangeH\000\022l\n\013http_source\030\006 \001(\0132U.y" +
+      "andex.cloud.mdb.clickhouse.v1.config.Cli" +
+      "ckhouseConfig.ExternalDictionary.HttpSou" +
+      "rceH\001\022n\n\014mysql_source\030\007 \001(\0132V.yandex.clo" +
+      "ud.mdb.clickhouse.v1.config.ClickhouseCo" +
+      "nfig.ExternalDictionary.MysqlSourceH\001\022x\n" +
+      "\021clickhouse_source\030\010 \001(\0132[.yandex.cloud." +
+      "mdb.clickhouse.v1.config.ClickhouseConfi" +
+      "g.ExternalDictionary.ClickhouseSourceH\001\022" +
+      "r\n\016mongodb_source\030\t \001(\0132X.yandex.cloud.m" +
+      "db.clickhouse.v1.config.ClickhouseConfig" +
+      ".ExternalDictionary.MongodbSourceH\001\022x\n\021p" +
+      "ostgresql_source\030\n \001(\0132[.yandex.cloud.md" +
+      "b.clickhouse.v1.config.ClickhouseConfig." +
+      "ExternalDictionary.PostgresqlSourceH\001\032\327\001" +
+      "\n\nHttpSource\022\021\n\003url\030\001 \001(\tB\004\350\3071\001\022\024\n\006forma" +
+      "t\030\002 \001(\tB\004\350\3071\001\022m\n\007headers\030\003 \003(\0132\\.yandex." +
+      "cloud.mdb.clickhouse.v1.config.Clickhous" +
+      "eConfig.ExternalDictionary.HttpSource.He" +
+      "ader\0321\n\006Header\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\023\n\005va" +
+      "lue\030\002 \001(\tB\004\350\3071\001\032\377\003\n\013MysqlSource\022\020\n\002db\030\001 " +
+      "\001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\031\n\004port\030\003" +
+      " \001(\003B\013\372\3071\0070-65535\022\014\n\004user\030\004 \001(\t\022\020\n\010passw" +
+      "ord\030\005 \001(\t\022x\n\010replicas\030\006 \003(\0132^.yandex.clo" +
+      "ud.mdb.clickhouse.v1.config.ClickhouseCo" +
+      "nfig.ExternalDictionary.MysqlSource.Repl" +
+      "icaB\006\202\3101\002>0\022\r\n\005where\030\007 \001(\t\022\030\n\020invalidate" +
+      "_query\030\010 \001(\t\0224\n\020close_connection\030\t \001(\0132\032" +
+      ".google.protobuf.BoolValue\0224\n\020share_conn" +
+      "ection\030\n \001(\0132\032.google.protobuf.BoolValue" +
+      "\032\177\n\007Replica\022\033\n\004host\030\001 \001(\tB\r\350\3071\001\212\3101\005<=253" +
+      "\022\034\n\010priority\030\002 \001(\003B\n\350\3071\001\372\3071\002>0\022\031\n\004port\030\003" +
+      " \001(\003B\013\372\3071\0070-65535\022\014\n\004user\030\004 \001(\t\022\020\n\010passw" +
+      "ord\030\005 \001(\t\032\316\001\n\020ClickhouseSource\022\020\n\002db\030\001 \001" +
+      "(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\027\n\004host\030\003 " +
+      "\001(\tB\t\212\3101\005<=253\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-6553" +
+      "5\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(\t\022" +
+      "\r\n\005where\030\007 \001(\t\022*\n\006secure\030\010 \001(\0132\032.google." +
+      "protobuf.BoolValue\032\246\001\n\rMongodbSource\022\020\n\002" +
+      "db\030\001 \001(\tB\004\350\3071\001\022\030\n\ncollection\030\002 \001(\tB\004\350\3071\001" +
+      "\022\027\n\004host\030\003 \001(\tB\t\212\3101\005<=253\022\031\n\004port\030\004 \001(\003B" +
+      "\013\372\3071\0070-65535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010pass" +
+      "word\030\006 \001(\t\022\017\n\007options\030\007 \001(\t\032\213\003\n\020Postgres" +
+      "qlSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(" +
+      "\tB\004\350\3071\001\022\025\n\005hosts\030\003 \003(\tB\006\202\3101\002>0\022\031\n\004port\030\004" +
+      " \001(\003B\013\372\3071\0070-65535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n" +
+      "\010password\030\006 \001(\t\022\030\n\020invalidate_query\030\007 \001(" +
+      "\t\022u\n\010ssl_mode\030\010 \001(\0162c.yandex.cloud.mdb.c" +
+      "lickhouse.v1.config.ClickhouseConfig.Ext" +
+      "ernalDictionary.PostgresqlSource.SslMode" +
+      "\"g\n\007SslMode\022\030\n\024SSL_MODE_UNSPECIFIED\020\000\022\013\n" +
+      "\007DISABLE\020\001\022\t\n\005ALLOW\020\002\022\n\n\006PREFER\020\003\022\r\n\tVER" +
+      "IFY_CA\020\004\022\017\n\013VERIFY_FULL\020\005\032\336\006\n\tStructure\022" +
+      "c\n\002id\030\001 \001(\0132W.yandex.cloud.mdb.clickhous" +
+      "e.v1.config.ClickhouseConfig.ExternalDic" +
+      "tionary.Structure.Id\022e\n\003key\030\003 \001(\0132X.yand" +
+      "ex.cloud.mdb.clickhouse.v1.config.Clickh" +
+      "ouseConfig.ExternalDictionary.Structure." +
+      "Key\022q\n\trange_min\030\004 \001(\0132^.yandex.cloud.md" +
+      "b.clickhouse.v1.config.ClickhouseConfig." +
+      "ExternalDictionary.Structure.Attribute\022q" +
+      "\n\trange_max\030\005 \001(\0132^.yandex.cloud.mdb.cli" +
+      "ckhouse.v1.config.ClickhouseConfig.Exter" +
+      "nalDictionary.Structure.Attribute\022z\n\natt" +
+      "ributes\030\002 \003(\0132^.yandex.cloud.mdb.clickho" +
+      "use.v1.config.ClickhouseConfig.ExternalD" +
+      "ictionary.Structure.AttributeB\006\202\3101\002>0\032\204\001" +
+      "\n\tAttribute\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\022\n\004type\030" +
+      "\002 \001(\tB\004\350\3071\001\022\022\n\nnull_value\030\003 \001(\t\022\022\n\nexpre" +
+      "ssion\030\004 \001(\t\022\024\n\014hierarchical\030\005 \001(\010\022\021\n\tinj" +
+      "ective\030\006 \001(\010\032\030\n\002Id\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\032\201" +
+      "\001\n\003Key\022z\n\nattributes\030\001 \003(\0132^.yandex.clou" +
+      "d.mdb.clickhouse.v1.config.ClickhouseCon" +
+      "fig.ExternalDictionary.Structure.Attribu" +
+      "teB\006\202\3101\002>0\032\332\005\n\006Layout\022j\n\004type\030\001 \001(\0162V.ya" +
+      "ndex.cloud.mdb.clickhouse.v1.config.Clic" +
+      "khouseConfig.ExternalDictionary.Layout.T" +
+      "ypeB\004\350\3071\001\022\025\n\rsize_in_cells\030\002 \001(\003\022;\n\027allo" +
+      "w_read_expired_keys\030\005 \001(\0132\032.google.proto" +
+      "buf.BoolValue\022\035\n\025max_update_queue_size\030\006" +
+      " \001(\003\022.\n&update_queue_push_timeout_millis" +
+      "econds\030\007 \001(\003\022\'\n\037query_wait_timeout_milli" +
+      "seconds\030\010 \001(\003\022\037\n\027max_threads_for_updates" +
+      "\030\t \001(\003\022\032\n\022initial_array_size\030\n \001(\003\022\026\n\016ma" +
+      "x_array_size\030\003 \001(\003\022A\n\035access_to_key_from" +
+      "_attributes\030\004 \001(\0132\032.google.protobuf.Bool" +
+      "Value\"\377\001\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\010\n\004" +
+      "FLAT\020\001\022\n\n\006HASHED\020\002\022\026\n\022COMPLEX_KEY_HASHED" +
+      "\020\003\022\020\n\014RANGE_HASHED\020\004\022\t\n\005CACHE\020\005\022\025\n\021COMPL" +
+      "EX_KEY_CACHE\020\006\022\021\n\rSPARSE_HASHED\020\007\022\035\n\031COM" +
+      "PLEX_KEY_SPARSE_HASHED\020\010\022\034\n\030COMPLEX_KEY_" +
+      "RANGE_HASHED\020\t\022\n\n\006DIRECT\020\n\022\026\n\022COMPLEX_KE" +
+      "Y_DIRECT\020\013\022\013\n\007IP_TRIE\020\014\032!\n\005Range\022\013\n\003min\030" +
+      "\001 \001(\003\022\013\n\003max\030\002 \001(\003B\020\n\010lifetime\022\004\300\3011\001B\016\n\006" +
+      "source\022\004\300\3011\001\032\341\003\n\016GraphiteRollup\022\022\n\004name\030" +
+      "\001 \001(\tB\004\350\3071\001\022h\n\010patterns\030\002 \003(\0132N.yandex.c" +
+      "loud.mdb.clickhouse.v1.config.Clickhouse" +
+      "Config.GraphiteRollup.PatternB\006\202\3101\002>0\022\030\n" +
+      "\020path_column_name\030\003 \001(\t\022\030\n\020time_column_n" +
+      "ame\030\004 \001(\t\022\031\n\021value_column_name\030\005 \001(\t\022\033\n\023" +
+      "version_column_name\030\006 \001(\t\032\344\001\n\007Pattern\022\016\n" +
+      "\006regexp\030\001 \001(\t\022\026\n\010function\030\002 \001(\tB\004\350\3071\001\022s\n" +
+      "\tretention\030\003 \003(\0132X.yandex.cloud.mdb.clic" +
+      "khouse.v1.config.ClickhouseConfig.Graphi" +
+      "teRollup.Pattern.RetentionB\006\202\3101\002>0\032<\n\tRe" +
+      "tention\022\024\n\003age\030\001 \001(\003B\007\372\3071\003>=0\022\031\n\tprecisi" +
+      "on\030\002 \001(\003B\006\372\3071\002>0\032G\n\020QueryMaskingRule\022\014\n\004" +
+      "name\030\001 \001(\t\022\024\n\006regexp\030\002 \001(\tB\004\350\3071\001\022\017\n\007repl" +
+      "ace\030\003 \001(\t\032\225\002\n\nQueryCache\022?\n\021max_size_in_" +
+      "bytes\030\001 \001(\0132\033.google.protobuf.Int64Value" +
+      "B\007\372\3071\003>=0\0229\n\013max_entries\030\002 \001(\0132\033.google." +
+      "protobuf.Int64ValueB\007\372\3071\003>=0\022E\n\027max_entr" +
+      "y_size_in_bytes\030\003 \001(\0132\033.google.protobuf." +
+      "Int64ValueB\007\372\3071\003>=0\022D\n\026max_entry_size_in" +
+      "_rows\030\004 \001(\0132\033.google.protobuf.Int64Value" +
+      "B\007\372\3071\003>=0\032K\n\nJdbcBridge\022\022\n\004host\030\001 \001(\tB\004\350" +
+      "\3071\001\022)\n\004port\030\002 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\"d\n\010LogLevel\022\031\n\025LOG_LEVEL_UNSPECIF" +
+      "IED\020\000\022\t\n\005TRACE\020\001\022\t\n\005DEBUG\020\002\022\017\n\013INFORMATI" +
+      "ON\020\003\022\013\n\007WARNING\020\004\022\t\n\005ERROR\020\005\"\215\002\n\023Clickho" +
+      "useConfigSet\022W\n\020effective_config\030\001 \001(\01327" +
       ".yandex.cloud.mdb.clickhouse.v1.config.C" +
-      "lickhouseConfig\022O\n\016default_config\030\003 \001(\0132" +
-      "7.yandex.cloud.mdb.clickhouse.v1.config." +
-      "ClickhouseConfigB\201\001\n)yandex.cloud.api.md" +
-      "b.clickhouse.v1.configZTgithub.com/yande" +
-      "x-cloud/go-genproto/yandex/cloud/mdb/cli" +
-      "ckhouse/v1/config;clickhouseb\006proto3"
+      "lickhouseConfigB\004\350\3071\001\022L\n\013user_config\030\002 \001" +
+      "(\01327.yandex.cloud.mdb.clickhouse.v1.conf" +
+      "ig.ClickhouseConfig\022O\n\016default_config\030\003 " +
+      "\001(\01327.yandex.cloud.mdb.clickhouse.v1.con" +
+      "fig.ClickhouseConfigB\201\001\n)yandex.cloud.ap" +
+      "i.mdb.clickhouse.v1.configZTgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/mdb",
+      "/clickhouse/v1/config;clickhouseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -62622,13 +65451,13 @@ public final class Clickhouse {
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor,
-        new java.lang.String[] { "LogLevel", "MergeTree", "Compression", "Dictionaries", "GraphiteRollup", "Kafka", "KafkaTopics", "Rabbitmq", "MaxConnections", "MaxConcurrentQueries", "KeepAliveTimeout", "UncompressedCacheSize", "MarkCacheSize", "MaxTableSizeToDrop", "MaxPartitionSizeToDrop", "BuiltinDictionariesReloadInterval", "Timezone", "GeobaseEnabled", "GeobaseUri", "QueryLogRetentionSize", "QueryLogRetentionTime", "QueryThreadLogEnabled", "QueryThreadLogRetentionSize", "QueryThreadLogRetentionTime", "PartLogRetentionSize", "PartLogRetentionTime", "MetricLogEnabled", "MetricLogRetentionSize", "MetricLogRetentionTime", "TraceLogEnabled", "TraceLogRetentionSize", "TraceLogRetentionTime", "TextLogEnabled", "TextLogRetentionSize", "TextLogRetentionTime", "TextLogLevel", "OpentelemetrySpanLogEnabled", "OpentelemetrySpanLogRetentionSize", "OpentelemetrySpanLogRetentionTime", "QueryViewsLogEnabled", "QueryViewsLogRetentionSize", "QueryViewsLogRetentionTime", "AsynchronousMetricLogEnabled", "AsynchronousMetricLogRetentionSize", "AsynchronousMetricLogRetentionTime", "SessionLogEnabled", "SessionLogRetentionSize", "SessionLogRetentionTime", "ZookeeperLogEnabled", "ZookeeperLogRetentionSize", "ZookeeperLogRetentionTime", "AsynchronousInsertLogEnabled", "AsynchronousInsertLogRetentionSize", "AsynchronousInsertLogRetentionTime", "BackgroundPoolSize", "BackgroundMergesMutationsConcurrencyRatio", "BackgroundSchedulePoolSize", "BackgroundFetchesPoolSize", "BackgroundMovePoolSize", "BackgroundDistributedSchedulePoolSize", "BackgroundBufferFlushSchedulePoolSize", "BackgroundMessageBrokerSchedulePoolSize", "BackgroundCommonPoolSize", "DefaultDatabase", "TotalMemoryProfilerStep", "TotalMemoryTrackerSampleProbability", "QueryMaskingRules", "DictionariesLazyLoad", "QueryCache", "JdbcBridge", });
+        new java.lang.String[] { "LogLevel", "MergeTree", "Compression", "Dictionaries", "GraphiteRollup", "Kafka", "KafkaTopics", "Rabbitmq", "MaxConnections", "MaxConcurrentQueries", "KeepAliveTimeout", "UncompressedCacheSize", "MarkCacheSize", "MaxTableSizeToDrop", "MaxPartitionSizeToDrop", "BuiltinDictionariesReloadInterval", "Timezone", "GeobaseEnabled", "GeobaseUri", "QueryLogRetentionSize", "QueryLogRetentionTime", "QueryThreadLogEnabled", "QueryThreadLogRetentionSize", "QueryThreadLogRetentionTime", "PartLogRetentionSize", "PartLogRetentionTime", "MetricLogEnabled", "MetricLogRetentionSize", "MetricLogRetentionTime", "TraceLogEnabled", "TraceLogRetentionSize", "TraceLogRetentionTime", "TextLogEnabled", "TextLogRetentionSize", "TextLogRetentionTime", "TextLogLevel", "OpentelemetrySpanLogEnabled", "OpentelemetrySpanLogRetentionSize", "OpentelemetrySpanLogRetentionTime", "QueryViewsLogEnabled", "QueryViewsLogRetentionSize", "QueryViewsLogRetentionTime", "AsynchronousMetricLogEnabled", "AsynchronousMetricLogRetentionSize", "AsynchronousMetricLogRetentionTime", "SessionLogEnabled", "SessionLogRetentionSize", "SessionLogRetentionTime", "ZookeeperLogEnabled", "ZookeeperLogRetentionSize", "ZookeeperLogRetentionTime", "AsynchronousInsertLogEnabled", "AsynchronousInsertLogRetentionSize", "AsynchronousInsertLogRetentionTime", "ProcessorsProfileLogEnabled", "ProcessorsProfileLogRetentionSize", "ProcessorsProfileLogRetentionTime", "BackgroundPoolSize", "BackgroundMergesMutationsConcurrencyRatio", "BackgroundSchedulePoolSize", "BackgroundFetchesPoolSize", "BackgroundMovePoolSize", "BackgroundDistributedSchedulePoolSize", "BackgroundBufferFlushSchedulePoolSize", "BackgroundMessageBrokerSchedulePoolSize", "BackgroundCommonPoolSize", "DefaultDatabase", "TotalMemoryProfilerStep", "TotalMemoryTrackerSampleProbability", "QueryMaskingRules", "DictionariesLazyLoad", "QueryCache", "JdbcBridge", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_MergeTree_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_MergeTree_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_MergeTree_descriptor,
-        new java.lang.String[] { "ReplicatedDeduplicationWindow", "ReplicatedDeduplicationWindowSeconds", "PartsToDelayInsert", "PartsToThrowInsert", "InactivePartsToDelayInsert", "InactivePartsToThrowInsert", "MaxReplicatedMergesInQueue", "NumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge", "MaxBytesToMergeAtMinSpaceInPool", "MaxBytesToMergeAtMaxSpaceInPool", "MinBytesForWidePart", "MinRowsForWidePart", "TtlOnlyDropParts", "AllowRemoteFsZeroCopyReplication", "MergeWithTtlTimeout", "MergeWithRecompressionTtlTimeout", "MaxPartsInTotal", "MaxNumberOfMergesWithTtlInPool", "CleanupDelayPeriod", "NumberOfFreeEntriesInPoolToExecuteMutation", "MaxAvgPartSizeForTooManyParts", "MinAgeToForceMergeSeconds", "MinAgeToForceMergeOnPartitionOnly", "MergeSelectingSleepMs", "MergeMaxBlockSize", "CheckSampleColumnIsCorrect", "MaxMergeSelectingSleepMs", "MaxCleanupDelayPeriod", });
+        new java.lang.String[] { "ReplicatedDeduplicationWindow", "ReplicatedDeduplicationWindowSeconds", "PartsToDelayInsert", "PartsToThrowInsert", "InactivePartsToDelayInsert", "InactivePartsToThrowInsert", "MaxReplicatedMergesInQueue", "NumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge", "MaxBytesToMergeAtMinSpaceInPool", "MaxBytesToMergeAtMaxSpaceInPool", "MinBytesForWidePart", "MinRowsForWidePart", "TtlOnlyDropParts", "AllowRemoteFsZeroCopyReplication", "MergeWithTtlTimeout", "MergeWithRecompressionTtlTimeout", "MaxPartsInTotal", "MaxNumberOfMergesWithTtlInPool", "CleanupDelayPeriod", "NumberOfFreeEntriesInPoolToExecuteMutation", "MaxAvgPartSizeForTooManyParts", "MinAgeToForceMergeSeconds", "MinAgeToForceMergeOnPartitionOnly", "MergeSelectingSleepMs", "MergeMaxBlockSize", "CheckSampleColumnIsCorrect", "MaxMergeSelectingSleepMs", "MaxCleanupDelayPeriod", "DeduplicateMergeProjectionMode", "LightweightMutationProjectionMode", "MaterializeTtlRecalculateOnly", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Kafka_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Kafka_fieldAccessorTable = new
@@ -62730,7 +65559,7 @@ public final class Clickhouse {
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_ExternalDictionary_Layout_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_ExternalDictionary_Layout_descriptor,
-        new java.lang.String[] { "Type", "SizeInCells", "MaxArraySize", });
+        new java.lang.String[] { "Type", "SizeInCells", "AllowReadExpiredKeys", "MaxUpdateQueueSize", "UpdateQueuePushTimeoutMilliseconds", "QueryWaitTimeoutMilliseconds", "MaxThreadsForUpdates", "InitialArraySize", "MaxArraySize", "AccessToKeyFromAttributes", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_ExternalDictionary_Range_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_ExternalDictionary_descriptor.getNestedTypes().get(7);
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_ExternalDictionary_Range_fieldAccessorTable = new

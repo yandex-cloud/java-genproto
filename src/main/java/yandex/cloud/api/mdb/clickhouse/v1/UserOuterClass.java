@@ -9061,6 +9061,66 @@ public final class UserOuterClass {
     com.google.protobuf.Int64ValueOrBuilder getMaxHttpGetRedirectsOrBuilder();
 
     /**
+     * <pre>
+     * Maximum length of field name in HTTP header.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_name_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value http_max_field_name_size = 150;</code>
+     * @return Whether the httpMaxFieldNameSize field is set.
+     */
+    boolean hasHttpMaxFieldNameSize();
+    /**
+     * <pre>
+     * Maximum length of field name in HTTP header.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_name_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value http_max_field_name_size = 150;</code>
+     * @return The httpMaxFieldNameSize.
+     */
+    com.google.protobuf.Int64Value getHttpMaxFieldNameSize();
+    /**
+     * <pre>
+     * Maximum length of field name in HTTP header.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_name_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value http_max_field_name_size = 150;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getHttpMaxFieldNameSizeOrBuilder();
+
+    /**
+     * <pre>
+     * Maximum length of field value in HTTP header.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_value_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value http_max_field_value_size = 151;</code>
+     * @return Whether the httpMaxFieldValueSize field is set.
+     */
+    boolean hasHttpMaxFieldValueSize();
+    /**
+     * <pre>
+     * Maximum length of field value in HTTP header.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_value_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value http_max_field_value_size = 151;</code>
+     * @return The httpMaxFieldValueSize.
+     */
+    com.google.protobuf.Int64Value getHttpMaxFieldValueSize();
+    /**
+     * <pre>
+     * Maximum length of field value in HTTP header.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_value_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value http_max_field_value_size = 151;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getHttpMaxFieldValueSizeOrBuilder();
+
+    /**
      * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
      * @return Whether the joinedSubqueryRequiresAlias field is set.
      */
@@ -9417,33 +9477,33 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
-     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+     * If it is set to true, use adaptive busy timeout for asynchronous inserts.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#async_insert_use_adaptive_busy_timeout).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
-     * @return Whether the asyncInsertStaleTimeout field is set.
+     * <code>.google.protobuf.BoolValue async_insert_use_adaptive_busy_timeout = 152;</code>
+     * @return Whether the asyncInsertUseAdaptiveBusyTimeout field is set.
      */
-    boolean hasAsyncInsertStaleTimeout();
+    boolean hasAsyncInsertUseAdaptiveBusyTimeout();
     /**
      * <pre>
-     * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
-     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+     * If it is set to true, use adaptive busy timeout for asynchronous inserts.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#async_insert_use_adaptive_busy_timeout).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
-     * @return The asyncInsertStaleTimeout.
+     * <code>.google.protobuf.BoolValue async_insert_use_adaptive_busy_timeout = 152;</code>
+     * @return The asyncInsertUseAdaptiveBusyTimeout.
      */
-    com.google.protobuf.Int64Value getAsyncInsertStaleTimeout();
+    com.google.protobuf.BoolValue getAsyncInsertUseAdaptiveBusyTimeout();
     /**
      * <pre>
-     * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
-     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+     * If it is set to true, use adaptive busy timeout for asynchronous inserts.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#async_insert_use_adaptive_busy_timeout).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
+     * <code>.google.protobuf.BoolValue async_insert_use_adaptive_busy_timeout = 152;</code>
      */
-    com.google.protobuf.Int64ValueOrBuilder getAsyncInsertStaleTimeoutOrBuilder();
+    com.google.protobuf.BoolValueOrBuilder getAsyncInsertUseAdaptiveBusyTimeoutOrBuilder();
 
     /**
      * <pre>
@@ -9597,6 +9657,58 @@ public final class UserOuterClass {
      * <code>.google.protobuf.BoolValue input_format_import_nested_json = 128;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getInputFormatImportNestedJsonOrBuilder();
+
+    /**
+     * <pre>
+     * Avro schema registry URL.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/formats#format_avro_schema_registry_url).
+     * </pre>
+     *
+     * <code>string format_avro_schema_registry_url = 148;</code>
+     * @return The formatAvroSchemaRegistryUrl.
+     */
+    java.lang.String getFormatAvroSchemaRegistryUrl();
+    /**
+     * <pre>
+     * Avro schema registry URL.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/formats#format_avro_schema_registry_url).
+     * </pre>
+     *
+     * <code>string format_avro_schema_registry_url = 148;</code>
+     * @return The bytes for formatAvroSchemaRegistryUrl.
+     */
+    com.google.protobuf.ByteString
+        getFormatAvroSchemaRegistryUrlBytes();
+
+    /**
+     * <pre>
+     * Allows data types without explicit modifiers NULL or NOT NULL in column definition will be Nullable.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#data_type_default_nullable).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue data_type_default_nullable = 149;</code>
+     * @return Whether the dataTypeDefaultNullable field is set.
+     */
+    boolean hasDataTypeDefaultNullable();
+    /**
+     * <pre>
+     * Allows data types without explicit modifiers NULL or NOT NULL in column definition will be Nullable.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#data_type_default_nullable).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue data_type_default_nullable = 149;</code>
+     * @return The dataTypeDefaultNullable.
+     */
+    com.google.protobuf.BoolValue getDataTypeDefaultNullable();
+    /**
+     * <pre>
+     * Allows data types without explicit modifiers NULL or NOT NULL in column definition will be Nullable.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#data_type_default_nullable).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue data_type_default_nullable = 149;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getDataTypeDefaultNullableOrBuilder();
 
     /**
      * <pre>
@@ -9927,7 +10039,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
-     * Default: true
+     * Default: false
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
      * </pre>
      *
@@ -9938,7 +10050,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
-     * Default: true
+     * Default: false
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
      * </pre>
      *
@@ -9949,13 +10061,419 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
-     * Default: true
+     * Default: false
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
      * </pre>
      *
      * <code>.google.protobuf.BoolValue log_query_threads = 139;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getLogQueryThreadsOrBuilder();
+
+    /**
+     * <pre>
+     * Enables or disables query views logging to the the system.query_view_log table.
+     * Default: true
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_views)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_query_views = 146;</code>
+     * @return Whether the logQueryViews field is set.
+     */
+    boolean hasLogQueryViews();
+    /**
+     * <pre>
+     * Enables or disables query views logging to the the system.query_view_log table.
+     * Default: true
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_views)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_query_views = 146;</code>
+     * @return The logQueryViews.
+     */
+    com.google.protobuf.BoolValue getLogQueryViews();
+    /**
+     * <pre>
+     * Enables or disables query views logging to the the system.query_view_log table.
+     * Default: true
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_views)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_query_views = 146;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getLogQueryViewsOrBuilder();
+
+    /**
+     * <pre>
+     * Log queries with the specified probability.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_queries_probability).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue log_queries_probability = 153;</code>
+     * @return Whether the logQueriesProbability field is set.
+     */
+    boolean hasLogQueriesProbability();
+    /**
+     * <pre>
+     * Log queries with the specified probability.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_queries_probability).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue log_queries_probability = 153;</code>
+     * @return The logQueriesProbability.
+     */
+    com.google.protobuf.DoubleValue getLogQueriesProbability();
+    /**
+     * <pre>
+     * Log queries with the specified probability.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_queries_probability).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue log_queries_probability = 153;</code>
+     */
+    com.google.protobuf.DoubleValueOrBuilder getLogQueriesProbabilityOrBuilder();
+
+    /**
+     * <pre>
+     * Enabled or disable logging of processors level profiling data to the the system.log_processors_profiles table.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_processors_profiles).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_processors_profiles = 154;</code>
+     * @return Whether the logProcessorsProfiles field is set.
+     */
+    boolean hasLogProcessorsProfiles();
+    /**
+     * <pre>
+     * Enabled or disable logging of processors level profiling data to the the system.log_processors_profiles table.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_processors_profiles).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_processors_profiles = 154;</code>
+     * @return The logProcessorsProfiles.
+     */
+    com.google.protobuf.BoolValue getLogProcessorsProfiles();
+    /**
+     * <pre>
+     * Enabled or disable logging of processors level profiling data to the the system.log_processors_profiles table.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_processors_profiles).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_processors_profiles = 154;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getLogProcessorsProfilesOrBuilder();
+
+    /**
+     * <pre>
+     * If turned on, SELECT queries may utilize the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_query_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_query_cache = 155;</code>
+     * @return Whether the useQueryCache field is set.
+     */
+    boolean hasUseQueryCache();
+    /**
+     * <pre>
+     * If turned on, SELECT queries may utilize the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_query_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_query_cache = 155;</code>
+     * @return The useQueryCache.
+     */
+    com.google.protobuf.BoolValue getUseQueryCache();
+    /**
+     * <pre>
+     * If turned on, SELECT queries may utilize the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_query_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_query_cache = 155;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getUseQueryCacheOrBuilder();
+
+    /**
+     * <pre>
+     * If turned on, results of SELECT queries are retrieved from the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_reads_from_query_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_reads_from_query_cache = 156;</code>
+     * @return Whether the enableReadsFromQueryCache field is set.
+     */
+    boolean hasEnableReadsFromQueryCache();
+    /**
+     * <pre>
+     * If turned on, results of SELECT queries are retrieved from the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_reads_from_query_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_reads_from_query_cache = 156;</code>
+     * @return The enableReadsFromQueryCache.
+     */
+    com.google.protobuf.BoolValue getEnableReadsFromQueryCache();
+    /**
+     * <pre>
+     * If turned on, results of SELECT queries are retrieved from the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_reads_from_query_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_reads_from_query_cache = 156;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getEnableReadsFromQueryCacheOrBuilder();
+
+    /**
+     * <pre>
+     * If turned on, results of SELECT queries are stored in the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_writes_to_query_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_writes_to_query_cache = 157;</code>
+     * @return Whether the enableWritesToQueryCache field is set.
+     */
+    boolean hasEnableWritesToQueryCache();
+    /**
+     * <pre>
+     * If turned on, results of SELECT queries are stored in the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_writes_to_query_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_writes_to_query_cache = 157;</code>
+     * @return The enableWritesToQueryCache.
+     */
+    com.google.protobuf.BoolValue getEnableWritesToQueryCache();
+    /**
+     * <pre>
+     * If turned on, results of SELECT queries are stored in the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_writes_to_query_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_writes_to_query_cache = 157;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getEnableWritesToQueryCacheOrBuilder();
+
+    /**
+     * <pre>
+     * Minimum number of times a SELECT query must run before its result is stored in the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_runs).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_min_query_runs = 158;</code>
+     * @return Whether the queryCacheMinQueryRuns field is set.
+     */
+    boolean hasQueryCacheMinQueryRuns();
+    /**
+     * <pre>
+     * Minimum number of times a SELECT query must run before its result is stored in the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_runs).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_min_query_runs = 158;</code>
+     * @return The queryCacheMinQueryRuns.
+     */
+    com.google.protobuf.Int64Value getQueryCacheMinQueryRuns();
+    /**
+     * <pre>
+     * Minimum number of times a SELECT query must run before its result is stored in the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_runs).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_min_query_runs = 158;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getQueryCacheMinQueryRunsOrBuilder();
+
+    /**
+     * <pre>
+     * Minimum duration in milliseconds a query needs to run for its result to be stored in the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_duration).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_min_query_duration = 159;</code>
+     * @return Whether the queryCacheMinQueryDuration field is set.
+     */
+    boolean hasQueryCacheMinQueryDuration();
+    /**
+     * <pre>
+     * Minimum duration in milliseconds a query needs to run for its result to be stored in the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_duration).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_min_query_duration = 159;</code>
+     * @return The queryCacheMinQueryDuration.
+     */
+    com.google.protobuf.Int64Value getQueryCacheMinQueryDuration();
+    /**
+     * <pre>
+     * Minimum duration in milliseconds a query needs to run for its result to be stored in the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_duration).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_min_query_duration = 159;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getQueryCacheMinQueryDurationOrBuilder();
+
+    /**
+     * <pre>
+     * After this time in seconds entries in the query cache become stale.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_ttl).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_ttl = 160;</code>
+     * @return Whether the queryCacheTtl field is set.
+     */
+    boolean hasQueryCacheTtl();
+    /**
+     * <pre>
+     * After this time in seconds entries in the query cache become stale.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_ttl).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_ttl = 160;</code>
+     * @return The queryCacheTtl.
+     */
+    com.google.protobuf.Int64Value getQueryCacheTtl();
+    /**
+     * <pre>
+     * After this time in seconds entries in the query cache become stale.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_ttl).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_ttl = 160;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getQueryCacheTtlOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum number of query results the current user may store in the query cache. 0 means unlimited.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_entries).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_max_entries = 161;</code>
+     * @return Whether the queryCacheMaxEntries field is set.
+     */
+    boolean hasQueryCacheMaxEntries();
+    /**
+     * <pre>
+     * The maximum number of query results the current user may store in the query cache. 0 means unlimited.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_entries).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_max_entries = 161;</code>
+     * @return The queryCacheMaxEntries.
+     */
+    com.google.protobuf.Int64Value getQueryCacheMaxEntries();
+    /**
+     * <pre>
+     * The maximum number of query results the current user may store in the query cache. 0 means unlimited.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_entries).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_max_entries = 161;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getQueryCacheMaxEntriesOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum amount of memory (in bytes) the current user may allocate in the query cache. 0 means unlimited.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_size_in_bytes).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_max_size_in_bytes = 162;</code>
+     * @return Whether the queryCacheMaxSizeInBytes field is set.
+     */
+    boolean hasQueryCacheMaxSizeInBytes();
+    /**
+     * <pre>
+     * The maximum amount of memory (in bytes) the current user may allocate in the query cache. 0 means unlimited.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_size_in_bytes).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_max_size_in_bytes = 162;</code>
+     * @return The queryCacheMaxSizeInBytes.
+     */
+    com.google.protobuf.Int64Value getQueryCacheMaxSizeInBytes();
+    /**
+     * <pre>
+     * The maximum amount of memory (in bytes) the current user may allocate in the query cache. 0 means unlimited.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_size_in_bytes).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_max_size_in_bytes = 162;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getQueryCacheMaxSizeInBytesOrBuilder();
+
+    /**
+     * <pre>
+     * A string which acts as a label for query cache entries. The same queries with different tags are considered different by the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_tag).
+     * </pre>
+     *
+     * <code>string query_cache_tag = 163;</code>
+     * @return The queryCacheTag.
+     */
+    java.lang.String getQueryCacheTag();
+    /**
+     * <pre>
+     * A string which acts as a label for query cache entries. The same queries with different tags are considered different by the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_tag).
+     * </pre>
+     *
+     * <code>string query_cache_tag = 163;</code>
+     * @return The bytes for queryCacheTag.
+     */
+    com.google.protobuf.ByteString
+        getQueryCacheTagBytes();
+
+    /**
+     * <pre>
+     * If turned on, the result of SELECT queries cached in the query cache can be read by other users. It is not recommended to enable this setting due to security reasons.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_share_between_users).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue query_cache_share_between_users = 164;</code>
+     * @return Whether the queryCacheShareBetweenUsers field is set.
+     */
+    boolean hasQueryCacheShareBetweenUsers();
+    /**
+     * <pre>
+     * If turned on, the result of SELECT queries cached in the query cache can be read by other users. It is not recommended to enable this setting due to security reasons.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_share_between_users).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue query_cache_share_between_users = 164;</code>
+     * @return The queryCacheShareBetweenUsers.
+     */
+    com.google.protobuf.BoolValue getQueryCacheShareBetweenUsers();
+    /**
+     * <pre>
+     * If turned on, the result of SELECT queries cached in the query cache can be read by other users. It is not recommended to enable this setting due to security reasons.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_share_between_users).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue query_cache_share_between_users = 164;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getQueryCacheShareBetweenUsersOrBuilder();
+
+    /**
+     * <pre>
+     * Controls how the query cache handles SELECT queries with non-deterministic functions like rand() or now().
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_nondeterministic_function_handling).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QueryCacheNondeterministicFunctionHandling query_cache_nondeterministic_function_handling = 165;</code>
+     * @return The enum numeric value on the wire for queryCacheNondeterministicFunctionHandling.
+     */
+    int getQueryCacheNondeterministicFunctionHandlingValue();
+    /**
+     * <pre>
+     * Controls how the query cache handles SELECT queries with non-deterministic functions like rand() or now().
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_nondeterministic_function_handling).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QueryCacheNondeterministicFunctionHandling query_cache_nondeterministic_function_handling = 165;</code>
+     * @return The queryCacheNondeterministicFunctionHandling.
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QueryCacheNondeterministicFunctionHandling getQueryCacheNondeterministicFunctionHandling();
 
     /**
      * <pre>
@@ -10114,7 +10632,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Enables/disables preferable using the localhost replica when processing distributed queries.
+     * Enables or disables preferable using the localhost replica when processing distributed queries.
      * Default: true
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
      * </pre>
@@ -10125,7 +10643,7 @@ public final class UserOuterClass {
     boolean hasPreferLocalhostReplica();
     /**
      * <pre>
-     * Enables/disables preferable using the localhost replica when processing distributed queries.
+     * Enables or disables preferable using the localhost replica when processing distributed queries.
      * Default: true
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
      * </pre>
@@ -10136,7 +10654,7 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getPreferLocalhostReplica();
     /**
      * <pre>
-     * Enables/disables preferable using the localhost replica when processing distributed queries.
+     * Enables or disables preferable using the localhost replica when processing distributed queries.
      * Default: true
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
      * </pre>
@@ -10144,6 +10662,69 @@ public final class UserOuterClass {
      * <code>.google.protobuf.BoolValue prefer_localhost_replica = 145;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getPreferLocalhostReplicaOrBuilder();
+
+    /**
+     * <pre>
+     * Enables or disable independent processing of partitions for SELECT queries with FINAL.
+     * Default: false
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/guides/replacing-merge-tree#exploiting-partitions-with-replacingmergetree)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue do_not_merge_across_partitions_select_final = 147;</code>
+     * @return Whether the doNotMergeAcrossPartitionsSelectFinal field is set.
+     */
+    boolean hasDoNotMergeAcrossPartitionsSelectFinal();
+    /**
+     * <pre>
+     * Enables or disable independent processing of partitions for SELECT queries with FINAL.
+     * Default: false
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/guides/replacing-merge-tree#exploiting-partitions-with-replacingmergetree)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue do_not_merge_across_partitions_select_final = 147;</code>
+     * @return The doNotMergeAcrossPartitionsSelectFinal.
+     */
+    com.google.protobuf.BoolValue getDoNotMergeAcrossPartitionsSelectFinal();
+    /**
+     * <pre>
+     * Enables or disable independent processing of partitions for SELECT queries with FINAL.
+     * Default: false
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/guides/replacing-merge-tree#exploiting-partitions-with-replacingmergetree)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue do_not_merge_across_partitions_select_final = 147;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getDoNotMergeAcrossPartitionsSelectFinalOrBuilder();
+
+    /**
+     * <pre>
+     * Ignore materialized views with dropped target table during pushing to views.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#ignore_materialized_views_with_dropped_target_table).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue ignore_materialized_views_with_dropped_target_table = 166;</code>
+     * @return Whether the ignoreMaterializedViewsWithDroppedTargetTable field is set.
+     */
+    boolean hasIgnoreMaterializedViewsWithDroppedTargetTable();
+    /**
+     * <pre>
+     * Ignore materialized views with dropped target table during pushing to views.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#ignore_materialized_views_with_dropped_target_table).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue ignore_materialized_views_with_dropped_target_table = 166;</code>
+     * @return The ignoreMaterializedViewsWithDroppedTargetTable.
+     */
+    com.google.protobuf.BoolValue getIgnoreMaterializedViewsWithDroppedTargetTable();
+    /**
+     * <pre>
+     * Ignore materialized views with dropped target table during pushing to views.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#ignore_materialized_views_with_dropped_target_table).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue ignore_materialized_views_with_dropped_target_table = 166;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getIgnoreMaterializedViewsWithDroppedTargetTableOrBuilder();
 
     /**
      * <pre>
@@ -10202,6 +10783,35 @@ public final class UserOuterClass {
      * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [deprecated = true];</code>
      */
     @java.lang.Deprecated com.google.protobuf.Int64ValueOrBuilder getMinCountToCompileOrBuilder();
+
+    /**
+     * <pre>
+     * The setting is deprecated and has no effect.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123 [deprecated = true];</code>
+     * @deprecated
+     * @return Whether the asyncInsertStaleTimeout field is set.
+     */
+    @java.lang.Deprecated boolean hasAsyncInsertStaleTimeout();
+    /**
+     * <pre>
+     * The setting is deprecated and has no effect.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123 [deprecated = true];</code>
+     * @deprecated
+     * @return The asyncInsertStaleTimeout.
+     */
+    @java.lang.Deprecated com.google.protobuf.Int64Value getAsyncInsertStaleTimeout();
+    /**
+     * <pre>
+     * The setting is deprecated and has no effect.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123 [deprecated = true];</code>
+     */
+    @java.lang.Deprecated com.google.protobuf.Int64ValueOrBuilder getAsyncInsertStaleTimeoutOrBuilder();
   }
   /**
    * <pre>
@@ -10238,8 +10848,11 @@ public final class UserOuterClass {
       quotaMode_ = 0;
       formatRegexp_ = "";
       formatRegexpEscapingRule_ = 0;
+      formatAvroSchemaRegistryUrl_ = "";
       localFilesystemReadMethod_ = 0;
       remoteFilesystemReadMethod_ = 0;
+      queryCacheTag_ = "";
+      queryCacheNondeterministicFunctionHandling_ = 0;
       loadBalancing_ = 0;
     }
 
@@ -12010,6 +12623,258 @@ public final class UserOuterClass {
 
               break;
             }
+            case 1170: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (logQueryViews_ != null) {
+                subBuilder = logQueryViews_.toBuilder();
+              }
+              logQueryViews_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logQueryViews_);
+                logQueryViews_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1178: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (doNotMergeAcrossPartitionsSelectFinal_ != null) {
+                subBuilder = doNotMergeAcrossPartitionsSelectFinal_.toBuilder();
+              }
+              doNotMergeAcrossPartitionsSelectFinal_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(doNotMergeAcrossPartitionsSelectFinal_);
+                doNotMergeAcrossPartitionsSelectFinal_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1186: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              formatAvroSchemaRegistryUrl_ = s;
+              break;
+            }
+            case 1194: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (dataTypeDefaultNullable_ != null) {
+                subBuilder = dataTypeDefaultNullable_.toBuilder();
+              }
+              dataTypeDefaultNullable_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(dataTypeDefaultNullable_);
+                dataTypeDefaultNullable_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1202: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (httpMaxFieldNameSize_ != null) {
+                subBuilder = httpMaxFieldNameSize_.toBuilder();
+              }
+              httpMaxFieldNameSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(httpMaxFieldNameSize_);
+                httpMaxFieldNameSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1210: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (httpMaxFieldValueSize_ != null) {
+                subBuilder = httpMaxFieldValueSize_.toBuilder();
+              }
+              httpMaxFieldValueSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(httpMaxFieldValueSize_);
+                httpMaxFieldValueSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1218: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (asyncInsertUseAdaptiveBusyTimeout_ != null) {
+                subBuilder = asyncInsertUseAdaptiveBusyTimeout_.toBuilder();
+              }
+              asyncInsertUseAdaptiveBusyTimeout_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(asyncInsertUseAdaptiveBusyTimeout_);
+                asyncInsertUseAdaptiveBusyTimeout_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1226: {
+              com.google.protobuf.DoubleValue.Builder subBuilder = null;
+              if (logQueriesProbability_ != null) {
+                subBuilder = logQueriesProbability_.toBuilder();
+              }
+              logQueriesProbability_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logQueriesProbability_);
+                logQueriesProbability_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1234: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (logProcessorsProfiles_ != null) {
+                subBuilder = logProcessorsProfiles_.toBuilder();
+              }
+              logProcessorsProfiles_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logProcessorsProfiles_);
+                logProcessorsProfiles_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1242: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (useQueryCache_ != null) {
+                subBuilder = useQueryCache_.toBuilder();
+              }
+              useQueryCache_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(useQueryCache_);
+                useQueryCache_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1250: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (enableReadsFromQueryCache_ != null) {
+                subBuilder = enableReadsFromQueryCache_.toBuilder();
+              }
+              enableReadsFromQueryCache_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(enableReadsFromQueryCache_);
+                enableReadsFromQueryCache_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1258: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (enableWritesToQueryCache_ != null) {
+                subBuilder = enableWritesToQueryCache_.toBuilder();
+              }
+              enableWritesToQueryCache_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(enableWritesToQueryCache_);
+                enableWritesToQueryCache_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1266: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (queryCacheMinQueryRuns_ != null) {
+                subBuilder = queryCacheMinQueryRuns_.toBuilder();
+              }
+              queryCacheMinQueryRuns_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(queryCacheMinQueryRuns_);
+                queryCacheMinQueryRuns_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1274: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (queryCacheMinQueryDuration_ != null) {
+                subBuilder = queryCacheMinQueryDuration_.toBuilder();
+              }
+              queryCacheMinQueryDuration_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(queryCacheMinQueryDuration_);
+                queryCacheMinQueryDuration_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1282: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (queryCacheTtl_ != null) {
+                subBuilder = queryCacheTtl_.toBuilder();
+              }
+              queryCacheTtl_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(queryCacheTtl_);
+                queryCacheTtl_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1290: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (queryCacheMaxEntries_ != null) {
+                subBuilder = queryCacheMaxEntries_.toBuilder();
+              }
+              queryCacheMaxEntries_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(queryCacheMaxEntries_);
+                queryCacheMaxEntries_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1298: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (queryCacheMaxSizeInBytes_ != null) {
+                subBuilder = queryCacheMaxSizeInBytes_.toBuilder();
+              }
+              queryCacheMaxSizeInBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(queryCacheMaxSizeInBytes_);
+                queryCacheMaxSizeInBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1306: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              queryCacheTag_ = s;
+              break;
+            }
+            case 1314: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (queryCacheShareBetweenUsers_ != null) {
+                subBuilder = queryCacheShareBetweenUsers_.toBuilder();
+              }
+              queryCacheShareBetweenUsers_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(queryCacheShareBetweenUsers_);
+                queryCacheShareBetweenUsers_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1320: {
+              int rawValue = input.readEnum();
+
+              queryCacheNondeterministicFunctionHandling_ = rawValue;
+              break;
+            }
+            case 1330: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (ignoreMaterializedViewsWithDroppedTargetTable_ != null) {
+                subBuilder = ignoreMaterializedViewsWithDroppedTargetTable_.toBuilder();
+              }
+              ignoreMaterializedViewsWithDroppedTargetTable_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(ignoreMaterializedViewsWithDroppedTargetTable_);
+                ignoreMaterializedViewsWithDroppedTargetTable_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -13686,6 +14551,161 @@ public final class UserOuterClass {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.clickhouse.v1.UserSettings.LoadBalancing)
+    }
+
+    /**
+     * <pre>
+     * Controls how the query cache handles SELECT queries with non-deterministic functions like rand() or now().
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_nondeterministic_function_handling).
+     * </pre>
+     *
+     * Protobuf enum {@code yandex.cloud.mdb.clickhouse.v1.UserSettings.QueryCacheNondeterministicFunctionHandling}
+     */
+    public enum QueryCacheNondeterministicFunctionHandling
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>QUERY_CACHE_NONDETERMINISTIC_FUNCTION_HANDLING_UNSPECIFIED = 0;</code>
+       */
+      QUERY_CACHE_NONDETERMINISTIC_FUNCTION_HANDLING_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Throw an exception and don't cache the query result.
+       * </pre>
+       *
+       * <code>QUERY_CACHE_NONDETERMINISTIC_FUNCTION_HANDLING_THROW = 1;</code>
+       */
+      QUERY_CACHE_NONDETERMINISTIC_FUNCTION_HANDLING_THROW(1),
+      /**
+       * <pre>
+       * Cache the query result.
+       * </pre>
+       *
+       * <code>QUERY_CACHE_NONDETERMINISTIC_FUNCTION_HANDLING_SAVE = 2;</code>
+       */
+      QUERY_CACHE_NONDETERMINISTIC_FUNCTION_HANDLING_SAVE(2),
+      /**
+       * <pre>
+       * Don't cache the query result and don't throw an exception.
+       * </pre>
+       *
+       * <code>QUERY_CACHE_NONDETERMINISTIC_FUNCTION_HANDLING_IGNORE = 3;</code>
+       */
+      QUERY_CACHE_NONDETERMINISTIC_FUNCTION_HANDLING_IGNORE(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>QUERY_CACHE_NONDETERMINISTIC_FUNCTION_HANDLING_UNSPECIFIED = 0;</code>
+       */
+      public static final int QUERY_CACHE_NONDETERMINISTIC_FUNCTION_HANDLING_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Throw an exception and don't cache the query result.
+       * </pre>
+       *
+       * <code>QUERY_CACHE_NONDETERMINISTIC_FUNCTION_HANDLING_THROW = 1;</code>
+       */
+      public static final int QUERY_CACHE_NONDETERMINISTIC_FUNCTION_HANDLING_THROW_VALUE = 1;
+      /**
+       * <pre>
+       * Cache the query result.
+       * </pre>
+       *
+       * <code>QUERY_CACHE_NONDETERMINISTIC_FUNCTION_HANDLING_SAVE = 2;</code>
+       */
+      public static final int QUERY_CACHE_NONDETERMINISTIC_FUNCTION_HANDLING_SAVE_VALUE = 2;
+      /**
+       * <pre>
+       * Don't cache the query result and don't throw an exception.
+       * </pre>
+       *
+       * <code>QUERY_CACHE_NONDETERMINISTIC_FUNCTION_HANDLING_IGNORE = 3;</code>
+       */
+      public static final int QUERY_CACHE_NONDETERMINISTIC_FUNCTION_HANDLING_IGNORE_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static QueryCacheNondeterministicFunctionHandling valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static QueryCacheNondeterministicFunctionHandling forNumber(int value) {
+        switch (value) {
+          case 0: return QUERY_CACHE_NONDETERMINISTIC_FUNCTION_HANDLING_UNSPECIFIED;
+          case 1: return QUERY_CACHE_NONDETERMINISTIC_FUNCTION_HANDLING_THROW;
+          case 2: return QUERY_CACHE_NONDETERMINISTIC_FUNCTION_HANDLING_SAVE;
+          case 3: return QUERY_CACHE_NONDETERMINISTIC_FUNCTION_HANDLING_IGNORE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<QueryCacheNondeterministicFunctionHandling>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          QueryCacheNondeterministicFunctionHandling> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<QueryCacheNondeterministicFunctionHandling>() {
+              public QueryCacheNondeterministicFunctionHandling findValueByNumber(int number) {
+                return QueryCacheNondeterministicFunctionHandling.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.getDescriptor().getEnumTypes().get(12);
+      }
+
+      private static final QueryCacheNondeterministicFunctionHandling[] VALUES = values();
+
+      public static QueryCacheNondeterministicFunctionHandling valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private QueryCacheNondeterministicFunctionHandling(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.clickhouse.v1.UserSettings.QueryCacheNondeterministicFunctionHandling)
     }
 
     public static final int READONLY_FIELD_NUMBER = 1;
@@ -18173,6 +19193,88 @@ public final class UserOuterClass {
       return getMaxHttpGetRedirects();
     }
 
+    public static final int HTTP_MAX_FIELD_NAME_SIZE_FIELD_NUMBER = 150;
+    private com.google.protobuf.Int64Value httpMaxFieldNameSize_;
+    /**
+     * <pre>
+     * Maximum length of field name in HTTP header.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_name_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value http_max_field_name_size = 150;</code>
+     * @return Whether the httpMaxFieldNameSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasHttpMaxFieldNameSize() {
+      return httpMaxFieldNameSize_ != null;
+    }
+    /**
+     * <pre>
+     * Maximum length of field name in HTTP header.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_name_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value http_max_field_name_size = 150;</code>
+     * @return The httpMaxFieldNameSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getHttpMaxFieldNameSize() {
+      return httpMaxFieldNameSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : httpMaxFieldNameSize_;
+    }
+    /**
+     * <pre>
+     * Maximum length of field name in HTTP header.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_name_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value http_max_field_name_size = 150;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getHttpMaxFieldNameSizeOrBuilder() {
+      return getHttpMaxFieldNameSize();
+    }
+
+    public static final int HTTP_MAX_FIELD_VALUE_SIZE_FIELD_NUMBER = 151;
+    private com.google.protobuf.Int64Value httpMaxFieldValueSize_;
+    /**
+     * <pre>
+     * Maximum length of field value in HTTP header.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_value_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value http_max_field_value_size = 151;</code>
+     * @return Whether the httpMaxFieldValueSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasHttpMaxFieldValueSize() {
+      return httpMaxFieldValueSize_ != null;
+    }
+    /**
+     * <pre>
+     * Maximum length of field value in HTTP header.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_value_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value http_max_field_value_size = 151;</code>
+     * @return The httpMaxFieldValueSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getHttpMaxFieldValueSize() {
+      return httpMaxFieldValueSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : httpMaxFieldValueSize_;
+    }
+    /**
+     * <pre>
+     * Maximum length of field value in HTTP header.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_value_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value http_max_field_value_size = 151;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getHttpMaxFieldValueSizeOrBuilder() {
+      return getHttpMaxFieldValueSize();
+    }
+
     public static final int JOINED_SUBQUERY_REQUIRES_ALIAS_FIELD_NUMBER = 93;
     private com.google.protobuf.BoolValue joinedSubqueryRequiresAlias_;
     /**
@@ -18691,45 +19793,45 @@ public final class UserOuterClass {
       return getAsyncInsertBusyTimeout();
     }
 
-    public static final int ASYNC_INSERT_STALE_TIMEOUT_FIELD_NUMBER = 123;
-    private com.google.protobuf.Int64Value asyncInsertStaleTimeout_;
+    public static final int ASYNC_INSERT_USE_ADAPTIVE_BUSY_TIMEOUT_FIELD_NUMBER = 152;
+    private com.google.protobuf.BoolValue asyncInsertUseAdaptiveBusyTimeout_;
     /**
      * <pre>
-     * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
-     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+     * If it is set to true, use adaptive busy timeout for asynchronous inserts.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#async_insert_use_adaptive_busy_timeout).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
-     * @return Whether the asyncInsertStaleTimeout field is set.
+     * <code>.google.protobuf.BoolValue async_insert_use_adaptive_busy_timeout = 152;</code>
+     * @return Whether the asyncInsertUseAdaptiveBusyTimeout field is set.
      */
     @java.lang.Override
-    public boolean hasAsyncInsertStaleTimeout() {
-      return asyncInsertStaleTimeout_ != null;
+    public boolean hasAsyncInsertUseAdaptiveBusyTimeout() {
+      return asyncInsertUseAdaptiveBusyTimeout_ != null;
     }
     /**
      * <pre>
-     * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
-     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+     * If it is set to true, use adaptive busy timeout for asynchronous inserts.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#async_insert_use_adaptive_busy_timeout).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
-     * @return The asyncInsertStaleTimeout.
+     * <code>.google.protobuf.BoolValue async_insert_use_adaptive_busy_timeout = 152;</code>
+     * @return The asyncInsertUseAdaptiveBusyTimeout.
      */
     @java.lang.Override
-    public com.google.protobuf.Int64Value getAsyncInsertStaleTimeout() {
-      return asyncInsertStaleTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asyncInsertStaleTimeout_;
+    public com.google.protobuf.BoolValue getAsyncInsertUseAdaptiveBusyTimeout() {
+      return asyncInsertUseAdaptiveBusyTimeout_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : asyncInsertUseAdaptiveBusyTimeout_;
     }
     /**
      * <pre>
-     * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
-     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+     * If it is set to true, use adaptive busy timeout for asynchronous inserts.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#async_insert_use_adaptive_busy_timeout).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
+     * <code>.google.protobuf.BoolValue async_insert_use_adaptive_busy_timeout = 152;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.Int64ValueOrBuilder getAsyncInsertStaleTimeoutOrBuilder() {
-      return getAsyncInsertStaleTimeout();
+    public com.google.protobuf.BoolValueOrBuilder getAsyncInsertUseAdaptiveBusyTimeoutOrBuilder() {
+      return getAsyncInsertUseAdaptiveBusyTimeout();
     }
 
     public static final int MEMORY_PROFILER_STEP_FIELD_NUMBER = 124;
@@ -18938,6 +20040,95 @@ public final class UserOuterClass {
     @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getInputFormatImportNestedJsonOrBuilder() {
       return getInputFormatImportNestedJson();
+    }
+
+    public static final int FORMAT_AVRO_SCHEMA_REGISTRY_URL_FIELD_NUMBER = 148;
+    private volatile java.lang.Object formatAvroSchemaRegistryUrl_;
+    /**
+     * <pre>
+     * Avro schema registry URL.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/formats#format_avro_schema_registry_url).
+     * </pre>
+     *
+     * <code>string format_avro_schema_registry_url = 148;</code>
+     * @return The formatAvroSchemaRegistryUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getFormatAvroSchemaRegistryUrl() {
+      java.lang.Object ref = formatAvroSchemaRegistryUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        formatAvroSchemaRegistryUrl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Avro schema registry URL.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/formats#format_avro_schema_registry_url).
+     * </pre>
+     *
+     * <code>string format_avro_schema_registry_url = 148;</code>
+     * @return The bytes for formatAvroSchemaRegistryUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFormatAvroSchemaRegistryUrlBytes() {
+      java.lang.Object ref = formatAvroSchemaRegistryUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        formatAvroSchemaRegistryUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATA_TYPE_DEFAULT_NULLABLE_FIELD_NUMBER = 149;
+    private com.google.protobuf.BoolValue dataTypeDefaultNullable_;
+    /**
+     * <pre>
+     * Allows data types without explicit modifiers NULL or NOT NULL in column definition will be Nullable.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#data_type_default_nullable).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue data_type_default_nullable = 149;</code>
+     * @return Whether the dataTypeDefaultNullable field is set.
+     */
+    @java.lang.Override
+    public boolean hasDataTypeDefaultNullable() {
+      return dataTypeDefaultNullable_ != null;
+    }
+    /**
+     * <pre>
+     * Allows data types without explicit modifiers NULL or NOT NULL in column definition will be Nullable.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#data_type_default_nullable).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue data_type_default_nullable = 149;</code>
+     * @return The dataTypeDefaultNullable.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getDataTypeDefaultNullable() {
+      return dataTypeDefaultNullable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : dataTypeDefaultNullable_;
+    }
+    /**
+     * <pre>
+     * Allows data types without explicit modifiers NULL or NOT NULL in column definition will be Nullable.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#data_type_default_nullable).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue data_type_default_nullable = 149;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getDataTypeDefaultNullableOrBuilder() {
+      return getDataTypeDefaultNullable();
     }
 
     public static final int LOCAL_FILESYSTEM_READ_METHOD_FIELD_NUMBER = 129;
@@ -19375,7 +20566,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
-     * Default: true
+     * Default: false
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
      * </pre>
      *
@@ -19389,7 +20580,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
-     * Default: true
+     * Default: false
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
      * </pre>
      *
@@ -19403,7 +20594,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
-     * Default: true
+     * Default: false
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
      * </pre>
      *
@@ -19412,6 +20603,578 @@ public final class UserOuterClass {
     @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getLogQueryThreadsOrBuilder() {
       return getLogQueryThreads();
+    }
+
+    public static final int LOG_QUERY_VIEWS_FIELD_NUMBER = 146;
+    private com.google.protobuf.BoolValue logQueryViews_;
+    /**
+     * <pre>
+     * Enables or disables query views logging to the the system.query_view_log table.
+     * Default: true
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_views)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_query_views = 146;</code>
+     * @return Whether the logQueryViews field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogQueryViews() {
+      return logQueryViews_ != null;
+    }
+    /**
+     * <pre>
+     * Enables or disables query views logging to the the system.query_view_log table.
+     * Default: true
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_views)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_query_views = 146;</code>
+     * @return The logQueryViews.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getLogQueryViews() {
+      return logQueryViews_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logQueryViews_;
+    }
+    /**
+     * <pre>
+     * Enables or disables query views logging to the the system.query_view_log table.
+     * Default: true
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_views)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_query_views = 146;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getLogQueryViewsOrBuilder() {
+      return getLogQueryViews();
+    }
+
+    public static final int LOG_QUERIES_PROBABILITY_FIELD_NUMBER = 153;
+    private com.google.protobuf.DoubleValue logQueriesProbability_;
+    /**
+     * <pre>
+     * Log queries with the specified probability.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_queries_probability).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue log_queries_probability = 153;</code>
+     * @return Whether the logQueriesProbability field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogQueriesProbability() {
+      return logQueriesProbability_ != null;
+    }
+    /**
+     * <pre>
+     * Log queries with the specified probability.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_queries_probability).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue log_queries_probability = 153;</code>
+     * @return The logQueriesProbability.
+     */
+    @java.lang.Override
+    public com.google.protobuf.DoubleValue getLogQueriesProbability() {
+      return logQueriesProbability_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : logQueriesProbability_;
+    }
+    /**
+     * <pre>
+     * Log queries with the specified probability.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_queries_probability).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue log_queries_probability = 153;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DoubleValueOrBuilder getLogQueriesProbabilityOrBuilder() {
+      return getLogQueriesProbability();
+    }
+
+    public static final int LOG_PROCESSORS_PROFILES_FIELD_NUMBER = 154;
+    private com.google.protobuf.BoolValue logProcessorsProfiles_;
+    /**
+     * <pre>
+     * Enabled or disable logging of processors level profiling data to the the system.log_processors_profiles table.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_processors_profiles).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_processors_profiles = 154;</code>
+     * @return Whether the logProcessorsProfiles field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogProcessorsProfiles() {
+      return logProcessorsProfiles_ != null;
+    }
+    /**
+     * <pre>
+     * Enabled or disable logging of processors level profiling data to the the system.log_processors_profiles table.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_processors_profiles).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_processors_profiles = 154;</code>
+     * @return The logProcessorsProfiles.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getLogProcessorsProfiles() {
+      return logProcessorsProfiles_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logProcessorsProfiles_;
+    }
+    /**
+     * <pre>
+     * Enabled or disable logging of processors level profiling data to the the system.log_processors_profiles table.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_processors_profiles).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_processors_profiles = 154;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getLogProcessorsProfilesOrBuilder() {
+      return getLogProcessorsProfiles();
+    }
+
+    public static final int USE_QUERY_CACHE_FIELD_NUMBER = 155;
+    private com.google.protobuf.BoolValue useQueryCache_;
+    /**
+     * <pre>
+     * If turned on, SELECT queries may utilize the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_query_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_query_cache = 155;</code>
+     * @return Whether the useQueryCache field is set.
+     */
+    @java.lang.Override
+    public boolean hasUseQueryCache() {
+      return useQueryCache_ != null;
+    }
+    /**
+     * <pre>
+     * If turned on, SELECT queries may utilize the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_query_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_query_cache = 155;</code>
+     * @return The useQueryCache.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getUseQueryCache() {
+      return useQueryCache_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : useQueryCache_;
+    }
+    /**
+     * <pre>
+     * If turned on, SELECT queries may utilize the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_query_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_query_cache = 155;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getUseQueryCacheOrBuilder() {
+      return getUseQueryCache();
+    }
+
+    public static final int ENABLE_READS_FROM_QUERY_CACHE_FIELD_NUMBER = 156;
+    private com.google.protobuf.BoolValue enableReadsFromQueryCache_;
+    /**
+     * <pre>
+     * If turned on, results of SELECT queries are retrieved from the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_reads_from_query_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_reads_from_query_cache = 156;</code>
+     * @return Whether the enableReadsFromQueryCache field is set.
+     */
+    @java.lang.Override
+    public boolean hasEnableReadsFromQueryCache() {
+      return enableReadsFromQueryCache_ != null;
+    }
+    /**
+     * <pre>
+     * If turned on, results of SELECT queries are retrieved from the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_reads_from_query_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_reads_from_query_cache = 156;</code>
+     * @return The enableReadsFromQueryCache.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getEnableReadsFromQueryCache() {
+      return enableReadsFromQueryCache_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableReadsFromQueryCache_;
+    }
+    /**
+     * <pre>
+     * If turned on, results of SELECT queries are retrieved from the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_reads_from_query_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_reads_from_query_cache = 156;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getEnableReadsFromQueryCacheOrBuilder() {
+      return getEnableReadsFromQueryCache();
+    }
+
+    public static final int ENABLE_WRITES_TO_QUERY_CACHE_FIELD_NUMBER = 157;
+    private com.google.protobuf.BoolValue enableWritesToQueryCache_;
+    /**
+     * <pre>
+     * If turned on, results of SELECT queries are stored in the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_writes_to_query_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_writes_to_query_cache = 157;</code>
+     * @return Whether the enableWritesToQueryCache field is set.
+     */
+    @java.lang.Override
+    public boolean hasEnableWritesToQueryCache() {
+      return enableWritesToQueryCache_ != null;
+    }
+    /**
+     * <pre>
+     * If turned on, results of SELECT queries are stored in the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_writes_to_query_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_writes_to_query_cache = 157;</code>
+     * @return The enableWritesToQueryCache.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getEnableWritesToQueryCache() {
+      return enableWritesToQueryCache_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableWritesToQueryCache_;
+    }
+    /**
+     * <pre>
+     * If turned on, results of SELECT queries are stored in the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_writes_to_query_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_writes_to_query_cache = 157;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getEnableWritesToQueryCacheOrBuilder() {
+      return getEnableWritesToQueryCache();
+    }
+
+    public static final int QUERY_CACHE_MIN_QUERY_RUNS_FIELD_NUMBER = 158;
+    private com.google.protobuf.Int64Value queryCacheMinQueryRuns_;
+    /**
+     * <pre>
+     * Minimum number of times a SELECT query must run before its result is stored in the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_runs).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_min_query_runs = 158;</code>
+     * @return Whether the queryCacheMinQueryRuns field is set.
+     */
+    @java.lang.Override
+    public boolean hasQueryCacheMinQueryRuns() {
+      return queryCacheMinQueryRuns_ != null;
+    }
+    /**
+     * <pre>
+     * Minimum number of times a SELECT query must run before its result is stored in the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_runs).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_min_query_runs = 158;</code>
+     * @return The queryCacheMinQueryRuns.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getQueryCacheMinQueryRuns() {
+      return queryCacheMinQueryRuns_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryCacheMinQueryRuns_;
+    }
+    /**
+     * <pre>
+     * Minimum number of times a SELECT query must run before its result is stored in the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_runs).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_min_query_runs = 158;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getQueryCacheMinQueryRunsOrBuilder() {
+      return getQueryCacheMinQueryRuns();
+    }
+
+    public static final int QUERY_CACHE_MIN_QUERY_DURATION_FIELD_NUMBER = 159;
+    private com.google.protobuf.Int64Value queryCacheMinQueryDuration_;
+    /**
+     * <pre>
+     * Minimum duration in milliseconds a query needs to run for its result to be stored in the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_duration).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_min_query_duration = 159;</code>
+     * @return Whether the queryCacheMinQueryDuration field is set.
+     */
+    @java.lang.Override
+    public boolean hasQueryCacheMinQueryDuration() {
+      return queryCacheMinQueryDuration_ != null;
+    }
+    /**
+     * <pre>
+     * Minimum duration in milliseconds a query needs to run for its result to be stored in the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_duration).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_min_query_duration = 159;</code>
+     * @return The queryCacheMinQueryDuration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getQueryCacheMinQueryDuration() {
+      return queryCacheMinQueryDuration_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryCacheMinQueryDuration_;
+    }
+    /**
+     * <pre>
+     * Minimum duration in milliseconds a query needs to run for its result to be stored in the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_duration).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_min_query_duration = 159;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getQueryCacheMinQueryDurationOrBuilder() {
+      return getQueryCacheMinQueryDuration();
+    }
+
+    public static final int QUERY_CACHE_TTL_FIELD_NUMBER = 160;
+    private com.google.protobuf.Int64Value queryCacheTtl_;
+    /**
+     * <pre>
+     * After this time in seconds entries in the query cache become stale.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_ttl).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_ttl = 160;</code>
+     * @return Whether the queryCacheTtl field is set.
+     */
+    @java.lang.Override
+    public boolean hasQueryCacheTtl() {
+      return queryCacheTtl_ != null;
+    }
+    /**
+     * <pre>
+     * After this time in seconds entries in the query cache become stale.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_ttl).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_ttl = 160;</code>
+     * @return The queryCacheTtl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getQueryCacheTtl() {
+      return queryCacheTtl_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryCacheTtl_;
+    }
+    /**
+     * <pre>
+     * After this time in seconds entries in the query cache become stale.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_ttl).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_ttl = 160;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getQueryCacheTtlOrBuilder() {
+      return getQueryCacheTtl();
+    }
+
+    public static final int QUERY_CACHE_MAX_ENTRIES_FIELD_NUMBER = 161;
+    private com.google.protobuf.Int64Value queryCacheMaxEntries_;
+    /**
+     * <pre>
+     * The maximum number of query results the current user may store in the query cache. 0 means unlimited.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_entries).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_max_entries = 161;</code>
+     * @return Whether the queryCacheMaxEntries field is set.
+     */
+    @java.lang.Override
+    public boolean hasQueryCacheMaxEntries() {
+      return queryCacheMaxEntries_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum number of query results the current user may store in the query cache. 0 means unlimited.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_entries).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_max_entries = 161;</code>
+     * @return The queryCacheMaxEntries.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getQueryCacheMaxEntries() {
+      return queryCacheMaxEntries_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryCacheMaxEntries_;
+    }
+    /**
+     * <pre>
+     * The maximum number of query results the current user may store in the query cache. 0 means unlimited.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_entries).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_max_entries = 161;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getQueryCacheMaxEntriesOrBuilder() {
+      return getQueryCacheMaxEntries();
+    }
+
+    public static final int QUERY_CACHE_MAX_SIZE_IN_BYTES_FIELD_NUMBER = 162;
+    private com.google.protobuf.Int64Value queryCacheMaxSizeInBytes_;
+    /**
+     * <pre>
+     * The maximum amount of memory (in bytes) the current user may allocate in the query cache. 0 means unlimited.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_size_in_bytes).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_max_size_in_bytes = 162;</code>
+     * @return Whether the queryCacheMaxSizeInBytes field is set.
+     */
+    @java.lang.Override
+    public boolean hasQueryCacheMaxSizeInBytes() {
+      return queryCacheMaxSizeInBytes_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum amount of memory (in bytes) the current user may allocate in the query cache. 0 means unlimited.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_size_in_bytes).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_max_size_in_bytes = 162;</code>
+     * @return The queryCacheMaxSizeInBytes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getQueryCacheMaxSizeInBytes() {
+      return queryCacheMaxSizeInBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryCacheMaxSizeInBytes_;
+    }
+    /**
+     * <pre>
+     * The maximum amount of memory (in bytes) the current user may allocate in the query cache. 0 means unlimited.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_size_in_bytes).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_cache_max_size_in_bytes = 162;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getQueryCacheMaxSizeInBytesOrBuilder() {
+      return getQueryCacheMaxSizeInBytes();
+    }
+
+    public static final int QUERY_CACHE_TAG_FIELD_NUMBER = 163;
+    private volatile java.lang.Object queryCacheTag_;
+    /**
+     * <pre>
+     * A string which acts as a label for query cache entries. The same queries with different tags are considered different by the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_tag).
+     * </pre>
+     *
+     * <code>string query_cache_tag = 163;</code>
+     * @return The queryCacheTag.
+     */
+    @java.lang.Override
+    public java.lang.String getQueryCacheTag() {
+      java.lang.Object ref = queryCacheTag_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        queryCacheTag_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A string which acts as a label for query cache entries. The same queries with different tags are considered different by the query cache.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_tag).
+     * </pre>
+     *
+     * <code>string query_cache_tag = 163;</code>
+     * @return The bytes for queryCacheTag.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getQueryCacheTagBytes() {
+      java.lang.Object ref = queryCacheTag_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        queryCacheTag_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int QUERY_CACHE_SHARE_BETWEEN_USERS_FIELD_NUMBER = 164;
+    private com.google.protobuf.BoolValue queryCacheShareBetweenUsers_;
+    /**
+     * <pre>
+     * If turned on, the result of SELECT queries cached in the query cache can be read by other users. It is not recommended to enable this setting due to security reasons.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_share_between_users).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue query_cache_share_between_users = 164;</code>
+     * @return Whether the queryCacheShareBetweenUsers field is set.
+     */
+    @java.lang.Override
+    public boolean hasQueryCacheShareBetweenUsers() {
+      return queryCacheShareBetweenUsers_ != null;
+    }
+    /**
+     * <pre>
+     * If turned on, the result of SELECT queries cached in the query cache can be read by other users. It is not recommended to enable this setting due to security reasons.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_share_between_users).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue query_cache_share_between_users = 164;</code>
+     * @return The queryCacheShareBetweenUsers.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getQueryCacheShareBetweenUsers() {
+      return queryCacheShareBetweenUsers_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : queryCacheShareBetweenUsers_;
+    }
+    /**
+     * <pre>
+     * If turned on, the result of SELECT queries cached in the query cache can be read by other users. It is not recommended to enable this setting due to security reasons.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_share_between_users).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue query_cache_share_between_users = 164;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getQueryCacheShareBetweenUsersOrBuilder() {
+      return getQueryCacheShareBetweenUsers();
+    }
+
+    public static final int QUERY_CACHE_NONDETERMINISTIC_FUNCTION_HANDLING_FIELD_NUMBER = 165;
+    private int queryCacheNondeterministicFunctionHandling_;
+    /**
+     * <pre>
+     * Controls how the query cache handles SELECT queries with non-deterministic functions like rand() or now().
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_nondeterministic_function_handling).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QueryCacheNondeterministicFunctionHandling query_cache_nondeterministic_function_handling = 165;</code>
+     * @return The enum numeric value on the wire for queryCacheNondeterministicFunctionHandling.
+     */
+    @java.lang.Override public int getQueryCacheNondeterministicFunctionHandlingValue() {
+      return queryCacheNondeterministicFunctionHandling_;
+    }
+    /**
+     * <pre>
+     * Controls how the query cache handles SELECT queries with non-deterministic functions like rand() or now().
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_nondeterministic_function_handling).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QueryCacheNondeterministicFunctionHandling query_cache_nondeterministic_function_handling = 165;</code>
+     * @return The queryCacheNondeterministicFunctionHandling.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QueryCacheNondeterministicFunctionHandling getQueryCacheNondeterministicFunctionHandling() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QueryCacheNondeterministicFunctionHandling result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QueryCacheNondeterministicFunctionHandling.valueOf(queryCacheNondeterministicFunctionHandling_);
+      return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QueryCacheNondeterministicFunctionHandling.UNRECOGNIZED : result;
     }
 
     public static final int MAX_INSERT_THREADS_FIELD_NUMBER = 140;
@@ -19625,7 +21388,7 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue preferLocalhostReplica_;
     /**
      * <pre>
-     * Enables/disables preferable using the localhost replica when processing distributed queries.
+     * Enables or disables preferable using the localhost replica when processing distributed queries.
      * Default: true
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
      * </pre>
@@ -19639,7 +21402,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Enables/disables preferable using the localhost replica when processing distributed queries.
+     * Enables or disables preferable using the localhost replica when processing distributed queries.
      * Default: true
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
      * </pre>
@@ -19653,7 +21416,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Enables/disables preferable using the localhost replica when processing distributed queries.
+     * Enables or disables preferable using the localhost replica when processing distributed queries.
      * Default: true
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
      * </pre>
@@ -19663,6 +21426,91 @@ public final class UserOuterClass {
     @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getPreferLocalhostReplicaOrBuilder() {
       return getPreferLocalhostReplica();
+    }
+
+    public static final int DO_NOT_MERGE_ACROSS_PARTITIONS_SELECT_FINAL_FIELD_NUMBER = 147;
+    private com.google.protobuf.BoolValue doNotMergeAcrossPartitionsSelectFinal_;
+    /**
+     * <pre>
+     * Enables or disable independent processing of partitions for SELECT queries with FINAL.
+     * Default: false
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/guides/replacing-merge-tree#exploiting-partitions-with-replacingmergetree)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue do_not_merge_across_partitions_select_final = 147;</code>
+     * @return Whether the doNotMergeAcrossPartitionsSelectFinal field is set.
+     */
+    @java.lang.Override
+    public boolean hasDoNotMergeAcrossPartitionsSelectFinal() {
+      return doNotMergeAcrossPartitionsSelectFinal_ != null;
+    }
+    /**
+     * <pre>
+     * Enables or disable independent processing of partitions for SELECT queries with FINAL.
+     * Default: false
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/guides/replacing-merge-tree#exploiting-partitions-with-replacingmergetree)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue do_not_merge_across_partitions_select_final = 147;</code>
+     * @return The doNotMergeAcrossPartitionsSelectFinal.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getDoNotMergeAcrossPartitionsSelectFinal() {
+      return doNotMergeAcrossPartitionsSelectFinal_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : doNotMergeAcrossPartitionsSelectFinal_;
+    }
+    /**
+     * <pre>
+     * Enables or disable independent processing of partitions for SELECT queries with FINAL.
+     * Default: false
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/guides/replacing-merge-tree#exploiting-partitions-with-replacingmergetree)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue do_not_merge_across_partitions_select_final = 147;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getDoNotMergeAcrossPartitionsSelectFinalOrBuilder() {
+      return getDoNotMergeAcrossPartitionsSelectFinal();
+    }
+
+    public static final int IGNORE_MATERIALIZED_VIEWS_WITH_DROPPED_TARGET_TABLE_FIELD_NUMBER = 166;
+    private com.google.protobuf.BoolValue ignoreMaterializedViewsWithDroppedTargetTable_;
+    /**
+     * <pre>
+     * Ignore materialized views with dropped target table during pushing to views.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#ignore_materialized_views_with_dropped_target_table).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue ignore_materialized_views_with_dropped_target_table = 166;</code>
+     * @return Whether the ignoreMaterializedViewsWithDroppedTargetTable field is set.
+     */
+    @java.lang.Override
+    public boolean hasIgnoreMaterializedViewsWithDroppedTargetTable() {
+      return ignoreMaterializedViewsWithDroppedTargetTable_ != null;
+    }
+    /**
+     * <pre>
+     * Ignore materialized views with dropped target table during pushing to views.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#ignore_materialized_views_with_dropped_target_table).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue ignore_materialized_views_with_dropped_target_table = 166;</code>
+     * @return The ignoreMaterializedViewsWithDroppedTargetTable.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getIgnoreMaterializedViewsWithDroppedTargetTable() {
+      return ignoreMaterializedViewsWithDroppedTargetTable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : ignoreMaterializedViewsWithDroppedTargetTable_;
+    }
+    /**
+     * <pre>
+     * Ignore materialized views with dropped target table during pushing to views.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#ignore_materialized_views_with_dropped_target_table).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue ignore_materialized_views_with_dropped_target_table = 166;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getIgnoreMaterializedViewsWithDroppedTargetTableOrBuilder() {
+      return getIgnoreMaterializedViewsWithDroppedTargetTable();
     }
 
     public static final int COMPILE_FIELD_NUMBER = 44;
@@ -19743,6 +21591,46 @@ public final class UserOuterClass {
     @java.lang.Override
     @java.lang.Deprecated public com.google.protobuf.Int64ValueOrBuilder getMinCountToCompileOrBuilder() {
       return getMinCountToCompile();
+    }
+
+    public static final int ASYNC_INSERT_STALE_TIMEOUT_FIELD_NUMBER = 123;
+    private com.google.protobuf.Int64Value asyncInsertStaleTimeout_;
+    /**
+     * <pre>
+     * The setting is deprecated and has no effect.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123 [deprecated = true];</code>
+     * @deprecated
+     * @return Whether the asyncInsertStaleTimeout field is set.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public boolean hasAsyncInsertStaleTimeout() {
+      return asyncInsertStaleTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * The setting is deprecated and has no effect.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123 [deprecated = true];</code>
+     * @deprecated
+     * @return The asyncInsertStaleTimeout.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public com.google.protobuf.Int64Value getAsyncInsertStaleTimeout() {
+      return asyncInsertStaleTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asyncInsertStaleTimeout_;
+    }
+    /**
+     * <pre>
+     * The setting is deprecated and has no effect.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123 [deprecated = true];</code>
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public com.google.protobuf.Int64ValueOrBuilder getAsyncInsertStaleTimeoutOrBuilder() {
+      return getAsyncInsertStaleTimeout();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -20192,6 +22080,69 @@ public final class UserOuterClass {
       }
       if (preferLocalhostReplica_ != null) {
         output.writeMessage(145, getPreferLocalhostReplica());
+      }
+      if (logQueryViews_ != null) {
+        output.writeMessage(146, getLogQueryViews());
+      }
+      if (doNotMergeAcrossPartitionsSelectFinal_ != null) {
+        output.writeMessage(147, getDoNotMergeAcrossPartitionsSelectFinal());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formatAvroSchemaRegistryUrl_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 148, formatAvroSchemaRegistryUrl_);
+      }
+      if (dataTypeDefaultNullable_ != null) {
+        output.writeMessage(149, getDataTypeDefaultNullable());
+      }
+      if (httpMaxFieldNameSize_ != null) {
+        output.writeMessage(150, getHttpMaxFieldNameSize());
+      }
+      if (httpMaxFieldValueSize_ != null) {
+        output.writeMessage(151, getHttpMaxFieldValueSize());
+      }
+      if (asyncInsertUseAdaptiveBusyTimeout_ != null) {
+        output.writeMessage(152, getAsyncInsertUseAdaptiveBusyTimeout());
+      }
+      if (logQueriesProbability_ != null) {
+        output.writeMessage(153, getLogQueriesProbability());
+      }
+      if (logProcessorsProfiles_ != null) {
+        output.writeMessage(154, getLogProcessorsProfiles());
+      }
+      if (useQueryCache_ != null) {
+        output.writeMessage(155, getUseQueryCache());
+      }
+      if (enableReadsFromQueryCache_ != null) {
+        output.writeMessage(156, getEnableReadsFromQueryCache());
+      }
+      if (enableWritesToQueryCache_ != null) {
+        output.writeMessage(157, getEnableWritesToQueryCache());
+      }
+      if (queryCacheMinQueryRuns_ != null) {
+        output.writeMessage(158, getQueryCacheMinQueryRuns());
+      }
+      if (queryCacheMinQueryDuration_ != null) {
+        output.writeMessage(159, getQueryCacheMinQueryDuration());
+      }
+      if (queryCacheTtl_ != null) {
+        output.writeMessage(160, getQueryCacheTtl());
+      }
+      if (queryCacheMaxEntries_ != null) {
+        output.writeMessage(161, getQueryCacheMaxEntries());
+      }
+      if (queryCacheMaxSizeInBytes_ != null) {
+        output.writeMessage(162, getQueryCacheMaxSizeInBytes());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(queryCacheTag_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 163, queryCacheTag_);
+      }
+      if (queryCacheShareBetweenUsers_ != null) {
+        output.writeMessage(164, getQueryCacheShareBetweenUsers());
+      }
+      if (queryCacheNondeterministicFunctionHandling_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QueryCacheNondeterministicFunctionHandling.QUERY_CACHE_NONDETERMINISTIC_FUNCTION_HANDLING_UNSPECIFIED.getNumber()) {
+        output.writeEnum(165, queryCacheNondeterministicFunctionHandling_);
+      }
+      if (ignoreMaterializedViewsWithDroppedTargetTable_ != null) {
+        output.writeMessage(166, getIgnoreMaterializedViewsWithDroppedTargetTable());
       }
       unknownFields.writeTo(output);
     }
@@ -20781,6 +22732,88 @@ public final class UserOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(145, getPreferLocalhostReplica());
       }
+      if (logQueryViews_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(146, getLogQueryViews());
+      }
+      if (doNotMergeAcrossPartitionsSelectFinal_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(147, getDoNotMergeAcrossPartitionsSelectFinal());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formatAvroSchemaRegistryUrl_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(148, formatAvroSchemaRegistryUrl_);
+      }
+      if (dataTypeDefaultNullable_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(149, getDataTypeDefaultNullable());
+      }
+      if (httpMaxFieldNameSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(150, getHttpMaxFieldNameSize());
+      }
+      if (httpMaxFieldValueSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(151, getHttpMaxFieldValueSize());
+      }
+      if (asyncInsertUseAdaptiveBusyTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(152, getAsyncInsertUseAdaptiveBusyTimeout());
+      }
+      if (logQueriesProbability_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(153, getLogQueriesProbability());
+      }
+      if (logProcessorsProfiles_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(154, getLogProcessorsProfiles());
+      }
+      if (useQueryCache_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(155, getUseQueryCache());
+      }
+      if (enableReadsFromQueryCache_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(156, getEnableReadsFromQueryCache());
+      }
+      if (enableWritesToQueryCache_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(157, getEnableWritesToQueryCache());
+      }
+      if (queryCacheMinQueryRuns_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(158, getQueryCacheMinQueryRuns());
+      }
+      if (queryCacheMinQueryDuration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(159, getQueryCacheMinQueryDuration());
+      }
+      if (queryCacheTtl_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(160, getQueryCacheTtl());
+      }
+      if (queryCacheMaxEntries_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(161, getQueryCacheMaxEntries());
+      }
+      if (queryCacheMaxSizeInBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(162, getQueryCacheMaxSizeInBytes());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(queryCacheTag_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(163, queryCacheTag_);
+      }
+      if (queryCacheShareBetweenUsers_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(164, getQueryCacheShareBetweenUsers());
+      }
+      if (queryCacheNondeterministicFunctionHandling_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QueryCacheNondeterministicFunctionHandling.QUERY_CACHE_NONDETERMINISTIC_FUNCTION_HANDLING_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(165, queryCacheNondeterministicFunctionHandling_);
+      }
+      if (ignoreMaterializedViewsWithDroppedTargetTable_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(166, getIgnoreMaterializedViewsWithDroppedTargetTable());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -21260,6 +23293,16 @@ public final class UserOuterClass {
         if (!getMaxHttpGetRedirects()
             .equals(other.getMaxHttpGetRedirects())) return false;
       }
+      if (hasHttpMaxFieldNameSize() != other.hasHttpMaxFieldNameSize()) return false;
+      if (hasHttpMaxFieldNameSize()) {
+        if (!getHttpMaxFieldNameSize()
+            .equals(other.getHttpMaxFieldNameSize())) return false;
+      }
+      if (hasHttpMaxFieldValueSize() != other.hasHttpMaxFieldValueSize()) return false;
+      if (hasHttpMaxFieldValueSize()) {
+        if (!getHttpMaxFieldValueSize()
+            .equals(other.getHttpMaxFieldValueSize())) return false;
+      }
       if (hasJoinedSubqueryRequiresAlias() != other.hasJoinedSubqueryRequiresAlias()) return false;
       if (hasJoinedSubqueryRequiresAlias()) {
         if (!getJoinedSubqueryRequiresAlias()
@@ -21319,10 +23362,10 @@ public final class UserOuterClass {
         if (!getAsyncInsertBusyTimeout()
             .equals(other.getAsyncInsertBusyTimeout())) return false;
       }
-      if (hasAsyncInsertStaleTimeout() != other.hasAsyncInsertStaleTimeout()) return false;
-      if (hasAsyncInsertStaleTimeout()) {
-        if (!getAsyncInsertStaleTimeout()
-            .equals(other.getAsyncInsertStaleTimeout())) return false;
+      if (hasAsyncInsertUseAdaptiveBusyTimeout() != other.hasAsyncInsertUseAdaptiveBusyTimeout()) return false;
+      if (hasAsyncInsertUseAdaptiveBusyTimeout()) {
+        if (!getAsyncInsertUseAdaptiveBusyTimeout()
+            .equals(other.getAsyncInsertUseAdaptiveBusyTimeout())) return false;
       }
       if (hasMemoryProfilerStep() != other.hasMemoryProfilerStep()) return false;
       if (hasMemoryProfilerStep()) {
@@ -21348,6 +23391,13 @@ public final class UserOuterClass {
       if (hasInputFormatImportNestedJson()) {
         if (!getInputFormatImportNestedJson()
             .equals(other.getInputFormatImportNestedJson())) return false;
+      }
+      if (!getFormatAvroSchemaRegistryUrl()
+          .equals(other.getFormatAvroSchemaRegistryUrl())) return false;
+      if (hasDataTypeDefaultNullable() != other.hasDataTypeDefaultNullable()) return false;
+      if (hasDataTypeDefaultNullable()) {
+        if (!getDataTypeDefaultNullable()
+            .equals(other.getDataTypeDefaultNullable())) return false;
       }
       if (localFilesystemReadMethod_ != other.localFilesystemReadMethod_) return false;
       if (hasMaxReadBufferSize() != other.hasMaxReadBufferSize()) return false;
@@ -21396,6 +23446,69 @@ public final class UserOuterClass {
         if (!getLogQueryThreads()
             .equals(other.getLogQueryThreads())) return false;
       }
+      if (hasLogQueryViews() != other.hasLogQueryViews()) return false;
+      if (hasLogQueryViews()) {
+        if (!getLogQueryViews()
+            .equals(other.getLogQueryViews())) return false;
+      }
+      if (hasLogQueriesProbability() != other.hasLogQueriesProbability()) return false;
+      if (hasLogQueriesProbability()) {
+        if (!getLogQueriesProbability()
+            .equals(other.getLogQueriesProbability())) return false;
+      }
+      if (hasLogProcessorsProfiles() != other.hasLogProcessorsProfiles()) return false;
+      if (hasLogProcessorsProfiles()) {
+        if (!getLogProcessorsProfiles()
+            .equals(other.getLogProcessorsProfiles())) return false;
+      }
+      if (hasUseQueryCache() != other.hasUseQueryCache()) return false;
+      if (hasUseQueryCache()) {
+        if (!getUseQueryCache()
+            .equals(other.getUseQueryCache())) return false;
+      }
+      if (hasEnableReadsFromQueryCache() != other.hasEnableReadsFromQueryCache()) return false;
+      if (hasEnableReadsFromQueryCache()) {
+        if (!getEnableReadsFromQueryCache()
+            .equals(other.getEnableReadsFromQueryCache())) return false;
+      }
+      if (hasEnableWritesToQueryCache() != other.hasEnableWritesToQueryCache()) return false;
+      if (hasEnableWritesToQueryCache()) {
+        if (!getEnableWritesToQueryCache()
+            .equals(other.getEnableWritesToQueryCache())) return false;
+      }
+      if (hasQueryCacheMinQueryRuns() != other.hasQueryCacheMinQueryRuns()) return false;
+      if (hasQueryCacheMinQueryRuns()) {
+        if (!getQueryCacheMinQueryRuns()
+            .equals(other.getQueryCacheMinQueryRuns())) return false;
+      }
+      if (hasQueryCacheMinQueryDuration() != other.hasQueryCacheMinQueryDuration()) return false;
+      if (hasQueryCacheMinQueryDuration()) {
+        if (!getQueryCacheMinQueryDuration()
+            .equals(other.getQueryCacheMinQueryDuration())) return false;
+      }
+      if (hasQueryCacheTtl() != other.hasQueryCacheTtl()) return false;
+      if (hasQueryCacheTtl()) {
+        if (!getQueryCacheTtl()
+            .equals(other.getQueryCacheTtl())) return false;
+      }
+      if (hasQueryCacheMaxEntries() != other.hasQueryCacheMaxEntries()) return false;
+      if (hasQueryCacheMaxEntries()) {
+        if (!getQueryCacheMaxEntries()
+            .equals(other.getQueryCacheMaxEntries())) return false;
+      }
+      if (hasQueryCacheMaxSizeInBytes() != other.hasQueryCacheMaxSizeInBytes()) return false;
+      if (hasQueryCacheMaxSizeInBytes()) {
+        if (!getQueryCacheMaxSizeInBytes()
+            .equals(other.getQueryCacheMaxSizeInBytes())) return false;
+      }
+      if (!getQueryCacheTag()
+          .equals(other.getQueryCacheTag())) return false;
+      if (hasQueryCacheShareBetweenUsers() != other.hasQueryCacheShareBetweenUsers()) return false;
+      if (hasQueryCacheShareBetweenUsers()) {
+        if (!getQueryCacheShareBetweenUsers()
+            .equals(other.getQueryCacheShareBetweenUsers())) return false;
+      }
+      if (queryCacheNondeterministicFunctionHandling_ != other.queryCacheNondeterministicFunctionHandling_) return false;
       if (hasMaxInsertThreads() != other.hasMaxInsertThreads()) return false;
       if (hasMaxInsertThreads()) {
         if (!getMaxInsertThreads()
@@ -21422,6 +23535,16 @@ public final class UserOuterClass {
         if (!getPreferLocalhostReplica()
             .equals(other.getPreferLocalhostReplica())) return false;
       }
+      if (hasDoNotMergeAcrossPartitionsSelectFinal() != other.hasDoNotMergeAcrossPartitionsSelectFinal()) return false;
+      if (hasDoNotMergeAcrossPartitionsSelectFinal()) {
+        if (!getDoNotMergeAcrossPartitionsSelectFinal()
+            .equals(other.getDoNotMergeAcrossPartitionsSelectFinal())) return false;
+      }
+      if (hasIgnoreMaterializedViewsWithDroppedTargetTable() != other.hasIgnoreMaterializedViewsWithDroppedTargetTable()) return false;
+      if (hasIgnoreMaterializedViewsWithDroppedTargetTable()) {
+        if (!getIgnoreMaterializedViewsWithDroppedTargetTable()
+            .equals(other.getIgnoreMaterializedViewsWithDroppedTargetTable())) return false;
+      }
       if (hasCompile() != other.hasCompile()) return false;
       if (hasCompile()) {
         if (!getCompile()
@@ -21431,6 +23554,11 @@ public final class UserOuterClass {
       if (hasMinCountToCompile()) {
         if (!getMinCountToCompile()
             .equals(other.getMinCountToCompile())) return false;
+      }
+      if (hasAsyncInsertStaleTimeout() != other.hasAsyncInsertStaleTimeout()) return false;
+      if (hasAsyncInsertStaleTimeout()) {
+        if (!getAsyncInsertStaleTimeout()
+            .equals(other.getAsyncInsertStaleTimeout())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -21833,6 +23961,14 @@ public final class UserOuterClass {
         hash = (37 * hash) + MAX_HTTP_GET_REDIRECTS_FIELD_NUMBER;
         hash = (53 * hash) + getMaxHttpGetRedirects().hashCode();
       }
+      if (hasHttpMaxFieldNameSize()) {
+        hash = (37 * hash) + HTTP_MAX_FIELD_NAME_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getHttpMaxFieldNameSize().hashCode();
+      }
+      if (hasHttpMaxFieldValueSize()) {
+        hash = (37 * hash) + HTTP_MAX_FIELD_VALUE_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getHttpMaxFieldValueSize().hashCode();
+      }
       if (hasJoinedSubqueryRequiresAlias()) {
         hash = (37 * hash) + JOINED_SUBQUERY_REQUIRES_ALIAS_FIELD_NUMBER;
         hash = (53 * hash) + getJoinedSubqueryRequiresAlias().hashCode();
@@ -21883,9 +24019,9 @@ public final class UserOuterClass {
         hash = (37 * hash) + ASYNC_INSERT_BUSY_TIMEOUT_FIELD_NUMBER;
         hash = (53 * hash) + getAsyncInsertBusyTimeout().hashCode();
       }
-      if (hasAsyncInsertStaleTimeout()) {
-        hash = (37 * hash) + ASYNC_INSERT_STALE_TIMEOUT_FIELD_NUMBER;
-        hash = (53 * hash) + getAsyncInsertStaleTimeout().hashCode();
+      if (hasAsyncInsertUseAdaptiveBusyTimeout()) {
+        hash = (37 * hash) + ASYNC_INSERT_USE_ADAPTIVE_BUSY_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getAsyncInsertUseAdaptiveBusyTimeout().hashCode();
       }
       if (hasMemoryProfilerStep()) {
         hash = (37 * hash) + MEMORY_PROFILER_STEP_FIELD_NUMBER;
@@ -21906,6 +24042,12 @@ public final class UserOuterClass {
       if (hasInputFormatImportNestedJson()) {
         hash = (37 * hash) + INPUT_FORMAT_IMPORT_NESTED_JSON_FIELD_NUMBER;
         hash = (53 * hash) + getInputFormatImportNestedJson().hashCode();
+      }
+      hash = (37 * hash) + FORMAT_AVRO_SCHEMA_REGISTRY_URL_FIELD_NUMBER;
+      hash = (53 * hash) + getFormatAvroSchemaRegistryUrl().hashCode();
+      if (hasDataTypeDefaultNullable()) {
+        hash = (37 * hash) + DATA_TYPE_DEFAULT_NULLABLE_FIELD_NUMBER;
+        hash = (53 * hash) + getDataTypeDefaultNullable().hashCode();
       }
       hash = (37 * hash) + LOCAL_FILESYSTEM_READ_METHOD_FIELD_NUMBER;
       hash = (53 * hash) + localFilesystemReadMethod_;
@@ -21947,6 +24089,58 @@ public final class UserOuterClass {
         hash = (37 * hash) + LOG_QUERY_THREADS_FIELD_NUMBER;
         hash = (53 * hash) + getLogQueryThreads().hashCode();
       }
+      if (hasLogQueryViews()) {
+        hash = (37 * hash) + LOG_QUERY_VIEWS_FIELD_NUMBER;
+        hash = (53 * hash) + getLogQueryViews().hashCode();
+      }
+      if (hasLogQueriesProbability()) {
+        hash = (37 * hash) + LOG_QUERIES_PROBABILITY_FIELD_NUMBER;
+        hash = (53 * hash) + getLogQueriesProbability().hashCode();
+      }
+      if (hasLogProcessorsProfiles()) {
+        hash = (37 * hash) + LOG_PROCESSORS_PROFILES_FIELD_NUMBER;
+        hash = (53 * hash) + getLogProcessorsProfiles().hashCode();
+      }
+      if (hasUseQueryCache()) {
+        hash = (37 * hash) + USE_QUERY_CACHE_FIELD_NUMBER;
+        hash = (53 * hash) + getUseQueryCache().hashCode();
+      }
+      if (hasEnableReadsFromQueryCache()) {
+        hash = (37 * hash) + ENABLE_READS_FROM_QUERY_CACHE_FIELD_NUMBER;
+        hash = (53 * hash) + getEnableReadsFromQueryCache().hashCode();
+      }
+      if (hasEnableWritesToQueryCache()) {
+        hash = (37 * hash) + ENABLE_WRITES_TO_QUERY_CACHE_FIELD_NUMBER;
+        hash = (53 * hash) + getEnableWritesToQueryCache().hashCode();
+      }
+      if (hasQueryCacheMinQueryRuns()) {
+        hash = (37 * hash) + QUERY_CACHE_MIN_QUERY_RUNS_FIELD_NUMBER;
+        hash = (53 * hash) + getQueryCacheMinQueryRuns().hashCode();
+      }
+      if (hasQueryCacheMinQueryDuration()) {
+        hash = (37 * hash) + QUERY_CACHE_MIN_QUERY_DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getQueryCacheMinQueryDuration().hashCode();
+      }
+      if (hasQueryCacheTtl()) {
+        hash = (37 * hash) + QUERY_CACHE_TTL_FIELD_NUMBER;
+        hash = (53 * hash) + getQueryCacheTtl().hashCode();
+      }
+      if (hasQueryCacheMaxEntries()) {
+        hash = (37 * hash) + QUERY_CACHE_MAX_ENTRIES_FIELD_NUMBER;
+        hash = (53 * hash) + getQueryCacheMaxEntries().hashCode();
+      }
+      if (hasQueryCacheMaxSizeInBytes()) {
+        hash = (37 * hash) + QUERY_CACHE_MAX_SIZE_IN_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getQueryCacheMaxSizeInBytes().hashCode();
+      }
+      hash = (37 * hash) + QUERY_CACHE_TAG_FIELD_NUMBER;
+      hash = (53 * hash) + getQueryCacheTag().hashCode();
+      if (hasQueryCacheShareBetweenUsers()) {
+        hash = (37 * hash) + QUERY_CACHE_SHARE_BETWEEN_USERS_FIELD_NUMBER;
+        hash = (53 * hash) + getQueryCacheShareBetweenUsers().hashCode();
+      }
+      hash = (37 * hash) + QUERY_CACHE_NONDETERMINISTIC_FUNCTION_HANDLING_FIELD_NUMBER;
+      hash = (53 * hash) + queryCacheNondeterministicFunctionHandling_;
       if (hasMaxInsertThreads()) {
         hash = (37 * hash) + MAX_INSERT_THREADS_FIELD_NUMBER;
         hash = (53 * hash) + getMaxInsertThreads().hashCode();
@@ -21969,6 +24163,14 @@ public final class UserOuterClass {
         hash = (37 * hash) + PREFER_LOCALHOST_REPLICA_FIELD_NUMBER;
         hash = (53 * hash) + getPreferLocalhostReplica().hashCode();
       }
+      if (hasDoNotMergeAcrossPartitionsSelectFinal()) {
+        hash = (37 * hash) + DO_NOT_MERGE_ACROSS_PARTITIONS_SELECT_FINAL_FIELD_NUMBER;
+        hash = (53 * hash) + getDoNotMergeAcrossPartitionsSelectFinal().hashCode();
+      }
+      if (hasIgnoreMaterializedViewsWithDroppedTargetTable()) {
+        hash = (37 * hash) + IGNORE_MATERIALIZED_VIEWS_WITH_DROPPED_TARGET_TABLE_FIELD_NUMBER;
+        hash = (53 * hash) + getIgnoreMaterializedViewsWithDroppedTargetTable().hashCode();
+      }
       if (hasCompile()) {
         hash = (37 * hash) + COMPILE_FIELD_NUMBER;
         hash = (53 * hash) + getCompile().hashCode();
@@ -21976,6 +24178,10 @@ public final class UserOuterClass {
       if (hasMinCountToCompile()) {
         hash = (37 * hash) + MIN_COUNT_TO_COMPILE_FIELD_NUMBER;
         hash = (53 * hash) + getMinCountToCompile().hashCode();
+      }
+      if (hasAsyncInsertStaleTimeout()) {
+        hash = (37 * hash) + ASYNC_INSERT_STALE_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getAsyncInsertStaleTimeout().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -22683,6 +24889,18 @@ public final class UserOuterClass {
           maxHttpGetRedirects_ = null;
           maxHttpGetRedirectsBuilder_ = null;
         }
+        if (httpMaxFieldNameSizeBuilder_ == null) {
+          httpMaxFieldNameSize_ = null;
+        } else {
+          httpMaxFieldNameSize_ = null;
+          httpMaxFieldNameSizeBuilder_ = null;
+        }
+        if (httpMaxFieldValueSizeBuilder_ == null) {
+          httpMaxFieldValueSize_ = null;
+        } else {
+          httpMaxFieldValueSize_ = null;
+          httpMaxFieldValueSizeBuilder_ = null;
+        }
         if (joinedSubqueryRequiresAliasBuilder_ == null) {
           joinedSubqueryRequiresAlias_ = null;
         } else {
@@ -22755,11 +24973,11 @@ public final class UserOuterClass {
           asyncInsertBusyTimeout_ = null;
           asyncInsertBusyTimeoutBuilder_ = null;
         }
-        if (asyncInsertStaleTimeoutBuilder_ == null) {
-          asyncInsertStaleTimeout_ = null;
+        if (asyncInsertUseAdaptiveBusyTimeoutBuilder_ == null) {
+          asyncInsertUseAdaptiveBusyTimeout_ = null;
         } else {
-          asyncInsertStaleTimeout_ = null;
-          asyncInsertStaleTimeoutBuilder_ = null;
+          asyncInsertUseAdaptiveBusyTimeout_ = null;
+          asyncInsertUseAdaptiveBusyTimeoutBuilder_ = null;
         }
         if (memoryProfilerStepBuilder_ == null) {
           memoryProfilerStep_ = null;
@@ -22790,6 +25008,14 @@ public final class UserOuterClass {
         } else {
           inputFormatImportNestedJson_ = null;
           inputFormatImportNestedJsonBuilder_ = null;
+        }
+        formatAvroSchemaRegistryUrl_ = "";
+
+        if (dataTypeDefaultNullableBuilder_ == null) {
+          dataTypeDefaultNullable_ = null;
+        } else {
+          dataTypeDefaultNullable_ = null;
+          dataTypeDefaultNullableBuilder_ = null;
         }
         localFilesystemReadMethod_ = 0;
 
@@ -22849,6 +25075,82 @@ public final class UserOuterClass {
           logQueryThreads_ = null;
           logQueryThreadsBuilder_ = null;
         }
+        if (logQueryViewsBuilder_ == null) {
+          logQueryViews_ = null;
+        } else {
+          logQueryViews_ = null;
+          logQueryViewsBuilder_ = null;
+        }
+        if (logQueriesProbabilityBuilder_ == null) {
+          logQueriesProbability_ = null;
+        } else {
+          logQueriesProbability_ = null;
+          logQueriesProbabilityBuilder_ = null;
+        }
+        if (logProcessorsProfilesBuilder_ == null) {
+          logProcessorsProfiles_ = null;
+        } else {
+          logProcessorsProfiles_ = null;
+          logProcessorsProfilesBuilder_ = null;
+        }
+        if (useQueryCacheBuilder_ == null) {
+          useQueryCache_ = null;
+        } else {
+          useQueryCache_ = null;
+          useQueryCacheBuilder_ = null;
+        }
+        if (enableReadsFromQueryCacheBuilder_ == null) {
+          enableReadsFromQueryCache_ = null;
+        } else {
+          enableReadsFromQueryCache_ = null;
+          enableReadsFromQueryCacheBuilder_ = null;
+        }
+        if (enableWritesToQueryCacheBuilder_ == null) {
+          enableWritesToQueryCache_ = null;
+        } else {
+          enableWritesToQueryCache_ = null;
+          enableWritesToQueryCacheBuilder_ = null;
+        }
+        if (queryCacheMinQueryRunsBuilder_ == null) {
+          queryCacheMinQueryRuns_ = null;
+        } else {
+          queryCacheMinQueryRuns_ = null;
+          queryCacheMinQueryRunsBuilder_ = null;
+        }
+        if (queryCacheMinQueryDurationBuilder_ == null) {
+          queryCacheMinQueryDuration_ = null;
+        } else {
+          queryCacheMinQueryDuration_ = null;
+          queryCacheMinQueryDurationBuilder_ = null;
+        }
+        if (queryCacheTtlBuilder_ == null) {
+          queryCacheTtl_ = null;
+        } else {
+          queryCacheTtl_ = null;
+          queryCacheTtlBuilder_ = null;
+        }
+        if (queryCacheMaxEntriesBuilder_ == null) {
+          queryCacheMaxEntries_ = null;
+        } else {
+          queryCacheMaxEntries_ = null;
+          queryCacheMaxEntriesBuilder_ = null;
+        }
+        if (queryCacheMaxSizeInBytesBuilder_ == null) {
+          queryCacheMaxSizeInBytes_ = null;
+        } else {
+          queryCacheMaxSizeInBytes_ = null;
+          queryCacheMaxSizeInBytesBuilder_ = null;
+        }
+        queryCacheTag_ = "";
+
+        if (queryCacheShareBetweenUsersBuilder_ == null) {
+          queryCacheShareBetweenUsers_ = null;
+        } else {
+          queryCacheShareBetweenUsers_ = null;
+          queryCacheShareBetweenUsersBuilder_ = null;
+        }
+        queryCacheNondeterministicFunctionHandling_ = 0;
+
         if (maxInsertThreadsBuilder_ == null) {
           maxInsertThreads_ = null;
         } else {
@@ -22881,6 +25183,18 @@ public final class UserOuterClass {
           preferLocalhostReplica_ = null;
           preferLocalhostReplicaBuilder_ = null;
         }
+        if (doNotMergeAcrossPartitionsSelectFinalBuilder_ == null) {
+          doNotMergeAcrossPartitionsSelectFinal_ = null;
+        } else {
+          doNotMergeAcrossPartitionsSelectFinal_ = null;
+          doNotMergeAcrossPartitionsSelectFinalBuilder_ = null;
+        }
+        if (ignoreMaterializedViewsWithDroppedTargetTableBuilder_ == null) {
+          ignoreMaterializedViewsWithDroppedTargetTable_ = null;
+        } else {
+          ignoreMaterializedViewsWithDroppedTargetTable_ = null;
+          ignoreMaterializedViewsWithDroppedTargetTableBuilder_ = null;
+        }
         if (compileBuilder_ == null) {
           compile_ = null;
         } else {
@@ -22892,6 +25206,12 @@ public final class UserOuterClass {
         } else {
           minCountToCompile_ = null;
           minCountToCompileBuilder_ = null;
+        }
+        if (asyncInsertStaleTimeoutBuilder_ == null) {
+          asyncInsertStaleTimeout_ = null;
+        } else {
+          asyncInsertStaleTimeout_ = null;
+          asyncInsertStaleTimeoutBuilder_ = null;
         }
         return this;
       }
@@ -23388,6 +25708,16 @@ public final class UserOuterClass {
         } else {
           result.maxHttpGetRedirects_ = maxHttpGetRedirectsBuilder_.build();
         }
+        if (httpMaxFieldNameSizeBuilder_ == null) {
+          result.httpMaxFieldNameSize_ = httpMaxFieldNameSize_;
+        } else {
+          result.httpMaxFieldNameSize_ = httpMaxFieldNameSizeBuilder_.build();
+        }
+        if (httpMaxFieldValueSizeBuilder_ == null) {
+          result.httpMaxFieldValueSize_ = httpMaxFieldValueSize_;
+        } else {
+          result.httpMaxFieldValueSize_ = httpMaxFieldValueSizeBuilder_.build();
+        }
         if (joinedSubqueryRequiresAliasBuilder_ == null) {
           result.joinedSubqueryRequiresAlias_ = joinedSubqueryRequiresAlias_;
         } else {
@@ -23446,10 +25776,10 @@ public final class UserOuterClass {
         } else {
           result.asyncInsertBusyTimeout_ = asyncInsertBusyTimeoutBuilder_.build();
         }
-        if (asyncInsertStaleTimeoutBuilder_ == null) {
-          result.asyncInsertStaleTimeout_ = asyncInsertStaleTimeout_;
+        if (asyncInsertUseAdaptiveBusyTimeoutBuilder_ == null) {
+          result.asyncInsertUseAdaptiveBusyTimeout_ = asyncInsertUseAdaptiveBusyTimeout_;
         } else {
-          result.asyncInsertStaleTimeout_ = asyncInsertStaleTimeoutBuilder_.build();
+          result.asyncInsertUseAdaptiveBusyTimeout_ = asyncInsertUseAdaptiveBusyTimeoutBuilder_.build();
         }
         if (memoryProfilerStepBuilder_ == null) {
           result.memoryProfilerStep_ = memoryProfilerStep_;
@@ -23475,6 +25805,12 @@ public final class UserOuterClass {
           result.inputFormatImportNestedJson_ = inputFormatImportNestedJson_;
         } else {
           result.inputFormatImportNestedJson_ = inputFormatImportNestedJsonBuilder_.build();
+        }
+        result.formatAvroSchemaRegistryUrl_ = formatAvroSchemaRegistryUrl_;
+        if (dataTypeDefaultNullableBuilder_ == null) {
+          result.dataTypeDefaultNullable_ = dataTypeDefaultNullable_;
+        } else {
+          result.dataTypeDefaultNullable_ = dataTypeDefaultNullableBuilder_.build();
         }
         result.localFilesystemReadMethod_ = localFilesystemReadMethod_;
         if (maxReadBufferSizeBuilder_ == null) {
@@ -23523,6 +25859,68 @@ public final class UserOuterClass {
         } else {
           result.logQueryThreads_ = logQueryThreadsBuilder_.build();
         }
+        if (logQueryViewsBuilder_ == null) {
+          result.logQueryViews_ = logQueryViews_;
+        } else {
+          result.logQueryViews_ = logQueryViewsBuilder_.build();
+        }
+        if (logQueriesProbabilityBuilder_ == null) {
+          result.logQueriesProbability_ = logQueriesProbability_;
+        } else {
+          result.logQueriesProbability_ = logQueriesProbabilityBuilder_.build();
+        }
+        if (logProcessorsProfilesBuilder_ == null) {
+          result.logProcessorsProfiles_ = logProcessorsProfiles_;
+        } else {
+          result.logProcessorsProfiles_ = logProcessorsProfilesBuilder_.build();
+        }
+        if (useQueryCacheBuilder_ == null) {
+          result.useQueryCache_ = useQueryCache_;
+        } else {
+          result.useQueryCache_ = useQueryCacheBuilder_.build();
+        }
+        if (enableReadsFromQueryCacheBuilder_ == null) {
+          result.enableReadsFromQueryCache_ = enableReadsFromQueryCache_;
+        } else {
+          result.enableReadsFromQueryCache_ = enableReadsFromQueryCacheBuilder_.build();
+        }
+        if (enableWritesToQueryCacheBuilder_ == null) {
+          result.enableWritesToQueryCache_ = enableWritesToQueryCache_;
+        } else {
+          result.enableWritesToQueryCache_ = enableWritesToQueryCacheBuilder_.build();
+        }
+        if (queryCacheMinQueryRunsBuilder_ == null) {
+          result.queryCacheMinQueryRuns_ = queryCacheMinQueryRuns_;
+        } else {
+          result.queryCacheMinQueryRuns_ = queryCacheMinQueryRunsBuilder_.build();
+        }
+        if (queryCacheMinQueryDurationBuilder_ == null) {
+          result.queryCacheMinQueryDuration_ = queryCacheMinQueryDuration_;
+        } else {
+          result.queryCacheMinQueryDuration_ = queryCacheMinQueryDurationBuilder_.build();
+        }
+        if (queryCacheTtlBuilder_ == null) {
+          result.queryCacheTtl_ = queryCacheTtl_;
+        } else {
+          result.queryCacheTtl_ = queryCacheTtlBuilder_.build();
+        }
+        if (queryCacheMaxEntriesBuilder_ == null) {
+          result.queryCacheMaxEntries_ = queryCacheMaxEntries_;
+        } else {
+          result.queryCacheMaxEntries_ = queryCacheMaxEntriesBuilder_.build();
+        }
+        if (queryCacheMaxSizeInBytesBuilder_ == null) {
+          result.queryCacheMaxSizeInBytes_ = queryCacheMaxSizeInBytes_;
+        } else {
+          result.queryCacheMaxSizeInBytes_ = queryCacheMaxSizeInBytesBuilder_.build();
+        }
+        result.queryCacheTag_ = queryCacheTag_;
+        if (queryCacheShareBetweenUsersBuilder_ == null) {
+          result.queryCacheShareBetweenUsers_ = queryCacheShareBetweenUsers_;
+        } else {
+          result.queryCacheShareBetweenUsers_ = queryCacheShareBetweenUsersBuilder_.build();
+        }
+        result.queryCacheNondeterministicFunctionHandling_ = queryCacheNondeterministicFunctionHandling_;
         if (maxInsertThreadsBuilder_ == null) {
           result.maxInsertThreads_ = maxInsertThreads_;
         } else {
@@ -23549,6 +25947,16 @@ public final class UserOuterClass {
         } else {
           result.preferLocalhostReplica_ = preferLocalhostReplicaBuilder_.build();
         }
+        if (doNotMergeAcrossPartitionsSelectFinalBuilder_ == null) {
+          result.doNotMergeAcrossPartitionsSelectFinal_ = doNotMergeAcrossPartitionsSelectFinal_;
+        } else {
+          result.doNotMergeAcrossPartitionsSelectFinal_ = doNotMergeAcrossPartitionsSelectFinalBuilder_.build();
+        }
+        if (ignoreMaterializedViewsWithDroppedTargetTableBuilder_ == null) {
+          result.ignoreMaterializedViewsWithDroppedTargetTable_ = ignoreMaterializedViewsWithDroppedTargetTable_;
+        } else {
+          result.ignoreMaterializedViewsWithDroppedTargetTable_ = ignoreMaterializedViewsWithDroppedTargetTableBuilder_.build();
+        }
         if (compileBuilder_ == null) {
           result.compile_ = compile_;
         } else {
@@ -23558,6 +25966,11 @@ public final class UserOuterClass {
           result.minCountToCompile_ = minCountToCompile_;
         } else {
           result.minCountToCompile_ = minCountToCompileBuilder_.build();
+        }
+        if (asyncInsertStaleTimeoutBuilder_ == null) {
+          result.asyncInsertStaleTimeout_ = asyncInsertStaleTimeout_;
+        } else {
+          result.asyncInsertStaleTimeout_ = asyncInsertStaleTimeoutBuilder_.build();
         }
         onBuilt();
         return result;
@@ -23926,6 +26339,12 @@ public final class UserOuterClass {
         if (other.hasMaxHttpGetRedirects()) {
           mergeMaxHttpGetRedirects(other.getMaxHttpGetRedirects());
         }
+        if (other.hasHttpMaxFieldNameSize()) {
+          mergeHttpMaxFieldNameSize(other.getHttpMaxFieldNameSize());
+        }
+        if (other.hasHttpMaxFieldValueSize()) {
+          mergeHttpMaxFieldValueSize(other.getHttpMaxFieldValueSize());
+        }
         if (other.hasJoinedSubqueryRequiresAlias()) {
           mergeJoinedSubqueryRequiresAlias(other.getJoinedSubqueryRequiresAlias());
         }
@@ -23969,8 +26388,8 @@ public final class UserOuterClass {
         if (other.hasAsyncInsertBusyTimeout()) {
           mergeAsyncInsertBusyTimeout(other.getAsyncInsertBusyTimeout());
         }
-        if (other.hasAsyncInsertStaleTimeout()) {
-          mergeAsyncInsertStaleTimeout(other.getAsyncInsertStaleTimeout());
+        if (other.hasAsyncInsertUseAdaptiveBusyTimeout()) {
+          mergeAsyncInsertUseAdaptiveBusyTimeout(other.getAsyncInsertUseAdaptiveBusyTimeout());
         }
         if (other.hasMemoryProfilerStep()) {
           mergeMemoryProfilerStep(other.getMemoryProfilerStep());
@@ -23986,6 +26405,13 @@ public final class UserOuterClass {
         }
         if (other.hasInputFormatImportNestedJson()) {
           mergeInputFormatImportNestedJson(other.getInputFormatImportNestedJson());
+        }
+        if (!other.getFormatAvroSchemaRegistryUrl().isEmpty()) {
+          formatAvroSchemaRegistryUrl_ = other.formatAvroSchemaRegistryUrl_;
+          onChanged();
+        }
+        if (other.hasDataTypeDefaultNullable()) {
+          mergeDataTypeDefaultNullable(other.getDataTypeDefaultNullable());
         }
         if (other.localFilesystemReadMethod_ != 0) {
           setLocalFilesystemReadMethodValue(other.getLocalFilesystemReadMethodValue());
@@ -24020,6 +26446,49 @@ public final class UserOuterClass {
         if (other.hasLogQueryThreads()) {
           mergeLogQueryThreads(other.getLogQueryThreads());
         }
+        if (other.hasLogQueryViews()) {
+          mergeLogQueryViews(other.getLogQueryViews());
+        }
+        if (other.hasLogQueriesProbability()) {
+          mergeLogQueriesProbability(other.getLogQueriesProbability());
+        }
+        if (other.hasLogProcessorsProfiles()) {
+          mergeLogProcessorsProfiles(other.getLogProcessorsProfiles());
+        }
+        if (other.hasUseQueryCache()) {
+          mergeUseQueryCache(other.getUseQueryCache());
+        }
+        if (other.hasEnableReadsFromQueryCache()) {
+          mergeEnableReadsFromQueryCache(other.getEnableReadsFromQueryCache());
+        }
+        if (other.hasEnableWritesToQueryCache()) {
+          mergeEnableWritesToQueryCache(other.getEnableWritesToQueryCache());
+        }
+        if (other.hasQueryCacheMinQueryRuns()) {
+          mergeQueryCacheMinQueryRuns(other.getQueryCacheMinQueryRuns());
+        }
+        if (other.hasQueryCacheMinQueryDuration()) {
+          mergeQueryCacheMinQueryDuration(other.getQueryCacheMinQueryDuration());
+        }
+        if (other.hasQueryCacheTtl()) {
+          mergeQueryCacheTtl(other.getQueryCacheTtl());
+        }
+        if (other.hasQueryCacheMaxEntries()) {
+          mergeQueryCacheMaxEntries(other.getQueryCacheMaxEntries());
+        }
+        if (other.hasQueryCacheMaxSizeInBytes()) {
+          mergeQueryCacheMaxSizeInBytes(other.getQueryCacheMaxSizeInBytes());
+        }
+        if (!other.getQueryCacheTag().isEmpty()) {
+          queryCacheTag_ = other.queryCacheTag_;
+          onChanged();
+        }
+        if (other.hasQueryCacheShareBetweenUsers()) {
+          mergeQueryCacheShareBetweenUsers(other.getQueryCacheShareBetweenUsers());
+        }
+        if (other.queryCacheNondeterministicFunctionHandling_ != 0) {
+          setQueryCacheNondeterministicFunctionHandlingValue(other.getQueryCacheNondeterministicFunctionHandlingValue());
+        }
         if (other.hasMaxInsertThreads()) {
           mergeMaxInsertThreads(other.getMaxInsertThreads());
         }
@@ -24038,11 +26507,20 @@ public final class UserOuterClass {
         if (other.hasPreferLocalhostReplica()) {
           mergePreferLocalhostReplica(other.getPreferLocalhostReplica());
         }
+        if (other.hasDoNotMergeAcrossPartitionsSelectFinal()) {
+          mergeDoNotMergeAcrossPartitionsSelectFinal(other.getDoNotMergeAcrossPartitionsSelectFinal());
+        }
+        if (other.hasIgnoreMaterializedViewsWithDroppedTargetTable()) {
+          mergeIgnoreMaterializedViewsWithDroppedTargetTable(other.getIgnoreMaterializedViewsWithDroppedTargetTable());
+        }
         if (other.hasCompile()) {
           mergeCompile(other.getCompile());
         }
         if (other.hasMinCountToCompile()) {
           mergeMinCountToCompile(other.getMinCountToCompile());
+        }
+        if (other.hasAsyncInsertStaleTimeout()) {
+          mergeAsyncInsertStaleTimeout(other.getAsyncInsertStaleTimeout());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -41064,6 +43542,334 @@ public final class UserOuterClass {
         return maxHttpGetRedirectsBuilder_;
       }
 
+      private com.google.protobuf.Int64Value httpMaxFieldNameSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> httpMaxFieldNameSizeBuilder_;
+      /**
+       * <pre>
+       * Maximum length of field name in HTTP header.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_name_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value http_max_field_name_size = 150;</code>
+       * @return Whether the httpMaxFieldNameSize field is set.
+       */
+      public boolean hasHttpMaxFieldNameSize() {
+        return httpMaxFieldNameSizeBuilder_ != null || httpMaxFieldNameSize_ != null;
+      }
+      /**
+       * <pre>
+       * Maximum length of field name in HTTP header.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_name_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value http_max_field_name_size = 150;</code>
+       * @return The httpMaxFieldNameSize.
+       */
+      public com.google.protobuf.Int64Value getHttpMaxFieldNameSize() {
+        if (httpMaxFieldNameSizeBuilder_ == null) {
+          return httpMaxFieldNameSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : httpMaxFieldNameSize_;
+        } else {
+          return httpMaxFieldNameSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Maximum length of field name in HTTP header.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_name_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value http_max_field_name_size = 150;</code>
+       */
+      public Builder setHttpMaxFieldNameSize(com.google.protobuf.Int64Value value) {
+        if (httpMaxFieldNameSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          httpMaxFieldNameSize_ = value;
+          onChanged();
+        } else {
+          httpMaxFieldNameSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum length of field name in HTTP header.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_name_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value http_max_field_name_size = 150;</code>
+       */
+      public Builder setHttpMaxFieldNameSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (httpMaxFieldNameSizeBuilder_ == null) {
+          httpMaxFieldNameSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          httpMaxFieldNameSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum length of field name in HTTP header.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_name_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value http_max_field_name_size = 150;</code>
+       */
+      public Builder mergeHttpMaxFieldNameSize(com.google.protobuf.Int64Value value) {
+        if (httpMaxFieldNameSizeBuilder_ == null) {
+          if (httpMaxFieldNameSize_ != null) {
+            httpMaxFieldNameSize_ =
+              com.google.protobuf.Int64Value.newBuilder(httpMaxFieldNameSize_).mergeFrom(value).buildPartial();
+          } else {
+            httpMaxFieldNameSize_ = value;
+          }
+          onChanged();
+        } else {
+          httpMaxFieldNameSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum length of field name in HTTP header.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_name_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value http_max_field_name_size = 150;</code>
+       */
+      public Builder clearHttpMaxFieldNameSize() {
+        if (httpMaxFieldNameSizeBuilder_ == null) {
+          httpMaxFieldNameSize_ = null;
+          onChanged();
+        } else {
+          httpMaxFieldNameSize_ = null;
+          httpMaxFieldNameSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum length of field name in HTTP header.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_name_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value http_max_field_name_size = 150;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getHttpMaxFieldNameSizeBuilder() {
+        
+        onChanged();
+        return getHttpMaxFieldNameSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Maximum length of field name in HTTP header.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_name_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value http_max_field_name_size = 150;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getHttpMaxFieldNameSizeOrBuilder() {
+        if (httpMaxFieldNameSizeBuilder_ != null) {
+          return httpMaxFieldNameSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return httpMaxFieldNameSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : httpMaxFieldNameSize_;
+        }
+      }
+      /**
+       * <pre>
+       * Maximum length of field name in HTTP header.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_name_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value http_max_field_name_size = 150;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getHttpMaxFieldNameSizeFieldBuilder() {
+        if (httpMaxFieldNameSizeBuilder_ == null) {
+          httpMaxFieldNameSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getHttpMaxFieldNameSize(),
+                  getParentForChildren(),
+                  isClean());
+          httpMaxFieldNameSize_ = null;
+        }
+        return httpMaxFieldNameSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value httpMaxFieldValueSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> httpMaxFieldValueSizeBuilder_;
+      /**
+       * <pre>
+       * Maximum length of field value in HTTP header.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_value_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value http_max_field_value_size = 151;</code>
+       * @return Whether the httpMaxFieldValueSize field is set.
+       */
+      public boolean hasHttpMaxFieldValueSize() {
+        return httpMaxFieldValueSizeBuilder_ != null || httpMaxFieldValueSize_ != null;
+      }
+      /**
+       * <pre>
+       * Maximum length of field value in HTTP header.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_value_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value http_max_field_value_size = 151;</code>
+       * @return The httpMaxFieldValueSize.
+       */
+      public com.google.protobuf.Int64Value getHttpMaxFieldValueSize() {
+        if (httpMaxFieldValueSizeBuilder_ == null) {
+          return httpMaxFieldValueSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : httpMaxFieldValueSize_;
+        } else {
+          return httpMaxFieldValueSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Maximum length of field value in HTTP header.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_value_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value http_max_field_value_size = 151;</code>
+       */
+      public Builder setHttpMaxFieldValueSize(com.google.protobuf.Int64Value value) {
+        if (httpMaxFieldValueSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          httpMaxFieldValueSize_ = value;
+          onChanged();
+        } else {
+          httpMaxFieldValueSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum length of field value in HTTP header.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_value_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value http_max_field_value_size = 151;</code>
+       */
+      public Builder setHttpMaxFieldValueSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (httpMaxFieldValueSizeBuilder_ == null) {
+          httpMaxFieldValueSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          httpMaxFieldValueSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum length of field value in HTTP header.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_value_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value http_max_field_value_size = 151;</code>
+       */
+      public Builder mergeHttpMaxFieldValueSize(com.google.protobuf.Int64Value value) {
+        if (httpMaxFieldValueSizeBuilder_ == null) {
+          if (httpMaxFieldValueSize_ != null) {
+            httpMaxFieldValueSize_ =
+              com.google.protobuf.Int64Value.newBuilder(httpMaxFieldValueSize_).mergeFrom(value).buildPartial();
+          } else {
+            httpMaxFieldValueSize_ = value;
+          }
+          onChanged();
+        } else {
+          httpMaxFieldValueSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum length of field value in HTTP header.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_value_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value http_max_field_value_size = 151;</code>
+       */
+      public Builder clearHttpMaxFieldValueSize() {
+        if (httpMaxFieldValueSizeBuilder_ == null) {
+          httpMaxFieldValueSize_ = null;
+          onChanged();
+        } else {
+          httpMaxFieldValueSize_ = null;
+          httpMaxFieldValueSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum length of field value in HTTP header.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_value_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value http_max_field_value_size = 151;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getHttpMaxFieldValueSizeBuilder() {
+        
+        onChanged();
+        return getHttpMaxFieldValueSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Maximum length of field value in HTTP header.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_value_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value http_max_field_value_size = 151;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getHttpMaxFieldValueSizeOrBuilder() {
+        if (httpMaxFieldValueSizeBuilder_ != null) {
+          return httpMaxFieldValueSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return httpMaxFieldValueSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : httpMaxFieldValueSize_;
+        }
+      }
+      /**
+       * <pre>
+       * Maximum length of field value in HTTP header.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#http_max_field_value_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value http_max_field_value_size = 151;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getHttpMaxFieldValueSizeFieldBuilder() {
+        if (httpMaxFieldValueSizeBuilder_ == null) {
+          httpMaxFieldValueSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getHttpMaxFieldValueSize(),
+                  getParentForChildren(),
+                  isClean());
+          httpMaxFieldValueSize_ = null;
+        }
+        return httpMaxFieldValueSizeBuilder_;
+      }
+
       private com.google.protobuf.BoolValue joinedSubqueryRequiresAlias_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> joinedSubqueryRequiresAliasBuilder_;
@@ -43013,168 +45819,168 @@ public final class UserOuterClass {
         return asyncInsertBusyTimeoutBuilder_;
       }
 
-      private com.google.protobuf.Int64Value asyncInsertStaleTimeout_;
+      private com.google.protobuf.BoolValue asyncInsertUseAdaptiveBusyTimeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> asyncInsertStaleTimeoutBuilder_;
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> asyncInsertUseAdaptiveBusyTimeoutBuilder_;
       /**
        * <pre>
-       * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
-       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * If it is set to true, use adaptive busy timeout for asynchronous inserts.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#async_insert_use_adaptive_busy_timeout).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
-       * @return Whether the asyncInsertStaleTimeout field is set.
+       * <code>.google.protobuf.BoolValue async_insert_use_adaptive_busy_timeout = 152;</code>
+       * @return Whether the asyncInsertUseAdaptiveBusyTimeout field is set.
        */
-      public boolean hasAsyncInsertStaleTimeout() {
-        return asyncInsertStaleTimeoutBuilder_ != null || asyncInsertStaleTimeout_ != null;
+      public boolean hasAsyncInsertUseAdaptiveBusyTimeout() {
+        return asyncInsertUseAdaptiveBusyTimeoutBuilder_ != null || asyncInsertUseAdaptiveBusyTimeout_ != null;
       }
       /**
        * <pre>
-       * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
-       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * If it is set to true, use adaptive busy timeout for asynchronous inserts.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#async_insert_use_adaptive_busy_timeout).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
-       * @return The asyncInsertStaleTimeout.
+       * <code>.google.protobuf.BoolValue async_insert_use_adaptive_busy_timeout = 152;</code>
+       * @return The asyncInsertUseAdaptiveBusyTimeout.
        */
-      public com.google.protobuf.Int64Value getAsyncInsertStaleTimeout() {
-        if (asyncInsertStaleTimeoutBuilder_ == null) {
-          return asyncInsertStaleTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asyncInsertStaleTimeout_;
+      public com.google.protobuf.BoolValue getAsyncInsertUseAdaptiveBusyTimeout() {
+        if (asyncInsertUseAdaptiveBusyTimeoutBuilder_ == null) {
+          return asyncInsertUseAdaptiveBusyTimeout_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : asyncInsertUseAdaptiveBusyTimeout_;
         } else {
-          return asyncInsertStaleTimeoutBuilder_.getMessage();
+          return asyncInsertUseAdaptiveBusyTimeoutBuilder_.getMessage();
         }
       }
       /**
        * <pre>
-       * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
-       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * If it is set to true, use adaptive busy timeout for asynchronous inserts.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#async_insert_use_adaptive_busy_timeout).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
+       * <code>.google.protobuf.BoolValue async_insert_use_adaptive_busy_timeout = 152;</code>
        */
-      public Builder setAsyncInsertStaleTimeout(com.google.protobuf.Int64Value value) {
-        if (asyncInsertStaleTimeoutBuilder_ == null) {
+      public Builder setAsyncInsertUseAdaptiveBusyTimeout(com.google.protobuf.BoolValue value) {
+        if (asyncInsertUseAdaptiveBusyTimeoutBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          asyncInsertStaleTimeout_ = value;
+          asyncInsertUseAdaptiveBusyTimeout_ = value;
           onChanged();
         } else {
-          asyncInsertStaleTimeoutBuilder_.setMessage(value);
+          asyncInsertUseAdaptiveBusyTimeoutBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
        * <pre>
-       * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
-       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * If it is set to true, use adaptive busy timeout for asynchronous inserts.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#async_insert_use_adaptive_busy_timeout).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
+       * <code>.google.protobuf.BoolValue async_insert_use_adaptive_busy_timeout = 152;</code>
        */
-      public Builder setAsyncInsertStaleTimeout(
-          com.google.protobuf.Int64Value.Builder builderForValue) {
-        if (asyncInsertStaleTimeoutBuilder_ == null) {
-          asyncInsertStaleTimeout_ = builderForValue.build();
+      public Builder setAsyncInsertUseAdaptiveBusyTimeout(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (asyncInsertUseAdaptiveBusyTimeoutBuilder_ == null) {
+          asyncInsertUseAdaptiveBusyTimeout_ = builderForValue.build();
           onChanged();
         } else {
-          asyncInsertStaleTimeoutBuilder_.setMessage(builderForValue.build());
+          asyncInsertUseAdaptiveBusyTimeoutBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
        * <pre>
-       * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
-       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * If it is set to true, use adaptive busy timeout for asynchronous inserts.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#async_insert_use_adaptive_busy_timeout).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
+       * <code>.google.protobuf.BoolValue async_insert_use_adaptive_busy_timeout = 152;</code>
        */
-      public Builder mergeAsyncInsertStaleTimeout(com.google.protobuf.Int64Value value) {
-        if (asyncInsertStaleTimeoutBuilder_ == null) {
-          if (asyncInsertStaleTimeout_ != null) {
-            asyncInsertStaleTimeout_ =
-              com.google.protobuf.Int64Value.newBuilder(asyncInsertStaleTimeout_).mergeFrom(value).buildPartial();
+      public Builder mergeAsyncInsertUseAdaptiveBusyTimeout(com.google.protobuf.BoolValue value) {
+        if (asyncInsertUseAdaptiveBusyTimeoutBuilder_ == null) {
+          if (asyncInsertUseAdaptiveBusyTimeout_ != null) {
+            asyncInsertUseAdaptiveBusyTimeout_ =
+              com.google.protobuf.BoolValue.newBuilder(asyncInsertUseAdaptiveBusyTimeout_).mergeFrom(value).buildPartial();
           } else {
-            asyncInsertStaleTimeout_ = value;
+            asyncInsertUseAdaptiveBusyTimeout_ = value;
           }
           onChanged();
         } else {
-          asyncInsertStaleTimeoutBuilder_.mergeFrom(value);
+          asyncInsertUseAdaptiveBusyTimeoutBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
        * <pre>
-       * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
-       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * If it is set to true, use adaptive busy timeout for asynchronous inserts.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#async_insert_use_adaptive_busy_timeout).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
+       * <code>.google.protobuf.BoolValue async_insert_use_adaptive_busy_timeout = 152;</code>
        */
-      public Builder clearAsyncInsertStaleTimeout() {
-        if (asyncInsertStaleTimeoutBuilder_ == null) {
-          asyncInsertStaleTimeout_ = null;
+      public Builder clearAsyncInsertUseAdaptiveBusyTimeout() {
+        if (asyncInsertUseAdaptiveBusyTimeoutBuilder_ == null) {
+          asyncInsertUseAdaptiveBusyTimeout_ = null;
           onChanged();
         } else {
-          asyncInsertStaleTimeout_ = null;
-          asyncInsertStaleTimeoutBuilder_ = null;
+          asyncInsertUseAdaptiveBusyTimeout_ = null;
+          asyncInsertUseAdaptiveBusyTimeoutBuilder_ = null;
         }
 
         return this;
       }
       /**
        * <pre>
-       * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
-       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * If it is set to true, use adaptive busy timeout for asynchronous inserts.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#async_insert_use_adaptive_busy_timeout).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
+       * <code>.google.protobuf.BoolValue async_insert_use_adaptive_busy_timeout = 152;</code>
        */
-      public com.google.protobuf.Int64Value.Builder getAsyncInsertStaleTimeoutBuilder() {
+      public com.google.protobuf.BoolValue.Builder getAsyncInsertUseAdaptiveBusyTimeoutBuilder() {
         
         onChanged();
-        return getAsyncInsertStaleTimeoutFieldBuilder().getBuilder();
+        return getAsyncInsertUseAdaptiveBusyTimeoutFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
-       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * If it is set to true, use adaptive busy timeout for asynchronous inserts.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#async_insert_use_adaptive_busy_timeout).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
+       * <code>.google.protobuf.BoolValue async_insert_use_adaptive_busy_timeout = 152;</code>
        */
-      public com.google.protobuf.Int64ValueOrBuilder getAsyncInsertStaleTimeoutOrBuilder() {
-        if (asyncInsertStaleTimeoutBuilder_ != null) {
-          return asyncInsertStaleTimeoutBuilder_.getMessageOrBuilder();
+      public com.google.protobuf.BoolValueOrBuilder getAsyncInsertUseAdaptiveBusyTimeoutOrBuilder() {
+        if (asyncInsertUseAdaptiveBusyTimeoutBuilder_ != null) {
+          return asyncInsertUseAdaptiveBusyTimeoutBuilder_.getMessageOrBuilder();
         } else {
-          return asyncInsertStaleTimeout_ == null ?
-              com.google.protobuf.Int64Value.getDefaultInstance() : asyncInsertStaleTimeout_;
+          return asyncInsertUseAdaptiveBusyTimeout_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : asyncInsertUseAdaptiveBusyTimeout_;
         }
       }
       /**
        * <pre>
-       * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
-       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * If it is set to true, use adaptive busy timeout for asynchronous inserts.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#async_insert_use_adaptive_busy_timeout).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
+       * <code>.google.protobuf.BoolValue async_insert_use_adaptive_busy_timeout = 152;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-          getAsyncInsertStaleTimeoutFieldBuilder() {
-        if (asyncInsertStaleTimeoutBuilder_ == null) {
-          asyncInsertStaleTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                  getAsyncInsertStaleTimeout(),
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getAsyncInsertUseAdaptiveBusyTimeoutFieldBuilder() {
+        if (asyncInsertUseAdaptiveBusyTimeoutBuilder_ == null) {
+          asyncInsertUseAdaptiveBusyTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getAsyncInsertUseAdaptiveBusyTimeout(),
                   getParentForChildren(),
                   isClean());
-          asyncInsertStaleTimeout_ = null;
+          asyncInsertUseAdaptiveBusyTimeout_ = null;
         }
-        return asyncInsertStaleTimeoutBuilder_;
+        return asyncInsertUseAdaptiveBusyTimeoutBuilder_;
       }
 
       private com.google.protobuf.Int64Value memoryProfilerStep_;
@@ -44004,6 +46810,271 @@ public final class UserOuterClass {
           inputFormatImportNestedJson_ = null;
         }
         return inputFormatImportNestedJsonBuilder_;
+      }
+
+      private java.lang.Object formatAvroSchemaRegistryUrl_ = "";
+      /**
+       * <pre>
+       * Avro schema registry URL.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/formats#format_avro_schema_registry_url).
+       * </pre>
+       *
+       * <code>string format_avro_schema_registry_url = 148;</code>
+       * @return The formatAvroSchemaRegistryUrl.
+       */
+      public java.lang.String getFormatAvroSchemaRegistryUrl() {
+        java.lang.Object ref = formatAvroSchemaRegistryUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          formatAvroSchemaRegistryUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Avro schema registry URL.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/formats#format_avro_schema_registry_url).
+       * </pre>
+       *
+       * <code>string format_avro_schema_registry_url = 148;</code>
+       * @return The bytes for formatAvroSchemaRegistryUrl.
+       */
+      public com.google.protobuf.ByteString
+          getFormatAvroSchemaRegistryUrlBytes() {
+        java.lang.Object ref = formatAvroSchemaRegistryUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          formatAvroSchemaRegistryUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Avro schema registry URL.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/formats#format_avro_schema_registry_url).
+       * </pre>
+       *
+       * <code>string format_avro_schema_registry_url = 148;</code>
+       * @param value The formatAvroSchemaRegistryUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFormatAvroSchemaRegistryUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        formatAvroSchemaRegistryUrl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Avro schema registry URL.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/formats#format_avro_schema_registry_url).
+       * </pre>
+       *
+       * <code>string format_avro_schema_registry_url = 148;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFormatAvroSchemaRegistryUrl() {
+        
+        formatAvroSchemaRegistryUrl_ = getDefaultInstance().getFormatAvroSchemaRegistryUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Avro schema registry URL.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/formats#format_avro_schema_registry_url).
+       * </pre>
+       *
+       * <code>string format_avro_schema_registry_url = 148;</code>
+       * @param value The bytes for formatAvroSchemaRegistryUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFormatAvroSchemaRegistryUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        formatAvroSchemaRegistryUrl_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.BoolValue dataTypeDefaultNullable_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> dataTypeDefaultNullableBuilder_;
+      /**
+       * <pre>
+       * Allows data types without explicit modifiers NULL or NOT NULL in column definition will be Nullable.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#data_type_default_nullable).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue data_type_default_nullable = 149;</code>
+       * @return Whether the dataTypeDefaultNullable field is set.
+       */
+      public boolean hasDataTypeDefaultNullable() {
+        return dataTypeDefaultNullableBuilder_ != null || dataTypeDefaultNullable_ != null;
+      }
+      /**
+       * <pre>
+       * Allows data types without explicit modifiers NULL or NOT NULL in column definition will be Nullable.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#data_type_default_nullable).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue data_type_default_nullable = 149;</code>
+       * @return The dataTypeDefaultNullable.
+       */
+      public com.google.protobuf.BoolValue getDataTypeDefaultNullable() {
+        if (dataTypeDefaultNullableBuilder_ == null) {
+          return dataTypeDefaultNullable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : dataTypeDefaultNullable_;
+        } else {
+          return dataTypeDefaultNullableBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Allows data types without explicit modifiers NULL or NOT NULL in column definition will be Nullable.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#data_type_default_nullable).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue data_type_default_nullable = 149;</code>
+       */
+      public Builder setDataTypeDefaultNullable(com.google.protobuf.BoolValue value) {
+        if (dataTypeDefaultNullableBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dataTypeDefaultNullable_ = value;
+          onChanged();
+        } else {
+          dataTypeDefaultNullableBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Allows data types without explicit modifiers NULL or NOT NULL in column definition will be Nullable.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#data_type_default_nullable).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue data_type_default_nullable = 149;</code>
+       */
+      public Builder setDataTypeDefaultNullable(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (dataTypeDefaultNullableBuilder_ == null) {
+          dataTypeDefaultNullable_ = builderForValue.build();
+          onChanged();
+        } else {
+          dataTypeDefaultNullableBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Allows data types without explicit modifiers NULL or NOT NULL in column definition will be Nullable.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#data_type_default_nullable).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue data_type_default_nullable = 149;</code>
+       */
+      public Builder mergeDataTypeDefaultNullable(com.google.protobuf.BoolValue value) {
+        if (dataTypeDefaultNullableBuilder_ == null) {
+          if (dataTypeDefaultNullable_ != null) {
+            dataTypeDefaultNullable_ =
+              com.google.protobuf.BoolValue.newBuilder(dataTypeDefaultNullable_).mergeFrom(value).buildPartial();
+          } else {
+            dataTypeDefaultNullable_ = value;
+          }
+          onChanged();
+        } else {
+          dataTypeDefaultNullableBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Allows data types without explicit modifiers NULL or NOT NULL in column definition will be Nullable.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#data_type_default_nullable).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue data_type_default_nullable = 149;</code>
+       */
+      public Builder clearDataTypeDefaultNullable() {
+        if (dataTypeDefaultNullableBuilder_ == null) {
+          dataTypeDefaultNullable_ = null;
+          onChanged();
+        } else {
+          dataTypeDefaultNullable_ = null;
+          dataTypeDefaultNullableBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Allows data types without explicit modifiers NULL or NOT NULL in column definition will be Nullable.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#data_type_default_nullable).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue data_type_default_nullable = 149;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getDataTypeDefaultNullableBuilder() {
+        
+        onChanged();
+        return getDataTypeDefaultNullableFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Allows data types without explicit modifiers NULL or NOT NULL in column definition will be Nullable.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#data_type_default_nullable).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue data_type_default_nullable = 149;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getDataTypeDefaultNullableOrBuilder() {
+        if (dataTypeDefaultNullableBuilder_ != null) {
+          return dataTypeDefaultNullableBuilder_.getMessageOrBuilder();
+        } else {
+          return dataTypeDefaultNullable_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : dataTypeDefaultNullable_;
+        }
+      }
+      /**
+       * <pre>
+       * Allows data types without explicit modifiers NULL or NOT NULL in column definition will be Nullable.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#data_type_default_nullable).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue data_type_default_nullable = 149;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getDataTypeDefaultNullableFieldBuilder() {
+        if (dataTypeDefaultNullableBuilder_ == null) {
+          dataTypeDefaultNullableBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getDataTypeDefaultNullable(),
+                  getParentForChildren(),
+                  isClean());
+          dataTypeDefaultNullable_ = null;
+        }
+        return dataTypeDefaultNullableBuilder_;
       }
 
       private int localFilesystemReadMethod_ = 0;
@@ -45613,7 +48684,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
-       * Default: true
+       * Default: false
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
        * </pre>
        *
@@ -45626,7 +48697,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
-       * Default: true
+       * Default: false
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
        * </pre>
        *
@@ -45643,7 +48714,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
-       * Default: true
+       * Default: false
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
        * </pre>
        *
@@ -45665,7 +48736,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
-       * Default: true
+       * Default: false
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
        * </pre>
        *
@@ -45685,7 +48756,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
-       * Default: true
+       * Default: false
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
        * </pre>
        *
@@ -45709,7 +48780,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
-       * Default: true
+       * Default: false
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
        * </pre>
        *
@@ -45729,7 +48800,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
-       * Default: true
+       * Default: false
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
        * </pre>
        *
@@ -45743,7 +48814,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
-       * Default: true
+       * Default: false
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
        * </pre>
        *
@@ -45760,7 +48831,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
-       * Default: true
+       * Default: false
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
        * </pre>
        *
@@ -45778,6 +48849,2163 @@ public final class UserOuterClass {
           logQueryThreads_ = null;
         }
         return logQueryThreadsBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue logQueryViews_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> logQueryViewsBuilder_;
+      /**
+       * <pre>
+       * Enables or disables query views logging to the the system.query_view_log table.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_views)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_query_views = 146;</code>
+       * @return Whether the logQueryViews field is set.
+       */
+      public boolean hasLogQueryViews() {
+        return logQueryViewsBuilder_ != null || logQueryViews_ != null;
+      }
+      /**
+       * <pre>
+       * Enables or disables query views logging to the the system.query_view_log table.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_views)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_query_views = 146;</code>
+       * @return The logQueryViews.
+       */
+      public com.google.protobuf.BoolValue getLogQueryViews() {
+        if (logQueryViewsBuilder_ == null) {
+          return logQueryViews_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logQueryViews_;
+        } else {
+          return logQueryViewsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enables or disables query views logging to the the system.query_view_log table.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_views)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_query_views = 146;</code>
+       */
+      public Builder setLogQueryViews(com.google.protobuf.BoolValue value) {
+        if (logQueryViewsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logQueryViews_ = value;
+          onChanged();
+        } else {
+          logQueryViewsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables query views logging to the the system.query_view_log table.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_views)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_query_views = 146;</code>
+       */
+      public Builder setLogQueryViews(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (logQueryViewsBuilder_ == null) {
+          logQueryViews_ = builderForValue.build();
+          onChanged();
+        } else {
+          logQueryViewsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables query views logging to the the system.query_view_log table.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_views)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_query_views = 146;</code>
+       */
+      public Builder mergeLogQueryViews(com.google.protobuf.BoolValue value) {
+        if (logQueryViewsBuilder_ == null) {
+          if (logQueryViews_ != null) {
+            logQueryViews_ =
+              com.google.protobuf.BoolValue.newBuilder(logQueryViews_).mergeFrom(value).buildPartial();
+          } else {
+            logQueryViews_ = value;
+          }
+          onChanged();
+        } else {
+          logQueryViewsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables query views logging to the the system.query_view_log table.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_views)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_query_views = 146;</code>
+       */
+      public Builder clearLogQueryViews() {
+        if (logQueryViewsBuilder_ == null) {
+          logQueryViews_ = null;
+          onChanged();
+        } else {
+          logQueryViews_ = null;
+          logQueryViewsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables query views logging to the the system.query_view_log table.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_views)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_query_views = 146;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getLogQueryViewsBuilder() {
+        
+        onChanged();
+        return getLogQueryViewsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enables or disables query views logging to the the system.query_view_log table.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_views)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_query_views = 146;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getLogQueryViewsOrBuilder() {
+        if (logQueryViewsBuilder_ != null) {
+          return logQueryViewsBuilder_.getMessageOrBuilder();
+        } else {
+          return logQueryViews_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : logQueryViews_;
+        }
+      }
+      /**
+       * <pre>
+       * Enables or disables query views logging to the the system.query_view_log table.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_views)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_query_views = 146;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getLogQueryViewsFieldBuilder() {
+        if (logQueryViewsBuilder_ == null) {
+          logQueryViewsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getLogQueryViews(),
+                  getParentForChildren(),
+                  isClean());
+          logQueryViews_ = null;
+        }
+        return logQueryViewsBuilder_;
+      }
+
+      private com.google.protobuf.DoubleValue logQueriesProbability_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> logQueriesProbabilityBuilder_;
+      /**
+       * <pre>
+       * Log queries with the specified probability.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_queries_probability).
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue log_queries_probability = 153;</code>
+       * @return Whether the logQueriesProbability field is set.
+       */
+      public boolean hasLogQueriesProbability() {
+        return logQueriesProbabilityBuilder_ != null || logQueriesProbability_ != null;
+      }
+      /**
+       * <pre>
+       * Log queries with the specified probability.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_queries_probability).
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue log_queries_probability = 153;</code>
+       * @return The logQueriesProbability.
+       */
+      public com.google.protobuf.DoubleValue getLogQueriesProbability() {
+        if (logQueriesProbabilityBuilder_ == null) {
+          return logQueriesProbability_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : logQueriesProbability_;
+        } else {
+          return logQueriesProbabilityBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Log queries with the specified probability.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_queries_probability).
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue log_queries_probability = 153;</code>
+       */
+      public Builder setLogQueriesProbability(com.google.protobuf.DoubleValue value) {
+        if (logQueriesProbabilityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logQueriesProbability_ = value;
+          onChanged();
+        } else {
+          logQueriesProbabilityBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Log queries with the specified probability.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_queries_probability).
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue log_queries_probability = 153;</code>
+       */
+      public Builder setLogQueriesProbability(
+          com.google.protobuf.DoubleValue.Builder builderForValue) {
+        if (logQueriesProbabilityBuilder_ == null) {
+          logQueriesProbability_ = builderForValue.build();
+          onChanged();
+        } else {
+          logQueriesProbabilityBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Log queries with the specified probability.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_queries_probability).
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue log_queries_probability = 153;</code>
+       */
+      public Builder mergeLogQueriesProbability(com.google.protobuf.DoubleValue value) {
+        if (logQueriesProbabilityBuilder_ == null) {
+          if (logQueriesProbability_ != null) {
+            logQueriesProbability_ =
+              com.google.protobuf.DoubleValue.newBuilder(logQueriesProbability_).mergeFrom(value).buildPartial();
+          } else {
+            logQueriesProbability_ = value;
+          }
+          onChanged();
+        } else {
+          logQueriesProbabilityBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Log queries with the specified probability.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_queries_probability).
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue log_queries_probability = 153;</code>
+       */
+      public Builder clearLogQueriesProbability() {
+        if (logQueriesProbabilityBuilder_ == null) {
+          logQueriesProbability_ = null;
+          onChanged();
+        } else {
+          logQueriesProbability_ = null;
+          logQueriesProbabilityBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Log queries with the specified probability.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_queries_probability).
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue log_queries_probability = 153;</code>
+       */
+      public com.google.protobuf.DoubleValue.Builder getLogQueriesProbabilityBuilder() {
+        
+        onChanged();
+        return getLogQueriesProbabilityFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Log queries with the specified probability.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_queries_probability).
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue log_queries_probability = 153;</code>
+       */
+      public com.google.protobuf.DoubleValueOrBuilder getLogQueriesProbabilityOrBuilder() {
+        if (logQueriesProbabilityBuilder_ != null) {
+          return logQueriesProbabilityBuilder_.getMessageOrBuilder();
+        } else {
+          return logQueriesProbability_ == null ?
+              com.google.protobuf.DoubleValue.getDefaultInstance() : logQueriesProbability_;
+        }
+      }
+      /**
+       * <pre>
+       * Log queries with the specified probability.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_queries_probability).
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue log_queries_probability = 153;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          getLogQueriesProbabilityFieldBuilder() {
+        if (logQueriesProbabilityBuilder_ == null) {
+          logQueriesProbabilityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                  getLogQueriesProbability(),
+                  getParentForChildren(),
+                  isClean());
+          logQueriesProbability_ = null;
+        }
+        return logQueriesProbabilityBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue logProcessorsProfiles_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> logProcessorsProfilesBuilder_;
+      /**
+       * <pre>
+       * Enabled or disable logging of processors level profiling data to the the system.log_processors_profiles table.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_processors_profiles).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_processors_profiles = 154;</code>
+       * @return Whether the logProcessorsProfiles field is set.
+       */
+      public boolean hasLogProcessorsProfiles() {
+        return logProcessorsProfilesBuilder_ != null || logProcessorsProfiles_ != null;
+      }
+      /**
+       * <pre>
+       * Enabled or disable logging of processors level profiling data to the the system.log_processors_profiles table.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_processors_profiles).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_processors_profiles = 154;</code>
+       * @return The logProcessorsProfiles.
+       */
+      public com.google.protobuf.BoolValue getLogProcessorsProfiles() {
+        if (logProcessorsProfilesBuilder_ == null) {
+          return logProcessorsProfiles_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logProcessorsProfiles_;
+        } else {
+          return logProcessorsProfilesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enabled or disable logging of processors level profiling data to the the system.log_processors_profiles table.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_processors_profiles).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_processors_profiles = 154;</code>
+       */
+      public Builder setLogProcessorsProfiles(com.google.protobuf.BoolValue value) {
+        if (logProcessorsProfilesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logProcessorsProfiles_ = value;
+          onChanged();
+        } else {
+          logProcessorsProfilesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled or disable logging of processors level profiling data to the the system.log_processors_profiles table.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_processors_profiles).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_processors_profiles = 154;</code>
+       */
+      public Builder setLogProcessorsProfiles(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (logProcessorsProfilesBuilder_ == null) {
+          logProcessorsProfiles_ = builderForValue.build();
+          onChanged();
+        } else {
+          logProcessorsProfilesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled or disable logging of processors level profiling data to the the system.log_processors_profiles table.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_processors_profiles).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_processors_profiles = 154;</code>
+       */
+      public Builder mergeLogProcessorsProfiles(com.google.protobuf.BoolValue value) {
+        if (logProcessorsProfilesBuilder_ == null) {
+          if (logProcessorsProfiles_ != null) {
+            logProcessorsProfiles_ =
+              com.google.protobuf.BoolValue.newBuilder(logProcessorsProfiles_).mergeFrom(value).buildPartial();
+          } else {
+            logProcessorsProfiles_ = value;
+          }
+          onChanged();
+        } else {
+          logProcessorsProfilesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled or disable logging of processors level profiling data to the the system.log_processors_profiles table.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_processors_profiles).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_processors_profiles = 154;</code>
+       */
+      public Builder clearLogProcessorsProfiles() {
+        if (logProcessorsProfilesBuilder_ == null) {
+          logProcessorsProfiles_ = null;
+          onChanged();
+        } else {
+          logProcessorsProfiles_ = null;
+          logProcessorsProfilesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled or disable logging of processors level profiling data to the the system.log_processors_profiles table.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_processors_profiles).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_processors_profiles = 154;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getLogProcessorsProfilesBuilder() {
+        
+        onChanged();
+        return getLogProcessorsProfilesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enabled or disable logging of processors level profiling data to the the system.log_processors_profiles table.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_processors_profiles).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_processors_profiles = 154;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getLogProcessorsProfilesOrBuilder() {
+        if (logProcessorsProfilesBuilder_ != null) {
+          return logProcessorsProfilesBuilder_.getMessageOrBuilder();
+        } else {
+          return logProcessorsProfiles_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : logProcessorsProfiles_;
+        }
+      }
+      /**
+       * <pre>
+       * Enabled or disable logging of processors level profiling data to the the system.log_processors_profiles table.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_processors_profiles).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_processors_profiles = 154;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getLogProcessorsProfilesFieldBuilder() {
+        if (logProcessorsProfilesBuilder_ == null) {
+          logProcessorsProfilesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getLogProcessorsProfiles(),
+                  getParentForChildren(),
+                  isClean());
+          logProcessorsProfiles_ = null;
+        }
+        return logProcessorsProfilesBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue useQueryCache_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> useQueryCacheBuilder_;
+      /**
+       * <pre>
+       * If turned on, SELECT queries may utilize the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_query_cache = 155;</code>
+       * @return Whether the useQueryCache field is set.
+       */
+      public boolean hasUseQueryCache() {
+        return useQueryCacheBuilder_ != null || useQueryCache_ != null;
+      }
+      /**
+       * <pre>
+       * If turned on, SELECT queries may utilize the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_query_cache = 155;</code>
+       * @return The useQueryCache.
+       */
+      public com.google.protobuf.BoolValue getUseQueryCache() {
+        if (useQueryCacheBuilder_ == null) {
+          return useQueryCache_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : useQueryCache_;
+        } else {
+          return useQueryCacheBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * If turned on, SELECT queries may utilize the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_query_cache = 155;</code>
+       */
+      public Builder setUseQueryCache(com.google.protobuf.BoolValue value) {
+        if (useQueryCacheBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          useQueryCache_ = value;
+          onChanged();
+        } else {
+          useQueryCacheBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If turned on, SELECT queries may utilize the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_query_cache = 155;</code>
+       */
+      public Builder setUseQueryCache(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (useQueryCacheBuilder_ == null) {
+          useQueryCache_ = builderForValue.build();
+          onChanged();
+        } else {
+          useQueryCacheBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If turned on, SELECT queries may utilize the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_query_cache = 155;</code>
+       */
+      public Builder mergeUseQueryCache(com.google.protobuf.BoolValue value) {
+        if (useQueryCacheBuilder_ == null) {
+          if (useQueryCache_ != null) {
+            useQueryCache_ =
+              com.google.protobuf.BoolValue.newBuilder(useQueryCache_).mergeFrom(value).buildPartial();
+          } else {
+            useQueryCache_ = value;
+          }
+          onChanged();
+        } else {
+          useQueryCacheBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If turned on, SELECT queries may utilize the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_query_cache = 155;</code>
+       */
+      public Builder clearUseQueryCache() {
+        if (useQueryCacheBuilder_ == null) {
+          useQueryCache_ = null;
+          onChanged();
+        } else {
+          useQueryCache_ = null;
+          useQueryCacheBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If turned on, SELECT queries may utilize the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_query_cache = 155;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getUseQueryCacheBuilder() {
+        
+        onChanged();
+        return getUseQueryCacheFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * If turned on, SELECT queries may utilize the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_query_cache = 155;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getUseQueryCacheOrBuilder() {
+        if (useQueryCacheBuilder_ != null) {
+          return useQueryCacheBuilder_.getMessageOrBuilder();
+        } else {
+          return useQueryCache_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : useQueryCache_;
+        }
+      }
+      /**
+       * <pre>
+       * If turned on, SELECT queries may utilize the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_query_cache = 155;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getUseQueryCacheFieldBuilder() {
+        if (useQueryCacheBuilder_ == null) {
+          useQueryCacheBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getUseQueryCache(),
+                  getParentForChildren(),
+                  isClean());
+          useQueryCache_ = null;
+        }
+        return useQueryCacheBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue enableReadsFromQueryCache_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableReadsFromQueryCacheBuilder_;
+      /**
+       * <pre>
+       * If turned on, results of SELECT queries are retrieved from the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_reads_from_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_reads_from_query_cache = 156;</code>
+       * @return Whether the enableReadsFromQueryCache field is set.
+       */
+      public boolean hasEnableReadsFromQueryCache() {
+        return enableReadsFromQueryCacheBuilder_ != null || enableReadsFromQueryCache_ != null;
+      }
+      /**
+       * <pre>
+       * If turned on, results of SELECT queries are retrieved from the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_reads_from_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_reads_from_query_cache = 156;</code>
+       * @return The enableReadsFromQueryCache.
+       */
+      public com.google.protobuf.BoolValue getEnableReadsFromQueryCache() {
+        if (enableReadsFromQueryCacheBuilder_ == null) {
+          return enableReadsFromQueryCache_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableReadsFromQueryCache_;
+        } else {
+          return enableReadsFromQueryCacheBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * If turned on, results of SELECT queries are retrieved from the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_reads_from_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_reads_from_query_cache = 156;</code>
+       */
+      public Builder setEnableReadsFromQueryCache(com.google.protobuf.BoolValue value) {
+        if (enableReadsFromQueryCacheBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          enableReadsFromQueryCache_ = value;
+          onChanged();
+        } else {
+          enableReadsFromQueryCacheBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If turned on, results of SELECT queries are retrieved from the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_reads_from_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_reads_from_query_cache = 156;</code>
+       */
+      public Builder setEnableReadsFromQueryCache(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (enableReadsFromQueryCacheBuilder_ == null) {
+          enableReadsFromQueryCache_ = builderForValue.build();
+          onChanged();
+        } else {
+          enableReadsFromQueryCacheBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If turned on, results of SELECT queries are retrieved from the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_reads_from_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_reads_from_query_cache = 156;</code>
+       */
+      public Builder mergeEnableReadsFromQueryCache(com.google.protobuf.BoolValue value) {
+        if (enableReadsFromQueryCacheBuilder_ == null) {
+          if (enableReadsFromQueryCache_ != null) {
+            enableReadsFromQueryCache_ =
+              com.google.protobuf.BoolValue.newBuilder(enableReadsFromQueryCache_).mergeFrom(value).buildPartial();
+          } else {
+            enableReadsFromQueryCache_ = value;
+          }
+          onChanged();
+        } else {
+          enableReadsFromQueryCacheBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If turned on, results of SELECT queries are retrieved from the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_reads_from_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_reads_from_query_cache = 156;</code>
+       */
+      public Builder clearEnableReadsFromQueryCache() {
+        if (enableReadsFromQueryCacheBuilder_ == null) {
+          enableReadsFromQueryCache_ = null;
+          onChanged();
+        } else {
+          enableReadsFromQueryCache_ = null;
+          enableReadsFromQueryCacheBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If turned on, results of SELECT queries are retrieved from the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_reads_from_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_reads_from_query_cache = 156;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getEnableReadsFromQueryCacheBuilder() {
+        
+        onChanged();
+        return getEnableReadsFromQueryCacheFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * If turned on, results of SELECT queries are retrieved from the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_reads_from_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_reads_from_query_cache = 156;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getEnableReadsFromQueryCacheOrBuilder() {
+        if (enableReadsFromQueryCacheBuilder_ != null) {
+          return enableReadsFromQueryCacheBuilder_.getMessageOrBuilder();
+        } else {
+          return enableReadsFromQueryCache_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : enableReadsFromQueryCache_;
+        }
+      }
+      /**
+       * <pre>
+       * If turned on, results of SELECT queries are retrieved from the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_reads_from_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_reads_from_query_cache = 156;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getEnableReadsFromQueryCacheFieldBuilder() {
+        if (enableReadsFromQueryCacheBuilder_ == null) {
+          enableReadsFromQueryCacheBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getEnableReadsFromQueryCache(),
+                  getParentForChildren(),
+                  isClean());
+          enableReadsFromQueryCache_ = null;
+        }
+        return enableReadsFromQueryCacheBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue enableWritesToQueryCache_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableWritesToQueryCacheBuilder_;
+      /**
+       * <pre>
+       * If turned on, results of SELECT queries are stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_writes_to_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_writes_to_query_cache = 157;</code>
+       * @return Whether the enableWritesToQueryCache field is set.
+       */
+      public boolean hasEnableWritesToQueryCache() {
+        return enableWritesToQueryCacheBuilder_ != null || enableWritesToQueryCache_ != null;
+      }
+      /**
+       * <pre>
+       * If turned on, results of SELECT queries are stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_writes_to_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_writes_to_query_cache = 157;</code>
+       * @return The enableWritesToQueryCache.
+       */
+      public com.google.protobuf.BoolValue getEnableWritesToQueryCache() {
+        if (enableWritesToQueryCacheBuilder_ == null) {
+          return enableWritesToQueryCache_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableWritesToQueryCache_;
+        } else {
+          return enableWritesToQueryCacheBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * If turned on, results of SELECT queries are stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_writes_to_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_writes_to_query_cache = 157;</code>
+       */
+      public Builder setEnableWritesToQueryCache(com.google.protobuf.BoolValue value) {
+        if (enableWritesToQueryCacheBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          enableWritesToQueryCache_ = value;
+          onChanged();
+        } else {
+          enableWritesToQueryCacheBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If turned on, results of SELECT queries are stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_writes_to_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_writes_to_query_cache = 157;</code>
+       */
+      public Builder setEnableWritesToQueryCache(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (enableWritesToQueryCacheBuilder_ == null) {
+          enableWritesToQueryCache_ = builderForValue.build();
+          onChanged();
+        } else {
+          enableWritesToQueryCacheBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If turned on, results of SELECT queries are stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_writes_to_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_writes_to_query_cache = 157;</code>
+       */
+      public Builder mergeEnableWritesToQueryCache(com.google.protobuf.BoolValue value) {
+        if (enableWritesToQueryCacheBuilder_ == null) {
+          if (enableWritesToQueryCache_ != null) {
+            enableWritesToQueryCache_ =
+              com.google.protobuf.BoolValue.newBuilder(enableWritesToQueryCache_).mergeFrom(value).buildPartial();
+          } else {
+            enableWritesToQueryCache_ = value;
+          }
+          onChanged();
+        } else {
+          enableWritesToQueryCacheBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If turned on, results of SELECT queries are stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_writes_to_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_writes_to_query_cache = 157;</code>
+       */
+      public Builder clearEnableWritesToQueryCache() {
+        if (enableWritesToQueryCacheBuilder_ == null) {
+          enableWritesToQueryCache_ = null;
+          onChanged();
+        } else {
+          enableWritesToQueryCache_ = null;
+          enableWritesToQueryCacheBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If turned on, results of SELECT queries are stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_writes_to_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_writes_to_query_cache = 157;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getEnableWritesToQueryCacheBuilder() {
+        
+        onChanged();
+        return getEnableWritesToQueryCacheFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * If turned on, results of SELECT queries are stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_writes_to_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_writes_to_query_cache = 157;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getEnableWritesToQueryCacheOrBuilder() {
+        if (enableWritesToQueryCacheBuilder_ != null) {
+          return enableWritesToQueryCacheBuilder_.getMessageOrBuilder();
+        } else {
+          return enableWritesToQueryCache_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : enableWritesToQueryCache_;
+        }
+      }
+      /**
+       * <pre>
+       * If turned on, results of SELECT queries are stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#enable_writes_to_query_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_writes_to_query_cache = 157;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getEnableWritesToQueryCacheFieldBuilder() {
+        if (enableWritesToQueryCacheBuilder_ == null) {
+          enableWritesToQueryCacheBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getEnableWritesToQueryCache(),
+                  getParentForChildren(),
+                  isClean());
+          enableWritesToQueryCache_ = null;
+        }
+        return enableWritesToQueryCacheBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value queryCacheMinQueryRuns_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> queryCacheMinQueryRunsBuilder_;
+      /**
+       * <pre>
+       * Minimum number of times a SELECT query must run before its result is stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_runs).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_min_query_runs = 158;</code>
+       * @return Whether the queryCacheMinQueryRuns field is set.
+       */
+      public boolean hasQueryCacheMinQueryRuns() {
+        return queryCacheMinQueryRunsBuilder_ != null || queryCacheMinQueryRuns_ != null;
+      }
+      /**
+       * <pre>
+       * Minimum number of times a SELECT query must run before its result is stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_runs).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_min_query_runs = 158;</code>
+       * @return The queryCacheMinQueryRuns.
+       */
+      public com.google.protobuf.Int64Value getQueryCacheMinQueryRuns() {
+        if (queryCacheMinQueryRunsBuilder_ == null) {
+          return queryCacheMinQueryRuns_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryCacheMinQueryRuns_;
+        } else {
+          return queryCacheMinQueryRunsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Minimum number of times a SELECT query must run before its result is stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_runs).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_min_query_runs = 158;</code>
+       */
+      public Builder setQueryCacheMinQueryRuns(com.google.protobuf.Int64Value value) {
+        if (queryCacheMinQueryRunsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          queryCacheMinQueryRuns_ = value;
+          onChanged();
+        } else {
+          queryCacheMinQueryRunsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum number of times a SELECT query must run before its result is stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_runs).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_min_query_runs = 158;</code>
+       */
+      public Builder setQueryCacheMinQueryRuns(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (queryCacheMinQueryRunsBuilder_ == null) {
+          queryCacheMinQueryRuns_ = builderForValue.build();
+          onChanged();
+        } else {
+          queryCacheMinQueryRunsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum number of times a SELECT query must run before its result is stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_runs).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_min_query_runs = 158;</code>
+       */
+      public Builder mergeQueryCacheMinQueryRuns(com.google.protobuf.Int64Value value) {
+        if (queryCacheMinQueryRunsBuilder_ == null) {
+          if (queryCacheMinQueryRuns_ != null) {
+            queryCacheMinQueryRuns_ =
+              com.google.protobuf.Int64Value.newBuilder(queryCacheMinQueryRuns_).mergeFrom(value).buildPartial();
+          } else {
+            queryCacheMinQueryRuns_ = value;
+          }
+          onChanged();
+        } else {
+          queryCacheMinQueryRunsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum number of times a SELECT query must run before its result is stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_runs).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_min_query_runs = 158;</code>
+       */
+      public Builder clearQueryCacheMinQueryRuns() {
+        if (queryCacheMinQueryRunsBuilder_ == null) {
+          queryCacheMinQueryRuns_ = null;
+          onChanged();
+        } else {
+          queryCacheMinQueryRuns_ = null;
+          queryCacheMinQueryRunsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum number of times a SELECT query must run before its result is stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_runs).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_min_query_runs = 158;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getQueryCacheMinQueryRunsBuilder() {
+        
+        onChanged();
+        return getQueryCacheMinQueryRunsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Minimum number of times a SELECT query must run before its result is stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_runs).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_min_query_runs = 158;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getQueryCacheMinQueryRunsOrBuilder() {
+        if (queryCacheMinQueryRunsBuilder_ != null) {
+          return queryCacheMinQueryRunsBuilder_.getMessageOrBuilder();
+        } else {
+          return queryCacheMinQueryRuns_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : queryCacheMinQueryRuns_;
+        }
+      }
+      /**
+       * <pre>
+       * Minimum number of times a SELECT query must run before its result is stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_runs).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_min_query_runs = 158;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getQueryCacheMinQueryRunsFieldBuilder() {
+        if (queryCacheMinQueryRunsBuilder_ == null) {
+          queryCacheMinQueryRunsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getQueryCacheMinQueryRuns(),
+                  getParentForChildren(),
+                  isClean());
+          queryCacheMinQueryRuns_ = null;
+        }
+        return queryCacheMinQueryRunsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value queryCacheMinQueryDuration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> queryCacheMinQueryDurationBuilder_;
+      /**
+       * <pre>
+       * Minimum duration in milliseconds a query needs to run for its result to be stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_duration).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_min_query_duration = 159;</code>
+       * @return Whether the queryCacheMinQueryDuration field is set.
+       */
+      public boolean hasQueryCacheMinQueryDuration() {
+        return queryCacheMinQueryDurationBuilder_ != null || queryCacheMinQueryDuration_ != null;
+      }
+      /**
+       * <pre>
+       * Minimum duration in milliseconds a query needs to run for its result to be stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_duration).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_min_query_duration = 159;</code>
+       * @return The queryCacheMinQueryDuration.
+       */
+      public com.google.protobuf.Int64Value getQueryCacheMinQueryDuration() {
+        if (queryCacheMinQueryDurationBuilder_ == null) {
+          return queryCacheMinQueryDuration_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryCacheMinQueryDuration_;
+        } else {
+          return queryCacheMinQueryDurationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Minimum duration in milliseconds a query needs to run for its result to be stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_duration).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_min_query_duration = 159;</code>
+       */
+      public Builder setQueryCacheMinQueryDuration(com.google.protobuf.Int64Value value) {
+        if (queryCacheMinQueryDurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          queryCacheMinQueryDuration_ = value;
+          onChanged();
+        } else {
+          queryCacheMinQueryDurationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum duration in milliseconds a query needs to run for its result to be stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_duration).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_min_query_duration = 159;</code>
+       */
+      public Builder setQueryCacheMinQueryDuration(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (queryCacheMinQueryDurationBuilder_ == null) {
+          queryCacheMinQueryDuration_ = builderForValue.build();
+          onChanged();
+        } else {
+          queryCacheMinQueryDurationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum duration in milliseconds a query needs to run for its result to be stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_duration).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_min_query_duration = 159;</code>
+       */
+      public Builder mergeQueryCacheMinQueryDuration(com.google.protobuf.Int64Value value) {
+        if (queryCacheMinQueryDurationBuilder_ == null) {
+          if (queryCacheMinQueryDuration_ != null) {
+            queryCacheMinQueryDuration_ =
+              com.google.protobuf.Int64Value.newBuilder(queryCacheMinQueryDuration_).mergeFrom(value).buildPartial();
+          } else {
+            queryCacheMinQueryDuration_ = value;
+          }
+          onChanged();
+        } else {
+          queryCacheMinQueryDurationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum duration in milliseconds a query needs to run for its result to be stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_duration).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_min_query_duration = 159;</code>
+       */
+      public Builder clearQueryCacheMinQueryDuration() {
+        if (queryCacheMinQueryDurationBuilder_ == null) {
+          queryCacheMinQueryDuration_ = null;
+          onChanged();
+        } else {
+          queryCacheMinQueryDuration_ = null;
+          queryCacheMinQueryDurationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum duration in milliseconds a query needs to run for its result to be stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_duration).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_min_query_duration = 159;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getQueryCacheMinQueryDurationBuilder() {
+        
+        onChanged();
+        return getQueryCacheMinQueryDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Minimum duration in milliseconds a query needs to run for its result to be stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_duration).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_min_query_duration = 159;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getQueryCacheMinQueryDurationOrBuilder() {
+        if (queryCacheMinQueryDurationBuilder_ != null) {
+          return queryCacheMinQueryDurationBuilder_.getMessageOrBuilder();
+        } else {
+          return queryCacheMinQueryDuration_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : queryCacheMinQueryDuration_;
+        }
+      }
+      /**
+       * <pre>
+       * Minimum duration in milliseconds a query needs to run for its result to be stored in the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_min_query_duration).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_min_query_duration = 159;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getQueryCacheMinQueryDurationFieldBuilder() {
+        if (queryCacheMinQueryDurationBuilder_ == null) {
+          queryCacheMinQueryDurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getQueryCacheMinQueryDuration(),
+                  getParentForChildren(),
+                  isClean());
+          queryCacheMinQueryDuration_ = null;
+        }
+        return queryCacheMinQueryDurationBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value queryCacheTtl_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> queryCacheTtlBuilder_;
+      /**
+       * <pre>
+       * After this time in seconds entries in the query cache become stale.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_ttl).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_ttl = 160;</code>
+       * @return Whether the queryCacheTtl field is set.
+       */
+      public boolean hasQueryCacheTtl() {
+        return queryCacheTtlBuilder_ != null || queryCacheTtl_ != null;
+      }
+      /**
+       * <pre>
+       * After this time in seconds entries in the query cache become stale.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_ttl).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_ttl = 160;</code>
+       * @return The queryCacheTtl.
+       */
+      public com.google.protobuf.Int64Value getQueryCacheTtl() {
+        if (queryCacheTtlBuilder_ == null) {
+          return queryCacheTtl_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryCacheTtl_;
+        } else {
+          return queryCacheTtlBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * After this time in seconds entries in the query cache become stale.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_ttl).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_ttl = 160;</code>
+       */
+      public Builder setQueryCacheTtl(com.google.protobuf.Int64Value value) {
+        if (queryCacheTtlBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          queryCacheTtl_ = value;
+          onChanged();
+        } else {
+          queryCacheTtlBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * After this time in seconds entries in the query cache become stale.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_ttl).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_ttl = 160;</code>
+       */
+      public Builder setQueryCacheTtl(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (queryCacheTtlBuilder_ == null) {
+          queryCacheTtl_ = builderForValue.build();
+          onChanged();
+        } else {
+          queryCacheTtlBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * After this time in seconds entries in the query cache become stale.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_ttl).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_ttl = 160;</code>
+       */
+      public Builder mergeQueryCacheTtl(com.google.protobuf.Int64Value value) {
+        if (queryCacheTtlBuilder_ == null) {
+          if (queryCacheTtl_ != null) {
+            queryCacheTtl_ =
+              com.google.protobuf.Int64Value.newBuilder(queryCacheTtl_).mergeFrom(value).buildPartial();
+          } else {
+            queryCacheTtl_ = value;
+          }
+          onChanged();
+        } else {
+          queryCacheTtlBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * After this time in seconds entries in the query cache become stale.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_ttl).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_ttl = 160;</code>
+       */
+      public Builder clearQueryCacheTtl() {
+        if (queryCacheTtlBuilder_ == null) {
+          queryCacheTtl_ = null;
+          onChanged();
+        } else {
+          queryCacheTtl_ = null;
+          queryCacheTtlBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * After this time in seconds entries in the query cache become stale.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_ttl).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_ttl = 160;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getQueryCacheTtlBuilder() {
+        
+        onChanged();
+        return getQueryCacheTtlFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * After this time in seconds entries in the query cache become stale.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_ttl).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_ttl = 160;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getQueryCacheTtlOrBuilder() {
+        if (queryCacheTtlBuilder_ != null) {
+          return queryCacheTtlBuilder_.getMessageOrBuilder();
+        } else {
+          return queryCacheTtl_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : queryCacheTtl_;
+        }
+      }
+      /**
+       * <pre>
+       * After this time in seconds entries in the query cache become stale.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_ttl).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_ttl = 160;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getQueryCacheTtlFieldBuilder() {
+        if (queryCacheTtlBuilder_ == null) {
+          queryCacheTtlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getQueryCacheTtl(),
+                  getParentForChildren(),
+                  isClean());
+          queryCacheTtl_ = null;
+        }
+        return queryCacheTtlBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value queryCacheMaxEntries_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> queryCacheMaxEntriesBuilder_;
+      /**
+       * <pre>
+       * The maximum number of query results the current user may store in the query cache. 0 means unlimited.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_entries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_max_entries = 161;</code>
+       * @return Whether the queryCacheMaxEntries field is set.
+       */
+      public boolean hasQueryCacheMaxEntries() {
+        return queryCacheMaxEntriesBuilder_ != null || queryCacheMaxEntries_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum number of query results the current user may store in the query cache. 0 means unlimited.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_entries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_max_entries = 161;</code>
+       * @return The queryCacheMaxEntries.
+       */
+      public com.google.protobuf.Int64Value getQueryCacheMaxEntries() {
+        if (queryCacheMaxEntriesBuilder_ == null) {
+          return queryCacheMaxEntries_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryCacheMaxEntries_;
+        } else {
+          return queryCacheMaxEntriesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum number of query results the current user may store in the query cache. 0 means unlimited.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_entries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_max_entries = 161;</code>
+       */
+      public Builder setQueryCacheMaxEntries(com.google.protobuf.Int64Value value) {
+        if (queryCacheMaxEntriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          queryCacheMaxEntries_ = value;
+          onChanged();
+        } else {
+          queryCacheMaxEntriesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of query results the current user may store in the query cache. 0 means unlimited.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_entries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_max_entries = 161;</code>
+       */
+      public Builder setQueryCacheMaxEntries(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (queryCacheMaxEntriesBuilder_ == null) {
+          queryCacheMaxEntries_ = builderForValue.build();
+          onChanged();
+        } else {
+          queryCacheMaxEntriesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of query results the current user may store in the query cache. 0 means unlimited.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_entries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_max_entries = 161;</code>
+       */
+      public Builder mergeQueryCacheMaxEntries(com.google.protobuf.Int64Value value) {
+        if (queryCacheMaxEntriesBuilder_ == null) {
+          if (queryCacheMaxEntries_ != null) {
+            queryCacheMaxEntries_ =
+              com.google.protobuf.Int64Value.newBuilder(queryCacheMaxEntries_).mergeFrom(value).buildPartial();
+          } else {
+            queryCacheMaxEntries_ = value;
+          }
+          onChanged();
+        } else {
+          queryCacheMaxEntriesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of query results the current user may store in the query cache. 0 means unlimited.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_entries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_max_entries = 161;</code>
+       */
+      public Builder clearQueryCacheMaxEntries() {
+        if (queryCacheMaxEntriesBuilder_ == null) {
+          queryCacheMaxEntries_ = null;
+          onChanged();
+        } else {
+          queryCacheMaxEntries_ = null;
+          queryCacheMaxEntriesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of query results the current user may store in the query cache. 0 means unlimited.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_entries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_max_entries = 161;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getQueryCacheMaxEntriesBuilder() {
+        
+        onChanged();
+        return getQueryCacheMaxEntriesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum number of query results the current user may store in the query cache. 0 means unlimited.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_entries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_max_entries = 161;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getQueryCacheMaxEntriesOrBuilder() {
+        if (queryCacheMaxEntriesBuilder_ != null) {
+          return queryCacheMaxEntriesBuilder_.getMessageOrBuilder();
+        } else {
+          return queryCacheMaxEntries_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : queryCacheMaxEntries_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum number of query results the current user may store in the query cache. 0 means unlimited.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_entries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_max_entries = 161;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getQueryCacheMaxEntriesFieldBuilder() {
+        if (queryCacheMaxEntriesBuilder_ == null) {
+          queryCacheMaxEntriesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getQueryCacheMaxEntries(),
+                  getParentForChildren(),
+                  isClean());
+          queryCacheMaxEntries_ = null;
+        }
+        return queryCacheMaxEntriesBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value queryCacheMaxSizeInBytes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> queryCacheMaxSizeInBytesBuilder_;
+      /**
+       * <pre>
+       * The maximum amount of memory (in bytes) the current user may allocate in the query cache. 0 means unlimited.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_size_in_bytes).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_max_size_in_bytes = 162;</code>
+       * @return Whether the queryCacheMaxSizeInBytes field is set.
+       */
+      public boolean hasQueryCacheMaxSizeInBytes() {
+        return queryCacheMaxSizeInBytesBuilder_ != null || queryCacheMaxSizeInBytes_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum amount of memory (in bytes) the current user may allocate in the query cache. 0 means unlimited.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_size_in_bytes).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_max_size_in_bytes = 162;</code>
+       * @return The queryCacheMaxSizeInBytes.
+       */
+      public com.google.protobuf.Int64Value getQueryCacheMaxSizeInBytes() {
+        if (queryCacheMaxSizeInBytesBuilder_ == null) {
+          return queryCacheMaxSizeInBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryCacheMaxSizeInBytes_;
+        } else {
+          return queryCacheMaxSizeInBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum amount of memory (in bytes) the current user may allocate in the query cache. 0 means unlimited.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_size_in_bytes).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_max_size_in_bytes = 162;</code>
+       */
+      public Builder setQueryCacheMaxSizeInBytes(com.google.protobuf.Int64Value value) {
+        if (queryCacheMaxSizeInBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          queryCacheMaxSizeInBytes_ = value;
+          onChanged();
+        } else {
+          queryCacheMaxSizeInBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum amount of memory (in bytes) the current user may allocate in the query cache. 0 means unlimited.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_size_in_bytes).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_max_size_in_bytes = 162;</code>
+       */
+      public Builder setQueryCacheMaxSizeInBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (queryCacheMaxSizeInBytesBuilder_ == null) {
+          queryCacheMaxSizeInBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          queryCacheMaxSizeInBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum amount of memory (in bytes) the current user may allocate in the query cache. 0 means unlimited.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_size_in_bytes).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_max_size_in_bytes = 162;</code>
+       */
+      public Builder mergeQueryCacheMaxSizeInBytes(com.google.protobuf.Int64Value value) {
+        if (queryCacheMaxSizeInBytesBuilder_ == null) {
+          if (queryCacheMaxSizeInBytes_ != null) {
+            queryCacheMaxSizeInBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(queryCacheMaxSizeInBytes_).mergeFrom(value).buildPartial();
+          } else {
+            queryCacheMaxSizeInBytes_ = value;
+          }
+          onChanged();
+        } else {
+          queryCacheMaxSizeInBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum amount of memory (in bytes) the current user may allocate in the query cache. 0 means unlimited.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_size_in_bytes).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_max_size_in_bytes = 162;</code>
+       */
+      public Builder clearQueryCacheMaxSizeInBytes() {
+        if (queryCacheMaxSizeInBytesBuilder_ == null) {
+          queryCacheMaxSizeInBytes_ = null;
+          onChanged();
+        } else {
+          queryCacheMaxSizeInBytes_ = null;
+          queryCacheMaxSizeInBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum amount of memory (in bytes) the current user may allocate in the query cache. 0 means unlimited.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_size_in_bytes).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_max_size_in_bytes = 162;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getQueryCacheMaxSizeInBytesBuilder() {
+        
+        onChanged();
+        return getQueryCacheMaxSizeInBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum amount of memory (in bytes) the current user may allocate in the query cache. 0 means unlimited.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_size_in_bytes).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_max_size_in_bytes = 162;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getQueryCacheMaxSizeInBytesOrBuilder() {
+        if (queryCacheMaxSizeInBytesBuilder_ != null) {
+          return queryCacheMaxSizeInBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return queryCacheMaxSizeInBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : queryCacheMaxSizeInBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum amount of memory (in bytes) the current user may allocate in the query cache. 0 means unlimited.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_max_size_in_bytes).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_cache_max_size_in_bytes = 162;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getQueryCacheMaxSizeInBytesFieldBuilder() {
+        if (queryCacheMaxSizeInBytesBuilder_ == null) {
+          queryCacheMaxSizeInBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getQueryCacheMaxSizeInBytes(),
+                  getParentForChildren(),
+                  isClean());
+          queryCacheMaxSizeInBytes_ = null;
+        }
+        return queryCacheMaxSizeInBytesBuilder_;
+      }
+
+      private java.lang.Object queryCacheTag_ = "";
+      /**
+       * <pre>
+       * A string which acts as a label for query cache entries. The same queries with different tags are considered different by the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_tag).
+       * </pre>
+       *
+       * <code>string query_cache_tag = 163;</code>
+       * @return The queryCacheTag.
+       */
+      public java.lang.String getQueryCacheTag() {
+        java.lang.Object ref = queryCacheTag_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          queryCacheTag_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A string which acts as a label for query cache entries. The same queries with different tags are considered different by the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_tag).
+       * </pre>
+       *
+       * <code>string query_cache_tag = 163;</code>
+       * @return The bytes for queryCacheTag.
+       */
+      public com.google.protobuf.ByteString
+          getQueryCacheTagBytes() {
+        java.lang.Object ref = queryCacheTag_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          queryCacheTag_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A string which acts as a label for query cache entries. The same queries with different tags are considered different by the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_tag).
+       * </pre>
+       *
+       * <code>string query_cache_tag = 163;</code>
+       * @param value The queryCacheTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQueryCacheTag(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        queryCacheTag_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A string which acts as a label for query cache entries. The same queries with different tags are considered different by the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_tag).
+       * </pre>
+       *
+       * <code>string query_cache_tag = 163;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQueryCacheTag() {
+        
+        queryCacheTag_ = getDefaultInstance().getQueryCacheTag();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A string which acts as a label for query cache entries. The same queries with different tags are considered different by the query cache.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_tag).
+       * </pre>
+       *
+       * <code>string query_cache_tag = 163;</code>
+       * @param value The bytes for queryCacheTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQueryCacheTagBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        queryCacheTag_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.BoolValue queryCacheShareBetweenUsers_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> queryCacheShareBetweenUsersBuilder_;
+      /**
+       * <pre>
+       * If turned on, the result of SELECT queries cached in the query cache can be read by other users. It is not recommended to enable this setting due to security reasons.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_share_between_users).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_cache_share_between_users = 164;</code>
+       * @return Whether the queryCacheShareBetweenUsers field is set.
+       */
+      public boolean hasQueryCacheShareBetweenUsers() {
+        return queryCacheShareBetweenUsersBuilder_ != null || queryCacheShareBetweenUsers_ != null;
+      }
+      /**
+       * <pre>
+       * If turned on, the result of SELECT queries cached in the query cache can be read by other users. It is not recommended to enable this setting due to security reasons.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_share_between_users).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_cache_share_between_users = 164;</code>
+       * @return The queryCacheShareBetweenUsers.
+       */
+      public com.google.protobuf.BoolValue getQueryCacheShareBetweenUsers() {
+        if (queryCacheShareBetweenUsersBuilder_ == null) {
+          return queryCacheShareBetweenUsers_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : queryCacheShareBetweenUsers_;
+        } else {
+          return queryCacheShareBetweenUsersBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * If turned on, the result of SELECT queries cached in the query cache can be read by other users. It is not recommended to enable this setting due to security reasons.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_share_between_users).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_cache_share_between_users = 164;</code>
+       */
+      public Builder setQueryCacheShareBetweenUsers(com.google.protobuf.BoolValue value) {
+        if (queryCacheShareBetweenUsersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          queryCacheShareBetweenUsers_ = value;
+          onChanged();
+        } else {
+          queryCacheShareBetweenUsersBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If turned on, the result of SELECT queries cached in the query cache can be read by other users. It is not recommended to enable this setting due to security reasons.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_share_between_users).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_cache_share_between_users = 164;</code>
+       */
+      public Builder setQueryCacheShareBetweenUsers(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (queryCacheShareBetweenUsersBuilder_ == null) {
+          queryCacheShareBetweenUsers_ = builderForValue.build();
+          onChanged();
+        } else {
+          queryCacheShareBetweenUsersBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If turned on, the result of SELECT queries cached in the query cache can be read by other users. It is not recommended to enable this setting due to security reasons.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_share_between_users).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_cache_share_between_users = 164;</code>
+       */
+      public Builder mergeQueryCacheShareBetweenUsers(com.google.protobuf.BoolValue value) {
+        if (queryCacheShareBetweenUsersBuilder_ == null) {
+          if (queryCacheShareBetweenUsers_ != null) {
+            queryCacheShareBetweenUsers_ =
+              com.google.protobuf.BoolValue.newBuilder(queryCacheShareBetweenUsers_).mergeFrom(value).buildPartial();
+          } else {
+            queryCacheShareBetweenUsers_ = value;
+          }
+          onChanged();
+        } else {
+          queryCacheShareBetweenUsersBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If turned on, the result of SELECT queries cached in the query cache can be read by other users. It is not recommended to enable this setting due to security reasons.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_share_between_users).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_cache_share_between_users = 164;</code>
+       */
+      public Builder clearQueryCacheShareBetweenUsers() {
+        if (queryCacheShareBetweenUsersBuilder_ == null) {
+          queryCacheShareBetweenUsers_ = null;
+          onChanged();
+        } else {
+          queryCacheShareBetweenUsers_ = null;
+          queryCacheShareBetweenUsersBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If turned on, the result of SELECT queries cached in the query cache can be read by other users. It is not recommended to enable this setting due to security reasons.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_share_between_users).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_cache_share_between_users = 164;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getQueryCacheShareBetweenUsersBuilder() {
+        
+        onChanged();
+        return getQueryCacheShareBetweenUsersFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * If turned on, the result of SELECT queries cached in the query cache can be read by other users. It is not recommended to enable this setting due to security reasons.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_share_between_users).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_cache_share_between_users = 164;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getQueryCacheShareBetweenUsersOrBuilder() {
+        if (queryCacheShareBetweenUsersBuilder_ != null) {
+          return queryCacheShareBetweenUsersBuilder_.getMessageOrBuilder();
+        } else {
+          return queryCacheShareBetweenUsers_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : queryCacheShareBetweenUsers_;
+        }
+      }
+      /**
+       * <pre>
+       * If turned on, the result of SELECT queries cached in the query cache can be read by other users. It is not recommended to enable this setting due to security reasons.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_share_between_users).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_cache_share_between_users = 164;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getQueryCacheShareBetweenUsersFieldBuilder() {
+        if (queryCacheShareBetweenUsersBuilder_ == null) {
+          queryCacheShareBetweenUsersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getQueryCacheShareBetweenUsers(),
+                  getParentForChildren(),
+                  isClean());
+          queryCacheShareBetweenUsers_ = null;
+        }
+        return queryCacheShareBetweenUsersBuilder_;
+      }
+
+      private int queryCacheNondeterministicFunctionHandling_ = 0;
+      /**
+       * <pre>
+       * Controls how the query cache handles SELECT queries with non-deterministic functions like rand() or now().
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_nondeterministic_function_handling).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QueryCacheNondeterministicFunctionHandling query_cache_nondeterministic_function_handling = 165;</code>
+       * @return The enum numeric value on the wire for queryCacheNondeterministicFunctionHandling.
+       */
+      @java.lang.Override public int getQueryCacheNondeterministicFunctionHandlingValue() {
+        return queryCacheNondeterministicFunctionHandling_;
+      }
+      /**
+       * <pre>
+       * Controls how the query cache handles SELECT queries with non-deterministic functions like rand() or now().
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_nondeterministic_function_handling).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QueryCacheNondeterministicFunctionHandling query_cache_nondeterministic_function_handling = 165;</code>
+       * @param value The enum numeric value on the wire for queryCacheNondeterministicFunctionHandling to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQueryCacheNondeterministicFunctionHandlingValue(int value) {
+        
+        queryCacheNondeterministicFunctionHandling_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls how the query cache handles SELECT queries with non-deterministic functions like rand() or now().
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_nondeterministic_function_handling).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QueryCacheNondeterministicFunctionHandling query_cache_nondeterministic_function_handling = 165;</code>
+       * @return The queryCacheNondeterministicFunctionHandling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QueryCacheNondeterministicFunctionHandling getQueryCacheNondeterministicFunctionHandling() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QueryCacheNondeterministicFunctionHandling result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QueryCacheNondeterministicFunctionHandling.valueOf(queryCacheNondeterministicFunctionHandling_);
+        return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QueryCacheNondeterministicFunctionHandling.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Controls how the query cache handles SELECT queries with non-deterministic functions like rand() or now().
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_nondeterministic_function_handling).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QueryCacheNondeterministicFunctionHandling query_cache_nondeterministic_function_handling = 165;</code>
+       * @param value The queryCacheNondeterministicFunctionHandling to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQueryCacheNondeterministicFunctionHandling(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QueryCacheNondeterministicFunctionHandling value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        queryCacheNondeterministicFunctionHandling_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls how the query cache handles SELECT queries with non-deterministic functions like rand() or now().
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#query_cache_nondeterministic_function_handling).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QueryCacheNondeterministicFunctionHandling query_cache_nondeterministic_function_handling = 165;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQueryCacheNondeterministicFunctionHandling() {
+        
+        queryCacheNondeterministicFunctionHandling_ = 0;
+        onChanged();
+        return this;
       }
 
       private com.google.protobuf.Int64Value maxInsertThreads_;
@@ -46561,7 +51789,7 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> preferLocalhostReplicaBuilder_;
       /**
        * <pre>
-       * Enables/disables preferable using the localhost replica when processing distributed queries.
+       * Enables or disables preferable using the localhost replica when processing distributed queries.
        * Default: true
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
        * </pre>
@@ -46574,7 +51802,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Enables/disables preferable using the localhost replica when processing distributed queries.
+       * Enables or disables preferable using the localhost replica when processing distributed queries.
        * Default: true
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
        * </pre>
@@ -46591,7 +51819,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Enables/disables preferable using the localhost replica when processing distributed queries.
+       * Enables or disables preferable using the localhost replica when processing distributed queries.
        * Default: true
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
        * </pre>
@@ -46613,7 +51841,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Enables/disables preferable using the localhost replica when processing distributed queries.
+       * Enables or disables preferable using the localhost replica when processing distributed queries.
        * Default: true
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
        * </pre>
@@ -46633,7 +51861,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Enables/disables preferable using the localhost replica when processing distributed queries.
+       * Enables or disables preferable using the localhost replica when processing distributed queries.
        * Default: true
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
        * </pre>
@@ -46657,7 +51885,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Enables/disables preferable using the localhost replica when processing distributed queries.
+       * Enables or disables preferable using the localhost replica when processing distributed queries.
        * Default: true
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
        * </pre>
@@ -46677,7 +51905,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Enables/disables preferable using the localhost replica when processing distributed queries.
+       * Enables or disables preferable using the localhost replica when processing distributed queries.
        * Default: true
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
        * </pre>
@@ -46691,7 +51919,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Enables/disables preferable using the localhost replica when processing distributed queries.
+       * Enables or disables preferable using the localhost replica when processing distributed queries.
        * Default: true
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
        * </pre>
@@ -46708,7 +51936,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Enables/disables preferable using the localhost replica when processing distributed queries.
+       * Enables or disables preferable using the localhost replica when processing distributed queries.
        * Default: true
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
        * </pre>
@@ -46727,6 +51955,343 @@ public final class UserOuterClass {
           preferLocalhostReplica_ = null;
         }
         return preferLocalhostReplicaBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue doNotMergeAcrossPartitionsSelectFinal_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> doNotMergeAcrossPartitionsSelectFinalBuilder_;
+      /**
+       * <pre>
+       * Enables or disable independent processing of partitions for SELECT queries with FINAL.
+       * Default: false
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/guides/replacing-merge-tree#exploiting-partitions-with-replacingmergetree)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue do_not_merge_across_partitions_select_final = 147;</code>
+       * @return Whether the doNotMergeAcrossPartitionsSelectFinal field is set.
+       */
+      public boolean hasDoNotMergeAcrossPartitionsSelectFinal() {
+        return doNotMergeAcrossPartitionsSelectFinalBuilder_ != null || doNotMergeAcrossPartitionsSelectFinal_ != null;
+      }
+      /**
+       * <pre>
+       * Enables or disable independent processing of partitions for SELECT queries with FINAL.
+       * Default: false
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/guides/replacing-merge-tree#exploiting-partitions-with-replacingmergetree)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue do_not_merge_across_partitions_select_final = 147;</code>
+       * @return The doNotMergeAcrossPartitionsSelectFinal.
+       */
+      public com.google.protobuf.BoolValue getDoNotMergeAcrossPartitionsSelectFinal() {
+        if (doNotMergeAcrossPartitionsSelectFinalBuilder_ == null) {
+          return doNotMergeAcrossPartitionsSelectFinal_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : doNotMergeAcrossPartitionsSelectFinal_;
+        } else {
+          return doNotMergeAcrossPartitionsSelectFinalBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enables or disable independent processing of partitions for SELECT queries with FINAL.
+       * Default: false
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/guides/replacing-merge-tree#exploiting-partitions-with-replacingmergetree)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue do_not_merge_across_partitions_select_final = 147;</code>
+       */
+      public Builder setDoNotMergeAcrossPartitionsSelectFinal(com.google.protobuf.BoolValue value) {
+        if (doNotMergeAcrossPartitionsSelectFinalBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          doNotMergeAcrossPartitionsSelectFinal_ = value;
+          onChanged();
+        } else {
+          doNotMergeAcrossPartitionsSelectFinalBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disable independent processing of partitions for SELECT queries with FINAL.
+       * Default: false
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/guides/replacing-merge-tree#exploiting-partitions-with-replacingmergetree)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue do_not_merge_across_partitions_select_final = 147;</code>
+       */
+      public Builder setDoNotMergeAcrossPartitionsSelectFinal(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (doNotMergeAcrossPartitionsSelectFinalBuilder_ == null) {
+          doNotMergeAcrossPartitionsSelectFinal_ = builderForValue.build();
+          onChanged();
+        } else {
+          doNotMergeAcrossPartitionsSelectFinalBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disable independent processing of partitions for SELECT queries with FINAL.
+       * Default: false
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/guides/replacing-merge-tree#exploiting-partitions-with-replacingmergetree)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue do_not_merge_across_partitions_select_final = 147;</code>
+       */
+      public Builder mergeDoNotMergeAcrossPartitionsSelectFinal(com.google.protobuf.BoolValue value) {
+        if (doNotMergeAcrossPartitionsSelectFinalBuilder_ == null) {
+          if (doNotMergeAcrossPartitionsSelectFinal_ != null) {
+            doNotMergeAcrossPartitionsSelectFinal_ =
+              com.google.protobuf.BoolValue.newBuilder(doNotMergeAcrossPartitionsSelectFinal_).mergeFrom(value).buildPartial();
+          } else {
+            doNotMergeAcrossPartitionsSelectFinal_ = value;
+          }
+          onChanged();
+        } else {
+          doNotMergeAcrossPartitionsSelectFinalBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disable independent processing of partitions for SELECT queries with FINAL.
+       * Default: false
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/guides/replacing-merge-tree#exploiting-partitions-with-replacingmergetree)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue do_not_merge_across_partitions_select_final = 147;</code>
+       */
+      public Builder clearDoNotMergeAcrossPartitionsSelectFinal() {
+        if (doNotMergeAcrossPartitionsSelectFinalBuilder_ == null) {
+          doNotMergeAcrossPartitionsSelectFinal_ = null;
+          onChanged();
+        } else {
+          doNotMergeAcrossPartitionsSelectFinal_ = null;
+          doNotMergeAcrossPartitionsSelectFinalBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disable independent processing of partitions for SELECT queries with FINAL.
+       * Default: false
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/guides/replacing-merge-tree#exploiting-partitions-with-replacingmergetree)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue do_not_merge_across_partitions_select_final = 147;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getDoNotMergeAcrossPartitionsSelectFinalBuilder() {
+        
+        onChanged();
+        return getDoNotMergeAcrossPartitionsSelectFinalFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enables or disable independent processing of partitions for SELECT queries with FINAL.
+       * Default: false
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/guides/replacing-merge-tree#exploiting-partitions-with-replacingmergetree)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue do_not_merge_across_partitions_select_final = 147;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getDoNotMergeAcrossPartitionsSelectFinalOrBuilder() {
+        if (doNotMergeAcrossPartitionsSelectFinalBuilder_ != null) {
+          return doNotMergeAcrossPartitionsSelectFinalBuilder_.getMessageOrBuilder();
+        } else {
+          return doNotMergeAcrossPartitionsSelectFinal_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : doNotMergeAcrossPartitionsSelectFinal_;
+        }
+      }
+      /**
+       * <pre>
+       * Enables or disable independent processing of partitions for SELECT queries with FINAL.
+       * Default: false
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/guides/replacing-merge-tree#exploiting-partitions-with-replacingmergetree)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue do_not_merge_across_partitions_select_final = 147;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getDoNotMergeAcrossPartitionsSelectFinalFieldBuilder() {
+        if (doNotMergeAcrossPartitionsSelectFinalBuilder_ == null) {
+          doNotMergeAcrossPartitionsSelectFinalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getDoNotMergeAcrossPartitionsSelectFinal(),
+                  getParentForChildren(),
+                  isClean());
+          doNotMergeAcrossPartitionsSelectFinal_ = null;
+        }
+        return doNotMergeAcrossPartitionsSelectFinalBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue ignoreMaterializedViewsWithDroppedTargetTable_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> ignoreMaterializedViewsWithDroppedTargetTableBuilder_;
+      /**
+       * <pre>
+       * Ignore materialized views with dropped target table during pushing to views.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#ignore_materialized_views_with_dropped_target_table).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue ignore_materialized_views_with_dropped_target_table = 166;</code>
+       * @return Whether the ignoreMaterializedViewsWithDroppedTargetTable field is set.
+       */
+      public boolean hasIgnoreMaterializedViewsWithDroppedTargetTable() {
+        return ignoreMaterializedViewsWithDroppedTargetTableBuilder_ != null || ignoreMaterializedViewsWithDroppedTargetTable_ != null;
+      }
+      /**
+       * <pre>
+       * Ignore materialized views with dropped target table during pushing to views.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#ignore_materialized_views_with_dropped_target_table).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue ignore_materialized_views_with_dropped_target_table = 166;</code>
+       * @return The ignoreMaterializedViewsWithDroppedTargetTable.
+       */
+      public com.google.protobuf.BoolValue getIgnoreMaterializedViewsWithDroppedTargetTable() {
+        if (ignoreMaterializedViewsWithDroppedTargetTableBuilder_ == null) {
+          return ignoreMaterializedViewsWithDroppedTargetTable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : ignoreMaterializedViewsWithDroppedTargetTable_;
+        } else {
+          return ignoreMaterializedViewsWithDroppedTargetTableBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Ignore materialized views with dropped target table during pushing to views.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#ignore_materialized_views_with_dropped_target_table).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue ignore_materialized_views_with_dropped_target_table = 166;</code>
+       */
+      public Builder setIgnoreMaterializedViewsWithDroppedTargetTable(com.google.protobuf.BoolValue value) {
+        if (ignoreMaterializedViewsWithDroppedTargetTableBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ignoreMaterializedViewsWithDroppedTargetTable_ = value;
+          onChanged();
+        } else {
+          ignoreMaterializedViewsWithDroppedTargetTableBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Ignore materialized views with dropped target table during pushing to views.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#ignore_materialized_views_with_dropped_target_table).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue ignore_materialized_views_with_dropped_target_table = 166;</code>
+       */
+      public Builder setIgnoreMaterializedViewsWithDroppedTargetTable(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (ignoreMaterializedViewsWithDroppedTargetTableBuilder_ == null) {
+          ignoreMaterializedViewsWithDroppedTargetTable_ = builderForValue.build();
+          onChanged();
+        } else {
+          ignoreMaterializedViewsWithDroppedTargetTableBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Ignore materialized views with dropped target table during pushing to views.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#ignore_materialized_views_with_dropped_target_table).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue ignore_materialized_views_with_dropped_target_table = 166;</code>
+       */
+      public Builder mergeIgnoreMaterializedViewsWithDroppedTargetTable(com.google.protobuf.BoolValue value) {
+        if (ignoreMaterializedViewsWithDroppedTargetTableBuilder_ == null) {
+          if (ignoreMaterializedViewsWithDroppedTargetTable_ != null) {
+            ignoreMaterializedViewsWithDroppedTargetTable_ =
+              com.google.protobuf.BoolValue.newBuilder(ignoreMaterializedViewsWithDroppedTargetTable_).mergeFrom(value).buildPartial();
+          } else {
+            ignoreMaterializedViewsWithDroppedTargetTable_ = value;
+          }
+          onChanged();
+        } else {
+          ignoreMaterializedViewsWithDroppedTargetTableBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Ignore materialized views with dropped target table during pushing to views.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#ignore_materialized_views_with_dropped_target_table).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue ignore_materialized_views_with_dropped_target_table = 166;</code>
+       */
+      public Builder clearIgnoreMaterializedViewsWithDroppedTargetTable() {
+        if (ignoreMaterializedViewsWithDroppedTargetTableBuilder_ == null) {
+          ignoreMaterializedViewsWithDroppedTargetTable_ = null;
+          onChanged();
+        } else {
+          ignoreMaterializedViewsWithDroppedTargetTable_ = null;
+          ignoreMaterializedViewsWithDroppedTargetTableBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Ignore materialized views with dropped target table during pushing to views.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#ignore_materialized_views_with_dropped_target_table).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue ignore_materialized_views_with_dropped_target_table = 166;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getIgnoreMaterializedViewsWithDroppedTargetTableBuilder() {
+        
+        onChanged();
+        return getIgnoreMaterializedViewsWithDroppedTargetTableFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Ignore materialized views with dropped target table during pushing to views.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#ignore_materialized_views_with_dropped_target_table).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue ignore_materialized_views_with_dropped_target_table = 166;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getIgnoreMaterializedViewsWithDroppedTargetTableOrBuilder() {
+        if (ignoreMaterializedViewsWithDroppedTargetTableBuilder_ != null) {
+          return ignoreMaterializedViewsWithDroppedTargetTableBuilder_.getMessageOrBuilder();
+        } else {
+          return ignoreMaterializedViewsWithDroppedTargetTable_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : ignoreMaterializedViewsWithDroppedTargetTable_;
+        }
+      }
+      /**
+       * <pre>
+       * Ignore materialized views with dropped target table during pushing to views.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#ignore_materialized_views_with_dropped_target_table).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue ignore_materialized_views_with_dropped_target_table = 166;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getIgnoreMaterializedViewsWithDroppedTargetTableFieldBuilder() {
+        if (ignoreMaterializedViewsWithDroppedTargetTableBuilder_ == null) {
+          ignoreMaterializedViewsWithDroppedTargetTableBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getIgnoreMaterializedViewsWithDroppedTargetTable(),
+                  getParentForChildren(),
+                  isClean());
+          ignoreMaterializedViewsWithDroppedTargetTable_ = null;
+        }
+        return ignoreMaterializedViewsWithDroppedTargetTableBuilder_;
       }
 
       private com.google.protobuf.BoolValue compile_;
@@ -47041,6 +52606,163 @@ public final class UserOuterClass {
           minCountToCompile_ = null;
         }
         return minCountToCompileBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value asyncInsertStaleTimeout_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> asyncInsertStaleTimeoutBuilder_;
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123 [deprecated = true];</code>
+       * @deprecated
+       * @return Whether the asyncInsertStaleTimeout field is set.
+       */
+      @java.lang.Deprecated public boolean hasAsyncInsertStaleTimeout() {
+        return asyncInsertStaleTimeoutBuilder_ != null || asyncInsertStaleTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123 [deprecated = true];</code>
+       * @deprecated
+       * @return The asyncInsertStaleTimeout.
+       */
+      @java.lang.Deprecated public com.google.protobuf.Int64Value getAsyncInsertStaleTimeout() {
+        if (asyncInsertStaleTimeoutBuilder_ == null) {
+          return asyncInsertStaleTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asyncInsertStaleTimeout_;
+        } else {
+          return asyncInsertStaleTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123 [deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setAsyncInsertStaleTimeout(com.google.protobuf.Int64Value value) {
+        if (asyncInsertStaleTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          asyncInsertStaleTimeout_ = value;
+          onChanged();
+        } else {
+          asyncInsertStaleTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123 [deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setAsyncInsertStaleTimeout(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (asyncInsertStaleTimeoutBuilder_ == null) {
+          asyncInsertStaleTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          asyncInsertStaleTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123 [deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder mergeAsyncInsertStaleTimeout(com.google.protobuf.Int64Value value) {
+        if (asyncInsertStaleTimeoutBuilder_ == null) {
+          if (asyncInsertStaleTimeout_ != null) {
+            asyncInsertStaleTimeout_ =
+              com.google.protobuf.Int64Value.newBuilder(asyncInsertStaleTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            asyncInsertStaleTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          asyncInsertStaleTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123 [deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder clearAsyncInsertStaleTimeout() {
+        if (asyncInsertStaleTimeoutBuilder_ == null) {
+          asyncInsertStaleTimeout_ = null;
+          onChanged();
+        } else {
+          asyncInsertStaleTimeout_ = null;
+          asyncInsertStaleTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123 [deprecated = true];</code>
+       */
+      @java.lang.Deprecated public com.google.protobuf.Int64Value.Builder getAsyncInsertStaleTimeoutBuilder() {
+        
+        onChanged();
+        return getAsyncInsertStaleTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123 [deprecated = true];</code>
+       */
+      @java.lang.Deprecated public com.google.protobuf.Int64ValueOrBuilder getAsyncInsertStaleTimeoutOrBuilder() {
+        if (asyncInsertStaleTimeoutBuilder_ != null) {
+          return asyncInsertStaleTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return asyncInsertStaleTimeout_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : asyncInsertStaleTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123 [deprecated = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getAsyncInsertStaleTimeoutFieldBuilder() {
+        if (asyncInsertStaleTimeoutBuilder_ == null) {
+          asyncInsertStaleTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getAsyncInsertStaleTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          asyncInsertStaleTimeout_ = null;
+        }
+        return asyncInsertStaleTimeoutBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -49252,7 +54974,7 @@ public final class UserOuterClass {
       "Settings\0229\n\006quotas\030\005 \003(\0132).yandex.cloud." +
       "mdb.clickhouse.v1.UserQuota\0225\n\021generate_" +
       "password\030\006 \001(\0132\032.google.protobuf.BoolVal" +
-      "ue\"\254c\n\014UserSettings\0226\n\010readonly\030\001 \001(\0132\033." +
+      "ue\"\331p\n\014UserSettings\0226\n\010readonly\030\001 \001(\0132\033." +
       "google.protobuf.Int64ValueB\007\372\3071\0030-2\022-\n\ta" +
       "llow_ddl\030\002 \001(\0132\032.google.protobuf.BoolVal" +
       "ue\022A\n\035allow_introspection_functions\030` \001(" +
@@ -49439,150 +55161,193 @@ public final class UserOuterClass {
       "tobuf.BoolValue\022P\n,cancel_http_readonly_" +
       "queries_on_client_close\030o \001(\0132\032.google.p" +
       "rotobuf.BoolValue\022;\n\026max_http_get_redire" +
-      "cts\030p \001(\0132\033.google.protobuf.Int64Value\022B" +
-      "\n\036joined_subquery_requires_alias\030] \001(\0132\032" +
-      ".google.protobuf.BoolValue\0222\n\016join_use_n" +
-      "ulls\030^ \001(\0132\032.google.protobuf.BoolValue\0225" +
-      "\n\021transform_null_in\030_ \001(\0132\032.google.proto" +
-      "buf.BoolValue\022J\n\nquota_mode\030P \001(\01626.yand" +
-      "ex.cloud.mdb.clickhouse.v1.UserSettings." +
-      "QuotaMode\0222\n\016flatten_nested\030q \001(\0132\032.goog" +
-      "le.protobuf.BoolValue\022\025\n\rformat_regexp\030r" +
-      " \001(\t\022j\n\033format_regexp_escaping_rule\030s \001(" +
-      "\0162E.yandex.cloud.mdb.clickhouse.v1.UserS" +
-      "ettings.FormatRegexpEscapingRule\022@\n\034form" +
-      "at_regexp_skip_unmatched\030t \001(\0132\032.google." +
-      "protobuf.BoolValue\0220\n\014async_insert\030u \001(\013" +
-      "2\032.google.protobuf.BoolValue\0229\n\024async_in" +
-      "sert_threads\030v \001(\0132\033.google.protobuf.Int" +
-      "64Value\0229\n\025wait_for_async_insert\030w \001(\0132\032" +
-      ".google.protobuf.BoolValue\022B\n\035wait_for_a" +
-      "sync_insert_timeout\030x \001(\0132\033.google.proto" +
-      "buf.Int64Value\022?\n\032async_insert_max_data_" +
-      "size\030y \001(\0132\033.google.protobuf.Int64Value\022" +
-      ">\n\031async_insert_busy_timeout\030z \001(\0132\033.goo" +
+      "cts\030p \001(\0132\033.google.protobuf.Int64Value\022>" +
+      "\n\030http_max_field_name_size\030\226\001 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\022?\n\031http_max_field" +
+      "_value_size\030\227\001 \001(\0132\033.google.protobuf.Int" +
+      "64Value\022B\n\036joined_subquery_requires_alia" +
+      "s\030] \001(\0132\032.google.protobuf.BoolValue\0222\n\016j" +
+      "oin_use_nulls\030^ \001(\0132\032.google.protobuf.Bo" +
+      "olValue\0225\n\021transform_null_in\030_ \001(\0132\032.goo" +
+      "gle.protobuf.BoolValue\022J\n\nquota_mode\030P \001" +
+      "(\01626.yandex.cloud.mdb.clickhouse.v1.User" +
+      "Settings.QuotaMode\0222\n\016flatten_nested\030q \001" +
+      "(\0132\032.google.protobuf.BoolValue\022\025\n\rformat" +
+      "_regexp\030r \001(\t\022j\n\033format_regexp_escaping_" +
+      "rule\030s \001(\0162E.yandex.cloud.mdb.clickhouse" +
+      ".v1.UserSettings.FormatRegexpEscapingRul" +
+      "e\022@\n\034format_regexp_skip_unmatched\030t \001(\0132" +
+      "\032.google.protobuf.BoolValue\0220\n\014async_ins" +
+      "ert\030u \001(\0132\032.google.protobuf.BoolValue\0229\n" +
+      "\024async_insert_threads\030v \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\0229\n\025wait_for_async_inser" +
+      "t\030w \001(\0132\032.google.protobuf.BoolValue\022B\n\035w" +
+      "ait_for_async_insert_timeout\030x \001(\0132\033.goo" +
       "gle.protobuf.Int64Value\022?\n\032async_insert_" +
-      "stale_timeout\030{ \001(\0132\033.google.protobuf.In" +
-      "t64Value\0229\n\024memory_profiler_step\030| \001(\0132\033" +
-      ".google.protobuf.Int64Value\022H\n\"memory_pr" +
-      "ofiler_sample_probability\030} \001(\0132\034.google" +
-      ".protobuf.DoubleValue\022?\n\021max_final_threa" +
-      "ds\030~ \001(\0132\033.google.protobuf.Int64ValueB\007\372" +
-      "\3071\003>=0\022A\n\035input_format_parallel_parsing\030" +
-      "\177 \001(\0132\032.google.protobuf.BoolValue\022D\n\037inp" +
-      "ut_format_import_nested_json\030\200\001 \001(\0132\032.go" +
-      "ogle.protobuf.BoolValue\022m\n\034local_filesys" +
-      "tem_read_method\030\201\001 \001(\0162F.yandex.cloud.md" +
-      "b.clickhouse.v1.UserSettings.LocalFilesy" +
-      "stemReadMethod\022B\n\024max_read_buffer_size\030\202" +
-      "\001 \001(\0132\033.google.protobuf.Int64ValueB\006\372\3071\002" +
-      ">0\022H\n\031insert_keeper_max_retries\030\203\001 \001(\0132\033" +
-      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\022W\n(" +
-      "max_temporary_data_on_disk_size_for_user" +
-      "\030\204\001 \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
-      "1\003>=0\022X\n)max_temporary_data_on_disk_size" +
-      "_for_query\030\205\001 \001(\0132\033.google.protobuf.Int6" +
-      "4ValueB\007\372\3071\003>=0\022?\n\020max_parser_depth\030\206\001 \001" +
+      "max_data_size\030y \001(\0132\033.google.protobuf.In" +
+      "t64Value\022>\n\031async_insert_busy_timeout\030z " +
+      "\001(\0132\033.google.protobuf.Int64Value\022K\n&asyn" +
+      "c_insert_use_adaptive_busy_timeout\030\230\001 \001(" +
+      "\0132\032.google.protobuf.BoolValue\0229\n\024memory_" +
+      "profiler_step\030| \001(\0132\033.google.protobuf.In" +
+      "t64Value\022H\n\"memory_profiler_sample_proba" +
+      "bility\030} \001(\0132\034.google.protobuf.DoubleVal" +
+      "ue\022?\n\021max_final_threads\030~ \001(\0132\033.google.p" +
+      "rotobuf.Int64ValueB\007\372\3071\003>=0\022A\n\035input_for" +
+      "mat_parallel_parsing\030\177 \001(\0132\032.google.prot" +
+      "obuf.BoolValue\022D\n\037input_format_import_ne" +
+      "sted_json\030\200\001 \001(\0132\032.google.protobuf.BoolV" +
+      "alue\022(\n\037format_avro_schema_registry_url\030" +
+      "\224\001 \001(\t\022?\n\032data_type_default_nullable\030\225\001 " +
+      "\001(\0132\032.google.protobuf.BoolValue\022m\n\034local" +
+      "_filesystem_read_method\030\201\001 \001(\0162F.yandex." +
+      "cloud.mdb.clickhouse.v1.UserSettings.Loc" +
+      "alFilesystemReadMethod\022B\n\024max_read_buffe" +
+      "r_size\030\202\001 \001(\0132\033.google.protobuf.Int64Val" +
+      "ueB\006\372\3071\002>0\022H\n\031insert_keeper_max_retries\030" +
+      "\203\001 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
+      "\003>=0\022W\n(max_temporary_data_on_disk_size_" +
+      "for_user\030\204\001 \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\007\372\3071\003>=0\022X\n)max_temporary_data_on_d" +
+      "isk_size_for_query\030\205\001 \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\007\372\3071\003>=0\022?\n\020max_parser_de" +
+      "pth\030\206\001 \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\007\372\3071\003>=0\022o\n\035remote_filesystem_read_metho" +
+      "d\030\207\001 \001(\0162G.yandex.cloud.mdb.clickhouse.v" +
+      "1.UserSettings.RemoteFilesystemReadMetho" +
+      "d\022R\n#memory_overcommit_ratio_denominator" +
+      "\030\210\001 \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
+      "1\003>=0\022[\n,memory_overcommit_ratio_denomin" +
+      "ator_for_user\030\211\001 \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\007\372\3071\003>=0\022\\\n-memory_usage_overc" +
+      "ommit_max_wait_microseconds\030\212\001 \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueB\007\372\3071\003>=0\0226\n\021log_" +
+      "query_threads\030\213\001 \001(\0132\032.google.protobuf.B" +
+      "oolValue\0224\n\017log_query_views\030\222\001 \001(\0132\032.goo" +
+      "gle.protobuf.BoolValue\022>\n\027log_queries_pr" +
+      "obability\030\231\001 \001(\0132\034.google.protobuf.Doubl" +
+      "eValue\022<\n\027log_processors_profiles\030\232\001 \001(\013" +
+      "2\032.google.protobuf.BoolValue\0224\n\017use_quer" +
+      "y_cache\030\233\001 \001(\0132\032.google.protobuf.BoolVal" +
+      "ue\022B\n\035enable_reads_from_query_cache\030\234\001 \001" +
+      "(\0132\032.google.protobuf.BoolValue\022A\n\034enable" +
+      "_writes_to_query_cache\030\235\001 \001(\0132\032.google.p" +
+      "rotobuf.BoolValue\022@\n\032query_cache_min_que" +
+      "ry_runs\030\236\001 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\022D\n\036query_cache_min_query_duration\030\237\001" +
+      " \001(\0132\033.google.protobuf.Int64Value\0225\n\017que" +
+      "ry_cache_ttl\030\240\001 \001(\0132\033.google.protobuf.In" +
+      "t64Value\022=\n\027query_cache_max_entries\030\241\001 \001" +
+      "(\0132\033.google.protobuf.Int64Value\022C\n\035query" +
+      "_cache_max_size_in_bytes\030\242\001 \001(\0132\033.google" +
+      ".protobuf.Int64Value\022\030\n\017query_cache_tag\030" +
+      "\243\001 \001(\t\022D\n\037query_cache_share_between_user" +
+      "s\030\244\001 \001(\0132\032.google.protobuf.BoolValue\022\220\001\n" +
+      ".query_cache_nondeterministic_function_h" +
+      "andling\030\245\001 \001(\0162W.yandex.cloud.mdb.clickh" +
+      "ouse.v1.UserSettings.QueryCacheNondeterm" +
+      "inisticFunctionHandling\022A\n\022max_insert_th" +
+      "reads\030\214\001 \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\007\372\3071\003>=0\0228\n\023use_hedged_requests\030\215\001 \001(\013" +
+      "2\032.google.protobuf.BoolValue\022F\n\027idle_con" +
+      "nection_timeout\030\216\001 \001(\0132\033.google.protobuf" +
+      ".Int64ValueB\007\372\3071\003>=0\022K\n\034hedged_connectio" +
+      "n_timeout_ms\030\217\001 \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\007\372\3071\003>=0\022S\n\016load_balancing\030\220\001 \001" +
+      "(\0162:.yandex.cloud.mdb.clickhouse.v1.User" +
+      "Settings.LoadBalancing\022=\n\030prefer_localho" +
+      "st_replica\030\221\001 \001(\0132\032.google.protobuf.Bool" +
+      "Value\022P\n+do_not_merge_across_partitions_" +
+      "select_final\030\223\001 \001(\0132\032.google.protobuf.Bo" +
+      "olValue\022X\n3ignore_materialized_views_wit" +
+      "h_dropped_target_table\030\246\001 \001(\0132\032.google.p" +
+      "rotobuf.BoolValue\022/\n\007compile\030, \001(\0132\032.goo" +
+      "gle.protobuf.BoolValueB\002\030\001\022=\n\024min_count_" +
+      "to_compile\030- \001(\0132\033.google.protobuf.Int64" +
+      "ValueB\002\030\001\022C\n\032async_insert_stale_timeout\030" +
+      "{ \001(\0132\033.google.protobuf.Int64ValueB\002\030\001\"_" +
+      "\n\014OverflowMode\022\035\n\031OVERFLOW_MODE_UNSPECIF" +
+      "IED\020\000\022\027\n\023OVERFLOW_MODE_THROW\020\001\022\027\n\023OVERFL" +
+      "OW_MODE_BREAK\020\002\"\241\001\n\023GroupByOverflowMode\022" +
+      "&\n\"GROUP_BY_OVERFLOW_MODE_UNSPECIFIED\020\000\022" +
+      " \n\034GROUP_BY_OVERFLOW_MODE_THROW\020\001\022 \n\034GRO" +
+      "UP_BY_OVERFLOW_MODE_BREAK\020\002\022\036\n\032GROUP_BY_" +
+      "OVERFLOW_MODE_ANY\020\003\"\322\001\n\026DistributedProdu" +
+      "ctMode\022(\n$DISTRIBUTED_PRODUCT_MODE_UNSPE" +
+      "CIFIED\020\000\022!\n\035DISTRIBUTED_PRODUCT_MODE_DEN" +
+      "Y\020\001\022\"\n\036DISTRIBUTED_PRODUCT_MODE_LOCAL\020\002\022" +
+      "#\n\037DISTRIBUTED_PRODUCT_MODE_GLOBAL\020\003\022\"\n\036" +
+      "DISTRIBUTED_PRODUCT_MODE_ALLOW\020\004\"q\n\tQuot" +
+      "aMode\022\032\n\026QUOTA_MODE_UNSPECIFIED\020\000\022\026\n\022QUO" +
+      "TA_MODE_DEFAULT\020\001\022\024\n\020QUOTA_MODE_KEYED\020\002\022" +
+      "\032\n\026QUOTA_MODE_KEYED_BY_IP\020\003\"\266\002\n\033CountDis" +
+      "tinctImplementation\022-\n)COUNT_DISTINCT_IM" +
+      "PLEMENTATION_UNSPECIFIED\020\000\022&\n\"COUNT_DIST" +
+      "INCT_IMPLEMENTATION_UNIQ\020\001\022/\n+COUNT_DIST" +
+      "INCT_IMPLEMENTATION_UNIQ_COMBINED\020\002\0222\n.C" +
+      "OUNT_DISTINCT_IMPLEMENTATION_UNIQ_COMBIN" +
+      "ED_64\020\003\022-\n)COUNT_DISTINCT_IMPLEMENTATION" +
+      "_UNIQ_HLL_12\020\004\022,\n(COUNT_DISTINCT_IMPLEME" +
+      "NTATION_UNIQ_EXACT\020\005\"\220\002\n\rJoinAlgorithm\022\036" +
+      "\n\032JOIN_ALGORITHM_UNSPECIFIED\020\000\022\027\n\023JOIN_A" +
+      "LGORITHM_HASH\020\001\022 \n\034JOIN_ALGORITHM_PARALL" +
+      "EL_HASH\020\002\022 \n\034JOIN_ALGORITHM_PARTIAL_MERG" +
+      "E\020\003\022\031\n\025JOIN_ALGORITHM_DIRECT\020\004\022\027\n\023JOIN_A" +
+      "LGORITHM_AUTO\020\005\022%\n!JOIN_ALGORITHM_FULL_S" +
+      "ORTING_MERGE\020\006\022\'\n#JOIN_ALGORITHM_PREFER_" +
+      "PARTIAL_MERGE\020\007\"\255\002\n\030FormatRegexpEscaping" +
+      "Rule\022+\n\'FORMAT_REGEXP_ESCAPING_RULE_UNSP" +
+      "ECIFIED\020\000\022\'\n#FORMAT_REGEXP_ESCAPING_RULE" +
+      "_ESCAPED\020\001\022&\n\"FORMAT_REGEXP_ESCAPING_RUL" +
+      "E_QUOTED\020\002\022#\n\037FORMAT_REGEXP_ESCAPING_RUL" +
+      "E_CSV\020\003\022$\n FORMAT_REGEXP_ESCAPING_RULE_J" +
+      "SON\020\004\022#\n\037FORMAT_REGEXP_ESCAPING_RULE_XML" +
+      "\020\005\022#\n\037FORMAT_REGEXP_ESCAPING_RULE_RAW\020\006\"" +
+      "\262\001\n\023DateTimeInputFormat\022&\n\"DATE_TIME_INP" +
+      "UT_FORMAT_UNSPECIFIED\020\000\022&\n\"DATE_TIME_INP" +
+      "UT_FORMAT_BEST_EFFORT\020\001\022 \n\034DATE_TIME_INP" +
+      "UT_FORMAT_BASIC\020\002\022)\n%DATE_TIME_INPUT_FOR" +
+      "MAT_BEST_EFFORT_US\020\003\"\260\001\n\024DateTimeOutputF" +
+      "ormat\022\'\n#DATE_TIME_OUTPUT_FORMAT_UNSPECI" +
+      "FIED\020\000\022\"\n\036DATE_TIME_OUTPUT_FORMAT_SIMPLE" +
+      "\020\001\022\037\n\033DATE_TIME_OUTPUT_FORMAT_ISO\020\002\022*\n&D" +
+      "ATE_TIME_OUTPUT_FORMAT_UNIX_TIMESTAMP\020\003\"" +
+      "\362\001\n\031LocalFilesystemReadMethod\022,\n(LOCAL_F" +
+      "ILESYSTEM_READ_METHOD_UNSPECIFIED\020\000\022%\n!L" +
+      "OCAL_FILESYSTEM_READ_METHOD_READ\020\001\0221\n-LO" +
+      "CAL_FILESYSTEM_READ_METHOD_PREAD_THREADP" +
+      "OOL\020\002\022&\n\"LOCAL_FILESYSTEM_READ_METHOD_PR" +
+      "EAD\020\003\022%\n!LOCAL_FILESYSTEM_READ_METHOD_NM" +
+      "AP\020\004\"\241\001\n\032RemoteFilesystemReadMethod\022-\n)R" +
+      "EMOTE_FILESYSTEM_READ_METHOD_UNSPECIFIED" +
+      "\020\000\022&\n\"REMOTE_FILESYSTEM_READ_METHOD_READ" +
+      "\020\001\022,\n(REMOTE_FILESYSTEM_READ_METHOD_THRE" +
+      "ADPOOL\020\002\"\320\001\n\rLoadBalancing\022\036\n\032LOAD_BALAN" +
+      "CING_UNSPECIFIED\020\000\022\031\n\025LOAD_BALANCING_RAN" +
+      "DOM\020\001\022#\n\037LOAD_BALANCING_NEAREST_HOSTNAME" +
+      "\020\002\022\033\n\027LOAD_BALANCING_IN_ORDER\020\003\022\"\n\036LOAD_" +
+      "BALANCING_FIRST_OR_RANDOM\020\004\022\036\n\032LOAD_BALA" +
+      "NCING_ROUND_ROBIN\020\005\"\232\002\n*QueryCacheNondet" +
+      "erministicFunctionHandling\022>\n:QUERY_CACH" +
+      "E_NONDETERMINISTIC_FUNCTION_HANDLING_UNS" +
+      "PECIFIED\020\000\0228\n4QUERY_CACHE_NONDETERMINIST" +
+      "IC_FUNCTION_HANDLING_THROW\020\001\0227\n3QUERY_CA" +
+      "CHE_NONDETERMINISTIC_FUNCTION_HANDLING_S" +
+      "AVE\020\002\0229\n5QUERY_CACHE_NONDETERMINISTIC_FU" +
+      "NCTION_HANDLING_IGNORE\020\003J\004\010R\020T\"\356\002\n\tUserQ" +
+      "uota\022B\n\021interval_duration\030\001 \001(\0132\033.google" +
+      ".protobuf.Int64ValueB\n\372\3071\006>=1000\0225\n\007quer" +
+      "ies\030\002 \001(\0132\033.google.protobuf.Int64ValueB\007" +
+      "\372\3071\003>=0\0224\n\006errors\030\003 \001(\0132\033.google.protobu" +
+      "f.Int64ValueB\007\372\3071\003>=0\0229\n\013result_rows\030\004 \001" +
       "(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0" +
-      "\022o\n\035remote_filesystem_read_method\030\207\001 \001(\016" +
-      "2G.yandex.cloud.mdb.clickhouse.v1.UserSe" +
-      "ttings.RemoteFilesystemReadMethod\022R\n#mem" +
-      "ory_overcommit_ratio_denominator\030\210\001 \001(\0132" +
-      "\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022[\n" +
-      ",memory_overcommit_ratio_denominator_for" +
-      "_user\030\211\001 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\007\372\3071\003>=0\022\\\n-memory_usage_overcommit_ma" +
-      "x_wait_microseconds\030\212\001 \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\007\372\3071\003>=0\0226\n\021log_query_th" +
-      "reads\030\213\001 \001(\0132\032.google.protobuf.BoolValue" +
-      "\022A\n\022max_insert_threads\030\214\001 \001(\0132\033.google.p" +
-      "rotobuf.Int64ValueB\007\372\3071\003>=0\0228\n\023use_hedge" +
-      "d_requests\030\215\001 \001(\0132\032.google.protobuf.Bool" +
-      "Value\022F\n\027idle_connection_timeout\030\216\001 \001(\0132" +
-      "\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022K\n" +
-      "\034hedged_connection_timeout_ms\030\217\001 \001(\0132\033.g" +
-      "oogle.protobuf.Int64ValueB\007\372\3071\003>=0\022S\n\016lo" +
-      "ad_balancing\030\220\001 \001(\0162:.yandex.cloud.mdb.c" +
-      "lickhouse.v1.UserSettings.LoadBalancing\022" +
-      "=\n\030prefer_localhost_replica\030\221\001 \001(\0132\032.goo" +
-      "gle.protobuf.BoolValue\022/\n\007compile\030, \001(\0132" +
-      "\032.google.protobuf.BoolValueB\002\030\001\022=\n\024min_c" +
-      "ount_to_compile\030- \001(\0132\033.google.protobuf." +
-      "Int64ValueB\002\030\001\"_\n\014OverflowMode\022\035\n\031OVERFL" +
-      "OW_MODE_UNSPECIFIED\020\000\022\027\n\023OVERFLOW_MODE_T" +
-      "HROW\020\001\022\027\n\023OVERFLOW_MODE_BREAK\020\002\"\241\001\n\023Grou" +
-      "pByOverflowMode\022&\n\"GROUP_BY_OVERFLOW_MOD" +
-      "E_UNSPECIFIED\020\000\022 \n\034GROUP_BY_OVERFLOW_MOD" +
-      "E_THROW\020\001\022 \n\034GROUP_BY_OVERFLOW_MODE_BREA" +
-      "K\020\002\022\036\n\032GROUP_BY_OVERFLOW_MODE_ANY\020\003\"\322\001\n\026" +
-      "DistributedProductMode\022(\n$DISTRIBUTED_PR" +
-      "ODUCT_MODE_UNSPECIFIED\020\000\022!\n\035DISTRIBUTED_" +
-      "PRODUCT_MODE_DENY\020\001\022\"\n\036DISTRIBUTED_PRODU" +
-      "CT_MODE_LOCAL\020\002\022#\n\037DISTRIBUTED_PRODUCT_M" +
-      "ODE_GLOBAL\020\003\022\"\n\036DISTRIBUTED_PRODUCT_MODE" +
-      "_ALLOW\020\004\"q\n\tQuotaMode\022\032\n\026QUOTA_MODE_UNSP" +
-      "ECIFIED\020\000\022\026\n\022QUOTA_MODE_DEFAULT\020\001\022\024\n\020QUO" +
-      "TA_MODE_KEYED\020\002\022\032\n\026QUOTA_MODE_KEYED_BY_I" +
-      "P\020\003\"\266\002\n\033CountDistinctImplementation\022-\n)C" +
-      "OUNT_DISTINCT_IMPLEMENTATION_UNSPECIFIED" +
-      "\020\000\022&\n\"COUNT_DISTINCT_IMPLEMENTATION_UNIQ" +
-      "\020\001\022/\n+COUNT_DISTINCT_IMPLEMENTATION_UNIQ" +
-      "_COMBINED\020\002\0222\n.COUNT_DISTINCT_IMPLEMENTA" +
-      "TION_UNIQ_COMBINED_64\020\003\022-\n)COUNT_DISTINC" +
-      "T_IMPLEMENTATION_UNIQ_HLL_12\020\004\022,\n(COUNT_" +
-      "DISTINCT_IMPLEMENTATION_UNIQ_EXACT\020\005\"\220\002\n" +
-      "\rJoinAlgorithm\022\036\n\032JOIN_ALGORITHM_UNSPECI" +
-      "FIED\020\000\022\027\n\023JOIN_ALGORITHM_HASH\020\001\022 \n\034JOIN_" +
-      "ALGORITHM_PARALLEL_HASH\020\002\022 \n\034JOIN_ALGORI" +
-      "THM_PARTIAL_MERGE\020\003\022\031\n\025JOIN_ALGORITHM_DI" +
-      "RECT\020\004\022\027\n\023JOIN_ALGORITHM_AUTO\020\005\022%\n!JOIN_" +
-      "ALGORITHM_FULL_SORTING_MERGE\020\006\022\'\n#JOIN_A" +
-      "LGORITHM_PREFER_PARTIAL_MERGE\020\007\"\255\002\n\030Form" +
-      "atRegexpEscapingRule\022+\n\'FORMAT_REGEXP_ES" +
-      "CAPING_RULE_UNSPECIFIED\020\000\022\'\n#FORMAT_REGE" +
-      "XP_ESCAPING_RULE_ESCAPED\020\001\022&\n\"FORMAT_REG" +
-      "EXP_ESCAPING_RULE_QUOTED\020\002\022#\n\037FORMAT_REG" +
-      "EXP_ESCAPING_RULE_CSV\020\003\022$\n FORMAT_REGEXP" +
-      "_ESCAPING_RULE_JSON\020\004\022#\n\037FORMAT_REGEXP_E" +
-      "SCAPING_RULE_XML\020\005\022#\n\037FORMAT_REGEXP_ESCA" +
-      "PING_RULE_RAW\020\006\"\262\001\n\023DateTimeInputFormat\022" +
-      "&\n\"DATE_TIME_INPUT_FORMAT_UNSPECIFIED\020\000\022" +
-      "&\n\"DATE_TIME_INPUT_FORMAT_BEST_EFFORT\020\001\022" +
-      " \n\034DATE_TIME_INPUT_FORMAT_BASIC\020\002\022)\n%DAT" +
-      "E_TIME_INPUT_FORMAT_BEST_EFFORT_US\020\003\"\260\001\n" +
-      "\024DateTimeOutputFormat\022\'\n#DATE_TIME_OUTPU" +
-      "T_FORMAT_UNSPECIFIED\020\000\022\"\n\036DATE_TIME_OUTP" +
-      "UT_FORMAT_SIMPLE\020\001\022\037\n\033DATE_TIME_OUTPUT_F" +
-      "ORMAT_ISO\020\002\022*\n&DATE_TIME_OUTPUT_FORMAT_U" +
-      "NIX_TIMESTAMP\020\003\"\362\001\n\031LocalFilesystemReadM" +
-      "ethod\022,\n(LOCAL_FILESYSTEM_READ_METHOD_UN" +
-      "SPECIFIED\020\000\022%\n!LOCAL_FILESYSTEM_READ_MET" +
-      "HOD_READ\020\001\0221\n-LOCAL_FILESYSTEM_READ_METH" +
-      "OD_PREAD_THREADPOOL\020\002\022&\n\"LOCAL_FILESYSTE" +
-      "M_READ_METHOD_PREAD\020\003\022%\n!LOCAL_FILESYSTE" +
-      "M_READ_METHOD_NMAP\020\004\"\241\001\n\032RemoteFilesyste" +
-      "mReadMethod\022-\n)REMOTE_FILESYSTEM_READ_ME" +
-      "THOD_UNSPECIFIED\020\000\022&\n\"REMOTE_FILESYSTEM_" +
-      "READ_METHOD_READ\020\001\022,\n(REMOTE_FILESYSTEM_" +
-      "READ_METHOD_THREADPOOL\020\002\"\320\001\n\rLoadBalanci" +
-      "ng\022\036\n\032LOAD_BALANCING_UNSPECIFIED\020\000\022\031\n\025LO" +
-      "AD_BALANCING_RANDOM\020\001\022#\n\037LOAD_BALANCING_" +
-      "NEAREST_HOSTNAME\020\002\022\033\n\027LOAD_BALANCING_IN_" +
-      "ORDER\020\003\022\"\n\036LOAD_BALANCING_FIRST_OR_RANDO" +
-      "M\020\004\022\036\n\032LOAD_BALANCING_ROUND_ROBIN\020\005J\004\010R\020" +
-      "T\"\356\002\n\tUserQuota\022B\n\021interval_duration\030\001 \001" +
-      "(\0132\033.google.protobuf.Int64ValueB\n\372\3071\006>=1" +
-      "000\0225\n\007queries\030\002 \001(\0132\033.google.protobuf.I" +
-      "nt64ValueB\007\372\3071\003>=0\0224\n\006errors\030\003 \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueB\007\372\3071\003>=0\0229\n\013resu" +
-      "lt_rows\030\004 \001(\0132\033.google.protobuf.Int64Val" +
-      "ueB\007\372\3071\003>=0\0227\n\tread_rows\030\005 \001(\0132\033.google." +
-      "protobuf.Int64ValueB\007\372\3071\003>=0\022<\n\016executio" +
-      "n_time\030\006 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\007\372\3071\003>=0Bs\n\"yandex.cloud.api.mdb.click" +
-      "house.v1ZMgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/mdb/clickhouse/v1;cli" +
-      "ckhouseb\006proto3"
+      "\0227\n\tread_rows\030\005 \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\007\372\3071\003>=0\022<\n\016execution_time\030\006 \001(" +
+      "\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0B" +
+      "s\n\"yandex.cloud.api.mdb.clickhouse.v1ZMg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/mdb/clickhouse/v1;clickhouseb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -49619,7 +55384,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_descriptor,
-        new java.lang.String[] { "Readonly", "AllowDdl", "AllowIntrospectionFunctions", "ConnectTimeout", "ConnectTimeoutWithFailover", "ReceiveTimeout", "SendTimeout", "TimeoutBeforeCheckingExecutionSpeed", "InsertQuorum", "InsertQuorumTimeout", "InsertQuorumParallel", "InsertNullAsDefault", "SelectSequentialConsistency", "DeduplicateBlocksInDependentMaterializedViews", "ReplicationAlterPartitionsSync", "MaxReplicaDelayForDistributedQueries", "FallbackToStaleReplicasForDistributedQueries", "DistributedProductMode", "DistributedAggregationMemoryEfficient", "DistributedDdlTaskTimeout", "SkipUnavailableShards", "CompileExpressions", "MinCountToCompileExpression", "MaxBlockSize", "MinInsertBlockSizeRows", "MinInsertBlockSizeBytes", "MaxInsertBlockSize", "MinBytesToUseDirectIo", "UseUncompressedCache", "MergeTreeMaxRowsToUseCache", "MergeTreeMaxBytesToUseCache", "MergeTreeMinRowsForConcurrentRead", "MergeTreeMinBytesForConcurrentRead", "MaxBytesBeforeExternalGroupBy", "MaxBytesBeforeExternalSort", "GroupByTwoLevelThreshold", "GroupByTwoLevelThresholdBytes", "Priority", "MaxThreads", "MaxMemoryUsage", "MaxMemoryUsageForUser", "MaxNetworkBandwidth", "MaxNetworkBandwidthForUser", "MaxPartitionsPerInsertBlock", "MaxConcurrentQueriesForUser", "ForceIndexByDate", "ForcePrimaryKey", "MaxRowsToRead", "MaxBytesToRead", "ReadOverflowMode", "MaxRowsToGroupBy", "GroupByOverflowMode", "MaxRowsToSort", "MaxBytesToSort", "SortOverflowMode", "MaxResultRows", "MaxResultBytes", "ResultOverflowMode", "MaxRowsInDistinct", "MaxBytesInDistinct", "DistinctOverflowMode", "MaxRowsToTransfer", "MaxBytesToTransfer", "TransferOverflowMode", "MaxExecutionTime", "TimeoutOverflowMode", "MaxRowsInSet", "MaxBytesInSet", "SetOverflowMode", "MaxRowsInJoin", "MaxBytesInJoin", "JoinOverflowMode", "JoinAlgorithm", "AnyJoinDistinctRightTableKeys", "MaxColumnsToRead", "MaxTemporaryColumns", "MaxTemporaryNonConstColumns", "MaxQuerySize", "MaxAstDepth", "MaxAstElements", "MaxExpandedAstElements", "MinExecutionSpeed", "MinExecutionSpeedBytes", "CountDistinctImplementation", "InputFormatValuesInterpretExpressions", "InputFormatDefaultsForOmittedFields", "InputFormatNullAsDefault", "DateTimeInputFormat", "InputFormatWithNamesUseHeader", "OutputFormatJsonQuote64BitIntegers", "OutputFormatJsonQuoteDenormals", "DateTimeOutputFormat", "LowCardinalityAllowInNativeFormat", "AllowSuspiciousLowCardinalityTypes", "EmptyResultForAggregationByEmptySet", "HttpConnectionTimeout", "HttpReceiveTimeout", "HttpSendTimeout", "EnableHttpCompression", "SendProgressInHttpHeaders", "HttpHeadersProgressInterval", "AddHttpCorsHeader", "CancelHttpReadonlyQueriesOnClientClose", "MaxHttpGetRedirects", "JoinedSubqueryRequiresAlias", "JoinUseNulls", "TransformNullIn", "QuotaMode", "FlattenNested", "FormatRegexp", "FormatRegexpEscapingRule", "FormatRegexpSkipUnmatched", "AsyncInsert", "AsyncInsertThreads", "WaitForAsyncInsert", "WaitForAsyncInsertTimeout", "AsyncInsertMaxDataSize", "AsyncInsertBusyTimeout", "AsyncInsertStaleTimeout", "MemoryProfilerStep", "MemoryProfilerSampleProbability", "MaxFinalThreads", "InputFormatParallelParsing", "InputFormatImportNestedJson", "LocalFilesystemReadMethod", "MaxReadBufferSize", "InsertKeeperMaxRetries", "MaxTemporaryDataOnDiskSizeForUser", "MaxTemporaryDataOnDiskSizeForQuery", "MaxParserDepth", "RemoteFilesystemReadMethod", "MemoryOvercommitRatioDenominator", "MemoryOvercommitRatioDenominatorForUser", "MemoryUsageOvercommitMaxWaitMicroseconds", "LogQueryThreads", "MaxInsertThreads", "UseHedgedRequests", "IdleConnectionTimeout", "HedgedConnectionTimeoutMs", "LoadBalancing", "PreferLocalhostReplica", "Compile", "MinCountToCompile", });
+        new java.lang.String[] { "Readonly", "AllowDdl", "AllowIntrospectionFunctions", "ConnectTimeout", "ConnectTimeoutWithFailover", "ReceiveTimeout", "SendTimeout", "TimeoutBeforeCheckingExecutionSpeed", "InsertQuorum", "InsertQuorumTimeout", "InsertQuorumParallel", "InsertNullAsDefault", "SelectSequentialConsistency", "DeduplicateBlocksInDependentMaterializedViews", "ReplicationAlterPartitionsSync", "MaxReplicaDelayForDistributedQueries", "FallbackToStaleReplicasForDistributedQueries", "DistributedProductMode", "DistributedAggregationMemoryEfficient", "DistributedDdlTaskTimeout", "SkipUnavailableShards", "CompileExpressions", "MinCountToCompileExpression", "MaxBlockSize", "MinInsertBlockSizeRows", "MinInsertBlockSizeBytes", "MaxInsertBlockSize", "MinBytesToUseDirectIo", "UseUncompressedCache", "MergeTreeMaxRowsToUseCache", "MergeTreeMaxBytesToUseCache", "MergeTreeMinRowsForConcurrentRead", "MergeTreeMinBytesForConcurrentRead", "MaxBytesBeforeExternalGroupBy", "MaxBytesBeforeExternalSort", "GroupByTwoLevelThreshold", "GroupByTwoLevelThresholdBytes", "Priority", "MaxThreads", "MaxMemoryUsage", "MaxMemoryUsageForUser", "MaxNetworkBandwidth", "MaxNetworkBandwidthForUser", "MaxPartitionsPerInsertBlock", "MaxConcurrentQueriesForUser", "ForceIndexByDate", "ForcePrimaryKey", "MaxRowsToRead", "MaxBytesToRead", "ReadOverflowMode", "MaxRowsToGroupBy", "GroupByOverflowMode", "MaxRowsToSort", "MaxBytesToSort", "SortOverflowMode", "MaxResultRows", "MaxResultBytes", "ResultOverflowMode", "MaxRowsInDistinct", "MaxBytesInDistinct", "DistinctOverflowMode", "MaxRowsToTransfer", "MaxBytesToTransfer", "TransferOverflowMode", "MaxExecutionTime", "TimeoutOverflowMode", "MaxRowsInSet", "MaxBytesInSet", "SetOverflowMode", "MaxRowsInJoin", "MaxBytesInJoin", "JoinOverflowMode", "JoinAlgorithm", "AnyJoinDistinctRightTableKeys", "MaxColumnsToRead", "MaxTemporaryColumns", "MaxTemporaryNonConstColumns", "MaxQuerySize", "MaxAstDepth", "MaxAstElements", "MaxExpandedAstElements", "MinExecutionSpeed", "MinExecutionSpeedBytes", "CountDistinctImplementation", "InputFormatValuesInterpretExpressions", "InputFormatDefaultsForOmittedFields", "InputFormatNullAsDefault", "DateTimeInputFormat", "InputFormatWithNamesUseHeader", "OutputFormatJsonQuote64BitIntegers", "OutputFormatJsonQuoteDenormals", "DateTimeOutputFormat", "LowCardinalityAllowInNativeFormat", "AllowSuspiciousLowCardinalityTypes", "EmptyResultForAggregationByEmptySet", "HttpConnectionTimeout", "HttpReceiveTimeout", "HttpSendTimeout", "EnableHttpCompression", "SendProgressInHttpHeaders", "HttpHeadersProgressInterval", "AddHttpCorsHeader", "CancelHttpReadonlyQueriesOnClientClose", "MaxHttpGetRedirects", "HttpMaxFieldNameSize", "HttpMaxFieldValueSize", "JoinedSubqueryRequiresAlias", "JoinUseNulls", "TransformNullIn", "QuotaMode", "FlattenNested", "FormatRegexp", "FormatRegexpEscapingRule", "FormatRegexpSkipUnmatched", "AsyncInsert", "AsyncInsertThreads", "WaitForAsyncInsert", "WaitForAsyncInsertTimeout", "AsyncInsertMaxDataSize", "AsyncInsertBusyTimeout", "AsyncInsertUseAdaptiveBusyTimeout", "MemoryProfilerStep", "MemoryProfilerSampleProbability", "MaxFinalThreads", "InputFormatParallelParsing", "InputFormatImportNestedJson", "FormatAvroSchemaRegistryUrl", "DataTypeDefaultNullable", "LocalFilesystemReadMethod", "MaxReadBufferSize", "InsertKeeperMaxRetries", "MaxTemporaryDataOnDiskSizeForUser", "MaxTemporaryDataOnDiskSizeForQuery", "MaxParserDepth", "RemoteFilesystemReadMethod", "MemoryOvercommitRatioDenominator", "MemoryOvercommitRatioDenominatorForUser", "MemoryUsageOvercommitMaxWaitMicroseconds", "LogQueryThreads", "LogQueryViews", "LogQueriesProbability", "LogProcessorsProfiles", "UseQueryCache", "EnableReadsFromQueryCache", "EnableWritesToQueryCache", "QueryCacheMinQueryRuns", "QueryCacheMinQueryDuration", "QueryCacheTtl", "QueryCacheMaxEntries", "QueryCacheMaxSizeInBytes", "QueryCacheTag", "QueryCacheShareBetweenUsers", "QueryCacheNondeterministicFunctionHandling", "MaxInsertThreads", "UseHedgedRequests", "IdleConnectionTimeout", "HedgedConnectionTimeoutMs", "LoadBalancing", "PreferLocalhostReplica", "DoNotMergeAcrossPartitionsSelectFinal", "IgnoreMaterializedViewsWithDroppedTargetTable", "Compile", "MinCountToCompile", "AsyncInsertStaleTimeout", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_fieldAccessorTable = new

@@ -39,33 +39,6 @@ public final class LagAllocationSettingsOuterClass {
      */
     long getLagSize();
 
-    /**
-     * <pre>
-     * LagInfo
-     * </pre>
-     *
-     * <code>.yandex.cloud.cic.v1.common.LagInfo lag_info = 14;</code>
-     * @return Whether the lagInfo field is set.
-     */
-    boolean hasLagInfo();
-    /**
-     * <pre>
-     * LagInfo
-     * </pre>
-     *
-     * <code>.yandex.cloud.cic.v1.common.LagInfo lag_info = 14;</code>
-     * @return The lagInfo.
-     */
-    yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo getLagInfo();
-    /**
-     * <pre>
-     * LagInfo
-     * </pre>
-     *
-     * <code>.yandex.cloud.cic.v1.common.LagInfo lag_info = 14;</code>
-     */
-    yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfoOrBuilder getLagInfoOrBuilder();
-
     public yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest.LagCase getLagCase();
   }
   /**
@@ -122,20 +95,6 @@ public final class LagAllocationSettingsOuterClass {
               lagCase_ = 13;
               break;
             }
-            case 114: {
-              yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo.Builder subBuilder = null;
-              if (lagCase_ == 14) {
-                subBuilder = ((yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo) lag_).toBuilder();
-              }
-              lag_ =
-                  input.readMessage(yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo) lag_);
-                lag_ = subBuilder.buildPartial();
-              }
-              lagCase_ = 14;
-              break;
-            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -174,7 +133,6 @@ public final class LagAllocationSettingsOuterClass {
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       LAG_SIZE(13),
-      LAG_INFO(14),
       LAG_NOT_SET(0);
       private final int value;
       private LagCase(int value) {
@@ -193,7 +151,6 @@ public final class LagAllocationSettingsOuterClass {
       public static LagCase forNumber(int value) {
         switch (value) {
           case 13: return LAG_SIZE;
-          case 14: return LAG_INFO;
           case 0: return LAG_NOT_SET;
           default: return null;
         }
@@ -240,49 +197,6 @@ public final class LagAllocationSettingsOuterClass {
       return 0L;
     }
 
-    public static final int LAG_INFO_FIELD_NUMBER = 14;
-    /**
-     * <pre>
-     * LagInfo
-     * </pre>
-     *
-     * <code>.yandex.cloud.cic.v1.common.LagInfo lag_info = 14;</code>
-     * @return Whether the lagInfo field is set.
-     */
-    @java.lang.Override
-    public boolean hasLagInfo() {
-      return lagCase_ == 14;
-    }
-    /**
-     * <pre>
-     * LagInfo
-     * </pre>
-     *
-     * <code>.yandex.cloud.cic.v1.common.LagInfo lag_info = 14;</code>
-     * @return The lagInfo.
-     */
-    @java.lang.Override
-    public yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo getLagInfo() {
-      if (lagCase_ == 14) {
-         return (yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo) lag_;
-      }
-      return yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo.getDefaultInstance();
-    }
-    /**
-     * <pre>
-     * LagInfo
-     * </pre>
-     *
-     * <code>.yandex.cloud.cic.v1.common.LagInfo lag_info = 14;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfoOrBuilder getLagInfoOrBuilder() {
-      if (lagCase_ == 14) {
-         return (yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo) lag_;
-      }
-      return yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo.getDefaultInstance();
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -301,9 +215,6 @@ public final class LagAllocationSettingsOuterClass {
         output.writeInt64(
             13, (long)((java.lang.Long) lag_));
       }
-      if (lagCase_ == 14) {
-        output.writeMessage(14, (yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo) lag_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -317,10 +228,6 @@ public final class LagAllocationSettingsOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(
               13, (long)((java.lang.Long) lag_));
-      }
-      if (lagCase_ == 14) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, (yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo) lag_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -343,10 +250,6 @@ public final class LagAllocationSettingsOuterClass {
           if (getLagSize()
               != other.getLagSize()) return false;
           break;
-        case 14:
-          if (!getLagInfo()
-              .equals(other.getLagInfo())) return false;
-          break;
         case 0:
         default:
       }
@@ -366,10 +269,6 @@ public final class LagAllocationSettingsOuterClass {
           hash = (37 * hash) + LAG_SIZE_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
               getLagSize());
-          break;
-        case 14:
-          hash = (37 * hash) + LAG_INFO_FIELD_NUMBER;
-          hash = (53 * hash) + getLagInfo().hashCode();
           break;
         case 0:
         default:
@@ -542,13 +441,6 @@ public final class LagAllocationSettingsOuterClass {
         if (lagCase_ == 13) {
           result.lag_ = lag_;
         }
-        if (lagCase_ == 14) {
-          if (lagInfoBuilder_ == null) {
-            result.lag_ = lag_;
-          } else {
-            result.lag_ = lagInfoBuilder_.build();
-          }
-        }
         result.lagCase_ = lagCase_;
         onBuilt();
         return result;
@@ -601,10 +493,6 @@ public final class LagAllocationSettingsOuterClass {
         switch (other.getLagCase()) {
           case LAG_SIZE: {
             setLagSize(other.getLagSize());
-            break;
-          }
-          case LAG_INFO: {
-            mergeLagInfo(other.getLagInfo());
             break;
           }
           case LAG_NOT_SET: {
@@ -714,183 +602,6 @@ public final class LagAllocationSettingsOuterClass {
           onChanged();
         }
         return this;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo, yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo.Builder, yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfoOrBuilder> lagInfoBuilder_;
-      /**
-       * <pre>
-       * LagInfo
-       * </pre>
-       *
-       * <code>.yandex.cloud.cic.v1.common.LagInfo lag_info = 14;</code>
-       * @return Whether the lagInfo field is set.
-       */
-      @java.lang.Override
-      public boolean hasLagInfo() {
-        return lagCase_ == 14;
-      }
-      /**
-       * <pre>
-       * LagInfo
-       * </pre>
-       *
-       * <code>.yandex.cloud.cic.v1.common.LagInfo lag_info = 14;</code>
-       * @return The lagInfo.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo getLagInfo() {
-        if (lagInfoBuilder_ == null) {
-          if (lagCase_ == 14) {
-            return (yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo) lag_;
-          }
-          return yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo.getDefaultInstance();
-        } else {
-          if (lagCase_ == 14) {
-            return lagInfoBuilder_.getMessage();
-          }
-          return yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * LagInfo
-       * </pre>
-       *
-       * <code>.yandex.cloud.cic.v1.common.LagInfo lag_info = 14;</code>
-       */
-      public Builder setLagInfo(yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo value) {
-        if (lagInfoBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          lag_ = value;
-          onChanged();
-        } else {
-          lagInfoBuilder_.setMessage(value);
-        }
-        lagCase_ = 14;
-        return this;
-      }
-      /**
-       * <pre>
-       * LagInfo
-       * </pre>
-       *
-       * <code>.yandex.cloud.cic.v1.common.LagInfo lag_info = 14;</code>
-       */
-      public Builder setLagInfo(
-          yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo.Builder builderForValue) {
-        if (lagInfoBuilder_ == null) {
-          lag_ = builderForValue.build();
-          onChanged();
-        } else {
-          lagInfoBuilder_.setMessage(builderForValue.build());
-        }
-        lagCase_ = 14;
-        return this;
-      }
-      /**
-       * <pre>
-       * LagInfo
-       * </pre>
-       *
-       * <code>.yandex.cloud.cic.v1.common.LagInfo lag_info = 14;</code>
-       */
-      public Builder mergeLagInfo(yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo value) {
-        if (lagInfoBuilder_ == null) {
-          if (lagCase_ == 14 &&
-              lag_ != yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo.getDefaultInstance()) {
-            lag_ = yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo.newBuilder((yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo) lag_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            lag_ = value;
-          }
-          onChanged();
-        } else {
-          if (lagCase_ == 14) {
-            lagInfoBuilder_.mergeFrom(value);
-          }
-          lagInfoBuilder_.setMessage(value);
-        }
-        lagCase_ = 14;
-        return this;
-      }
-      /**
-       * <pre>
-       * LagInfo
-       * </pre>
-       *
-       * <code>.yandex.cloud.cic.v1.common.LagInfo lag_info = 14;</code>
-       */
-      public Builder clearLagInfo() {
-        if (lagInfoBuilder_ == null) {
-          if (lagCase_ == 14) {
-            lagCase_ = 0;
-            lag_ = null;
-            onChanged();
-          }
-        } else {
-          if (lagCase_ == 14) {
-            lagCase_ = 0;
-            lag_ = null;
-          }
-          lagInfoBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * LagInfo
-       * </pre>
-       *
-       * <code>.yandex.cloud.cic.v1.common.LagInfo lag_info = 14;</code>
-       */
-      public yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo.Builder getLagInfoBuilder() {
-        return getLagInfoFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * LagInfo
-       * </pre>
-       *
-       * <code>.yandex.cloud.cic.v1.common.LagInfo lag_info = 14;</code>
-       */
-      @java.lang.Override
-      public yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfoOrBuilder getLagInfoOrBuilder() {
-        if ((lagCase_ == 14) && (lagInfoBuilder_ != null)) {
-          return lagInfoBuilder_.getMessageOrBuilder();
-        } else {
-          if (lagCase_ == 14) {
-            return (yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo) lag_;
-          }
-          return yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * LagInfo
-       * </pre>
-       *
-       * <code>.yandex.cloud.cic.v1.common.LagInfo lag_info = 14;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo, yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo.Builder, yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfoOrBuilder> 
-          getLagInfoFieldBuilder() {
-        if (lagInfoBuilder_ == null) {
-          if (!(lagCase_ == 14)) {
-            lag_ = yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo.getDefaultInstance();
-          }
-          lagInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo, yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo.Builder, yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfoOrBuilder>(
-                  (yandex.cloud.api.cic.v1.common.LagInfoOuterClass.LagInfo) lag_,
-                  getParentForChildren(),
-                  isClean());
-          lag_ = null;
-        }
-        lagCase_ = 14;
-        onChanged();;
-        return lagInfoBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1656,14 +1367,13 @@ public final class LagAllocationSettingsOuterClass {
       "\n8yandex/cloud/cic/v1/common/lag_allocat" +
       "ion_settings.proto\022\032yandex.cloud.cic.v1." +
       "common\032)yandex/cloud/cic/v1/common/lag_i" +
-      "nfo.proto\"r\n\034LagAllocationSettingsReques" +
-      "t\022\022\n\010lag_size\030\r \001(\003H\000\0227\n\010lag_info\030\016 \001(\0132" +
-      "#.yandex.cloud.cic.v1.common.LagInfoH\000B\005" +
-      "\n\003lag\"N\n\025LagAllocationSettings\0225\n\010lag_in" +
-      "fo\030\016 \001(\0132#.yandex.cloud.cic.v1.common.La" +
-      "gInfoBd\n\036yandex.cloud.api.cic.v1.commonZ" +
-      "Bgithub.com/yandex-cloud/go-genproto/yan" +
-      "dex/cloud/cic/v1/common;cicb\006proto3"
+      "nfo.proto\"?\n\034LagAllocationSettingsReques" +
+      "t\022\022\n\010lag_size\030\r \001(\003H\000B\005\n\003lagJ\004\010\016\020\017\"N\n\025La" +
+      "gAllocationSettings\0225\n\010lag_info\030\016 \001(\0132#." +
+      "yandex.cloud.cic.v1.common.LagInfoBd\n\036ya" +
+      "ndex.cloud.api.cic.v1.commonZBgithub.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/c" +
+      "ic/v1/common;cicb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1675,7 +1385,7 @@ public final class LagAllocationSettingsOuterClass {
     internal_static_yandex_cloud_cic_v1_common_LagAllocationSettingsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cic_v1_common_LagAllocationSettingsRequest_descriptor,
-        new java.lang.String[] { "LagSize", "LagInfo", "Lag", });
+        new java.lang.String[] { "LagSize", "Lag", });
     internal_static_yandex_cloud_cic_v1_common_LagAllocationSettings_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_cic_v1_common_LagAllocationSettings_fieldAccessorTable = new

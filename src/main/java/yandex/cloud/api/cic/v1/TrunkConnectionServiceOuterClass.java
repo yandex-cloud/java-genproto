@@ -3966,6 +3966,33 @@ public final class TrunkConnectionServiceOuterClass {
        * @return The transceiverType.
        */
       yandex.cloud.api.cic.v1.common.TransceiverTypeOuterClass.TransceiverType getTransceiverType();
+
+      /**
+       * <pre>
+       * LAG allocation settings that the trunkConnection is deployed on.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+       * @return Whether the lagAllocationSettings field is set.
+       */
+      boolean hasLagAllocationSettings();
+      /**
+       * <pre>
+       * LAG allocation settings that the trunkConnection is deployed on.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+       * @return The lagAllocationSettings.
+       */
+      yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest getLagAllocationSettings();
+      /**
+       * <pre>
+       * LAG allocation settings that the trunkConnection is deployed on.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+       */
+      yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequestOrBuilder getLagAllocationSettingsOrBuilder();
     }
     /**
      * <pre>
@@ -4021,6 +4048,19 @@ public final class TrunkConnectionServiceOuterClass {
                 int rawValue = input.readEnum();
 
                 transceiverType_ = rawValue;
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest.Builder subBuilder = null;
+                if (lagAllocationSettings_ != null) {
+                  subBuilder = lagAllocationSettings_.toBuilder();
+                }
+                lagAllocationSettings_ = input.readMessage(yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(lagAllocationSettings_);
+                  lagAllocationSettings_ = subBuilder.buildPartial();
+                }
+
                 break;
               }
               default: {
@@ -4082,6 +4122,44 @@ public final class TrunkConnectionServiceOuterClass {
         return result == null ? yandex.cloud.api.cic.v1.common.TransceiverTypeOuterClass.TransceiverType.UNRECOGNIZED : result;
       }
 
+      public static final int LAG_ALLOCATION_SETTINGS_FIELD_NUMBER = 3;
+      private yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest lagAllocationSettings_;
+      /**
+       * <pre>
+       * LAG allocation settings that the trunkConnection is deployed on.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+       * @return Whether the lagAllocationSettings field is set.
+       */
+      @java.lang.Override
+      public boolean hasLagAllocationSettings() {
+        return lagAllocationSettings_ != null;
+      }
+      /**
+       * <pre>
+       * LAG allocation settings that the trunkConnection is deployed on.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+       * @return The lagAllocationSettings.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest getLagAllocationSettings() {
+        return lagAllocationSettings_ == null ? yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest.getDefaultInstance() : lagAllocationSettings_;
+      }
+      /**
+       * <pre>
+       * LAG allocation settings that the trunkConnection is deployed on.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequestOrBuilder getLagAllocationSettingsOrBuilder() {
+        return getLagAllocationSettings();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -4099,6 +4177,9 @@ public final class TrunkConnectionServiceOuterClass {
         if (transceiverType_ != yandex.cloud.api.cic.v1.common.TransceiverTypeOuterClass.TransceiverType.TRANSCEIVER_TYPE_UNSPECIFIED.getNumber()) {
           output.writeEnum(1, transceiverType_);
         }
+        if (lagAllocationSettings_ != null) {
+          output.writeMessage(3, getLagAllocationSettings());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -4111,6 +4192,10 @@ public final class TrunkConnectionServiceOuterClass {
         if (transceiverType_ != yandex.cloud.api.cic.v1.common.TransceiverTypeOuterClass.TransceiverType.TRANSCEIVER_TYPE_UNSPECIFIED.getNumber()) {
           size += com.google.protobuf.CodedOutputStream
             .computeEnumSize(1, transceiverType_);
+        }
+        if (lagAllocationSettings_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getLagAllocationSettings());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -4128,6 +4213,11 @@ public final class TrunkConnectionServiceOuterClass {
         yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.LagDirectJoint other = (yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.LagDirectJoint) obj;
 
         if (transceiverType_ != other.transceiverType_) return false;
+        if (hasLagAllocationSettings() != other.hasLagAllocationSettings()) return false;
+        if (hasLagAllocationSettings()) {
+          if (!getLagAllocationSettings()
+              .equals(other.getLagAllocationSettings())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -4141,6 +4231,10 @@ public final class TrunkConnectionServiceOuterClass {
         hash = (19 * hash) + getDescriptor().hashCode();
         hash = (37 * hash) + TRANSCEIVER_TYPE_FIELD_NUMBER;
         hash = (53 * hash) + transceiverType_;
+        if (hasLagAllocationSettings()) {
+          hash = (37 * hash) + LAG_ALLOCATION_SETTINGS_FIELD_NUMBER;
+          hash = (53 * hash) + getLagAllocationSettings().hashCode();
+        }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -4280,6 +4374,12 @@ public final class TrunkConnectionServiceOuterClass {
           super.clear();
           transceiverType_ = 0;
 
+          if (lagAllocationSettingsBuilder_ == null) {
+            lagAllocationSettings_ = null;
+          } else {
+            lagAllocationSettings_ = null;
+            lagAllocationSettingsBuilder_ = null;
+          }
           return this;
         }
 
@@ -4307,6 +4407,11 @@ public final class TrunkConnectionServiceOuterClass {
         public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.LagDirectJoint buildPartial() {
           yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.LagDirectJoint result = new yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.LagDirectJoint(this);
           result.transceiverType_ = transceiverType_;
+          if (lagAllocationSettingsBuilder_ == null) {
+            result.lagAllocationSettings_ = lagAllocationSettings_;
+          } else {
+            result.lagAllocationSettings_ = lagAllocationSettingsBuilder_.build();
+          }
           onBuilt();
           return result;
         }
@@ -4357,6 +4462,9 @@ public final class TrunkConnectionServiceOuterClass {
           if (other == yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.LagDirectJoint.getDefaultInstance()) return this;
           if (other.transceiverType_ != 0) {
             setTransceiverTypeValue(other.getTransceiverTypeValue());
+          }
+          if (other.hasLagAllocationSettings()) {
+            mergeLagAllocationSettings(other.getLagAllocationSettings());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -4459,6 +4567,161 @@ public final class TrunkConnectionServiceOuterClass {
           transceiverType_ = 0;
           onChanged();
           return this;
+        }
+
+        private yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest lagAllocationSettings_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest, yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest.Builder, yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequestOrBuilder> lagAllocationSettingsBuilder_;
+        /**
+         * <pre>
+         * LAG allocation settings that the trunkConnection is deployed on.
+         * </pre>
+         *
+         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+         * @return Whether the lagAllocationSettings field is set.
+         */
+        public boolean hasLagAllocationSettings() {
+          return lagAllocationSettingsBuilder_ != null || lagAllocationSettings_ != null;
+        }
+        /**
+         * <pre>
+         * LAG allocation settings that the trunkConnection is deployed on.
+         * </pre>
+         *
+         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+         * @return The lagAllocationSettings.
+         */
+        public yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest getLagAllocationSettings() {
+          if (lagAllocationSettingsBuilder_ == null) {
+            return lagAllocationSettings_ == null ? yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest.getDefaultInstance() : lagAllocationSettings_;
+          } else {
+            return lagAllocationSettingsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * LAG allocation settings that the trunkConnection is deployed on.
+         * </pre>
+         *
+         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+         */
+        public Builder setLagAllocationSettings(yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest value) {
+          if (lagAllocationSettingsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            lagAllocationSettings_ = value;
+            onChanged();
+          } else {
+            lagAllocationSettingsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * LAG allocation settings that the trunkConnection is deployed on.
+         * </pre>
+         *
+         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+         */
+        public Builder setLagAllocationSettings(
+            yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest.Builder builderForValue) {
+          if (lagAllocationSettingsBuilder_ == null) {
+            lagAllocationSettings_ = builderForValue.build();
+            onChanged();
+          } else {
+            lagAllocationSettingsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * LAG allocation settings that the trunkConnection is deployed on.
+         * </pre>
+         *
+         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+         */
+        public Builder mergeLagAllocationSettings(yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest value) {
+          if (lagAllocationSettingsBuilder_ == null) {
+            if (lagAllocationSettings_ != null) {
+              lagAllocationSettings_ =
+                yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest.newBuilder(lagAllocationSettings_).mergeFrom(value).buildPartial();
+            } else {
+              lagAllocationSettings_ = value;
+            }
+            onChanged();
+          } else {
+            lagAllocationSettingsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * LAG allocation settings that the trunkConnection is deployed on.
+         * </pre>
+         *
+         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+         */
+        public Builder clearLagAllocationSettings() {
+          if (lagAllocationSettingsBuilder_ == null) {
+            lagAllocationSettings_ = null;
+            onChanged();
+          } else {
+            lagAllocationSettings_ = null;
+            lagAllocationSettingsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * LAG allocation settings that the trunkConnection is deployed on.
+         * </pre>
+         *
+         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+         */
+        public yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest.Builder getLagAllocationSettingsBuilder() {
+          
+          onChanged();
+          return getLagAllocationSettingsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * LAG allocation settings that the trunkConnection is deployed on.
+         * </pre>
+         *
+         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+         */
+        public yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequestOrBuilder getLagAllocationSettingsOrBuilder() {
+          if (lagAllocationSettingsBuilder_ != null) {
+            return lagAllocationSettingsBuilder_.getMessageOrBuilder();
+          } else {
+            return lagAllocationSettings_ == null ?
+                yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest.getDefaultInstance() : lagAllocationSettings_;
+          }
+        }
+        /**
+         * <pre>
+         * LAG allocation settings that the trunkConnection is deployed on.
+         * </pre>
+         *
+         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest, yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest.Builder, yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequestOrBuilder> 
+            getLagAllocationSettingsFieldBuilder() {
+          if (lagAllocationSettingsBuilder_ == null) {
+            lagAllocationSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest, yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest.Builder, yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequestOrBuilder>(
+                    getLagAllocationSettings(),
+                    getParentForChildren(),
+                    isClean());
+            lagAllocationSettings_ = null;
+          }
+          return lagAllocationSettingsBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -14699,100 +14962,103 @@ public final class TrunkConnectionServiceOuterClass {
       "\032 yandex/cloud/api/operation.proto\032&yand" +
       "ex/cloud/operation/operation.proto\0321yand" +
       "ex/cloud/cic/v1/common/transceiver_type." +
-      "proto\032*yandex/cloud/cic/v1/trunk_connect" +
-      "ion.proto\"F\n\031GetTrunkConnectionRequest\022)" +
-      "\n\023trunk_connection_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\"\230\001\n\033ListTrunkConnectionsRequest\022\037\n\tfol" +
-      "der_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030" +
-      "\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212" +
-      "\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"x\n\034" +
-      "ListTrunkConnectionsResponse\022?\n\021trunk_co" +
-      "nnections\030\001 \003(\0132$.yandex.cloud.cic.v1.Tr" +
-      "unkConnection\022\027\n\017next_page_token\030\002 \001(\t\"\230" +
-      "\010\n\034CreateTrunkConnectionRequest\022\014\n\004name\030" +
-      "\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\021\n\tfolder_id\030" +
-      "\004 \001(\t\022\021\n\tregion_id\030\005 \001(\t\022k\n\030single_port_" +
-      "direct_joint\030\n \001(\0132G.yandex.cloud.cic.v1" +
-      ".CreateTrunkConnectionRequest.SinglePort" +
-      "DirectJointH\000\022\\\n\020lag_direct_joint\030\013 \001(\0132" +
-      "@.yandex.cloud.cic.v1.CreateTrunkConnect" +
-      "ionRequest.LagDirectJointH\000\022\\\n\022partner_j" +
-      "oint_info\030\014 \001(\0132>.yandex.cloud.cic.v1.Cr" +
-      "eateTrunkConnectionRequest.PartnerJointH" +
-      "\000\022:\n\024point_of_presence_id\030\r \001(\0132\034.google" +
-      ".protobuf.StringValue\022?\n\010capacity\030\021 \001(\0162" +
-      "-.yandex.cloud.cic.v1.TrunkConnection.Ca" +
-      "pacity\022\216\001\n\006labels\030\022 \003(\0132=.yandex.cloud.c" +
-      "ic.v1.CreateTrunkConnectionRequest.Label" +
-      "sEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262" +
-      "\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\033\n\023delet" +
-      "ion_protection\030\024 \001(\010\032-\n\013LabelsEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032d\n\025SinglePor" +
-      "tDirectJoint\022E\n\020transceiver_type\030\001 \001(\0162+" +
-      ".yandex.cloud.cic.v1.common.TransceiverT" +
-      "ypeJ\004\010\002\020\005\032]\n\016LagDirectJoint\022E\n\020transceiv" +
-      "er_type\030\001 \001(\0162+.yandex.cloud.cic.v1.comm" +
-      "on.TransceiverTypeJ\004\010\002\020\005\032F\n\014PartnerJoint" +
-      "\0220\n\npartner_id\030\004 \001(\0132\034.google.protobuf.S" +
-      "tringValueJ\004\010\001\020\004B\007\n\005jointJ\004\010\003\020\004J\004\010\006\020\nJ\004\010" +
-      "\016\020\021J\004\010\023\020\024\"<\n\035CreateTrunkConnectionMetada" +
-      "ta\022\033\n\023trunk_connection_id\030\001 \001(\t\"\242\004\n\034Upda" +
+      "proto\0328yandex/cloud/cic/v1/common/lag_al" +
+      "location_settings.proto\032*yandex/cloud/ci" +
+      "c/v1/trunk_connection.proto\"F\n\031GetTrunkC" +
+      "onnectionRequest\022)\n\023trunk_connection_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\230\001\n\033ListTrunkConnect" +
+      "ionsRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\np" +
+      "age_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001" +
+      "(\tB\n\212\3101\006<=1000\"x\n\034ListTrunkConnectionsRe" +
+      "sponse\022?\n\021trunk_connections\030\001 \003(\0132$.yand" +
+      "ex.cloud.cic.v1.TrunkConnection\022\027\n\017next_" +
+      "page_token\030\002 \001(\t\"\364\010\n\034CreateTrunkConnecti" +
+      "onRequest\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002" +
+      " \001(\t\022\021\n\tfolder_id\030\004 \001(\t\022\021\n\tregion_id\030\005 \001" +
+      "(\t\022k\n\030single_port_direct_joint\030\n \001(\0132G.y" +
+      "andex.cloud.cic.v1.CreateTrunkConnection" +
+      "Request.SinglePortDirectJointH\000\022\\\n\020lag_d" +
+      "irect_joint\030\013 \001(\0132@.yandex.cloud.cic.v1." +
+      "CreateTrunkConnectionRequest.LagDirectJo" +
+      "intH\000\022\\\n\022partner_joint_info\030\014 \001(\0132>.yand" +
+      "ex.cloud.cic.v1.CreateTrunkConnectionReq" +
+      "uest.PartnerJointH\000\022:\n\024point_of_presence" +
+      "_id\030\r \001(\0132\034.google.protobuf.StringValue\022" +
+      "?\n\010capacity\030\021 \001(\0162-.yandex.cloud.cic.v1." +
+      "TrunkConnection.Capacity\022\216\001\n\006labels\030\022 \003(" +
+      "\0132=.yandex.cloud.cic.v1.CreateTrunkConne" +
+      "ctionRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=" +
+      "63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-" +
+      "_0-9a-z]*\022\033\n\023deletion_protection\030\024 \001(\010\032-" +
+      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\t:\0028\001\032d\n\025SinglePortDirectJoint\022E\n\020transc" +
+      "eiver_type\030\001 \001(\0162+.yandex.cloud.cic.v1.c" +
+      "ommon.TransceiverTypeJ\004\010\002\020\005\032\270\001\n\016LagDirec" +
+      "tJoint\022E\n\020transceiver_type\030\001 \001(\0162+.yande" +
+      "x.cloud.cic.v1.common.TransceiverType\022Y\n" +
+      "\027lag_allocation_settings\030\003 \001(\01328.yandex." +
+      "cloud.cic.v1.common.LagAllocationSetting" +
+      "sRequestJ\004\010\002\020\003\032F\n\014PartnerJoint\0220\n\npartne" +
+      "r_id\030\004 \001(\0132\034.google.protobuf.StringValue" +
+      "J\004\010\001\020\004B\007\n\005jointJ\004\010\003\020\004J\004\010\006\020\nJ\004\010\016\020\021J\004\010\023\020\024\"" +
+      "<\n\035CreateTrunkConnectionMetadata\022\033\n\023trun" +
+      "k_connection_id\030\001 \001(\t\"\242\004\n\034UpdateTrunkCon" +
+      "nectionRequest\022)\n\023trunk_connection_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032" +
+      ".google.protobuf.FieldMask\022\014\n\004name\030\003 \001(\t" +
+      "\022\023\n\013description\030\004 \001(\t\022\021\n\tregion_id\030\007 \001(\t" +
+      "\022:\n\024point_of_presence_id\030\r \001(\0132\034.google." +
+      "protobuf.StringValue\022?\n\010capacity\030\021 \001(\0162-" +
+      ".yandex.cloud.cic.v1.TrunkConnection.Cap" +
+      "acity\022\216\001\n\006labels\030\022 \003(\0132=.yandex.cloud.ci" +
+      "c.v1.UpdateTrunkConnectionRequest.Labels" +
+      "EntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\310" +
+      "1\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\033\n\023deleti" +
+      "on_protection\030\024 \001(\010\032-\n\013LabelsEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\005\020\007J\004\010\010\020\rJ\004" +
+      "\010\016\020\021J\004\010\023\020\024\"<\n\035UpdateTrunkConnectionMetad" +
+      "ata\022\033\n\023trunk_connection_id\030\001 \001(\t\"I\n\034Dele" +
       "teTrunkConnectionRequest\022)\n\023trunk_connec" +
-      "tion_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_ma" +
-      "sk\030\002 \001(\0132\032.google.protobuf.FieldMask\022\014\n\004" +
-      "name\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022\021\n\tregio" +
-      "n_id\030\007 \001(\t\022:\n\024point_of_presence_id\030\r \001(\013" +
-      "2\034.google.protobuf.StringValue\022?\n\010capaci" +
-      "ty\030\021 \001(\0162-.yandex.cloud.cic.v1.TrunkConn" +
-      "ection.Capacity\022\216\001\n\006labels\030\022 \003(\0132=.yande" +
-      "x.cloud.cic.v1.UpdateTrunkConnectionRequ" +
-      "est.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_" +
-      "0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*" +
-      "\022\033\n\023deletion_protection\030\024 \001(\010\032-\n\013LabelsE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\005" +
-      "\020\007J\004\010\010\020\rJ\004\010\016\020\021J\004\010\023\020\024\"<\n\035UpdateTrunkConne" +
-      "ctionMetadata\022\033\n\023trunk_connection_id\030\001 \001" +
-      "(\t\"I\n\034DeleteTrunkConnectionRequest\022)\n\023tr" +
-      "unk_connection_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"<\n" +
-      "\035DeleteTrunkConnectionMetadata\022\033\n\023trunk_" +
-      "connection_id\030\001 \001(\t\"x\n$ListTrunkConnecti" +
-      "onOperationsRequest\022)\n\023trunk_connection_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\021\n\tpage_size\030\002 \001(" +
-      "\003\022\022\n\npage_token\030\003 \001(\t\"w\n%ListTrunkConnec" +
-      "tionOperationsResponse\0225\n\noperations\030\001 \003" +
-      "(\0132!.yandex.cloud.operation.Operation\022\027\n" +
-      "\017next_page_token\030\002 \001(\t2\350\010\n\026TrunkConnecti" +
-      "onService\022\223\001\n\003Get\022..yandex.cloud.cic.v1." +
-      "GetTrunkConnectionRequest\032$.yandex.cloud" +
-      ".cic.v1.TrunkConnection\"6\202\323\344\223\0020\022./cic/v1" +
-      "/trunkConnections/{trunk_connection_id}\022" +
-      "\215\001\n\004List\0220.yandex.cloud.cic.v1.ListTrunk" +
-      "ConnectionsRequest\0321.yandex.cloud.cic.v1" +
-      ".ListTrunkConnectionsResponse\" \202\323\344\223\002\032\022\030/" +
-      "cic/v1/trunkConnections\022\267\001\n\006Create\0221.yan" +
-      "dex.cloud.cic.v1.CreateTrunkConnectionRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"W\262\322*0\n\035CreateTrunkConnectionMetadata\022\017T" +
-      "runkConnection\202\323\344\223\002\035\"\030/cic/v1/trunkConne" +
-      "ctions:\001*\022\315\001\n\006Update\0221.yandex.cloud.cic." +
-      "v1.UpdateTrunkConnectionRequest\032!.yandex" +
-      ".cloud.operation.Operation\"m\262\322*0\n\035Update" +
-      "TrunkConnectionMetadata\022\017TrunkConnection" +
-      "\202\323\344\223\00232./cic/v1/trunkConnections/{trunk_" +
-      "connection_id}:\001*\022\320\001\n\006Delete\0221.yandex.cl" +
-      "oud.cic.v1.DeleteTrunkConnectionRequest\032" +
-      "!.yandex.cloud.operation.Operation\"p\262\322*6" +
-      "\n\035DeleteTrunkConnectionMetadata\022\025google." +
-      "protobuf.Empty\202\323\344\223\0020*./cic/v1/trunkConne" +
-      "ctions/{trunk_connection_id}\022\312\001\n\016ListOpe" +
-      "rations\0229.yandex.cloud.cic.v1.ListTrunkC" +
-      "onnectionOperationsRequest\032:.yandex.clou" +
-      "d.cic.v1.ListTrunkConnectionOperationsRe" +
-      "sponse\"A\202\323\344\223\002;\0229/cic/v1/trunkConnections" +
-      "/{trunk_connection_id}/operationsBV\n\027yan" +
-      "dex.cloud.api.cic.v1Z;github.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/cic/v1;ci" +
-      "cb\006proto3"
+      "tion_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"<\n\035DeleteTru" +
+      "nkConnectionMetadata\022\033\n\023trunk_connection" +
+      "_id\030\001 \001(\t\"x\n$ListTrunkConnectionOperatio" +
+      "nsRequest\022)\n\023trunk_connection_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_" +
+      "token\030\003 \001(\t\"w\n%ListTrunkConnectionOperat" +
+      "ionsResponse\0225\n\noperations\030\001 \003(\0132!.yande" +
+      "x.cloud.operation.Operation\022\027\n\017next_page" +
+      "_token\030\002 \001(\t2\350\010\n\026TrunkConnectionService\022" +
+      "\223\001\n\003Get\022..yandex.cloud.cic.v1.GetTrunkCo" +
+      "nnectionRequest\032$.yandex.cloud.cic.v1.Tr" +
+      "unkConnection\"6\202\323\344\223\0020\022./cic/v1/trunkConn" +
+      "ections/{trunk_connection_id}\022\215\001\n\004List\0220" +
+      ".yandex.cloud.cic.v1.ListTrunkConnection" +
+      "sRequest\0321.yandex.cloud.cic.v1.ListTrunk" +
+      "ConnectionsResponse\" \202\323\344\223\002\032\022\030/cic/v1/tru" +
+      "nkConnections\022\267\001\n\006Create\0221.yandex.cloud." +
+      "cic.v1.CreateTrunkConnectionRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"W\262\322*0\n\035Cr" +
+      "eateTrunkConnectionMetadata\022\017TrunkConnec" +
+      "tion\202\323\344\223\002\035\"\030/cic/v1/trunkConnections:\001*\022" +
+      "\315\001\n\006Update\0221.yandex.cloud.cic.v1.UpdateT" +
+      "runkConnectionRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"m\262\322*0\n\035UpdateTrunkConne" +
+      "ctionMetadata\022\017TrunkConnection\202\323\344\223\00232./c" +
+      "ic/v1/trunkConnections/{trunk_connection" +
+      "_id}:\001*\022\320\001\n\006Delete\0221.yandex.cloud.cic.v1" +
+      ".DeleteTrunkConnectionRequest\032!.yandex.c" +
+      "loud.operation.Operation\"p\262\322*6\n\035DeleteTr" +
+      "unkConnectionMetadata\022\025google.protobuf.E" +
+      "mpty\202\323\344\223\0020*./cic/v1/trunkConnections/{tr" +
+      "unk_connection_id}\022\312\001\n\016ListOperations\0229." +
+      "yandex.cloud.cic.v1.ListTrunkConnectionO" +
+      "perationsRequest\032:.yandex.cloud.cic.v1.L" +
+      "istTrunkConnectionOperationsResponse\"A\202\323" +
+      "\344\223\002;\0229/cic/v1/trunkConnections/{trunk_co" +
+      "nnection_id}/operationsBV\n\027yandex.cloud." +
+      "api.cic.v1Z;github.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/cic/v1;cicb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14804,6 +15070,7 @@ public final class TrunkConnectionServiceOuterClass {
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.cic.v1.common.TransceiverTypeOuterClass.getDescriptor(),
+          yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.getDescriptor(),
           yandex.cloud.api.cic.v1.TrunkConnectionOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_cic_v1_GetTrunkConnectionRequest_descriptor =
@@ -14847,7 +15114,7 @@ public final class TrunkConnectionServiceOuterClass {
     internal_static_yandex_cloud_cic_v1_CreateTrunkConnectionRequest_LagDirectJoint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cic_v1_CreateTrunkConnectionRequest_LagDirectJoint_descriptor,
-        new java.lang.String[] { "TransceiverType", });
+        new java.lang.String[] { "TransceiverType", "LagAllocationSettings", });
     internal_static_yandex_cloud_cic_v1_CreateTrunkConnectionRequest_PartnerJoint_descriptor =
       internal_static_yandex_cloud_cic_v1_CreateTrunkConnectionRequest_descriptor.getNestedTypes().get(3);
     internal_static_yandex_cloud_cic_v1_CreateTrunkConnectionRequest_PartnerJoint_fieldAccessorTable = new
@@ -14921,6 +15188,7 @@ public final class TrunkConnectionServiceOuterClass {
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.cic.v1.common.TransceiverTypeOuterClass.getDescriptor();
+    yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.getDescriptor();
     yandex.cloud.api.cic.v1.TrunkConnectionOuterClass.getDescriptor();
   }
 

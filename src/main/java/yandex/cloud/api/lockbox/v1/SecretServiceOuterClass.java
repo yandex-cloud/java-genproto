@@ -3886,7 +3886,7 @@ public final class SecretServiceOuterClass {
      * Payload entries added to the first version.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
      */
     java.util.List<yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange> 
         getVersionPayloadEntriesList();
@@ -3895,7 +3895,7 @@ public final class SecretServiceOuterClass {
      * Payload entries added to the first version.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
      */
     yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange getVersionPayloadEntries(int index);
     /**
@@ -3903,7 +3903,7 @@ public final class SecretServiceOuterClass {
      * Payload entries added to the first version.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
      */
     int getVersionPayloadEntriesCount();
     /**
@@ -3911,7 +3911,7 @@ public final class SecretServiceOuterClass {
      * Payload entries added to the first version.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
      */
     java.util.List<? extends yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChangeOrBuilder> 
         getVersionPayloadEntriesOrBuilderList();
@@ -3920,7 +3920,7 @@ public final class SecretServiceOuterClass {
      * Payload entries added to the first version.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
      */
     yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChangeOrBuilder getVersionPayloadEntriesOrBuilder(
         int index);
@@ -4548,7 +4548,7 @@ public final class SecretServiceOuterClass {
      * Payload entries added to the first version.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
      */
     @java.lang.Override
     public java.util.List<yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange> getVersionPayloadEntriesList() {
@@ -4559,7 +4559,7 @@ public final class SecretServiceOuterClass {
      * Payload entries added to the first version.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
      */
     @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChangeOrBuilder> 
@@ -4571,7 +4571,7 @@ public final class SecretServiceOuterClass {
      * Payload entries added to the first version.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
      */
     @java.lang.Override
     public int getVersionPayloadEntriesCount() {
@@ -4582,7 +4582,7 @@ public final class SecretServiceOuterClass {
      * Payload entries added to the first version.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
      */
     @java.lang.Override
     public yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange getVersionPayloadEntries(int index) {
@@ -4593,7 +4593,7 @@ public final class SecretServiceOuterClass {
      * Payload entries added to the first version.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
      */
     @java.lang.Override
     public yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChangeOrBuilder getVersionPayloadEntriesOrBuilder(
@@ -5939,7 +5939,7 @@ public final class SecretServiceOuterClass {
        * Payload entries added to the first version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
        */
       public java.util.List<yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange> getVersionPayloadEntriesList() {
         if (versionPayloadEntriesBuilder_ == null) {
@@ -5953,7 +5953,7 @@ public final class SecretServiceOuterClass {
        * Payload entries added to the first version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
        */
       public int getVersionPayloadEntriesCount() {
         if (versionPayloadEntriesBuilder_ == null) {
@@ -5967,7 +5967,7 @@ public final class SecretServiceOuterClass {
        * Payload entries added to the first version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
        */
       public yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange getVersionPayloadEntries(int index) {
         if (versionPayloadEntriesBuilder_ == null) {
@@ -5981,7 +5981,7 @@ public final class SecretServiceOuterClass {
        * Payload entries added to the first version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
        */
       public Builder setVersionPayloadEntries(
           int index, yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange value) {
@@ -6002,7 +6002,7 @@ public final class SecretServiceOuterClass {
        * Payload entries added to the first version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
        */
       public Builder setVersionPayloadEntries(
           int index, yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange.Builder builderForValue) {
@@ -6020,7 +6020,7 @@ public final class SecretServiceOuterClass {
        * Payload entries added to the first version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
        */
       public Builder addVersionPayloadEntries(yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange value) {
         if (versionPayloadEntriesBuilder_ == null) {
@@ -6040,7 +6040,7 @@ public final class SecretServiceOuterClass {
        * Payload entries added to the first version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
        */
       public Builder addVersionPayloadEntries(
           int index, yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange value) {
@@ -6061,7 +6061,7 @@ public final class SecretServiceOuterClass {
        * Payload entries added to the first version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
        */
       public Builder addVersionPayloadEntries(
           yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange.Builder builderForValue) {
@@ -6079,7 +6079,7 @@ public final class SecretServiceOuterClass {
        * Payload entries added to the first version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
        */
       public Builder addVersionPayloadEntries(
           int index, yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange.Builder builderForValue) {
@@ -6097,7 +6097,7 @@ public final class SecretServiceOuterClass {
        * Payload entries added to the first version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
        */
       public Builder addAllVersionPayloadEntries(
           java.lang.Iterable<? extends yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange> values) {
@@ -6116,7 +6116,7 @@ public final class SecretServiceOuterClass {
        * Payload entries added to the first version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
        */
       public Builder clearVersionPayloadEntries() {
         if (versionPayloadEntriesBuilder_ == null) {
@@ -6133,7 +6133,7 @@ public final class SecretServiceOuterClass {
        * Payload entries added to the first version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
        */
       public Builder removeVersionPayloadEntries(int index) {
         if (versionPayloadEntriesBuilder_ == null) {
@@ -6150,7 +6150,7 @@ public final class SecretServiceOuterClass {
        * Payload entries added to the first version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
        */
       public yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange.Builder getVersionPayloadEntriesBuilder(
           int index) {
@@ -6161,7 +6161,7 @@ public final class SecretServiceOuterClass {
        * Payload entries added to the first version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
        */
       public yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChangeOrBuilder getVersionPayloadEntriesOrBuilder(
           int index) {
@@ -6175,7 +6175,7 @@ public final class SecretServiceOuterClass {
        * Payload entries added to the first version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
        */
       public java.util.List<? extends yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChangeOrBuilder> 
            getVersionPayloadEntriesOrBuilderList() {
@@ -6190,7 +6190,7 @@ public final class SecretServiceOuterClass {
        * Payload entries added to the first version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
        */
       public yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange.Builder addVersionPayloadEntriesBuilder() {
         return getVersionPayloadEntriesFieldBuilder().addBuilder(
@@ -6201,7 +6201,7 @@ public final class SecretServiceOuterClass {
        * Payload entries added to the first version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
        */
       public yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange.Builder addVersionPayloadEntriesBuilder(
           int index) {
@@ -6213,7 +6213,7 @@ public final class SecretServiceOuterClass {
        * Payload entries added to the first version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange version_payload_entries = 7;</code>
        */
       public java.util.List<yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange.Builder> 
            getVersionPayloadEntriesBuilderList() {
@@ -13736,7 +13736,7 @@ public final class SecretServiceOuterClass {
      * Describe how payload entries of the base version change in the added version.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
      */
     java.util.List<yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange> 
         getPayloadEntriesList();
@@ -13745,7 +13745,7 @@ public final class SecretServiceOuterClass {
      * Describe how payload entries of the base version change in the added version.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
      */
     yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange getPayloadEntries(int index);
     /**
@@ -13753,7 +13753,7 @@ public final class SecretServiceOuterClass {
      * Describe how payload entries of the base version change in the added version.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
      */
     int getPayloadEntriesCount();
     /**
@@ -13761,7 +13761,7 @@ public final class SecretServiceOuterClass {
      * Describe how payload entries of the base version change in the added version.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
      */
     java.util.List<? extends yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChangeOrBuilder> 
         getPayloadEntriesOrBuilderList();
@@ -13770,7 +13770,7 @@ public final class SecretServiceOuterClass {
      * Describe how payload entries of the base version change in the added version.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
      */
     yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChangeOrBuilder getPayloadEntriesOrBuilder(
         int index);
@@ -14006,7 +14006,7 @@ public final class SecretServiceOuterClass {
      * Describe how payload entries of the base version change in the added version.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
      */
     @java.lang.Override
     public java.util.List<yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange> getPayloadEntriesList() {
@@ -14017,7 +14017,7 @@ public final class SecretServiceOuterClass {
      * Describe how payload entries of the base version change in the added version.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
      */
     @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChangeOrBuilder> 
@@ -14029,7 +14029,7 @@ public final class SecretServiceOuterClass {
      * Describe how payload entries of the base version change in the added version.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
      */
     @java.lang.Override
     public int getPayloadEntriesCount() {
@@ -14040,7 +14040,7 @@ public final class SecretServiceOuterClass {
      * Describe how payload entries of the base version change in the added version.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
      */
     @java.lang.Override
     public yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange getPayloadEntries(int index) {
@@ -14051,7 +14051,7 @@ public final class SecretServiceOuterClass {
      * Describe how payload entries of the base version change in the added version.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
      */
     @java.lang.Override
     public yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChangeOrBuilder getPayloadEntriesOrBuilder(
@@ -14707,7 +14707,7 @@ public final class SecretServiceOuterClass {
        * Describe how payload entries of the base version change in the added version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
        */
       public java.util.List<yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange> getPayloadEntriesList() {
         if (payloadEntriesBuilder_ == null) {
@@ -14721,7 +14721,7 @@ public final class SecretServiceOuterClass {
        * Describe how payload entries of the base version change in the added version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
        */
       public int getPayloadEntriesCount() {
         if (payloadEntriesBuilder_ == null) {
@@ -14735,7 +14735,7 @@ public final class SecretServiceOuterClass {
        * Describe how payload entries of the base version change in the added version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
        */
       public yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange getPayloadEntries(int index) {
         if (payloadEntriesBuilder_ == null) {
@@ -14749,7 +14749,7 @@ public final class SecretServiceOuterClass {
        * Describe how payload entries of the base version change in the added version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
        */
       public Builder setPayloadEntries(
           int index, yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange value) {
@@ -14770,7 +14770,7 @@ public final class SecretServiceOuterClass {
        * Describe how payload entries of the base version change in the added version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
        */
       public Builder setPayloadEntries(
           int index, yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange.Builder builderForValue) {
@@ -14788,7 +14788,7 @@ public final class SecretServiceOuterClass {
        * Describe how payload entries of the base version change in the added version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
        */
       public Builder addPayloadEntries(yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange value) {
         if (payloadEntriesBuilder_ == null) {
@@ -14808,7 +14808,7 @@ public final class SecretServiceOuterClass {
        * Describe how payload entries of the base version change in the added version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
        */
       public Builder addPayloadEntries(
           int index, yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange value) {
@@ -14829,7 +14829,7 @@ public final class SecretServiceOuterClass {
        * Describe how payload entries of the base version change in the added version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
        */
       public Builder addPayloadEntries(
           yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange.Builder builderForValue) {
@@ -14847,7 +14847,7 @@ public final class SecretServiceOuterClass {
        * Describe how payload entries of the base version change in the added version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
        */
       public Builder addPayloadEntries(
           int index, yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange.Builder builderForValue) {
@@ -14865,7 +14865,7 @@ public final class SecretServiceOuterClass {
        * Describe how payload entries of the base version change in the added version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
        */
       public Builder addAllPayloadEntries(
           java.lang.Iterable<? extends yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange> values) {
@@ -14884,7 +14884,7 @@ public final class SecretServiceOuterClass {
        * Describe how payload entries of the base version change in the added version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
        */
       public Builder clearPayloadEntries() {
         if (payloadEntriesBuilder_ == null) {
@@ -14901,7 +14901,7 @@ public final class SecretServiceOuterClass {
        * Describe how payload entries of the base version change in the added version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
        */
       public Builder removePayloadEntries(int index) {
         if (payloadEntriesBuilder_ == null) {
@@ -14918,7 +14918,7 @@ public final class SecretServiceOuterClass {
        * Describe how payload entries of the base version change in the added version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
        */
       public yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange.Builder getPayloadEntriesBuilder(
           int index) {
@@ -14929,7 +14929,7 @@ public final class SecretServiceOuterClass {
        * Describe how payload entries of the base version change in the added version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
        */
       public yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChangeOrBuilder getPayloadEntriesOrBuilder(
           int index) {
@@ -14943,7 +14943,7 @@ public final class SecretServiceOuterClass {
        * Describe how payload entries of the base version change in the added version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
        */
       public java.util.List<? extends yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChangeOrBuilder> 
            getPayloadEntriesOrBuilderList() {
@@ -14958,7 +14958,7 @@ public final class SecretServiceOuterClass {
        * Describe how payload entries of the base version change in the added version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
        */
       public yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange.Builder addPayloadEntriesBuilder() {
         return getPayloadEntriesFieldBuilder().addBuilder(
@@ -14969,7 +14969,7 @@ public final class SecretServiceOuterClass {
        * Describe how payload entries of the base version change in the added version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
        */
       public yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange.Builder addPayloadEntriesBuilder(
           int index) {
@@ -14981,7 +14981,7 @@ public final class SecretServiceOuterClass {
        * Describe how payload entries of the base version change in the added version.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       * <code>repeated .yandex.cloud.lockbox.v1.PayloadEntryChange payload_entries = 3;</code>
        */
       public java.util.List<yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.PayloadEntryChange.Builder> 
            getPayloadEntriesBuilderList() {
@@ -23855,7 +23855,7 @@ public final class SecretServiceOuterClass {
       "_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 " +
       "\001(\tB\t\212\3101\005<=100\"`\n\023ListSecretsResponse\0220\n" +
       "\007secrets\030\001 \003(\0132\037.yandex.cloud.lockbox.v1" +
-      ".Secret\022\027\n\017next_page_token\030\002 \001(\t\"\224\005\n\023Cre" +
+      ".Secret\022\027\n\017next_page_token\030\002 \001(\t\"\212\005\n\023Cre" +
       "ateSecretRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071" +
       "\001\212\3101\004<=50\022\027\n\004name\030\002 \001(\tB\t\212\3101\005<=100\022\037\n\013de" +
       "scription\030\003 \001(\tB\n\212\3101\006<=1024\022\211\001\n\006labels\030\004" +
@@ -23863,141 +23863,141 @@ public final class SecretServiceOuterClass {
       "retRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63" +
       "\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0" +
       "-9a-z]*\022\034\n\nkms_key_id\030\005 \001(\tB\010\212\3101\004<=50\022&\n" +
-      "\023version_description\030\006 \001(\tB\t\212\3101\005<=256\022V\n" +
+      "\023version_description\030\006 \001(\tB\t\212\3101\005<=256\022L\n" +
       "\027version_payload_entries\030\007 \003(\0132+.yandex." +
-      "cloud.lockbox.v1.PayloadEntryChangeB\010\202\3101" +
-      "\004<=32\022\033\n\023deletion_protection\030\010 \001(\010\022_\n\036pa" +
-      "ssword_payload_specification\030\t \001(\01325.yan" +
-      "dex.cloud.lockbox.v1.PasswordPayloadSpec" +
-      "ificationH\000\0222\n\016create_version\030\n \001(\0132\032.go" +
-      "ogle.protobuf.BoolValue\032-\n\013LabelsEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\027\n\025payloa" +
-      "d_specification\"=\n\024CreateSecretMetadata\022" +
-      "\021\n\tsecret_id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\"\371" +
-      "\003\n\023UpdateSecretRequest\022\037\n\tsecret_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\0225\n\013update_mask\030\002 \001(\0132\032.g" +
-      "oogle.protobuf.FieldMaskB\004\350\3071\001\022\027\n\004name\030\003" +
-      " \001(\tB\t\212\3101\005<=100\022\037\n\013description\030\004 \001(\tB\n\212\310" +
-      "1\006<=1024\022\211\001\n\006labels\030\005 \003(\01328.yandex.cloud" +
-      ".lockbox.v1.UpdateSecretRequest.LabelsEn" +
-      "tryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006" +
-      "\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\033\n\023deletion" +
-      "_protection\030\006 \001(\010\022_\n\036password_payload_sp" +
-      "ecification\030\007 \001(\01325.yandex.cloud.lockbox" +
-      ".v1.PasswordPayloadSpecificationH\000\032-\n\013La" +
-      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001B\027\n\025payload_specification\"7\n\024UpdateSecr" +
-      "etMetadata\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\"6\n\023DeleteSecretRequest\022\037\n\tsecret_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\024DeleteSecretMetad" +
-      "ata\022\021\n\tsecret_id\030\001 \001(\t\"8\n\025ActivateSecret" +
-      "Request\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\"+\n\026ActivateSecretMetadata\022\021\n\tsecret_id\030" +
-      "\001 \001(\t\":\n\027DeactivateSecretRequest\022\037\n\tsecr" +
-      "et_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\030DeactivateS" +
-      "ecretMetadata\022\021\n\tsecret_id\030\001 \001(\t\"\310\001\n\021Add" +
-      "VersionRequest\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\022\037\n\013description\030\002 \001(\tB\n\212\3101\006<=1024" +
-      "\022N\n\017payload_entries\030\003 \003(\0132+.yandex.cloud" +
-      ".lockbox.v1.PayloadEntryChangeB\010\202\3101\004<=32" +
-      "\022!\n\017base_version_id\030\004 \001(\tB\010\212\3101\004<=50\";\n\022A" +
-      "ddVersionMetadata\022\021\n\tsecret_id\030\001 \001(\t\022\022\n\n" +
-      "version_id\030\002 \001(\t\"t\n\023ListVersionsRequest\022" +
-      "\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage" +
-      "_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 " +
-      "\001(\tB\t\212\3101\005<=100\"c\n\024ListVersionsResponse\0222" +
-      "\n\010versions\030\001 \003(\0132 .yandex.cloud.lockbox." +
-      "v1.Version\022\027\n\017next_page_token\030\002 \001(\t\"\231\001\n!" +
-      "ScheduleVersionDestructionRequest\022\037\n\tsec" +
-      "ret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\nversion_id" +
-      "\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\0221\n\016pending_period\030\003" +
-      " \001(\0132\031.google.protobuf.Duration\"{\n\"Sched" +
-      "uleVersionDestructionMetadata\022\021\n\tsecret_" +
-      "id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\022.\n\ndestroy_" +
-      "at\030\003 \001(\0132\032.google.protobuf.Timestamp\"d\n\037" +
-      "CancelVersionDestructionRequest\022\037\n\tsecre" +
-      "t_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\nversion_id\030\002" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\"I\n CancelVersionDestr" +
-      "uctionMetadata\022\021\n\tsecret_id\030\001 \001(\t\022\022\n\nver" +
-      "sion_id\030\002 \001(\t\"|\n\033ListSecretOperationsReq" +
-      "uest\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n" +
-      "\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_tok" +
-      "en\030\003 \001(\tB\t\212\3101\005<=100\"n\n\034ListSecretOperati" +
-      "onsResponse\0225\n\noperations\030\001 \003(\0132!.yandex" +
-      ".cloud.operation.Operation\022\027\n\017next_page_" +
-      "token\030\002 \001(\t2\351\025\n\rSecretService\022z\n\003Get\022).y" +
-      "andex.cloud.lockbox.v1.GetSecretRequest\032" +
-      "\037.yandex.cloud.lockbox.v1.Secret\"\'\202\323\344\223\002!" +
-      "\022\037/lockbox/v1/secrets/{secret_id}\022~\n\004Lis" +
-      "t\022+.yandex.cloud.lockbox.v1.ListSecretsR" +
-      "equest\032,.yandex.cloud.lockbox.v1.ListSec" +
-      "retsResponse\"\033\202\323\344\223\002\025\022\023/lockbox/v1/secret" +
-      "s\022\233\001\n\006Create\022,.yandex.cloud.lockbox.v1.C" +
-      "reateSecretRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"@\202\323\344\223\002\030\"\023/lockbox/v1/secre" +
-      "ts:\001*\262\322*\036\n\024CreateSecretMetadata\022\006Secret\022" +
-      "\247\001\n\006Update\022,.yandex.cloud.lockbox.v1.Upd" +
-      "ateSecretRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"L\202\323\344\223\002$2\037/lockbox/v1/secrets" +
-      "/{secret_id}:\001*\262\322*\036\n\024UpdateSecretMetadat" +
-      "a\022\006Secret\022\244\001\n\006Delete\022,.yandex.cloud.lock" +
-      "box.v1.DeleteSecretRequest\032!.yandex.clou" +
-      "d.operation.Operation\"I\202\323\344\223\002!*\037/lockbox/" +
-      "v1/secrets/{secret_id}\262\322*\036\n\024DeleteSecret" +
-      "Metadata\022\006Secret\022\263\001\n\010Activate\022..yandex.c" +
-      "loud.lockbox.v1.ActivateSecretRequest\032!." +
-      "yandex.cloud.operation.Operation\"T\202\323\344\223\002*" +
-      "\"(/lockbox/v1/secrets/{secret_id}:activa" +
-      "te\262\322* \n\026ActivateSecretMetadata\022\006Secret\022\273" +
-      "\001\n\nDeactivate\0220.yandex.cloud.lockbox.v1." +
-      "DeactivateSecretRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"X\202\323\344\223\002,\"*/lockbox/v1/" +
-      "secrets/{secret_id}:deactivate\262\322*\"\n\030Deac" +
-      "tivateSecretMetadata\022\006Secret\022\235\001\n\014ListVer" +
-      "sions\022,.yandex.cloud.lockbox.v1.ListVers" +
-      "ionsRequest\032-.yandex.cloud.lockbox.v1.Li" +
-      "stVersionsResponse\"0\202\323\344\223\002*\022(/lockbox/v1/" +
-      "secrets/{secret_id}/versions\022\263\001\n\nAddVers" +
-      "ion\022*.yandex.cloud.lockbox.v1.AddVersion" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"V\202\323\344\223\002/\"*/lockbox/v1/secrets/{secret_" +
-      "id}:addVersion:\001*\262\322*\035\n\022AddVersionMetadat" +
-      "a\022\007Version\022\363\001\n\032ScheduleVersionDestructio" +
-      "n\022:.yandex.cloud.lockbox.v1.ScheduleVers" +
-      "ionDestructionRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"v\202\323\344\223\002?\":/lockbox/v1/se" +
-      "crets/{secret_id}:scheduleVersionDestruc" +
-      "tion:\001*\262\322*-\n\"ScheduleVersionDestructionM" +
-      "etadata\022\007Version\022\353\001\n\030CancelVersionDestru" +
-      "ction\0228.yandex.cloud.lockbox.v1.CancelVe" +
-      "rsionDestructionRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"r\202\323\344\223\002=\"8/lockbox/v1/" +
-      "secrets/{secret_id}:cancelVersionDestruc" +
-      "tion:\001*\262\322*+\n CancelVersionDestructionMet" +
-      "adata\022\007Version\022\261\001\n\016ListOperations\0224.yand" +
-      "ex.cloud.lockbox.v1.ListSecretOperations" +
-      "Request\0325.yandex.cloud.lockbox.v1.ListSe" +
-      "cretOperationsResponse\"2\202\323\344\223\002,\022*/lockbox" +
-      "/v1/secrets/{secret_id}/operations\022\263\001\n\022L" +
-      "istAccessBindings\022..yandex.cloud.access." +
-      "ListAccessBindingsRequest\032/.yandex.cloud" +
-      ".access.ListAccessBindingsResponse\"<\202\323\344\223" +
-      "\0026\0224/lockbox/v1/secrets/{resource_id}:li" +
-      "stAccessBindings\022\342\001\n\021SetAccessBindings\022-" +
-      ".yandex.cloud.access.SetAccessBindingsRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"{\202\323\344\223\0028\"3/lockbox/v1/secrets/{resource_" +
-      "id}:setAccessBindings:\001*\262\322*9\n access.Set" +
-      "AccessBindingsMetadata\022\025google.protobuf." +
-      "Empty\022\357\001\n\024UpdateAccessBindings\0220.yandex." +
-      "cloud.access.UpdateAccessBindingsRequest" +
-      "\032!.yandex.cloud.operation.Operation\"\201\001\202\323" +
-      "\344\223\002;\"6/lockbox/v1/secrets/{resource_id}:" +
-      "updateAccessBindings:\001*\262\322*<\n#access.Upda" +
-      "teAccessBindingsMetadata\022\025google.protobu" +
-      "f.EmptyBb\n\033yandex.cloud.api.lockbox.v1ZC" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/lockbox/v1;lockboxb\006proto3"
+      "cloud.lockbox.v1.PayloadEntryChange\022\033\n\023d" +
+      "eletion_protection\030\010 \001(\010\022_\n\036password_pay" +
+      "load_specification\030\t \001(\01325.yandex.cloud." +
+      "lockbox.v1.PasswordPayloadSpecificationH" +
+      "\000\0222\n\016create_version\030\n \001(\0132\032.google.proto" +
+      "buf.BoolValue\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(" +
+      "\t\022\r\n\005value\030\002 \001(\t:\0028\001B\027\n\025payload_specific" +
+      "ation\"=\n\024CreateSecretMetadata\022\021\n\tsecret_" +
+      "id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\"\371\003\n\023UpdateS" +
+      "ecretRequest\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\0225\n\013update_mask\030\002 \001(\0132\032.google.prot" +
+      "obuf.FieldMaskB\004\350\3071\001\022\027\n\004name\030\003 \001(\tB\t\212\3101\005" +
+      "<=100\022\037\n\013description\030\004 \001(\tB\n\212\3101\006<=1024\022\211" +
+      "\001\n\006labels\030\005 \003(\01328.yandex.cloud.lockbox.v" +
+      "1.UpdateSecretRequest.LabelsEntryB?\202\3101\004<" +
+      "=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022" +
+      "\022\020[a-z][-_0-9a-z]*\022\033\n\023deletion_protectio" +
+      "n\030\006 \001(\010\022_\n\036password_payload_specificatio" +
+      "n\030\007 \001(\01325.yandex.cloud.lockbox.v1.Passwo" +
+      "rdPayloadSpecificationH\000\032-\n\013LabelsEntry\022" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\027\n\025paylo" +
+      "ad_specification\"7\n\024UpdateSecretMetadata" +
+      "\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"6\n\023Del" +
+      "eteSecretRequest\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\")\n\024DeleteSecretMetadata\022\021\n\tsec" +
+      "ret_id\030\001 \001(\t\"8\n\025ActivateSecretRequest\022\037\n" +
+      "\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\026Activa" +
+      "teSecretMetadata\022\021\n\tsecret_id\030\001 \001(\t\":\n\027D" +
+      "eactivateSecretRequest\022\037\n\tsecret_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\"-\n\030DeactivateSecretMetad" +
+      "ata\022\021\n\tsecret_id\030\001 \001(\t\"\276\001\n\021AddVersionReq" +
+      "uest\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\037\n" +
+      "\013description\030\002 \001(\tB\n\212\3101\006<=1024\022D\n\017payloa" +
+      "d_entries\030\003 \003(\0132+.yandex.cloud.lockbox.v" +
+      "1.PayloadEntryChange\022!\n\017base_version_id\030" +
+      "\004 \001(\tB\010\212\3101\004<=50\";\n\022AddVersionMetadata\022\021\n" +
+      "\tsecret_id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\"t\n\023" +
+      "ListVersionsRequest\022\037\n\tsecret_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1" +
+      "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"c\n\024Li" +
+      "stVersionsResponse\0222\n\010versions\030\001 \003(\0132 .y" +
+      "andex.cloud.lockbox.v1.Version\022\027\n\017next_p" +
+      "age_token\030\002 \001(\t\"\231\001\n!ScheduleVersionDestr" +
+      "uctionRequest\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022 \n\nversion_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\0221\n\016pending_period\030\003 \001(\0132\031.google.protob" +
+      "uf.Duration\"{\n\"ScheduleVersionDestructio" +
+      "nMetadata\022\021\n\tsecret_id\030\001 \001(\t\022\022\n\nversion_" +
+      "id\030\002 \001(\t\022.\n\ndestroy_at\030\003 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\"d\n\037CancelVersionDestruc" +
+      "tionRequest\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022 \n\nversion_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"I" +
+      "\n CancelVersionDestructionMetadata\022\021\n\tse" +
+      "cret_id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\"|\n\033Lis" +
+      "tSecretOperationsRequest\022\037\n\tsecret_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\307" +
+      "1\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"" +
+      "n\n\034ListSecretOperationsResponse\0225\n\nopera" +
+      "tions\030\001 \003(\0132!.yandex.cloud.operation.Ope" +
+      "ration\022\027\n\017next_page_token\030\002 \001(\t2\351\025\n\rSecr" +
+      "etService\022z\n\003Get\022).yandex.cloud.lockbox." +
+      "v1.GetSecretRequest\032\037.yandex.cloud.lockb" +
+      "ox.v1.Secret\"\'\202\323\344\223\002!\022\037/lockbox/v1/secret" +
+      "s/{secret_id}\022~\n\004List\022+.yandex.cloud.loc" +
+      "kbox.v1.ListSecretsRequest\032,.yandex.clou" +
+      "d.lockbox.v1.ListSecretsResponse\"\033\202\323\344\223\002\025" +
+      "\022\023/lockbox/v1/secrets\022\233\001\n\006Create\022,.yande" +
+      "x.cloud.lockbox.v1.CreateSecretRequest\032!" +
+      ".yandex.cloud.operation.Operation\"@\202\323\344\223\002" +
+      "\030\"\023/lockbox/v1/secrets:\001*\262\322*\036\n\024CreateSec" +
+      "retMetadata\022\006Secret\022\247\001\n\006Update\022,.yandex." +
+      "cloud.lockbox.v1.UpdateSecretRequest\032!.y" +
+      "andex.cloud.operation.Operation\"L\202\323\344\223\002$2" +
+      "\037/lockbox/v1/secrets/{secret_id}:\001*\262\322*\036\n" +
+      "\024UpdateSecretMetadata\022\006Secret\022\244\001\n\006Delete" +
+      "\022,.yandex.cloud.lockbox.v1.DeleteSecretR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"I\202\323\344\223\002!*\037/lockbox/v1/secrets/{secret_i" +
+      "d}\262\322*\036\n\024DeleteSecretMetadata\022\006Secret\022\263\001\n" +
+      "\010Activate\022..yandex.cloud.lockbox.v1.Acti" +
+      "vateSecretRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"T\202\323\344\223\002*\"(/lockbox/v1/secret" +
+      "s/{secret_id}:activate\262\322* \n\026ActivateSecr" +
+      "etMetadata\022\006Secret\022\273\001\n\nDeactivate\0220.yand" +
+      "ex.cloud.lockbox.v1.DeactivateSecretRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"X" +
+      "\202\323\344\223\002,\"*/lockbox/v1/secrets/{secret_id}:" +
+      "deactivate\262\322*\"\n\030DeactivateSecretMetadata" +
+      "\022\006Secret\022\235\001\n\014ListVersions\022,.yandex.cloud" +
+      ".lockbox.v1.ListVersionsRequest\032-.yandex" +
+      ".cloud.lockbox.v1.ListVersionsResponse\"0" +
+      "\202\323\344\223\002*\022(/lockbox/v1/secrets/{secret_id}/" +
+      "versions\022\263\001\n\nAddVersion\022*.yandex.cloud.l" +
+      "ockbox.v1.AddVersionRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"V\202\323\344\223\002/\"*/lockbox" +
+      "/v1/secrets/{secret_id}:addVersion:\001*\262\322*" +
+      "\035\n\022AddVersionMetadata\022\007Version\022\363\001\n\032Sched" +
+      "uleVersionDestruction\022:.yandex.cloud.loc" +
+      "kbox.v1.ScheduleVersionDestructionReques" +
+      "t\032!.yandex.cloud.operation.Operation\"v\202\323" +
+      "\344\223\002?\":/lockbox/v1/secrets/{secret_id}:sc" +
+      "heduleVersionDestruction:\001*\262\322*-\n\"Schedul" +
+      "eVersionDestructionMetadata\022\007Version\022\353\001\n" +
+      "\030CancelVersionDestruction\0228.yandex.cloud" +
+      ".lockbox.v1.CancelVersionDestructionRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"r" +
+      "\202\323\344\223\002=\"8/lockbox/v1/secrets/{secret_id}:" +
+      "cancelVersionDestruction:\001*\262\322*+\n CancelV" +
+      "ersionDestructionMetadata\022\007Version\022\261\001\n\016L" +
+      "istOperations\0224.yandex.cloud.lockbox.v1." +
+      "ListSecretOperationsRequest\0325.yandex.clo" +
+      "ud.lockbox.v1.ListSecretOperationsRespon" +
+      "se\"2\202\323\344\223\002,\022*/lockbox/v1/secrets/{secret_" +
+      "id}/operations\022\263\001\n\022ListAccessBindings\022.." +
+      "yandex.cloud.access.ListAccessBindingsRe" +
+      "quest\032/.yandex.cloud.access.ListAccessBi" +
+      "ndingsResponse\"<\202\323\344\223\0026\0224/lockbox/v1/secr" +
+      "ets/{resource_id}:listAccessBindings\022\342\001\n" +
+      "\021SetAccessBindings\022-.yandex.cloud.access" +
+      ".SetAccessBindingsRequest\032!.yandex.cloud" +
+      ".operation.Operation\"{\202\323\344\223\0028\"3/lockbox/v" +
+      "1/secrets/{resource_id}:setAccessBinding" +
+      "s:\001*\262\322*9\n access.SetAccessBindingsMetada" +
+      "ta\022\025google.protobuf.Empty\022\357\001\n\024UpdateAcce" +
+      "ssBindings\0220.yandex.cloud.access.UpdateA" +
+      "ccessBindingsRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"\201\001\202\323\344\223\002;\"6/lockbox/v1/se" +
+      "crets/{resource_id}:updateAccessBindings" +
+      ":\001*\262\322*<\n#access.UpdateAccessBindingsMeta" +
+      "data\022\025google.protobuf.EmptyBb\n\033yandex.cl" +
+      "oud.api.lockbox.v1ZCgithub.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/lockbox/v1;" +
+      "lockboxb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

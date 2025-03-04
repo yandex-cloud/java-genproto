@@ -4915,6 +4915,21 @@ public final class DeviceOuterClass {
      * <code>.google.protobuf.Timestamp last_online_time = 5;</code>
      */
     com.google.protobuf.TimestampOrBuilder getLastOnlineTimeOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Timestamp last_disconnect_time = 6;</code>
+     * @return Whether the lastDisconnectTime field is set.
+     */
+    boolean hasLastDisconnectTime();
+    /**
+     * <code>.google.protobuf.Timestamp last_disconnect_time = 6;</code>
+     * @return The lastDisconnectTime.
+     */
+    com.google.protobuf.Timestamp getLastDisconnectTime();
+    /**
+     * <code>.google.protobuf.Timestamp last_disconnect_time = 6;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getLastDisconnectTimeOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.DeviceMonitoringData}
@@ -5016,6 +5031,19 @@ public final class DeviceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(lastOnlineTime_);
                 lastOnlineTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (lastDisconnectTime_ != null) {
+                subBuilder = lastDisconnectTime_.toBuilder();
+              }
+              lastDisconnectTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lastDisconnectTime_);
+                lastDisconnectTime_ = subBuilder.buildPartial();
               }
 
               break;
@@ -5194,6 +5222,32 @@ public final class DeviceOuterClass {
       return getLastOnlineTime();
     }
 
+    public static final int LAST_DISCONNECT_TIME_FIELD_NUMBER = 6;
+    private com.google.protobuf.Timestamp lastDisconnectTime_;
+    /**
+     * <code>.google.protobuf.Timestamp last_disconnect_time = 6;</code>
+     * @return Whether the lastDisconnectTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasLastDisconnectTime() {
+      return lastDisconnectTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp last_disconnect_time = 6;</code>
+     * @return The lastDisconnectTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getLastDisconnectTime() {
+      return lastDisconnectTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastDisconnectTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp last_disconnect_time = 6;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getLastDisconnectTimeOrBuilder() {
+      return getLastDisconnectTime();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5223,6 +5277,9 @@ public final class DeviceOuterClass {
       if (lastOnlineTime_ != null) {
         output.writeMessage(5, getLastOnlineTime());
       }
+      if (lastDisconnectTime_ != null) {
+        output.writeMessage(6, getLastDisconnectTime());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5250,6 +5307,10 @@ public final class DeviceOuterClass {
       if (lastOnlineTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getLastOnlineTime());
+      }
+      if (lastDisconnectTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getLastDisconnectTime());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5288,6 +5349,11 @@ public final class DeviceOuterClass {
         if (!getLastOnlineTime()
             .equals(other.getLastOnlineTime())) return false;
       }
+      if (hasLastDisconnectTime() != other.hasLastDisconnectTime()) return false;
+      if (hasLastDisconnectTime()) {
+        if (!getLastDisconnectTime()
+            .equals(other.getLastDisconnectTime())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5316,6 +5382,10 @@ public final class DeviceOuterClass {
       if (hasLastOnlineTime()) {
         hash = (37 * hash) + LAST_ONLINE_TIME_FIELD_NUMBER;
         hash = (53 * hash) + getLastOnlineTime().hashCode();
+      }
+      if (hasLastDisconnectTime()) {
+        hash = (37 * hash) + LAST_DISCONNECT_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getLastDisconnectTime().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -5476,6 +5546,12 @@ public final class DeviceOuterClass {
           lastOnlineTime_ = null;
           lastOnlineTimeBuilder_ = null;
         }
+        if (lastDisconnectTimeBuilder_ == null) {
+          lastDisconnectTime_ = null;
+        } else {
+          lastDisconnectTime_ = null;
+          lastDisconnectTimeBuilder_ = null;
+        }
         return this;
       }
 
@@ -5522,6 +5598,11 @@ public final class DeviceOuterClass {
           result.lastOnlineTime_ = lastOnlineTime_;
         } else {
           result.lastOnlineTime_ = lastOnlineTimeBuilder_.build();
+        }
+        if (lastDisconnectTimeBuilder_ == null) {
+          result.lastDisconnectTime_ = lastDisconnectTime_;
+        } else {
+          result.lastDisconnectTime_ = lastDisconnectTimeBuilder_.build();
         }
         onBuilt();
         return result;
@@ -5586,6 +5667,9 @@ public final class DeviceOuterClass {
         }
         if (other.hasLastOnlineTime()) {
           mergeLastOnlineTime(other.getLastOnlineTime());
+        }
+        if (other.hasLastDisconnectTime()) {
+          mergeLastDisconnectTime(other.getLastDisconnectTime());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6167,6 +6251,125 @@ public final class DeviceOuterClass {
         }
         return lastOnlineTimeBuilder_;
       }
+
+      private com.google.protobuf.Timestamp lastDisconnectTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastDisconnectTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp last_disconnect_time = 6;</code>
+       * @return Whether the lastDisconnectTime field is set.
+       */
+      public boolean hasLastDisconnectTime() {
+        return lastDisconnectTimeBuilder_ != null || lastDisconnectTime_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_disconnect_time = 6;</code>
+       * @return The lastDisconnectTime.
+       */
+      public com.google.protobuf.Timestamp getLastDisconnectTime() {
+        if (lastDisconnectTimeBuilder_ == null) {
+          return lastDisconnectTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastDisconnectTime_;
+        } else {
+          return lastDisconnectTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_disconnect_time = 6;</code>
+       */
+      public Builder setLastDisconnectTime(com.google.protobuf.Timestamp value) {
+        if (lastDisconnectTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lastDisconnectTime_ = value;
+          onChanged();
+        } else {
+          lastDisconnectTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_disconnect_time = 6;</code>
+       */
+      public Builder setLastDisconnectTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (lastDisconnectTimeBuilder_ == null) {
+          lastDisconnectTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          lastDisconnectTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_disconnect_time = 6;</code>
+       */
+      public Builder mergeLastDisconnectTime(com.google.protobuf.Timestamp value) {
+        if (lastDisconnectTimeBuilder_ == null) {
+          if (lastDisconnectTime_ != null) {
+            lastDisconnectTime_ =
+              com.google.protobuf.Timestamp.newBuilder(lastDisconnectTime_).mergeFrom(value).buildPartial();
+          } else {
+            lastDisconnectTime_ = value;
+          }
+          onChanged();
+        } else {
+          lastDisconnectTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_disconnect_time = 6;</code>
+       */
+      public Builder clearLastDisconnectTime() {
+        if (lastDisconnectTimeBuilder_ == null) {
+          lastDisconnectTime_ = null;
+          onChanged();
+        } else {
+          lastDisconnectTime_ = null;
+          lastDisconnectTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_disconnect_time = 6;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getLastDisconnectTimeBuilder() {
+        
+        onChanged();
+        return getLastDisconnectTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_disconnect_time = 6;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getLastDisconnectTimeOrBuilder() {
+        if (lastDisconnectTimeBuilder_ != null) {
+          return lastDisconnectTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return lastDisconnectTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : lastDisconnectTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_disconnect_time = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getLastDisconnectTimeFieldBuilder() {
+        if (lastDisconnectTimeBuilder_ == null) {
+          lastDisconnectTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getLastDisconnectTime(),
+                  getParentForChildren(),
+                  isClean());
+          lastDisconnectTime_ = null;
+        }
+        return lastDisconnectTimeBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6274,17 +6477,19 @@ public final class DeviceOuterClass {
       "2\032.google.protobuf.Timestamp\"_\n\016DevicePa" +
       "ssword\022\021\n\tdevice_id\030\001 \001(\t\022\n\n\002id\030\002 \001(\t\022.\n" +
       "\ncreated_at\030\003 \001(\0132\032.google.protobuf.Time" +
-      "stamp\"\216\002\n\024DeviceMonitoringData\022\024\n\014last_a" +
+      "stamp\"\310\002\n\024DeviceMonitoringData\022\024\n\014last_a" +
       "uth_ip\030\001 \001(\t\0222\n\016last_auth_time\030\002 \001(\0132\032.g" +
       "oogle.protobuf.Timestamp\022:\n\026last_pub_act" +
       "ivity_time\030\003 \001(\0132\032.google.protobuf.Times" +
       "tamp\022:\n\026last_sub_activity_time\030\004 \001(\0132\032.g" +
       "oogle.protobuf.Timestamp\0224\n\020last_online_" +
-      "time\030\005 \001(\0132\032.google.protobuf.Timestamp*!" +
-      "\n\nDeviceView\022\t\n\005BASIC\020\000\022\010\n\004FULL\020\001Bj\n\037yan" +
-      "dex.cloud.api.iot.devices.v1ZGgithub.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/i" +
-      "ot/devices/v1;devicesb\006proto3"
+      "time\030\005 \001(\0132\032.google.protobuf.Timestamp\0228" +
+      "\n\024last_disconnect_time\030\006 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp*!\n\nDeviceView\022\t\n\005BASIC\020" +
+      "\000\022\010\n\004FULL\020\001Bj\n\037yandex.cloud.api.iot.devi" +
+      "ces.v1ZGgithub.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/iot/devices/v1;devicesb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6320,7 +6525,7 @@ public final class DeviceOuterClass {
     internal_static_yandex_cloud_iot_devices_v1_DeviceMonitoringData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_DeviceMonitoringData_descriptor,
-        new java.lang.String[] { "LastAuthIp", "LastAuthTime", "LastPubActivityTime", "LastSubActivityTime", "LastOnlineTime", });
+        new java.lang.String[] { "LastAuthIp", "LastAuthTime", "LastPubActivityTime", "LastSubActivityTime", "LastOnlineTime", "LastDisconnectTime", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
